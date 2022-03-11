@@ -2,6 +2,7 @@ package io.pulumi.resources;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -16,7 +17,7 @@ import static io.pulumi.resources.Resources.mergeNullableList;
 public abstract class ResourceOptions {
 
     @Nullable
-    protected Input<String> id;
+    protected Output<String> id;
     @Nullable
     protected Resource parent;
     @Nullable
@@ -42,7 +43,7 @@ public abstract class ResourceOptions {
     protected ResourceOptions() { /* empty */ }
 
     protected ResourceOptions(
-            @Nullable Input<String> id,
+            @Nullable Output<String> id,
             @Nullable Resource parent,
             @Nullable Input<List<Resource>> dependsOn,
             boolean protect,
@@ -76,13 +77,13 @@ public abstract class ResourceOptions {
             this.options = options;
         }
 
-        public B setId(@Nullable Input<String> id) {
+        public B setId(@Nullable Output<String> id) {
             options.id = id;
             return (B) this;
         }
 
         public B setId(@Nullable String id) {
-            options.id = Input.ofNullable(id);
+            options.id = Output.ofNullable(id);
             return (B) this;
         }
 
@@ -150,7 +151,7 @@ public abstract class ResourceOptions {
     /**
      * An optional existing ID to load, rather than create.
      */
-    public Optional<Input<String>> getId() {
+    public Optional<Output<String>> getId() {
         return Optional.ofNullable(id);
     }
 
@@ -247,7 +248,7 @@ public abstract class ResourceOptions {
         return mergeSharedOptions(options1, options2, null);
     }
 
-    protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2, @Nullable Input<String> id) {
+    protected static <T extends ResourceOptions> T mergeSharedOptions(T options1, T options2, @Nullable Output<String> id) {
         Objects.requireNonNull(options1);
         Objects.requireNonNull(options2);
 

@@ -3,6 +3,7 @@ package io.pulumi.resources;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.InputOutputTests;
+import io.pulumi.core.Output;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -38,7 +39,7 @@ class ResourceOptionsTest {
                                 null
                         ),
                         new TestResourceOptions(
-                                Input.of("id"),
+                                Output.of("id"),
                                 null,
                                 Input.empty(),
                                 true,
@@ -52,7 +53,7 @@ class ResourceOptionsTest {
                                 List.of()
                         ),
                         new TestResourceOptions(
-                                Input.of("id"),
+                                Output.of("id"),
                                 null,
                                 Input.empty(),
                                 true,
@@ -97,7 +98,7 @@ class ResourceOptionsTest {
         protected TestResourceOptions() { /* empty */ }
 
         public TestResourceOptions(
-                @Nullable Input<String> id,
+                @Nullable Output<String> id,
                 @Nullable Resource parent,
                 @Nullable Input<List<Resource>> dependsOn,
                 boolean protect,

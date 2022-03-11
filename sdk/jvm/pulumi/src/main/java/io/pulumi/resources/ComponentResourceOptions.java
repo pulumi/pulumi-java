@@ -2,6 +2,7 @@ package io.pulumi.resources;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.internal.Copyable;
 import io.pulumi.core.internal.Objects;
 
@@ -23,7 +24,7 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
     protected ComponentResourceOptions() { /* empty */ }
 
     public ComponentResourceOptions(
-            @Nullable Input<String> id,
+            @Nullable Output<String> id,
             @Nullable Resource parent,
             @Nullable Input<List<Resource>> dependsOn,
             boolean protect,
@@ -112,7 +113,7 @@ public final class ComponentResourceOptions extends ResourceOptions implements C
     public static ComponentResourceOptions merge(
             @Nullable ComponentResourceOptions options1,
             @Nullable ComponentResourceOptions options2,
-            @Nullable Input<String> id
+            @Nullable Output<String> id
     ) {
         options1 = options1 != null ? options1.copy() : Empty;
         options2 = options2 != null ? options2.copy() : Empty;

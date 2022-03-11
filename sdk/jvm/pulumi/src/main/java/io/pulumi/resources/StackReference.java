@@ -59,8 +59,8 @@ public class StackReference extends CustomResource {
         );
     }
 
-    private static Input<String> ensureName(@Nullable StackReferenceArgs args, String name) {
-        return args == null ? Input.of(name) : args.getName().orElse(Input.of(name));
+    private static Output<String> ensureName(@Nullable StackReferenceArgs args, String name) {
+        return args == null ? Output.of(name) : args.getName().orElse(Output.of(name));
     }
 
     public Output<String> getName() {
