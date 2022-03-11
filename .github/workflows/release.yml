@@ -1,0 +1,36 @@
+on:
+  pull_request:
+    branches: # TODO this is temporary
+      - t0yv0/goreleaser-builds
+    paths-ignore:
+      - 'CHANGELOG.md'
+      - 'CHANGELOG_PENDING.md'
+
+jobs:
+  release-pulumi-language-jvm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Go 1.17.x
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.17.x
+      - name: Configure Go cache
+        id: go-cache-paths
+        run: |
+          echo "::set-output name=go-build::$(go env GOCACHE)"
+          echo "::set-output name=go-mod::$(go env GOMODCACHE)"
+      - name: Set up Go cache
+        uses: actions/cache@v2
+        id: go-cache
+        with:
+          path: |
+              ${{ steps.go-cache-paths.outputs.go-build }}
+              ${{ steps.go-cache-paths.outputs.go-mod }}
+          key: go-cache-${{ hashFiles('**/go.sum') }}
+      - name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@v2
+        with:
+          version: latest
+          # args: --release-notes=CHANGELOG_PENDING.md
+          args: -p 3 -f .goreleaser.yml --rm-dist
