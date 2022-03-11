@@ -68,7 +68,7 @@ jobs:
           make provider.docker.install &
           wait;
       - name: Integration tests
-          make integration_tests
+        run: make integration_tests
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Setup Python
