@@ -123,6 +123,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-java-webserver &&
             ./gradlew install &&
+            pulumi stack rm dev --yes &&
             pulumi stack init dev &&
             pulumi preview &&
             pulumi stack rm dev --yes";
@@ -178,6 +179,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-appservice-sql &&
             ./gradlew install &&
+            pulumi stack rm dev --yes &&
             pulumi stack init dev &&
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
             pulumi preview &&
@@ -232,6 +234,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/gcp-java-gke-hello-world &&
             ./gradlew install &&
+            pulumi stack rm dev --yes &&
             pulumi stack init dev &&
             pulumi preview &&
             pulumi stack rm dev --yes"
@@ -283,6 +286,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/minimal &&
             ./gradlew install &&
+            pulumi stack rm dev --yes &&
             pulumi stack init dev &&
             pulumi config set minimal:name foo &&
             pulumi config set minimal:secret bar &&
@@ -347,6 +351,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-native-java-s3-folder &&
             ./gradlew install &&
+            pulumi stack rm dev --yes &&
             pulumi stack init dev &&
             pulumi preview &&
             pulumi stack rm dev --yes"
@@ -399,6 +404,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-static-website &&
             ./gradlew install &&
+            pulumi stack rm dev --yes &&
             pulumi stack init dev &&
             pulumi preview &&
             pulumi stack rm dev --yes"
@@ -451,6 +457,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/random &&
             ./gradlew install &&
+            pulumi stack rm dev --yes &&
             pulumi stack init dev &&
             pulumi preview &&
             pulumi stack rm dev --yes"
