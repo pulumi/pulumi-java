@@ -47,47 +47,46 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Publish Pulumi Java SDK to a local Maven repo
-        run: make install_sdk
-      - name: Build Pulumi JVM Language Provider and Codegen
-        run: make build_go
-      - name: Test Pulumi JVM Language Provider and Codegen
-        run: make test_go
-      ###
-      - name: Build pulumi-random JVM SDK
-        run: |
-          make provider.random.install &
-          make provider.azure-native.install &
-          make provider.google-native.install &
-          wait;
-          make provider.gcp.install &
-          make provider.aws.install &
-          make provider.aws-native.install &
-          wait;
-          make provider.kubernetes.install &
-          make provider.docker.install &
-          wait;
-      - name: Integration tests
-        run: make integration_tests
-      - name: Install Pulumi CLI
-        uses: pulumi/action-install-pulumi-cli@v2
-      - name: Setup Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{matrix.pythonversion}}
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-region: ${{ env.AWS_REGION }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          role-duration-seconds: 3600
-          role-session-name: ${{ env.PROVIDER }}@githubActions
-          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
+#      - name: Publish Pulumi Java SDK to a local Maven repo
+#        run: make install_sdk
+#      - name: Build Pulumi JVM Language Provider and Codegen
+#        run: make build_go
+#      - name: Test Pulumi JVM Language Provider and Codegen
+#        run: make test_go
+#      ###
+#      - name: Build pulumi-random JVM SDK
+#        run: |
+#          make provider.random.install &
+#          make provider.azure-native.install &
+#          make provider.google-native.install &
+#          wait;
+#          make provider.gcp.install &
+#          make provider.aws.install &
+#          make provider.aws-native.install &
+#          wait;
+#          make provider.kubernetes.install &
+#          make provider.docker.install &
+#          wait;
+#      - name: Integration tests
+#        run: make integration_tests
+#      - name: Install Pulumi CLI
+#        uses: pulumi/action-install-pulumi-cli@v2
+#      - name: Setup Python
+#        uses: actions/setup-python@v2
+#        with:
+#          python-version: ${{matrix.pythonversion}}
+#      - name: Configure AWS Credentials
+#        uses: aws-actions/configure-aws-credentials@v1
+#        with:
+#          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#          aws-region: ${{ env.AWS_REGION }}
+#          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#          role-duration-seconds: 3600
+#          role-session-name: ${{ env.PROVIDER }}@githubActions
+#          role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: Run tests
         run: |
-          make bin/pulumi-language-jvm && mkdir -p ~/.pulumi/bin/ && cp bin/pulumi-language-jvm ~/.pulumi/bin/pulumi-language-jvm
-          export PATH="$PATH:~/.pulumi/bin/"
+          make bin/pulumi-language-jvm && mkdir -p ~/.pulumi/bin/ && cp bin/pulumi-language-jvm ~/.pulumi/bin/pulumi-language-jvm && export PATH="$PATH:~/.pulumi/bin/"
           for provider in `ls tests/examples/*/ -d`; do
             bash -c  "cd  $provider && pulumi destroy -s dev; pulumi stack rm dev --yes; pulumi stack init dev; pulumi preview; pulumi stack rm dev --yes;";
           done;
