@@ -9,7 +9,6 @@ import io.pulumi.azurenative.web.outputs.ApplicationLogsConfigResponse;
 import io.pulumi.azurenative.web.outputs.EnabledConfigResponse;
 import io.pulumi.azurenative.web.outputs.HttpLogsConfigResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -168,30 +167,30 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppDiagnosticLogsConfiguration(String name, WebAppDiagnosticLogsConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppDiagnosticLogsConfiguration", name, args == null ? WebAppDiagnosticLogsConfigurationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppDiagnosticLogsConfiguration", name, args == null ? WebAppDiagnosticLogsConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppDiagnosticLogsConfiguration(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppDiagnosticLogsConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppDiagnosticLogsConfiguration", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20150801:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20160801:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppDiagnosticLogsConfiguration").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppDiagnosticLogsConfiguration").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppDiagnosticLogsConfiguration").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppDiagnosticLogsConfiguration").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -205,7 +204,7 @@ public class WebAppDiagnosticLogsConfiguration extends io.pulumi.resources.Custo
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppDiagnosticLogsConfiguration get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppDiagnosticLogsConfiguration get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppDiagnosticLogsConfiguration(name, id, options);
     }
 }

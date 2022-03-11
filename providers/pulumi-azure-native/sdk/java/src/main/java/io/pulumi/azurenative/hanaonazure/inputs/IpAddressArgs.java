@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
-    public IpAddressArgs(@Nullable Input<String> ipAddress) {
+    public IpAddressArgs(@Nullable Output<String> ipAddress) {
         this.ipAddress = ipAddress;
     }
 
     private IpAddressArgs() {
-        this.ipAddress = Input.empty();
+        this.ipAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipAddress;
+        private @Nullable Output<String> ipAddress;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
         public IpAddressArgs build() {

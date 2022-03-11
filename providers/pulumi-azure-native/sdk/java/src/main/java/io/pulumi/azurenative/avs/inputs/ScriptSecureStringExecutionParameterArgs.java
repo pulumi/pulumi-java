@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,10 +34,10 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="secureValue")
-      private final @Nullable Input<String> secureValue;
+      private final @Nullable Output<String> secureValue;
 
-    public Input<String> getSecureValue() {
-        return this.secureValue == null ? Input.empty() : this.secureValue;
+    public Output<String> getSecureValue() {
+        return this.secureValue == null ? Output.empty() : this.secureValue;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ScriptSecureStringExecutionParameterArgs(
-        Input<String> name,
-        @Nullable Input<String> secureValue,
-        Input<String> type) {
+        Output<String> name,
+        @Nullable Output<String> secureValue,
+        Output<String> type) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.secureValue = secureValue;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ScriptSecureStringExecutionParameterArgs() {
-        this.name = Input.empty();
-        this.secureValue = Input.empty();
-        this.type = Input.empty();
+        this.name = Output.empty();
+        this.secureValue = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<String> secureValue;
-        private Input<String> type;
+        private Output<String> name;
+        private @Nullable Output<String> secureValue;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class ScriptSecureStringExecutionParameterArgs extends io.pulumi.re
     	      this.type = defaults.type;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder secureValue(@Nullable Input<String> secureValue) {
+        public Builder secureValue(@Nullable Output<String> secureValue) {
             this.secureValue = secureValue;
             return this;
         }
 
         public Builder secureValue(@Nullable String secureValue) {
-            this.secureValue = Input.ofNullable(secureValue);
+            this.secureValue = Output.ofNullable(secureValue);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ScriptSecureStringExecutionParameterArgs build() {

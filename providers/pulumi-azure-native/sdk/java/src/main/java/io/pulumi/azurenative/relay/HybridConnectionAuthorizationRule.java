@@ -6,7 +6,6 @@ package io.pulumi.azurenative.relay;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.relay.HybridConnectionAuthorizationRuleArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -112,19 +111,19 @@ public class HybridConnectionAuthorizationRule extends io.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public HybridConnectionAuthorizationRule(String name, HybridConnectionAuthorizationRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:relay:HybridConnectionAuthorizationRule", name, args == null ? HybridConnectionAuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:relay:HybridConnectionAuthorizationRule", name, args == null ? HybridConnectionAuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private HybridConnectionAuthorizationRule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private HybridConnectionAuthorizationRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:relay:HybridConnectionAuthorizationRule", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:relay/v20160701:HybridConnectionAuthorizationRule").build()),
-                Input.of(Alias.builder().setType("azure-native:relay/v20170401:HybridConnectionAuthorizationRule").build())
+                Output.of(Alias.builder().setType("azure-native:relay/v20160701:HybridConnectionAuthorizationRule").build()),
+                Output.of(Alias.builder().setType("azure-native:relay/v20170401:HybridConnectionAuthorizationRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -138,7 +137,7 @@ public class HybridConnectionAuthorizationRule extends io.pulumi.resources.Custo
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HybridConnectionAuthorizationRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static HybridConnectionAuthorizationRule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HybridConnectionAuthorizationRule(name, id, options);
     }
 }

@@ -9,7 +9,6 @@ import io.pulumi.azurenative.databoxedge.outputs.KubernetesClusterInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesRoleResourcesResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -215,10 +214,10 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KubernetesRole(String name, KubernetesRoleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:KubernetesRole", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:databoxedge:KubernetesRole", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private KubernetesRole(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private KubernetesRole(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:KubernetesRole", name, null, makeResourceOptions(options, id));
     }
 
@@ -229,21 +228,21 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190301:KubernetesRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190701:KubernetesRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190801:KubernetesRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200501preview:KubernetesRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901:KubernetesRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:KubernetesRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20201201:KubernetesRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201:KubernetesRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:KubernetesRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601:KubernetesRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:KubernetesRole").build())
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190301:KubernetesRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190701:KubernetesRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190801:KubernetesRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200501preview:KubernetesRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901:KubernetesRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:KubernetesRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20201201:KubernetesRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201:KubernetesRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:KubernetesRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601:KubernetesRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:KubernetesRole").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -257,7 +256,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static KubernetesRole get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static KubernetesRole get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new KubernetesRole(name, id, options);
     }
 }

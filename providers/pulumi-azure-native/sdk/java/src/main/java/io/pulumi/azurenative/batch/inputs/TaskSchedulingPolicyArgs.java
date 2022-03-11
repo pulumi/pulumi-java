@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.ComputeNodeFillType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -14,18 +14,18 @@ public final class TaskSchedulingPolicyArgs extends io.pulumi.resources.Resource
     public static final TaskSchedulingPolicyArgs Empty = new TaskSchedulingPolicyArgs();
 
     @InputImport(name="nodeFillType", required=true)
-      private final Input<ComputeNodeFillType> nodeFillType;
+      private final Output<ComputeNodeFillType> nodeFillType;
 
-    public Input<ComputeNodeFillType> getNodeFillType() {
+    public Output<ComputeNodeFillType> getNodeFillType() {
         return this.nodeFillType;
     }
 
-    public TaskSchedulingPolicyArgs(Input<ComputeNodeFillType> nodeFillType) {
+    public TaskSchedulingPolicyArgs(Output<ComputeNodeFillType> nodeFillType) {
         this.nodeFillType = Objects.requireNonNull(nodeFillType, "expected parameter 'nodeFillType' to be non-null");
     }
 
     private TaskSchedulingPolicyArgs() {
-        this.nodeFillType = Input.empty();
+        this.nodeFillType = Output.empty();
     }
 
     public static Builder builder() {
@@ -37,7 +37,7 @@ public final class TaskSchedulingPolicyArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<ComputeNodeFillType> nodeFillType;
+        private Output<ComputeNodeFillType> nodeFillType;
 
         public Builder() {
     	      // Empty
@@ -48,13 +48,13 @@ public final class TaskSchedulingPolicyArgs extends io.pulumi.resources.Resource
     	      this.nodeFillType = defaults.nodeFillType;
         }
 
-        public Builder nodeFillType(Input<ComputeNodeFillType> nodeFillType) {
+        public Builder nodeFillType(Output<ComputeNodeFillType> nodeFillType) {
             this.nodeFillType = Objects.requireNonNull(nodeFillType);
             return this;
         }
 
         public Builder nodeFillType(ComputeNodeFillType nodeFillType) {
-            this.nodeFillType = Input.of(Objects.requireNonNull(nodeFillType));
+            this.nodeFillType = Output.of(Objects.requireNonNull(nodeFillType));
             return this;
         }
         public TaskSchedulingPolicyArgs build() {

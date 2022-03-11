@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ImageDataDiskArgs;
 import io.pulumi.azurenative.compute.inputs.ImageOSDiskArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataDisks")
-      private final @Nullable Input<List<ImageDataDiskArgs>> dataDisks;
+      private final @Nullable Output<List<ImageDataDiskArgs>> dataDisks;
 
-    public Input<List<ImageDataDiskArgs>> getDataDisks() {
-        return this.dataDisks == null ? Input.empty() : this.dataDisks;
+    public Output<List<ImageDataDiskArgs>> getDataDisks() {
+        return this.dataDisks == null ? Output.empty() : this.dataDisks;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="osDisk")
-      private final @Nullable Input<ImageOSDiskArgs> osDisk;
+      private final @Nullable Output<ImageOSDiskArgs> osDisk;
 
-    public Input<ImageOSDiskArgs> getOsDisk() {
-        return this.osDisk == null ? Input.empty() : this.osDisk;
+    public Output<ImageOSDiskArgs> getOsDisk() {
+        return this.osDisk == null ? Output.empty() : this.osDisk;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="zoneResilient")
-      private final @Nullable Input<Boolean> zoneResilient;
+      private final @Nullable Output<Boolean> zoneResilient;
 
-    public Input<Boolean> getZoneResilient() {
-        return this.zoneResilient == null ? Input.empty() : this.zoneResilient;
+    public Output<Boolean> getZoneResilient() {
+        return this.zoneResilient == null ? Output.empty() : this.zoneResilient;
     }
 
     public ImageStorageProfileArgs(
-        @Nullable Input<List<ImageDataDiskArgs>> dataDisks,
-        @Nullable Input<ImageOSDiskArgs> osDisk,
-        @Nullable Input<Boolean> zoneResilient) {
+        @Nullable Output<List<ImageDataDiskArgs>> dataDisks,
+        @Nullable Output<ImageOSDiskArgs> osDisk,
+        @Nullable Output<Boolean> zoneResilient) {
         this.dataDisks = dataDisks;
         this.osDisk = osDisk;
         this.zoneResilient = zoneResilient;
     }
 
     private ImageStorageProfileArgs() {
-        this.dataDisks = Input.empty();
-        this.osDisk = Input.empty();
-        this.zoneResilient = Input.empty();
+        this.dataDisks = Output.empty();
+        this.osDisk = Output.empty();
+        this.zoneResilient = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ImageDataDiskArgs>> dataDisks;
-        private @Nullable Input<ImageOSDiskArgs> osDisk;
-        private @Nullable Input<Boolean> zoneResilient;
+        private @Nullable Output<List<ImageDataDiskArgs>> dataDisks;
+        private @Nullable Output<ImageOSDiskArgs> osDisk;
+        private @Nullable Output<Boolean> zoneResilient;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
     	      this.zoneResilient = defaults.zoneResilient;
         }
 
-        public Builder dataDisks(@Nullable Input<List<ImageDataDiskArgs>> dataDisks) {
+        public Builder dataDisks(@Nullable Output<List<ImageDataDiskArgs>> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
         public Builder dataDisks(@Nullable List<ImageDataDiskArgs> dataDisks) {
-            this.dataDisks = Input.ofNullable(dataDisks);
+            this.dataDisks = Output.ofNullable(dataDisks);
             return this;
         }
 
-        public Builder osDisk(@Nullable Input<ImageOSDiskArgs> osDisk) {
+        public Builder osDisk(@Nullable Output<ImageOSDiskArgs> osDisk) {
             this.osDisk = osDisk;
             return this;
         }
 
         public Builder osDisk(@Nullable ImageOSDiskArgs osDisk) {
-            this.osDisk = Input.ofNullable(osDisk);
+            this.osDisk = Output.ofNullable(osDisk);
             return this;
         }
 
-        public Builder zoneResilient(@Nullable Input<Boolean> zoneResilient) {
+        public Builder zoneResilient(@Nullable Output<Boolean> zoneResilient) {
             this.zoneResilient = zoneResilient;
             return this;
         }
 
         public Builder zoneResilient(@Nullable Boolean zoneResilient) {
-            this.zoneResilient = Input.ofNullable(zoneResilient);
+            this.zoneResilient = Output.ofNullable(zoneResilient);
             return this;
         }
         public ImageStorageProfileArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.billing;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="billingAccountName", required=true)
-      private final Input<String> billingAccountName;
+      private final Output<String> billingAccountName;
 
-    public Input<String> getBillingAccountName() {
+    public Output<String> getBillingAccountName() {
         return this.billingAccountName;
     }
 
@@ -30,10 +30,10 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="billingRoleAssignmentName")
-      private final @Nullable Input<String> billingRoleAssignmentName;
+      private final @Nullable Output<String> billingRoleAssignmentName;
 
-    public Input<String> getBillingRoleAssignmentName() {
-        return this.billingRoleAssignmentName == null ? Input.empty() : this.billingRoleAssignmentName;
+    public Output<String> getBillingRoleAssignmentName() {
+        return this.billingRoleAssignmentName == null ? Output.empty() : this.billingRoleAssignmentName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="principalId")
-      private final @Nullable Input<String> principalId;
+      private final @Nullable Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
-        return this.principalId == null ? Input.empty() : this.principalId;
+    public Output<String> getPrincipalId() {
+        return this.principalId == null ? Output.empty() : this.principalId;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="principalTenantId")
-      private final @Nullable Input<String> principalTenantId;
+      private final @Nullable Output<String> principalTenantId;
 
-    public Input<String> getPrincipalTenantId() {
-        return this.principalTenantId == null ? Input.empty() : this.principalTenantId;
+    public Output<String> getPrincipalTenantId() {
+        return this.principalTenantId == null ? Output.empty() : this.principalTenantId;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="roleDefinitionId")
-      private final @Nullable Input<String> roleDefinitionId;
+      private final @Nullable Output<String> roleDefinitionId;
 
-    public Input<String> getRoleDefinitionId() {
-        return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
+    public Output<String> getRoleDefinitionId() {
+        return this.roleDefinitionId == null ? Output.empty() : this.roleDefinitionId;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="userAuthenticationType")
-      private final @Nullable Input<String> userAuthenticationType;
+      private final @Nullable Output<String> userAuthenticationType;
 
-    public Input<String> getUserAuthenticationType() {
-        return this.userAuthenticationType == null ? Input.empty() : this.userAuthenticationType;
+    public Output<String> getUserAuthenticationType() {
+        return this.userAuthenticationType == null ? Output.empty() : this.userAuthenticationType;
     }
 
     /**
@@ -85,20 +85,20 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="userEmailAddress")
-      private final @Nullable Input<String> userEmailAddress;
+      private final @Nullable Output<String> userEmailAddress;
 
-    public Input<String> getUserEmailAddress() {
-        return this.userEmailAddress == null ? Input.empty() : this.userEmailAddress;
+    public Output<String> getUserEmailAddress() {
+        return this.userEmailAddress == null ? Output.empty() : this.userEmailAddress;
     }
 
     public BillingRoleAssignmentByBillingAccountArgs(
-        Input<String> billingAccountName,
-        @Nullable Input<String> billingRoleAssignmentName,
-        @Nullable Input<String> principalId,
-        @Nullable Input<String> principalTenantId,
-        @Nullable Input<String> roleDefinitionId,
-        @Nullable Input<String> userAuthenticationType,
-        @Nullable Input<String> userEmailAddress) {
+        Output<String> billingAccountName,
+        @Nullable Output<String> billingRoleAssignmentName,
+        @Nullable Output<String> principalId,
+        @Nullable Output<String> principalTenantId,
+        @Nullable Output<String> roleDefinitionId,
+        @Nullable Output<String> userAuthenticationType,
+        @Nullable Output<String> userEmailAddress) {
         this.billingAccountName = Objects.requireNonNull(billingAccountName, "expected parameter 'billingAccountName' to be non-null");
         this.billingRoleAssignmentName = billingRoleAssignmentName;
         this.principalId = principalId;
@@ -109,13 +109,13 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     }
 
     private BillingRoleAssignmentByBillingAccountArgs() {
-        this.billingAccountName = Input.empty();
-        this.billingRoleAssignmentName = Input.empty();
-        this.principalId = Input.empty();
-        this.principalTenantId = Input.empty();
-        this.roleDefinitionId = Input.empty();
-        this.userAuthenticationType = Input.empty();
-        this.userEmailAddress = Input.empty();
+        this.billingAccountName = Output.empty();
+        this.billingRoleAssignmentName = Output.empty();
+        this.principalId = Output.empty();
+        this.principalTenantId = Output.empty();
+        this.roleDefinitionId = Output.empty();
+        this.userAuthenticationType = Output.empty();
+        this.userEmailAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,13 +127,13 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> billingAccountName;
-        private @Nullable Input<String> billingRoleAssignmentName;
-        private @Nullable Input<String> principalId;
-        private @Nullable Input<String> principalTenantId;
-        private @Nullable Input<String> roleDefinitionId;
-        private @Nullable Input<String> userAuthenticationType;
-        private @Nullable Input<String> userEmailAddress;
+        private Output<String> billingAccountName;
+        private @Nullable Output<String> billingRoleAssignmentName;
+        private @Nullable Output<String> principalId;
+        private @Nullable Output<String> principalTenantId;
+        private @Nullable Output<String> roleDefinitionId;
+        private @Nullable Output<String> userAuthenticationType;
+        private @Nullable Output<String> userEmailAddress;
 
         public Builder() {
     	      // Empty
@@ -150,73 +150,73 @@ public final class BillingRoleAssignmentByBillingAccountArgs extends io.pulumi.r
     	      this.userEmailAddress = defaults.userEmailAddress;
         }
 
-        public Builder billingAccountName(Input<String> billingAccountName) {
+        public Builder billingAccountName(Output<String> billingAccountName) {
             this.billingAccountName = Objects.requireNonNull(billingAccountName);
             return this;
         }
 
         public Builder billingAccountName(String billingAccountName) {
-            this.billingAccountName = Input.of(Objects.requireNonNull(billingAccountName));
+            this.billingAccountName = Output.of(Objects.requireNonNull(billingAccountName));
             return this;
         }
 
-        public Builder billingRoleAssignmentName(@Nullable Input<String> billingRoleAssignmentName) {
+        public Builder billingRoleAssignmentName(@Nullable Output<String> billingRoleAssignmentName) {
             this.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
 
         public Builder billingRoleAssignmentName(@Nullable String billingRoleAssignmentName) {
-            this.billingRoleAssignmentName = Input.ofNullable(billingRoleAssignmentName);
+            this.billingRoleAssignmentName = Output.ofNullable(billingRoleAssignmentName);
             return this;
         }
 
-        public Builder principalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Input.ofNullable(principalId);
+            this.principalId = Output.ofNullable(principalId);
             return this;
         }
 
-        public Builder principalTenantId(@Nullable Input<String> principalTenantId) {
+        public Builder principalTenantId(@Nullable Output<String> principalTenantId) {
             this.principalTenantId = principalTenantId;
             return this;
         }
 
         public Builder principalTenantId(@Nullable String principalTenantId) {
-            this.principalTenantId = Input.ofNullable(principalTenantId);
+            this.principalTenantId = Output.ofNullable(principalTenantId);
             return this;
         }
 
-        public Builder roleDefinitionId(@Nullable Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Input.ofNullable(roleDefinitionId);
+            this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
             return this;
         }
 
-        public Builder userAuthenticationType(@Nullable Input<String> userAuthenticationType) {
+        public Builder userAuthenticationType(@Nullable Output<String> userAuthenticationType) {
             this.userAuthenticationType = userAuthenticationType;
             return this;
         }
 
         public Builder userAuthenticationType(@Nullable String userAuthenticationType) {
-            this.userAuthenticationType = Input.ofNullable(userAuthenticationType);
+            this.userAuthenticationType = Output.ofNullable(userAuthenticationType);
             return this;
         }
 
-        public Builder userEmailAddress(@Nullable Input<String> userEmailAddress) {
+        public Builder userEmailAddress(@Nullable Output<String> userEmailAddress) {
             this.userEmailAddress = userEmailAddress;
             return this;
         }
 
         public Builder userEmailAddress(@Nullable String userEmailAddress) {
-            this.userEmailAddress = Input.ofNullable(userEmailAddress);
+            this.userEmailAddress = Output.ofNullable(userEmailAddress);
             return this;
         }
         public BillingRoleAssignmentByBillingAccountArgs build() {

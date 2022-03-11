@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logs")
-      private final @Nullable Input<String> logs;
+      private final @Nullable Output<String> logs;
 
-    public Input<String> getLogs() {
-        return this.logs == null ? Input.empty() : this.logs;
+    public Output<String> getLogs() {
+        return this.logs == null ? Output.empty() : this.logs;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metrics")
-      private final @Nullable Input<String> metrics;
+      private final @Nullable Output<String> metrics;
 
-    public Input<String> getMetrics() {
-        return this.metrics == null ? Input.empty() : this.metrics;
+    public Output<String> getMetrics() {
+        return this.metrics == null ? Output.empty() : this.metrics;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="usages")
-      private final @Nullable Input<String> usages;
+      private final @Nullable Output<String> usages;
 
-    public Input<String> getUsages() {
-        return this.usages == null ? Input.empty() : this.usages;
+    public Output<String> getUsages() {
+        return this.usages == null ? Output.empty() : this.usages;
     }
 
     public UploadWatermarkArgs(
-        @Nullable Input<String> logs,
-        @Nullable Input<String> metrics,
-        @Nullable Input<String> usages) {
+        @Nullable Output<String> logs,
+        @Nullable Output<String> metrics,
+        @Nullable Output<String> usages) {
         this.logs = logs;
         this.metrics = metrics;
         this.usages = usages;
     }
 
     private UploadWatermarkArgs() {
-        this.logs = Input.empty();
-        this.metrics = Input.empty();
-        this.usages = Input.empty();
+        this.logs = Output.empty();
+        this.metrics = Output.empty();
+        this.usages = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> logs;
-        private @Nullable Input<String> metrics;
-        private @Nullable Input<String> usages;
+        private @Nullable Output<String> logs;
+        private @Nullable Output<String> metrics;
+        private @Nullable Output<String> usages;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
     	      this.usages = defaults.usages;
         }
 
-        public Builder logs(@Nullable Input<String> logs) {
+        public Builder logs(@Nullable Output<String> logs) {
             this.logs = logs;
             return this;
         }
 
         public Builder logs(@Nullable String logs) {
-            this.logs = Input.ofNullable(logs);
+            this.logs = Output.ofNullable(logs);
             return this;
         }
 
-        public Builder metrics(@Nullable Input<String> metrics) {
+        public Builder metrics(@Nullable Output<String> metrics) {
             this.metrics = metrics;
             return this;
         }
 
         public Builder metrics(@Nullable String metrics) {
-            this.metrics = Input.ofNullable(metrics);
+            this.metrics = Output.ofNullable(metrics);
             return this;
         }
 
-        public Builder usages(@Nullable Input<String> usages) {
+        public Builder usages(@Nullable Output<String> usages) {
             this.usages = usages;
             return this;
         }
 
         public Builder usages(@Nullable String usages) {
-            this.usages = Input.ofNullable(usages);
+            this.usages = Output.ofNullable(usages);
             return this;
         }
         public UploadWatermarkArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="claimType")
-      private final @Nullable Input<String> claimType;
+      private final @Nullable Output<String> claimType;
 
-    public Input<String> getClaimType() {
-        return this.claimType == null ? Input.empty() : this.claimType;
+    public Output<String> getClaimType() {
+        return this.claimType == null ? Output.empty() : this.claimType;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="claimValue")
-      private final @Nullable Input<String> claimValue;
+      private final @Nullable Output<String> claimValue;
 
-    public Input<String> getClaimValue() {
-        return this.claimValue == null ? Input.empty() : this.claimValue;
+    public Output<String> getClaimValue() {
+        return this.claimValue == null ? Output.empty() : this.claimValue;
     }
 
     public ContentKeyPolicyTokenClaimArgs(
-        @Nullable Input<String> claimType,
-        @Nullable Input<String> claimValue) {
+        @Nullable Output<String> claimType,
+        @Nullable Output<String> claimValue) {
         this.claimType = claimType;
         this.claimValue = claimValue;
     }
 
     private ContentKeyPolicyTokenClaimArgs() {
-        this.claimType = Input.empty();
-        this.claimValue = Input.empty();
+        this.claimType = Output.empty();
+        this.claimValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> claimType;
-        private @Nullable Input<String> claimValue;
+        private @Nullable Output<String> claimType;
+        private @Nullable Output<String> claimValue;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
     	      this.claimValue = defaults.claimValue;
         }
 
-        public Builder claimType(@Nullable Input<String> claimType) {
+        public Builder claimType(@Nullable Output<String> claimType) {
             this.claimType = claimType;
             return this;
         }
 
         public Builder claimType(@Nullable String claimType) {
-            this.claimType = Input.ofNullable(claimType);
+            this.claimType = Output.ofNullable(claimType);
             return this;
         }
 
-        public Builder claimValue(@Nullable Input<String> claimValue) {
+        public Builder claimValue(@Nullable Output<String> claimValue) {
             this.claimValue = claimValue;
             return this;
         }
 
         public Builder claimValue(@Nullable String claimValue) {
-            this.claimValue = Input.ofNullable(claimValue);
+            this.claimValue = Output.ofNullable(claimValue);
             return this;
         }
         public ContentKeyPolicyTokenClaimArgs build() {

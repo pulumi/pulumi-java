@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class WorkspaceCustomStringParameterArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
-    public WorkspaceCustomStringParameterArgs(Input<String> value) {
+    public WorkspaceCustomStringParameterArgs(Output<String> value) {
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private WorkspaceCustomStringParameterArgs() {
-        this.value = Input.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class WorkspaceCustomStringParameterArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> value;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class WorkspaceCustomStringParameterArgs extends io.pulumi.resource
     	      this.value = defaults.value;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public WorkspaceCustomStringParameterArgs build() {

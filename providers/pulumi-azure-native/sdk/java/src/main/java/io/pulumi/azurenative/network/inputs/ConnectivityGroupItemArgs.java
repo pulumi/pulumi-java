@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.GroupConnectivity;
 import io.pulumi.azurenative.network.enums.IsGlobal;
 import io.pulumi.azurenative.network.enums.UseHubGateway;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="groupConnectivity")
-      private final @Nullable Input<Either<String,GroupConnectivity>> groupConnectivity;
+      private final @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity;
 
-    public Input<Either<String,GroupConnectivity>> getGroupConnectivity() {
-        return this.groupConnectivity == null ? Input.empty() : this.groupConnectivity;
+    public Output<Either<String,GroupConnectivity>> getGroupConnectivity() {
+        return this.groupConnectivity == null ? Output.empty() : this.groupConnectivity;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isGlobal")
-      private final @Nullable Input<Either<String,IsGlobal>> isGlobal;
+      private final @Nullable Output<Either<String,IsGlobal>> isGlobal;
 
-    public Input<Either<String,IsGlobal>> getIsGlobal() {
-        return this.isGlobal == null ? Input.empty() : this.isGlobal;
+    public Output<Either<String,IsGlobal>> getIsGlobal() {
+        return this.isGlobal == null ? Output.empty() : this.isGlobal;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="networkGroupId")
-      private final @Nullable Input<String> networkGroupId;
+      private final @Nullable Output<String> networkGroupId;
 
-    public Input<String> getNetworkGroupId() {
-        return this.networkGroupId == null ? Input.empty() : this.networkGroupId;
+    public Output<String> getNetworkGroupId() {
+        return this.networkGroupId == null ? Output.empty() : this.networkGroupId;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="useHubGateway")
-      private final @Nullable Input<Either<String,UseHubGateway>> useHubGateway;
+      private final @Nullable Output<Either<String,UseHubGateway>> useHubGateway;
 
-    public Input<Either<String,UseHubGateway>> getUseHubGateway() {
-        return this.useHubGateway == null ? Input.empty() : this.useHubGateway;
+    public Output<Either<String,UseHubGateway>> getUseHubGateway() {
+        return this.useHubGateway == null ? Output.empty() : this.useHubGateway;
     }
 
     public ConnectivityGroupItemArgs(
-        @Nullable Input<Either<String,GroupConnectivity>> groupConnectivity,
-        @Nullable Input<Either<String,IsGlobal>> isGlobal,
-        @Nullable Input<String> networkGroupId,
-        @Nullable Input<Either<String,UseHubGateway>> useHubGateway) {
+        @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity,
+        @Nullable Output<Either<String,IsGlobal>> isGlobal,
+        @Nullable Output<String> networkGroupId,
+        @Nullable Output<Either<String,UseHubGateway>> useHubGateway) {
         this.groupConnectivity = groupConnectivity;
         this.isGlobal = isGlobal;
         this.networkGroupId = networkGroupId;
@@ -74,10 +74,10 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
     }
 
     private ConnectivityGroupItemArgs() {
-        this.groupConnectivity = Input.empty();
-        this.isGlobal = Input.empty();
-        this.networkGroupId = Input.empty();
-        this.useHubGateway = Input.empty();
+        this.groupConnectivity = Output.empty();
+        this.isGlobal = Output.empty();
+        this.networkGroupId = Output.empty();
+        this.useHubGateway = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,GroupConnectivity>> groupConnectivity;
-        private @Nullable Input<Either<String,IsGlobal>> isGlobal;
-        private @Nullable Input<String> networkGroupId;
-        private @Nullable Input<Either<String,UseHubGateway>> useHubGateway;
+        private @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity;
+        private @Nullable Output<Either<String,IsGlobal>> isGlobal;
+        private @Nullable Output<String> networkGroupId;
+        private @Nullable Output<Either<String,UseHubGateway>> useHubGateway;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
     	      this.useHubGateway = defaults.useHubGateway;
         }
 
-        public Builder groupConnectivity(@Nullable Input<Either<String,GroupConnectivity>> groupConnectivity) {
+        public Builder groupConnectivity(@Nullable Output<Either<String,GroupConnectivity>> groupConnectivity) {
             this.groupConnectivity = groupConnectivity;
             return this;
         }
 
         public Builder groupConnectivity(@Nullable Either<String,GroupConnectivity> groupConnectivity) {
-            this.groupConnectivity = Input.ofNullable(groupConnectivity);
+            this.groupConnectivity = Output.ofNullable(groupConnectivity);
             return this;
         }
 
-        public Builder isGlobal(@Nullable Input<Either<String,IsGlobal>> isGlobal) {
+        public Builder isGlobal(@Nullable Output<Either<String,IsGlobal>> isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
 
         public Builder isGlobal(@Nullable Either<String,IsGlobal> isGlobal) {
-            this.isGlobal = Input.ofNullable(isGlobal);
+            this.isGlobal = Output.ofNullable(isGlobal);
             return this;
         }
 
-        public Builder networkGroupId(@Nullable Input<String> networkGroupId) {
+        public Builder networkGroupId(@Nullable Output<String> networkGroupId) {
             this.networkGroupId = networkGroupId;
             return this;
         }
 
         public Builder networkGroupId(@Nullable String networkGroupId) {
-            this.networkGroupId = Input.ofNullable(networkGroupId);
+            this.networkGroupId = Output.ofNullable(networkGroupId);
             return this;
         }
 
-        public Builder useHubGateway(@Nullable Input<Either<String,UseHubGateway>> useHubGateway) {
+        public Builder useHubGateway(@Nullable Output<Either<String,UseHubGateway>> useHubGateway) {
             this.useHubGateway = useHubGateway;
             return this;
         }
 
         public Builder useHubGateway(@Nullable Either<String,UseHubGateway> useHubGateway) {
-            this.useHubGateway = Input.ofNullable(useHubGateway);
+            this.useHubGateway = Output.ofNullable(useHubGateway);
             return this;
         }
         public ConnectivityGroupItemArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="contentTypesToCompress")
-      private final @Nullable Input<List<String>> contentTypesToCompress;
+      private final @Nullable Output<List<String>> contentTypesToCompress;
 
-    public Input<List<String>> getContentTypesToCompress() {
-        return this.contentTypesToCompress == null ? Input.empty() : this.contentTypesToCompress;
+    public Output<List<String>> getContentTypesToCompress() {
+        return this.contentTypesToCompress == null ? Output.empty() : this.contentTypesToCompress;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="isCompressionEnabled")
-      private final @Nullable Input<Boolean> isCompressionEnabled;
+      private final @Nullable Output<Boolean> isCompressionEnabled;
 
-    public Input<Boolean> getIsCompressionEnabled() {
-        return this.isCompressionEnabled == null ? Input.empty() : this.isCompressionEnabled;
+    public Output<Boolean> getIsCompressionEnabled() {
+        return this.isCompressionEnabled == null ? Output.empty() : this.isCompressionEnabled;
     }
 
     public CompressionSettingsArgs(
-        @Nullable Input<List<String>> contentTypesToCompress,
-        @Nullable Input<Boolean> isCompressionEnabled) {
+        @Nullable Output<List<String>> contentTypesToCompress,
+        @Nullable Output<Boolean> isCompressionEnabled) {
         this.contentTypesToCompress = contentTypesToCompress;
         this.isCompressionEnabled = isCompressionEnabled;
     }
 
     private CompressionSettingsArgs() {
-        this.contentTypesToCompress = Input.empty();
-        this.isCompressionEnabled = Input.empty();
+        this.contentTypesToCompress = Output.empty();
+        this.isCompressionEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> contentTypesToCompress;
-        private @Nullable Input<Boolean> isCompressionEnabled;
+        private @Nullable Output<List<String>> contentTypesToCompress;
+        private @Nullable Output<Boolean> isCompressionEnabled;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.isCompressionEnabled = defaults.isCompressionEnabled;
         }
 
-        public Builder contentTypesToCompress(@Nullable Input<List<String>> contentTypesToCompress) {
+        public Builder contentTypesToCompress(@Nullable Output<List<String>> contentTypesToCompress) {
             this.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
 
         public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
-            this.contentTypesToCompress = Input.ofNullable(contentTypesToCompress);
+            this.contentTypesToCompress = Output.ofNullable(contentTypesToCompress);
             return this;
         }
 
-        public Builder isCompressionEnabled(@Nullable Input<Boolean> isCompressionEnabled) {
+        public Builder isCompressionEnabled(@Nullable Output<Boolean> isCompressionEnabled) {
             this.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
 
         public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
-            this.isCompressionEnabled = Input.ofNullable(isCompressionEnabled);
+            this.isCompressionEnabled = Output.ofNullable(isCompressionEnabled);
             return this;
         }
         public CompressionSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="identityClientId")
-      private final @Nullable Input<String> identityClientId;
+      private final @Nullable Output<String> identityClientId;
 
-    public Input<String> getIdentityClientId() {
-        return this.identityClientId == null ? Input.empty() : this.identityClientId;
+    public Output<String> getIdentityClientId() {
+        return this.identityClientId == null ? Output.empty() : this.identityClientId;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyIdentifier", required=true)
-      private final Input<String> keyIdentifier;
+      private final Output<String> keyIdentifier;
 
-    public Input<String> getKeyIdentifier() {
+    public Output<String> getKeyIdentifier() {
         return this.keyIdentifier;
     }
 
@@ -41,25 +41,25 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVaultArmId", required=true)
-      private final Input<String> keyVaultArmId;
+      private final Output<String> keyVaultArmId;
 
-    public Input<String> getKeyVaultArmId() {
+    public Output<String> getKeyVaultArmId() {
         return this.keyVaultArmId;
     }
 
     public KeyVaultPropertiesArgs(
-        @Nullable Input<String> identityClientId,
-        Input<String> keyIdentifier,
-        Input<String> keyVaultArmId) {
+        @Nullable Output<String> identityClientId,
+        Output<String> keyIdentifier,
+        Output<String> keyVaultArmId) {
         this.identityClientId = identityClientId;
         this.keyIdentifier = Objects.requireNonNull(keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
         this.keyVaultArmId = Objects.requireNonNull(keyVaultArmId, "expected parameter 'keyVaultArmId' to be non-null");
     }
 
     private KeyVaultPropertiesArgs() {
-        this.identityClientId = Input.empty();
-        this.keyIdentifier = Input.empty();
-        this.keyVaultArmId = Input.empty();
+        this.identityClientId = Output.empty();
+        this.keyIdentifier = Output.empty();
+        this.keyVaultArmId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> identityClientId;
-        private Input<String> keyIdentifier;
-        private Input<String> keyVaultArmId;
+        private @Nullable Output<String> identityClientId;
+        private Output<String> keyIdentifier;
+        private Output<String> keyVaultArmId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.keyVaultArmId = defaults.keyVaultArmId;
         }
 
-        public Builder identityClientId(@Nullable Input<String> identityClientId) {
+        public Builder identityClientId(@Nullable Output<String> identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
         public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = Input.ofNullable(identityClientId);
+            this.identityClientId = Output.ofNullable(identityClientId);
             return this;
         }
 
-        public Builder keyIdentifier(Input<String> keyIdentifier) {
+        public Builder keyIdentifier(Output<String> keyIdentifier) {
             this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
             return this;
         }
 
         public Builder keyIdentifier(String keyIdentifier) {
-            this.keyIdentifier = Input.of(Objects.requireNonNull(keyIdentifier));
+            this.keyIdentifier = Output.of(Objects.requireNonNull(keyIdentifier));
             return this;
         }
 
-        public Builder keyVaultArmId(Input<String> keyVaultArmId) {
+        public Builder keyVaultArmId(Output<String> keyVaultArmId) {
             this.keyVaultArmId = Objects.requireNonNull(keyVaultArmId);
             return this;
         }
 
         public Builder keyVaultArmId(String keyVaultArmId) {
-            this.keyVaultArmId = Input.of(Objects.requireNonNull(keyVaultArmId));
+            this.keyVaultArmId = Output.of(Objects.requireNonNull(keyVaultArmId));
             return this;
         }
         public KeyVaultPropertiesArgs build() {

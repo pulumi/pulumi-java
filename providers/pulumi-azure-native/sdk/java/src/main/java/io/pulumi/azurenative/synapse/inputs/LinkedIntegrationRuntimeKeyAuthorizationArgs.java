@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.SecureStringArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends io.pulum
      * 
      */
     @InputImport(name="authorizationType", required=true)
-      private final Input<String> authorizationType;
+      private final Output<String> authorizationType;
 
-    public Input<String> getAuthorizationType() {
+    public Output<String> getAuthorizationType() {
         return this.authorizationType;
     }
 
@@ -35,22 +35,22 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends io.pulum
      * 
      */
     @InputImport(name="key", required=true)
-      private final Input<SecureStringArgs> key;
+      private final Output<SecureStringArgs> key;
 
-    public Input<SecureStringArgs> getKey() {
+    public Output<SecureStringArgs> getKey() {
         return this.key;
     }
 
     public LinkedIntegrationRuntimeKeyAuthorizationArgs(
-        Input<String> authorizationType,
-        Input<SecureStringArgs> key) {
+        Output<String> authorizationType,
+        Output<SecureStringArgs> key) {
         this.authorizationType = Objects.requireNonNull(authorizationType, "expected parameter 'authorizationType' to be non-null");
         this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
     }
 
     private LinkedIntegrationRuntimeKeyAuthorizationArgs() {
-        this.authorizationType = Input.empty();
-        this.key = Input.empty();
+        this.authorizationType = Output.empty();
+        this.key = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends io.pulum
     }
 
     public static final class Builder {
-        private Input<String> authorizationType;
-        private Input<SecureStringArgs> key;
+        private Output<String> authorizationType;
+        private Output<SecureStringArgs> key;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends io.pulum
     	      this.key = defaults.key;
         }
 
-        public Builder authorizationType(Input<String> authorizationType) {
+        public Builder authorizationType(Output<String> authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
 
         public Builder authorizationType(String authorizationType) {
-            this.authorizationType = Input.of(Objects.requireNonNull(authorizationType));
+            this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
             return this;
         }
 
-        public Builder key(Input<SecureStringArgs> key) {
+        public Builder key(Output<SecureStringArgs> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
         public Builder key(SecureStringArgs key) {
-            this.key = Input.of(Objects.requireNonNull(key));
+            this.key = Output.of(Objects.requireNonNull(key));
             return this;
         }
         public LinkedIntegrationRuntimeKeyAuthorizationArgs build() {

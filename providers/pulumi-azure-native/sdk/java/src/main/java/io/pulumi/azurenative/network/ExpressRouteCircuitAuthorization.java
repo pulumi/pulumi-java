@@ -6,7 +6,6 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.ExpressRouteCircuitAuthorizationArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -154,56 +153,56 @@ public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public ExpressRouteCircuitAuthorization(String name, ExpressRouteCircuitAuthorizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ExpressRouteCircuitAuthorization", name, args == null ? ExpressRouteCircuitAuthorizationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:ExpressRouteCircuitAuthorization", name, args == null ? ExpressRouteCircuitAuthorizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ExpressRouteCircuitAuthorization(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ExpressRouteCircuitAuthorization(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ExpressRouteCircuitAuthorization", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20150501preview:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20150615:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160330:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160601:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160901:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20161201:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170301:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170601:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170801:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170901:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171001:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171101:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180101:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180201:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180601:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180701:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:ExpressRouteCircuitAuthorization").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:ExpressRouteCircuitAuthorization").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20150501preview:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20150615:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160330:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160601:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160901:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20161201:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:ExpressRouteCircuitAuthorization").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:ExpressRouteCircuitAuthorization").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -217,7 +216,7 @@ public class ExpressRouteCircuitAuthorization extends io.pulumi.resources.Custom
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ExpressRouteCircuitAuthorization get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ExpressRouteCircuitAuthorization get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ExpressRouteCircuitAuthorization(name, id, options);
     }
 }

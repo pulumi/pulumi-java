@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="advertisedCommunities")
-      private final @Nullable Input<List<String>> advertisedCommunities;
+      private final @Nullable Output<List<String>> advertisedCommunities;
 
-    public Input<List<String>> getAdvertisedCommunities() {
-        return this.advertisedCommunities == null ? Input.empty() : this.advertisedCommunities;
+    public Output<List<String>> getAdvertisedCommunities() {
+        return this.advertisedCommunities == null ? Output.empty() : this.advertisedCommunities;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="advertisedPublicPrefixes")
-      private final @Nullable Input<List<String>> advertisedPublicPrefixes;
+      private final @Nullable Output<List<String>> advertisedPublicPrefixes;
 
-    public Input<List<String>> getAdvertisedPublicPrefixes() {
-        return this.advertisedPublicPrefixes == null ? Input.empty() : this.advertisedPublicPrefixes;
+    public Output<List<String>> getAdvertisedPublicPrefixes() {
+        return this.advertisedPublicPrefixes == null ? Output.empty() : this.advertisedPublicPrefixes;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="customerASN")
-      private final @Nullable Input<Integer> customerASN;
+      private final @Nullable Output<Integer> customerASN;
 
-    public Input<Integer> getCustomerASN() {
-        return this.customerASN == null ? Input.empty() : this.customerASN;
+    public Output<Integer> getCustomerASN() {
+        return this.customerASN == null ? Output.empty() : this.customerASN;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="legacyMode")
-      private final @Nullable Input<Integer> legacyMode;
+      private final @Nullable Output<Integer> legacyMode;
 
-    public Input<Integer> getLegacyMode() {
-        return this.legacyMode == null ? Input.empty() : this.legacyMode;
+    public Output<Integer> getLegacyMode() {
+        return this.legacyMode == null ? Output.empty() : this.legacyMode;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="routingRegistryName")
-      private final @Nullable Input<String> routingRegistryName;
+      private final @Nullable Output<String> routingRegistryName;
 
-    public Input<String> getRoutingRegistryName() {
-        return this.routingRegistryName == null ? Input.empty() : this.routingRegistryName;
+    public Output<String> getRoutingRegistryName() {
+        return this.routingRegistryName == null ? Output.empty() : this.routingRegistryName;
     }
 
     public ExpressRouteCircuitPeeringConfigArgs(
-        @Nullable Input<List<String>> advertisedCommunities,
-        @Nullable Input<List<String>> advertisedPublicPrefixes,
-        @Nullable Input<Integer> customerASN,
-        @Nullable Input<Integer> legacyMode,
-        @Nullable Input<String> routingRegistryName) {
+        @Nullable Output<List<String>> advertisedCommunities,
+        @Nullable Output<List<String>> advertisedPublicPrefixes,
+        @Nullable Output<Integer> customerASN,
+        @Nullable Output<Integer> legacyMode,
+        @Nullable Output<String> routingRegistryName) {
         this.advertisedCommunities = advertisedCommunities;
         this.advertisedPublicPrefixes = advertisedPublicPrefixes;
         this.customerASN = customerASN;
@@ -89,11 +89,11 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
     }
 
     private ExpressRouteCircuitPeeringConfigArgs() {
-        this.advertisedCommunities = Input.empty();
-        this.advertisedPublicPrefixes = Input.empty();
-        this.customerASN = Input.empty();
-        this.legacyMode = Input.empty();
-        this.routingRegistryName = Input.empty();
+        this.advertisedCommunities = Output.empty();
+        this.advertisedPublicPrefixes = Output.empty();
+        this.customerASN = Output.empty();
+        this.legacyMode = Output.empty();
+        this.routingRegistryName = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> advertisedCommunities;
-        private @Nullable Input<List<String>> advertisedPublicPrefixes;
-        private @Nullable Input<Integer> customerASN;
-        private @Nullable Input<Integer> legacyMode;
-        private @Nullable Input<String> routingRegistryName;
+        private @Nullable Output<List<String>> advertisedCommunities;
+        private @Nullable Output<List<String>> advertisedPublicPrefixes;
+        private @Nullable Output<Integer> customerASN;
+        private @Nullable Output<Integer> legacyMode;
+        private @Nullable Output<String> routingRegistryName;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
     	      this.routingRegistryName = defaults.routingRegistryName;
         }
 
-        public Builder advertisedCommunities(@Nullable Input<List<String>> advertisedCommunities) {
+        public Builder advertisedCommunities(@Nullable Output<List<String>> advertisedCommunities) {
             this.advertisedCommunities = advertisedCommunities;
             return this;
         }
 
         public Builder advertisedCommunities(@Nullable List<String> advertisedCommunities) {
-            this.advertisedCommunities = Input.ofNullable(advertisedCommunities);
+            this.advertisedCommunities = Output.ofNullable(advertisedCommunities);
             return this;
         }
 
-        public Builder advertisedPublicPrefixes(@Nullable Input<List<String>> advertisedPublicPrefixes) {
+        public Builder advertisedPublicPrefixes(@Nullable Output<List<String>> advertisedPublicPrefixes) {
             this.advertisedPublicPrefixes = advertisedPublicPrefixes;
             return this;
         }
 
         public Builder advertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
-            this.advertisedPublicPrefixes = Input.ofNullable(advertisedPublicPrefixes);
+            this.advertisedPublicPrefixes = Output.ofNullable(advertisedPublicPrefixes);
             return this;
         }
 
-        public Builder customerASN(@Nullable Input<Integer> customerASN) {
+        public Builder customerASN(@Nullable Output<Integer> customerASN) {
             this.customerASN = customerASN;
             return this;
         }
 
         public Builder customerASN(@Nullable Integer customerASN) {
-            this.customerASN = Input.ofNullable(customerASN);
+            this.customerASN = Output.ofNullable(customerASN);
             return this;
         }
 
-        public Builder legacyMode(@Nullable Input<Integer> legacyMode) {
+        public Builder legacyMode(@Nullable Output<Integer> legacyMode) {
             this.legacyMode = legacyMode;
             return this;
         }
 
         public Builder legacyMode(@Nullable Integer legacyMode) {
-            this.legacyMode = Input.ofNullable(legacyMode);
+            this.legacyMode = Output.ofNullable(legacyMode);
             return this;
         }
 
-        public Builder routingRegistryName(@Nullable Input<String> routingRegistryName) {
+        public Builder routingRegistryName(@Nullable Output<String> routingRegistryName) {
             this.routingRegistryName = routingRegistryName;
             return this;
         }
 
         public Builder routingRegistryName(@Nullable String routingRegistryName) {
-            this.routingRegistryName = Input.ofNullable(routingRegistryName);
+            this.routingRegistryName = Output.ofNullable(routingRegistryName);
             return this;
         }
         public ExpressRouteCircuitPeeringConfigArgs build() {

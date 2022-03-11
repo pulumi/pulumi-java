@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.PublisherInfoArgs;
 import io.pulumi.azurenative.security.inputs.UserRecommendationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<String> action;
+      private final @Nullable Output<String> action;
 
-    public Input<String> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<String> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="common")
-      private final @Nullable Input<Boolean> common;
+      private final @Nullable Output<Boolean> common;
 
-    public Input<Boolean> getCommon() {
-        return this.common == null ? Input.empty() : this.common;
+    public Output<Boolean> getCommon() {
+        return this.common == null ? Output.empty() : this.common;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configurationStatus")
-      private final @Nullable Input<String> configurationStatus;
+      private final @Nullable Output<String> configurationStatus;
 
-    public Input<String> getConfigurationStatus() {
-        return this.configurationStatus == null ? Input.empty() : this.configurationStatus;
+    public Output<String> getConfigurationStatus() {
+        return this.configurationStatus == null ? Output.empty() : this.configurationStatus;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fileType")
-      private final @Nullable Input<String> fileType;
+      private final @Nullable Output<String> fileType;
 
-    public Input<String> getFileType() {
-        return this.fileType == null ? Input.empty() : this.fileType;
+    public Output<String> getFileType() {
+        return this.fileType == null ? Output.empty() : this.fileType;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<String> path;
+      private final @Nullable Output<String> path;
 
-    public Input<String> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<String> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publisherInfo")
-      private final @Nullable Input<PublisherInfoArgs> publisherInfo;
+      private final @Nullable Output<PublisherInfoArgs> publisherInfo;
 
-    public Input<PublisherInfoArgs> getPublisherInfo() {
-        return this.publisherInfo == null ? Input.empty() : this.publisherInfo;
+    public Output<PublisherInfoArgs> getPublisherInfo() {
+        return this.publisherInfo == null ? Output.empty() : this.publisherInfo;
     }
 
     /**
@@ -93,36 +93,36 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     @InputImport(name="userSids")
-      private final @Nullable Input<List<String>> userSids;
+      private final @Nullable Output<List<String>> userSids;
 
-    public Input<List<String>> getUserSids() {
-        return this.userSids == null ? Input.empty() : this.userSids;
+    public Output<List<String>> getUserSids() {
+        return this.userSids == null ? Output.empty() : this.userSids;
     }
 
     @InputImport(name="usernames")
-      private final @Nullable Input<List<UserRecommendationArgs>> usernames;
+      private final @Nullable Output<List<UserRecommendationArgs>> usernames;
 
-    public Input<List<UserRecommendationArgs>> getUsernames() {
-        return this.usernames == null ? Input.empty() : this.usernames;
+    public Output<List<UserRecommendationArgs>> getUsernames() {
+        return this.usernames == null ? Output.empty() : this.usernames;
     }
 
     public PathRecommendationArgs(
-        @Nullable Input<String> action,
-        @Nullable Input<Boolean> common,
-        @Nullable Input<String> configurationStatus,
-        @Nullable Input<String> fileType,
-        @Nullable Input<String> path,
-        @Nullable Input<PublisherInfoArgs> publisherInfo,
-        @Nullable Input<String> type,
-        @Nullable Input<List<String>> userSids,
-        @Nullable Input<List<UserRecommendationArgs>> usernames) {
+        @Nullable Output<String> action,
+        @Nullable Output<Boolean> common,
+        @Nullable Output<String> configurationStatus,
+        @Nullable Output<String> fileType,
+        @Nullable Output<String> path,
+        @Nullable Output<PublisherInfoArgs> publisherInfo,
+        @Nullable Output<String> type,
+        @Nullable Output<List<String>> userSids,
+        @Nullable Output<List<UserRecommendationArgs>> usernames) {
         this.action = action;
         this.common = common;
         this.configurationStatus = configurationStatus;
@@ -135,15 +135,15 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PathRecommendationArgs() {
-        this.action = Input.empty();
-        this.common = Input.empty();
-        this.configurationStatus = Input.empty();
-        this.fileType = Input.empty();
-        this.path = Input.empty();
-        this.publisherInfo = Input.empty();
-        this.type = Input.empty();
-        this.userSids = Input.empty();
-        this.usernames = Input.empty();
+        this.action = Output.empty();
+        this.common = Output.empty();
+        this.configurationStatus = Output.empty();
+        this.fileType = Output.empty();
+        this.path = Output.empty();
+        this.publisherInfo = Output.empty();
+        this.type = Output.empty();
+        this.userSids = Output.empty();
+        this.usernames = Output.empty();
     }
 
     public static Builder builder() {
@@ -155,15 +155,15 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> action;
-        private @Nullable Input<Boolean> common;
-        private @Nullable Input<String> configurationStatus;
-        private @Nullable Input<String> fileType;
-        private @Nullable Input<String> path;
-        private @Nullable Input<PublisherInfoArgs> publisherInfo;
-        private @Nullable Input<String> type;
-        private @Nullable Input<List<String>> userSids;
-        private @Nullable Input<List<UserRecommendationArgs>> usernames;
+        private @Nullable Output<String> action;
+        private @Nullable Output<Boolean> common;
+        private @Nullable Output<String> configurationStatus;
+        private @Nullable Output<String> fileType;
+        private @Nullable Output<String> path;
+        private @Nullable Output<PublisherInfoArgs> publisherInfo;
+        private @Nullable Output<String> type;
+        private @Nullable Output<List<String>> userSids;
+        private @Nullable Output<List<UserRecommendationArgs>> usernames;
 
         public Builder() {
     	      // Empty
@@ -182,93 +182,93 @@ public final class PathRecommendationArgs extends io.pulumi.resources.ResourceAr
     	      this.usernames = defaults.usernames;
         }
 
-        public Builder action(@Nullable Input<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable String action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder common(@Nullable Input<Boolean> common) {
+        public Builder common(@Nullable Output<Boolean> common) {
             this.common = common;
             return this;
         }
 
         public Builder common(@Nullable Boolean common) {
-            this.common = Input.ofNullable(common);
+            this.common = Output.ofNullable(common);
             return this;
         }
 
-        public Builder configurationStatus(@Nullable Input<String> configurationStatus) {
+        public Builder configurationStatus(@Nullable Output<String> configurationStatus) {
             this.configurationStatus = configurationStatus;
             return this;
         }
 
         public Builder configurationStatus(@Nullable String configurationStatus) {
-            this.configurationStatus = Input.ofNullable(configurationStatus);
+            this.configurationStatus = Output.ofNullable(configurationStatus);
             return this;
         }
 
-        public Builder fileType(@Nullable Input<String> fileType) {
+        public Builder fileType(@Nullable Output<String> fileType) {
             this.fileType = fileType;
             return this;
         }
 
         public Builder fileType(@Nullable String fileType) {
-            this.fileType = Input.ofNullable(fileType);
+            this.fileType = Output.ofNullable(fileType);
             return this;
         }
 
-        public Builder path(@Nullable Input<String> path) {
+        public Builder path(@Nullable Output<String> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable String path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
 
-        public Builder publisherInfo(@Nullable Input<PublisherInfoArgs> publisherInfo) {
+        public Builder publisherInfo(@Nullable Output<PublisherInfoArgs> publisherInfo) {
             this.publisherInfo = publisherInfo;
             return this;
         }
 
         public Builder publisherInfo(@Nullable PublisherInfoArgs publisherInfo) {
-            this.publisherInfo = Input.ofNullable(publisherInfo);
+            this.publisherInfo = Output.ofNullable(publisherInfo);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder userSids(@Nullable Input<List<String>> userSids) {
+        public Builder userSids(@Nullable Output<List<String>> userSids) {
             this.userSids = userSids;
             return this;
         }
 
         public Builder userSids(@Nullable List<String> userSids) {
-            this.userSids = Input.ofNullable(userSids);
+            this.userSids = Output.ofNullable(userSids);
             return this;
         }
 
-        public Builder usernames(@Nullable Input<List<UserRecommendationArgs>> usernames) {
+        public Builder usernames(@Nullable Output<List<UserRecommendationArgs>> usernames) {
             this.usernames = usernames;
             return this;
         }
 
         public Builder usernames(@Nullable List<UserRecommendationArgs> usernames) {
-            this.usernames = Input.ofNullable(usernames);
+            this.usernames = Output.ofNullable(usernames);
             return this;
         }
         public PathRecommendationArgs build() {

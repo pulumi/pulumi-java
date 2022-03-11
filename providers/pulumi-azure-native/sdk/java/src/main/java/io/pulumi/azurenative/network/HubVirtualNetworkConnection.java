@@ -8,7 +8,6 @@ import io.pulumi.azurenative.network.HubVirtualNetworkConnectionArgs;
 import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -185,25 +184,25 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public HubVirtualNetworkConnection(String name, HubVirtualNetworkConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:HubVirtualNetworkConnection", name, args == null ? HubVirtualNetworkConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:HubVirtualNetworkConnection", name, args == null ? HubVirtualNetworkConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private HubVirtualNetworkConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private HubVirtualNetworkConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:HubVirtualNetworkConnection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:HubVirtualNetworkConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:HubVirtualNetworkConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:HubVirtualNetworkConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:HubVirtualNetworkConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:HubVirtualNetworkConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:HubVirtualNetworkConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:HubVirtualNetworkConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:HubVirtualNetworkConnection").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:HubVirtualNetworkConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:HubVirtualNetworkConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -217,7 +216,7 @@ public class HubVirtualNetworkConnection extends io.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static HubVirtualNetworkConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static HubVirtualNetworkConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new HubVirtualNetworkConnection(name, id, options);
     }
 }

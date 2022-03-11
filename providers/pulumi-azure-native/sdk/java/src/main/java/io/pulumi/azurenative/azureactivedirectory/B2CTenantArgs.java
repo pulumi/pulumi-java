@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azureactivedirectory;
 
 import io.pulumi.azurenative.azureactivedirectory.inputs.B2CResourceSKUArgs;
 import io.pulumi.azurenative.azureactivedirectory.inputs.CreateTenantRequestBodyPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,16 +22,16 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="properties", required=true)
-      private final Input<CreateTenantRequestBodyPropertiesArgs> properties;
+      private final Output<CreateTenantRequestBodyPropertiesArgs> properties;
 
-    public Input<CreateTenantRequestBodyPropertiesArgs> getProperties() {
+    public Output<CreateTenantRequestBodyPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -40,9 +40,9 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -51,10 +51,10 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<B2CResourceSKUArgs> sku;
+      private final Output<B2CResourceSKUArgs> sku;
 
-    public Input<B2CResourceSKUArgs> getSku() {
+    public Output<B2CResourceSKUArgs> getSku() {
         return this.sku;
     }
 
@@ -73,19 +73,19 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public B2CTenantArgs(
-        @Nullable Input<String> location,
-        Input<CreateTenantRequestBodyPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        Input<B2CResourceSKUArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        Output<CreateTenantRequestBodyPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        Output<B2CResourceSKUArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -95,12 +95,12 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private B2CTenantArgs() {
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,12 +112,12 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private Input<CreateTenantRequestBodyPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private Input<B2CResourceSKUArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private Output<CreateTenantRequestBodyPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private Output<B2CResourceSKUArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -133,63 +133,63 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(Input<CreateTenantRequestBodyPropertiesArgs> properties) {
+        public Builder properties(Output<CreateTenantRequestBodyPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(CreateTenantRequestBodyPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder sku(Input<B2CResourceSKUArgs> sku) {
+        public Builder sku(Output<B2CResourceSKUArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(B2CResourceSKUArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public B2CTenantArgs build() {

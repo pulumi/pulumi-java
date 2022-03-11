@@ -13,7 +13,6 @@ import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkBgpCommunitiesResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkPeeringResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -317,56 +316,56 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualNetwork(String name, VirtualNetworkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:VirtualNetwork", name, args == null ? VirtualNetworkArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:VirtualNetwork", name, args == null ? VirtualNetworkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private VirtualNetwork(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private VirtualNetwork(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:VirtualNetwork", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20150501preview:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20150615:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160330:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160601:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160901:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20161201:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170301:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170601:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170801:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170901:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171001:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171101:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180101:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180201:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180601:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180701:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:VirtualNetwork").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:VirtualNetwork").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20150501preview:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20150615:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160330:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160601:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160901:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20161201:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:VirtualNetwork").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:VirtualNetwork").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -380,7 +379,7 @@ public class VirtualNetwork extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VirtualNetwork get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static VirtualNetwork get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new VirtualNetwork(name, id, options);
     }
 }

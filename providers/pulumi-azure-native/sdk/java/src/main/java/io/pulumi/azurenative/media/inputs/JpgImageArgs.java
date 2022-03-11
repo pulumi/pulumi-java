@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.StretchMode;
 import io.pulumi.azurenative.media.enums.VideoSyncMode;
 import io.pulumi.azurenative.media.inputs.JpgLayerArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyFrameInterval")
-      private final @Nullable Input<String> keyFrameInterval;
+      private final @Nullable Output<String> keyFrameInterval;
 
-    public Input<String> getKeyFrameInterval() {
-        return this.keyFrameInterval == null ? Input.empty() : this.keyFrameInterval;
+    public Output<String> getKeyFrameInterval() {
+        return this.keyFrameInterval == null ? Output.empty() : this.keyFrameInterval;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="layers")
-      private final @Nullable Input<List<JpgLayerArgs>> layers;
+      private final @Nullable Output<List<JpgLayerArgs>> layers;
 
-    public Input<List<JpgLayerArgs>> getLayers() {
-        return this.layers == null ? Input.empty() : this.layers;
+    public Output<List<JpgLayerArgs>> getLayers() {
+        return this.layers == null ? Output.empty() : this.layers;
     }
 
     /**
@@ -63,9 +63,9 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -74,10 +74,10 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="range")
-      private final @Nullable Input<String> range;
+      private final @Nullable Output<String> range;
 
-    public Input<String> getRange() {
-        return this.range == null ? Input.empty() : this.range;
+    public Output<String> getRange() {
+        return this.range == null ? Output.empty() : this.range;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spriteColumn")
-      private final @Nullable Input<Integer> spriteColumn;
+      private final @Nullable Output<Integer> spriteColumn;
 
-    public Input<Integer> getSpriteColumn() {
-        return this.spriteColumn == null ? Input.empty() : this.spriteColumn;
+    public Output<Integer> getSpriteColumn() {
+        return this.spriteColumn == null ? Output.empty() : this.spriteColumn;
     }
 
     /**
@@ -96,9 +96,9 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start", required=true)
-      private final Input<String> start;
+      private final Output<String> start;
 
-    public Input<String> getStart() {
+    public Output<String> getStart() {
         return this.start;
     }
 
@@ -107,10 +107,10 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="step")
-      private final @Nullable Input<String> step;
+      private final @Nullable Output<String> step;
 
-    public Input<String> getStep() {
-        return this.step == null ? Input.empty() : this.step;
+    public Output<String> getStep() {
+        return this.step == null ? Output.empty() : this.step;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stretchMode")
-      private final @Nullable Input<Either<String,StretchMode>> stretchMode;
+      private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Input<Either<String,StretchMode>> getStretchMode() {
-        return this.stretchMode == null ? Input.empty() : this.stretchMode;
+    public Output<Either<String,StretchMode>> getStretchMode() {
+        return this.stretchMode == null ? Output.empty() : this.stretchMode;
     }
 
     /**
@@ -129,23 +129,23 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncMode")
-      private final @Nullable Input<Either<String,VideoSyncMode>> syncMode;
+      private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
-    public Input<Either<String,VideoSyncMode>> getSyncMode() {
-        return this.syncMode == null ? Input.empty() : this.syncMode;
+    public Output<Either<String,VideoSyncMode>> getSyncMode() {
+        return this.syncMode == null ? Output.empty() : this.syncMode;
     }
 
     public JpgImageArgs(
-        @Nullable Input<String> keyFrameInterval,
-        @Nullable Input<String> label,
-        @Nullable Input<List<JpgLayerArgs>> layers,
-        Input<String> odataType,
-        @Nullable Input<String> range,
-        @Nullable Input<Integer> spriteColumn,
-        Input<String> start,
-        @Nullable Input<String> step,
-        @Nullable Input<Either<String,StretchMode>> stretchMode,
-        @Nullable Input<Either<String,VideoSyncMode>> syncMode) {
+        @Nullable Output<String> keyFrameInterval,
+        @Nullable Output<String> label,
+        @Nullable Output<List<JpgLayerArgs>> layers,
+        Output<String> odataType,
+        @Nullable Output<String> range,
+        @Nullable Output<Integer> spriteColumn,
+        Output<String> start,
+        @Nullable Output<String> step,
+        @Nullable Output<Either<String,StretchMode>> stretchMode,
+        @Nullable Output<Either<String,VideoSyncMode>> syncMode) {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.layers = layers;
@@ -159,16 +159,16 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JpgImageArgs() {
-        this.keyFrameInterval = Input.empty();
-        this.label = Input.empty();
-        this.layers = Input.empty();
-        this.odataType = Input.empty();
-        this.range = Input.empty();
-        this.spriteColumn = Input.empty();
-        this.start = Input.empty();
-        this.step = Input.empty();
-        this.stretchMode = Input.empty();
-        this.syncMode = Input.empty();
+        this.keyFrameInterval = Output.empty();
+        this.label = Output.empty();
+        this.layers = Output.empty();
+        this.odataType = Output.empty();
+        this.range = Output.empty();
+        this.spriteColumn = Output.empty();
+        this.start = Output.empty();
+        this.step = Output.empty();
+        this.stretchMode = Output.empty();
+        this.syncMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -180,16 +180,16 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyFrameInterval;
-        private @Nullable Input<String> label;
-        private @Nullable Input<List<JpgLayerArgs>> layers;
-        private Input<String> odataType;
-        private @Nullable Input<String> range;
-        private @Nullable Input<Integer> spriteColumn;
-        private Input<String> start;
-        private @Nullable Input<String> step;
-        private @Nullable Input<Either<String,StretchMode>> stretchMode;
-        private @Nullable Input<Either<String,VideoSyncMode>> syncMode;
+        private @Nullable Output<String> keyFrameInterval;
+        private @Nullable Output<String> label;
+        private @Nullable Output<List<JpgLayerArgs>> layers;
+        private Output<String> odataType;
+        private @Nullable Output<String> range;
+        private @Nullable Output<Integer> spriteColumn;
+        private Output<String> start;
+        private @Nullable Output<String> step;
+        private @Nullable Output<Either<String,StretchMode>> stretchMode;
+        private @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
         public Builder() {
     	      // Empty
@@ -209,103 +209,103 @@ public final class JpgImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syncMode = defaults.syncMode;
         }
 
-        public Builder keyFrameInterval(@Nullable Input<String> keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = Input.ofNullable(keyFrameInterval);
+            this.keyFrameInterval = Output.ofNullable(keyFrameInterval);
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder layers(@Nullable Input<List<JpgLayerArgs>> layers) {
+        public Builder layers(@Nullable Output<List<JpgLayerArgs>> layers) {
             this.layers = layers;
             return this;
         }
 
         public Builder layers(@Nullable List<JpgLayerArgs> layers) {
-            this.layers = Input.ofNullable(layers);
+            this.layers = Output.ofNullable(layers);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder range(@Nullable Input<String> range) {
+        public Builder range(@Nullable Output<String> range) {
             this.range = range;
             return this;
         }
 
         public Builder range(@Nullable String range) {
-            this.range = Input.ofNullable(range);
+            this.range = Output.ofNullable(range);
             return this;
         }
 
-        public Builder spriteColumn(@Nullable Input<Integer> spriteColumn) {
+        public Builder spriteColumn(@Nullable Output<Integer> spriteColumn) {
             this.spriteColumn = spriteColumn;
             return this;
         }
 
         public Builder spriteColumn(@Nullable Integer spriteColumn) {
-            this.spriteColumn = Input.ofNullable(spriteColumn);
+            this.spriteColumn = Output.ofNullable(spriteColumn);
             return this;
         }
 
-        public Builder start(Input<String> start) {
+        public Builder start(Output<String> start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
         public Builder start(String start) {
-            this.start = Input.of(Objects.requireNonNull(start));
+            this.start = Output.of(Objects.requireNonNull(start));
             return this;
         }
 
-        public Builder step(@Nullable Input<String> step) {
+        public Builder step(@Nullable Output<String> step) {
             this.step = step;
             return this;
         }
 
         public Builder step(@Nullable String step) {
-            this.step = Input.ofNullable(step);
+            this.step = Output.ofNullable(step);
             return this;
         }
 
-        public Builder stretchMode(@Nullable Input<Either<String,StretchMode>> stretchMode) {
+        public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
 
         public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
-            this.stretchMode = Input.ofNullable(stretchMode);
+            this.stretchMode = Output.ofNullable(stretchMode);
             return this;
         }
 
-        public Builder syncMode(@Nullable Input<Either<String,VideoSyncMode>> syncMode) {
+        public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
             this.syncMode = syncMode;
             return this;
         }
 
         public Builder syncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
-            this.syncMode = Input.ofNullable(syncMode);
+            this.syncMode = Output.ofNullable(syncMode);
             return this;
         }
         public JpgImageArgs build() {

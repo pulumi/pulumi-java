@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="default", required=true)
-      private final Input<String> $default;
+      private final Output<String> $default;
 
-    public Input<String> get$default() {
+    public Output<String> get$default() {
         return this.$default;
     }
 
@@ -33,9 +33,9 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximum", required=true)
-      private final Input<String> maximum;
+      private final Output<String> maximum;
 
-    public Input<String> getMaximum() {
+    public Output<String> getMaximum() {
         return this.maximum;
     }
 
@@ -44,25 +44,25 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimum", required=true)
-      private final Input<String> minimum;
+      private final Output<String> minimum;
 
-    public Input<String> getMinimum() {
+    public Output<String> getMinimum() {
         return this.minimum;
     }
 
     public ScaleCapacityArgs(
-        Input<String> $default,
-        Input<String> maximum,
-        Input<String> minimum) {
+        Output<String> $default,
+        Output<String> maximum,
+        Output<String> minimum) {
         this.$default = Objects.requireNonNull($default, "expected parameter '$default' to be non-null");
         this.maximum = Objects.requireNonNull(maximum, "expected parameter 'maximum' to be non-null");
         this.minimum = Objects.requireNonNull(minimum, "expected parameter 'minimum' to be non-null");
     }
 
     private ScaleCapacityArgs() {
-        this.$default = Input.empty();
-        this.maximum = Input.empty();
-        this.minimum = Input.empty();
+        this.$default = Output.empty();
+        this.maximum = Output.empty();
+        this.minimum = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> $default;
-        private Input<String> maximum;
-        private Input<String> minimum;
+        private Output<String> $default;
+        private Output<String> maximum;
+        private Output<String> minimum;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class ScaleCapacityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.minimum = defaults.minimum;
         }
 
-        public Builder $default(Input<String> $default) {
+        public Builder $default(Output<String> $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
 
         public Builder $default(String $default) {
-            this.$default = Input.of(Objects.requireNonNull($default));
+            this.$default = Output.of(Objects.requireNonNull($default));
             return this;
         }
 
-        public Builder maximum(Input<String> maximum) {
+        public Builder maximum(Output<String> maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
 
         public Builder maximum(String maximum) {
-            this.maximum = Input.of(Objects.requireNonNull(maximum));
+            this.maximum = Output.of(Objects.requireNonNull(maximum));
             return this;
         }
 
-        public Builder minimum(Input<String> minimum) {
+        public Builder minimum(Output<String> minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
 
         public Builder minimum(String minimum) {
-            this.minimum = Input.of(Objects.requireNonNull(minimum));
+            this.minimum = Output.of(Objects.requireNonNull(minimum));
             return this;
         }
         public ScaleCapacityArgs build() {

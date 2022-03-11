@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningexperimentation.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="accessKey", required=true)
-      private final Input<String> accessKey;
+      private final Output<String> accessKey;
 
-    public Input<String> getAccessKey() {
+    public Output<String> getAccessKey() {
         return this.accessKey;
     }
 
@@ -33,22 +33,22 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="storageAccountId", required=true)
-      private final Input<String> storageAccountId;
+      private final Output<String> storageAccountId;
 
-    public Input<String> getStorageAccountId() {
+    public Output<String> getStorageAccountId() {
         return this.storageAccountId;
     }
 
     public StorageAccountPropertiesArgs(
-        Input<String> accessKey,
-        Input<String> storageAccountId) {
+        Output<String> accessKey,
+        Output<String> storageAccountId) {
         this.accessKey = Objects.requireNonNull(accessKey, "expected parameter 'accessKey' to be non-null");
         this.storageAccountId = Objects.requireNonNull(storageAccountId, "expected parameter 'storageAccountId' to be non-null");
     }
 
     private StorageAccountPropertiesArgs() {
-        this.accessKey = Input.empty();
-        this.storageAccountId = Input.empty();
+        this.accessKey = Output.empty();
+        this.storageAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> accessKey;
-        private Input<String> storageAccountId;
+        private Output<String> accessKey;
+        private Output<String> storageAccountId;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder accessKey(Input<String> accessKey) {
+        public Builder accessKey(Output<String> accessKey) {
             this.accessKey = Objects.requireNonNull(accessKey);
             return this;
         }
 
         public Builder accessKey(String accessKey) {
-            this.accessKey = Input.of(Objects.requireNonNull(accessKey));
+            this.accessKey = Output.of(Objects.requireNonNull(accessKey));
             return this;
         }
 
-        public Builder storageAccountId(Input<String> storageAccountId) {
+        public Builder storageAccountId(Output<String> storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
 
         public Builder storageAccountId(String storageAccountId) {
-            this.storageAccountId = Input.of(Objects.requireNonNull(storageAccountId));
+            this.storageAccountId = Output.of(Objects.requireNonNull(storageAccountId));
             return this;
         }
         public StorageAccountPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="domainNameLabel")
-      private final @Nullable Input<String> domainNameLabel;
+      private final @Nullable Output<String> domainNameLabel;
 
-    public Input<String> getDomainNameLabel() {
-        return this.domainNameLabel == null ? Input.empty() : this.domainNameLabel;
+    public Output<String> getDomainNameLabel() {
+        return this.domainNameLabel == null ? Output.empty() : this.domainNameLabel;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fqdn")
-      private final @Nullable Input<String> fqdn;
+      private final @Nullable Output<String> fqdn;
 
-    public Input<String> getFqdn() {
-        return this.fqdn == null ? Input.empty() : this.fqdn;
+    public Output<String> getFqdn() {
+        return this.fqdn == null ? Output.empty() : this.fqdn;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="reverseFqdn")
-      private final @Nullable Input<String> reverseFqdn;
+      private final @Nullable Output<String> reverseFqdn;
 
-    public Input<String> getReverseFqdn() {
-        return this.reverseFqdn == null ? Input.empty() : this.reverseFqdn;
+    public Output<String> getReverseFqdn() {
+        return this.reverseFqdn == null ? Output.empty() : this.reverseFqdn;
     }
 
     public PublicIPAddressDnsSettingsArgs(
-        @Nullable Input<String> domainNameLabel,
-        @Nullable Input<String> fqdn,
-        @Nullable Input<String> reverseFqdn) {
+        @Nullable Output<String> domainNameLabel,
+        @Nullable Output<String> fqdn,
+        @Nullable Output<String> reverseFqdn) {
         this.domainNameLabel = domainNameLabel;
         this.fqdn = fqdn;
         this.reverseFqdn = reverseFqdn;
     }
 
     private PublicIPAddressDnsSettingsArgs() {
-        this.domainNameLabel = Input.empty();
-        this.fqdn = Input.empty();
-        this.reverseFqdn = Input.empty();
+        this.domainNameLabel = Output.empty();
+        this.fqdn = Output.empty();
+        this.reverseFqdn = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> domainNameLabel;
-        private @Nullable Input<String> fqdn;
-        private @Nullable Input<String> reverseFqdn;
+        private @Nullable Output<String> domainNameLabel;
+        private @Nullable Output<String> fqdn;
+        private @Nullable Output<String> reverseFqdn;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class PublicIPAddressDnsSettingsArgs extends io.pulumi.resources.Re
     	      this.reverseFqdn = defaults.reverseFqdn;
         }
 
-        public Builder domainNameLabel(@Nullable Input<String> domainNameLabel) {
+        public Builder domainNameLabel(@Nullable Output<String> domainNameLabel) {
             this.domainNameLabel = domainNameLabel;
             return this;
         }
 
         public Builder domainNameLabel(@Nullable String domainNameLabel) {
-            this.domainNameLabel = Input.ofNullable(domainNameLabel);
+            this.domainNameLabel = Output.ofNullable(domainNameLabel);
             return this;
         }
 
-        public Builder fqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Input.ofNullable(fqdn);
+            this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
 
-        public Builder reverseFqdn(@Nullable Input<String> reverseFqdn) {
+        public Builder reverseFqdn(@Nullable Output<String> reverseFqdn) {
             this.reverseFqdn = reverseFqdn;
             return this;
         }
 
         public Builder reverseFqdn(@Nullable String reverseFqdn) {
-            this.reverseFqdn = Input.ofNullable(reverseFqdn);
+            this.reverseFqdn = Output.ofNullable(reverseFqdn);
             return this;
         }
         public PublicIPAddressDnsSettingsArgs build() {

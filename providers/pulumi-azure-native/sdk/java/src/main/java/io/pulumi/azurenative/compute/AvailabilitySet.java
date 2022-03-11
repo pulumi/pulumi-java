@@ -9,7 +9,6 @@ import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.SkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -215,34 +214,34 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AvailabilitySet(String name, AvailabilitySetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:AvailabilitySet", name, args == null ? AvailabilitySetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:AvailabilitySet", name, args == null ? AvailabilitySetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AvailabilitySet(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AvailabilitySet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:AvailabilitySet", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20150615:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20160330:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20160430preview:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20170330:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20171201:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180401:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180601:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20181001:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190301:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190701:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20191201:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200601:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20201201:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210301:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210401:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210701:AvailabilitySet").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20211101:AvailabilitySet").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20150615:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20160330:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20160430preview:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20170330:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20171201:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180401:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180601:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20181001:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190301:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190701:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20191201:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200601:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20201201:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210301:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210401:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210701:AvailabilitySet").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20211101:AvailabilitySet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -256,7 +255,7 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AvailabilitySet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AvailabilitySet get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AvailabilitySet(name, id, options);
     }
 }

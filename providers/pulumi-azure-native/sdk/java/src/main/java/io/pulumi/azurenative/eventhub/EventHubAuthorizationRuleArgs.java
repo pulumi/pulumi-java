@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.azurenative.eventhub.enums.AccessRights;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="authorizationRuleName")
-      private final @Nullable Input<String> authorizationRuleName;
+      private final @Nullable Output<String> authorizationRuleName;
 
-    public Input<String> getAuthorizationRuleName() {
-        return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
+    public Output<String> getAuthorizationRuleName() {
+        return this.authorizationRuleName == null ? Output.empty() : this.authorizationRuleName;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="eventHubName", required=true)
-      private final Input<String> eventHubName;
+      private final Output<String> eventHubName;
 
-    public Input<String> getEventHubName() {
+    public Output<String> getEventHubName() {
         return this.eventHubName;
     }
 
@@ -44,9 +44,9 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -55,9 +55,9 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,18 +66,18 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rights", required=true)
-      private final Input<List<Either<String,AccessRights>>> rights;
+      private final Output<List<Either<String,AccessRights>>> rights;
 
-    public Input<List<Either<String,AccessRights>>> getRights() {
+    public Output<List<Either<String,AccessRights>>> getRights() {
         return this.rights;
     }
 
     public EventHubAuthorizationRuleArgs(
-        @Nullable Input<String> authorizationRuleName,
-        Input<String> eventHubName,
-        Input<String> namespaceName,
-        Input<String> resourceGroupName,
-        Input<List<Either<String,AccessRights>>> rights) {
+        @Nullable Output<String> authorizationRuleName,
+        Output<String> eventHubName,
+        Output<String> namespaceName,
+        Output<String> resourceGroupName,
+        Output<List<Either<String,AccessRights>>> rights) {
         this.authorizationRuleName = authorizationRuleName;
         this.eventHubName = Objects.requireNonNull(eventHubName, "expected parameter 'eventHubName' to be non-null");
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
@@ -86,11 +86,11 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
     }
 
     private EventHubAuthorizationRuleArgs() {
-        this.authorizationRuleName = Input.empty();
-        this.eventHubName = Input.empty();
-        this.namespaceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.rights = Input.empty();
+        this.authorizationRuleName = Output.empty();
+        this.eventHubName = Output.empty();
+        this.namespaceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.rights = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizationRuleName;
-        private Input<String> eventHubName;
-        private Input<String> namespaceName;
-        private Input<String> resourceGroupName;
-        private Input<List<Either<String,AccessRights>>> rights;
+        private @Nullable Output<String> authorizationRuleName;
+        private Output<String> eventHubName;
+        private Output<String> namespaceName;
+        private Output<String> resourceGroupName;
+        private Output<List<Either<String,AccessRights>>> rights;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class EventHubAuthorizationRuleArgs extends io.pulumi.resources.Res
     	      this.rights = defaults.rights;
         }
 
-        public Builder authorizationRuleName(@Nullable Input<String> authorizationRuleName) {
+        public Builder authorizationRuleName(@Nullable Output<String> authorizationRuleName) {
             this.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
-            this.authorizationRuleName = Input.ofNullable(authorizationRuleName);
+            this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
             return this;
         }
 
-        public Builder eventHubName(Input<String> eventHubName) {
+        public Builder eventHubName(Output<String> eventHubName) {
             this.eventHubName = Objects.requireNonNull(eventHubName);
             return this;
         }
 
         public Builder eventHubName(String eventHubName) {
-            this.eventHubName = Input.of(Objects.requireNonNull(eventHubName));
+            this.eventHubName = Output.of(Objects.requireNonNull(eventHubName));
             return this;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder rights(Input<List<Either<String,AccessRights>>> rights) {
+        public Builder rights(Output<List<Either<String,AccessRights>>> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
 
         public Builder rights(List<Either<String,AccessRights>> rights) {
-            this.rights = Input.of(Objects.requireNonNull(rights));
+            this.rights = Output.of(Objects.requireNonNull(rights));
             return this;
         }
         public EventHubAuthorizationRuleArgs build() {

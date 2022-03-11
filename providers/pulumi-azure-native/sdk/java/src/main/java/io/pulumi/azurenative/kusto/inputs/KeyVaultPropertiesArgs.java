@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyName", required=true)
-      private final Input<String> keyName;
+      private final Output<String> keyName;
 
-    public Input<String> getKeyName() {
+    public Output<String> getKeyName() {
         return this.keyName;
     }
 
@@ -34,9 +34,9 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVaultUri", required=true)
-      private final Input<String> keyVaultUri;
+      private final Output<String> keyVaultUri;
 
-    public Input<String> getKeyVaultUri() {
+    public Output<String> getKeyVaultUri() {
         return this.keyVaultUri;
     }
 
@@ -45,10 +45,10 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyVersion")
-      private final @Nullable Input<String> keyVersion;
+      private final @Nullable Output<String> keyVersion;
 
-    public Input<String> getKeyVersion() {
-        return this.keyVersion == null ? Input.empty() : this.keyVersion;
+    public Output<String> getKeyVersion() {
+        return this.keyVersion == null ? Output.empty() : this.keyVersion;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="userIdentity")
-      private final @Nullable Input<String> userIdentity;
+      private final @Nullable Output<String> userIdentity;
 
-    public Input<String> getUserIdentity() {
-        return this.userIdentity == null ? Input.empty() : this.userIdentity;
+    public Output<String> getUserIdentity() {
+        return this.userIdentity == null ? Output.empty() : this.userIdentity;
     }
 
     public KeyVaultPropertiesArgs(
-        Input<String> keyName,
-        Input<String> keyVaultUri,
-        @Nullable Input<String> keyVersion,
-        @Nullable Input<String> userIdentity) {
+        Output<String> keyName,
+        Output<String> keyVaultUri,
+        @Nullable Output<String> keyVersion,
+        @Nullable Output<String> userIdentity) {
         this.keyName = Objects.requireNonNull(keyName, "expected parameter 'keyName' to be non-null");
         this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
         this.keyVersion = keyVersion;
@@ -74,10 +74,10 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private KeyVaultPropertiesArgs() {
-        this.keyName = Input.empty();
-        this.keyVaultUri = Input.empty();
-        this.keyVersion = Input.empty();
-        this.userIdentity = Input.empty();
+        this.keyName = Output.empty();
+        this.keyVaultUri = Output.empty();
+        this.keyVersion = Output.empty();
+        this.userIdentity = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> keyName;
-        private Input<String> keyVaultUri;
-        private @Nullable Input<String> keyVersion;
-        private @Nullable Input<String> userIdentity;
+        private Output<String> keyName;
+        private Output<String> keyVaultUri;
+        private @Nullable Output<String> keyVersion;
+        private @Nullable Output<String> userIdentity;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.userIdentity = defaults.userIdentity;
         }
 
-        public Builder keyName(Input<String> keyName) {
+        public Builder keyName(Output<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
         public Builder keyName(String keyName) {
-            this.keyName = Input.of(Objects.requireNonNull(keyName));
+            this.keyName = Output.of(Objects.requireNonNull(keyName));
             return this;
         }
 
-        public Builder keyVaultUri(Input<String> keyVaultUri) {
+        public Builder keyVaultUri(Output<String> keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
 
         public Builder keyVaultUri(String keyVaultUri) {
-            this.keyVaultUri = Input.of(Objects.requireNonNull(keyVaultUri));
+            this.keyVaultUri = Output.of(Objects.requireNonNull(keyVaultUri));
             return this;
         }
 
-        public Builder keyVersion(@Nullable Input<String> keyVersion) {
+        public Builder keyVersion(@Nullable Output<String> keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
         public Builder keyVersion(@Nullable String keyVersion) {
-            this.keyVersion = Input.ofNullable(keyVersion);
+            this.keyVersion = Output.ofNullable(keyVersion);
             return this;
         }
 
-        public Builder userIdentity(@Nullable Input<String> userIdentity) {
+        public Builder userIdentity(@Nullable Output<String> userIdentity) {
             this.userIdentity = userIdentity;
             return this;
         }
 
         public Builder userIdentity(@Nullable String userIdentity) {
-            this.userIdentity = Input.ofNullable(userIdentity);
+            this.userIdentity = Output.ofNullable(userIdentity);
             return this;
         }
         public KeyVaultPropertiesArgs build() {

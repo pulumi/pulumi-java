@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
@@ -24,10 +24,10 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Object> count;
+      private final @Nullable Output<Object> count;
 
-    public Input<Object> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Object> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intervalInSeconds")
-      private final @Nullable Input<Integer> intervalInSeconds;
+      private final @Nullable Output<Integer> intervalInSeconds;
 
-    public Input<Integer> getIntervalInSeconds() {
-        return this.intervalInSeconds == null ? Input.empty() : this.intervalInSeconds;
+    public Output<Integer> getIntervalInSeconds() {
+        return this.intervalInSeconds == null ? Output.empty() : this.intervalInSeconds;
     }
 
     public RetryPolicyArgs(
-        @Nullable Input<Object> count,
-        @Nullable Input<Integer> intervalInSeconds) {
+        @Nullable Output<Object> count,
+        @Nullable Output<Integer> intervalInSeconds) {
         this.count = count;
         this.intervalInSeconds = intervalInSeconds;
     }
 
     private RetryPolicyArgs() {
-        this.count = Input.empty();
-        this.intervalInSeconds = Input.empty();
+        this.count = Output.empty();
+        this.intervalInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> count;
-        private @Nullable Input<Integer> intervalInSeconds;
+        private @Nullable Output<Object> count;
+        private @Nullable Output<Integer> intervalInSeconds;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.intervalInSeconds = defaults.intervalInSeconds;
         }
 
-        public Builder count(@Nullable Input<Object> count) {
+        public Builder count(@Nullable Output<Object> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Object count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder intervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Output<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Input.ofNullable(intervalInSeconds);
+            this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
             return this;
         }
         public RetryPolicyArgs build() {

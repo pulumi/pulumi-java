@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.RectangleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audioGainLevel")
-      private final @Nullable Input<Double> audioGainLevel;
+      private final @Nullable Output<Double> audioGainLevel;
 
-    public Input<Double> getAudioGainLevel() {
-        return this.audioGainLevel == null ? Input.empty() : this.audioGainLevel;
+    public Output<Double> getAudioGainLevel() {
+        return this.audioGainLevel == null ? Output.empty() : this.audioGainLevel;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cropRectangle")
-      private final @Nullable Input<RectangleArgs> cropRectangle;
+      private final @Nullable Output<RectangleArgs> cropRectangle;
 
-    public Input<RectangleArgs> getCropRectangle() {
-        return this.cropRectangle == null ? Input.empty() : this.cropRectangle;
+    public Output<RectangleArgs> getCropRectangle() {
+        return this.cropRectangle == null ? Output.empty() : this.cropRectangle;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="end")
-      private final @Nullable Input<String> end;
+      private final @Nullable Output<String> end;
 
-    public Input<String> getEnd() {
-        return this.end == null ? Input.empty() : this.end;
+    public Output<String> getEnd() {
+        return this.end == null ? Output.empty() : this.end;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fadeInDuration")
-      private final @Nullable Input<String> fadeInDuration;
+      private final @Nullable Output<String> fadeInDuration;
 
-    public Input<String> getFadeInDuration() {
-        return this.fadeInDuration == null ? Input.empty() : this.fadeInDuration;
+    public Output<String> getFadeInDuration() {
+        return this.fadeInDuration == null ? Output.empty() : this.fadeInDuration;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fadeOutDuration")
-      private final @Nullable Input<String> fadeOutDuration;
+      private final @Nullable Output<String> fadeOutDuration;
 
-    public Input<String> getFadeOutDuration() {
-        return this.fadeOutDuration == null ? Input.empty() : this.fadeOutDuration;
+    public Output<String> getFadeOutDuration() {
+        return this.fadeOutDuration == null ? Output.empty() : this.fadeOutDuration;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputLabel", required=true)
-      private final Input<String> inputLabel;
+      private final Output<String> inputLabel;
 
-    public Input<String> getInputLabel() {
+    public Output<String> getInputLabel() {
         return this.inputLabel;
     }
 
@@ -92,9 +92,9 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -103,10 +103,10 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="opacity")
-      private final @Nullable Input<Double> opacity;
+      private final @Nullable Output<Double> opacity;
 
-    public Input<Double> getOpacity() {
-        return this.opacity == null ? Input.empty() : this.opacity;
+    public Output<Double> getOpacity() {
+        return this.opacity == null ? Output.empty() : this.opacity;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="position")
-      private final @Nullable Input<RectangleArgs> position;
+      private final @Nullable Output<RectangleArgs> position;
 
-    public Input<RectangleArgs> getPosition() {
-        return this.position == null ? Input.empty() : this.position;
+    public Output<RectangleArgs> getPosition() {
+        return this.position == null ? Output.empty() : this.position;
     }
 
     /**
@@ -125,23 +125,23 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start")
-      private final @Nullable Input<String> start;
+      private final @Nullable Output<String> start;
 
-    public Input<String> getStart() {
-        return this.start == null ? Input.empty() : this.start;
+    public Output<String> getStart() {
+        return this.start == null ? Output.empty() : this.start;
     }
 
     public VideoOverlayArgs(
-        @Nullable Input<Double> audioGainLevel,
-        @Nullable Input<RectangleArgs> cropRectangle,
-        @Nullable Input<String> end,
-        @Nullable Input<String> fadeInDuration,
-        @Nullable Input<String> fadeOutDuration,
-        Input<String> inputLabel,
-        Input<String> odataType,
-        @Nullable Input<Double> opacity,
-        @Nullable Input<RectangleArgs> position,
-        @Nullable Input<String> start) {
+        @Nullable Output<Double> audioGainLevel,
+        @Nullable Output<RectangleArgs> cropRectangle,
+        @Nullable Output<String> end,
+        @Nullable Output<String> fadeInDuration,
+        @Nullable Output<String> fadeOutDuration,
+        Output<String> inputLabel,
+        Output<String> odataType,
+        @Nullable Output<Double> opacity,
+        @Nullable Output<RectangleArgs> position,
+        @Nullable Output<String> start) {
         this.audioGainLevel = audioGainLevel;
         this.cropRectangle = cropRectangle;
         this.end = end;
@@ -155,16 +155,16 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VideoOverlayArgs() {
-        this.audioGainLevel = Input.empty();
-        this.cropRectangle = Input.empty();
-        this.end = Input.empty();
-        this.fadeInDuration = Input.empty();
-        this.fadeOutDuration = Input.empty();
-        this.inputLabel = Input.empty();
-        this.odataType = Input.empty();
-        this.opacity = Input.empty();
-        this.position = Input.empty();
-        this.start = Input.empty();
+        this.audioGainLevel = Output.empty();
+        this.cropRectangle = Output.empty();
+        this.end = Output.empty();
+        this.fadeInDuration = Output.empty();
+        this.fadeOutDuration = Output.empty();
+        this.inputLabel = Output.empty();
+        this.odataType = Output.empty();
+        this.opacity = Output.empty();
+        this.position = Output.empty();
+        this.start = Output.empty();
     }
 
     public static Builder builder() {
@@ -176,16 +176,16 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> audioGainLevel;
-        private @Nullable Input<RectangleArgs> cropRectangle;
-        private @Nullable Input<String> end;
-        private @Nullable Input<String> fadeInDuration;
-        private @Nullable Input<String> fadeOutDuration;
-        private Input<String> inputLabel;
-        private Input<String> odataType;
-        private @Nullable Input<Double> opacity;
-        private @Nullable Input<RectangleArgs> position;
-        private @Nullable Input<String> start;
+        private @Nullable Output<Double> audioGainLevel;
+        private @Nullable Output<RectangleArgs> cropRectangle;
+        private @Nullable Output<String> end;
+        private @Nullable Output<String> fadeInDuration;
+        private @Nullable Output<String> fadeOutDuration;
+        private Output<String> inputLabel;
+        private Output<String> odataType;
+        private @Nullable Output<Double> opacity;
+        private @Nullable Output<RectangleArgs> position;
+        private @Nullable Output<String> start;
 
         public Builder() {
     	      // Empty
@@ -205,103 +205,103 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.start = defaults.start;
         }
 
-        public Builder audioGainLevel(@Nullable Input<Double> audioGainLevel) {
+        public Builder audioGainLevel(@Nullable Output<Double> audioGainLevel) {
             this.audioGainLevel = audioGainLevel;
             return this;
         }
 
         public Builder audioGainLevel(@Nullable Double audioGainLevel) {
-            this.audioGainLevel = Input.ofNullable(audioGainLevel);
+            this.audioGainLevel = Output.ofNullable(audioGainLevel);
             return this;
         }
 
-        public Builder cropRectangle(@Nullable Input<RectangleArgs> cropRectangle) {
+        public Builder cropRectangle(@Nullable Output<RectangleArgs> cropRectangle) {
             this.cropRectangle = cropRectangle;
             return this;
         }
 
         public Builder cropRectangle(@Nullable RectangleArgs cropRectangle) {
-            this.cropRectangle = Input.ofNullable(cropRectangle);
+            this.cropRectangle = Output.ofNullable(cropRectangle);
             return this;
         }
 
-        public Builder end(@Nullable Input<String> end) {
+        public Builder end(@Nullable Output<String> end) {
             this.end = end;
             return this;
         }
 
         public Builder end(@Nullable String end) {
-            this.end = Input.ofNullable(end);
+            this.end = Output.ofNullable(end);
             return this;
         }
 
-        public Builder fadeInDuration(@Nullable Input<String> fadeInDuration) {
+        public Builder fadeInDuration(@Nullable Output<String> fadeInDuration) {
             this.fadeInDuration = fadeInDuration;
             return this;
         }
 
         public Builder fadeInDuration(@Nullable String fadeInDuration) {
-            this.fadeInDuration = Input.ofNullable(fadeInDuration);
+            this.fadeInDuration = Output.ofNullable(fadeInDuration);
             return this;
         }
 
-        public Builder fadeOutDuration(@Nullable Input<String> fadeOutDuration) {
+        public Builder fadeOutDuration(@Nullable Output<String> fadeOutDuration) {
             this.fadeOutDuration = fadeOutDuration;
             return this;
         }
 
         public Builder fadeOutDuration(@Nullable String fadeOutDuration) {
-            this.fadeOutDuration = Input.ofNullable(fadeOutDuration);
+            this.fadeOutDuration = Output.ofNullable(fadeOutDuration);
             return this;
         }
 
-        public Builder inputLabel(Input<String> inputLabel) {
+        public Builder inputLabel(Output<String> inputLabel) {
             this.inputLabel = Objects.requireNonNull(inputLabel);
             return this;
         }
 
         public Builder inputLabel(String inputLabel) {
-            this.inputLabel = Input.of(Objects.requireNonNull(inputLabel));
+            this.inputLabel = Output.of(Objects.requireNonNull(inputLabel));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder opacity(@Nullable Input<Double> opacity) {
+        public Builder opacity(@Nullable Output<Double> opacity) {
             this.opacity = opacity;
             return this;
         }
 
         public Builder opacity(@Nullable Double opacity) {
-            this.opacity = Input.ofNullable(opacity);
+            this.opacity = Output.ofNullable(opacity);
             return this;
         }
 
-        public Builder position(@Nullable Input<RectangleArgs> position) {
+        public Builder position(@Nullable Output<RectangleArgs> position) {
             this.position = position;
             return this;
         }
 
         public Builder position(@Nullable RectangleArgs position) {
-            this.position = Input.ofNullable(position);
+            this.position = Output.ofNullable(position);
             return this;
         }
 
-        public Builder start(@Nullable Input<String> start) {
+        public Builder start(@Nullable Output<String> start) {
             this.start = start;
             return this;
         }
 
         public Builder start(@Nullable String start) {
-            this.start = Input.ofNullable(start);
+            this.start = Output.ofNullable(start);
             return this;
         }
         public VideoOverlayArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="notificationName", required=true)
-      private final Input<String> notificationName;
+      private final Output<String> notificationName;
 
-    public Input<String> getNotificationName() {
+    public Output<String> getNotificationName() {
         return this.notificationName;
     }
 
@@ -41,9 +41,9 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,17 +52,17 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public NotificationRecipientEmailArgs(
-        @Nullable Input<String> email,
-        Input<String> notificationName,
-        Input<String> resourceGroupName,
-        Input<String> serviceName) {
+        @Nullable Output<String> email,
+        Output<String> notificationName,
+        Output<String> resourceGroupName,
+        Output<String> serviceName) {
         this.email = email;
         this.notificationName = Objects.requireNonNull(notificationName, "expected parameter 'notificationName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -70,10 +70,10 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
     }
 
     private NotificationRecipientEmailArgs() {
-        this.email = Input.empty();
-        this.notificationName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
+        this.email = Output.empty();
+        this.notificationName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
-        private Input<String> notificationName;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
+        private @Nullable Output<String> email;
+        private Output<String> notificationName;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class NotificationRecipientEmailArgs extends io.pulumi.resources.Re
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder notificationName(Input<String> notificationName) {
+        public Builder notificationName(Output<String> notificationName) {
             this.notificationName = Objects.requireNonNull(notificationName);
             return this;
         }
 
         public Builder notificationName(String notificationName) {
-            this.notificationName = Input.of(Objects.requireNonNull(notificationName));
+            this.notificationName = Output.of(Objects.requireNonNull(notificationName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public NotificationRecipientEmailArgs build() {

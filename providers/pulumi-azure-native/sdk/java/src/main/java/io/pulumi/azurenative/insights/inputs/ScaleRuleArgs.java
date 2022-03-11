@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.MetricTriggerArgs;
 import io.pulumi.azurenative.insights.inputs.ScaleActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
@@ -23,9 +23,9 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricTrigger", required=true)
-      private final Input<MetricTriggerArgs> metricTrigger;
+      private final Output<MetricTriggerArgs> metricTrigger;
 
-    public Input<MetricTriggerArgs> getMetricTrigger() {
+    public Output<MetricTriggerArgs> getMetricTrigger() {
         return this.metricTrigger;
     }
 
@@ -34,22 +34,22 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scaleAction", required=true)
-      private final Input<ScaleActionArgs> scaleAction;
+      private final Output<ScaleActionArgs> scaleAction;
 
-    public Input<ScaleActionArgs> getScaleAction() {
+    public Output<ScaleActionArgs> getScaleAction() {
         return this.scaleAction;
     }
 
     public ScaleRuleArgs(
-        Input<MetricTriggerArgs> metricTrigger,
-        Input<ScaleActionArgs> scaleAction) {
+        Output<MetricTriggerArgs> metricTrigger,
+        Output<ScaleActionArgs> scaleAction) {
         this.metricTrigger = Objects.requireNonNull(metricTrigger, "expected parameter 'metricTrigger' to be non-null");
         this.scaleAction = Objects.requireNonNull(scaleAction, "expected parameter 'scaleAction' to be non-null");
     }
 
     private ScaleRuleArgs() {
-        this.metricTrigger = Input.empty();
-        this.scaleAction = Input.empty();
+        this.metricTrigger = Output.empty();
+        this.scaleAction = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<MetricTriggerArgs> metricTrigger;
-        private Input<ScaleActionArgs> scaleAction;
+        private Output<MetricTriggerArgs> metricTrigger;
+        private Output<ScaleActionArgs> scaleAction;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scaleAction = defaults.scaleAction;
         }
 
-        public Builder metricTrigger(Input<MetricTriggerArgs> metricTrigger) {
+        public Builder metricTrigger(Output<MetricTriggerArgs> metricTrigger) {
             this.metricTrigger = Objects.requireNonNull(metricTrigger);
             return this;
         }
 
         public Builder metricTrigger(MetricTriggerArgs metricTrigger) {
-            this.metricTrigger = Input.of(Objects.requireNonNull(metricTrigger));
+            this.metricTrigger = Output.of(Objects.requireNonNull(metricTrigger));
             return this;
         }
 
-        public Builder scaleAction(Input<ScaleActionArgs> scaleAction) {
+        public Builder scaleAction(Output<ScaleActionArgs> scaleAction) {
             this.scaleAction = Objects.requireNonNull(scaleAction);
             return this;
         }
 
         public Builder scaleAction(ScaleActionArgs scaleAction) {
-            this.scaleAction = Input.of(Objects.requireNonNull(scaleAction));
+            this.scaleAction = Output.of(Objects.requireNonNull(scaleAction));
             return this;
         }
         public ScaleRuleArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.machinelearningservices.inputs.CommandJobArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.SweepJobArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<Either<CommandJobArgs,SweepJobArgs>> properties;
+      private final Output<Either<CommandJobArgs,SweepJobArgs>> properties;
 
-    public Input<Either<CommandJobArgs,SweepJobArgs>> getProperties() {
+    public Output<Either<CommandJobArgs,SweepJobArgs>> getProperties() {
         return this.properties;
     }
 
@@ -44,9 +44,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -55,17 +55,17 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public JobArgs(
-        @Nullable Input<String> id,
-        Input<Either<CommandJobArgs,SweepJobArgs>> properties,
-        Input<String> resourceGroupName,
-        Input<String> workspaceName) {
+        @Nullable Output<String> id,
+        Output<Either<CommandJobArgs,SweepJobArgs>> properties,
+        Output<String> resourceGroupName,
+        Output<String> workspaceName) {
         this.id = id;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -73,10 +73,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.id = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.workspaceName = Input.empty();
+        this.id = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private Input<Either<CommandJobArgs,SweepJobArgs>> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> id;
+        private Output<Either<CommandJobArgs,SweepJobArgs>> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder properties(Input<Either<CommandJobArgs,SweepJobArgs>> properties) {
+        public Builder properties(Output<Either<CommandJobArgs,SweepJobArgs>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(Either<CommandJobArgs,SweepJobArgs> properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public JobArgs build() {

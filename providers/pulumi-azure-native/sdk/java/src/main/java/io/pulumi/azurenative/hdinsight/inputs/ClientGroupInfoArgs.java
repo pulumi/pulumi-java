@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="groupId")
-      private final @Nullable Input<String> groupId;
+      private final @Nullable Output<String> groupId;
 
-    public Input<String> getGroupId() {
-        return this.groupId == null ? Input.empty() : this.groupId;
+    public Output<String> getGroupId() {
+        return this.groupId == null ? Output.empty() : this.groupId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="groupName")
-      private final @Nullable Input<String> groupName;
+      private final @Nullable Output<String> groupName;
 
-    public Input<String> getGroupName() {
-        return this.groupName == null ? Input.empty() : this.groupName;
+    public Output<String> getGroupName() {
+        return this.groupName == null ? Output.empty() : this.groupName;
     }
 
     public ClientGroupInfoArgs(
-        @Nullable Input<String> groupId,
-        @Nullable Input<String> groupName) {
+        @Nullable Output<String> groupId,
+        @Nullable Output<String> groupName) {
         this.groupId = groupId;
         this.groupName = groupName;
     }
 
     private ClientGroupInfoArgs() {
-        this.groupId = Input.empty();
-        this.groupName = Input.empty();
+        this.groupId = Output.empty();
+        this.groupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupId;
-        private @Nullable Input<String> groupName;
+        private @Nullable Output<String> groupId;
+        private @Nullable Output<String> groupName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
     	      this.groupName = defaults.groupName;
         }
 
-        public Builder groupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Input.ofNullable(groupId);
+            this.groupId = Output.ofNullable(groupId);
             return this;
         }
 
-        public Builder groupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Input.ofNullable(groupName);
+            this.groupName = Output.ofNullable(groupName);
             return this;
         }
         public ClientGroupInfoArgs build() {

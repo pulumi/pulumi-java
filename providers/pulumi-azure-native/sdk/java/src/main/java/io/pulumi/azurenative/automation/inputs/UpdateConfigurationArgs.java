@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.OperatingSystemType;
 import io.pulumi.azurenative.automation.inputs.LinuxPropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.TargetPropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.WindowsPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="azureVirtualMachines")
-      private final @Nullable Input<List<String>> azureVirtualMachines;
+      private final @Nullable Output<List<String>> azureVirtualMachines;
 
-    public Input<List<String>> getAzureVirtualMachines() {
-        return this.azureVirtualMachines == null ? Input.empty() : this.azureVirtualMachines;
+    public Output<List<String>> getAzureVirtualMachines() {
+        return this.azureVirtualMachines == null ? Output.empty() : this.azureVirtualMachines;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="duration")
-      private final @Nullable Input<String> duration;
+      private final @Nullable Output<String> duration;
 
-    public Input<String> getDuration() {
-        return this.duration == null ? Input.empty() : this.duration;
+    public Output<String> getDuration() {
+        return this.duration == null ? Output.empty() : this.duration;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="linux")
-      private final @Nullable Input<LinuxPropertiesArgs> linux;
+      private final @Nullable Output<LinuxPropertiesArgs> linux;
 
-    public Input<LinuxPropertiesArgs> getLinux() {
-        return this.linux == null ? Input.empty() : this.linux;
+    public Output<LinuxPropertiesArgs> getLinux() {
+        return this.linux == null ? Output.empty() : this.linux;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="nonAzureComputerNames")
-      private final @Nullable Input<List<String>> nonAzureComputerNames;
+      private final @Nullable Output<List<String>> nonAzureComputerNames;
 
-    public Input<List<String>> getNonAzureComputerNames() {
-        return this.nonAzureComputerNames == null ? Input.empty() : this.nonAzureComputerNames;
+    public Output<List<String>> getNonAzureComputerNames() {
+        return this.nonAzureComputerNames == null ? Output.empty() : this.nonAzureComputerNames;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="operatingSystem", required=true)
-      private final Input<OperatingSystemType> operatingSystem;
+      private final Output<OperatingSystemType> operatingSystem;
 
-    public Input<OperatingSystemType> getOperatingSystem() {
+    public Output<OperatingSystemType> getOperatingSystem() {
         return this.operatingSystem;
     }
 
@@ -83,10 +83,10 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targets")
-      private final @Nullable Input<TargetPropertiesArgs> targets;
+      private final @Nullable Output<TargetPropertiesArgs> targets;
 
-    public Input<TargetPropertiesArgs> getTargets() {
-        return this.targets == null ? Input.empty() : this.targets;
+    public Output<TargetPropertiesArgs> getTargets() {
+        return this.targets == null ? Output.empty() : this.targets;
     }
 
     /**
@@ -94,20 +94,20 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="windows")
-      private final @Nullable Input<WindowsPropertiesArgs> windows;
+      private final @Nullable Output<WindowsPropertiesArgs> windows;
 
-    public Input<WindowsPropertiesArgs> getWindows() {
-        return this.windows == null ? Input.empty() : this.windows;
+    public Output<WindowsPropertiesArgs> getWindows() {
+        return this.windows == null ? Output.empty() : this.windows;
     }
 
     public UpdateConfigurationArgs(
-        @Nullable Input<List<String>> azureVirtualMachines,
-        @Nullable Input<String> duration,
-        @Nullable Input<LinuxPropertiesArgs> linux,
-        @Nullable Input<List<String>> nonAzureComputerNames,
-        Input<OperatingSystemType> operatingSystem,
-        @Nullable Input<TargetPropertiesArgs> targets,
-        @Nullable Input<WindowsPropertiesArgs> windows) {
+        @Nullable Output<List<String>> azureVirtualMachines,
+        @Nullable Output<String> duration,
+        @Nullable Output<LinuxPropertiesArgs> linux,
+        @Nullable Output<List<String>> nonAzureComputerNames,
+        Output<OperatingSystemType> operatingSystem,
+        @Nullable Output<TargetPropertiesArgs> targets,
+        @Nullable Output<WindowsPropertiesArgs> windows) {
         this.azureVirtualMachines = azureVirtualMachines;
         this.duration = duration;
         this.linux = linux;
@@ -118,13 +118,13 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     private UpdateConfigurationArgs() {
-        this.azureVirtualMachines = Input.empty();
-        this.duration = Input.empty();
-        this.linux = Input.empty();
-        this.nonAzureComputerNames = Input.empty();
-        this.operatingSystem = Input.empty();
-        this.targets = Input.empty();
-        this.windows = Input.empty();
+        this.azureVirtualMachines = Output.empty();
+        this.duration = Output.empty();
+        this.linux = Output.empty();
+        this.nonAzureComputerNames = Output.empty();
+        this.operatingSystem = Output.empty();
+        this.targets = Output.empty();
+        this.windows = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> azureVirtualMachines;
-        private @Nullable Input<String> duration;
-        private @Nullable Input<LinuxPropertiesArgs> linux;
-        private @Nullable Input<List<String>> nonAzureComputerNames;
-        private Input<OperatingSystemType> operatingSystem;
-        private @Nullable Input<TargetPropertiesArgs> targets;
-        private @Nullable Input<WindowsPropertiesArgs> windows;
+        private @Nullable Output<List<String>> azureVirtualMachines;
+        private @Nullable Output<String> duration;
+        private @Nullable Output<LinuxPropertiesArgs> linux;
+        private @Nullable Output<List<String>> nonAzureComputerNames;
+        private Output<OperatingSystemType> operatingSystem;
+        private @Nullable Output<TargetPropertiesArgs> targets;
+        private @Nullable Output<WindowsPropertiesArgs> windows;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.windows = defaults.windows;
         }
 
-        public Builder azureVirtualMachines(@Nullable Input<List<String>> azureVirtualMachines) {
+        public Builder azureVirtualMachines(@Nullable Output<List<String>> azureVirtualMachines) {
             this.azureVirtualMachines = azureVirtualMachines;
             return this;
         }
 
         public Builder azureVirtualMachines(@Nullable List<String> azureVirtualMachines) {
-            this.azureVirtualMachines = Input.ofNullable(azureVirtualMachines);
+            this.azureVirtualMachines = Output.ofNullable(azureVirtualMachines);
             return this;
         }
 
-        public Builder duration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Output<String> duration) {
             this.duration = duration;
             return this;
         }
 
         public Builder duration(@Nullable String duration) {
-            this.duration = Input.ofNullable(duration);
+            this.duration = Output.ofNullable(duration);
             return this;
         }
 
-        public Builder linux(@Nullable Input<LinuxPropertiesArgs> linux) {
+        public Builder linux(@Nullable Output<LinuxPropertiesArgs> linux) {
             this.linux = linux;
             return this;
         }
 
         public Builder linux(@Nullable LinuxPropertiesArgs linux) {
-            this.linux = Input.ofNullable(linux);
+            this.linux = Output.ofNullable(linux);
             return this;
         }
 
-        public Builder nonAzureComputerNames(@Nullable Input<List<String>> nonAzureComputerNames) {
+        public Builder nonAzureComputerNames(@Nullable Output<List<String>> nonAzureComputerNames) {
             this.nonAzureComputerNames = nonAzureComputerNames;
             return this;
         }
 
         public Builder nonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
-            this.nonAzureComputerNames = Input.ofNullable(nonAzureComputerNames);
+            this.nonAzureComputerNames = Output.ofNullable(nonAzureComputerNames);
             return this;
         }
 
-        public Builder operatingSystem(Input<OperatingSystemType> operatingSystem) {
+        public Builder operatingSystem(Output<OperatingSystemType> operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
 
         public Builder operatingSystem(OperatingSystemType operatingSystem) {
-            this.operatingSystem = Input.of(Objects.requireNonNull(operatingSystem));
+            this.operatingSystem = Output.of(Objects.requireNonNull(operatingSystem));
             return this;
         }
 
-        public Builder targets(@Nullable Input<TargetPropertiesArgs> targets) {
+        public Builder targets(@Nullable Output<TargetPropertiesArgs> targets) {
             this.targets = targets;
             return this;
         }
 
         public Builder targets(@Nullable TargetPropertiesArgs targets) {
-            this.targets = Input.ofNullable(targets);
+            this.targets = Output.ofNullable(targets);
             return this;
         }
 
-        public Builder windows(@Nullable Input<WindowsPropertiesArgs> windows) {
+        public Builder windows(@Nullable Output<WindowsPropertiesArgs> windows) {
             this.windows = windows;
             return this;
         }
 
         public Builder windows(@Nullable WindowsPropertiesArgs windows) {
-            this.windows = Input.ofNullable(windows);
+            this.windows = Output.ofNullable(windows);
             return this;
         }
         public UpdateConfigurationArgs build() {

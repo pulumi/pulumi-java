@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.ContentSourceType;
 import io.pulumi.azurenative.automation.inputs.ContentHashArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hash")
-      private final @Nullable Input<ContentHashArgs> hash;
+      private final @Nullable Output<ContentHashArgs> hash;
 
-    public Input<ContentHashArgs> getHash() {
-        return this.hash == null ? Input.empty() : this.hash;
+    public Output<ContentHashArgs> getHash() {
+        return this.hash == null ? Output.empty() : this.hash;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ContentSourceType>> type;
+      private final @Nullable Output<Either<String,ContentSourceType>> type;
 
-    public Input<Either<String,ContentSourceType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ContentSourceType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public ContentSourceArgs(
-        @Nullable Input<ContentHashArgs> hash,
-        @Nullable Input<Either<String,ContentSourceType>> type,
-        @Nullable Input<String> value,
-        @Nullable Input<String> version) {
+        @Nullable Output<ContentHashArgs> hash,
+        @Nullable Output<Either<String,ContentSourceType>> type,
+        @Nullable Output<String> value,
+        @Nullable Output<String> version) {
         this.hash = hash;
         this.type = type;
         this.value = value;
@@ -77,10 +77,10 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContentSourceArgs() {
-        this.hash = Input.empty();
-        this.type = Input.empty();
-        this.value = Input.empty();
-        this.version = Input.empty();
+        this.hash = Output.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ContentHashArgs> hash;
-        private @Nullable Input<Either<String,ContentSourceType>> type;
-        private @Nullable Input<String> value;
-        private @Nullable Input<String> version;
+        private @Nullable Output<ContentHashArgs> hash;
+        private @Nullable Output<Either<String,ContentSourceType>> type;
+        private @Nullable Output<String> value;
+        private @Nullable Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder hash(@Nullable Input<ContentHashArgs> hash) {
+        public Builder hash(@Nullable Output<ContentHashArgs> hash) {
             this.hash = hash;
             return this;
         }
 
         public Builder hash(@Nullable ContentHashArgs hash) {
-            this.hash = Input.ofNullable(hash);
+            this.hash = Output.ofNullable(hash);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,ContentSourceType>> type) {
+        public Builder type(@Nullable Output<Either<String,ContentSourceType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ContentSourceType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public ContentSourceArgs build() {

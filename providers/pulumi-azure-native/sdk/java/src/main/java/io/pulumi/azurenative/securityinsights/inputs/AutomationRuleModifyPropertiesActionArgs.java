@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRuleModifyPropertiesActionActionConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="actionConfiguration", required=true)
-      private final Input<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
+      private final Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
 
-    public Input<AutomationRuleModifyPropertiesActionActionConfigurationArgs> getActionConfiguration() {
+    public Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> getActionConfiguration() {
         return this.actionConfiguration;
     }
 
@@ -36,9 +36,9 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="actionType", required=true)
-      private final Input<String> actionType;
+      private final Output<String> actionType;
 
-    public Input<String> getActionType() {
+    public Output<String> getActionType() {
         return this.actionType;
     }
 
@@ -47,25 +47,25 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="order", required=true)
-      private final Input<Integer> order;
+      private final Output<Integer> order;
 
-    public Input<Integer> getOrder() {
+    public Output<Integer> getOrder() {
         return this.order;
     }
 
     public AutomationRuleModifyPropertiesActionArgs(
-        Input<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration,
-        Input<String> actionType,
-        Input<Integer> order) {
+        Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration,
+        Output<String> actionType,
+        Output<Integer> order) {
         this.actionConfiguration = Objects.requireNonNull(actionConfiguration, "expected parameter 'actionConfiguration' to be non-null");
         this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
         this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
     }
 
     private AutomationRuleModifyPropertiesActionArgs() {
-        this.actionConfiguration = Input.empty();
-        this.actionType = Input.empty();
-        this.order = Input.empty();
+        this.actionConfiguration = Output.empty();
+        this.actionType = Output.empty();
+        this.order = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private Input<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
-        private Input<String> actionType;
-        private Input<Integer> order;
+        private Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration;
+        private Output<String> actionType;
+        private Output<Integer> order;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class AutomationRuleModifyPropertiesActionArgs extends io.pulumi.re
     	      this.order = defaults.order;
         }
 
-        public Builder actionConfiguration(Input<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration) {
+        public Builder actionConfiguration(Output<AutomationRuleModifyPropertiesActionActionConfigurationArgs> actionConfiguration) {
             this.actionConfiguration = Objects.requireNonNull(actionConfiguration);
             return this;
         }
 
         public Builder actionConfiguration(AutomationRuleModifyPropertiesActionActionConfigurationArgs actionConfiguration) {
-            this.actionConfiguration = Input.of(Objects.requireNonNull(actionConfiguration));
+            this.actionConfiguration = Output.of(Objects.requireNonNull(actionConfiguration));
             return this;
         }
 
-        public Builder actionType(Input<String> actionType) {
+        public Builder actionType(Output<String> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
         public Builder actionType(String actionType) {
-            this.actionType = Input.of(Objects.requireNonNull(actionType));
+            this.actionType = Output.of(Objects.requireNonNull(actionType));
             return this;
         }
 
-        public Builder order(Input<Integer> order) {
+        public Builder order(Output<Integer> order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
 
         public Builder order(Integer order) {
-            this.order = Input.of(Objects.requireNonNull(order));
+            this.order = Output.of(Objects.requireNonNull(order));
             return this;
         }
         public AutomationRuleModifyPropertiesActionArgs build() {

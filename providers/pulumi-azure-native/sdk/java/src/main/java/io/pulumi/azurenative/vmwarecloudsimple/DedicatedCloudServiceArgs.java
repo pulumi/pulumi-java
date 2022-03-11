@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dedicatedCloudServiceName")
-      private final @Nullable Input<String> dedicatedCloudServiceName;
+      private final @Nullable Output<String> dedicatedCloudServiceName;
 
-    public Input<String> getDedicatedCloudServiceName() {
-        return this.dedicatedCloudServiceName == null ? Input.empty() : this.dedicatedCloudServiceName;
+    public Output<String> getDedicatedCloudServiceName() {
+        return this.dedicatedCloudServiceName == null ? Output.empty() : this.dedicatedCloudServiceName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="gatewaySubnet", required=true)
-      private final Input<String> gatewaySubnet;
+      private final Output<String> gatewaySubnet;
 
-    public Input<String> getGatewaySubnet() {
+    public Output<String> getGatewaySubnet() {
         return this.gatewaySubnet;
     }
 
@@ -42,10 +42,10 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,18 +64,18 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DedicatedCloudServiceArgs(
-        @Nullable Input<String> dedicatedCloudServiceName,
-        Input<String> gatewaySubnet,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> dedicatedCloudServiceName,
+        Output<String> gatewaySubnet,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.dedicatedCloudServiceName = dedicatedCloudServiceName;
         this.gatewaySubnet = Objects.requireNonNull(gatewaySubnet, "expected parameter 'gatewaySubnet' to be non-null");
         this.location = location;
@@ -84,11 +84,11 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
     }
 
     private DedicatedCloudServiceArgs() {
-        this.dedicatedCloudServiceName = Input.empty();
-        this.gatewaySubnet = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.dedicatedCloudServiceName = Output.empty();
+        this.gatewaySubnet = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dedicatedCloudServiceName;
-        private Input<String> gatewaySubnet;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> dedicatedCloudServiceName;
+        private Output<String> gatewaySubnet;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder dedicatedCloudServiceName(@Nullable Input<String> dedicatedCloudServiceName) {
+        public Builder dedicatedCloudServiceName(@Nullable Output<String> dedicatedCloudServiceName) {
             this.dedicatedCloudServiceName = dedicatedCloudServiceName;
             return this;
         }
 
         public Builder dedicatedCloudServiceName(@Nullable String dedicatedCloudServiceName) {
-            this.dedicatedCloudServiceName = Input.ofNullable(dedicatedCloudServiceName);
+            this.dedicatedCloudServiceName = Output.ofNullable(dedicatedCloudServiceName);
             return this;
         }
 
-        public Builder gatewaySubnet(Input<String> gatewaySubnet) {
+        public Builder gatewaySubnet(Output<String> gatewaySubnet) {
             this.gatewaySubnet = Objects.requireNonNull(gatewaySubnet);
             return this;
         }
 
         public Builder gatewaySubnet(String gatewaySubnet) {
-            this.gatewaySubnet = Input.of(Objects.requireNonNull(gatewaySubnet));
+            this.gatewaySubnet = Output.of(Objects.requireNonNull(gatewaySubnet));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DedicatedCloudServiceArgs build() {

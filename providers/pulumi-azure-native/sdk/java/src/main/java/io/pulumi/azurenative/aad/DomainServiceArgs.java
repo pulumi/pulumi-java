@@ -10,7 +10,7 @@ import io.pulumi.azurenative.aad.inputs.NotificationSettingsArgs;
 import io.pulumi.azurenative.aad.inputs.ReplicaSetArgs;
 import io.pulumi.azurenative.aad.inputs.ResourceForestSettingsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainConfigurationType")
-      private final @Nullable Input<String> domainConfigurationType;
+      private final @Nullable Output<String> domainConfigurationType;
 
-    public Input<String> getDomainConfigurationType() {
-        return this.domainConfigurationType == null ? Input.empty() : this.domainConfigurationType;
+    public Output<String> getDomainConfigurationType() {
+        return this.domainConfigurationType == null ? Output.empty() : this.domainConfigurationType;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-      private final @Nullable Input<String> domainName;
+      private final @Nullable Output<String> domainName;
 
-    public Input<String> getDomainName() {
-        return this.domainName == null ? Input.empty() : this.domainName;
+    public Output<String> getDomainName() {
+        return this.domainName == null ? Output.empty() : this.domainName;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainSecuritySettings")
-      private final @Nullable Input<DomainSecuritySettingsArgs> domainSecuritySettings;
+      private final @Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings;
 
-    public Input<DomainSecuritySettingsArgs> getDomainSecuritySettings() {
-        return this.domainSecuritySettings == null ? Input.empty() : this.domainSecuritySettings;
+    public Output<DomainSecuritySettingsArgs> getDomainSecuritySettings() {
+        return this.domainSecuritySettings == null ? Output.empty() : this.domainSecuritySettings;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainServiceName")
-      private final @Nullable Input<String> domainServiceName;
+      private final @Nullable Output<String> domainServiceName;
 
-    public Input<String> getDomainServiceName() {
-        return this.domainServiceName == null ? Input.empty() : this.domainServiceName;
+    public Output<String> getDomainServiceName() {
+        return this.domainServiceName == null ? Output.empty() : this.domainServiceName;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filteredSync")
-      private final @Nullable Input<Either<String,FilteredSync>> filteredSync;
+      private final @Nullable Output<Either<String,FilteredSync>> filteredSync;
 
-    public Input<Either<String,FilteredSync>> getFilteredSync() {
-        return this.filteredSync == null ? Input.empty() : this.filteredSync;
+    public Output<Either<String,FilteredSync>> getFilteredSync() {
+        return this.filteredSync == null ? Output.empty() : this.filteredSync;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ldapsSettings")
-      private final @Nullable Input<LdapsSettingsArgs> ldapsSettings;
+      private final @Nullable Output<LdapsSettingsArgs> ldapsSettings;
 
-    public Input<LdapsSettingsArgs> getLdapsSettings() {
-        return this.ldapsSettings == null ? Input.empty() : this.ldapsSettings;
+    public Output<LdapsSettingsArgs> getLdapsSettings() {
+        return this.ldapsSettings == null ? Output.empty() : this.ldapsSettings;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -105,10 +105,10 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationSettings")
-      private final @Nullable Input<NotificationSettingsArgs> notificationSettings;
+      private final @Nullable Output<NotificationSettingsArgs> notificationSettings;
 
-    public Input<NotificationSettingsArgs> getNotificationSettings() {
-        return this.notificationSettings == null ? Input.empty() : this.notificationSettings;
+    public Output<NotificationSettingsArgs> getNotificationSettings() {
+        return this.notificationSettings == null ? Output.empty() : this.notificationSettings;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicaSets")
-      private final @Nullable Input<List<ReplicaSetArgs>> replicaSets;
+      private final @Nullable Output<List<ReplicaSetArgs>> replicaSets;
 
-    public Input<List<ReplicaSetArgs>> getReplicaSets() {
-        return this.replicaSets == null ? Input.empty() : this.replicaSets;
+    public Output<List<ReplicaSetArgs>> getReplicaSets() {
+        return this.replicaSets == null ? Output.empty() : this.replicaSets;
     }
 
     /**
@@ -127,10 +127,10 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceForestSettings")
-      private final @Nullable Input<ResourceForestSettingsArgs> resourceForestSettings;
+      private final @Nullable Output<ResourceForestSettingsArgs> resourceForestSettings;
 
-    public Input<ResourceForestSettingsArgs> getResourceForestSettings() {
-        return this.resourceForestSettings == null ? Input.empty() : this.resourceForestSettings;
+    public Output<ResourceForestSettingsArgs> getResourceForestSettings() {
+        return this.resourceForestSettings == null ? Output.empty() : this.resourceForestSettings;
     }
 
     /**
@@ -138,9 +138,9 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -149,10 +149,10 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<String> sku;
+      private final @Nullable Output<String> sku;
 
-    public Input<String> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<String> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -160,26 +160,26 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DomainServiceArgs(
-        @Nullable Input<String> domainConfigurationType,
-        @Nullable Input<String> domainName,
-        @Nullable Input<DomainSecuritySettingsArgs> domainSecuritySettings,
-        @Nullable Input<String> domainServiceName,
-        @Nullable Input<Either<String,FilteredSync>> filteredSync,
-        @Nullable Input<LdapsSettingsArgs> ldapsSettings,
-        @Nullable Input<String> location,
-        @Nullable Input<NotificationSettingsArgs> notificationSettings,
-        @Nullable Input<List<ReplicaSetArgs>> replicaSets,
-        @Nullable Input<ResourceForestSettingsArgs> resourceForestSettings,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> domainConfigurationType,
+        @Nullable Output<String> domainName,
+        @Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings,
+        @Nullable Output<String> domainServiceName,
+        @Nullable Output<Either<String,FilteredSync>> filteredSync,
+        @Nullable Output<LdapsSettingsArgs> ldapsSettings,
+        @Nullable Output<String> location,
+        @Nullable Output<NotificationSettingsArgs> notificationSettings,
+        @Nullable Output<List<ReplicaSetArgs>> replicaSets,
+        @Nullable Output<ResourceForestSettingsArgs> resourceForestSettings,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.domainConfigurationType = domainConfigurationType;
         this.domainName = domainName;
         this.domainSecuritySettings = domainSecuritySettings;
@@ -196,19 +196,19 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainServiceArgs() {
-        this.domainConfigurationType = Input.empty();
-        this.domainName = Input.empty();
-        this.domainSecuritySettings = Input.empty();
-        this.domainServiceName = Input.empty();
-        this.filteredSync = Input.empty();
-        this.ldapsSettings = Input.empty();
-        this.location = Input.empty();
-        this.notificationSettings = Input.empty();
-        this.replicaSets = Input.empty();
-        this.resourceForestSettings = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.domainConfigurationType = Output.empty();
+        this.domainName = Output.empty();
+        this.domainSecuritySettings = Output.empty();
+        this.domainServiceName = Output.empty();
+        this.filteredSync = Output.empty();
+        this.ldapsSettings = Output.empty();
+        this.location = Output.empty();
+        this.notificationSettings = Output.empty();
+        this.replicaSets = Output.empty();
+        this.resourceForestSettings = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -220,19 +220,19 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> domainConfigurationType;
-        private @Nullable Input<String> domainName;
-        private @Nullable Input<DomainSecuritySettingsArgs> domainSecuritySettings;
-        private @Nullable Input<String> domainServiceName;
-        private @Nullable Input<Either<String,FilteredSync>> filteredSync;
-        private @Nullable Input<LdapsSettingsArgs> ldapsSettings;
-        private @Nullable Input<String> location;
-        private @Nullable Input<NotificationSettingsArgs> notificationSettings;
-        private @Nullable Input<List<ReplicaSetArgs>> replicaSets;
-        private @Nullable Input<ResourceForestSettingsArgs> resourceForestSettings;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> domainConfigurationType;
+        private @Nullable Output<String> domainName;
+        private @Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings;
+        private @Nullable Output<String> domainServiceName;
+        private @Nullable Output<Either<String,FilteredSync>> filteredSync;
+        private @Nullable Output<LdapsSettingsArgs> ldapsSettings;
+        private @Nullable Output<String> location;
+        private @Nullable Output<NotificationSettingsArgs> notificationSettings;
+        private @Nullable Output<List<ReplicaSetArgs>> replicaSets;
+        private @Nullable Output<ResourceForestSettingsArgs> resourceForestSettings;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -255,133 +255,133 @@ public final class DomainServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder domainConfigurationType(@Nullable Input<String> domainConfigurationType) {
+        public Builder domainConfigurationType(@Nullable Output<String> domainConfigurationType) {
             this.domainConfigurationType = domainConfigurationType;
             return this;
         }
 
         public Builder domainConfigurationType(@Nullable String domainConfigurationType) {
-            this.domainConfigurationType = Input.ofNullable(domainConfigurationType);
+            this.domainConfigurationType = Output.ofNullable(domainConfigurationType);
             return this;
         }
 
-        public Builder domainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Output<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Input.ofNullable(domainName);
+            this.domainName = Output.ofNullable(domainName);
             return this;
         }
 
-        public Builder domainSecuritySettings(@Nullable Input<DomainSecuritySettingsArgs> domainSecuritySettings) {
+        public Builder domainSecuritySettings(@Nullable Output<DomainSecuritySettingsArgs> domainSecuritySettings) {
             this.domainSecuritySettings = domainSecuritySettings;
             return this;
         }
 
         public Builder domainSecuritySettings(@Nullable DomainSecuritySettingsArgs domainSecuritySettings) {
-            this.domainSecuritySettings = Input.ofNullable(domainSecuritySettings);
+            this.domainSecuritySettings = Output.ofNullable(domainSecuritySettings);
             return this;
         }
 
-        public Builder domainServiceName(@Nullable Input<String> domainServiceName) {
+        public Builder domainServiceName(@Nullable Output<String> domainServiceName) {
             this.domainServiceName = domainServiceName;
             return this;
         }
 
         public Builder domainServiceName(@Nullable String domainServiceName) {
-            this.domainServiceName = Input.ofNullable(domainServiceName);
+            this.domainServiceName = Output.ofNullable(domainServiceName);
             return this;
         }
 
-        public Builder filteredSync(@Nullable Input<Either<String,FilteredSync>> filteredSync) {
+        public Builder filteredSync(@Nullable Output<Either<String,FilteredSync>> filteredSync) {
             this.filteredSync = filteredSync;
             return this;
         }
 
         public Builder filteredSync(@Nullable Either<String,FilteredSync> filteredSync) {
-            this.filteredSync = Input.ofNullable(filteredSync);
+            this.filteredSync = Output.ofNullable(filteredSync);
             return this;
         }
 
-        public Builder ldapsSettings(@Nullable Input<LdapsSettingsArgs> ldapsSettings) {
+        public Builder ldapsSettings(@Nullable Output<LdapsSettingsArgs> ldapsSettings) {
             this.ldapsSettings = ldapsSettings;
             return this;
         }
 
         public Builder ldapsSettings(@Nullable LdapsSettingsArgs ldapsSettings) {
-            this.ldapsSettings = Input.ofNullable(ldapsSettings);
+            this.ldapsSettings = Output.ofNullable(ldapsSettings);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder notificationSettings(@Nullable Input<NotificationSettingsArgs> notificationSettings) {
+        public Builder notificationSettings(@Nullable Output<NotificationSettingsArgs> notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
 
         public Builder notificationSettings(@Nullable NotificationSettingsArgs notificationSettings) {
-            this.notificationSettings = Input.ofNullable(notificationSettings);
+            this.notificationSettings = Output.ofNullable(notificationSettings);
             return this;
         }
 
-        public Builder replicaSets(@Nullable Input<List<ReplicaSetArgs>> replicaSets) {
+        public Builder replicaSets(@Nullable Output<List<ReplicaSetArgs>> replicaSets) {
             this.replicaSets = replicaSets;
             return this;
         }
 
         public Builder replicaSets(@Nullable List<ReplicaSetArgs> replicaSets) {
-            this.replicaSets = Input.ofNullable(replicaSets);
+            this.replicaSets = Output.ofNullable(replicaSets);
             return this;
         }
 
-        public Builder resourceForestSettings(@Nullable Input<ResourceForestSettingsArgs> resourceForestSettings) {
+        public Builder resourceForestSettings(@Nullable Output<ResourceForestSettingsArgs> resourceForestSettings) {
             this.resourceForestSettings = resourceForestSettings;
             return this;
         }
 
         public Builder resourceForestSettings(@Nullable ResourceForestSettingsArgs resourceForestSettings) {
-            this.resourceForestSettings = Input.ofNullable(resourceForestSettings);
+            this.resourceForestSettings = Output.ofNullable(resourceForestSettings);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Output<String> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable String sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DomainServiceArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.RosettaNetActionType;
 import io.pulumi.azurenative.logic.enums.RosettaNetPipConfidentialityScope;
 import io.pulumi.azurenative.logic.enums.RosettaNetResponseType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,9 +26,9 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="actionType", required=true)
-      private final Input<RosettaNetActionType> actionType;
+      private final Output<RosettaNetActionType> actionType;
 
-    public Input<RosettaNetActionType> getActionType() {
+    public Output<RosettaNetActionType> getActionType() {
         return this.actionType;
     }
 
@@ -37,9 +37,9 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="isAuthorizationRequired", required=true)
-      private final Input<Boolean> isAuthorizationRequired;
+      private final Output<Boolean> isAuthorizationRequired;
 
-    public Input<Boolean> getIsAuthorizationRequired() {
+    public Output<Boolean> getIsAuthorizationRequired() {
         return this.isAuthorizationRequired;
     }
 
@@ -48,9 +48,9 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="isSecuredTransportRequired", required=true)
-      private final Input<Boolean> isSecuredTransportRequired;
+      private final Output<Boolean> isSecuredTransportRequired;
 
-    public Input<Boolean> getIsSecuredTransportRequired() {
+    public Output<Boolean> getIsSecuredTransportRequired() {
         return this.isSecuredTransportRequired;
     }
 
@@ -59,9 +59,9 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="nonRepudiationOfOriginAndContent", required=true)
-      private final Input<Boolean> nonRepudiationOfOriginAndContent;
+      private final Output<Boolean> nonRepudiationOfOriginAndContent;
 
-    public Input<Boolean> getNonRepudiationOfOriginAndContent() {
+    public Output<Boolean> getNonRepudiationOfOriginAndContent() {
         return this.nonRepudiationOfOriginAndContent;
     }
 
@@ -70,9 +70,9 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="persistentConfidentialityScope", required=true)
-      private final Input<RosettaNetPipConfidentialityScope> persistentConfidentialityScope;
+      private final Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope;
 
-    public Input<RosettaNetPipConfidentialityScope> getPersistentConfidentialityScope() {
+    public Output<RosettaNetPipConfidentialityScope> getPersistentConfidentialityScope() {
         return this.persistentConfidentialityScope;
     }
 
@@ -81,9 +81,9 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="responseType", required=true)
-      private final Input<RosettaNetResponseType> responseType;
+      private final Output<RosettaNetResponseType> responseType;
 
-    public Input<RosettaNetResponseType> getResponseType() {
+    public Output<RosettaNetResponseType> getResponseType() {
         return this.responseType;
     }
 
@@ -92,9 +92,9 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="retryCount", required=true)
-      private final Input<Integer> retryCount;
+      private final Output<Integer> retryCount;
 
-    public Input<Integer> getRetryCount() {
+    public Output<Integer> getRetryCount() {
         return this.retryCount;
     }
 
@@ -103,21 +103,21 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="timeToPerformInSeconds", required=true)
-      private final Input<Integer> timeToPerformInSeconds;
+      private final Output<Integer> timeToPerformInSeconds;
 
-    public Input<Integer> getTimeToPerformInSeconds() {
+    public Output<Integer> getTimeToPerformInSeconds() {
         return this.timeToPerformInSeconds;
     }
 
     public RosettaNetPipActivityBehaviorArgs(
-        Input<RosettaNetActionType> actionType,
-        Input<Boolean> isAuthorizationRequired,
-        Input<Boolean> isSecuredTransportRequired,
-        Input<Boolean> nonRepudiationOfOriginAndContent,
-        Input<RosettaNetPipConfidentialityScope> persistentConfidentialityScope,
-        Input<RosettaNetResponseType> responseType,
-        Input<Integer> retryCount,
-        Input<Integer> timeToPerformInSeconds) {
+        Output<RosettaNetActionType> actionType,
+        Output<Boolean> isAuthorizationRequired,
+        Output<Boolean> isSecuredTransportRequired,
+        Output<Boolean> nonRepudiationOfOriginAndContent,
+        Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope,
+        Output<RosettaNetResponseType> responseType,
+        Output<Integer> retryCount,
+        Output<Integer> timeToPerformInSeconds) {
         this.actionType = Objects.requireNonNull(actionType, "expected parameter 'actionType' to be non-null");
         this.isAuthorizationRequired = Objects.requireNonNull(isAuthorizationRequired, "expected parameter 'isAuthorizationRequired' to be non-null");
         this.isSecuredTransportRequired = Objects.requireNonNull(isSecuredTransportRequired, "expected parameter 'isSecuredTransportRequired' to be non-null");
@@ -129,14 +129,14 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     }
 
     private RosettaNetPipActivityBehaviorArgs() {
-        this.actionType = Input.empty();
-        this.isAuthorizationRequired = Input.empty();
-        this.isSecuredTransportRequired = Input.empty();
-        this.nonRepudiationOfOriginAndContent = Input.empty();
-        this.persistentConfidentialityScope = Input.empty();
-        this.responseType = Input.empty();
-        this.retryCount = Input.empty();
-        this.timeToPerformInSeconds = Input.empty();
+        this.actionType = Output.empty();
+        this.isAuthorizationRequired = Output.empty();
+        this.isSecuredTransportRequired = Output.empty();
+        this.nonRepudiationOfOriginAndContent = Output.empty();
+        this.persistentConfidentialityScope = Output.empty();
+        this.responseType = Output.empty();
+        this.retryCount = Output.empty();
+        this.timeToPerformInSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -148,14 +148,14 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<RosettaNetActionType> actionType;
-        private Input<Boolean> isAuthorizationRequired;
-        private Input<Boolean> isSecuredTransportRequired;
-        private Input<Boolean> nonRepudiationOfOriginAndContent;
-        private Input<RosettaNetPipConfidentialityScope> persistentConfidentialityScope;
-        private Input<RosettaNetResponseType> responseType;
-        private Input<Integer> retryCount;
-        private Input<Integer> timeToPerformInSeconds;
+        private Output<RosettaNetActionType> actionType;
+        private Output<Boolean> isAuthorizationRequired;
+        private Output<Boolean> isSecuredTransportRequired;
+        private Output<Boolean> nonRepudiationOfOriginAndContent;
+        private Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope;
+        private Output<RosettaNetResponseType> responseType;
+        private Output<Integer> retryCount;
+        private Output<Integer> timeToPerformInSeconds;
 
         public Builder() {
     	      // Empty
@@ -173,83 +173,83 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     	      this.timeToPerformInSeconds = defaults.timeToPerformInSeconds;
         }
 
-        public Builder actionType(Input<RosettaNetActionType> actionType) {
+        public Builder actionType(Output<RosettaNetActionType> actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
         public Builder actionType(RosettaNetActionType actionType) {
-            this.actionType = Input.of(Objects.requireNonNull(actionType));
+            this.actionType = Output.of(Objects.requireNonNull(actionType));
             return this;
         }
 
-        public Builder isAuthorizationRequired(Input<Boolean> isAuthorizationRequired) {
+        public Builder isAuthorizationRequired(Output<Boolean> isAuthorizationRequired) {
             this.isAuthorizationRequired = Objects.requireNonNull(isAuthorizationRequired);
             return this;
         }
 
         public Builder isAuthorizationRequired(Boolean isAuthorizationRequired) {
-            this.isAuthorizationRequired = Input.of(Objects.requireNonNull(isAuthorizationRequired));
+            this.isAuthorizationRequired = Output.of(Objects.requireNonNull(isAuthorizationRequired));
             return this;
         }
 
-        public Builder isSecuredTransportRequired(Input<Boolean> isSecuredTransportRequired) {
+        public Builder isSecuredTransportRequired(Output<Boolean> isSecuredTransportRequired) {
             this.isSecuredTransportRequired = Objects.requireNonNull(isSecuredTransportRequired);
             return this;
         }
 
         public Builder isSecuredTransportRequired(Boolean isSecuredTransportRequired) {
-            this.isSecuredTransportRequired = Input.of(Objects.requireNonNull(isSecuredTransportRequired));
+            this.isSecuredTransportRequired = Output.of(Objects.requireNonNull(isSecuredTransportRequired));
             return this;
         }
 
-        public Builder nonRepudiationOfOriginAndContent(Input<Boolean> nonRepudiationOfOriginAndContent) {
+        public Builder nonRepudiationOfOriginAndContent(Output<Boolean> nonRepudiationOfOriginAndContent) {
             this.nonRepudiationOfOriginAndContent = Objects.requireNonNull(nonRepudiationOfOriginAndContent);
             return this;
         }
 
         public Builder nonRepudiationOfOriginAndContent(Boolean nonRepudiationOfOriginAndContent) {
-            this.nonRepudiationOfOriginAndContent = Input.of(Objects.requireNonNull(nonRepudiationOfOriginAndContent));
+            this.nonRepudiationOfOriginAndContent = Output.of(Objects.requireNonNull(nonRepudiationOfOriginAndContent));
             return this;
         }
 
-        public Builder persistentConfidentialityScope(Input<RosettaNetPipConfidentialityScope> persistentConfidentialityScope) {
+        public Builder persistentConfidentialityScope(Output<RosettaNetPipConfidentialityScope> persistentConfidentialityScope) {
             this.persistentConfidentialityScope = Objects.requireNonNull(persistentConfidentialityScope);
             return this;
         }
 
         public Builder persistentConfidentialityScope(RosettaNetPipConfidentialityScope persistentConfidentialityScope) {
-            this.persistentConfidentialityScope = Input.of(Objects.requireNonNull(persistentConfidentialityScope));
+            this.persistentConfidentialityScope = Output.of(Objects.requireNonNull(persistentConfidentialityScope));
             return this;
         }
 
-        public Builder responseType(Input<RosettaNetResponseType> responseType) {
+        public Builder responseType(Output<RosettaNetResponseType> responseType) {
             this.responseType = Objects.requireNonNull(responseType);
             return this;
         }
 
         public Builder responseType(RosettaNetResponseType responseType) {
-            this.responseType = Input.of(Objects.requireNonNull(responseType));
+            this.responseType = Output.of(Objects.requireNonNull(responseType));
             return this;
         }
 
-        public Builder retryCount(Input<Integer> retryCount) {
+        public Builder retryCount(Output<Integer> retryCount) {
             this.retryCount = Objects.requireNonNull(retryCount);
             return this;
         }
 
         public Builder retryCount(Integer retryCount) {
-            this.retryCount = Input.of(Objects.requireNonNull(retryCount));
+            this.retryCount = Output.of(Objects.requireNonNull(retryCount));
             return this;
         }
 
-        public Builder timeToPerformInSeconds(Input<Integer> timeToPerformInSeconds) {
+        public Builder timeToPerformInSeconds(Output<Integer> timeToPerformInSeconds) {
             this.timeToPerformInSeconds = Objects.requireNonNull(timeToPerformInSeconds);
             return this;
         }
 
         public Builder timeToPerformInSeconds(Integer timeToPerformInSeconds) {
-            this.timeToPerformInSeconds = Input.of(Objects.requireNonNull(timeToPerformInSeconds));
+            this.timeToPerformInSeconds = Output.of(Objects.requireNonNull(timeToPerformInSeconds));
             return this;
         }
         public RosettaNetPipActivityBehaviorArgs build() {

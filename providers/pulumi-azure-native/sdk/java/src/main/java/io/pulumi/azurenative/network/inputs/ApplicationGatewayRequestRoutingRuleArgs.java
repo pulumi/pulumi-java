@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.ApplicationGatewayRequestRoutingRuleType;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="backendAddressPool")
-      private final @Nullable Input<SubResourceArgs> backendAddressPool;
+      private final @Nullable Output<SubResourceArgs> backendAddressPool;
 
-    public Input<SubResourceArgs> getBackendAddressPool() {
-        return this.backendAddressPool == null ? Input.empty() : this.backendAddressPool;
+    public Output<SubResourceArgs> getBackendAddressPool() {
+        return this.backendAddressPool == null ? Output.empty() : this.backendAddressPool;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="backendHttpSettings")
-      private final @Nullable Input<SubResourceArgs> backendHttpSettings;
+      private final @Nullable Output<SubResourceArgs> backendHttpSettings;
 
-    public Input<SubResourceArgs> getBackendHttpSettings() {
-        return this.backendHttpSettings == null ? Input.empty() : this.backendHttpSettings;
+    public Output<SubResourceArgs> getBackendHttpSettings() {
+        return this.backendHttpSettings == null ? Output.empty() : this.backendHttpSettings;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="httpListener")
-      private final @Nullable Input<SubResourceArgs> httpListener;
+      private final @Nullable Output<SubResourceArgs> httpListener;
 
-    public Input<SubResourceArgs> getHttpListener() {
-        return this.httpListener == null ? Input.empty() : this.httpListener;
+    public Output<SubResourceArgs> getHttpListener() {
+        return this.httpListener == null ? Output.empty() : this.httpListener;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="redirectConfiguration")
-      private final @Nullable Input<SubResourceArgs> redirectConfiguration;
+      private final @Nullable Output<SubResourceArgs> redirectConfiguration;
 
-    public Input<SubResourceArgs> getRedirectConfiguration() {
-        return this.redirectConfiguration == null ? Input.empty() : this.redirectConfiguration;
+    public Output<SubResourceArgs> getRedirectConfiguration() {
+        return this.redirectConfiguration == null ? Output.empty() : this.redirectConfiguration;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="rewriteRuleSet")
-      private final @Nullable Input<SubResourceArgs> rewriteRuleSet;
+      private final @Nullable Output<SubResourceArgs> rewriteRuleSet;
 
-    public Input<SubResourceArgs> getRewriteRuleSet() {
-        return this.rewriteRuleSet == null ? Input.empty() : this.rewriteRuleSet;
+    public Output<SubResourceArgs> getRewriteRuleSet() {
+        return this.rewriteRuleSet == null ? Output.empty() : this.rewriteRuleSet;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="ruleType")
-      private final @Nullable Input<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType;
+      private final @Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType;
 
-    public Input<Either<String,ApplicationGatewayRequestRoutingRuleType>> getRuleType() {
-        return this.ruleType == null ? Input.empty() : this.ruleType;
+    public Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> getRuleType() {
+        return this.ruleType == null ? Output.empty() : this.ruleType;
     }
 
     /**
@@ -126,23 +126,23 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="urlPathMap")
-      private final @Nullable Input<SubResourceArgs> urlPathMap;
+      private final @Nullable Output<SubResourceArgs> urlPathMap;
 
-    public Input<SubResourceArgs> getUrlPathMap() {
-        return this.urlPathMap == null ? Input.empty() : this.urlPathMap;
+    public Output<SubResourceArgs> getUrlPathMap() {
+        return this.urlPathMap == null ? Output.empty() : this.urlPathMap;
     }
 
     public ApplicationGatewayRequestRoutingRuleArgs(
-        @Nullable Input<SubResourceArgs> backendAddressPool,
-        @Nullable Input<SubResourceArgs> backendHttpSettings,
-        @Nullable Input<SubResourceArgs> httpListener,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<SubResourceArgs> redirectConfiguration,
-        @Nullable Input<SubResourceArgs> rewriteRuleSet,
-        @Nullable Input<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType,
-        @Nullable Input<SubResourceArgs> urlPathMap) {
+        @Nullable Output<SubResourceArgs> backendAddressPool,
+        @Nullable Output<SubResourceArgs> backendHttpSettings,
+        @Nullable Output<SubResourceArgs> httpListener,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<SubResourceArgs> redirectConfiguration,
+        @Nullable Output<SubResourceArgs> rewriteRuleSet,
+        @Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType,
+        @Nullable Output<SubResourceArgs> urlPathMap) {
         this.backendAddressPool = backendAddressPool;
         this.backendHttpSettings = backendHttpSettings;
         this.httpListener = httpListener;
@@ -156,16 +156,16 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     }
 
     private ApplicationGatewayRequestRoutingRuleArgs() {
-        this.backendAddressPool = Input.empty();
-        this.backendHttpSettings = Input.empty();
-        this.httpListener = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
-        this.redirectConfiguration = Input.empty();
-        this.rewriteRuleSet = Input.empty();
-        this.ruleType = Input.empty();
-        this.urlPathMap = Input.empty();
+        this.backendAddressPool = Output.empty();
+        this.backendHttpSettings = Output.empty();
+        this.httpListener = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
+        this.redirectConfiguration = Output.empty();
+        this.rewriteRuleSet = Output.empty();
+        this.ruleType = Output.empty();
+        this.urlPathMap = Output.empty();
     }
 
     public static Builder builder() {
@@ -177,16 +177,16 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<SubResourceArgs> backendAddressPool;
-        private @Nullable Input<SubResourceArgs> backendHttpSettings;
-        private @Nullable Input<SubResourceArgs> httpListener;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<SubResourceArgs> redirectConfiguration;
-        private @Nullable Input<SubResourceArgs> rewriteRuleSet;
-        private @Nullable Input<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType;
-        private @Nullable Input<SubResourceArgs> urlPathMap;
+        private @Nullable Output<SubResourceArgs> backendAddressPool;
+        private @Nullable Output<SubResourceArgs> backendHttpSettings;
+        private @Nullable Output<SubResourceArgs> httpListener;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<SubResourceArgs> redirectConfiguration;
+        private @Nullable Output<SubResourceArgs> rewriteRuleSet;
+        private @Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType;
+        private @Nullable Output<SubResourceArgs> urlPathMap;
 
         public Builder() {
     	      // Empty
@@ -206,103 +206,103 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
     	      this.urlPathMap = defaults.urlPathMap;
         }
 
-        public Builder backendAddressPool(@Nullable Input<SubResourceArgs> backendAddressPool) {
+        public Builder backendAddressPool(@Nullable Output<SubResourceArgs> backendAddressPool) {
             this.backendAddressPool = backendAddressPool;
             return this;
         }
 
         public Builder backendAddressPool(@Nullable SubResourceArgs backendAddressPool) {
-            this.backendAddressPool = Input.ofNullable(backendAddressPool);
+            this.backendAddressPool = Output.ofNullable(backendAddressPool);
             return this;
         }
 
-        public Builder backendHttpSettings(@Nullable Input<SubResourceArgs> backendHttpSettings) {
+        public Builder backendHttpSettings(@Nullable Output<SubResourceArgs> backendHttpSettings) {
             this.backendHttpSettings = backendHttpSettings;
             return this;
         }
 
         public Builder backendHttpSettings(@Nullable SubResourceArgs backendHttpSettings) {
-            this.backendHttpSettings = Input.ofNullable(backendHttpSettings);
+            this.backendHttpSettings = Output.ofNullable(backendHttpSettings);
             return this;
         }
 
-        public Builder httpListener(@Nullable Input<SubResourceArgs> httpListener) {
+        public Builder httpListener(@Nullable Output<SubResourceArgs> httpListener) {
             this.httpListener = httpListener;
             return this;
         }
 
         public Builder httpListener(@Nullable SubResourceArgs httpListener) {
-            this.httpListener = Input.ofNullable(httpListener);
+            this.httpListener = Output.ofNullable(httpListener);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder redirectConfiguration(@Nullable Input<SubResourceArgs> redirectConfiguration) {
+        public Builder redirectConfiguration(@Nullable Output<SubResourceArgs> redirectConfiguration) {
             this.redirectConfiguration = redirectConfiguration;
             return this;
         }
 
         public Builder redirectConfiguration(@Nullable SubResourceArgs redirectConfiguration) {
-            this.redirectConfiguration = Input.ofNullable(redirectConfiguration);
+            this.redirectConfiguration = Output.ofNullable(redirectConfiguration);
             return this;
         }
 
-        public Builder rewriteRuleSet(@Nullable Input<SubResourceArgs> rewriteRuleSet) {
+        public Builder rewriteRuleSet(@Nullable Output<SubResourceArgs> rewriteRuleSet) {
             this.rewriteRuleSet = rewriteRuleSet;
             return this;
         }
 
         public Builder rewriteRuleSet(@Nullable SubResourceArgs rewriteRuleSet) {
-            this.rewriteRuleSet = Input.ofNullable(rewriteRuleSet);
+            this.rewriteRuleSet = Output.ofNullable(rewriteRuleSet);
             return this;
         }
 
-        public Builder ruleType(@Nullable Input<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType) {
+        public Builder ruleType(@Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType) {
             this.ruleType = ruleType;
             return this;
         }
 
         public Builder ruleType(@Nullable Either<String,ApplicationGatewayRequestRoutingRuleType> ruleType) {
-            this.ruleType = Input.ofNullable(ruleType);
+            this.ruleType = Output.ofNullable(ruleType);
             return this;
         }
 
-        public Builder urlPathMap(@Nullable Input<SubResourceArgs> urlPathMap) {
+        public Builder urlPathMap(@Nullable Output<SubResourceArgs> urlPathMap) {
             this.urlPathMap = urlPathMap;
             return this;
         }
 
         public Builder urlPathMap(@Nullable SubResourceArgs urlPathMap) {
-            this.urlPathMap = Input.ofNullable(urlPathMap);
+            this.urlPathMap = Output.ofNullable(urlPathMap);
             return this;
         }
         public ApplicationGatewayRequestRoutingRuleArgs build() {

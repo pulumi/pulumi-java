@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.datashare.enums.TriggerKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,9 +32,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,TriggerKind>> kind;
+      private final Output<Either<String,TriggerKind>> kind;
 
-    public Input<Either<String,TriggerKind>> getKind() {
+    public Output<Either<String,TriggerKind>> getKind() {
         return this.kind;
     }
 
@@ -43,9 +43,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,9 +54,9 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-      private final Input<String> shareSubscriptionName;
+      private final Output<String> shareSubscriptionName;
 
-    public Input<String> getShareSubscriptionName() {
+    public Output<String> getShareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
@@ -65,18 +65,18 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerName")
-      private final @Nullable Input<String> triggerName;
+      private final @Nullable Output<String> triggerName;
 
-    public Input<String> getTriggerName() {
-        return this.triggerName == null ? Input.empty() : this.triggerName;
+    public Output<String> getTriggerName() {
+        return this.triggerName == null ? Output.empty() : this.triggerName;
     }
 
     public TriggerArgs(
-        Input<String> accountName,
-        Input<Either<String,TriggerKind>> kind,
-        Input<String> resourceGroupName,
-        Input<String> shareSubscriptionName,
-        @Nullable Input<String> triggerName) {
+        Output<String> accountName,
+        Output<Either<String,TriggerKind>> kind,
+        Output<String> resourceGroupName,
+        Output<String> shareSubscriptionName,
+        @Nullable Output<String> triggerName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerArgs() {
-        this.accountName = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareSubscriptionName = Input.empty();
-        this.triggerName = Input.empty();
+        this.accountName = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareSubscriptionName = Output.empty();
+        this.triggerName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<Either<String,TriggerKind>> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> shareSubscriptionName;
-        private @Nullable Input<String> triggerName;
+        private Output<String> accountName;
+        private Output<Either<String,TriggerKind>> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> shareSubscriptionName;
+        private @Nullable Output<String> triggerName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.triggerName = defaults.triggerName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder kind(Input<Either<String,TriggerKind>> kind) {
+        public Builder kind(Output<Either<String,TriggerKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,TriggerKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareSubscriptionName(Input<String> shareSubscriptionName) {
+        public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
 
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Input.of(Objects.requireNonNull(shareSubscriptionName));
+            this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
 
-        public Builder triggerName(@Nullable Input<String> triggerName) {
+        public Builder triggerName(@Nullable Output<String> triggerName) {
             this.triggerName = triggerName;
             return this;
         }
 
         public Builder triggerName(@Nullable String triggerName) {
-            this.triggerName = Input.ofNullable(triggerName);
+            this.triggerName = Output.ofNullable(triggerName);
             return this;
         }
         public TriggerArgs build() {

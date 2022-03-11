@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailAddress")
-      private final @Nullable Input<String> emailAddress;
+      private final @Nullable Output<String> emailAddress;
 
-    public Input<String> getEmailAddress() {
-        return this.emailAddress == null ? Input.empty() : this.emailAddress;
+    public Output<String> getEmailAddress() {
+        return this.emailAddress == null ? Output.empty() : this.emailAddress;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phoneNumber")
-      private final @Nullable Input<String> phoneNumber;
+      private final @Nullable Output<String> phoneNumber;
 
-    public Input<String> getPhoneNumber() {
-        return this.phoneNumber == null ? Input.empty() : this.phoneNumber;
+    public Output<String> getPhoneNumber() {
+        return this.phoneNumber == null ? Output.empty() : this.phoneNumber;
     }
 
     public UserInfoArgs(
-        @Nullable Input<String> emailAddress,
-        @Nullable Input<String> name,
-        @Nullable Input<String> phoneNumber) {
+        @Nullable Output<String> emailAddress,
+        @Nullable Output<String> name,
+        @Nullable Output<String> phoneNumber) {
         this.emailAddress = emailAddress;
         this.name = name;
         this.phoneNumber = phoneNumber;
     }
 
     private UserInfoArgs() {
-        this.emailAddress = Input.empty();
-        this.name = Input.empty();
-        this.phoneNumber = Input.empty();
+        this.emailAddress = Output.empty();
+        this.name = Output.empty();
+        this.phoneNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> emailAddress;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> phoneNumber;
+        private @Nullable Output<String> emailAddress;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> phoneNumber;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder emailAddress(@Nullable Input<String> emailAddress) {
+        public Builder emailAddress(@Nullable Output<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
         public Builder emailAddress(@Nullable String emailAddress) {
-            this.emailAddress = Input.ofNullable(emailAddress);
+            this.emailAddress = Output.ofNullable(emailAddress);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder phoneNumber(@Nullable Input<String> phoneNumber) {
+        public Builder phoneNumber(@Nullable Output<String> phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
 
         public Builder phoneNumber(@Nullable String phoneNumber) {
-            this.phoneNumber = Input.ofNullable(phoneNumber);
+            this.phoneNumber = Output.ofNullable(phoneNumber);
             return this;
         }
         public UserInfoArgs build() {

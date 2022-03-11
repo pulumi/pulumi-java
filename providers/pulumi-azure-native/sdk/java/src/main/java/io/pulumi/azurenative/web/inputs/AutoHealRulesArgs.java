@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.AutoHealActionsArgs;
 import io.pulumi.azurenative.web.inputs.AutoHealTriggersArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<AutoHealActionsArgs> actions;
+      private final @Nullable Output<AutoHealActionsArgs> actions;
 
-    public Input<AutoHealActionsArgs> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<AutoHealActionsArgs> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggers")
-      private final @Nullable Input<AutoHealTriggersArgs> triggers;
+      private final @Nullable Output<AutoHealTriggersArgs> triggers;
 
-    public Input<AutoHealTriggersArgs> getTriggers() {
-        return this.triggers == null ? Input.empty() : this.triggers;
+    public Output<AutoHealTriggersArgs> getTriggers() {
+        return this.triggers == null ? Output.empty() : this.triggers;
     }
 
     public AutoHealRulesArgs(
-        @Nullable Input<AutoHealActionsArgs> actions,
-        @Nullable Input<AutoHealTriggersArgs> triggers) {
+        @Nullable Output<AutoHealActionsArgs> actions,
+        @Nullable Output<AutoHealTriggersArgs> triggers) {
         this.actions = actions;
         this.triggers = triggers;
     }
 
     private AutoHealRulesArgs() {
-        this.actions = Input.empty();
-        this.triggers = Input.empty();
+        this.actions = Output.empty();
+        this.triggers = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoHealActionsArgs> actions;
-        private @Nullable Input<AutoHealTriggersArgs> triggers;
+        private @Nullable Output<AutoHealActionsArgs> actions;
+        private @Nullable Output<AutoHealTriggersArgs> triggers;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder actions(@Nullable Input<AutoHealActionsArgs> actions) {
+        public Builder actions(@Nullable Output<AutoHealActionsArgs> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable AutoHealActionsArgs actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder triggers(@Nullable Input<AutoHealTriggersArgs> triggers) {
+        public Builder triggers(@Nullable Output<AutoHealTriggersArgs> triggers) {
             this.triggers = triggers;
             return this;
         }
 
         public Builder triggers(@Nullable AutoHealTriggersArgs triggers) {
-            this.triggers = Input.ofNullable(triggers);
+            this.triggers = Output.ofNullable(triggers);
             return this;
         }
         public AutoHealRulesArgs build() {

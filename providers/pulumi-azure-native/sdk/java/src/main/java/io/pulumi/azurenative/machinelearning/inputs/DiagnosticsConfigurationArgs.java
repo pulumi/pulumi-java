@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.enums.DiagnosticsLevel;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="expiry")
-      private final @Nullable Input<String> expiry;
+      private final @Nullable Output<String> expiry;
 
-    public Input<String> getExpiry() {
-        return this.expiry == null ? Input.empty() : this.expiry;
+    public Output<String> getExpiry() {
+        return this.expiry == null ? Output.empty() : this.expiry;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="level", required=true)
-      private final Input<Either<String,DiagnosticsLevel>> level;
+      private final Output<Either<String,DiagnosticsLevel>> level;
 
-    public Input<Either<String,DiagnosticsLevel>> getLevel() {
+    public Output<Either<String,DiagnosticsLevel>> getLevel() {
         return this.level;
     }
 
     public DiagnosticsConfigurationArgs(
-        @Nullable Input<String> expiry,
-        Input<Either<String,DiagnosticsLevel>> level) {
+        @Nullable Output<String> expiry,
+        Output<Either<String,DiagnosticsLevel>> level) {
         this.expiry = expiry;
         this.level = Objects.requireNonNull(level, "expected parameter 'level' to be non-null");
     }
 
     private DiagnosticsConfigurationArgs() {
-        this.expiry = Input.empty();
-        this.level = Input.empty();
+        this.expiry = Output.empty();
+        this.level = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expiry;
-        private Input<Either<String,DiagnosticsLevel>> level;
+        private @Nullable Output<String> expiry;
+        private Output<Either<String,DiagnosticsLevel>> level;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class DiagnosticsConfigurationArgs extends io.pulumi.resources.Reso
     	      this.level = defaults.level;
         }
 
-        public Builder expiry(@Nullable Input<String> expiry) {
+        public Builder expiry(@Nullable Output<String> expiry) {
             this.expiry = expiry;
             return this;
         }
 
         public Builder expiry(@Nullable String expiry) {
-            this.expiry = Input.ofNullable(expiry);
+            this.expiry = Output.ofNullable(expiry);
             return this;
         }
 
-        public Builder level(Input<Either<String,DiagnosticsLevel>> level) {
+        public Builder level(Output<Either<String,DiagnosticsLevel>> level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
         public Builder level(Either<String,DiagnosticsLevel> level) {
-            this.level = Input.of(Objects.requireNonNull(level));
+            this.level = Output.of(Objects.requireNonNull(level));
             return this;
         }
         public DiagnosticsConfigurationArgs build() {

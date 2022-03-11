@@ -17,7 +17,7 @@ import io.pulumi.azurenative.datafactory.inputs.HdfsReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.HttpReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.SftpReadSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -38,10 +38,10 @@ public final class BinarySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-      private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Input<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
+    public Output<Object> getDisableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class BinarySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="formatSettings")
-      private final @Nullable Input<BinaryReadSettingsArgs> formatSettings;
+      private final @Nullable Output<BinaryReadSettingsArgs> formatSettings;
 
-    public Input<BinaryReadSettingsArgs> getFormatSettings() {
-        return this.formatSettings == null ? Input.empty() : this.formatSettings;
+    public Output<BinaryReadSettingsArgs> getFormatSettings() {
+        return this.formatSettings == null ? Output.empty() : this.formatSettings;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class BinarySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-      private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Input<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
+    public Output<Object> getMaxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class BinarySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryCount")
-      private final @Nullable Input<Object> sourceRetryCount;
+      private final @Nullable Output<Object> sourceRetryCount;
 
-    public Input<Object> getSourceRetryCount() {
-        return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
+    public Output<Object> getSourceRetryCount() {
+        return this.sourceRetryCount == null ? Output.empty() : this.sourceRetryCount;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class BinarySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryWait")
-      private final @Nullable Input<Object> sourceRetryWait;
+      private final @Nullable Output<Object> sourceRetryWait;
 
-    public Input<Object> getSourceRetryWait() {
-        return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
+    public Output<Object> getSourceRetryWait() {
+        return this.sourceRetryWait == null ? Output.empty() : this.sourceRetryWait;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class BinarySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storeSettings")
-      private final @Nullable Input<Object> storeSettings;
+      private final @Nullable Output<Object> storeSettings;
 
-    public Input<Object> getStoreSettings() {
-        return this.storeSettings == null ? Input.empty() : this.storeSettings;
+    public Output<Object> getStoreSettings() {
+        return this.storeSettings == null ? Output.empty() : this.storeSettings;
     }
 
     /**
@@ -105,20 +105,20 @@ public final class BinarySourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public BinarySourceArgs(
-        @Nullable Input<Object> disableMetricsCollection,
-        @Nullable Input<BinaryReadSettingsArgs> formatSettings,
-        @Nullable Input<Object> maxConcurrentConnections,
-        @Nullable Input<Object> sourceRetryCount,
-        @Nullable Input<Object> sourceRetryWait,
-        @Nullable Input<Object> storeSettings,
-        Input<String> type) {
+        @Nullable Output<Object> disableMetricsCollection,
+        @Nullable Output<BinaryReadSettingsArgs> formatSettings,
+        @Nullable Output<Object> maxConcurrentConnections,
+        @Nullable Output<Object> sourceRetryCount,
+        @Nullable Output<Object> sourceRetryWait,
+        @Nullable Output<Object> storeSettings,
+        Output<String> type) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.formatSettings = formatSettings;
         this.maxConcurrentConnections = maxConcurrentConnections;
@@ -129,13 +129,13 @@ public final class BinarySourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BinarySourceArgs() {
-        this.disableMetricsCollection = Input.empty();
-        this.formatSettings = Input.empty();
-        this.maxConcurrentConnections = Input.empty();
-        this.sourceRetryCount = Input.empty();
-        this.sourceRetryWait = Input.empty();
-        this.storeSettings = Input.empty();
-        this.type = Input.empty();
+        this.disableMetricsCollection = Output.empty();
+        this.formatSettings = Output.empty();
+        this.maxConcurrentConnections = Output.empty();
+        this.sourceRetryCount = Output.empty();
+        this.sourceRetryWait = Output.empty();
+        this.storeSettings = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,13 +147,13 @@ public final class BinarySourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> disableMetricsCollection;
-        private @Nullable Input<BinaryReadSettingsArgs> formatSettings;
-        private @Nullable Input<Object> maxConcurrentConnections;
-        private @Nullable Input<Object> sourceRetryCount;
-        private @Nullable Input<Object> sourceRetryWait;
-        private @Nullable Input<Object> storeSettings;
-        private Input<String> type;
+        private @Nullable Output<Object> disableMetricsCollection;
+        private @Nullable Output<BinaryReadSettingsArgs> formatSettings;
+        private @Nullable Output<Object> maxConcurrentConnections;
+        private @Nullable Output<Object> sourceRetryCount;
+        private @Nullable Output<Object> sourceRetryWait;
+        private @Nullable Output<Object> storeSettings;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -170,73 +170,73 @@ public final class BinarySourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder formatSettings(@Nullable Input<BinaryReadSettingsArgs> formatSettings) {
+        public Builder formatSettings(@Nullable Output<BinaryReadSettingsArgs> formatSettings) {
             this.formatSettings = formatSettings;
             return this;
         }
 
         public Builder formatSettings(@Nullable BinaryReadSettingsArgs formatSettings) {
-            this.formatSettings = Input.ofNullable(formatSettings);
+            this.formatSettings = Output.ofNullable(formatSettings);
             return this;
         }
 
-        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder sourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Input.ofNullable(sourceRetryCount);
+            this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
 
-        public Builder sourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Input.ofNullable(sourceRetryWait);
+            this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
 
-        public Builder storeSettings(@Nullable Input<Object> storeSettings) {
+        public Builder storeSettings(@Nullable Output<Object> storeSettings) {
             this.storeSettings = storeSettings;
             return this;
         }
 
         public Builder storeSettings(@Nullable Object storeSettings) {
-            this.storeSettings = Input.ofNullable(storeSettings);
+            this.storeSettings = Output.ofNullable(storeSettings);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public BinarySourceArgs build() {

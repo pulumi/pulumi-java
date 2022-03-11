@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="additionalMetadataId")
-      private final @Nullable Input<String> additionalMetadataId;
+      private final @Nullable Output<String> additionalMetadataId;
 
-    public Input<String> getAdditionalMetadataId() {
-        return this.additionalMetadataId == null ? Input.empty() : this.additionalMetadataId;
+    public Output<String> getAdditionalMetadataId() {
+        return this.additionalMetadataId == null ? Output.empty() : this.additionalMetadataId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="category")
-      private final @Nullable Input<String> category;
+      private final @Nullable Output<String> category;
 
-    public Input<String> getCategory() {
-        return this.category == null ? Input.empty() : this.category;
+    public Output<String> getCategory() {
+        return this.category == null ? Output.empty() : this.category;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public PolicyDefinitionGroupArgs(
-        @Nullable Input<String> additionalMetadataId,
-        @Nullable Input<String> category,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<String> name) {
+        @Nullable Output<String> additionalMetadataId,
+        @Nullable Output<String> category,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<String> name) {
         this.additionalMetadataId = additionalMetadataId;
         this.category = category;
         this.description = description;
@@ -87,11 +87,11 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
     }
 
     private PolicyDefinitionGroupArgs() {
-        this.additionalMetadataId = Input.empty();
-        this.category = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.name = Input.empty();
+        this.additionalMetadataId = Output.empty();
+        this.category = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> additionalMetadataId;
-        private @Nullable Input<String> category;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<String> name;
+        private @Nullable Output<String> additionalMetadataId;
+        private @Nullable Output<String> category;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class PolicyDefinitionGroupArgs extends io.pulumi.resources.Resourc
     	      this.name = defaults.name;
         }
 
-        public Builder additionalMetadataId(@Nullable Input<String> additionalMetadataId) {
+        public Builder additionalMetadataId(@Nullable Output<String> additionalMetadataId) {
             this.additionalMetadataId = additionalMetadataId;
             return this;
         }
 
         public Builder additionalMetadataId(@Nullable String additionalMetadataId) {
-            this.additionalMetadataId = Input.ofNullable(additionalMetadataId);
+            this.additionalMetadataId = Output.ofNullable(additionalMetadataId);
             return this;
         }
 
-        public Builder category(@Nullable Input<String> category) {
+        public Builder category(@Nullable Output<String> category) {
             this.category = category;
             return this;
         }
 
         public Builder category(@Nullable String category) {
-            this.category = Input.ofNullable(category);
+            this.category = Output.ofNullable(category);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public PolicyDefinitionGroupArgs build() {

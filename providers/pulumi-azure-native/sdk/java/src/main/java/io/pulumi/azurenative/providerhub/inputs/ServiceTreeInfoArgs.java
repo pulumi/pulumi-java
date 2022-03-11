@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
     public static final ServiceTreeInfoArgs Empty = new ServiceTreeInfoArgs();
 
     @InputImport(name="componentId")
-      private final @Nullable Input<String> componentId;
+      private final @Nullable Output<String> componentId;
 
-    public Input<String> getComponentId() {
-        return this.componentId == null ? Input.empty() : this.componentId;
+    public Output<String> getComponentId() {
+        return this.componentId == null ? Output.empty() : this.componentId;
     }
 
     @InputImport(name="serviceId")
-      private final @Nullable Input<String> serviceId;
+      private final @Nullable Output<String> serviceId;
 
-    public Input<String> getServiceId() {
-        return this.serviceId == null ? Input.empty() : this.serviceId;
+    public Output<String> getServiceId() {
+        return this.serviceId == null ? Output.empty() : this.serviceId;
     }
 
     public ServiceTreeInfoArgs(
-        @Nullable Input<String> componentId,
-        @Nullable Input<String> serviceId) {
+        @Nullable Output<String> componentId,
+        @Nullable Output<String> serviceId) {
         this.componentId = componentId;
         this.serviceId = serviceId;
     }
 
     private ServiceTreeInfoArgs() {
-        this.componentId = Input.empty();
-        this.serviceId = Input.empty();
+        this.componentId = Output.empty();
+        this.serviceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> componentId;
-        private @Nullable Input<String> serviceId;
+        private @Nullable Output<String> componentId;
+        private @Nullable Output<String> serviceId;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class ServiceTreeInfoArgs extends io.pulumi.resources.ResourceArgs 
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder componentId(@Nullable Input<String> componentId) {
+        public Builder componentId(@Nullable Output<String> componentId) {
             this.componentId = componentId;
             return this;
         }
 
         public Builder componentId(@Nullable String componentId) {
-            this.componentId = Input.ofNullable(componentId);
+            this.componentId = Output.ofNullable(componentId);
             return this;
         }
 
-        public Builder serviceId(@Nullable Input<String> serviceId) {
+        public Builder serviceId(@Nullable Output<String> serviceId) {
             this.serviceId = serviceId;
             return this;
         }
 
         public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Input.ofNullable(serviceId);
+            this.serviceId = Output.ofNullable(serviceId);
             return this;
         }
         public ServiceTreeInfoArgs build() {

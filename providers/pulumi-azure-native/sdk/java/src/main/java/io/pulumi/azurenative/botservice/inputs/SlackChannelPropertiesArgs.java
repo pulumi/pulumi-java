@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -57,10 +57,10 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="landingPageUrl")
-      private final @Nullable Input<String> landingPageUrl;
+      private final @Nullable Output<String> landingPageUrl;
 
-    public Input<String> getLandingPageUrl() {
-        return this.landingPageUrl == null ? Input.empty() : this.landingPageUrl;
+    public Output<String> getLandingPageUrl() {
+        return this.landingPageUrl == null ? Output.empty() : this.landingPageUrl;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="signingSecret")
-      private final @Nullable Input<String> signingSecret;
+      private final @Nullable Output<String> signingSecret;
 
-    public Input<String> getSigningSecret() {
-        return this.signingSecret == null ? Input.empty() : this.signingSecret;
+    public Output<String> getSigningSecret() {
+        return this.signingSecret == null ? Output.empty() : this.signingSecret;
     }
 
     /**
@@ -79,19 +79,19 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="verificationToken")
-      private final @Nullable Input<String> verificationToken;
+      private final @Nullable Output<String> verificationToken;
 
-    public Input<String> getVerificationToken() {
-        return this.verificationToken == null ? Input.empty() : this.verificationToken;
+    public Output<String> getVerificationToken() {
+        return this.verificationToken == null ? Output.empty() : this.verificationToken;
     }
 
     public SlackChannelPropertiesArgs(
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecret,
-        Input<Boolean> isEnabled,
-        @Nullable Input<String> landingPageUrl,
-        @Nullable Input<String> signingSecret,
-        @Nullable Input<String> verificationToken) {
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecret,
+        Output<Boolean> isEnabled,
+        @Nullable Output<String> landingPageUrl,
+        @Nullable Output<String> signingSecret,
+        @Nullable Output<String> verificationToken) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
@@ -101,12 +101,12 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private SlackChannelPropertiesArgs() {
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.isEnabled = Input.empty();
-        this.landingPageUrl = Input.empty();
-        this.signingSecret = Input.empty();
-        this.verificationToken = Input.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.isEnabled = Output.empty();
+        this.landingPageUrl = Output.empty();
+        this.signingSecret = Output.empty();
+        this.verificationToken = Output.empty();
     }
 
     public static Builder builder() {
@@ -118,12 +118,12 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecret;
-        private Input<Boolean> isEnabled;
-        private @Nullable Input<String> landingPageUrl;
-        private @Nullable Input<String> signingSecret;
-        private @Nullable Input<String> verificationToken;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecret;
+        private Output<Boolean> isEnabled;
+        private @Nullable Output<String> landingPageUrl;
+        private @Nullable Output<String> signingSecret;
+        private @Nullable Output<String> verificationToken;
 
         public Builder() {
     	      // Empty
@@ -139,63 +139,63 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     	      this.verificationToken = defaults.verificationToken;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder landingPageUrl(@Nullable Input<String> landingPageUrl) {
+        public Builder landingPageUrl(@Nullable Output<String> landingPageUrl) {
             this.landingPageUrl = landingPageUrl;
             return this;
         }
 
         public Builder landingPageUrl(@Nullable String landingPageUrl) {
-            this.landingPageUrl = Input.ofNullable(landingPageUrl);
+            this.landingPageUrl = Output.ofNullable(landingPageUrl);
             return this;
         }
 
-        public Builder signingSecret(@Nullable Input<String> signingSecret) {
+        public Builder signingSecret(@Nullable Output<String> signingSecret) {
             this.signingSecret = signingSecret;
             return this;
         }
 
         public Builder signingSecret(@Nullable String signingSecret) {
-            this.signingSecret = Input.ofNullable(signingSecret);
+            this.signingSecret = Output.ofNullable(signingSecret);
             return this;
         }
 
-        public Builder verificationToken(@Nullable Input<String> verificationToken) {
+        public Builder verificationToken(@Nullable Output<String> verificationToken) {
             this.verificationToken = verificationToken;
             return this;
         }
 
         public Builder verificationToken(@Nullable String verificationToken) {
-            this.verificationToken = Input.ofNullable(verificationToken);
+            this.verificationToken = Output.ofNullable(verificationToken);
             return this;
         }
         public SlackChannelPropertiesArgs build() {

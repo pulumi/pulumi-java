@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azureactivedirectory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="countryCode")
-      private final @Nullable Input<String> countryCode;
+      private final @Nullable Output<String> countryCode;
 
-    public Input<String> getCountryCode() {
-        return this.countryCode == null ? Input.empty() : this.countryCode;
+    public Output<String> getCountryCode() {
+        return this.countryCode == null ? Output.empty() : this.countryCode;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     public CreateTenantRequestBodyPropertiesArgs(
-        @Nullable Input<String> countryCode,
-        @Nullable Input<String> displayName) {
+        @Nullable Output<String> countryCode,
+        @Nullable Output<String> displayName) {
         this.countryCode = countryCode;
         this.displayName = displayName;
     }
 
     private CreateTenantRequestBodyPropertiesArgs() {
-        this.countryCode = Input.empty();
-        this.displayName = Input.empty();
+        this.countryCode = Output.empty();
+        this.displayName = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> countryCode;
-        private @Nullable Input<String> displayName;
+        private @Nullable Output<String> countryCode;
+        private @Nullable Output<String> displayName;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder countryCode(@Nullable Input<String> countryCode) {
+        public Builder countryCode(@Nullable Output<String> countryCode) {
             this.countryCode = countryCode;
             return this;
         }
 
         public Builder countryCode(@Nullable String countryCode) {
-            this.countryCode = Input.ofNullable(countryCode);
+            this.countryCode = Output.ofNullable(countryCode);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
         public CreateTenantRequestBodyPropertiesArgs build() {

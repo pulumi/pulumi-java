@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.ContainerType;
 import io.pulumi.azurenative.batch.inputs.ContainerRegistryArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerImageNames")
-      private final @Nullable Input<List<String>> containerImageNames;
+      private final @Nullable Output<List<String>> containerImageNames;
 
-    public Input<List<String>> getContainerImageNames() {
-        return this.containerImageNames == null ? Input.empty() : this.containerImageNames;
+    public Output<List<String>> getContainerImageNames() {
+        return this.containerImageNames == null ? Output.empty() : this.containerImageNames;
     }
 
     /**
@@ -33,32 +33,32 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerRegistries")
-      private final @Nullable Input<List<ContainerRegistryArgs>> containerRegistries;
+      private final @Nullable Output<List<ContainerRegistryArgs>> containerRegistries;
 
-    public Input<List<ContainerRegistryArgs>> getContainerRegistries() {
-        return this.containerRegistries == null ? Input.empty() : this.containerRegistries;
+    public Output<List<ContainerRegistryArgs>> getContainerRegistries() {
+        return this.containerRegistries == null ? Output.empty() : this.containerRegistries;
     }
 
     @InputImport(name="type", required=true)
-      private final Input<ContainerType> type;
+      private final Output<ContainerType> type;
 
-    public Input<ContainerType> getType() {
+    public Output<ContainerType> getType() {
         return this.type;
     }
 
     public ContainerConfigurationArgs(
-        @Nullable Input<List<String>> containerImageNames,
-        @Nullable Input<List<ContainerRegistryArgs>> containerRegistries,
-        Input<ContainerType> type) {
+        @Nullable Output<List<String>> containerImageNames,
+        @Nullable Output<List<ContainerRegistryArgs>> containerRegistries,
+        Output<ContainerType> type) {
         this.containerImageNames = containerImageNames;
         this.containerRegistries = containerRegistries;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ContainerConfigurationArgs() {
-        this.containerImageNames = Input.empty();
-        this.containerRegistries = Input.empty();
-        this.type = Input.empty();
+        this.containerImageNames = Output.empty();
+        this.containerRegistries = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -70,9 +70,9 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> containerImageNames;
-        private @Nullable Input<List<ContainerRegistryArgs>> containerRegistries;
-        private Input<ContainerType> type;
+        private @Nullable Output<List<String>> containerImageNames;
+        private @Nullable Output<List<ContainerRegistryArgs>> containerRegistries;
+        private Output<ContainerType> type;
 
         public Builder() {
     	      // Empty
@@ -85,33 +85,33 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder containerImageNames(@Nullable Input<List<String>> containerImageNames) {
+        public Builder containerImageNames(@Nullable Output<List<String>> containerImageNames) {
             this.containerImageNames = containerImageNames;
             return this;
         }
 
         public Builder containerImageNames(@Nullable List<String> containerImageNames) {
-            this.containerImageNames = Input.ofNullable(containerImageNames);
+            this.containerImageNames = Output.ofNullable(containerImageNames);
             return this;
         }
 
-        public Builder containerRegistries(@Nullable Input<List<ContainerRegistryArgs>> containerRegistries) {
+        public Builder containerRegistries(@Nullable Output<List<ContainerRegistryArgs>> containerRegistries) {
             this.containerRegistries = containerRegistries;
             return this;
         }
 
         public Builder containerRegistries(@Nullable List<ContainerRegistryArgs> containerRegistries) {
-            this.containerRegistries = Input.ofNullable(containerRegistries);
+            this.containerRegistries = Output.ofNullable(containerRegistries);
             return this;
         }
 
-        public Builder type(Input<ContainerType> type) {
+        public Builder type(Output<ContainerType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(ContainerType type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ContainerConfigurationArgs build() {

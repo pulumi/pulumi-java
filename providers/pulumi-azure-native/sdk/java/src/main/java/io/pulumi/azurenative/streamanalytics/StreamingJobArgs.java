@@ -13,7 +13,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.OutputArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.SkuArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.TransformationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compatibilityLevel")
-      private final @Nullable Input<Either<String,CompatibilityLevel>> compatibilityLevel;
+      private final @Nullable Output<Either<String,CompatibilityLevel>> compatibilityLevel;
 
-    public Input<Either<String,CompatibilityLevel>> getCompatibilityLevel() {
-        return this.compatibilityLevel == null ? Input.empty() : this.compatibilityLevel;
+    public Output<Either<String,CompatibilityLevel>> getCompatibilityLevel() {
+        return this.compatibilityLevel == null ? Output.empty() : this.compatibilityLevel;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataLocale")
-      private final @Nullable Input<String> dataLocale;
+      private final @Nullable Output<String> dataLocale;
 
-    public Input<String> getDataLocale() {
-        return this.dataLocale == null ? Input.empty() : this.dataLocale;
+    public Output<String> getDataLocale() {
+        return this.dataLocale == null ? Output.empty() : this.dataLocale;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventsLateArrivalMaxDelayInSeconds")
-      private final @Nullable Input<Integer> eventsLateArrivalMaxDelayInSeconds;
+      private final @Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds;
 
-    public Input<Integer> getEventsLateArrivalMaxDelayInSeconds() {
-        return this.eventsLateArrivalMaxDelayInSeconds == null ? Input.empty() : this.eventsLateArrivalMaxDelayInSeconds;
+    public Output<Integer> getEventsLateArrivalMaxDelayInSeconds() {
+        return this.eventsLateArrivalMaxDelayInSeconds == null ? Output.empty() : this.eventsLateArrivalMaxDelayInSeconds;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventsOutOfOrderMaxDelayInSeconds")
-      private final @Nullable Input<Integer> eventsOutOfOrderMaxDelayInSeconds;
+      private final @Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds;
 
-    public Input<Integer> getEventsOutOfOrderMaxDelayInSeconds() {
-        return this.eventsOutOfOrderMaxDelayInSeconds == null ? Input.empty() : this.eventsOutOfOrderMaxDelayInSeconds;
+    public Output<Integer> getEventsOutOfOrderMaxDelayInSeconds() {
+        return this.eventsOutOfOrderMaxDelayInSeconds == null ? Output.empty() : this.eventsOutOfOrderMaxDelayInSeconds;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventsOutOfOrderPolicy")
-      private final @Nullable Input<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
+      private final @Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
 
-    public Input<Either<String,EventsOutOfOrderPolicy>> getEventsOutOfOrderPolicy() {
-        return this.eventsOutOfOrderPolicy == null ? Input.empty() : this.eventsOutOfOrderPolicy;
+    public Output<Either<String,EventsOutOfOrderPolicy>> getEventsOutOfOrderPolicy() {
+        return this.eventsOutOfOrderPolicy == null ? Output.empty() : this.eventsOutOfOrderPolicy;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functions")
-      private final @Nullable Input<List<FunctionArgs>> functions;
+      private final @Nullable Output<List<FunctionArgs>> functions;
 
-    public Input<List<FunctionArgs>> getFunctions() {
-        return this.functions == null ? Input.empty() : this.functions;
+    public Output<List<FunctionArgs>> getFunctions() {
+        return this.functions == null ? Output.empty() : this.functions;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs")
-      private final @Nullable Input<List<InputArgs>> inputs;
+      private final @Nullable Output<List<InputArgs>> inputs;
 
-    public Input<List<InputArgs>> getInputs() {
-        return this.inputs == null ? Input.empty() : this.inputs;
+    public Output<List<InputArgs>> getInputs() {
+        return this.inputs == null ? Output.empty() : this.inputs;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName")
-      private final @Nullable Input<String> jobName;
+      private final @Nullable Output<String> jobName;
 
-    public Input<String> getJobName() {
-        return this.jobName == null ? Input.empty() : this.jobName;
+    public Output<String> getJobName() {
+        return this.jobName == null ? Output.empty() : this.jobName;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputErrorPolicy")
-      private final @Nullable Input<Either<String,OutputErrorPolicy>> outputErrorPolicy;
+      private final @Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy;
 
-    public Input<Either<String,OutputErrorPolicy>> getOutputErrorPolicy() {
-        return this.outputErrorPolicy == null ? Input.empty() : this.outputErrorPolicy;
+    public Output<Either<String,OutputErrorPolicy>> getOutputErrorPolicy() {
+        return this.outputErrorPolicy == null ? Output.empty() : this.outputErrorPolicy;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputStartMode")
-      private final @Nullable Input<Either<String,OutputStartMode>> outputStartMode;
+      private final @Nullable Output<Either<String,OutputStartMode>> outputStartMode;
 
-    public Input<Either<String,OutputStartMode>> getOutputStartMode() {
-        return this.outputStartMode == null ? Input.empty() : this.outputStartMode;
+    public Output<Either<String,OutputStartMode>> getOutputStartMode() {
+        return this.outputStartMode == null ? Output.empty() : this.outputStartMode;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputStartTime")
-      private final @Nullable Input<String> outputStartTime;
+      private final @Nullable Output<String> outputStartTime;
 
-    public Input<String> getOutputStartTime() {
-        return this.outputStartTime == null ? Input.empty() : this.outputStartTime;
+    public Output<String> getOutputStartTime() {
+        return this.outputStartTime == null ? Output.empty() : this.outputStartTime;
     }
 
     /**
@@ -164,10 +164,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputs")
-      private final @Nullable Input<List<OutputArgs>> outputs;
+      private final @Nullable Output<List<OutputArgs>> outputs;
 
-    public Input<List<OutputArgs>> getOutputs() {
-        return this.outputs == null ? Input.empty() : this.outputs;
+    public Output<List<OutputArgs>> getOutputs() {
+        return this.outputs == null ? Output.empty() : this.outputs;
     }
 
     /**
@@ -175,9 +175,9 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -186,10 +186,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -197,10 +197,10 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -208,30 +208,30 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transformation")
-      private final @Nullable Input<TransformationArgs> transformation;
+      private final @Nullable Output<TransformationArgs> transformation;
 
-    public Input<TransformationArgs> getTransformation() {
-        return this.transformation == null ? Input.empty() : this.transformation;
+    public Output<TransformationArgs> getTransformation() {
+        return this.transformation == null ? Output.empty() : this.transformation;
     }
 
     public StreamingJobArgs(
-        @Nullable Input<Either<String,CompatibilityLevel>> compatibilityLevel,
-        @Nullable Input<String> dataLocale,
-        @Nullable Input<Integer> eventsLateArrivalMaxDelayInSeconds,
-        @Nullable Input<Integer> eventsOutOfOrderMaxDelayInSeconds,
-        @Nullable Input<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy,
-        @Nullable Input<List<FunctionArgs>> functions,
-        @Nullable Input<List<InputArgs>> inputs,
-        @Nullable Input<String> jobName,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,OutputErrorPolicy>> outputErrorPolicy,
-        @Nullable Input<Either<String,OutputStartMode>> outputStartMode,
-        @Nullable Input<String> outputStartTime,
-        @Nullable Input<List<OutputArgs>> outputs,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<TransformationArgs> transformation) {
+        @Nullable Output<Either<String,CompatibilityLevel>> compatibilityLevel,
+        @Nullable Output<String> dataLocale,
+        @Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds,
+        @Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds,
+        @Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy,
+        @Nullable Output<List<FunctionArgs>> functions,
+        @Nullable Output<List<InputArgs>> inputs,
+        @Nullable Output<String> jobName,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy,
+        @Nullable Output<Either<String,OutputStartMode>> outputStartMode,
+        @Nullable Output<String> outputStartTime,
+        @Nullable Output<List<OutputArgs>> outputs,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<TransformationArgs> transformation) {
         this.compatibilityLevel = compatibilityLevel;
         this.dataLocale = dataLocale;
         this.eventsLateArrivalMaxDelayInSeconds = eventsLateArrivalMaxDelayInSeconds;
@@ -252,23 +252,23 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamingJobArgs() {
-        this.compatibilityLevel = Input.empty();
-        this.dataLocale = Input.empty();
-        this.eventsLateArrivalMaxDelayInSeconds = Input.empty();
-        this.eventsOutOfOrderMaxDelayInSeconds = Input.empty();
-        this.eventsOutOfOrderPolicy = Input.empty();
-        this.functions = Input.empty();
-        this.inputs = Input.empty();
-        this.jobName = Input.empty();
-        this.location = Input.empty();
-        this.outputErrorPolicy = Input.empty();
-        this.outputStartMode = Input.empty();
-        this.outputStartTime = Input.empty();
-        this.outputs = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.transformation = Input.empty();
+        this.compatibilityLevel = Output.empty();
+        this.dataLocale = Output.empty();
+        this.eventsLateArrivalMaxDelayInSeconds = Output.empty();
+        this.eventsOutOfOrderMaxDelayInSeconds = Output.empty();
+        this.eventsOutOfOrderPolicy = Output.empty();
+        this.functions = Output.empty();
+        this.inputs = Output.empty();
+        this.jobName = Output.empty();
+        this.location = Output.empty();
+        this.outputErrorPolicy = Output.empty();
+        this.outputStartMode = Output.empty();
+        this.outputStartTime = Output.empty();
+        this.outputs = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.transformation = Output.empty();
     }
 
     public static Builder builder() {
@@ -280,23 +280,23 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,CompatibilityLevel>> compatibilityLevel;
-        private @Nullable Input<String> dataLocale;
-        private @Nullable Input<Integer> eventsLateArrivalMaxDelayInSeconds;
-        private @Nullable Input<Integer> eventsOutOfOrderMaxDelayInSeconds;
-        private @Nullable Input<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
-        private @Nullable Input<List<FunctionArgs>> functions;
-        private @Nullable Input<List<InputArgs>> inputs;
-        private @Nullable Input<String> jobName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,OutputErrorPolicy>> outputErrorPolicy;
-        private @Nullable Input<Either<String,OutputStartMode>> outputStartMode;
-        private @Nullable Input<String> outputStartTime;
-        private @Nullable Input<List<OutputArgs>> outputs;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<TransformationArgs> transformation;
+        private @Nullable Output<Either<String,CompatibilityLevel>> compatibilityLevel;
+        private @Nullable Output<String> dataLocale;
+        private @Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds;
+        private @Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds;
+        private @Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy;
+        private @Nullable Output<List<FunctionArgs>> functions;
+        private @Nullable Output<List<InputArgs>> inputs;
+        private @Nullable Output<String> jobName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy;
+        private @Nullable Output<Either<String,OutputStartMode>> outputStartMode;
+        private @Nullable Output<String> outputStartTime;
+        private @Nullable Output<List<OutputArgs>> outputs;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<TransformationArgs> transformation;
 
         public Builder() {
     	      // Empty
@@ -323,173 +323,173 @@ public final class StreamingJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transformation = defaults.transformation;
         }
 
-        public Builder compatibilityLevel(@Nullable Input<Either<String,CompatibilityLevel>> compatibilityLevel) {
+        public Builder compatibilityLevel(@Nullable Output<Either<String,CompatibilityLevel>> compatibilityLevel) {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
 
         public Builder compatibilityLevel(@Nullable Either<String,CompatibilityLevel> compatibilityLevel) {
-            this.compatibilityLevel = Input.ofNullable(compatibilityLevel);
+            this.compatibilityLevel = Output.ofNullable(compatibilityLevel);
             return this;
         }
 
-        public Builder dataLocale(@Nullable Input<String> dataLocale) {
+        public Builder dataLocale(@Nullable Output<String> dataLocale) {
             this.dataLocale = dataLocale;
             return this;
         }
 
         public Builder dataLocale(@Nullable String dataLocale) {
-            this.dataLocale = Input.ofNullable(dataLocale);
+            this.dataLocale = Output.ofNullable(dataLocale);
             return this;
         }
 
-        public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Input<Integer> eventsLateArrivalMaxDelayInSeconds) {
+        public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Output<Integer> eventsLateArrivalMaxDelayInSeconds) {
             this.eventsLateArrivalMaxDelayInSeconds = eventsLateArrivalMaxDelayInSeconds;
             return this;
         }
 
         public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Integer eventsLateArrivalMaxDelayInSeconds) {
-            this.eventsLateArrivalMaxDelayInSeconds = Input.ofNullable(eventsLateArrivalMaxDelayInSeconds);
+            this.eventsLateArrivalMaxDelayInSeconds = Output.ofNullable(eventsLateArrivalMaxDelayInSeconds);
             return this;
         }
 
-        public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Input<Integer> eventsOutOfOrderMaxDelayInSeconds) {
+        public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Output<Integer> eventsOutOfOrderMaxDelayInSeconds) {
             this.eventsOutOfOrderMaxDelayInSeconds = eventsOutOfOrderMaxDelayInSeconds;
             return this;
         }
 
         public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Integer eventsOutOfOrderMaxDelayInSeconds) {
-            this.eventsOutOfOrderMaxDelayInSeconds = Input.ofNullable(eventsOutOfOrderMaxDelayInSeconds);
+            this.eventsOutOfOrderMaxDelayInSeconds = Output.ofNullable(eventsOutOfOrderMaxDelayInSeconds);
             return this;
         }
 
-        public Builder eventsOutOfOrderPolicy(@Nullable Input<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy) {
+        public Builder eventsOutOfOrderPolicy(@Nullable Output<Either<String,EventsOutOfOrderPolicy>> eventsOutOfOrderPolicy) {
             this.eventsOutOfOrderPolicy = eventsOutOfOrderPolicy;
             return this;
         }
 
         public Builder eventsOutOfOrderPolicy(@Nullable Either<String,EventsOutOfOrderPolicy> eventsOutOfOrderPolicy) {
-            this.eventsOutOfOrderPolicy = Input.ofNullable(eventsOutOfOrderPolicy);
+            this.eventsOutOfOrderPolicy = Output.ofNullable(eventsOutOfOrderPolicy);
             return this;
         }
 
-        public Builder functions(@Nullable Input<List<FunctionArgs>> functions) {
+        public Builder functions(@Nullable Output<List<FunctionArgs>> functions) {
             this.functions = functions;
             return this;
         }
 
         public Builder functions(@Nullable List<FunctionArgs> functions) {
-            this.functions = Input.ofNullable(functions);
+            this.functions = Output.ofNullable(functions);
             return this;
         }
 
-        public Builder inputs(@Nullable Input<List<InputArgs>> inputs) {
+        public Builder inputs(@Nullable Output<List<InputArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
         public Builder inputs(@Nullable List<InputArgs> inputs) {
-            this.inputs = Input.ofNullable(inputs);
+            this.inputs = Output.ofNullable(inputs);
             return this;
         }
 
-        public Builder jobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Output<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Input.ofNullable(jobName);
+            this.jobName = Output.ofNullable(jobName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder outputErrorPolicy(@Nullable Input<Either<String,OutputErrorPolicy>> outputErrorPolicy) {
+        public Builder outputErrorPolicy(@Nullable Output<Either<String,OutputErrorPolicy>> outputErrorPolicy) {
             this.outputErrorPolicy = outputErrorPolicy;
             return this;
         }
 
         public Builder outputErrorPolicy(@Nullable Either<String,OutputErrorPolicy> outputErrorPolicy) {
-            this.outputErrorPolicy = Input.ofNullable(outputErrorPolicy);
+            this.outputErrorPolicy = Output.ofNullable(outputErrorPolicy);
             return this;
         }
 
-        public Builder outputStartMode(@Nullable Input<Either<String,OutputStartMode>> outputStartMode) {
+        public Builder outputStartMode(@Nullable Output<Either<String,OutputStartMode>> outputStartMode) {
             this.outputStartMode = outputStartMode;
             return this;
         }
 
         public Builder outputStartMode(@Nullable Either<String,OutputStartMode> outputStartMode) {
-            this.outputStartMode = Input.ofNullable(outputStartMode);
+            this.outputStartMode = Output.ofNullable(outputStartMode);
             return this;
         }
 
-        public Builder outputStartTime(@Nullable Input<String> outputStartTime) {
+        public Builder outputStartTime(@Nullable Output<String> outputStartTime) {
             this.outputStartTime = outputStartTime;
             return this;
         }
 
         public Builder outputStartTime(@Nullable String outputStartTime) {
-            this.outputStartTime = Input.ofNullable(outputStartTime);
+            this.outputStartTime = Output.ofNullable(outputStartTime);
             return this;
         }
 
-        public Builder outputs(@Nullable Input<List<OutputArgs>> outputs) {
+        public Builder outputs(@Nullable Output<List<OutputArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
         public Builder outputs(@Nullable List<OutputArgs> outputs) {
-            this.outputs = Input.ofNullable(outputs);
+            this.outputs = Output.ofNullable(outputs);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder transformation(@Nullable Input<TransformationArgs> transformation) {
+        public Builder transformation(@Nullable Output<TransformationArgs> transformation) {
             this.transformation = transformation;
             return this;
         }
 
         public Builder transformation(@Nullable TransformationArgs transformation) {
-            this.transformation = Input.ofNullable(transformation);
+            this.transformation = Output.ofNullable(transformation);
             return this;
         }
         public StreamingJobArgs build() {

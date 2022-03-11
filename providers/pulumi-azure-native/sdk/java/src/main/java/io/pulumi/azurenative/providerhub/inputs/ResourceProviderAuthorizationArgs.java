@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,39 +15,39 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
     public static final ResourceProviderAuthorizationArgs Empty = new ResourceProviderAuthorizationArgs();
 
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     @InputImport(name="managedByRoleDefinitionId")
-      private final @Nullable Input<String> managedByRoleDefinitionId;
+      private final @Nullable Output<String> managedByRoleDefinitionId;
 
-    public Input<String> getManagedByRoleDefinitionId() {
-        return this.managedByRoleDefinitionId == null ? Input.empty() : this.managedByRoleDefinitionId;
+    public Output<String> getManagedByRoleDefinitionId() {
+        return this.managedByRoleDefinitionId == null ? Output.empty() : this.managedByRoleDefinitionId;
     }
 
     @InputImport(name="roleDefinitionId")
-      private final @Nullable Input<String> roleDefinitionId;
+      private final @Nullable Output<String> roleDefinitionId;
 
-    public Input<String> getRoleDefinitionId() {
-        return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
+    public Output<String> getRoleDefinitionId() {
+        return this.roleDefinitionId == null ? Output.empty() : this.roleDefinitionId;
     }
 
     public ResourceProviderAuthorizationArgs(
-        @Nullable Input<String> applicationId,
-        @Nullable Input<String> managedByRoleDefinitionId,
-        @Nullable Input<String> roleDefinitionId) {
+        @Nullable Output<String> applicationId,
+        @Nullable Output<String> managedByRoleDefinitionId,
+        @Nullable Output<String> roleDefinitionId) {
         this.applicationId = applicationId;
         this.managedByRoleDefinitionId = managedByRoleDefinitionId;
         this.roleDefinitionId = roleDefinitionId;
     }
 
     private ResourceProviderAuthorizationArgs() {
-        this.applicationId = Input.empty();
-        this.managedByRoleDefinitionId = Input.empty();
-        this.roleDefinitionId = Input.empty();
+        this.applicationId = Output.empty();
+        this.managedByRoleDefinitionId = Output.empty();
+        this.roleDefinitionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,9 +59,9 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<String> managedByRoleDefinitionId;
-        private @Nullable Input<String> roleDefinitionId;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<String> managedByRoleDefinitionId;
+        private @Nullable Output<String> roleDefinitionId;
 
         public Builder() {
     	      // Empty
@@ -74,33 +74,33 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
     	      this.roleDefinitionId = defaults.roleDefinitionId;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder managedByRoleDefinitionId(@Nullable Input<String> managedByRoleDefinitionId) {
+        public Builder managedByRoleDefinitionId(@Nullable Output<String> managedByRoleDefinitionId) {
             this.managedByRoleDefinitionId = managedByRoleDefinitionId;
             return this;
         }
 
         public Builder managedByRoleDefinitionId(@Nullable String managedByRoleDefinitionId) {
-            this.managedByRoleDefinitionId = Input.ofNullable(managedByRoleDefinitionId);
+            this.managedByRoleDefinitionId = Output.ofNullable(managedByRoleDefinitionId);
             return this;
         }
 
-        public Builder roleDefinitionId(@Nullable Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Input.ofNullable(roleDefinitionId);
+            this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
             return this;
         }
         public ResourceProviderAuthorizationArgs build() {

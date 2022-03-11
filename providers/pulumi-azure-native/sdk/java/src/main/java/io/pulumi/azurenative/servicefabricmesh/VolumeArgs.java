@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh;
 import io.pulumi.azurenative.servicefabricmesh.enums.VolumeProvider;
 import io.pulumi.azurenative.servicefabricmesh.inputs.VolumeProviderParametersAzureFileArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureFileParameters")
-      private final @Nullable Input<VolumeProviderParametersAzureFileArgs> azureFileParameters;
+      private final @Nullable Output<VolumeProviderParametersAzureFileArgs> azureFileParameters;
 
-    public Input<VolumeProviderParametersAzureFileArgs> getAzureFileParameters() {
-        return this.azureFileParameters == null ? Input.empty() : this.azureFileParameters;
+    public Output<VolumeProviderParametersAzureFileArgs> getAzureFileParameters() {
+        return this.azureFileParameters == null ? Output.empty() : this.azureFileParameters;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provider", required=true)
-      private final Input<Either<String,VolumeProvider>> provider;
+      private final Output<Either<String,VolumeProvider>> provider;
 
-    public Input<Either<String,VolumeProvider>> getProvider() {
+    public Output<Either<String,VolumeProvider>> getProvider() {
         return this.provider;
     }
 
@@ -67,9 +67,9 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,10 +78,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeResourceName")
-      private final @Nullable Input<String> volumeResourceName;
+      private final @Nullable Output<String> volumeResourceName;
 
-    public Input<String> getVolumeResourceName() {
-        return this.volumeResourceName == null ? Input.empty() : this.volumeResourceName;
+    public Output<String> getVolumeResourceName() {
+        return this.volumeResourceName == null ? Output.empty() : this.volumeResourceName;
     }
 
     public VolumeArgs(
-        @Nullable Input<VolumeProviderParametersAzureFileArgs> azureFileParameters,
-        @Nullable Input<String> description,
-        @Nullable Input<String> location,
-        Input<Either<String,VolumeProvider>> provider,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> volumeResourceName) {
+        @Nullable Output<VolumeProviderParametersAzureFileArgs> azureFileParameters,
+        @Nullable Output<String> description,
+        @Nullable Output<String> location,
+        Output<Either<String,VolumeProvider>> provider,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> volumeResourceName) {
         this.azureFileParameters = azureFileParameters;
         this.description = description;
         this.location = location;
@@ -113,13 +113,13 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeArgs() {
-        this.azureFileParameters = Input.empty();
-        this.description = Input.empty();
-        this.location = Input.empty();
-        this.provider = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.volumeResourceName = Input.empty();
+        this.azureFileParameters = Output.empty();
+        this.description = Output.empty();
+        this.location = Output.empty();
+        this.provider = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.volumeResourceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<VolumeProviderParametersAzureFileArgs> azureFileParameters;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> location;
-        private Input<Either<String,VolumeProvider>> provider;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> volumeResourceName;
+        private @Nullable Output<VolumeProviderParametersAzureFileArgs> azureFileParameters;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> location;
+        private Output<Either<String,VolumeProvider>> provider;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> volumeResourceName;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeResourceName = defaults.volumeResourceName;
         }
 
-        public Builder azureFileParameters(@Nullable Input<VolumeProviderParametersAzureFileArgs> azureFileParameters) {
+        public Builder azureFileParameters(@Nullable Output<VolumeProviderParametersAzureFileArgs> azureFileParameters) {
             this.azureFileParameters = azureFileParameters;
             return this;
         }
 
         public Builder azureFileParameters(@Nullable VolumeProviderParametersAzureFileArgs azureFileParameters) {
-            this.azureFileParameters = Input.ofNullable(azureFileParameters);
+            this.azureFileParameters = Output.ofNullable(azureFileParameters);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder provider(Input<Either<String,VolumeProvider>> provider) {
+        public Builder provider(Output<Either<String,VolumeProvider>> provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
         public Builder provider(Either<String,VolumeProvider> provider) {
-            this.provider = Input.of(Objects.requireNonNull(provider));
+            this.provider = Output.of(Objects.requireNonNull(provider));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder volumeResourceName(@Nullable Input<String> volumeResourceName) {
+        public Builder volumeResourceName(@Nullable Output<String> volumeResourceName) {
             this.volumeResourceName = volumeResourceName;
             return this;
         }
 
         public Builder volumeResourceName(@Nullable String volumeResourceName) {
-            this.volumeResourceName = Input.ofNullable(volumeResourceName);
+            this.volumeResourceName = Output.ofNullable(volumeResourceName);
             return this;
         }
         public VolumeArgs build() {

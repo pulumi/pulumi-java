@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.keyvault.inputs.ManagedHsmPropertiesArgs;
 import io.pulumi.azurenative.keyvault.inputs.ManagedHsmSkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ManagedHsmPropertiesArgs> properties;
+      private final @Nullable Output<ManagedHsmPropertiesArgs> properties;
 
-    public Input<ManagedHsmPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ManagedHsmPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,10 +66,10 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<ManagedHsmSkuArgs> sku;
+      private final @Nullable Output<ManagedHsmSkuArgs> sku;
 
-    public Input<ManagedHsmSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ManagedHsmSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ManagedHsmArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<ManagedHsmPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<ManagedHsmSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<ManagedHsmPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<ManagedHsmSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.name = name;
         this.properties = properties;
@@ -99,12 +99,12 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManagedHsmArgs() {
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ManagedHsmPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ManagedHsmSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ManagedHsmPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ManagedHsmSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ManagedHsmPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ManagedHsmPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ManagedHsmPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<ManagedHsmSkuArgs> sku) {
+        public Builder sku(@Nullable Output<ManagedHsmSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ManagedHsmSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ManagedHsmArgs build() {

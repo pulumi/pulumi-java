@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -34,22 +34,22 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="widevineTemplate", required=true)
-      private final Input<String> widevineTemplate;
+      private final Output<String> widevineTemplate;
 
-    public Input<String> getWidevineTemplate() {
+    public Output<String> getWidevineTemplate() {
         return this.widevineTemplate;
     }
 
     public ContentKeyPolicyWidevineConfigurationArgs(
-        Input<String> odataType,
-        Input<String> widevineTemplate) {
+        Output<String> odataType,
+        Output<String> widevineTemplate) {
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.widevineTemplate = Objects.requireNonNull(widevineTemplate, "expected parameter 'widevineTemplate' to be non-null");
     }
 
     private ContentKeyPolicyWidevineConfigurationArgs() {
-        this.odataType = Input.empty();
-        this.widevineTemplate = Input.empty();
+        this.odataType = Output.empty();
+        this.widevineTemplate = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> odataType;
-        private Input<String> widevineTemplate;
+        private Output<String> odataType;
+        private Output<String> widevineTemplate;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
     	      this.widevineTemplate = defaults.widevineTemplate;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder widevineTemplate(Input<String> widevineTemplate) {
+        public Builder widevineTemplate(Output<String> widevineTemplate) {
             this.widevineTemplate = Objects.requireNonNull(widevineTemplate);
             return this;
         }
 
         public Builder widevineTemplate(String widevineTemplate) {
-            this.widevineTemplate = Input.of(Objects.requireNonNull(widevineTemplate));
+            this.widevineTemplate = Output.of(Objects.requireNonNull(widevineTemplate));
             return this;
         }
         public ContentKeyPolicyWidevineConfigurationArgs build() {

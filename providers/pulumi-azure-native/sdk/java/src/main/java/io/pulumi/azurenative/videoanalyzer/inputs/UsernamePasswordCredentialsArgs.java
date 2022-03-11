@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -34,9 +34,9 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -45,25 +45,25 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public UsernamePasswordCredentialsArgs(
-        Input<String> password,
-        Input<String> type,
-        Input<String> username) {
+        Output<String> password,
+        Output<String> type,
+        Output<String> username) {
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
     }
 
     private UsernamePasswordCredentialsArgs() {
-        this.password = Input.empty();
-        this.type = Input.empty();
-        this.username = Input.empty();
+        this.password = Output.empty();
+        this.type = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> password;
-        private Input<String> type;
-        private Input<String> username;
+        private Output<String> password;
+        private Output<String> type;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class UsernamePasswordCredentialsArgs extends io.pulumi.resources.R
     	      this.username = defaults.username;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public UsernamePasswordCredentialsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.certificateregistration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyVaultId")
-      private final @Nullable Input<String> keyVaultId;
+      private final @Nullable Output<String> keyVaultId;
 
-    public Input<String> getKeyVaultId() {
-        return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
+    public Output<String> getKeyVaultId() {
+        return this.keyVaultId == null ? Output.empty() : this.keyVaultId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyVaultSecretName")
-      private final @Nullable Input<String> keyVaultSecretName;
+      private final @Nullable Output<String> keyVaultSecretName;
 
-    public Input<String> getKeyVaultSecretName() {
-        return this.keyVaultSecretName == null ? Input.empty() : this.keyVaultSecretName;
+    public Output<String> getKeyVaultSecretName() {
+        return this.keyVaultSecretName == null ? Output.empty() : this.keyVaultSecretName;
     }
 
     public AppServiceCertificateArgs(
-        @Nullable Input<String> keyVaultId,
-        @Nullable Input<String> keyVaultSecretName) {
+        @Nullable Output<String> keyVaultId,
+        @Nullable Output<String> keyVaultSecretName) {
         this.keyVaultId = keyVaultId;
         this.keyVaultSecretName = keyVaultSecretName;
     }
 
     private AppServiceCertificateArgs() {
-        this.keyVaultId = Input.empty();
-        this.keyVaultSecretName = Input.empty();
+        this.keyVaultId = Output.empty();
+        this.keyVaultSecretName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyVaultId;
-        private @Nullable Input<String> keyVaultSecretName;
+        private @Nullable Output<String> keyVaultId;
+        private @Nullable Output<String> keyVaultSecretName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
     	      this.keyVaultSecretName = defaults.keyVaultSecretName;
         }
 
-        public Builder keyVaultId(@Nullable Input<String> keyVaultId) {
+        public Builder keyVaultId(@Nullable Output<String> keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Input.ofNullable(keyVaultId);
+            this.keyVaultId = Output.ofNullable(keyVaultId);
             return this;
         }
 
-        public Builder keyVaultSecretName(@Nullable Input<String> keyVaultSecretName) {
+        public Builder keyVaultSecretName(@Nullable Output<String> keyVaultSecretName) {
             this.keyVaultSecretName = keyVaultSecretName;
             return this;
         }
 
         public Builder keyVaultSecretName(@Nullable String keyVaultSecretName) {
-            this.keyVaultSecretName = Input.ofNullable(keyVaultSecretName);
+            this.keyVaultSecretName = Output.ofNullable(keyVaultSecretName);
             return this;
         }
         public AppServiceCertificateArgs build() {

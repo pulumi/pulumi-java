@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fqdn")
-      private final @Nullable Input<String> fqdn;
+      private final @Nullable Output<String> fqdn;
 
-    public Input<String> getFqdn() {
-        return this.fqdn == null ? Input.empty() : this.fqdn;
+    public Output<String> getFqdn() {
+        return this.fqdn == null ? Output.empty() : this.fqdn;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     public ApplicationGatewayBackendAddressArgs(
-        @Nullable Input<String> fqdn,
-        @Nullable Input<String> ipAddress) {
+        @Nullable Output<String> fqdn,
+        @Nullable Output<String> ipAddress) {
         this.fqdn = fqdn;
         this.ipAddress = ipAddress;
     }
 
     private ApplicationGatewayBackendAddressArgs() {
-        this.fqdn = Input.empty();
-        this.ipAddress = Input.empty();
+        this.fqdn = Output.empty();
+        this.ipAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fqdn;
-        private @Nullable Input<String> ipAddress;
+        private @Nullable Output<String> fqdn;
+        private @Nullable Output<String> ipAddress;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ApplicationGatewayBackendAddressArgs extends io.pulumi.resour
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder fqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Input.ofNullable(fqdn);
+            this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
         public ApplicationGatewayBackendAddressArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.analysisservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class ServerAdministratorsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="members")
-      private final @Nullable Input<List<String>> members;
+      private final @Nullable Output<List<String>> members;
 
-    public Input<List<String>> getMembers() {
-        return this.members == null ? Input.empty() : this.members;
+    public Output<List<String>> getMembers() {
+        return this.members == null ? Output.empty() : this.members;
     }
 
-    public ServerAdministratorsArgs(@Nullable Input<List<String>> members) {
+    public ServerAdministratorsArgs(@Nullable Output<List<String>> members) {
         this.members = members;
     }
 
     private ServerAdministratorsArgs() {
-        this.members = Input.empty();
+        this.members = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ServerAdministratorsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> members;
+        private @Nullable Output<List<String>> members;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ServerAdministratorsArgs extends io.pulumi.resources.Resource
     	      this.members = defaults.members;
         }
 
-        public Builder members(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Output<List<String>> members) {
             this.members = members;
             return this;
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = Input.ofNullable(members);
+            this.members = Output.ofNullable(members);
             return this;
         }
         public ServerAdministratorsArgs build() {

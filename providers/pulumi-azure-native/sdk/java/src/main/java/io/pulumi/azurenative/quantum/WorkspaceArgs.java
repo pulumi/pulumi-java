@@ -5,7 +5,7 @@ package io.pulumi.azurenative.quantum;
 
 import io.pulumi.azurenative.quantum.inputs.ProviderArgs;
 import io.pulumi.azurenative.quantum.inputs.QuantumWorkspaceIdentityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<QuantumWorkspaceIdentityArgs> identity;
+      private final @Nullable Output<QuantumWorkspaceIdentityArgs> identity;
 
-    public Input<QuantumWorkspaceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<QuantumWorkspaceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providers")
-      private final @Nullable Input<List<ProviderArgs>> providers;
+      private final @Nullable Output<List<ProviderArgs>> providers;
 
-    public Input<List<ProviderArgs>> getProviders() {
-        return this.providers == null ? Input.empty() : this.providers;
+    public Output<List<ProviderArgs>> getProviders() {
+        return this.providers == null ? Output.empty() : this.providers;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -67,10 +67,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccount")
-      private final @Nullable Input<String> storageAccount;
+      private final @Nullable Output<String> storageAccount;
 
-    public Input<String> getStorageAccount() {
-        return this.storageAccount == null ? Input.empty() : this.storageAccount;
+    public Output<String> getStorageAccount() {
+        return this.storageAccount == null ? Output.empty() : this.storageAccount;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName")
-      private final @Nullable Input<String> workspaceName;
+      private final @Nullable Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
-        return this.workspaceName == null ? Input.empty() : this.workspaceName;
+    public Output<String> getWorkspaceName() {
+        return this.workspaceName == null ? Output.empty() : this.workspaceName;
     }
 
     public WorkspaceArgs(
-        @Nullable Input<QuantumWorkspaceIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<List<ProviderArgs>> providers,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> storageAccount,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> workspaceName) {
+        @Nullable Output<QuantumWorkspaceIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<List<ProviderArgs>> providers,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> storageAccount,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> workspaceName) {
         this.identity = identity;
         this.location = location;
         this.providers = providers;
@@ -113,13 +113,13 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceArgs() {
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.providers = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.storageAccount = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceName = Input.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.providers = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.storageAccount = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<QuantumWorkspaceIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<ProviderArgs>> providers;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> storageAccount;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> workspaceName;
+        private @Nullable Output<QuantumWorkspaceIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<ProviderArgs>> providers;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> storageAccount;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder identity(@Nullable Input<QuantumWorkspaceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<QuantumWorkspaceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable QuantumWorkspaceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder providers(@Nullable Input<List<ProviderArgs>> providers) {
+        public Builder providers(@Nullable Output<List<ProviderArgs>> providers) {
             this.providers = providers;
             return this;
         }
 
         public Builder providers(@Nullable List<ProviderArgs> providers) {
-            this.providers = Input.ofNullable(providers);
+            this.providers = Output.ofNullable(providers);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder storageAccount(@Nullable Input<String> storageAccount) {
+        public Builder storageAccount(@Nullable Output<String> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
         public Builder storageAccount(@Nullable String storageAccount) {
-            this.storageAccount = Input.ofNullable(storageAccount);
+            this.storageAccount = Output.ofNullable(storageAccount);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Output<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
         public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Input.ofNullable(workspaceName);
+            this.workspaceName = Output.ofNullable(workspaceName);
             return this;
         }
         public WorkspaceArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.digitaltwins.enums.PublicNetworkAccess;
 import io.pulumi.azurenative.digitaltwins.inputs.DigitalTwinsIdentityArgs;
 import io.pulumi.azurenative.digitaltwins.inputs.PrivateEndpointConnectionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<DigitalTwinsIdentityArgs> identity;
+      private final @Nullable Output<DigitalTwinsIdentityArgs> identity;
 
-    public Input<DigitalTwinsIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<DigitalTwinsIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -36,17 +36,17 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     @InputImport(name="privateEndpointConnections")
-      private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+      private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Input<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
-        return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
+    public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
+        return this.privateEndpointConnections == null ? Output.empty() : this.privateEndpointConnections;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,10 +76,10 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public DigitalTwinArgs(
-        @Nullable Input<DigitalTwinsIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections,
-        @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<DigitalTwinsIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections,
+        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<Map<String,String>> tags) {
         this.identity = identity;
         this.location = location;
         this.privateEndpointConnections = privateEndpointConnections;
@@ -111,13 +111,13 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DigitalTwinArgs() {
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.privateEndpointConnections = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.tags = Input.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.privateEndpointConnections = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<DigitalTwinsIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
-        private @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<DigitalTwinsIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class DigitalTwinArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder identity(@Nullable Input<DigitalTwinsIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<DigitalTwinsIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable DigitalTwinsIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
-            this.privateEndpointConnections = Input.ofNullable(privateEndpointConnections);
+            this.privateEndpointConnections = Output.ofNullable(privateEndpointConnections);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public DigitalTwinArgs build() {

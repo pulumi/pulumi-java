@@ -10,7 +10,6 @@ import io.pulumi.azurenative.costmanagement.outputs.PivotPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigDatasetResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigTimePeriodResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -327,21 +326,21 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ViewByScope(String name, ViewByScopeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:costmanagement:ViewByScope", name, args == null ? ViewByScopeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:costmanagement:ViewByScope", name, args == null ? ViewByScopeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ViewByScope(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ViewByScope(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:costmanagement:ViewByScope", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20190401preview:ViewByScope").build()),
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20191101:ViewByScope").build()),
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20200601:ViewByScope").build()),
-                Input.of(Alias.builder().setType("azure-native:costmanagement/v20211001:ViewByScope").build())
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20190401preview:ViewByScope").build()),
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20191101:ViewByScope").build()),
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20200601:ViewByScope").build()),
+                Output.of(Alias.builder().setType("azure-native:costmanagement/v20211001:ViewByScope").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -355,7 +354,7 @@ public class ViewByScope extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ViewByScope get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ViewByScope get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ViewByScope(name, id, options);
     }
 }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.IntegrationServiceEnvironmentAccessEndpointType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class IntegrationServiceEnvironmentAccessEndpointArgs extends io.pu
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type;
+      private final @Nullable Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type;
 
-    public Input<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public IntegrationServiceEnvironmentAccessEndpointArgs(@Nullable Input<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type) {
+    public IntegrationServiceEnvironmentAccessEndpointArgs(@Nullable Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type) {
         this.type = type;
     }
 
     private IntegrationServiceEnvironmentAccessEndpointArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class IntegrationServiceEnvironmentAccessEndpointArgs extends io.pu
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type;
+        private @Nullable Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class IntegrationServiceEnvironmentAccessEndpointArgs extends io.pu
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type) {
+        public Builder type(@Nullable Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,IntegrationServiceEnvironmentAccessEndpointType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public IntegrationServiceEnvironmentAccessEndpointArgs build() {

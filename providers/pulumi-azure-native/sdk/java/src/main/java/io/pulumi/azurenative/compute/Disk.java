@@ -15,7 +15,6 @@ import io.pulumi.azurenative.compute.outputs.PropertyUpdatesInProgressResponse;
 import io.pulumi.azurenative.compute.outputs.PurchasePlanResponse;
 import io.pulumi.azurenative.compute.outputs.ShareInfoElementResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -559,31 +558,31 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Disk(String name, DiskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:Disk", name, args == null ? DiskArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:Disk", name, args == null ? DiskArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Disk(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Disk(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:Disk", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20160430preview:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20170330:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180401:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180601:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20180930:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190301:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190701:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20191101:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200501:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200630:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200930:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20201201:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210401:Disk").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210801:Disk").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20160430preview:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20170330:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180401:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180601:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20180930:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190301:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190701:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20191101:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200501:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200630:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200930:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20201201:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210401:Disk").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210801:Disk").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -597,7 +596,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Disk get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Disk get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Disk(name, id, options);
     }
 }

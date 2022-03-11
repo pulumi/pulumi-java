@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="markdownSource")
-      private final @Nullable Input<Integer> markdownSource;
+      private final @Nullable Output<Integer> markdownSource;
 
-    public Input<Integer> getMarkdownSource() {
-        return this.markdownSource == null ? Input.empty() : this.markdownSource;
+    public Output<Integer> getMarkdownSource() {
+        return this.markdownSource == null ? Output.empty() : this.markdownSource;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="markdownUri")
-      private final @Nullable Input<String> markdownUri;
+      private final @Nullable Output<String> markdownUri;
 
-    public Input<String> getMarkdownUri() {
-        return this.markdownUri == null ? Input.empty() : this.markdownUri;
+    public Output<String> getMarkdownUri() {
+        return this.markdownUri == null ? Output.empty() : this.markdownUri;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="subtitle")
-      private final @Nullable Input<String> subtitle;
+      private final @Nullable Output<String> subtitle;
 
-    public Input<String> getSubtitle() {
-        return this.subtitle == null ? Input.empty() : this.subtitle;
+    public Output<String> getSubtitle() {
+        return this.subtitle == null ? Output.empty() : this.subtitle;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="title")
-      private final @Nullable Input<String> title;
+      private final @Nullable Output<String> title;
 
-    public Input<String> getTitle() {
-        return this.title == null ? Input.empty() : this.title;
+    public Output<String> getTitle() {
+        return this.title == null ? Output.empty() : this.title;
     }
 
     public MarkdownPartMetadataSettingsSettingsArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<Integer> markdownSource,
-        @Nullable Input<String> markdownUri,
-        @Nullable Input<String> subtitle,
-        @Nullable Input<String> title) {
+        @Nullable Output<String> content,
+        @Nullable Output<Integer> markdownSource,
+        @Nullable Output<String> markdownUri,
+        @Nullable Output<String> subtitle,
+        @Nullable Output<String> title) {
         this.content = content;
         this.markdownSource = markdownSource;
         this.markdownUri = markdownUri;
@@ -88,11 +88,11 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
     }
 
     private MarkdownPartMetadataSettingsSettingsArgs() {
-        this.content = Input.empty();
-        this.markdownSource = Input.empty();
-        this.markdownUri = Input.empty();
-        this.subtitle = Input.empty();
-        this.title = Input.empty();
+        this.content = Output.empty();
+        this.markdownSource = Output.empty();
+        this.markdownUri = Output.empty();
+        this.subtitle = Output.empty();
+        this.title = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<Integer> markdownSource;
-        private @Nullable Input<String> markdownUri;
-        private @Nullable Input<String> subtitle;
-        private @Nullable Input<String> title;
+        private @Nullable Output<String> content;
+        private @Nullable Output<Integer> markdownSource;
+        private @Nullable Output<String> markdownUri;
+        private @Nullable Output<String> subtitle;
+        private @Nullable Output<String> title;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class MarkdownPartMetadataSettingsSettingsArgs extends io.pulumi.re
     	      this.title = defaults.title;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder markdownSource(@Nullable Input<Integer> markdownSource) {
+        public Builder markdownSource(@Nullable Output<Integer> markdownSource) {
             this.markdownSource = markdownSource;
             return this;
         }
 
         public Builder markdownSource(@Nullable Integer markdownSource) {
-            this.markdownSource = Input.ofNullable(markdownSource);
+            this.markdownSource = Output.ofNullable(markdownSource);
             return this;
         }
 
-        public Builder markdownUri(@Nullable Input<String> markdownUri) {
+        public Builder markdownUri(@Nullable Output<String> markdownUri) {
             this.markdownUri = markdownUri;
             return this;
         }
 
         public Builder markdownUri(@Nullable String markdownUri) {
-            this.markdownUri = Input.ofNullable(markdownUri);
+            this.markdownUri = Output.ofNullable(markdownUri);
             return this;
         }
 
-        public Builder subtitle(@Nullable Input<String> subtitle) {
+        public Builder subtitle(@Nullable Output<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
 
         public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Input.ofNullable(subtitle);
+            this.subtitle = Output.ofNullable(subtitle);
             return this;
         }
 
-        public Builder title(@Nullable Input<String> title) {
+        public Builder title(@Nullable Output<String> title) {
             this.title = title;
             return this;
         }
 
         public Builder title(@Nullable String title) {
-            this.title = Input.ofNullable(title);
+            this.title = Output.ofNullable(title);
             return this;
         }
         public MarkdownPartMetadataSettingsSettingsArgs build() {

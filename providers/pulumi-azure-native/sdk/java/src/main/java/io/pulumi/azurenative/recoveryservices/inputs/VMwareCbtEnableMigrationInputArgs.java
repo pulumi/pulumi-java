@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.LicenseType;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtDiskInputArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,9 +27,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="dataMoverRunAsAccountId", required=true)
-      private final Input<String> dataMoverRunAsAccountId;
+      private final Output<String> dataMoverRunAsAccountId;
 
-    public Input<String> getDataMoverRunAsAccountId() {
+    public Output<String> getDataMoverRunAsAccountId() {
         return this.dataMoverRunAsAccountId;
     }
 
@@ -38,9 +38,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="disksToInclude", required=true)
-      private final Input<List<VMwareCbtDiskInputArgs>> disksToInclude;
+      private final Output<List<VMwareCbtDiskInputArgs>> disksToInclude;
 
-    public Input<List<VMwareCbtDiskInputArgs>> getDisksToInclude() {
+    public Output<List<VMwareCbtDiskInputArgs>> getDisksToInclude() {
         return this.disksToInclude;
     }
 
@@ -50,9 +50,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="instanceType", required=true)
-      private final Input<String> instanceType;
+      private final Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
+    public Output<String> getInstanceType() {
         return this.instanceType;
     }
 
@@ -61,10 +61,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="licenseType")
-      private final @Nullable Input<Either<String,LicenseType>> licenseType;
+      private final @Nullable Output<Either<String,LicenseType>> licenseType;
 
-    public Input<Either<String,LicenseType>> getLicenseType() {
-        return this.licenseType == null ? Input.empty() : this.licenseType;
+    public Output<Either<String,LicenseType>> getLicenseType() {
+        return this.licenseType == null ? Output.empty() : this.licenseType;
     }
 
     /**
@@ -72,9 +72,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="snapshotRunAsAccountId", required=true)
-      private final Input<String> snapshotRunAsAccountId;
+      private final Output<String> snapshotRunAsAccountId;
 
-    public Input<String> getSnapshotRunAsAccountId() {
+    public Output<String> getSnapshotRunAsAccountId() {
         return this.snapshotRunAsAccountId;
     }
 
@@ -83,10 +83,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetAvailabilitySetId")
-      private final @Nullable Input<String> targetAvailabilitySetId;
+      private final @Nullable Output<String> targetAvailabilitySetId;
 
-    public Input<String> getTargetAvailabilitySetId() {
-        return this.targetAvailabilitySetId == null ? Input.empty() : this.targetAvailabilitySetId;
+    public Output<String> getTargetAvailabilitySetId() {
+        return this.targetAvailabilitySetId == null ? Output.empty() : this.targetAvailabilitySetId;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetBootDiagnosticsStorageAccountId")
-      private final @Nullable Input<String> targetBootDiagnosticsStorageAccountId;
+      private final @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
 
-    public Input<String> getTargetBootDiagnosticsStorageAccountId() {
-        return this.targetBootDiagnosticsStorageAccountId == null ? Input.empty() : this.targetBootDiagnosticsStorageAccountId;
+    public Output<String> getTargetBootDiagnosticsStorageAccountId() {
+        return this.targetBootDiagnosticsStorageAccountId == null ? Output.empty() : this.targetBootDiagnosticsStorageAccountId;
     }
 
     /**
@@ -105,9 +105,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetNetworkId", required=true)
-      private final Input<String> targetNetworkId;
+      private final Output<String> targetNetworkId;
 
-    public Input<String> getTargetNetworkId() {
+    public Output<String> getTargetNetworkId() {
         return this.targetNetworkId;
     }
 
@@ -116,9 +116,9 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetResourceGroupId", required=true)
-      private final Input<String> targetResourceGroupId;
+      private final Output<String> targetResourceGroupId;
 
-    public Input<String> getTargetResourceGroupId() {
+    public Output<String> getTargetResourceGroupId() {
         return this.targetResourceGroupId;
     }
 
@@ -127,10 +127,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetSubnetName")
-      private final @Nullable Input<String> targetSubnetName;
+      private final @Nullable Output<String> targetSubnetName;
 
-    public Input<String> getTargetSubnetName() {
-        return this.targetSubnetName == null ? Input.empty() : this.targetSubnetName;
+    public Output<String> getTargetSubnetName() {
+        return this.targetSubnetName == null ? Output.empty() : this.targetSubnetName;
     }
 
     /**
@@ -138,10 +138,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetVmName")
-      private final @Nullable Input<String> targetVmName;
+      private final @Nullable Output<String> targetVmName;
 
-    public Input<String> getTargetVmName() {
-        return this.targetVmName == null ? Input.empty() : this.targetVmName;
+    public Output<String> getTargetVmName() {
+        return this.targetVmName == null ? Output.empty() : this.targetVmName;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetVmSize")
-      private final @Nullable Input<String> targetVmSize;
+      private final @Nullable Output<String> targetVmSize;
 
-    public Input<String> getTargetVmSize() {
-        return this.targetVmSize == null ? Input.empty() : this.targetVmSize;
+    public Output<String> getTargetVmSize() {
+        return this.targetVmSize == null ? Output.empty() : this.targetVmSize;
     }
 
     /**
@@ -160,26 +160,26 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="vmwareMachineId", required=true)
-      private final Input<String> vmwareMachineId;
+      private final Output<String> vmwareMachineId;
 
-    public Input<String> getVmwareMachineId() {
+    public Output<String> getVmwareMachineId() {
         return this.vmwareMachineId;
     }
 
     public VMwareCbtEnableMigrationInputArgs(
-        Input<String> dataMoverRunAsAccountId,
-        Input<List<VMwareCbtDiskInputArgs>> disksToInclude,
-        Input<String> instanceType,
-        @Nullable Input<Either<String,LicenseType>> licenseType,
-        Input<String> snapshotRunAsAccountId,
-        @Nullable Input<String> targetAvailabilitySetId,
-        @Nullable Input<String> targetBootDiagnosticsStorageAccountId,
-        Input<String> targetNetworkId,
-        Input<String> targetResourceGroupId,
-        @Nullable Input<String> targetSubnetName,
-        @Nullable Input<String> targetVmName,
-        @Nullable Input<String> targetVmSize,
-        Input<String> vmwareMachineId) {
+        Output<String> dataMoverRunAsAccountId,
+        Output<List<VMwareCbtDiskInputArgs>> disksToInclude,
+        Output<String> instanceType,
+        @Nullable Output<Either<String,LicenseType>> licenseType,
+        Output<String> snapshotRunAsAccountId,
+        @Nullable Output<String> targetAvailabilitySetId,
+        @Nullable Output<String> targetBootDiagnosticsStorageAccountId,
+        Output<String> targetNetworkId,
+        Output<String> targetResourceGroupId,
+        @Nullable Output<String> targetSubnetName,
+        @Nullable Output<String> targetVmName,
+        @Nullable Output<String> targetVmSize,
+        Output<String> vmwareMachineId) {
         this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId, "expected parameter 'dataMoverRunAsAccountId' to be non-null");
         this.disksToInclude = Objects.requireNonNull(disksToInclude, "expected parameter 'disksToInclude' to be non-null");
         this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
@@ -196,19 +196,19 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
     }
 
     private VMwareCbtEnableMigrationInputArgs() {
-        this.dataMoverRunAsAccountId = Input.empty();
-        this.disksToInclude = Input.empty();
-        this.instanceType = Input.empty();
-        this.licenseType = Input.empty();
-        this.snapshotRunAsAccountId = Input.empty();
-        this.targetAvailabilitySetId = Input.empty();
-        this.targetBootDiagnosticsStorageAccountId = Input.empty();
-        this.targetNetworkId = Input.empty();
-        this.targetResourceGroupId = Input.empty();
-        this.targetSubnetName = Input.empty();
-        this.targetVmName = Input.empty();
-        this.targetVmSize = Input.empty();
-        this.vmwareMachineId = Input.empty();
+        this.dataMoverRunAsAccountId = Output.empty();
+        this.disksToInclude = Output.empty();
+        this.instanceType = Output.empty();
+        this.licenseType = Output.empty();
+        this.snapshotRunAsAccountId = Output.empty();
+        this.targetAvailabilitySetId = Output.empty();
+        this.targetBootDiagnosticsStorageAccountId = Output.empty();
+        this.targetNetworkId = Output.empty();
+        this.targetResourceGroupId = Output.empty();
+        this.targetSubnetName = Output.empty();
+        this.targetVmName = Output.empty();
+        this.targetVmSize = Output.empty();
+        this.vmwareMachineId = Output.empty();
     }
 
     public static Builder builder() {
@@ -220,19 +220,19 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> dataMoverRunAsAccountId;
-        private Input<List<VMwareCbtDiskInputArgs>> disksToInclude;
-        private Input<String> instanceType;
-        private @Nullable Input<Either<String,LicenseType>> licenseType;
-        private Input<String> snapshotRunAsAccountId;
-        private @Nullable Input<String> targetAvailabilitySetId;
-        private @Nullable Input<String> targetBootDiagnosticsStorageAccountId;
-        private Input<String> targetNetworkId;
-        private Input<String> targetResourceGroupId;
-        private @Nullable Input<String> targetSubnetName;
-        private @Nullable Input<String> targetVmName;
-        private @Nullable Input<String> targetVmSize;
-        private Input<String> vmwareMachineId;
+        private Output<String> dataMoverRunAsAccountId;
+        private Output<List<VMwareCbtDiskInputArgs>> disksToInclude;
+        private Output<String> instanceType;
+        private @Nullable Output<Either<String,LicenseType>> licenseType;
+        private Output<String> snapshotRunAsAccountId;
+        private @Nullable Output<String> targetAvailabilitySetId;
+        private @Nullable Output<String> targetBootDiagnosticsStorageAccountId;
+        private Output<String> targetNetworkId;
+        private Output<String> targetResourceGroupId;
+        private @Nullable Output<String> targetSubnetName;
+        private @Nullable Output<String> targetVmName;
+        private @Nullable Output<String> targetVmSize;
+        private Output<String> vmwareMachineId;
 
         public Builder() {
     	      // Empty
@@ -255,133 +255,133 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
     	      this.vmwareMachineId = defaults.vmwareMachineId;
         }
 
-        public Builder dataMoverRunAsAccountId(Input<String> dataMoverRunAsAccountId) {
+        public Builder dataMoverRunAsAccountId(Output<String> dataMoverRunAsAccountId) {
             this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId);
             return this;
         }
 
         public Builder dataMoverRunAsAccountId(String dataMoverRunAsAccountId) {
-            this.dataMoverRunAsAccountId = Input.of(Objects.requireNonNull(dataMoverRunAsAccountId));
+            this.dataMoverRunAsAccountId = Output.of(Objects.requireNonNull(dataMoverRunAsAccountId));
             return this;
         }
 
-        public Builder disksToInclude(Input<List<VMwareCbtDiskInputArgs>> disksToInclude) {
+        public Builder disksToInclude(Output<List<VMwareCbtDiskInputArgs>> disksToInclude) {
             this.disksToInclude = Objects.requireNonNull(disksToInclude);
             return this;
         }
 
         public Builder disksToInclude(List<VMwareCbtDiskInputArgs> disksToInclude) {
-            this.disksToInclude = Input.of(Objects.requireNonNull(disksToInclude));
+            this.disksToInclude = Output.of(Objects.requireNonNull(disksToInclude));
             return this;
         }
 
-        public Builder instanceType(Input<String> instanceType) {
+        public Builder instanceType(Output<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
         public Builder instanceType(String instanceType) {
-            this.instanceType = Input.of(Objects.requireNonNull(instanceType));
+            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder licenseType(@Nullable Input<Either<String,LicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Output<Either<String,LicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
         public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
-            this.licenseType = Input.ofNullable(licenseType);
+            this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
 
-        public Builder snapshotRunAsAccountId(Input<String> snapshotRunAsAccountId) {
+        public Builder snapshotRunAsAccountId(Output<String> snapshotRunAsAccountId) {
             this.snapshotRunAsAccountId = Objects.requireNonNull(snapshotRunAsAccountId);
             return this;
         }
 
         public Builder snapshotRunAsAccountId(String snapshotRunAsAccountId) {
-            this.snapshotRunAsAccountId = Input.of(Objects.requireNonNull(snapshotRunAsAccountId));
+            this.snapshotRunAsAccountId = Output.of(Objects.requireNonNull(snapshotRunAsAccountId));
             return this;
         }
 
-        public Builder targetAvailabilitySetId(@Nullable Input<String> targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
-            this.targetAvailabilitySetId = Input.ofNullable(targetAvailabilitySetId);
+            this.targetAvailabilitySetId = Output.ofNullable(targetAvailabilitySetId);
             return this;
         }
 
-        public Builder targetBootDiagnosticsStorageAccountId(@Nullable Input<String> targetBootDiagnosticsStorageAccountId) {
+        public Builder targetBootDiagnosticsStorageAccountId(@Nullable Output<String> targetBootDiagnosticsStorageAccountId) {
             this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
 
         public Builder targetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
-            this.targetBootDiagnosticsStorageAccountId = Input.ofNullable(targetBootDiagnosticsStorageAccountId);
+            this.targetBootDiagnosticsStorageAccountId = Output.ofNullable(targetBootDiagnosticsStorageAccountId);
             return this;
         }
 
-        public Builder targetNetworkId(Input<String> targetNetworkId) {
+        public Builder targetNetworkId(Output<String> targetNetworkId) {
             this.targetNetworkId = Objects.requireNonNull(targetNetworkId);
             return this;
         }
 
         public Builder targetNetworkId(String targetNetworkId) {
-            this.targetNetworkId = Input.of(Objects.requireNonNull(targetNetworkId));
+            this.targetNetworkId = Output.of(Objects.requireNonNull(targetNetworkId));
             return this;
         }
 
-        public Builder targetResourceGroupId(Input<String> targetResourceGroupId) {
+        public Builder targetResourceGroupId(Output<String> targetResourceGroupId) {
             this.targetResourceGroupId = Objects.requireNonNull(targetResourceGroupId);
             return this;
         }
 
         public Builder targetResourceGroupId(String targetResourceGroupId) {
-            this.targetResourceGroupId = Input.of(Objects.requireNonNull(targetResourceGroupId));
+            this.targetResourceGroupId = Output.of(Objects.requireNonNull(targetResourceGroupId));
             return this;
         }
 
-        public Builder targetSubnetName(@Nullable Input<String> targetSubnetName) {
+        public Builder targetSubnetName(@Nullable Output<String> targetSubnetName) {
             this.targetSubnetName = targetSubnetName;
             return this;
         }
 
         public Builder targetSubnetName(@Nullable String targetSubnetName) {
-            this.targetSubnetName = Input.ofNullable(targetSubnetName);
+            this.targetSubnetName = Output.ofNullable(targetSubnetName);
             return this;
         }
 
-        public Builder targetVmName(@Nullable Input<String> targetVmName) {
+        public Builder targetVmName(@Nullable Output<String> targetVmName) {
             this.targetVmName = targetVmName;
             return this;
         }
 
         public Builder targetVmName(@Nullable String targetVmName) {
-            this.targetVmName = Input.ofNullable(targetVmName);
+            this.targetVmName = Output.ofNullable(targetVmName);
             return this;
         }
 
-        public Builder targetVmSize(@Nullable Input<String> targetVmSize) {
+        public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }
 
         public Builder targetVmSize(@Nullable String targetVmSize) {
-            this.targetVmSize = Input.ofNullable(targetVmSize);
+            this.targetVmSize = Output.ofNullable(targetVmSize);
             return this;
         }
 
-        public Builder vmwareMachineId(Input<String> vmwareMachineId) {
+        public Builder vmwareMachineId(Output<String> vmwareMachineId) {
             this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId);
             return this;
         }
 
         public Builder vmwareMachineId(String vmwareMachineId) {
-            this.vmwareMachineId = Input.of(Objects.requireNonNull(vmwareMachineId));
+            this.vmwareMachineId = Output.of(Objects.requireNonNull(vmwareMachineId));
             return this;
         }
         public VMwareCbtEnableMigrationInputArgs build() {

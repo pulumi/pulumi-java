@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.enums.CustomImageOsType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="imageName")
-      private final @Nullable Input<String> imageName;
+      private final @Nullable Output<String> imageName;
 
-    public Input<String> getImageName() {
-        return this.imageName == null ? Input.empty() : this.imageName;
+    public Output<String> getImageName() {
+        return this.imageName == null ? Output.empty() : this.imageName;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="osType", required=true)
-      private final Input<Either<String,CustomImageOsType>> osType;
+      private final Output<Either<String,CustomImageOsType>> osType;
 
-    public Input<Either<String,CustomImageOsType>> getOsType() {
+    public Output<Either<String,CustomImageOsType>> getOsType() {
         return this.osType;
     }
 
@@ -48,25 +48,25 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sysPrep")
-      private final @Nullable Input<Boolean> sysPrep;
+      private final @Nullable Output<Boolean> sysPrep;
 
-    public Input<Boolean> getSysPrep() {
-        return this.sysPrep == null ? Input.empty() : this.sysPrep;
+    public Output<Boolean> getSysPrep() {
+        return this.sysPrep == null ? Output.empty() : this.sysPrep;
     }
 
     public CustomImagePropertiesCustomArgs(
-        @Nullable Input<String> imageName,
-        Input<Either<String,CustomImageOsType>> osType,
-        @Nullable Input<Boolean> sysPrep) {
+        @Nullable Output<String> imageName,
+        Output<Either<String,CustomImageOsType>> osType,
+        @Nullable Output<Boolean> sysPrep) {
         this.imageName = imageName;
         this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
         this.sysPrep = sysPrep;
     }
 
     private CustomImagePropertiesCustomArgs() {
-        this.imageName = Input.empty();
-        this.osType = Input.empty();
-        this.sysPrep = Input.empty();
+        this.imageName = Output.empty();
+        this.osType = Output.empty();
+        this.sysPrep = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> imageName;
-        private Input<Either<String,CustomImageOsType>> osType;
-        private @Nullable Input<Boolean> sysPrep;
+        private @Nullable Output<String> imageName;
+        private Output<Either<String,CustomImageOsType>> osType;
+        private @Nullable Output<Boolean> sysPrep;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
     	      this.sysPrep = defaults.sysPrep;
         }
 
-        public Builder imageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Input.ofNullable(imageName);
+            this.imageName = Output.ofNullable(imageName);
             return this;
         }
 
-        public Builder osType(Input<Either<String,CustomImageOsType>> osType) {
+        public Builder osType(Output<Either<String,CustomImageOsType>> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
         public Builder osType(Either<String,CustomImageOsType> osType) {
-            this.osType = Input.of(Objects.requireNonNull(osType));
+            this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
 
-        public Builder sysPrep(@Nullable Input<Boolean> sysPrep) {
+        public Builder sysPrep(@Nullable Output<Boolean> sysPrep) {
             this.sysPrep = sysPrep;
             return this;
         }
 
         public Builder sysPrep(@Nullable Boolean sysPrep) {
-            this.sysPrep = Input.ofNullable(sysPrep);
+            this.sysPrep = Output.ofNullable(sysPrep);
             return this;
         }
         public CustomImagePropertiesCustomArgs build() {

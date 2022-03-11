@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.RequestsBasedTriggerArgs;
 import io.pulumi.azurenative.web.inputs.SlowRequestsBasedTriggerArgs;
 import io.pulumi.azurenative.web.inputs.StatusCodesBasedTriggerArgs;
 import io.pulumi.azurenative.web.inputs.StatusCodesRangeBasedTriggerArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="privateBytesInKB")
-      private final @Nullable Input<Integer> privateBytesInKB;
+      private final @Nullable Output<Integer> privateBytesInKB;
 
-    public Input<Integer> getPrivateBytesInKB() {
-        return this.privateBytesInKB == null ? Input.empty() : this.privateBytesInKB;
+    public Output<Integer> getPrivateBytesInKB() {
+        return this.privateBytesInKB == null ? Output.empty() : this.privateBytesInKB;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requests")
-      private final @Nullable Input<RequestsBasedTriggerArgs> requests;
+      private final @Nullable Output<RequestsBasedTriggerArgs> requests;
 
-    public Input<RequestsBasedTriggerArgs> getRequests() {
-        return this.requests == null ? Input.empty() : this.requests;
+    public Output<RequestsBasedTriggerArgs> getRequests() {
+        return this.requests == null ? Output.empty() : this.requests;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="slowRequests")
-      private final @Nullable Input<SlowRequestsBasedTriggerArgs> slowRequests;
+      private final @Nullable Output<SlowRequestsBasedTriggerArgs> slowRequests;
 
-    public Input<SlowRequestsBasedTriggerArgs> getSlowRequests() {
-        return this.slowRequests == null ? Input.empty() : this.slowRequests;
+    public Output<SlowRequestsBasedTriggerArgs> getSlowRequests() {
+        return this.slowRequests == null ? Output.empty() : this.slowRequests;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="slowRequestsWithPath")
-      private final @Nullable Input<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
+      private final @Nullable Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
 
-    public Input<List<SlowRequestsBasedTriggerArgs>> getSlowRequestsWithPath() {
-        return this.slowRequestsWithPath == null ? Input.empty() : this.slowRequestsWithPath;
+    public Output<List<SlowRequestsBasedTriggerArgs>> getSlowRequestsWithPath() {
+        return this.slowRequestsWithPath == null ? Output.empty() : this.slowRequestsWithPath;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="statusCodes")
-      private final @Nullable Input<List<StatusCodesBasedTriggerArgs>> statusCodes;
+      private final @Nullable Output<List<StatusCodesBasedTriggerArgs>> statusCodes;
 
-    public Input<List<StatusCodesBasedTriggerArgs>> getStatusCodes() {
-        return this.statusCodes == null ? Input.empty() : this.statusCodes;
+    public Output<List<StatusCodesBasedTriggerArgs>> getStatusCodes() {
+        return this.statusCodes == null ? Output.empty() : this.statusCodes;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="statusCodesRange")
-      private final @Nullable Input<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;
+      private final @Nullable Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;
 
-    public Input<List<StatusCodesRangeBasedTriggerArgs>> getStatusCodesRange() {
-        return this.statusCodesRange == null ? Input.empty() : this.statusCodesRange;
+    public Output<List<StatusCodesRangeBasedTriggerArgs>> getStatusCodesRange() {
+        return this.statusCodesRange == null ? Output.empty() : this.statusCodesRange;
     }
 
     public AutoHealTriggersArgs(
-        @Nullable Input<Integer> privateBytesInKB,
-        @Nullable Input<RequestsBasedTriggerArgs> requests,
-        @Nullable Input<SlowRequestsBasedTriggerArgs> slowRequests,
-        @Nullable Input<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath,
-        @Nullable Input<List<StatusCodesBasedTriggerArgs>> statusCodes,
-        @Nullable Input<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange) {
+        @Nullable Output<Integer> privateBytesInKB,
+        @Nullable Output<RequestsBasedTriggerArgs> requests,
+        @Nullable Output<SlowRequestsBasedTriggerArgs> slowRequests,
+        @Nullable Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath,
+        @Nullable Output<List<StatusCodesBasedTriggerArgs>> statusCodes,
+        @Nullable Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange) {
         this.privateBytesInKB = privateBytesInKB;
         this.requests = requests;
         this.slowRequests = slowRequests;
@@ -105,12 +105,12 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AutoHealTriggersArgs() {
-        this.privateBytesInKB = Input.empty();
-        this.requests = Input.empty();
-        this.slowRequests = Input.empty();
-        this.slowRequestsWithPath = Input.empty();
-        this.statusCodes = Input.empty();
-        this.statusCodesRange = Input.empty();
+        this.privateBytesInKB = Output.empty();
+        this.requests = Output.empty();
+        this.slowRequests = Output.empty();
+        this.slowRequestsWithPath = Output.empty();
+        this.statusCodes = Output.empty();
+        this.statusCodesRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> privateBytesInKB;
-        private @Nullable Input<RequestsBasedTriggerArgs> requests;
-        private @Nullable Input<SlowRequestsBasedTriggerArgs> slowRequests;
-        private @Nullable Input<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
-        private @Nullable Input<List<StatusCodesBasedTriggerArgs>> statusCodes;
-        private @Nullable Input<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;
+        private @Nullable Output<Integer> privateBytesInKB;
+        private @Nullable Output<RequestsBasedTriggerArgs> requests;
+        private @Nullable Output<SlowRequestsBasedTriggerArgs> slowRequests;
+        private @Nullable Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath;
+        private @Nullable Output<List<StatusCodesBasedTriggerArgs>> statusCodes;
+        private @Nullable Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class AutoHealTriggersArgs extends io.pulumi.resources.ResourceArgs
     	      this.statusCodesRange = defaults.statusCodesRange;
         }
 
-        public Builder privateBytesInKB(@Nullable Input<Integer> privateBytesInKB) {
+        public Builder privateBytesInKB(@Nullable Output<Integer> privateBytesInKB) {
             this.privateBytesInKB = privateBytesInKB;
             return this;
         }
 
         public Builder privateBytesInKB(@Nullable Integer privateBytesInKB) {
-            this.privateBytesInKB = Input.ofNullable(privateBytesInKB);
+            this.privateBytesInKB = Output.ofNullable(privateBytesInKB);
             return this;
         }
 
-        public Builder requests(@Nullable Input<RequestsBasedTriggerArgs> requests) {
+        public Builder requests(@Nullable Output<RequestsBasedTriggerArgs> requests) {
             this.requests = requests;
             return this;
         }
 
         public Builder requests(@Nullable RequestsBasedTriggerArgs requests) {
-            this.requests = Input.ofNullable(requests);
+            this.requests = Output.ofNullable(requests);
             return this;
         }
 
-        public Builder slowRequests(@Nullable Input<SlowRequestsBasedTriggerArgs> slowRequests) {
+        public Builder slowRequests(@Nullable Output<SlowRequestsBasedTriggerArgs> slowRequests) {
             this.slowRequests = slowRequests;
             return this;
         }
 
         public Builder slowRequests(@Nullable SlowRequestsBasedTriggerArgs slowRequests) {
-            this.slowRequests = Input.ofNullable(slowRequests);
+            this.slowRequests = Output.ofNullable(slowRequests);
             return this;
         }
 
-        public Builder slowRequestsWithPath(@Nullable Input<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath) {
+        public Builder slowRequestsWithPath(@Nullable Output<List<SlowRequestsBasedTriggerArgs>> slowRequestsWithPath) {
             this.slowRequestsWithPath = slowRequestsWithPath;
             return this;
         }
 
         public Builder slowRequestsWithPath(@Nullable List<SlowRequestsBasedTriggerArgs> slowRequestsWithPath) {
-            this.slowRequestsWithPath = Input.ofNullable(slowRequestsWithPath);
+            this.slowRequestsWithPath = Output.ofNullable(slowRequestsWithPath);
             return this;
         }
 
-        public Builder statusCodes(@Nullable Input<List<StatusCodesBasedTriggerArgs>> statusCodes) {
+        public Builder statusCodes(@Nullable Output<List<StatusCodesBasedTriggerArgs>> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }
 
         public Builder statusCodes(@Nullable List<StatusCodesBasedTriggerArgs> statusCodes) {
-            this.statusCodes = Input.ofNullable(statusCodes);
+            this.statusCodes = Output.ofNullable(statusCodes);
             return this;
         }
 
-        public Builder statusCodesRange(@Nullable Input<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange) {
+        public Builder statusCodesRange(@Nullable Output<List<StatusCodesRangeBasedTriggerArgs>> statusCodesRange) {
             this.statusCodesRange = statusCodesRange;
             return this;
         }
 
         public Builder statusCodesRange(@Nullable List<StatusCodesRangeBasedTriggerArgs> statusCodesRange) {
-            this.statusCodesRange = Input.ofNullable(statusCodesRange);
+            this.statusCodesRange = Output.ofNullable(statusCodesRange);
             return this;
         }
         public AutoHealTriggersArgs build() {

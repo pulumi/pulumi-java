@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.enums.IdentityProviderType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="allowedTenants")
-      private final @Nullable Input<List<String>> allowedTenants;
+      private final @Nullable Output<List<String>> allowedTenants;
 
-    public Input<List<String>> getAllowedTenants() {
-        return this.allowedTenants == null ? Input.empty() : this.allowedTenants;
+    public Output<List<String>> getAllowedTenants() {
+        return this.allowedTenants == null ? Output.empty() : this.allowedTenants;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authority")
-      private final @Nullable Input<String> authority;
+      private final @Nullable Output<String> authority;
 
-    public Input<String> getAuthority() {
-        return this.authority == null ? Input.empty() : this.authority;
+    public Output<String> getAuthority() {
+        return this.authority == null ? Output.empty() : this.authority;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clientId", required=true)
-      private final Input<String> clientId;
+      private final Output<String> clientId;
 
-    public Input<String> getClientId() {
+    public Output<String> getClientId() {
         return this.clientId;
     }
 
@@ -55,9 +55,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clientSecret", required=true)
-      private final Input<String> clientSecret;
+      private final Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
+    public Output<String> getClientSecret() {
         return this.clientSecret;
     }
 
@@ -66,10 +66,10 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identityProviderName")
-      private final @Nullable Input<String> identityProviderName;
+      private final @Nullable Output<String> identityProviderName;
 
-    public Input<String> getIdentityProviderName() {
-        return this.identityProviderName == null ? Input.empty() : this.identityProviderName;
+    public Output<String> getIdentityProviderName() {
+        return this.identityProviderName == null ? Output.empty() : this.identityProviderName;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="passwordResetPolicyName")
-      private final @Nullable Input<String> passwordResetPolicyName;
+      private final @Nullable Output<String> passwordResetPolicyName;
 
-    public Input<String> getPasswordResetPolicyName() {
-        return this.passwordResetPolicyName == null ? Input.empty() : this.passwordResetPolicyName;
+    public Output<String> getPasswordResetPolicyName() {
+        return this.passwordResetPolicyName == null ? Output.empty() : this.passwordResetPolicyName;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="profileEditingPolicyName")
-      private final @Nullable Input<String> profileEditingPolicyName;
+      private final @Nullable Output<String> profileEditingPolicyName;
 
-    public Input<String> getProfileEditingPolicyName() {
-        return this.profileEditingPolicyName == null ? Input.empty() : this.profileEditingPolicyName;
+    public Output<String> getProfileEditingPolicyName() {
+        return this.profileEditingPolicyName == null ? Output.empty() : this.profileEditingPolicyName;
     }
 
     /**
@@ -99,9 +99,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -110,9 +110,9 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
@@ -121,10 +121,10 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="signinPolicyName")
-      private final @Nullable Input<String> signinPolicyName;
+      private final @Nullable Output<String> signinPolicyName;
 
-    public Input<String> getSigninPolicyName() {
-        return this.signinPolicyName == null ? Input.empty() : this.signinPolicyName;
+    public Output<String> getSigninPolicyName() {
+        return this.signinPolicyName == null ? Output.empty() : this.signinPolicyName;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="signinTenant")
-      private final @Nullable Input<String> signinTenant;
+      private final @Nullable Output<String> signinTenant;
 
-    public Input<String> getSigninTenant() {
-        return this.signinTenant == null ? Input.empty() : this.signinTenant;
+    public Output<String> getSigninTenant() {
+        return this.signinTenant == null ? Output.empty() : this.signinTenant;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="signupPolicyName")
-      private final @Nullable Input<String> signupPolicyName;
+      private final @Nullable Output<String> signupPolicyName;
 
-    public Input<String> getSignupPolicyName() {
-        return this.signupPolicyName == null ? Input.empty() : this.signupPolicyName;
+    public Output<String> getSignupPolicyName() {
+        return this.signupPolicyName == null ? Output.empty() : this.signupPolicyName;
     }
 
     /**
@@ -154,26 +154,26 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,IdentityProviderType>> type;
+      private final @Nullable Output<Either<String,IdentityProviderType>> type;
 
-    public Input<Either<String,IdentityProviderType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,IdentityProviderType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public IdentityProviderArgs(
-        @Nullable Input<List<String>> allowedTenants,
-        @Nullable Input<String> authority,
-        Input<String> clientId,
-        Input<String> clientSecret,
-        @Nullable Input<String> identityProviderName,
-        @Nullable Input<String> passwordResetPolicyName,
-        @Nullable Input<String> profileEditingPolicyName,
-        Input<String> resourceGroupName,
-        Input<String> serviceName,
-        @Nullable Input<String> signinPolicyName,
-        @Nullable Input<String> signinTenant,
-        @Nullable Input<String> signupPolicyName,
-        @Nullable Input<Either<String,IdentityProviderType>> type) {
+        @Nullable Output<List<String>> allowedTenants,
+        @Nullable Output<String> authority,
+        Output<String> clientId,
+        Output<String> clientSecret,
+        @Nullable Output<String> identityProviderName,
+        @Nullable Output<String> passwordResetPolicyName,
+        @Nullable Output<String> profileEditingPolicyName,
+        Output<String> resourceGroupName,
+        Output<String> serviceName,
+        @Nullable Output<String> signinPolicyName,
+        @Nullable Output<String> signinTenant,
+        @Nullable Output<String> signupPolicyName,
+        @Nullable Output<Either<String,IdentityProviderType>> type) {
         this.allowedTenants = allowedTenants;
         this.authority = authority;
         this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
@@ -190,19 +190,19 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IdentityProviderArgs() {
-        this.allowedTenants = Input.empty();
-        this.authority = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.identityProviderName = Input.empty();
-        this.passwordResetPolicyName = Input.empty();
-        this.profileEditingPolicyName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
-        this.signinPolicyName = Input.empty();
-        this.signinTenant = Input.empty();
-        this.signupPolicyName = Input.empty();
-        this.type = Input.empty();
+        this.allowedTenants = Output.empty();
+        this.authority = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.identityProviderName = Output.empty();
+        this.passwordResetPolicyName = Output.empty();
+        this.profileEditingPolicyName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
+        this.signinPolicyName = Output.empty();
+        this.signinTenant = Output.empty();
+        this.signupPolicyName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -214,19 +214,19 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedTenants;
-        private @Nullable Input<String> authority;
-        private Input<String> clientId;
-        private Input<String> clientSecret;
-        private @Nullable Input<String> identityProviderName;
-        private @Nullable Input<String> passwordResetPolicyName;
-        private @Nullable Input<String> profileEditingPolicyName;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
-        private @Nullable Input<String> signinPolicyName;
-        private @Nullable Input<String> signinTenant;
-        private @Nullable Input<String> signupPolicyName;
-        private @Nullable Input<Either<String,IdentityProviderType>> type;
+        private @Nullable Output<List<String>> allowedTenants;
+        private @Nullable Output<String> authority;
+        private Output<String> clientId;
+        private Output<String> clientSecret;
+        private @Nullable Output<String> identityProviderName;
+        private @Nullable Output<String> passwordResetPolicyName;
+        private @Nullable Output<String> profileEditingPolicyName;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
+        private @Nullable Output<String> signinPolicyName;
+        private @Nullable Output<String> signinTenant;
+        private @Nullable Output<String> signupPolicyName;
+        private @Nullable Output<Either<String,IdentityProviderType>> type;
 
         public Builder() {
     	      // Empty
@@ -249,133 +249,133 @@ public final class IdentityProviderArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder allowedTenants(@Nullable Input<List<String>> allowedTenants) {
+        public Builder allowedTenants(@Nullable Output<List<String>> allowedTenants) {
             this.allowedTenants = allowedTenants;
             return this;
         }
 
         public Builder allowedTenants(@Nullable List<String> allowedTenants) {
-            this.allowedTenants = Input.ofNullable(allowedTenants);
+            this.allowedTenants = Output.ofNullable(allowedTenants);
             return this;
         }
 
-        public Builder authority(@Nullable Input<String> authority) {
+        public Builder authority(@Nullable Output<String> authority) {
             this.authority = authority;
             return this;
         }
 
         public Builder authority(@Nullable String authority) {
-            this.authority = Input.ofNullable(authority);
+            this.authority = Output.ofNullable(authority);
             return this;
         }
 
-        public Builder clientId(Input<String> clientId) {
+        public Builder clientId(Output<String> clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
         public Builder clientId(String clientId) {
-            this.clientId = Input.of(Objects.requireNonNull(clientId));
+            this.clientId = Output.of(Objects.requireNonNull(clientId));
             return this;
         }
 
-        public Builder clientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Output<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
+            this.clientSecret = Output.of(Objects.requireNonNull(clientSecret));
             return this;
         }
 
-        public Builder identityProviderName(@Nullable Input<String> identityProviderName) {
+        public Builder identityProviderName(@Nullable Output<String> identityProviderName) {
             this.identityProviderName = identityProviderName;
             return this;
         }
 
         public Builder identityProviderName(@Nullable String identityProviderName) {
-            this.identityProviderName = Input.ofNullable(identityProviderName);
+            this.identityProviderName = Output.ofNullable(identityProviderName);
             return this;
         }
 
-        public Builder passwordResetPolicyName(@Nullable Input<String> passwordResetPolicyName) {
+        public Builder passwordResetPolicyName(@Nullable Output<String> passwordResetPolicyName) {
             this.passwordResetPolicyName = passwordResetPolicyName;
             return this;
         }
 
         public Builder passwordResetPolicyName(@Nullable String passwordResetPolicyName) {
-            this.passwordResetPolicyName = Input.ofNullable(passwordResetPolicyName);
+            this.passwordResetPolicyName = Output.ofNullable(passwordResetPolicyName);
             return this;
         }
 
-        public Builder profileEditingPolicyName(@Nullable Input<String> profileEditingPolicyName) {
+        public Builder profileEditingPolicyName(@Nullable Output<String> profileEditingPolicyName) {
             this.profileEditingPolicyName = profileEditingPolicyName;
             return this;
         }
 
         public Builder profileEditingPolicyName(@Nullable String profileEditingPolicyName) {
-            this.profileEditingPolicyName = Input.ofNullable(profileEditingPolicyName);
+            this.profileEditingPolicyName = Output.ofNullable(profileEditingPolicyName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder signinPolicyName(@Nullable Input<String> signinPolicyName) {
+        public Builder signinPolicyName(@Nullable Output<String> signinPolicyName) {
             this.signinPolicyName = signinPolicyName;
             return this;
         }
 
         public Builder signinPolicyName(@Nullable String signinPolicyName) {
-            this.signinPolicyName = Input.ofNullable(signinPolicyName);
+            this.signinPolicyName = Output.ofNullable(signinPolicyName);
             return this;
         }
 
-        public Builder signinTenant(@Nullable Input<String> signinTenant) {
+        public Builder signinTenant(@Nullable Output<String> signinTenant) {
             this.signinTenant = signinTenant;
             return this;
         }
 
         public Builder signinTenant(@Nullable String signinTenant) {
-            this.signinTenant = Input.ofNullable(signinTenant);
+            this.signinTenant = Output.ofNullable(signinTenant);
             return this;
         }
 
-        public Builder signupPolicyName(@Nullable Input<String> signupPolicyName) {
+        public Builder signupPolicyName(@Nullable Output<String> signupPolicyName) {
             this.signupPolicyName = signupPolicyName;
             return this;
         }
 
         public Builder signupPolicyName(@Nullable String signupPolicyName) {
-            this.signupPolicyName = Input.ofNullable(signupPolicyName);
+            this.signupPolicyName = Output.ofNullable(signupPolicyName);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,IdentityProviderType>> type) {
+        public Builder type(@Nullable Output<Either<String,IdentityProviderType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,IdentityProviderType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public IdentityProviderArgs build() {

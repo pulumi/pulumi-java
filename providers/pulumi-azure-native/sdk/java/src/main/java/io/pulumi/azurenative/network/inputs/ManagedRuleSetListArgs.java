@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FrontDoorManagedRuleSetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="managedRuleSets")
-      private final @Nullable Input<List<FrontDoorManagedRuleSetArgs>> managedRuleSets;
+      private final @Nullable Output<List<FrontDoorManagedRuleSetArgs>> managedRuleSets;
 
-    public Input<List<FrontDoorManagedRuleSetArgs>> getManagedRuleSets() {
-        return this.managedRuleSets == null ? Input.empty() : this.managedRuleSets;
+    public Output<List<FrontDoorManagedRuleSetArgs>> getManagedRuleSets() {
+        return this.managedRuleSets == null ? Output.empty() : this.managedRuleSets;
     }
 
-    public ManagedRuleSetListArgs(@Nullable Input<List<FrontDoorManagedRuleSetArgs>> managedRuleSets) {
+    public ManagedRuleSetListArgs(@Nullable Output<List<FrontDoorManagedRuleSetArgs>> managedRuleSets) {
         this.managedRuleSets = managedRuleSets;
     }
 
     private ManagedRuleSetListArgs() {
-        this.managedRuleSets = Input.empty();
+        this.managedRuleSets = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<FrontDoorManagedRuleSetArgs>> managedRuleSets;
+        private @Nullable Output<List<FrontDoorManagedRuleSetArgs>> managedRuleSets;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
     	      this.managedRuleSets = defaults.managedRuleSets;
         }
 
-        public Builder managedRuleSets(@Nullable Input<List<FrontDoorManagedRuleSetArgs>> managedRuleSets) {
+        public Builder managedRuleSets(@Nullable Output<List<FrontDoorManagedRuleSetArgs>> managedRuleSets) {
             this.managedRuleSets = managedRuleSets;
             return this;
         }
 
         public Builder managedRuleSets(@Nullable List<FrontDoorManagedRuleSetArgs> managedRuleSets) {
-            this.managedRuleSets = Input.ofNullable(managedRuleSets);
+            this.managedRuleSets = Output.ofNullable(managedRuleSets);
             return this;
         }
         public ManagedRuleSetListArgs build() {

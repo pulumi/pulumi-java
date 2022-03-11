@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessRequestVirtualMachineArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="justification")
-      private final @Nullable Input<String> justification;
+      private final @Nullable Output<String> justification;
 
-    public Input<String> getJustification() {
-        return this.justification == null ? Input.empty() : this.justification;
+    public Output<String> getJustification() {
+        return this.justification == null ? Output.empty() : this.justification;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="requestor", required=true)
-      private final Input<String> requestor;
+      private final Output<String> requestor;
 
-    public Input<String> getRequestor() {
+    public Output<String> getRequestor() {
         return this.requestor;
     }
 
@@ -43,24 +43,24 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="startTimeUtc", required=true)
-      private final Input<String> startTimeUtc;
+      private final Output<String> startTimeUtc;
 
-    public Input<String> getStartTimeUtc() {
+    public Output<String> getStartTimeUtc() {
         return this.startTimeUtc;
     }
 
     @InputImport(name="virtualMachines", required=true)
-      private final Input<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
+      private final Output<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
 
-    public Input<List<JitNetworkAccessRequestVirtualMachineArgs>> getVirtualMachines() {
+    public Output<List<JitNetworkAccessRequestVirtualMachineArgs>> getVirtualMachines() {
         return this.virtualMachines;
     }
 
     public JitNetworkAccessRequestArgs(
-        @Nullable Input<String> justification,
-        Input<String> requestor,
-        Input<String> startTimeUtc,
-        Input<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines) {
+        @Nullable Output<String> justification,
+        Output<String> requestor,
+        Output<String> startTimeUtc,
+        Output<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines) {
         this.justification = justification;
         this.requestor = Objects.requireNonNull(requestor, "expected parameter 'requestor' to be non-null");
         this.startTimeUtc = Objects.requireNonNull(startTimeUtc, "expected parameter 'startTimeUtc' to be non-null");
@@ -68,10 +68,10 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
     }
 
     private JitNetworkAccessRequestArgs() {
-        this.justification = Input.empty();
-        this.requestor = Input.empty();
-        this.startTimeUtc = Input.empty();
-        this.virtualMachines = Input.empty();
+        this.justification = Output.empty();
+        this.requestor = Output.empty();
+        this.startTimeUtc = Output.empty();
+        this.virtualMachines = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,10 +83,10 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> justification;
-        private Input<String> requestor;
-        private Input<String> startTimeUtc;
-        private Input<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
+        private @Nullable Output<String> justification;
+        private Output<String> requestor;
+        private Output<String> startTimeUtc;
+        private Output<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
 
         public Builder() {
     	      // Empty
@@ -100,43 +100,43 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
     	      this.virtualMachines = defaults.virtualMachines;
         }
 
-        public Builder justification(@Nullable Input<String> justification) {
+        public Builder justification(@Nullable Output<String> justification) {
             this.justification = justification;
             return this;
         }
 
         public Builder justification(@Nullable String justification) {
-            this.justification = Input.ofNullable(justification);
+            this.justification = Output.ofNullable(justification);
             return this;
         }
 
-        public Builder requestor(Input<String> requestor) {
+        public Builder requestor(Output<String> requestor) {
             this.requestor = Objects.requireNonNull(requestor);
             return this;
         }
 
         public Builder requestor(String requestor) {
-            this.requestor = Input.of(Objects.requireNonNull(requestor));
+            this.requestor = Output.of(Objects.requireNonNull(requestor));
             return this;
         }
 
-        public Builder startTimeUtc(Input<String> startTimeUtc) {
+        public Builder startTimeUtc(Output<String> startTimeUtc) {
             this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
             return this;
         }
 
         public Builder startTimeUtc(String startTimeUtc) {
-            this.startTimeUtc = Input.of(Objects.requireNonNull(startTimeUtc));
+            this.startTimeUtc = Output.of(Objects.requireNonNull(startTimeUtc));
             return this;
         }
 
-        public Builder virtualMachines(Input<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines) {
+        public Builder virtualMachines(Output<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
 
         public Builder virtualMachines(List<JitNetworkAccessRequestVirtualMachineArgs> virtualMachines) {
-            this.virtualMachines = Input.of(Objects.requireNonNull(virtualMachines));
+            this.virtualMachines = Output.of(Objects.requireNonNull(virtualMachines));
             return this;
         }
         public JitNetworkAccessRequestArgs build() {

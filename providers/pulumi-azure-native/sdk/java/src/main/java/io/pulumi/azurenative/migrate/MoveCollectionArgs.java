@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.IdentityArgs;
 import io.pulumi.azurenative.migrate.inputs.MoveCollectionPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityArgs> identity;
+      private final @Nullable Output<IdentityArgs> identity;
 
-    public Input<IdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moveCollectionName")
-      private final @Nullable Input<String> moveCollectionName;
+      private final @Nullable Output<String> moveCollectionName;
 
-    public Input<String> getMoveCollectionName() {
-        return this.moveCollectionName == null ? Input.empty() : this.moveCollectionName;
+    public Output<String> getMoveCollectionName() {
+        return this.moveCollectionName == null ? Output.empty() : this.moveCollectionName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<MoveCollectionPropertiesArgs> properties;
+      private final @Nullable Output<MoveCollectionPropertiesArgs> properties;
 
-    public Input<MoveCollectionPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<MoveCollectionPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,19 +77,19 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public MoveCollectionArgs(
-        @Nullable Input<IdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<String> moveCollectionName,
-        @Nullable Input<MoveCollectionPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<IdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<String> moveCollectionName,
+        @Nullable Output<MoveCollectionPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.identity = identity;
         this.location = location;
         this.moveCollectionName = moveCollectionName;
@@ -99,12 +99,12 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MoveCollectionArgs() {
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.moveCollectionName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.moveCollectionName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<IdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> moveCollectionName;
-        private @Nullable Input<MoveCollectionPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<IdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> moveCollectionName;
+        private @Nullable Output<MoveCollectionPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder identity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder moveCollectionName(@Nullable Input<String> moveCollectionName) {
+        public Builder moveCollectionName(@Nullable Output<String> moveCollectionName) {
             this.moveCollectionName = moveCollectionName;
             return this;
         }
 
         public Builder moveCollectionName(@Nullable String moveCollectionName) {
-            this.moveCollectionName = Input.ofNullable(moveCollectionName);
+            this.moveCollectionName = Output.ofNullable(moveCollectionName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<MoveCollectionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<MoveCollectionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable MoveCollectionPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public MoveCollectionArgs build() {

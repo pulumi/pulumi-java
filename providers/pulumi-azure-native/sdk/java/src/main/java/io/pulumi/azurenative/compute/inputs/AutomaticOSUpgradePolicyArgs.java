@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AutomaticOSUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="disableAutomaticRollback")
-      private final @Nullable Input<Boolean> disableAutomaticRollback;
+      private final @Nullable Output<Boolean> disableAutomaticRollback;
 
-    public Input<Boolean> getDisableAutomaticRollback() {
-        return this.disableAutomaticRollback == null ? Input.empty() : this.disableAutomaticRollback;
+    public Output<Boolean> getDisableAutomaticRollback() {
+        return this.disableAutomaticRollback == null ? Output.empty() : this.disableAutomaticRollback;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AutomaticOSUpgradePolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enableAutomaticOSUpgrade")
-      private final @Nullable Input<Boolean> enableAutomaticOSUpgrade;
+      private final @Nullable Output<Boolean> enableAutomaticOSUpgrade;
 
-    public Input<Boolean> getEnableAutomaticOSUpgrade() {
-        return this.enableAutomaticOSUpgrade == null ? Input.empty() : this.enableAutomaticOSUpgrade;
+    public Output<Boolean> getEnableAutomaticOSUpgrade() {
+        return this.enableAutomaticOSUpgrade == null ? Output.empty() : this.enableAutomaticOSUpgrade;
     }
 
     public AutomaticOSUpgradePolicyArgs(
-        @Nullable Input<Boolean> disableAutomaticRollback,
-        @Nullable Input<Boolean> enableAutomaticOSUpgrade) {
+        @Nullable Output<Boolean> disableAutomaticRollback,
+        @Nullable Output<Boolean> enableAutomaticOSUpgrade) {
         this.disableAutomaticRollback = disableAutomaticRollback;
         this.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
     }
 
     private AutomaticOSUpgradePolicyArgs() {
-        this.disableAutomaticRollback = Input.empty();
-        this.enableAutomaticOSUpgrade = Input.empty();
+        this.disableAutomaticRollback = Output.empty();
+        this.enableAutomaticOSUpgrade = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AutomaticOSUpgradePolicyArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableAutomaticRollback;
-        private @Nullable Input<Boolean> enableAutomaticOSUpgrade;
+        private @Nullable Output<Boolean> disableAutomaticRollback;
+        private @Nullable Output<Boolean> enableAutomaticOSUpgrade;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AutomaticOSUpgradePolicyArgs extends io.pulumi.resources.Reso
     	      this.enableAutomaticOSUpgrade = defaults.enableAutomaticOSUpgrade;
         }
 
-        public Builder disableAutomaticRollback(@Nullable Input<Boolean> disableAutomaticRollback) {
+        public Builder disableAutomaticRollback(@Nullable Output<Boolean> disableAutomaticRollback) {
             this.disableAutomaticRollback = disableAutomaticRollback;
             return this;
         }
 
         public Builder disableAutomaticRollback(@Nullable Boolean disableAutomaticRollback) {
-            this.disableAutomaticRollback = Input.ofNullable(disableAutomaticRollback);
+            this.disableAutomaticRollback = Output.ofNullable(disableAutomaticRollback);
             return this;
         }
 
-        public Builder enableAutomaticOSUpgrade(@Nullable Input<Boolean> enableAutomaticOSUpgrade) {
+        public Builder enableAutomaticOSUpgrade(@Nullable Output<Boolean> enableAutomaticOSUpgrade) {
             this.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
             return this;
         }
 
         public Builder enableAutomaticOSUpgrade(@Nullable Boolean enableAutomaticOSUpgrade) {
-            this.enableAutomaticOSUpgrade = Input.ofNullable(enableAutomaticOSUpgrade);
+            this.enableAutomaticOSUpgrade = Output.ofNullable(enableAutomaticOSUpgrade);
             return this;
         }
         public AutomaticOSUpgradePolicyArgs build() {

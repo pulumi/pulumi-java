@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datacatalog.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId")
-      private final @Nullable Input<String> objectId;
+      private final @Nullable Output<String> objectId;
 
-    public Input<String> getObjectId() {
-        return this.objectId == null ? Input.empty() : this.objectId;
+    public Output<String> getObjectId() {
+        return this.objectId == null ? Output.empty() : this.objectId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upn")
-      private final @Nullable Input<String> upn;
+      private final @Nullable Output<String> upn;
 
-    public Input<String> getUpn() {
-        return this.upn == null ? Input.empty() : this.upn;
+    public Output<String> getUpn() {
+        return this.upn == null ? Output.empty() : this.upn;
     }
 
     public PrincipalsArgs(
-        @Nullable Input<String> objectId,
-        @Nullable Input<String> upn) {
+        @Nullable Output<String> objectId,
+        @Nullable Output<String> upn) {
         this.objectId = objectId;
         this.upn = upn;
     }
 
     private PrincipalsArgs() {
-        this.objectId = Input.empty();
-        this.upn = Input.empty();
+        this.objectId = Output.empty();
+        this.upn = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> objectId;
-        private @Nullable Input<String> upn;
+        private @Nullable Output<String> objectId;
+        private @Nullable Output<String> upn;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upn = defaults.upn;
         }
 
-        public Builder objectId(@Nullable Input<String> objectId) {
+        public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
 
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Input.ofNullable(objectId);
+            this.objectId = Output.ofNullable(objectId);
             return this;
         }
 
-        public Builder upn(@Nullable Input<String> upn) {
+        public Builder upn(@Nullable Output<String> upn) {
             this.upn = upn;
             return this;
         }
 
         public Builder upn(@Nullable String upn) {
-            this.upn = Input.ofNullable(upn);
+            this.upn = Output.ofNullable(upn);
             return this;
         }
         public PrincipalsArgs build() {

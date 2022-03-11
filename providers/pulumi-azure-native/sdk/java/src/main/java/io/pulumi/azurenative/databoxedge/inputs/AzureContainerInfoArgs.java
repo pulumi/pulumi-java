@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="containerName", required=true)
-      private final Input<String> containerName;
+      private final Output<String> containerName;
 
-    public Input<String> getContainerName() {
+    public Output<String> getContainerName() {
         return this.containerName;
     }
 
@@ -35,9 +35,9 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataFormat", required=true)
-      private final Input<Either<String,AzureContainerDataFormat>> dataFormat;
+      private final Output<Either<String,AzureContainerDataFormat>> dataFormat;
 
-    public Input<Either<String,AzureContainerDataFormat>> getDataFormat() {
+    public Output<Either<String,AzureContainerDataFormat>> getDataFormat() {
         return this.dataFormat;
     }
 
@@ -46,25 +46,25 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="storageAccountCredentialId", required=true)
-      private final Input<String> storageAccountCredentialId;
+      private final Output<String> storageAccountCredentialId;
 
-    public Input<String> getStorageAccountCredentialId() {
+    public Output<String> getStorageAccountCredentialId() {
         return this.storageAccountCredentialId;
     }
 
     public AzureContainerInfoArgs(
-        Input<String> containerName,
-        Input<Either<String,AzureContainerDataFormat>> dataFormat,
-        Input<String> storageAccountCredentialId) {
+        Output<String> containerName,
+        Output<Either<String,AzureContainerDataFormat>> dataFormat,
+        Output<String> storageAccountCredentialId) {
         this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
         this.dataFormat = Objects.requireNonNull(dataFormat, "expected parameter 'dataFormat' to be non-null");
         this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId, "expected parameter 'storageAccountCredentialId' to be non-null");
     }
 
     private AzureContainerInfoArgs() {
-        this.containerName = Input.empty();
-        this.dataFormat = Input.empty();
-        this.storageAccountCredentialId = Input.empty();
+        this.containerName = Output.empty();
+        this.dataFormat = Output.empty();
+        this.storageAccountCredentialId = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> containerName;
-        private Input<Either<String,AzureContainerDataFormat>> dataFormat;
-        private Input<String> storageAccountCredentialId;
+        private Output<String> containerName;
+        private Output<Either<String,AzureContainerDataFormat>> dataFormat;
+        private Output<String> storageAccountCredentialId;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
     	      this.storageAccountCredentialId = defaults.storageAccountCredentialId;
         }
 
-        public Builder containerName(Input<String> containerName) {
+        public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Input.of(Objects.requireNonNull(containerName));
+            this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder dataFormat(Input<Either<String,AzureContainerDataFormat>> dataFormat) {
+        public Builder dataFormat(Output<Either<String,AzureContainerDataFormat>> dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
 
         public Builder dataFormat(Either<String,AzureContainerDataFormat> dataFormat) {
-            this.dataFormat = Input.of(Objects.requireNonNull(dataFormat));
+            this.dataFormat = Output.of(Objects.requireNonNull(dataFormat));
             return this;
         }
 
-        public Builder storageAccountCredentialId(Input<String> storageAccountCredentialId) {
+        public Builder storageAccountCredentialId(Output<String> storageAccountCredentialId) {
             this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
             return this;
         }
 
         public Builder storageAccountCredentialId(String storageAccountCredentialId) {
-            this.storageAccountCredentialId = Input.of(Objects.requireNonNull(storageAccountCredentialId));
+            this.storageAccountCredentialId = Output.of(Objects.requireNonNull(storageAccountCredentialId));
             return this;
         }
         public AzureContainerInfoArgs build() {

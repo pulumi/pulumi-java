@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="certificateName")
-      private final @Nullable Input<String> certificateName;
+      private final @Nullable Output<String> certificateName;
 
-    public Input<String> getCertificateName() {
-        return this.certificateName == null ? Input.empty() : this.certificateName;
+    public Output<String> getCertificateName() {
+        return this.certificateName == null ? Output.empty() : this.certificateName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-      private final Input<String> managedInstanceName;
+      private final Output<String> managedInstanceName;
 
-    public Input<String> getManagedInstanceName() {
+    public Output<String> getManagedInstanceName() {
         return this.managedInstanceName;
     }
 
@@ -41,10 +41,10 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publicBlob")
-      private final @Nullable Input<String> publicBlob;
+      private final @Nullable Output<String> publicBlob;
 
-    public Input<String> getPublicBlob() {
-        return this.publicBlob == null ? Input.empty() : this.publicBlob;
+    public Output<String> getPublicBlob() {
+        return this.publicBlob == null ? Output.empty() : this.publicBlob;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ServerTrustCertificateArgs(
-        @Nullable Input<String> certificateName,
-        Input<String> managedInstanceName,
-        @Nullable Input<String> publicBlob,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> certificateName,
+        Output<String> managedInstanceName,
+        @Nullable Output<String> publicBlob,
+        Output<String> resourceGroupName) {
         this.certificateName = certificateName;
         this.managedInstanceName = Objects.requireNonNull(managedInstanceName, "expected parameter 'managedInstanceName' to be non-null");
         this.publicBlob = publicBlob;
@@ -70,10 +70,10 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     }
 
     private ServerTrustCertificateArgs() {
-        this.certificateName = Input.empty();
-        this.managedInstanceName = Input.empty();
-        this.publicBlob = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.certificateName = Output.empty();
+        this.managedInstanceName = Output.empty();
+        this.publicBlob = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificateName;
-        private Input<String> managedInstanceName;
-        private @Nullable Input<String> publicBlob;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> certificateName;
+        private Output<String> managedInstanceName;
+        private @Nullable Output<String> publicBlob;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ServerTrustCertificateArgs extends io.pulumi.resources.Resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder certificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Input.ofNullable(certificateName);
+            this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
 
-        public Builder managedInstanceName(Input<String> managedInstanceName) {
+        public Builder managedInstanceName(Output<String> managedInstanceName) {
             this.managedInstanceName = Objects.requireNonNull(managedInstanceName);
             return this;
         }
 
         public Builder managedInstanceName(String managedInstanceName) {
-            this.managedInstanceName = Input.of(Objects.requireNonNull(managedInstanceName));
+            this.managedInstanceName = Output.of(Objects.requireNonNull(managedInstanceName));
             return this;
         }
 
-        public Builder publicBlob(@Nullable Input<String> publicBlob) {
+        public Builder publicBlob(@Nullable Output<String> publicBlob) {
             this.publicBlob = publicBlob;
             return this;
         }
 
         public Builder publicBlob(@Nullable String publicBlob) {
-            this.publicBlob = Input.ofNullable(publicBlob);
+            this.publicBlob = Output.ofNullable(publicBlob);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ServerTrustCertificateArgs build() {

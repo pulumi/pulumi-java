@@ -9,7 +9,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.CsvSerializationArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.EventHubStreamInputDataSourceArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.IoTHubStreamInputDataSourceArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="datasource")
-      private final @Nullable Input<Object> datasource;
+      private final @Nullable Output<Object> datasource;
 
-    public Input<Object> getDatasource() {
-        return this.datasource == null ? Input.empty() : this.datasource;
+    public Output<Object> getDatasource() {
+        return this.datasource == null ? Output.empty() : this.datasource;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serialization")
-      private final @Nullable Input<Object> serialization;
+      private final @Nullable Output<Object> serialization;
 
-    public Input<Object> getSerialization() {
-        return this.serialization == null ? Input.empty() : this.serialization;
+    public Output<Object> getSerialization() {
+        return this.serialization == null ? Output.empty() : this.serialization;
     }
 
     /**
@@ -53,25 +53,25 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public StreamInputPropertiesArgs(
-        @Nullable Input<Object> datasource,
-        @Nullable Input<Object> serialization,
-        Input<String> type) {
+        @Nullable Output<Object> datasource,
+        @Nullable Output<Object> serialization,
+        Output<String> type) {
         this.datasource = datasource;
         this.serialization = serialization;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private StreamInputPropertiesArgs() {
-        this.datasource = Input.empty();
-        this.serialization = Input.empty();
-        this.type = Input.empty();
+        this.datasource = Output.empty();
+        this.serialization = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -83,9 +83,9 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> datasource;
-        private @Nullable Input<Object> serialization;
-        private Input<String> type;
+        private @Nullable Output<Object> datasource;
+        private @Nullable Output<Object> serialization;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -98,33 +98,33 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder datasource(@Nullable Input<Object> datasource) {
+        public Builder datasource(@Nullable Output<Object> datasource) {
             this.datasource = datasource;
             return this;
         }
 
         public Builder datasource(@Nullable Object datasource) {
-            this.datasource = Input.ofNullable(datasource);
+            this.datasource = Output.ofNullable(datasource);
             return this;
         }
 
-        public Builder serialization(@Nullable Input<Object> serialization) {
+        public Builder serialization(@Nullable Output<Object> serialization) {
             this.serialization = serialization;
             return this;
         }
 
         public Builder serialization(@Nullable Object serialization) {
-            this.serialization = Input.ofNullable(serialization);
+            this.serialization = Output.ofNullable(serialization);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public StreamInputPropertiesArgs build() {

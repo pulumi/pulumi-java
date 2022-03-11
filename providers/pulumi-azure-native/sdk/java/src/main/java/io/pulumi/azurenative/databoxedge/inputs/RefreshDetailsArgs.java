@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errorManifestFile")
-      private final @Nullable Input<String> errorManifestFile;
+      private final @Nullable Output<String> errorManifestFile;
 
-    public Input<String> getErrorManifestFile() {
-        return this.errorManifestFile == null ? Input.empty() : this.errorManifestFile;
+    public Output<String> getErrorManifestFile() {
+        return this.errorManifestFile == null ? Output.empty() : this.errorManifestFile;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inProgressRefreshJobId")
-      private final @Nullable Input<String> inProgressRefreshJobId;
+      private final @Nullable Output<String> inProgressRefreshJobId;
 
-    public Input<String> getInProgressRefreshJobId() {
-        return this.inProgressRefreshJobId == null ? Input.empty() : this.inProgressRefreshJobId;
+    public Output<String> getInProgressRefreshJobId() {
+        return this.inProgressRefreshJobId == null ? Output.empty() : this.inProgressRefreshJobId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastCompletedRefreshJobTimeInUTC")
-      private final @Nullable Input<String> lastCompletedRefreshJobTimeInUTC;
+      private final @Nullable Output<String> lastCompletedRefreshJobTimeInUTC;
 
-    public Input<String> getLastCompletedRefreshJobTimeInUTC() {
-        return this.lastCompletedRefreshJobTimeInUTC == null ? Input.empty() : this.lastCompletedRefreshJobTimeInUTC;
+    public Output<String> getLastCompletedRefreshJobTimeInUTC() {
+        return this.lastCompletedRefreshJobTimeInUTC == null ? Output.empty() : this.lastCompletedRefreshJobTimeInUTC;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastJob")
-      private final @Nullable Input<String> lastJob;
+      private final @Nullable Output<String> lastJob;
 
-    public Input<String> getLastJob() {
-        return this.lastJob == null ? Input.empty() : this.lastJob;
+    public Output<String> getLastJob() {
+        return this.lastJob == null ? Output.empty() : this.lastJob;
     }
 
     public RefreshDetailsArgs(
-        @Nullable Input<String> errorManifestFile,
-        @Nullable Input<String> inProgressRefreshJobId,
-        @Nullable Input<String> lastCompletedRefreshJobTimeInUTC,
-        @Nullable Input<String> lastJob) {
+        @Nullable Output<String> errorManifestFile,
+        @Nullable Output<String> inProgressRefreshJobId,
+        @Nullable Output<String> lastCompletedRefreshJobTimeInUTC,
+        @Nullable Output<String> lastJob) {
         this.errorManifestFile = errorManifestFile;
         this.inProgressRefreshJobId = inProgressRefreshJobId;
         this.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;
@@ -74,10 +74,10 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RefreshDetailsArgs() {
-        this.errorManifestFile = Input.empty();
-        this.inProgressRefreshJobId = Input.empty();
-        this.lastCompletedRefreshJobTimeInUTC = Input.empty();
-        this.lastJob = Input.empty();
+        this.errorManifestFile = Output.empty();
+        this.inProgressRefreshJobId = Output.empty();
+        this.lastCompletedRefreshJobTimeInUTC = Output.empty();
+        this.lastJob = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> errorManifestFile;
-        private @Nullable Input<String> inProgressRefreshJobId;
-        private @Nullable Input<String> lastCompletedRefreshJobTimeInUTC;
-        private @Nullable Input<String> lastJob;
+        private @Nullable Output<String> errorManifestFile;
+        private @Nullable Output<String> inProgressRefreshJobId;
+        private @Nullable Output<String> lastCompletedRefreshJobTimeInUTC;
+        private @Nullable Output<String> lastJob;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lastJob = defaults.lastJob;
         }
 
-        public Builder errorManifestFile(@Nullable Input<String> errorManifestFile) {
+        public Builder errorManifestFile(@Nullable Output<String> errorManifestFile) {
             this.errorManifestFile = errorManifestFile;
             return this;
         }
 
         public Builder errorManifestFile(@Nullable String errorManifestFile) {
-            this.errorManifestFile = Input.ofNullable(errorManifestFile);
+            this.errorManifestFile = Output.ofNullable(errorManifestFile);
             return this;
         }
 
-        public Builder inProgressRefreshJobId(@Nullable Input<String> inProgressRefreshJobId) {
+        public Builder inProgressRefreshJobId(@Nullable Output<String> inProgressRefreshJobId) {
             this.inProgressRefreshJobId = inProgressRefreshJobId;
             return this;
         }
 
         public Builder inProgressRefreshJobId(@Nullable String inProgressRefreshJobId) {
-            this.inProgressRefreshJobId = Input.ofNullable(inProgressRefreshJobId);
+            this.inProgressRefreshJobId = Output.ofNullable(inProgressRefreshJobId);
             return this;
         }
 
-        public Builder lastCompletedRefreshJobTimeInUTC(@Nullable Input<String> lastCompletedRefreshJobTimeInUTC) {
+        public Builder lastCompletedRefreshJobTimeInUTC(@Nullable Output<String> lastCompletedRefreshJobTimeInUTC) {
             this.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;
             return this;
         }
 
         public Builder lastCompletedRefreshJobTimeInUTC(@Nullable String lastCompletedRefreshJobTimeInUTC) {
-            this.lastCompletedRefreshJobTimeInUTC = Input.ofNullable(lastCompletedRefreshJobTimeInUTC);
+            this.lastCompletedRefreshJobTimeInUTC = Output.ofNullable(lastCompletedRefreshJobTimeInUTC);
             return this;
         }
 
-        public Builder lastJob(@Nullable Input<String> lastJob) {
+        public Builder lastJob(@Nullable Output<String> lastJob) {
             this.lastJob = lastJob;
             return this;
         }
 
         public Builder lastJob(@Nullable String lastJob) {
-            this.lastJob = Input.ofNullable(lastJob);
+            this.lastJob = Output.ofNullable(lastJob);
             return this;
         }
         public RefreshDetailsArgs build() {

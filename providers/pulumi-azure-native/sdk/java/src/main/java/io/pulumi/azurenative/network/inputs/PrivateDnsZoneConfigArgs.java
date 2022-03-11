@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="privateDnsZoneId")
-      private final @Nullable Input<String> privateDnsZoneId;
+      private final @Nullable Output<String> privateDnsZoneId;
 
-    public Input<String> getPrivateDnsZoneId() {
-        return this.privateDnsZoneId == null ? Input.empty() : this.privateDnsZoneId;
+    public Output<String> getPrivateDnsZoneId() {
+        return this.privateDnsZoneId == null ? Output.empty() : this.privateDnsZoneId;
     }
 
     public PrivateDnsZoneConfigArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> privateDnsZoneId) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> privateDnsZoneId) {
         this.name = name;
         this.privateDnsZoneId = privateDnsZoneId;
     }
 
     private PrivateDnsZoneConfigArgs() {
-        this.name = Input.empty();
-        this.privateDnsZoneId = Input.empty();
+        this.name = Output.empty();
+        this.privateDnsZoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> privateDnsZoneId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> privateDnsZoneId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
     	      this.privateDnsZoneId = defaults.privateDnsZoneId;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder privateDnsZoneId(@Nullable Input<String> privateDnsZoneId) {
+        public Builder privateDnsZoneId(@Nullable Output<String> privateDnsZoneId) {
             this.privateDnsZoneId = privateDnsZoneId;
             return this;
         }
 
         public Builder privateDnsZoneId(@Nullable String privateDnsZoneId) {
-            this.privateDnsZoneId = Input.ofNullable(privateDnsZoneId);
+            this.privateDnsZoneId = Output.ofNullable(privateDnsZoneId);
             return this;
         }
         public PrivateDnsZoneConfigArgs build() {

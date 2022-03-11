@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.enums.PrivateEndpointServiceConnectionStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="groupId")
-      private final @Nullable Input<String> groupId;
+      private final @Nullable Output<String> groupId;
 
-    public Input<String> getGroupId() {
-        return this.groupId == null ? Input.empty() : this.groupId;
+    public Output<String> getGroupId() {
+        return this.groupId == null ? Output.empty() : this.groupId;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="privateLinkResourceId")
-      private final @Nullable Input<String> privateLinkResourceId;
+      private final @Nullable Output<String> privateLinkResourceId;
 
-    public Input<String> getPrivateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
+    public Output<String> getPrivateLinkResourceId() {
+        return this.privateLinkResourceId == null ? Output.empty() : this.privateLinkResourceId;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="requestMessage")
-      private final @Nullable Input<String> requestMessage;
+      private final @Nullable Output<String> requestMessage;
 
-    public Input<String> getRequestMessage() {
-        return this.requestMessage == null ? Input.empty() : this.requestMessage;
+    public Output<String> getRequestMessage() {
+        return this.requestMessage == null ? Output.empty() : this.requestMessage;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,PrivateEndpointServiceConnectionStatus>> status;
+      private final @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
-    public Input<Either<String,PrivateEndpointServiceConnectionStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,PrivateEndpointServiceConnectionStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public SharedPrivateLinkResourceArgs(
-        @Nullable Input<String> groupId,
-        @Nullable Input<String> name,
-        @Nullable Input<String> privateLinkResourceId,
-        @Nullable Input<String> requestMessage,
-        @Nullable Input<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
+        @Nullable Output<String> groupId,
+        @Nullable Output<String> name,
+        @Nullable Output<String> privateLinkResourceId,
+        @Nullable Output<String> requestMessage,
+        @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
         this.groupId = groupId;
         this.name = name;
         this.privateLinkResourceId = privateLinkResourceId;
@@ -85,11 +85,11 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     }
 
     private SharedPrivateLinkResourceArgs() {
-        this.groupId = Input.empty();
-        this.name = Input.empty();
-        this.privateLinkResourceId = Input.empty();
-        this.requestMessage = Input.empty();
-        this.status = Input.empty();
+        this.groupId = Output.empty();
+        this.name = Output.empty();
+        this.privateLinkResourceId = Output.empty();
+        this.requestMessage = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupId;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> privateLinkResourceId;
-        private @Nullable Input<String> requestMessage;
-        private @Nullable Input<Either<String,PrivateEndpointServiceConnectionStatus>> status;
+        private @Nullable Output<String> groupId;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> privateLinkResourceId;
+        private @Nullable Output<String> requestMessage;
+        private @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
     	      this.status = defaults.status;
         }
 
-        public Builder groupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Input.ofNullable(groupId);
+            this.groupId = Output.ofNullable(groupId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder privateLinkResourceId(@Nullable Input<String> privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Input.ofNullable(privateLinkResourceId);
+            this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
             return this;
         }
 
-        public Builder requestMessage(@Nullable Input<String> requestMessage) {
+        public Builder requestMessage(@Nullable Output<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Input.ofNullable(requestMessage);
+            this.requestMessage = Output.ofNullable(requestMessage);
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,PrivateEndpointServiceConnectionStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public SharedPrivateLinkResourceArgs build() {

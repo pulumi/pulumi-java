@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managementpartner;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerId")
-      private final @Nullable Input<String> partnerId;
+      private final @Nullable Output<String> partnerId;
 
-    public Input<String> getPartnerId() {
-        return this.partnerId == null ? Input.empty() : this.partnerId;
+    public Output<String> getPartnerId() {
+        return this.partnerId == null ? Output.empty() : this.partnerId;
     }
 
-    public PartnerArgs(@Nullable Input<String> partnerId) {
+    public PartnerArgs(@Nullable Output<String> partnerId) {
         this.partnerId = partnerId;
     }
 
     private PartnerArgs() {
-        this.partnerId = Input.empty();
+        this.partnerId = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> partnerId;
+        private @Nullable Output<String> partnerId;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.partnerId = defaults.partnerId;
         }
 
-        public Builder partnerId(@Nullable Input<String> partnerId) {
+        public Builder partnerId(@Nullable Output<String> partnerId) {
             this.partnerId = partnerId;
             return this;
         }
 
         public Builder partnerId(@Nullable String partnerId) {
-            this.partnerId = Input.ofNullable(partnerId);
+            this.partnerId = Output.ofNullable(partnerId);
             return this;
         }
         public PartnerArgs build() {

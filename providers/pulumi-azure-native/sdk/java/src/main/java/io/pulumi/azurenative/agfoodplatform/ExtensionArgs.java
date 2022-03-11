@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.agfoodplatform;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensionId")
-      private final @Nullable Input<String> extensionId;
+      private final @Nullable Output<String> extensionId;
 
-    public Input<String> getExtensionId() {
-        return this.extensionId == null ? Input.empty() : this.extensionId;
+    public Output<String> getExtensionId() {
+        return this.extensionId == null ? Output.empty() : this.extensionId;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="farmBeatsResourceName", required=true)
-      private final Input<String> farmBeatsResourceName;
+      private final Output<String> farmBeatsResourceName;
 
-    public Input<String> getFarmBeatsResourceName() {
+    public Output<String> getFarmBeatsResourceName() {
         return this.farmBeatsResourceName;
     }
 
@@ -41,25 +41,25 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ExtensionArgs(
-        @Nullable Input<String> extensionId,
-        Input<String> farmBeatsResourceName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> extensionId,
+        Output<String> farmBeatsResourceName,
+        Output<String> resourceGroupName) {
         this.extensionId = extensionId;
         this.farmBeatsResourceName = Objects.requireNonNull(farmBeatsResourceName, "expected parameter 'farmBeatsResourceName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
     }
 
     private ExtensionArgs() {
-        this.extensionId = Input.empty();
-        this.farmBeatsResourceName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.extensionId = Output.empty();
+        this.farmBeatsResourceName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> extensionId;
-        private Input<String> farmBeatsResourceName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> extensionId;
+        private Output<String> farmBeatsResourceName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder extensionId(@Nullable Input<String> extensionId) {
+        public Builder extensionId(@Nullable Output<String> extensionId) {
             this.extensionId = extensionId;
             return this;
         }
 
         public Builder extensionId(@Nullable String extensionId) {
-            this.extensionId = Input.ofNullable(extensionId);
+            this.extensionId = Output.ofNullable(extensionId);
             return this;
         }
 
-        public Builder farmBeatsResourceName(Input<String> farmBeatsResourceName) {
+        public Builder farmBeatsResourceName(Output<String> farmBeatsResourceName) {
             this.farmBeatsResourceName = Objects.requireNonNull(farmBeatsResourceName);
             return this;
         }
 
         public Builder farmBeatsResourceName(String farmBeatsResourceName) {
-            this.farmBeatsResourceName = Input.of(Objects.requireNonNull(farmBeatsResourceName));
+            this.farmBeatsResourceName = Output.of(Objects.requireNonNull(farmBeatsResourceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ExtensionArgs build() {

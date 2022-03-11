@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.enums.AutoScalingResourceMetricName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -36,22 +36,22 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,AutoScalingResourceMetricName>> name;
+      private final Output<Either<String,AutoScalingResourceMetricName>> name;
 
-    public Input<Either<String,AutoScalingResourceMetricName>> getName() {
+    public Output<Either<String,AutoScalingResourceMetricName>> getName() {
         return this.name;
     }
 
     public AutoScalingResourceMetricArgs(
-        Input<String> kind,
-        Input<Either<String,AutoScalingResourceMetricName>> name) {
+        Output<String> kind,
+        Output<Either<String,AutoScalingResourceMetricName>> name) {
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private AutoScalingResourceMetricArgs() {
-        this.kind = Input.empty();
-        this.name = Input.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> kind;
-        private Input<Either<String,AutoScalingResourceMetricName>> name;
+        private Output<String> kind;
+        private Output<Either<String,AutoScalingResourceMetricName>> name;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder name(Input<Either<String,AutoScalingResourceMetricName>> name) {
+        public Builder name(Output<Either<String,AutoScalingResourceMetricName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,AutoScalingResourceMetricName> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public AutoScalingResourceMetricArgs build() {

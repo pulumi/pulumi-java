@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetExtensionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
      * 
      */
     @InputImport(name="extensions")
-      private final @Nullable Input<List<VirtualMachineScaleSetExtensionArgs>> extensions;
+      private final @Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions;
 
-    public Input<List<VirtualMachineScaleSetExtensionArgs>> getExtensions() {
-        return this.extensions == null ? Input.empty() : this.extensions;
+    public Output<List<VirtualMachineScaleSetExtensionArgs>> getExtensions() {
+        return this.extensions == null ? Output.empty() : this.extensions;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
      * 
      */
     @InputImport(name="extensionsTimeBudget")
-      private final @Nullable Input<String> extensionsTimeBudget;
+      private final @Nullable Output<String> extensionsTimeBudget;
 
-    public Input<String> getExtensionsTimeBudget() {
-        return this.extensionsTimeBudget == null ? Input.empty() : this.extensionsTimeBudget;
+    public Output<String> getExtensionsTimeBudget() {
+        return this.extensionsTimeBudget == null ? Output.empty() : this.extensionsTimeBudget;
     }
 
     public VirtualMachineScaleSetExtensionProfileArgs(
-        @Nullable Input<List<VirtualMachineScaleSetExtensionArgs>> extensions,
-        @Nullable Input<String> extensionsTimeBudget) {
+        @Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions,
+        @Nullable Output<String> extensionsTimeBudget) {
         this.extensions = extensions;
         this.extensionsTimeBudget = extensionsTimeBudget;
     }
 
     private VirtualMachineScaleSetExtensionProfileArgs() {
-        this.extensions = Input.empty();
-        this.extensionsTimeBudget = Input.empty();
+        this.extensions = Output.empty();
+        this.extensionsTimeBudget = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<VirtualMachineScaleSetExtensionArgs>> extensions;
-        private @Nullable Input<String> extensionsTimeBudget;
+        private @Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions;
+        private @Nullable Output<String> extensionsTimeBudget;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
     	      this.extensionsTimeBudget = defaults.extensionsTimeBudget;
         }
 
-        public Builder extensions(@Nullable Input<List<VirtualMachineScaleSetExtensionArgs>> extensions) {
+        public Builder extensions(@Nullable Output<List<VirtualMachineScaleSetExtensionArgs>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
         public Builder extensions(@Nullable List<VirtualMachineScaleSetExtensionArgs> extensions) {
-            this.extensions = Input.ofNullable(extensions);
+            this.extensions = Output.ofNullable(extensions);
             return this;
         }
 
-        public Builder extensionsTimeBudget(@Nullable Input<String> extensionsTimeBudget) {
+        public Builder extensionsTimeBudget(@Nullable Output<String> extensionsTimeBudget) {
             this.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }
 
         public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
-            this.extensionsTimeBudget = Input.ofNullable(extensionsTimeBudget);
+            this.extensionsTimeBudget = Output.ofNullable(extensionsTimeBudget);
             return this;
         }
         public VirtualMachineScaleSetExtensionProfileArgs build() {

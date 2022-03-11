@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="automationAccountId", required=true)
-      private final Input<String> automationAccountId;
+      private final Output<String> automationAccountId;
 
-    public Input<String> getAutomationAccountId() {
+    public Output<String> getAutomationAccountId() {
         return this.automationAccountId;
     }
 
@@ -35,9 +35,9 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isGlobalRunbook", required=true)
-      private final Input<Boolean> isGlobalRunbook;
+      private final Output<Boolean> isGlobalRunbook;
 
-    public Input<Boolean> getIsGlobalRunbook() {
+    public Output<Boolean> getIsGlobalRunbook() {
         return this.isGlobalRunbook;
     }
 
@@ -46,10 +46,10 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="runbookName", required=true)
-      private final Input<String> runbookName;
+      private final Output<String> runbookName;
 
-    public Input<String> getRunbookName() {
+    public Output<String> getRunbookName() {
         return this.runbookName;
     }
 
@@ -68,10 +68,10 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serviceUri")
-      private final @Nullable Input<String> serviceUri;
+      private final @Nullable Output<String> serviceUri;
 
-    public Input<String> getServiceUri() {
-        return this.serviceUri == null ? Input.empty() : this.serviceUri;
+    public Output<String> getServiceUri() {
+        return this.serviceUri == null ? Output.empty() : this.serviceUri;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-      private final @Nullable Input<Boolean> useCommonAlertSchema;
+      private final @Nullable Output<Boolean> useCommonAlertSchema;
 
-    public Input<Boolean> getUseCommonAlertSchema() {
-        return this.useCommonAlertSchema == null ? Input.empty() : this.useCommonAlertSchema;
+    public Output<Boolean> getUseCommonAlertSchema() {
+        return this.useCommonAlertSchema == null ? Output.empty() : this.useCommonAlertSchema;
     }
 
     /**
@@ -90,37 +90,37 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="webhookResourceId", required=true)
-      private final Input<String> webhookResourceId;
+      private final Output<String> webhookResourceId;
 
-    public Input<String> getWebhookResourceId() {
+    public Output<String> getWebhookResourceId() {
         return this.webhookResourceId;
     }
 
     public AutomationRunbookReceiverArgs(
-        Input<String> automationAccountId,
-        Input<Boolean> isGlobalRunbook,
-        @Nullable Input<String> name,
-        Input<String> runbookName,
-        @Nullable Input<String> serviceUri,
-        @Nullable Input<Boolean> useCommonAlertSchema,
-        Input<String> webhookResourceId) {
+        Output<String> automationAccountId,
+        Output<Boolean> isGlobalRunbook,
+        @Nullable Output<String> name,
+        Output<String> runbookName,
+        @Nullable Output<String> serviceUri,
+        @Nullable Output<Boolean> useCommonAlertSchema,
+        Output<String> webhookResourceId) {
         this.automationAccountId = Objects.requireNonNull(automationAccountId, "expected parameter 'automationAccountId' to be non-null");
         this.isGlobalRunbook = Objects.requireNonNull(isGlobalRunbook, "expected parameter 'isGlobalRunbook' to be non-null");
         this.name = name;
         this.runbookName = Objects.requireNonNull(runbookName, "expected parameter 'runbookName' to be non-null");
         this.serviceUri = serviceUri;
-        this.useCommonAlertSchema = useCommonAlertSchema == null ? Input.ofNullable(false) : useCommonAlertSchema;
+        this.useCommonAlertSchema = useCommonAlertSchema == null ? Output.ofNullable(false) : useCommonAlertSchema;
         this.webhookResourceId = Objects.requireNonNull(webhookResourceId, "expected parameter 'webhookResourceId' to be non-null");
     }
 
     private AutomationRunbookReceiverArgs() {
-        this.automationAccountId = Input.empty();
-        this.isGlobalRunbook = Input.empty();
-        this.name = Input.empty();
-        this.runbookName = Input.empty();
-        this.serviceUri = Input.empty();
-        this.useCommonAlertSchema = Input.empty();
-        this.webhookResourceId = Input.empty();
+        this.automationAccountId = Output.empty();
+        this.isGlobalRunbook = Output.empty();
+        this.name = Output.empty();
+        this.runbookName = Output.empty();
+        this.serviceUri = Output.empty();
+        this.useCommonAlertSchema = Output.empty();
+        this.webhookResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> automationAccountId;
-        private Input<Boolean> isGlobalRunbook;
-        private @Nullable Input<String> name;
-        private Input<String> runbookName;
-        private @Nullable Input<String> serviceUri;
-        private @Nullable Input<Boolean> useCommonAlertSchema;
-        private Input<String> webhookResourceId;
+        private Output<String> automationAccountId;
+        private Output<Boolean> isGlobalRunbook;
+        private @Nullable Output<String> name;
+        private Output<String> runbookName;
+        private @Nullable Output<String> serviceUri;
+        private @Nullable Output<Boolean> useCommonAlertSchema;
+        private Output<String> webhookResourceId;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class AutomationRunbookReceiverArgs extends io.pulumi.resources.Res
     	      this.webhookResourceId = defaults.webhookResourceId;
         }
 
-        public Builder automationAccountId(Input<String> automationAccountId) {
+        public Builder automationAccountId(Output<String> automationAccountId) {
             this.automationAccountId = Objects.requireNonNull(automationAccountId);
             return this;
         }
 
         public Builder automationAccountId(String automationAccountId) {
-            this.automationAccountId = Input.of(Objects.requireNonNull(automationAccountId));
+            this.automationAccountId = Output.of(Objects.requireNonNull(automationAccountId));
             return this;
         }
 
-        public Builder isGlobalRunbook(Input<Boolean> isGlobalRunbook) {
+        public Builder isGlobalRunbook(Output<Boolean> isGlobalRunbook) {
             this.isGlobalRunbook = Objects.requireNonNull(isGlobalRunbook);
             return this;
         }
 
         public Builder isGlobalRunbook(Boolean isGlobalRunbook) {
-            this.isGlobalRunbook = Input.of(Objects.requireNonNull(isGlobalRunbook));
+            this.isGlobalRunbook = Output.of(Objects.requireNonNull(isGlobalRunbook));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder runbookName(Input<String> runbookName) {
+        public Builder runbookName(Output<String> runbookName) {
             this.runbookName = Objects.requireNonNull(runbookName);
             return this;
         }
 
         public Builder runbookName(String runbookName) {
-            this.runbookName = Input.of(Objects.requireNonNull(runbookName));
+            this.runbookName = Output.of(Objects.requireNonNull(runbookName));
             return this;
         }
 
-        public Builder serviceUri(@Nullable Input<String> serviceUri) {
+        public Builder serviceUri(@Nullable Output<String> serviceUri) {
             this.serviceUri = serviceUri;
             return this;
         }
 
         public Builder serviceUri(@Nullable String serviceUri) {
-            this.serviceUri = Input.ofNullable(serviceUri);
+            this.serviceUri = Output.ofNullable(serviceUri);
             return this;
         }
 
-        public Builder useCommonAlertSchema(@Nullable Input<Boolean> useCommonAlertSchema) {
+        public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
 
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
-            this.useCommonAlertSchema = Input.ofNullable(useCommonAlertSchema);
+            this.useCommonAlertSchema = Output.ofNullable(useCommonAlertSchema);
             return this;
         }
 
-        public Builder webhookResourceId(Input<String> webhookResourceId) {
+        public Builder webhookResourceId(Output<String> webhookResourceId) {
             this.webhookResourceId = Objects.requireNonNull(webhookResourceId);
             return this;
         }
 
         public Builder webhookResourceId(String webhookResourceId) {
-            this.webhookResourceId = Input.of(Objects.requireNonNull(webhookResourceId));
+            this.webhookResourceId = Output.of(Objects.requireNonNull(webhookResourceId));
             return this;
         }
         public AutomationRunbookReceiverArgs build() {

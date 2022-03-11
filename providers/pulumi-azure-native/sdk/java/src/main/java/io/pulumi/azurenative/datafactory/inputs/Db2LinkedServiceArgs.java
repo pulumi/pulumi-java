@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authenticationType")
-      private final @Nullable Input<Either<String,Db2AuthenticationType>> authenticationType;
+      private final @Nullable Output<Either<String,Db2AuthenticationType>> authenticationType;
 
-    public Input<Either<String,Db2AuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Input.empty() : this.authenticationType;
+    public Output<Either<String,Db2AuthenticationType>> getAuthenticationType() {
+        return this.authenticationType == null ? Output.empty() : this.authenticationType;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="certificateCommonName")
-      private final @Nullable Input<Object> certificateCommonName;
+      private final @Nullable Output<Object> certificateCommonName;
 
-    public Input<Object> getCertificateCommonName() {
-        return this.certificateCommonName == null ? Input.empty() : this.certificateCommonName;
+    public Output<Object> getCertificateCommonName() {
+        return this.certificateCommonName == null ? Output.empty() : this.certificateCommonName;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectionString")
-      private final @Nullable Input<Object> connectionString;
+      private final @Nullable Output<Object> connectionString;
 
-    public Input<Object> getConnectionString() {
-        return this.connectionString == null ? Input.empty() : this.connectionString;
+    public Output<Object> getConnectionString() {
+        return this.connectionString == null ? Output.empty() : this.connectionString;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="database")
-      private final @Nullable Input<Object> database;
+      private final @Nullable Output<Object> database;
 
-    public Input<Object> getDatabase() {
-        return this.database == null ? Input.empty() : this.database;
+    public Output<Object> getDatabase() {
+        return this.database == null ? Output.empty() : this.database;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryptedCredential")
-      private final @Nullable Input<Object> encryptedCredential;
+      private final @Nullable Output<Object> encryptedCredential;
 
-    public Input<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
+    public Output<Object> getEncryptedCredential() {
+        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="packageCollection")
-      private final @Nullable Input<Object> packageCollection;
+      private final @Nullable Output<Object> packageCollection;
 
-    public Input<Object> getPackageCollection() {
-        return this.packageCollection == null ? Input.empty() : this.packageCollection;
+    public Output<Object> getPackageCollection() {
+        return this.packageCollection == null ? Output.empty() : this.packageCollection;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -153,10 +153,10 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="server")
-      private final @Nullable Input<Object> server;
+      private final @Nullable Output<Object> server;
 
-    public Input<Object> getServer() {
-        return this.server == null ? Input.empty() : this.server;
+    public Output<Object> getServer() {
+        return this.server == null ? Output.empty() : this.server;
     }
 
     /**
@@ -165,9 +165,9 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -176,27 +176,27 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<Object> username;
+      private final @Nullable Output<Object> username;
 
-    public Input<Object> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<Object> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public Db2LinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<Either<String,Db2AuthenticationType>> authenticationType,
-        @Nullable Input<Object> certificateCommonName,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        @Nullable Input<Object> connectionString,
-        @Nullable Input<Object> database,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> encryptedCredential,
-        @Nullable Input<Object> packageCollection,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
-        @Nullable Input<Object> server,
-        Input<String> type,
-        @Nullable Input<Object> username) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<Either<String,Db2AuthenticationType>> authenticationType,
+        @Nullable Output<Object> certificateCommonName,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        @Nullable Output<Object> connectionString,
+        @Nullable Output<Object> database,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> encryptedCredential,
+        @Nullable Output<Object> packageCollection,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password,
+        @Nullable Output<Object> server,
+        Output<String> type,
+        @Nullable Output<Object> username) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.certificateCommonName = certificateCommonName;
@@ -214,20 +214,20 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private Db2LinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.authenticationType = Input.empty();
-        this.certificateCommonName = Input.empty();
-        this.connectVia = Input.empty();
-        this.connectionString = Input.empty();
-        this.database = Input.empty();
-        this.description = Input.empty();
-        this.encryptedCredential = Input.empty();
-        this.packageCollection = Input.empty();
-        this.parameters = Input.empty();
-        this.password = Input.empty();
-        this.server = Input.empty();
-        this.type = Input.empty();
-        this.username = Input.empty();
+        this.annotations = Output.empty();
+        this.authenticationType = Output.empty();
+        this.certificateCommonName = Output.empty();
+        this.connectVia = Output.empty();
+        this.connectionString = Output.empty();
+        this.database = Output.empty();
+        this.description = Output.empty();
+        this.encryptedCredential = Output.empty();
+        this.packageCollection = Output.empty();
+        this.parameters = Output.empty();
+        this.password = Output.empty();
+        this.server = Output.empty();
+        this.type = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -239,20 +239,20 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<Either<String,Db2AuthenticationType>> authenticationType;
-        private @Nullable Input<Object> certificateCommonName;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private @Nullable Input<Object> connectionString;
-        private @Nullable Input<Object> database;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> encryptedCredential;
-        private @Nullable Input<Object> packageCollection;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
-        private @Nullable Input<Object> server;
-        private Input<String> type;
-        private @Nullable Input<Object> username;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<Either<String,Db2AuthenticationType>> authenticationType;
+        private @Nullable Output<Object> certificateCommonName;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private @Nullable Output<Object> connectionString;
+        private @Nullable Output<Object> database;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> encryptedCredential;
+        private @Nullable Output<Object> packageCollection;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private @Nullable Output<Object> server;
+        private Output<String> type;
+        private @Nullable Output<Object> username;
 
         public Builder() {
     	      // Empty
@@ -276,143 +276,143 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
     	      this.username = defaults.username;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder authenticationType(@Nullable Input<Either<String,Db2AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Output<Either<String,Db2AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
         public Builder authenticationType(@Nullable Either<String,Db2AuthenticationType> authenticationType) {
-            this.authenticationType = Input.ofNullable(authenticationType);
+            this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder certificateCommonName(@Nullable Input<Object> certificateCommonName) {
+        public Builder certificateCommonName(@Nullable Output<Object> certificateCommonName) {
             this.certificateCommonName = certificateCommonName;
             return this;
         }
 
         public Builder certificateCommonName(@Nullable Object certificateCommonName) {
-            this.certificateCommonName = Input.ofNullable(certificateCommonName);
+            this.certificateCommonName = Output.ofNullable(certificateCommonName);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder connectionString(@Nullable Input<Object> connectionString) {
+        public Builder connectionString(@Nullable Output<Object> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
         public Builder connectionString(@Nullable Object connectionString) {
-            this.connectionString = Input.ofNullable(connectionString);
+            this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
 
-        public Builder database(@Nullable Input<Object> database) {
+        public Builder database(@Nullable Output<Object> database) {
             this.database = database;
             return this;
         }
 
         public Builder database(@Nullable Object database) {
-            this.database = Input.ofNullable(database);
+            this.database = Output.ofNullable(database);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Input.ofNullable(encryptedCredential);
+            this.encryptedCredential = Output.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder packageCollection(@Nullable Input<Object> packageCollection) {
+        public Builder packageCollection(@Nullable Output<Object> packageCollection) {
             this.packageCollection = packageCollection;
             return this;
         }
 
         public Builder packageCollection(@Nullable Object packageCollection) {
-            this.packageCollection = Input.ofNullable(packageCollection);
+            this.packageCollection = Output.ofNullable(packageCollection);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder server(@Nullable Input<Object> server) {
+        public Builder server(@Nullable Output<Object> server) {
             this.server = server;
             return this;
         }
 
         public Builder server(@Nullable Object server) {
-            this.server = Input.ofNullable(server);
+            this.server = Output.ofNullable(server);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder username(@Nullable Input<Object> username) {
+        public Builder username(@Nullable Output<Object> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable Object username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public Db2LinkedServiceArgs build() {

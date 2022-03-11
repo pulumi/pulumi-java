@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -18,9 +18,9 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     public static final KeyVaultSigningKeyParametersArgs Empty = new KeyVaultSigningKeyParametersArgs();
 
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -29,9 +29,9 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -40,9 +40,9 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretName", required=true)
-      private final Input<String> secretName;
+      private final Output<String> secretName;
 
-    public Input<String> getSecretName() {
+    public Output<String> getSecretName() {
         return this.secretName;
     }
 
@@ -51,9 +51,9 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretVersion", required=true)
-      private final Input<String> secretVersion;
+      private final Output<String> secretVersion;
 
-    public Input<String> getSecretVersion() {
+    public Output<String> getSecretVersion() {
         return this.secretVersion;
     }
 
@@ -62,9 +62,9 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-      private final Input<String> subscriptionId;
+      private final Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
+    public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
 
@@ -73,19 +73,19 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vaultName", required=true)
-      private final Input<String> vaultName;
+      private final Output<String> vaultName;
 
-    public Input<String> getVaultName() {
+    public Output<String> getVaultName() {
         return this.vaultName;
     }
 
     public KeyVaultSigningKeyParametersArgs(
-        Input<String> odataType,
-        Input<String> resourceGroupName,
-        Input<String> secretName,
-        Input<String> secretVersion,
-        Input<String> subscriptionId,
-        Input<String> vaultName) {
+        Output<String> odataType,
+        Output<String> resourceGroupName,
+        Output<String> secretName,
+        Output<String> secretVersion,
+        Output<String> subscriptionId,
+        Output<String> vaultName) {
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
@@ -95,12 +95,12 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     }
 
     private KeyVaultSigningKeyParametersArgs() {
-        this.odataType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.secretName = Input.empty();
-        this.secretVersion = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.vaultName = Input.empty();
+        this.odataType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.secretName = Output.empty();
+        this.secretVersion = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.vaultName = Output.empty();
     }
 
     public static Builder builder() {
@@ -112,12 +112,12 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> odataType;
-        private Input<String> resourceGroupName;
-        private Input<String> secretName;
-        private Input<String> secretVersion;
-        private Input<String> subscriptionId;
-        private Input<String> vaultName;
+        private Output<String> odataType;
+        private Output<String> resourceGroupName;
+        private Output<String> secretName;
+        private Output<String> secretVersion;
+        private Output<String> subscriptionId;
+        private Output<String> vaultName;
 
         public Builder() {
     	      // Empty
@@ -133,63 +133,63 @@ public final class KeyVaultSigningKeyParametersArgs extends io.pulumi.resources.
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder secretName(Input<String> secretName) {
+        public Builder secretName(Output<String> secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
         public Builder secretName(String secretName) {
-            this.secretName = Input.of(Objects.requireNonNull(secretName));
+            this.secretName = Output.of(Objects.requireNonNull(secretName));
             return this;
         }
 
-        public Builder secretVersion(Input<String> secretVersion) {
+        public Builder secretVersion(Output<String> secretVersion) {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }
 
         public Builder secretVersion(String secretVersion) {
-            this.secretVersion = Input.of(Objects.requireNonNull(secretVersion));
+            this.secretVersion = Output.of(Objects.requireNonNull(secretVersion));
             return this;
         }
 
-        public Builder subscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
+            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
 
-        public Builder vaultName(Input<String> vaultName) {
+        public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
         public Builder vaultName(String vaultName) {
-            this.vaultName = Input.of(Objects.requireNonNull(vaultName));
+            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
         }
         public KeyVaultSigningKeyParametersArgs build() {

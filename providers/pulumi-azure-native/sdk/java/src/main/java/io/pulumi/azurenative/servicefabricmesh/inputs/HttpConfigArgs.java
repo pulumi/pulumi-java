@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpHostConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hosts", required=true)
-      private final Input<List<HttpHostConfigArgs>> hosts;
+      private final Output<List<HttpHostConfigArgs>> hosts;
 
-    public Input<List<HttpHostConfigArgs>> getHosts() {
+    public Output<List<HttpHostConfigArgs>> getHosts() {
         return this.hosts;
     }
 
@@ -36,9 +36,9 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -47,25 +47,25 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
     public HttpConfigArgs(
-        Input<List<HttpHostConfigArgs>> hosts,
-        Input<String> name,
-        Input<Integer> port) {
+        Output<List<HttpHostConfigArgs>> hosts,
+        Output<String> name,
+        Output<Integer> port) {
         this.hosts = Objects.requireNonNull(hosts, "expected parameter 'hosts' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
     }
 
     private HttpConfigArgs() {
-        this.hosts = Input.empty();
-        this.name = Input.empty();
-        this.port = Input.empty();
+        this.hosts = Output.empty();
+        this.name = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<HttpHostConfigArgs>> hosts;
-        private Input<String> name;
-        private Input<Integer> port;
+        private Output<List<HttpHostConfigArgs>> hosts;
+        private Output<String> name;
+        private Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.port = defaults.port;
         }
 
-        public Builder hosts(Input<List<HttpHostConfigArgs>> hosts) {
+        public Builder hosts(Output<List<HttpHostConfigArgs>> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
         public Builder hosts(List<HttpHostConfigArgs> hosts) {
-            this.hosts = Input.of(Objects.requireNonNull(hosts));
+            this.hosts = Output.of(Objects.requireNonNull(hosts));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
         public HttpConfigArgs build() {

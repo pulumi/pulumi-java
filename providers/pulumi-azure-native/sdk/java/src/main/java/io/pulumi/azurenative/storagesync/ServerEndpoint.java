@@ -9,7 +9,6 @@ import io.pulumi.azurenative.storagesync.outputs.ServerEndpointCloudTieringStatu
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointRecallStatusResponse;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncStatusResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -354,27 +353,27 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerEndpoint(String name, ServerEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storagesync:ServerEndpoint", name, args == null ? ServerEndpointArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storagesync:ServerEndpoint", name, args == null ? ServerEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServerEndpoint(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServerEndpoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storagesync:ServerEndpoint", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20170605preview:ServerEndpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20180402:ServerEndpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20180701:ServerEndpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20181001:ServerEndpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20190201:ServerEndpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20190301:ServerEndpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20190601:ServerEndpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20191001:ServerEndpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20200301:ServerEndpoint").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20200901:ServerEndpoint").build())
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20170605preview:ServerEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20180402:ServerEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20180701:ServerEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20181001:ServerEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20190201:ServerEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20190301:ServerEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20190601:ServerEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20191001:ServerEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20200301:ServerEndpoint").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20200901:ServerEndpoint").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -388,7 +387,7 @@ public class ServerEndpoint extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServerEndpoint get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServerEndpoint get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServerEndpoint(name, id, options);
     }
 }

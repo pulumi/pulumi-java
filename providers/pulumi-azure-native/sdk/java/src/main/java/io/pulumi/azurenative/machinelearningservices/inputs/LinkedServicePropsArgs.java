@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.enums.LinkedServiceLinkType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="createdTime")
-      private final @Nullable Input<String> createdTime;
+      private final @Nullable Output<String> createdTime;
 
-    public Input<String> getCreatedTime() {
-        return this.createdTime == null ? Input.empty() : this.createdTime;
+    public Output<String> getCreatedTime() {
+        return this.createdTime == null ? Output.empty() : this.createdTime;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkType")
-      private final @Nullable Input<LinkedServiceLinkType> linkType;
+      private final @Nullable Output<LinkedServiceLinkType> linkType;
 
-    public Input<LinkedServiceLinkType> getLinkType() {
-        return this.linkType == null ? Input.empty() : this.linkType;
+    public Output<LinkedServiceLinkType> getLinkType() {
+        return this.linkType == null ? Output.empty() : this.linkType;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkedServiceResourceId", required=true)
-      private final Input<String> linkedServiceResourceId;
+      private final Output<String> linkedServiceResourceId;
 
-    public Input<String> getLinkedServiceResourceId() {
+    public Output<String> getLinkedServiceResourceId() {
         return this.linkedServiceResourceId;
     }
 
@@ -57,17 +57,17 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="modifiedTime")
-      private final @Nullable Input<String> modifiedTime;
+      private final @Nullable Output<String> modifiedTime;
 
-    public Input<String> getModifiedTime() {
-        return this.modifiedTime == null ? Input.empty() : this.modifiedTime;
+    public Output<String> getModifiedTime() {
+        return this.modifiedTime == null ? Output.empty() : this.modifiedTime;
     }
 
     public LinkedServicePropsArgs(
-        @Nullable Input<String> createdTime,
-        @Nullable Input<LinkedServiceLinkType> linkType,
-        Input<String> linkedServiceResourceId,
-        @Nullable Input<String> modifiedTime) {
+        @Nullable Output<String> createdTime,
+        @Nullable Output<LinkedServiceLinkType> linkType,
+        Output<String> linkedServiceResourceId,
+        @Nullable Output<String> modifiedTime) {
         this.createdTime = createdTime;
         this.linkType = linkType;
         this.linkedServiceResourceId = Objects.requireNonNull(linkedServiceResourceId, "expected parameter 'linkedServiceResourceId' to be non-null");
@@ -75,10 +75,10 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LinkedServicePropsArgs() {
-        this.createdTime = Input.empty();
-        this.linkType = Input.empty();
-        this.linkedServiceResourceId = Input.empty();
-        this.modifiedTime = Input.empty();
+        this.createdTime = Output.empty();
+        this.linkType = Output.empty();
+        this.linkedServiceResourceId = Output.empty();
+        this.modifiedTime = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> createdTime;
-        private @Nullable Input<LinkedServiceLinkType> linkType;
-        private Input<String> linkedServiceResourceId;
-        private @Nullable Input<String> modifiedTime;
+        private @Nullable Output<String> createdTime;
+        private @Nullable Output<LinkedServiceLinkType> linkType;
+        private Output<String> linkedServiceResourceId;
+        private @Nullable Output<String> modifiedTime;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class LinkedServicePropsArgs extends io.pulumi.resources.ResourceAr
     	      this.modifiedTime = defaults.modifiedTime;
         }
 
-        public Builder createdTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Output<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Input.ofNullable(createdTime);
+            this.createdTime = Output.ofNullable(createdTime);
             return this;
         }
 
-        public Builder linkType(@Nullable Input<LinkedServiceLinkType> linkType) {
+        public Builder linkType(@Nullable Output<LinkedServiceLinkType> linkType) {
             this.linkType = linkType;
             return this;
         }
 
         public Builder linkType(@Nullable LinkedServiceLinkType linkType) {
-            this.linkType = Input.ofNullable(linkType);
+            this.linkType = Output.ofNullable(linkType);
             return this;
         }
 
-        public Builder linkedServiceResourceId(Input<String> linkedServiceResourceId) {
+        public Builder linkedServiceResourceId(Output<String> linkedServiceResourceId) {
             this.linkedServiceResourceId = Objects.requireNonNull(linkedServiceResourceId);
             return this;
         }
 
         public Builder linkedServiceResourceId(String linkedServiceResourceId) {
-            this.linkedServiceResourceId = Input.of(Objects.requireNonNull(linkedServiceResourceId));
+            this.linkedServiceResourceId = Output.of(Objects.requireNonNull(linkedServiceResourceId));
             return this;
         }
 
-        public Builder modifiedTime(@Nullable Input<String> modifiedTime) {
+        public Builder modifiedTime(@Nullable Output<String> modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }
 
         public Builder modifiedTime(@Nullable String modifiedTime) {
-            this.modifiedTime = Input.ofNullable(modifiedTime);
+            this.modifiedTime = Output.ofNullable(modifiedTime);
             return this;
         }
         public LinkedServicePropsArgs build() {

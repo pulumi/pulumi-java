@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.AutomationTriggeringRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class AutomationRuleSetArgs extends io.pulumi.resources.ResourceArg
     public static final AutomationRuleSetArgs Empty = new AutomationRuleSetArgs();
 
     @InputImport(name="rules")
-      private final @Nullable Input<List<AutomationTriggeringRuleArgs>> rules;
+      private final @Nullable Output<List<AutomationTriggeringRuleArgs>> rules;
 
-    public Input<List<AutomationTriggeringRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<AutomationTriggeringRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
-    public AutomationRuleSetArgs(@Nullable Input<List<AutomationTriggeringRuleArgs>> rules) {
+    public AutomationRuleSetArgs(@Nullable Output<List<AutomationTriggeringRuleArgs>> rules) {
         this.rules = rules;
     }
 
     private AutomationRuleSetArgs() {
-        this.rules = Input.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class AutomationRuleSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AutomationTriggeringRuleArgs>> rules;
+        private @Nullable Output<List<AutomationTriggeringRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class AutomationRuleSetArgs extends io.pulumi.resources.ResourceArg
     	      this.rules = defaults.rules;
         }
 
-        public Builder rules(@Nullable Input<List<AutomationTriggeringRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<AutomationTriggeringRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<AutomationTriggeringRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public AutomationRuleSetArgs build() {

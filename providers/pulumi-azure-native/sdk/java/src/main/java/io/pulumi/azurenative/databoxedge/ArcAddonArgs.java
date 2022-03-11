@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonName")
-      private final @Nullable Input<String> addonName;
+      private final @Nullable Output<String> addonName;
 
-    public Input<String> getAddonName() {
-        return this.addonName == null ? Input.empty() : this.addonName;
+    public Output<String> getAddonName() {
+        return this.addonName == null ? Output.empty() : this.addonName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -42,9 +42,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -53,9 +53,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,9 +64,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceLocation", required=true)
-      private final Input<String> resourceLocation;
+      private final Output<String> resourceLocation;
 
-    public Input<String> getResourceLocation() {
+    public Output<String> getResourceLocation() {
         return this.resourceLocation;
     }
 
@@ -75,9 +75,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -86,9 +86,9 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleName", required=true)
-      private final Input<String> roleName;
+      private final Output<String> roleName;
 
-    public Input<String> getRoleName() {
+    public Output<String> getRoleName() {
         return this.roleName;
     }
 
@@ -97,21 +97,21 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-      private final Input<String> subscriptionId;
+      private final Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
+    public Output<String> getSubscriptionId() {
         return this.subscriptionId;
     }
 
     public ArcAddonArgs(
-        @Nullable Input<String> addonName,
-        Input<String> deviceName,
-        Input<String> kind,
-        Input<String> resourceGroupName,
-        Input<String> resourceLocation,
-        Input<String> resourceName,
-        Input<String> roleName,
-        Input<String> subscriptionId) {
+        @Nullable Output<String> addonName,
+        Output<String> deviceName,
+        Output<String> kind,
+        Output<String> resourceGroupName,
+        Output<String> resourceLocation,
+        Output<String> resourceName,
+        Output<String> roleName,
+        Output<String> subscriptionId) {
         this.addonName = addonName;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -123,14 +123,14 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArcAddonArgs() {
-        this.addonName = Input.empty();
-        this.deviceName = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceLocation = Input.empty();
-        this.resourceName = Input.empty();
-        this.roleName = Input.empty();
-        this.subscriptionId = Input.empty();
+        this.addonName = Output.empty();
+        this.deviceName = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceLocation = Output.empty();
+        this.resourceName = Output.empty();
+        this.roleName = Output.empty();
+        this.subscriptionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addonName;
-        private Input<String> deviceName;
-        private Input<String> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceLocation;
-        private Input<String> resourceName;
-        private Input<String> roleName;
-        private Input<String> subscriptionId;
+        private @Nullable Output<String> addonName;
+        private Output<String> deviceName;
+        private Output<String> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceLocation;
+        private Output<String> resourceName;
+        private Output<String> roleName;
+        private Output<String> subscriptionId;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder addonName(@Nullable Input<String> addonName) {
+        public Builder addonName(@Nullable Output<String> addonName) {
             this.addonName = addonName;
             return this;
         }
 
         public Builder addonName(@Nullable String addonName) {
-            this.addonName = Input.ofNullable(addonName);
+            this.addonName = Output.ofNullable(addonName);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceLocation(Input<String> resourceLocation) {
+        public Builder resourceLocation(Output<String> resourceLocation) {
             this.resourceLocation = Objects.requireNonNull(resourceLocation);
             return this;
         }
 
         public Builder resourceLocation(String resourceLocation) {
-            this.resourceLocation = Input.of(Objects.requireNonNull(resourceLocation));
+            this.resourceLocation = Output.of(Objects.requireNonNull(resourceLocation));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder roleName(Input<String> roleName) {
+        public Builder roleName(Output<String> roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
 
         public Builder roleName(String roleName) {
-            this.roleName = Input.of(Objects.requireNonNull(roleName));
+            this.roleName = Output.of(Objects.requireNonNull(roleName));
             return this;
         }
 
-        public Builder subscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Output<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
+            this.subscriptionId = Output.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
         public ArcAddonArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-      private final Input<String> endpointName;
+      private final Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
+    public Output<String> getEndpointName() {
         return this.endpointName;
     }
 
@@ -43,9 +43,9 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostName", required=true)
-      private final Input<String> hostName;
+      private final Output<String> hostName;
 
-    public Input<String> getHostName() {
+    public Output<String> getHostName() {
         return this.hostName;
     }
 
@@ -54,10 +54,10 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpPort")
-      private final @Nullable Input<Integer> httpPort;
+      private final @Nullable Output<Integer> httpPort;
 
-    public Input<Integer> getHttpPort() {
-        return this.httpPort == null ? Input.empty() : this.httpPort;
+    public Output<Integer> getHttpPort() {
+        return this.httpPort == null ? Output.empty() : this.httpPort;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpsPort")
-      private final @Nullable Input<Integer> httpsPort;
+      private final @Nullable Output<Integer> httpsPort;
 
-    public Input<Integer> getHttpsPort() {
-        return this.httpsPort == null ? Input.empty() : this.httpsPort;
+    public Output<Integer> getHttpsPort() {
+        return this.httpsPort == null ? Output.empty() : this.httpsPort;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originHostHeader")
-      private final @Nullable Input<String> originHostHeader;
+      private final @Nullable Output<String> originHostHeader;
 
-    public Input<String> getOriginHostHeader() {
-        return this.originHostHeader == null ? Input.empty() : this.originHostHeader;
+    public Output<String> getOriginHostHeader() {
+        return this.originHostHeader == null ? Output.empty() : this.originHostHeader;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originName")
-      private final @Nullable Input<String> originName;
+      private final @Nullable Output<String> originName;
 
-    public Input<String> getOriginName() {
-        return this.originName == null ? Input.empty() : this.originName;
+    public Output<String> getOriginName() {
+        return this.originName == null ? Output.empty() : this.originName;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkAlias")
-      private final @Nullable Input<String> privateLinkAlias;
+      private final @Nullable Output<String> privateLinkAlias;
 
-    public Input<String> getPrivateLinkAlias() {
-        return this.privateLinkAlias == null ? Input.empty() : this.privateLinkAlias;
+    public Output<String> getPrivateLinkAlias() {
+        return this.privateLinkAlias == null ? Output.empty() : this.privateLinkAlias;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkApprovalMessage")
-      private final @Nullable Input<String> privateLinkApprovalMessage;
+      private final @Nullable Output<String> privateLinkApprovalMessage;
 
-    public Input<String> getPrivateLinkApprovalMessage() {
-        return this.privateLinkApprovalMessage == null ? Input.empty() : this.privateLinkApprovalMessage;
+    public Output<String> getPrivateLinkApprovalMessage() {
+        return this.privateLinkApprovalMessage == null ? Output.empty() : this.privateLinkApprovalMessage;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkLocation")
-      private final @Nullable Input<String> privateLinkLocation;
+      private final @Nullable Output<String> privateLinkLocation;
 
-    public Input<String> getPrivateLinkLocation() {
-        return this.privateLinkLocation == null ? Input.empty() : this.privateLinkLocation;
+    public Output<String> getPrivateLinkLocation() {
+        return this.privateLinkLocation == null ? Output.empty() : this.privateLinkLocation;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkResourceId")
-      private final @Nullable Input<String> privateLinkResourceId;
+      private final @Nullable Output<String> privateLinkResourceId;
 
-    public Input<String> getPrivateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Input.empty() : this.privateLinkResourceId;
+    public Output<String> getPrivateLinkResourceId() {
+        return this.privateLinkResourceId == null ? Output.empty() : this.privateLinkResourceId;
     }
 
     /**
@@ -153,9 +153,9 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -164,9 +164,9 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -175,28 +175,28 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-      private final @Nullable Input<Integer> weight;
+      private final @Nullable Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Integer> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public OriginArgs(
-        @Nullable Input<Boolean> enabled,
-        Input<String> endpointName,
-        Input<String> hostName,
-        @Nullable Input<Integer> httpPort,
-        @Nullable Input<Integer> httpsPort,
-        @Nullable Input<String> originHostHeader,
-        @Nullable Input<String> originName,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<String> privateLinkAlias,
-        @Nullable Input<String> privateLinkApprovalMessage,
-        @Nullable Input<String> privateLinkLocation,
-        @Nullable Input<String> privateLinkResourceId,
-        Input<String> profileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Integer> weight) {
+        @Nullable Output<Boolean> enabled,
+        Output<String> endpointName,
+        Output<String> hostName,
+        @Nullable Output<Integer> httpPort,
+        @Nullable Output<Integer> httpsPort,
+        @Nullable Output<String> originHostHeader,
+        @Nullable Output<String> originName,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<String> privateLinkAlias,
+        @Nullable Output<String> privateLinkApprovalMessage,
+        @Nullable Output<String> privateLinkLocation,
+        @Nullable Output<String> privateLinkResourceId,
+        Output<String> profileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Integer> weight) {
         this.enabled = enabled;
         this.endpointName = Objects.requireNonNull(endpointName, "expected parameter 'endpointName' to be non-null");
         this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
@@ -215,21 +215,21 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OriginArgs() {
-        this.enabled = Input.empty();
-        this.endpointName = Input.empty();
-        this.hostName = Input.empty();
-        this.httpPort = Input.empty();
-        this.httpsPort = Input.empty();
-        this.originHostHeader = Input.empty();
-        this.originName = Input.empty();
-        this.priority = Input.empty();
-        this.privateLinkAlias = Input.empty();
-        this.privateLinkApprovalMessage = Input.empty();
-        this.privateLinkLocation = Input.empty();
-        this.privateLinkResourceId = Input.empty();
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.weight = Input.empty();
+        this.enabled = Output.empty();
+        this.endpointName = Output.empty();
+        this.hostName = Output.empty();
+        this.httpPort = Output.empty();
+        this.httpsPort = Output.empty();
+        this.originHostHeader = Output.empty();
+        this.originName = Output.empty();
+        this.priority = Output.empty();
+        this.privateLinkAlias = Output.empty();
+        this.privateLinkApprovalMessage = Output.empty();
+        this.privateLinkLocation = Output.empty();
+        this.privateLinkResourceId = Output.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -241,21 +241,21 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private Input<String> endpointName;
-        private Input<String> hostName;
-        private @Nullable Input<Integer> httpPort;
-        private @Nullable Input<Integer> httpsPort;
-        private @Nullable Input<String> originHostHeader;
-        private @Nullable Input<String> originName;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<String> privateLinkAlias;
-        private @Nullable Input<String> privateLinkApprovalMessage;
-        private @Nullable Input<String> privateLinkLocation;
-        private @Nullable Input<String> privateLinkResourceId;
-        private Input<String> profileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Integer> weight;
+        private @Nullable Output<Boolean> enabled;
+        private Output<String> endpointName;
+        private Output<String> hostName;
+        private @Nullable Output<Integer> httpPort;
+        private @Nullable Output<Integer> httpsPort;
+        private @Nullable Output<String> originHostHeader;
+        private @Nullable Output<String> originName;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<String> privateLinkAlias;
+        private @Nullable Output<String> privateLinkApprovalMessage;
+        private @Nullable Output<String> privateLinkLocation;
+        private @Nullable Output<String> privateLinkResourceId;
+        private Output<String> profileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -280,153 +280,153 @@ public final class OriginArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weight = defaults.weight;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder endpointName(Input<String> endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Input.of(Objects.requireNonNull(endpointName));
+            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder hostName(Input<String> hostName) {
+        public Builder hostName(Output<String> hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Input.of(Objects.requireNonNull(hostName));
+            this.hostName = Output.of(Objects.requireNonNull(hostName));
             return this;
         }
 
-        public Builder httpPort(@Nullable Input<Integer> httpPort) {
+        public Builder httpPort(@Nullable Output<Integer> httpPort) {
             this.httpPort = httpPort;
             return this;
         }
 
         public Builder httpPort(@Nullable Integer httpPort) {
-            this.httpPort = Input.ofNullable(httpPort);
+            this.httpPort = Output.ofNullable(httpPort);
             return this;
         }
 
-        public Builder httpsPort(@Nullable Input<Integer> httpsPort) {
+        public Builder httpsPort(@Nullable Output<Integer> httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
 
         public Builder httpsPort(@Nullable Integer httpsPort) {
-            this.httpsPort = Input.ofNullable(httpsPort);
+            this.httpsPort = Output.ofNullable(httpsPort);
             return this;
         }
 
-        public Builder originHostHeader(@Nullable Input<String> originHostHeader) {
+        public Builder originHostHeader(@Nullable Output<String> originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
 
         public Builder originHostHeader(@Nullable String originHostHeader) {
-            this.originHostHeader = Input.ofNullable(originHostHeader);
+            this.originHostHeader = Output.ofNullable(originHostHeader);
             return this;
         }
 
-        public Builder originName(@Nullable Input<String> originName) {
+        public Builder originName(@Nullable Output<String> originName) {
             this.originName = originName;
             return this;
         }
 
         public Builder originName(@Nullable String originName) {
-            this.originName = Input.ofNullable(originName);
+            this.originName = Output.ofNullable(originName);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder privateLinkAlias(@Nullable Input<String> privateLinkAlias) {
+        public Builder privateLinkAlias(@Nullable Output<String> privateLinkAlias) {
             this.privateLinkAlias = privateLinkAlias;
             return this;
         }
 
         public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
-            this.privateLinkAlias = Input.ofNullable(privateLinkAlias);
+            this.privateLinkAlias = Output.ofNullable(privateLinkAlias);
             return this;
         }
 
-        public Builder privateLinkApprovalMessage(@Nullable Input<String> privateLinkApprovalMessage) {
+        public Builder privateLinkApprovalMessage(@Nullable Output<String> privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
 
         public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
-            this.privateLinkApprovalMessage = Input.ofNullable(privateLinkApprovalMessage);
+            this.privateLinkApprovalMessage = Output.ofNullable(privateLinkApprovalMessage);
             return this;
         }
 
-        public Builder privateLinkLocation(@Nullable Input<String> privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable Output<String> privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
         public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
-            this.privateLinkLocation = Input.ofNullable(privateLinkLocation);
+            this.privateLinkLocation = Output.ofNullable(privateLinkLocation);
             return this;
         }
 
-        public Builder privateLinkResourceId(@Nullable Input<String> privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Input.ofNullable(privateLinkResourceId);
+            this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder weight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public OriginArgs build() {

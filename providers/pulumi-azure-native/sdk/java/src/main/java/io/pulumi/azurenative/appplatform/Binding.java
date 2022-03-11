@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.appplatform.BindingArgs;
 import io.pulumi.azurenative.appplatform.outputs.BindingResourcePropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -113,23 +112,23 @@ public class Binding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Binding(String name, BindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:appplatform:Binding", name, args == null ? BindingArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:appplatform:Binding", name, args == null ? BindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Binding(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Binding(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:appplatform:Binding", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20190501preview:Binding").build()),
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20200701:Binding").build()),
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20201101preview:Binding").build()),
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20210601preview:Binding").build()),
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20210901preview:Binding").build()),
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20220101preview:Binding").build())
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20190501preview:Binding").build()),
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20200701:Binding").build()),
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20201101preview:Binding").build()),
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20210601preview:Binding").build()),
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20210901preview:Binding").build()),
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20220101preview:Binding").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -143,7 +142,7 @@ public class Binding extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Binding get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Binding get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Binding(name, id, options);
     }
 }

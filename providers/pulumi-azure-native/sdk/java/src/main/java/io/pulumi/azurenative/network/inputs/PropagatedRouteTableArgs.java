@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ids")
-      private final @Nullable Input<List<SubResourceArgs>> ids;
+      private final @Nullable Output<List<SubResourceArgs>> ids;
 
-    public Input<List<SubResourceArgs>> getIds() {
-        return this.ids == null ? Input.empty() : this.ids;
+    public Output<List<SubResourceArgs>> getIds() {
+        return this.ids == null ? Output.empty() : this.ids;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="labels")
-      private final @Nullable Input<List<String>> labels;
+      private final @Nullable Output<List<String>> labels;
 
-    public Input<List<String>> getLabels() {
-        return this.labels == null ? Input.empty() : this.labels;
+    public Output<List<String>> getLabels() {
+        return this.labels == null ? Output.empty() : this.labels;
     }
 
     public PropagatedRouteTableArgs(
-        @Nullable Input<List<SubResourceArgs>> ids,
-        @Nullable Input<List<String>> labels) {
+        @Nullable Output<List<SubResourceArgs>> ids,
+        @Nullable Output<List<String>> labels) {
         this.ids = ids;
         this.labels = labels;
     }
 
     private PropagatedRouteTableArgs() {
-        this.ids = Input.empty();
-        this.labels = Input.empty();
+        this.ids = Output.empty();
+        this.labels = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SubResourceArgs>> ids;
-        private @Nullable Input<List<String>> labels;
+        private @Nullable Output<List<SubResourceArgs>> ids;
+        private @Nullable Output<List<String>> labels;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PropagatedRouteTableArgs extends io.pulumi.resources.Resource
     	      this.labels = defaults.labels;
         }
 
-        public Builder ids(@Nullable Input<List<SubResourceArgs>> ids) {
+        public Builder ids(@Nullable Output<List<SubResourceArgs>> ids) {
             this.ids = ids;
             return this;
         }
 
         public Builder ids(@Nullable List<SubResourceArgs> ids) {
-            this.ids = Input.ofNullable(ids);
+            this.ids = Output.ofNullable(ids);
             return this;
         }
 
-        public Builder labels(@Nullable Input<List<String>> labels) {
+        public Builder labels(@Nullable Output<List<String>> labels) {
             this.labels = labels;
             return this;
         }
 
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Input.ofNullable(labels);
+            this.labels = Output.ofNullable(labels);
             return this;
         }
         public PropagatedRouteTableArgs build() {

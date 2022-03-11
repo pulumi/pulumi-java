@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.storsimple.enums.Kind;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPolicyName")
-      private final @Nullable Input<String> backupPolicyName;
+      private final @Nullable Output<String> backupPolicyName;
 
-    public Input<String> getBackupPolicyName() {
-        return this.backupPolicyName == null ? Input.empty() : this.backupPolicyName;
+    public Output<String> getBackupPolicyName() {
+        return this.backupPolicyName == null ? Output.empty() : this.backupPolicyName;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -43,10 +43,10 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Kind> kind;
+      private final @Nullable Output<Kind> kind;
 
-    public Input<Kind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Kind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managerName", required=true)
-      private final Input<String> managerName;
+      private final Output<String> managerName;
 
-    public Input<String> getManagerName() {
+    public Output<String> getManagerName() {
         return this.managerName;
     }
 
@@ -65,9 +65,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,19 +76,19 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeIds", required=true)
-      private final Input<List<String>> volumeIds;
+      private final Output<List<String>> volumeIds;
 
-    public Input<List<String>> getVolumeIds() {
+    public Output<List<String>> getVolumeIds() {
         return this.volumeIds;
     }
 
     public BackupPolicyArgs(
-        @Nullable Input<String> backupPolicyName,
-        Input<String> deviceName,
-        @Nullable Input<Kind> kind,
-        Input<String> managerName,
-        Input<String> resourceGroupName,
-        Input<List<String>> volumeIds) {
+        @Nullable Output<String> backupPolicyName,
+        Output<String> deviceName,
+        @Nullable Output<Kind> kind,
+        Output<String> managerName,
+        Output<String> resourceGroupName,
+        Output<List<String>> volumeIds) {
         this.backupPolicyName = backupPolicyName;
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.kind = kind;
@@ -98,12 +98,12 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupPolicyArgs() {
-        this.backupPolicyName = Input.empty();
-        this.deviceName = Input.empty();
-        this.kind = Input.empty();
-        this.managerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.volumeIds = Input.empty();
+        this.backupPolicyName = Output.empty();
+        this.deviceName = Output.empty();
+        this.kind = Output.empty();
+        this.managerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.volumeIds = Output.empty();
     }
 
     public static Builder builder() {
@@ -115,12 +115,12 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backupPolicyName;
-        private Input<String> deviceName;
-        private @Nullable Input<Kind> kind;
-        private Input<String> managerName;
-        private Input<String> resourceGroupName;
-        private Input<List<String>> volumeIds;
+        private @Nullable Output<String> backupPolicyName;
+        private Output<String> deviceName;
+        private @Nullable Output<Kind> kind;
+        private Output<String> managerName;
+        private Output<String> resourceGroupName;
+        private Output<List<String>> volumeIds;
 
         public Builder() {
     	      // Empty
@@ -136,63 +136,63 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeIds = defaults.volumeIds;
         }
 
-        public Builder backupPolicyName(@Nullable Input<String> backupPolicyName) {
+        public Builder backupPolicyName(@Nullable Output<String> backupPolicyName) {
             this.backupPolicyName = backupPolicyName;
             return this;
         }
 
         public Builder backupPolicyName(@Nullable String backupPolicyName) {
-            this.backupPolicyName = Input.ofNullable(backupPolicyName);
+            this.backupPolicyName = Output.ofNullable(backupPolicyName);
             return this;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder kind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder managerName(Input<String> managerName) {
+        public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
         public Builder managerName(String managerName) {
-            this.managerName = Input.of(Objects.requireNonNull(managerName));
+            this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder volumeIds(Input<List<String>> volumeIds) {
+        public Builder volumeIds(Output<List<String>> volumeIds) {
             this.volumeIds = Objects.requireNonNull(volumeIds);
             return this;
         }
 
         public Builder volumeIds(List<String> volumeIds) {
-            this.volumeIds = Input.of(Objects.requireNonNull(volumeIds));
+            this.volumeIds = Output.of(Objects.requireNonNull(volumeIds));
             return this;
         }
         public BackupPolicyArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.edgeorder;
 
 import io.pulumi.azurenative.edgeorder.inputs.ContactDetailsArgs;
 import io.pulumi.azurenative.edgeorder.inputs.ShippingAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressName")
-      private final @Nullable Input<String> addressName;
+      private final @Nullable Output<String> addressName;
 
-    public Input<String> getAddressName() {
-        return this.addressName == null ? Input.empty() : this.addressName;
+    public Output<String> getAddressName() {
+        return this.addressName == null ? Output.empty() : this.addressName;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactDetails", required=true)
-      private final Input<ContactDetailsArgs> contactDetails;
+      private final Output<ContactDetailsArgs> contactDetails;
 
-    public Input<ContactDetailsArgs> getContactDetails() {
+    public Output<ContactDetailsArgs> getContactDetails() {
         return this.contactDetails;
     }
 
@@ -44,10 +44,10 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,10 +66,10 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shippingAddress")
-      private final @Nullable Input<ShippingAddressArgs> shippingAddress;
+      private final @Nullable Output<ShippingAddressArgs> shippingAddress;
 
-    public Input<ShippingAddressArgs> getShippingAddress() {
-        return this.shippingAddress == null ? Input.empty() : this.shippingAddress;
+    public Output<ShippingAddressArgs> getShippingAddress() {
+        return this.shippingAddress == null ? Output.empty() : this.shippingAddress;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AddressByNameArgs(
-        @Nullable Input<String> addressName,
-        Input<ContactDetailsArgs> contactDetails,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<ShippingAddressArgs> shippingAddress,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> addressName,
+        Output<ContactDetailsArgs> contactDetails,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<ShippingAddressArgs> shippingAddress,
+        @Nullable Output<Map<String,String>> tags) {
         this.addressName = addressName;
         this.contactDetails = Objects.requireNonNull(contactDetails, "expected parameter 'contactDetails' to be non-null");
         this.location = location;
@@ -99,12 +99,12 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AddressByNameArgs() {
-        this.addressName = Input.empty();
-        this.contactDetails = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shippingAddress = Input.empty();
-        this.tags = Input.empty();
+        this.addressName = Output.empty();
+        this.contactDetails = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shippingAddress = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addressName;
-        private Input<ContactDetailsArgs> contactDetails;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ShippingAddressArgs> shippingAddress;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> addressName;
+        private Output<ContactDetailsArgs> contactDetails;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ShippingAddressArgs> shippingAddress;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder addressName(@Nullable Input<String> addressName) {
+        public Builder addressName(@Nullable Output<String> addressName) {
             this.addressName = addressName;
             return this;
         }
 
         public Builder addressName(@Nullable String addressName) {
-            this.addressName = Input.ofNullable(addressName);
+            this.addressName = Output.ofNullable(addressName);
             return this;
         }
 
-        public Builder contactDetails(Input<ContactDetailsArgs> contactDetails) {
+        public Builder contactDetails(Output<ContactDetailsArgs> contactDetails) {
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
 
         public Builder contactDetails(ContactDetailsArgs contactDetails) {
-            this.contactDetails = Input.of(Objects.requireNonNull(contactDetails));
+            this.contactDetails = Output.of(Objects.requireNonNull(contactDetails));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shippingAddress(@Nullable Input<ShippingAddressArgs> shippingAddress) {
+        public Builder shippingAddress(@Nullable Output<ShippingAddressArgs> shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
 
         public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
-            this.shippingAddress = Input.ofNullable(shippingAddress);
+            this.shippingAddress = Output.ofNullable(shippingAddress);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AddressByNameArgs build() {

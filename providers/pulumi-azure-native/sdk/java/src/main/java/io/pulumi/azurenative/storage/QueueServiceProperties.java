@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storage.QueueServicePropertiesArgs;
 import io.pulumi.azurenative.storage.outputs.CorsRulesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -113,24 +112,24 @@ public class QueueServiceProperties extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public QueueServiceProperties(String name, QueueServicePropertiesArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:QueueServiceProperties", name, args == null ? QueueServicePropertiesArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storage:QueueServiceProperties", name, args == null ? QueueServicePropertiesArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private QueueServiceProperties(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private QueueServiceProperties(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storage:QueueServiceProperties", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storage/v20190601:QueueServiceProperties").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20200801preview:QueueServiceProperties").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210101:QueueServiceProperties").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210201:QueueServiceProperties").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210401:QueueServiceProperties").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210601:QueueServiceProperties").build()),
-                Input.of(Alias.builder().setType("azure-native:storage/v20210801:QueueServiceProperties").build())
+                Output.of(Alias.builder().setType("azure-native:storage/v20190601:QueueServiceProperties").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20200801preview:QueueServiceProperties").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210101:QueueServiceProperties").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210201:QueueServiceProperties").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210401:QueueServiceProperties").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210601:QueueServiceProperties").build()),
+                Output.of(Alias.builder().setType("azure-native:storage/v20210801:QueueServiceProperties").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -144,7 +143,7 @@ public class QueueServiceProperties extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static QueueServiceProperties get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static QueueServiceProperties get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new QueueServiceProperties(name, id, options);
     }
 }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.MatchProcessingBehavior;
 import io.pulumi.azurenative.network.inputs.RulesEngineActionArgs;
 import io.pulumi.azurenative.network.inputs.RulesEngineMatchConditionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,9 +29,9 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<RulesEngineActionArgs> action;
+      private final Output<RulesEngineActionArgs> action;
 
-    public Input<RulesEngineActionArgs> getAction() {
+    public Output<RulesEngineActionArgs> getAction() {
         return this.action;
     }
 
@@ -40,10 +40,10 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="matchConditions")
-      private final @Nullable Input<List<RulesEngineMatchConditionArgs>> matchConditions;
+      private final @Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions;
 
-    public Input<List<RulesEngineMatchConditionArgs>> getMatchConditions() {
-        return this.matchConditions == null ? Input.empty() : this.matchConditions;
+    public Output<List<RulesEngineMatchConditionArgs>> getMatchConditions() {
+        return this.matchConditions == null ? Output.empty() : this.matchConditions;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="matchProcessingBehavior")
-      private final @Nullable Input<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
+      private final @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
 
-    public Input<Either<String,MatchProcessingBehavior>> getMatchProcessingBehavior() {
-        return this.matchProcessingBehavior == null ? Input.empty() : this.matchProcessingBehavior;
+    public Output<Either<String,MatchProcessingBehavior>> getMatchProcessingBehavior() {
+        return this.matchProcessingBehavior == null ? Output.empty() : this.matchProcessingBehavior;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -73,18 +73,18 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="priority", required=true)
-      private final Input<Integer> priority;
+      private final Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
+    public Output<Integer> getPriority() {
         return this.priority;
     }
 
     public RulesEngineRuleArgs(
-        Input<RulesEngineActionArgs> action,
-        @Nullable Input<List<RulesEngineMatchConditionArgs>> matchConditions,
-        @Nullable Input<Either<String,MatchProcessingBehavior>> matchProcessingBehavior,
-        Input<String> name,
-        Input<Integer> priority) {
+        Output<RulesEngineActionArgs> action,
+        @Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions,
+        @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior,
+        Output<String> name,
+        Output<Integer> priority) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.matchConditions = matchConditions;
         this.matchProcessingBehavior = matchProcessingBehavior;
@@ -93,11 +93,11 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RulesEngineRuleArgs() {
-        this.action = Input.empty();
-        this.matchConditions = Input.empty();
-        this.matchProcessingBehavior = Input.empty();
-        this.name = Input.empty();
-        this.priority = Input.empty();
+        this.action = Output.empty();
+        this.matchConditions = Output.empty();
+        this.matchProcessingBehavior = Output.empty();
+        this.name = Output.empty();
+        this.priority = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,11 +109,11 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<RulesEngineActionArgs> action;
-        private @Nullable Input<List<RulesEngineMatchConditionArgs>> matchConditions;
-        private @Nullable Input<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
-        private Input<String> name;
-        private Input<Integer> priority;
+        private Output<RulesEngineActionArgs> action;
+        private @Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions;
+        private @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
+        private Output<String> name;
+        private Output<Integer> priority;
 
         public Builder() {
     	      // Empty
@@ -128,53 +128,53 @@ public final class RulesEngineRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.priority = defaults.priority;
         }
 
-        public Builder action(Input<RulesEngineActionArgs> action) {
+        public Builder action(Output<RulesEngineActionArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(RulesEngineActionArgs action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder matchConditions(@Nullable Input<List<RulesEngineMatchConditionArgs>> matchConditions) {
+        public Builder matchConditions(@Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions) {
             this.matchConditions = matchConditions;
             return this;
         }
 
         public Builder matchConditions(@Nullable List<RulesEngineMatchConditionArgs> matchConditions) {
-            this.matchConditions = Input.ofNullable(matchConditions);
+            this.matchConditions = Output.ofNullable(matchConditions);
             return this;
         }
 
-        public Builder matchProcessingBehavior(@Nullable Input<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
+        public Builder matchProcessingBehavior(@Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
             this.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
 
         public Builder matchProcessingBehavior(@Nullable Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
-            this.matchProcessingBehavior = Input.ofNullable(matchProcessingBehavior);
+            this.matchProcessingBehavior = Output.ofNullable(matchProcessingBehavior);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder priority(Input<Integer> priority) {
+        public Builder priority(Output<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
         public Builder priority(Integer priority) {
-            this.priority = Input.of(Objects.requireNonNull(priority));
+            this.priority = Output.of(Objects.requireNonNull(priority));
             return this;
         }
         public RulesEngineRuleArgs build() {

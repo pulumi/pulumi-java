@@ -12,7 +12,7 @@ import io.pulumi.azurenative.databox.inputs.JobDeliveryInfoArgs;
 import io.pulumi.azurenative.databox.inputs.ResourceIdentityArgs;
 import io.pulumi.azurenative.databox.inputs.SkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryInfo")
-      private final @Nullable Input<JobDeliveryInfoArgs> deliveryInfo;
+      private final @Nullable Output<JobDeliveryInfoArgs> deliveryInfo;
 
-    public Input<JobDeliveryInfoArgs> getDeliveryInfo() {
-        return this.deliveryInfo == null ? Input.empty() : this.deliveryInfo;
+    public Output<JobDeliveryInfoArgs> getDeliveryInfo() {
+        return this.deliveryInfo == null ? Output.empty() : this.deliveryInfo;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryType")
-      private final @Nullable Input<Either<String,JobDeliveryType>> deliveryType;
+      private final @Nullable Output<Either<String,JobDeliveryType>> deliveryType;
 
-    public Input<Either<String,JobDeliveryType>> getDeliveryType() {
-        return this.deliveryType == null ? Input.empty() : this.deliveryType;
+    public Output<Either<String,JobDeliveryType>> getDeliveryType() {
+        return this.deliveryType == null ? Output.empty() : this.deliveryType;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="details")
-      private final @Nullable Input<Object> details;
+      private final @Nullable Output<Object> details;
 
-    public Input<Object> getDetails() {
-        return this.details == null ? Input.empty() : this.details;
+    public Output<Object> getDetails() {
+        return this.details == null ? Output.empty() : this.details;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ResourceIdentityArgs> identity;
+      private final @Nullable Output<ResourceIdentityArgs> identity;
 
-    public Input<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ResourceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName")
-      private final @Nullable Input<String> jobName;
+      private final @Nullable Output<String> jobName;
 
-    public Input<String> getJobName() {
-        return this.jobName == null ? Input.empty() : this.jobName;
+    public Output<String> getJobName() {
+        return this.jobName == null ? Output.empty() : this.jobName;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -96,9 +96,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -107,9 +107,9 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -118,10 +118,10 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -129,25 +129,25 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferType", required=true)
-      private final Input<Either<String,TransferType>> transferType;
+      private final Output<Either<String,TransferType>> transferType;
 
-    public Input<Either<String,TransferType>> getTransferType() {
+    public Output<Either<String,TransferType>> getTransferType() {
         return this.transferType;
     }
 
     public JobArgs(
-        @Nullable Input<JobDeliveryInfoArgs> deliveryInfo,
-        @Nullable Input<Either<String,JobDeliveryType>> deliveryType,
-        @Nullable Input<Object> details,
-        @Nullable Input<ResourceIdentityArgs> identity,
-        @Nullable Input<String> jobName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        Input<Either<String,TransferType>> transferType) {
+        @Nullable Output<JobDeliveryInfoArgs> deliveryInfo,
+        @Nullable Output<Either<String,JobDeliveryType>> deliveryType,
+        @Nullable Output<Object> details,
+        @Nullable Output<ResourceIdentityArgs> identity,
+        @Nullable Output<String> jobName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        Output<Either<String,TransferType>> transferType) {
         this.deliveryInfo = deliveryInfo;
-        this.deliveryType = deliveryType == null ? Input.ofLeft("NonScheduled") : deliveryType;
+        this.deliveryType = deliveryType == null ? Output.ofLeft("NonScheduled") : deliveryType;
         this.details = details;
         this.identity = identity;
         this.jobName = jobName;
@@ -159,16 +159,16 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.deliveryInfo = Input.empty();
-        this.deliveryType = Input.empty();
-        this.details = Input.empty();
-        this.identity = Input.empty();
-        this.jobName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.transferType = Input.empty();
+        this.deliveryInfo = Output.empty();
+        this.deliveryType = Output.empty();
+        this.details = Output.empty();
+        this.identity = Output.empty();
+        this.jobName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.transferType = Output.empty();
     }
 
     public static Builder builder() {
@@ -180,16 +180,16 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<JobDeliveryInfoArgs> deliveryInfo;
-        private @Nullable Input<Either<String,JobDeliveryType>> deliveryType;
-        private @Nullable Input<Object> details;
-        private @Nullable Input<ResourceIdentityArgs> identity;
-        private @Nullable Input<String> jobName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<Either<String,TransferType>> transferType;
+        private @Nullable Output<JobDeliveryInfoArgs> deliveryInfo;
+        private @Nullable Output<Either<String,JobDeliveryType>> deliveryType;
+        private @Nullable Output<Object> details;
+        private @Nullable Output<ResourceIdentityArgs> identity;
+        private @Nullable Output<String> jobName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<Either<String,TransferType>> transferType;
 
         public Builder() {
     	      // Empty
@@ -209,103 +209,103 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transferType = defaults.transferType;
         }
 
-        public Builder deliveryInfo(@Nullable Input<JobDeliveryInfoArgs> deliveryInfo) {
+        public Builder deliveryInfo(@Nullable Output<JobDeliveryInfoArgs> deliveryInfo) {
             this.deliveryInfo = deliveryInfo;
             return this;
         }
 
         public Builder deliveryInfo(@Nullable JobDeliveryInfoArgs deliveryInfo) {
-            this.deliveryInfo = Input.ofNullable(deliveryInfo);
+            this.deliveryInfo = Output.ofNullable(deliveryInfo);
             return this;
         }
 
-        public Builder deliveryType(@Nullable Input<Either<String,JobDeliveryType>> deliveryType) {
+        public Builder deliveryType(@Nullable Output<Either<String,JobDeliveryType>> deliveryType) {
             this.deliveryType = deliveryType;
             return this;
         }
 
         public Builder deliveryType(@Nullable Either<String,JobDeliveryType> deliveryType) {
-            this.deliveryType = Input.ofNullable(deliveryType);
+            this.deliveryType = Output.ofNullable(deliveryType);
             return this;
         }
 
-        public Builder details(@Nullable Input<Object> details) {
+        public Builder details(@Nullable Output<Object> details) {
             this.details = details;
             return this;
         }
 
         public Builder details(@Nullable Object details) {
-            this.details = Input.ofNullable(details);
+            this.details = Output.ofNullable(details);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder jobName(@Nullable Input<String> jobName) {
+        public Builder jobName(@Nullable Output<String> jobName) {
             this.jobName = jobName;
             return this;
         }
 
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Input.ofNullable(jobName);
+            this.jobName = Output.ofNullable(jobName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder transferType(Input<Either<String,TransferType>> transferType) {
+        public Builder transferType(Output<Either<String,TransferType>> transferType) {
             this.transferType = Objects.requireNonNull(transferType);
             return this;
         }
 
         public Builder transferType(Either<String,TransferType> transferType) {
-            this.transferType = Input.of(Objects.requireNonNull(transferType));
+            this.transferType = Output.of(Objects.requireNonNull(transferType));
             return this;
         }
         public JobArgs build() {

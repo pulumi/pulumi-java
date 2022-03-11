@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.azurenative.customerinsights.inputs.HubBillingInfoFormatArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubBillingInfo")
-      private final @Nullable Input<HubBillingInfoFormatArgs> hubBillingInfo;
+      private final @Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo;
 
-    public Input<HubBillingInfoFormatArgs> getHubBillingInfo() {
-        return this.hubBillingInfo == null ? Input.empty() : this.hubBillingInfo;
+    public Output<HubBillingInfoFormatArgs> getHubBillingInfo() {
+        return this.hubBillingInfo == null ? Output.empty() : this.hubBillingInfo;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName")
-      private final @Nullable Input<String> hubName;
+      private final @Nullable Output<String> hubName;
 
-    public Input<String> getHubName() {
-        return this.hubName == null ? Input.empty() : this.hubName;
+    public Output<String> getHubName() {
+        return this.hubName == null ? Output.empty() : this.hubName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,10 +66,10 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -77,19 +77,19 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantFeatures")
-      private final @Nullable Input<Integer> tenantFeatures;
+      private final @Nullable Output<Integer> tenantFeatures;
 
-    public Input<Integer> getTenantFeatures() {
-        return this.tenantFeatures == null ? Input.empty() : this.tenantFeatures;
+    public Output<Integer> getTenantFeatures() {
+        return this.tenantFeatures == null ? Output.empty() : this.tenantFeatures;
     }
 
     public HubArgs(
-        @Nullable Input<HubBillingInfoFormatArgs> hubBillingInfo,
-        @Nullable Input<String> hubName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Integer> tenantFeatures) {
+        @Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo,
+        @Nullable Output<String> hubName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Integer> tenantFeatures) {
         this.hubBillingInfo = hubBillingInfo;
         this.hubName = hubName;
         this.location = location;
@@ -99,12 +99,12 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HubArgs() {
-        this.hubBillingInfo = Input.empty();
-        this.hubName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.tenantFeatures = Input.empty();
+        this.hubBillingInfo = Output.empty();
+        this.hubName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.tenantFeatures = Output.empty();
     }
 
     public static Builder builder() {
@@ -116,12 +116,12 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<HubBillingInfoFormatArgs> hubBillingInfo;
-        private @Nullable Input<String> hubName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Integer> tenantFeatures;
+        private @Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo;
+        private @Nullable Output<String> hubName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Integer> tenantFeatures;
 
         public Builder() {
     	      // Empty
@@ -137,63 +137,63 @@ public final class HubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tenantFeatures = defaults.tenantFeatures;
         }
 
-        public Builder hubBillingInfo(@Nullable Input<HubBillingInfoFormatArgs> hubBillingInfo) {
+        public Builder hubBillingInfo(@Nullable Output<HubBillingInfoFormatArgs> hubBillingInfo) {
             this.hubBillingInfo = hubBillingInfo;
             return this;
         }
 
         public Builder hubBillingInfo(@Nullable HubBillingInfoFormatArgs hubBillingInfo) {
-            this.hubBillingInfo = Input.ofNullable(hubBillingInfo);
+            this.hubBillingInfo = Output.ofNullable(hubBillingInfo);
             return this;
         }
 
-        public Builder hubName(@Nullable Input<String> hubName) {
+        public Builder hubName(@Nullable Output<String> hubName) {
             this.hubName = hubName;
             return this;
         }
 
         public Builder hubName(@Nullable String hubName) {
-            this.hubName = Input.ofNullable(hubName);
+            this.hubName = Output.ofNullable(hubName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tenantFeatures(@Nullable Input<Integer> tenantFeatures) {
+        public Builder tenantFeatures(@Nullable Output<Integer> tenantFeatures) {
             this.tenantFeatures = tenantFeatures;
             return this;
         }
 
         public Builder tenantFeatures(@Nullable Integer tenantFeatures) {
-            this.tenantFeatures = Input.ofNullable(tenantFeatures);
+            this.tenantFeatures = Output.ofNullable(tenantFeatures);
             return this;
         }
         public HubArgs build() {

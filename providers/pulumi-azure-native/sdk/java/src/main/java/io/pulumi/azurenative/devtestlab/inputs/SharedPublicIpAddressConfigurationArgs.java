@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.InboundNatRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="inboundNatRules")
-      private final @Nullable Input<List<InboundNatRuleArgs>> inboundNatRules;
+      private final @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
 
-    public Input<List<InboundNatRuleArgs>> getInboundNatRules() {
-        return this.inboundNatRules == null ? Input.empty() : this.inboundNatRules;
+    public Output<List<InboundNatRuleArgs>> getInboundNatRules() {
+        return this.inboundNatRules == null ? Output.empty() : this.inboundNatRules;
     }
 
-    public SharedPublicIpAddressConfigurationArgs(@Nullable Input<List<InboundNatRuleArgs>> inboundNatRules) {
+    public SharedPublicIpAddressConfigurationArgs(@Nullable Output<List<InboundNatRuleArgs>> inboundNatRules) {
         this.inboundNatRules = inboundNatRules;
     }
 
     private SharedPublicIpAddressConfigurationArgs() {
-        this.inboundNatRules = Input.empty();
+        this.inboundNatRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<List<InboundNatRuleArgs>> inboundNatRules;
+        private @Nullable Output<List<InboundNatRuleArgs>> inboundNatRules;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SharedPublicIpAddressConfigurationArgs extends io.pulumi.reso
     	      this.inboundNatRules = defaults.inboundNatRules;
         }
 
-        public Builder inboundNatRules(@Nullable Input<List<InboundNatRuleArgs>> inboundNatRules) {
+        public Builder inboundNatRules(@Nullable Output<List<InboundNatRuleArgs>> inboundNatRules) {
             this.inboundNatRules = inboundNatRules;
             return this;
         }
 
         public Builder inboundNatRules(@Nullable List<InboundNatRuleArgs> inboundNatRules) {
-            this.inboundNatRules = Input.ofNullable(inboundNatRules);
+            this.inboundNatRules = Output.ofNullable(inboundNatRules);
             return this;
         }
         public SharedPublicIpAddressConfigurationArgs build() {

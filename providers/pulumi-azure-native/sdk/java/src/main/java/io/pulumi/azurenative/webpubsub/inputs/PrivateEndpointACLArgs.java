@@ -5,7 +5,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.enums.WebPubSubRequestType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allow")
-      private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> allow;
+      private final @Nullable Output<List<Either<String,WebPubSubRequestType>>> allow;
 
-    public Input<List<Either<String,WebPubSubRequestType>>> getAllow() {
-        return this.allow == null ? Input.empty() : this.allow;
+    public Output<List<Either<String,WebPubSubRequestType>>> getAllow() {
+        return this.allow == null ? Output.empty() : this.allow;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="deny")
-      private final @Nullable Input<List<Either<String,WebPubSubRequestType>>> deny;
+      private final @Nullable Output<List<Either<String,WebPubSubRequestType>>> deny;
 
-    public Input<List<Either<String,WebPubSubRequestType>>> getDeny() {
-        return this.deny == null ? Input.empty() : this.deny;
+    public Output<List<Either<String,WebPubSubRequestType>>> getDeny() {
+        return this.deny == null ? Output.empty() : this.deny;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public PrivateEndpointACLArgs(
-        @Nullable Input<List<Either<String,WebPubSubRequestType>>> allow,
-        @Nullable Input<List<Either<String,WebPubSubRequestType>>> deny,
-        Input<String> name) {
+        @Nullable Output<List<Either<String,WebPubSubRequestType>>> allow,
+        @Nullable Output<List<Either<String,WebPubSubRequestType>>> deny,
+        Output<String> name) {
         this.allow = allow;
         this.deny = deny;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private PrivateEndpointACLArgs() {
-        this.allow = Input.empty();
-        this.deny = Input.empty();
-        this.name = Input.empty();
+        this.allow = Output.empty();
+        this.deny = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,WebPubSubRequestType>>> allow;
-        private @Nullable Input<List<Either<String,WebPubSubRequestType>>> deny;
-        private Input<String> name;
+        private @Nullable Output<List<Either<String,WebPubSubRequestType>>> allow;
+        private @Nullable Output<List<Either<String,WebPubSubRequestType>>> deny;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class PrivateEndpointACLArgs extends io.pulumi.resources.ResourceAr
     	      this.name = defaults.name;
         }
 
-        public Builder allow(@Nullable Input<List<Either<String,WebPubSubRequestType>>> allow) {
+        public Builder allow(@Nullable Output<List<Either<String,WebPubSubRequestType>>> allow) {
             this.allow = allow;
             return this;
         }
 
         public Builder allow(@Nullable List<Either<String,WebPubSubRequestType>> allow) {
-            this.allow = Input.ofNullable(allow);
+            this.allow = Output.ofNullable(allow);
             return this;
         }
 
-        public Builder deny(@Nullable Input<List<Either<String,WebPubSubRequestType>>> deny) {
+        public Builder deny(@Nullable Output<List<Either<String,WebPubSubRequestType>>> deny) {
             this.deny = deny;
             return this;
         }
 
         public Builder deny(@Nullable List<Either<String,WebPubSubRequestType>> deny) {
-            this.deny = Input.ofNullable(deny);
+            this.deny = Output.ofNullable(deny);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public PrivateEndpointACLArgs build() {

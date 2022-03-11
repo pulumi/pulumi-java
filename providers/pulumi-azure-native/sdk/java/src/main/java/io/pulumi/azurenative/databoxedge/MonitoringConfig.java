@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.databoxedge.MonitoringConfigArgs;
 import io.pulumi.azurenative.databoxedge.outputs.MetricConfigurationResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -113,24 +112,24 @@ public class MonitoringConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MonitoringConfig(String name, MonitoringConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:MonitoringConfig", name, args == null ? MonitoringConfigArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:databoxedge:MonitoringConfig", name, args == null ? MonitoringConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MonitoringConfig(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MonitoringConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:MonitoringConfig", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901:MonitoringConfig").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:MonitoringConfig").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20201201:MonitoringConfig").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201:MonitoringConfig").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:MonitoringConfig").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601:MonitoringConfig").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:MonitoringConfig").build())
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901:MonitoringConfig").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:MonitoringConfig").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20201201:MonitoringConfig").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201:MonitoringConfig").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:MonitoringConfig").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601:MonitoringConfig").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:MonitoringConfig").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -144,7 +143,7 @@ public class MonitoringConfig extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MonitoringConfig get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MonitoringConfig get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MonitoringConfig(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class LongTermSchedulePolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="schedulePolicyType", required=true)
-      private final Input<String> schedulePolicyType;
+      private final Output<String> schedulePolicyType;
 
-    public Input<String> getSchedulePolicyType() {
+    public Output<String> getSchedulePolicyType() {
         return this.schedulePolicyType;
     }
 
-    public LongTermSchedulePolicyArgs(Input<String> schedulePolicyType) {
+    public LongTermSchedulePolicyArgs(Output<String> schedulePolicyType) {
         this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType, "expected parameter 'schedulePolicyType' to be non-null");
     }
 
     private LongTermSchedulePolicyArgs() {
-        this.schedulePolicyType = Input.empty();
+        this.schedulePolicyType = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class LongTermSchedulePolicyArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> schedulePolicyType;
+        private Output<String> schedulePolicyType;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class LongTermSchedulePolicyArgs extends io.pulumi.resources.Resour
     	      this.schedulePolicyType = defaults.schedulePolicyType;
         }
 
-        public Builder schedulePolicyType(Input<String> schedulePolicyType) {
+        public Builder schedulePolicyType(Output<String> schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
 
         public Builder schedulePolicyType(String schedulePolicyType) {
-            this.schedulePolicyType = Input.of(Objects.requireNonNull(schedulePolicyType));
+            this.schedulePolicyType = Output.of(Objects.requireNonNull(schedulePolicyType));
             return this;
         }
         public LongTermSchedulePolicyArgs build() {

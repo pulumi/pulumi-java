@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.azurenative.sql.enums.PrivateLinkServiceConnectionStateStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
      * 
      */
     @InputImport(name="description", required=true)
-      private final Input<String> description;
+      private final Output<String> description;
 
-    public Input<String> getDescription() {
+    public Output<String> getDescription() {
         return this.description;
     }
 
@@ -31,22 +31,22 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
+      private final Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
 
-    public Input<Either<String,PrivateLinkServiceConnectionStateStatus>> getStatus() {
+    public Output<Either<String,PrivateLinkServiceConnectionStateStatus>> getStatus() {
         return this.status;
     }
 
     public PrivateLinkServiceConnectionStatePropertyArgs(
-        Input<String> description,
-        Input<Either<String,PrivateLinkServiceConnectionStateStatus>> status) {
+        Output<String> description,
+        Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status) {
         this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
         this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private PrivateLinkServiceConnectionStatePropertyArgs() {
-        this.description = Input.empty();
-        this.status = Input.empty();
+        this.description = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<String> description;
-        private Input<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
+        private Output<String> description;
+        private Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
     	      this.status = defaults.status;
         }
 
-        public Builder description(Input<String> description) {
+        public Builder description(Output<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
         public Builder description(String description) {
-            this.description = Input.of(Objects.requireNonNull(description));
+            this.description = Output.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder status(Input<Either<String,PrivateLinkServiceConnectionStateStatus>> status) {
+        public Builder status(Output<Either<String,PrivateLinkServiceConnectionStateStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(Either<String,PrivateLinkServiceConnectionStateStatus> status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public PrivateLinkServiceConnectionStatePropertyArgs build() {

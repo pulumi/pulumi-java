@@ -6,7 +6,6 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.SyncAgentArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -183,24 +182,24 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SyncAgent(String name, SyncAgentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:SyncAgent", name, args == null ? SyncAgentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:sql:SyncAgent", name, args == null ? SyncAgentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SyncAgent(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SyncAgent(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:SyncAgent", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:sql/v20150501preview:SyncAgent").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200202preview:SyncAgent").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200801preview:SyncAgent").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20201101preview:SyncAgent").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210201preview:SyncAgent").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210501preview:SyncAgent").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210801preview:SyncAgent").build())
+                Output.of(Alias.builder().setType("azure-native:sql/v20150501preview:SyncAgent").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:SyncAgent").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:SyncAgent").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:SyncAgent").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:SyncAgent").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:SyncAgent").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:SyncAgent").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -214,7 +213,7 @@ public class SyncAgent extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SyncAgent get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SyncAgent get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SyncAgent(name, id, options);
     }
 }

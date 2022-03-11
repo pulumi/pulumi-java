@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityandcompliance.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ServiceExportConfigurationInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storageAccountName")
-      private final @Nullable Input<String> storageAccountName;
+      private final @Nullable Output<String> storageAccountName;
 
-    public Input<String> getStorageAccountName() {
-        return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
+    public Output<String> getStorageAccountName() {
+        return this.storageAccountName == null ? Output.empty() : this.storageAccountName;
     }
 
-    public ServiceExportConfigurationInfoArgs(@Nullable Input<String> storageAccountName) {
+    public ServiceExportConfigurationInfoArgs(@Nullable Output<String> storageAccountName) {
         this.storageAccountName = storageAccountName;
     }
 
     private ServiceExportConfigurationInfoArgs() {
-        this.storageAccountName = Input.empty();
+        this.storageAccountName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ServiceExportConfigurationInfoArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> storageAccountName;
+        private @Nullable Output<String> storageAccountName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ServiceExportConfigurationInfoArgs extends io.pulumi.resource
     	      this.storageAccountName = defaults.storageAccountName;
         }
 
-        public Builder storageAccountName(@Nullable Input<String> storageAccountName) {
+        public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Input.ofNullable(storageAccountName);
+            this.storageAccountName = Output.ofNullable(storageAccountName);
             return this;
         }
         public ServiceExportConfigurationInfoArgs build() {

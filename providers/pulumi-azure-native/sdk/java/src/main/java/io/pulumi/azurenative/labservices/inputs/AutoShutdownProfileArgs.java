@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.enums.EnableState;
 import io.pulumi.azurenative.labservices.enums.ShutdownOnIdleMode;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="disconnectDelay")
-      private final @Nullable Input<String> disconnectDelay;
+      private final @Nullable Output<String> disconnectDelay;
 
-    public Input<String> getDisconnectDelay() {
-        return this.disconnectDelay == null ? Input.empty() : this.disconnectDelay;
+    public Output<String> getDisconnectDelay() {
+        return this.disconnectDelay == null ? Output.empty() : this.disconnectDelay;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="idleDelay")
-      private final @Nullable Input<String> idleDelay;
+      private final @Nullable Output<String> idleDelay;
 
-    public Input<String> getIdleDelay() {
-        return this.idleDelay == null ? Input.empty() : this.idleDelay;
+    public Output<String> getIdleDelay() {
+        return this.idleDelay == null ? Output.empty() : this.idleDelay;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="noConnectDelay")
-      private final @Nullable Input<String> noConnectDelay;
+      private final @Nullable Output<String> noConnectDelay;
 
-    public Input<String> getNoConnectDelay() {
-        return this.noConnectDelay == null ? Input.empty() : this.noConnectDelay;
+    public Output<String> getNoConnectDelay() {
+        return this.noConnectDelay == null ? Output.empty() : this.noConnectDelay;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="shutdownOnDisconnect")
-      private final @Nullable Input<EnableState> shutdownOnDisconnect;
+      private final @Nullable Output<EnableState> shutdownOnDisconnect;
 
-    public Input<EnableState> getShutdownOnDisconnect() {
-        return this.shutdownOnDisconnect == null ? Input.empty() : this.shutdownOnDisconnect;
+    public Output<EnableState> getShutdownOnDisconnect() {
+        return this.shutdownOnDisconnect == null ? Output.empty() : this.shutdownOnDisconnect;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="shutdownOnIdle")
-      private final @Nullable Input<ShutdownOnIdleMode> shutdownOnIdle;
+      private final @Nullable Output<ShutdownOnIdleMode> shutdownOnIdle;
 
-    public Input<ShutdownOnIdleMode> getShutdownOnIdle() {
-        return this.shutdownOnIdle == null ? Input.empty() : this.shutdownOnIdle;
+    public Output<ShutdownOnIdleMode> getShutdownOnIdle() {
+        return this.shutdownOnIdle == null ? Output.empty() : this.shutdownOnIdle;
     }
 
     /**
@@ -80,34 +80,34 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="shutdownWhenNotConnected")
-      private final @Nullable Input<EnableState> shutdownWhenNotConnected;
+      private final @Nullable Output<EnableState> shutdownWhenNotConnected;
 
-    public Input<EnableState> getShutdownWhenNotConnected() {
-        return this.shutdownWhenNotConnected == null ? Input.empty() : this.shutdownWhenNotConnected;
+    public Output<EnableState> getShutdownWhenNotConnected() {
+        return this.shutdownWhenNotConnected == null ? Output.empty() : this.shutdownWhenNotConnected;
     }
 
     public AutoShutdownProfileArgs(
-        @Nullable Input<String> disconnectDelay,
-        @Nullable Input<String> idleDelay,
-        @Nullable Input<String> noConnectDelay,
-        @Nullable Input<EnableState> shutdownOnDisconnect,
-        @Nullable Input<ShutdownOnIdleMode> shutdownOnIdle,
-        @Nullable Input<EnableState> shutdownWhenNotConnected) {
+        @Nullable Output<String> disconnectDelay,
+        @Nullable Output<String> idleDelay,
+        @Nullable Output<String> noConnectDelay,
+        @Nullable Output<EnableState> shutdownOnDisconnect,
+        @Nullable Output<ShutdownOnIdleMode> shutdownOnIdle,
+        @Nullable Output<EnableState> shutdownWhenNotConnected) {
         this.disconnectDelay = disconnectDelay;
         this.idleDelay = idleDelay;
         this.noConnectDelay = noConnectDelay;
-        this.shutdownOnDisconnect = shutdownOnDisconnect == null ? Input.ofNullable(io.pulumi.azurenative.labservices.enums.EnableState.Disabled) : shutdownOnDisconnect;
-        this.shutdownOnIdle = shutdownOnIdle == null ? Input.ofNullable(io.pulumi.azurenative.labservices.enums.ShutdownOnIdleMode.None) : shutdownOnIdle;
-        this.shutdownWhenNotConnected = shutdownWhenNotConnected == null ? Input.ofNullable(io.pulumi.azurenative.labservices.enums.EnableState.Disabled) : shutdownWhenNotConnected;
+        this.shutdownOnDisconnect = shutdownOnDisconnect == null ? Output.ofNullable(io.pulumi.azurenative.labservices.enums.EnableState.Disabled) : shutdownOnDisconnect;
+        this.shutdownOnIdle = shutdownOnIdle == null ? Output.ofNullable(io.pulumi.azurenative.labservices.enums.ShutdownOnIdleMode.None) : shutdownOnIdle;
+        this.shutdownWhenNotConnected = shutdownWhenNotConnected == null ? Output.ofNullable(io.pulumi.azurenative.labservices.enums.EnableState.Disabled) : shutdownWhenNotConnected;
     }
 
     private AutoShutdownProfileArgs() {
-        this.disconnectDelay = Input.empty();
-        this.idleDelay = Input.empty();
-        this.noConnectDelay = Input.empty();
-        this.shutdownOnDisconnect = Input.empty();
-        this.shutdownOnIdle = Input.empty();
-        this.shutdownWhenNotConnected = Input.empty();
+        this.disconnectDelay = Output.empty();
+        this.idleDelay = Output.empty();
+        this.noConnectDelay = Output.empty();
+        this.shutdownOnDisconnect = Output.empty();
+        this.shutdownOnIdle = Output.empty();
+        this.shutdownWhenNotConnected = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> disconnectDelay;
-        private @Nullable Input<String> idleDelay;
-        private @Nullable Input<String> noConnectDelay;
-        private @Nullable Input<EnableState> shutdownOnDisconnect;
-        private @Nullable Input<ShutdownOnIdleMode> shutdownOnIdle;
-        private @Nullable Input<EnableState> shutdownWhenNotConnected;
+        private @Nullable Output<String> disconnectDelay;
+        private @Nullable Output<String> idleDelay;
+        private @Nullable Output<String> noConnectDelay;
+        private @Nullable Output<EnableState> shutdownOnDisconnect;
+        private @Nullable Output<ShutdownOnIdleMode> shutdownOnIdle;
+        private @Nullable Output<EnableState> shutdownWhenNotConnected;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class AutoShutdownProfileArgs extends io.pulumi.resources.ResourceA
     	      this.shutdownWhenNotConnected = defaults.shutdownWhenNotConnected;
         }
 
-        public Builder disconnectDelay(@Nullable Input<String> disconnectDelay) {
+        public Builder disconnectDelay(@Nullable Output<String> disconnectDelay) {
             this.disconnectDelay = disconnectDelay;
             return this;
         }
 
         public Builder disconnectDelay(@Nullable String disconnectDelay) {
-            this.disconnectDelay = Input.ofNullable(disconnectDelay);
+            this.disconnectDelay = Output.ofNullable(disconnectDelay);
             return this;
         }
 
-        public Builder idleDelay(@Nullable Input<String> idleDelay) {
+        public Builder idleDelay(@Nullable Output<String> idleDelay) {
             this.idleDelay = idleDelay;
             return this;
         }
 
         public Builder idleDelay(@Nullable String idleDelay) {
-            this.idleDelay = Input.ofNullable(idleDelay);
+            this.idleDelay = Output.ofNullable(idleDelay);
             return this;
         }
 
-        public Builder noConnectDelay(@Nullable Input<String> noConnectDelay) {
+        public Builder noConnectDelay(@Nullable Output<String> noConnectDelay) {
             this.noConnectDelay = noConnectDelay;
             return this;
         }
 
         public Builder noConnectDelay(@Nullable String noConnectDelay) {
-            this.noConnectDelay = Input.ofNullable(noConnectDelay);
+            this.noConnectDelay = Output.ofNullable(noConnectDelay);
             return this;
         }
 
-        public Builder shutdownOnDisconnect(@Nullable Input<EnableState> shutdownOnDisconnect) {
+        public Builder shutdownOnDisconnect(@Nullable Output<EnableState> shutdownOnDisconnect) {
             this.shutdownOnDisconnect = shutdownOnDisconnect;
             return this;
         }
 
         public Builder shutdownOnDisconnect(@Nullable EnableState shutdownOnDisconnect) {
-            this.shutdownOnDisconnect = Input.ofNullable(shutdownOnDisconnect);
+            this.shutdownOnDisconnect = Output.ofNullable(shutdownOnDisconnect);
             return this;
         }
 
-        public Builder shutdownOnIdle(@Nullable Input<ShutdownOnIdleMode> shutdownOnIdle) {
+        public Builder shutdownOnIdle(@Nullable Output<ShutdownOnIdleMode> shutdownOnIdle) {
             this.shutdownOnIdle = shutdownOnIdle;
             return this;
         }
 
         public Builder shutdownOnIdle(@Nullable ShutdownOnIdleMode shutdownOnIdle) {
-            this.shutdownOnIdle = Input.ofNullable(shutdownOnIdle);
+            this.shutdownOnIdle = Output.ofNullable(shutdownOnIdle);
             return this;
         }
 
-        public Builder shutdownWhenNotConnected(@Nullable Input<EnableState> shutdownWhenNotConnected) {
+        public Builder shutdownWhenNotConnected(@Nullable Output<EnableState> shutdownWhenNotConnected) {
             this.shutdownWhenNotConnected = shutdownWhenNotConnected;
             return this;
         }
 
         public Builder shutdownWhenNotConnected(@Nullable EnableState shutdownWhenNotConnected) {
-            this.shutdownWhenNotConnected = Input.ofNullable(shutdownWhenNotConnected);
+            this.shutdownWhenNotConnected = Output.ofNullable(shutdownWhenNotConnected);
             return this;
         }
         public AutoShutdownProfileArgs build() {

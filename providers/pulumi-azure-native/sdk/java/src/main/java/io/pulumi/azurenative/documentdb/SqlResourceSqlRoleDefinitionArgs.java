@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.documentdb.enums.RoleDefinitionType;
 import io.pulumi.azurenative.documentdb.inputs.PermissionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,9 +22,9 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -33,10 +33,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="assignableScopes")
-      private final @Nullable Input<List<String>> assignableScopes;
+      private final @Nullable Output<List<String>> assignableScopes;
 
-    public Input<List<String>> getAssignableScopes() {
-        return this.assignableScopes == null ? Input.empty() : this.assignableScopes;
+    public Output<List<String>> getAssignableScopes() {
+        return this.assignableScopes == null ? Output.empty() : this.assignableScopes;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<List<PermissionArgs>> permissions;
+      private final @Nullable Output<List<PermissionArgs>> permissions;
 
-    public Input<List<PermissionArgs>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<List<PermissionArgs>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,10 +66,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="roleDefinitionId")
-      private final @Nullable Input<String> roleDefinitionId;
+      private final @Nullable Output<String> roleDefinitionId;
 
-    public Input<String> getRoleDefinitionId() {
-        return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
+    public Output<String> getRoleDefinitionId() {
+        return this.roleDefinitionId == null ? Output.empty() : this.roleDefinitionId;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="roleName")
-      private final @Nullable Input<String> roleName;
+      private final @Nullable Output<String> roleName;
 
-    public Input<String> getRoleName() {
-        return this.roleName == null ? Input.empty() : this.roleName;
+    public Output<String> getRoleName() {
+        return this.roleName == null ? Output.empty() : this.roleName;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<RoleDefinitionType> type;
+      private final @Nullable Output<RoleDefinitionType> type;
 
-    public Input<RoleDefinitionType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<RoleDefinitionType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public SqlResourceSqlRoleDefinitionArgs(
-        Input<String> accountName,
-        @Nullable Input<List<String>> assignableScopes,
-        @Nullable Input<List<PermissionArgs>> permissions,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> roleDefinitionId,
-        @Nullable Input<String> roleName,
-        @Nullable Input<RoleDefinitionType> type) {
+        Output<String> accountName,
+        @Nullable Output<List<String>> assignableScopes,
+        @Nullable Output<List<PermissionArgs>> permissions,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> roleDefinitionId,
+        @Nullable Output<String> roleName,
+        @Nullable Output<RoleDefinitionType> type) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.assignableScopes = assignableScopes;
         this.permissions = permissions;
@@ -112,13 +112,13 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
     }
 
     private SqlResourceSqlRoleDefinitionArgs() {
-        this.accountName = Input.empty();
-        this.assignableScopes = Input.empty();
-        this.permissions = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.roleDefinitionId = Input.empty();
-        this.roleName = Input.empty();
-        this.type = Input.empty();
+        this.accountName = Output.empty();
+        this.assignableScopes = Output.empty();
+        this.permissions = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.roleDefinitionId = Output.empty();
+        this.roleName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<List<String>> assignableScopes;
-        private @Nullable Input<List<PermissionArgs>> permissions;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> roleDefinitionId;
-        private @Nullable Input<String> roleName;
-        private @Nullable Input<RoleDefinitionType> type;
+        private Output<String> accountName;
+        private @Nullable Output<List<String>> assignableScopes;
+        private @Nullable Output<List<PermissionArgs>> permissions;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> roleDefinitionId;
+        private @Nullable Output<String> roleName;
+        private @Nullable Output<RoleDefinitionType> type;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder assignableScopes(@Nullable Input<List<String>> assignableScopes) {
+        public Builder assignableScopes(@Nullable Output<List<String>> assignableScopes) {
             this.assignableScopes = assignableScopes;
             return this;
         }
 
         public Builder assignableScopes(@Nullable List<String> assignableScopes) {
-            this.assignableScopes = Input.ofNullable(assignableScopes);
+            this.assignableScopes = Output.ofNullable(assignableScopes);
             return this;
         }
 
-        public Builder permissions(@Nullable Input<List<PermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Output<List<PermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable List<PermissionArgs> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder roleDefinitionId(@Nullable Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Input.ofNullable(roleDefinitionId);
+            this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
             return this;
         }
 
-        public Builder roleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Output<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Input.ofNullable(roleName);
+            this.roleName = Output.ofNullable(roleName);
             return this;
         }
 
-        public Builder type(@Nullable Input<RoleDefinitionType> type) {
+        public Builder type(@Nullable Output<RoleDefinitionType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable RoleDefinitionType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public SqlResourceSqlRoleDefinitionArgs build() {

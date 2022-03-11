@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="container")
-      private final @Nullable Input<Object> container;
+      private final @Nullable Output<Object> container;
 
-    public Input<Object> getContainer() {
-        return this.container == null ? Input.empty() : this.container;
+    public Output<Object> getContainer() {
+        return this.container == null ? Output.empty() : this.container;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="fileName")
-      private final @Nullable Input<Object> fileName;
+      private final @Nullable Output<Object> fileName;
 
-    public Input<Object> getFileName() {
-        return this.fileName == null ? Input.empty() : this.fileName;
+    public Output<Object> getFileName() {
+        return this.fileName == null ? Output.empty() : this.fileName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="folderPath")
-      private final @Nullable Input<Object> folderPath;
+      private final @Nullable Output<Object> folderPath;
 
-    public Input<Object> getFolderPath() {
-        return this.folderPath == null ? Input.empty() : this.folderPath;
+    public Output<Object> getFolderPath() {
+        return this.folderPath == null ? Output.empty() : this.folderPath;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AzureBlobStorageLocationArgs(
-        @Nullable Input<Object> container,
-        @Nullable Input<Object> fileName,
-        @Nullable Input<Object> folderPath,
-        Input<String> type) {
+        @Nullable Output<Object> container,
+        @Nullable Output<Object> fileName,
+        @Nullable Output<Object> folderPath,
+        Output<String> type) {
         this.container = container;
         this.fileName = fileName;
         this.folderPath = folderPath;
@@ -76,10 +76,10 @@ public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.Reso
     }
 
     private AzureBlobStorageLocationArgs() {
-        this.container = Input.empty();
-        this.fileName = Input.empty();
-        this.folderPath = Input.empty();
-        this.type = Input.empty();
+        this.container = Output.empty();
+        this.fileName = Output.empty();
+        this.folderPath = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> container;
-        private @Nullable Input<Object> fileName;
-        private @Nullable Input<Object> folderPath;
-        private Input<String> type;
+        private @Nullable Output<Object> container;
+        private @Nullable Output<Object> fileName;
+        private @Nullable Output<Object> folderPath;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class AzureBlobStorageLocationArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder container(@Nullable Input<Object> container) {
+        public Builder container(@Nullable Output<Object> container) {
             this.container = container;
             return this;
         }
 
         public Builder container(@Nullable Object container) {
-            this.container = Input.ofNullable(container);
+            this.container = Output.ofNullable(container);
             return this;
         }
 
-        public Builder fileName(@Nullable Input<Object> fileName) {
+        public Builder fileName(@Nullable Output<Object> fileName) {
             this.fileName = fileName;
             return this;
         }
 
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Input.ofNullable(fileName);
+            this.fileName = Output.ofNullable(fileName);
             return this;
         }
 
-        public Builder folderPath(@Nullable Input<Object> folderPath) {
+        public Builder folderPath(@Nullable Output<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Input.ofNullable(folderPath);
+            this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AzureBlobStorageLocationArgs build() {

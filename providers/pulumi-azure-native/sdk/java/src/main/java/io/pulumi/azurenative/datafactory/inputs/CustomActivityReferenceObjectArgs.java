@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="datasets")
-      private final @Nullable Input<List<DatasetReferenceArgs>> datasets;
+      private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
-    public Input<List<DatasetReferenceArgs>> getDatasets() {
-        return this.datasets == null ? Input.empty() : this.datasets;
+    public Output<List<DatasetReferenceArgs>> getDatasets() {
+        return this.datasets == null ? Output.empty() : this.datasets;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkedServices")
-      private final @Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices;
+      private final @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
 
-    public Input<List<LinkedServiceReferenceArgs>> getLinkedServices() {
-        return this.linkedServices == null ? Input.empty() : this.linkedServices;
+    public Output<List<LinkedServiceReferenceArgs>> getLinkedServices() {
+        return this.linkedServices == null ? Output.empty() : this.linkedServices;
     }
 
     public CustomActivityReferenceObjectArgs(
-        @Nullable Input<List<DatasetReferenceArgs>> datasets,
-        @Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices) {
+        @Nullable Output<List<DatasetReferenceArgs>> datasets,
+        @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices) {
         this.datasets = datasets;
         this.linkedServices = linkedServices;
     }
 
     private CustomActivityReferenceObjectArgs() {
-        this.datasets = Input.empty();
-        this.linkedServices = Input.empty();
+        this.datasets = Output.empty();
+        this.linkedServices = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<List<DatasetReferenceArgs>> datasets;
-        private @Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices;
+        private @Nullable Output<List<DatasetReferenceArgs>> datasets;
+        private @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
     	      this.linkedServices = defaults.linkedServices;
         }
 
-        public Builder datasets(@Nullable Input<List<DatasetReferenceArgs>> datasets) {
+        public Builder datasets(@Nullable Output<List<DatasetReferenceArgs>> datasets) {
             this.datasets = datasets;
             return this;
         }
 
         public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
-            this.datasets = Input.ofNullable(datasets);
+            this.datasets = Output.ofNullable(datasets);
             return this;
         }
 
-        public Builder linkedServices(@Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices) {
+        public Builder linkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices) {
             this.linkedServices = linkedServices;
             return this;
         }
 
         public Builder linkedServices(@Nullable List<LinkedServiceReferenceArgs> linkedServices) {
-            this.linkedServices = Input.ofNullable(linkedServices);
+            this.linkedServices = Output.ofNullable(linkedServices);
             return this;
         }
         public CustomActivityReferenceObjectArgs build() {

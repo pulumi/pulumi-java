@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,9 +24,9 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionGroupId", required=true)
-      private final Input<String> actionGroupId;
+      private final Output<String> actionGroupId;
 
-    public Input<String> getActionGroupId() {
+    public Output<String> getActionGroupId() {
         return this.actionGroupId;
     }
 
@@ -35,22 +35,22 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookProperties")
-      private final @Nullable Input<Map<String,String>> webhookProperties;
+      private final @Nullable Output<Map<String,String>> webhookProperties;
 
-    public Input<Map<String,String>> getWebhookProperties() {
-        return this.webhookProperties == null ? Input.empty() : this.webhookProperties;
+    public Output<Map<String,String>> getWebhookProperties() {
+        return this.webhookProperties == null ? Output.empty() : this.webhookProperties;
     }
 
     public ActionGroupArgs(
-        Input<String> actionGroupId,
-        @Nullable Input<Map<String,String>> webhookProperties) {
+        Output<String> actionGroupId,
+        @Nullable Output<Map<String,String>> webhookProperties) {
         this.actionGroupId = Objects.requireNonNull(actionGroupId, "expected parameter 'actionGroupId' to be non-null");
         this.webhookProperties = webhookProperties;
     }
 
     private ActionGroupArgs() {
-        this.actionGroupId = Input.empty();
-        this.webhookProperties = Input.empty();
+        this.actionGroupId = Output.empty();
+        this.webhookProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> actionGroupId;
-        private @Nullable Input<Map<String,String>> webhookProperties;
+        private Output<String> actionGroupId;
+        private @Nullable Output<Map<String,String>> webhookProperties;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhookProperties = defaults.webhookProperties;
         }
 
-        public Builder actionGroupId(Input<String> actionGroupId) {
+        public Builder actionGroupId(Output<String> actionGroupId) {
             this.actionGroupId = Objects.requireNonNull(actionGroupId);
             return this;
         }
 
         public Builder actionGroupId(String actionGroupId) {
-            this.actionGroupId = Input.of(Objects.requireNonNull(actionGroupId));
+            this.actionGroupId = Output.of(Objects.requireNonNull(actionGroupId));
             return this;
         }
 
-        public Builder webhookProperties(@Nullable Input<Map<String,String>> webhookProperties) {
+        public Builder webhookProperties(@Nullable Output<Map<String,String>> webhookProperties) {
             this.webhookProperties = webhookProperties;
             return this;
         }
 
         public Builder webhookProperties(@Nullable Map<String,String> webhookProperties) {
-            this.webhookProperties = Input.ofNullable(webhookProperties);
+            this.webhookProperties = Output.ofNullable(webhookProperties);
             return this;
         }
         public ActionGroupArgs build() {

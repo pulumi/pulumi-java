@@ -5,7 +5,7 @@ package io.pulumi.azurenative.peering.inputs;
 
 import io.pulumi.azurenative.peering.inputs.ExchangeConnectionArgs;
 import io.pulumi.azurenative.peering.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connections")
-      private final @Nullable Input<List<ExchangeConnectionArgs>> connections;
+      private final @Nullable Output<List<ExchangeConnectionArgs>> connections;
 
-    public Input<List<ExchangeConnectionArgs>> getConnections() {
-        return this.connections == null ? Input.empty() : this.connections;
+    public Output<List<ExchangeConnectionArgs>> getConnections() {
+        return this.connections == null ? Output.empty() : this.connections;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="peerAsn")
-      private final @Nullable Input<SubResourceArgs> peerAsn;
+      private final @Nullable Output<SubResourceArgs> peerAsn;
 
-    public Input<SubResourceArgs> getPeerAsn() {
-        return this.peerAsn == null ? Input.empty() : this.peerAsn;
+    public Output<SubResourceArgs> getPeerAsn() {
+        return this.peerAsn == null ? Output.empty() : this.peerAsn;
     }
 
     public PeeringPropertiesExchangeArgs(
-        @Nullable Input<List<ExchangeConnectionArgs>> connections,
-        @Nullable Input<SubResourceArgs> peerAsn) {
+        @Nullable Output<List<ExchangeConnectionArgs>> connections,
+        @Nullable Output<SubResourceArgs> peerAsn) {
         this.connections = connections;
         this.peerAsn = peerAsn;
     }
 
     private PeeringPropertiesExchangeArgs() {
-        this.connections = Input.empty();
-        this.peerAsn = Input.empty();
+        this.connections = Output.empty();
+        this.peerAsn = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ExchangeConnectionArgs>> connections;
-        private @Nullable Input<SubResourceArgs> peerAsn;
+        private @Nullable Output<List<ExchangeConnectionArgs>> connections;
+        private @Nullable Output<SubResourceArgs> peerAsn;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.Res
     	      this.peerAsn = defaults.peerAsn;
         }
 
-        public Builder connections(@Nullable Input<List<ExchangeConnectionArgs>> connections) {
+        public Builder connections(@Nullable Output<List<ExchangeConnectionArgs>> connections) {
             this.connections = connections;
             return this;
         }
 
         public Builder connections(@Nullable List<ExchangeConnectionArgs> connections) {
-            this.connections = Input.ofNullable(connections);
+            this.connections = Output.ofNullable(connections);
             return this;
         }
 
-        public Builder peerAsn(@Nullable Input<SubResourceArgs> peerAsn) {
+        public Builder peerAsn(@Nullable Output<SubResourceArgs> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
         public Builder peerAsn(@Nullable SubResourceArgs peerAsn) {
-            this.peerAsn = Input.ofNullable(peerAsn);
+            this.peerAsn = Output.ofNullable(peerAsn);
             return this;
         }
         public PeeringPropertiesExchangeArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.azurenative.machinelearningcompute.enums.SystemServiceType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="systemServiceType", required=true)
-      private final Input<Either<String,SystemServiceType>> systemServiceType;
+      private final Output<Either<String,SystemServiceType>> systemServiceType;
 
-    public Input<Either<String,SystemServiceType>> getSystemServiceType() {
+    public Output<Either<String,SystemServiceType>> getSystemServiceType() {
         return this.systemServiceType;
     }
 
-    public SystemServiceArgs(Input<Either<String,SystemServiceType>> systemServiceType) {
+    public SystemServiceArgs(Output<Either<String,SystemServiceType>> systemServiceType) {
         this.systemServiceType = Objects.requireNonNull(systemServiceType, "expected parameter 'systemServiceType' to be non-null");
     }
 
     private SystemServiceArgs() {
-        this.systemServiceType = Input.empty();
+        this.systemServiceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,SystemServiceType>> systemServiceType;
+        private Output<Either<String,SystemServiceType>> systemServiceType;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SystemServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.systemServiceType = defaults.systemServiceType;
         }
 
-        public Builder systemServiceType(Input<Either<String,SystemServiceType>> systemServiceType) {
+        public Builder systemServiceType(Output<Either<String,SystemServiceType>> systemServiceType) {
             this.systemServiceType = Objects.requireNonNull(systemServiceType);
             return this;
         }
 
         public Builder systemServiceType(Either<String,SystemServiceType> systemServiceType) {
-            this.systemServiceType = Input.of(Objects.requireNonNull(systemServiceType));
+            this.systemServiceType = Output.of(Objects.requireNonNull(systemServiceType));
             return this;
         }
         public SystemServiceArgs build() {

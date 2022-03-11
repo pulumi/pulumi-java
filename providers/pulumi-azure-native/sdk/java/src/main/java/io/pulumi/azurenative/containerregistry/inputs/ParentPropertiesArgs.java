@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.SyncPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="syncProperties", required=true)
-      private final Input<SyncPropertiesArgs> syncProperties;
+      private final Output<SyncPropertiesArgs> syncProperties;
 
-    public Input<SyncPropertiesArgs> getSyncProperties() {
+    public Output<SyncPropertiesArgs> getSyncProperties() {
         return this.syncProperties;
     }
 
     public ParentPropertiesArgs(
-        @Nullable Input<String> id,
-        Input<SyncPropertiesArgs> syncProperties) {
+        @Nullable Output<String> id,
+        Output<SyncPropertiesArgs> syncProperties) {
         this.id = id;
         this.syncProperties = Objects.requireNonNull(syncProperties, "expected parameter 'syncProperties' to be non-null");
     }
 
     private ParentPropertiesArgs() {
-        this.id = Input.empty();
-        this.syncProperties = Input.empty();
+        this.id = Output.empty();
+        this.syncProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private Input<SyncPropertiesArgs> syncProperties;
+        private @Nullable Output<String> id;
+        private Output<SyncPropertiesArgs> syncProperties;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.syncProperties = defaults.syncProperties;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder syncProperties(Input<SyncPropertiesArgs> syncProperties) {
+        public Builder syncProperties(Output<SyncPropertiesArgs> syncProperties) {
             this.syncProperties = Objects.requireNonNull(syncProperties);
             return this;
         }
 
         public Builder syncProperties(SyncPropertiesArgs syncProperties) {
-            this.syncProperties = Input.of(Objects.requireNonNull(syncProperties));
+            this.syncProperties = Output.of(Objects.requireNonNull(syncProperties));
             return this;
         }
         public ParentPropertiesArgs build() {

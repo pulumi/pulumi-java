@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customproviders;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associationName")
-      private final @Nullable Input<String> associationName;
+      private final @Nullable Output<String> associationName;
 
-    public Input<String> getAssociationName() {
-        return this.associationName == null ? Input.empty() : this.associationName;
+    public Output<String> getAssociationName() {
+        return this.associationName == null ? Output.empty() : this.associationName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -41,25 +41,25 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceId")
-      private final @Nullable Input<String> targetResourceId;
+      private final @Nullable Output<String> targetResourceId;
 
-    public Input<String> getTargetResourceId() {
-        return this.targetResourceId == null ? Input.empty() : this.targetResourceId;
+    public Output<String> getTargetResourceId() {
+        return this.targetResourceId == null ? Output.empty() : this.targetResourceId;
     }
 
     public AssociationArgs(
-        @Nullable Input<String> associationName,
-        Input<String> scope,
-        @Nullable Input<String> targetResourceId) {
+        @Nullable Output<String> associationName,
+        Output<String> scope,
+        @Nullable Output<String> targetResourceId) {
         this.associationName = associationName;
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
         this.targetResourceId = targetResourceId;
     }
 
     private AssociationArgs() {
-        this.associationName = Input.empty();
-        this.scope = Input.empty();
-        this.targetResourceId = Input.empty();
+        this.associationName = Output.empty();
+        this.scope = Output.empty();
+        this.targetResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> associationName;
-        private Input<String> scope;
-        private @Nullable Input<String> targetResourceId;
+        private @Nullable Output<String> associationName;
+        private Output<String> scope;
+        private @Nullable Output<String> targetResourceId;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetResourceId = defaults.targetResourceId;
         }
 
-        public Builder associationName(@Nullable Input<String> associationName) {
+        public Builder associationName(@Nullable Output<String> associationName) {
             this.associationName = associationName;
             return this;
         }
 
         public Builder associationName(@Nullable String associationName) {
-            this.associationName = Input.ofNullable(associationName);
+            this.associationName = Output.ofNullable(associationName);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder targetResourceId(@Nullable Input<String> targetResourceId) {
+        public Builder targetResourceId(@Nullable Output<String> targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
 
         public Builder targetResourceId(@Nullable String targetResourceId) {
-            this.targetResourceId = Input.ofNullable(targetResourceId);
+            this.targetResourceId = Output.ofNullable(targetResourceId);
             return this;
         }
         public AssociationArgs build() {

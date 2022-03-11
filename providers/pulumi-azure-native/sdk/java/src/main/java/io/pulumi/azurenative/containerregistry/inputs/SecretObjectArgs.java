@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.enums.SecretObjectType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,SecretObjectType>> type;
+      private final @Nullable Output<Either<String,SecretObjectType>> type;
 
-    public Input<Either<String,SecretObjectType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,SecretObjectType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -39,22 +39,22 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public SecretObjectArgs(
-        @Nullable Input<Either<String,SecretObjectType>> type,
-        @Nullable Input<String> value) {
+        @Nullable Output<Either<String,SecretObjectType>> type,
+        @Nullable Output<String> value) {
         this.type = type;
         this.value = value;
     }
 
     private SecretObjectArgs() {
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -66,8 +66,8 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,SecretObjectType>> type;
-        private @Nullable Input<String> value;
+        private @Nullable Output<Either<String,SecretObjectType>> type;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -79,23 +79,23 @@ public final class SecretObjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder type(@Nullable Input<Either<String,SecretObjectType>> type) {
+        public Builder type(@Nullable Output<Either<String,SecretObjectType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,SecretObjectType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public SecretObjectArgs build() {

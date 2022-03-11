@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingCycle")
-      private final @Nullable Input<String> billingCycle;
+      private final @Nullable Output<String> billingCycle;
 
-    public Input<String> getBillingCycle() {
-        return this.billingCycle == null ? Input.empty() : this.billingCycle;
+    public Output<String> getBillingCycle() {
+        return this.billingCycle == null ? Output.empty() : this.billingCycle;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="effectiveDate")
-      private final @Nullable Input<String> effectiveDate;
+      private final @Nullable Output<String> effectiveDate;
 
-    public Input<String> getEffectiveDate() {
-        return this.effectiveDate == null ? Input.empty() : this.effectiveDate;
+    public Output<String> getEffectiveDate() {
+        return this.effectiveDate == null ? Output.empty() : this.effectiveDate;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="planDetails")
-      private final @Nullable Input<String> planDetails;
+      private final @Nullable Output<String> planDetails;
 
-    public Input<String> getPlanDetails() {
-        return this.planDetails == null ? Input.empty() : this.planDetails;
+    public Output<String> getPlanDetails() {
+        return this.planDetails == null ? Output.empty() : this.planDetails;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usageType")
-      private final @Nullable Input<String> usageType;
+      private final @Nullable Output<String> usageType;
 
-    public Input<String> getUsageType() {
-        return this.usageType == null ? Input.empty() : this.usageType;
+    public Output<String> getUsageType() {
+        return this.usageType == null ? Output.empty() : this.usageType;
     }
 
     public PlanDataArgs(
-        @Nullable Input<String> billingCycle,
-        @Nullable Input<String> effectiveDate,
-        @Nullable Input<String> planDetails,
-        @Nullable Input<String> usageType) {
+        @Nullable Output<String> billingCycle,
+        @Nullable Output<String> effectiveDate,
+        @Nullable Output<String> planDetails,
+        @Nullable Output<String> usageType) {
         this.billingCycle = billingCycle;
         this.effectiveDate = effectiveDate;
         this.planDetails = planDetails;
@@ -70,10 +70,10 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PlanDataArgs() {
-        this.billingCycle = Input.empty();
-        this.effectiveDate = Input.empty();
-        this.planDetails = Input.empty();
-        this.usageType = Input.empty();
+        this.billingCycle = Output.empty();
+        this.effectiveDate = Output.empty();
+        this.planDetails = Output.empty();
+        this.usageType = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> billingCycle;
-        private @Nullable Input<String> effectiveDate;
-        private @Nullable Input<String> planDetails;
-        private @Nullable Input<String> usageType;
+        private @Nullable Output<String> billingCycle;
+        private @Nullable Output<String> effectiveDate;
+        private @Nullable Output<String> planDetails;
+        private @Nullable Output<String> usageType;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class PlanDataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usageType = defaults.usageType;
         }
 
-        public Builder billingCycle(@Nullable Input<String> billingCycle) {
+        public Builder billingCycle(@Nullable Output<String> billingCycle) {
             this.billingCycle = billingCycle;
             return this;
         }
 
         public Builder billingCycle(@Nullable String billingCycle) {
-            this.billingCycle = Input.ofNullable(billingCycle);
+            this.billingCycle = Output.ofNullable(billingCycle);
             return this;
         }
 
-        public Builder effectiveDate(@Nullable Input<String> effectiveDate) {
+        public Builder effectiveDate(@Nullable Output<String> effectiveDate) {
             this.effectiveDate = effectiveDate;
             return this;
         }
 
         public Builder effectiveDate(@Nullable String effectiveDate) {
-            this.effectiveDate = Input.ofNullable(effectiveDate);
+            this.effectiveDate = Output.ofNullable(effectiveDate);
             return this;
         }
 
-        public Builder planDetails(@Nullable Input<String> planDetails) {
+        public Builder planDetails(@Nullable Output<String> planDetails) {
             this.planDetails = planDetails;
             return this;
         }
 
         public Builder planDetails(@Nullable String planDetails) {
-            this.planDetails = Input.ofNullable(planDetails);
+            this.planDetails = Output.ofNullable(planDetails);
             return this;
         }
 
-        public Builder usageType(@Nullable Input<String> usageType) {
+        public Builder usageType(@Nullable Output<String> usageType) {
             this.usageType = usageType;
             return this;
         }
 
         public Builder usageType(@Nullable String usageType) {
-            this.usageType = Input.ofNullable(usageType);
+            this.usageType = Output.ofNullable(usageType);
             return this;
         }
         public PlanDataArgs build() {

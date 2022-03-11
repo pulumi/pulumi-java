@@ -6,7 +6,7 @@ package io.pulumi.azurenative.botservice.inputs;
 import io.pulumi.azurenative.botservice.enums.EnterpriseChannelState;
 import io.pulumi.azurenative.botservice.inputs.EnterpriseChannelNodeArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,9 +27,9 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nodes", required=true)
-      private final Input<List<EnterpriseChannelNodeArgs>> nodes;
+      private final Output<List<EnterpriseChannelNodeArgs>> nodes;
 
-    public Input<List<EnterpriseChannelNodeArgs>> getNodes() {
+    public Output<List<EnterpriseChannelNodeArgs>> getNodes() {
         return this.nodes;
     }
 
@@ -38,22 +38,22 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<Either<String,EnterpriseChannelState>> state;
+      private final @Nullable Output<Either<String,EnterpriseChannelState>> state;
 
-    public Input<Either<String,EnterpriseChannelState>> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<Either<String,EnterpriseChannelState>> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public EnterpriseChannelPropertiesArgs(
-        Input<List<EnterpriseChannelNodeArgs>> nodes,
-        @Nullable Input<Either<String,EnterpriseChannelState>> state) {
+        Output<List<EnterpriseChannelNodeArgs>> nodes,
+        @Nullable Output<Either<String,EnterpriseChannelState>> state) {
         this.nodes = Objects.requireNonNull(nodes, "expected parameter 'nodes' to be non-null");
         this.state = state;
     }
 
     private EnterpriseChannelPropertiesArgs() {
-        this.nodes = Input.empty();
-        this.state = Input.empty();
+        this.nodes = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -65,8 +65,8 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<List<EnterpriseChannelNodeArgs>> nodes;
-        private @Nullable Input<Either<String,EnterpriseChannelState>> state;
+        private Output<List<EnterpriseChannelNodeArgs>> nodes;
+        private @Nullable Output<Either<String,EnterpriseChannelState>> state;
 
         public Builder() {
     	      // Empty
@@ -78,23 +78,23 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
     	      this.state = defaults.state;
         }
 
-        public Builder nodes(Input<List<EnterpriseChannelNodeArgs>> nodes) {
+        public Builder nodes(Output<List<EnterpriseChannelNodeArgs>> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
 
         public Builder nodes(List<EnterpriseChannelNodeArgs> nodes) {
-            this.nodes = Input.of(Objects.requireNonNull(nodes));
+            this.nodes = Output.of(Objects.requireNonNull(nodes));
             return this;
         }
 
-        public Builder state(@Nullable Input<Either<String,EnterpriseChannelState>> state) {
+        public Builder state(@Nullable Output<Either<String,EnterpriseChannelState>> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable Either<String,EnterpriseChannelState> state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public EnterpriseChannelPropertiesArgs build() {

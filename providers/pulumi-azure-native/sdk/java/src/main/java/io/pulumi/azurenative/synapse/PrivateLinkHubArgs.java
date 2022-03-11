@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateLinkHubName")
-      private final @Nullable Input<String> privateLinkHubName;
+      private final @Nullable Output<String> privateLinkHubName;
 
-    public Input<String> getPrivateLinkHubName() {
-        return this.privateLinkHubName == null ? Input.empty() : this.privateLinkHubName;
+    public Output<String> getPrivateLinkHubName() {
+        return this.privateLinkHubName == null ? Output.empty() : this.privateLinkHubName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,18 +64,18 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PrivateLinkHubArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> privateLinkHubName,
-        @Nullable Input<String> provisioningState,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> privateLinkHubName,
+        @Nullable Output<String> provisioningState,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.privateLinkHubName = privateLinkHubName;
         this.provisioningState = provisioningState;
@@ -84,11 +84,11 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrivateLinkHubArgs() {
-        this.location = Input.empty();
-        this.privateLinkHubName = Input.empty();
-        this.provisioningState = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.privateLinkHubName = Output.empty();
+        this.provisioningState = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> privateLinkHubName;
-        private @Nullable Input<String> provisioningState;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> privateLinkHubName;
+        private @Nullable Output<String> provisioningState;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class PrivateLinkHubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privateLinkHubName(@Nullable Input<String> privateLinkHubName) {
+        public Builder privateLinkHubName(@Nullable Output<String> privateLinkHubName) {
             this.privateLinkHubName = privateLinkHubName;
             return this;
         }
 
         public Builder privateLinkHubName(@Nullable String privateLinkHubName) {
-            this.privateLinkHubName = Input.ofNullable(privateLinkHubName);
+            this.privateLinkHubName = Output.ofNullable(privateLinkHubName);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PrivateLinkHubArgs build() {

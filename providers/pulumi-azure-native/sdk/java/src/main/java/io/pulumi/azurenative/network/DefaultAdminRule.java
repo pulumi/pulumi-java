@@ -8,7 +8,6 @@ import io.pulumi.azurenative.network.DefaultAdminRuleArgs;
 import io.pulumi.azurenative.network.outputs.AddressPrefixItemResponse;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -313,10 +312,10 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DefaultAdminRule(String name, DefaultAdminRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:DefaultAdminRule", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:DefaultAdminRule", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private DefaultAdminRule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DefaultAdminRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:DefaultAdminRule", name, null, makeResourceOptions(options, id));
     }
 
@@ -327,12 +326,12 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20210201preview:DefaultAdminRule").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501preview:DefaultAdminRule").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20210201preview:DefaultAdminRule").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501preview:DefaultAdminRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -346,7 +345,7 @@ public class DefaultAdminRule extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DefaultAdminRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DefaultAdminRule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DefaultAdminRule(name, id, options);
     }
 }

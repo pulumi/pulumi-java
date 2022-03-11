@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning;
 
 import io.pulumi.azurenative.machinelearning.inputs.WebServicePropertiesForGraphArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<WebServicePropertiesForGraphArgs> properties;
+      private final Output<WebServicePropertiesForGraphArgs> properties;
 
-    public Input<WebServicePropertiesForGraphArgs> getProperties() {
+    public Output<WebServicePropertiesForGraphArgs> getProperties() {
         return this.properties;
     }
 
@@ -43,9 +43,9 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webServiceName")
-      private final @Nullable Input<String> webServiceName;
+      private final @Nullable Output<String> webServiceName;
 
-    public Input<String> getWebServiceName() {
-        return this.webServiceName == null ? Input.empty() : this.webServiceName;
+    public Output<String> getWebServiceName() {
+        return this.webServiceName == null ? Output.empty() : this.webServiceName;
     }
 
     public WebServiceArgs(
-        @Nullable Input<String> location,
-        Input<WebServicePropertiesForGraphArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> webServiceName) {
+        @Nullable Output<String> location,
+        Output<WebServicePropertiesForGraphArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> webServiceName) {
         this.location = location;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebServiceArgs() {
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.webServiceName = Input.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.webServiceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private Input<WebServicePropertiesForGraphArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> webServiceName;
+        private @Nullable Output<String> location;
+        private Output<WebServicePropertiesForGraphArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> webServiceName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webServiceName = defaults.webServiceName;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(Input<WebServicePropertiesForGraphArgs> properties) {
+        public Builder properties(Output<WebServicePropertiesForGraphArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(WebServicePropertiesForGraphArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder webServiceName(@Nullable Input<String> webServiceName) {
+        public Builder webServiceName(@Nullable Output<String> webServiceName) {
             this.webServiceName = webServiceName;
             return this;
         }
 
         public Builder webServiceName(@Nullable String webServiceName) {
-            this.webServiceName = Input.ofNullable(webServiceName);
+            this.webServiceName = Output.ofNullable(webServiceName);
             return this;
         }
         public WebServiceArgs build() {

@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.notebooks.NotebookProxyArgs;
 import io.pulumi.azurenative.notebooks.outputs.NotebookResourceSystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -197,18 +196,18 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotebookProxy(String name, NotebookProxyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:notebooks:NotebookProxy", name, args == null ? NotebookProxyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:notebooks:NotebookProxy", name, args == null ? NotebookProxyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NotebookProxy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NotebookProxy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:notebooks:NotebookProxy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:notebooks/v20191011preview:NotebookProxy").build())
+                Output.of(Alias.builder().setType("azure-native:notebooks/v20191011preview:NotebookProxy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -222,7 +221,7 @@ public class NotebookProxy extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NotebookProxy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NotebookProxy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NotebookProxy(name, id, options);
     }
 }

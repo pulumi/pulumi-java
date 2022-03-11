@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="keyVaultUrl")
-      private final @Nullable Input<String> keyVaultUrl;
+      private final @Nullable Output<String> keyVaultUrl;
 
-    public Input<String> getKeyVaultUrl() {
-        return this.keyVaultUrl == null ? Input.empty() : this.keyVaultUrl;
+    public Output<String> getKeyVaultUrl() {
+        return this.keyVaultUrl == null ? Output.empty() : this.keyVaultUrl;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public WorkspaceKeyDetailsArgs(
-        @Nullable Input<String> keyVaultUrl,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> keyVaultUrl,
+        @Nullable Output<String> name) {
         this.keyVaultUrl = keyVaultUrl;
         this.name = name;
     }
 
     private WorkspaceKeyDetailsArgs() {
-        this.keyVaultUrl = Input.empty();
-        this.name = Input.empty();
+        this.keyVaultUrl = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyVaultUrl;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> keyVaultUrl;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
     	      this.name = defaults.name;
         }
 
-        public Builder keyVaultUrl(@Nullable Input<String> keyVaultUrl) {
+        public Builder keyVaultUrl(@Nullable Output<String> keyVaultUrl) {
             this.keyVaultUrl = keyVaultUrl;
             return this;
         }
 
         public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
-            this.keyVaultUrl = Input.ofNullable(keyVaultUrl);
+            this.keyVaultUrl = Output.ofNullable(keyVaultUrl);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public WorkspaceKeyDetailsArgs build() {

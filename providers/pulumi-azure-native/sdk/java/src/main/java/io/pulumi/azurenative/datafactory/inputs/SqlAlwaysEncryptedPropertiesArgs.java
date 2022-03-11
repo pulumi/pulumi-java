@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceArgs
 import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -29,9 +29,9 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="alwaysEncryptedAkvAuthType", required=true)
-      private final Input<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType;
+      private final Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType;
 
-    public Input<Either<String,SqlAlwaysEncryptedAkvAuthType>> getAlwaysEncryptedAkvAuthType() {
+    public Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> getAlwaysEncryptedAkvAuthType() {
         return this.alwaysEncryptedAkvAuthType;
     }
 
@@ -40,10 +40,10 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="credential")
-      private final @Nullable Input<CredentialReferenceArgs> credential;
+      private final @Nullable Output<CredentialReferenceArgs> credential;
 
-    public Input<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Input.empty() : this.credential;
+    public Output<CredentialReferenceArgs> getCredential() {
+        return this.credential == null ? Output.empty() : this.credential;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="servicePrincipalId")
-      private final @Nullable Input<Object> servicePrincipalId;
+      private final @Nullable Output<Object> servicePrincipalId;
 
-    public Input<Object> getServicePrincipalId() {
-        return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
+    public Output<Object> getServicePrincipalId() {
+        return this.servicePrincipalId == null ? Output.empty() : this.servicePrincipalId;
     }
 
     /**
@@ -62,17 +62,17 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="servicePrincipalKey")
-      private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+      private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
-    public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
-        return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
+    public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
+        return this.servicePrincipalKey == null ? Output.empty() : this.servicePrincipalKey;
     }
 
     public SqlAlwaysEncryptedPropertiesArgs(
-        Input<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType,
-        @Nullable Input<CredentialReferenceArgs> credential,
-        @Nullable Input<Object> servicePrincipalId,
-        @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
+        Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType,
+        @Nullable Output<CredentialReferenceArgs> credential,
+        @Nullable Output<Object> servicePrincipalId,
+        @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
         this.alwaysEncryptedAkvAuthType = Objects.requireNonNull(alwaysEncryptedAkvAuthType, "expected parameter 'alwaysEncryptedAkvAuthType' to be non-null");
         this.credential = credential;
         this.servicePrincipalId = servicePrincipalId;
@@ -80,10 +80,10 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
     }
 
     private SqlAlwaysEncryptedPropertiesArgs() {
-        this.alwaysEncryptedAkvAuthType = Input.empty();
-        this.credential = Input.empty();
-        this.servicePrincipalId = Input.empty();
-        this.servicePrincipalKey = Input.empty();
+        this.alwaysEncryptedAkvAuthType = Output.empty();
+        this.credential = Output.empty();
+        this.servicePrincipalId = Output.empty();
+        this.servicePrincipalKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,10 +95,10 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private Input<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType;
-        private @Nullable Input<CredentialReferenceArgs> credential;
-        private @Nullable Input<Object> servicePrincipalId;
-        private @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+        private Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType;
+        private @Nullable Output<CredentialReferenceArgs> credential;
+        private @Nullable Output<Object> servicePrincipalId;
+        private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
         public Builder() {
     	      // Empty
@@ -112,43 +112,43 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
     	      this.servicePrincipalKey = defaults.servicePrincipalKey;
         }
 
-        public Builder alwaysEncryptedAkvAuthType(Input<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType) {
+        public Builder alwaysEncryptedAkvAuthType(Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType) {
             this.alwaysEncryptedAkvAuthType = Objects.requireNonNull(alwaysEncryptedAkvAuthType);
             return this;
         }
 
         public Builder alwaysEncryptedAkvAuthType(Either<String,SqlAlwaysEncryptedAkvAuthType> alwaysEncryptedAkvAuthType) {
-            this.alwaysEncryptedAkvAuthType = Input.of(Objects.requireNonNull(alwaysEncryptedAkvAuthType));
+            this.alwaysEncryptedAkvAuthType = Output.of(Objects.requireNonNull(alwaysEncryptedAkvAuthType));
             return this;
         }
 
-        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Input.ofNullable(credential);
+            this.credential = Output.ofNullable(credential);
             return this;
         }
 
-        public Builder servicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Input.ofNullable(servicePrincipalId);
+            this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
             return this;
         }
 
-        public Builder servicePrincipalKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Input.ofNullable(servicePrincipalKey);
+            this.servicePrincipalKey = Output.ofNullable(servicePrincipalKey);
             return this;
         }
         public SqlAlwaysEncryptedPropertiesArgs build() {

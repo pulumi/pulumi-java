@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.enums.CreatedByType;
 import io.pulumi.azurenative.securityinsights.enums.RepoType;
 import io.pulumi.azurenative.securityinsights.inputs.RepositoryArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentTypes", required=true)
-      private final Input<List<Either<String,ContentType>>> contentTypes;
+      private final Output<List<Either<String,ContentType>>> contentTypes;
 
-    public Input<List<Either<String,ContentType>>> getContentTypes() {
+    public Output<List<Either<String,ContentType>>> getContentTypes() {
         return this.contentTypes;
     }
 
@@ -36,10 +36,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-      private final @Nullable Input<String> createdBy;
+      private final @Nullable Output<String> createdBy;
 
-    public Input<String> getCreatedBy() {
-        return this.createdBy == null ? Input.empty() : this.createdBy;
+    public Output<String> getCreatedBy() {
+        return this.createdBy == null ? Output.empty() : this.createdBy;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdByType")
-      private final @Nullable Input<Either<String,CreatedByType>> createdByType;
+      private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Input<Either<String,CreatedByType>> getCreatedByType() {
-        return this.createdByType == null ? Input.empty() : this.createdByType;
+    public Output<Either<String,CreatedByType>> getCreatedByType() {
+        return this.createdByType == null ? Output.empty() : this.createdByType;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-      private final Input<String> displayName;
+      private final Output<String> displayName;
 
-    public Input<String> getDisplayName() {
+    public Output<String> getDisplayName() {
         return this.displayName;
     }
 
@@ -91,10 +91,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-      private final @Nullable Input<String> lastModifiedAt;
+      private final @Nullable Output<String> lastModifiedAt;
 
-    public Input<String> getLastModifiedAt() {
-        return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
+    public Output<String> getLastModifiedAt() {
+        return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedBy")
-      private final @Nullable Input<String> lastModifiedBy;
+      private final @Nullable Output<String> lastModifiedBy;
 
-    public Input<String> getLastModifiedBy() {
-        return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
+    public Output<String> getLastModifiedBy() {
+        return this.lastModifiedBy == null ? Output.empty() : this.lastModifiedBy;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedByType")
-      private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
+      private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Input<Either<String,CreatedByType>> getLastModifiedByType() {
-        return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
+    public Output<Either<String,CreatedByType>> getLastModifiedByType() {
+        return this.lastModifiedByType == null ? Output.empty() : this.lastModifiedByType;
     }
 
     /**
@@ -135,9 +135,9 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-      private final Input<String> operationalInsightsResourceProvider;
+      private final Output<String> operationalInsightsResourceProvider;
 
-    public Input<String> getOperationalInsightsResourceProvider() {
+    public Output<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -146,9 +146,9 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoType", required=true)
-      private final Input<Either<String,RepoType>> repoType;
+      private final Output<Either<String,RepoType>> repoType;
 
-    public Input<Either<String,RepoType>> getRepoType() {
+    public Output<Either<String,RepoType>> getRepoType() {
         return this.repoType;
     }
 
@@ -157,9 +157,9 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository", required=true)
-      private final Input<RepositoryArgs> repository;
+      private final Output<RepositoryArgs> repository;
 
-    public Input<RepositoryArgs> getRepository() {
+    public Output<RepositoryArgs> getRepository() {
         return this.repository;
     }
 
@@ -168,9 +168,9 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -179,10 +179,10 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceControlId")
-      private final @Nullable Input<String> sourceControlId;
+      private final @Nullable Output<String> sourceControlId;
 
-    public Input<String> getSourceControlId() {
-        return this.sourceControlId == null ? Input.empty() : this.sourceControlId;
+    public Output<String> getSourceControlId() {
+        return this.sourceControlId == null ? Output.empty() : this.sourceControlId;
     }
 
     /**
@@ -190,29 +190,29 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public SourceControlArgs(
-        Input<List<Either<String,ContentType>>> contentTypes,
-        @Nullable Input<String> createdAt,
-        @Nullable Input<String> createdBy,
-        @Nullable Input<Either<String,CreatedByType>> createdByType,
-        @Nullable Input<String> description,
-        Input<String> displayName,
-        @Nullable Input<String> id,
-        @Nullable Input<String> lastModifiedAt,
-        @Nullable Input<String> lastModifiedBy,
-        @Nullable Input<Either<String,CreatedByType>> lastModifiedByType,
-        Input<String> operationalInsightsResourceProvider,
-        Input<Either<String,RepoType>> repoType,
-        Input<RepositoryArgs> repository,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sourceControlId,
-        Input<String> workspaceName) {
+        Output<List<Either<String,ContentType>>> contentTypes,
+        @Nullable Output<String> createdAt,
+        @Nullable Output<String> createdBy,
+        @Nullable Output<Either<String,CreatedByType>> createdByType,
+        @Nullable Output<String> description,
+        Output<String> displayName,
+        @Nullable Output<String> id,
+        @Nullable Output<String> lastModifiedAt,
+        @Nullable Output<String> lastModifiedBy,
+        @Nullable Output<Either<String,CreatedByType>> lastModifiedByType,
+        Output<String> operationalInsightsResourceProvider,
+        Output<Either<String,RepoType>> repoType,
+        Output<RepositoryArgs> repository,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sourceControlId,
+        Output<String> workspaceName) {
         this.contentTypes = Objects.requireNonNull(contentTypes, "expected parameter 'contentTypes' to be non-null");
         this.createdAt = createdAt;
         this.createdBy = createdBy;
@@ -232,22 +232,22 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceControlArgs() {
-        this.contentTypes = Input.empty();
-        this.createdAt = Input.empty();
-        this.createdBy = Input.empty();
-        this.createdByType = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.id = Input.empty();
-        this.lastModifiedAt = Input.empty();
-        this.lastModifiedBy = Input.empty();
-        this.lastModifiedByType = Input.empty();
-        this.operationalInsightsResourceProvider = Input.empty();
-        this.repoType = Input.empty();
-        this.repository = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sourceControlId = Input.empty();
-        this.workspaceName = Input.empty();
+        this.contentTypes = Output.empty();
+        this.createdAt = Output.empty();
+        this.createdBy = Output.empty();
+        this.createdByType = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.id = Output.empty();
+        this.lastModifiedAt = Output.empty();
+        this.lastModifiedBy = Output.empty();
+        this.lastModifiedByType = Output.empty();
+        this.operationalInsightsResourceProvider = Output.empty();
+        this.repoType = Output.empty();
+        this.repository = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sourceControlId = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -259,22 +259,22 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<Either<String,ContentType>>> contentTypes;
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<String> createdBy;
-        private @Nullable Input<Either<String,CreatedByType>> createdByType;
-        private @Nullable Input<String> description;
-        private Input<String> displayName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> lastModifiedAt;
-        private @Nullable Input<String> lastModifiedBy;
-        private @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
-        private Input<String> operationalInsightsResourceProvider;
-        private Input<Either<String,RepoType>> repoType;
-        private Input<RepositoryArgs> repository;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sourceControlId;
-        private Input<String> workspaceName;
+        private Output<List<Either<String,ContentType>>> contentTypes;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<String> createdBy;
+        private @Nullable Output<Either<String,CreatedByType>> createdByType;
+        private @Nullable Output<String> description;
+        private Output<String> displayName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> lastModifiedAt;
+        private @Nullable Output<String> lastModifiedBy;
+        private @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
+        private Output<String> operationalInsightsResourceProvider;
+        private Output<Either<String,RepoType>> repoType;
+        private Output<RepositoryArgs> repository;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sourceControlId;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -300,163 +300,163 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder contentTypes(Input<List<Either<String,ContentType>>> contentTypes) {
+        public Builder contentTypes(Output<List<Either<String,ContentType>>> contentTypes) {
             this.contentTypes = Objects.requireNonNull(contentTypes);
             return this;
         }
 
         public Builder contentTypes(List<Either<String,ContentType>> contentTypes) {
-            this.contentTypes = Input.of(Objects.requireNonNull(contentTypes));
+            this.contentTypes = Output.of(Objects.requireNonNull(contentTypes));
             return this;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder createdBy(@Nullable Input<String> createdBy) {
+        public Builder createdBy(@Nullable Output<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Input.ofNullable(createdBy);
+            this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
 
-        public Builder createdByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
+        public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
         public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
-            this.createdByType = Input.ofNullable(createdByType);
+            this.createdByType = Output.ofNullable(createdByType);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(Input<String> displayName) {
+        public Builder displayName(Output<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Input.of(Objects.requireNonNull(displayName));
+            this.displayName = Output.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder lastModifiedAt(@Nullable Input<String> lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Input.ofNullable(lastModifiedAt);
+            this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
 
-        public Builder lastModifiedBy(@Nullable Input<String> lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Input.ofNullable(lastModifiedBy);
+            this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
             return this;
         }
 
-        public Builder lastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
         public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
-            this.lastModifiedByType = Input.ofNullable(lastModifiedByType);
+            this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
             return this;
         }
 
-        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
+            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder repoType(Input<Either<String,RepoType>> repoType) {
+        public Builder repoType(Output<Either<String,RepoType>> repoType) {
             this.repoType = Objects.requireNonNull(repoType);
             return this;
         }
 
         public Builder repoType(Either<String,RepoType> repoType) {
-            this.repoType = Input.of(Objects.requireNonNull(repoType));
+            this.repoType = Output.of(Objects.requireNonNull(repoType));
             return this;
         }
 
-        public Builder repository(Input<RepositoryArgs> repository) {
+        public Builder repository(Output<RepositoryArgs> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
         public Builder repository(RepositoryArgs repository) {
-            this.repository = Input.of(Objects.requireNonNull(repository));
+            this.repository = Output.of(Objects.requireNonNull(repository));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sourceControlId(@Nullable Input<String> sourceControlId) {
+        public Builder sourceControlId(@Nullable Output<String> sourceControlId) {
             this.sourceControlId = sourceControlId;
             return this;
         }
 
         public Builder sourceControlId(@Nullable String sourceControlId) {
-            this.sourceControlId = Input.ofNullable(sourceControlId);
+            this.sourceControlId = Output.ofNullable(sourceControlId);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public SourceControlArgs build() {

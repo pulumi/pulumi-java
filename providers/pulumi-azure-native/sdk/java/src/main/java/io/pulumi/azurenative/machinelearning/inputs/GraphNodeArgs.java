@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetId")
-      private final @Nullable Input<String> assetId;
+      private final @Nullable Output<String> assetId;
 
-    public Input<String> getAssetId() {
-        return this.assetId == null ? Input.empty() : this.assetId;
+    public Output<String> getAssetId() {
+        return this.assetId == null ? Output.empty() : this.assetId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputId")
-      private final @Nullable Input<String> inputId;
+      private final @Nullable Output<String> inputId;
 
-    public Input<String> getInputId() {
-        return this.inputId == null ? Input.empty() : this.inputId;
+    public Output<String> getInputId() {
+        return this.inputId == null ? Output.empty() : this.inputId;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputId")
-      private final @Nullable Input<String> outputId;
+      private final @Nullable Output<String> outputId;
 
-    public Input<String> getOutputId() {
-        return this.outputId == null ? Input.empty() : this.outputId;
+    public Output<String> getOutputId() {
+        return this.outputId == null ? Output.empty() : this.outputId;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,WebServiceParameterArgs>> parameters;
+      private final @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
 
-    public Input<Map<String,WebServiceParameterArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,WebServiceParameterArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     public GraphNodeArgs(
-        @Nullable Input<String> assetId,
-        @Nullable Input<String> inputId,
-        @Nullable Input<String> outputId,
-        @Nullable Input<Map<String,WebServiceParameterArgs>> parameters) {
+        @Nullable Output<String> assetId,
+        @Nullable Output<String> inputId,
+        @Nullable Output<String> outputId,
+        @Nullable Output<Map<String,WebServiceParameterArgs>> parameters) {
         this.assetId = assetId;
         this.inputId = inputId;
         this.outputId = outputId;
@@ -76,10 +76,10 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GraphNodeArgs() {
-        this.assetId = Input.empty();
-        this.inputId = Input.empty();
-        this.outputId = Input.empty();
-        this.parameters = Input.empty();
+        this.assetId = Output.empty();
+        this.inputId = Output.empty();
+        this.outputId = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> assetId;
-        private @Nullable Input<String> inputId;
-        private @Nullable Input<String> outputId;
-        private @Nullable Input<Map<String,WebServiceParameterArgs>> parameters;
+        private @Nullable Output<String> assetId;
+        private @Nullable Output<String> inputId;
+        private @Nullable Output<String> outputId;
+        private @Nullable Output<Map<String,WebServiceParameterArgs>> parameters;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder assetId(@Nullable Input<String> assetId) {
+        public Builder assetId(@Nullable Output<String> assetId) {
             this.assetId = assetId;
             return this;
         }
 
         public Builder assetId(@Nullable String assetId) {
-            this.assetId = Input.ofNullable(assetId);
+            this.assetId = Output.ofNullable(assetId);
             return this;
         }
 
-        public Builder inputId(@Nullable Input<String> inputId) {
+        public Builder inputId(@Nullable Output<String> inputId) {
             this.inputId = inputId;
             return this;
         }
 
         public Builder inputId(@Nullable String inputId) {
-            this.inputId = Input.ofNullable(inputId);
+            this.inputId = Output.ofNullable(inputId);
             return this;
         }
 
-        public Builder outputId(@Nullable Input<String> outputId) {
+        public Builder outputId(@Nullable Output<String> outputId) {
             this.outputId = outputId;
             return this;
         }
 
         public Builder outputId(@Nullable String outputId) {
-            this.outputId = Input.ofNullable(outputId);
+            this.outputId = Output.ofNullable(outputId);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,WebServiceParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,WebServiceParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,WebServiceParameterArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public GraphNodeArgs build() {

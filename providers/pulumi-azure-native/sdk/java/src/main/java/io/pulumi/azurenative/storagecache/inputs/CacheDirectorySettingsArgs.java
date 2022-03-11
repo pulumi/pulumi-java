@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.CacheActiveDirectorySettingsArgs;
 import io.pulumi.azurenative.storagecache.inputs.CacheUsernameDownloadSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="activeDirectory")
-      private final @Nullable Input<CacheActiveDirectorySettingsArgs> activeDirectory;
+      private final @Nullable Output<CacheActiveDirectorySettingsArgs> activeDirectory;
 
-    public Input<CacheActiveDirectorySettingsArgs> getActiveDirectory() {
-        return this.activeDirectory == null ? Input.empty() : this.activeDirectory;
+    public Output<CacheActiveDirectorySettingsArgs> getActiveDirectory() {
+        return this.activeDirectory == null ? Output.empty() : this.activeDirectory;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="usernameDownload")
-      private final @Nullable Input<CacheUsernameDownloadSettingsArgs> usernameDownload;
+      private final @Nullable Output<CacheUsernameDownloadSettingsArgs> usernameDownload;
 
-    public Input<CacheUsernameDownloadSettingsArgs> getUsernameDownload() {
-        return this.usernameDownload == null ? Input.empty() : this.usernameDownload;
+    public Output<CacheUsernameDownloadSettingsArgs> getUsernameDownload() {
+        return this.usernameDownload == null ? Output.empty() : this.usernameDownload;
     }
 
     public CacheDirectorySettingsArgs(
-        @Nullable Input<CacheActiveDirectorySettingsArgs> activeDirectory,
-        @Nullable Input<CacheUsernameDownloadSettingsArgs> usernameDownload) {
+        @Nullable Output<CacheActiveDirectorySettingsArgs> activeDirectory,
+        @Nullable Output<CacheUsernameDownloadSettingsArgs> usernameDownload) {
         this.activeDirectory = activeDirectory;
         this.usernameDownload = usernameDownload;
     }
 
     private CacheDirectorySettingsArgs() {
-        this.activeDirectory = Input.empty();
-        this.usernameDownload = Input.empty();
+        this.activeDirectory = Output.empty();
+        this.usernameDownload = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<CacheActiveDirectorySettingsArgs> activeDirectory;
-        private @Nullable Input<CacheUsernameDownloadSettingsArgs> usernameDownload;
+        private @Nullable Output<CacheActiveDirectorySettingsArgs> activeDirectory;
+        private @Nullable Output<CacheUsernameDownloadSettingsArgs> usernameDownload;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
     	      this.usernameDownload = defaults.usernameDownload;
         }
 
-        public Builder activeDirectory(@Nullable Input<CacheActiveDirectorySettingsArgs> activeDirectory) {
+        public Builder activeDirectory(@Nullable Output<CacheActiveDirectorySettingsArgs> activeDirectory) {
             this.activeDirectory = activeDirectory;
             return this;
         }
 
         public Builder activeDirectory(@Nullable CacheActiveDirectorySettingsArgs activeDirectory) {
-            this.activeDirectory = Input.ofNullable(activeDirectory);
+            this.activeDirectory = Output.ofNullable(activeDirectory);
             return this;
         }
 
-        public Builder usernameDownload(@Nullable Input<CacheUsernameDownloadSettingsArgs> usernameDownload) {
+        public Builder usernameDownload(@Nullable Output<CacheUsernameDownloadSettingsArgs> usernameDownload) {
             this.usernameDownload = usernameDownload;
             return this;
         }
 
         public Builder usernameDownload(@Nullable CacheUsernameDownloadSettingsArgs usernameDownload) {
-            this.usernameDownload = Input.ofNullable(usernameDownload);
+            this.usernameDownload = Output.ofNullable(usernameDownload);
             return this;
         }
         public CacheDirectorySettingsArgs build() {

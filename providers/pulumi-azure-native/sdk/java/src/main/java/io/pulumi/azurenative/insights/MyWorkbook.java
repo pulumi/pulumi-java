@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.insights.MyWorkbookArgs;
 import io.pulumi.azurenative.insights.outputs.MyWorkbookManagedIdentityResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -282,20 +281,20 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MyWorkbook(String name, MyWorkbookArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:MyWorkbook", name, args == null ? MyWorkbookArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:insights:MyWorkbook", name, args == null ? MyWorkbookArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private MyWorkbook(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MyWorkbook(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:MyWorkbook", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:insights/v20150501:MyWorkbook").build()),
-                Input.of(Alias.builder().setType("azure-native:insights/v20201020:MyWorkbook").build()),
-                Input.of(Alias.builder().setType("azure-native:insights/v20210308:MyWorkbook").build())
+                Output.of(Alias.builder().setType("azure-native:insights/v20150501:MyWorkbook").build()),
+                Output.of(Alias.builder().setType("azure-native:insights/v20201020:MyWorkbook").build()),
+                Output.of(Alias.builder().setType("azure-native:insights/v20210308:MyWorkbook").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -309,7 +308,7 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MyWorkbook get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MyWorkbook get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MyWorkbook(name, id, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.UniqueKeyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class UniqueKeyPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uniqueKeys")
-      private final @Nullable Input<List<UniqueKeyArgs>> uniqueKeys;
+      private final @Nullable Output<List<UniqueKeyArgs>> uniqueKeys;
 
-    public Input<List<UniqueKeyArgs>> getUniqueKeys() {
-        return this.uniqueKeys == null ? Input.empty() : this.uniqueKeys;
+    public Output<List<UniqueKeyArgs>> getUniqueKeys() {
+        return this.uniqueKeys == null ? Output.empty() : this.uniqueKeys;
     }
 
-    public UniqueKeyPolicyArgs(@Nullable Input<List<UniqueKeyArgs>> uniqueKeys) {
+    public UniqueKeyPolicyArgs(@Nullable Output<List<UniqueKeyArgs>> uniqueKeys) {
         this.uniqueKeys = uniqueKeys;
     }
 
     private UniqueKeyPolicyArgs() {
-        this.uniqueKeys = Input.empty();
+        this.uniqueKeys = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class UniqueKeyPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<UniqueKeyArgs>> uniqueKeys;
+        private @Nullable Output<List<UniqueKeyArgs>> uniqueKeys;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class UniqueKeyPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uniqueKeys = defaults.uniqueKeys;
         }
 
-        public Builder uniqueKeys(@Nullable Input<List<UniqueKeyArgs>> uniqueKeys) {
+        public Builder uniqueKeys(@Nullable Output<List<UniqueKeyArgs>> uniqueKeys) {
             this.uniqueKeys = uniqueKeys;
             return this;
         }
 
         public Builder uniqueKeys(@Nullable List<UniqueKeyArgs> uniqueKeys) {
-            this.uniqueKeys = Input.ofNullable(uniqueKeys);
+            this.uniqueKeys = Output.ofNullable(uniqueKeys);
             return this;
         }
         public UniqueKeyPolicyArgs build() {

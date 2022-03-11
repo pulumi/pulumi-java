@@ -17,7 +17,7 @@ import io.pulumi.azurenative.containerinstance.inputs.InitContainerDefinitionArg
 import io.pulumi.azurenative.containerinstance.inputs.IpAddressArgs;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -35,10 +35,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerGroupName")
-      private final @Nullable Input<String> containerGroupName;
+      private final @Nullable Output<String> containerGroupName;
 
-    public Input<String> getContainerGroupName() {
-        return this.containerGroupName == null ? Input.empty() : this.containerGroupName;
+    public Output<String> getContainerGroupName() {
+        return this.containerGroupName == null ? Output.empty() : this.containerGroupName;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containers", required=true)
-      private final Input<List<ContainerArgs>> containers;
+      private final Output<List<ContainerArgs>> containers;
 
-    public Input<List<ContainerArgs>> getContainers() {
+    public Output<List<ContainerArgs>> getContainers() {
         return this.containers;
     }
 
@@ -57,10 +57,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diagnostics")
-      private final @Nullable Input<ContainerGroupDiagnosticsArgs> diagnostics;
+      private final @Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics;
 
-    public Input<ContainerGroupDiagnosticsArgs> getDiagnostics() {
-        return this.diagnostics == null ? Input.empty() : this.diagnostics;
+    public Output<ContainerGroupDiagnosticsArgs> getDiagnostics() {
+        return this.diagnostics == null ? Output.empty() : this.diagnostics;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsConfig")
-      private final @Nullable Input<DnsConfigurationArgs> dnsConfig;
+      private final @Nullable Output<DnsConfigurationArgs> dnsConfig;
 
-    public Input<DnsConfigurationArgs> getDnsConfig() {
-        return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
+    public Output<DnsConfigurationArgs> getDnsConfig() {
+        return this.dnsConfig == null ? Output.empty() : this.dnsConfig;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionProperties")
-      private final @Nullable Input<EncryptionPropertiesArgs> encryptionProperties;
+      private final @Nullable Output<EncryptionPropertiesArgs> encryptionProperties;
 
-    public Input<EncryptionPropertiesArgs> getEncryptionProperties() {
-        return this.encryptionProperties == null ? Input.empty() : this.encryptionProperties;
+    public Output<EncryptionPropertiesArgs> getEncryptionProperties() {
+        return this.encryptionProperties == null ? Output.empty() : this.encryptionProperties;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ContainerGroupIdentityArgs> identity;
+      private final @Nullable Output<ContainerGroupIdentityArgs> identity;
 
-    public Input<ContainerGroupIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ContainerGroupIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageRegistryCredentials")
-      private final @Nullable Input<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
+      private final @Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
 
-    public Input<List<ImageRegistryCredentialArgs>> getImageRegistryCredentials() {
-        return this.imageRegistryCredentials == null ? Input.empty() : this.imageRegistryCredentials;
+    public Output<List<ImageRegistryCredentialArgs>> getImageRegistryCredentials() {
+        return this.imageRegistryCredentials == null ? Output.empty() : this.imageRegistryCredentials;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initContainers")
-      private final @Nullable Input<List<InitContainerDefinitionArgs>> initContainers;
+      private final @Nullable Output<List<InitContainerDefinitionArgs>> initContainers;
 
-    public Input<List<InitContainerDefinitionArgs>> getInitContainers() {
-        return this.initContainers == null ? Input.empty() : this.initContainers;
+    public Output<List<InitContainerDefinitionArgs>> getInitContainers() {
+        return this.initContainers == null ? Output.empty() : this.initContainers;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<IpAddressArgs> ipAddress;
+      private final @Nullable Output<IpAddressArgs> ipAddress;
 
-    public Input<IpAddressArgs> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<IpAddressArgs> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-      private final @Nullable Input<ContainerGroupNetworkProfileArgs> networkProfile;
+      private final @Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile;
 
-    public Input<ContainerGroupNetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Input.empty() : this.networkProfile;
+    public Output<ContainerGroupNetworkProfileArgs> getNetworkProfile() {
+        return this.networkProfile == null ? Output.empty() : this.networkProfile;
     }
 
     /**
@@ -156,9 +156,9 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType", required=true)
-      private final Input<Either<String,OperatingSystemTypes>> osType;
+      private final Output<Either<String,OperatingSystemTypes>> osType;
 
-    public Input<Either<String,OperatingSystemTypes>> getOsType() {
+    public Output<Either<String,OperatingSystemTypes>> getOsType() {
         return this.osType;
     }
 
@@ -167,9 +167,9 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -181,10 +181,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restartPolicy")
-      private final @Nullable Input<Either<String,ContainerGroupRestartPolicy>> restartPolicy;
+      private final @Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy;
 
-    public Input<Either<String,ContainerGroupRestartPolicy>> getRestartPolicy() {
-        return this.restartPolicy == null ? Input.empty() : this.restartPolicy;
+    public Output<Either<String,ContainerGroupRestartPolicy>> getRestartPolicy() {
+        return this.restartPolicy == null ? Output.empty() : this.restartPolicy;
     }
 
     /**
@@ -192,10 +192,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<Either<String,ContainerGroupSku>> sku;
+      private final @Nullable Output<Either<String,ContainerGroupSku>> sku;
 
-    public Input<Either<String,ContainerGroupSku>> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<Either<String,ContainerGroupSku>> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -203,10 +203,10 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -214,30 +214,30 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumes")
-      private final @Nullable Input<List<VolumeArgs>> volumes;
+      private final @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Input<List<VolumeArgs>> getVolumes() {
-        return this.volumes == null ? Input.empty() : this.volumes;
+    public Output<List<VolumeArgs>> getVolumes() {
+        return this.volumes == null ? Output.empty() : this.volumes;
     }
 
     public ContainerGroupArgs(
-        @Nullable Input<String> containerGroupName,
-        Input<List<ContainerArgs>> containers,
-        @Nullable Input<ContainerGroupDiagnosticsArgs> diagnostics,
-        @Nullable Input<DnsConfigurationArgs> dnsConfig,
-        @Nullable Input<EncryptionPropertiesArgs> encryptionProperties,
-        @Nullable Input<ContainerGroupIdentityArgs> identity,
-        @Nullable Input<List<ImageRegistryCredentialArgs>> imageRegistryCredentials,
-        @Nullable Input<List<InitContainerDefinitionArgs>> initContainers,
-        @Nullable Input<IpAddressArgs> ipAddress,
-        @Nullable Input<String> location,
-        @Nullable Input<ContainerGroupNetworkProfileArgs> networkProfile,
-        Input<Either<String,OperatingSystemTypes>> osType,
-        Input<String> resourceGroupName,
-        @Nullable Input<Either<String,ContainerGroupRestartPolicy>> restartPolicy,
-        @Nullable Input<Either<String,ContainerGroupSku>> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<VolumeArgs>> volumes) {
+        @Nullable Output<String> containerGroupName,
+        Output<List<ContainerArgs>> containers,
+        @Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics,
+        @Nullable Output<DnsConfigurationArgs> dnsConfig,
+        @Nullable Output<EncryptionPropertiesArgs> encryptionProperties,
+        @Nullable Output<ContainerGroupIdentityArgs> identity,
+        @Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials,
+        @Nullable Output<List<InitContainerDefinitionArgs>> initContainers,
+        @Nullable Output<IpAddressArgs> ipAddress,
+        @Nullable Output<String> location,
+        @Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile,
+        Output<Either<String,OperatingSystemTypes>> osType,
+        Output<String> resourceGroupName,
+        @Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy,
+        @Nullable Output<Either<String,ContainerGroupSku>> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<VolumeArgs>> volumes) {
         this.containerGroupName = containerGroupName;
         this.containers = Objects.requireNonNull(containers, "expected parameter 'containers' to be non-null");
         this.diagnostics = diagnostics;
@@ -258,23 +258,23 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerGroupArgs() {
-        this.containerGroupName = Input.empty();
-        this.containers = Input.empty();
-        this.diagnostics = Input.empty();
-        this.dnsConfig = Input.empty();
-        this.encryptionProperties = Input.empty();
-        this.identity = Input.empty();
-        this.imageRegistryCredentials = Input.empty();
-        this.initContainers = Input.empty();
-        this.ipAddress = Input.empty();
-        this.location = Input.empty();
-        this.networkProfile = Input.empty();
-        this.osType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.restartPolicy = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.volumes = Input.empty();
+        this.containerGroupName = Output.empty();
+        this.containers = Output.empty();
+        this.diagnostics = Output.empty();
+        this.dnsConfig = Output.empty();
+        this.encryptionProperties = Output.empty();
+        this.identity = Output.empty();
+        this.imageRegistryCredentials = Output.empty();
+        this.initContainers = Output.empty();
+        this.ipAddress = Output.empty();
+        this.location = Output.empty();
+        this.networkProfile = Output.empty();
+        this.osType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.restartPolicy = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.volumes = Output.empty();
     }
 
     public static Builder builder() {
@@ -286,23 +286,23 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> containerGroupName;
-        private Input<List<ContainerArgs>> containers;
-        private @Nullable Input<ContainerGroupDiagnosticsArgs> diagnostics;
-        private @Nullable Input<DnsConfigurationArgs> dnsConfig;
-        private @Nullable Input<EncryptionPropertiesArgs> encryptionProperties;
-        private @Nullable Input<ContainerGroupIdentityArgs> identity;
-        private @Nullable Input<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
-        private @Nullable Input<List<InitContainerDefinitionArgs>> initContainers;
-        private @Nullable Input<IpAddressArgs> ipAddress;
-        private @Nullable Input<String> location;
-        private @Nullable Input<ContainerGroupNetworkProfileArgs> networkProfile;
-        private Input<Either<String,OperatingSystemTypes>> osType;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Either<String,ContainerGroupRestartPolicy>> restartPolicy;
-        private @Nullable Input<Either<String,ContainerGroupSku>> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<VolumeArgs>> volumes;
+        private @Nullable Output<String> containerGroupName;
+        private Output<List<ContainerArgs>> containers;
+        private @Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics;
+        private @Nullable Output<DnsConfigurationArgs> dnsConfig;
+        private @Nullable Output<EncryptionPropertiesArgs> encryptionProperties;
+        private @Nullable Output<ContainerGroupIdentityArgs> identity;
+        private @Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
+        private @Nullable Output<List<InitContainerDefinitionArgs>> initContainers;
+        private @Nullable Output<IpAddressArgs> ipAddress;
+        private @Nullable Output<String> location;
+        private @Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile;
+        private Output<Either<String,OperatingSystemTypes>> osType;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy;
+        private @Nullable Output<Either<String,ContainerGroupSku>> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<VolumeArgs>> volumes;
 
         public Builder() {
     	      // Empty
@@ -329,173 +329,173 @@ public final class ContainerGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder containerGroupName(@Nullable Input<String> containerGroupName) {
+        public Builder containerGroupName(@Nullable Output<String> containerGroupName) {
             this.containerGroupName = containerGroupName;
             return this;
         }
 
         public Builder containerGroupName(@Nullable String containerGroupName) {
-            this.containerGroupName = Input.ofNullable(containerGroupName);
+            this.containerGroupName = Output.ofNullable(containerGroupName);
             return this;
         }
 
-        public Builder containers(Input<List<ContainerArgs>> containers) {
+        public Builder containers(Output<List<ContainerArgs>> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
 
         public Builder containers(List<ContainerArgs> containers) {
-            this.containers = Input.of(Objects.requireNonNull(containers));
+            this.containers = Output.of(Objects.requireNonNull(containers));
             return this;
         }
 
-        public Builder diagnostics(@Nullable Input<ContainerGroupDiagnosticsArgs> diagnostics) {
+        public Builder diagnostics(@Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
         public Builder diagnostics(@Nullable ContainerGroupDiagnosticsArgs diagnostics) {
-            this.diagnostics = Input.ofNullable(diagnostics);
+            this.diagnostics = Output.ofNullable(diagnostics);
             return this;
         }
 
-        public Builder dnsConfig(@Nullable Input<DnsConfigurationArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Output<DnsConfigurationArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
         public Builder dnsConfig(@Nullable DnsConfigurationArgs dnsConfig) {
-            this.dnsConfig = Input.ofNullable(dnsConfig);
+            this.dnsConfig = Output.ofNullable(dnsConfig);
             return this;
         }
 
-        public Builder encryptionProperties(@Nullable Input<EncryptionPropertiesArgs> encryptionProperties) {
+        public Builder encryptionProperties(@Nullable Output<EncryptionPropertiesArgs> encryptionProperties) {
             this.encryptionProperties = encryptionProperties;
             return this;
         }
 
         public Builder encryptionProperties(@Nullable EncryptionPropertiesArgs encryptionProperties) {
-            this.encryptionProperties = Input.ofNullable(encryptionProperties);
+            this.encryptionProperties = Output.ofNullable(encryptionProperties);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ContainerGroupIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ContainerGroupIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ContainerGroupIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder imageRegistryCredentials(@Nullable Input<List<ImageRegistryCredentialArgs>> imageRegistryCredentials) {
+        public Builder imageRegistryCredentials(@Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials) {
             this.imageRegistryCredentials = imageRegistryCredentials;
             return this;
         }
 
         public Builder imageRegistryCredentials(@Nullable List<ImageRegistryCredentialArgs> imageRegistryCredentials) {
-            this.imageRegistryCredentials = Input.ofNullable(imageRegistryCredentials);
+            this.imageRegistryCredentials = Output.ofNullable(imageRegistryCredentials);
             return this;
         }
 
-        public Builder initContainers(@Nullable Input<List<InitContainerDefinitionArgs>> initContainers) {
+        public Builder initContainers(@Nullable Output<List<InitContainerDefinitionArgs>> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
 
         public Builder initContainers(@Nullable List<InitContainerDefinitionArgs> initContainers) {
-            this.initContainers = Input.ofNullable(initContainers);
+            this.initContainers = Output.ofNullable(initContainers);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<IpAddressArgs> ipAddress) {
+        public Builder ipAddress(@Nullable Output<IpAddressArgs> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable IpAddressArgs ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkProfile(@Nullable Input<ContainerGroupNetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
         public Builder networkProfile(@Nullable ContainerGroupNetworkProfileArgs networkProfile) {
-            this.networkProfile = Input.ofNullable(networkProfile);
+            this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder osType(Input<Either<String,OperatingSystemTypes>> osType) {
+        public Builder osType(Output<Either<String,OperatingSystemTypes>> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
         public Builder osType(Either<String,OperatingSystemTypes> osType) {
-            this.osType = Input.of(Objects.requireNonNull(osType));
+            this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder restartPolicy(@Nullable Input<Either<String,ContainerGroupRestartPolicy>> restartPolicy) {
+        public Builder restartPolicy(@Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
 
         public Builder restartPolicy(@Nullable Either<String,ContainerGroupRestartPolicy> restartPolicy) {
-            this.restartPolicy = Input.ofNullable(restartPolicy);
+            this.restartPolicy = Output.ofNullable(restartPolicy);
             return this;
         }
 
-        public Builder sku(@Nullable Input<Either<String,ContainerGroupSku>> sku) {
+        public Builder sku(@Nullable Output<Either<String,ContainerGroupSku>> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable Either<String,ContainerGroupSku> sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Input.ofNullable(volumes);
+            this.volumes = Output.ofNullable(volumes);
             return this;
         }
         public ContainerGroupArgs build() {

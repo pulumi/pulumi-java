@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.TrailingSeparatorPolicy;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
-      private final Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
+      private final Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
 
-    public Input<Boolean> getAllowLeadingAndTrailingSpacesAndZeroes() {
+    public Output<Boolean> getAllowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
 
@@ -36,9 +36,9 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="messageId", required=true)
-      private final Input<String> messageId;
+      private final Output<String> messageId;
 
-    public Input<String> getMessageId() {
+    public Output<String> getMessageId() {
         return this.messageId;
     }
 
@@ -47,9 +47,9 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="trailingSeparatorPolicy", required=true)
-      private final Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
+      private final Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
 
-    public Input<Either<String,TrailingSeparatorPolicy>> getTrailingSeparatorPolicy() {
+    public Output<Either<String,TrailingSeparatorPolicy>> getTrailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
 
@@ -58,9 +58,9 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
-      private final Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
+      private final Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
 
-    public Input<Boolean> getTrimLeadingAndTrailingSpacesAndZeroes() {
+    public Output<Boolean> getTrimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
 
@@ -69,9 +69,9 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validateCharacterSet", required=true)
-      private final Input<Boolean> validateCharacterSet;
+      private final Output<Boolean> validateCharacterSet;
 
-    public Input<Boolean> getValidateCharacterSet() {
+    public Output<Boolean> getValidateCharacterSet() {
         return this.validateCharacterSet;
     }
 
@@ -80,9 +80,9 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validateEDITypes", required=true)
-      private final Input<Boolean> validateEDITypes;
+      private final Output<Boolean> validateEDITypes;
 
-    public Input<Boolean> getValidateEDITypes() {
+    public Output<Boolean> getValidateEDITypes() {
         return this.validateEDITypes;
     }
 
@@ -91,20 +91,20 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="validateXSDTypes", required=true)
-      private final Input<Boolean> validateXSDTypes;
+      private final Output<Boolean> validateXSDTypes;
 
-    public Input<Boolean> getValidateXSDTypes() {
+    public Output<Boolean> getValidateXSDTypes() {
         return this.validateXSDTypes;
     }
 
     public X12ValidationOverrideArgs(
-        Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes,
-        Input<String> messageId,
-        Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy,
-        Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes,
-        Input<Boolean> validateCharacterSet,
-        Input<Boolean> validateEDITypes,
-        Input<Boolean> validateXSDTypes) {
+        Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes,
+        Output<String> messageId,
+        Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy,
+        Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes,
+        Output<Boolean> validateCharacterSet,
+        Output<Boolean> validateEDITypes,
+        Output<Boolean> validateXSDTypes) {
         this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes, "expected parameter 'allowLeadingAndTrailingSpacesAndZeroes' to be non-null");
         this.messageId = Objects.requireNonNull(messageId, "expected parameter 'messageId' to be non-null");
         this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy, "expected parameter 'trailingSeparatorPolicy' to be non-null");
@@ -115,13 +115,13 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
     }
 
     private X12ValidationOverrideArgs() {
-        this.allowLeadingAndTrailingSpacesAndZeroes = Input.empty();
-        this.messageId = Input.empty();
-        this.trailingSeparatorPolicy = Input.empty();
-        this.trimLeadingAndTrailingSpacesAndZeroes = Input.empty();
-        this.validateCharacterSet = Input.empty();
-        this.validateEDITypes = Input.empty();
-        this.validateXSDTypes = Input.empty();
+        this.allowLeadingAndTrailingSpacesAndZeroes = Output.empty();
+        this.messageId = Output.empty();
+        this.trailingSeparatorPolicy = Output.empty();
+        this.trimLeadingAndTrailingSpacesAndZeroes = Output.empty();
+        this.validateCharacterSet = Output.empty();
+        this.validateEDITypes = Output.empty();
+        this.validateXSDTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
-        private Input<String> messageId;
-        private Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
-        private Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
-        private Input<Boolean> validateCharacterSet;
-        private Input<Boolean> validateEDITypes;
-        private Input<Boolean> validateXSDTypes;
+        private Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
+        private Output<String> messageId;
+        private Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
+        private Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
+        private Output<Boolean> validateCharacterSet;
+        private Output<Boolean> validateEDITypes;
+        private Output<Boolean> validateXSDTypes;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
     	      this.validateXSDTypes = defaults.validateXSDTypes;
         }
 
-        public Builder allowLeadingAndTrailingSpacesAndZeroes(Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes) {
+        public Builder allowLeadingAndTrailingSpacesAndZeroes(Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes) {
             this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
-            this.allowLeadingAndTrailingSpacesAndZeroes = Input.of(Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes));
+            this.allowLeadingAndTrailingSpacesAndZeroes = Output.of(Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes));
             return this;
         }
 
-        public Builder messageId(Input<String> messageId) {
+        public Builder messageId(Output<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
         public Builder messageId(String messageId) {
-            this.messageId = Input.of(Objects.requireNonNull(messageId));
+            this.messageId = Output.of(Objects.requireNonNull(messageId));
             return this;
         }
 
-        public Builder trailingSeparatorPolicy(Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
+        public Builder trailingSeparatorPolicy(Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
             return this;
         }
 
         public Builder trailingSeparatorPolicy(Either<String,TrailingSeparatorPolicy> trailingSeparatorPolicy) {
-            this.trailingSeparatorPolicy = Input.of(Objects.requireNonNull(trailingSeparatorPolicy));
+            this.trailingSeparatorPolicy = Output.of(Objects.requireNonNull(trailingSeparatorPolicy));
             return this;
         }
 
-        public Builder trimLeadingAndTrailingSpacesAndZeroes(Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
+        public Builder trimLeadingAndTrailingSpacesAndZeroes(Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
-            this.trimLeadingAndTrailingSpacesAndZeroes = Input.of(Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes));
+            this.trimLeadingAndTrailingSpacesAndZeroes = Output.of(Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes));
             return this;
         }
 
-        public Builder validateCharacterSet(Input<Boolean> validateCharacterSet) {
+        public Builder validateCharacterSet(Output<Boolean> validateCharacterSet) {
             this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet);
             return this;
         }
 
         public Builder validateCharacterSet(Boolean validateCharacterSet) {
-            this.validateCharacterSet = Input.of(Objects.requireNonNull(validateCharacterSet));
+            this.validateCharacterSet = Output.of(Objects.requireNonNull(validateCharacterSet));
             return this;
         }
 
-        public Builder validateEDITypes(Input<Boolean> validateEDITypes) {
+        public Builder validateEDITypes(Output<Boolean> validateEDITypes) {
             this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
             return this;
         }
 
         public Builder validateEDITypes(Boolean validateEDITypes) {
-            this.validateEDITypes = Input.of(Objects.requireNonNull(validateEDITypes));
+            this.validateEDITypes = Output.of(Objects.requireNonNull(validateEDITypes));
             return this;
         }
 
-        public Builder validateXSDTypes(Input<Boolean> validateXSDTypes) {
+        public Builder validateXSDTypes(Output<Boolean> validateXSDTypes) {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }
 
         public Builder validateXSDTypes(Boolean validateXSDTypes) {
-            this.validateXSDTypes = Input.of(Objects.requireNonNull(validateXSDTypes));
+            this.validateXSDTypes = Output.of(Objects.requireNonNull(validateXSDTypes));
             return this;
         }
         public X12ValidationOverrideArgs build() {

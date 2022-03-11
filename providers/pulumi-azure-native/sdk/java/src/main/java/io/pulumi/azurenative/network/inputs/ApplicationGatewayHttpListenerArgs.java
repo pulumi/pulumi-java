@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ApplicationGatewayProtocol;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayCustomErrorArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,10 +29,10 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="customErrorConfigurations")
-      private final @Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
+      private final @Nullable Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
 
-    public Input<List<ApplicationGatewayCustomErrorArgs>> getCustomErrorConfigurations() {
-        return this.customErrorConfigurations == null ? Input.empty() : this.customErrorConfigurations;
+    public Output<List<ApplicationGatewayCustomErrorArgs>> getCustomErrorConfigurations() {
+        return this.customErrorConfigurations == null ? Output.empty() : this.customErrorConfigurations;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="firewallPolicy")
-      private final @Nullable Input<SubResourceArgs> firewallPolicy;
+      private final @Nullable Output<SubResourceArgs> firewallPolicy;
 
-    public Input<SubResourceArgs> getFirewallPolicy() {
-        return this.firewallPolicy == null ? Input.empty() : this.firewallPolicy;
+    public Output<SubResourceArgs> getFirewallPolicy() {
+        return this.firewallPolicy == null ? Output.empty() : this.firewallPolicy;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="frontendIPConfiguration")
-      private final @Nullable Input<SubResourceArgs> frontendIPConfiguration;
+      private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
 
-    public Input<SubResourceArgs> getFrontendIPConfiguration() {
-        return this.frontendIPConfiguration == null ? Input.empty() : this.frontendIPConfiguration;
+    public Output<SubResourceArgs> getFrontendIPConfiguration() {
+        return this.frontendIPConfiguration == null ? Output.empty() : this.frontendIPConfiguration;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="frontendPort")
-      private final @Nullable Input<SubResourceArgs> frontendPort;
+      private final @Nullable Output<SubResourceArgs> frontendPort;
 
-    public Input<SubResourceArgs> getFrontendPort() {
-        return this.frontendPort == null ? Input.empty() : this.frontendPort;
+    public Output<SubResourceArgs> getFrontendPort() {
+        return this.frontendPort == null ? Output.empty() : this.frontendPort;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hostName")
-      private final @Nullable Input<String> hostName;
+      private final @Nullable Output<String> hostName;
 
-    public Input<String> getHostName() {
-        return this.hostName == null ? Input.empty() : this.hostName;
+    public Output<String> getHostName() {
+        return this.hostName == null ? Output.empty() : this.hostName;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hostNames")
-      private final @Nullable Input<List<String>> hostNames;
+      private final @Nullable Output<List<String>> hostNames;
 
-    public Input<List<String>> getHostNames() {
-        return this.hostNames == null ? Input.empty() : this.hostNames;
+    public Output<List<String>> getHostNames() {
+        return this.hostNames == null ? Output.empty() : this.hostNames;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="protocol")
-      private final @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
+      private final @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
 
-    public Input<Either<String,ApplicationGatewayProtocol>> getProtocol() {
-        return this.protocol == null ? Input.empty() : this.protocol;
+    public Output<Either<String,ApplicationGatewayProtocol>> getProtocol() {
+        return this.protocol == null ? Output.empty() : this.protocol;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="requireServerNameIndication")
-      private final @Nullable Input<Boolean> requireServerNameIndication;
+      private final @Nullable Output<Boolean> requireServerNameIndication;
 
-    public Input<Boolean> getRequireServerNameIndication() {
-        return this.requireServerNameIndication == null ? Input.empty() : this.requireServerNameIndication;
+    public Output<Boolean> getRequireServerNameIndication() {
+        return this.requireServerNameIndication == null ? Output.empty() : this.requireServerNameIndication;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sslCertificate")
-      private final @Nullable Input<SubResourceArgs> sslCertificate;
+      private final @Nullable Output<SubResourceArgs> sslCertificate;
 
-    public Input<SubResourceArgs> getSslCertificate() {
-        return this.sslCertificate == null ? Input.empty() : this.sslCertificate;
+    public Output<SubResourceArgs> getSslCertificate() {
+        return this.sslCertificate == null ? Output.empty() : this.sslCertificate;
     }
 
     /**
@@ -150,25 +150,25 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sslProfile")
-      private final @Nullable Input<SubResourceArgs> sslProfile;
+      private final @Nullable Output<SubResourceArgs> sslProfile;
 
-    public Input<SubResourceArgs> getSslProfile() {
-        return this.sslProfile == null ? Input.empty() : this.sslProfile;
+    public Output<SubResourceArgs> getSslProfile() {
+        return this.sslProfile == null ? Output.empty() : this.sslProfile;
     }
 
     public ApplicationGatewayHttpListenerArgs(
-        @Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations,
-        @Nullable Input<SubResourceArgs> firewallPolicy,
-        @Nullable Input<SubResourceArgs> frontendIPConfiguration,
-        @Nullable Input<SubResourceArgs> frontendPort,
-        @Nullable Input<String> hostName,
-        @Nullable Input<List<String>> hostNames,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol,
-        @Nullable Input<Boolean> requireServerNameIndication,
-        @Nullable Input<SubResourceArgs> sslCertificate,
-        @Nullable Input<SubResourceArgs> sslProfile) {
+        @Nullable Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations,
+        @Nullable Output<SubResourceArgs> firewallPolicy,
+        @Nullable Output<SubResourceArgs> frontendIPConfiguration,
+        @Nullable Output<SubResourceArgs> frontendPort,
+        @Nullable Output<String> hostName,
+        @Nullable Output<List<String>> hostNames,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol,
+        @Nullable Output<Boolean> requireServerNameIndication,
+        @Nullable Output<SubResourceArgs> sslCertificate,
+        @Nullable Output<SubResourceArgs> sslProfile) {
         this.customErrorConfigurations = customErrorConfigurations;
         this.firewallPolicy = firewallPolicy;
         this.frontendIPConfiguration = frontendIPConfiguration;
@@ -184,18 +184,18 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
     }
 
     private ApplicationGatewayHttpListenerArgs() {
-        this.customErrorConfigurations = Input.empty();
-        this.firewallPolicy = Input.empty();
-        this.frontendIPConfiguration = Input.empty();
-        this.frontendPort = Input.empty();
-        this.hostName = Input.empty();
-        this.hostNames = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.protocol = Input.empty();
-        this.requireServerNameIndication = Input.empty();
-        this.sslCertificate = Input.empty();
-        this.sslProfile = Input.empty();
+        this.customErrorConfigurations = Output.empty();
+        this.firewallPolicy = Output.empty();
+        this.frontendIPConfiguration = Output.empty();
+        this.frontendPort = Output.empty();
+        this.hostName = Output.empty();
+        this.hostNames = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.protocol = Output.empty();
+        this.requireServerNameIndication = Output.empty();
+        this.sslCertificate = Output.empty();
+        this.sslProfile = Output.empty();
     }
 
     public static Builder builder() {
@@ -207,18 +207,18 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
-        private @Nullable Input<SubResourceArgs> firewallPolicy;
-        private @Nullable Input<SubResourceArgs> frontendIPConfiguration;
-        private @Nullable Input<SubResourceArgs> frontendPort;
-        private @Nullable Input<String> hostName;
-        private @Nullable Input<List<String>> hostNames;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol;
-        private @Nullable Input<Boolean> requireServerNameIndication;
-        private @Nullable Input<SubResourceArgs> sslCertificate;
-        private @Nullable Input<SubResourceArgs> sslProfile;
+        private @Nullable Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations;
+        private @Nullable Output<SubResourceArgs> firewallPolicy;
+        private @Nullable Output<SubResourceArgs> frontendIPConfiguration;
+        private @Nullable Output<SubResourceArgs> frontendPort;
+        private @Nullable Output<String> hostName;
+        private @Nullable Output<List<String>> hostNames;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
+        private @Nullable Output<Boolean> requireServerNameIndication;
+        private @Nullable Output<SubResourceArgs> sslCertificate;
+        private @Nullable Output<SubResourceArgs> sslProfile;
 
         public Builder() {
     	      // Empty
@@ -240,123 +240,123 @@ public final class ApplicationGatewayHttpListenerArgs extends io.pulumi.resource
     	      this.sslProfile = defaults.sslProfile;
         }
 
-        public Builder customErrorConfigurations(@Nullable Input<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations) {
+        public Builder customErrorConfigurations(@Nullable Output<List<ApplicationGatewayCustomErrorArgs>> customErrorConfigurations) {
             this.customErrorConfigurations = customErrorConfigurations;
             return this;
         }
 
         public Builder customErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorArgs> customErrorConfigurations) {
-            this.customErrorConfigurations = Input.ofNullable(customErrorConfigurations);
+            this.customErrorConfigurations = Output.ofNullable(customErrorConfigurations);
             return this;
         }
 
-        public Builder firewallPolicy(@Nullable Input<SubResourceArgs> firewallPolicy) {
+        public Builder firewallPolicy(@Nullable Output<SubResourceArgs> firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
         public Builder firewallPolicy(@Nullable SubResourceArgs firewallPolicy) {
-            this.firewallPolicy = Input.ofNullable(firewallPolicy);
+            this.firewallPolicy = Output.ofNullable(firewallPolicy);
             return this;
         }
 
-        public Builder frontendIPConfiguration(@Nullable Input<SubResourceArgs> frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable Output<SubResourceArgs> frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
 
         public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
-            this.frontendIPConfiguration = Input.ofNullable(frontendIPConfiguration);
+            this.frontendIPConfiguration = Output.ofNullable(frontendIPConfiguration);
             return this;
         }
 
-        public Builder frontendPort(@Nullable Input<SubResourceArgs> frontendPort) {
+        public Builder frontendPort(@Nullable Output<SubResourceArgs> frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
 
         public Builder frontendPort(@Nullable SubResourceArgs frontendPort) {
-            this.frontendPort = Input.ofNullable(frontendPort);
+            this.frontendPort = Output.ofNullable(frontendPort);
             return this;
         }
 
-        public Builder hostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Output<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Input.ofNullable(hostName);
+            this.hostName = Output.ofNullable(hostName);
             return this;
         }
 
-        public Builder hostNames(@Nullable Input<List<String>> hostNames) {
+        public Builder hostNames(@Nullable Output<List<String>> hostNames) {
             this.hostNames = hostNames;
             return this;
         }
 
         public Builder hostNames(@Nullable List<String> hostNames) {
-            this.hostNames = Input.ofNullable(hostNames);
+            this.hostNames = Output.ofNullable(hostNames);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder protocol(@Nullable Input<Either<String,ApplicationGatewayProtocol>> protocol) {
+        public Builder protocol(@Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
         public Builder protocol(@Nullable Either<String,ApplicationGatewayProtocol> protocol) {
-            this.protocol = Input.ofNullable(protocol);
+            this.protocol = Output.ofNullable(protocol);
             return this;
         }
 
-        public Builder requireServerNameIndication(@Nullable Input<Boolean> requireServerNameIndication) {
+        public Builder requireServerNameIndication(@Nullable Output<Boolean> requireServerNameIndication) {
             this.requireServerNameIndication = requireServerNameIndication;
             return this;
         }
 
         public Builder requireServerNameIndication(@Nullable Boolean requireServerNameIndication) {
-            this.requireServerNameIndication = Input.ofNullable(requireServerNameIndication);
+            this.requireServerNameIndication = Output.ofNullable(requireServerNameIndication);
             return this;
         }
 
-        public Builder sslCertificate(@Nullable Input<SubResourceArgs> sslCertificate) {
+        public Builder sslCertificate(@Nullable Output<SubResourceArgs> sslCertificate) {
             this.sslCertificate = sslCertificate;
             return this;
         }
 
         public Builder sslCertificate(@Nullable SubResourceArgs sslCertificate) {
-            this.sslCertificate = Input.ofNullable(sslCertificate);
+            this.sslCertificate = Output.ofNullable(sslCertificate);
             return this;
         }
 
-        public Builder sslProfile(@Nullable Input<SubResourceArgs> sslProfile) {
+        public Builder sslProfile(@Nullable Output<SubResourceArgs> sslProfile) {
             this.sslProfile = sslProfile;
             return this;
         }
 
         public Builder sslProfile(@Nullable SubResourceArgs sslProfile) {
-            this.sslProfile = Input.ofNullable(sslProfile);
+            this.sslProfile = Output.ofNullable(sslProfile);
             return this;
         }
         public ApplicationGatewayHttpListenerArgs build() {

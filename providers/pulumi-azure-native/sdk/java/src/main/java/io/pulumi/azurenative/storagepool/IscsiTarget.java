@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storagepool.IscsiTargetArgs;
 import io.pulumi.azurenative.storagepool.outputs.TargetPortalGroupResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,20 +154,20 @@ public class IscsiTarget extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IscsiTarget(String name, IscsiTargetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storagepool:IscsiTarget", name, args == null ? IscsiTargetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storagepool:IscsiTarget", name, args == null ? IscsiTargetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IscsiTarget(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IscsiTarget(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storagepool:IscsiTarget", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storagepool/v20200315preview:IscsiTarget").build()),
-                Input.of(Alias.builder().setType("azure-native:storagepool/v20210401preview:IscsiTarget").build()),
-                Input.of(Alias.builder().setType("azure-native:storagepool/v20210801:IscsiTarget").build())
+                Output.of(Alias.builder().setType("azure-native:storagepool/v20200315preview:IscsiTarget").build()),
+                Output.of(Alias.builder().setType("azure-native:storagepool/v20210401preview:IscsiTarget").build()),
+                Output.of(Alias.builder().setType("azure-native:storagepool/v20210801:IscsiTarget").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -182,7 +181,7 @@ public class IscsiTarget extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IscsiTarget get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IscsiTarget get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IscsiTarget(name, id, options);
     }
 }

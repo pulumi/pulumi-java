@@ -9,7 +9,6 @@ import io.pulumi.azurenative.automation.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.automation.outputs.RunbookDraftResponse;
 import io.pulumi.azurenative.automation.outputs.RunbookParameterResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -356,20 +355,20 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Runbook(String name, RunbookArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:automation:Runbook", name, args == null ? RunbookArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:automation:Runbook", name, args == null ? RunbookArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Runbook(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Runbook(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:automation:Runbook", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:automation/v20151031:Runbook").build()),
-                Input.of(Alias.builder().setType("azure-native:automation/v20180630:Runbook").build()),
-                Input.of(Alias.builder().setType("azure-native:automation/v20190601:Runbook").build())
+                Output.of(Alias.builder().setType("azure-native:automation/v20151031:Runbook").build()),
+                Output.of(Alias.builder().setType("azure-native:automation/v20180630:Runbook").build()),
+                Output.of(Alias.builder().setType("azure-native:automation/v20190601:Runbook").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -383,7 +382,7 @@ public class Runbook extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Runbook get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Runbook get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Runbook(name, id, options);
     }
 }

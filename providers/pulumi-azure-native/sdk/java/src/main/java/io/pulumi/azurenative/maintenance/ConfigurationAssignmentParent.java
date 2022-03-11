@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.maintenance.ConfigurationAssignmentParentArgs;
 import io.pulumi.azurenative.maintenance.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,19 +154,19 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfigurationAssignmentParent(String name, ConfigurationAssignmentParentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:maintenance:ConfigurationAssignmentParent", name, args == null ? ConfigurationAssignmentParentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:maintenance:ConfigurationAssignmentParent", name, args == null ? ConfigurationAssignmentParentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConfigurationAssignmentParent(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConfigurationAssignmentParent(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:maintenance:ConfigurationAssignmentParent", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:maintenance/v20210401preview:ConfigurationAssignmentParent").build()),
-                Input.of(Alias.builder().setType("azure-native:maintenance/v20210901preview:ConfigurationAssignmentParent").build())
+                Output.of(Alias.builder().setType("azure-native:maintenance/v20210401preview:ConfigurationAssignmentParent").build()),
+                Output.of(Alias.builder().setType("azure-native:maintenance/v20210901preview:ConfigurationAssignmentParent").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -181,7 +180,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfigurationAssignmentParent get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConfigurationAssignmentParent get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConfigurationAssignmentParent(name, id, options);
     }
 }

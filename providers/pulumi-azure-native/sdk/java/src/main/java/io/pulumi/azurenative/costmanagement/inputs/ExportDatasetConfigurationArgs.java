@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class ExportDatasetConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="columns")
-      private final @Nullable Input<List<String>> columns;
+      private final @Nullable Output<List<String>> columns;
 
-    public Input<List<String>> getColumns() {
-        return this.columns == null ? Input.empty() : this.columns;
+    public Output<List<String>> getColumns() {
+        return this.columns == null ? Output.empty() : this.columns;
     }
 
-    public ExportDatasetConfigurationArgs(@Nullable Input<List<String>> columns) {
+    public ExportDatasetConfigurationArgs(@Nullable Output<List<String>> columns) {
         this.columns = columns;
     }
 
     private ExportDatasetConfigurationArgs() {
-        this.columns = Input.empty();
+        this.columns = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class ExportDatasetConfigurationArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> columns;
+        private @Nullable Output<List<String>> columns;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class ExportDatasetConfigurationArgs extends io.pulumi.resources.Re
     	      this.columns = defaults.columns;
         }
 
-        public Builder columns(@Nullable Input<List<String>> columns) {
+        public Builder columns(@Nullable Output<List<String>> columns) {
             this.columns = columns;
             return this;
         }
 
         public Builder columns(@Nullable List<String> columns) {
-            this.columns = Input.ofNullable(columns);
+            this.columns = Output.ofNullable(columns);
             return this;
         }
         public ExportDatasetConfigurationArgs build() {

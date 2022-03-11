@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.BgpSettingsArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VpnConnectionArgs;
 import io.pulumi.azurenative.network.inputs.VpnGatewayNatRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,10 +27,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpSettings")
-      private final @Nullable Input<BgpSettingsArgs> bgpSettings;
+      private final @Nullable Output<BgpSettingsArgs> bgpSettings;
 
-    public Input<BgpSettingsArgs> getBgpSettings() {
-        return this.bgpSettings == null ? Input.empty() : this.bgpSettings;
+    public Output<BgpSettingsArgs> getBgpSettings() {
+        return this.bgpSettings == null ? Output.empty() : this.bgpSettings;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connections")
-      private final @Nullable Input<List<VpnConnectionArgs>> connections;
+      private final @Nullable Output<List<VpnConnectionArgs>> connections;
 
-    public Input<List<VpnConnectionArgs>> getConnections() {
-        return this.connections == null ? Input.empty() : this.connections;
+    public Output<List<VpnConnectionArgs>> getConnections() {
+        return this.connections == null ? Output.empty() : this.connections;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayName")
-      private final @Nullable Input<String> gatewayName;
+      private final @Nullable Output<String> gatewayName;
 
-    public Input<String> getGatewayName() {
-        return this.gatewayName == null ? Input.empty() : this.gatewayName;
+    public Output<String> getGatewayName() {
+        return this.gatewayName == null ? Output.empty() : this.gatewayName;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isRoutingPreferenceInternet")
-      private final @Nullable Input<Boolean> isRoutingPreferenceInternet;
+      private final @Nullable Output<Boolean> isRoutingPreferenceInternet;
 
-    public Input<Boolean> getIsRoutingPreferenceInternet() {
-        return this.isRoutingPreferenceInternet == null ? Input.empty() : this.isRoutingPreferenceInternet;
+    public Output<Boolean> getIsRoutingPreferenceInternet() {
+        return this.isRoutingPreferenceInternet == null ? Output.empty() : this.isRoutingPreferenceInternet;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natRules")
-      private final @Nullable Input<List<VpnGatewayNatRuleArgs>> natRules;
+      private final @Nullable Output<List<VpnGatewayNatRuleArgs>> natRules;
 
-    public Input<List<VpnGatewayNatRuleArgs>> getNatRules() {
-        return this.natRules == null ? Input.empty() : this.natRules;
+    public Output<List<VpnGatewayNatRuleArgs>> getNatRules() {
+        return this.natRules == null ? Output.empty() : this.natRules;
     }
 
     /**
@@ -104,9 +104,9 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -115,10 +115,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualHub")
-      private final @Nullable Input<SubResourceArgs> virtualHub;
+      private final @Nullable Output<SubResourceArgs> virtualHub;
 
-    public Input<SubResourceArgs> getVirtualHub() {
-        return this.virtualHub == null ? Input.empty() : this.virtualHub;
+    public Output<SubResourceArgs> getVirtualHub() {
+        return this.virtualHub == null ? Output.empty() : this.virtualHub;
     }
 
     /**
@@ -137,24 +137,24 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnGatewayScaleUnit")
-      private final @Nullable Input<Integer> vpnGatewayScaleUnit;
+      private final @Nullable Output<Integer> vpnGatewayScaleUnit;
 
-    public Input<Integer> getVpnGatewayScaleUnit() {
-        return this.vpnGatewayScaleUnit == null ? Input.empty() : this.vpnGatewayScaleUnit;
+    public Output<Integer> getVpnGatewayScaleUnit() {
+        return this.vpnGatewayScaleUnit == null ? Output.empty() : this.vpnGatewayScaleUnit;
     }
 
     public VpnGatewayArgs(
-        @Nullable Input<BgpSettingsArgs> bgpSettings,
-        @Nullable Input<List<VpnConnectionArgs>> connections,
-        @Nullable Input<String> gatewayName,
-        @Nullable Input<String> id,
-        @Nullable Input<Boolean> isRoutingPreferenceInternet,
-        @Nullable Input<String> location,
-        @Nullable Input<List<VpnGatewayNatRuleArgs>> natRules,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<SubResourceArgs> virtualHub,
-        @Nullable Input<Integer> vpnGatewayScaleUnit) {
+        @Nullable Output<BgpSettingsArgs> bgpSettings,
+        @Nullable Output<List<VpnConnectionArgs>> connections,
+        @Nullable Output<String> gatewayName,
+        @Nullable Output<String> id,
+        @Nullable Output<Boolean> isRoutingPreferenceInternet,
+        @Nullable Output<String> location,
+        @Nullable Output<List<VpnGatewayNatRuleArgs>> natRules,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<SubResourceArgs> virtualHub,
+        @Nullable Output<Integer> vpnGatewayScaleUnit) {
         this.bgpSettings = bgpSettings;
         this.connections = connections;
         this.gatewayName = gatewayName;
@@ -169,17 +169,17 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpnGatewayArgs() {
-        this.bgpSettings = Input.empty();
-        this.connections = Input.empty();
-        this.gatewayName = Input.empty();
-        this.id = Input.empty();
-        this.isRoutingPreferenceInternet = Input.empty();
-        this.location = Input.empty();
-        this.natRules = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.virtualHub = Input.empty();
-        this.vpnGatewayScaleUnit = Input.empty();
+        this.bgpSettings = Output.empty();
+        this.connections = Output.empty();
+        this.gatewayName = Output.empty();
+        this.id = Output.empty();
+        this.isRoutingPreferenceInternet = Output.empty();
+        this.location = Output.empty();
+        this.natRules = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.virtualHub = Output.empty();
+        this.vpnGatewayScaleUnit = Output.empty();
     }
 
     public static Builder builder() {
@@ -191,17 +191,17 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<BgpSettingsArgs> bgpSettings;
-        private @Nullable Input<List<VpnConnectionArgs>> connections;
-        private @Nullable Input<String> gatewayName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Boolean> isRoutingPreferenceInternet;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<VpnGatewayNatRuleArgs>> natRules;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<SubResourceArgs> virtualHub;
-        private @Nullable Input<Integer> vpnGatewayScaleUnit;
+        private @Nullable Output<BgpSettingsArgs> bgpSettings;
+        private @Nullable Output<List<VpnConnectionArgs>> connections;
+        private @Nullable Output<String> gatewayName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Boolean> isRoutingPreferenceInternet;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<VpnGatewayNatRuleArgs>> natRules;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<SubResourceArgs> virtualHub;
+        private @Nullable Output<Integer> vpnGatewayScaleUnit;
 
         public Builder() {
     	      // Empty
@@ -222,113 +222,113 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpnGatewayScaleUnit = defaults.vpnGatewayScaleUnit;
         }
 
-        public Builder bgpSettings(@Nullable Input<BgpSettingsArgs> bgpSettings) {
+        public Builder bgpSettings(@Nullable Output<BgpSettingsArgs> bgpSettings) {
             this.bgpSettings = bgpSettings;
             return this;
         }
 
         public Builder bgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
-            this.bgpSettings = Input.ofNullable(bgpSettings);
+            this.bgpSettings = Output.ofNullable(bgpSettings);
             return this;
         }
 
-        public Builder connections(@Nullable Input<List<VpnConnectionArgs>> connections) {
+        public Builder connections(@Nullable Output<List<VpnConnectionArgs>> connections) {
             this.connections = connections;
             return this;
         }
 
         public Builder connections(@Nullable List<VpnConnectionArgs> connections) {
-            this.connections = Input.ofNullable(connections);
+            this.connections = Output.ofNullable(connections);
             return this;
         }
 
-        public Builder gatewayName(@Nullable Input<String> gatewayName) {
+        public Builder gatewayName(@Nullable Output<String> gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
 
         public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Input.ofNullable(gatewayName);
+            this.gatewayName = Output.ofNullable(gatewayName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder isRoutingPreferenceInternet(@Nullable Input<Boolean> isRoutingPreferenceInternet) {
+        public Builder isRoutingPreferenceInternet(@Nullable Output<Boolean> isRoutingPreferenceInternet) {
             this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
             return this;
         }
 
         public Builder isRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
-            this.isRoutingPreferenceInternet = Input.ofNullable(isRoutingPreferenceInternet);
+            this.isRoutingPreferenceInternet = Output.ofNullable(isRoutingPreferenceInternet);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder natRules(@Nullable Input<List<VpnGatewayNatRuleArgs>> natRules) {
+        public Builder natRules(@Nullable Output<List<VpnGatewayNatRuleArgs>> natRules) {
             this.natRules = natRules;
             return this;
         }
 
         public Builder natRules(@Nullable List<VpnGatewayNatRuleArgs> natRules) {
-            this.natRules = Input.ofNullable(natRules);
+            this.natRules = Output.ofNullable(natRules);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder virtualHub(@Nullable Input<SubResourceArgs> virtualHub) {
+        public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
 
         public Builder virtualHub(@Nullable SubResourceArgs virtualHub) {
-            this.virtualHub = Input.ofNullable(virtualHub);
+            this.virtualHub = Output.ofNullable(virtualHub);
             return this;
         }
 
-        public Builder vpnGatewayScaleUnit(@Nullable Input<Integer> vpnGatewayScaleUnit) {
+        public Builder vpnGatewayScaleUnit(@Nullable Output<Integer> vpnGatewayScaleUnit) {
             this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }
 
         public Builder vpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
-            this.vpnGatewayScaleUnit = Input.ofNullable(vpnGatewayScaleUnit);
+            this.vpnGatewayScaleUnit = Output.ofNullable(vpnGatewayScaleUnit);
             return this;
         }
         public VpnGatewayArgs build() {

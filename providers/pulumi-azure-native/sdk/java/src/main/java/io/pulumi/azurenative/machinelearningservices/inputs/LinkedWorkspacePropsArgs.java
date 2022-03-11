@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="linkedWorkspaceResourceId")
-      private final @Nullable Input<String> linkedWorkspaceResourceId;
+      private final @Nullable Output<String> linkedWorkspaceResourceId;
 
-    public Input<String> getLinkedWorkspaceResourceId() {
-        return this.linkedWorkspaceResourceId == null ? Input.empty() : this.linkedWorkspaceResourceId;
+    public Output<String> getLinkedWorkspaceResourceId() {
+        return this.linkedWorkspaceResourceId == null ? Output.empty() : this.linkedWorkspaceResourceId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userAssignedIdentityResourceId")
-      private final @Nullable Input<String> userAssignedIdentityResourceId;
+      private final @Nullable Output<String> userAssignedIdentityResourceId;
 
-    public Input<String> getUserAssignedIdentityResourceId() {
-        return this.userAssignedIdentityResourceId == null ? Input.empty() : this.userAssignedIdentityResourceId;
+    public Output<String> getUserAssignedIdentityResourceId() {
+        return this.userAssignedIdentityResourceId == null ? Output.empty() : this.userAssignedIdentityResourceId;
     }
 
     public LinkedWorkspacePropsArgs(
-        @Nullable Input<String> linkedWorkspaceResourceId,
-        @Nullable Input<String> userAssignedIdentityResourceId) {
+        @Nullable Output<String> linkedWorkspaceResourceId,
+        @Nullable Output<String> userAssignedIdentityResourceId) {
         this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
         this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
     }
 
     private LinkedWorkspacePropsArgs() {
-        this.linkedWorkspaceResourceId = Input.empty();
-        this.userAssignedIdentityResourceId = Input.empty();
+        this.linkedWorkspaceResourceId = Output.empty();
+        this.userAssignedIdentityResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> linkedWorkspaceResourceId;
-        private @Nullable Input<String> userAssignedIdentityResourceId;
+        private @Nullable Output<String> linkedWorkspaceResourceId;
+        private @Nullable Output<String> userAssignedIdentityResourceId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
     	      this.userAssignedIdentityResourceId = defaults.userAssignedIdentityResourceId;
         }
 
-        public Builder linkedWorkspaceResourceId(@Nullable Input<String> linkedWorkspaceResourceId) {
+        public Builder linkedWorkspaceResourceId(@Nullable Output<String> linkedWorkspaceResourceId) {
             this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
             return this;
         }
 
         public Builder linkedWorkspaceResourceId(@Nullable String linkedWorkspaceResourceId) {
-            this.linkedWorkspaceResourceId = Input.ofNullable(linkedWorkspaceResourceId);
+            this.linkedWorkspaceResourceId = Output.ofNullable(linkedWorkspaceResourceId);
             return this;
         }
 
-        public Builder userAssignedIdentityResourceId(@Nullable Input<String> userAssignedIdentityResourceId) {
+        public Builder userAssignedIdentityResourceId(@Nullable Output<String> userAssignedIdentityResourceId) {
             this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
             return this;
         }
 
         public Builder userAssignedIdentityResourceId(@Nullable String userAssignedIdentityResourceId) {
-            this.userAssignedIdentityResourceId = Input.ofNullable(userAssignedIdentityResourceId);
+            this.userAssignedIdentityResourceId = Output.ofNullable(userAssignedIdentityResourceId);
             return this;
         }
         public LinkedWorkspacePropsArgs build() {

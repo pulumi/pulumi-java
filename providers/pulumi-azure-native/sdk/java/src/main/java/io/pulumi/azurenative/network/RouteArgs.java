@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.enums.RouteNextHopType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressPrefix")
-      private final @Nullable Input<String> addressPrefix;
+      private final @Nullable Output<String> addressPrefix;
 
-    public Input<String> getAddressPrefix() {
-        return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
+    public Output<String> getAddressPrefix() {
+        return this.addressPrefix == null ? Output.empty() : this.addressPrefix;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hasBgpOverride")
-      private final @Nullable Input<Boolean> hasBgpOverride;
+      private final @Nullable Output<Boolean> hasBgpOverride;
 
-    public Input<Boolean> getHasBgpOverride() {
-        return this.hasBgpOverride == null ? Input.empty() : this.hasBgpOverride;
+    public Output<Boolean> getHasBgpOverride() {
+        return this.hasBgpOverride == null ? Output.empty() : this.hasBgpOverride;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopIpAddress")
-      private final @Nullable Input<String> nextHopIpAddress;
+      private final @Nullable Output<String> nextHopIpAddress;
 
-    public Input<String> getNextHopIpAddress() {
-        return this.nextHopIpAddress == null ? Input.empty() : this.nextHopIpAddress;
+    public Output<String> getNextHopIpAddress() {
+        return this.nextHopIpAddress == null ? Output.empty() : this.nextHopIpAddress;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHopType", required=true)
-      private final Input<Either<String,RouteNextHopType>> nextHopType;
+      private final Output<Either<String,RouteNextHopType>> nextHopType;
 
-    public Input<Either<String,RouteNextHopType>> getNextHopType() {
+    public Output<Either<String,RouteNextHopType>> getNextHopType() {
         return this.nextHopType;
     }
 
@@ -88,9 +88,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -99,10 +99,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeName")
-      private final @Nullable Input<String> routeName;
+      private final @Nullable Output<String> routeName;
 
-    public Input<String> getRouteName() {
-        return this.routeName == null ? Input.empty() : this.routeName;
+    public Output<String> getRouteName() {
+        return this.routeName == null ? Output.empty() : this.routeName;
     }
 
     /**
@@ -110,9 +110,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeTableName", required=true)
-      private final Input<String> routeTableName;
+      private final Output<String> routeTableName;
 
-    public Input<String> getRouteTableName() {
+    public Output<String> getRouteTableName() {
         return this.routeTableName;
     }
 
@@ -121,23 +121,23 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public RouteArgs(
-        @Nullable Input<String> addressPrefix,
-        @Nullable Input<Boolean> hasBgpOverride,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<String> nextHopIpAddress,
-        Input<Either<String,RouteNextHopType>> nextHopType,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> routeName,
-        Input<String> routeTableName,
-        @Nullable Input<String> type) {
+        @Nullable Output<String> addressPrefix,
+        @Nullable Output<Boolean> hasBgpOverride,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<String> nextHopIpAddress,
+        Output<Either<String,RouteNextHopType>> nextHopType,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> routeName,
+        Output<String> routeTableName,
+        @Nullable Output<String> type) {
         this.addressPrefix = addressPrefix;
         this.hasBgpOverride = hasBgpOverride;
         this.id = id;
@@ -151,16 +151,16 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteArgs() {
-        this.addressPrefix = Input.empty();
-        this.hasBgpOverride = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.nextHopIpAddress = Input.empty();
-        this.nextHopType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.routeName = Input.empty();
-        this.routeTableName = Input.empty();
-        this.type = Input.empty();
+        this.addressPrefix = Output.empty();
+        this.hasBgpOverride = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.nextHopIpAddress = Output.empty();
+        this.nextHopType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.routeName = Output.empty();
+        this.routeTableName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addressPrefix;
-        private @Nullable Input<Boolean> hasBgpOverride;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> nextHopIpAddress;
-        private Input<Either<String,RouteNextHopType>> nextHopType;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> routeName;
-        private Input<String> routeTableName;
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> addressPrefix;
+        private @Nullable Output<Boolean> hasBgpOverride;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> nextHopIpAddress;
+        private Output<Either<String,RouteNextHopType>> nextHopType;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> routeName;
+        private Output<String> routeTableName;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Input.ofNullable(addressPrefix);
+            this.addressPrefix = Output.ofNullable(addressPrefix);
             return this;
         }
 
-        public Builder hasBgpOverride(@Nullable Input<Boolean> hasBgpOverride) {
+        public Builder hasBgpOverride(@Nullable Output<Boolean> hasBgpOverride) {
             this.hasBgpOverride = hasBgpOverride;
             return this;
         }
 
         public Builder hasBgpOverride(@Nullable Boolean hasBgpOverride) {
-            this.hasBgpOverride = Input.ofNullable(hasBgpOverride);
+            this.hasBgpOverride = Output.ofNullable(hasBgpOverride);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder nextHopIpAddress(@Nullable Input<String> nextHopIpAddress) {
+        public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
 
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
-            this.nextHopIpAddress = Input.ofNullable(nextHopIpAddress);
+            this.nextHopIpAddress = Output.ofNullable(nextHopIpAddress);
             return this;
         }
 
-        public Builder nextHopType(Input<Either<String,RouteNextHopType>> nextHopType) {
+        public Builder nextHopType(Output<Either<String,RouteNextHopType>> nextHopType) {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }
 
         public Builder nextHopType(Either<String,RouteNextHopType> nextHopType) {
-            this.nextHopType = Input.of(Objects.requireNonNull(nextHopType));
+            this.nextHopType = Output.of(Objects.requireNonNull(nextHopType));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder routeName(@Nullable Input<String> routeName) {
+        public Builder routeName(@Nullable Output<String> routeName) {
             this.routeName = routeName;
             return this;
         }
 
         public Builder routeName(@Nullable String routeName) {
-            this.routeName = Input.ofNullable(routeName);
+            this.routeName = Output.ofNullable(routeName);
             return this;
         }
 
-        public Builder routeTableName(Input<String> routeTableName) {
+        public Builder routeTableName(Output<String> routeTableName) {
             this.routeTableName = Objects.requireNonNull(routeTableName);
             return this;
         }
 
         public Builder routeTableName(String routeTableName) {
-            this.routeTableName = Input.of(Objects.requireNonNull(routeTableName));
+            this.routeTableName = Output.of(Objects.requireNonNull(routeTableName));
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public RouteArgs build() {

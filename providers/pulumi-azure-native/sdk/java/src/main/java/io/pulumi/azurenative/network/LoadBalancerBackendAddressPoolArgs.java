@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.LoadBalancerBackendAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -21,10 +21,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="backendAddressPoolName")
-      private final @Nullable Input<String> backendAddressPoolName;
+      private final @Nullable Output<String> backendAddressPoolName;
 
-    public Input<String> getBackendAddressPoolName() {
-        return this.backendAddressPoolName == null ? Input.empty() : this.backendAddressPoolName;
+    public Output<String> getBackendAddressPoolName() {
+        return this.backendAddressPoolName == null ? Output.empty() : this.backendAddressPoolName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="loadBalancerBackendAddresses")
-      private final @Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
+      private final @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
 
-    public Input<List<LoadBalancerBackendAddressArgs>> getLoadBalancerBackendAddresses() {
-        return this.loadBalancerBackendAddresses == null ? Input.empty() : this.loadBalancerBackendAddresses;
+    public Output<List<LoadBalancerBackendAddressArgs>> getLoadBalancerBackendAddresses() {
+        return this.loadBalancerBackendAddresses == null ? Output.empty() : this.loadBalancerBackendAddresses;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="loadBalancerName", required=true)
-      private final Input<String> loadBalancerName;
+      private final Output<String> loadBalancerName;
 
-    public Input<String> getLoadBalancerName() {
+    public Output<String> getLoadBalancerName() {
         return this.loadBalancerName;
     }
 
@@ -65,10 +65,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public LoadBalancerBackendAddressPoolArgs(
-        @Nullable Input<String> backendAddressPoolName,
-        @Nullable Input<String> id,
-        @Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses,
-        Input<String> loadBalancerName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> backendAddressPoolName,
+        @Nullable Output<String> id,
+        @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses,
+        Output<String> loadBalancerName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName) {
         this.backendAddressPoolName = backendAddressPoolName;
         this.id = id;
         this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
@@ -111,13 +111,13 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
     }
 
     private LoadBalancerBackendAddressPoolArgs() {
-        this.backendAddressPoolName = Input.empty();
-        this.id = Input.empty();
-        this.loadBalancerBackendAddresses = Input.empty();
-        this.loadBalancerName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.backendAddressPoolName = Output.empty();
+        this.id = Output.empty();
+        this.loadBalancerBackendAddresses = Output.empty();
+        this.loadBalancerName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> backendAddressPoolName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
-        private Input<String> loadBalancerName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> backendAddressPoolName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses;
+        private Output<String> loadBalancerName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class LoadBalancerBackendAddressPoolArgs extends io.pulumi.resource
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder backendAddressPoolName(@Nullable Input<String> backendAddressPoolName) {
+        public Builder backendAddressPoolName(@Nullable Output<String> backendAddressPoolName) {
             this.backendAddressPoolName = backendAddressPoolName;
             return this;
         }
 
         public Builder backendAddressPoolName(@Nullable String backendAddressPoolName) {
-            this.backendAddressPoolName = Input.ofNullable(backendAddressPoolName);
+            this.backendAddressPoolName = Output.ofNullable(backendAddressPoolName);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder loadBalancerBackendAddresses(@Nullable Input<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses) {
+        public Builder loadBalancerBackendAddresses(@Nullable Output<List<LoadBalancerBackendAddressArgs>> loadBalancerBackendAddresses) {
             this.loadBalancerBackendAddresses = loadBalancerBackendAddresses;
             return this;
         }
 
         public Builder loadBalancerBackendAddresses(@Nullable List<LoadBalancerBackendAddressArgs> loadBalancerBackendAddresses) {
-            this.loadBalancerBackendAddresses = Input.ofNullable(loadBalancerBackendAddresses);
+            this.loadBalancerBackendAddresses = Output.ofNullable(loadBalancerBackendAddresses);
             return this;
         }
 
-        public Builder loadBalancerName(Input<String> loadBalancerName) {
+        public Builder loadBalancerName(Output<String> loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
 
         public Builder loadBalancerName(String loadBalancerName) {
-            this.loadBalancerName = Input.of(Objects.requireNonNull(loadBalancerName));
+            this.loadBalancerName = Output.of(Objects.requireNonNull(loadBalancerName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public LoadBalancerBackendAddressPoolArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.enums.Access;
 import io.pulumi.azurenative.network.enums.RouteFilterRuleType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="access", required=true)
-      private final Input<Either<String,Access>> access;
+      private final Output<Either<String,Access>> access;
 
-    public Input<Either<String,Access>> getAccess() {
+    public Output<Either<String,Access>> getAccess() {
         return this.access;
     }
 
@@ -34,9 +34,9 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="communities", required=true)
-      private final Input<List<String>> communities;
+      private final Output<List<String>> communities;
 
-    public Input<List<String>> getCommunities() {
+    public Output<List<String>> getCommunities() {
         return this.communities;
     }
 
@@ -45,10 +45,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -78,9 +78,9 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,9 +89,9 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="routeFilterName", required=true)
-      private final Input<String> routeFilterName;
+      private final Output<String> routeFilterName;
 
-    public Input<String> getRouteFilterName() {
+    public Output<String> getRouteFilterName() {
         return this.routeFilterName;
     }
 
@@ -100,9 +100,9 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="routeFilterRuleType", required=true)
-      private final Input<Either<String,RouteFilterRuleType>> routeFilterRuleType;
+      private final Output<Either<String,RouteFilterRuleType>> routeFilterRuleType;
 
-    public Input<Either<String,RouteFilterRuleType>> getRouteFilterRuleType() {
+    public Output<Either<String,RouteFilterRuleType>> getRouteFilterRuleType() {
         return this.routeFilterRuleType;
     }
 
@@ -111,22 +111,22 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ruleName")
-      private final @Nullable Input<String> ruleName;
+      private final @Nullable Output<String> ruleName;
 
-    public Input<String> getRuleName() {
-        return this.ruleName == null ? Input.empty() : this.ruleName;
+    public Output<String> getRuleName() {
+        return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
     public RouteFilterRuleArgs(
-        Input<Either<String,Access>> access,
-        Input<List<String>> communities,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        Input<String> routeFilterName,
-        Input<Either<String,RouteFilterRuleType>> routeFilterRuleType,
-        @Nullable Input<String> ruleName) {
+        Output<Either<String,Access>> access,
+        Output<List<String>> communities,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        Output<String> routeFilterName,
+        Output<Either<String,RouteFilterRuleType>> routeFilterRuleType,
+        @Nullable Output<String> ruleName) {
         this.access = Objects.requireNonNull(access, "expected parameter 'access' to be non-null");
         this.communities = Objects.requireNonNull(communities, "expected parameter 'communities' to be non-null");
         this.id = id;
@@ -139,15 +139,15 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RouteFilterRuleArgs() {
-        this.access = Input.empty();
-        this.communities = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.routeFilterName = Input.empty();
-        this.routeFilterRuleType = Input.empty();
-        this.ruleName = Input.empty();
+        this.access = Output.empty();
+        this.communities = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.routeFilterName = Output.empty();
+        this.routeFilterRuleType = Output.empty();
+        this.ruleName = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,15 +159,15 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private Input<Either<String,Access>> access;
-        private Input<List<String>> communities;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<String> routeFilterName;
-        private Input<Either<String,RouteFilterRuleType>> routeFilterRuleType;
-        private @Nullable Input<String> ruleName;
+        private Output<Either<String,Access>> access;
+        private Output<List<String>> communities;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<String> routeFilterName;
+        private Output<Either<String,RouteFilterRuleType>> routeFilterRuleType;
+        private @Nullable Output<String> ruleName;
 
         public Builder() {
     	      // Empty
@@ -186,93 +186,93 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder access(Input<Either<String,Access>> access) {
+        public Builder access(Output<Either<String,Access>> access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
         public Builder access(Either<String,Access> access) {
-            this.access = Input.of(Objects.requireNonNull(access));
+            this.access = Output.of(Objects.requireNonNull(access));
             return this;
         }
 
-        public Builder communities(Input<List<String>> communities) {
+        public Builder communities(Output<List<String>> communities) {
             this.communities = Objects.requireNonNull(communities);
             return this;
         }
 
         public Builder communities(List<String> communities) {
-            this.communities = Input.of(Objects.requireNonNull(communities));
+            this.communities = Output.of(Objects.requireNonNull(communities));
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder routeFilterName(Input<String> routeFilterName) {
+        public Builder routeFilterName(Output<String> routeFilterName) {
             this.routeFilterName = Objects.requireNonNull(routeFilterName);
             return this;
         }
 
         public Builder routeFilterName(String routeFilterName) {
-            this.routeFilterName = Input.of(Objects.requireNonNull(routeFilterName));
+            this.routeFilterName = Output.of(Objects.requireNonNull(routeFilterName));
             return this;
         }
 
-        public Builder routeFilterRuleType(Input<Either<String,RouteFilterRuleType>> routeFilterRuleType) {
+        public Builder routeFilterRuleType(Output<Either<String,RouteFilterRuleType>> routeFilterRuleType) {
             this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType);
             return this;
         }
 
         public Builder routeFilterRuleType(Either<String,RouteFilterRuleType> routeFilterRuleType) {
-            this.routeFilterRuleType = Input.of(Objects.requireNonNull(routeFilterRuleType));
+            this.routeFilterRuleType = Output.of(Objects.requireNonNull(routeFilterRuleType));
             return this;
         }
 
-        public Builder ruleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Input.ofNullable(ruleName);
+            this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
         public RouteFilterRuleArgs build() {

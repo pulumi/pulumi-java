@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasourceType")
-      private final @Nullable Input<String> datasourceType;
+      private final @Nullable Output<String> datasourceType;
 
-    public Input<String> getDatasourceType() {
-        return this.datasourceType == null ? Input.empty() : this.datasourceType;
+    public Output<String> getDatasourceType() {
+        return this.datasourceType == null ? Output.empty() : this.datasourceType;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectType")
-      private final @Nullable Input<String> objectType;
+      private final @Nullable Output<String> objectType;
 
-    public Input<String> getObjectType() {
-        return this.objectType == null ? Input.empty() : this.objectType;
+    public Output<String> getObjectType() {
+        return this.objectType == null ? Output.empty() : this.objectType;
     }
 
     /**
@@ -45,9 +45,9 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceID", required=true)
-      private final Input<String> resourceID;
+      private final Output<String> resourceID;
 
-    public Input<String> getResourceID() {
+    public Output<String> getResourceID() {
         return this.resourceID;
     }
 
@@ -56,10 +56,10 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceLocation")
-      private final @Nullable Input<String> resourceLocation;
+      private final @Nullable Output<String> resourceLocation;
 
-    public Input<String> getResourceLocation() {
-        return this.resourceLocation == null ? Input.empty() : this.resourceLocation;
+    public Output<String> getResourceLocation() {
+        return this.resourceLocation == null ? Output.empty() : this.resourceLocation;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri")
-      private final @Nullable Input<String> resourceUri;
+      private final @Nullable Output<String> resourceUri;
 
-    public Input<String> getResourceUri() {
-        return this.resourceUri == null ? Input.empty() : this.resourceUri;
+    public Output<String> getResourceUri() {
+        return this.resourceUri == null ? Output.empty() : this.resourceUri;
     }
 
     public DatasourceArgs(
-        @Nullable Input<String> datasourceType,
-        @Nullable Input<String> objectType,
-        Input<String> resourceID,
-        @Nullable Input<String> resourceLocation,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<String> resourceType,
-        @Nullable Input<String> resourceUri) {
+        @Nullable Output<String> datasourceType,
+        @Nullable Output<String> objectType,
+        Output<String> resourceID,
+        @Nullable Output<String> resourceLocation,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<String> resourceType,
+        @Nullable Output<String> resourceUri) {
         this.datasourceType = datasourceType;
         this.objectType = objectType;
         this.resourceID = Objects.requireNonNull(resourceID, "expected parameter 'resourceID' to be non-null");
@@ -113,13 +113,13 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasourceArgs() {
-        this.datasourceType = Input.empty();
-        this.objectType = Input.empty();
-        this.resourceID = Input.empty();
-        this.resourceLocation = Input.empty();
-        this.resourceName = Input.empty();
-        this.resourceType = Input.empty();
-        this.resourceUri = Input.empty();
+        this.datasourceType = Output.empty();
+        this.objectType = Output.empty();
+        this.resourceID = Output.empty();
+        this.resourceLocation = Output.empty();
+        this.resourceName = Output.empty();
+        this.resourceType = Output.empty();
+        this.resourceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datasourceType;
-        private @Nullable Input<String> objectType;
-        private Input<String> resourceID;
-        private @Nullable Input<String> resourceLocation;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<String> resourceType;
-        private @Nullable Input<String> resourceUri;
+        private @Nullable Output<String> datasourceType;
+        private @Nullable Output<String> objectType;
+        private Output<String> resourceID;
+        private @Nullable Output<String> resourceLocation;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<String> resourceType;
+        private @Nullable Output<String> resourceUri;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder datasourceType(@Nullable Input<String> datasourceType) {
+        public Builder datasourceType(@Nullable Output<String> datasourceType) {
             this.datasourceType = datasourceType;
             return this;
         }
 
         public Builder datasourceType(@Nullable String datasourceType) {
-            this.datasourceType = Input.ofNullable(datasourceType);
+            this.datasourceType = Output.ofNullable(datasourceType);
             return this;
         }
 
-        public Builder objectType(@Nullable Input<String> objectType) {
+        public Builder objectType(@Nullable Output<String> objectType) {
             this.objectType = objectType;
             return this;
         }
 
         public Builder objectType(@Nullable String objectType) {
-            this.objectType = Input.ofNullable(objectType);
+            this.objectType = Output.ofNullable(objectType);
             return this;
         }
 
-        public Builder resourceID(Input<String> resourceID) {
+        public Builder resourceID(Output<String> resourceID) {
             this.resourceID = Objects.requireNonNull(resourceID);
             return this;
         }
 
         public Builder resourceID(String resourceID) {
-            this.resourceID = Input.of(Objects.requireNonNull(resourceID));
+            this.resourceID = Output.of(Objects.requireNonNull(resourceID));
             return this;
         }
 
-        public Builder resourceLocation(@Nullable Input<String> resourceLocation) {
+        public Builder resourceLocation(@Nullable Output<String> resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
 
         public Builder resourceLocation(@Nullable String resourceLocation) {
-            this.resourceLocation = Input.ofNullable(resourceLocation);
+            this.resourceLocation = Output.ofNullable(resourceLocation);
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
 
-        public Builder resourceUri(@Nullable Input<String> resourceUri) {
+        public Builder resourceUri(@Nullable Output<String> resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Input.ofNullable(resourceUri);
+            this.resourceUri = Output.ofNullable(resourceUri);
             return this;
         }
         public DatasourceArgs build() {

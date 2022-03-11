@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.RuleManagementEventDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dataSource")
-      private final @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+      private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
-    public Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
-        return this.dataSource == null ? Input.empty() : this.dataSource;
+    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
+        return this.dataSource == null ? Output.empty() : this.dataSource;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="failedLocationCount", required=true)
-      private final Input<Integer> failedLocationCount;
+      private final Output<Integer> failedLocationCount;
 
-    public Input<Integer> getFailedLocationCount() {
+    public Output<Integer> getFailedLocationCount() {
         return this.failedLocationCount;
     }
 
@@ -50,9 +50,9 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -61,17 +61,17 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="windowSize")
-      private final @Nullable Input<String> windowSize;
+      private final @Nullable Output<String> windowSize;
 
-    public Input<String> getWindowSize() {
-        return this.windowSize == null ? Input.empty() : this.windowSize;
+    public Output<String> getWindowSize() {
+        return this.windowSize == null ? Output.empty() : this.windowSize;
     }
 
     public LocationThresholdRuleConditionArgs(
-        @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource,
-        Input<Integer> failedLocationCount,
-        Input<String> odataType,
-        @Nullable Input<String> windowSize) {
+        @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource,
+        Output<Integer> failedLocationCount,
+        Output<String> odataType,
+        @Nullable Output<String> windowSize) {
         this.dataSource = dataSource;
         this.failedLocationCount = Objects.requireNonNull(failedLocationCount, "expected parameter 'failedLocationCount' to be non-null");
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
@@ -79,10 +79,10 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
     }
 
     private LocationThresholdRuleConditionArgs() {
-        this.dataSource = Input.empty();
-        this.failedLocationCount = Input.empty();
-        this.odataType = Input.empty();
-        this.windowSize = Input.empty();
+        this.dataSource = Output.empty();
+        this.failedLocationCount = Output.empty();
+        this.odataType = Output.empty();
+        this.windowSize = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
-        private Input<Integer> failedLocationCount;
-        private Input<String> odataType;
-        private @Nullable Input<String> windowSize;
+        private @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+        private Output<Integer> failedLocationCount;
+        private Output<String> odataType;
+        private @Nullable Output<String> windowSize;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class LocationThresholdRuleConditionArgs extends io.pulumi.resource
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder dataSource(@Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
+        public Builder dataSource(@Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
-            this.dataSource = Input.ofNullable(dataSource);
+            this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
 
-        public Builder failedLocationCount(Input<Integer> failedLocationCount) {
+        public Builder failedLocationCount(Output<Integer> failedLocationCount) {
             this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
             return this;
         }
 
         public Builder failedLocationCount(Integer failedLocationCount) {
-            this.failedLocationCount = Input.of(Objects.requireNonNull(failedLocationCount));
+            this.failedLocationCount = Output.of(Objects.requireNonNull(failedLocationCount));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder windowSize(@Nullable Input<String> windowSize) {
+        public Builder windowSize(@Nullable Output<String> windowSize) {
             this.windowSize = windowSize;
             return this;
         }
 
         public Builder windowSize(@Nullable String windowSize) {
-            this.windowSize = Input.ofNullable(windowSize);
+            this.windowSize = Output.ofNullable(windowSize);
             return this;
         }
         public LocationThresholdRuleConditionArgs build() {

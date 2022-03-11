@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.inputs.DeinterlaceArgs;
 import io.pulumi.azurenative.media.inputs.RectangleArgs;
 import io.pulumi.azurenative.media.inputs.VideoOverlayArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -30,10 +30,10 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crop")
-      private final @Nullable Input<RectangleArgs> crop;
+      private final @Nullable Output<RectangleArgs> crop;
 
-    public Input<RectangleArgs> getCrop() {
-        return this.crop == null ? Input.empty() : this.crop;
+    public Output<RectangleArgs> getCrop() {
+        return this.crop == null ? Output.empty() : this.crop;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deinterlace")
-      private final @Nullable Input<DeinterlaceArgs> deinterlace;
+      private final @Nullable Output<DeinterlaceArgs> deinterlace;
 
-    public Input<DeinterlaceArgs> getDeinterlace() {
-        return this.deinterlace == null ? Input.empty() : this.deinterlace;
+    public Output<DeinterlaceArgs> getDeinterlace() {
+        return this.deinterlace == null ? Output.empty() : this.deinterlace;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overlays")
-      private final @Nullable Input<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
+      private final @Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
 
-    public Input<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> getOverlays() {
-        return this.overlays == null ? Input.empty() : this.overlays;
+    public Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> getOverlays() {
+        return this.overlays == null ? Output.empty() : this.overlays;
     }
 
     /**
@@ -63,17 +63,17 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotation")
-      private final @Nullable Input<Either<String,Rotation>> rotation;
+      private final @Nullable Output<Either<String,Rotation>> rotation;
 
-    public Input<Either<String,Rotation>> getRotation() {
-        return this.rotation == null ? Input.empty() : this.rotation;
+    public Output<Either<String,Rotation>> getRotation() {
+        return this.rotation == null ? Output.empty() : this.rotation;
     }
 
     public FiltersArgs(
-        @Nullable Input<RectangleArgs> crop,
-        @Nullable Input<DeinterlaceArgs> deinterlace,
-        @Nullable Input<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays,
-        @Nullable Input<Either<String,Rotation>> rotation) {
+        @Nullable Output<RectangleArgs> crop,
+        @Nullable Output<DeinterlaceArgs> deinterlace,
+        @Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays,
+        @Nullable Output<Either<String,Rotation>> rotation) {
         this.crop = crop;
         this.deinterlace = deinterlace;
         this.overlays = overlays;
@@ -81,10 +81,10 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FiltersArgs() {
-        this.crop = Input.empty();
-        this.deinterlace = Input.empty();
-        this.overlays = Input.empty();
-        this.rotation = Input.empty();
+        this.crop = Output.empty();
+        this.deinterlace = Output.empty();
+        this.overlays = Output.empty();
+        this.rotation = Output.empty();
     }
 
     public static Builder builder() {
@@ -96,10 +96,10 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<RectangleArgs> crop;
-        private @Nullable Input<DeinterlaceArgs> deinterlace;
-        private @Nullable Input<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
-        private @Nullable Input<Either<String,Rotation>> rotation;
+        private @Nullable Output<RectangleArgs> crop;
+        private @Nullable Output<DeinterlaceArgs> deinterlace;
+        private @Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
+        private @Nullable Output<Either<String,Rotation>> rotation;
 
         public Builder() {
     	      // Empty
@@ -113,43 +113,43 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rotation = defaults.rotation;
         }
 
-        public Builder crop(@Nullable Input<RectangleArgs> crop) {
+        public Builder crop(@Nullable Output<RectangleArgs> crop) {
             this.crop = crop;
             return this;
         }
 
         public Builder crop(@Nullable RectangleArgs crop) {
-            this.crop = Input.ofNullable(crop);
+            this.crop = Output.ofNullable(crop);
             return this;
         }
 
-        public Builder deinterlace(@Nullable Input<DeinterlaceArgs> deinterlace) {
+        public Builder deinterlace(@Nullable Output<DeinterlaceArgs> deinterlace) {
             this.deinterlace = deinterlace;
             return this;
         }
 
         public Builder deinterlace(@Nullable DeinterlaceArgs deinterlace) {
-            this.deinterlace = Input.ofNullable(deinterlace);
+            this.deinterlace = Output.ofNullable(deinterlace);
             return this;
         }
 
-        public Builder overlays(@Nullable Input<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays) {
+        public Builder overlays(@Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays) {
             this.overlays = overlays;
             return this;
         }
 
         public Builder overlays(@Nullable List<Either<AudioOverlayArgs,VideoOverlayArgs>> overlays) {
-            this.overlays = Input.ofNullable(overlays);
+            this.overlays = Output.ofNullable(overlays);
             return this;
         }
 
-        public Builder rotation(@Nullable Input<Either<String,Rotation>> rotation) {
+        public Builder rotation(@Nullable Output<Either<String,Rotation>> rotation) {
             this.rotation = rotation;
             return this;
         }
 
         public Builder rotation(@Nullable Either<String,Rotation> rotation) {
-            this.rotation = Input.ofNullable(rotation);
+            this.rotation = Output.ofNullable(rotation);
             return this;
         }
         public FiltersArgs build() {

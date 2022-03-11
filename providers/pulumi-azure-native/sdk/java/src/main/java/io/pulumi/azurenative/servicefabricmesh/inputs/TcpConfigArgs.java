@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.GatewayDestinationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination", required=true)
-      private final Input<GatewayDestinationArgs> destination;
+      private final Output<GatewayDestinationArgs> destination;
 
-    public Input<GatewayDestinationArgs> getDestination() {
+    public Output<GatewayDestinationArgs> getDestination() {
         return this.destination;
     }
 
@@ -35,9 +35,9 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -46,25 +46,25 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-      private final Input<Integer> port;
+      private final Output<Integer> port;
 
-    public Input<Integer> getPort() {
+    public Output<Integer> getPort() {
         return this.port;
     }
 
     public TcpConfigArgs(
-        Input<GatewayDestinationArgs> destination,
-        Input<String> name,
-        Input<Integer> port) {
+        Output<GatewayDestinationArgs> destination,
+        Output<String> name,
+        Output<Integer> port) {
         this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
     }
 
     private TcpConfigArgs() {
-        this.destination = Input.empty();
-        this.name = Input.empty();
-        this.port = Input.empty();
+        this.destination = Output.empty();
+        this.name = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<GatewayDestinationArgs> destination;
-        private Input<String> name;
-        private Input<Integer> port;
+        private Output<GatewayDestinationArgs> destination;
+        private Output<String> name;
+        private Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class TcpConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.port = defaults.port;
         }
 
-        public Builder destination(Input<GatewayDestinationArgs> destination) {
+        public Builder destination(Output<GatewayDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
         public Builder destination(GatewayDestinationArgs destination) {
-            this.destination = Input.of(Objects.requireNonNull(destination));
+            this.destination = Output.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder port(Input<Integer> port) {
+        public Builder port(Output<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
         public Builder port(Integer port) {
-            this.port = Input.of(Objects.requireNonNull(port));
+            this.port = Output.of(Objects.requireNonNull(port));
             return this;
         }
         public TcpConfigArgs build() {

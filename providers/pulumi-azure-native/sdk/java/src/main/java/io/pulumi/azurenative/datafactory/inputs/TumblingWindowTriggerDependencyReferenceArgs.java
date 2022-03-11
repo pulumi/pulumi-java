@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * 
      */
     @InputImport(name="offset")
-      private final @Nullable Input<String> offset;
+      private final @Nullable Output<String> offset;
 
-    public Input<String> getOffset() {
-        return this.offset == null ? Input.empty() : this.offset;
+    public Output<String> getOffset() {
+        return this.offset == null ? Output.empty() : this.offset;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * 
      */
     @InputImport(name="referenceTrigger", required=true)
-      private final Input<TriggerReferenceArgs> referenceTrigger;
+      private final Output<TriggerReferenceArgs> referenceTrigger;
 
-    public Input<TriggerReferenceArgs> getReferenceTrigger() {
+    public Output<TriggerReferenceArgs> getReferenceTrigger() {
         return this.referenceTrigger;
     }
 
@@ -46,10 +46,10 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<String> size;
+      private final @Nullable Output<String> size;
 
-    public Input<String> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<String> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public TumblingWindowTriggerDependencyReferenceArgs(
-        @Nullable Input<String> offset,
-        Input<TriggerReferenceArgs> referenceTrigger,
-        @Nullable Input<String> size,
-        Input<String> type) {
+        @Nullable Output<String> offset,
+        Output<TriggerReferenceArgs> referenceTrigger,
+        @Nullable Output<String> size,
+        Output<String> type) {
         this.offset = offset;
         this.referenceTrigger = Objects.requireNonNull(referenceTrigger, "expected parameter 'referenceTrigger' to be non-null");
         this.size = size;
@@ -76,10 +76,10 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
     }
 
     private TumblingWindowTriggerDependencyReferenceArgs() {
-        this.offset = Input.empty();
-        this.referenceTrigger = Input.empty();
-        this.size = Input.empty();
-        this.type = Input.empty();
+        this.offset = Output.empty();
+        this.referenceTrigger = Output.empty();
+        this.size = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<String> offset;
-        private Input<TriggerReferenceArgs> referenceTrigger;
-        private @Nullable Input<String> size;
-        private Input<String> type;
+        private @Nullable Output<String> offset;
+        private Output<TriggerReferenceArgs> referenceTrigger;
+        private @Nullable Output<String> size;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
     	      this.type = defaults.type;
         }
 
-        public Builder offset(@Nullable Input<String> offset) {
+        public Builder offset(@Nullable Output<String> offset) {
             this.offset = offset;
             return this;
         }
 
         public Builder offset(@Nullable String offset) {
-            this.offset = Input.ofNullable(offset);
+            this.offset = Output.ofNullable(offset);
             return this;
         }
 
-        public Builder referenceTrigger(Input<TriggerReferenceArgs> referenceTrigger) {
+        public Builder referenceTrigger(Output<TriggerReferenceArgs> referenceTrigger) {
             this.referenceTrigger = Objects.requireNonNull(referenceTrigger);
             return this;
         }
 
         public Builder referenceTrigger(TriggerReferenceArgs referenceTrigger) {
-            this.referenceTrigger = Input.of(Objects.requireNonNull(referenceTrigger));
+            this.referenceTrigger = Output.of(Objects.requireNonNull(referenceTrigger));
             return this;
         }
 
-        public Builder size(@Nullable Input<String> size) {
+        public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable String size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public TumblingWindowTriggerDependencyReferenceArgs build() {

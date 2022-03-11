@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
      * 
      */
     @InputImport(name="statusCodes")
-      private final @Nullable Input<List<String>> statusCodes;
+      private final @Nullable Output<List<String>> statusCodes;
 
-    public Input<List<String>> getStatusCodes() {
-        return this.statusCodes == null ? Input.empty() : this.statusCodes;
+    public Output<List<String>> getStatusCodes() {
+        return this.statusCodes == null ? Output.empty() : this.statusCodes;
     }
 
     public ApplicationGatewayProbeHealthResponseMatchArgs(
-        @Nullable Input<String> body,
-        @Nullable Input<List<String>> statusCodes) {
+        @Nullable Output<String> body,
+        @Nullable Output<List<String>> statusCodes) {
         this.body = body;
         this.statusCodes = statusCodes;
     }
 
     private ApplicationGatewayProbeHealthResponseMatchArgs() {
-        this.body = Input.empty();
-        this.statusCodes = Input.empty();
+        this.body = Output.empty();
+        this.statusCodes = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
     }
 
     public static final class Builder {
-        private @Nullable Input<String> body;
-        private @Nullable Input<List<String>> statusCodes;
+        private @Nullable Output<String> body;
+        private @Nullable Output<List<String>> statusCodes;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ApplicationGatewayProbeHealthResponseMatchArgs extends io.pul
     	      this.statusCodes = defaults.statusCodes;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder statusCodes(@Nullable Input<List<String>> statusCodes) {
+        public Builder statusCodes(@Nullable Output<List<String>> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }
 
         public Builder statusCodes(@Nullable List<String> statusCodes) {
-            this.statusCodes = Input.ofNullable(statusCodes);
+            this.statusCodes = Output.ofNullable(statusCodes);
             return this;
         }
         public ApplicationGatewayProbeHealthResponseMatchArgs build() {

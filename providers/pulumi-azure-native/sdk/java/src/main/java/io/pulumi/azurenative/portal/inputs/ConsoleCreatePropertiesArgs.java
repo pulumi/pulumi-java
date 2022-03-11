@@ -6,7 +6,7 @@ package io.pulumi.azurenative.portal.inputs;
 import io.pulumi.azurenative.portal.enums.OsType;
 import io.pulumi.azurenative.portal.enums.ProvisioningState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="osType", required=true)
-      private final Input<Either<String,OsType>> osType;
+      private final Output<Either<String,OsType>> osType;
 
-    public Input<Either<String,OsType>> getOsType() {
+    public Output<Either<String,OsType>> getOsType() {
         return this.osType;
     }
 
@@ -37,10 +37,10 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
-    public Input<Either<String,ProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,ProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public ConsoleCreatePropertiesArgs(
-        Input<Either<String,OsType>> osType,
-        @Nullable Input<Either<String,ProvisioningState>> provisioningState,
-        @Nullable Input<String> uri) {
+        Output<Either<String,OsType>> osType,
+        @Nullable Output<Either<String,ProvisioningState>> provisioningState,
+        @Nullable Output<String> uri) {
         this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
         this.provisioningState = provisioningState;
         this.uri = uri;
     }
 
     private ConsoleCreatePropertiesArgs() {
-        this.osType = Input.empty();
-        this.provisioningState = Input.empty();
-        this.uri = Input.empty();
+        this.osType = Output.empty();
+        this.provisioningState = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<Either<String,OsType>> osType;
-        private @Nullable Input<Either<String,ProvisioningState>> provisioningState;
-        private @Nullable Input<String> uri;
+        private Output<Either<String,OsType>> osType;
+        private @Nullable Output<Either<String,ProvisioningState>> provisioningState;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class ConsoleCreatePropertiesArgs extends io.pulumi.resources.Resou
     	      this.uri = defaults.uri;
         }
 
-        public Builder osType(Input<Either<String,OsType>> osType) {
+        public Builder osType(Output<Either<String,OsType>> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
         public Builder osType(Either<String,OsType> osType) {
-            this.osType = Input.of(Objects.requireNonNull(osType));
+            this.osType = Output.of(Objects.requireNonNull(osType));
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,ProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,ProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,ProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public ConsoleCreatePropertiesArgs build() {

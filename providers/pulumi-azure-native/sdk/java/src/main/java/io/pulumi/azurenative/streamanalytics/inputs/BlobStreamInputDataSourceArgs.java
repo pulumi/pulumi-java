@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.StorageAccountArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="container")
-      private final @Nullable Input<String> container;
+      private final @Nullable Output<String> container;
 
-    public Input<String> getContainer() {
-        return this.container == null ? Input.empty() : this.container;
+    public Output<String> getContainer() {
+        return this.container == null ? Output.empty() : this.container;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dateFormat")
-      private final @Nullable Input<String> dateFormat;
+      private final @Nullable Output<String> dateFormat;
 
-    public Input<String> getDateFormat() {
-        return this.dateFormat == null ? Input.empty() : this.dateFormat;
+    public Output<String> getDateFormat() {
+        return this.dateFormat == null ? Output.empty() : this.dateFormat;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="pathPattern")
-      private final @Nullable Input<String> pathPattern;
+      private final @Nullable Output<String> pathPattern;
 
-    public Input<String> getPathPattern() {
-        return this.pathPattern == null ? Input.empty() : this.pathPattern;
+    public Output<String> getPathPattern() {
+        return this.pathPattern == null ? Output.empty() : this.pathPattern;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourcePartitionCount")
-      private final @Nullable Input<Integer> sourcePartitionCount;
+      private final @Nullable Output<Integer> sourcePartitionCount;
 
-    public Input<Integer> getSourcePartitionCount() {
-        return this.sourcePartitionCount == null ? Input.empty() : this.sourcePartitionCount;
+    public Output<Integer> getSourcePartitionCount() {
+        return this.sourcePartitionCount == null ? Output.empty() : this.sourcePartitionCount;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageAccounts")
-      private final @Nullable Input<List<StorageAccountArgs>> storageAccounts;
+      private final @Nullable Output<List<StorageAccountArgs>> storageAccounts;
 
-    public Input<List<StorageAccountArgs>> getStorageAccounts() {
-        return this.storageAccounts == null ? Input.empty() : this.storageAccounts;
+    public Output<List<StorageAccountArgs>> getStorageAccounts() {
+        return this.storageAccounts == null ? Output.empty() : this.storageAccounts;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="timeFormat")
-      private final @Nullable Input<String> timeFormat;
+      private final @Nullable Output<String> timeFormat;
 
-    public Input<String> getTimeFormat() {
-        return this.timeFormat == null ? Input.empty() : this.timeFormat;
+    public Output<String> getTimeFormat() {
+        return this.timeFormat == null ? Output.empty() : this.timeFormat;
     }
 
     /**
@@ -93,20 +93,20 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public BlobStreamInputDataSourceArgs(
-        @Nullable Input<String> container,
-        @Nullable Input<String> dateFormat,
-        @Nullable Input<String> pathPattern,
-        @Nullable Input<Integer> sourcePartitionCount,
-        @Nullable Input<List<StorageAccountArgs>> storageAccounts,
-        @Nullable Input<String> timeFormat,
-        Input<String> type) {
+        @Nullable Output<String> container,
+        @Nullable Output<String> dateFormat,
+        @Nullable Output<String> pathPattern,
+        @Nullable Output<Integer> sourcePartitionCount,
+        @Nullable Output<List<StorageAccountArgs>> storageAccounts,
+        @Nullable Output<String> timeFormat,
+        Output<String> type) {
         this.container = container;
         this.dateFormat = dateFormat;
         this.pathPattern = pathPattern;
@@ -117,13 +117,13 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
     }
 
     private BlobStreamInputDataSourceArgs() {
-        this.container = Input.empty();
-        this.dateFormat = Input.empty();
-        this.pathPattern = Input.empty();
-        this.sourcePartitionCount = Input.empty();
-        this.storageAccounts = Input.empty();
-        this.timeFormat = Input.empty();
-        this.type = Input.empty();
+        this.container = Output.empty();
+        this.dateFormat = Output.empty();
+        this.pathPattern = Output.empty();
+        this.sourcePartitionCount = Output.empty();
+        this.storageAccounts = Output.empty();
+        this.timeFormat = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -135,13 +135,13 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> container;
-        private @Nullable Input<String> dateFormat;
-        private @Nullable Input<String> pathPattern;
-        private @Nullable Input<Integer> sourcePartitionCount;
-        private @Nullable Input<List<StorageAccountArgs>> storageAccounts;
-        private @Nullable Input<String> timeFormat;
-        private Input<String> type;
+        private @Nullable Output<String> container;
+        private @Nullable Output<String> dateFormat;
+        private @Nullable Output<String> pathPattern;
+        private @Nullable Output<Integer> sourcePartitionCount;
+        private @Nullable Output<List<StorageAccountArgs>> storageAccounts;
+        private @Nullable Output<String> timeFormat;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -158,73 +158,73 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder container(@Nullable Input<String> container) {
+        public Builder container(@Nullable Output<String> container) {
             this.container = container;
             return this;
         }
 
         public Builder container(@Nullable String container) {
-            this.container = Input.ofNullable(container);
+            this.container = Output.ofNullable(container);
             return this;
         }
 
-        public Builder dateFormat(@Nullable Input<String> dateFormat) {
+        public Builder dateFormat(@Nullable Output<String> dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
 
         public Builder dateFormat(@Nullable String dateFormat) {
-            this.dateFormat = Input.ofNullable(dateFormat);
+            this.dateFormat = Output.ofNullable(dateFormat);
             return this;
         }
 
-        public Builder pathPattern(@Nullable Input<String> pathPattern) {
+        public Builder pathPattern(@Nullable Output<String> pathPattern) {
             this.pathPattern = pathPattern;
             return this;
         }
 
         public Builder pathPattern(@Nullable String pathPattern) {
-            this.pathPattern = Input.ofNullable(pathPattern);
+            this.pathPattern = Output.ofNullable(pathPattern);
             return this;
         }
 
-        public Builder sourcePartitionCount(@Nullable Input<Integer> sourcePartitionCount) {
+        public Builder sourcePartitionCount(@Nullable Output<Integer> sourcePartitionCount) {
             this.sourcePartitionCount = sourcePartitionCount;
             return this;
         }
 
         public Builder sourcePartitionCount(@Nullable Integer sourcePartitionCount) {
-            this.sourcePartitionCount = Input.ofNullable(sourcePartitionCount);
+            this.sourcePartitionCount = Output.ofNullable(sourcePartitionCount);
             return this;
         }
 
-        public Builder storageAccounts(@Nullable Input<List<StorageAccountArgs>> storageAccounts) {
+        public Builder storageAccounts(@Nullable Output<List<StorageAccountArgs>> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
 
         public Builder storageAccounts(@Nullable List<StorageAccountArgs> storageAccounts) {
-            this.storageAccounts = Input.ofNullable(storageAccounts);
+            this.storageAccounts = Output.ofNullable(storageAccounts);
             return this;
         }
 
-        public Builder timeFormat(@Nullable Input<String> timeFormat) {
+        public Builder timeFormat(@Nullable Output<String> timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
 
         public Builder timeFormat(@Nullable String timeFormat) {
-            this.timeFormat = Input.ofNullable(timeFormat);
+            this.timeFormat = Output.ofNullable(timeFormat);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public BlobStreamInputDataSourceArgs build() {

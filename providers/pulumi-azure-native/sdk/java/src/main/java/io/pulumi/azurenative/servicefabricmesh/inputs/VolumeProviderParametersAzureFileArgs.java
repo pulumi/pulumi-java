@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="accountKey")
-      private final @Nullable Input<String> accountKey;
+      private final @Nullable Output<String> accountKey;
 
-    public Input<String> getAccountKey() {
-        return this.accountKey == null ? Input.empty() : this.accountKey;
+    public Output<String> getAccountKey() {
+        return this.accountKey == null ? Output.empty() : this.accountKey;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -45,25 +45,25 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="shareName", required=true)
-      private final Input<String> shareName;
+      private final Output<String> shareName;
 
-    public Input<String> getShareName() {
+    public Output<String> getShareName() {
         return this.shareName;
     }
 
     public VolumeProviderParametersAzureFileArgs(
-        @Nullable Input<String> accountKey,
-        Input<String> accountName,
-        Input<String> shareName) {
+        @Nullable Output<String> accountKey,
+        Output<String> accountName,
+        Output<String> shareName) {
         this.accountKey = accountKey;
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.shareName = Objects.requireNonNull(shareName, "expected parameter 'shareName' to be non-null");
     }
 
     private VolumeProviderParametersAzureFileArgs() {
-        this.accountKey = Input.empty();
-        this.accountName = Input.empty();
-        this.shareName = Input.empty();
+        this.accountKey = Output.empty();
+        this.accountName = Output.empty();
+        this.shareName = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountKey;
-        private Input<String> accountName;
-        private Input<String> shareName;
+        private @Nullable Output<String> accountKey;
+        private Output<String> accountName;
+        private Output<String> shareName;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
     	      this.shareName = defaults.shareName;
         }
 
-        public Builder accountKey(@Nullable Input<String> accountKey) {
+        public Builder accountKey(@Nullable Output<String> accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
         public Builder accountKey(@Nullable String accountKey) {
-            this.accountKey = Input.ofNullable(accountKey);
+            this.accountKey = Output.ofNullable(accountKey);
             return this;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder shareName(Input<String> shareName) {
+        public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
         public Builder shareName(String shareName) {
-            this.shareName = Input.of(Objects.requireNonNull(shareName));
+            this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
         public VolumeProviderParametersAzureFileArgs build() {

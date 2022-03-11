@@ -10,7 +10,6 @@ import io.pulumi.azurenative.sql.outputs.ManagedInstancePecPropertyResponse;
 import io.pulumi.azurenative.sql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -471,25 +470,25 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedInstance(String name, ManagedInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:ManagedInstance", name, args == null ? ManagedInstanceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:sql:ManagedInstance", name, args == null ? ManagedInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagedInstance(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagedInstance(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ManagedInstance", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:sql/v20150501preview:ManagedInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20180601preview:ManagedInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200202preview:ManagedInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200801preview:ManagedInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20201101preview:ManagedInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210201preview:ManagedInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210501preview:ManagedInstance").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210801preview:ManagedInstance").build())
+                Output.of(Alias.builder().setType("azure-native:sql/v20150501preview:ManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20180601preview:ManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:ManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:ManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:ManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:ManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:ManagedInstance").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:ManagedInstance").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -503,7 +502,7 @@ public class ManagedInstance extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagedInstance get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagedInstance get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedInstance(name, id, options);
     }
 }

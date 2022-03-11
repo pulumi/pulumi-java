@@ -9,7 +9,7 @@ import io.pulumi.azurenative.web.inputs.ApiResourceDefinitionsArgs;
 import io.pulumi.azurenative.web.inputs.ConnectionParameterArgs;
 import io.pulumi.azurenative.web.inputs.WsdlDefinitionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -32,10 +32,10 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="apiDefinitions")
-      private final @Nullable Input<ApiResourceDefinitionsArgs> apiDefinitions;
+      private final @Nullable Output<ApiResourceDefinitionsArgs> apiDefinitions;
 
-    public Input<ApiResourceDefinitionsArgs> getApiDefinitions() {
-        return this.apiDefinitions == null ? Input.empty() : this.apiDefinitions;
+    public Output<ApiResourceDefinitionsArgs> getApiDefinitions() {
+        return this.apiDefinitions == null ? Output.empty() : this.apiDefinitions;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="apiType")
-      private final @Nullable Input<Either<String,ApiType>> apiType;
+      private final @Nullable Output<Either<String,ApiType>> apiType;
 
-    public Input<Either<String,ApiType>> getApiType() {
-        return this.apiType == null ? Input.empty() : this.apiType;
+    public Output<Either<String,ApiType>> getApiType() {
+        return this.apiType == null ? Output.empty() : this.apiType;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="backendService")
-      private final @Nullable Input<ApiResourceBackendServiceArgs> backendService;
+      private final @Nullable Output<ApiResourceBackendServiceArgs> backendService;
 
-    public Input<ApiResourceBackendServiceArgs> getBackendService() {
-        return this.backendService == null ? Input.empty() : this.backendService;
+    public Output<ApiResourceBackendServiceArgs> getBackendService() {
+        return this.backendService == null ? Output.empty() : this.backendService;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="brandColor")
-      private final @Nullable Input<String> brandColor;
+      private final @Nullable Output<String> brandColor;
 
-    public Input<String> getBrandColor() {
-        return this.brandColor == null ? Input.empty() : this.brandColor;
+    public Output<String> getBrandColor() {
+        return this.brandColor == null ? Output.empty() : this.brandColor;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="capabilities")
-      private final @Nullable Input<List<String>> capabilities;
+      private final @Nullable Output<List<String>> capabilities;
 
-    public Input<List<String>> getCapabilities() {
-        return this.capabilities == null ? Input.empty() : this.capabilities;
+    public Output<List<String>> getCapabilities() {
+        return this.capabilities == null ? Output.empty() : this.capabilities;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectionParameters")
-      private final @Nullable Input<Map<String,ConnectionParameterArgs>> connectionParameters;
+      private final @Nullable Output<Map<String,ConnectionParameterArgs>> connectionParameters;
 
-    public Input<Map<String,ConnectionParameterArgs>> getConnectionParameters() {
-        return this.connectionParameters == null ? Input.empty() : this.connectionParameters;
+    public Output<Map<String,ConnectionParameterArgs>> getConnectionParameters() {
+        return this.connectionParameters == null ? Output.empty() : this.connectionParameters;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="iconUri")
-      private final @Nullable Input<String> iconUri;
+      private final @Nullable Output<String> iconUri;
 
-    public Input<String> getIconUri() {
-        return this.iconUri == null ? Input.empty() : this.iconUri;
+    public Output<String> getIconUri() {
+        return this.iconUri == null ? Output.empty() : this.iconUri;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="runtimeUrls")
-      private final @Nullable Input<List<String>> runtimeUrls;
+      private final @Nullable Output<List<String>> runtimeUrls;
 
-    public Input<List<String>> getRuntimeUrls() {
-        return this.runtimeUrls == null ? Input.empty() : this.runtimeUrls;
+    public Output<List<String>> getRuntimeUrls() {
+        return this.runtimeUrls == null ? Output.empty() : this.runtimeUrls;
     }
 
     /**
@@ -142,10 +142,10 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="swagger")
-      private final @Nullable Input<Object> swagger;
+      private final @Nullable Output<Object> swagger;
 
-    public Input<Object> getSwagger() {
-        return this.swagger == null ? Input.empty() : this.swagger;
+    public Output<Object> getSwagger() {
+        return this.swagger == null ? Output.empty() : this.swagger;
     }
 
     /**
@@ -153,25 +153,25 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="wsdlDefinition")
-      private final @Nullable Input<WsdlDefinitionArgs> wsdlDefinition;
+      private final @Nullable Output<WsdlDefinitionArgs> wsdlDefinition;
 
-    public Input<WsdlDefinitionArgs> getWsdlDefinition() {
-        return this.wsdlDefinition == null ? Input.empty() : this.wsdlDefinition;
+    public Output<WsdlDefinitionArgs> getWsdlDefinition() {
+        return this.wsdlDefinition == null ? Output.empty() : this.wsdlDefinition;
     }
 
     public CustomApiPropertiesDefinitionArgs(
-        @Nullable Input<ApiResourceDefinitionsArgs> apiDefinitions,
-        @Nullable Input<Either<String,ApiType>> apiType,
-        @Nullable Input<ApiResourceBackendServiceArgs> backendService,
-        @Nullable Input<String> brandColor,
-        @Nullable Input<List<String>> capabilities,
-        @Nullable Input<Map<String,ConnectionParameterArgs>> connectionParameters,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> iconUri,
-        @Nullable Input<List<String>> runtimeUrls,
-        @Nullable Input<Object> swagger,
-        @Nullable Input<WsdlDefinitionArgs> wsdlDefinition) {
+        @Nullable Output<ApiResourceDefinitionsArgs> apiDefinitions,
+        @Nullable Output<Either<String,ApiType>> apiType,
+        @Nullable Output<ApiResourceBackendServiceArgs> backendService,
+        @Nullable Output<String> brandColor,
+        @Nullable Output<List<String>> capabilities,
+        @Nullable Output<Map<String,ConnectionParameterArgs>> connectionParameters,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> iconUri,
+        @Nullable Output<List<String>> runtimeUrls,
+        @Nullable Output<Object> swagger,
+        @Nullable Output<WsdlDefinitionArgs> wsdlDefinition) {
         this.apiDefinitions = apiDefinitions;
         this.apiType = apiType;
         this.backendService = backendService;
@@ -187,18 +187,18 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
     }
 
     private CustomApiPropertiesDefinitionArgs() {
-        this.apiDefinitions = Input.empty();
-        this.apiType = Input.empty();
-        this.backendService = Input.empty();
-        this.brandColor = Input.empty();
-        this.capabilities = Input.empty();
-        this.connectionParameters = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.iconUri = Input.empty();
-        this.runtimeUrls = Input.empty();
-        this.swagger = Input.empty();
-        this.wsdlDefinition = Input.empty();
+        this.apiDefinitions = Output.empty();
+        this.apiType = Output.empty();
+        this.backendService = Output.empty();
+        this.brandColor = Output.empty();
+        this.capabilities = Output.empty();
+        this.connectionParameters = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.iconUri = Output.empty();
+        this.runtimeUrls = Output.empty();
+        this.swagger = Output.empty();
+        this.wsdlDefinition = Output.empty();
     }
 
     public static Builder builder() {
@@ -210,18 +210,18 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<ApiResourceDefinitionsArgs> apiDefinitions;
-        private @Nullable Input<Either<String,ApiType>> apiType;
-        private @Nullable Input<ApiResourceBackendServiceArgs> backendService;
-        private @Nullable Input<String> brandColor;
-        private @Nullable Input<List<String>> capabilities;
-        private @Nullable Input<Map<String,ConnectionParameterArgs>> connectionParameters;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> iconUri;
-        private @Nullable Input<List<String>> runtimeUrls;
-        private @Nullable Input<Object> swagger;
-        private @Nullable Input<WsdlDefinitionArgs> wsdlDefinition;
+        private @Nullable Output<ApiResourceDefinitionsArgs> apiDefinitions;
+        private @Nullable Output<Either<String,ApiType>> apiType;
+        private @Nullable Output<ApiResourceBackendServiceArgs> backendService;
+        private @Nullable Output<String> brandColor;
+        private @Nullable Output<List<String>> capabilities;
+        private @Nullable Output<Map<String,ConnectionParameterArgs>> connectionParameters;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> iconUri;
+        private @Nullable Output<List<String>> runtimeUrls;
+        private @Nullable Output<Object> swagger;
+        private @Nullable Output<WsdlDefinitionArgs> wsdlDefinition;
 
         public Builder() {
     	      // Empty
@@ -243,123 +243,123 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
     	      this.wsdlDefinition = defaults.wsdlDefinition;
         }
 
-        public Builder apiDefinitions(@Nullable Input<ApiResourceDefinitionsArgs> apiDefinitions) {
+        public Builder apiDefinitions(@Nullable Output<ApiResourceDefinitionsArgs> apiDefinitions) {
             this.apiDefinitions = apiDefinitions;
             return this;
         }
 
         public Builder apiDefinitions(@Nullable ApiResourceDefinitionsArgs apiDefinitions) {
-            this.apiDefinitions = Input.ofNullable(apiDefinitions);
+            this.apiDefinitions = Output.ofNullable(apiDefinitions);
             return this;
         }
 
-        public Builder apiType(@Nullable Input<Either<String,ApiType>> apiType) {
+        public Builder apiType(@Nullable Output<Either<String,ApiType>> apiType) {
             this.apiType = apiType;
             return this;
         }
 
         public Builder apiType(@Nullable Either<String,ApiType> apiType) {
-            this.apiType = Input.ofNullable(apiType);
+            this.apiType = Output.ofNullable(apiType);
             return this;
         }
 
-        public Builder backendService(@Nullable Input<ApiResourceBackendServiceArgs> backendService) {
+        public Builder backendService(@Nullable Output<ApiResourceBackendServiceArgs> backendService) {
             this.backendService = backendService;
             return this;
         }
 
         public Builder backendService(@Nullable ApiResourceBackendServiceArgs backendService) {
-            this.backendService = Input.ofNullable(backendService);
+            this.backendService = Output.ofNullable(backendService);
             return this;
         }
 
-        public Builder brandColor(@Nullable Input<String> brandColor) {
+        public Builder brandColor(@Nullable Output<String> brandColor) {
             this.brandColor = brandColor;
             return this;
         }
 
         public Builder brandColor(@Nullable String brandColor) {
-            this.brandColor = Input.ofNullable(brandColor);
+            this.brandColor = Output.ofNullable(brandColor);
             return this;
         }
 
-        public Builder capabilities(@Nullable Input<List<String>> capabilities) {
+        public Builder capabilities(@Nullable Output<List<String>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
         public Builder capabilities(@Nullable List<String> capabilities) {
-            this.capabilities = Input.ofNullable(capabilities);
+            this.capabilities = Output.ofNullable(capabilities);
             return this;
         }
 
-        public Builder connectionParameters(@Nullable Input<Map<String,ConnectionParameterArgs>> connectionParameters) {
+        public Builder connectionParameters(@Nullable Output<Map<String,ConnectionParameterArgs>> connectionParameters) {
             this.connectionParameters = connectionParameters;
             return this;
         }
 
         public Builder connectionParameters(@Nullable Map<String,ConnectionParameterArgs> connectionParameters) {
-            this.connectionParameters = Input.ofNullable(connectionParameters);
+            this.connectionParameters = Output.ofNullable(connectionParameters);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder iconUri(@Nullable Input<String> iconUri) {
+        public Builder iconUri(@Nullable Output<String> iconUri) {
             this.iconUri = iconUri;
             return this;
         }
 
         public Builder iconUri(@Nullable String iconUri) {
-            this.iconUri = Input.ofNullable(iconUri);
+            this.iconUri = Output.ofNullable(iconUri);
             return this;
         }
 
-        public Builder runtimeUrls(@Nullable Input<List<String>> runtimeUrls) {
+        public Builder runtimeUrls(@Nullable Output<List<String>> runtimeUrls) {
             this.runtimeUrls = runtimeUrls;
             return this;
         }
 
         public Builder runtimeUrls(@Nullable List<String> runtimeUrls) {
-            this.runtimeUrls = Input.ofNullable(runtimeUrls);
+            this.runtimeUrls = Output.ofNullable(runtimeUrls);
             return this;
         }
 
-        public Builder swagger(@Nullable Input<Object> swagger) {
+        public Builder swagger(@Nullable Output<Object> swagger) {
             this.swagger = swagger;
             return this;
         }
 
         public Builder swagger(@Nullable Object swagger) {
-            this.swagger = Input.ofNullable(swagger);
+            this.swagger = Output.ofNullable(swagger);
             return this;
         }
 
-        public Builder wsdlDefinition(@Nullable Input<WsdlDefinitionArgs> wsdlDefinition) {
+        public Builder wsdlDefinition(@Nullable Output<WsdlDefinitionArgs> wsdlDefinition) {
             this.wsdlDefinition = wsdlDefinition;
             return this;
         }
 
         public Builder wsdlDefinition(@Nullable WsdlDefinitionArgs wsdlDefinition) {
-            this.wsdlDefinition = Input.ofNullable(wsdlDefinition);
+            this.wsdlDefinition = Output.ofNullable(wsdlDefinition);
             return this;
         }
         public CustomApiPropertiesDefinitionArgs build() {

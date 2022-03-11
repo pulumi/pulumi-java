@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class DWCopyCommandDefaultValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="columnName")
-      private final @Nullable Input<Object> columnName;
+      private final @Nullable Output<Object> columnName;
 
-    public Input<Object> getColumnName() {
-        return this.columnName == null ? Input.empty() : this.columnName;
+    public Output<Object> getColumnName() {
+        return this.columnName == null ? Output.empty() : this.columnName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class DWCopyCommandDefaultValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<Object> defaultValue;
+      private final @Nullable Output<Object> defaultValue;
 
-    public Input<Object> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<Object> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     public DWCopyCommandDefaultValueArgs(
-        @Nullable Input<Object> columnName,
-        @Nullable Input<Object> defaultValue) {
+        @Nullable Output<Object> columnName,
+        @Nullable Output<Object> defaultValue) {
         this.columnName = columnName;
         this.defaultValue = defaultValue;
     }
 
     private DWCopyCommandDefaultValueArgs() {
-        this.columnName = Input.empty();
-        this.defaultValue = Input.empty();
+        this.columnName = Output.empty();
+        this.defaultValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class DWCopyCommandDefaultValueArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> columnName;
-        private @Nullable Input<Object> defaultValue;
+        private @Nullable Output<Object> columnName;
+        private @Nullable Output<Object> defaultValue;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class DWCopyCommandDefaultValueArgs extends io.pulumi.resources.Res
     	      this.defaultValue = defaults.defaultValue;
         }
 
-        public Builder columnName(@Nullable Input<Object> columnName) {
+        public Builder columnName(@Nullable Output<Object> columnName) {
             this.columnName = columnName;
             return this;
         }
 
         public Builder columnName(@Nullable Object columnName) {
-            this.columnName = Input.ofNullable(columnName);
+            this.columnName = Output.ofNullable(columnName);
             return this;
         }
 
-        public Builder defaultValue(@Nullable Input<Object> defaultValue) {
+        public Builder defaultValue(@Nullable Output<Object> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
         public DWCopyCommandDefaultValueArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.NatGatewaySkuArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-      private final @Nullable Input<Integer> idleTimeoutInMinutes;
+      private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Input<Integer> getIdleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
+    public Output<Integer> getIdleTimeoutInMinutes() {
+        return this.idleTimeoutInMinutes == null ? Output.empty() : this.idleTimeoutInMinutes;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIpAddresses")
-      private final @Nullable Input<List<SubResourceArgs>> publicIpAddresses;
+      private final @Nullable Output<List<SubResourceArgs>> publicIpAddresses;
 
-    public Input<List<SubResourceArgs>> getPublicIpAddresses() {
-        return this.publicIpAddresses == null ? Input.empty() : this.publicIpAddresses;
+    public Output<List<SubResourceArgs>> getPublicIpAddresses() {
+        return this.publicIpAddresses == null ? Output.empty() : this.publicIpAddresses;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicIpPrefixes")
-      private final @Nullable Input<List<SubResourceArgs>> publicIpPrefixes;
+      private final @Nullable Output<List<SubResourceArgs>> publicIpPrefixes;
 
-    public Input<List<SubResourceArgs>> getPublicIpPrefixes() {
-        return this.publicIpPrefixes == null ? Input.empty() : this.publicIpPrefixes;
+    public Output<List<SubResourceArgs>> getPublicIpPrefixes() {
+        return this.publicIpPrefixes == null ? Output.empty() : this.publicIpPrefixes;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<NatGatewaySkuArgs> sku;
+      private final @Nullable Output<NatGatewaySkuArgs> sku;
 
-    public Input<NatGatewaySkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<NatGatewaySkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -105,21 +105,21 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public NatGatewayArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> idleTimeoutInMinutes,
-        @Nullable Input<String> location,
-        @Nullable Input<List<SubResourceArgs>> publicIpAddresses,
-        @Nullable Input<List<SubResourceArgs>> publicIpPrefixes,
-        @Nullable Input<NatGatewaySkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<String>> zones) {
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> idleTimeoutInMinutes,
+        @Nullable Output<String> location,
+        @Nullable Output<List<SubResourceArgs>> publicIpAddresses,
+        @Nullable Output<List<SubResourceArgs>> publicIpPrefixes,
+        @Nullable Output<NatGatewaySkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<String>> zones) {
         this.id = id;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;
         this.location = location;
@@ -131,14 +131,14 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NatGatewayArgs() {
-        this.id = Input.empty();
-        this.idleTimeoutInMinutes = Input.empty();
-        this.location = Input.empty();
-        this.publicIpAddresses = Input.empty();
-        this.publicIpPrefixes = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.zones = Input.empty();
+        this.id = Output.empty();
+        this.idleTimeoutInMinutes = Output.empty();
+        this.location = Output.empty();
+        this.publicIpAddresses = Output.empty();
+        this.publicIpPrefixes = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -150,14 +150,14 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> idleTimeoutInMinutes;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<SubResourceArgs>> publicIpAddresses;
-        private @Nullable Input<List<SubResourceArgs>> publicIpPrefixes;
-        private @Nullable Input<NatGatewaySkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> idleTimeoutInMinutes;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<SubResourceArgs>> publicIpAddresses;
+        private @Nullable Output<List<SubResourceArgs>> publicIpPrefixes;
+        private @Nullable Output<NatGatewaySkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -175,83 +175,83 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder idleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Input.ofNullable(idleTimeoutInMinutes);
+            this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder publicIpAddresses(@Nullable Input<List<SubResourceArgs>> publicIpAddresses) {
+        public Builder publicIpAddresses(@Nullable Output<List<SubResourceArgs>> publicIpAddresses) {
             this.publicIpAddresses = publicIpAddresses;
             return this;
         }
 
         public Builder publicIpAddresses(@Nullable List<SubResourceArgs> publicIpAddresses) {
-            this.publicIpAddresses = Input.ofNullable(publicIpAddresses);
+            this.publicIpAddresses = Output.ofNullable(publicIpAddresses);
             return this;
         }
 
-        public Builder publicIpPrefixes(@Nullable Input<List<SubResourceArgs>> publicIpPrefixes) {
+        public Builder publicIpPrefixes(@Nullable Output<List<SubResourceArgs>> publicIpPrefixes) {
             this.publicIpPrefixes = publicIpPrefixes;
             return this;
         }
 
         public Builder publicIpPrefixes(@Nullable List<SubResourceArgs> publicIpPrefixes) {
-            this.publicIpPrefixes = Input.ofNullable(publicIpPrefixes);
+            this.publicIpPrefixes = Output.ofNullable(publicIpPrefixes);
             return this;
         }
 
-        public Builder sku(@Nullable Input<NatGatewaySkuArgs> sku) {
+        public Builder sku(@Nullable Output<NatGatewaySkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable NatGatewaySkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public NatGatewayArgs build() {

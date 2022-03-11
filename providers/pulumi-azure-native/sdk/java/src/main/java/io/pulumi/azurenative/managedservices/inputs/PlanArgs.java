@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managedservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -33,9 +33,9 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="product", required=true)
-      private final Input<String> product;
+      private final Output<String> product;
 
-    public Input<String> getProduct() {
+    public Output<String> getProduct() {
         return this.product;
     }
 
@@ -44,9 +44,9 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisher", required=true)
-      private final Input<String> publisher;
+      private final Output<String> publisher;
 
-    public Input<String> getPublisher() {
+    public Output<String> getPublisher() {
         return this.publisher;
     }
 
@@ -55,17 +55,17 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version", required=true)
-      private final Input<String> version;
+      private final Output<String> version;
 
-    public Input<String> getVersion() {
+    public Output<String> getVersion() {
         return this.version;
     }
 
     public PlanArgs(
-        Input<String> name,
-        Input<String> product,
-        Input<String> publisher,
-        Input<String> version) {
+        Output<String> name,
+        Output<String> product,
+        Output<String> publisher,
+        Output<String> version) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.product = Objects.requireNonNull(product, "expected parameter 'product' to be non-null");
         this.publisher = Objects.requireNonNull(publisher, "expected parameter 'publisher' to be non-null");
@@ -73,10 +73,10 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PlanArgs() {
-        this.name = Input.empty();
-        this.product = Input.empty();
-        this.publisher = Input.empty();
-        this.version = Input.empty();
+        this.name = Output.empty();
+        this.product = Output.empty();
+        this.publisher = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -88,10 +88,10 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> product;
-        private Input<String> publisher;
-        private Input<String> version;
+        private Output<String> name;
+        private Output<String> product;
+        private Output<String> publisher;
+        private Output<String> version;
 
         public Builder() {
     	      // Empty
@@ -105,43 +105,43 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder product(Input<String> product) {
+        public Builder product(Output<String> product) {
             this.product = Objects.requireNonNull(product);
             return this;
         }
 
         public Builder product(String product) {
-            this.product = Input.of(Objects.requireNonNull(product));
+            this.product = Output.of(Objects.requireNonNull(product));
             return this;
         }
 
-        public Builder publisher(Input<String> publisher) {
+        public Builder publisher(Output<String> publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
 
         public Builder publisher(String publisher) {
-            this.publisher = Input.of(Objects.requireNonNull(publisher));
+            this.publisher = Output.of(Objects.requireNonNull(publisher));
             return this;
         }
 
-        public Builder version(Input<String> version) {
+        public Builder version(Output<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
         public Builder version(String version) {
-            this.version = Input.of(Objects.requireNonNull(version));
+            this.version = Output.of(Objects.requireNonNull(version));
             return this;
         }
         public PlanArgs build() {

@@ -8,7 +8,6 @@ import io.pulumi.azurenative.documentdb.SqlResourceSqlContainerArgs;
 import io.pulumi.azurenative.documentdb.outputs.SqlContainerGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.SqlContainerGetPropertiesResponseResource;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,38 +140,38 @@ public class SqlResourceSqlContainer extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlResourceSqlContainer(String name, SqlResourceSqlContainerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:SqlResourceSqlContainer", name, args == null ? SqlResourceSqlContainerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:documentdb:SqlResourceSqlContainer", name, args == null ? SqlResourceSqlContainerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SqlResourceSqlContainer(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SqlResourceSqlContainer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:SqlResourceSqlContainer", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20150401:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20150408:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20151106:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20160319:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20160331:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20190801:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20191212:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200301:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200401:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200901:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210115:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210315:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210415:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210515:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210615:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015:SqlResourceSqlContainer").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:SqlResourceSqlContainer").build())
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20150401:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20150408:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20151106:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20160319:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20160331:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:SqlResourceSqlContainer").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:SqlResourceSqlContainer").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -186,7 +185,7 @@ public class SqlResourceSqlContainer extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SqlResourceSqlContainer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SqlResourceSqlContainer get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlResourceSqlContainer(name, id, options);
     }
 }

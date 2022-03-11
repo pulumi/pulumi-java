@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.SsisLogLocationType;
 import io.pulumi.azurenative.datafactory.inputs.SSISAccessCredentialArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="accessCredential")
-      private final @Nullable Input<SSISAccessCredentialArgs> accessCredential;
+      private final @Nullable Output<SSISAccessCredentialArgs> accessCredential;
 
-    public Input<SSISAccessCredentialArgs> getAccessCredential() {
-        return this.accessCredential == null ? Input.empty() : this.accessCredential;
+    public Output<SSISAccessCredentialArgs> getAccessCredential() {
+        return this.accessCredential == null ? Output.empty() : this.accessCredential;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logPath", required=true)
-      private final Input<Object> logPath;
+      private final Output<Object> logPath;
 
-    public Input<Object> getLogPath() {
+    public Output<Object> getLogPath() {
         return this.logPath;
     }
 
@@ -49,10 +49,10 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="logRefreshInterval")
-      private final @Nullable Input<Object> logRefreshInterval;
+      private final @Nullable Output<Object> logRefreshInterval;
 
-    public Input<Object> getLogRefreshInterval() {
-        return this.logRefreshInterval == null ? Input.empty() : this.logRefreshInterval;
+    public Output<Object> getLogRefreshInterval() {
+        return this.logRefreshInterval == null ? Output.empty() : this.logRefreshInterval;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,SsisLogLocationType>> type;
+      private final Output<Either<String,SsisLogLocationType>> type;
 
-    public Input<Either<String,SsisLogLocationType>> getType() {
+    public Output<Either<String,SsisLogLocationType>> getType() {
         return this.type;
     }
 
     public SSISLogLocationArgs(
-        @Nullable Input<SSISAccessCredentialArgs> accessCredential,
-        Input<Object> logPath,
-        @Nullable Input<Object> logRefreshInterval,
-        Input<Either<String,SsisLogLocationType>> type) {
+        @Nullable Output<SSISAccessCredentialArgs> accessCredential,
+        Output<Object> logPath,
+        @Nullable Output<Object> logRefreshInterval,
+        Output<Either<String,SsisLogLocationType>> type) {
         this.accessCredential = accessCredential;
         this.logPath = Objects.requireNonNull(logPath, "expected parameter 'logPath' to be non-null");
         this.logRefreshInterval = logRefreshInterval;
@@ -78,10 +78,10 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SSISLogLocationArgs() {
-        this.accessCredential = Input.empty();
-        this.logPath = Input.empty();
-        this.logRefreshInterval = Input.empty();
-        this.type = Input.empty();
+        this.accessCredential = Output.empty();
+        this.logPath = Output.empty();
+        this.logRefreshInterval = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<SSISAccessCredentialArgs> accessCredential;
-        private Input<Object> logPath;
-        private @Nullable Input<Object> logRefreshInterval;
-        private Input<Either<String,SsisLogLocationType>> type;
+        private @Nullable Output<SSISAccessCredentialArgs> accessCredential;
+        private Output<Object> logPath;
+        private @Nullable Output<Object> logRefreshInterval;
+        private Output<Either<String,SsisLogLocationType>> type;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder accessCredential(@Nullable Input<SSISAccessCredentialArgs> accessCredential) {
+        public Builder accessCredential(@Nullable Output<SSISAccessCredentialArgs> accessCredential) {
             this.accessCredential = accessCredential;
             return this;
         }
 
         public Builder accessCredential(@Nullable SSISAccessCredentialArgs accessCredential) {
-            this.accessCredential = Input.ofNullable(accessCredential);
+            this.accessCredential = Output.ofNullable(accessCredential);
             return this;
         }
 
-        public Builder logPath(Input<Object> logPath) {
+        public Builder logPath(Output<Object> logPath) {
             this.logPath = Objects.requireNonNull(logPath);
             return this;
         }
 
         public Builder logPath(Object logPath) {
-            this.logPath = Input.of(Objects.requireNonNull(logPath));
+            this.logPath = Output.of(Objects.requireNonNull(logPath));
             return this;
         }
 
-        public Builder logRefreshInterval(@Nullable Input<Object> logRefreshInterval) {
+        public Builder logRefreshInterval(@Nullable Output<Object> logRefreshInterval) {
             this.logRefreshInterval = logRefreshInterval;
             return this;
         }
 
         public Builder logRefreshInterval(@Nullable Object logRefreshInterval) {
-            this.logRefreshInterval = Input.ofNullable(logRefreshInterval);
+            this.logRefreshInterval = Output.ofNullable(logRefreshInterval);
             return this;
         }
 
-        public Builder type(Input<Either<String,SsisLogLocationType>> type) {
+        public Builder type(Output<Either<String,SsisLogLocationType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,SsisLogLocationType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SSISLogLocationArgs build() {

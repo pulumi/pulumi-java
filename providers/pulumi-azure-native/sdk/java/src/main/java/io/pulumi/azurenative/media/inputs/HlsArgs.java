@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class HlsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fragmentsPerTsSegment")
-      private final @Nullable Input<Integer> fragmentsPerTsSegment;
+      private final @Nullable Output<Integer> fragmentsPerTsSegment;
 
-    public Input<Integer> getFragmentsPerTsSegment() {
-        return this.fragmentsPerTsSegment == null ? Input.empty() : this.fragmentsPerTsSegment;
+    public Output<Integer> getFragmentsPerTsSegment() {
+        return this.fragmentsPerTsSegment == null ? Output.empty() : this.fragmentsPerTsSegment;
     }
 
-    public HlsArgs(@Nullable Input<Integer> fragmentsPerTsSegment) {
+    public HlsArgs(@Nullable Output<Integer> fragmentsPerTsSegment) {
         this.fragmentsPerTsSegment = fragmentsPerTsSegment;
     }
 
     private HlsArgs() {
-        this.fragmentsPerTsSegment = Input.empty();
+        this.fragmentsPerTsSegment = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class HlsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> fragmentsPerTsSegment;
+        private @Nullable Output<Integer> fragmentsPerTsSegment;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class HlsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fragmentsPerTsSegment = defaults.fragmentsPerTsSegment;
         }
 
-        public Builder fragmentsPerTsSegment(@Nullable Input<Integer> fragmentsPerTsSegment) {
+        public Builder fragmentsPerTsSegment(@Nullable Output<Integer> fragmentsPerTsSegment) {
             this.fragmentsPerTsSegment = fragmentsPerTsSegment;
             return this;
         }
 
         public Builder fragmentsPerTsSegment(@Nullable Integer fragmentsPerTsSegment) {
-            this.fragmentsPerTsSegment = Input.ofNullable(fragmentsPerTsSegment);
+            this.fragmentsPerTsSegment = Output.ofNullable(fragmentsPerTsSegment);
             return this;
         }
         public HlsArgs build() {

@@ -9,7 +9,6 @@ import io.pulumi.azurenative.compute.outputs.DedicatedHostInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.SkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -258,26 +257,26 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DedicatedHost(String name, DedicatedHostArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:DedicatedHost", name, args == null ? DedicatedHostArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:DedicatedHost", name, args == null ? DedicatedHostArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DedicatedHost(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DedicatedHost(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:DedicatedHost", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20190301:DedicatedHost").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20190701:DedicatedHost").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20191201:DedicatedHost").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20200601:DedicatedHost").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20201201:DedicatedHost").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210301:DedicatedHost").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210401:DedicatedHost").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210701:DedicatedHost").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20211101:DedicatedHost").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20190301:DedicatedHost").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20190701:DedicatedHost").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20191201:DedicatedHost").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20200601:DedicatedHost").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20201201:DedicatedHost").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210301:DedicatedHost").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210401:DedicatedHost").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210701:DedicatedHost").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20211101:DedicatedHost").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -291,7 +290,7 @@ public class DedicatedHost extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DedicatedHost get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DedicatedHost get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DedicatedHost(name, id, options);
     }
 }

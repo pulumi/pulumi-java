@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning;
 
 import io.pulumi.azurenative.machinelearning.inputs.ResourceSkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commitmentPlanName")
-      private final @Nullable Input<String> commitmentPlanName;
+      private final @Nullable Output<String> commitmentPlanName;
 
-    public Input<String> getCommitmentPlanName() {
-        return this.commitmentPlanName == null ? Input.empty() : this.commitmentPlanName;
+    public Output<String> getCommitmentPlanName() {
+        return this.commitmentPlanName == null ? Output.empty() : this.commitmentPlanName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<ResourceSkuArgs> sku;
+      private final @Nullable Output<ResourceSkuArgs> sku;
 
-    public Input<ResourceSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ResourceSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CommitmentPlanArgs(
-        @Nullable Input<String> commitmentPlanName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<ResourceSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> commitmentPlanName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<ResourceSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.commitmentPlanName = commitmentPlanName;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CommitmentPlanArgs() {
-        this.commitmentPlanName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.commitmentPlanName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> commitmentPlanName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ResourceSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> commitmentPlanName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ResourceSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder commitmentPlanName(@Nullable Input<String> commitmentPlanName) {
+        public Builder commitmentPlanName(@Nullable Output<String> commitmentPlanName) {
             this.commitmentPlanName = commitmentPlanName;
             return this;
         }
 
         public Builder commitmentPlanName(@Nullable String commitmentPlanName) {
-            this.commitmentPlanName = Input.ofNullable(commitmentPlanName);
+            this.commitmentPlanName = Output.ofNullable(commitmentPlanName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<ResourceSkuArgs> sku) {
+        public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ResourceSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CommitmentPlanArgs build() {

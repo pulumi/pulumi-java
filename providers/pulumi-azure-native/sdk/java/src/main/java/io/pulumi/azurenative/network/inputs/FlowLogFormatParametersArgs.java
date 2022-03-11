@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.FlowLogFormatType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,FlowLogFormatType>> type;
+      private final @Nullable Output<Either<String,FlowLogFormatType>> type;
 
-    public Input<Either<String,FlowLogFormatType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,FlowLogFormatType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<Integer> version;
+      private final @Nullable Output<Integer> version;
 
-    public Input<Integer> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<Integer> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     public FlowLogFormatParametersArgs(
-        @Nullable Input<Either<String,FlowLogFormatType>> type,
-        @Nullable Input<Integer> version) {
+        @Nullable Output<Either<String,FlowLogFormatType>> type,
+        @Nullable Output<Integer> version) {
         this.type = type;
-        this.version = version == null ? Input.ofNullable(0) : version;
+        this.version = version == null ? Output.ofNullable(0) : version;
     }
 
     private FlowLogFormatParametersArgs() {
-        this.type = Input.empty();
-        this.version = Input.empty();
+        this.type = Output.empty();
+        this.version = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,FlowLogFormatType>> type;
-        private @Nullable Input<Integer> version;
+        private @Nullable Output<Either<String,FlowLogFormatType>> type;
+        private @Nullable Output<Integer> version;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
     	      this.version = defaults.version;
         }
 
-        public Builder type(@Nullable Input<Either<String,FlowLogFormatType>> type) {
+        public Builder type(@Nullable Output<Either<String,FlowLogFormatType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,FlowLogFormatType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder version(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Output<Integer> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable Integer version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
         public FlowLogFormatParametersArgs build() {

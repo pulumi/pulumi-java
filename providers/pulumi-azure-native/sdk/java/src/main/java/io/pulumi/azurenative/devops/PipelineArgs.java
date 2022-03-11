@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devops;
 import io.pulumi.azurenative.devops.enums.PipelineTypeEnum;
 import io.pulumi.azurenative.devops.inputs.BootstrapConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,9 +23,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bootstrapConfiguration", required=true)
-      private final Input<BootstrapConfigurationArgs> bootstrapConfiguration;
+      private final Output<BootstrapConfigurationArgs> bootstrapConfiguration;
 
-    public Input<BootstrapConfigurationArgs> getBootstrapConfiguration() {
+    public Output<BootstrapConfigurationArgs> getBootstrapConfiguration() {
         return this.bootstrapConfiguration;
     }
 
@@ -34,10 +34,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineName")
-      private final @Nullable Input<String> pipelineName;
+      private final @Nullable Output<String> pipelineName;
 
-    public Input<String> getPipelineName() {
-        return this.pipelineName == null ? Input.empty() : this.pipelineName;
+    public Output<String> getPipelineName() {
+        return this.pipelineName == null ? Output.empty() : this.pipelineName;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineType", required=true)
-      private final Input<Either<String,PipelineTypeEnum>> pipelineType;
+      private final Output<Either<String,PipelineTypeEnum>> pipelineType;
 
-    public Input<Either<String,PipelineTypeEnum>> getPipelineType() {
+    public Output<Either<String,PipelineTypeEnum>> getPipelineType() {
         return this.pipelineType;
     }
 
@@ -67,9 +67,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,19 +78,19 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PipelineArgs(
-        Input<BootstrapConfigurationArgs> bootstrapConfiguration,
-        @Nullable Input<String> location,
-        @Nullable Input<String> pipelineName,
-        Input<Either<String,PipelineTypeEnum>> pipelineType,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<BootstrapConfigurationArgs> bootstrapConfiguration,
+        @Nullable Output<String> location,
+        @Nullable Output<String> pipelineName,
+        Output<Either<String,PipelineTypeEnum>> pipelineType,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.bootstrapConfiguration = Objects.requireNonNull(bootstrapConfiguration, "expected parameter 'bootstrapConfiguration' to be non-null");
         this.location = location;
         this.pipelineName = pipelineName;
@@ -100,12 +100,12 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.bootstrapConfiguration = Input.empty();
-        this.location = Input.empty();
-        this.pipelineName = Input.empty();
-        this.pipelineType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.bootstrapConfiguration = Output.empty();
+        this.location = Output.empty();
+        this.pipelineName = Output.empty();
+        this.pipelineType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -117,12 +117,12 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<BootstrapConfigurationArgs> bootstrapConfiguration;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> pipelineName;
-        private Input<Either<String,PipelineTypeEnum>> pipelineType;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<BootstrapConfigurationArgs> bootstrapConfiguration;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> pipelineName;
+        private Output<Either<String,PipelineTypeEnum>> pipelineType;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -138,63 +138,63 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder bootstrapConfiguration(Input<BootstrapConfigurationArgs> bootstrapConfiguration) {
+        public Builder bootstrapConfiguration(Output<BootstrapConfigurationArgs> bootstrapConfiguration) {
             this.bootstrapConfiguration = Objects.requireNonNull(bootstrapConfiguration);
             return this;
         }
 
         public Builder bootstrapConfiguration(BootstrapConfigurationArgs bootstrapConfiguration) {
-            this.bootstrapConfiguration = Input.of(Objects.requireNonNull(bootstrapConfiguration));
+            this.bootstrapConfiguration = Output.of(Objects.requireNonNull(bootstrapConfiguration));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder pipelineName(@Nullable Input<String> pipelineName) {
+        public Builder pipelineName(@Nullable Output<String> pipelineName) {
             this.pipelineName = pipelineName;
             return this;
         }
 
         public Builder pipelineName(@Nullable String pipelineName) {
-            this.pipelineName = Input.ofNullable(pipelineName);
+            this.pipelineName = Output.ofNullable(pipelineName);
             return this;
         }
 
-        public Builder pipelineType(Input<Either<String,PipelineTypeEnum>> pipelineType) {
+        public Builder pipelineType(Output<Either<String,PipelineTypeEnum>> pipelineType) {
             this.pipelineType = Objects.requireNonNull(pipelineType);
             return this;
         }
 
         public Builder pipelineType(Either<String,PipelineTypeEnum> pipelineType) {
-            this.pipelineType = Input.of(Objects.requireNonNull(pipelineType));
+            this.pipelineType = Output.of(Objects.requireNonNull(pipelineType));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PipelineArgs build() {

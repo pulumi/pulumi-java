@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.OrcFormatArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParquetFormatArgs;
 import io.pulumi.azurenative.datafactory.inputs.TextFormatArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -35,10 +35,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="compression")
-      private final @Nullable Input<DatasetCompressionArgs> compression;
+      private final @Nullable Output<DatasetCompressionArgs> compression;
 
-    public Input<DatasetCompressionArgs> getCompression() {
-        return this.compression == null ? Input.empty() : this.compression;
+    public Output<DatasetCompressionArgs> getCompression() {
+        return this.compression == null ? Output.empty() : this.compression;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fileFilter")
-      private final @Nullable Input<Object> fileFilter;
+      private final @Nullable Output<Object> fileFilter;
 
-    public Input<Object> getFileFilter() {
-        return this.fileFilter == null ? Input.empty() : this.fileFilter;
+    public Output<Object> getFileFilter() {
+        return this.fileFilter == null ? Output.empty() : this.fileFilter;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fileName")
-      private final @Nullable Input<Object> fileName;
+      private final @Nullable Output<Object> fileName;
 
-    public Input<Object> getFileName() {
-        return this.fileName == null ? Input.empty() : this.fileName;
+    public Output<Object> getFileName() {
+        return this.fileName == null ? Output.empty() : this.fileName;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="folder")
-      private final @Nullable Input<DatasetFolderArgs> folder;
+      private final @Nullable Output<DatasetFolderArgs> folder;
 
-    public Input<DatasetFolderArgs> getFolder() {
-        return this.folder == null ? Input.empty() : this.folder;
+    public Output<DatasetFolderArgs> getFolder() {
+        return this.folder == null ? Output.empty() : this.folder;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="folderPath")
-      private final @Nullable Input<Object> folderPath;
+      private final @Nullable Output<Object> folderPath;
 
-    public Input<Object> getFolderPath() {
-        return this.folderPath == null ? Input.empty() : this.folderPath;
+    public Output<Object> getFolderPath() {
+        return this.folderPath == null ? Output.empty() : this.folderPath;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="format")
-      private final @Nullable Input<Object> format;
+      private final @Nullable Output<Object> format;
 
-    public Input<Object> getFormat() {
-        return this.format == null ? Input.empty() : this.format;
+    public Output<Object> getFormat() {
+        return this.format == null ? Output.empty() : this.format;
     }
 
     /**
@@ -123,9 +123,9 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-      private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+      private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
+    public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -134,10 +134,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="modifiedDatetimeEnd")
-      private final @Nullable Input<Object> modifiedDatetimeEnd;
+      private final @Nullable Output<Object> modifiedDatetimeEnd;
 
-    public Input<Object> getModifiedDatetimeEnd() {
-        return this.modifiedDatetimeEnd == null ? Input.empty() : this.modifiedDatetimeEnd;
+    public Output<Object> getModifiedDatetimeEnd() {
+        return this.modifiedDatetimeEnd == null ? Output.empty() : this.modifiedDatetimeEnd;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="modifiedDatetimeStart")
-      private final @Nullable Input<Object> modifiedDatetimeStart;
+      private final @Nullable Output<Object> modifiedDatetimeStart;
 
-    public Input<Object> getModifiedDatetimeStart() {
-        return this.modifiedDatetimeStart == null ? Input.empty() : this.modifiedDatetimeStart;
+    public Output<Object> getModifiedDatetimeStart() {
+        return this.modifiedDatetimeStart == null ? Output.empty() : this.modifiedDatetimeStart;
     }
 
     /**
@@ -156,10 +156,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -167,10 +167,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="schema")
-      private final @Nullable Input<Object> schema;
+      private final @Nullable Output<Object> schema;
 
-    public Input<Object> getSchema() {
-        return this.schema == null ? Input.empty() : this.schema;
+    public Output<Object> getSchema() {
+        return this.schema == null ? Output.empty() : this.schema;
     }
 
     /**
@@ -178,10 +178,10 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="structure")
-      private final @Nullable Input<Object> structure;
+      private final @Nullable Output<Object> structure;
 
-    public Input<Object> getStructure() {
-        return this.structure == null ? Input.empty() : this.structure;
+    public Output<Object> getStructure() {
+        return this.structure == null ? Output.empty() : this.structure;
     }
 
     /**
@@ -190,28 +190,28 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public FileShareDatasetArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<DatasetCompressionArgs> compression,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> fileFilter,
-        @Nullable Input<Object> fileName,
-        @Nullable Input<DatasetFolderArgs> folder,
-        @Nullable Input<Object> folderPath,
-        @Nullable Input<Object> format,
-        Input<LinkedServiceReferenceArgs> linkedServiceName,
-        @Nullable Input<Object> modifiedDatetimeEnd,
-        @Nullable Input<Object> modifiedDatetimeStart,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        @Nullable Input<Object> schema,
-        @Nullable Input<Object> structure,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<DatasetCompressionArgs> compression,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> fileFilter,
+        @Nullable Output<Object> fileName,
+        @Nullable Output<DatasetFolderArgs> folder,
+        @Nullable Output<Object> folderPath,
+        @Nullable Output<Object> format,
+        Output<LinkedServiceReferenceArgs> linkedServiceName,
+        @Nullable Output<Object> modifiedDatetimeEnd,
+        @Nullable Output<Object> modifiedDatetimeStart,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        @Nullable Output<Object> schema,
+        @Nullable Output<Object> structure,
+        Output<String> type) {
         this.annotations = annotations;
         this.compression = compression;
         this.description = description;
@@ -230,21 +230,21 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FileShareDatasetArgs() {
-        this.annotations = Input.empty();
-        this.compression = Input.empty();
-        this.description = Input.empty();
-        this.fileFilter = Input.empty();
-        this.fileName = Input.empty();
-        this.folder = Input.empty();
-        this.folderPath = Input.empty();
-        this.format = Input.empty();
-        this.linkedServiceName = Input.empty();
-        this.modifiedDatetimeEnd = Input.empty();
-        this.modifiedDatetimeStart = Input.empty();
-        this.parameters = Input.empty();
-        this.schema = Input.empty();
-        this.structure = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.compression = Output.empty();
+        this.description = Output.empty();
+        this.fileFilter = Output.empty();
+        this.fileName = Output.empty();
+        this.folder = Output.empty();
+        this.folderPath = Output.empty();
+        this.format = Output.empty();
+        this.linkedServiceName = Output.empty();
+        this.modifiedDatetimeEnd = Output.empty();
+        this.modifiedDatetimeStart = Output.empty();
+        this.parameters = Output.empty();
+        this.schema = Output.empty();
+        this.structure = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -256,21 +256,21 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<DatasetCompressionArgs> compression;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> fileFilter;
-        private @Nullable Input<Object> fileName;
-        private @Nullable Input<DatasetFolderArgs> folder;
-        private @Nullable Input<Object> folderPath;
-        private @Nullable Input<Object> format;
-        private Input<LinkedServiceReferenceArgs> linkedServiceName;
-        private @Nullable Input<Object> modifiedDatetimeEnd;
-        private @Nullable Input<Object> modifiedDatetimeStart;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private @Nullable Input<Object> schema;
-        private @Nullable Input<Object> structure;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<DatasetCompressionArgs> compression;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> fileFilter;
+        private @Nullable Output<Object> fileName;
+        private @Nullable Output<DatasetFolderArgs> folder;
+        private @Nullable Output<Object> folderPath;
+        private @Nullable Output<Object> format;
+        private Output<LinkedServiceReferenceArgs> linkedServiceName;
+        private @Nullable Output<Object> modifiedDatetimeEnd;
+        private @Nullable Output<Object> modifiedDatetimeStart;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private @Nullable Output<Object> schema;
+        private @Nullable Output<Object> structure;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -295,153 +295,153 @@ public final class FileShareDatasetArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder compression(@Nullable Input<DatasetCompressionArgs> compression) {
+        public Builder compression(@Nullable Output<DatasetCompressionArgs> compression) {
             this.compression = compression;
             return this;
         }
 
         public Builder compression(@Nullable DatasetCompressionArgs compression) {
-            this.compression = Input.ofNullable(compression);
+            this.compression = Output.ofNullable(compression);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder fileFilter(@Nullable Input<Object> fileFilter) {
+        public Builder fileFilter(@Nullable Output<Object> fileFilter) {
             this.fileFilter = fileFilter;
             return this;
         }
 
         public Builder fileFilter(@Nullable Object fileFilter) {
-            this.fileFilter = Input.ofNullable(fileFilter);
+            this.fileFilter = Output.ofNullable(fileFilter);
             return this;
         }
 
-        public Builder fileName(@Nullable Input<Object> fileName) {
+        public Builder fileName(@Nullable Output<Object> fileName) {
             this.fileName = fileName;
             return this;
         }
 
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Input.ofNullable(fileName);
+            this.fileName = Output.ofNullable(fileName);
             return this;
         }
 
-        public Builder folder(@Nullable Input<DatasetFolderArgs> folder) {
+        public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
             this.folder = folder;
             return this;
         }
 
         public Builder folder(@Nullable DatasetFolderArgs folder) {
-            this.folder = Input.ofNullable(folder);
+            this.folder = Output.ofNullable(folder);
             return this;
         }
 
-        public Builder folderPath(@Nullable Input<Object> folderPath) {
+        public Builder folderPath(@Nullable Output<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Input.ofNullable(folderPath);
+            this.folderPath = Output.ofNullable(folderPath);
             return this;
         }
 
-        public Builder format(@Nullable Input<Object> format) {
+        public Builder format(@Nullable Output<Object> format) {
             this.format = format;
             return this;
         }
 
         public Builder format(@Nullable Object format) {
-            this.format = Input.ofNullable(format);
+            this.format = Output.ofNullable(format);
             return this;
         }
 
-        public Builder linkedServiceName(Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
+            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder modifiedDatetimeEnd(@Nullable Input<Object> modifiedDatetimeEnd) {
+        public Builder modifiedDatetimeEnd(@Nullable Output<Object> modifiedDatetimeEnd) {
             this.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
 
         public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
-            this.modifiedDatetimeEnd = Input.ofNullable(modifiedDatetimeEnd);
+            this.modifiedDatetimeEnd = Output.ofNullable(modifiedDatetimeEnd);
             return this;
         }
 
-        public Builder modifiedDatetimeStart(@Nullable Input<Object> modifiedDatetimeStart) {
+        public Builder modifiedDatetimeStart(@Nullable Output<Object> modifiedDatetimeStart) {
             this.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
 
         public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
-            this.modifiedDatetimeStart = Input.ofNullable(modifiedDatetimeStart);
+            this.modifiedDatetimeStart = Output.ofNullable(modifiedDatetimeStart);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder schema(@Nullable Input<Object> schema) {
+        public Builder schema(@Nullable Output<Object> schema) {
             this.schema = schema;
             return this;
         }
 
         public Builder schema(@Nullable Object schema) {
-            this.schema = Input.ofNullable(schema);
+            this.schema = Output.ofNullable(schema);
             return this;
         }
 
-        public Builder structure(@Nullable Input<Object> structure) {
+        public Builder structure(@Nullable Output<Object> structure) {
             this.structure = structure;
             return this;
         }
 
         public Builder structure(@Nullable Object structure) {
-            this.structure = Input.ofNullable(structure);
+            this.structure = Output.ofNullable(structure);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public FileShareDatasetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dependencyName")
-      private final @Nullable Input<String> dependencyName;
+      private final @Nullable Output<String> dependencyName;
 
-    public Input<String> getDependencyName() {
-        return this.dependencyName == null ? Input.empty() : this.dependencyName;
+    public Output<String> getDependencyName() {
+        return this.dependencyName == null ? Output.empty() : this.dependencyName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="minVersion")
-      private final @Nullable Input<String> minVersion;
+      private final @Nullable Output<String> minVersion;
 
-    public Input<String> getMinVersion() {
-        return this.minVersion == null ? Input.empty() : this.minVersion;
+    public Output<String> getMinVersion() {
+        return this.minVersion == null ? Output.empty() : this.minVersion;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="publisher")
-      private final @Nullable Input<String> publisher;
+      private final @Nullable Output<String> publisher;
 
-    public Input<String> getPublisher() {
-        return this.publisher == null ? Input.empty() : this.publisher;
+    public Output<String> getPublisher() {
+        return this.publisher == null ? Output.empty() : this.publisher;
     }
 
     public MsixPackageDependenciesArgs(
-        @Nullable Input<String> dependencyName,
-        @Nullable Input<String> minVersion,
-        @Nullable Input<String> publisher) {
+        @Nullable Output<String> dependencyName,
+        @Nullable Output<String> minVersion,
+        @Nullable Output<String> publisher) {
         this.dependencyName = dependencyName;
         this.minVersion = minVersion;
         this.publisher = publisher;
     }
 
     private MsixPackageDependenciesArgs() {
-        this.dependencyName = Input.empty();
-        this.minVersion = Input.empty();
-        this.publisher = Input.empty();
+        this.dependencyName = Output.empty();
+        this.minVersion = Output.empty();
+        this.publisher = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> dependencyName;
-        private @Nullable Input<String> minVersion;
-        private @Nullable Input<String> publisher;
+        private @Nullable Output<String> dependencyName;
+        private @Nullable Output<String> minVersion;
+        private @Nullable Output<String> publisher;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class MsixPackageDependenciesArgs extends io.pulumi.resources.Resou
     	      this.publisher = defaults.publisher;
         }
 
-        public Builder dependencyName(@Nullable Input<String> dependencyName) {
+        public Builder dependencyName(@Nullable Output<String> dependencyName) {
             this.dependencyName = dependencyName;
             return this;
         }
 
         public Builder dependencyName(@Nullable String dependencyName) {
-            this.dependencyName = Input.ofNullable(dependencyName);
+            this.dependencyName = Output.ofNullable(dependencyName);
             return this;
         }
 
-        public Builder minVersion(@Nullable Input<String> minVersion) {
+        public Builder minVersion(@Nullable Output<String> minVersion) {
             this.minVersion = minVersion;
             return this;
         }
 
         public Builder minVersion(@Nullable String minVersion) {
-            this.minVersion = Input.ofNullable(minVersion);
+            this.minVersion = Output.ofNullable(minVersion);
             return this;
         }
 
-        public Builder publisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Output<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
         public Builder publisher(@Nullable String publisher) {
-            this.publisher = Input.ofNullable(publisher);
+            this.publisher = Output.ofNullable(publisher);
             return this;
         }
         public MsixPackageDependenciesArgs build() {

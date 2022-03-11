@@ -7,7 +7,7 @@ import io.pulumi.azurenative.vmwarecloudsimple.inputs.GuestOSCustomizationArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.ResourcePoolArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualDiskArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualNicArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,9 +27,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amountOfRam", required=true)
-      private final Input<Integer> amountOfRam;
+      private final Output<Integer> amountOfRam;
 
-    public Input<Integer> getAmountOfRam() {
+    public Output<Integer> getAmountOfRam() {
         return this.amountOfRam;
     }
 
@@ -38,10 +38,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customization")
-      private final @Nullable Input<GuestOSCustomizationArgs> customization;
+      private final @Nullable Output<GuestOSCustomizationArgs> customization;
 
-    public Input<GuestOSCustomizationArgs> getCustomization() {
-        return this.customization == null ? Input.empty() : this.customization;
+    public Output<GuestOSCustomizationArgs> getCustomization() {
+        return this.customization == null ? Output.empty() : this.customization;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disks")
-      private final @Nullable Input<List<VirtualDiskArgs>> disks;
+      private final @Nullable Output<List<VirtualDiskArgs>> disks;
 
-    public Input<List<VirtualDiskArgs>> getDisks() {
-        return this.disks == null ? Input.empty() : this.disks;
+    public Output<List<VirtualDiskArgs>> getDisks() {
+        return this.disks == null ? Output.empty() : this.disks;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exposeToGuestVM")
-      private final @Nullable Input<Boolean> exposeToGuestVM;
+      private final @Nullable Output<Boolean> exposeToGuestVM;
 
-    public Input<Boolean> getExposeToGuestVM() {
-        return this.exposeToGuestVM == null ? Input.empty() : this.exposeToGuestVM;
+    public Output<Boolean> getExposeToGuestVM() {
+        return this.exposeToGuestVM == null ? Output.empty() : this.exposeToGuestVM;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nics")
-      private final @Nullable Input<List<VirtualNicArgs>> nics;
+      private final @Nullable Output<List<VirtualNicArgs>> nics;
 
-    public Input<List<VirtualNicArgs>> getNics() {
-        return this.nics == null ? Input.empty() : this.nics;
+    public Output<List<VirtualNicArgs>> getNics() {
+        return this.nics == null ? Output.empty() : this.nics;
     }
 
     /**
@@ -93,9 +93,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfCores", required=true)
-      private final Input<Integer> numberOfCores;
+      private final Output<Integer> numberOfCores;
 
-    public Input<Integer> getNumberOfCores() {
+    public Output<Integer> getNumberOfCores() {
         return this.numberOfCores;
     }
 
@@ -104,10 +104,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -115,9 +115,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateCloudId", required=true)
-      private final Input<String> privateCloudId;
+      private final Output<String> privateCloudId;
 
-    public Input<String> getPrivateCloudId() {
+    public Output<String> getPrivateCloudId() {
         return this.privateCloudId;
     }
 
@@ -126,9 +126,9 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -137,10 +137,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcePool")
-      private final @Nullable Input<ResourcePoolArgs> resourcePool;
+      private final @Nullable Output<ResourcePoolArgs> resourcePool;
 
-    public Input<ResourcePoolArgs> getResourcePool() {
-        return this.resourcePool == null ? Input.empty() : this.resourcePool;
+    public Output<ResourcePoolArgs> getResourcePool() {
+        return this.resourcePool == null ? Output.empty() : this.resourcePool;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateId")
-      private final @Nullable Input<String> templateId;
+      private final @Nullable Output<String> templateId;
 
-    public Input<String> getTemplateId() {
-        return this.templateId == null ? Input.empty() : this.templateId;
+    public Output<String> getTemplateId() {
+        return this.templateId == null ? Output.empty() : this.templateId;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     /**
@@ -181,10 +181,10 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vSphereNetworks")
-      private final @Nullable Input<List<String>> vSphereNetworks;
+      private final @Nullable Output<List<String>> vSphereNetworks;
 
-    public Input<List<String>> getVSphereNetworks() {
-        return this.vSphereNetworks == null ? Input.empty() : this.vSphereNetworks;
+    public Output<List<String>> getVSphereNetworks() {
+        return this.vSphereNetworks == null ? Output.empty() : this.vSphereNetworks;
     }
 
     /**
@@ -192,29 +192,29 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualMachineName")
-      private final @Nullable Input<String> virtualMachineName;
+      private final @Nullable Output<String> virtualMachineName;
 
-    public Input<String> getVirtualMachineName() {
-        return this.virtualMachineName == null ? Input.empty() : this.virtualMachineName;
+    public Output<String> getVirtualMachineName() {
+        return this.virtualMachineName == null ? Output.empty() : this.virtualMachineName;
     }
 
     public VirtualMachineArgs(
-        Input<Integer> amountOfRam,
-        @Nullable Input<GuestOSCustomizationArgs> customization,
-        @Nullable Input<List<VirtualDiskArgs>> disks,
-        @Nullable Input<Boolean> exposeToGuestVM,
-        @Nullable Input<String> location,
-        @Nullable Input<List<VirtualNicArgs>> nics,
-        Input<Integer> numberOfCores,
-        @Nullable Input<String> password,
-        Input<String> privateCloudId,
-        Input<String> resourceGroupName,
-        @Nullable Input<ResourcePoolArgs> resourcePool,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> templateId,
-        @Nullable Input<String> username,
-        @Nullable Input<List<String>> vSphereNetworks,
-        @Nullable Input<String> virtualMachineName) {
+        Output<Integer> amountOfRam,
+        @Nullable Output<GuestOSCustomizationArgs> customization,
+        @Nullable Output<List<VirtualDiskArgs>> disks,
+        @Nullable Output<Boolean> exposeToGuestVM,
+        @Nullable Output<String> location,
+        @Nullable Output<List<VirtualNicArgs>> nics,
+        Output<Integer> numberOfCores,
+        @Nullable Output<String> password,
+        Output<String> privateCloudId,
+        Output<String> resourceGroupName,
+        @Nullable Output<ResourcePoolArgs> resourcePool,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> templateId,
+        @Nullable Output<String> username,
+        @Nullable Output<List<String>> vSphereNetworks,
+        @Nullable Output<String> virtualMachineName) {
         this.amountOfRam = Objects.requireNonNull(amountOfRam, "expected parameter 'amountOfRam' to be non-null");
         this.customization = customization;
         this.disks = disks;
@@ -234,22 +234,22 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualMachineArgs() {
-        this.amountOfRam = Input.empty();
-        this.customization = Input.empty();
-        this.disks = Input.empty();
-        this.exposeToGuestVM = Input.empty();
-        this.location = Input.empty();
-        this.nics = Input.empty();
-        this.numberOfCores = Input.empty();
-        this.password = Input.empty();
-        this.privateCloudId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourcePool = Input.empty();
-        this.tags = Input.empty();
-        this.templateId = Input.empty();
-        this.username = Input.empty();
-        this.vSphereNetworks = Input.empty();
-        this.virtualMachineName = Input.empty();
+        this.amountOfRam = Output.empty();
+        this.customization = Output.empty();
+        this.disks = Output.empty();
+        this.exposeToGuestVM = Output.empty();
+        this.location = Output.empty();
+        this.nics = Output.empty();
+        this.numberOfCores = Output.empty();
+        this.password = Output.empty();
+        this.privateCloudId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourcePool = Output.empty();
+        this.tags = Output.empty();
+        this.templateId = Output.empty();
+        this.username = Output.empty();
+        this.vSphereNetworks = Output.empty();
+        this.virtualMachineName = Output.empty();
     }
 
     public static Builder builder() {
@@ -261,22 +261,22 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Integer> amountOfRam;
-        private @Nullable Input<GuestOSCustomizationArgs> customization;
-        private @Nullable Input<List<VirtualDiskArgs>> disks;
-        private @Nullable Input<Boolean> exposeToGuestVM;
-        private @Nullable Input<String> location;
-        private @Nullable Input<List<VirtualNicArgs>> nics;
-        private Input<Integer> numberOfCores;
-        private @Nullable Input<String> password;
-        private Input<String> privateCloudId;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ResourcePoolArgs> resourcePool;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> templateId;
-        private @Nullable Input<String> username;
-        private @Nullable Input<List<String>> vSphereNetworks;
-        private @Nullable Input<String> virtualMachineName;
+        private Output<Integer> amountOfRam;
+        private @Nullable Output<GuestOSCustomizationArgs> customization;
+        private @Nullable Output<List<VirtualDiskArgs>> disks;
+        private @Nullable Output<Boolean> exposeToGuestVM;
+        private @Nullable Output<String> location;
+        private @Nullable Output<List<VirtualNicArgs>> nics;
+        private Output<Integer> numberOfCores;
+        private @Nullable Output<String> password;
+        private Output<String> privateCloudId;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ResourcePoolArgs> resourcePool;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> templateId;
+        private @Nullable Output<String> username;
+        private @Nullable Output<List<String>> vSphereNetworks;
+        private @Nullable Output<String> virtualMachineName;
 
         public Builder() {
     	      // Empty
@@ -302,163 +302,163 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualMachineName = defaults.virtualMachineName;
         }
 
-        public Builder amountOfRam(Input<Integer> amountOfRam) {
+        public Builder amountOfRam(Output<Integer> amountOfRam) {
             this.amountOfRam = Objects.requireNonNull(amountOfRam);
             return this;
         }
 
         public Builder amountOfRam(Integer amountOfRam) {
-            this.amountOfRam = Input.of(Objects.requireNonNull(amountOfRam));
+            this.amountOfRam = Output.of(Objects.requireNonNull(amountOfRam));
             return this;
         }
 
-        public Builder customization(@Nullable Input<GuestOSCustomizationArgs> customization) {
+        public Builder customization(@Nullable Output<GuestOSCustomizationArgs> customization) {
             this.customization = customization;
             return this;
         }
 
         public Builder customization(@Nullable GuestOSCustomizationArgs customization) {
-            this.customization = Input.ofNullable(customization);
+            this.customization = Output.ofNullable(customization);
             return this;
         }
 
-        public Builder disks(@Nullable Input<List<VirtualDiskArgs>> disks) {
+        public Builder disks(@Nullable Output<List<VirtualDiskArgs>> disks) {
             this.disks = disks;
             return this;
         }
 
         public Builder disks(@Nullable List<VirtualDiskArgs> disks) {
-            this.disks = Input.ofNullable(disks);
+            this.disks = Output.ofNullable(disks);
             return this;
         }
 
-        public Builder exposeToGuestVM(@Nullable Input<Boolean> exposeToGuestVM) {
+        public Builder exposeToGuestVM(@Nullable Output<Boolean> exposeToGuestVM) {
             this.exposeToGuestVM = exposeToGuestVM;
             return this;
         }
 
         public Builder exposeToGuestVM(@Nullable Boolean exposeToGuestVM) {
-            this.exposeToGuestVM = Input.ofNullable(exposeToGuestVM);
+            this.exposeToGuestVM = Output.ofNullable(exposeToGuestVM);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder nics(@Nullable Input<List<VirtualNicArgs>> nics) {
+        public Builder nics(@Nullable Output<List<VirtualNicArgs>> nics) {
             this.nics = nics;
             return this;
         }
 
         public Builder nics(@Nullable List<VirtualNicArgs> nics) {
-            this.nics = Input.ofNullable(nics);
+            this.nics = Output.ofNullable(nics);
             return this;
         }
 
-        public Builder numberOfCores(Input<Integer> numberOfCores) {
+        public Builder numberOfCores(Output<Integer> numberOfCores) {
             this.numberOfCores = Objects.requireNonNull(numberOfCores);
             return this;
         }
 
         public Builder numberOfCores(Integer numberOfCores) {
-            this.numberOfCores = Input.of(Objects.requireNonNull(numberOfCores));
+            this.numberOfCores = Output.of(Objects.requireNonNull(numberOfCores));
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder privateCloudId(Input<String> privateCloudId) {
+        public Builder privateCloudId(Output<String> privateCloudId) {
             this.privateCloudId = Objects.requireNonNull(privateCloudId);
             return this;
         }
 
         public Builder privateCloudId(String privateCloudId) {
-            this.privateCloudId = Input.of(Objects.requireNonNull(privateCloudId));
+            this.privateCloudId = Output.of(Objects.requireNonNull(privateCloudId));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourcePool(@Nullable Input<ResourcePoolArgs> resourcePool) {
+        public Builder resourcePool(@Nullable Output<ResourcePoolArgs> resourcePool) {
             this.resourcePool = resourcePool;
             return this;
         }
 
         public Builder resourcePool(@Nullable ResourcePoolArgs resourcePool) {
-            this.resourcePool = Input.ofNullable(resourcePool);
+            this.resourcePool = Output.ofNullable(resourcePool);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder templateId(@Nullable Input<String> templateId) {
+        public Builder templateId(@Nullable Output<String> templateId) {
             this.templateId = templateId;
             return this;
         }
 
         public Builder templateId(@Nullable String templateId) {
-            this.templateId = Input.ofNullable(templateId);
+            this.templateId = Output.ofNullable(templateId);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
 
-        public Builder vSphereNetworks(@Nullable Input<List<String>> vSphereNetworks) {
+        public Builder vSphereNetworks(@Nullable Output<List<String>> vSphereNetworks) {
             this.vSphereNetworks = vSphereNetworks;
             return this;
         }
 
         public Builder vSphereNetworks(@Nullable List<String> vSphereNetworks) {
-            this.vSphereNetworks = Input.ofNullable(vSphereNetworks);
+            this.vSphereNetworks = Output.ofNullable(vSphereNetworks);
             return this;
         }
 
-        public Builder virtualMachineName(@Nullable Input<String> virtualMachineName) {
+        public Builder virtualMachineName(@Nullable Output<String> virtualMachineName) {
             this.virtualMachineName = virtualMachineName;
             return this;
         }
 
         public Builder virtualMachineName(@Nullable String virtualMachineName) {
-            this.virtualMachineName = Input.ofNullable(virtualMachineName);
+            this.virtualMachineName = Output.ofNullable(virtualMachineName);
             return this;
         }
         public VirtualMachineArgs build() {

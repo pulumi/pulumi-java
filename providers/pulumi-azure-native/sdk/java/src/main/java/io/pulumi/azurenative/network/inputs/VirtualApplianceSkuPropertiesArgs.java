@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="bundledScaleUnit")
-      private final @Nullable Input<String> bundledScaleUnit;
+      private final @Nullable Output<String> bundledScaleUnit;
 
-    public Input<String> getBundledScaleUnit() {
-        return this.bundledScaleUnit == null ? Input.empty() : this.bundledScaleUnit;
+    public Output<String> getBundledScaleUnit() {
+        return this.bundledScaleUnit == null ? Output.empty() : this.bundledScaleUnit;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="marketPlaceVersion")
-      private final @Nullable Input<String> marketPlaceVersion;
+      private final @Nullable Output<String> marketPlaceVersion;
 
-    public Input<String> getMarketPlaceVersion() {
-        return this.marketPlaceVersion == null ? Input.empty() : this.marketPlaceVersion;
+    public Output<String> getMarketPlaceVersion() {
+        return this.marketPlaceVersion == null ? Output.empty() : this.marketPlaceVersion;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="vendor")
-      private final @Nullable Input<String> vendor;
+      private final @Nullable Output<String> vendor;
 
-    public Input<String> getVendor() {
-        return this.vendor == null ? Input.empty() : this.vendor;
+    public Output<String> getVendor() {
+        return this.vendor == null ? Output.empty() : this.vendor;
     }
 
     public VirtualApplianceSkuPropertiesArgs(
-        @Nullable Input<String> bundledScaleUnit,
-        @Nullable Input<String> marketPlaceVersion,
-        @Nullable Input<String> vendor) {
+        @Nullable Output<String> bundledScaleUnit,
+        @Nullable Output<String> marketPlaceVersion,
+        @Nullable Output<String> vendor) {
         this.bundledScaleUnit = bundledScaleUnit;
         this.marketPlaceVersion = marketPlaceVersion;
         this.vendor = vendor;
     }
 
     private VirtualApplianceSkuPropertiesArgs() {
-        this.bundledScaleUnit = Input.empty();
-        this.marketPlaceVersion = Input.empty();
-        this.vendor = Input.empty();
+        this.bundledScaleUnit = Output.empty();
+        this.marketPlaceVersion = Output.empty();
+        this.vendor = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bundledScaleUnit;
-        private @Nullable Input<String> marketPlaceVersion;
-        private @Nullable Input<String> vendor;
+        private @Nullable Output<String> bundledScaleUnit;
+        private @Nullable Output<String> marketPlaceVersion;
+        private @Nullable Output<String> vendor;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class VirtualApplianceSkuPropertiesArgs extends io.pulumi.resources
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder bundledScaleUnit(@Nullable Input<String> bundledScaleUnit) {
+        public Builder bundledScaleUnit(@Nullable Output<String> bundledScaleUnit) {
             this.bundledScaleUnit = bundledScaleUnit;
             return this;
         }
 
         public Builder bundledScaleUnit(@Nullable String bundledScaleUnit) {
-            this.bundledScaleUnit = Input.ofNullable(bundledScaleUnit);
+            this.bundledScaleUnit = Output.ofNullable(bundledScaleUnit);
             return this;
         }
 
-        public Builder marketPlaceVersion(@Nullable Input<String> marketPlaceVersion) {
+        public Builder marketPlaceVersion(@Nullable Output<String> marketPlaceVersion) {
             this.marketPlaceVersion = marketPlaceVersion;
             return this;
         }
 
         public Builder marketPlaceVersion(@Nullable String marketPlaceVersion) {
-            this.marketPlaceVersion = Input.ofNullable(marketPlaceVersion);
+            this.marketPlaceVersion = Output.ofNullable(marketPlaceVersion);
             return this;
         }
 
-        public Builder vendor(@Nullable Input<String> vendor) {
+        public Builder vendor(@Nullable Output<String> vendor) {
             this.vendor = vendor;
             return this;
         }
 
         public Builder vendor(@Nullable String vendor) {
-            this.vendor = Input.ofNullable(vendor);
+            this.vendor = Output.ofNullable(vendor);
             return this;
         }
         public VirtualApplianceSkuPropertiesArgs build() {

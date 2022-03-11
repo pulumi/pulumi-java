@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentVersion")
-      private final @Nullable Input<String> contentVersion;
+      private final @Nullable Output<String> contentVersion;
 
-    public Input<String> getContentVersion() {
-        return this.contentVersion == null ? Input.empty() : this.contentVersion;
+    public Output<String> getContentVersion() {
+        return this.contentVersion == null ? Output.empty() : this.contentVersion;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryString")
-      private final @Nullable Input<String> queryString;
+      private final @Nullable Output<String> queryString;
 
-    public Input<String> getQueryString() {
-        return this.queryString == null ? Input.empty() : this.queryString;
+    public Output<String> getQueryString() {
+        return this.queryString == null ? Output.empty() : this.queryString;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relativePath")
-      private final @Nullable Input<String> relativePath;
+      private final @Nullable Output<String> relativePath;
 
-    public Input<String> getRelativePath() {
-        return this.relativePath == null ? Input.empty() : this.relativePath;
+    public Output<String> getRelativePath() {
+        return this.relativePath == null ? Output.empty() : this.relativePath;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public TemplateLinkArgs(
-        @Nullable Input<String> contentVersion,
-        @Nullable Input<String> id,
-        @Nullable Input<String> queryString,
-        @Nullable Input<String> relativePath,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> contentVersion,
+        @Nullable Output<String> id,
+        @Nullable Output<String> queryString,
+        @Nullable Output<String> relativePath,
+        @Nullable Output<String> uri) {
         this.contentVersion = contentVersion;
         this.id = id;
         this.queryString = queryString;
@@ -87,11 +87,11 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateLinkArgs() {
-        this.contentVersion = Input.empty();
-        this.id = Input.empty();
-        this.queryString = Input.empty();
-        this.relativePath = Input.empty();
-        this.uri = Input.empty();
+        this.contentVersion = Output.empty();
+        this.id = Output.empty();
+        this.queryString = Output.empty();
+        this.relativePath = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contentVersion;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> queryString;
-        private @Nullable Input<String> relativePath;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> contentVersion;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> queryString;
+        private @Nullable Output<String> relativePath;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder contentVersion(@Nullable Input<String> contentVersion) {
+        public Builder contentVersion(@Nullable Output<String> contentVersion) {
             this.contentVersion = contentVersion;
             return this;
         }
 
         public Builder contentVersion(@Nullable String contentVersion) {
-            this.contentVersion = Input.ofNullable(contentVersion);
+            this.contentVersion = Output.ofNullable(contentVersion);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder queryString(@Nullable Input<String> queryString) {
+        public Builder queryString(@Nullable Output<String> queryString) {
             this.queryString = queryString;
             return this;
         }
 
         public Builder queryString(@Nullable String queryString) {
-            this.queryString = Input.ofNullable(queryString);
+            this.queryString = Output.ofNullable(queryString);
             return this;
         }
 
-        public Builder relativePath(@Nullable Input<String> relativePath) {
+        public Builder relativePath(@Nullable Output<String> relativePath) {
             this.relativePath = relativePath;
             return this;
         }
 
         public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = Input.ofNullable(relativePath);
+            this.relativePath = Output.ofNullable(relativePath);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public TemplateLinkArgs build() {

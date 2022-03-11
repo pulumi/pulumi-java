@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="publicIPs")
-      private final @Nullable Input<List<String>> publicIPs;
+      private final @Nullable Output<List<String>> publicIPs;
 
-    public Input<List<String>> getPublicIPs() {
-        return this.publicIPs == null ? Input.empty() : this.publicIPs;
+    public Output<List<String>> getPublicIPs() {
+        return this.publicIPs == null ? Output.empty() : this.publicIPs;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<String> subnet;
+      private final @Nullable Output<String> subnet;
 
-    public Input<String> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<String> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="vNetId")
-      private final @Nullable Input<String> vNetId;
+      private final @Nullable Output<String> vNetId;
 
-    public Input<String> getVNetId() {
-        return this.vNetId == null ? Input.empty() : this.vNetId;
+    public Output<String> getVNetId() {
+        return this.vNetId == null ? Output.empty() : this.vNetId;
     }
 
     public IntegrationRuntimeVNetPropertiesArgs(
-        @Nullable Input<List<String>> publicIPs,
-        @Nullable Input<String> subnet,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<String> vNetId) {
+        @Nullable Output<List<String>> publicIPs,
+        @Nullable Output<String> subnet,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<String> vNetId) {
         this.publicIPs = publicIPs;
         this.subnet = subnet;
         this.subnetId = subnetId;
@@ -75,10 +75,10 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
     }
 
     private IntegrationRuntimeVNetPropertiesArgs() {
-        this.publicIPs = Input.empty();
-        this.subnet = Input.empty();
-        this.subnetId = Input.empty();
-        this.vNetId = Input.empty();
+        this.publicIPs = Output.empty();
+        this.subnet = Output.empty();
+        this.subnetId = Output.empty();
+        this.vNetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> publicIPs;
-        private @Nullable Input<String> subnet;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<String> vNetId;
+        private @Nullable Output<List<String>> publicIPs;
+        private @Nullable Output<String> subnet;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<String> vNetId;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class IntegrationRuntimeVNetPropertiesArgs extends io.pulumi.resour
     	      this.vNetId = defaults.vNetId;
         }
 
-        public Builder publicIPs(@Nullable Input<List<String>> publicIPs) {
+        public Builder publicIPs(@Nullable Output<List<String>> publicIPs) {
             this.publicIPs = publicIPs;
             return this;
         }
 
         public Builder publicIPs(@Nullable List<String> publicIPs) {
-            this.publicIPs = Input.ofNullable(publicIPs);
+            this.publicIPs = Output.ofNullable(publicIPs);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<String> subnet) {
+        public Builder subnet(@Nullable Output<String> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder vNetId(@Nullable Input<String> vNetId) {
+        public Builder vNetId(@Nullable Output<String> vNetId) {
             this.vNetId = vNetId;
             return this;
         }
 
         public Builder vNetId(@Nullable String vNetId) {
-            this.vNetId = Input.ofNullable(vNetId);
+            this.vNetId = Output.ofNullable(vNetId);
             return this;
         }
         public IntegrationRuntimeVNetPropertiesArgs build() {

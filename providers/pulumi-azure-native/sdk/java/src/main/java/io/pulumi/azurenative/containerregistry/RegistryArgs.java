@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.NetworkRuleSetArgs;
 import io.pulumi.azurenative.containerregistry.inputs.PoliciesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.SkuArgs;
 import io.pulumi.azurenative.containerregistry.inputs.StorageAccountPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUserEnabled")
-      private final @Nullable Input<Boolean> adminUserEnabled;
+      private final @Nullable Output<Boolean> adminUserEnabled;
 
-    public Input<Boolean> getAdminUserEnabled() {
-        return this.adminUserEnabled == null ? Input.empty() : this.adminUserEnabled;
+    public Output<Boolean> getAdminUserEnabled() {
+        return this.adminUserEnabled == null ? Output.empty() : this.adminUserEnabled;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkRuleSet")
-      private final @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
+      private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
-    public Input<NetworkRuleSetArgs> getNetworkRuleSet() {
-        return this.networkRuleSet == null ? Input.empty() : this.networkRuleSet;
+    public Output<NetworkRuleSetArgs> getNetworkRuleSet() {
+        return this.networkRuleSet == null ? Output.empty() : this.networkRuleSet;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policies")
-      private final @Nullable Input<PoliciesArgs> policies;
+      private final @Nullable Output<PoliciesArgs> policies;
 
-    public Input<PoliciesArgs> getPolicies() {
-        return this.policies == null ? Input.empty() : this.policies;
+    public Output<PoliciesArgs> getPolicies() {
+        return this.policies == null ? Output.empty() : this.policies;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName")
-      private final @Nullable Input<String> registryName;
+      private final @Nullable Output<String> registryName;
 
-    public Input<String> getRegistryName() {
-        return this.registryName == null ? Input.empty() : this.registryName;
+    public Output<String> getRegistryName() {
+        return this.registryName == null ? Output.empty() : this.registryName;
     }
 
     /**
@@ -80,9 +80,9 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -91,9 +91,9 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -102,10 +102,10 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccount")
-      private final @Nullable Input<StorageAccountPropertiesArgs> storageAccount;
+      private final @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
 
-    public Input<StorageAccountPropertiesArgs> getStorageAccount() {
-        return this.storageAccount == null ? Input.empty() : this.storageAccount;
+    public Output<StorageAccountPropertiesArgs> getStorageAccount() {
+        return this.storageAccount == null ? Output.empty() : this.storageAccount;
     }
 
     /**
@@ -113,23 +113,23 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RegistryArgs(
-        @Nullable Input<Boolean> adminUserEnabled,
-        @Nullable Input<String> location,
-        @Nullable Input<NetworkRuleSetArgs> networkRuleSet,
-        @Nullable Input<PoliciesArgs> policies,
-        @Nullable Input<String> registryName,
-        Input<String> resourceGroupName,
-        Input<SkuArgs> sku,
-        @Nullable Input<StorageAccountPropertiesArgs> storageAccount,
-        @Nullable Input<Map<String,String>> tags) {
-        this.adminUserEnabled = adminUserEnabled == null ? Input.ofNullable(false) : adminUserEnabled;
+        @Nullable Output<Boolean> adminUserEnabled,
+        @Nullable Output<String> location,
+        @Nullable Output<NetworkRuleSetArgs> networkRuleSet,
+        @Nullable Output<PoliciesArgs> policies,
+        @Nullable Output<String> registryName,
+        Output<String> resourceGroupName,
+        Output<SkuArgs> sku,
+        @Nullable Output<StorageAccountPropertiesArgs> storageAccount,
+        @Nullable Output<Map<String,String>> tags) {
+        this.adminUserEnabled = adminUserEnabled == null ? Output.ofNullable(false) : adminUserEnabled;
         this.location = location;
         this.networkRuleSet = networkRuleSet;
         this.policies = policies;
@@ -141,15 +141,15 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegistryArgs() {
-        this.adminUserEnabled = Input.empty();
-        this.location = Input.empty();
-        this.networkRuleSet = Input.empty();
-        this.policies = Input.empty();
-        this.registryName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.storageAccount = Input.empty();
-        this.tags = Input.empty();
+        this.adminUserEnabled = Output.empty();
+        this.location = Output.empty();
+        this.networkRuleSet = Output.empty();
+        this.policies = Output.empty();
+        this.registryName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.storageAccount = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> adminUserEnabled;
-        private @Nullable Input<String> location;
-        private @Nullable Input<NetworkRuleSetArgs> networkRuleSet;
-        private @Nullable Input<PoliciesArgs> policies;
-        private @Nullable Input<String> registryName;
-        private Input<String> resourceGroupName;
-        private Input<SkuArgs> sku;
-        private @Nullable Input<StorageAccountPropertiesArgs> storageAccount;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Boolean> adminUserEnabled;
+        private @Nullable Output<String> location;
+        private @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
+        private @Nullable Output<PoliciesArgs> policies;
+        private @Nullable Output<String> registryName;
+        private Output<String> resourceGroupName;
+        private Output<SkuArgs> sku;
+        private @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder adminUserEnabled(@Nullable Input<Boolean> adminUserEnabled) {
+        public Builder adminUserEnabled(@Nullable Output<Boolean> adminUserEnabled) {
             this.adminUserEnabled = adminUserEnabled;
             return this;
         }
 
         public Builder adminUserEnabled(@Nullable Boolean adminUserEnabled) {
-            this.adminUserEnabled = Input.ofNullable(adminUserEnabled);
+            this.adminUserEnabled = Output.ofNullable(adminUserEnabled);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder networkRuleSet(@Nullable Input<NetworkRuleSetArgs> networkRuleSet) {
+        public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
             this.networkRuleSet = networkRuleSet;
             return this;
         }
 
         public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
-            this.networkRuleSet = Input.ofNullable(networkRuleSet);
+            this.networkRuleSet = Output.ofNullable(networkRuleSet);
             return this;
         }
 
-        public Builder policies(@Nullable Input<PoliciesArgs> policies) {
+        public Builder policies(@Nullable Output<PoliciesArgs> policies) {
             this.policies = policies;
             return this;
         }
 
         public Builder policies(@Nullable PoliciesArgs policies) {
-            this.policies = Input.ofNullable(policies);
+            this.policies = Output.ofNullable(policies);
             return this;
         }
 
-        public Builder registryName(@Nullable Input<String> registryName) {
+        public Builder registryName(@Nullable Output<String> registryName) {
             this.registryName = registryName;
             return this;
         }
 
         public Builder registryName(@Nullable String registryName) {
-            this.registryName = Input.ofNullable(registryName);
+            this.registryName = Output.ofNullable(registryName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder storageAccount(@Nullable Input<StorageAccountPropertiesArgs> storageAccount) {
+        public Builder storageAccount(@Nullable Output<StorageAccountPropertiesArgs> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
         public Builder storageAccount(@Nullable StorageAccountPropertiesArgs storageAccount) {
-            this.storageAccount = Input.ofNullable(storageAccount);
+            this.storageAccount = Output.ofNullable(storageAccount);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RegistryArgs build() {

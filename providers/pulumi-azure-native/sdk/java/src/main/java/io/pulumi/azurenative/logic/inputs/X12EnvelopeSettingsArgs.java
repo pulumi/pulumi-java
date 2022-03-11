@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.UsageIndicator;
 import io.pulumi.azurenative.logic.enums.X12DateFormat;
 import io.pulumi.azurenative.logic.enums.X12TimeFormat;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,9 +29,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="controlStandardsId", required=true)
-      private final Input<Integer> controlStandardsId;
+      private final Output<Integer> controlStandardsId;
 
-    public Input<Integer> getControlStandardsId() {
+    public Output<Integer> getControlStandardsId() {
         return this.controlStandardsId;
     }
 
@@ -40,9 +40,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="controlVersionNumber", required=true)
-      private final Input<String> controlVersionNumber;
+      private final Output<String> controlVersionNumber;
 
-    public Input<String> getControlVersionNumber() {
+    public Output<String> getControlVersionNumber() {
         return this.controlVersionNumber;
     }
 
@@ -51,9 +51,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableDefaultGroupHeaders", required=true)
-      private final Input<Boolean> enableDefaultGroupHeaders;
+      private final Output<Boolean> enableDefaultGroupHeaders;
 
-    public Input<Boolean> getEnableDefaultGroupHeaders() {
+    public Output<Boolean> getEnableDefaultGroupHeaders() {
         return this.enableDefaultGroupHeaders;
     }
 
@@ -62,10 +62,10 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="functionalGroupId")
-      private final @Nullable Input<String> functionalGroupId;
+      private final @Nullable Output<String> functionalGroupId;
 
-    public Input<String> getFunctionalGroupId() {
-        return this.functionalGroupId == null ? Input.empty() : this.functionalGroupId;
+    public Output<String> getFunctionalGroupId() {
+        return this.functionalGroupId == null ? Output.empty() : this.functionalGroupId;
     }
 
     /**
@@ -73,9 +73,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupControlNumberLowerBound", required=true)
-      private final Input<Integer> groupControlNumberLowerBound;
+      private final Output<Integer> groupControlNumberLowerBound;
 
-    public Input<Integer> getGroupControlNumberLowerBound() {
+    public Output<Integer> getGroupControlNumberLowerBound() {
         return this.groupControlNumberLowerBound;
     }
 
@@ -84,9 +84,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupControlNumberUpperBound", required=true)
-      private final Input<Integer> groupControlNumberUpperBound;
+      private final Output<Integer> groupControlNumberUpperBound;
 
-    public Input<Integer> getGroupControlNumberUpperBound() {
+    public Output<Integer> getGroupControlNumberUpperBound() {
         return this.groupControlNumberUpperBound;
     }
 
@@ -95,9 +95,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupHeaderAgencyCode", required=true)
-      private final Input<String> groupHeaderAgencyCode;
+      private final Output<String> groupHeaderAgencyCode;
 
-    public Input<String> getGroupHeaderAgencyCode() {
+    public Output<String> getGroupHeaderAgencyCode() {
         return this.groupHeaderAgencyCode;
     }
 
@@ -106,9 +106,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupHeaderDateFormat", required=true)
-      private final Input<Either<String,X12DateFormat>> groupHeaderDateFormat;
+      private final Output<Either<String,X12DateFormat>> groupHeaderDateFormat;
 
-    public Input<Either<String,X12DateFormat>> getGroupHeaderDateFormat() {
+    public Output<Either<String,X12DateFormat>> getGroupHeaderDateFormat() {
         return this.groupHeaderDateFormat;
     }
 
@@ -117,9 +117,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupHeaderTimeFormat", required=true)
-      private final Input<Either<String,X12TimeFormat>> groupHeaderTimeFormat;
+      private final Output<Either<String,X12TimeFormat>> groupHeaderTimeFormat;
 
-    public Input<Either<String,X12TimeFormat>> getGroupHeaderTimeFormat() {
+    public Output<Either<String,X12TimeFormat>> getGroupHeaderTimeFormat() {
         return this.groupHeaderTimeFormat;
     }
 
@@ -128,9 +128,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="groupHeaderVersion", required=true)
-      private final Input<String> groupHeaderVersion;
+      private final Output<String> groupHeaderVersion;
 
-    public Input<String> getGroupHeaderVersion() {
+    public Output<String> getGroupHeaderVersion() {
         return this.groupHeaderVersion;
     }
 
@@ -139,9 +139,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="interchangeControlNumberLowerBound", required=true)
-      private final Input<Integer> interchangeControlNumberLowerBound;
+      private final Output<Integer> interchangeControlNumberLowerBound;
 
-    public Input<Integer> getInterchangeControlNumberLowerBound() {
+    public Output<Integer> getInterchangeControlNumberLowerBound() {
         return this.interchangeControlNumberLowerBound;
     }
 
@@ -150,9 +150,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="interchangeControlNumberUpperBound", required=true)
-      private final Input<Integer> interchangeControlNumberUpperBound;
+      private final Output<Integer> interchangeControlNumberUpperBound;
 
-    public Input<Integer> getInterchangeControlNumberUpperBound() {
+    public Output<Integer> getInterchangeControlNumberUpperBound() {
         return this.interchangeControlNumberUpperBound;
     }
 
@@ -161,9 +161,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="overwriteExistingTransactionSetControlNumber", required=true)
-      private final Input<Boolean> overwriteExistingTransactionSetControlNumber;
+      private final Output<Boolean> overwriteExistingTransactionSetControlNumber;
 
-    public Input<Boolean> getOverwriteExistingTransactionSetControlNumber() {
+    public Output<Boolean> getOverwriteExistingTransactionSetControlNumber() {
         return this.overwriteExistingTransactionSetControlNumber;
     }
 
@@ -172,9 +172,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="receiverApplicationId", required=true)
-      private final Input<String> receiverApplicationId;
+      private final Output<String> receiverApplicationId;
 
-    public Input<String> getReceiverApplicationId() {
+    public Output<String> getReceiverApplicationId() {
         return this.receiverApplicationId;
     }
 
@@ -183,9 +183,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rolloverGroupControlNumber", required=true)
-      private final Input<Boolean> rolloverGroupControlNumber;
+      private final Output<Boolean> rolloverGroupControlNumber;
 
-    public Input<Boolean> getRolloverGroupControlNumber() {
+    public Output<Boolean> getRolloverGroupControlNumber() {
         return this.rolloverGroupControlNumber;
     }
 
@@ -194,9 +194,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rolloverInterchangeControlNumber", required=true)
-      private final Input<Boolean> rolloverInterchangeControlNumber;
+      private final Output<Boolean> rolloverInterchangeControlNumber;
 
-    public Input<Boolean> getRolloverInterchangeControlNumber() {
+    public Output<Boolean> getRolloverInterchangeControlNumber() {
         return this.rolloverInterchangeControlNumber;
     }
 
@@ -205,9 +205,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rolloverTransactionSetControlNumber", required=true)
-      private final Input<Boolean> rolloverTransactionSetControlNumber;
+      private final Output<Boolean> rolloverTransactionSetControlNumber;
 
-    public Input<Boolean> getRolloverTransactionSetControlNumber() {
+    public Output<Boolean> getRolloverTransactionSetControlNumber() {
         return this.rolloverTransactionSetControlNumber;
     }
 
@@ -216,9 +216,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="senderApplicationId", required=true)
-      private final Input<String> senderApplicationId;
+      private final Output<String> senderApplicationId;
 
-    public Input<String> getSenderApplicationId() {
+    public Output<String> getSenderApplicationId() {
         return this.senderApplicationId;
     }
 
@@ -227,9 +227,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transactionSetControlNumberLowerBound", required=true)
-      private final Input<Integer> transactionSetControlNumberLowerBound;
+      private final Output<Integer> transactionSetControlNumberLowerBound;
 
-    public Input<Integer> getTransactionSetControlNumberLowerBound() {
+    public Output<Integer> getTransactionSetControlNumberLowerBound() {
         return this.transactionSetControlNumberLowerBound;
     }
 
@@ -238,10 +238,10 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transactionSetControlNumberPrefix")
-      private final @Nullable Input<String> transactionSetControlNumberPrefix;
+      private final @Nullable Output<String> transactionSetControlNumberPrefix;
 
-    public Input<String> getTransactionSetControlNumberPrefix() {
-        return this.transactionSetControlNumberPrefix == null ? Input.empty() : this.transactionSetControlNumberPrefix;
+    public Output<String> getTransactionSetControlNumberPrefix() {
+        return this.transactionSetControlNumberPrefix == null ? Output.empty() : this.transactionSetControlNumberPrefix;
     }
 
     /**
@@ -249,10 +249,10 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transactionSetControlNumberSuffix")
-      private final @Nullable Input<String> transactionSetControlNumberSuffix;
+      private final @Nullable Output<String> transactionSetControlNumberSuffix;
 
-    public Input<String> getTransactionSetControlNumberSuffix() {
-        return this.transactionSetControlNumberSuffix == null ? Input.empty() : this.transactionSetControlNumberSuffix;
+    public Output<String> getTransactionSetControlNumberSuffix() {
+        return this.transactionSetControlNumberSuffix == null ? Output.empty() : this.transactionSetControlNumberSuffix;
     }
 
     /**
@@ -260,9 +260,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transactionSetControlNumberUpperBound", required=true)
-      private final Input<Integer> transactionSetControlNumberUpperBound;
+      private final Output<Integer> transactionSetControlNumberUpperBound;
 
-    public Input<Integer> getTransactionSetControlNumberUpperBound() {
+    public Output<Integer> getTransactionSetControlNumberUpperBound() {
         return this.transactionSetControlNumberUpperBound;
     }
 
@@ -271,9 +271,9 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="usageIndicator", required=true)
-      private final Input<Either<String,UsageIndicator>> usageIndicator;
+      private final Output<Either<String,UsageIndicator>> usageIndicator;
 
-    public Input<Either<String,UsageIndicator>> getUsageIndicator() {
+    public Output<Either<String,UsageIndicator>> getUsageIndicator() {
         return this.usageIndicator;
     }
 
@@ -282,37 +282,37 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="useControlStandardsIdAsRepetitionCharacter", required=true)
-      private final Input<Boolean> useControlStandardsIdAsRepetitionCharacter;
+      private final Output<Boolean> useControlStandardsIdAsRepetitionCharacter;
 
-    public Input<Boolean> getUseControlStandardsIdAsRepetitionCharacter() {
+    public Output<Boolean> getUseControlStandardsIdAsRepetitionCharacter() {
         return this.useControlStandardsIdAsRepetitionCharacter;
     }
 
     public X12EnvelopeSettingsArgs(
-        Input<Integer> controlStandardsId,
-        Input<String> controlVersionNumber,
-        Input<Boolean> enableDefaultGroupHeaders,
-        @Nullable Input<String> functionalGroupId,
-        Input<Integer> groupControlNumberLowerBound,
-        Input<Integer> groupControlNumberUpperBound,
-        Input<String> groupHeaderAgencyCode,
-        Input<Either<String,X12DateFormat>> groupHeaderDateFormat,
-        Input<Either<String,X12TimeFormat>> groupHeaderTimeFormat,
-        Input<String> groupHeaderVersion,
-        Input<Integer> interchangeControlNumberLowerBound,
-        Input<Integer> interchangeControlNumberUpperBound,
-        Input<Boolean> overwriteExistingTransactionSetControlNumber,
-        Input<String> receiverApplicationId,
-        Input<Boolean> rolloverGroupControlNumber,
-        Input<Boolean> rolloverInterchangeControlNumber,
-        Input<Boolean> rolloverTransactionSetControlNumber,
-        Input<String> senderApplicationId,
-        Input<Integer> transactionSetControlNumberLowerBound,
-        @Nullable Input<String> transactionSetControlNumberPrefix,
-        @Nullable Input<String> transactionSetControlNumberSuffix,
-        Input<Integer> transactionSetControlNumberUpperBound,
-        Input<Either<String,UsageIndicator>> usageIndicator,
-        Input<Boolean> useControlStandardsIdAsRepetitionCharacter) {
+        Output<Integer> controlStandardsId,
+        Output<String> controlVersionNumber,
+        Output<Boolean> enableDefaultGroupHeaders,
+        @Nullable Output<String> functionalGroupId,
+        Output<Integer> groupControlNumberLowerBound,
+        Output<Integer> groupControlNumberUpperBound,
+        Output<String> groupHeaderAgencyCode,
+        Output<Either<String,X12DateFormat>> groupHeaderDateFormat,
+        Output<Either<String,X12TimeFormat>> groupHeaderTimeFormat,
+        Output<String> groupHeaderVersion,
+        Output<Integer> interchangeControlNumberLowerBound,
+        Output<Integer> interchangeControlNumberUpperBound,
+        Output<Boolean> overwriteExistingTransactionSetControlNumber,
+        Output<String> receiverApplicationId,
+        Output<Boolean> rolloverGroupControlNumber,
+        Output<Boolean> rolloverInterchangeControlNumber,
+        Output<Boolean> rolloverTransactionSetControlNumber,
+        Output<String> senderApplicationId,
+        Output<Integer> transactionSetControlNumberLowerBound,
+        @Nullable Output<String> transactionSetControlNumberPrefix,
+        @Nullable Output<String> transactionSetControlNumberSuffix,
+        Output<Integer> transactionSetControlNumberUpperBound,
+        Output<Either<String,UsageIndicator>> usageIndicator,
+        Output<Boolean> useControlStandardsIdAsRepetitionCharacter) {
         this.controlStandardsId = Objects.requireNonNull(controlStandardsId, "expected parameter 'controlStandardsId' to be non-null");
         this.controlVersionNumber = Objects.requireNonNull(controlVersionNumber, "expected parameter 'controlVersionNumber' to be non-null");
         this.enableDefaultGroupHeaders = Objects.requireNonNull(enableDefaultGroupHeaders, "expected parameter 'enableDefaultGroupHeaders' to be non-null");
@@ -340,30 +340,30 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private X12EnvelopeSettingsArgs() {
-        this.controlStandardsId = Input.empty();
-        this.controlVersionNumber = Input.empty();
-        this.enableDefaultGroupHeaders = Input.empty();
-        this.functionalGroupId = Input.empty();
-        this.groupControlNumberLowerBound = Input.empty();
-        this.groupControlNumberUpperBound = Input.empty();
-        this.groupHeaderAgencyCode = Input.empty();
-        this.groupHeaderDateFormat = Input.empty();
-        this.groupHeaderTimeFormat = Input.empty();
-        this.groupHeaderVersion = Input.empty();
-        this.interchangeControlNumberLowerBound = Input.empty();
-        this.interchangeControlNumberUpperBound = Input.empty();
-        this.overwriteExistingTransactionSetControlNumber = Input.empty();
-        this.receiverApplicationId = Input.empty();
-        this.rolloverGroupControlNumber = Input.empty();
-        this.rolloverInterchangeControlNumber = Input.empty();
-        this.rolloverTransactionSetControlNumber = Input.empty();
-        this.senderApplicationId = Input.empty();
-        this.transactionSetControlNumberLowerBound = Input.empty();
-        this.transactionSetControlNumberPrefix = Input.empty();
-        this.transactionSetControlNumberSuffix = Input.empty();
-        this.transactionSetControlNumberUpperBound = Input.empty();
-        this.usageIndicator = Input.empty();
-        this.useControlStandardsIdAsRepetitionCharacter = Input.empty();
+        this.controlStandardsId = Output.empty();
+        this.controlVersionNumber = Output.empty();
+        this.enableDefaultGroupHeaders = Output.empty();
+        this.functionalGroupId = Output.empty();
+        this.groupControlNumberLowerBound = Output.empty();
+        this.groupControlNumberUpperBound = Output.empty();
+        this.groupHeaderAgencyCode = Output.empty();
+        this.groupHeaderDateFormat = Output.empty();
+        this.groupHeaderTimeFormat = Output.empty();
+        this.groupHeaderVersion = Output.empty();
+        this.interchangeControlNumberLowerBound = Output.empty();
+        this.interchangeControlNumberUpperBound = Output.empty();
+        this.overwriteExistingTransactionSetControlNumber = Output.empty();
+        this.receiverApplicationId = Output.empty();
+        this.rolloverGroupControlNumber = Output.empty();
+        this.rolloverInterchangeControlNumber = Output.empty();
+        this.rolloverTransactionSetControlNumber = Output.empty();
+        this.senderApplicationId = Output.empty();
+        this.transactionSetControlNumberLowerBound = Output.empty();
+        this.transactionSetControlNumberPrefix = Output.empty();
+        this.transactionSetControlNumberSuffix = Output.empty();
+        this.transactionSetControlNumberUpperBound = Output.empty();
+        this.usageIndicator = Output.empty();
+        this.useControlStandardsIdAsRepetitionCharacter = Output.empty();
     }
 
     public static Builder builder() {
@@ -375,30 +375,30 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<Integer> controlStandardsId;
-        private Input<String> controlVersionNumber;
-        private Input<Boolean> enableDefaultGroupHeaders;
-        private @Nullable Input<String> functionalGroupId;
-        private Input<Integer> groupControlNumberLowerBound;
-        private Input<Integer> groupControlNumberUpperBound;
-        private Input<String> groupHeaderAgencyCode;
-        private Input<Either<String,X12DateFormat>> groupHeaderDateFormat;
-        private Input<Either<String,X12TimeFormat>> groupHeaderTimeFormat;
-        private Input<String> groupHeaderVersion;
-        private Input<Integer> interchangeControlNumberLowerBound;
-        private Input<Integer> interchangeControlNumberUpperBound;
-        private Input<Boolean> overwriteExistingTransactionSetControlNumber;
-        private Input<String> receiverApplicationId;
-        private Input<Boolean> rolloverGroupControlNumber;
-        private Input<Boolean> rolloverInterchangeControlNumber;
-        private Input<Boolean> rolloverTransactionSetControlNumber;
-        private Input<String> senderApplicationId;
-        private Input<Integer> transactionSetControlNumberLowerBound;
-        private @Nullable Input<String> transactionSetControlNumberPrefix;
-        private @Nullable Input<String> transactionSetControlNumberSuffix;
-        private Input<Integer> transactionSetControlNumberUpperBound;
-        private Input<Either<String,UsageIndicator>> usageIndicator;
-        private Input<Boolean> useControlStandardsIdAsRepetitionCharacter;
+        private Output<Integer> controlStandardsId;
+        private Output<String> controlVersionNumber;
+        private Output<Boolean> enableDefaultGroupHeaders;
+        private @Nullable Output<String> functionalGroupId;
+        private Output<Integer> groupControlNumberLowerBound;
+        private Output<Integer> groupControlNumberUpperBound;
+        private Output<String> groupHeaderAgencyCode;
+        private Output<Either<String,X12DateFormat>> groupHeaderDateFormat;
+        private Output<Either<String,X12TimeFormat>> groupHeaderTimeFormat;
+        private Output<String> groupHeaderVersion;
+        private Output<Integer> interchangeControlNumberLowerBound;
+        private Output<Integer> interchangeControlNumberUpperBound;
+        private Output<Boolean> overwriteExistingTransactionSetControlNumber;
+        private Output<String> receiverApplicationId;
+        private Output<Boolean> rolloverGroupControlNumber;
+        private Output<Boolean> rolloverInterchangeControlNumber;
+        private Output<Boolean> rolloverTransactionSetControlNumber;
+        private Output<String> senderApplicationId;
+        private Output<Integer> transactionSetControlNumberLowerBound;
+        private @Nullable Output<String> transactionSetControlNumberPrefix;
+        private @Nullable Output<String> transactionSetControlNumberSuffix;
+        private Output<Integer> transactionSetControlNumberUpperBound;
+        private Output<Either<String,UsageIndicator>> usageIndicator;
+        private Output<Boolean> useControlStandardsIdAsRepetitionCharacter;
 
         public Builder() {
     	      // Empty
@@ -432,243 +432,243 @@ public final class X12EnvelopeSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.useControlStandardsIdAsRepetitionCharacter = defaults.useControlStandardsIdAsRepetitionCharacter;
         }
 
-        public Builder controlStandardsId(Input<Integer> controlStandardsId) {
+        public Builder controlStandardsId(Output<Integer> controlStandardsId) {
             this.controlStandardsId = Objects.requireNonNull(controlStandardsId);
             return this;
         }
 
         public Builder controlStandardsId(Integer controlStandardsId) {
-            this.controlStandardsId = Input.of(Objects.requireNonNull(controlStandardsId));
+            this.controlStandardsId = Output.of(Objects.requireNonNull(controlStandardsId));
             return this;
         }
 
-        public Builder controlVersionNumber(Input<String> controlVersionNumber) {
+        public Builder controlVersionNumber(Output<String> controlVersionNumber) {
             this.controlVersionNumber = Objects.requireNonNull(controlVersionNumber);
             return this;
         }
 
         public Builder controlVersionNumber(String controlVersionNumber) {
-            this.controlVersionNumber = Input.of(Objects.requireNonNull(controlVersionNumber));
+            this.controlVersionNumber = Output.of(Objects.requireNonNull(controlVersionNumber));
             return this;
         }
 
-        public Builder enableDefaultGroupHeaders(Input<Boolean> enableDefaultGroupHeaders) {
+        public Builder enableDefaultGroupHeaders(Output<Boolean> enableDefaultGroupHeaders) {
             this.enableDefaultGroupHeaders = Objects.requireNonNull(enableDefaultGroupHeaders);
             return this;
         }
 
         public Builder enableDefaultGroupHeaders(Boolean enableDefaultGroupHeaders) {
-            this.enableDefaultGroupHeaders = Input.of(Objects.requireNonNull(enableDefaultGroupHeaders));
+            this.enableDefaultGroupHeaders = Output.of(Objects.requireNonNull(enableDefaultGroupHeaders));
             return this;
         }
 
-        public Builder functionalGroupId(@Nullable Input<String> functionalGroupId) {
+        public Builder functionalGroupId(@Nullable Output<String> functionalGroupId) {
             this.functionalGroupId = functionalGroupId;
             return this;
         }
 
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
-            this.functionalGroupId = Input.ofNullable(functionalGroupId);
+            this.functionalGroupId = Output.ofNullable(functionalGroupId);
             return this;
         }
 
-        public Builder groupControlNumberLowerBound(Input<Integer> groupControlNumberLowerBound) {
+        public Builder groupControlNumberLowerBound(Output<Integer> groupControlNumberLowerBound) {
             this.groupControlNumberLowerBound = Objects.requireNonNull(groupControlNumberLowerBound);
             return this;
         }
 
         public Builder groupControlNumberLowerBound(Integer groupControlNumberLowerBound) {
-            this.groupControlNumberLowerBound = Input.of(Objects.requireNonNull(groupControlNumberLowerBound));
+            this.groupControlNumberLowerBound = Output.of(Objects.requireNonNull(groupControlNumberLowerBound));
             return this;
         }
 
-        public Builder groupControlNumberUpperBound(Input<Integer> groupControlNumberUpperBound) {
+        public Builder groupControlNumberUpperBound(Output<Integer> groupControlNumberUpperBound) {
             this.groupControlNumberUpperBound = Objects.requireNonNull(groupControlNumberUpperBound);
             return this;
         }
 
         public Builder groupControlNumberUpperBound(Integer groupControlNumberUpperBound) {
-            this.groupControlNumberUpperBound = Input.of(Objects.requireNonNull(groupControlNumberUpperBound));
+            this.groupControlNumberUpperBound = Output.of(Objects.requireNonNull(groupControlNumberUpperBound));
             return this;
         }
 
-        public Builder groupHeaderAgencyCode(Input<String> groupHeaderAgencyCode) {
+        public Builder groupHeaderAgencyCode(Output<String> groupHeaderAgencyCode) {
             this.groupHeaderAgencyCode = Objects.requireNonNull(groupHeaderAgencyCode);
             return this;
         }
 
         public Builder groupHeaderAgencyCode(String groupHeaderAgencyCode) {
-            this.groupHeaderAgencyCode = Input.of(Objects.requireNonNull(groupHeaderAgencyCode));
+            this.groupHeaderAgencyCode = Output.of(Objects.requireNonNull(groupHeaderAgencyCode));
             return this;
         }
 
-        public Builder groupHeaderDateFormat(Input<Either<String,X12DateFormat>> groupHeaderDateFormat) {
+        public Builder groupHeaderDateFormat(Output<Either<String,X12DateFormat>> groupHeaderDateFormat) {
             this.groupHeaderDateFormat = Objects.requireNonNull(groupHeaderDateFormat);
             return this;
         }
 
         public Builder groupHeaderDateFormat(Either<String,X12DateFormat> groupHeaderDateFormat) {
-            this.groupHeaderDateFormat = Input.of(Objects.requireNonNull(groupHeaderDateFormat));
+            this.groupHeaderDateFormat = Output.of(Objects.requireNonNull(groupHeaderDateFormat));
             return this;
         }
 
-        public Builder groupHeaderTimeFormat(Input<Either<String,X12TimeFormat>> groupHeaderTimeFormat) {
+        public Builder groupHeaderTimeFormat(Output<Either<String,X12TimeFormat>> groupHeaderTimeFormat) {
             this.groupHeaderTimeFormat = Objects.requireNonNull(groupHeaderTimeFormat);
             return this;
         }
 
         public Builder groupHeaderTimeFormat(Either<String,X12TimeFormat> groupHeaderTimeFormat) {
-            this.groupHeaderTimeFormat = Input.of(Objects.requireNonNull(groupHeaderTimeFormat));
+            this.groupHeaderTimeFormat = Output.of(Objects.requireNonNull(groupHeaderTimeFormat));
             return this;
         }
 
-        public Builder groupHeaderVersion(Input<String> groupHeaderVersion) {
+        public Builder groupHeaderVersion(Output<String> groupHeaderVersion) {
             this.groupHeaderVersion = Objects.requireNonNull(groupHeaderVersion);
             return this;
         }
 
         public Builder groupHeaderVersion(String groupHeaderVersion) {
-            this.groupHeaderVersion = Input.of(Objects.requireNonNull(groupHeaderVersion));
+            this.groupHeaderVersion = Output.of(Objects.requireNonNull(groupHeaderVersion));
             return this;
         }
 
-        public Builder interchangeControlNumberLowerBound(Input<Integer> interchangeControlNumberLowerBound) {
+        public Builder interchangeControlNumberLowerBound(Output<Integer> interchangeControlNumberLowerBound) {
             this.interchangeControlNumberLowerBound = Objects.requireNonNull(interchangeControlNumberLowerBound);
             return this;
         }
 
         public Builder interchangeControlNumberLowerBound(Integer interchangeControlNumberLowerBound) {
-            this.interchangeControlNumberLowerBound = Input.of(Objects.requireNonNull(interchangeControlNumberLowerBound));
+            this.interchangeControlNumberLowerBound = Output.of(Objects.requireNonNull(interchangeControlNumberLowerBound));
             return this;
         }
 
-        public Builder interchangeControlNumberUpperBound(Input<Integer> interchangeControlNumberUpperBound) {
+        public Builder interchangeControlNumberUpperBound(Output<Integer> interchangeControlNumberUpperBound) {
             this.interchangeControlNumberUpperBound = Objects.requireNonNull(interchangeControlNumberUpperBound);
             return this;
         }
 
         public Builder interchangeControlNumberUpperBound(Integer interchangeControlNumberUpperBound) {
-            this.interchangeControlNumberUpperBound = Input.of(Objects.requireNonNull(interchangeControlNumberUpperBound));
+            this.interchangeControlNumberUpperBound = Output.of(Objects.requireNonNull(interchangeControlNumberUpperBound));
             return this;
         }
 
-        public Builder overwriteExistingTransactionSetControlNumber(Input<Boolean> overwriteExistingTransactionSetControlNumber) {
+        public Builder overwriteExistingTransactionSetControlNumber(Output<Boolean> overwriteExistingTransactionSetControlNumber) {
             this.overwriteExistingTransactionSetControlNumber = Objects.requireNonNull(overwriteExistingTransactionSetControlNumber);
             return this;
         }
 
         public Builder overwriteExistingTransactionSetControlNumber(Boolean overwriteExistingTransactionSetControlNumber) {
-            this.overwriteExistingTransactionSetControlNumber = Input.of(Objects.requireNonNull(overwriteExistingTransactionSetControlNumber));
+            this.overwriteExistingTransactionSetControlNumber = Output.of(Objects.requireNonNull(overwriteExistingTransactionSetControlNumber));
             return this;
         }
 
-        public Builder receiverApplicationId(Input<String> receiverApplicationId) {
+        public Builder receiverApplicationId(Output<String> receiverApplicationId) {
             this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
             return this;
         }
 
         public Builder receiverApplicationId(String receiverApplicationId) {
-            this.receiverApplicationId = Input.of(Objects.requireNonNull(receiverApplicationId));
+            this.receiverApplicationId = Output.of(Objects.requireNonNull(receiverApplicationId));
             return this;
         }
 
-        public Builder rolloverGroupControlNumber(Input<Boolean> rolloverGroupControlNumber) {
+        public Builder rolloverGroupControlNumber(Output<Boolean> rolloverGroupControlNumber) {
             this.rolloverGroupControlNumber = Objects.requireNonNull(rolloverGroupControlNumber);
             return this;
         }
 
         public Builder rolloverGroupControlNumber(Boolean rolloverGroupControlNumber) {
-            this.rolloverGroupControlNumber = Input.of(Objects.requireNonNull(rolloverGroupControlNumber));
+            this.rolloverGroupControlNumber = Output.of(Objects.requireNonNull(rolloverGroupControlNumber));
             return this;
         }
 
-        public Builder rolloverInterchangeControlNumber(Input<Boolean> rolloverInterchangeControlNumber) {
+        public Builder rolloverInterchangeControlNumber(Output<Boolean> rolloverInterchangeControlNumber) {
             this.rolloverInterchangeControlNumber = Objects.requireNonNull(rolloverInterchangeControlNumber);
             return this;
         }
 
         public Builder rolloverInterchangeControlNumber(Boolean rolloverInterchangeControlNumber) {
-            this.rolloverInterchangeControlNumber = Input.of(Objects.requireNonNull(rolloverInterchangeControlNumber));
+            this.rolloverInterchangeControlNumber = Output.of(Objects.requireNonNull(rolloverInterchangeControlNumber));
             return this;
         }
 
-        public Builder rolloverTransactionSetControlNumber(Input<Boolean> rolloverTransactionSetControlNumber) {
+        public Builder rolloverTransactionSetControlNumber(Output<Boolean> rolloverTransactionSetControlNumber) {
             this.rolloverTransactionSetControlNumber = Objects.requireNonNull(rolloverTransactionSetControlNumber);
             return this;
         }
 
         public Builder rolloverTransactionSetControlNumber(Boolean rolloverTransactionSetControlNumber) {
-            this.rolloverTransactionSetControlNumber = Input.of(Objects.requireNonNull(rolloverTransactionSetControlNumber));
+            this.rolloverTransactionSetControlNumber = Output.of(Objects.requireNonNull(rolloverTransactionSetControlNumber));
             return this;
         }
 
-        public Builder senderApplicationId(Input<String> senderApplicationId) {
+        public Builder senderApplicationId(Output<String> senderApplicationId) {
             this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
             return this;
         }
 
         public Builder senderApplicationId(String senderApplicationId) {
-            this.senderApplicationId = Input.of(Objects.requireNonNull(senderApplicationId));
+            this.senderApplicationId = Output.of(Objects.requireNonNull(senderApplicationId));
             return this;
         }
 
-        public Builder transactionSetControlNumberLowerBound(Input<Integer> transactionSetControlNumberLowerBound) {
+        public Builder transactionSetControlNumberLowerBound(Output<Integer> transactionSetControlNumberLowerBound) {
             this.transactionSetControlNumberLowerBound = Objects.requireNonNull(transactionSetControlNumberLowerBound);
             return this;
         }
 
         public Builder transactionSetControlNumberLowerBound(Integer transactionSetControlNumberLowerBound) {
-            this.transactionSetControlNumberLowerBound = Input.of(Objects.requireNonNull(transactionSetControlNumberLowerBound));
+            this.transactionSetControlNumberLowerBound = Output.of(Objects.requireNonNull(transactionSetControlNumberLowerBound));
             return this;
         }
 
-        public Builder transactionSetControlNumberPrefix(@Nullable Input<String> transactionSetControlNumberPrefix) {
+        public Builder transactionSetControlNumberPrefix(@Nullable Output<String> transactionSetControlNumberPrefix) {
             this.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
             return this;
         }
 
         public Builder transactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
-            this.transactionSetControlNumberPrefix = Input.ofNullable(transactionSetControlNumberPrefix);
+            this.transactionSetControlNumberPrefix = Output.ofNullable(transactionSetControlNumberPrefix);
             return this;
         }
 
-        public Builder transactionSetControlNumberSuffix(@Nullable Input<String> transactionSetControlNumberSuffix) {
+        public Builder transactionSetControlNumberSuffix(@Nullable Output<String> transactionSetControlNumberSuffix) {
             this.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
             return this;
         }
 
         public Builder transactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
-            this.transactionSetControlNumberSuffix = Input.ofNullable(transactionSetControlNumberSuffix);
+            this.transactionSetControlNumberSuffix = Output.ofNullable(transactionSetControlNumberSuffix);
             return this;
         }
 
-        public Builder transactionSetControlNumberUpperBound(Input<Integer> transactionSetControlNumberUpperBound) {
+        public Builder transactionSetControlNumberUpperBound(Output<Integer> transactionSetControlNumberUpperBound) {
             this.transactionSetControlNumberUpperBound = Objects.requireNonNull(transactionSetControlNumberUpperBound);
             return this;
         }
 
         public Builder transactionSetControlNumberUpperBound(Integer transactionSetControlNumberUpperBound) {
-            this.transactionSetControlNumberUpperBound = Input.of(Objects.requireNonNull(transactionSetControlNumberUpperBound));
+            this.transactionSetControlNumberUpperBound = Output.of(Objects.requireNonNull(transactionSetControlNumberUpperBound));
             return this;
         }
 
-        public Builder usageIndicator(Input<Either<String,UsageIndicator>> usageIndicator) {
+        public Builder usageIndicator(Output<Either<String,UsageIndicator>> usageIndicator) {
             this.usageIndicator = Objects.requireNonNull(usageIndicator);
             return this;
         }
 
         public Builder usageIndicator(Either<String,UsageIndicator> usageIndicator) {
-            this.usageIndicator = Input.of(Objects.requireNonNull(usageIndicator));
+            this.usageIndicator = Output.of(Objects.requireNonNull(usageIndicator));
             return this;
         }
 
-        public Builder useControlStandardsIdAsRepetitionCharacter(Input<Boolean> useControlStandardsIdAsRepetitionCharacter) {
+        public Builder useControlStandardsIdAsRepetitionCharacter(Output<Boolean> useControlStandardsIdAsRepetitionCharacter) {
             this.useControlStandardsIdAsRepetitionCharacter = Objects.requireNonNull(useControlStandardsIdAsRepetitionCharacter);
             return this;
         }
 
         public Builder useControlStandardsIdAsRepetitionCharacter(Boolean useControlStandardsIdAsRepetitionCharacter) {
-            this.useControlStandardsIdAsRepetitionCharacter = Input.of(Objects.requireNonNull(useControlStandardsIdAsRepetitionCharacter));
+            this.useControlStandardsIdAsRepetitionCharacter = Output.of(Objects.requireNonNull(useControlStandardsIdAsRepetitionCharacter));
             return this;
         }
         public X12EnvelopeSettingsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="preserveZipFileNameAsFolder")
-      private final @Nullable Input<Object> preserveZipFileNameAsFolder;
+      private final @Nullable Output<Object> preserveZipFileNameAsFolder;
 
-    public Input<Object> getPreserveZipFileNameAsFolder() {
-        return this.preserveZipFileNameAsFolder == null ? Input.empty() : this.preserveZipFileNameAsFolder;
+    public Output<Object> getPreserveZipFileNameAsFolder() {
+        return this.preserveZipFileNameAsFolder == null ? Output.empty() : this.preserveZipFileNameAsFolder;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ZipDeflateReadSettingsArgs(
-        @Nullable Input<Object> preserveZipFileNameAsFolder,
-        Input<String> type) {
+        @Nullable Output<Object> preserveZipFileNameAsFolder,
+        Output<String> type) {
         this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ZipDeflateReadSettingsArgs() {
-        this.preserveZipFileNameAsFolder = Input.empty();
-        this.type = Input.empty();
+        this.preserveZipFileNameAsFolder = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> preserveZipFileNameAsFolder;
-        private Input<String> type;
+        private @Nullable Output<Object> preserveZipFileNameAsFolder;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ZipDeflateReadSettingsArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder preserveZipFileNameAsFolder(@Nullable Input<Object> preserveZipFileNameAsFolder) {
+        public Builder preserveZipFileNameAsFolder(@Nullable Output<Object> preserveZipFileNameAsFolder) {
             this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
             return this;
         }
 
         public Builder preserveZipFileNameAsFolder(@Nullable Object preserveZipFileNameAsFolder) {
-            this.preserveZipFileNameAsFolder = Input.ofNullable(preserveZipFileNameAsFolder);
+            this.preserveZipFileNameAsFolder = Output.ofNullable(preserveZipFileNameAsFolder);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ZipDeflateReadSettingsArgs build() {

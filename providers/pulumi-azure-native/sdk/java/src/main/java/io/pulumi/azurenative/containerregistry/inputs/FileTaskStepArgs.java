@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contextAccessToken")
-      private final @Nullable Input<String> contextAccessToken;
+      private final @Nullable Output<String> contextAccessToken;
 
-    public Input<String> getContextAccessToken() {
-        return this.contextAccessToken == null ? Input.empty() : this.contextAccessToken;
+    public Output<String> getContextAccessToken() {
+        return this.contextAccessToken == null ? Output.empty() : this.contextAccessToken;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contextPath")
-      private final @Nullable Input<String> contextPath;
+      private final @Nullable Output<String> contextPath;
 
-    public Input<String> getContextPath() {
-        return this.contextPath == null ? Input.empty() : this.contextPath;
+    public Output<String> getContextPath() {
+        return this.contextPath == null ? Output.empty() : this.contextPath;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskFilePath", required=true)
-      private final Input<String> taskFilePath;
+      private final Output<String> taskFilePath;
 
-    public Input<String> getTaskFilePath() {
+    public Output<String> getTaskFilePath() {
         return this.taskFilePath;
     }
 
@@ -59,9 +59,9 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -70,10 +70,10 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<SetValueArgs>> values;
+      private final @Nullable Output<List<SetValueArgs>> values;
 
-    public Input<List<SetValueArgs>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<SetValueArgs>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="valuesFilePath")
-      private final @Nullable Input<String> valuesFilePath;
+      private final @Nullable Output<String> valuesFilePath;
 
-    public Input<String> getValuesFilePath() {
-        return this.valuesFilePath == null ? Input.empty() : this.valuesFilePath;
+    public Output<String> getValuesFilePath() {
+        return this.valuesFilePath == null ? Output.empty() : this.valuesFilePath;
     }
 
     public FileTaskStepArgs(
-        @Nullable Input<String> contextAccessToken,
-        @Nullable Input<String> contextPath,
-        Input<String> taskFilePath,
-        Input<String> type,
-        @Nullable Input<List<SetValueArgs>> values,
-        @Nullable Input<String> valuesFilePath) {
+        @Nullable Output<String> contextAccessToken,
+        @Nullable Output<String> contextPath,
+        Output<String> taskFilePath,
+        Output<String> type,
+        @Nullable Output<List<SetValueArgs>> values,
+        @Nullable Output<String> valuesFilePath) {
         this.contextAccessToken = contextAccessToken;
         this.contextPath = contextPath;
         this.taskFilePath = Objects.requireNonNull(taskFilePath, "expected parameter 'taskFilePath' to be non-null");
@@ -103,12 +103,12 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileTaskStepArgs() {
-        this.contextAccessToken = Input.empty();
-        this.contextPath = Input.empty();
-        this.taskFilePath = Input.empty();
-        this.type = Input.empty();
-        this.values = Input.empty();
-        this.valuesFilePath = Input.empty();
+        this.contextAccessToken = Output.empty();
+        this.contextPath = Output.empty();
+        this.taskFilePath = Output.empty();
+        this.type = Output.empty();
+        this.values = Output.empty();
+        this.valuesFilePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> contextAccessToken;
-        private @Nullable Input<String> contextPath;
-        private Input<String> taskFilePath;
-        private Input<String> type;
-        private @Nullable Input<List<SetValueArgs>> values;
-        private @Nullable Input<String> valuesFilePath;
+        private @Nullable Output<String> contextAccessToken;
+        private @Nullable Output<String> contextPath;
+        private Output<String> taskFilePath;
+        private Output<String> type;
+        private @Nullable Output<List<SetValueArgs>> values;
+        private @Nullable Output<String> valuesFilePath;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class FileTaskStepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valuesFilePath = defaults.valuesFilePath;
         }
 
-        public Builder contextAccessToken(@Nullable Input<String> contextAccessToken) {
+        public Builder contextAccessToken(@Nullable Output<String> contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
 
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
-            this.contextAccessToken = Input.ofNullable(contextAccessToken);
+            this.contextAccessToken = Output.ofNullable(contextAccessToken);
             return this;
         }
 
-        public Builder contextPath(@Nullable Input<String> contextPath) {
+        public Builder contextPath(@Nullable Output<String> contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
         public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = Input.ofNullable(contextPath);
+            this.contextPath = Output.ofNullable(contextPath);
             return this;
         }
 
-        public Builder taskFilePath(Input<String> taskFilePath) {
+        public Builder taskFilePath(Output<String> taskFilePath) {
             this.taskFilePath = Objects.requireNonNull(taskFilePath);
             return this;
         }
 
         public Builder taskFilePath(String taskFilePath) {
-            this.taskFilePath = Input.of(Objects.requireNonNull(taskFilePath));
+            this.taskFilePath = Output.of(Objects.requireNonNull(taskFilePath));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder values(@Nullable Input<List<SetValueArgs>> values) {
+        public Builder values(@Nullable Output<List<SetValueArgs>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<SetValueArgs> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
 
-        public Builder valuesFilePath(@Nullable Input<String> valuesFilePath) {
+        public Builder valuesFilePath(@Nullable Output<String> valuesFilePath) {
             this.valuesFilePath = valuesFilePath;
             return this;
         }
 
         public Builder valuesFilePath(@Nullable String valuesFilePath) {
-            this.valuesFilePath = Input.ofNullable(valuesFilePath);
+            this.valuesFilePath = Output.ofNullable(valuesFilePath);
             return this;
         }
         public FileTaskStepArgs build() {

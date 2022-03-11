@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identityType", required=true)
-      private final Input<String> identityType;
+      private final Output<String> identityType;
 
-    public Input<String> getIdentityType() {
+    public Output<String> getIdentityType() {
         return this.identityType;
     }
 
@@ -46,10 +46,10 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="objectId")
-      private final @Nullable Input<String> objectId;
+      private final @Nullable Output<String> objectId;
 
-    public Input<String> getObjectId() {
-        return this.objectId == null ? Input.empty() : this.objectId;
+    public Output<String> getObjectId() {
+        return this.objectId == null ? Output.empty() : this.objectId;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceId")
-      private final @Nullable Input<String> resourceId;
+      private final @Nullable Output<String> resourceId;
 
-    public Input<String> getResourceId() {
-        return this.resourceId == null ? Input.empty() : this.resourceId;
+    public Output<String> getResourceId() {
+        return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
     public ManagedIdentityArgs(
-        @Nullable Input<String> clientId,
-        Input<String> identityType,
-        @Nullable Input<String> objectId,
-        @Nullable Input<String> resourceId) {
+        @Nullable Output<String> clientId,
+        Output<String> identityType,
+        @Nullable Output<String> objectId,
+        @Nullable Output<String> resourceId) {
         this.clientId = clientId;
         this.identityType = Objects.requireNonNull(identityType, "expected parameter 'identityType' to be non-null");
         this.objectId = objectId;
@@ -75,10 +75,10 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ManagedIdentityArgs() {
-        this.clientId = Input.empty();
-        this.identityType = Input.empty();
-        this.objectId = Input.empty();
-        this.resourceId = Input.empty();
+        this.clientId = Output.empty();
+        this.identityType = Output.empty();
+        this.objectId = Output.empty();
+        this.resourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clientId;
-        private Input<String> identityType;
-        private @Nullable Input<String> objectId;
-        private @Nullable Input<String> resourceId;
+        private @Nullable Output<String> clientId;
+        private Output<String> identityType;
+        private @Nullable Output<String> objectId;
+        private @Nullable Output<String> resourceId;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder identityType(Input<String> identityType) {
+        public Builder identityType(Output<String> identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
 
         public Builder identityType(String identityType) {
-            this.identityType = Input.of(Objects.requireNonNull(identityType));
+            this.identityType = Output.of(Objects.requireNonNull(identityType));
             return this;
         }
 
-        public Builder objectId(@Nullable Input<String> objectId) {
+        public Builder objectId(@Nullable Output<String> objectId) {
             this.objectId = objectId;
             return this;
         }
 
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Input.ofNullable(objectId);
+            this.objectId = Output.ofNullable(objectId);
             return this;
         }
 
-        public Builder resourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Output<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Input.ofNullable(resourceId);
+            this.resourceId = Output.ofNullable(resourceId);
             return this;
         }
         public ManagedIdentityArgs build() {

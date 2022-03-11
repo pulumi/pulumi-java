@@ -10,7 +10,6 @@ import io.pulumi.azurenative.security.outputs.PathRecommendationResponse;
 import io.pulumi.azurenative.security.outputs.ProtectionModeResponse;
 import io.pulumi.azurenative.security.outputs.VmRecommendationResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -203,19 +202,19 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public AdaptiveApplicationControl(String name, AdaptiveApplicationControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:security:AdaptiveApplicationControl", name, args == null ? AdaptiveApplicationControlArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:security:AdaptiveApplicationControl", name, args == null ? AdaptiveApplicationControlArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AdaptiveApplicationControl(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AdaptiveApplicationControl(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:AdaptiveApplicationControl", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:security/v20150601preview:AdaptiveApplicationControl").build()),
-                Input.of(Alias.builder().setType("azure-native:security/v20200101:AdaptiveApplicationControl").build())
+                Output.of(Alias.builder().setType("azure-native:security/v20150601preview:AdaptiveApplicationControl").build()),
+                Output.of(Alias.builder().setType("azure-native:security/v20200101:AdaptiveApplicationControl").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -229,7 +228,7 @@ public class AdaptiveApplicationControl extends io.pulumi.resources.CustomResour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AdaptiveApplicationControl get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AdaptiveApplicationControl get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AdaptiveApplicationControl(name, id, options);
     }
 }

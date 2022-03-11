@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.inputs.RedirectConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -31,10 +31,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceptedProtocols")
-      private final @Nullable Input<List<Either<String,FrontDoorProtocol>>> acceptedProtocols;
+      private final @Nullable Output<List<Either<String,FrontDoorProtocol>>> acceptedProtocols;
 
-    public Input<List<Either<String,FrontDoorProtocol>>> getAcceptedProtocols() {
-        return this.acceptedProtocols == null ? Input.empty() : this.acceptedProtocols;
+    public Output<List<Either<String,FrontDoorProtocol>>> getAcceptedProtocols() {
+        return this.acceptedProtocols == null ? Output.empty() : this.acceptedProtocols;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-      private final @Nullable Input<Either<String,RoutingRuleEnabledState>> enabledState;
+      private final @Nullable Output<Either<String,RoutingRuleEnabledState>> enabledState;
 
-    public Input<Either<String,RoutingRuleEnabledState>> getEnabledState() {
-        return this.enabledState == null ? Input.empty() : this.enabledState;
+    public Output<Either<String,RoutingRuleEnabledState>> getEnabledState() {
+        return this.enabledState == null ? Output.empty() : this.enabledState;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendEndpoints")
-      private final @Nullable Input<List<SubResourceArgs>> frontendEndpoints;
+      private final @Nullable Output<List<SubResourceArgs>> frontendEndpoints;
 
-    public Input<List<SubResourceArgs>> getFrontendEndpoints() {
-        return this.frontendEndpoints == null ? Input.empty() : this.frontendEndpoints;
+    public Output<List<SubResourceArgs>> getFrontendEndpoints() {
+        return this.frontendEndpoints == null ? Output.empty() : this.frontendEndpoints;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patternsToMatch")
-      private final @Nullable Input<List<String>> patternsToMatch;
+      private final @Nullable Output<List<String>> patternsToMatch;
 
-    public Input<List<String>> getPatternsToMatch() {
-        return this.patternsToMatch == null ? Input.empty() : this.patternsToMatch;
+    public Output<List<String>> getPatternsToMatch() {
+        return this.patternsToMatch == null ? Output.empty() : this.patternsToMatch;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeConfiguration")
-      private final @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration;
+      private final @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration;
 
-    public Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> getRouteConfiguration() {
-        return this.routeConfiguration == null ? Input.empty() : this.routeConfiguration;
+    public Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> getRouteConfiguration() {
+        return this.routeConfiguration == null ? Output.empty() : this.routeConfiguration;
     }
 
     /**
@@ -108,10 +108,10 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rulesEngine")
-      private final @Nullable Input<SubResourceArgs> rulesEngine;
+      private final @Nullable Output<SubResourceArgs> rulesEngine;
 
-    public Input<SubResourceArgs> getRulesEngine() {
-        return this.rulesEngine == null ? Input.empty() : this.rulesEngine;
+    public Output<SubResourceArgs> getRulesEngine() {
+        return this.rulesEngine == null ? Output.empty() : this.rulesEngine;
     }
 
     /**
@@ -119,22 +119,22 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webApplicationFirewallPolicyLink")
-      private final @Nullable Input<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
+      private final @Nullable Output<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
-    public Input<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
-        return this.webApplicationFirewallPolicyLink == null ? Input.empty() : this.webApplicationFirewallPolicyLink;
+    public Output<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
+        return this.webApplicationFirewallPolicyLink == null ? Output.empty() : this.webApplicationFirewallPolicyLink;
     }
 
     public RoutingRuleArgs(
-        @Nullable Input<List<Either<String,FrontDoorProtocol>>> acceptedProtocols,
-        @Nullable Input<Either<String,RoutingRuleEnabledState>> enabledState,
-        @Nullable Input<List<SubResourceArgs>> frontendEndpoints,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<List<String>> patternsToMatch,
-        @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration,
-        @Nullable Input<SubResourceArgs> rulesEngine,
-        @Nullable Input<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
+        @Nullable Output<List<Either<String,FrontDoorProtocol>>> acceptedProtocols,
+        @Nullable Output<Either<String,RoutingRuleEnabledState>> enabledState,
+        @Nullable Output<List<SubResourceArgs>> frontendEndpoints,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<List<String>> patternsToMatch,
+        @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration,
+        @Nullable Output<SubResourceArgs> rulesEngine,
+        @Nullable Output<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
         this.acceptedProtocols = acceptedProtocols;
         this.enabledState = enabledState;
         this.frontendEndpoints = frontendEndpoints;
@@ -147,15 +147,15 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoutingRuleArgs() {
-        this.acceptedProtocols = Input.empty();
-        this.enabledState = Input.empty();
-        this.frontendEndpoints = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.patternsToMatch = Input.empty();
-        this.routeConfiguration = Input.empty();
-        this.rulesEngine = Input.empty();
-        this.webApplicationFirewallPolicyLink = Input.empty();
+        this.acceptedProtocols = Output.empty();
+        this.enabledState = Output.empty();
+        this.frontendEndpoints = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.patternsToMatch = Output.empty();
+        this.routeConfiguration = Output.empty();
+        this.rulesEngine = Output.empty();
+        this.webApplicationFirewallPolicyLink = Output.empty();
     }
 
     public static Builder builder() {
@@ -167,15 +167,15 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,FrontDoorProtocol>>> acceptedProtocols;
-        private @Nullable Input<Either<String,RoutingRuleEnabledState>> enabledState;
-        private @Nullable Input<List<SubResourceArgs>> frontendEndpoints;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<String>> patternsToMatch;
-        private @Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration;
-        private @Nullable Input<SubResourceArgs> rulesEngine;
-        private @Nullable Input<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
+        private @Nullable Output<List<Either<String,FrontDoorProtocol>>> acceptedProtocols;
+        private @Nullable Output<Either<String,RoutingRuleEnabledState>> enabledState;
+        private @Nullable Output<List<SubResourceArgs>> frontendEndpoints;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<String>> patternsToMatch;
+        private @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration;
+        private @Nullable Output<SubResourceArgs> rulesEngine;
+        private @Nullable Output<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
         public Builder() {
     	      // Empty
@@ -194,93 +194,93 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
         }
 
-        public Builder acceptedProtocols(@Nullable Input<List<Either<String,FrontDoorProtocol>>> acceptedProtocols) {
+        public Builder acceptedProtocols(@Nullable Output<List<Either<String,FrontDoorProtocol>>> acceptedProtocols) {
             this.acceptedProtocols = acceptedProtocols;
             return this;
         }
 
         public Builder acceptedProtocols(@Nullable List<Either<String,FrontDoorProtocol>> acceptedProtocols) {
-            this.acceptedProtocols = Input.ofNullable(acceptedProtocols);
+            this.acceptedProtocols = Output.ofNullable(acceptedProtocols);
             return this;
         }
 
-        public Builder enabledState(@Nullable Input<Either<String,RoutingRuleEnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Output<Either<String,RoutingRuleEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
         public Builder enabledState(@Nullable Either<String,RoutingRuleEnabledState> enabledState) {
-            this.enabledState = Input.ofNullable(enabledState);
+            this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
 
-        public Builder frontendEndpoints(@Nullable Input<List<SubResourceArgs>> frontendEndpoints) {
+        public Builder frontendEndpoints(@Nullable Output<List<SubResourceArgs>> frontendEndpoints) {
             this.frontendEndpoints = frontendEndpoints;
             return this;
         }
 
         public Builder frontendEndpoints(@Nullable List<SubResourceArgs> frontendEndpoints) {
-            this.frontendEndpoints = Input.ofNullable(frontendEndpoints);
+            this.frontendEndpoints = Output.ofNullable(frontendEndpoints);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder patternsToMatch(@Nullable Input<List<String>> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable Output<List<String>> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
 
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
-            this.patternsToMatch = Input.ofNullable(patternsToMatch);
+            this.patternsToMatch = Output.ofNullable(patternsToMatch);
             return this;
         }
 
-        public Builder routeConfiguration(@Nullable Input<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration) {
+        public Builder routeConfiguration(@Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration) {
             this.routeConfiguration = routeConfiguration;
             return this;
         }
 
         public Builder routeConfiguration(@Nullable Either<ForwardingConfigurationArgs,RedirectConfigurationArgs> routeConfiguration) {
-            this.routeConfiguration = Input.ofNullable(routeConfiguration);
+            this.routeConfiguration = Output.ofNullable(routeConfiguration);
             return this;
         }
 
-        public Builder rulesEngine(@Nullable Input<SubResourceArgs> rulesEngine) {
+        public Builder rulesEngine(@Nullable Output<SubResourceArgs> rulesEngine) {
             this.rulesEngine = rulesEngine;
             return this;
         }
 
         public Builder rulesEngine(@Nullable SubResourceArgs rulesEngine) {
-            this.rulesEngine = Input.ofNullable(rulesEngine);
+            this.rulesEngine = Output.ofNullable(rulesEngine);
             return this;
         }
 
-        public Builder webApplicationFirewallPolicyLink(@Nullable Input<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable Output<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
 
         public Builder webApplicationFirewallPolicyLink(@Nullable RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
-            this.webApplicationFirewallPolicyLink = Input.ofNullable(webApplicationFirewallPolicyLink);
+            this.webApplicationFirewallPolicyLink = Output.ofNullable(webApplicationFirewallPolicyLink);
             return this;
         }
         public RoutingRuleArgs build() {

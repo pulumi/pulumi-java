@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.enums.StretchMode;
 import io.pulumi.azurenative.media.enums.VideoSyncMode;
 import io.pulumi.azurenative.media.inputs.H265LayerArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="complexity")
-      private final @Nullable Input<Either<String,H265Complexity>> complexity;
+      private final @Nullable Output<Either<String,H265Complexity>> complexity;
 
-    public Input<Either<String,H265Complexity>> getComplexity() {
-        return this.complexity == null ? Input.empty() : this.complexity;
+    public Output<Either<String,H265Complexity>> getComplexity() {
+        return this.complexity == null ? Output.empty() : this.complexity;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyFrameInterval")
-      private final @Nullable Input<String> keyFrameInterval;
+      private final @Nullable Output<String> keyFrameInterval;
 
-    public Input<String> getKeyFrameInterval() {
-        return this.keyFrameInterval == null ? Input.empty() : this.keyFrameInterval;
+    public Output<String> getKeyFrameInterval() {
+        return this.keyFrameInterval == null ? Output.empty() : this.keyFrameInterval;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="layers")
-      private final @Nullable Input<List<H265LayerArgs>> layers;
+      private final @Nullable Output<List<H265LayerArgs>> layers;
 
-    public Input<List<H265LayerArgs>> getLayers() {
-        return this.layers == null ? Input.empty() : this.layers;
+    public Output<List<H265LayerArgs>> getLayers() {
+        return this.layers == null ? Output.empty() : this.layers;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -86,10 +86,10 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sceneChangeDetection")
-      private final @Nullable Input<Boolean> sceneChangeDetection;
+      private final @Nullable Output<Boolean> sceneChangeDetection;
 
-    public Input<Boolean> getSceneChangeDetection() {
-        return this.sceneChangeDetection == null ? Input.empty() : this.sceneChangeDetection;
+    public Output<Boolean> getSceneChangeDetection() {
+        return this.sceneChangeDetection == null ? Output.empty() : this.sceneChangeDetection;
     }
 
     /**
@@ -97,10 +97,10 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stretchMode")
-      private final @Nullable Input<Either<String,StretchMode>> stretchMode;
+      private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Input<Either<String,StretchMode>> getStretchMode() {
-        return this.stretchMode == null ? Input.empty() : this.stretchMode;
+    public Output<Either<String,StretchMode>> getStretchMode() {
+        return this.stretchMode == null ? Output.empty() : this.stretchMode;
     }
 
     /**
@@ -108,21 +108,21 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncMode")
-      private final @Nullable Input<Either<String,VideoSyncMode>> syncMode;
+      private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
-    public Input<Either<String,VideoSyncMode>> getSyncMode() {
-        return this.syncMode == null ? Input.empty() : this.syncMode;
+    public Output<Either<String,VideoSyncMode>> getSyncMode() {
+        return this.syncMode == null ? Output.empty() : this.syncMode;
     }
 
     public H265VideoArgs(
-        @Nullable Input<Either<String,H265Complexity>> complexity,
-        @Nullable Input<String> keyFrameInterval,
-        @Nullable Input<String> label,
-        @Nullable Input<List<H265LayerArgs>> layers,
-        Input<String> odataType,
-        @Nullable Input<Boolean> sceneChangeDetection,
-        @Nullable Input<Either<String,StretchMode>> stretchMode,
-        @Nullable Input<Either<String,VideoSyncMode>> syncMode) {
+        @Nullable Output<Either<String,H265Complexity>> complexity,
+        @Nullable Output<String> keyFrameInterval,
+        @Nullable Output<String> label,
+        @Nullable Output<List<H265LayerArgs>> layers,
+        Output<String> odataType,
+        @Nullable Output<Boolean> sceneChangeDetection,
+        @Nullable Output<Either<String,StretchMode>> stretchMode,
+        @Nullable Output<Either<String,VideoSyncMode>> syncMode) {
         this.complexity = complexity;
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
@@ -134,14 +134,14 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private H265VideoArgs() {
-        this.complexity = Input.empty();
-        this.keyFrameInterval = Input.empty();
-        this.label = Input.empty();
-        this.layers = Input.empty();
-        this.odataType = Input.empty();
-        this.sceneChangeDetection = Input.empty();
-        this.stretchMode = Input.empty();
-        this.syncMode = Input.empty();
+        this.complexity = Output.empty();
+        this.keyFrameInterval = Output.empty();
+        this.label = Output.empty();
+        this.layers = Output.empty();
+        this.odataType = Output.empty();
+        this.sceneChangeDetection = Output.empty();
+        this.stretchMode = Output.empty();
+        this.syncMode = Output.empty();
     }
 
     public static Builder builder() {
@@ -153,14 +153,14 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,H265Complexity>> complexity;
-        private @Nullable Input<String> keyFrameInterval;
-        private @Nullable Input<String> label;
-        private @Nullable Input<List<H265LayerArgs>> layers;
-        private Input<String> odataType;
-        private @Nullable Input<Boolean> sceneChangeDetection;
-        private @Nullable Input<Either<String,StretchMode>> stretchMode;
-        private @Nullable Input<Either<String,VideoSyncMode>> syncMode;
+        private @Nullable Output<Either<String,H265Complexity>> complexity;
+        private @Nullable Output<String> keyFrameInterval;
+        private @Nullable Output<String> label;
+        private @Nullable Output<List<H265LayerArgs>> layers;
+        private Output<String> odataType;
+        private @Nullable Output<Boolean> sceneChangeDetection;
+        private @Nullable Output<Either<String,StretchMode>> stretchMode;
+        private @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
         public Builder() {
     	      // Empty
@@ -178,83 +178,83 @@ public final class H265VideoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syncMode = defaults.syncMode;
         }
 
-        public Builder complexity(@Nullable Input<Either<String,H265Complexity>> complexity) {
+        public Builder complexity(@Nullable Output<Either<String,H265Complexity>> complexity) {
             this.complexity = complexity;
             return this;
         }
 
         public Builder complexity(@Nullable Either<String,H265Complexity> complexity) {
-            this.complexity = Input.ofNullable(complexity);
+            this.complexity = Output.ofNullable(complexity);
             return this;
         }
 
-        public Builder keyFrameInterval(@Nullable Input<String> keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = Input.ofNullable(keyFrameInterval);
+            this.keyFrameInterval = Output.ofNullable(keyFrameInterval);
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder layers(@Nullable Input<List<H265LayerArgs>> layers) {
+        public Builder layers(@Nullable Output<List<H265LayerArgs>> layers) {
             this.layers = layers;
             return this;
         }
 
         public Builder layers(@Nullable List<H265LayerArgs> layers) {
-            this.layers = Input.ofNullable(layers);
+            this.layers = Output.ofNullable(layers);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder sceneChangeDetection(@Nullable Input<Boolean> sceneChangeDetection) {
+        public Builder sceneChangeDetection(@Nullable Output<Boolean> sceneChangeDetection) {
             this.sceneChangeDetection = sceneChangeDetection;
             return this;
         }
 
         public Builder sceneChangeDetection(@Nullable Boolean sceneChangeDetection) {
-            this.sceneChangeDetection = Input.ofNullable(sceneChangeDetection);
+            this.sceneChangeDetection = Output.ofNullable(sceneChangeDetection);
             return this;
         }
 
-        public Builder stretchMode(@Nullable Input<Either<String,StretchMode>> stretchMode) {
+        public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
 
         public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
-            this.stretchMode = Input.ofNullable(stretchMode);
+            this.stretchMode = Output.ofNullable(stretchMode);
             return this;
         }
 
-        public Builder syncMode(@Nullable Input<Either<String,VideoSyncMode>> syncMode) {
+        public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
             this.syncMode = syncMode;
             return this;
         }
 
         public Builder syncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
-            this.syncMode = Input.ofNullable(syncMode);
+            this.syncMode = Output.ofNullable(syncMode);
             return this;
         }
         public H265VideoArgs build() {

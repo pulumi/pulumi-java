@@ -6,7 +6,6 @@ package io.pulumi.azurenative.managementpartner;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.managementpartner.PartnerArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -211,18 +210,18 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Partner(String name, @Nullable PartnerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:managementpartner:Partner", name, args == null ? PartnerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:managementpartner:Partner", name, args == null ? PartnerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Partner(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Partner(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:managementpartner:Partner", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:managementpartner/v20180201:Partner").build())
+                Output.of(Alias.builder().setType("azure-native:managementpartner/v20180201:Partner").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -236,7 +235,7 @@ public class Partner extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Partner get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Partner get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Partner(name, id, options);
     }
 }

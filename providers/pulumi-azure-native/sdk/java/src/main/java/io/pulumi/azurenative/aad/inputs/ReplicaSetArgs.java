@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     public ReplicaSetArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> subnetId) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> subnetId) {
         this.location = location;
         this.subnetId = subnetId;
     }
 
     private ReplicaSetArgs() {
-        this.location = Input.empty();
-        this.subnetId = Input.empty();
+        this.location = Output.empty();
+        this.subnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> subnetId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> subnetId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
         public ReplicaSetArgs build() {

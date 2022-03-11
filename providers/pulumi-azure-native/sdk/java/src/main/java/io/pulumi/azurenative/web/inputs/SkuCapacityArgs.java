@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="default")
-      private final @Nullable Input<Integer> $default;
+      private final @Nullable Output<Integer> $default;
 
-    public Input<Integer> get$default() {
-        return this.$default == null ? Input.empty() : this.$default;
+    public Output<Integer> get$default() {
+        return this.$default == null ? Output.empty() : this.$default;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticMaximum")
-      private final @Nullable Input<Integer> elasticMaximum;
+      private final @Nullable Output<Integer> elasticMaximum;
 
-    public Input<Integer> getElasticMaximum() {
-        return this.elasticMaximum == null ? Input.empty() : this.elasticMaximum;
+    public Output<Integer> getElasticMaximum() {
+        return this.elasticMaximum == null ? Output.empty() : this.elasticMaximum;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximum")
-      private final @Nullable Input<Integer> maximum;
+      private final @Nullable Output<Integer> maximum;
 
-    public Input<Integer> getMaximum() {
-        return this.maximum == null ? Input.empty() : this.maximum;
+    public Output<Integer> getMaximum() {
+        return this.maximum == null ? Output.empty() : this.maximum;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimum")
-      private final @Nullable Input<Integer> minimum;
+      private final @Nullable Output<Integer> minimum;
 
-    public Input<Integer> getMinimum() {
-        return this.minimum == null ? Input.empty() : this.minimum;
+    public Output<Integer> getMinimum() {
+        return this.minimum == null ? Output.empty() : this.minimum;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scaleType")
-      private final @Nullable Input<String> scaleType;
+      private final @Nullable Output<String> scaleType;
 
-    public Input<String> getScaleType() {
-        return this.scaleType == null ? Input.empty() : this.scaleType;
+    public Output<String> getScaleType() {
+        return this.scaleType == null ? Output.empty() : this.scaleType;
     }
 
     public SkuCapacityArgs(
-        @Nullable Input<Integer> $default,
-        @Nullable Input<Integer> elasticMaximum,
-        @Nullable Input<Integer> maximum,
-        @Nullable Input<Integer> minimum,
-        @Nullable Input<String> scaleType) {
+        @Nullable Output<Integer> $default,
+        @Nullable Output<Integer> elasticMaximum,
+        @Nullable Output<Integer> maximum,
+        @Nullable Output<Integer> minimum,
+        @Nullable Output<String> scaleType) {
         this.$default = $default;
         this.elasticMaximum = elasticMaximum;
         this.maximum = maximum;
@@ -88,11 +88,11 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuCapacityArgs() {
-        this.$default = Input.empty();
-        this.elasticMaximum = Input.empty();
-        this.maximum = Input.empty();
-        this.minimum = Input.empty();
-        this.scaleType = Input.empty();
+        this.$default = Output.empty();
+        this.elasticMaximum = Output.empty();
+        this.maximum = Output.empty();
+        this.minimum = Output.empty();
+        this.scaleType = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> $default;
-        private @Nullable Input<Integer> elasticMaximum;
-        private @Nullable Input<Integer> maximum;
-        private @Nullable Input<Integer> minimum;
-        private @Nullable Input<String> scaleType;
+        private @Nullable Output<Integer> $default;
+        private @Nullable Output<Integer> elasticMaximum;
+        private @Nullable Output<Integer> maximum;
+        private @Nullable Output<Integer> minimum;
+        private @Nullable Output<String> scaleType;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class SkuCapacityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder $default(@Nullable Input<Integer> $default) {
+        public Builder $default(@Nullable Output<Integer> $default) {
             this.$default = $default;
             return this;
         }
 
         public Builder $default(@Nullable Integer $default) {
-            this.$default = Input.ofNullable($default);
+            this.$default = Output.ofNullable($default);
             return this;
         }
 
-        public Builder elasticMaximum(@Nullable Input<Integer> elasticMaximum) {
+        public Builder elasticMaximum(@Nullable Output<Integer> elasticMaximum) {
             this.elasticMaximum = elasticMaximum;
             return this;
         }
 
         public Builder elasticMaximum(@Nullable Integer elasticMaximum) {
-            this.elasticMaximum = Input.ofNullable(elasticMaximum);
+            this.elasticMaximum = Output.ofNullable(elasticMaximum);
             return this;
         }
 
-        public Builder maximum(@Nullable Input<Integer> maximum) {
+        public Builder maximum(@Nullable Output<Integer> maximum) {
             this.maximum = maximum;
             return this;
         }
 
         public Builder maximum(@Nullable Integer maximum) {
-            this.maximum = Input.ofNullable(maximum);
+            this.maximum = Output.ofNullable(maximum);
             return this;
         }
 
-        public Builder minimum(@Nullable Input<Integer> minimum) {
+        public Builder minimum(@Nullable Output<Integer> minimum) {
             this.minimum = minimum;
             return this;
         }
 
         public Builder minimum(@Nullable Integer minimum) {
-            this.minimum = Input.ofNullable(minimum);
+            this.minimum = Output.ofNullable(minimum);
             return this;
         }
 
-        public Builder scaleType(@Nullable Input<String> scaleType) {
+        public Builder scaleType(@Nullable Output<String> scaleType) {
             this.scaleType = scaleType;
             return this;
         }
 
         public Builder scaleType(@Nullable String scaleType) {
-            this.scaleType = Input.ofNullable(scaleType);
+            this.scaleType = Output.ofNullable(scaleType);
             return this;
         }
         public SkuCapacityArgs build() {

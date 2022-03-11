@@ -12,7 +12,6 @@ import io.pulumi.azurenative.containerservice.outputs.OpenShiftManagedClusterMas
 import io.pulumi.azurenative.containerservice.outputs.OpenShiftRouterProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.PurchasePlanResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -287,21 +286,21 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public OpenShiftManagedCluster(String name, OpenShiftManagedClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerservice:OpenShiftManagedCluster", name, args == null ? OpenShiftManagedClusterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:containerservice:OpenShiftManagedCluster", name, args == null ? OpenShiftManagedClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private OpenShiftManagedCluster(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private OpenShiftManagedCluster(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerservice:OpenShiftManagedCluster", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20180930preview:OpenShiftManagedCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20190430:OpenShiftManagedCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20190930preview:OpenShiftManagedCluster").build()),
-                Input.of(Alias.builder().setType("azure-native:containerservice/v20191027preview:OpenShiftManagedCluster").build())
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20180930preview:OpenShiftManagedCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20190430:OpenShiftManagedCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20190930preview:OpenShiftManagedCluster").build()),
+                Output.of(Alias.builder().setType("azure-native:containerservice/v20191027preview:OpenShiftManagedCluster").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -315,7 +314,7 @@ public class OpenShiftManagedCluster extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static OpenShiftManagedCluster get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static OpenShiftManagedCluster get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new OpenShiftManagedCluster(name, id, options);
     }
 }

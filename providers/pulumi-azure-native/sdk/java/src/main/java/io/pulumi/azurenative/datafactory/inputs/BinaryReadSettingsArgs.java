@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.TarGZipReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.TarReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="compressionProperties")
-      private final @Nullable Input<Object> compressionProperties;
+      private final @Nullable Output<Object> compressionProperties;
 
-    public Input<Object> getCompressionProperties() {
-        return this.compressionProperties == null ? Input.empty() : this.compressionProperties;
+    public Output<Object> getCompressionProperties() {
+        return this.compressionProperties == null ? Output.empty() : this.compressionProperties;
     }
 
     /**
@@ -39,22 +39,22 @@ public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public BinaryReadSettingsArgs(
-        @Nullable Input<Object> compressionProperties,
-        Input<String> type) {
+        @Nullable Output<Object> compressionProperties,
+        Output<String> type) {
         this.compressionProperties = compressionProperties;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private BinaryReadSettingsArgs() {
-        this.compressionProperties = Input.empty();
-        this.type = Input.empty();
+        this.compressionProperties = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -66,8 +66,8 @@ public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> compressionProperties;
-        private Input<String> type;
+        private @Nullable Output<Object> compressionProperties;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -79,23 +79,23 @@ public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder compressionProperties(@Nullable Input<Object> compressionProperties) {
+        public Builder compressionProperties(@Nullable Output<Object> compressionProperties) {
             this.compressionProperties = compressionProperties;
             return this;
         }
 
         public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = Input.ofNullable(compressionProperties);
+            this.compressionProperties = Output.ofNullable(compressionProperties);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public BinaryReadSettingsArgs build() {

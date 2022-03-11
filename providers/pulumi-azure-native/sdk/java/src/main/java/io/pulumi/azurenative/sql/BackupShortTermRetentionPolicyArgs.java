@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -31,10 +31,10 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,10 +53,10 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="retentionDays")
-      private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Output<Integer> retentionDays;
 
-    public Input<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Input.empty() : this.retentionDays;
+    public Output<Integer> getRetentionDays() {
+        return this.retentionDays == null ? Output.empty() : this.retentionDays;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
     public BackupShortTermRetentionPolicyArgs(
-        Input<String> databaseName,
-        @Nullable Input<String> policyName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Integer> retentionDays,
-        Input<String> serverName) {
+        Output<String> databaseName,
+        @Nullable Output<String> policyName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Integer> retentionDays,
+        Output<String> serverName) {
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.policyName = policyName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -84,11 +84,11 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
     }
 
     private BackupShortTermRetentionPolicyArgs() {
-        this.databaseName = Input.empty();
-        this.policyName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.retentionDays = Input.empty();
-        this.serverName = Input.empty();
+        this.databaseName = Output.empty();
+        this.policyName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.retentionDays = Output.empty();
+        this.serverName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> databaseName;
-        private @Nullable Input<String> policyName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Integer> retentionDays;
-        private Input<String> serverName;
+        private Output<String> databaseName;
+        private @Nullable Output<String> policyName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Integer> retentionDays;
+        private Output<String> serverName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Input.ofNullable(retentionDays);
+            this.retentionDays = Output.ofNullable(retentionDays);
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
         public BackupShortTermRetentionPolicyArgs build() {

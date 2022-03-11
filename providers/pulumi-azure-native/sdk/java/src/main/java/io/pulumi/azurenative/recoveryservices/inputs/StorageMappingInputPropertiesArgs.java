@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class StorageMappingInputPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetStorageClassificationId")
-      private final @Nullable Input<String> targetStorageClassificationId;
+      private final @Nullable Output<String> targetStorageClassificationId;
 
-    public Input<String> getTargetStorageClassificationId() {
-        return this.targetStorageClassificationId == null ? Input.empty() : this.targetStorageClassificationId;
+    public Output<String> getTargetStorageClassificationId() {
+        return this.targetStorageClassificationId == null ? Output.empty() : this.targetStorageClassificationId;
     }
 
-    public StorageMappingInputPropertiesArgs(@Nullable Input<String> targetStorageClassificationId) {
+    public StorageMappingInputPropertiesArgs(@Nullable Output<String> targetStorageClassificationId) {
         this.targetStorageClassificationId = targetStorageClassificationId;
     }
 
     private StorageMappingInputPropertiesArgs() {
-        this.targetStorageClassificationId = Input.empty();
+        this.targetStorageClassificationId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class StorageMappingInputPropertiesArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private @Nullable Input<String> targetStorageClassificationId;
+        private @Nullable Output<String> targetStorageClassificationId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class StorageMappingInputPropertiesArgs extends io.pulumi.resources
     	      this.targetStorageClassificationId = defaults.targetStorageClassificationId;
         }
 
-        public Builder targetStorageClassificationId(@Nullable Input<String> targetStorageClassificationId) {
+        public Builder targetStorageClassificationId(@Nullable Output<String> targetStorageClassificationId) {
             this.targetStorageClassificationId = targetStorageClassificationId;
             return this;
         }
 
         public Builder targetStorageClassificationId(@Nullable String targetStorageClassificationId) {
-            this.targetStorageClassificationId = Input.ofNullable(targetStorageClassificationId);
+            this.targetStorageClassificationId = Output.ofNullable(targetStorageClassificationId);
             return this;
         }
         public StorageMappingInputPropertiesArgs build() {

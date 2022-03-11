@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customproviders;
 import io.pulumi.azurenative.customproviders.inputs.CustomRPActionRouteDefinitionArgs;
 import io.pulumi.azurenative.customproviders.inputs.CustomRPResourceTypeRouteDefinitionArgs;
 import io.pulumi.azurenative.customproviders.inputs.CustomRPValidationsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<List<CustomRPActionRouteDefinitionArgs>> actions;
+      private final @Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions;
 
-    public Input<List<CustomRPActionRouteDefinitionArgs>> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<List<CustomRPActionRouteDefinitionArgs>> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -57,10 +57,10 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceProviderName")
-      private final @Nullable Input<String> resourceProviderName;
+      private final @Nullable Output<String> resourceProviderName;
 
-    public Input<String> getResourceProviderName() {
-        return this.resourceProviderName == null ? Input.empty() : this.resourceProviderName;
+    public Output<String> getResourceProviderName() {
+        return this.resourceProviderName == null ? Output.empty() : this.resourceProviderName;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceTypes")
-      private final @Nullable Input<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
+      private final @Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
 
-    public Input<List<CustomRPResourceTypeRouteDefinitionArgs>> getResourceTypes() {
-        return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
+    public Output<List<CustomRPResourceTypeRouteDefinitionArgs>> getResourceTypes() {
+        return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -90,20 +90,20 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="validations")
-      private final @Nullable Input<List<CustomRPValidationsArgs>> validations;
+      private final @Nullable Output<List<CustomRPValidationsArgs>> validations;
 
-    public Input<List<CustomRPValidationsArgs>> getValidations() {
-        return this.validations == null ? Input.empty() : this.validations;
+    public Output<List<CustomRPValidationsArgs>> getValidations() {
+        return this.validations == null ? Output.empty() : this.validations;
     }
 
     public CustomResourceProviderArgs(
-        @Nullable Input<List<CustomRPActionRouteDefinitionArgs>> actions,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceProviderName,
-        @Nullable Input<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<CustomRPValidationsArgs>> validations) {
+        @Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceProviderName,
+        @Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<CustomRPValidationsArgs>> validations) {
         this.actions = actions;
         this.location = location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -114,13 +114,13 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     }
 
     private CustomResourceProviderArgs() {
-        this.actions = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceProviderName = Input.empty();
-        this.resourceTypes = Input.empty();
-        this.tags = Input.empty();
-        this.validations = Input.empty();
+        this.actions = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceProviderName = Output.empty();
+        this.resourceTypes = Output.empty();
+        this.tags = Output.empty();
+        this.validations = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<List<CustomRPActionRouteDefinitionArgs>> actions;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceProviderName;
-        private @Nullable Input<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<CustomRPValidationsArgs>> validations;
+        private @Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceProviderName;
+        private @Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<CustomRPValidationsArgs>> validations;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
     	      this.validations = defaults.validations;
         }
 
-        public Builder actions(@Nullable Input<List<CustomRPActionRouteDefinitionArgs>> actions) {
+        public Builder actions(@Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable List<CustomRPActionRouteDefinitionArgs> actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceProviderName(@Nullable Input<String> resourceProviderName) {
+        public Builder resourceProviderName(@Nullable Output<String> resourceProviderName) {
             this.resourceProviderName = resourceProviderName;
             return this;
         }
 
         public Builder resourceProviderName(@Nullable String resourceProviderName) {
-            this.resourceProviderName = Input.ofNullable(resourceProviderName);
+            this.resourceProviderName = Output.ofNullable(resourceProviderName);
             return this;
         }
 
-        public Builder resourceTypes(@Nullable Input<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes) {
+        public Builder resourceTypes(@Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
         public Builder resourceTypes(@Nullable List<CustomRPResourceTypeRouteDefinitionArgs> resourceTypes) {
-            this.resourceTypes = Input.ofNullable(resourceTypes);
+            this.resourceTypes = Output.ofNullable(resourceTypes);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder validations(@Nullable Input<List<CustomRPValidationsArgs>> validations) {
+        public Builder validations(@Nullable Output<List<CustomRPValidationsArgs>> validations) {
             this.validations = validations;
             return this;
         }
 
         public Builder validations(@Nullable List<CustomRPValidationsArgs> validations) {
-            this.validations = Input.ofNullable(validations);
+            this.validations = Output.ofNullable(validations);
             return this;
         }
         public CustomResourceProviderArgs build() {

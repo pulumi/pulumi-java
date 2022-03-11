@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.enums.SkuNameEnum;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<Integer> capacity;
+      private final @Nullable Output<Integer> capacity;
 
-    public Input<Integer> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<Integer> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family")
-      private final @Nullable Input<String> family;
+      private final @Nullable Output<String> family;
 
-    public Input<String> getFamily() {
-        return this.family == null ? Input.empty() : this.family;
+    public Output<String> getFamily() {
+        return this.family == null ? Output.empty() : this.family;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,SkuNameEnum>> name;
+      private final Output<Either<String,SkuNameEnum>> name;
 
-    public Input<Either<String,SkuNameEnum>> getName() {
+    public Output<Either<String,SkuNameEnum>> getName() {
         return this.name;
     }
 
     public SkuArgs(
-        @Nullable Input<Integer> capacity,
-        @Nullable Input<String> family,
-        Input<Either<String,SkuNameEnum>> name) {
+        @Nullable Output<Integer> capacity,
+        @Nullable Output<String> family,
+        Output<Either<String,SkuNameEnum>> name) {
         this.capacity = capacity;
         this.family = family;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private SkuArgs() {
-        this.capacity = Input.empty();
-        this.family = Input.empty();
-        this.name = Input.empty();
+        this.capacity = Output.empty();
+        this.family = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> capacity;
-        private @Nullable Input<String> family;
-        private Input<Either<String,SkuNameEnum>> name;
+        private @Nullable Output<Integer> capacity;
+        private @Nullable Output<String> family;
+        private Output<Either<String,SkuNameEnum>> name;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder capacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Output<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder family(@Nullable Input<String> family) {
+        public Builder family(@Nullable Output<String> family) {
             this.family = family;
             return this;
         }
 
         public Builder family(@Nullable String family) {
-            this.family = Input.ofNullable(family);
+            this.family = Output.ofNullable(family);
             return this;
         }
 
-        public Builder name(Input<Either<String,SkuNameEnum>> name) {
+        public Builder name(Output<Either<String,SkuNameEnum>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,SkuNameEnum> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public SkuArgs build() {

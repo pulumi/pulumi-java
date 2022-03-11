@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.cdn.enums.EnabledState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-      private final @Nullable Input<Either<String,EnabledState>> enabledState;
+      private final @Nullable Output<Either<String,EnabledState>> enabledState;
 
-    public Input<Either<String,EnabledState>> getEnabledState() {
-        return this.enabledState == null ? Input.empty() : this.enabledState;
+    public Output<Either<String,EnabledState>> getEnabledState() {
+        return this.enabledState == null ? Output.empty() : this.enabledState;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName")
-      private final @Nullable Input<String> endpointName;
+      private final @Nullable Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
-        return this.endpointName == null ? Input.empty() : this.endpointName;
+    public Output<String> getEndpointName() {
+        return this.endpointName == null ? Output.empty() : this.endpointName;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originResponseTimeoutSeconds")
-      private final @Nullable Input<Integer> originResponseTimeoutSeconds;
+      private final @Nullable Output<Integer> originResponseTimeoutSeconds;
 
-    public Input<Integer> getOriginResponseTimeoutSeconds() {
-        return this.originResponseTimeoutSeconds == null ? Input.empty() : this.originResponseTimeoutSeconds;
+    public Output<Integer> getOriginResponseTimeoutSeconds() {
+        return this.originResponseTimeoutSeconds == null ? Output.empty() : this.originResponseTimeoutSeconds;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -78,9 +78,9 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -89,20 +89,20 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AFDEndpointArgs(
-        @Nullable Input<Either<String,EnabledState>> enabledState,
-        @Nullable Input<String> endpointName,
-        @Nullable Input<String> location,
-        @Nullable Input<Integer> originResponseTimeoutSeconds,
-        Input<String> profileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<Either<String,EnabledState>> enabledState,
+        @Nullable Output<String> endpointName,
+        @Nullable Output<String> location,
+        @Nullable Output<Integer> originResponseTimeoutSeconds,
+        Output<String> profileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.enabledState = enabledState;
         this.endpointName = endpointName;
         this.location = location;
@@ -113,13 +113,13 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AFDEndpointArgs() {
-        this.enabledState = Input.empty();
-        this.endpointName = Input.empty();
-        this.location = Input.empty();
-        this.originResponseTimeoutSeconds = Input.empty();
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.enabledState = Output.empty();
+        this.endpointName = Output.empty();
+        this.location = Output.empty();
+        this.originResponseTimeoutSeconds = Output.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,EnabledState>> enabledState;
-        private @Nullable Input<String> endpointName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Integer> originResponseTimeoutSeconds;
-        private Input<String> profileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<Either<String,EnabledState>> enabledState;
+        private @Nullable Output<String> endpointName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Integer> originResponseTimeoutSeconds;
+        private Output<String> profileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class AFDEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder enabledState(@Nullable Input<Either<String,EnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Output<Either<String,EnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
         public Builder enabledState(@Nullable Either<String,EnabledState> enabledState) {
-            this.enabledState = Input.ofNullable(enabledState);
+            this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
 
-        public Builder endpointName(@Nullable Input<String> endpointName) {
+        public Builder endpointName(@Nullable Output<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
         public Builder endpointName(@Nullable String endpointName) {
-            this.endpointName = Input.ofNullable(endpointName);
+            this.endpointName = Output.ofNullable(endpointName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder originResponseTimeoutSeconds(@Nullable Input<Integer> originResponseTimeoutSeconds) {
+        public Builder originResponseTimeoutSeconds(@Nullable Output<Integer> originResponseTimeoutSeconds) {
             this.originResponseTimeoutSeconds = originResponseTimeoutSeconds;
             return this;
         }
 
         public Builder originResponseTimeoutSeconds(@Nullable Integer originResponseTimeoutSeconds) {
-            this.originResponseTimeoutSeconds = Input.ofNullable(originResponseTimeoutSeconds);
+            this.originResponseTimeoutSeconds = Output.ofNullable(originResponseTimeoutSeconds);
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AFDEndpointArgs build() {

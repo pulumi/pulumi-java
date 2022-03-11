@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.enums.BuiltInAuthenticationProvider;
 import io.pulumi.azurenative.web.enums.UnauthenticatedClientAction;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -24,10 +24,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="aadClaimsAuthorization")
-      private final @Nullable Input<String> aadClaimsAuthorization;
+      private final @Nullable Output<String> aadClaimsAuthorization;
 
-    public Input<String> getAadClaimsAuthorization() {
-        return this.aadClaimsAuthorization == null ? Input.empty() : this.aadClaimsAuthorization;
+    public Output<String> getAadClaimsAuthorization() {
+        return this.aadClaimsAuthorization == null ? Output.empty() : this.aadClaimsAuthorization;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="additionalLoginParams")
-      private final @Nullable Input<List<String>> additionalLoginParams;
+      private final @Nullable Output<List<String>> additionalLoginParams;
 
-    public Input<List<String>> getAdditionalLoginParams() {
-        return this.additionalLoginParams == null ? Input.empty() : this.additionalLoginParams;
+    public Output<List<String>> getAdditionalLoginParams() {
+        return this.additionalLoginParams == null ? Output.empty() : this.additionalLoginParams;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allowedAudiences")
-      private final @Nullable Input<List<String>> allowedAudiences;
+      private final @Nullable Output<List<String>> allowedAudiences;
 
-    public Input<List<String>> getAllowedAudiences() {
-        return this.allowedAudiences == null ? Input.empty() : this.allowedAudiences;
+    public Output<List<String>> getAllowedAudiences() {
+        return this.allowedAudiences == null ? Output.empty() : this.allowedAudiences;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allowedExternalRedirectUrls")
-      private final @Nullable Input<List<String>> allowedExternalRedirectUrls;
+      private final @Nullable Output<List<String>> allowedExternalRedirectUrls;
 
-    public Input<List<String>> getAllowedExternalRedirectUrls() {
-        return this.allowedExternalRedirectUrls == null ? Input.empty() : this.allowedExternalRedirectUrls;
+    public Output<List<String>> getAllowedExternalRedirectUrls() {
+        return this.allowedExternalRedirectUrls == null ? Output.empty() : this.allowedExternalRedirectUrls;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="authFilePath")
-      private final @Nullable Input<String> authFilePath;
+      private final @Nullable Output<String> authFilePath;
 
-    public Input<String> getAuthFilePath() {
-        return this.authFilePath == null ? Input.empty() : this.authFilePath;
+    public Output<String> getAuthFilePath() {
+        return this.authFilePath == null ? Output.empty() : this.authFilePath;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clientSecretCertificateThumbprint")
-      private final @Nullable Input<String> clientSecretCertificateThumbprint;
+      private final @Nullable Output<String> clientSecretCertificateThumbprint;
 
-    public Input<String> getClientSecretCertificateThumbprint() {
-        return this.clientSecretCertificateThumbprint == null ? Input.empty() : this.clientSecretCertificateThumbprint;
+    public Output<String> getClientSecretCertificateThumbprint() {
+        return this.clientSecretCertificateThumbprint == null ? Output.empty() : this.clientSecretCertificateThumbprint;
     }
 
     /**
@@ -125,10 +125,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clientSecretSettingName")
-      private final @Nullable Input<String> clientSecretSettingName;
+      private final @Nullable Output<String> clientSecretSettingName;
 
-    public Input<String> getClientSecretSettingName() {
-        return this.clientSecretSettingName == null ? Input.empty() : this.clientSecretSettingName;
+    public Output<String> getClientSecretSettingName() {
+        return this.clientSecretSettingName == null ? Output.empty() : this.clientSecretSettingName;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="configVersion")
-      private final @Nullable Input<String> configVersion;
+      private final @Nullable Output<String> configVersion;
 
-    public Input<String> getConfigVersion() {
-        return this.configVersion == null ? Input.empty() : this.configVersion;
+    public Output<String> getConfigVersion() {
+        return this.configVersion == null ? Output.empty() : this.configVersion;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultProvider")
-      private final @Nullable Input<BuiltInAuthenticationProvider> defaultProvider;
+      private final @Nullable Output<BuiltInAuthenticationProvider> defaultProvider;
 
-    public Input<BuiltInAuthenticationProvider> getDefaultProvider() {
-        return this.defaultProvider == null ? Input.empty() : this.defaultProvider;
+    public Output<BuiltInAuthenticationProvider> getDefaultProvider() {
+        return this.defaultProvider == null ? Output.empty() : this.defaultProvider;
     }
 
     /**
@@ -161,10 +161,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -174,10 +174,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="facebookAppId")
-      private final @Nullable Input<String> facebookAppId;
+      private final @Nullable Output<String> facebookAppId;
 
-    public Input<String> getFacebookAppId() {
-        return this.facebookAppId == null ? Input.empty() : this.facebookAppId;
+    public Output<String> getFacebookAppId() {
+        return this.facebookAppId == null ? Output.empty() : this.facebookAppId;
     }
 
     /**
@@ -187,10 +187,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="facebookAppSecret")
-      private final @Nullable Input<String> facebookAppSecret;
+      private final @Nullable Output<String> facebookAppSecret;
 
-    public Input<String> getFacebookAppSecret() {
-        return this.facebookAppSecret == null ? Input.empty() : this.facebookAppSecret;
+    public Output<String> getFacebookAppSecret() {
+        return this.facebookAppSecret == null ? Output.empty() : this.facebookAppSecret;
     }
 
     /**
@@ -198,10 +198,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="facebookAppSecretSettingName")
-      private final @Nullable Input<String> facebookAppSecretSettingName;
+      private final @Nullable Output<String> facebookAppSecretSettingName;
 
-    public Input<String> getFacebookAppSecretSettingName() {
-        return this.facebookAppSecretSettingName == null ? Input.empty() : this.facebookAppSecretSettingName;
+    public Output<String> getFacebookAppSecretSettingName() {
+        return this.facebookAppSecretSettingName == null ? Output.empty() : this.facebookAppSecretSettingName;
     }
 
     /**
@@ -211,10 +211,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="facebookOAuthScopes")
-      private final @Nullable Input<List<String>> facebookOAuthScopes;
+      private final @Nullable Output<List<String>> facebookOAuthScopes;
 
-    public Input<List<String>> getFacebookOAuthScopes() {
-        return this.facebookOAuthScopes == null ? Input.empty() : this.facebookOAuthScopes;
+    public Output<List<String>> getFacebookOAuthScopes() {
+        return this.facebookOAuthScopes == null ? Output.empty() : this.facebookOAuthScopes;
     }
 
     /**
@@ -223,10 +223,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gitHubClientId")
-      private final @Nullable Input<String> gitHubClientId;
+      private final @Nullable Output<String> gitHubClientId;
 
-    public Input<String> getGitHubClientId() {
-        return this.gitHubClientId == null ? Input.empty() : this.gitHubClientId;
+    public Output<String> getGitHubClientId() {
+        return this.gitHubClientId == null ? Output.empty() : this.gitHubClientId;
     }
 
     /**
@@ -235,10 +235,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gitHubClientSecret")
-      private final @Nullable Input<String> gitHubClientSecret;
+      private final @Nullable Output<String> gitHubClientSecret;
 
-    public Input<String> getGitHubClientSecret() {
-        return this.gitHubClientSecret == null ? Input.empty() : this.gitHubClientSecret;
+    public Output<String> getGitHubClientSecret() {
+        return this.gitHubClientSecret == null ? Output.empty() : this.gitHubClientSecret;
     }
 
     /**
@@ -247,10 +247,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gitHubClientSecretSettingName")
-      private final @Nullable Input<String> gitHubClientSecretSettingName;
+      private final @Nullable Output<String> gitHubClientSecretSettingName;
 
-    public Input<String> getGitHubClientSecretSettingName() {
-        return this.gitHubClientSecretSettingName == null ? Input.empty() : this.gitHubClientSecretSettingName;
+    public Output<String> getGitHubClientSecretSettingName() {
+        return this.gitHubClientSecretSettingName == null ? Output.empty() : this.gitHubClientSecretSettingName;
     }
 
     /**
@@ -259,10 +259,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gitHubOAuthScopes")
-      private final @Nullable Input<List<String>> gitHubOAuthScopes;
+      private final @Nullable Output<List<String>> gitHubOAuthScopes;
 
-    public Input<List<String>> getGitHubOAuthScopes() {
-        return this.gitHubOAuthScopes == null ? Input.empty() : this.gitHubOAuthScopes;
+    public Output<List<String>> getGitHubOAuthScopes() {
+        return this.gitHubOAuthScopes == null ? Output.empty() : this.gitHubOAuthScopes;
     }
 
     /**
@@ -272,10 +272,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="googleClientId")
-      private final @Nullable Input<String> googleClientId;
+      private final @Nullable Output<String> googleClientId;
 
-    public Input<String> getGoogleClientId() {
-        return this.googleClientId == null ? Input.empty() : this.googleClientId;
+    public Output<String> getGoogleClientId() {
+        return this.googleClientId == null ? Output.empty() : this.googleClientId;
     }
 
     /**
@@ -285,10 +285,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="googleClientSecret")
-      private final @Nullable Input<String> googleClientSecret;
+      private final @Nullable Output<String> googleClientSecret;
 
-    public Input<String> getGoogleClientSecret() {
-        return this.googleClientSecret == null ? Input.empty() : this.googleClientSecret;
+    public Output<String> getGoogleClientSecret() {
+        return this.googleClientSecret == null ? Output.empty() : this.googleClientSecret;
     }
 
     /**
@@ -297,10 +297,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="googleClientSecretSettingName")
-      private final @Nullable Input<String> googleClientSecretSettingName;
+      private final @Nullable Output<String> googleClientSecretSettingName;
 
-    public Input<String> getGoogleClientSecretSettingName() {
-        return this.googleClientSecretSettingName == null ? Input.empty() : this.googleClientSecretSettingName;
+    public Output<String> getGoogleClientSecretSettingName() {
+        return this.googleClientSecretSettingName == null ? Output.empty() : this.googleClientSecretSettingName;
     }
 
     /**
@@ -310,10 +310,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="googleOAuthScopes")
-      private final @Nullable Input<List<String>> googleOAuthScopes;
+      private final @Nullable Output<List<String>> googleOAuthScopes;
 
-    public Input<List<String>> getGoogleOAuthScopes() {
-        return this.googleOAuthScopes == null ? Input.empty() : this.googleOAuthScopes;
+    public Output<List<String>> getGoogleOAuthScopes() {
+        return this.googleOAuthScopes == null ? Output.empty() : this.googleOAuthScopes;
     }
 
     /**
@@ -322,10 +322,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isAuthFromFile")
-      private final @Nullable Input<String> isAuthFromFile;
+      private final @Nullable Output<String> isAuthFromFile;
 
-    public Input<String> getIsAuthFromFile() {
-        return this.isAuthFromFile == null ? Input.empty() : this.isAuthFromFile;
+    public Output<String> getIsAuthFromFile() {
+        return this.isAuthFromFile == null ? Output.empty() : this.isAuthFromFile;
     }
 
     /**
@@ -336,10 +336,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="issuer")
-      private final @Nullable Input<String> issuer;
+      private final @Nullable Output<String> issuer;
 
-    public Input<String> getIssuer() {
-        return this.issuer == null ? Input.empty() : this.issuer;
+    public Output<String> getIssuer() {
+        return this.issuer == null ? Output.empty() : this.issuer;
     }
 
     /**
@@ -347,10 +347,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -360,10 +360,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="microsoftAccountClientId")
-      private final @Nullable Input<String> microsoftAccountClientId;
+      private final @Nullable Output<String> microsoftAccountClientId;
 
-    public Input<String> getMicrosoftAccountClientId() {
-        return this.microsoftAccountClientId == null ? Input.empty() : this.microsoftAccountClientId;
+    public Output<String> getMicrosoftAccountClientId() {
+        return this.microsoftAccountClientId == null ? Output.empty() : this.microsoftAccountClientId;
     }
 
     /**
@@ -373,10 +373,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="microsoftAccountClientSecret")
-      private final @Nullable Input<String> microsoftAccountClientSecret;
+      private final @Nullable Output<String> microsoftAccountClientSecret;
 
-    public Input<String> getMicrosoftAccountClientSecret() {
-        return this.microsoftAccountClientSecret == null ? Input.empty() : this.microsoftAccountClientSecret;
+    public Output<String> getMicrosoftAccountClientSecret() {
+        return this.microsoftAccountClientSecret == null ? Output.empty() : this.microsoftAccountClientSecret;
     }
 
     /**
@@ -385,10 +385,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="microsoftAccountClientSecretSettingName")
-      private final @Nullable Input<String> microsoftAccountClientSecretSettingName;
+      private final @Nullable Output<String> microsoftAccountClientSecretSettingName;
 
-    public Input<String> getMicrosoftAccountClientSecretSettingName() {
-        return this.microsoftAccountClientSecretSettingName == null ? Input.empty() : this.microsoftAccountClientSecretSettingName;
+    public Output<String> getMicrosoftAccountClientSecretSettingName() {
+        return this.microsoftAccountClientSecretSettingName == null ? Output.empty() : this.microsoftAccountClientSecretSettingName;
     }
 
     /**
@@ -398,10 +398,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="microsoftAccountOAuthScopes")
-      private final @Nullable Input<List<String>> microsoftAccountOAuthScopes;
+      private final @Nullable Output<List<String>> microsoftAccountOAuthScopes;
 
-    public Input<List<String>> getMicrosoftAccountOAuthScopes() {
-        return this.microsoftAccountOAuthScopes == null ? Input.empty() : this.microsoftAccountOAuthScopes;
+    public Output<List<String>> getMicrosoftAccountOAuthScopes() {
+        return this.microsoftAccountOAuthScopes == null ? Output.empty() : this.microsoftAccountOAuthScopes;
     }
 
     /**
@@ -409,9 +409,9 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -420,9 +420,9 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -432,10 +432,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="runtimeVersion")
-      private final @Nullable Input<String> runtimeVersion;
+      private final @Nullable Output<String> runtimeVersion;
 
-    public Input<String> getRuntimeVersion() {
-        return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
+    public Output<String> getRuntimeVersion() {
+        return this.runtimeVersion == null ? Output.empty() : this.runtimeVersion;
     }
 
     /**
@@ -444,10 +444,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tokenRefreshExtensionHours")
-      private final @Nullable Input<Double> tokenRefreshExtensionHours;
+      private final @Nullable Output<Double> tokenRefreshExtensionHours;
 
-    public Input<Double> getTokenRefreshExtensionHours() {
-        return this.tokenRefreshExtensionHours == null ? Input.empty() : this.tokenRefreshExtensionHours;
+    public Output<Double> getTokenRefreshExtensionHours() {
+        return this.tokenRefreshExtensionHours == null ? Output.empty() : this.tokenRefreshExtensionHours;
     }
 
     /**
@@ -456,10 +456,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tokenStoreEnabled")
-      private final @Nullable Input<Boolean> tokenStoreEnabled;
+      private final @Nullable Output<Boolean> tokenStoreEnabled;
 
-    public Input<Boolean> getTokenStoreEnabled() {
-        return this.tokenStoreEnabled == null ? Input.empty() : this.tokenStoreEnabled;
+    public Output<Boolean> getTokenStoreEnabled() {
+        return this.tokenStoreEnabled == null ? Output.empty() : this.tokenStoreEnabled;
     }
 
     /**
@@ -469,10 +469,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="twitterConsumerKey")
-      private final @Nullable Input<String> twitterConsumerKey;
+      private final @Nullable Output<String> twitterConsumerKey;
 
-    public Input<String> getTwitterConsumerKey() {
-        return this.twitterConsumerKey == null ? Input.empty() : this.twitterConsumerKey;
+    public Output<String> getTwitterConsumerKey() {
+        return this.twitterConsumerKey == null ? Output.empty() : this.twitterConsumerKey;
     }
 
     /**
@@ -482,10 +482,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="twitterConsumerSecret")
-      private final @Nullable Input<String> twitterConsumerSecret;
+      private final @Nullable Output<String> twitterConsumerSecret;
 
-    public Input<String> getTwitterConsumerSecret() {
-        return this.twitterConsumerSecret == null ? Input.empty() : this.twitterConsumerSecret;
+    public Output<String> getTwitterConsumerSecret() {
+        return this.twitterConsumerSecret == null ? Output.empty() : this.twitterConsumerSecret;
     }
 
     /**
@@ -494,10 +494,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="twitterConsumerSecretSettingName")
-      private final @Nullable Input<String> twitterConsumerSecretSettingName;
+      private final @Nullable Output<String> twitterConsumerSecretSettingName;
 
-    public Input<String> getTwitterConsumerSecretSettingName() {
-        return this.twitterConsumerSecretSettingName == null ? Input.empty() : this.twitterConsumerSecretSettingName;
+    public Output<String> getTwitterConsumerSecretSettingName() {
+        return this.twitterConsumerSecretSettingName == null ? Output.empty() : this.twitterConsumerSecretSettingName;
     }
 
     /**
@@ -505,10 +505,10 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="unauthenticatedClientAction")
-      private final @Nullable Input<UnauthenticatedClientAction> unauthenticatedClientAction;
+      private final @Nullable Output<UnauthenticatedClientAction> unauthenticatedClientAction;
 
-    public Input<UnauthenticatedClientAction> getUnauthenticatedClientAction() {
-        return this.unauthenticatedClientAction == null ? Input.empty() : this.unauthenticatedClientAction;
+    public Output<UnauthenticatedClientAction> getUnauthenticatedClientAction() {
+        return this.unauthenticatedClientAction == null ? Output.empty() : this.unauthenticatedClientAction;
     }
 
     /**
@@ -516,54 +516,54 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="validateIssuer")
-      private final @Nullable Input<Boolean> validateIssuer;
+      private final @Nullable Output<Boolean> validateIssuer;
 
-    public Input<Boolean> getValidateIssuer() {
-        return this.validateIssuer == null ? Input.empty() : this.validateIssuer;
+    public Output<Boolean> getValidateIssuer() {
+        return this.validateIssuer == null ? Output.empty() : this.validateIssuer;
     }
 
     public WebAppAuthSettingsArgs(
-        @Nullable Input<String> aadClaimsAuthorization,
-        @Nullable Input<List<String>> additionalLoginParams,
-        @Nullable Input<List<String>> allowedAudiences,
-        @Nullable Input<List<String>> allowedExternalRedirectUrls,
-        @Nullable Input<String> authFilePath,
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecret,
-        @Nullable Input<String> clientSecretCertificateThumbprint,
-        @Nullable Input<String> clientSecretSettingName,
-        @Nullable Input<String> configVersion,
-        @Nullable Input<BuiltInAuthenticationProvider> defaultProvider,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> facebookAppId,
-        @Nullable Input<String> facebookAppSecret,
-        @Nullable Input<String> facebookAppSecretSettingName,
-        @Nullable Input<List<String>> facebookOAuthScopes,
-        @Nullable Input<String> gitHubClientId,
-        @Nullable Input<String> gitHubClientSecret,
-        @Nullable Input<String> gitHubClientSecretSettingName,
-        @Nullable Input<List<String>> gitHubOAuthScopes,
-        @Nullable Input<String> googleClientId,
-        @Nullable Input<String> googleClientSecret,
-        @Nullable Input<String> googleClientSecretSettingName,
-        @Nullable Input<List<String>> googleOAuthScopes,
-        @Nullable Input<String> isAuthFromFile,
-        @Nullable Input<String> issuer,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> microsoftAccountClientId,
-        @Nullable Input<String> microsoftAccountClientSecret,
-        @Nullable Input<String> microsoftAccountClientSecretSettingName,
-        @Nullable Input<List<String>> microsoftAccountOAuthScopes,
-        Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> runtimeVersion,
-        @Nullable Input<Double> tokenRefreshExtensionHours,
-        @Nullable Input<Boolean> tokenStoreEnabled,
-        @Nullable Input<String> twitterConsumerKey,
-        @Nullable Input<String> twitterConsumerSecret,
-        @Nullable Input<String> twitterConsumerSecretSettingName,
-        @Nullable Input<UnauthenticatedClientAction> unauthenticatedClientAction,
-        @Nullable Input<Boolean> validateIssuer) {
+        @Nullable Output<String> aadClaimsAuthorization,
+        @Nullable Output<List<String>> additionalLoginParams,
+        @Nullable Output<List<String>> allowedAudiences,
+        @Nullable Output<List<String>> allowedExternalRedirectUrls,
+        @Nullable Output<String> authFilePath,
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecret,
+        @Nullable Output<String> clientSecretCertificateThumbprint,
+        @Nullable Output<String> clientSecretSettingName,
+        @Nullable Output<String> configVersion,
+        @Nullable Output<BuiltInAuthenticationProvider> defaultProvider,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> facebookAppId,
+        @Nullable Output<String> facebookAppSecret,
+        @Nullable Output<String> facebookAppSecretSettingName,
+        @Nullable Output<List<String>> facebookOAuthScopes,
+        @Nullable Output<String> gitHubClientId,
+        @Nullable Output<String> gitHubClientSecret,
+        @Nullable Output<String> gitHubClientSecretSettingName,
+        @Nullable Output<List<String>> gitHubOAuthScopes,
+        @Nullable Output<String> googleClientId,
+        @Nullable Output<String> googleClientSecret,
+        @Nullable Output<String> googleClientSecretSettingName,
+        @Nullable Output<List<String>> googleOAuthScopes,
+        @Nullable Output<String> isAuthFromFile,
+        @Nullable Output<String> issuer,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> microsoftAccountClientId,
+        @Nullable Output<String> microsoftAccountClientSecret,
+        @Nullable Output<String> microsoftAccountClientSecretSettingName,
+        @Nullable Output<List<String>> microsoftAccountOAuthScopes,
+        Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> runtimeVersion,
+        @Nullable Output<Double> tokenRefreshExtensionHours,
+        @Nullable Output<Boolean> tokenStoreEnabled,
+        @Nullable Output<String> twitterConsumerKey,
+        @Nullable Output<String> twitterConsumerSecret,
+        @Nullable Output<String> twitterConsumerSecretSettingName,
+        @Nullable Output<UnauthenticatedClientAction> unauthenticatedClientAction,
+        @Nullable Output<Boolean> validateIssuer) {
         this.aadClaimsAuthorization = aadClaimsAuthorization;
         this.additionalLoginParams = additionalLoginParams;
         this.allowedAudiences = allowedAudiences;
@@ -608,47 +608,47 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private WebAppAuthSettingsArgs() {
-        this.aadClaimsAuthorization = Input.empty();
-        this.additionalLoginParams = Input.empty();
-        this.allowedAudiences = Input.empty();
-        this.allowedExternalRedirectUrls = Input.empty();
-        this.authFilePath = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.clientSecretCertificateThumbprint = Input.empty();
-        this.clientSecretSettingName = Input.empty();
-        this.configVersion = Input.empty();
-        this.defaultProvider = Input.empty();
-        this.enabled = Input.empty();
-        this.facebookAppId = Input.empty();
-        this.facebookAppSecret = Input.empty();
-        this.facebookAppSecretSettingName = Input.empty();
-        this.facebookOAuthScopes = Input.empty();
-        this.gitHubClientId = Input.empty();
-        this.gitHubClientSecret = Input.empty();
-        this.gitHubClientSecretSettingName = Input.empty();
-        this.gitHubOAuthScopes = Input.empty();
-        this.googleClientId = Input.empty();
-        this.googleClientSecret = Input.empty();
-        this.googleClientSecretSettingName = Input.empty();
-        this.googleOAuthScopes = Input.empty();
-        this.isAuthFromFile = Input.empty();
-        this.issuer = Input.empty();
-        this.kind = Input.empty();
-        this.microsoftAccountClientId = Input.empty();
-        this.microsoftAccountClientSecret = Input.empty();
-        this.microsoftAccountClientSecretSettingName = Input.empty();
-        this.microsoftAccountOAuthScopes = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.runtimeVersion = Input.empty();
-        this.tokenRefreshExtensionHours = Input.empty();
-        this.tokenStoreEnabled = Input.empty();
-        this.twitterConsumerKey = Input.empty();
-        this.twitterConsumerSecret = Input.empty();
-        this.twitterConsumerSecretSettingName = Input.empty();
-        this.unauthenticatedClientAction = Input.empty();
-        this.validateIssuer = Input.empty();
+        this.aadClaimsAuthorization = Output.empty();
+        this.additionalLoginParams = Output.empty();
+        this.allowedAudiences = Output.empty();
+        this.allowedExternalRedirectUrls = Output.empty();
+        this.authFilePath = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.clientSecretCertificateThumbprint = Output.empty();
+        this.clientSecretSettingName = Output.empty();
+        this.configVersion = Output.empty();
+        this.defaultProvider = Output.empty();
+        this.enabled = Output.empty();
+        this.facebookAppId = Output.empty();
+        this.facebookAppSecret = Output.empty();
+        this.facebookAppSecretSettingName = Output.empty();
+        this.facebookOAuthScopes = Output.empty();
+        this.gitHubClientId = Output.empty();
+        this.gitHubClientSecret = Output.empty();
+        this.gitHubClientSecretSettingName = Output.empty();
+        this.gitHubOAuthScopes = Output.empty();
+        this.googleClientId = Output.empty();
+        this.googleClientSecret = Output.empty();
+        this.googleClientSecretSettingName = Output.empty();
+        this.googleOAuthScopes = Output.empty();
+        this.isAuthFromFile = Output.empty();
+        this.issuer = Output.empty();
+        this.kind = Output.empty();
+        this.microsoftAccountClientId = Output.empty();
+        this.microsoftAccountClientSecret = Output.empty();
+        this.microsoftAccountClientSecretSettingName = Output.empty();
+        this.microsoftAccountOAuthScopes = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.runtimeVersion = Output.empty();
+        this.tokenRefreshExtensionHours = Output.empty();
+        this.tokenStoreEnabled = Output.empty();
+        this.twitterConsumerKey = Output.empty();
+        this.twitterConsumerSecret = Output.empty();
+        this.twitterConsumerSecretSettingName = Output.empty();
+        this.unauthenticatedClientAction = Output.empty();
+        this.validateIssuer = Output.empty();
     }
 
     public static Builder builder() {
@@ -660,47 +660,47 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aadClaimsAuthorization;
-        private @Nullable Input<List<String>> additionalLoginParams;
-        private @Nullable Input<List<String>> allowedAudiences;
-        private @Nullable Input<List<String>> allowedExternalRedirectUrls;
-        private @Nullable Input<String> authFilePath;
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecret;
-        private @Nullable Input<String> clientSecretCertificateThumbprint;
-        private @Nullable Input<String> clientSecretSettingName;
-        private @Nullable Input<String> configVersion;
-        private @Nullable Input<BuiltInAuthenticationProvider> defaultProvider;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> facebookAppId;
-        private @Nullable Input<String> facebookAppSecret;
-        private @Nullable Input<String> facebookAppSecretSettingName;
-        private @Nullable Input<List<String>> facebookOAuthScopes;
-        private @Nullable Input<String> gitHubClientId;
-        private @Nullable Input<String> gitHubClientSecret;
-        private @Nullable Input<String> gitHubClientSecretSettingName;
-        private @Nullable Input<List<String>> gitHubOAuthScopes;
-        private @Nullable Input<String> googleClientId;
-        private @Nullable Input<String> googleClientSecret;
-        private @Nullable Input<String> googleClientSecretSettingName;
-        private @Nullable Input<List<String>> googleOAuthScopes;
-        private @Nullable Input<String> isAuthFromFile;
-        private @Nullable Input<String> issuer;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> microsoftAccountClientId;
-        private @Nullable Input<String> microsoftAccountClientSecret;
-        private @Nullable Input<String> microsoftAccountClientSecretSettingName;
-        private @Nullable Input<List<String>> microsoftAccountOAuthScopes;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> runtimeVersion;
-        private @Nullable Input<Double> tokenRefreshExtensionHours;
-        private @Nullable Input<Boolean> tokenStoreEnabled;
-        private @Nullable Input<String> twitterConsumerKey;
-        private @Nullable Input<String> twitterConsumerSecret;
-        private @Nullable Input<String> twitterConsumerSecretSettingName;
-        private @Nullable Input<UnauthenticatedClientAction> unauthenticatedClientAction;
-        private @Nullable Input<Boolean> validateIssuer;
+        private @Nullable Output<String> aadClaimsAuthorization;
+        private @Nullable Output<List<String>> additionalLoginParams;
+        private @Nullable Output<List<String>> allowedAudiences;
+        private @Nullable Output<List<String>> allowedExternalRedirectUrls;
+        private @Nullable Output<String> authFilePath;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecret;
+        private @Nullable Output<String> clientSecretCertificateThumbprint;
+        private @Nullable Output<String> clientSecretSettingName;
+        private @Nullable Output<String> configVersion;
+        private @Nullable Output<BuiltInAuthenticationProvider> defaultProvider;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> facebookAppId;
+        private @Nullable Output<String> facebookAppSecret;
+        private @Nullable Output<String> facebookAppSecretSettingName;
+        private @Nullable Output<List<String>> facebookOAuthScopes;
+        private @Nullable Output<String> gitHubClientId;
+        private @Nullable Output<String> gitHubClientSecret;
+        private @Nullable Output<String> gitHubClientSecretSettingName;
+        private @Nullable Output<List<String>> gitHubOAuthScopes;
+        private @Nullable Output<String> googleClientId;
+        private @Nullable Output<String> googleClientSecret;
+        private @Nullable Output<String> googleClientSecretSettingName;
+        private @Nullable Output<List<String>> googleOAuthScopes;
+        private @Nullable Output<String> isAuthFromFile;
+        private @Nullable Output<String> issuer;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> microsoftAccountClientId;
+        private @Nullable Output<String> microsoftAccountClientSecret;
+        private @Nullable Output<String> microsoftAccountClientSecretSettingName;
+        private @Nullable Output<List<String>> microsoftAccountOAuthScopes;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> runtimeVersion;
+        private @Nullable Output<Double> tokenRefreshExtensionHours;
+        private @Nullable Output<Boolean> tokenStoreEnabled;
+        private @Nullable Output<String> twitterConsumerKey;
+        private @Nullable Output<String> twitterConsumerSecret;
+        private @Nullable Output<String> twitterConsumerSecretSettingName;
+        private @Nullable Output<UnauthenticatedClientAction> unauthenticatedClientAction;
+        private @Nullable Output<Boolean> validateIssuer;
 
         public Builder() {
     	      // Empty
@@ -751,413 +751,413 @@ public final class WebAppAuthSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.validateIssuer = defaults.validateIssuer;
         }
 
-        public Builder aadClaimsAuthorization(@Nullable Input<String> aadClaimsAuthorization) {
+        public Builder aadClaimsAuthorization(@Nullable Output<String> aadClaimsAuthorization) {
             this.aadClaimsAuthorization = aadClaimsAuthorization;
             return this;
         }
 
         public Builder aadClaimsAuthorization(@Nullable String aadClaimsAuthorization) {
-            this.aadClaimsAuthorization = Input.ofNullable(aadClaimsAuthorization);
+            this.aadClaimsAuthorization = Output.ofNullable(aadClaimsAuthorization);
             return this;
         }
 
-        public Builder additionalLoginParams(@Nullable Input<List<String>> additionalLoginParams) {
+        public Builder additionalLoginParams(@Nullable Output<List<String>> additionalLoginParams) {
             this.additionalLoginParams = additionalLoginParams;
             return this;
         }
 
         public Builder additionalLoginParams(@Nullable List<String> additionalLoginParams) {
-            this.additionalLoginParams = Input.ofNullable(additionalLoginParams);
+            this.additionalLoginParams = Output.ofNullable(additionalLoginParams);
             return this;
         }
 
-        public Builder allowedAudiences(@Nullable Input<List<String>> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable Output<List<String>> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
 
         public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
-            this.allowedAudiences = Input.ofNullable(allowedAudiences);
+            this.allowedAudiences = Output.ofNullable(allowedAudiences);
             return this;
         }
 
-        public Builder allowedExternalRedirectUrls(@Nullable Input<List<String>> allowedExternalRedirectUrls) {
+        public Builder allowedExternalRedirectUrls(@Nullable Output<List<String>> allowedExternalRedirectUrls) {
             this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
 
         public Builder allowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
-            this.allowedExternalRedirectUrls = Input.ofNullable(allowedExternalRedirectUrls);
+            this.allowedExternalRedirectUrls = Output.ofNullable(allowedExternalRedirectUrls);
             return this;
         }
 
-        public Builder authFilePath(@Nullable Input<String> authFilePath) {
+        public Builder authFilePath(@Nullable Output<String> authFilePath) {
             this.authFilePath = authFilePath;
             return this;
         }
 
         public Builder authFilePath(@Nullable String authFilePath) {
-            this.authFilePath = Input.ofNullable(authFilePath);
+            this.authFilePath = Output.ofNullable(authFilePath);
             return this;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder clientSecretCertificateThumbprint(@Nullable Input<String> clientSecretCertificateThumbprint) {
+        public Builder clientSecretCertificateThumbprint(@Nullable Output<String> clientSecretCertificateThumbprint) {
             this.clientSecretCertificateThumbprint = clientSecretCertificateThumbprint;
             return this;
         }
 
         public Builder clientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
-            this.clientSecretCertificateThumbprint = Input.ofNullable(clientSecretCertificateThumbprint);
+            this.clientSecretCertificateThumbprint = Output.ofNullable(clientSecretCertificateThumbprint);
             return this;
         }
 
-        public Builder clientSecretSettingName(@Nullable Input<String> clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable Output<String> clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
 
         public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
-            this.clientSecretSettingName = Input.ofNullable(clientSecretSettingName);
+            this.clientSecretSettingName = Output.ofNullable(clientSecretSettingName);
             return this;
         }
 
-        public Builder configVersion(@Nullable Input<String> configVersion) {
+        public Builder configVersion(@Nullable Output<String> configVersion) {
             this.configVersion = configVersion;
             return this;
         }
 
         public Builder configVersion(@Nullable String configVersion) {
-            this.configVersion = Input.ofNullable(configVersion);
+            this.configVersion = Output.ofNullable(configVersion);
             return this;
         }
 
-        public Builder defaultProvider(@Nullable Input<BuiltInAuthenticationProvider> defaultProvider) {
+        public Builder defaultProvider(@Nullable Output<BuiltInAuthenticationProvider> defaultProvider) {
             this.defaultProvider = defaultProvider;
             return this;
         }
 
         public Builder defaultProvider(@Nullable BuiltInAuthenticationProvider defaultProvider) {
-            this.defaultProvider = Input.ofNullable(defaultProvider);
+            this.defaultProvider = Output.ofNullable(defaultProvider);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder facebookAppId(@Nullable Input<String> facebookAppId) {
+        public Builder facebookAppId(@Nullable Output<String> facebookAppId) {
             this.facebookAppId = facebookAppId;
             return this;
         }
 
         public Builder facebookAppId(@Nullable String facebookAppId) {
-            this.facebookAppId = Input.ofNullable(facebookAppId);
+            this.facebookAppId = Output.ofNullable(facebookAppId);
             return this;
         }
 
-        public Builder facebookAppSecret(@Nullable Input<String> facebookAppSecret) {
+        public Builder facebookAppSecret(@Nullable Output<String> facebookAppSecret) {
             this.facebookAppSecret = facebookAppSecret;
             return this;
         }
 
         public Builder facebookAppSecret(@Nullable String facebookAppSecret) {
-            this.facebookAppSecret = Input.ofNullable(facebookAppSecret);
+            this.facebookAppSecret = Output.ofNullable(facebookAppSecret);
             return this;
         }
 
-        public Builder facebookAppSecretSettingName(@Nullable Input<String> facebookAppSecretSettingName) {
+        public Builder facebookAppSecretSettingName(@Nullable Output<String> facebookAppSecretSettingName) {
             this.facebookAppSecretSettingName = facebookAppSecretSettingName;
             return this;
         }
 
         public Builder facebookAppSecretSettingName(@Nullable String facebookAppSecretSettingName) {
-            this.facebookAppSecretSettingName = Input.ofNullable(facebookAppSecretSettingName);
+            this.facebookAppSecretSettingName = Output.ofNullable(facebookAppSecretSettingName);
             return this;
         }
 
-        public Builder facebookOAuthScopes(@Nullable Input<List<String>> facebookOAuthScopes) {
+        public Builder facebookOAuthScopes(@Nullable Output<List<String>> facebookOAuthScopes) {
             this.facebookOAuthScopes = facebookOAuthScopes;
             return this;
         }
 
         public Builder facebookOAuthScopes(@Nullable List<String> facebookOAuthScopes) {
-            this.facebookOAuthScopes = Input.ofNullable(facebookOAuthScopes);
+            this.facebookOAuthScopes = Output.ofNullable(facebookOAuthScopes);
             return this;
         }
 
-        public Builder gitHubClientId(@Nullable Input<String> gitHubClientId) {
+        public Builder gitHubClientId(@Nullable Output<String> gitHubClientId) {
             this.gitHubClientId = gitHubClientId;
             return this;
         }
 
         public Builder gitHubClientId(@Nullable String gitHubClientId) {
-            this.gitHubClientId = Input.ofNullable(gitHubClientId);
+            this.gitHubClientId = Output.ofNullable(gitHubClientId);
             return this;
         }
 
-        public Builder gitHubClientSecret(@Nullable Input<String> gitHubClientSecret) {
+        public Builder gitHubClientSecret(@Nullable Output<String> gitHubClientSecret) {
             this.gitHubClientSecret = gitHubClientSecret;
             return this;
         }
 
         public Builder gitHubClientSecret(@Nullable String gitHubClientSecret) {
-            this.gitHubClientSecret = Input.ofNullable(gitHubClientSecret);
+            this.gitHubClientSecret = Output.ofNullable(gitHubClientSecret);
             return this;
         }
 
-        public Builder gitHubClientSecretSettingName(@Nullable Input<String> gitHubClientSecretSettingName) {
+        public Builder gitHubClientSecretSettingName(@Nullable Output<String> gitHubClientSecretSettingName) {
             this.gitHubClientSecretSettingName = gitHubClientSecretSettingName;
             return this;
         }
 
         public Builder gitHubClientSecretSettingName(@Nullable String gitHubClientSecretSettingName) {
-            this.gitHubClientSecretSettingName = Input.ofNullable(gitHubClientSecretSettingName);
+            this.gitHubClientSecretSettingName = Output.ofNullable(gitHubClientSecretSettingName);
             return this;
         }
 
-        public Builder gitHubOAuthScopes(@Nullable Input<List<String>> gitHubOAuthScopes) {
+        public Builder gitHubOAuthScopes(@Nullable Output<List<String>> gitHubOAuthScopes) {
             this.gitHubOAuthScopes = gitHubOAuthScopes;
             return this;
         }
 
         public Builder gitHubOAuthScopes(@Nullable List<String> gitHubOAuthScopes) {
-            this.gitHubOAuthScopes = Input.ofNullable(gitHubOAuthScopes);
+            this.gitHubOAuthScopes = Output.ofNullable(gitHubOAuthScopes);
             return this;
         }
 
-        public Builder googleClientId(@Nullable Input<String> googleClientId) {
+        public Builder googleClientId(@Nullable Output<String> googleClientId) {
             this.googleClientId = googleClientId;
             return this;
         }
 
         public Builder googleClientId(@Nullable String googleClientId) {
-            this.googleClientId = Input.ofNullable(googleClientId);
+            this.googleClientId = Output.ofNullable(googleClientId);
             return this;
         }
 
-        public Builder googleClientSecret(@Nullable Input<String> googleClientSecret) {
+        public Builder googleClientSecret(@Nullable Output<String> googleClientSecret) {
             this.googleClientSecret = googleClientSecret;
             return this;
         }
 
         public Builder googleClientSecret(@Nullable String googleClientSecret) {
-            this.googleClientSecret = Input.ofNullable(googleClientSecret);
+            this.googleClientSecret = Output.ofNullable(googleClientSecret);
             return this;
         }
 
-        public Builder googleClientSecretSettingName(@Nullable Input<String> googleClientSecretSettingName) {
+        public Builder googleClientSecretSettingName(@Nullable Output<String> googleClientSecretSettingName) {
             this.googleClientSecretSettingName = googleClientSecretSettingName;
             return this;
         }
 
         public Builder googleClientSecretSettingName(@Nullable String googleClientSecretSettingName) {
-            this.googleClientSecretSettingName = Input.ofNullable(googleClientSecretSettingName);
+            this.googleClientSecretSettingName = Output.ofNullable(googleClientSecretSettingName);
             return this;
         }
 
-        public Builder googleOAuthScopes(@Nullable Input<List<String>> googleOAuthScopes) {
+        public Builder googleOAuthScopes(@Nullable Output<List<String>> googleOAuthScopes) {
             this.googleOAuthScopes = googleOAuthScopes;
             return this;
         }
 
         public Builder googleOAuthScopes(@Nullable List<String> googleOAuthScopes) {
-            this.googleOAuthScopes = Input.ofNullable(googleOAuthScopes);
+            this.googleOAuthScopes = Output.ofNullable(googleOAuthScopes);
             return this;
         }
 
-        public Builder isAuthFromFile(@Nullable Input<String> isAuthFromFile) {
+        public Builder isAuthFromFile(@Nullable Output<String> isAuthFromFile) {
             this.isAuthFromFile = isAuthFromFile;
             return this;
         }
 
         public Builder isAuthFromFile(@Nullable String isAuthFromFile) {
-            this.isAuthFromFile = Input.ofNullable(isAuthFromFile);
+            this.isAuthFromFile = Output.ofNullable(isAuthFromFile);
             return this;
         }
 
-        public Builder issuer(@Nullable Input<String> issuer) {
+        public Builder issuer(@Nullable Output<String> issuer) {
             this.issuer = issuer;
             return this;
         }
 
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Input.ofNullable(issuer);
+            this.issuer = Output.ofNullable(issuer);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder microsoftAccountClientId(@Nullable Input<String> microsoftAccountClientId) {
+        public Builder microsoftAccountClientId(@Nullable Output<String> microsoftAccountClientId) {
             this.microsoftAccountClientId = microsoftAccountClientId;
             return this;
         }
 
         public Builder microsoftAccountClientId(@Nullable String microsoftAccountClientId) {
-            this.microsoftAccountClientId = Input.ofNullable(microsoftAccountClientId);
+            this.microsoftAccountClientId = Output.ofNullable(microsoftAccountClientId);
             return this;
         }
 
-        public Builder microsoftAccountClientSecret(@Nullable Input<String> microsoftAccountClientSecret) {
+        public Builder microsoftAccountClientSecret(@Nullable Output<String> microsoftAccountClientSecret) {
             this.microsoftAccountClientSecret = microsoftAccountClientSecret;
             return this;
         }
 
         public Builder microsoftAccountClientSecret(@Nullable String microsoftAccountClientSecret) {
-            this.microsoftAccountClientSecret = Input.ofNullable(microsoftAccountClientSecret);
+            this.microsoftAccountClientSecret = Output.ofNullable(microsoftAccountClientSecret);
             return this;
         }
 
-        public Builder microsoftAccountClientSecretSettingName(@Nullable Input<String> microsoftAccountClientSecretSettingName) {
+        public Builder microsoftAccountClientSecretSettingName(@Nullable Output<String> microsoftAccountClientSecretSettingName) {
             this.microsoftAccountClientSecretSettingName = microsoftAccountClientSecretSettingName;
             return this;
         }
 
         public Builder microsoftAccountClientSecretSettingName(@Nullable String microsoftAccountClientSecretSettingName) {
-            this.microsoftAccountClientSecretSettingName = Input.ofNullable(microsoftAccountClientSecretSettingName);
+            this.microsoftAccountClientSecretSettingName = Output.ofNullable(microsoftAccountClientSecretSettingName);
             return this;
         }
 
-        public Builder microsoftAccountOAuthScopes(@Nullable Input<List<String>> microsoftAccountOAuthScopes) {
+        public Builder microsoftAccountOAuthScopes(@Nullable Output<List<String>> microsoftAccountOAuthScopes) {
             this.microsoftAccountOAuthScopes = microsoftAccountOAuthScopes;
             return this;
         }
 
         public Builder microsoftAccountOAuthScopes(@Nullable List<String> microsoftAccountOAuthScopes) {
-            this.microsoftAccountOAuthScopes = Input.ofNullable(microsoftAccountOAuthScopes);
+            this.microsoftAccountOAuthScopes = Output.ofNullable(microsoftAccountOAuthScopes);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder runtimeVersion(@Nullable Input<String> runtimeVersion) {
+        public Builder runtimeVersion(@Nullable Output<String> runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Input.ofNullable(runtimeVersion);
+            this.runtimeVersion = Output.ofNullable(runtimeVersion);
             return this;
         }
 
-        public Builder tokenRefreshExtensionHours(@Nullable Input<Double> tokenRefreshExtensionHours) {
+        public Builder tokenRefreshExtensionHours(@Nullable Output<Double> tokenRefreshExtensionHours) {
             this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
             return this;
         }
 
         public Builder tokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
-            this.tokenRefreshExtensionHours = Input.ofNullable(tokenRefreshExtensionHours);
+            this.tokenRefreshExtensionHours = Output.ofNullable(tokenRefreshExtensionHours);
             return this;
         }
 
-        public Builder tokenStoreEnabled(@Nullable Input<Boolean> tokenStoreEnabled) {
+        public Builder tokenStoreEnabled(@Nullable Output<Boolean> tokenStoreEnabled) {
             this.tokenStoreEnabled = tokenStoreEnabled;
             return this;
         }
 
         public Builder tokenStoreEnabled(@Nullable Boolean tokenStoreEnabled) {
-            this.tokenStoreEnabled = Input.ofNullable(tokenStoreEnabled);
+            this.tokenStoreEnabled = Output.ofNullable(tokenStoreEnabled);
             return this;
         }
 
-        public Builder twitterConsumerKey(@Nullable Input<String> twitterConsumerKey) {
+        public Builder twitterConsumerKey(@Nullable Output<String> twitterConsumerKey) {
             this.twitterConsumerKey = twitterConsumerKey;
             return this;
         }
 
         public Builder twitterConsumerKey(@Nullable String twitterConsumerKey) {
-            this.twitterConsumerKey = Input.ofNullable(twitterConsumerKey);
+            this.twitterConsumerKey = Output.ofNullable(twitterConsumerKey);
             return this;
         }
 
-        public Builder twitterConsumerSecret(@Nullable Input<String> twitterConsumerSecret) {
+        public Builder twitterConsumerSecret(@Nullable Output<String> twitterConsumerSecret) {
             this.twitterConsumerSecret = twitterConsumerSecret;
             return this;
         }
 
         public Builder twitterConsumerSecret(@Nullable String twitterConsumerSecret) {
-            this.twitterConsumerSecret = Input.ofNullable(twitterConsumerSecret);
+            this.twitterConsumerSecret = Output.ofNullable(twitterConsumerSecret);
             return this;
         }
 
-        public Builder twitterConsumerSecretSettingName(@Nullable Input<String> twitterConsumerSecretSettingName) {
+        public Builder twitterConsumerSecretSettingName(@Nullable Output<String> twitterConsumerSecretSettingName) {
             this.twitterConsumerSecretSettingName = twitterConsumerSecretSettingName;
             return this;
         }
 
         public Builder twitterConsumerSecretSettingName(@Nullable String twitterConsumerSecretSettingName) {
-            this.twitterConsumerSecretSettingName = Input.ofNullable(twitterConsumerSecretSettingName);
+            this.twitterConsumerSecretSettingName = Output.ofNullable(twitterConsumerSecretSettingName);
             return this;
         }
 
-        public Builder unauthenticatedClientAction(@Nullable Input<UnauthenticatedClientAction> unauthenticatedClientAction) {
+        public Builder unauthenticatedClientAction(@Nullable Output<UnauthenticatedClientAction> unauthenticatedClientAction) {
             this.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }
 
         public Builder unauthenticatedClientAction(@Nullable UnauthenticatedClientAction unauthenticatedClientAction) {
-            this.unauthenticatedClientAction = Input.ofNullable(unauthenticatedClientAction);
+            this.unauthenticatedClientAction = Output.ofNullable(unauthenticatedClientAction);
             return this;
         }
 
-        public Builder validateIssuer(@Nullable Input<Boolean> validateIssuer) {
+        public Builder validateIssuer(@Nullable Output<Boolean> validateIssuer) {
             this.validateIssuer = validateIssuer;
             return this;
         }
 
         public Builder validateIssuer(@Nullable Boolean validateIssuer) {
-            this.validateIssuer = Input.ofNullable(validateIssuer);
+            this.validateIssuer = Output.ofNullable(validateIssuer);
             return this;
         }
         public WebAppAuthSettingsArgs build() {

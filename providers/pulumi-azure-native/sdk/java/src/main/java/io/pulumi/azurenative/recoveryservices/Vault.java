@@ -10,7 +10,6 @@ import io.pulumi.azurenative.recoveryservices.outputs.SkuResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SystemDataResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VaultPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -201,28 +200,28 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Vault(String name, VaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:recoveryservices:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:recoveryservices:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Vault(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Vault(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:Vault", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20160601:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20200202:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20201001:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210101:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211101preview:Vault").build())
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20160601:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20200202:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20201001:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210101:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211101preview:Vault").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -236,7 +235,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Vault get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Vault get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Vault(name, id, options);
     }
 }

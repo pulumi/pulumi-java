@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.databoxedge.enums.RoleStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="deviceName", required=true)
-      private final Input<String> deviceName;
+      private final Output<String> deviceName;
 
-    public Input<String> getDeviceName() {
+    public Output<String> getDeviceName() {
         return this.deviceName;
     }
 
@@ -33,9 +33,9 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -44,10 +44,10 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,18 +66,18 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="roleStatus", required=true)
-      private final Input<Either<String,RoleStatus>> roleStatus;
+      private final Output<Either<String,RoleStatus>> roleStatus;
 
-    public Input<Either<String,RoleStatus>> getRoleStatus() {
+    public Output<Either<String,RoleStatus>> getRoleStatus() {
         return this.roleStatus;
     }
 
     public CloudEdgeManagementRoleArgs(
-        Input<String> deviceName,
-        Input<String> kind,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName,
-        Input<Either<String,RoleStatus>> roleStatus) {
+        Output<String> deviceName,
+        Output<String> kind,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName,
+        Output<Either<String,RoleStatus>> roleStatus) {
         this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.name = name;
@@ -86,11 +86,11 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
     }
 
     private CloudEdgeManagementRoleArgs() {
-        this.deviceName = Input.empty();
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.roleStatus = Input.empty();
+        this.deviceName = Output.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.roleStatus = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> deviceName;
-        private Input<String> kind;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<Either<String,RoleStatus>> roleStatus;
+        private Output<String> deviceName;
+        private Output<String> kind;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<Either<String,RoleStatus>> roleStatus;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class CloudEdgeManagementRoleArgs extends io.pulumi.resources.Resou
     	      this.roleStatus = defaults.roleStatus;
         }
 
-        public Builder deviceName(Input<String> deviceName) {
+        public Builder deviceName(Output<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Input.of(Objects.requireNonNull(deviceName));
+            this.deviceName = Output.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder roleStatus(Input<Either<String,RoleStatus>> roleStatus) {
+        public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
 
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
-            this.roleStatus = Input.of(Objects.requireNonNull(roleStatus));
+            this.roleStatus = Output.of(Objects.requireNonNull(roleStatus));
             return this;
         }
         public CloudEdgeManagementRoleArgs build() {

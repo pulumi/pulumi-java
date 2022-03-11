@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.enums.PolicyStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="days")
-      private final @Nullable Input<Integer> days;
+      private final @Nullable Output<Integer> days;
 
-    public Input<Integer> getDays() {
-        return this.days == null ? Input.empty() : this.days;
+    public Output<Integer> getDays() {
+        return this.days == null ? Output.empty() : this.days;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,PolicyStatus>> status;
+      private final @Nullable Output<Either<String,PolicyStatus>> status;
 
-    public Input<Either<String,PolicyStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,PolicyStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public RetentionPolicyArgs(
-        @Nullable Input<Integer> days,
-        @Nullable Input<Either<String,PolicyStatus>> status) {
-        this.days = days == null ? Input.ofNullable(7) : days;
-        this.status = status == null ? Input.ofLeft("disabled") : status;
+        @Nullable Output<Integer> days,
+        @Nullable Output<Either<String,PolicyStatus>> status) {
+        this.days = days == null ? Output.ofNullable(7) : days;
+        this.status = status == null ? Output.ofLeft("disabled") : status;
     }
 
     private RetentionPolicyArgs() {
-        this.days = Input.empty();
-        this.status = Input.empty();
+        this.days = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> days;
-        private @Nullable Input<Either<String,PolicyStatus>> status;
+        private @Nullable Output<Integer> days;
+        private @Nullable Output<Either<String,PolicyStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.status = defaults.status;
         }
 
-        public Builder days(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Output<Integer> days) {
             this.days = days;
             return this;
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = Input.ofNullable(days);
+            this.days = Output.ofNullable(days);
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,PolicyStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,PolicyStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,PolicyStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public RetentionPolicyArgs build() {

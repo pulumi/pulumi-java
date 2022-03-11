@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesExchangeArgs;
 import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesSharePointArgs;
 import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesTeamsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,10 +25,10 @@ public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="exchange")
-      private final @Nullable Input<OfficeDataConnectorDataTypesExchangeArgs> exchange;
+      private final @Nullable Output<OfficeDataConnectorDataTypesExchangeArgs> exchange;
 
-    public Input<OfficeDataConnectorDataTypesExchangeArgs> getExchange() {
-        return this.exchange == null ? Input.empty() : this.exchange;
+    public Output<OfficeDataConnectorDataTypesExchangeArgs> getExchange() {
+        return this.exchange == null ? Output.empty() : this.exchange;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sharePoint")
-      private final @Nullable Input<OfficeDataConnectorDataTypesSharePointArgs> sharePoint;
+      private final @Nullable Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint;
 
-    public Input<OfficeDataConnectorDataTypesSharePointArgs> getSharePoint() {
-        return this.sharePoint == null ? Input.empty() : this.sharePoint;
+    public Output<OfficeDataConnectorDataTypesSharePointArgs> getSharePoint() {
+        return this.sharePoint == null ? Output.empty() : this.sharePoint;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="teams")
-      private final @Nullable Input<OfficeDataConnectorDataTypesTeamsArgs> teams;
+      private final @Nullable Output<OfficeDataConnectorDataTypesTeamsArgs> teams;
 
-    public Input<OfficeDataConnectorDataTypesTeamsArgs> getTeams() {
-        return this.teams == null ? Input.empty() : this.teams;
+    public Output<OfficeDataConnectorDataTypesTeamsArgs> getTeams() {
+        return this.teams == null ? Output.empty() : this.teams;
     }
 
     public OfficeDataConnectorDataTypesArgs(
-        @Nullable Input<OfficeDataConnectorDataTypesExchangeArgs> exchange,
-        @Nullable Input<OfficeDataConnectorDataTypesSharePointArgs> sharePoint,
-        @Nullable Input<OfficeDataConnectorDataTypesTeamsArgs> teams) {
+        @Nullable Output<OfficeDataConnectorDataTypesExchangeArgs> exchange,
+        @Nullable Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint,
+        @Nullable Output<OfficeDataConnectorDataTypesTeamsArgs> teams) {
         this.exchange = exchange;
         this.sharePoint = sharePoint;
         this.teams = teams;
     }
 
     private OfficeDataConnectorDataTypesArgs() {
-        this.exchange = Input.empty();
-        this.sharePoint = Input.empty();
-        this.teams = Input.empty();
+        this.exchange = Output.empty();
+        this.sharePoint = Output.empty();
+        this.teams = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<OfficeDataConnectorDataTypesExchangeArgs> exchange;
-        private @Nullable Input<OfficeDataConnectorDataTypesSharePointArgs> sharePoint;
-        private @Nullable Input<OfficeDataConnectorDataTypesTeamsArgs> teams;
+        private @Nullable Output<OfficeDataConnectorDataTypesExchangeArgs> exchange;
+        private @Nullable Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint;
+        private @Nullable Output<OfficeDataConnectorDataTypesTeamsArgs> teams;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class OfficeDataConnectorDataTypesArgs extends io.pulumi.resources.
     	      this.teams = defaults.teams;
         }
 
-        public Builder exchange(@Nullable Input<OfficeDataConnectorDataTypesExchangeArgs> exchange) {
+        public Builder exchange(@Nullable Output<OfficeDataConnectorDataTypesExchangeArgs> exchange) {
             this.exchange = exchange;
             return this;
         }
 
         public Builder exchange(@Nullable OfficeDataConnectorDataTypesExchangeArgs exchange) {
-            this.exchange = Input.ofNullable(exchange);
+            this.exchange = Output.ofNullable(exchange);
             return this;
         }
 
-        public Builder sharePoint(@Nullable Input<OfficeDataConnectorDataTypesSharePointArgs> sharePoint) {
+        public Builder sharePoint(@Nullable Output<OfficeDataConnectorDataTypesSharePointArgs> sharePoint) {
             this.sharePoint = sharePoint;
             return this;
         }
 
         public Builder sharePoint(@Nullable OfficeDataConnectorDataTypesSharePointArgs sharePoint) {
-            this.sharePoint = Input.ofNullable(sharePoint);
+            this.sharePoint = Output.ofNullable(sharePoint);
             return this;
         }
 
-        public Builder teams(@Nullable Input<OfficeDataConnectorDataTypesTeamsArgs> teams) {
+        public Builder teams(@Nullable Output<OfficeDataConnectorDataTypesTeamsArgs> teams) {
             this.teams = teams;
             return this;
         }
 
         public Builder teams(@Nullable OfficeDataConnectorDataTypesTeamsArgs teams) {
-            this.teams = Input.ofNullable(teams);
+            this.teams = Output.ofNullable(teams);
             return this;
         }
         public OfficeDataConnectorDataTypesArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.KeySource;
 import io.pulumi.azurenative.batch.inputs.KeyVaultPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keySource")
-      private final @Nullable Input<KeySource> keySource;
+      private final @Nullable Output<KeySource> keySource;
 
-    public Input<KeySource> getKeySource() {
-        return this.keySource == null ? Input.empty() : this.keySource;
+    public Output<KeySource> getKeySource() {
+        return this.keySource == null ? Output.empty() : this.keySource;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVaultProperties")
-      private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+      private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
+    public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
+        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
     }
 
     public EncryptionPropertiesArgs(
-        @Nullable Input<KeySource> keySource,
-        @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        @Nullable Output<KeySource> keySource,
+        @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
         this.keySource = keySource;
         this.keyVaultProperties = keyVaultProperties;
     }
 
     private EncryptionPropertiesArgs() {
-        this.keySource = Input.empty();
-        this.keyVaultProperties = Input.empty();
+        this.keySource = Output.empty();
+        this.keyVaultProperties = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<KeySource> keySource;
-        private @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+        private @Nullable Output<KeySource> keySource;
+        private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     	      this.keyVaultProperties = defaults.keyVaultProperties;
         }
 
-        public Builder keySource(@Nullable Input<KeySource> keySource) {
+        public Builder keySource(@Nullable Output<KeySource> keySource) {
             this.keySource = keySource;
             return this;
         }
 
         public Builder keySource(@Nullable KeySource keySource) {
-            this.keySource = Input.ofNullable(keySource);
+            this.keySource = Output.ofNullable(keySource);
             return this;
         }
 
-        public Builder keyVaultProperties(@Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
             return this;
         }
         public EncryptionPropertiesArgs build() {

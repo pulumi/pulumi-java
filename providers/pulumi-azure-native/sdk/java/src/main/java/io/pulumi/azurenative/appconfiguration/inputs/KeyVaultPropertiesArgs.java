@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="identityClientId")
-      private final @Nullable Input<String> identityClientId;
+      private final @Nullable Output<String> identityClientId;
 
-    public Input<String> getIdentityClientId() {
-        return this.identityClientId == null ? Input.empty() : this.identityClientId;
+    public Output<String> getIdentityClientId() {
+        return this.identityClientId == null ? Output.empty() : this.identityClientId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyIdentifier")
-      private final @Nullable Input<String> keyIdentifier;
+      private final @Nullable Output<String> keyIdentifier;
 
-    public Input<String> getKeyIdentifier() {
-        return this.keyIdentifier == null ? Input.empty() : this.keyIdentifier;
+    public Output<String> getKeyIdentifier() {
+        return this.keyIdentifier == null ? Output.empty() : this.keyIdentifier;
     }
 
     public KeyVaultPropertiesArgs(
-        @Nullable Input<String> identityClientId,
-        @Nullable Input<String> keyIdentifier) {
+        @Nullable Output<String> identityClientId,
+        @Nullable Output<String> keyIdentifier) {
         this.identityClientId = identityClientId;
         this.keyIdentifier = keyIdentifier;
     }
 
     private KeyVaultPropertiesArgs() {
-        this.identityClientId = Input.empty();
-        this.keyIdentifier = Input.empty();
+        this.identityClientId = Output.empty();
+        this.keyIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> identityClientId;
-        private @Nullable Input<String> keyIdentifier;
+        private @Nullable Output<String> identityClientId;
+        private @Nullable Output<String> keyIdentifier;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.keyIdentifier = defaults.keyIdentifier;
         }
 
-        public Builder identityClientId(@Nullable Input<String> identityClientId) {
+        public Builder identityClientId(@Nullable Output<String> identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
         public Builder identityClientId(@Nullable String identityClientId) {
-            this.identityClientId = Input.ofNullable(identityClientId);
+            this.identityClientId = Output.ofNullable(identityClientId);
             return this;
         }
 
-        public Builder keyIdentifier(@Nullable Input<String> keyIdentifier) {
+        public Builder keyIdentifier(@Nullable Output<String> keyIdentifier) {
             this.keyIdentifier = keyIdentifier;
             return this;
         }
 
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
-            this.keyIdentifier = Input.ofNullable(keyIdentifier);
+            this.keyIdentifier = Output.ofNullable(keyIdentifier);
             return this;
         }
         public KeyVaultPropertiesArgs build() {

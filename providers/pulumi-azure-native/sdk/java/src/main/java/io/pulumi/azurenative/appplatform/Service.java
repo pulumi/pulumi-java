@@ -8,7 +8,6 @@ import io.pulumi.azurenative.appplatform.ServiceArgs;
 import io.pulumi.azurenative.appplatform.outputs.ClusterResourcePropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -157,23 +156,23 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Service(String name, ServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:appplatform:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:appplatform:Service", name, args == null ? ServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Service(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Service(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:appplatform:Service", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20190501preview:Service").build()),
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20200701:Service").build()),
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20201101preview:Service").build()),
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20210601preview:Service").build()),
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20210901preview:Service").build()),
-                Input.of(Alias.builder().setType("azure-native:appplatform/v20220101preview:Service").build())
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20190501preview:Service").build()),
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20200701:Service").build()),
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20201101preview:Service").build()),
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20210601preview:Service").build()),
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20210901preview:Service").build()),
+                Output.of(Alias.builder().setType("azure-native:appplatform/v20220101preview:Service").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -187,7 +186,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Service get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Service get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Service(name, id, options);
     }
 }

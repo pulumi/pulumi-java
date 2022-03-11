@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databox.enums.TransferConfigurationType;
 import io.pulumi.azurenative.databox.inputs.TransferConfigurationTransferAllDetailsArgs;
 import io.pulumi.azurenative.databox.inputs.TransferConfigurationTransferFilterDetailsArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transferAllDetails")
-      private final @Nullable Input<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
+      private final @Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
 
-    public Input<TransferConfigurationTransferAllDetailsArgs> getTransferAllDetails() {
-        return this.transferAllDetails == null ? Input.empty() : this.transferAllDetails;
+    public Output<TransferConfigurationTransferAllDetailsArgs> getTransferAllDetails() {
+        return this.transferAllDetails == null ? Output.empty() : this.transferAllDetails;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transferConfigurationType", required=true)
-      private final Input<Either<String,TransferConfigurationType>> transferConfigurationType;
+      private final Output<Either<String,TransferConfigurationType>> transferConfigurationType;
 
-    public Input<Either<String,TransferConfigurationType>> getTransferConfigurationType() {
+    public Output<Either<String,TransferConfigurationType>> getTransferConfigurationType() {
         return this.transferConfigurationType;
     }
 
@@ -49,25 +49,25 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="transferFilterDetails")
-      private final @Nullable Input<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
+      private final @Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
 
-    public Input<TransferConfigurationTransferFilterDetailsArgs> getTransferFilterDetails() {
-        return this.transferFilterDetails == null ? Input.empty() : this.transferFilterDetails;
+    public Output<TransferConfigurationTransferFilterDetailsArgs> getTransferFilterDetails() {
+        return this.transferFilterDetails == null ? Output.empty() : this.transferFilterDetails;
     }
 
     public TransferConfigurationArgs(
-        @Nullable Input<TransferConfigurationTransferAllDetailsArgs> transferAllDetails,
-        Input<Either<String,TransferConfigurationType>> transferConfigurationType,
-        @Nullable Input<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails) {
+        @Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails,
+        Output<Either<String,TransferConfigurationType>> transferConfigurationType,
+        @Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails) {
         this.transferAllDetails = transferAllDetails;
         this.transferConfigurationType = Objects.requireNonNull(transferConfigurationType, "expected parameter 'transferConfigurationType' to be non-null");
         this.transferFilterDetails = transferFilterDetails;
     }
 
     private TransferConfigurationArgs() {
-        this.transferAllDetails = Input.empty();
-        this.transferConfigurationType = Input.empty();
-        this.transferFilterDetails = Input.empty();
+        this.transferAllDetails = Output.empty();
+        this.transferConfigurationType = Output.empty();
+        this.transferFilterDetails = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
-        private Input<Either<String,TransferConfigurationType>> transferConfigurationType;
-        private @Nullable Input<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
+        private @Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails;
+        private Output<Either<String,TransferConfigurationType>> transferConfigurationType;
+        private @Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.transferFilterDetails = defaults.transferFilterDetails;
         }
 
-        public Builder transferAllDetails(@Nullable Input<TransferConfigurationTransferAllDetailsArgs> transferAllDetails) {
+        public Builder transferAllDetails(@Nullable Output<TransferConfigurationTransferAllDetailsArgs> transferAllDetails) {
             this.transferAllDetails = transferAllDetails;
             return this;
         }
 
         public Builder transferAllDetails(@Nullable TransferConfigurationTransferAllDetailsArgs transferAllDetails) {
-            this.transferAllDetails = Input.ofNullable(transferAllDetails);
+            this.transferAllDetails = Output.ofNullable(transferAllDetails);
             return this;
         }
 
-        public Builder transferConfigurationType(Input<Either<String,TransferConfigurationType>> transferConfigurationType) {
+        public Builder transferConfigurationType(Output<Either<String,TransferConfigurationType>> transferConfigurationType) {
             this.transferConfigurationType = Objects.requireNonNull(transferConfigurationType);
             return this;
         }
 
         public Builder transferConfigurationType(Either<String,TransferConfigurationType> transferConfigurationType) {
-            this.transferConfigurationType = Input.of(Objects.requireNonNull(transferConfigurationType));
+            this.transferConfigurationType = Output.of(Objects.requireNonNull(transferConfigurationType));
             return this;
         }
 
-        public Builder transferFilterDetails(@Nullable Input<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails) {
+        public Builder transferFilterDetails(@Nullable Output<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails) {
             this.transferFilterDetails = transferFilterDetails;
             return this;
         }
 
         public Builder transferFilterDetails(@Nullable TransferConfigurationTransferFilterDetailsArgs transferFilterDetails) {
-            this.transferFilterDetails = Input.ofNullable(transferFilterDetails);
+            this.transferFilterDetails = Output.ofNullable(transferFilterDetails);
             return this;
         }
         public TransferConfigurationArgs build() {

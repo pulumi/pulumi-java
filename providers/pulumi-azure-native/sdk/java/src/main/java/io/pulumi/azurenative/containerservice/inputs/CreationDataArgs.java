@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceResourceId")
-      private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Output<String> sourceResourceId;
 
-    public Input<String> getSourceResourceId() {
-        return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
+    public Output<String> getSourceResourceId() {
+        return this.sourceResourceId == null ? Output.empty() : this.sourceResourceId;
     }
 
-    public CreationDataArgs(@Nullable Input<String> sourceResourceId) {
+    public CreationDataArgs(@Nullable Output<String> sourceResourceId) {
         this.sourceResourceId = sourceResourceId;
     }
 
     private CreationDataArgs() {
-        this.sourceResourceId = Input.empty();
+        this.sourceResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> sourceResourceId;
+        private @Nullable Output<String> sourceResourceId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceResourceId = defaults.sourceResourceId;
         }
 
-        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Input.ofNullable(sourceResourceId);
+            this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
         }
         public CreationDataArgs build() {

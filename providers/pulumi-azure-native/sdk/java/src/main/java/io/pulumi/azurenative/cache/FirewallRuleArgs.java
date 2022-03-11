@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cacheName", required=true)
-      private final Input<String> cacheName;
+      private final Output<String> cacheName;
 
-    public Input<String> getCacheName() {
+    public Output<String> getCacheName() {
         return this.cacheName;
     }
 
@@ -30,9 +30,9 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endIP", required=true)
-      private final Input<String> endIP;
+      private final Output<String> endIP;
 
-    public Input<String> getEndIP() {
+    public Output<String> getEndIP() {
         return this.endIP;
     }
 
@@ -41,9 +41,9 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,10 +52,10 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-      private final @Nullable Input<String> ruleName;
+      private final @Nullable Output<String> ruleName;
 
-    public Input<String> getRuleName() {
-        return this.ruleName == null ? Input.empty() : this.ruleName;
+    public Output<String> getRuleName() {
+        return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startIP", required=true)
-      private final Input<String> startIP;
+      private final Output<String> startIP;
 
-    public Input<String> getStartIP() {
+    public Output<String> getStartIP() {
         return this.startIP;
     }
 
     public FirewallRuleArgs(
-        Input<String> cacheName,
-        Input<String> endIP,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> ruleName,
-        Input<String> startIP) {
+        Output<String> cacheName,
+        Output<String> endIP,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> ruleName,
+        Output<String> startIP) {
         this.cacheName = Objects.requireNonNull(cacheName, "expected parameter 'cacheName' to be non-null");
         this.endIP = Objects.requireNonNull(endIP, "expected parameter 'endIP' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -83,11 +83,11 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallRuleArgs() {
-        this.cacheName = Input.empty();
-        this.endIP = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.ruleName = Input.empty();
-        this.startIP = Input.empty();
+        this.cacheName = Output.empty();
+        this.endIP = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.ruleName = Output.empty();
+        this.startIP = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> cacheName;
-        private Input<String> endIP;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> ruleName;
-        private Input<String> startIP;
+        private Output<String> cacheName;
+        private Output<String> endIP;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> ruleName;
+        private Output<String> startIP;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startIP = defaults.startIP;
         }
 
-        public Builder cacheName(Input<String> cacheName) {
+        public Builder cacheName(Output<String> cacheName) {
             this.cacheName = Objects.requireNonNull(cacheName);
             return this;
         }
 
         public Builder cacheName(String cacheName) {
-            this.cacheName = Input.of(Objects.requireNonNull(cacheName));
+            this.cacheName = Output.of(Objects.requireNonNull(cacheName));
             return this;
         }
 
-        public Builder endIP(Input<String> endIP) {
+        public Builder endIP(Output<String> endIP) {
             this.endIP = Objects.requireNonNull(endIP);
             return this;
         }
 
         public Builder endIP(String endIP) {
-            this.endIP = Input.of(Objects.requireNonNull(endIP));
+            this.endIP = Output.of(Objects.requireNonNull(endIP));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder ruleName(@Nullable Input<String> ruleName) {
+        public Builder ruleName(@Nullable Output<String> ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Input.ofNullable(ruleName);
+            this.ruleName = Output.ofNullable(ruleName);
             return this;
         }
 
-        public Builder startIP(Input<String> startIP) {
+        public Builder startIP(Output<String> startIP) {
             this.startIP = Objects.requireNonNull(startIP);
             return this;
         }
 
         public Builder startIP(String startIP) {
-            this.startIP = Input.of(Objects.requireNonNull(startIP));
+            this.startIP = Output.of(Objects.requireNonNull(startIP));
             return this;
         }
         public FirewallRuleArgs build() {

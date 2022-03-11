@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="authority")
-      private final @Nullable Input<String> authority;
+      private final @Nullable Output<String> authority;
 
-    public Input<String> getAuthority() {
-        return this.authority == null ? Input.empty() : this.authority;
+    public Output<String> getAuthority() {
+        return this.authority == null ? Output.empty() : this.authority;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     public UploadServicePrincipalArgs(
-        @Nullable Input<String> authority,
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecret,
-        @Nullable Input<String> tenantId) {
+        @Nullable Output<String> authority,
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecret,
+        @Nullable Output<String> tenantId) {
         this.authority = authority;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -74,10 +74,10 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     }
 
     private UploadServicePrincipalArgs() {
-        this.authority = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.tenantId = Input.empty();
+        this.authority = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authority;
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecret;
-        private @Nullable Input<String> tenantId;
+        private @Nullable Output<String> authority;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecret;
+        private @Nullable Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class UploadServicePrincipalArgs extends io.pulumi.resources.Resour
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder authority(@Nullable Input<String> authority) {
+        public Builder authority(@Nullable Output<String> authority) {
             this.authority = authority;
             return this;
         }
 
         public Builder authority(@Nullable String authority) {
-            this.authority = Input.ofNullable(authority);
+            this.authority = Output.ofNullable(authority);
             return this;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Output<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId);
+            this.clientId = Output.ofNullable(clientId);
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret);
+            this.clientSecret = Output.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
         public UploadServicePrincipalArgs build() {

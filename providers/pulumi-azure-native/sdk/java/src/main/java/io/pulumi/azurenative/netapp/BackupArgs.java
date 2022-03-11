@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,10 +30,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupName")
-      private final @Nullable Input<String> backupName;
+      private final @Nullable Output<String> backupName;
 
-    public Input<String> getBackupName() {
-        return this.backupName == null ? Input.empty() : this.backupName;
+    public Output<String> getBackupName() {
+        return this.backupName == null ? Output.empty() : this.backupName;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-      private final @Nullable Input<String> label;
+      private final @Nullable Output<String> label;
 
-    public Input<String> getLabel() {
-        return this.label == null ? Input.empty() : this.label;
+    public Output<String> getLabel() {
+        return this.label == null ? Output.empty() : this.label;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -63,9 +63,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolName", required=true)
-      private final Input<String> poolName;
+      private final Output<String> poolName;
 
-    public Input<String> getPoolName() {
+    public Output<String> getPoolName() {
         return this.poolName;
     }
 
@@ -74,9 +74,9 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -85,20 +85,20 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeName", required=true)
-      private final Input<String> volumeName;
+      private final Output<String> volumeName;
 
-    public Input<String> getVolumeName() {
+    public Output<String> getVolumeName() {
         return this.volumeName;
     }
 
     public BackupArgs(
-        Input<String> accountName,
-        @Nullable Input<String> backupName,
-        @Nullable Input<String> label,
-        @Nullable Input<String> location,
-        Input<String> poolName,
-        Input<String> resourceGroupName,
-        Input<String> volumeName) {
+        Output<String> accountName,
+        @Nullable Output<String> backupName,
+        @Nullable Output<String> label,
+        @Nullable Output<String> location,
+        Output<String> poolName,
+        Output<String> resourceGroupName,
+        Output<String> volumeName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.backupName = backupName;
         this.label = label;
@@ -109,13 +109,13 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupArgs() {
-        this.accountName = Input.empty();
-        this.backupName = Input.empty();
-        this.label = Input.empty();
-        this.location = Input.empty();
-        this.poolName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.volumeName = Input.empty();
+        this.accountName = Output.empty();
+        this.backupName = Output.empty();
+        this.label = Output.empty();
+        this.location = Output.empty();
+        this.poolName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.volumeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -127,13 +127,13 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> backupName;
-        private @Nullable Input<String> label;
-        private @Nullable Input<String> location;
-        private Input<String> poolName;
-        private Input<String> resourceGroupName;
-        private Input<String> volumeName;
+        private Output<String> accountName;
+        private @Nullable Output<String> backupName;
+        private @Nullable Output<String> label;
+        private @Nullable Output<String> location;
+        private Output<String> poolName;
+        private Output<String> resourceGroupName;
+        private Output<String> volumeName;
 
         public Builder() {
     	      // Empty
@@ -150,73 +150,73 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder backupName(@Nullable Input<String> backupName) {
+        public Builder backupName(@Nullable Output<String> backupName) {
             this.backupName = backupName;
             return this;
         }
 
         public Builder backupName(@Nullable String backupName) {
-            this.backupName = Input.ofNullable(backupName);
+            this.backupName = Output.ofNullable(backupName);
             return this;
         }
 
-        public Builder label(@Nullable Input<String> label) {
+        public Builder label(@Nullable Output<String> label) {
             this.label = label;
             return this;
         }
 
         public Builder label(@Nullable String label) {
-            this.label = Input.ofNullable(label);
+            this.label = Output.ofNullable(label);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder poolName(Input<String> poolName) {
+        public Builder poolName(Output<String> poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
 
         public Builder poolName(String poolName) {
-            this.poolName = Input.of(Objects.requireNonNull(poolName));
+            this.poolName = Output.of(Objects.requireNonNull(poolName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder volumeName(Input<String> volumeName) {
+        public Builder volumeName(Output<String> volumeName) {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }
 
         public Builder volumeName(String volumeName) {
-            this.volumeName = Input.of(Objects.requireNonNull(volumeName));
+            this.volumeName = Output.of(Objects.requireNonNull(volumeName));
             return this;
         }
         public BackupArgs build() {

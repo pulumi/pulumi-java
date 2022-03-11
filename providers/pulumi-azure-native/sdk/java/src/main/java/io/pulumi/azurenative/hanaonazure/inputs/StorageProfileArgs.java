@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.azurenative.hanaonazure.inputs.DiskArgs;
 import io.pulumi.azurenative.hanaonazure.inputs.SAPSystemIDArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hanaSids")
-      private final @Nullable Input<List<SAPSystemIDArgs>> hanaSids;
+      private final @Nullable Output<List<SAPSystemIDArgs>> hanaSids;
 
-    public Input<List<SAPSystemIDArgs>> getHanaSids() {
-        return this.hanaSids == null ? Input.empty() : this.hanaSids;
+    public Output<List<SAPSystemIDArgs>> getHanaSids() {
+        return this.hanaSids == null ? Output.empty() : this.hanaSids;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osDisks")
-      private final @Nullable Input<List<DiskArgs>> osDisks;
+      private final @Nullable Output<List<DiskArgs>> osDisks;
 
-    public Input<List<DiskArgs>> getOsDisks() {
-        return this.osDisks == null ? Input.empty() : this.osDisks;
+    public Output<List<DiskArgs>> getOsDisks() {
+        return this.osDisks == null ? Output.empty() : this.osDisks;
     }
 
     public StorageProfileArgs(
-        @Nullable Input<List<SAPSystemIDArgs>> hanaSids,
-        @Nullable Input<List<DiskArgs>> osDisks) {
+        @Nullable Output<List<SAPSystemIDArgs>> hanaSids,
+        @Nullable Output<List<DiskArgs>> osDisks) {
         this.hanaSids = hanaSids;
         this.osDisks = osDisks;
     }
 
     private StorageProfileArgs() {
-        this.hanaSids = Input.empty();
-        this.osDisks = Input.empty();
+        this.hanaSids = Output.empty();
+        this.osDisks = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SAPSystemIDArgs>> hanaSids;
-        private @Nullable Input<List<DiskArgs>> osDisks;
+        private @Nullable Output<List<SAPSystemIDArgs>> hanaSids;
+        private @Nullable Output<List<DiskArgs>> osDisks;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.osDisks = defaults.osDisks;
         }
 
-        public Builder hanaSids(@Nullable Input<List<SAPSystemIDArgs>> hanaSids) {
+        public Builder hanaSids(@Nullable Output<List<SAPSystemIDArgs>> hanaSids) {
             this.hanaSids = hanaSids;
             return this;
         }
 
         public Builder hanaSids(@Nullable List<SAPSystemIDArgs> hanaSids) {
-            this.hanaSids = Input.ofNullable(hanaSids);
+            this.hanaSids = Output.ofNullable(hanaSids);
             return this;
         }
 
-        public Builder osDisks(@Nullable Input<List<DiskArgs>> osDisks) {
+        public Builder osDisks(@Nullable Output<List<DiskArgs>> osDisks) {
             this.osDisks = osDisks;
             return this;
         }
 
         public Builder osDisks(@Nullable List<DiskArgs> osDisks) {
-            this.osDisks = Input.ofNullable(osDisks);
+            this.osDisks = Output.ofNullable(osDisks);
             return this;
         }
         public StorageProfileArgs build() {

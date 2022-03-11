@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="addressPrefixes")
-      private final @Nullable Input<List<String>> addressPrefixes;
+      private final @Nullable Output<List<String>> addressPrefixes;
 
-    public Input<List<String>> getAddressPrefixes() {
-        return this.addressPrefixes == null ? Input.empty() : this.addressPrefixes;
+    public Output<List<String>> getAddressPrefixes() {
+        return this.addressPrefixes == null ? Output.empty() : this.addressPrefixes;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="nextHopIpAddress")
-      private final @Nullable Input<String> nextHopIpAddress;
+      private final @Nullable Output<String> nextHopIpAddress;
 
-    public Input<String> getNextHopIpAddress() {
-        return this.nextHopIpAddress == null ? Input.empty() : this.nextHopIpAddress;
+    public Output<String> getNextHopIpAddress() {
+        return this.nextHopIpAddress == null ? Output.empty() : this.nextHopIpAddress;
     }
 
     public VirtualHubRouteArgs(
-        @Nullable Input<List<String>> addressPrefixes,
-        @Nullable Input<String> nextHopIpAddress) {
+        @Nullable Output<List<String>> addressPrefixes,
+        @Nullable Output<String> nextHopIpAddress) {
         this.addressPrefixes = addressPrefixes;
         this.nextHopIpAddress = nextHopIpAddress;
     }
 
     private VirtualHubRouteArgs() {
-        this.addressPrefixes = Input.empty();
-        this.nextHopIpAddress = Input.empty();
+        this.addressPrefixes = Output.empty();
+        this.nextHopIpAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> addressPrefixes;
-        private @Nullable Input<String> nextHopIpAddress;
+        private @Nullable Output<List<String>> addressPrefixes;
+        private @Nullable Output<String> nextHopIpAddress;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class VirtualHubRouteArgs extends io.pulumi.resources.ResourceArgs 
     	      this.nextHopIpAddress = defaults.nextHopIpAddress;
         }
 
-        public Builder addressPrefixes(@Nullable Input<List<String>> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable Output<List<String>> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
 
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = Input.ofNullable(addressPrefixes);
+            this.addressPrefixes = Output.ofNullable(addressPrefixes);
             return this;
         }
 
-        public Builder nextHopIpAddress(@Nullable Input<String> nextHopIpAddress) {
+        public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
 
         public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
-            this.nextHopIpAddress = Input.ofNullable(nextHopIpAddress);
+            this.nextHopIpAddress = Output.ofNullable(nextHopIpAddress);
             return this;
         }
         public VirtualHubRouteArgs build() {

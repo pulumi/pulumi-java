@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.MCASDataConnectorArgs;
 import io.pulumi.azurenative.securityinsights.outputs.MCASDataConnectorDataTypesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -157,10 +156,10 @@ public class MCASDataConnector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MCASDataConnector(String name, MCASDataConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:MCASDataConnector", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:securityinsights:MCASDataConnector", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private MCASDataConnector(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MCASDataConnector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:MCASDataConnector", name, null, makeResourceOptions(options, id));
     }
 
@@ -171,14 +170,14 @@ public class MCASDataConnector extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20190101preview:MCASDataConnector").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20200101:MCASDataConnector").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20210301preview:MCASDataConnector").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20210901preview:MCASDataConnector").build())
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20190101preview:MCASDataConnector").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20200101:MCASDataConnector").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210301preview:MCASDataConnector").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210901preview:MCASDataConnector").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -192,7 +191,7 @@ public class MCASDataConnector extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MCASDataConnector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MCASDataConnector get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MCASDataConnector(name, id, options);
     }
 }

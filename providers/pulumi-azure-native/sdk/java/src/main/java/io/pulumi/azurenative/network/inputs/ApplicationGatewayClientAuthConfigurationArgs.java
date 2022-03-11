@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends io.pulu
      * 
      */
     @InputImport(name="verifyClientCertIssuerDN")
-      private final @Nullable Input<Boolean> verifyClientCertIssuerDN;
+      private final @Nullable Output<Boolean> verifyClientCertIssuerDN;
 
-    public Input<Boolean> getVerifyClientCertIssuerDN() {
-        return this.verifyClientCertIssuerDN == null ? Input.empty() : this.verifyClientCertIssuerDN;
+    public Output<Boolean> getVerifyClientCertIssuerDN() {
+        return this.verifyClientCertIssuerDN == null ? Output.empty() : this.verifyClientCertIssuerDN;
     }
 
-    public ApplicationGatewayClientAuthConfigurationArgs(@Nullable Input<Boolean> verifyClientCertIssuerDN) {
+    public ApplicationGatewayClientAuthConfigurationArgs(@Nullable Output<Boolean> verifyClientCertIssuerDN) {
         this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
     }
 
     private ApplicationGatewayClientAuthConfigurationArgs() {
-        this.verifyClientCertIssuerDN = Input.empty();
+        this.verifyClientCertIssuerDN = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> verifyClientCertIssuerDN;
+        private @Nullable Output<Boolean> verifyClientCertIssuerDN;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ApplicationGatewayClientAuthConfigurationArgs extends io.pulu
     	      this.verifyClientCertIssuerDN = defaults.verifyClientCertIssuerDN;
         }
 
-        public Builder verifyClientCertIssuerDN(@Nullable Input<Boolean> verifyClientCertIssuerDN) {
+        public Builder verifyClientCertIssuerDN(@Nullable Output<Boolean> verifyClientCertIssuerDN) {
             this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
             return this;
         }
 
         public Builder verifyClientCertIssuerDN(@Nullable Boolean verifyClientCertIssuerDN) {
-            this.verifyClientCertIssuerDN = Input.ofNullable(verifyClientCertIssuerDN);
+            this.verifyClientCertIssuerDN = Output.ofNullable(verifyClientCertIssuerDN);
             return this;
         }
         public ApplicationGatewayClientAuthConfigurationArgs build() {

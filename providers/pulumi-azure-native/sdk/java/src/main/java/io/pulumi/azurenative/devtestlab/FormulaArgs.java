@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab;
 
 import io.pulumi.azurenative.devtestlab.inputs.FormulaPropertiesFromVmArgs;
 import io.pulumi.azurenative.devtestlab.inputs.LabVirtualMachineCreationParameterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="formulaContent")
-      private final @Nullable Input<LabVirtualMachineCreationParameterArgs> formulaContent;
+      private final @Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent;
 
-    public Input<LabVirtualMachineCreationParameterArgs> getFormulaContent() {
-        return this.formulaContent == null ? Input.empty() : this.formulaContent;
+    public Output<LabVirtualMachineCreationParameterArgs> getFormulaContent() {
+        return this.formulaContent == null ? Output.empty() : this.formulaContent;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-      private final Input<String> labName;
+      private final Output<String> labName;
 
-    public Input<String> getLabName() {
+    public Output<String> getLabName() {
         return this.labName;
     }
 
@@ -55,10 +55,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType")
-      private final @Nullable Input<String> osType;
+      private final @Nullable Output<String> osType;
 
-    public Input<String> getOsType() {
-        return this.osType == null ? Input.empty() : this.osType;
+    public Output<String> getOsType() {
+        return this.osType == null ? Output.empty() : this.osType;
     }
 
     /**
@@ -88,9 +88,9 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -99,10 +99,10 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -110,22 +110,22 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vm")
-      private final @Nullable Input<FormulaPropertiesFromVmArgs> vm;
+      private final @Nullable Output<FormulaPropertiesFromVmArgs> vm;
 
-    public Input<FormulaPropertiesFromVmArgs> getVm() {
-        return this.vm == null ? Input.empty() : this.vm;
+    public Output<FormulaPropertiesFromVmArgs> getVm() {
+        return this.vm == null ? Output.empty() : this.vm;
     }
 
     public FormulaArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<LabVirtualMachineCreationParameterArgs> formulaContent,
-        Input<String> labName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> name,
-        @Nullable Input<String> osType,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<FormulaPropertiesFromVmArgs> vm) {
+        @Nullable Output<String> description,
+        @Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent,
+        Output<String> labName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> name,
+        @Nullable Output<String> osType,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<FormulaPropertiesFromVmArgs> vm) {
         this.description = description;
         this.formulaContent = formulaContent;
         this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
@@ -138,15 +138,15 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FormulaArgs() {
-        this.description = Input.empty();
-        this.formulaContent = Input.empty();
-        this.labName = Input.empty();
-        this.location = Input.empty();
-        this.name = Input.empty();
-        this.osType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.vm = Input.empty();
+        this.description = Output.empty();
+        this.formulaContent = Output.empty();
+        this.labName = Output.empty();
+        this.location = Output.empty();
+        this.name = Output.empty();
+        this.osType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.vm = Output.empty();
     }
 
     public static Builder builder() {
@@ -158,15 +158,15 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<LabVirtualMachineCreationParameterArgs> formulaContent;
-        private Input<String> labName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> osType;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<FormulaPropertiesFromVmArgs> vm;
+        private @Nullable Output<String> description;
+        private @Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent;
+        private Output<String> labName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> osType;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<FormulaPropertiesFromVmArgs> vm;
 
         public Builder() {
     	      // Empty
@@ -185,93 +185,93 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vm = defaults.vm;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder formulaContent(@Nullable Input<LabVirtualMachineCreationParameterArgs> formulaContent) {
+        public Builder formulaContent(@Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent) {
             this.formulaContent = formulaContent;
             return this;
         }
 
         public Builder formulaContent(@Nullable LabVirtualMachineCreationParameterArgs formulaContent) {
-            this.formulaContent = Input.ofNullable(formulaContent);
+            this.formulaContent = Output.ofNullable(formulaContent);
             return this;
         }
 
-        public Builder labName(Input<String> labName) {
+        public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
         public Builder labName(String labName) {
-            this.labName = Input.of(Objects.requireNonNull(labName));
+            this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder osType(@Nullable Input<String> osType) {
+        public Builder osType(@Nullable Output<String> osType) {
             this.osType = osType;
             return this;
         }
 
         public Builder osType(@Nullable String osType) {
-            this.osType = Input.ofNullable(osType);
+            this.osType = Output.ofNullable(osType);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vm(@Nullable Input<FormulaPropertiesFromVmArgs> vm) {
+        public Builder vm(@Nullable Output<FormulaPropertiesFromVmArgs> vm) {
             this.vm = vm;
             return this;
         }
 
         public Builder vm(@Nullable FormulaPropertiesFromVmArgs vm) {
-            this.vm = Input.ofNullable(vm);
+            this.vm = Output.ofNullable(vm);
             return this;
         }
         public FormulaArgs build() {

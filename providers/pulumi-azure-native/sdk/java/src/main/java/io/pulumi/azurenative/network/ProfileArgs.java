@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.DnsConfigArgs;
 import io.pulumi.azurenative.network.inputs.EndpointArgs;
 import io.pulumi.azurenative.network.inputs.MonitorConfigArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedEndpointRecordTypes")
-      private final @Nullable Input<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
+      private final @Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
 
-    public Input<List<Either<String,AllowedEndpointRecordType>>> getAllowedEndpointRecordTypes() {
-        return this.allowedEndpointRecordTypes == null ? Input.empty() : this.allowedEndpointRecordTypes;
+    public Output<List<Either<String,AllowedEndpointRecordType>>> getAllowedEndpointRecordTypes() {
+        return this.allowedEndpointRecordTypes == null ? Output.empty() : this.allowedEndpointRecordTypes;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsConfig")
-      private final @Nullable Input<DnsConfigArgs> dnsConfig;
+      private final @Nullable Output<DnsConfigArgs> dnsConfig;
 
-    public Input<DnsConfigArgs> getDnsConfig() {
-        return this.dnsConfig == null ? Input.empty() : this.dnsConfig;
+    public Output<DnsConfigArgs> getDnsConfig() {
+        return this.dnsConfig == null ? Output.empty() : this.dnsConfig;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints")
-      private final @Nullable Input<List<EndpointArgs>> endpoints;
+      private final @Nullable Output<List<EndpointArgs>> endpoints;
 
-    public Input<List<EndpointArgs>> getEndpoints() {
-        return this.endpoints == null ? Input.empty() : this.endpoints;
+    public Output<List<EndpointArgs>> getEndpoints() {
+        return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxReturn")
-      private final @Nullable Input<Double> maxReturn;
+      private final @Nullable Output<Double> maxReturn;
 
-    public Input<Double> getMaxReturn() {
-        return this.maxReturn == null ? Input.empty() : this.maxReturn;
+    public Output<Double> getMaxReturn() {
+        return this.maxReturn == null ? Output.empty() : this.maxReturn;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitorConfig")
-      private final @Nullable Input<MonitorConfigArgs> monitorConfig;
+      private final @Nullable Output<MonitorConfigArgs> monitorConfig;
 
-    public Input<MonitorConfigArgs> getMonitorConfig() {
-        return this.monitorConfig == null ? Input.empty() : this.monitorConfig;
+    public Output<MonitorConfigArgs> getMonitorConfig() {
+        return this.monitorConfig == null ? Output.empty() : this.monitorConfig;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName")
-      private final @Nullable Input<String> profileName;
+      private final @Nullable Output<String> profileName;
 
-    public Input<String> getProfileName() {
-        return this.profileName == null ? Input.empty() : this.profileName;
+    public Output<String> getProfileName() {
+        return this.profileName == null ? Output.empty() : this.profileName;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileStatus")
-      private final @Nullable Input<Either<String,ProfileStatus>> profileStatus;
+      private final @Nullable Output<Either<String,ProfileStatus>> profileStatus;
 
-    public Input<Either<String,ProfileStatus>> getProfileStatus() {
-        return this.profileStatus == null ? Input.empty() : this.profileStatus;
+    public Output<Either<String,ProfileStatus>> getProfileStatus() {
+        return this.profileStatus == null ? Output.empty() : this.profileStatus;
     }
 
     /**
@@ -140,9 +140,9 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -151,10 +151,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficRoutingMethod")
-      private final @Nullable Input<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
+      private final @Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
 
-    public Input<Either<String,TrafficRoutingMethod>> getTrafficRoutingMethod() {
-        return this.trafficRoutingMethod == null ? Input.empty() : this.trafficRoutingMethod;
+    public Output<Either<String,TrafficRoutingMethod>> getTrafficRoutingMethod() {
+        return this.trafficRoutingMethod == null ? Output.empty() : this.trafficRoutingMethod;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficViewEnrollmentStatus")
-      private final @Nullable Input<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
+      private final @Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
 
-    public Input<Either<String,TrafficViewEnrollmentStatus>> getTrafficViewEnrollmentStatus() {
-        return this.trafficViewEnrollmentStatus == null ? Input.empty() : this.trafficViewEnrollmentStatus;
+    public Output<Either<String,TrafficViewEnrollmentStatus>> getTrafficViewEnrollmentStatus() {
+        return this.trafficViewEnrollmentStatus == null ? Output.empty() : this.trafficViewEnrollmentStatus;
     }
 
     /**
@@ -184,28 +184,28 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ProfileArgs(
-        @Nullable Input<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes,
-        @Nullable Input<DnsConfigArgs> dnsConfig,
-        @Nullable Input<List<EndpointArgs>> endpoints,
-        @Nullable Input<String> id,
-        @Nullable Input<String> location,
-        @Nullable Input<Double> maxReturn,
-        @Nullable Input<MonitorConfigArgs> monitorConfig,
-        @Nullable Input<String> name,
-        @Nullable Input<String> profileName,
-        @Nullable Input<Either<String,ProfileStatus>> profileStatus,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Either<String,TrafficRoutingMethod>> trafficRoutingMethod,
-        @Nullable Input<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus,
-        @Nullable Input<String> type) {
+        @Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes,
+        @Nullable Output<DnsConfigArgs> dnsConfig,
+        @Nullable Output<List<EndpointArgs>> endpoints,
+        @Nullable Output<String> id,
+        @Nullable Output<String> location,
+        @Nullable Output<Double> maxReturn,
+        @Nullable Output<MonitorConfigArgs> monitorConfig,
+        @Nullable Output<String> name,
+        @Nullable Output<String> profileName,
+        @Nullable Output<Either<String,ProfileStatus>> profileStatus,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod,
+        @Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus,
+        @Nullable Output<String> type) {
         this.allowedEndpointRecordTypes = allowedEndpointRecordTypes;
         this.dnsConfig = dnsConfig;
         this.endpoints = endpoints;
@@ -224,21 +224,21 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProfileArgs() {
-        this.allowedEndpointRecordTypes = Input.empty();
-        this.dnsConfig = Input.empty();
-        this.endpoints = Input.empty();
-        this.id = Input.empty();
-        this.location = Input.empty();
-        this.maxReturn = Input.empty();
-        this.monitorConfig = Input.empty();
-        this.name = Input.empty();
-        this.profileName = Input.empty();
-        this.profileStatus = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.trafficRoutingMethod = Input.empty();
-        this.trafficViewEnrollmentStatus = Input.empty();
-        this.type = Input.empty();
+        this.allowedEndpointRecordTypes = Output.empty();
+        this.dnsConfig = Output.empty();
+        this.endpoints = Output.empty();
+        this.id = Output.empty();
+        this.location = Output.empty();
+        this.maxReturn = Output.empty();
+        this.monitorConfig = Output.empty();
+        this.name = Output.empty();
+        this.profileName = Output.empty();
+        this.profileStatus = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.trafficRoutingMethod = Output.empty();
+        this.trafficViewEnrollmentStatus = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -250,21 +250,21 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
-        private @Nullable Input<DnsConfigArgs> dnsConfig;
-        private @Nullable Input<List<EndpointArgs>> endpoints;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Double> maxReturn;
-        private @Nullable Input<MonitorConfigArgs> monitorConfig;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> profileName;
-        private @Nullable Input<Either<String,ProfileStatus>> profileStatus;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
-        private @Nullable Input<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
-        private @Nullable Input<String> type;
+        private @Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes;
+        private @Nullable Output<DnsConfigArgs> dnsConfig;
+        private @Nullable Output<List<EndpointArgs>> endpoints;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Double> maxReturn;
+        private @Nullable Output<MonitorConfigArgs> monitorConfig;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> profileName;
+        private @Nullable Output<Either<String,ProfileStatus>> profileStatus;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod;
+        private @Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -289,153 +289,153 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder allowedEndpointRecordTypes(@Nullable Input<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes) {
+        public Builder allowedEndpointRecordTypes(@Nullable Output<List<Either<String,AllowedEndpointRecordType>>> allowedEndpointRecordTypes) {
             this.allowedEndpointRecordTypes = allowedEndpointRecordTypes;
             return this;
         }
 
         public Builder allowedEndpointRecordTypes(@Nullable List<Either<String,AllowedEndpointRecordType>> allowedEndpointRecordTypes) {
-            this.allowedEndpointRecordTypes = Input.ofNullable(allowedEndpointRecordTypes);
+            this.allowedEndpointRecordTypes = Output.ofNullable(allowedEndpointRecordTypes);
             return this;
         }
 
-        public Builder dnsConfig(@Nullable Input<DnsConfigArgs> dnsConfig) {
+        public Builder dnsConfig(@Nullable Output<DnsConfigArgs> dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
         public Builder dnsConfig(@Nullable DnsConfigArgs dnsConfig) {
-            this.dnsConfig = Input.ofNullable(dnsConfig);
+            this.dnsConfig = Output.ofNullable(dnsConfig);
             return this;
         }
 
-        public Builder endpoints(@Nullable Input<List<EndpointArgs>> endpoints) {
+        public Builder endpoints(@Nullable Output<List<EndpointArgs>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
         public Builder endpoints(@Nullable List<EndpointArgs> endpoints) {
-            this.endpoints = Input.ofNullable(endpoints);
+            this.endpoints = Output.ofNullable(endpoints);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder maxReturn(@Nullable Input<Double> maxReturn) {
+        public Builder maxReturn(@Nullable Output<Double> maxReturn) {
             this.maxReturn = maxReturn;
             return this;
         }
 
         public Builder maxReturn(@Nullable Double maxReturn) {
-            this.maxReturn = Input.ofNullable(maxReturn);
+            this.maxReturn = Output.ofNullable(maxReturn);
             return this;
         }
 
-        public Builder monitorConfig(@Nullable Input<MonitorConfigArgs> monitorConfig) {
+        public Builder monitorConfig(@Nullable Output<MonitorConfigArgs> monitorConfig) {
             this.monitorConfig = monitorConfig;
             return this;
         }
 
         public Builder monitorConfig(@Nullable MonitorConfigArgs monitorConfig) {
-            this.monitorConfig = Input.ofNullable(monitorConfig);
+            this.monitorConfig = Output.ofNullable(monitorConfig);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder profileName(@Nullable Input<String> profileName) {
+        public Builder profileName(@Nullable Output<String> profileName) {
             this.profileName = profileName;
             return this;
         }
 
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = Input.ofNullable(profileName);
+            this.profileName = Output.ofNullable(profileName);
             return this;
         }
 
-        public Builder profileStatus(@Nullable Input<Either<String,ProfileStatus>> profileStatus) {
+        public Builder profileStatus(@Nullable Output<Either<String,ProfileStatus>> profileStatus) {
             this.profileStatus = profileStatus;
             return this;
         }
 
         public Builder profileStatus(@Nullable Either<String,ProfileStatus> profileStatus) {
-            this.profileStatus = Input.ofNullable(profileStatus);
+            this.profileStatus = Output.ofNullable(profileStatus);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder trafficRoutingMethod(@Nullable Input<Either<String,TrafficRoutingMethod>> trafficRoutingMethod) {
+        public Builder trafficRoutingMethod(@Nullable Output<Either<String,TrafficRoutingMethod>> trafficRoutingMethod) {
             this.trafficRoutingMethod = trafficRoutingMethod;
             return this;
         }
 
         public Builder trafficRoutingMethod(@Nullable Either<String,TrafficRoutingMethod> trafficRoutingMethod) {
-            this.trafficRoutingMethod = Input.ofNullable(trafficRoutingMethod);
+            this.trafficRoutingMethod = Output.ofNullable(trafficRoutingMethod);
             return this;
         }
 
-        public Builder trafficViewEnrollmentStatus(@Nullable Input<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus) {
+        public Builder trafficViewEnrollmentStatus(@Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus) {
             this.trafficViewEnrollmentStatus = trafficViewEnrollmentStatus;
             return this;
         }
 
         public Builder trafficViewEnrollmentStatus(@Nullable Either<String,TrafficViewEnrollmentStatus> trafficViewEnrollmentStatus) {
-            this.trafficViewEnrollmentStatus = Input.ofNullable(trafficViewEnrollmentStatus);
+            this.trafficViewEnrollmentStatus = Output.ofNullable(trafficViewEnrollmentStatus);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ProfileArgs build() {

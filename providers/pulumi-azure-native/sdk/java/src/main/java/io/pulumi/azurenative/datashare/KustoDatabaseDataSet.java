@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.KustoDatabaseDataSetArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -185,10 +184,10 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KustoDatabaseDataSet(String name, KustoDatabaseDataSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:KustoDatabaseDataSet", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:datashare:KustoDatabaseDataSet", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private KustoDatabaseDataSet(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private KustoDatabaseDataSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:KustoDatabaseDataSet", name, null, makeResourceOptions(options, id));
     }
 
@@ -199,15 +198,15 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:datashare/v20181101preview:KustoDatabaseDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20191101:KustoDatabaseDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20200901:KustoDatabaseDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20201001preview:KustoDatabaseDataSet").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20210801:KustoDatabaseDataSet").build())
+                Output.of(Alias.builder().setType("azure-native:datashare/v20181101preview:KustoDatabaseDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20191101:KustoDatabaseDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20200901:KustoDatabaseDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20201001preview:KustoDatabaseDataSet").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20210801:KustoDatabaseDataSet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -221,7 +220,7 @@ public class KustoDatabaseDataSet extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static KustoDatabaseDataSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static KustoDatabaseDataSet get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new KustoDatabaseDataSet(name, id, options);
     }
 }

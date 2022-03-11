@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ReportComparisonExpressionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="and")
-      private final @Nullable Input<List<ReportFilterArgs>> and;
+      private final @Nullable Output<List<ReportFilterArgs>> and;
 
-    public Input<List<ReportFilterArgs>> getAnd() {
-        return this.and == null ? Input.empty() : this.and;
+    public Output<List<ReportFilterArgs>> getAnd() {
+        return this.and == null ? Output.empty() : this.and;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimension")
-      private final @Nullable Input<ReportComparisonExpressionArgs> dimension;
+      private final @Nullable Output<ReportComparisonExpressionArgs> dimension;
 
-    public Input<ReportComparisonExpressionArgs> getDimension() {
-        return this.dimension == null ? Input.empty() : this.dimension;
+    public Output<ReportComparisonExpressionArgs> getDimension() {
+        return this.dimension == null ? Output.empty() : this.dimension;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="not")
-      private final @Nullable Input<ReportFilterArgs> not;
+      private final @Nullable Output<ReportFilterArgs> not;
 
-    public Input<ReportFilterArgs> getNot() {
-        return this.not == null ? Input.empty() : this.not;
+    public Output<ReportFilterArgs> getNot() {
+        return this.not == null ? Output.empty() : this.not;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="or")
-      private final @Nullable Input<List<ReportFilterArgs>> or;
+      private final @Nullable Output<List<ReportFilterArgs>> or;
 
-    public Input<List<ReportFilterArgs>> getOr() {
-        return this.or == null ? Input.empty() : this.or;
+    public Output<List<ReportFilterArgs>> getOr() {
+        return this.or == null ? Output.empty() : this.or;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-      private final @Nullable Input<ReportComparisonExpressionArgs> tag;
+      private final @Nullable Output<ReportComparisonExpressionArgs> tag;
 
-    public Input<ReportComparisonExpressionArgs> getTag() {
-        return this.tag == null ? Input.empty() : this.tag;
+    public Output<ReportComparisonExpressionArgs> getTag() {
+        return this.tag == null ? Output.empty() : this.tag;
     }
 
     public ReportFilterArgs(
-        @Nullable Input<List<ReportFilterArgs>> and,
-        @Nullable Input<ReportComparisonExpressionArgs> dimension,
-        @Nullable Input<ReportFilterArgs> not,
-        @Nullable Input<List<ReportFilterArgs>> or,
-        @Nullable Input<ReportComparisonExpressionArgs> tag) {
+        @Nullable Output<List<ReportFilterArgs>> and,
+        @Nullable Output<ReportComparisonExpressionArgs> dimension,
+        @Nullable Output<ReportFilterArgs> not,
+        @Nullable Output<List<ReportFilterArgs>> or,
+        @Nullable Output<ReportComparisonExpressionArgs> tag) {
         this.and = and;
         this.dimension = dimension;
         this.not = not;
@@ -88,11 +88,11 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportFilterArgs() {
-        this.and = Input.empty();
-        this.dimension = Input.empty();
-        this.not = Input.empty();
-        this.or = Input.empty();
-        this.tag = Input.empty();
+        this.and = Output.empty();
+        this.dimension = Output.empty();
+        this.not = Output.empty();
+        this.or = Output.empty();
+        this.tag = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ReportFilterArgs>> and;
-        private @Nullable Input<ReportComparisonExpressionArgs> dimension;
-        private @Nullable Input<ReportFilterArgs> not;
-        private @Nullable Input<List<ReportFilterArgs>> or;
-        private @Nullable Input<ReportComparisonExpressionArgs> tag;
+        private @Nullable Output<List<ReportFilterArgs>> and;
+        private @Nullable Output<ReportComparisonExpressionArgs> dimension;
+        private @Nullable Output<ReportFilterArgs> not;
+        private @Nullable Output<List<ReportFilterArgs>> or;
+        private @Nullable Output<ReportComparisonExpressionArgs> tag;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder and(@Nullable Input<List<ReportFilterArgs>> and) {
+        public Builder and(@Nullable Output<List<ReportFilterArgs>> and) {
             this.and = and;
             return this;
         }
 
         public Builder and(@Nullable List<ReportFilterArgs> and) {
-            this.and = Input.ofNullable(and);
+            this.and = Output.ofNullable(and);
             return this;
         }
 
-        public Builder dimension(@Nullable Input<ReportComparisonExpressionArgs> dimension) {
+        public Builder dimension(@Nullable Output<ReportComparisonExpressionArgs> dimension) {
             this.dimension = dimension;
             return this;
         }
 
         public Builder dimension(@Nullable ReportComparisonExpressionArgs dimension) {
-            this.dimension = Input.ofNullable(dimension);
+            this.dimension = Output.ofNullable(dimension);
             return this;
         }
 
-        public Builder not(@Nullable Input<ReportFilterArgs> not) {
+        public Builder not(@Nullable Output<ReportFilterArgs> not) {
             this.not = not;
             return this;
         }
 
         public Builder not(@Nullable ReportFilterArgs not) {
-            this.not = Input.ofNullable(not);
+            this.not = Output.ofNullable(not);
             return this;
         }
 
-        public Builder or(@Nullable Input<List<ReportFilterArgs>> or) {
+        public Builder or(@Nullable Output<List<ReportFilterArgs>> or) {
             this.or = or;
             return this;
         }
 
         public Builder or(@Nullable List<ReportFilterArgs> or) {
-            this.or = Input.ofNullable(or);
+            this.or = Output.ofNullable(or);
             return this;
         }
 
-        public Builder tag(@Nullable Input<ReportComparisonExpressionArgs> tag) {
+        public Builder tag(@Nullable Output<ReportComparisonExpressionArgs> tag) {
             this.tag = tag;
             return this;
         }
 
         public Builder tag(@Nullable ReportComparisonExpressionArgs tag) {
-            this.tag = Input.ofNullable(tag);
+            this.tag = Output.ofNullable(tag);
             return this;
         }
         public ReportFilterArgs build() {

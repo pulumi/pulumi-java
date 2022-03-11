@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.enums.DependencyCondition;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,9 +25,9 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="activity", required=true)
-      private final Input<String> activity;
+      private final Output<String> activity;
 
-    public Input<String> getActivity() {
+    public Output<String> getActivity() {
         return this.activity;
     }
 
@@ -36,22 +36,22 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dependencyConditions", required=true)
-      private final Input<List<Either<String,DependencyCondition>>> dependencyConditions;
+      private final Output<List<Either<String,DependencyCondition>>> dependencyConditions;
 
-    public Input<List<Either<String,DependencyCondition>>> getDependencyConditions() {
+    public Output<List<Either<String,DependencyCondition>>> getDependencyConditions() {
         return this.dependencyConditions;
     }
 
     public ActivityDependencyArgs(
-        Input<String> activity,
-        Input<List<Either<String,DependencyCondition>>> dependencyConditions) {
+        Output<String> activity,
+        Output<List<Either<String,DependencyCondition>>> dependencyConditions) {
         this.activity = Objects.requireNonNull(activity, "expected parameter 'activity' to be non-null");
         this.dependencyConditions = Objects.requireNonNull(dependencyConditions, "expected parameter 'dependencyConditions' to be non-null");
     }
 
     private ActivityDependencyArgs() {
-        this.activity = Input.empty();
-        this.dependencyConditions = Input.empty();
+        this.activity = Output.empty();
+        this.dependencyConditions = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> activity;
-        private Input<List<Either<String,DependencyCondition>>> dependencyConditions;
+        private Output<String> activity;
+        private Output<List<Either<String,DependencyCondition>>> dependencyConditions;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
     	      this.dependencyConditions = defaults.dependencyConditions;
         }
 
-        public Builder activity(Input<String> activity) {
+        public Builder activity(Output<String> activity) {
             this.activity = Objects.requireNonNull(activity);
             return this;
         }
 
         public Builder activity(String activity) {
-            this.activity = Input.of(Objects.requireNonNull(activity));
+            this.activity = Output.of(Objects.requireNonNull(activity));
             return this;
         }
 
-        public Builder dependencyConditions(Input<List<Either<String,DependencyCondition>>> dependencyConditions) {
+        public Builder dependencyConditions(Output<List<Either<String,DependencyCondition>>> dependencyConditions) {
             this.dependencyConditions = Objects.requireNonNull(dependencyConditions);
             return this;
         }
 
         public Builder dependencyConditions(List<Either<String,DependencyCondition>> dependencyConditions) {
-            this.dependencyConditions = Input.of(Objects.requireNonNull(dependencyConditions));
+            this.dependencyConditions = Output.of(Objects.requireNonNull(dependencyConditions));
             return this;
         }
         public ActivityDependencyArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ServerCertificateCommonNameArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ServerCertificateCommonNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="commonNames")
-      private final @Nullable Input<List<ServerCertificateCommonNameArgs>> commonNames;
+      private final @Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames;
 
-    public Input<List<ServerCertificateCommonNameArgs>> getCommonNames() {
-        return this.commonNames == null ? Input.empty() : this.commonNames;
+    public Output<List<ServerCertificateCommonNameArgs>> getCommonNames() {
+        return this.commonNames == null ? Output.empty() : this.commonNames;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ServerCertificateCommonNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="x509StoreName")
-      private final @Nullable Input<String> x509StoreName;
+      private final @Nullable Output<String> x509StoreName;
 
-    public Input<String> getX509StoreName() {
-        return this.x509StoreName == null ? Input.empty() : this.x509StoreName;
+    public Output<String> getX509StoreName() {
+        return this.x509StoreName == null ? Output.empty() : this.x509StoreName;
     }
 
     public ServerCertificateCommonNamesArgs(
-        @Nullable Input<List<ServerCertificateCommonNameArgs>> commonNames,
-        @Nullable Input<String> x509StoreName) {
+        @Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames,
+        @Nullable Output<String> x509StoreName) {
         this.commonNames = commonNames;
         this.x509StoreName = x509StoreName;
     }
 
     private ServerCertificateCommonNamesArgs() {
-        this.commonNames = Input.empty();
-        this.x509StoreName = Input.empty();
+        this.commonNames = Output.empty();
+        this.x509StoreName = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ServerCertificateCommonNamesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ServerCertificateCommonNameArgs>> commonNames;
-        private @Nullable Input<String> x509StoreName;
+        private @Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames;
+        private @Nullable Output<String> x509StoreName;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ServerCertificateCommonNamesArgs extends io.pulumi.resources.
     	      this.x509StoreName = defaults.x509StoreName;
         }
 
-        public Builder commonNames(@Nullable Input<List<ServerCertificateCommonNameArgs>> commonNames) {
+        public Builder commonNames(@Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames) {
             this.commonNames = commonNames;
             return this;
         }
 
         public Builder commonNames(@Nullable List<ServerCertificateCommonNameArgs> commonNames) {
-            this.commonNames = Input.ofNullable(commonNames);
+            this.commonNames = Output.ofNullable(commonNames);
             return this;
         }
 
-        public Builder x509StoreName(@Nullable Input<String> x509StoreName) {
+        public Builder x509StoreName(@Nullable Output<String> x509StoreName) {
             this.x509StoreName = x509StoreName;
             return this;
         }
 
         public Builder x509StoreName(@Nullable String x509StoreName) {
-            this.x509StoreName = Input.ofNullable(x509StoreName);
+            this.x509StoreName = Output.ofNullable(x509StoreName);
             return this;
         }
         public ServerCertificateCommonNamesArgs build() {

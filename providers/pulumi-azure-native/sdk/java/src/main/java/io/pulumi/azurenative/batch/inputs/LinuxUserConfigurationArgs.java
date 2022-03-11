@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gid")
-      private final @Nullable Input<Integer> gid;
+      private final @Nullable Output<Integer> gid;
 
-    public Input<Integer> getGid() {
-        return this.gid == null ? Input.empty() : this.gid;
+    public Output<Integer> getGid() {
+        return this.gid == null ? Output.empty() : this.gid;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sshPrivateKey")
-      private final @Nullable Input<String> sshPrivateKey;
+      private final @Nullable Output<String> sshPrivateKey;
 
-    public Input<String> getSshPrivateKey() {
-        return this.sshPrivateKey == null ? Input.empty() : this.sshPrivateKey;
+    public Output<String> getSshPrivateKey() {
+        return this.sshPrivateKey == null ? Output.empty() : this.sshPrivateKey;
     }
 
     /**
@@ -42,25 +42,25 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="uid")
-      private final @Nullable Input<Integer> uid;
+      private final @Nullable Output<Integer> uid;
 
-    public Input<Integer> getUid() {
-        return this.uid == null ? Input.empty() : this.uid;
+    public Output<Integer> getUid() {
+        return this.uid == null ? Output.empty() : this.uid;
     }
 
     public LinuxUserConfigurationArgs(
-        @Nullable Input<Integer> gid,
-        @Nullable Input<String> sshPrivateKey,
-        @Nullable Input<Integer> uid) {
+        @Nullable Output<Integer> gid,
+        @Nullable Output<String> sshPrivateKey,
+        @Nullable Output<Integer> uid) {
         this.gid = gid;
         this.sshPrivateKey = sshPrivateKey;
         this.uid = uid;
     }
 
     private LinuxUserConfigurationArgs() {
-        this.gid = Input.empty();
-        this.sshPrivateKey = Input.empty();
-        this.uid = Input.empty();
+        this.gid = Output.empty();
+        this.sshPrivateKey = Output.empty();
+        this.uid = Output.empty();
     }
 
     public static Builder builder() {
@@ -72,9 +72,9 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> gid;
-        private @Nullable Input<String> sshPrivateKey;
-        private @Nullable Input<Integer> uid;
+        private @Nullable Output<Integer> gid;
+        private @Nullable Output<String> sshPrivateKey;
+        private @Nullable Output<Integer> uid;
 
         public Builder() {
     	      // Empty
@@ -87,33 +87,33 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
     	      this.uid = defaults.uid;
         }
 
-        public Builder gid(@Nullable Input<Integer> gid) {
+        public Builder gid(@Nullable Output<Integer> gid) {
             this.gid = gid;
             return this;
         }
 
         public Builder gid(@Nullable Integer gid) {
-            this.gid = Input.ofNullable(gid);
+            this.gid = Output.ofNullable(gid);
             return this;
         }
 
-        public Builder sshPrivateKey(@Nullable Input<String> sshPrivateKey) {
+        public Builder sshPrivateKey(@Nullable Output<String> sshPrivateKey) {
             this.sshPrivateKey = sshPrivateKey;
             return this;
         }
 
         public Builder sshPrivateKey(@Nullable String sshPrivateKey) {
-            this.sshPrivateKey = Input.ofNullable(sshPrivateKey);
+            this.sshPrivateKey = Output.ofNullable(sshPrivateKey);
             return this;
         }
 
-        public Builder uid(@Nullable Input<Integer> uid) {
+        public Builder uid(@Nullable Output<Integer> uid) {
             this.uid = uid;
             return this;
         }
 
         public Builder uid(@Nullable Integer uid) {
-            this.uid = Input.ofNullable(uid);
+            this.uid = Output.ofNullable(uid);
             return this;
         }
         public LinuxUserConfigurationArgs build() {

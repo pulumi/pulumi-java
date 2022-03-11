@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.azurenative.storsimple.enums.SslStatus;
 import io.pulumi.azurenative.storsimple.inputs.AsymmetricEncryptedSecretArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="accessKey")
-      private final @Nullable Input<AsymmetricEncryptedSecretArgs> accessKey;
+      private final @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey;
 
-    public Input<AsymmetricEncryptedSecretArgs> getAccessKey() {
-        return this.accessKey == null ? Input.empty() : this.accessKey;
+    public Output<AsymmetricEncryptedSecretArgs> getAccessKey() {
+        return this.accessKey == null ? Output.empty() : this.accessKey;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="endPoint", required=true)
-      private final Input<String> endPoint;
+      private final Output<String> endPoint;
 
-    public Input<String> getEndPoint() {
+    public Output<String> getEndPoint() {
         return this.endPoint;
     }
 
@@ -44,10 +44,10 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Kind> kind;
+      private final @Nullable Output<Kind> kind;
 
-    public Input<Kind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Kind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -55,9 +55,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="managerName", required=true)
-      private final Input<String> managerName;
+      private final Output<String> managerName;
 
-    public Input<String> getManagerName() {
+    public Output<String> getManagerName() {
         return this.managerName;
     }
 
@@ -66,9 +66,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,9 +77,9 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sslStatus", required=true)
-      private final Input<SslStatus> sslStatus;
+      private final Output<SslStatus> sslStatus;
 
-    public Input<SslStatus> getSslStatus() {
+    public Output<SslStatus> getSslStatus() {
         return this.sslStatus;
     }
 
@@ -88,20 +88,20 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="storageAccountCredentialName")
-      private final @Nullable Input<String> storageAccountCredentialName;
+      private final @Nullable Output<String> storageAccountCredentialName;
 
-    public Input<String> getStorageAccountCredentialName() {
-        return this.storageAccountCredentialName == null ? Input.empty() : this.storageAccountCredentialName;
+    public Output<String> getStorageAccountCredentialName() {
+        return this.storageAccountCredentialName == null ? Output.empty() : this.storageAccountCredentialName;
     }
 
     public StorageAccountCredentialArgs(
-        @Nullable Input<AsymmetricEncryptedSecretArgs> accessKey,
-        Input<String> endPoint,
-        @Nullable Input<Kind> kind,
-        Input<String> managerName,
-        Input<String> resourceGroupName,
-        Input<SslStatus> sslStatus,
-        @Nullable Input<String> storageAccountCredentialName) {
+        @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey,
+        Output<String> endPoint,
+        @Nullable Output<Kind> kind,
+        Output<String> managerName,
+        Output<String> resourceGroupName,
+        Output<SslStatus> sslStatus,
+        @Nullable Output<String> storageAccountCredentialName) {
         this.accessKey = accessKey;
         this.endPoint = Objects.requireNonNull(endPoint, "expected parameter 'endPoint' to be non-null");
         this.kind = kind;
@@ -112,13 +112,13 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     }
 
     private StorageAccountCredentialArgs() {
-        this.accessKey = Input.empty();
-        this.endPoint = Input.empty();
-        this.kind = Input.empty();
-        this.managerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sslStatus = Input.empty();
-        this.storageAccountCredentialName = Input.empty();
+        this.accessKey = Output.empty();
+        this.endPoint = Output.empty();
+        this.kind = Output.empty();
+        this.managerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sslStatus = Output.empty();
+        this.storageAccountCredentialName = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<AsymmetricEncryptedSecretArgs> accessKey;
-        private Input<String> endPoint;
-        private @Nullable Input<Kind> kind;
-        private Input<String> managerName;
-        private Input<String> resourceGroupName;
-        private Input<SslStatus> sslStatus;
-        private @Nullable Input<String> storageAccountCredentialName;
+        private @Nullable Output<AsymmetricEncryptedSecretArgs> accessKey;
+        private Output<String> endPoint;
+        private @Nullable Output<Kind> kind;
+        private Output<String> managerName;
+        private Output<String> resourceGroupName;
+        private Output<SslStatus> sslStatus;
+        private @Nullable Output<String> storageAccountCredentialName;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class StorageAccountCredentialArgs extends io.pulumi.resources.Reso
     	      this.storageAccountCredentialName = defaults.storageAccountCredentialName;
         }
 
-        public Builder accessKey(@Nullable Input<AsymmetricEncryptedSecretArgs> accessKey) {
+        public Builder accessKey(@Nullable Output<AsymmetricEncryptedSecretArgs> accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
         public Builder accessKey(@Nullable AsymmetricEncryptedSecretArgs accessKey) {
-            this.accessKey = Input.ofNullable(accessKey);
+            this.accessKey = Output.ofNullable(accessKey);
             return this;
         }
 
-        public Builder endPoint(Input<String> endPoint) {
+        public Builder endPoint(Output<String> endPoint) {
             this.endPoint = Objects.requireNonNull(endPoint);
             return this;
         }
 
         public Builder endPoint(String endPoint) {
-            this.endPoint = Input.of(Objects.requireNonNull(endPoint));
+            this.endPoint = Output.of(Objects.requireNonNull(endPoint));
             return this;
         }
 
-        public Builder kind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder managerName(Input<String> managerName) {
+        public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
         public Builder managerName(String managerName) {
-            this.managerName = Input.of(Objects.requireNonNull(managerName));
+            this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sslStatus(Input<SslStatus> sslStatus) {
+        public Builder sslStatus(Output<SslStatus> sslStatus) {
             this.sslStatus = Objects.requireNonNull(sslStatus);
             return this;
         }
 
         public Builder sslStatus(SslStatus sslStatus) {
-            this.sslStatus = Input.of(Objects.requireNonNull(sslStatus));
+            this.sslStatus = Output.of(Objects.requireNonNull(sslStatus));
             return this;
         }
 
-        public Builder storageAccountCredentialName(@Nullable Input<String> storageAccountCredentialName) {
+        public Builder storageAccountCredentialName(@Nullable Output<String> storageAccountCredentialName) {
             this.storageAccountCredentialName = storageAccountCredentialName;
             return this;
         }
 
         public Builder storageAccountCredentialName(@Nullable String storageAccountCredentialName) {
-            this.storageAccountCredentialName = Input.ofNullable(storageAccountCredentialName);
+            this.storageAccountCredentialName = Output.ofNullable(storageAccountCredentialName);
             return this;
         }
         public StorageAccountCredentialArgs build() {

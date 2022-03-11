@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ServerInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverId", required=true)
-      private final Input<String> serverId;
+      private final Output<String> serverId;
 
-    public Input<String> getServerId() {
+    public Output<String> getServerId() {
         return this.serverId;
     }
 
-    public ServerInfoArgs(Input<String> serverId) {
+    public ServerInfoArgs(Output<String> serverId) {
         this.serverId = Objects.requireNonNull(serverId, "expected parameter 'serverId' to be non-null");
     }
 
     private ServerInfoArgs() {
-        this.serverId = Input.empty();
+        this.serverId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ServerInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> serverId;
+        private Output<String> serverId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ServerInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverId = defaults.serverId;
         }
 
-        public Builder serverId(Input<String> serverId) {
+        public Builder serverId(Output<String> serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }
 
         public Builder serverId(String serverId) {
-            this.serverId = Input.of(Objects.requireNonNull(serverId));
+            this.serverId = Output.of(Objects.requireNonNull(serverId));
             return this;
         }
         public ServerInfoArgs build() {

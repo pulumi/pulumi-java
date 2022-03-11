@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -48,10 +48,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imagePaths")
-      private final @Nullable Input<List<String>> imagePaths;
+      private final @Nullable Output<List<String>> imagePaths;
 
-    public Input<List<String>> getImagePaths() {
-        return this.imagePaths == null ? Input.empty() : this.imagePaths;
+    public Output<List<String>> getImagePaths() {
+        return this.imagePaths == null ? Output.empty() : this.imagePaths;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,Object>> parameters;
+      private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Input<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,Object>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedResourceTypes")
-      private final @Nullable Input<List<String>> supportedResourceTypes;
+      private final @Nullable Output<List<String>> supportedResourceTypes;
 
-    public Input<List<String>> getSupportedResourceTypes() {
-        return this.supportedResourceTypes == null ? Input.empty() : this.supportedResourceTypes;
+    public Output<List<String>> getSupportedResourceTypes() {
+        return this.supportedResourceTypes == null ? Output.empty() : this.supportedResourceTypes;
     }
 
     public DetectorArgs(
-        @Nullable Input<String> description,
-        Input<String> id,
-        @Nullable Input<List<String>> imagePaths,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,Object>> parameters,
-        @Nullable Input<List<String>> supportedResourceTypes) {
+        @Nullable Output<String> description,
+        Output<String> id,
+        @Nullable Output<List<String>> imagePaths,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,Object>> parameters,
+        @Nullable Output<List<String>> supportedResourceTypes) {
         this.description = description;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.imagePaths = imagePaths;
@@ -103,12 +103,12 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetectorArgs() {
-        this.description = Input.empty();
-        this.id = Input.empty();
-        this.imagePaths = Input.empty();
-        this.name = Input.empty();
-        this.parameters = Input.empty();
-        this.supportedResourceTypes = Input.empty();
+        this.description = Output.empty();
+        this.id = Output.empty();
+        this.imagePaths = Output.empty();
+        this.name = Output.empty();
+        this.parameters = Output.empty();
+        this.supportedResourceTypes = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<String> id;
-        private @Nullable Input<List<String>> imagePaths;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,Object>> parameters;
-        private @Nullable Input<List<String>> supportedResourceTypes;
+        private @Nullable Output<String> description;
+        private Output<String> id;
+        private @Nullable Output<List<String>> imagePaths;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,Object>> parameters;
+        private @Nullable Output<List<String>> supportedResourceTypes;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.supportedResourceTypes = defaults.supportedResourceTypes;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder imagePaths(@Nullable Input<List<String>> imagePaths) {
+        public Builder imagePaths(@Nullable Output<List<String>> imagePaths) {
             this.imagePaths = imagePaths;
             return this;
         }
 
         public Builder imagePaths(@Nullable List<String> imagePaths) {
-            this.imagePaths = Input.ofNullable(imagePaths);
+            this.imagePaths = Output.ofNullable(imagePaths);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder supportedResourceTypes(@Nullable Input<List<String>> supportedResourceTypes) {
+        public Builder supportedResourceTypes(@Nullable Output<List<String>> supportedResourceTypes) {
             this.supportedResourceTypes = supportedResourceTypes;
             return this;
         }
 
         public Builder supportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
-            this.supportedResourceTypes = Input.ofNullable(supportedResourceTypes);
+            this.supportedResourceTypes = Output.ofNullable(supportedResourceTypes);
             return this;
         }
         public DetectorArgs build() {

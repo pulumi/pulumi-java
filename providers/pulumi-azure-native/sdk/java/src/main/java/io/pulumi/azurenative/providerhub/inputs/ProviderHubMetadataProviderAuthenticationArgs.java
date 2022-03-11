@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -15,18 +15,18 @@ public final class ProviderHubMetadataProviderAuthenticationArgs extends io.pulu
     public static final ProviderHubMetadataProviderAuthenticationArgs Empty = new ProviderHubMetadataProviderAuthenticationArgs();
 
     @InputImport(name="allowedAudiences", required=true)
-      private final Input<List<String>> allowedAudiences;
+      private final Output<List<String>> allowedAudiences;
 
-    public Input<List<String>> getAllowedAudiences() {
+    public Output<List<String>> getAllowedAudiences() {
         return this.allowedAudiences;
     }
 
-    public ProviderHubMetadataProviderAuthenticationArgs(Input<List<String>> allowedAudiences) {
+    public ProviderHubMetadataProviderAuthenticationArgs(Output<List<String>> allowedAudiences) {
         this.allowedAudiences = Objects.requireNonNull(allowedAudiences, "expected parameter 'allowedAudiences' to be non-null");
     }
 
     private ProviderHubMetadataProviderAuthenticationArgs() {
-        this.allowedAudiences = Input.empty();
+        this.allowedAudiences = Output.empty();
     }
 
     public static Builder builder() {
@@ -38,7 +38,7 @@ public final class ProviderHubMetadataProviderAuthenticationArgs extends io.pulu
     }
 
     public static final class Builder {
-        private Input<List<String>> allowedAudiences;
+        private Output<List<String>> allowedAudiences;
 
         public Builder() {
     	      // Empty
@@ -49,13 +49,13 @@ public final class ProviderHubMetadataProviderAuthenticationArgs extends io.pulu
     	      this.allowedAudiences = defaults.allowedAudiences;
         }
 
-        public Builder allowedAudiences(Input<List<String>> allowedAudiences) {
+        public Builder allowedAudiences(Output<List<String>> allowedAudiences) {
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
 
         public Builder allowedAudiences(List<String> allowedAudiences) {
-            this.allowedAudiences = Input.of(Objects.requireNonNull(allowedAudiences));
+            this.allowedAudiences = Output.of(Objects.requireNonNull(allowedAudiences));
             return this;
         }
         public ProviderHubMetadataProviderAuthenticationArgs build() {

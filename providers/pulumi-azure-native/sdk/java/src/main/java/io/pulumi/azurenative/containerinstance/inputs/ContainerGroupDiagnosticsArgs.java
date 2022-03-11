@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.LogAnalyticsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class ContainerGroupDiagnosticsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="logAnalytics")
-      private final @Nullable Input<LogAnalyticsArgs> logAnalytics;
+      private final @Nullable Output<LogAnalyticsArgs> logAnalytics;
 
-    public Input<LogAnalyticsArgs> getLogAnalytics() {
-        return this.logAnalytics == null ? Input.empty() : this.logAnalytics;
+    public Output<LogAnalyticsArgs> getLogAnalytics() {
+        return this.logAnalytics == null ? Output.empty() : this.logAnalytics;
     }
 
-    public ContainerGroupDiagnosticsArgs(@Nullable Input<LogAnalyticsArgs> logAnalytics) {
+    public ContainerGroupDiagnosticsArgs(@Nullable Output<LogAnalyticsArgs> logAnalytics) {
         this.logAnalytics = logAnalytics;
     }
 
     private ContainerGroupDiagnosticsArgs() {
-        this.logAnalytics = Input.empty();
+        this.logAnalytics = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ContainerGroupDiagnosticsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<LogAnalyticsArgs> logAnalytics;
+        private @Nullable Output<LogAnalyticsArgs> logAnalytics;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ContainerGroupDiagnosticsArgs extends io.pulumi.resources.Res
     	      this.logAnalytics = defaults.logAnalytics;
         }
 
-        public Builder logAnalytics(@Nullable Input<LogAnalyticsArgs> logAnalytics) {
+        public Builder logAnalytics(@Nullable Output<LogAnalyticsArgs> logAnalytics) {
             this.logAnalytics = logAnalytics;
             return this;
         }
 
         public Builder logAnalytics(@Nullable LogAnalyticsArgs logAnalytics) {
-            this.logAnalytics = Input.ofNullable(logAnalytics);
+            this.logAnalytics = Output.ofNullable(logAnalytics);
             return this;
         }
         public ContainerGroupDiagnosticsArgs build() {

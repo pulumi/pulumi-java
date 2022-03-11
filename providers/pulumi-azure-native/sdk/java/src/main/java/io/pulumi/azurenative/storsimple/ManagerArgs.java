@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.storsimple.inputs.ManagerIntrinsicSettingsArgs;
 import io.pulumi.azurenative.storsimple.inputs.ManagerSkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cisIntrinsicSettings")
-      private final @Nullable Input<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings;
+      private final @Nullable Output<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings;
 
-    public Input<ManagerIntrinsicSettingsArgs> getCisIntrinsicSettings() {
-        return this.cisIntrinsicSettings == null ? Input.empty() : this.cisIntrinsicSettings;
+    public Output<ManagerIntrinsicSettingsArgs> getCisIntrinsicSettings() {
+        return this.cisIntrinsicSettings == null ? Output.empty() : this.cisIntrinsicSettings;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managerName")
-      private final @Nullable Input<String> managerName;
+      private final @Nullable Output<String> managerName;
 
-    public Input<String> getManagerName() {
-        return this.managerName == null ? Input.empty() : this.managerName;
+    public Output<String> getManagerName() {
+        return this.managerName == null ? Output.empty() : this.managerName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -77,10 +77,10 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<ManagerSkuArgs> sku;
+      private final @Nullable Output<ManagerSkuArgs> sku;
 
-    public Input<ManagerSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<ManagerSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -88,20 +88,20 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ManagerArgs(
-        @Nullable Input<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings,
-        @Nullable Input<String> location,
-        @Nullable Input<String> managerName,
-        @Nullable Input<String> provisioningState,
-        Input<String> resourceGroupName,
-        @Nullable Input<ManagerSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings,
+        @Nullable Output<String> location,
+        @Nullable Output<String> managerName,
+        @Nullable Output<String> provisioningState,
+        Output<String> resourceGroupName,
+        @Nullable Output<ManagerSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.cisIntrinsicSettings = cisIntrinsicSettings;
         this.location = location;
         this.managerName = managerName;
@@ -112,13 +112,13 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManagerArgs() {
-        this.cisIntrinsicSettings = Input.empty();
-        this.location = Input.empty();
-        this.managerName = Input.empty();
-        this.provisioningState = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.cisIntrinsicSettings = Output.empty();
+        this.location = Output.empty();
+        this.managerName = Output.empty();
+        this.provisioningState = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managerName;
-        private @Nullable Input<String> provisioningState;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<ManagerSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managerName;
+        private @Nullable Output<String> provisioningState;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<ManagerSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class ManagerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder cisIntrinsicSettings(@Nullable Input<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings) {
+        public Builder cisIntrinsicSettings(@Nullable Output<ManagerIntrinsicSettingsArgs> cisIntrinsicSettings) {
             this.cisIntrinsicSettings = cisIntrinsicSettings;
             return this;
         }
 
         public Builder cisIntrinsicSettings(@Nullable ManagerIntrinsicSettingsArgs cisIntrinsicSettings) {
-            this.cisIntrinsicSettings = Input.ofNullable(cisIntrinsicSettings);
+            this.cisIntrinsicSettings = Output.ofNullable(cisIntrinsicSettings);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managerName(@Nullable Input<String> managerName) {
+        public Builder managerName(@Nullable Output<String> managerName) {
             this.managerName = managerName;
             return this;
         }
 
         public Builder managerName(@Nullable String managerName) {
-            this.managerName = Input.ofNullable(managerName);
+            this.managerName = Output.ofNullable(managerName);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<ManagerSkuArgs> sku) {
+        public Builder sku(@Nullable Output<ManagerSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable ManagerSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ManagerArgs build() {

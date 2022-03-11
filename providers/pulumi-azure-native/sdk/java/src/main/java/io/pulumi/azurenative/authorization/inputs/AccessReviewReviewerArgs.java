@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AccessReviewReviewerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="principalId")
-      private final @Nullable Input<String> principalId;
+      private final @Nullable Output<String> principalId;
 
-    public Input<String> getPrincipalId() {
-        return this.principalId == null ? Input.empty() : this.principalId;
+    public Output<String> getPrincipalId() {
+        return this.principalId == null ? Output.empty() : this.principalId;
     }
 
-    public AccessReviewReviewerArgs(@Nullable Input<String> principalId) {
+    public AccessReviewReviewerArgs(@Nullable Output<String> principalId) {
         this.principalId = principalId;
     }
 
     private AccessReviewReviewerArgs() {
-        this.principalId = Input.empty();
+        this.principalId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AccessReviewReviewerArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> principalId;
+        private @Nullable Output<String> principalId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AccessReviewReviewerArgs extends io.pulumi.resources.Resource
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder principalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Output<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Input.ofNullable(principalId);
+            this.principalId = Output.ofNullable(principalId);
             return this;
         }
         public AccessReviewReviewerArgs build() {

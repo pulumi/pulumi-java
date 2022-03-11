@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.ManagementEventAggregationCondition
 import io.pulumi.azurenative.insights.inputs.RuleManagementEventDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="aggregation")
-      private final @Nullable Input<ManagementEventAggregationConditionArgs> aggregation;
+      private final @Nullable Output<ManagementEventAggregationConditionArgs> aggregation;
 
-    public Input<ManagementEventAggregationConditionArgs> getAggregation() {
-        return this.aggregation == null ? Input.empty() : this.aggregation;
+    public Output<ManagementEventAggregationConditionArgs> getAggregation() {
+        return this.aggregation == null ? Output.empty() : this.aggregation;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dataSource")
-      private final @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+      private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
-    public Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
-        return this.dataSource == null ? Input.empty() : this.dataSource;
+    public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
+        return this.dataSource == null ? Output.empty() : this.dataSource;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public ManagementEventRuleConditionArgs(
-        @Nullable Input<ManagementEventAggregationConditionArgs> aggregation,
-        @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource,
-        Input<String> odataType) {
+        @Nullable Output<ManagementEventAggregationConditionArgs> aggregation,
+        @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource,
+        Output<String> odataType) {
         this.aggregation = aggregation;
         this.dataSource = dataSource;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
     }
 
     private ManagementEventRuleConditionArgs() {
-        this.aggregation = Input.empty();
-        this.dataSource = Input.empty();
-        this.odataType = Input.empty();
+        this.aggregation = Output.empty();
+        this.dataSource = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<ManagementEventAggregationConditionArgs> aggregation;
-        private @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
-        private Input<String> odataType;
+        private @Nullable Output<ManagementEventAggregationConditionArgs> aggregation;
+        private @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class ManagementEventRuleConditionArgs extends io.pulumi.resources.
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder aggregation(@Nullable Input<ManagementEventAggregationConditionArgs> aggregation) {
+        public Builder aggregation(@Nullable Output<ManagementEventAggregationConditionArgs> aggregation) {
             this.aggregation = aggregation;
             return this;
         }
 
         public Builder aggregation(@Nullable ManagementEventAggregationConditionArgs aggregation) {
-            this.aggregation = Input.ofNullable(aggregation);
+            this.aggregation = Output.ofNullable(aggregation);
             return this;
         }
 
-        public Builder dataSource(@Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
+        public Builder dataSource(@Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
         public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs> dataSource) {
-            this.dataSource = Input.ofNullable(dataSource);
+            this.dataSource = Output.ofNullable(dataSource);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public ManagementEventRuleConditionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="filters")
-      private final @Nullable Input<List<String>> filters;
+      private final @Nullable Output<List<String>> filters;
 
-    public Input<List<String>> getFilters() {
-        return this.filters == null ? Input.empty() : this.filters;
+    public Output<List<String>> getFilters() {
+        return this.filters == null ? Output.empty() : this.filters;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="searchCriteria")
-      private final @Nullable Input<String> searchCriteria;
+      private final @Nullable Output<String> searchCriteria;
 
-    public Input<String> getSearchCriteria() {
-        return this.searchCriteria == null ? Input.empty() : this.searchCriteria;
+    public Output<String> getSearchCriteria() {
+        return this.searchCriteria == null ? Output.empty() : this.searchCriteria;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -70,18 +70,18 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="updateLimit")
-      private final @Nullable Input<Integer> updateLimit;
+      private final @Nullable Output<Integer> updateLimit;
 
-    public Input<Integer> getUpdateLimit() {
-        return this.updateLimit == null ? Input.empty() : this.updateLimit;
+    public Output<Integer> getUpdateLimit() {
+        return this.updateLimit == null ? Output.empty() : this.updateLimit;
     }
 
     public ImageTemplateWindowsUpdateCustomizerArgs(
-        @Nullable Input<List<String>> filters,
-        @Nullable Input<String> name,
-        @Nullable Input<String> searchCriteria,
-        Input<String> type,
-        @Nullable Input<Integer> updateLimit) {
+        @Nullable Output<List<String>> filters,
+        @Nullable Output<String> name,
+        @Nullable Output<String> searchCriteria,
+        Output<String> type,
+        @Nullable Output<Integer> updateLimit) {
         this.filters = filters;
         this.name = name;
         this.searchCriteria = searchCriteria;
@@ -90,11 +90,11 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
     }
 
     private ImageTemplateWindowsUpdateCustomizerArgs() {
-        this.filters = Input.empty();
-        this.name = Input.empty();
-        this.searchCriteria = Input.empty();
-        this.type = Input.empty();
-        this.updateLimit = Input.empty();
+        this.filters = Output.empty();
+        this.name = Output.empty();
+        this.searchCriteria = Output.empty();
+        this.type = Output.empty();
+        this.updateLimit = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> filters;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> searchCriteria;
-        private Input<String> type;
-        private @Nullable Input<Integer> updateLimit;
+        private @Nullable Output<List<String>> filters;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> searchCriteria;
+        private Output<String> type;
+        private @Nullable Output<Integer> updateLimit;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class ImageTemplateWindowsUpdateCustomizerArgs extends io.pulumi.re
     	      this.updateLimit = defaults.updateLimit;
         }
 
-        public Builder filters(@Nullable Input<List<String>> filters) {
+        public Builder filters(@Nullable Output<List<String>> filters) {
             this.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable List<String> filters) {
-            this.filters = Input.ofNullable(filters);
+            this.filters = Output.ofNullable(filters);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder searchCriteria(@Nullable Input<String> searchCriteria) {
+        public Builder searchCriteria(@Nullable Output<String> searchCriteria) {
             this.searchCriteria = searchCriteria;
             return this;
         }
 
         public Builder searchCriteria(@Nullable String searchCriteria) {
-            this.searchCriteria = Input.ofNullable(searchCriteria);
+            this.searchCriteria = Output.ofNullable(searchCriteria);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder updateLimit(@Nullable Input<Integer> updateLimit) {
+        public Builder updateLimit(@Nullable Output<Integer> updateLimit) {
             this.updateLimit = updateLimit;
             return this;
         }
 
         public Builder updateLimit(@Nullable Integer updateLimit) {
-            this.updateLimit = Input.ofNullable(updateLimit);
+            this.updateLimit = Output.ofNullable(updateLimit);
             return this;
         }
         public ImageTemplateWindowsUpdateCustomizerArgs build() {

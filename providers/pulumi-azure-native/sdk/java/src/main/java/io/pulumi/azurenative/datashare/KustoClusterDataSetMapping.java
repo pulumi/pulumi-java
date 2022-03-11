@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.datashare.KustoClusterDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -199,10 +198,10 @@ public class KustoClusterDataSetMapping extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public KustoClusterDataSetMapping(String name, KustoClusterDataSetMappingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datashare:KustoClusterDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:datashare:KustoClusterDataSetMapping", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private KustoClusterDataSetMapping(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private KustoClusterDataSetMapping(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datashare:KustoClusterDataSetMapping", name, null, makeResourceOptions(options, id));
     }
 
@@ -213,15 +212,15 @@ public class KustoClusterDataSetMapping extends io.pulumi.resources.CustomResour
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:datashare/v20181101preview:KustoClusterDataSetMapping").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20191101:KustoClusterDataSetMapping").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20200901:KustoClusterDataSetMapping").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20201001preview:KustoClusterDataSetMapping").build()),
-                Input.of(Alias.builder().setType("azure-native:datashare/v20210801:KustoClusterDataSetMapping").build())
+                Output.of(Alias.builder().setType("azure-native:datashare/v20181101preview:KustoClusterDataSetMapping").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20191101:KustoClusterDataSetMapping").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20200901:KustoClusterDataSetMapping").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20201001preview:KustoClusterDataSetMapping").build()),
+                Output.of(Alias.builder().setType("azure-native:datashare/v20210801:KustoClusterDataSetMapping").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -235,7 +234,7 @@ public class KustoClusterDataSetMapping extends io.pulumi.resources.CustomResour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static KustoClusterDataSetMapping get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static KustoClusterDataSetMapping get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new KustoClusterDataSetMapping(name, id, options);
     }
 }

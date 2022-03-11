@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.Office365PolicyPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="addressPrefix")
-      private final @Nullable Input<String> addressPrefix;
+      private final @Nullable Output<String> addressPrefix;
 
-    public Input<String> getAddressPrefix() {
-        return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
+    public Output<String> getAddressPrefix() {
+        return this.addressPrefix == null ? Output.empty() : this.addressPrefix;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkVirtualApplianceName", required=true)
-      private final Input<String> networkVirtualApplianceName;
+      private final Output<String> networkVirtualApplianceName;
 
-    public Input<String> getNetworkVirtualApplianceName() {
+    public Output<String> getNetworkVirtualApplianceName() {
         return this.networkVirtualApplianceName;
     }
 
@@ -64,10 +64,10 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="o365Policy")
-      private final @Nullable Input<Office365PolicyPropertiesArgs> o365Policy;
+      private final @Nullable Output<Office365PolicyPropertiesArgs> o365Policy;
 
-    public Input<Office365PolicyPropertiesArgs> getO365Policy() {
-        return this.o365Policy == null ? Input.empty() : this.o365Policy;
+    public Output<Office365PolicyPropertiesArgs> getO365Policy() {
+        return this.o365Policy == null ? Output.empty() : this.o365Policy;
     }
 
     /**
@@ -75,9 +75,9 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -86,20 +86,20 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="siteName")
-      private final @Nullable Input<String> siteName;
+      private final @Nullable Output<String> siteName;
 
-    public Input<String> getSiteName() {
-        return this.siteName == null ? Input.empty() : this.siteName;
+    public Output<String> getSiteName() {
+        return this.siteName == null ? Output.empty() : this.siteName;
     }
 
     public VirtualApplianceSiteArgs(
-        @Nullable Input<String> addressPrefix,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        Input<String> networkVirtualApplianceName,
-        @Nullable Input<Office365PolicyPropertiesArgs> o365Policy,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> siteName) {
+        @Nullable Output<String> addressPrefix,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        Output<String> networkVirtualApplianceName,
+        @Nullable Output<Office365PolicyPropertiesArgs> o365Policy,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> siteName) {
         this.addressPrefix = addressPrefix;
         this.id = id;
         this.name = name;
@@ -110,13 +110,13 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
     }
 
     private VirtualApplianceSiteArgs() {
-        this.addressPrefix = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.networkVirtualApplianceName = Input.empty();
-        this.o365Policy = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.siteName = Input.empty();
+        this.addressPrefix = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.networkVirtualApplianceName = Output.empty();
+        this.o365Policy = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.siteName = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addressPrefix;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private Input<String> networkVirtualApplianceName;
-        private @Nullable Input<Office365PolicyPropertiesArgs> o365Policy;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> siteName;
+        private @Nullable Output<String> addressPrefix;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private Output<String> networkVirtualApplianceName;
+        private @Nullable Output<Office365PolicyPropertiesArgs> o365Policy;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> siteName;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
     	      this.siteName = defaults.siteName;
         }
 
-        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Input.ofNullable(addressPrefix);
+            this.addressPrefix = Output.ofNullable(addressPrefix);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkVirtualApplianceName(Input<String> networkVirtualApplianceName) {
+        public Builder networkVirtualApplianceName(Output<String> networkVirtualApplianceName) {
             this.networkVirtualApplianceName = Objects.requireNonNull(networkVirtualApplianceName);
             return this;
         }
 
         public Builder networkVirtualApplianceName(String networkVirtualApplianceName) {
-            this.networkVirtualApplianceName = Input.of(Objects.requireNonNull(networkVirtualApplianceName));
+            this.networkVirtualApplianceName = Output.of(Objects.requireNonNull(networkVirtualApplianceName));
             return this;
         }
 
-        public Builder o365Policy(@Nullable Input<Office365PolicyPropertiesArgs> o365Policy) {
+        public Builder o365Policy(@Nullable Output<Office365PolicyPropertiesArgs> o365Policy) {
             this.o365Policy = o365Policy;
             return this;
         }
 
         public Builder o365Policy(@Nullable Office365PolicyPropertiesArgs o365Policy) {
-            this.o365Policy = Input.ofNullable(o365Policy);
+            this.o365Policy = Output.ofNullable(o365Policy);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder siteName(@Nullable Input<String> siteName) {
+        public Builder siteName(@Nullable Output<String> siteName) {
             this.siteName = siteName;
             return this;
         }
 
         public Builder siteName(@Nullable String siteName) {
-            this.siteName = Input.ofNullable(siteName);
+            this.siteName = Output.ofNullable(siteName);
             return this;
         }
         public VirtualApplianceSiteArgs build() {

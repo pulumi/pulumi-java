@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="snapshotPolicyId")
-      private final @Nullable Input<String> snapshotPolicyId;
+      private final @Nullable Output<String> snapshotPolicyId;
 
-    public Input<String> getSnapshotPolicyId() {
-        return this.snapshotPolicyId == null ? Input.empty() : this.snapshotPolicyId;
+    public Output<String> getSnapshotPolicyId() {
+        return this.snapshotPolicyId == null ? Output.empty() : this.snapshotPolicyId;
     }
 
-    public VolumeSnapshotPropertiesArgs(@Nullable Input<String> snapshotPolicyId) {
+    public VolumeSnapshotPropertiesArgs(@Nullable Output<String> snapshotPolicyId) {
         this.snapshotPolicyId = snapshotPolicyId;
     }
 
     private VolumeSnapshotPropertiesArgs() {
-        this.snapshotPolicyId = Input.empty();
+        this.snapshotPolicyId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> snapshotPolicyId;
+        private @Nullable Output<String> snapshotPolicyId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class VolumeSnapshotPropertiesArgs extends io.pulumi.resources.Reso
     	      this.snapshotPolicyId = defaults.snapshotPolicyId;
         }
 
-        public Builder snapshotPolicyId(@Nullable Input<String> snapshotPolicyId) {
+        public Builder snapshotPolicyId(@Nullable Output<String> snapshotPolicyId) {
             this.snapshotPolicyId = snapshotPolicyId;
             return this;
         }
 
         public Builder snapshotPolicyId(@Nullable String snapshotPolicyId) {
-            this.snapshotPolicyId = Input.ofNullable(snapshotPolicyId);
+            this.snapshotPolicyId = Output.ofNullable(snapshotPolicyId);
             return this;
         }
         public VolumeSnapshotPropertiesArgs build() {

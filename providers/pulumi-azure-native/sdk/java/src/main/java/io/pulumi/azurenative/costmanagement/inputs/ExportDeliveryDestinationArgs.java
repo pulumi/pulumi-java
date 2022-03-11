@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class ExportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="container", required=true)
-      private final Input<String> container;
+      private final Output<String> container;
 
-    public Input<String> getContainer() {
+    public Output<String> getContainer() {
         return this.container;
     }
 
@@ -34,9 +34,9 @@ public final class ExportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceId", required=true)
-      private final Input<String> resourceId;
+      private final Output<String> resourceId;
 
-    public Input<String> getResourceId() {
+    public Output<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -45,25 +45,25 @@ public final class ExportDeliveryDestinationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rootFolderPath")
-      private final @Nullable Input<String> rootFolderPath;
+      private final @Nullable Output<String> rootFolderPath;
 
-    public Input<String> getRootFolderPath() {
-        return this.rootFolderPath == null ? Input.empty() : this.rootFolderPath;
+    public Output<String> getRootFolderPath() {
+        return this.rootFolderPath == null ? Output.empty() : this.rootFolderPath;
     }
 
     public ExportDeliveryDestinationArgs(
-        Input<String> container,
-        Input<String> resourceId,
-        @Nullable Input<String> rootFolderPath) {
+        Output<String> container,
+        Output<String> resourceId,
+        @Nullable Output<String> rootFolderPath) {
         this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
         this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
         this.rootFolderPath = rootFolderPath;
     }
 
     private ExportDeliveryDestinationArgs() {
-        this.container = Input.empty();
-        this.resourceId = Input.empty();
-        this.rootFolderPath = Input.empty();
+        this.container = Output.empty();
+        this.resourceId = Output.empty();
+        this.rootFolderPath = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class ExportDeliveryDestinationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> container;
-        private Input<String> resourceId;
-        private @Nullable Input<String> rootFolderPath;
+        private Output<String> container;
+        private Output<String> resourceId;
+        private @Nullable Output<String> rootFolderPath;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class ExportDeliveryDestinationArgs extends io.pulumi.resources.Res
     	      this.rootFolderPath = defaults.rootFolderPath;
         }
 
-        public Builder container(Input<String> container) {
+        public Builder container(Output<String> container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
         public Builder container(String container) {
-            this.container = Input.of(Objects.requireNonNull(container));
+            this.container = Output.of(Objects.requireNonNull(container));
             return this;
         }
 
-        public Builder resourceId(Input<String> resourceId) {
+        public Builder resourceId(Output<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Input.of(Objects.requireNonNull(resourceId));
+            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder rootFolderPath(@Nullable Input<String> rootFolderPath) {
+        public Builder rootFolderPath(@Nullable Output<String> rootFolderPath) {
             this.rootFolderPath = rootFolderPath;
             return this;
         }
 
         public Builder rootFolderPath(@Nullable String rootFolderPath) {
-            this.rootFolderPath = Input.ofNullable(rootFolderPath);
+            this.rootFolderPath = Output.ofNullable(rootFolderPath);
             return this;
         }
         public ExportDeliveryDestinationArgs build() {

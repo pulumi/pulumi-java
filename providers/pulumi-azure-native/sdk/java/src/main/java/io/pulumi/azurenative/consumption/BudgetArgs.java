@@ -9,7 +9,7 @@ import io.pulumi.azurenative.consumption.inputs.BudgetFilterArgs;
 import io.pulumi.azurenative.consumption.inputs.BudgetTimePeriodArgs;
 import io.pulumi.azurenative.consumption.inputs.NotificationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amount", required=true)
-      private final Input<Double> amount;
+      private final Output<Double> amount;
 
-    public Input<Double> getAmount() {
+    public Output<Double> getAmount() {
         return this.amount;
     }
 
@@ -38,10 +38,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="budgetName")
-      private final @Nullable Input<String> budgetName;
+      private final @Nullable Output<String> budgetName;
 
-    public Input<String> getBudgetName() {
-        return this.budgetName == null ? Input.empty() : this.budgetName;
+    public Output<String> getBudgetName() {
+        return this.budgetName == null ? Output.empty() : this.budgetName;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category", required=true)
-      private final Input<Either<String,CategoryType>> category;
+      private final Output<Either<String,CategoryType>> category;
 
-    public Input<Either<String,CategoryType>> getCategory() {
+    public Output<Either<String,CategoryType>> getCategory() {
         return this.category;
     }
 
@@ -60,10 +60,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-      private final @Nullable Input<String> eTag;
+      private final @Nullable Output<String> eTag;
 
-    public Input<String> getETag() {
-        return this.eTag == null ? Input.empty() : this.eTag;
+    public Output<String> getETag() {
+        return this.eTag == null ? Output.empty() : this.eTag;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<BudgetFilterArgs> filter;
+      private final @Nullable Output<BudgetFilterArgs> filter;
 
-    public Input<BudgetFilterArgs> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<BudgetFilterArgs> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notifications")
-      private final @Nullable Input<Map<String,NotificationArgs>> notifications;
+      private final @Nullable Output<Map<String,NotificationArgs>> notifications;
 
-    public Input<Map<String,NotificationArgs>> getNotifications() {
-        return this.notifications == null ? Input.empty() : this.notifications;
+    public Output<Map<String,NotificationArgs>> getNotifications() {
+        return this.notifications == null ? Output.empty() : this.notifications;
     }
 
     /**
@@ -93,9 +93,9 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -104,9 +104,9 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeGrain", required=true)
-      private final Input<Either<String,TimeGrainType>> timeGrain;
+      private final Output<Either<String,TimeGrainType>> timeGrain;
 
-    public Input<Either<String,TimeGrainType>> getTimeGrain() {
+    public Output<Either<String,TimeGrainType>> getTimeGrain() {
         return this.timeGrain;
     }
 
@@ -115,22 +115,22 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timePeriod", required=true)
-      private final Input<BudgetTimePeriodArgs> timePeriod;
+      private final Output<BudgetTimePeriodArgs> timePeriod;
 
-    public Input<BudgetTimePeriodArgs> getTimePeriod() {
+    public Output<BudgetTimePeriodArgs> getTimePeriod() {
         return this.timePeriod;
     }
 
     public BudgetArgs(
-        Input<Double> amount,
-        @Nullable Input<String> budgetName,
-        Input<Either<String,CategoryType>> category,
-        @Nullable Input<String> eTag,
-        @Nullable Input<BudgetFilterArgs> filter,
-        @Nullable Input<Map<String,NotificationArgs>> notifications,
-        Input<String> scope,
-        Input<Either<String,TimeGrainType>> timeGrain,
-        Input<BudgetTimePeriodArgs> timePeriod) {
+        Output<Double> amount,
+        @Nullable Output<String> budgetName,
+        Output<Either<String,CategoryType>> category,
+        @Nullable Output<String> eTag,
+        @Nullable Output<BudgetFilterArgs> filter,
+        @Nullable Output<Map<String,NotificationArgs>> notifications,
+        Output<String> scope,
+        Output<Either<String,TimeGrainType>> timeGrain,
+        Output<BudgetTimePeriodArgs> timePeriod) {
         this.amount = Objects.requireNonNull(amount, "expected parameter 'amount' to be non-null");
         this.budgetName = budgetName;
         this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
@@ -143,15 +143,15 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BudgetArgs() {
-        this.amount = Input.empty();
-        this.budgetName = Input.empty();
-        this.category = Input.empty();
-        this.eTag = Input.empty();
-        this.filter = Input.empty();
-        this.notifications = Input.empty();
-        this.scope = Input.empty();
-        this.timeGrain = Input.empty();
-        this.timePeriod = Input.empty();
+        this.amount = Output.empty();
+        this.budgetName = Output.empty();
+        this.category = Output.empty();
+        this.eTag = Output.empty();
+        this.filter = Output.empty();
+        this.notifications = Output.empty();
+        this.scope = Output.empty();
+        this.timeGrain = Output.empty();
+        this.timePeriod = Output.empty();
     }
 
     public static Builder builder() {
@@ -163,15 +163,15 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Double> amount;
-        private @Nullable Input<String> budgetName;
-        private Input<Either<String,CategoryType>> category;
-        private @Nullable Input<String> eTag;
-        private @Nullable Input<BudgetFilterArgs> filter;
-        private @Nullable Input<Map<String,NotificationArgs>> notifications;
-        private Input<String> scope;
-        private Input<Either<String,TimeGrainType>> timeGrain;
-        private Input<BudgetTimePeriodArgs> timePeriod;
+        private Output<Double> amount;
+        private @Nullable Output<String> budgetName;
+        private Output<Either<String,CategoryType>> category;
+        private @Nullable Output<String> eTag;
+        private @Nullable Output<BudgetFilterArgs> filter;
+        private @Nullable Output<Map<String,NotificationArgs>> notifications;
+        private Output<String> scope;
+        private Output<Either<String,TimeGrainType>> timeGrain;
+        private Output<BudgetTimePeriodArgs> timePeriod;
 
         public Builder() {
     	      // Empty
@@ -190,93 +190,93 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timePeriod = defaults.timePeriod;
         }
 
-        public Builder amount(Input<Double> amount) {
+        public Builder amount(Output<Double> amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
         public Builder amount(Double amount) {
-            this.amount = Input.of(Objects.requireNonNull(amount));
+            this.amount = Output.of(Objects.requireNonNull(amount));
             return this;
         }
 
-        public Builder budgetName(@Nullable Input<String> budgetName) {
+        public Builder budgetName(@Nullable Output<String> budgetName) {
             this.budgetName = budgetName;
             return this;
         }
 
         public Builder budgetName(@Nullable String budgetName) {
-            this.budgetName = Input.ofNullable(budgetName);
+            this.budgetName = Output.ofNullable(budgetName);
             return this;
         }
 
-        public Builder category(Input<Either<String,CategoryType>> category) {
+        public Builder category(Output<Either<String,CategoryType>> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
         public Builder category(Either<String,CategoryType> category) {
-            this.category = Input.of(Objects.requireNonNull(category));
+            this.category = Output.of(Objects.requireNonNull(category));
             return this;
         }
 
-        public Builder eTag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Output<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Input.ofNullable(eTag);
+            this.eTag = Output.ofNullable(eTag);
             return this;
         }
 
-        public Builder filter(@Nullable Input<BudgetFilterArgs> filter) {
+        public Builder filter(@Nullable Output<BudgetFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable BudgetFilterArgs filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder notifications(@Nullable Input<Map<String,NotificationArgs>> notifications) {
+        public Builder notifications(@Nullable Output<Map<String,NotificationArgs>> notifications) {
             this.notifications = notifications;
             return this;
         }
 
         public Builder notifications(@Nullable Map<String,NotificationArgs> notifications) {
-            this.notifications = Input.ofNullable(notifications);
+            this.notifications = Output.ofNullable(notifications);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder timeGrain(Input<Either<String,TimeGrainType>> timeGrain) {
+        public Builder timeGrain(Output<Either<String,TimeGrainType>> timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
 
         public Builder timeGrain(Either<String,TimeGrainType> timeGrain) {
-            this.timeGrain = Input.of(Objects.requireNonNull(timeGrain));
+            this.timeGrain = Output.of(Objects.requireNonNull(timeGrain));
             return this;
         }
 
-        public Builder timePeriod(Input<BudgetTimePeriodArgs> timePeriod) {
+        public Builder timePeriod(Output<BudgetTimePeriodArgs> timePeriod) {
             this.timePeriod = Objects.requireNonNull(timePeriod);
             return this;
         }
 
         public Builder timePeriod(BudgetTimePeriodArgs timePeriod) {
-            this.timePeriod = Input.of(Objects.requireNonNull(timePeriod));
+            this.timePeriod = Output.of(Objects.requireNonNull(timePeriod));
             return this;
         }
         public BudgetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,46 +15,46 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
     public static final LinkedAccessCheckArgs Empty = new LinkedAccessCheckArgs();
 
     @InputImport(name="actionName")
-      private final @Nullable Input<String> actionName;
+      private final @Nullable Output<String> actionName;
 
-    public Input<String> getActionName() {
-        return this.actionName == null ? Input.empty() : this.actionName;
+    public Output<String> getActionName() {
+        return this.actionName == null ? Output.empty() : this.actionName;
     }
 
     @InputImport(name="linkedAction")
-      private final @Nullable Input<String> linkedAction;
+      private final @Nullable Output<String> linkedAction;
 
-    public Input<String> getLinkedAction() {
-        return this.linkedAction == null ? Input.empty() : this.linkedAction;
+    public Output<String> getLinkedAction() {
+        return this.linkedAction == null ? Output.empty() : this.linkedAction;
     }
 
     @InputImport(name="linkedActionVerb")
-      private final @Nullable Input<String> linkedActionVerb;
+      private final @Nullable Output<String> linkedActionVerb;
 
-    public Input<String> getLinkedActionVerb() {
-        return this.linkedActionVerb == null ? Input.empty() : this.linkedActionVerb;
+    public Output<String> getLinkedActionVerb() {
+        return this.linkedActionVerb == null ? Output.empty() : this.linkedActionVerb;
     }
 
     @InputImport(name="linkedProperty")
-      private final @Nullable Input<String> linkedProperty;
+      private final @Nullable Output<String> linkedProperty;
 
-    public Input<String> getLinkedProperty() {
-        return this.linkedProperty == null ? Input.empty() : this.linkedProperty;
+    public Output<String> getLinkedProperty() {
+        return this.linkedProperty == null ? Output.empty() : this.linkedProperty;
     }
 
     @InputImport(name="linkedType")
-      private final @Nullable Input<String> linkedType;
+      private final @Nullable Output<String> linkedType;
 
-    public Input<String> getLinkedType() {
-        return this.linkedType == null ? Input.empty() : this.linkedType;
+    public Output<String> getLinkedType() {
+        return this.linkedType == null ? Output.empty() : this.linkedType;
     }
 
     public LinkedAccessCheckArgs(
-        @Nullable Input<String> actionName,
-        @Nullable Input<String> linkedAction,
-        @Nullable Input<String> linkedActionVerb,
-        @Nullable Input<String> linkedProperty,
-        @Nullable Input<String> linkedType) {
+        @Nullable Output<String> actionName,
+        @Nullable Output<String> linkedAction,
+        @Nullable Output<String> linkedActionVerb,
+        @Nullable Output<String> linkedProperty,
+        @Nullable Output<String> linkedType) {
         this.actionName = actionName;
         this.linkedAction = linkedAction;
         this.linkedActionVerb = linkedActionVerb;
@@ -63,11 +63,11 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
     }
 
     private LinkedAccessCheckArgs() {
-        this.actionName = Input.empty();
-        this.linkedAction = Input.empty();
-        this.linkedActionVerb = Input.empty();
-        this.linkedProperty = Input.empty();
-        this.linkedType = Input.empty();
+        this.actionName = Output.empty();
+        this.linkedAction = Output.empty();
+        this.linkedActionVerb = Output.empty();
+        this.linkedProperty = Output.empty();
+        this.linkedType = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,11 +79,11 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> actionName;
-        private @Nullable Input<String> linkedAction;
-        private @Nullable Input<String> linkedActionVerb;
-        private @Nullable Input<String> linkedProperty;
-        private @Nullable Input<String> linkedType;
+        private @Nullable Output<String> actionName;
+        private @Nullable Output<String> linkedAction;
+        private @Nullable Output<String> linkedActionVerb;
+        private @Nullable Output<String> linkedProperty;
+        private @Nullable Output<String> linkedType;
 
         public Builder() {
     	      // Empty
@@ -98,53 +98,53 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
     	      this.linkedType = defaults.linkedType;
         }
 
-        public Builder actionName(@Nullable Input<String> actionName) {
+        public Builder actionName(@Nullable Output<String> actionName) {
             this.actionName = actionName;
             return this;
         }
 
         public Builder actionName(@Nullable String actionName) {
-            this.actionName = Input.ofNullable(actionName);
+            this.actionName = Output.ofNullable(actionName);
             return this;
         }
 
-        public Builder linkedAction(@Nullable Input<String> linkedAction) {
+        public Builder linkedAction(@Nullable Output<String> linkedAction) {
             this.linkedAction = linkedAction;
             return this;
         }
 
         public Builder linkedAction(@Nullable String linkedAction) {
-            this.linkedAction = Input.ofNullable(linkedAction);
+            this.linkedAction = Output.ofNullable(linkedAction);
             return this;
         }
 
-        public Builder linkedActionVerb(@Nullable Input<String> linkedActionVerb) {
+        public Builder linkedActionVerb(@Nullable Output<String> linkedActionVerb) {
             this.linkedActionVerb = linkedActionVerb;
             return this;
         }
 
         public Builder linkedActionVerb(@Nullable String linkedActionVerb) {
-            this.linkedActionVerb = Input.ofNullable(linkedActionVerb);
+            this.linkedActionVerb = Output.ofNullable(linkedActionVerb);
             return this;
         }
 
-        public Builder linkedProperty(@Nullable Input<String> linkedProperty) {
+        public Builder linkedProperty(@Nullable Output<String> linkedProperty) {
             this.linkedProperty = linkedProperty;
             return this;
         }
 
         public Builder linkedProperty(@Nullable String linkedProperty) {
-            this.linkedProperty = Input.ofNullable(linkedProperty);
+            this.linkedProperty = Output.ofNullable(linkedProperty);
             return this;
         }
 
-        public Builder linkedType(@Nullable Input<String> linkedType) {
+        public Builder linkedType(@Nullable Output<String> linkedType) {
             this.linkedType = linkedType;
             return this;
         }
 
         public Builder linkedType(@Nullable String linkedType) {
-            this.linkedType = Input.ofNullable(linkedType);
+            this.linkedType = Output.ofNullable(linkedType);
             return this;
         }
         public LinkedAccessCheckArgs build() {

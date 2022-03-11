@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,9 +20,9 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -31,10 +31,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="monthlyRetention")
-      private final @Nullable Input<String> monthlyRetention;
+      private final @Nullable Output<String> monthlyRetention;
 
-    public Input<String> getMonthlyRetention() {
-        return this.monthlyRetention == null ? Input.empty() : this.monthlyRetention;
+    public Output<String> getMonthlyRetention() {
+        return this.monthlyRetention == null ? Output.empty() : this.monthlyRetention;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,9 +64,9 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -75,10 +75,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="weekOfYear")
-      private final @Nullable Input<Integer> weekOfYear;
+      private final @Nullable Output<Integer> weekOfYear;
 
-    public Input<Integer> getWeekOfYear() {
-        return this.weekOfYear == null ? Input.empty() : this.weekOfYear;
+    public Output<Integer> getWeekOfYear() {
+        return this.weekOfYear == null ? Output.empty() : this.weekOfYear;
     }
 
     /**
@@ -86,10 +86,10 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="weeklyRetention")
-      private final @Nullable Input<String> weeklyRetention;
+      private final @Nullable Output<String> weeklyRetention;
 
-    public Input<String> getWeeklyRetention() {
-        return this.weeklyRetention == null ? Input.empty() : this.weeklyRetention;
+    public Output<String> getWeeklyRetention() {
+        return this.weeklyRetention == null ? Output.empty() : this.weeklyRetention;
     }
 
     /**
@@ -97,21 +97,21 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="yearlyRetention")
-      private final @Nullable Input<String> yearlyRetention;
+      private final @Nullable Output<String> yearlyRetention;
 
-    public Input<String> getYearlyRetention() {
-        return this.yearlyRetention == null ? Input.empty() : this.yearlyRetention;
+    public Output<String> getYearlyRetention() {
+        return this.yearlyRetention == null ? Output.empty() : this.yearlyRetention;
     }
 
     public LongTermRetentionPolicyArgs(
-        Input<String> databaseName,
-        @Nullable Input<String> monthlyRetention,
-        @Nullable Input<String> policyName,
-        Input<String> resourceGroupName,
-        Input<String> serverName,
-        @Nullable Input<Integer> weekOfYear,
-        @Nullable Input<String> weeklyRetention,
-        @Nullable Input<String> yearlyRetention) {
+        Output<String> databaseName,
+        @Nullable Output<String> monthlyRetention,
+        @Nullable Output<String> policyName,
+        Output<String> resourceGroupName,
+        Output<String> serverName,
+        @Nullable Output<Integer> weekOfYear,
+        @Nullable Output<String> weeklyRetention,
+        @Nullable Output<String> yearlyRetention) {
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.monthlyRetention = monthlyRetention;
         this.policyName = policyName;
@@ -123,14 +123,14 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
     }
 
     private LongTermRetentionPolicyArgs() {
-        this.databaseName = Input.empty();
-        this.monthlyRetention = Input.empty();
-        this.policyName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
-        this.weekOfYear = Input.empty();
-        this.weeklyRetention = Input.empty();
-        this.yearlyRetention = Input.empty();
+        this.databaseName = Output.empty();
+        this.monthlyRetention = Output.empty();
+        this.policyName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
+        this.weekOfYear = Output.empty();
+        this.weeklyRetention = Output.empty();
+        this.yearlyRetention = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> databaseName;
-        private @Nullable Input<String> monthlyRetention;
-        private @Nullable Input<String> policyName;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
-        private @Nullable Input<Integer> weekOfYear;
-        private @Nullable Input<String> weeklyRetention;
-        private @Nullable Input<String> yearlyRetention;
+        private Output<String> databaseName;
+        private @Nullable Output<String> monthlyRetention;
+        private @Nullable Output<String> policyName;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
+        private @Nullable Output<Integer> weekOfYear;
+        private @Nullable Output<String> weeklyRetention;
+        private @Nullable Output<String> yearlyRetention;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
     	      this.yearlyRetention = defaults.yearlyRetention;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder monthlyRetention(@Nullable Input<String> monthlyRetention) {
+        public Builder monthlyRetention(@Nullable Output<String> monthlyRetention) {
             this.monthlyRetention = monthlyRetention;
             return this;
         }
 
         public Builder monthlyRetention(@Nullable String monthlyRetention) {
-            this.monthlyRetention = Input.ofNullable(monthlyRetention);
+            this.monthlyRetention = Output.ofNullable(monthlyRetention);
             return this;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder weekOfYear(@Nullable Input<Integer> weekOfYear) {
+        public Builder weekOfYear(@Nullable Output<Integer> weekOfYear) {
             this.weekOfYear = weekOfYear;
             return this;
         }
 
         public Builder weekOfYear(@Nullable Integer weekOfYear) {
-            this.weekOfYear = Input.ofNullable(weekOfYear);
+            this.weekOfYear = Output.ofNullable(weekOfYear);
             return this;
         }
 
-        public Builder weeklyRetention(@Nullable Input<String> weeklyRetention) {
+        public Builder weeklyRetention(@Nullable Output<String> weeklyRetention) {
             this.weeklyRetention = weeklyRetention;
             return this;
         }
 
         public Builder weeklyRetention(@Nullable String weeklyRetention) {
-            this.weeklyRetention = Input.ofNullable(weeklyRetention);
+            this.weeklyRetention = Output.ofNullable(weeklyRetention);
             return this;
         }
 
-        public Builder yearlyRetention(@Nullable Input<String> yearlyRetention) {
+        public Builder yearlyRetention(@Nullable Output<String> yearlyRetention) {
             this.yearlyRetention = yearlyRetention;
             return this;
         }
 
         public Builder yearlyRetention(@Nullable String yearlyRetention) {
-            this.yearlyRetention = Input.ofNullable(yearlyRetention);
+            this.yearlyRetention = Output.ofNullable(yearlyRetention);
             return this;
         }
         public LongTermRetentionPolicyArgs build() {

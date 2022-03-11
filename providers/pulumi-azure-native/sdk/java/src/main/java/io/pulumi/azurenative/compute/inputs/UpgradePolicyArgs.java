@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.UpgradeMode;
 import io.pulumi.azurenative.compute.inputs.AutomaticOSUpgradePolicyArgs;
 import io.pulumi.azurenative.compute.inputs.RollingUpgradePolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,10 +25,10 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automaticOSUpgradePolicy")
-      private final @Nullable Input<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy;
+      private final @Nullable Output<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy;
 
-    public Input<AutomaticOSUpgradePolicyArgs> getAutomaticOSUpgradePolicy() {
-        return this.automaticOSUpgradePolicy == null ? Input.empty() : this.automaticOSUpgradePolicy;
+    public Output<AutomaticOSUpgradePolicyArgs> getAutomaticOSUpgradePolicy() {
+        return this.automaticOSUpgradePolicy == null ? Output.empty() : this.automaticOSUpgradePolicy;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<UpgradeMode> mode;
+      private final @Nullable Output<UpgradeMode> mode;
 
-    public Input<UpgradeMode> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<UpgradeMode> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rollingUpgradePolicy")
-      private final @Nullable Input<RollingUpgradePolicyArgs> rollingUpgradePolicy;
+      private final @Nullable Output<RollingUpgradePolicyArgs> rollingUpgradePolicy;
 
-    public Input<RollingUpgradePolicyArgs> getRollingUpgradePolicy() {
-        return this.rollingUpgradePolicy == null ? Input.empty() : this.rollingUpgradePolicy;
+    public Output<RollingUpgradePolicyArgs> getRollingUpgradePolicy() {
+        return this.rollingUpgradePolicy == null ? Output.empty() : this.rollingUpgradePolicy;
     }
 
     public UpgradePolicyArgs(
-        @Nullable Input<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy,
-        @Nullable Input<UpgradeMode> mode,
-        @Nullable Input<RollingUpgradePolicyArgs> rollingUpgradePolicy) {
+        @Nullable Output<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy,
+        @Nullable Output<UpgradeMode> mode,
+        @Nullable Output<RollingUpgradePolicyArgs> rollingUpgradePolicy) {
         this.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
         this.mode = mode;
         this.rollingUpgradePolicy = rollingUpgradePolicy;
     }
 
     private UpgradePolicyArgs() {
-        this.automaticOSUpgradePolicy = Input.empty();
-        this.mode = Input.empty();
-        this.rollingUpgradePolicy = Input.empty();
+        this.automaticOSUpgradePolicy = Output.empty();
+        this.mode = Output.empty();
+        this.rollingUpgradePolicy = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy;
-        private @Nullable Input<UpgradeMode> mode;
-        private @Nullable Input<RollingUpgradePolicyArgs> rollingUpgradePolicy;
+        private @Nullable Output<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy;
+        private @Nullable Output<UpgradeMode> mode;
+        private @Nullable Output<RollingUpgradePolicyArgs> rollingUpgradePolicy;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rollingUpgradePolicy = defaults.rollingUpgradePolicy;
         }
 
-        public Builder automaticOSUpgradePolicy(@Nullable Input<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy) {
+        public Builder automaticOSUpgradePolicy(@Nullable Output<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy) {
             this.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
             return this;
         }
 
         public Builder automaticOSUpgradePolicy(@Nullable AutomaticOSUpgradePolicyArgs automaticOSUpgradePolicy) {
-            this.automaticOSUpgradePolicy = Input.ofNullable(automaticOSUpgradePolicy);
+            this.automaticOSUpgradePolicy = Output.ofNullable(automaticOSUpgradePolicy);
             return this;
         }
 
-        public Builder mode(@Nullable Input<UpgradeMode> mode) {
+        public Builder mode(@Nullable Output<UpgradeMode> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable UpgradeMode mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder rollingUpgradePolicy(@Nullable Input<RollingUpgradePolicyArgs> rollingUpgradePolicy) {
+        public Builder rollingUpgradePolicy(@Nullable Output<RollingUpgradePolicyArgs> rollingUpgradePolicy) {
             this.rollingUpgradePolicy = rollingUpgradePolicy;
             return this;
         }
 
         public Builder rollingUpgradePolicy(@Nullable RollingUpgradePolicyArgs rollingUpgradePolicy) {
-            this.rollingUpgradePolicy = Input.ofNullable(rollingUpgradePolicy);
+            this.rollingUpgradePolicy = Output.ofNullable(rollingUpgradePolicy);
             return this;
         }
         public UpgradePolicyArgs build() {

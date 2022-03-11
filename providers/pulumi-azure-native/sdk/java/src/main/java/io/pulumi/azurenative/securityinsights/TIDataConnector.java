@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.TIDataConnectorArgs;
 import io.pulumi.azurenative.securityinsights.outputs.TIDataConnectorDataTypesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -171,10 +170,10 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TIDataConnector(String name, TIDataConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:TIDataConnector", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:securityinsights:TIDataConnector", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private TIDataConnector(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TIDataConnector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:TIDataConnector", name, null, makeResourceOptions(options, id));
     }
 
@@ -185,14 +184,14 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20190101preview:TIDataConnector").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20200101:TIDataConnector").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20210301preview:TIDataConnector").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20210901preview:TIDataConnector").build())
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20190101preview:TIDataConnector").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20200101:TIDataConnector").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210301preview:TIDataConnector").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210901preview:TIDataConnector").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -206,7 +205,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TIDataConnector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TIDataConnector get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TIDataConnector(name, id, options);
     }
 }

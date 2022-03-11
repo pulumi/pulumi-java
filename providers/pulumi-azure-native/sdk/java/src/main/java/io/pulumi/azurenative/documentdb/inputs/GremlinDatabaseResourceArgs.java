@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class GremlinDatabaseResourceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
-    public GremlinDatabaseResourceArgs(Input<String> id) {
+    public GremlinDatabaseResourceArgs(Output<String> id) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
     }
 
     private GremlinDatabaseResourceArgs() {
-        this.id = Input.empty();
+        this.id = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class GremlinDatabaseResourceArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> id;
+        private Output<String> id;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class GremlinDatabaseResourceArgs extends io.pulumi.resources.Resou
     	      this.id = defaults.id;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
         public GremlinDatabaseResourceArgs build() {

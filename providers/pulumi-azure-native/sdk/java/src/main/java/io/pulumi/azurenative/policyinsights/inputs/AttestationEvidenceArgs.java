@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceUri")
-      private final @Nullable Input<String> sourceUri;
+      private final @Nullable Output<String> sourceUri;
 
-    public Input<String> getSourceUri() {
-        return this.sourceUri == null ? Input.empty() : this.sourceUri;
+    public Output<String> getSourceUri() {
+        return this.sourceUri == null ? Output.empty() : this.sourceUri;
     }
 
     public AttestationEvidenceArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> sourceUri) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> sourceUri) {
         this.description = description;
         this.sourceUri = sourceUri;
     }
 
     private AttestationEvidenceArgs() {
-        this.description = Input.empty();
-        this.sourceUri = Input.empty();
+        this.description = Output.empty();
+        this.sourceUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> sourceUri;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> sourceUri;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AttestationEvidenceArgs extends io.pulumi.resources.ResourceA
     	      this.sourceUri = defaults.sourceUri;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder sourceUri(@Nullable Input<String> sourceUri) {
+        public Builder sourceUri(@Nullable Output<String> sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
 
         public Builder sourceUri(@Nullable String sourceUri) {
-            this.sourceUri = Input.ofNullable(sourceUri);
+            this.sourceUri = Output.ofNullable(sourceUri);
             return this;
         }
         public AttestationEvidenceArgs build() {

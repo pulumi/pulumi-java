@@ -8,7 +8,6 @@ import io.pulumi.azurenative.network.AdminRuleCollectionArgs;
 import io.pulumi.azurenative.network.outputs.NetworkManagerSecurityGroupItemResponse;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -184,19 +183,19 @@ public class AdminRuleCollection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AdminRuleCollection(String name, AdminRuleCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:AdminRuleCollection", name, args == null ? AdminRuleCollectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:AdminRuleCollection", name, args == null ? AdminRuleCollectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AdminRuleCollection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AdminRuleCollection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:AdminRuleCollection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20210201preview:AdminRuleCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501preview:AdminRuleCollection").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20210201preview:AdminRuleCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501preview:AdminRuleCollection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -210,7 +209,7 @@ public class AdminRuleCollection extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AdminRuleCollection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AdminRuleCollection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AdminRuleCollection(name, id, options);
     }
 }

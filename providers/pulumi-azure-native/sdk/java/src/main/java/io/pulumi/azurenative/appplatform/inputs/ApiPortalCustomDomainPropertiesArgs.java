@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ApiPortalCustomDomainPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="thumbprint")
-      private final @Nullable Input<String> thumbprint;
+      private final @Nullable Output<String> thumbprint;
 
-    public Input<String> getThumbprint() {
-        return this.thumbprint == null ? Input.empty() : this.thumbprint;
+    public Output<String> getThumbprint() {
+        return this.thumbprint == null ? Output.empty() : this.thumbprint;
     }
 
-    public ApiPortalCustomDomainPropertiesArgs(@Nullable Input<String> thumbprint) {
+    public ApiPortalCustomDomainPropertiesArgs(@Nullable Output<String> thumbprint) {
         this.thumbprint = thumbprint;
     }
 
     private ApiPortalCustomDomainPropertiesArgs() {
-        this.thumbprint = Input.empty();
+        this.thumbprint = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ApiPortalCustomDomainPropertiesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> thumbprint;
+        private @Nullable Output<String> thumbprint;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ApiPortalCustomDomainPropertiesArgs extends io.pulumi.resourc
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder thumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Input.ofNullable(thumbprint);
+            this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
         public ApiPortalCustomDomainPropertiesArgs build() {

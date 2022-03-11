@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh;
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpConfigArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.TcpConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationNetwork", required=true)
-      private final Input<NetworkRefArgs> destinationNetwork;
+      private final Output<NetworkRefArgs> destinationNetwork;
 
-    public Input<NetworkRefArgs> getDestinationNetwork() {
+    public Output<NetworkRefArgs> getDestinationNetwork() {
         return this.destinationNetwork;
     }
 
@@ -46,10 +46,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayResourceName")
-      private final @Nullable Input<String> gatewayResourceName;
+      private final @Nullable Output<String> gatewayResourceName;
 
-    public Input<String> getGatewayResourceName() {
-        return this.gatewayResourceName == null ? Input.empty() : this.gatewayResourceName;
+    public Output<String> getGatewayResourceName() {
+        return this.gatewayResourceName == null ? Output.empty() : this.gatewayResourceName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="http")
-      private final @Nullable Input<List<HttpConfigArgs>> http;
+      private final @Nullable Output<List<HttpConfigArgs>> http;
 
-    public Input<List<HttpConfigArgs>> getHttp() {
-        return this.http == null ? Input.empty() : this.http;
+    public Output<List<HttpConfigArgs>> getHttp() {
+        return this.http == null ? Output.empty() : this.http;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -90,9 +90,9 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceNetwork", required=true)
-      private final Input<NetworkRefArgs> sourceNetwork;
+      private final Output<NetworkRefArgs> sourceNetwork;
 
-    public Input<NetworkRefArgs> getSourceNetwork() {
+    public Output<NetworkRefArgs> getSourceNetwork() {
         return this.sourceNetwork;
     }
 
@@ -101,10 +101,10 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -112,22 +112,22 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tcp")
-      private final @Nullable Input<List<TcpConfigArgs>> tcp;
+      private final @Nullable Output<List<TcpConfigArgs>> tcp;
 
-    public Input<List<TcpConfigArgs>> getTcp() {
-        return this.tcp == null ? Input.empty() : this.tcp;
+    public Output<List<TcpConfigArgs>> getTcp() {
+        return this.tcp == null ? Output.empty() : this.tcp;
     }
 
     public GatewayArgs(
-        @Nullable Input<String> description,
-        Input<NetworkRefArgs> destinationNetwork,
-        @Nullable Input<String> gatewayResourceName,
-        @Nullable Input<List<HttpConfigArgs>> http,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<NetworkRefArgs> sourceNetwork,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<TcpConfigArgs>> tcp) {
+        @Nullable Output<String> description,
+        Output<NetworkRefArgs> destinationNetwork,
+        @Nullable Output<String> gatewayResourceName,
+        @Nullable Output<List<HttpConfigArgs>> http,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<NetworkRefArgs> sourceNetwork,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<TcpConfigArgs>> tcp) {
         this.description = description;
         this.destinationNetwork = Objects.requireNonNull(destinationNetwork, "expected parameter 'destinationNetwork' to be non-null");
         this.gatewayResourceName = gatewayResourceName;
@@ -140,15 +140,15 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayArgs() {
-        this.description = Input.empty();
-        this.destinationNetwork = Input.empty();
-        this.gatewayResourceName = Input.empty();
-        this.http = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sourceNetwork = Input.empty();
-        this.tags = Input.empty();
-        this.tcp = Input.empty();
+        this.description = Output.empty();
+        this.destinationNetwork = Output.empty();
+        this.gatewayResourceName = Output.empty();
+        this.http = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sourceNetwork = Output.empty();
+        this.tags = Output.empty();
+        this.tcp = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private Input<NetworkRefArgs> destinationNetwork;
-        private @Nullable Input<String> gatewayResourceName;
-        private @Nullable Input<List<HttpConfigArgs>> http;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<NetworkRefArgs> sourceNetwork;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<TcpConfigArgs>> tcp;
+        private @Nullable Output<String> description;
+        private Output<NetworkRefArgs> destinationNetwork;
+        private @Nullable Output<String> gatewayResourceName;
+        private @Nullable Output<List<HttpConfigArgs>> http;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<NetworkRefArgs> sourceNetwork;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<TcpConfigArgs>> tcp;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tcp = defaults.tcp;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder destinationNetwork(Input<NetworkRefArgs> destinationNetwork) {
+        public Builder destinationNetwork(Output<NetworkRefArgs> destinationNetwork) {
             this.destinationNetwork = Objects.requireNonNull(destinationNetwork);
             return this;
         }
 
         public Builder destinationNetwork(NetworkRefArgs destinationNetwork) {
-            this.destinationNetwork = Input.of(Objects.requireNonNull(destinationNetwork));
+            this.destinationNetwork = Output.of(Objects.requireNonNull(destinationNetwork));
             return this;
         }
 
-        public Builder gatewayResourceName(@Nullable Input<String> gatewayResourceName) {
+        public Builder gatewayResourceName(@Nullable Output<String> gatewayResourceName) {
             this.gatewayResourceName = gatewayResourceName;
             return this;
         }
 
         public Builder gatewayResourceName(@Nullable String gatewayResourceName) {
-            this.gatewayResourceName = Input.ofNullable(gatewayResourceName);
+            this.gatewayResourceName = Output.ofNullable(gatewayResourceName);
             return this;
         }
 
-        public Builder http(@Nullable Input<List<HttpConfigArgs>> http) {
+        public Builder http(@Nullable Output<List<HttpConfigArgs>> http) {
             this.http = http;
             return this;
         }
 
         public Builder http(@Nullable List<HttpConfigArgs> http) {
-            this.http = Input.ofNullable(http);
+            this.http = Output.ofNullable(http);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sourceNetwork(Input<NetworkRefArgs> sourceNetwork) {
+        public Builder sourceNetwork(Output<NetworkRefArgs> sourceNetwork) {
             this.sourceNetwork = Objects.requireNonNull(sourceNetwork);
             return this;
         }
 
         public Builder sourceNetwork(NetworkRefArgs sourceNetwork) {
-            this.sourceNetwork = Input.of(Objects.requireNonNull(sourceNetwork));
+            this.sourceNetwork = Output.of(Objects.requireNonNull(sourceNetwork));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tcp(@Nullable Input<List<TcpConfigArgs>> tcp) {
+        public Builder tcp(@Nullable Output<List<TcpConfigArgs>> tcp) {
             this.tcp = tcp;
             return this;
         }
 
         public Builder tcp(@Nullable List<TcpConfigArgs> tcp) {
-            this.tcp = Input.ofNullable(tcp);
+            this.tcp = Output.ofNullable(tcp);
             return this;
         }
         public GatewayArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.enums.SshPublicAccess;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="adminPublicKey")
-      private final @Nullable Input<String> adminPublicKey;
+      private final @Nullable Output<String> adminPublicKey;
 
-    public Input<String> getAdminPublicKey() {
-        return this.adminPublicKey == null ? Input.empty() : this.adminPublicKey;
+    public Output<String> getAdminPublicKey() {
+        return this.adminPublicKey == null ? Output.empty() : this.adminPublicKey;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sshPublicAccess")
-      private final @Nullable Input<Either<String,SshPublicAccess>> sshPublicAccess;
+      private final @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess;
 
-    public Input<Either<String,SshPublicAccess>> getSshPublicAccess() {
-        return this.sshPublicAccess == null ? Input.empty() : this.sshPublicAccess;
+    public Output<Either<String,SshPublicAccess>> getSshPublicAccess() {
+        return this.sshPublicAccess == null ? Output.empty() : this.sshPublicAccess;
     }
 
     public ComputeInstanceSshSettingsArgs(
-        @Nullable Input<String> adminPublicKey,
-        @Nullable Input<Either<String,SshPublicAccess>> sshPublicAccess) {
+        @Nullable Output<String> adminPublicKey,
+        @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess) {
         this.adminPublicKey = adminPublicKey;
-        this.sshPublicAccess = sshPublicAccess == null ? Input.ofLeft("Disabled") : sshPublicAccess;
+        this.sshPublicAccess = sshPublicAccess == null ? Output.ofLeft("Disabled") : sshPublicAccess;
     }
 
     private ComputeInstanceSshSettingsArgs() {
-        this.adminPublicKey = Input.empty();
-        this.sshPublicAccess = Input.empty();
+        this.adminPublicKey = Output.empty();
+        this.sshPublicAccess = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> adminPublicKey;
-        private @Nullable Input<Either<String,SshPublicAccess>> sshPublicAccess;
+        private @Nullable Output<String> adminPublicKey;
+        private @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
     	      this.sshPublicAccess = defaults.sshPublicAccess;
         }
 
-        public Builder adminPublicKey(@Nullable Input<String> adminPublicKey) {
+        public Builder adminPublicKey(@Nullable Output<String> adminPublicKey) {
             this.adminPublicKey = adminPublicKey;
             return this;
         }
 
         public Builder adminPublicKey(@Nullable String adminPublicKey) {
-            this.adminPublicKey = Input.ofNullable(adminPublicKey);
+            this.adminPublicKey = Output.ofNullable(adminPublicKey);
             return this;
         }
 
-        public Builder sshPublicAccess(@Nullable Input<Either<String,SshPublicAccess>> sshPublicAccess) {
+        public Builder sshPublicAccess(@Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess) {
             this.sshPublicAccess = sshPublicAccess;
             return this;
         }
 
         public Builder sshPublicAccess(@Nullable Either<String,SshPublicAccess> sshPublicAccess) {
-            this.sshPublicAccess = Input.ofNullable(sshPublicAccess);
+            this.sshPublicAccess = Output.ofNullable(sshPublicAccess);
             return this;
         }
         public ComputeInstanceSshSettingsArgs build() {

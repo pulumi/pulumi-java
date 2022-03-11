@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="message", required=true)
-      private final Input<String> message;
+      private final Output<String> message;
 
-    public Input<String> getMessage() {
+    public Output<String> getMessage() {
         return this.message;
     }
 
@@ -34,22 +34,22 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyDefinitionReferenceId")
-      private final @Nullable Input<String> policyDefinitionReferenceId;
+      private final @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Input<String> getPolicyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Input.empty() : this.policyDefinitionReferenceId;
+    public Output<String> getPolicyDefinitionReferenceId() {
+        return this.policyDefinitionReferenceId == null ? Output.empty() : this.policyDefinitionReferenceId;
     }
 
     public NonComplianceMessageArgs(
-        Input<String> message,
-        @Nullable Input<String> policyDefinitionReferenceId) {
+        Output<String> message,
+        @Nullable Output<String> policyDefinitionReferenceId) {
         this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
         this.policyDefinitionReferenceId = policyDefinitionReferenceId;
     }
 
     private NonComplianceMessageArgs() {
-        this.message = Input.empty();
-        this.policyDefinitionReferenceId = Input.empty();
+        this.message = Output.empty();
+        this.policyDefinitionReferenceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> message;
-        private @Nullable Input<String> policyDefinitionReferenceId;
+        private Output<String> message;
+        private @Nullable Output<String> policyDefinitionReferenceId;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class NonComplianceMessageArgs extends io.pulumi.resources.Resource
     	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
         }
 
-        public Builder message(Input<String> message) {
+        public Builder message(Output<String> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
         public Builder message(String message) {
-            this.message = Input.of(Objects.requireNonNull(message));
+            this.message = Output.of(Objects.requireNonNull(message));
             return this;
         }
 
-        public Builder policyDefinitionReferenceId(@Nullable Input<String> policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = Input.ofNullable(policyDefinitionReferenceId);
+            this.policyDefinitionReferenceId = Output.ofNullable(policyDefinitionReferenceId);
             return this;
         }
         public NonComplianceMessageArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.azurenative.solutions.enums.JitApproverType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -47,25 +47,25 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,JitApproverType>> type;
+      private final @Nullable Output<Either<String,JitApproverType>> type;
 
-    public Input<Either<String,JitApproverType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,JitApproverType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public JitApproverDefinitionArgs(
-        @Nullable Input<String> displayName,
-        Input<String> id,
-        @Nullable Input<Either<String,JitApproverType>> type) {
+        @Nullable Output<String> displayName,
+        Output<String> id,
+        @Nullable Output<Either<String,JitApproverType>> type) {
         this.displayName = displayName;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.type = type;
     }
 
     private JitApproverDefinitionArgs() {
-        this.displayName = Input.empty();
-        this.id = Input.empty();
-        this.type = Input.empty();
+        this.displayName = Output.empty();
+        this.id = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> displayName;
-        private Input<String> id;
-        private @Nullable Input<Either<String,JitApproverType>> type;
+        private @Nullable Output<String> displayName;
+        private Output<String> id;
+        private @Nullable Output<Either<String,JitApproverType>> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class JitApproverDefinitionArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,JitApproverType>> type) {
+        public Builder type(@Nullable Output<Either<String,JitApproverType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,JitApproverType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public JitApproverDefinitionArgs build() {

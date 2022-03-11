@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="settings")
-      private final @Nullable Input<ConfigurationServiceSettingsArgs> settings;
+      private final @Nullable Output<ConfigurationServiceSettingsArgs> settings;
 
-    public Input<ConfigurationServiceSettingsArgs> getSettings() {
-        return this.settings == null ? Input.empty() : this.settings;
+    public Output<ConfigurationServiceSettingsArgs> getSettings() {
+        return this.settings == null ? Output.empty() : this.settings;
     }
 
-    public ConfigurationServicePropertiesArgs(@Nullable Input<ConfigurationServiceSettingsArgs> settings) {
+    public ConfigurationServicePropertiesArgs(@Nullable Output<ConfigurationServiceSettingsArgs> settings) {
         this.settings = settings;
     }
 
     private ConfigurationServicePropertiesArgs() {
-        this.settings = Input.empty();
+        this.settings = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<ConfigurationServiceSettingsArgs> settings;
+        private @Nullable Output<ConfigurationServiceSettingsArgs> settings;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
     	      this.settings = defaults.settings;
         }
 
-        public Builder settings(@Nullable Input<ConfigurationServiceSettingsArgs> settings) {
+        public Builder settings(@Nullable Output<ConfigurationServiceSettingsArgs> settings) {
             this.settings = settings;
             return this;
         }
 
         public Builder settings(@Nullable ConfigurationServiceSettingsArgs settings) {
-            this.settings = Input.ofNullable(settings);
+            this.settings = Output.ofNullable(settings);
             return this;
         }
         public ConfigurationServicePropertiesArgs build() {

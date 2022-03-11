@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.enums.AuthenticationType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="authenticationType")
-      private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
+      private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Input<Either<String,AuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Input.empty() : this.authenticationType;
+    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+        return this.authenticationType == null ? Output.empty() : this.authenticationType;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="batchFrequencyInSeconds")
-      private final @Nullable Input<Integer> batchFrequencyInSeconds;
+      private final @Nullable Output<Integer> batchFrequencyInSeconds;
 
-    public Input<Integer> getBatchFrequencyInSeconds() {
-        return this.batchFrequencyInSeconds == null ? Input.empty() : this.batchFrequencyInSeconds;
+    public Output<Integer> getBatchFrequencyInSeconds() {
+        return this.batchFrequencyInSeconds == null ? Output.empty() : this.batchFrequencyInSeconds;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="connectionString")
-      private final @Nullable Input<String> connectionString;
+      private final @Nullable Output<String> connectionString;
 
-    public Input<String> getConnectionString() {
-        return this.connectionString == null ? Input.empty() : this.connectionString;
+    public Output<String> getConnectionString() {
+        return this.connectionString == null ? Output.empty() : this.connectionString;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="containerName", required=true)
-      private final Input<String> containerName;
+      private final Output<String> containerName;
 
-    public Input<String> getContainerName() {
+    public Output<String> getContainerName() {
         return this.containerName;
     }
 
@@ -70,10 +70,10 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="encoding")
-      private final @Nullable Input<String> encoding;
+      private final @Nullable Output<String> encoding;
 
-    public Input<String> getEncoding() {
-        return this.encoding == null ? Input.empty() : this.encoding;
+    public Output<String> getEncoding() {
+        return this.encoding == null ? Output.empty() : this.encoding;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="endpointUri")
-      private final @Nullable Input<String> endpointUri;
+      private final @Nullable Output<String> endpointUri;
 
-    public Input<String> getEndpointUri() {
-        return this.endpointUri == null ? Input.empty() : this.endpointUri;
+    public Output<String> getEndpointUri() {
+        return this.endpointUri == null ? Output.empty() : this.endpointUri;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="fileNameFormat")
-      private final @Nullable Input<String> fileNameFormat;
+      private final @Nullable Output<String> fileNameFormat;
 
-    public Input<String> getFileNameFormat() {
-        return this.fileNameFormat == null ? Input.empty() : this.fileNameFormat;
+    public Output<String> getFileNameFormat() {
+        return this.fileNameFormat == null ? Output.empty() : this.fileNameFormat;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maxChunkSizeInBytes")
-      private final @Nullable Input<Integer> maxChunkSizeInBytes;
+      private final @Nullable Output<Integer> maxChunkSizeInBytes;
 
-    public Input<Integer> getMaxChunkSizeInBytes() {
-        return this.maxChunkSizeInBytes == null ? Input.empty() : this.maxChunkSizeInBytes;
+    public Output<Integer> getMaxChunkSizeInBytes() {
+        return this.maxChunkSizeInBytes == null ? Output.empty() : this.maxChunkSizeInBytes;
     }
 
     /**
@@ -125,9 +125,9 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -136,10 +136,10 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroup")
-      private final @Nullable Input<String> resourceGroup;
+      private final @Nullable Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
-        return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
+    public Output<String> getResourceGroup() {
+        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
     }
 
     /**
@@ -147,25 +147,25 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     public RoutingStorageContainerPropertiesArgs(
-        @Nullable Input<Either<String,AuthenticationType>> authenticationType,
-        @Nullable Input<Integer> batchFrequencyInSeconds,
-        @Nullable Input<String> connectionString,
-        Input<String> containerName,
-        @Nullable Input<String> encoding,
-        @Nullable Input<String> endpointUri,
-        @Nullable Input<String> fileNameFormat,
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> maxChunkSizeInBytes,
-        Input<String> name,
-        @Nullable Input<String> resourceGroup,
-        @Nullable Input<String> subscriptionId) {
+        @Nullable Output<Either<String,AuthenticationType>> authenticationType,
+        @Nullable Output<Integer> batchFrequencyInSeconds,
+        @Nullable Output<String> connectionString,
+        Output<String> containerName,
+        @Nullable Output<String> encoding,
+        @Nullable Output<String> endpointUri,
+        @Nullable Output<String> fileNameFormat,
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> maxChunkSizeInBytes,
+        Output<String> name,
+        @Nullable Output<String> resourceGroup,
+        @Nullable Output<String> subscriptionId) {
         this.authenticationType = authenticationType;
         this.batchFrequencyInSeconds = batchFrequencyInSeconds;
         this.connectionString = connectionString;
@@ -181,18 +181,18 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
     }
 
     private RoutingStorageContainerPropertiesArgs() {
-        this.authenticationType = Input.empty();
-        this.batchFrequencyInSeconds = Input.empty();
-        this.connectionString = Input.empty();
-        this.containerName = Input.empty();
-        this.encoding = Input.empty();
-        this.endpointUri = Input.empty();
-        this.fileNameFormat = Input.empty();
-        this.id = Input.empty();
-        this.maxChunkSizeInBytes = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.subscriptionId = Input.empty();
+        this.authenticationType = Output.empty();
+        this.batchFrequencyInSeconds = Output.empty();
+        this.connectionString = Output.empty();
+        this.containerName = Output.empty();
+        this.encoding = Output.empty();
+        this.endpointUri = Output.empty();
+        this.fileNameFormat = Output.empty();
+        this.id = Output.empty();
+        this.maxChunkSizeInBytes = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.subscriptionId = Output.empty();
     }
 
     public static Builder builder() {
@@ -204,18 +204,18 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,AuthenticationType>> authenticationType;
-        private @Nullable Input<Integer> batchFrequencyInSeconds;
-        private @Nullable Input<String> connectionString;
-        private Input<String> containerName;
-        private @Nullable Input<String> encoding;
-        private @Nullable Input<String> endpointUri;
-        private @Nullable Input<String> fileNameFormat;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> maxChunkSizeInBytes;
-        private Input<String> name;
-        private @Nullable Input<String> resourceGroup;
-        private @Nullable Input<String> subscriptionId;
+        private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
+        private @Nullable Output<Integer> batchFrequencyInSeconds;
+        private @Nullable Output<String> connectionString;
+        private Output<String> containerName;
+        private @Nullable Output<String> encoding;
+        private @Nullable Output<String> endpointUri;
+        private @Nullable Output<String> fileNameFormat;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> maxChunkSizeInBytes;
+        private Output<String> name;
+        private @Nullable Output<String> resourceGroup;
+        private @Nullable Output<String> subscriptionId;
 
         public Builder() {
     	      // Empty
@@ -237,123 +237,123 @@ public final class RoutingStorageContainerPropertiesArgs extends io.pulumi.resou
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder authenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Input.ofNullable(authenticationType);
+            this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder batchFrequencyInSeconds(@Nullable Input<Integer> batchFrequencyInSeconds) {
+        public Builder batchFrequencyInSeconds(@Nullable Output<Integer> batchFrequencyInSeconds) {
             this.batchFrequencyInSeconds = batchFrequencyInSeconds;
             return this;
         }
 
         public Builder batchFrequencyInSeconds(@Nullable Integer batchFrequencyInSeconds) {
-            this.batchFrequencyInSeconds = Input.ofNullable(batchFrequencyInSeconds);
+            this.batchFrequencyInSeconds = Output.ofNullable(batchFrequencyInSeconds);
             return this;
         }
 
-        public Builder connectionString(@Nullable Input<String> connectionString) {
+        public Builder connectionString(@Nullable Output<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
         public Builder connectionString(@Nullable String connectionString) {
-            this.connectionString = Input.ofNullable(connectionString);
+            this.connectionString = Output.ofNullable(connectionString);
             return this;
         }
 
-        public Builder containerName(Input<String> containerName) {
+        public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Input.of(Objects.requireNonNull(containerName));
+            this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder encoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Output<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
         public Builder encoding(@Nullable String encoding) {
-            this.encoding = Input.ofNullable(encoding);
+            this.encoding = Output.ofNullable(encoding);
             return this;
         }
 
-        public Builder endpointUri(@Nullable Input<String> endpointUri) {
+        public Builder endpointUri(@Nullable Output<String> endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Input.ofNullable(endpointUri);
+            this.endpointUri = Output.ofNullable(endpointUri);
             return this;
         }
 
-        public Builder fileNameFormat(@Nullable Input<String> fileNameFormat) {
+        public Builder fileNameFormat(@Nullable Output<String> fileNameFormat) {
             this.fileNameFormat = fileNameFormat;
             return this;
         }
 
         public Builder fileNameFormat(@Nullable String fileNameFormat) {
-            this.fileNameFormat = Input.ofNullable(fileNameFormat);
+            this.fileNameFormat = Output.ofNullable(fileNameFormat);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder maxChunkSizeInBytes(@Nullable Input<Integer> maxChunkSizeInBytes) {
+        public Builder maxChunkSizeInBytes(@Nullable Output<Integer> maxChunkSizeInBytes) {
             this.maxChunkSizeInBytes = maxChunkSizeInBytes;
             return this;
         }
 
         public Builder maxChunkSizeInBytes(@Nullable Integer maxChunkSizeInBytes) {
-            this.maxChunkSizeInBytes = Input.ofNullable(maxChunkSizeInBytes);
+            this.maxChunkSizeInBytes = Output.ofNullable(maxChunkSizeInBytes);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Input.ofNullable(resourceGroup);
+            this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
         public RoutingStorageContainerPropertiesArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.AutoScaleSettingsArgs;
 import io.pulumi.azurenative.batch.inputs.FixedScaleSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoScale")
-      private final @Nullable Input<AutoScaleSettingsArgs> autoScale;
+      private final @Nullable Output<AutoScaleSettingsArgs> autoScale;
 
-    public Input<AutoScaleSettingsArgs> getAutoScale() {
-        return this.autoScale == null ? Input.empty() : this.autoScale;
+    public Output<AutoScaleSettingsArgs> getAutoScale() {
+        return this.autoScale == null ? Output.empty() : this.autoScale;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedScale")
-      private final @Nullable Input<FixedScaleSettingsArgs> fixedScale;
+      private final @Nullable Output<FixedScaleSettingsArgs> fixedScale;
 
-    public Input<FixedScaleSettingsArgs> getFixedScale() {
-        return this.fixedScale == null ? Input.empty() : this.fixedScale;
+    public Output<FixedScaleSettingsArgs> getFixedScale() {
+        return this.fixedScale == null ? Output.empty() : this.fixedScale;
     }
 
     public ScaleSettingsArgs(
-        @Nullable Input<AutoScaleSettingsArgs> autoScale,
-        @Nullable Input<FixedScaleSettingsArgs> fixedScale) {
+        @Nullable Output<AutoScaleSettingsArgs> autoScale,
+        @Nullable Output<FixedScaleSettingsArgs> fixedScale) {
         this.autoScale = autoScale;
         this.fixedScale = fixedScale;
     }
 
     private ScaleSettingsArgs() {
-        this.autoScale = Input.empty();
-        this.fixedScale = Input.empty();
+        this.autoScale = Output.empty();
+        this.fixedScale = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoScaleSettingsArgs> autoScale;
-        private @Nullable Input<FixedScaleSettingsArgs> fixedScale;
+        private @Nullable Output<AutoScaleSettingsArgs> autoScale;
+        private @Nullable Output<FixedScaleSettingsArgs> fixedScale;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fixedScale = defaults.fixedScale;
         }
 
-        public Builder autoScale(@Nullable Input<AutoScaleSettingsArgs> autoScale) {
+        public Builder autoScale(@Nullable Output<AutoScaleSettingsArgs> autoScale) {
             this.autoScale = autoScale;
             return this;
         }
 
         public Builder autoScale(@Nullable AutoScaleSettingsArgs autoScale) {
-            this.autoScale = Input.ofNullable(autoScale);
+            this.autoScale = Output.ofNullable(autoScale);
             return this;
         }
 
-        public Builder fixedScale(@Nullable Input<FixedScaleSettingsArgs> fixedScale) {
+        public Builder fixedScale(@Nullable Output<FixedScaleSettingsArgs> fixedScale) {
             this.fixedScale = fixedScale;
             return this;
         }
 
         public Builder fixedScale(@Nullable FixedScaleSettingsArgs fixedScale) {
-            this.fixedScale = Input.ofNullable(fixedScale);
+            this.fixedScale = Output.ofNullable(fixedScale);
             return this;
         }
         public ScaleSettingsArgs build() {

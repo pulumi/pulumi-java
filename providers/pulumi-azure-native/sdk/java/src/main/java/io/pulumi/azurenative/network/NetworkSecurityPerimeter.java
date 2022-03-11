@@ -6,7 +6,6 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.NetworkSecurityPerimeterArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -183,19 +182,19 @@ public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkSecurityPerimeter(String name, NetworkSecurityPerimeterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:NetworkSecurityPerimeter", name, args == null ? NetworkSecurityPerimeterArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:NetworkSecurityPerimeter", name, args == null ? NetworkSecurityPerimeterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NetworkSecurityPerimeter(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NetworkSecurityPerimeter(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:NetworkSecurityPerimeter", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20210201preview:NetworkSecurityPerimeter").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301preview:NetworkSecurityPerimeter").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20210201preview:NetworkSecurityPerimeter").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301preview:NetworkSecurityPerimeter").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -209,7 +208,7 @@ public class NetworkSecurityPerimeter extends io.pulumi.resources.CustomResource
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NetworkSecurityPerimeter get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NetworkSecurityPerimeter get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NetworkSecurityPerimeter(name, id, options);
     }
 }

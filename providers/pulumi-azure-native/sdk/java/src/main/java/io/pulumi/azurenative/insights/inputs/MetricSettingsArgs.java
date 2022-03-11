@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.RetentionPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-      private final @Nullable Input<String> category;
+      private final @Nullable Output<String> category;
 
-    public Input<String> getCategory() {
-        return this.category == null ? Input.empty() : this.category;
+    public Output<String> getCategory() {
+        return this.category == null ? Output.empty() : this.category;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -47,10 +47,10 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-      private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
+      private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
-    public Input<RetentionPolicyArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
+    public Output<RetentionPolicyArgs> getRetentionPolicy() {
+        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeGrain")
-      private final @Nullable Input<String> timeGrain;
+      private final @Nullable Output<String> timeGrain;
 
-    public Input<String> getTimeGrain() {
-        return this.timeGrain == null ? Input.empty() : this.timeGrain;
+    public Output<String> getTimeGrain() {
+        return this.timeGrain == null ? Output.empty() : this.timeGrain;
     }
 
     public MetricSettingsArgs(
-        @Nullable Input<String> category,
-        Input<Boolean> enabled,
-        @Nullable Input<RetentionPolicyArgs> retentionPolicy,
-        @Nullable Input<String> timeGrain) {
+        @Nullable Output<String> category,
+        Output<Boolean> enabled,
+        @Nullable Output<RetentionPolicyArgs> retentionPolicy,
+        @Nullable Output<String> timeGrain) {
         this.category = category;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.retentionPolicy = retentionPolicy;
@@ -76,10 +76,10 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricSettingsArgs() {
-        this.category = Input.empty();
-        this.enabled = Input.empty();
-        this.retentionPolicy = Input.empty();
-        this.timeGrain = Input.empty();
+        this.category = Output.empty();
+        this.enabled = Output.empty();
+        this.retentionPolicy = Output.empty();
+        this.timeGrain = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> category;
-        private Input<Boolean> enabled;
-        private @Nullable Input<RetentionPolicyArgs> retentionPolicy;
-        private @Nullable Input<String> timeGrain;
+        private @Nullable Output<String> category;
+        private Output<Boolean> enabled;
+        private @Nullable Output<RetentionPolicyArgs> retentionPolicy;
+        private @Nullable Output<String> timeGrain;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class MetricSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeGrain = defaults.timeGrain;
         }
 
-        public Builder category(@Nullable Input<String> category) {
+        public Builder category(@Nullable Output<String> category) {
             this.category = category;
             return this;
         }
 
         public Builder category(@Nullable String category) {
-            this.category = Input.ofNullable(category);
+            this.category = Output.ofNullable(category);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder retentionPolicy(@Nullable Input<RetentionPolicyArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Output<RetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
         public Builder retentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Input.ofNullable(retentionPolicy);
+            this.retentionPolicy = Output.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder timeGrain(@Nullable Input<String> timeGrain) {
+        public Builder timeGrain(@Nullable Output<String> timeGrain) {
             this.timeGrain = timeGrain;
             return this;
         }
 
         public Builder timeGrain(@Nullable String timeGrain) {
-            this.timeGrain = Input.ofNullable(timeGrain);
+            this.timeGrain = Output.ofNullable(timeGrain);
             return this;
         }
         public MetricSettingsArgs build() {

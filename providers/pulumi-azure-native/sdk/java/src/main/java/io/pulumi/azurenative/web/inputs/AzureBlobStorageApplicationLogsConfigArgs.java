@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.LogLevel;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="level")
-      private final @Nullable Input<LogLevel> level;
+      private final @Nullable Output<LogLevel> level;
 
-    public Input<LogLevel> getLevel() {
-        return this.level == null ? Input.empty() : this.level;
+    public Output<LogLevel> getLevel() {
+        return this.level == null ? Output.empty() : this.level;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="retentionInDays")
-      private final @Nullable Input<Integer> retentionInDays;
+      private final @Nullable Output<Integer> retentionInDays;
 
-    public Input<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
+    public Output<Integer> getRetentionInDays() {
+        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="sasUrl")
-      private final @Nullable Input<String> sasUrl;
+      private final @Nullable Output<String> sasUrl;
 
-    public Input<String> getSasUrl() {
-        return this.sasUrl == null ? Input.empty() : this.sasUrl;
+    public Output<String> getSasUrl() {
+        return this.sasUrl == null ? Output.empty() : this.sasUrl;
     }
 
     public AzureBlobStorageApplicationLogsConfigArgs(
-        @Nullable Input<LogLevel> level,
-        @Nullable Input<Integer> retentionInDays,
-        @Nullable Input<String> sasUrl) {
+        @Nullable Output<LogLevel> level,
+        @Nullable Output<Integer> retentionInDays,
+        @Nullable Output<String> sasUrl) {
         this.level = level;
         this.retentionInDays = retentionInDays;
         this.sasUrl = sasUrl;
     }
 
     private AzureBlobStorageApplicationLogsConfigArgs() {
-        this.level = Input.empty();
-        this.retentionInDays = Input.empty();
-        this.sasUrl = Input.empty();
+        this.level = Output.empty();
+        this.retentionInDays = Output.empty();
+        this.sasUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<LogLevel> level;
-        private @Nullable Input<Integer> retentionInDays;
-        private @Nullable Input<String> sasUrl;
+        private @Nullable Output<LogLevel> level;
+        private @Nullable Output<Integer> retentionInDays;
+        private @Nullable Output<String> sasUrl;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
     	      this.sasUrl = defaults.sasUrl;
         }
 
-        public Builder level(@Nullable Input<LogLevel> level) {
+        public Builder level(@Nullable Output<LogLevel> level) {
             this.level = level;
             return this;
         }
 
         public Builder level(@Nullable LogLevel level) {
-            this.level = Input.ofNullable(level);
+            this.level = Output.ofNullable(level);
             return this;
         }
 
-        public Builder retentionInDays(@Nullable Input<Integer> retentionInDays) {
+        public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Input.ofNullable(retentionInDays);
+            this.retentionInDays = Output.ofNullable(retentionInDays);
             return this;
         }
 
-        public Builder sasUrl(@Nullable Input<String> sasUrl) {
+        public Builder sasUrl(@Nullable Output<String> sasUrl) {
             this.sasUrl = sasUrl;
             return this;
         }
 
         public Builder sasUrl(@Nullable String sasUrl) {
-            this.sasUrl = Input.ofNullable(sasUrl);
+            this.sasUrl = Output.ofNullable(sasUrl);
             return this;
         }
         public AzureBlobStorageApplicationLogsConfigArgs build() {

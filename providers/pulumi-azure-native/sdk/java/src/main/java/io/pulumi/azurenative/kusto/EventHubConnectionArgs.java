@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kusto;
 
 import io.pulumi.azurenative.kusto.enums.DataFormat;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clusterName", required=true)
-      private final Input<String> clusterName;
+      private final Output<String> clusterName;
 
-    public Input<String> getClusterName() {
+    public Output<String> getClusterName() {
         return this.clusterName;
     }
 
@@ -32,9 +32,9 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="consumerGroup", required=true)
-      private final Input<String> consumerGroup;
+      private final Output<String> consumerGroup;
 
-    public Input<String> getConsumerGroup() {
+    public Output<String> getConsumerGroup() {
         return this.consumerGroup;
     }
 
@@ -43,10 +43,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataFormat")
-      private final @Nullable Input<Either<String,DataFormat>> dataFormat;
+      private final @Nullable Output<Either<String,DataFormat>> dataFormat;
 
-    public Input<Either<String,DataFormat>> getDataFormat() {
-        return this.dataFormat == null ? Input.empty() : this.dataFormat;
+    public Output<Either<String,DataFormat>> getDataFormat() {
+        return this.dataFormat == null ? Output.empty() : this.dataFormat;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -65,10 +65,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eventHubConnectionName")
-      private final @Nullable Input<String> eventHubConnectionName;
+      private final @Nullable Output<String> eventHubConnectionName;
 
-    public Input<String> getEventHubConnectionName() {
-        return this.eventHubConnectionName == null ? Input.empty() : this.eventHubConnectionName;
+    public Output<String> getEventHubConnectionName() {
+        return this.eventHubConnectionName == null ? Output.empty() : this.eventHubConnectionName;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eventHubResourceId", required=true)
-      private final Input<String> eventHubResourceId;
+      private final Output<String> eventHubResourceId;
 
-    public Input<String> getEventHubResourceId() {
+    public Output<String> getEventHubResourceId() {
         return this.eventHubResourceId;
     }
 
@@ -87,10 +87,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="mappingRuleName")
-      private final @Nullable Input<String> mappingRuleName;
+      private final @Nullable Output<String> mappingRuleName;
 
-    public Input<String> getMappingRuleName() {
-        return this.mappingRuleName == null ? Input.empty() : this.mappingRuleName;
+    public Output<String> getMappingRuleName() {
+        return this.mappingRuleName == null ? Output.empty() : this.mappingRuleName;
     }
 
     /**
@@ -109,9 +109,9 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -120,23 +120,23 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tableName")
-      private final @Nullable Input<String> tableName;
+      private final @Nullable Output<String> tableName;
 
-    public Input<String> getTableName() {
-        return this.tableName == null ? Input.empty() : this.tableName;
+    public Output<String> getTableName() {
+        return this.tableName == null ? Output.empty() : this.tableName;
     }
 
     public EventHubConnectionArgs(
-        Input<String> clusterName,
-        Input<String> consumerGroup,
-        @Nullable Input<Either<String,DataFormat>> dataFormat,
-        Input<String> databaseName,
-        @Nullable Input<String> eventHubConnectionName,
-        Input<String> eventHubResourceId,
-        @Nullable Input<String> location,
-        @Nullable Input<String> mappingRuleName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> tableName) {
+        Output<String> clusterName,
+        Output<String> consumerGroup,
+        @Nullable Output<Either<String,DataFormat>> dataFormat,
+        Output<String> databaseName,
+        @Nullable Output<String> eventHubConnectionName,
+        Output<String> eventHubResourceId,
+        @Nullable Output<String> location,
+        @Nullable Output<String> mappingRuleName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> tableName) {
         this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
         this.consumerGroup = Objects.requireNonNull(consumerGroup, "expected parameter 'consumerGroup' to be non-null");
         this.dataFormat = dataFormat;
@@ -150,16 +150,16 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EventHubConnectionArgs() {
-        this.clusterName = Input.empty();
-        this.consumerGroup = Input.empty();
-        this.dataFormat = Input.empty();
-        this.databaseName = Input.empty();
-        this.eventHubConnectionName = Input.empty();
-        this.eventHubResourceId = Input.empty();
-        this.location = Input.empty();
-        this.mappingRuleName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tableName = Input.empty();
+        this.clusterName = Output.empty();
+        this.consumerGroup = Output.empty();
+        this.dataFormat = Output.empty();
+        this.databaseName = Output.empty();
+        this.eventHubConnectionName = Output.empty();
+        this.eventHubResourceId = Output.empty();
+        this.location = Output.empty();
+        this.mappingRuleName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -171,16 +171,16 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> clusterName;
-        private Input<String> consumerGroup;
-        private @Nullable Input<Either<String,DataFormat>> dataFormat;
-        private Input<String> databaseName;
-        private @Nullable Input<String> eventHubConnectionName;
-        private Input<String> eventHubResourceId;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> mappingRuleName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> tableName;
+        private Output<String> clusterName;
+        private Output<String> consumerGroup;
+        private @Nullable Output<Either<String,DataFormat>> dataFormat;
+        private Output<String> databaseName;
+        private @Nullable Output<String> eventHubConnectionName;
+        private Output<String> eventHubResourceId;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> mappingRuleName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -200,103 +200,103 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder clusterName(Input<String> clusterName) {
+        public Builder clusterName(Output<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Input.of(Objects.requireNonNull(clusterName));
+            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder consumerGroup(Input<String> consumerGroup) {
+        public Builder consumerGroup(Output<String> consumerGroup) {
             this.consumerGroup = Objects.requireNonNull(consumerGroup);
             return this;
         }
 
         public Builder consumerGroup(String consumerGroup) {
-            this.consumerGroup = Input.of(Objects.requireNonNull(consumerGroup));
+            this.consumerGroup = Output.of(Objects.requireNonNull(consumerGroup));
             return this;
         }
 
-        public Builder dataFormat(@Nullable Input<Either<String,DataFormat>> dataFormat) {
+        public Builder dataFormat(@Nullable Output<Either<String,DataFormat>> dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
 
         public Builder dataFormat(@Nullable Either<String,DataFormat> dataFormat) {
-            this.dataFormat = Input.ofNullable(dataFormat);
+            this.dataFormat = Output.ofNullable(dataFormat);
             return this;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder eventHubConnectionName(@Nullable Input<String> eventHubConnectionName) {
+        public Builder eventHubConnectionName(@Nullable Output<String> eventHubConnectionName) {
             this.eventHubConnectionName = eventHubConnectionName;
             return this;
         }
 
         public Builder eventHubConnectionName(@Nullable String eventHubConnectionName) {
-            this.eventHubConnectionName = Input.ofNullable(eventHubConnectionName);
+            this.eventHubConnectionName = Output.ofNullable(eventHubConnectionName);
             return this;
         }
 
-        public Builder eventHubResourceId(Input<String> eventHubResourceId) {
+        public Builder eventHubResourceId(Output<String> eventHubResourceId) {
             this.eventHubResourceId = Objects.requireNonNull(eventHubResourceId);
             return this;
         }
 
         public Builder eventHubResourceId(String eventHubResourceId) {
-            this.eventHubResourceId = Input.of(Objects.requireNonNull(eventHubResourceId));
+            this.eventHubResourceId = Output.of(Objects.requireNonNull(eventHubResourceId));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder mappingRuleName(@Nullable Input<String> mappingRuleName) {
+        public Builder mappingRuleName(@Nullable Output<String> mappingRuleName) {
             this.mappingRuleName = mappingRuleName;
             return this;
         }
 
         public Builder mappingRuleName(@Nullable String mappingRuleName) {
-            this.mappingRuleName = Input.ofNullable(mappingRuleName);
+            this.mappingRuleName = Output.ofNullable(mappingRuleName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Output<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Input.ofNullable(tableName);
+            this.tableName = Output.ofNullable(tableName);
             return this;
         }
         public EventHubConnectionArgs build() {

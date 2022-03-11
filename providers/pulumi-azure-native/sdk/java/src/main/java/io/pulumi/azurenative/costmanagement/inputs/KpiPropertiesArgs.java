@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.enums.KpiTypeType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,KpiTypeType>> type;
+      private final @Nullable Output<Either<String,KpiTypeType>> type;
 
-    public Input<Either<String,KpiTypeType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,KpiTypeType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public KpiPropertiesArgs(
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<String> id,
-        @Nullable Input<Either<String,KpiTypeType>> type) {
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<String> id,
+        @Nullable Output<Either<String,KpiTypeType>> type) {
         this.enabled = enabled;
         this.id = id;
         this.type = type;
     }
 
     private KpiPropertiesArgs() {
-        this.enabled = Input.empty();
-        this.id = Input.empty();
-        this.type = Input.empty();
+        this.enabled = Output.empty();
+        this.id = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Either<String,KpiTypeType>> type;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Either<String,KpiTypeType>> type;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class KpiPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,KpiTypeType>> type) {
+        public Builder type(@Nullable Output<Either<String,KpiTypeType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,KpiTypeType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public KpiPropertiesArgs build() {

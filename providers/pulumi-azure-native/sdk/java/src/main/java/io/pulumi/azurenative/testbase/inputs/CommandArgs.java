@@ -6,7 +6,7 @@ package io.pulumi.azurenative.testbase.inputs;
 import io.pulumi.azurenative.testbase.enums.Action;
 import io.pulumi.azurenative.testbase.enums.ContentType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,9 +28,9 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-      private final Input<Either<String,Action>> action;
+      private final Output<Either<String,Action>> action;
 
-    public Input<Either<String,Action>> getAction() {
+    public Output<Either<String,Action>> getAction() {
         return this.action;
     }
 
@@ -39,10 +39,10 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alwaysRun")
-      private final @Nullable Input<Boolean> alwaysRun;
+      private final @Nullable Output<Boolean> alwaysRun;
 
-    public Input<Boolean> getAlwaysRun() {
-        return this.alwaysRun == null ? Input.empty() : this.alwaysRun;
+    public Output<Boolean> getAlwaysRun() {
+        return this.alwaysRun == null ? Output.empty() : this.alwaysRun;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applyUpdateBefore")
-      private final @Nullable Input<Boolean> applyUpdateBefore;
+      private final @Nullable Output<Boolean> applyUpdateBefore;
 
-    public Input<Boolean> getApplyUpdateBefore() {
-        return this.applyUpdateBefore == null ? Input.empty() : this.applyUpdateBefore;
+    public Output<Boolean> getApplyUpdateBefore() {
+        return this.applyUpdateBefore == null ? Output.empty() : this.applyUpdateBefore;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content", required=true)
-      private final Input<String> content;
+      private final Output<String> content;
 
-    public Input<String> getContent() {
+    public Output<String> getContent() {
         return this.content;
     }
 
@@ -72,9 +72,9 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType", required=true)
-      private final Input<Either<String,ContentType>> contentType;
+      private final Output<Either<String,ContentType>> contentType;
 
-    public Input<Either<String,ContentType>> getContentType() {
+    public Output<Either<String,ContentType>> getContentType() {
         return this.contentType;
     }
 
@@ -83,10 +83,10 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRunTime")
-      private final @Nullable Input<Integer> maxRunTime;
+      private final @Nullable Output<Integer> maxRunTime;
 
-    public Input<Integer> getMaxRunTime() {
-        return this.maxRunTime == null ? Input.empty() : this.maxRunTime;
+    public Output<Integer> getMaxRunTime() {
+        return this.maxRunTime == null ? Output.empty() : this.maxRunTime;
     }
 
     /**
@@ -94,9 +94,9 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -105,10 +105,10 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restartAfter")
-      private final @Nullable Input<Boolean> restartAfter;
+      private final @Nullable Output<Boolean> restartAfter;
 
-    public Input<Boolean> getRestartAfter() {
-        return this.restartAfter == null ? Input.empty() : this.restartAfter;
+    public Output<Boolean> getRestartAfter() {
+        return this.restartAfter == null ? Output.empty() : this.restartAfter;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runAsInteractive")
-      private final @Nullable Input<Boolean> runAsInteractive;
+      private final @Nullable Output<Boolean> runAsInteractive;
 
-    public Input<Boolean> getRunAsInteractive() {
-        return this.runAsInteractive == null ? Input.empty() : this.runAsInteractive;
+    public Output<Boolean> getRunAsInteractive() {
+        return this.runAsInteractive == null ? Output.empty() : this.runAsInteractive;
     }
 
     /**
@@ -127,23 +127,23 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runElevated")
-      private final @Nullable Input<Boolean> runElevated;
+      private final @Nullable Output<Boolean> runElevated;
 
-    public Input<Boolean> getRunElevated() {
-        return this.runElevated == null ? Input.empty() : this.runElevated;
+    public Output<Boolean> getRunElevated() {
+        return this.runElevated == null ? Output.empty() : this.runElevated;
     }
 
     public CommandArgs(
-        Input<Either<String,Action>> action,
-        @Nullable Input<Boolean> alwaysRun,
-        @Nullable Input<Boolean> applyUpdateBefore,
-        Input<String> content,
-        Input<Either<String,ContentType>> contentType,
-        @Nullable Input<Integer> maxRunTime,
-        Input<String> name,
-        @Nullable Input<Boolean> restartAfter,
-        @Nullable Input<Boolean> runAsInteractive,
-        @Nullable Input<Boolean> runElevated) {
+        Output<Either<String,Action>> action,
+        @Nullable Output<Boolean> alwaysRun,
+        @Nullable Output<Boolean> applyUpdateBefore,
+        Output<String> content,
+        Output<Either<String,ContentType>> contentType,
+        @Nullable Output<Integer> maxRunTime,
+        Output<String> name,
+        @Nullable Output<Boolean> restartAfter,
+        @Nullable Output<Boolean> runAsInteractive,
+        @Nullable Output<Boolean> runElevated) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.alwaysRun = alwaysRun;
         this.applyUpdateBefore = applyUpdateBefore;
@@ -157,16 +157,16 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CommandArgs() {
-        this.action = Input.empty();
-        this.alwaysRun = Input.empty();
-        this.applyUpdateBefore = Input.empty();
-        this.content = Input.empty();
-        this.contentType = Input.empty();
-        this.maxRunTime = Input.empty();
-        this.name = Input.empty();
-        this.restartAfter = Input.empty();
-        this.runAsInteractive = Input.empty();
-        this.runElevated = Input.empty();
+        this.action = Output.empty();
+        this.alwaysRun = Output.empty();
+        this.applyUpdateBefore = Output.empty();
+        this.content = Output.empty();
+        this.contentType = Output.empty();
+        this.maxRunTime = Output.empty();
+        this.name = Output.empty();
+        this.restartAfter = Output.empty();
+        this.runAsInteractive = Output.empty();
+        this.runElevated = Output.empty();
     }
 
     public static Builder builder() {
@@ -178,16 +178,16 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,Action>> action;
-        private @Nullable Input<Boolean> alwaysRun;
-        private @Nullable Input<Boolean> applyUpdateBefore;
-        private Input<String> content;
-        private Input<Either<String,ContentType>> contentType;
-        private @Nullable Input<Integer> maxRunTime;
-        private Input<String> name;
-        private @Nullable Input<Boolean> restartAfter;
-        private @Nullable Input<Boolean> runAsInteractive;
-        private @Nullable Input<Boolean> runElevated;
+        private Output<Either<String,Action>> action;
+        private @Nullable Output<Boolean> alwaysRun;
+        private @Nullable Output<Boolean> applyUpdateBefore;
+        private Output<String> content;
+        private Output<Either<String,ContentType>> contentType;
+        private @Nullable Output<Integer> maxRunTime;
+        private Output<String> name;
+        private @Nullable Output<Boolean> restartAfter;
+        private @Nullable Output<Boolean> runAsInteractive;
+        private @Nullable Output<Boolean> runElevated;
 
         public Builder() {
     	      // Empty
@@ -207,103 +207,103 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     	      this.runElevated = defaults.runElevated;
         }
 
-        public Builder action(Input<Either<String,Action>> action) {
+        public Builder action(Output<Either<String,Action>> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(Either<String,Action> action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder alwaysRun(@Nullable Input<Boolean> alwaysRun) {
+        public Builder alwaysRun(@Nullable Output<Boolean> alwaysRun) {
             this.alwaysRun = alwaysRun;
             return this;
         }
 
         public Builder alwaysRun(@Nullable Boolean alwaysRun) {
-            this.alwaysRun = Input.ofNullable(alwaysRun);
+            this.alwaysRun = Output.ofNullable(alwaysRun);
             return this;
         }
 
-        public Builder applyUpdateBefore(@Nullable Input<Boolean> applyUpdateBefore) {
+        public Builder applyUpdateBefore(@Nullable Output<Boolean> applyUpdateBefore) {
             this.applyUpdateBefore = applyUpdateBefore;
             return this;
         }
 
         public Builder applyUpdateBefore(@Nullable Boolean applyUpdateBefore) {
-            this.applyUpdateBefore = Input.ofNullable(applyUpdateBefore);
+            this.applyUpdateBefore = Output.ofNullable(applyUpdateBefore);
             return this;
         }
 
-        public Builder content(Input<String> content) {
+        public Builder content(Output<String> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
         public Builder content(String content) {
-            this.content = Input.of(Objects.requireNonNull(content));
+            this.content = Output.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder contentType(Input<Either<String,ContentType>> contentType) {
+        public Builder contentType(Output<Either<String,ContentType>> contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
         public Builder contentType(Either<String,ContentType> contentType) {
-            this.contentType = Input.of(Objects.requireNonNull(contentType));
+            this.contentType = Output.of(Objects.requireNonNull(contentType));
             return this;
         }
 
-        public Builder maxRunTime(@Nullable Input<Integer> maxRunTime) {
+        public Builder maxRunTime(@Nullable Output<Integer> maxRunTime) {
             this.maxRunTime = maxRunTime;
             return this;
         }
 
         public Builder maxRunTime(@Nullable Integer maxRunTime) {
-            this.maxRunTime = Input.ofNullable(maxRunTime);
+            this.maxRunTime = Output.ofNullable(maxRunTime);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder restartAfter(@Nullable Input<Boolean> restartAfter) {
+        public Builder restartAfter(@Nullable Output<Boolean> restartAfter) {
             this.restartAfter = restartAfter;
             return this;
         }
 
         public Builder restartAfter(@Nullable Boolean restartAfter) {
-            this.restartAfter = Input.ofNullable(restartAfter);
+            this.restartAfter = Output.ofNullable(restartAfter);
             return this;
         }
 
-        public Builder runAsInteractive(@Nullable Input<Boolean> runAsInteractive) {
+        public Builder runAsInteractive(@Nullable Output<Boolean> runAsInteractive) {
             this.runAsInteractive = runAsInteractive;
             return this;
         }
 
         public Builder runAsInteractive(@Nullable Boolean runAsInteractive) {
-            this.runAsInteractive = Input.ofNullable(runAsInteractive);
+            this.runAsInteractive = Output.ofNullable(runAsInteractive);
             return this;
         }
 
-        public Builder runElevated(@Nullable Input<Boolean> runElevated) {
+        public Builder runElevated(@Nullable Output<Boolean> runElevated) {
             this.runElevated = runElevated;
             return this;
         }
 
         public Builder runElevated(@Nullable Boolean runElevated) {
-            this.runElevated = Input.ofNullable(runElevated);
+            this.runElevated = Output.ofNullable(runElevated);
             return this;
         }
         public CommandArgs build() {

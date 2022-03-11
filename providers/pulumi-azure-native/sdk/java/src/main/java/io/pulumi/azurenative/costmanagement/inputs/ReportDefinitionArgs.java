@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.enums.TimeframeType;
 import io.pulumi.azurenative.costmanagement.inputs.ReportDatasetArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportTimePeriodArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -28,10 +28,10 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataset")
-      private final @Nullable Input<ReportDatasetArgs> dataset;
+      private final @Nullable Output<ReportDatasetArgs> dataset;
 
-    public Input<ReportDatasetArgs> getDataset() {
-        return this.dataset == null ? Input.empty() : this.dataset;
+    public Output<ReportDatasetArgs> getDataset() {
+        return this.dataset == null ? Output.empty() : this.dataset;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timePeriod")
-      private final @Nullable Input<ReportTimePeriodArgs> timePeriod;
+      private final @Nullable Output<ReportTimePeriodArgs> timePeriod;
 
-    public Input<ReportTimePeriodArgs> getTimePeriod() {
-        return this.timePeriod == null ? Input.empty() : this.timePeriod;
+    public Output<ReportTimePeriodArgs> getTimePeriod() {
+        return this.timePeriod == null ? Output.empty() : this.timePeriod;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timeframe", required=true)
-      private final Input<Either<String,TimeframeType>> timeframe;
+      private final Output<Either<String,TimeframeType>> timeframe;
 
-    public Input<Either<String,TimeframeType>> getTimeframe() {
+    public Output<Either<String,TimeframeType>> getTimeframe() {
         return this.timeframe;
     }
 
@@ -61,17 +61,17 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ReportType>> type;
+      private final Output<Either<String,ReportType>> type;
 
-    public Input<Either<String,ReportType>> getType() {
+    public Output<Either<String,ReportType>> getType() {
         return this.type;
     }
 
     public ReportDefinitionArgs(
-        @Nullable Input<ReportDatasetArgs> dataset,
-        @Nullable Input<ReportTimePeriodArgs> timePeriod,
-        Input<Either<String,TimeframeType>> timeframe,
-        Input<Either<String,ReportType>> type) {
+        @Nullable Output<ReportDatasetArgs> dataset,
+        @Nullable Output<ReportTimePeriodArgs> timePeriod,
+        Output<Either<String,TimeframeType>> timeframe,
+        Output<Either<String,ReportType>> type) {
         this.dataset = dataset;
         this.timePeriod = timePeriod;
         this.timeframe = Objects.requireNonNull(timeframe, "expected parameter 'timeframe' to be non-null");
@@ -79,10 +79,10 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ReportDefinitionArgs() {
-        this.dataset = Input.empty();
-        this.timePeriod = Input.empty();
-        this.timeframe = Input.empty();
-        this.type = Input.empty();
+        this.dataset = Output.empty();
+        this.timePeriod = Output.empty();
+        this.timeframe = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<ReportDatasetArgs> dataset;
-        private @Nullable Input<ReportTimePeriodArgs> timePeriod;
-        private Input<Either<String,TimeframeType>> timeframe;
-        private Input<Either<String,ReportType>> type;
+        private @Nullable Output<ReportDatasetArgs> dataset;
+        private @Nullable Output<ReportTimePeriodArgs> timePeriod;
+        private Output<Either<String,TimeframeType>> timeframe;
+        private Output<Either<String,ReportType>> type;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder dataset(@Nullable Input<ReportDatasetArgs> dataset) {
+        public Builder dataset(@Nullable Output<ReportDatasetArgs> dataset) {
             this.dataset = dataset;
             return this;
         }
 
         public Builder dataset(@Nullable ReportDatasetArgs dataset) {
-            this.dataset = Input.ofNullable(dataset);
+            this.dataset = Output.ofNullable(dataset);
             return this;
         }
 
-        public Builder timePeriod(@Nullable Input<ReportTimePeriodArgs> timePeriod) {
+        public Builder timePeriod(@Nullable Output<ReportTimePeriodArgs> timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
 
         public Builder timePeriod(@Nullable ReportTimePeriodArgs timePeriod) {
-            this.timePeriod = Input.ofNullable(timePeriod);
+            this.timePeriod = Output.ofNullable(timePeriod);
             return this;
         }
 
-        public Builder timeframe(Input<Either<String,TimeframeType>> timeframe) {
+        public Builder timeframe(Output<Either<String,TimeframeType>> timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
 
         public Builder timeframe(Either<String,TimeframeType> timeframe) {
-            this.timeframe = Input.of(Objects.requireNonNull(timeframe));
+            this.timeframe = Output.of(Objects.requireNonNull(timeframe));
             return this;
         }
 
-        public Builder type(Input<Either<String,ReportType>> type) {
+        public Builder type(Output<Either<String,ReportType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ReportType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ReportDefinitionArgs build() {

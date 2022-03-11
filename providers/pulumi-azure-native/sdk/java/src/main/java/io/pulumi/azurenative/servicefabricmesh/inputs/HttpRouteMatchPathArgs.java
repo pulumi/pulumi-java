@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.enums.PathMatchType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rewrite")
-      private final @Nullable Input<String> rewrite;
+      private final @Nullable Output<String> rewrite;
 
-    public Input<String> getRewrite() {
-        return this.rewrite == null ? Input.empty() : this.rewrite;
+    public Output<String> getRewrite() {
+        return this.rewrite == null ? Output.empty() : this.rewrite;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,PathMatchType>> type;
+      private final Output<Either<String,PathMatchType>> type;
 
-    public Input<Either<String,PathMatchType>> getType() {
+    public Output<Either<String,PathMatchType>> getType() {
         return this.type;
     }
 
@@ -47,25 +47,25 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public HttpRouteMatchPathArgs(
-        @Nullable Input<String> rewrite,
-        Input<Either<String,PathMatchType>> type,
-        Input<String> value) {
+        @Nullable Output<String> rewrite,
+        Output<Either<String,PathMatchType>> type,
+        Output<String> value) {
         this.rewrite = rewrite;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private HttpRouteMatchPathArgs() {
-        this.rewrite = Input.empty();
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.rewrite = Output.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> rewrite;
-        private Input<Either<String,PathMatchType>> type;
-        private Input<String> value;
+        private @Nullable Output<String> rewrite;
+        private Output<Either<String,PathMatchType>> type;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class HttpRouteMatchPathArgs extends io.pulumi.resources.ResourceAr
     	      this.value = defaults.value;
         }
 
-        public Builder rewrite(@Nullable Input<String> rewrite) {
+        public Builder rewrite(@Nullable Output<String> rewrite) {
             this.rewrite = rewrite;
             return this;
         }
 
         public Builder rewrite(@Nullable String rewrite) {
-            this.rewrite = Input.ofNullable(rewrite);
+            this.rewrite = Output.ofNullable(rewrite);
             return this;
         }
 
-        public Builder type(Input<Either<String,PathMatchType>> type) {
+        public Builder type(Output<Either<String,PathMatchType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,PathMatchType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public HttpRouteMatchPathArgs build() {

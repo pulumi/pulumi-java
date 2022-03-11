@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.enums.OperatingSystemType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,18 +21,18 @@ public final class DockerImagePlatformArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="operatingSystemType")
-      private final @Nullable Input<Either<String,OperatingSystemType>> operatingSystemType;
+      private final @Nullable Output<Either<String,OperatingSystemType>> operatingSystemType;
 
-    public Input<Either<String,OperatingSystemType>> getOperatingSystemType() {
-        return this.operatingSystemType == null ? Input.empty() : this.operatingSystemType;
+    public Output<Either<String,OperatingSystemType>> getOperatingSystemType() {
+        return this.operatingSystemType == null ? Output.empty() : this.operatingSystemType;
     }
 
-    public DockerImagePlatformArgs(@Nullable Input<Either<String,OperatingSystemType>> operatingSystemType) {
+    public DockerImagePlatformArgs(@Nullable Output<Either<String,OperatingSystemType>> operatingSystemType) {
         this.operatingSystemType = operatingSystemType;
     }
 
     private DockerImagePlatformArgs() {
-        this.operatingSystemType = Input.empty();
+        this.operatingSystemType = Output.empty();
     }
 
     public static Builder builder() {
@@ -44,7 +44,7 @@ public final class DockerImagePlatformArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,OperatingSystemType>> operatingSystemType;
+        private @Nullable Output<Either<String,OperatingSystemType>> operatingSystemType;
 
         public Builder() {
     	      // Empty
@@ -55,13 +55,13 @@ public final class DockerImagePlatformArgs extends io.pulumi.resources.ResourceA
     	      this.operatingSystemType = defaults.operatingSystemType;
         }
 
-        public Builder operatingSystemType(@Nullable Input<Either<String,OperatingSystemType>> operatingSystemType) {
+        public Builder operatingSystemType(@Nullable Output<Either<String,OperatingSystemType>> operatingSystemType) {
             this.operatingSystemType = operatingSystemType;
             return this;
         }
 
         public Builder operatingSystemType(@Nullable Either<String,OperatingSystemType> operatingSystemType) {
-            this.operatingSystemType = Input.ofNullable(operatingSystemType);
+            this.operatingSystemType = Output.ofNullable(operatingSystemType);
             return this;
         }
         public DockerImagePlatformArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.ConnectedRegistryMode;
 import io.pulumi.azurenative.containerregistry.inputs.LoggingPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.ParentPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientTokenIds")
-      private final @Nullable Input<List<String>> clientTokenIds;
+      private final @Nullable Output<List<String>> clientTokenIds;
 
-    public Input<List<String>> getClientTokenIds() {
-        return this.clientTokenIds == null ? Input.empty() : this.clientTokenIds;
+    public Output<List<String>> getClientTokenIds() {
+        return this.clientTokenIds == null ? Output.empty() : this.clientTokenIds;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="connectedRegistryName")
-      private final @Nullable Input<String> connectedRegistryName;
+      private final @Nullable Output<String> connectedRegistryName;
 
-    public Input<String> getConnectedRegistryName() {
-        return this.connectedRegistryName == null ? Input.empty() : this.connectedRegistryName;
+    public Output<String> getConnectedRegistryName() {
+        return this.connectedRegistryName == null ? Output.empty() : this.connectedRegistryName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="logging")
-      private final @Nullable Input<LoggingPropertiesArgs> logging;
+      private final @Nullable Output<LoggingPropertiesArgs> logging;
 
-    public Input<LoggingPropertiesArgs> getLogging() {
-        return this.logging == null ? Input.empty() : this.logging;
+    public Output<LoggingPropertiesArgs> getLogging() {
+        return this.logging == null ? Output.empty() : this.logging;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mode", required=true)
-      private final Input<Either<String,ConnectedRegistryMode>> mode;
+      private final Output<Either<String,ConnectedRegistryMode>> mode;
 
-    public Input<Either<String,ConnectedRegistryMode>> getMode() {
+    public Output<Either<String,ConnectedRegistryMode>> getMode() {
         return this.mode;
     }
 
@@ -68,9 +68,9 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parent", required=true)
-      private final Input<ParentPropertiesArgs> parent;
+      private final Output<ParentPropertiesArgs> parent;
 
-    public Input<ParentPropertiesArgs> getParent() {
+    public Output<ParentPropertiesArgs> getParent() {
         return this.parent;
     }
 
@@ -79,9 +79,9 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="registryName", required=true)
-      private final Input<String> registryName;
+      private final Output<String> registryName;
 
-    public Input<String> getRegistryName() {
+    public Output<String> getRegistryName() {
         return this.registryName;
     }
 
@@ -90,20 +90,20 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ConnectedRegistryArgs(
-        @Nullable Input<List<String>> clientTokenIds,
-        @Nullable Input<String> connectedRegistryName,
-        @Nullable Input<LoggingPropertiesArgs> logging,
-        Input<Either<String,ConnectedRegistryMode>> mode,
-        Input<ParentPropertiesArgs> parent,
-        Input<String> registryName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<List<String>> clientTokenIds,
+        @Nullable Output<String> connectedRegistryName,
+        @Nullable Output<LoggingPropertiesArgs> logging,
+        Output<Either<String,ConnectedRegistryMode>> mode,
+        Output<ParentPropertiesArgs> parent,
+        Output<String> registryName,
+        Output<String> resourceGroupName) {
         this.clientTokenIds = clientTokenIds;
         this.connectedRegistryName = connectedRegistryName;
         this.logging = logging;
@@ -114,13 +114,13 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ConnectedRegistryArgs() {
-        this.clientTokenIds = Input.empty();
-        this.connectedRegistryName = Input.empty();
-        this.logging = Input.empty();
-        this.mode = Input.empty();
-        this.parent = Input.empty();
-        this.registryName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.clientTokenIds = Output.empty();
+        this.connectedRegistryName = Output.empty();
+        this.logging = Output.empty();
+        this.mode = Output.empty();
+        this.parent = Output.empty();
+        this.registryName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -132,13 +132,13 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> clientTokenIds;
-        private @Nullable Input<String> connectedRegistryName;
-        private @Nullable Input<LoggingPropertiesArgs> logging;
-        private Input<Either<String,ConnectedRegistryMode>> mode;
-        private Input<ParentPropertiesArgs> parent;
-        private Input<String> registryName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<List<String>> clientTokenIds;
+        private @Nullable Output<String> connectedRegistryName;
+        private @Nullable Output<LoggingPropertiesArgs> logging;
+        private Output<Either<String,ConnectedRegistryMode>> mode;
+        private Output<ParentPropertiesArgs> parent;
+        private Output<String> registryName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -155,73 +155,73 @@ public final class ConnectedRegistryArgs extends io.pulumi.resources.ResourceArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder clientTokenIds(@Nullable Input<List<String>> clientTokenIds) {
+        public Builder clientTokenIds(@Nullable Output<List<String>> clientTokenIds) {
             this.clientTokenIds = clientTokenIds;
             return this;
         }
 
         public Builder clientTokenIds(@Nullable List<String> clientTokenIds) {
-            this.clientTokenIds = Input.ofNullable(clientTokenIds);
+            this.clientTokenIds = Output.ofNullable(clientTokenIds);
             return this;
         }
 
-        public Builder connectedRegistryName(@Nullable Input<String> connectedRegistryName) {
+        public Builder connectedRegistryName(@Nullable Output<String> connectedRegistryName) {
             this.connectedRegistryName = connectedRegistryName;
             return this;
         }
 
         public Builder connectedRegistryName(@Nullable String connectedRegistryName) {
-            this.connectedRegistryName = Input.ofNullable(connectedRegistryName);
+            this.connectedRegistryName = Output.ofNullable(connectedRegistryName);
             return this;
         }
 
-        public Builder logging(@Nullable Input<LoggingPropertiesArgs> logging) {
+        public Builder logging(@Nullable Output<LoggingPropertiesArgs> logging) {
             this.logging = logging;
             return this;
         }
 
         public Builder logging(@Nullable LoggingPropertiesArgs logging) {
-            this.logging = Input.ofNullable(logging);
+            this.logging = Output.ofNullable(logging);
             return this;
         }
 
-        public Builder mode(Input<Either<String,ConnectedRegistryMode>> mode) {
+        public Builder mode(Output<Either<String,ConnectedRegistryMode>> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
         public Builder mode(Either<String,ConnectedRegistryMode> mode) {
-            this.mode = Input.of(Objects.requireNonNull(mode));
+            this.mode = Output.of(Objects.requireNonNull(mode));
             return this;
         }
 
-        public Builder parent(Input<ParentPropertiesArgs> parent) {
+        public Builder parent(Output<ParentPropertiesArgs> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
         public Builder parent(ParentPropertiesArgs parent) {
-            this.parent = Input.of(Objects.requireNonNull(parent));
+            this.parent = Output.of(Objects.requireNonNull(parent));
             return this;
         }
 
-        public Builder registryName(Input<String> registryName) {
+        public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Input.of(Objects.requireNonNull(registryName));
+            this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ConnectedRegistryArgs build() {

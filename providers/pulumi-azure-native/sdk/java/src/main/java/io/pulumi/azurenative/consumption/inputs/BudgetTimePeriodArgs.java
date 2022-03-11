@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.consumption.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endDate")
-      private final @Nullable Input<String> endDate;
+      private final @Nullable Output<String> endDate;
 
-    public Input<String> getEndDate() {
-        return this.endDate == null ? Input.empty() : this.endDate;
+    public Output<String> getEndDate() {
+        return this.endDate == null ? Output.empty() : this.endDate;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startDate", required=true)
-      private final Input<String> startDate;
+      private final Output<String> startDate;
 
-    public Input<String> getStartDate() {
+    public Output<String> getStartDate() {
         return this.startDate;
     }
 
     public BudgetTimePeriodArgs(
-        @Nullable Input<String> endDate,
-        Input<String> startDate) {
+        @Nullable Output<String> endDate,
+        Output<String> startDate) {
         this.endDate = endDate;
         this.startDate = Objects.requireNonNull(startDate, "expected parameter 'startDate' to be non-null");
     }
 
     private BudgetTimePeriodArgs() {
-        this.endDate = Input.empty();
-        this.startDate = Input.empty();
+        this.endDate = Output.empty();
+        this.startDate = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endDate;
-        private Input<String> startDate;
+        private @Nullable Output<String> endDate;
+        private Output<String> startDate;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BudgetTimePeriodArgs extends io.pulumi.resources.ResourceArgs
     	      this.startDate = defaults.startDate;
         }
 
-        public Builder endDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Output<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Input.ofNullable(endDate);
+            this.endDate = Output.ofNullable(endDate);
             return this;
         }
 
-        public Builder startDate(Input<String> startDate) {
+        public Builder startDate(Output<String> startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
 
         public Builder startDate(String startDate) {
-            this.startDate = Input.of(Objects.requireNonNull(startDate));
+            this.startDate = Output.of(Objects.requireNonNull(startDate));
             return this;
         }
         public BudgetTimePeriodArgs build() {

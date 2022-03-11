@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.ClusterPurpose;
 import io.pulumi.azurenative.machinelearningservices.inputs.AksNetworkingConfigurationArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.SslConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentCount")
-      private final @Nullable Input<Integer> agentCount;
+      private final @Nullable Output<Integer> agentCount;
 
-    public Input<Integer> getAgentCount() {
-        return this.agentCount == null ? Input.empty() : this.agentCount;
+    public Output<Integer> getAgentCount() {
+        return this.agentCount == null ? Output.empty() : this.agentCount;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="agentVmSize")
-      private final @Nullable Input<String> agentVmSize;
+      private final @Nullable Output<String> agentVmSize;
 
-    public Input<String> getAgentVmSize() {
-        return this.agentVmSize == null ? Input.empty() : this.agentVmSize;
+    public Output<String> getAgentVmSize() {
+        return this.agentVmSize == null ? Output.empty() : this.agentVmSize;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aksNetworkingConfiguration")
-      private final @Nullable Input<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
+      private final @Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
 
-    public Input<AksNetworkingConfigurationArgs> getAksNetworkingConfiguration() {
-        return this.aksNetworkingConfiguration == null ? Input.empty() : this.aksNetworkingConfiguration;
+    public Output<AksNetworkingConfigurationArgs> getAksNetworkingConfiguration() {
+        return this.aksNetworkingConfiguration == null ? Output.empty() : this.aksNetworkingConfiguration;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterFqdn")
-      private final @Nullable Input<String> clusterFqdn;
+      private final @Nullable Output<String> clusterFqdn;
 
-    public Input<String> getClusterFqdn() {
-        return this.clusterFqdn == null ? Input.empty() : this.clusterFqdn;
+    public Output<String> getClusterFqdn() {
+        return this.clusterFqdn == null ? Output.empty() : this.clusterFqdn;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterPurpose")
-      private final @Nullable Input<Either<String,ClusterPurpose>> clusterPurpose;
+      private final @Nullable Output<Either<String,ClusterPurpose>> clusterPurpose;
 
-    public Input<Either<String,ClusterPurpose>> getClusterPurpose() {
-        return this.clusterPurpose == null ? Input.empty() : this.clusterPurpose;
+    public Output<Either<String,ClusterPurpose>> getClusterPurpose() {
+        return this.clusterPurpose == null ? Output.empty() : this.clusterPurpose;
     }
 
     /**
@@ -83,34 +83,34 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sslConfiguration")
-      private final @Nullable Input<SslConfigurationArgs> sslConfiguration;
+      private final @Nullable Output<SslConfigurationArgs> sslConfiguration;
 
-    public Input<SslConfigurationArgs> getSslConfiguration() {
-        return this.sslConfiguration == null ? Input.empty() : this.sslConfiguration;
+    public Output<SslConfigurationArgs> getSslConfiguration() {
+        return this.sslConfiguration == null ? Output.empty() : this.sslConfiguration;
     }
 
     public AKSPropertiesArgs(
-        @Nullable Input<Integer> agentCount,
-        @Nullable Input<String> agentVmSize,
-        @Nullable Input<AksNetworkingConfigurationArgs> aksNetworkingConfiguration,
-        @Nullable Input<String> clusterFqdn,
-        @Nullable Input<Either<String,ClusterPurpose>> clusterPurpose,
-        @Nullable Input<SslConfigurationArgs> sslConfiguration) {
+        @Nullable Output<Integer> agentCount,
+        @Nullable Output<String> agentVmSize,
+        @Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration,
+        @Nullable Output<String> clusterFqdn,
+        @Nullable Output<Either<String,ClusterPurpose>> clusterPurpose,
+        @Nullable Output<SslConfigurationArgs> sslConfiguration) {
         this.agentCount = agentCount;
         this.agentVmSize = agentVmSize;
         this.aksNetworkingConfiguration = aksNetworkingConfiguration;
         this.clusterFqdn = clusterFqdn;
-        this.clusterPurpose = clusterPurpose == null ? Input.ofLeft("FastProd") : clusterPurpose;
+        this.clusterPurpose = clusterPurpose == null ? Output.ofLeft("FastProd") : clusterPurpose;
         this.sslConfiguration = sslConfiguration;
     }
 
     private AKSPropertiesArgs() {
-        this.agentCount = Input.empty();
-        this.agentVmSize = Input.empty();
-        this.aksNetworkingConfiguration = Input.empty();
-        this.clusterFqdn = Input.empty();
-        this.clusterPurpose = Input.empty();
-        this.sslConfiguration = Input.empty();
+        this.agentCount = Output.empty();
+        this.agentVmSize = Output.empty();
+        this.aksNetworkingConfiguration = Output.empty();
+        this.clusterFqdn = Output.empty();
+        this.clusterPurpose = Output.empty();
+        this.sslConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> agentCount;
-        private @Nullable Input<String> agentVmSize;
-        private @Nullable Input<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
-        private @Nullable Input<String> clusterFqdn;
-        private @Nullable Input<Either<String,ClusterPurpose>> clusterPurpose;
-        private @Nullable Input<SslConfigurationArgs> sslConfiguration;
+        private @Nullable Output<Integer> agentCount;
+        private @Nullable Output<String> agentVmSize;
+        private @Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
+        private @Nullable Output<String> clusterFqdn;
+        private @Nullable Output<Either<String,ClusterPurpose>> clusterPurpose;
+        private @Nullable Output<SslConfigurationArgs> sslConfiguration;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sslConfiguration = defaults.sslConfiguration;
         }
 
-        public Builder agentCount(@Nullable Input<Integer> agentCount) {
+        public Builder agentCount(@Nullable Output<Integer> agentCount) {
             this.agentCount = agentCount;
             return this;
         }
 
         public Builder agentCount(@Nullable Integer agentCount) {
-            this.agentCount = Input.ofNullable(agentCount);
+            this.agentCount = Output.ofNullable(agentCount);
             return this;
         }
 
-        public Builder agentVmSize(@Nullable Input<String> agentVmSize) {
+        public Builder agentVmSize(@Nullable Output<String> agentVmSize) {
             this.agentVmSize = agentVmSize;
             return this;
         }
 
         public Builder agentVmSize(@Nullable String agentVmSize) {
-            this.agentVmSize = Input.ofNullable(agentVmSize);
+            this.agentVmSize = Output.ofNullable(agentVmSize);
             return this;
         }
 
-        public Builder aksNetworkingConfiguration(@Nullable Input<AksNetworkingConfigurationArgs> aksNetworkingConfiguration) {
+        public Builder aksNetworkingConfiguration(@Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration) {
             this.aksNetworkingConfiguration = aksNetworkingConfiguration;
             return this;
         }
 
         public Builder aksNetworkingConfiguration(@Nullable AksNetworkingConfigurationArgs aksNetworkingConfiguration) {
-            this.aksNetworkingConfiguration = Input.ofNullable(aksNetworkingConfiguration);
+            this.aksNetworkingConfiguration = Output.ofNullable(aksNetworkingConfiguration);
             return this;
         }
 
-        public Builder clusterFqdn(@Nullable Input<String> clusterFqdn) {
+        public Builder clusterFqdn(@Nullable Output<String> clusterFqdn) {
             this.clusterFqdn = clusterFqdn;
             return this;
         }
 
         public Builder clusterFqdn(@Nullable String clusterFqdn) {
-            this.clusterFqdn = Input.ofNullable(clusterFqdn);
+            this.clusterFqdn = Output.ofNullable(clusterFqdn);
             return this;
         }
 
-        public Builder clusterPurpose(@Nullable Input<Either<String,ClusterPurpose>> clusterPurpose) {
+        public Builder clusterPurpose(@Nullable Output<Either<String,ClusterPurpose>> clusterPurpose) {
             this.clusterPurpose = clusterPurpose;
             return this;
         }
 
         public Builder clusterPurpose(@Nullable Either<String,ClusterPurpose> clusterPurpose) {
-            this.clusterPurpose = Input.ofNullable(clusterPurpose);
+            this.clusterPurpose = Output.ofNullable(clusterPurpose);
             return this;
         }
 
-        public Builder sslConfiguration(@Nullable Input<SslConfigurationArgs> sslConfiguration) {
+        public Builder sslConfiguration(@Nullable Output<SslConfigurationArgs> sslConfiguration) {
             this.sslConfiguration = sslConfiguration;
             return this;
         }
 
         public Builder sslConfiguration(@Nullable SslConfigurationArgs sslConfiguration) {
-            this.sslConfiguration = Input.ofNullable(sslConfiguration);
+            this.sslConfiguration = Output.ofNullable(sslConfiguration);
             return this;
         }
         public AKSPropertiesArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.enums.TokenCertificateName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encodedPemCertificate")
-      private final @Nullable Input<String> encodedPemCertificate;
+      private final @Nullable Output<String> encodedPemCertificate;
 
-    public Input<String> getEncodedPemCertificate() {
-        return this.encodedPemCertificate == null ? Input.empty() : this.encodedPemCertificate;
+    public Output<String> getEncodedPemCertificate() {
+        return this.encodedPemCertificate == null ? Output.empty() : this.encodedPemCertificate;
     }
 
     /**
@@ -36,17 +36,17 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expiry")
-      private final @Nullable Input<String> expiry;
+      private final @Nullable Output<String> expiry;
 
-    public Input<String> getExpiry() {
-        return this.expiry == null ? Input.empty() : this.expiry;
+    public Output<String> getExpiry() {
+        return this.expiry == null ? Output.empty() : this.expiry;
     }
 
     @InputImport(name="name")
-      private final @Nullable Input<Either<String,TokenCertificateName>> name;
+      private final @Nullable Output<Either<String,TokenCertificateName>> name;
 
-    public Input<Either<String,TokenCertificateName>> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<Either<String,TokenCertificateName>> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -54,17 +54,17 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="thumbprint")
-      private final @Nullable Input<String> thumbprint;
+      private final @Nullable Output<String> thumbprint;
 
-    public Input<String> getThumbprint() {
-        return this.thumbprint == null ? Input.empty() : this.thumbprint;
+    public Output<String> getThumbprint() {
+        return this.thumbprint == null ? Output.empty() : this.thumbprint;
     }
 
     public TokenCertificateArgs(
-        @Nullable Input<String> encodedPemCertificate,
-        @Nullable Input<String> expiry,
-        @Nullable Input<Either<String,TokenCertificateName>> name,
-        @Nullable Input<String> thumbprint) {
+        @Nullable Output<String> encodedPemCertificate,
+        @Nullable Output<String> expiry,
+        @Nullable Output<Either<String,TokenCertificateName>> name,
+        @Nullable Output<String> thumbprint) {
         this.encodedPemCertificate = encodedPemCertificate;
         this.expiry = expiry;
         this.name = name;
@@ -72,10 +72,10 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TokenCertificateArgs() {
-        this.encodedPemCertificate = Input.empty();
-        this.expiry = Input.empty();
-        this.name = Input.empty();
-        this.thumbprint = Input.empty();
+        this.encodedPemCertificate = Output.empty();
+        this.expiry = Output.empty();
+        this.name = Output.empty();
+        this.thumbprint = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> encodedPemCertificate;
-        private @Nullable Input<String> expiry;
-        private @Nullable Input<Either<String,TokenCertificateName>> name;
-        private @Nullable Input<String> thumbprint;
+        private @Nullable Output<String> encodedPemCertificate;
+        private @Nullable Output<String> expiry;
+        private @Nullable Output<Either<String,TokenCertificateName>> name;
+        private @Nullable Output<String> thumbprint;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class TokenCertificateArgs extends io.pulumi.resources.ResourceArgs
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder encodedPemCertificate(@Nullable Input<String> encodedPemCertificate) {
+        public Builder encodedPemCertificate(@Nullable Output<String> encodedPemCertificate) {
             this.encodedPemCertificate = encodedPemCertificate;
             return this;
         }
 
         public Builder encodedPemCertificate(@Nullable String encodedPemCertificate) {
-            this.encodedPemCertificate = Input.ofNullable(encodedPemCertificate);
+            this.encodedPemCertificate = Output.ofNullable(encodedPemCertificate);
             return this;
         }
 
-        public Builder expiry(@Nullable Input<String> expiry) {
+        public Builder expiry(@Nullable Output<String> expiry) {
             this.expiry = expiry;
             return this;
         }
 
         public Builder expiry(@Nullable String expiry) {
-            this.expiry = Input.ofNullable(expiry);
+            this.expiry = Output.ofNullable(expiry);
             return this;
         }
 
-        public Builder name(@Nullable Input<Either<String,TokenCertificateName>> name) {
+        public Builder name(@Nullable Output<Either<String,TokenCertificateName>> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable Either<String,TokenCertificateName> name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder thumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Input.ofNullable(thumbprint);
+            this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
         public TokenCertificateArgs build() {

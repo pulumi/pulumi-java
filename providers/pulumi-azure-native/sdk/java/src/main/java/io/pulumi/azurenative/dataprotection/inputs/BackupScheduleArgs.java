@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,18 +23,18 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repeatingTimeIntervals", required=true)
-      private final Input<List<String>> repeatingTimeIntervals;
+      private final Output<List<String>> repeatingTimeIntervals;
 
-    public Input<List<String>> getRepeatingTimeIntervals() {
+    public Output<List<String>> getRepeatingTimeIntervals() {
         return this.repeatingTimeIntervals;
     }
 
-    public BackupScheduleArgs(Input<List<String>> repeatingTimeIntervals) {
+    public BackupScheduleArgs(Output<List<String>> repeatingTimeIntervals) {
         this.repeatingTimeIntervals = Objects.requireNonNull(repeatingTimeIntervals, "expected parameter 'repeatingTimeIntervals' to be non-null");
     }
 
     private BackupScheduleArgs() {
-        this.repeatingTimeIntervals = Input.empty();
+        this.repeatingTimeIntervals = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<String>> repeatingTimeIntervals;
+        private Output<List<String>> repeatingTimeIntervals;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.repeatingTimeIntervals = defaults.repeatingTimeIntervals;
         }
 
-        public Builder repeatingTimeIntervals(Input<List<String>> repeatingTimeIntervals) {
+        public Builder repeatingTimeIntervals(Output<List<String>> repeatingTimeIntervals) {
             this.repeatingTimeIntervals = Objects.requireNonNull(repeatingTimeIntervals);
             return this;
         }
 
         public Builder repeatingTimeIntervals(List<String> repeatingTimeIntervals) {
-            this.repeatingTimeIntervals = Input.of(Objects.requireNonNull(repeatingTimeIntervals));
+            this.repeatingTimeIntervals = Output.of(Objects.requireNonNull(repeatingTimeIntervals));
             return this;
         }
         public BackupScheduleArgs build() {

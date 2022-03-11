@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.enums.RecurrenceFrequency;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="frequency")
-      private final @Nullable Input<RecurrenceFrequency> frequency;
+      private final @Nullable Output<RecurrenceFrequency> frequency;
 
-    public Input<RecurrenceFrequency> getFrequency() {
-        return this.frequency == null ? Input.empty() : this.frequency;
+    public Output<RecurrenceFrequency> getFrequency() {
+        return this.frequency == null ? Output.empty() : this.frequency;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="interval")
-      private final @Nullable Input<Integer> interval;
+      private final @Nullable Output<Integer> interval;
 
-    public Input<Integer> getInterval() {
-        return this.interval == null ? Input.empty() : this.interval;
+    public Output<Integer> getInterval() {
+        return this.interval == null ? Output.empty() : this.interval;
     }
 
     public JobMaxRecurrenceArgs(
-        @Nullable Input<RecurrenceFrequency> frequency,
-        @Nullable Input<Integer> interval) {
+        @Nullable Output<RecurrenceFrequency> frequency,
+        @Nullable Output<Integer> interval) {
         this.frequency = frequency;
         this.interval = interval;
     }
 
     private JobMaxRecurrenceArgs() {
-        this.frequency = Input.empty();
-        this.interval = Input.empty();
+        this.frequency = Output.empty();
+        this.interval = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<RecurrenceFrequency> frequency;
-        private @Nullable Input<Integer> interval;
+        private @Nullable Output<RecurrenceFrequency> frequency;
+        private @Nullable Output<Integer> interval;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
     	      this.interval = defaults.interval;
         }
 
-        public Builder frequency(@Nullable Input<RecurrenceFrequency> frequency) {
+        public Builder frequency(@Nullable Output<RecurrenceFrequency> frequency) {
             this.frequency = frequency;
             return this;
         }
 
         public Builder frequency(@Nullable RecurrenceFrequency frequency) {
-            this.frequency = Input.ofNullable(frequency);
+            this.frequency = Output.ofNullable(frequency);
             return this;
         }
 
-        public Builder interval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Output<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Input.ofNullable(interval);
+            this.interval = Output.ofNullable(interval);
             return this;
         }
         public JobMaxRecurrenceArgs build() {

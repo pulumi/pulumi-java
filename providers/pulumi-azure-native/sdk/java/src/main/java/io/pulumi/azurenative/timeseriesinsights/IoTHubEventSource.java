@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.timeseriesinsights.IoTHubEventSourceArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.LocalTimestampResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -270,10 +269,10 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IoTHubEventSource(String name, IoTHubEventSourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:timeseriesinsights:IoTHubEventSource", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:timeseriesinsights:IoTHubEventSource", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private IoTHubEventSource(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IoTHubEventSource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:timeseriesinsights:IoTHubEventSource", name, null, makeResourceOptions(options, id));
     }
 
@@ -284,16 +283,16 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20170228preview:IoTHubEventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20171115:IoTHubEventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20180815preview:IoTHubEventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20200515:IoTHubEventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210331preview:IoTHubEventSource").build()),
-                Input.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210630preview:IoTHubEventSource").build())
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20170228preview:IoTHubEventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20171115:IoTHubEventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20180815preview:IoTHubEventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20200515:IoTHubEventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210331preview:IoTHubEventSource").build()),
+                Output.of(Alias.builder().setType("azure-native:timeseriesinsights/v20210630preview:IoTHubEventSource").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -307,7 +306,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IoTHubEventSource get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IoTHubEventSource get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IoTHubEventSource(name, id, options);
     }
 }

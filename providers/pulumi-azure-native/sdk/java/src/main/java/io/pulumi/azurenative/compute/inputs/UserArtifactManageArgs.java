@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="install", required=true)
-      private final Input<String> install;
+      private final Output<String> install;
 
-    public Input<String> getInstall() {
+    public Output<String> getInstall() {
         return this.install;
     }
 
@@ -30,9 +30,9 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="remove", required=true)
-      private final Input<String> remove;
+      private final Output<String> remove;
 
-    public Input<String> getRemove() {
+    public Output<String> getRemove() {
         return this.remove;
     }
 
@@ -41,25 +41,25 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="update")
-      private final @Nullable Input<String> update;
+      private final @Nullable Output<String> update;
 
-    public Input<String> getUpdate() {
-        return this.update == null ? Input.empty() : this.update;
+    public Output<String> getUpdate() {
+        return this.update == null ? Output.empty() : this.update;
     }
 
     public UserArtifactManageArgs(
-        Input<String> install,
-        Input<String> remove,
-        @Nullable Input<String> update) {
+        Output<String> install,
+        Output<String> remove,
+        @Nullable Output<String> update) {
         this.install = Objects.requireNonNull(install, "expected parameter 'install' to be non-null");
         this.remove = Objects.requireNonNull(remove, "expected parameter 'remove' to be non-null");
         this.update = update;
     }
 
     private UserArtifactManageArgs() {
-        this.install = Input.empty();
-        this.remove = Input.empty();
-        this.update = Input.empty();
+        this.install = Output.empty();
+        this.remove = Output.empty();
+        this.update = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> install;
-        private Input<String> remove;
-        private @Nullable Input<String> update;
+        private Output<String> install;
+        private Output<String> remove;
+        private @Nullable Output<String> update;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class UserArtifactManageArgs extends io.pulumi.resources.ResourceAr
     	      this.update = defaults.update;
         }
 
-        public Builder install(Input<String> install) {
+        public Builder install(Output<String> install) {
             this.install = Objects.requireNonNull(install);
             return this;
         }
 
         public Builder install(String install) {
-            this.install = Input.of(Objects.requireNonNull(install));
+            this.install = Output.of(Objects.requireNonNull(install));
             return this;
         }
 
-        public Builder remove(Input<String> remove) {
+        public Builder remove(Output<String> remove) {
             this.remove = Objects.requireNonNull(remove);
             return this;
         }
 
         public Builder remove(String remove) {
-            this.remove = Input.of(Objects.requireNonNull(remove));
+            this.remove = Output.of(Objects.requireNonNull(remove));
             return this;
         }
 
-        public Builder update(@Nullable Input<String> update) {
+        public Builder update(@Nullable Output<String> update) {
             this.update = update;
             return this;
         }
 
         public Builder update(@Nullable String update) {
-            this.update = Input.ofNullable(update);
+            this.update = Output.ofNullable(update);
             return this;
         }
         public UserArtifactManageArgs build() {

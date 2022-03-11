@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devops.inputs;
 
 import io.pulumi.azurenative.devops.enums.AuthorizationType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -26,9 +26,9 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationType", required=true)
-      private final Input<Either<String,AuthorizationType>> authorizationType;
+      private final Output<Either<String,AuthorizationType>> authorizationType;
 
-    public Input<Either<String,AuthorizationType>> getAuthorizationType() {
+    public Output<Either<String,AuthorizationType>> getAuthorizationType() {
         return this.authorizationType;
     }
 
@@ -37,22 +37,22 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     public AuthorizationArgs(
-        Input<Either<String,AuthorizationType>> authorizationType,
-        @Nullable Input<Map<String,String>> parameters) {
+        Output<Either<String,AuthorizationType>> authorizationType,
+        @Nullable Output<Map<String,String>> parameters) {
         this.authorizationType = Objects.requireNonNull(authorizationType, "expected parameter 'authorizationType' to be non-null");
         this.parameters = parameters;
     }
 
     private AuthorizationArgs() {
-        this.authorizationType = Input.empty();
-        this.parameters = Input.empty();
+        this.authorizationType = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,AuthorizationType>> authorizationType;
-        private @Nullable Input<Map<String,String>> parameters;
+        private Output<Either<String,AuthorizationType>> authorizationType;
+        private @Nullable Output<Map<String,String>> parameters;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder authorizationType(Input<Either<String,AuthorizationType>> authorizationType) {
+        public Builder authorizationType(Output<Either<String,AuthorizationType>> authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
 
         public Builder authorizationType(Either<String,AuthorizationType> authorizationType) {
-            this.authorizationType = Input.of(Objects.requireNonNull(authorizationType));
+            this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public AuthorizationArgs build() {

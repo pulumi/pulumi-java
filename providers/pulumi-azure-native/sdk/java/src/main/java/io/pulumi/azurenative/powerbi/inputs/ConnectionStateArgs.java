@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerbi.inputs;
 
 import io.pulumi.azurenative.powerbi.enums.PersistedConnectionStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="actionsRequired")
-      private final @Nullable Input<String> actionsRequired;
+      private final @Nullable Output<String> actionsRequired;
 
-    public Input<String> getActionsRequired() {
-        return this.actionsRequired == null ? Input.empty() : this.actionsRequired;
+    public Output<String> getActionsRequired() {
+        return this.actionsRequired == null ? Output.empty() : this.actionsRequired;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,PersistedConnectionStatus>> status;
+      private final @Nullable Output<Either<String,PersistedConnectionStatus>> status;
 
-    public Input<Either<String,PersistedConnectionStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,PersistedConnectionStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public ConnectionStateArgs(
-        @Nullable Input<String> actionsRequired,
-        @Nullable Input<String> description,
-        @Nullable Input<Either<String,PersistedConnectionStatus>> status) {
+        @Nullable Output<String> actionsRequired,
+        @Nullable Output<String> description,
+        @Nullable Output<Either<String,PersistedConnectionStatus>> status) {
         this.actionsRequired = actionsRequired;
         this.description = description;
         this.status = status;
     }
 
     private ConnectionStateArgs() {
-        this.actionsRequired = Input.empty();
-        this.description = Input.empty();
-        this.status = Input.empty();
+        this.actionsRequired = Output.empty();
+        this.description = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> actionsRequired;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Either<String,PersistedConnectionStatus>> status;
+        private @Nullable Output<String> actionsRequired;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Either<String,PersistedConnectionStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
     	      this.status = defaults.status;
         }
 
-        public Builder actionsRequired(@Nullable Input<String> actionsRequired) {
+        public Builder actionsRequired(@Nullable Output<String> actionsRequired) {
             this.actionsRequired = actionsRequired;
             return this;
         }
 
         public Builder actionsRequired(@Nullable String actionsRequired) {
-            this.actionsRequired = Input.ofNullable(actionsRequired);
+            this.actionsRequired = Output.ofNullable(actionsRequired);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,PersistedConnectionStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,PersistedConnectionStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,PersistedConnectionStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public ConnectionStateArgs build() {

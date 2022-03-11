@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources;
 
 import io.pulumi.azurenative.resources.inputs.TagsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<TagsArgs> properties;
+      private final Output<TagsArgs> properties;
 
-    public Input<TagsArgs> getProperties() {
+    public Output<TagsArgs> getProperties() {
         return this.properties;
     }
 
@@ -30,22 +30,22 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
     public TagAtScopeArgs(
-        Input<TagsArgs> properties,
-        Input<String> scope) {
+        Output<TagsArgs> properties,
+        Output<String> scope) {
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
     }
 
     private TagAtScopeArgs() {
-        this.properties = Input.empty();
-        this.scope = Input.empty();
+        this.properties = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<TagsArgs> properties;
-        private Input<String> scope;
+        private Output<TagsArgs> properties;
+        private Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder properties(Input<TagsArgs> properties) {
+        public Builder properties(Output<TagsArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(TagsArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
         public TagAtScopeArgs build() {

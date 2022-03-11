@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization.inputs;
 import io.pulumi.azurenative.authorization.enums.ParameterType;
 import io.pulumi.azurenative.authorization.inputs.ParameterDefinitionsValueMetadataArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="allowedValues")
-      private final @Nullable Input<List<Object>> allowedValues;
+      private final @Nullable Output<List<Object>> allowedValues;
 
-    public Input<List<Object>> getAllowedValues() {
-        return this.allowedValues == null ? Input.empty() : this.allowedValues;
+    public Output<List<Object>> getAllowedValues() {
+        return this.allowedValues == null ? Output.empty() : this.allowedValues;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="defaultValue")
-      private final @Nullable Input<Object> defaultValue;
+      private final @Nullable Output<Object> defaultValue;
 
-    public Input<Object> getDefaultValue() {
-        return this.defaultValue == null ? Input.empty() : this.defaultValue;
+    public Output<Object> getDefaultValue() {
+        return this.defaultValue == null ? Output.empty() : this.defaultValue;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<ParameterDefinitionsValueMetadataArgs> metadata;
+      private final @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata;
 
-    public Input<ParameterDefinitionsValueMetadataArgs> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<ParameterDefinitionsValueMetadataArgs> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ParameterType>> type;
+      private final @Nullable Output<Either<String,ParameterType>> type;
 
-    public Input<Either<String,ParameterType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ParameterType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ParameterDefinitionsValueArgs(
-        @Nullable Input<List<Object>> allowedValues,
-        @Nullable Input<Object> defaultValue,
-        @Nullable Input<ParameterDefinitionsValueMetadataArgs> metadata,
-        @Nullable Input<Either<String,ParameterType>> type) {
+        @Nullable Output<List<Object>> allowedValues,
+        @Nullable Output<Object> defaultValue,
+        @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata,
+        @Nullable Output<Either<String,ParameterType>> type) {
         this.allowedValues = allowedValues;
         this.defaultValue = defaultValue;
         this.metadata = metadata;
@@ -79,10 +79,10 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     }
 
     private ParameterDefinitionsValueArgs() {
-        this.allowedValues = Input.empty();
-        this.defaultValue = Input.empty();
-        this.metadata = Input.empty();
-        this.type = Input.empty();
+        this.allowedValues = Output.empty();
+        this.defaultValue = Output.empty();
+        this.metadata = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> allowedValues;
-        private @Nullable Input<Object> defaultValue;
-        private @Nullable Input<ParameterDefinitionsValueMetadataArgs> metadata;
-        private @Nullable Input<Either<String,ParameterType>> type;
+        private @Nullable Output<List<Object>> allowedValues;
+        private @Nullable Output<Object> defaultValue;
+        private @Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata;
+        private @Nullable Output<Either<String,ParameterType>> type;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class ParameterDefinitionsValueArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder allowedValues(@Nullable Input<List<Object>> allowedValues) {
+        public Builder allowedValues(@Nullable Output<List<Object>> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
         public Builder allowedValues(@Nullable List<Object> allowedValues) {
-            this.allowedValues = Input.ofNullable(allowedValues);
+            this.allowedValues = Output.ofNullable(allowedValues);
             return this;
         }
 
-        public Builder defaultValue(@Nullable Input<Object> defaultValue) {
+        public Builder defaultValue(@Nullable Output<Object> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Input.ofNullable(defaultValue);
+            this.defaultValue = Output.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<ParameterDefinitionsValueMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Output<ParameterDefinitionsValueMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable ParameterDefinitionsValueMetadataArgs metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,ParameterType>> type) {
+        public Builder type(@Nullable Output<Either<String,ParameterType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ParameterType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ParameterDefinitionsValueArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoStorageContainerName")
-      private final @Nullable Input<String> autoStorageContainerName;
+      private final @Nullable Output<String> autoStorageContainerName;
 
-    public Input<String> getAutoStorageContainerName() {
-        return this.autoStorageContainerName == null ? Input.empty() : this.autoStorageContainerName;
+    public Output<String> getAutoStorageContainerName() {
+        return this.autoStorageContainerName == null ? Output.empty() : this.autoStorageContainerName;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobPrefix")
-      private final @Nullable Input<String> blobPrefix;
+      private final @Nullable Output<String> blobPrefix;
 
-    public Input<String> getBlobPrefix() {
-        return this.blobPrefix == null ? Input.empty() : this.blobPrefix;
+    public Output<String> getBlobPrefix() {
+        return this.blobPrefix == null ? Output.empty() : this.blobPrefix;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileMode")
-      private final @Nullable Input<String> fileMode;
+      private final @Nullable Output<String> fileMode;
 
-    public Input<String> getFileMode() {
-        return this.fileMode == null ? Input.empty() : this.fileMode;
+    public Output<String> getFileMode() {
+        return this.fileMode == null ? Output.empty() : this.fileMode;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filePath")
-      private final @Nullable Input<String> filePath;
+      private final @Nullable Output<String> filePath;
 
-    public Input<String> getFilePath() {
-        return this.filePath == null ? Input.empty() : this.filePath;
+    public Output<String> getFilePath() {
+        return this.filePath == null ? Output.empty() : this.filePath;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpUrl")
-      private final @Nullable Input<String> httpUrl;
+      private final @Nullable Output<String> httpUrl;
 
-    public Input<String> getHttpUrl() {
-        return this.httpUrl == null ? Input.empty() : this.httpUrl;
+    public Output<String> getHttpUrl() {
+        return this.httpUrl == null ? Output.empty() : this.httpUrl;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageContainerUrl")
-      private final @Nullable Input<String> storageContainerUrl;
+      private final @Nullable Output<String> storageContainerUrl;
 
-    public Input<String> getStorageContainerUrl() {
-        return this.storageContainerUrl == null ? Input.empty() : this.storageContainerUrl;
+    public Output<String> getStorageContainerUrl() {
+        return this.storageContainerUrl == null ? Output.empty() : this.storageContainerUrl;
     }
 
     public ResourceFileArgs(
-        @Nullable Input<String> autoStorageContainerName,
-        @Nullable Input<String> blobPrefix,
-        @Nullable Input<String> fileMode,
-        @Nullable Input<String> filePath,
-        @Nullable Input<String> httpUrl,
-        @Nullable Input<String> storageContainerUrl) {
+        @Nullable Output<String> autoStorageContainerName,
+        @Nullable Output<String> blobPrefix,
+        @Nullable Output<String> fileMode,
+        @Nullable Output<String> filePath,
+        @Nullable Output<String> httpUrl,
+        @Nullable Output<String> storageContainerUrl) {
         this.autoStorageContainerName = autoStorageContainerName;
         this.blobPrefix = blobPrefix;
         this.fileMode = fileMode;
@@ -96,12 +96,12 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceFileArgs() {
-        this.autoStorageContainerName = Input.empty();
-        this.blobPrefix = Input.empty();
-        this.fileMode = Input.empty();
-        this.filePath = Input.empty();
-        this.httpUrl = Input.empty();
-        this.storageContainerUrl = Input.empty();
+        this.autoStorageContainerName = Output.empty();
+        this.blobPrefix = Output.empty();
+        this.fileMode = Output.empty();
+        this.filePath = Output.empty();
+        this.httpUrl = Output.empty();
+        this.storageContainerUrl = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> autoStorageContainerName;
-        private @Nullable Input<String> blobPrefix;
-        private @Nullable Input<String> fileMode;
-        private @Nullable Input<String> filePath;
-        private @Nullable Input<String> httpUrl;
-        private @Nullable Input<String> storageContainerUrl;
+        private @Nullable Output<String> autoStorageContainerName;
+        private @Nullable Output<String> blobPrefix;
+        private @Nullable Output<String> fileMode;
+        private @Nullable Output<String> filePath;
+        private @Nullable Output<String> httpUrl;
+        private @Nullable Output<String> storageContainerUrl;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class ResourceFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageContainerUrl = defaults.storageContainerUrl;
         }
 
-        public Builder autoStorageContainerName(@Nullable Input<String> autoStorageContainerName) {
+        public Builder autoStorageContainerName(@Nullable Output<String> autoStorageContainerName) {
             this.autoStorageContainerName = autoStorageContainerName;
             return this;
         }
 
         public Builder autoStorageContainerName(@Nullable String autoStorageContainerName) {
-            this.autoStorageContainerName = Input.ofNullable(autoStorageContainerName);
+            this.autoStorageContainerName = Output.ofNullable(autoStorageContainerName);
             return this;
         }
 
-        public Builder blobPrefix(@Nullable Input<String> blobPrefix) {
+        public Builder blobPrefix(@Nullable Output<String> blobPrefix) {
             this.blobPrefix = blobPrefix;
             return this;
         }
 
         public Builder blobPrefix(@Nullable String blobPrefix) {
-            this.blobPrefix = Input.ofNullable(blobPrefix);
+            this.blobPrefix = Output.ofNullable(blobPrefix);
             return this;
         }
 
-        public Builder fileMode(@Nullable Input<String> fileMode) {
+        public Builder fileMode(@Nullable Output<String> fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
         public Builder fileMode(@Nullable String fileMode) {
-            this.fileMode = Input.ofNullable(fileMode);
+            this.fileMode = Output.ofNullable(fileMode);
             return this;
         }
 
-        public Builder filePath(@Nullable Input<String> filePath) {
+        public Builder filePath(@Nullable Output<String> filePath) {
             this.filePath = filePath;
             return this;
         }
 
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = Input.ofNullable(filePath);
+            this.filePath = Output.ofNullable(filePath);
             return this;
         }
 
-        public Builder httpUrl(@Nullable Input<String> httpUrl) {
+        public Builder httpUrl(@Nullable Output<String> httpUrl) {
             this.httpUrl = httpUrl;
             return this;
         }
 
         public Builder httpUrl(@Nullable String httpUrl) {
-            this.httpUrl = Input.ofNullable(httpUrl);
+            this.httpUrl = Output.ofNullable(httpUrl);
             return this;
         }
 
-        public Builder storageContainerUrl(@Nullable Input<String> storageContainerUrl) {
+        public Builder storageContainerUrl(@Nullable Output<String> storageContainerUrl) {
             this.storageContainerUrl = storageContainerUrl;
             return this;
         }
 
         public Builder storageContainerUrl(@Nullable String storageContainerUrl) {
-            this.storageContainerUrl = Input.ofNullable(storageContainerUrl);
+            this.storageContainerUrl = Output.ofNullable(storageContainerUrl);
             return this;
         }
         public ResourceFileArgs build() {

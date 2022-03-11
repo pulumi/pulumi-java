@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices;
 
 import io.pulumi.azurenative.labservices.inputs.RecurrencePatternArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-      private final Input<String> labName;
+      private final Output<String> labName;
 
-    public Input<String> getLabName() {
+    public Output<String> getLabName() {
         return this.labName;
     }
 
@@ -31,10 +31,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notes")
-      private final @Nullable Input<String> notes;
+      private final @Nullable Output<String> notes;
 
-    public Input<String> getNotes() {
-        return this.notes == null ? Input.empty() : this.notes;
+    public Output<String> getNotes() {
+        return this.notes == null ? Output.empty() : this.notes;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrencePattern")
-      private final @Nullable Input<RecurrencePatternArgs> recurrencePattern;
+      private final @Nullable Output<RecurrencePatternArgs> recurrencePattern;
 
-    public Input<RecurrencePatternArgs> getRecurrencePattern() {
-        return this.recurrencePattern == null ? Input.empty() : this.recurrencePattern;
+    public Output<RecurrencePatternArgs> getRecurrencePattern() {
+        return this.recurrencePattern == null ? Output.empty() : this.recurrencePattern;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,10 +64,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleName")
-      private final @Nullable Input<String> scheduleName;
+      private final @Nullable Output<String> scheduleName;
 
-    public Input<String> getScheduleName() {
-        return this.scheduleName == null ? Input.empty() : this.scheduleName;
+    public Output<String> getScheduleName() {
+        return this.scheduleName == null ? Output.empty() : this.scheduleName;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startAt")
-      private final @Nullable Input<String> startAt;
+      private final @Nullable Output<String> startAt;
 
-    public Input<String> getStartAt() {
-        return this.startAt == null ? Input.empty() : this.startAt;
+    public Output<String> getStartAt() {
+        return this.startAt == null ? Output.empty() : this.startAt;
     }
 
     /**
@@ -86,9 +86,9 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stopAt", required=true)
-      private final Input<String> stopAt;
+      private final Output<String> stopAt;
 
-    public Input<String> getStopAt() {
+    public Output<String> getStopAt() {
         return this.stopAt;
     }
 
@@ -97,21 +97,21 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZoneId", required=true)
-      private final Input<String> timeZoneId;
+      private final Output<String> timeZoneId;
 
-    public Input<String> getTimeZoneId() {
+    public Output<String> getTimeZoneId() {
         return this.timeZoneId;
     }
 
     public ScheduleArgs(
-        Input<String> labName,
-        @Nullable Input<String> notes,
-        @Nullable Input<RecurrencePatternArgs> recurrencePattern,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> scheduleName,
-        @Nullable Input<String> startAt,
-        Input<String> stopAt,
-        Input<String> timeZoneId) {
+        Output<String> labName,
+        @Nullable Output<String> notes,
+        @Nullable Output<RecurrencePatternArgs> recurrencePattern,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> scheduleName,
+        @Nullable Output<String> startAt,
+        Output<String> stopAt,
+        Output<String> timeZoneId) {
         this.labName = Objects.requireNonNull(labName, "expected parameter 'labName' to be non-null");
         this.notes = notes;
         this.recurrencePattern = recurrencePattern;
@@ -123,14 +123,14 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.labName = Input.empty();
-        this.notes = Input.empty();
-        this.recurrencePattern = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scheduleName = Input.empty();
-        this.startAt = Input.empty();
-        this.stopAt = Input.empty();
-        this.timeZoneId = Input.empty();
+        this.labName = Output.empty();
+        this.notes = Output.empty();
+        this.recurrencePattern = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scheduleName = Output.empty();
+        this.startAt = Output.empty();
+        this.stopAt = Output.empty();
+        this.timeZoneId = Output.empty();
     }
 
     public static Builder builder() {
@@ -142,14 +142,14 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> labName;
-        private @Nullable Input<String> notes;
-        private @Nullable Input<RecurrencePatternArgs> recurrencePattern;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> scheduleName;
-        private @Nullable Input<String> startAt;
-        private Input<String> stopAt;
-        private Input<String> timeZoneId;
+        private Output<String> labName;
+        private @Nullable Output<String> notes;
+        private @Nullable Output<RecurrencePatternArgs> recurrencePattern;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> scheduleName;
+        private @Nullable Output<String> startAt;
+        private Output<String> stopAt;
+        private Output<String> timeZoneId;
 
         public Builder() {
     	      // Empty
@@ -167,83 +167,83 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeZoneId = defaults.timeZoneId;
         }
 
-        public Builder labName(Input<String> labName) {
+        public Builder labName(Output<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
         public Builder labName(String labName) {
-            this.labName = Input.of(Objects.requireNonNull(labName));
+            this.labName = Output.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder notes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Output<String> notes) {
             this.notes = notes;
             return this;
         }
 
         public Builder notes(@Nullable String notes) {
-            this.notes = Input.ofNullable(notes);
+            this.notes = Output.ofNullable(notes);
             return this;
         }
 
-        public Builder recurrencePattern(@Nullable Input<RecurrencePatternArgs> recurrencePattern) {
+        public Builder recurrencePattern(@Nullable Output<RecurrencePatternArgs> recurrencePattern) {
             this.recurrencePattern = recurrencePattern;
             return this;
         }
 
         public Builder recurrencePattern(@Nullable RecurrencePatternArgs recurrencePattern) {
-            this.recurrencePattern = Input.ofNullable(recurrencePattern);
+            this.recurrencePattern = Output.ofNullable(recurrencePattern);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scheduleName(@Nullable Input<String> scheduleName) {
+        public Builder scheduleName(@Nullable Output<String> scheduleName) {
             this.scheduleName = scheduleName;
             return this;
         }
 
         public Builder scheduleName(@Nullable String scheduleName) {
-            this.scheduleName = Input.ofNullable(scheduleName);
+            this.scheduleName = Output.ofNullable(scheduleName);
             return this;
         }
 
-        public Builder startAt(@Nullable Input<String> startAt) {
+        public Builder startAt(@Nullable Output<String> startAt) {
             this.startAt = startAt;
             return this;
         }
 
         public Builder startAt(@Nullable String startAt) {
-            this.startAt = Input.ofNullable(startAt);
+            this.startAt = Output.ofNullable(startAt);
             return this;
         }
 
-        public Builder stopAt(Input<String> stopAt) {
+        public Builder stopAt(Output<String> stopAt) {
             this.stopAt = Objects.requireNonNull(stopAt);
             return this;
         }
 
         public Builder stopAt(String stopAt) {
-            this.stopAt = Input.of(Objects.requireNonNull(stopAt));
+            this.stopAt = Output.of(Objects.requireNonNull(stopAt));
             return this;
         }
 
-        public Builder timeZoneId(Input<String> timeZoneId) {
+        public Builder timeZoneId(Output<String> timeZoneId) {
             this.timeZoneId = Objects.requireNonNull(timeZoneId);
             return this;
         }
 
         public Builder timeZoneId(String timeZoneId) {
-            this.timeZoneId = Input.of(Objects.requireNonNull(timeZoneId));
+            this.timeZoneId = Output.of(Objects.requireNonNull(timeZoneId));
             return this;
         }
         public ScheduleArgs build() {

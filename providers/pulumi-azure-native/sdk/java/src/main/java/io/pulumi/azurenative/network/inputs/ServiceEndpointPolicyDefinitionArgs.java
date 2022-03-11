@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="service")
-      private final @Nullable Input<String> service;
+      private final @Nullable Output<String> service;
 
-    public Input<String> getService() {
-        return this.service == null ? Input.empty() : this.service;
+    public Output<String> getService() {
+        return this.service == null ? Output.empty() : this.service;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceResources")
-      private final @Nullable Input<List<String>> serviceResources;
+      private final @Nullable Output<List<String>> serviceResources;
 
-    public Input<List<String>> getServiceResources() {
-        return this.serviceResources == null ? Input.empty() : this.serviceResources;
+    public Output<List<String>> getServiceResources() {
+        return this.serviceResources == null ? Output.empty() : this.serviceResources;
     }
 
     public ServiceEndpointPolicyDefinitionArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<String> service,
-        @Nullable Input<List<String>> serviceResources) {
+        @Nullable Output<String> description,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<String> service,
+        @Nullable Output<List<String>> serviceResources) {
         this.description = description;
         this.id = id;
         this.name = name;
@@ -88,11 +88,11 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
     }
 
     private ServiceEndpointPolicyDefinitionArgs() {
-        this.description = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.service = Input.empty();
-        this.serviceResources = Input.empty();
+        this.description = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.service = Output.empty();
+        this.serviceResources = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> service;
-        private @Nullable Input<List<String>> serviceResources;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> service;
+        private @Nullable Output<List<String>> serviceResources;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class ServiceEndpointPolicyDefinitionArgs extends io.pulumi.resourc
     	      this.serviceResources = defaults.serviceResources;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder service(@Nullable Input<String> service) {
+        public Builder service(@Nullable Output<String> service) {
             this.service = service;
             return this;
         }
 
         public Builder service(@Nullable String service) {
-            this.service = Input.ofNullable(service);
+            this.service = Output.ofNullable(service);
             return this;
         }
 
-        public Builder serviceResources(@Nullable Input<List<String>> serviceResources) {
+        public Builder serviceResources(@Nullable Output<List<String>> serviceResources) {
             this.serviceResources = serviceResources;
             return this;
         }
 
         public Builder serviceResources(@Nullable List<String> serviceResources) {
-            this.serviceResources = Input.ofNullable(serviceResources);
+            this.serviceResources = Output.ofNullable(serviceResources);
             return this;
         }
         public ServiceEndpointPolicyDefinitionArgs build() {

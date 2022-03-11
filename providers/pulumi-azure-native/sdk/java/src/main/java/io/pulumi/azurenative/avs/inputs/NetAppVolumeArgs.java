@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nfsFilePath")
-      private final @Nullable Input<String> nfsFilePath;
+      private final @Nullable Output<String> nfsFilePath;
 
-    public Input<String> getNfsFilePath() {
-        return this.nfsFilePath == null ? Input.empty() : this.nfsFilePath;
+    public Output<String> getNfsFilePath() {
+        return this.nfsFilePath == null ? Output.empty() : this.nfsFilePath;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nfsProviderIp")
-      private final @Nullable Input<String> nfsProviderIp;
+      private final @Nullable Output<String> nfsProviderIp;
 
-    public Input<String> getNfsProviderIp() {
-        return this.nfsProviderIp == null ? Input.empty() : this.nfsProviderIp;
+    public Output<String> getNfsProviderIp() {
+        return this.nfsProviderIp == null ? Output.empty() : this.nfsProviderIp;
     }
 
     public NetAppVolumeArgs(
-        @Nullable Input<String> nfsFilePath,
-        @Nullable Input<String> nfsProviderIp) {
+        @Nullable Output<String> nfsFilePath,
+        @Nullable Output<String> nfsProviderIp) {
         this.nfsFilePath = nfsFilePath;
         this.nfsProviderIp = nfsProviderIp;
     }
 
     private NetAppVolumeArgs() {
-        this.nfsFilePath = Input.empty();
-        this.nfsProviderIp = Input.empty();
+        this.nfsFilePath = Output.empty();
+        this.nfsProviderIp = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> nfsFilePath;
-        private @Nullable Input<String> nfsProviderIp;
+        private @Nullable Output<String> nfsFilePath;
+        private @Nullable Output<String> nfsProviderIp;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class NetAppVolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nfsProviderIp = defaults.nfsProviderIp;
         }
 
-        public Builder nfsFilePath(@Nullable Input<String> nfsFilePath) {
+        public Builder nfsFilePath(@Nullable Output<String> nfsFilePath) {
             this.nfsFilePath = nfsFilePath;
             return this;
         }
 
         public Builder nfsFilePath(@Nullable String nfsFilePath) {
-            this.nfsFilePath = Input.ofNullable(nfsFilePath);
+            this.nfsFilePath = Output.ofNullable(nfsFilePath);
             return this;
         }
 
-        public Builder nfsProviderIp(@Nullable Input<String> nfsProviderIp) {
+        public Builder nfsProviderIp(@Nullable Output<String> nfsProviderIp) {
             this.nfsProviderIp = nfsProviderIp;
             return this;
         }
 
         public Builder nfsProviderIp(@Nullable String nfsProviderIp) {
-            this.nfsProviderIp = Input.ofNullable(nfsProviderIp);
+            this.nfsProviderIp = Output.ofNullable(nfsProviderIp);
             return this;
         }
         public NetAppVolumeArgs build() {

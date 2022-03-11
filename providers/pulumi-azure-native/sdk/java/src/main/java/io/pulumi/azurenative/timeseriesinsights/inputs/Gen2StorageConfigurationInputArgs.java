@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -33,22 +33,22 @@ public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="managementKey", required=true)
-      private final Input<String> managementKey;
+      private final Output<String> managementKey;
 
-    public Input<String> getManagementKey() {
+    public Output<String> getManagementKey() {
         return this.managementKey;
     }
 
     public Gen2StorageConfigurationInputArgs(
-        Input<String> accountName,
-        Input<String> managementKey) {
+        Output<String> accountName,
+        Output<String> managementKey) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.managementKey = Objects.requireNonNull(managementKey, "expected parameter 'managementKey' to be non-null");
     }
 
     private Gen2StorageConfigurationInputArgs() {
-        this.accountName = Input.empty();
-        this.managementKey = Input.empty();
+        this.accountName = Output.empty();
+        this.managementKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private Input<String> managementKey;
+        private Output<String> accountName;
+        private Output<String> managementKey;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class Gen2StorageConfigurationInputArgs extends io.pulumi.resources
     	      this.managementKey = defaults.managementKey;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder managementKey(Input<String> managementKey) {
+        public Builder managementKey(Output<String> managementKey) {
             this.managementKey = Objects.requireNonNull(managementKey);
             return this;
         }
 
         public Builder managementKey(String managementKey) {
-            this.managementKey = Input.of(Objects.requireNonNull(managementKey));
+            this.managementKey = Output.of(Objects.requireNonNull(managementKey));
             return this;
         }
         public Gen2StorageConfigurationInputArgs build() {

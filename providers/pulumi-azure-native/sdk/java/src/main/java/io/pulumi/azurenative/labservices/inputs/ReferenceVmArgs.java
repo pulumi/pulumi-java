@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ReferenceVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ReferenceVmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-      private final Input<String> userName;
+      private final Output<String> userName;
 
-    public Input<String> getUserName() {
+    public Output<String> getUserName() {
         return this.userName;
     }
 
     public ReferenceVmArgs(
-        @Nullable Input<String> password,
-        Input<String> userName) {
+        @Nullable Output<String> password,
+        Output<String> userName) {
         this.password = password;
         this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
     }
 
     private ReferenceVmArgs() {
-        this.password = Input.empty();
-        this.userName = Input.empty();
+        this.password = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ReferenceVmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> password;
-        private Input<String> userName;
+        private @Nullable Output<String> password;
+        private Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ReferenceVmArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder userName(Input<String> userName) {
+        public Builder userName(Output<String> userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
         public Builder userName(String userName) {
-            this.userName = Input.of(Objects.requireNonNull(userName));
+            this.userName = Output.of(Objects.requireNonNull(userName));
             return this;
         }
         public ReferenceVmArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.HostType;
 import io.pulumi.azurenative.web.enums.SslState;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hostType")
-      private final @Nullable Input<HostType> hostType;
+      private final @Nullable Output<HostType> hostType;
 
-    public Input<HostType> getHostType() {
-        return this.hostType == null ? Input.empty() : this.hostType;
+    public Output<HostType> getHostType() {
+        return this.hostType == null ? Output.empty() : this.hostType;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sslState")
-      private final @Nullable Input<SslState> sslState;
+      private final @Nullable Output<SslState> sslState;
 
-    public Input<SslState> getSslState() {
-        return this.sslState == null ? Input.empty() : this.sslState;
+    public Output<SslState> getSslState() {
+        return this.sslState == null ? Output.empty() : this.sslState;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="thumbprint")
-      private final @Nullable Input<String> thumbprint;
+      private final @Nullable Output<String> thumbprint;
 
-    public Input<String> getThumbprint() {
-        return this.thumbprint == null ? Input.empty() : this.thumbprint;
+    public Output<String> getThumbprint() {
+        return this.thumbprint == null ? Output.empty() : this.thumbprint;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="toUpdate")
-      private final @Nullable Input<Boolean> toUpdate;
+      private final @Nullable Output<Boolean> toUpdate;
 
-    public Input<Boolean> getToUpdate() {
-        return this.toUpdate == null ? Input.empty() : this.toUpdate;
+    public Output<Boolean> getToUpdate() {
+        return this.toUpdate == null ? Output.empty() : this.toUpdate;
     }
 
     /**
@@ -81,19 +81,19 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="virtualIP")
-      private final @Nullable Input<String> virtualIP;
+      private final @Nullable Output<String> virtualIP;
 
-    public Input<String> getVirtualIP() {
-        return this.virtualIP == null ? Input.empty() : this.virtualIP;
+    public Output<String> getVirtualIP() {
+        return this.virtualIP == null ? Output.empty() : this.virtualIP;
     }
 
     public HostNameSslStateArgs(
-        @Nullable Input<HostType> hostType,
-        @Nullable Input<String> name,
-        @Nullable Input<SslState> sslState,
-        @Nullable Input<String> thumbprint,
-        @Nullable Input<Boolean> toUpdate,
-        @Nullable Input<String> virtualIP) {
+        @Nullable Output<HostType> hostType,
+        @Nullable Output<String> name,
+        @Nullable Output<SslState> sslState,
+        @Nullable Output<String> thumbprint,
+        @Nullable Output<Boolean> toUpdate,
+        @Nullable Output<String> virtualIP) {
         this.hostType = hostType;
         this.name = name;
         this.sslState = sslState;
@@ -103,12 +103,12 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HostNameSslStateArgs() {
-        this.hostType = Input.empty();
-        this.name = Input.empty();
-        this.sslState = Input.empty();
-        this.thumbprint = Input.empty();
-        this.toUpdate = Input.empty();
-        this.virtualIP = Input.empty();
+        this.hostType = Output.empty();
+        this.name = Output.empty();
+        this.sslState = Output.empty();
+        this.thumbprint = Output.empty();
+        this.toUpdate = Output.empty();
+        this.virtualIP = Output.empty();
     }
 
     public static Builder builder() {
@@ -120,12 +120,12 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<HostType> hostType;
-        private @Nullable Input<String> name;
-        private @Nullable Input<SslState> sslState;
-        private @Nullable Input<String> thumbprint;
-        private @Nullable Input<Boolean> toUpdate;
-        private @Nullable Input<String> virtualIP;
+        private @Nullable Output<HostType> hostType;
+        private @Nullable Output<String> name;
+        private @Nullable Output<SslState> sslState;
+        private @Nullable Output<String> thumbprint;
+        private @Nullable Output<Boolean> toUpdate;
+        private @Nullable Output<String> virtualIP;
 
         public Builder() {
     	      // Empty
@@ -141,63 +141,63 @@ public final class HostNameSslStateArgs extends io.pulumi.resources.ResourceArgs
     	      this.virtualIP = defaults.virtualIP;
         }
 
-        public Builder hostType(@Nullable Input<HostType> hostType) {
+        public Builder hostType(@Nullable Output<HostType> hostType) {
             this.hostType = hostType;
             return this;
         }
 
         public Builder hostType(@Nullable HostType hostType) {
-            this.hostType = Input.ofNullable(hostType);
+            this.hostType = Output.ofNullable(hostType);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sslState(@Nullable Input<SslState> sslState) {
+        public Builder sslState(@Nullable Output<SslState> sslState) {
             this.sslState = sslState;
             return this;
         }
 
         public Builder sslState(@Nullable SslState sslState) {
-            this.sslState = Input.ofNullable(sslState);
+            this.sslState = Output.ofNullable(sslState);
             return this;
         }
 
-        public Builder thumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Output<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Input.ofNullable(thumbprint);
+            this.thumbprint = Output.ofNullable(thumbprint);
             return this;
         }
 
-        public Builder toUpdate(@Nullable Input<Boolean> toUpdate) {
+        public Builder toUpdate(@Nullable Output<Boolean> toUpdate) {
             this.toUpdate = toUpdate;
             return this;
         }
 
         public Builder toUpdate(@Nullable Boolean toUpdate) {
-            this.toUpdate = Input.ofNullable(toUpdate);
+            this.toUpdate = Output.ofNullable(toUpdate);
             return this;
         }
 
-        public Builder virtualIP(@Nullable Input<String> virtualIP) {
+        public Builder virtualIP(@Nullable Output<String> virtualIP) {
             this.virtualIP = virtualIP;
             return this;
         }
 
         public Builder virtualIP(@Nullable String virtualIP) {
-            this.virtualIP = Input.ofNullable(virtualIP);
+            this.virtualIP = Output.ofNullable(virtualIP);
             return this;
         }
         public HostNameSslStateArgs build() {

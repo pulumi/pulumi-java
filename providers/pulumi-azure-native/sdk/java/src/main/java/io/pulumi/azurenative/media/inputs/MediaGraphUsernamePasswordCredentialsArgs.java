@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -34,9 +34,9 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -45,25 +45,25 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="username", required=true)
-      private final Input<String> username;
+      private final Output<String> username;
 
-    public Input<String> getUsername() {
+    public Output<String> getUsername() {
         return this.username;
     }
 
     public MediaGraphUsernamePasswordCredentialsArgs(
-        Input<String> odataType,
-        Input<String> password,
-        Input<String> username) {
+        Output<String> odataType,
+        Output<String> password,
+        Output<String> username) {
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
         this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
     }
 
     private MediaGraphUsernamePasswordCredentialsArgs() {
-        this.odataType = Input.empty();
-        this.password = Input.empty();
-        this.username = Input.empty();
+        this.odataType = Output.empty();
+        this.password = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private Input<String> odataType;
-        private Input<String> password;
-        private Input<String> username;
+        private Output<String> odataType;
+        private Output<String> password;
+        private Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
     	      this.username = defaults.username;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder username(Input<String> username) {
+        public Builder username(Output<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
         public Builder username(String username) {
-            this.username = Input.of(Objects.requireNonNull(username));
+            this.username = Output.of(Objects.requireNonNull(username));
             return this;
         }
         public MediaGraphUsernamePasswordCredentialsArgs build() {

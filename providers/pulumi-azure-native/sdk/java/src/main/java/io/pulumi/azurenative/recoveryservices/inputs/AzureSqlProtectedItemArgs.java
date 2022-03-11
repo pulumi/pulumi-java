@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.enums.DataSourceType;
 import io.pulumi.azurenative.recoveryservices.enums.ProtectedItemState;
 import io.pulumi.azurenative.recoveryservices.inputs.AzureSqlProtectedItemExtendedInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="backupManagementType")
-      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Input<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
+    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="backupSetName")
-      private final @Nullable Input<String> backupSetName;
+      private final @Nullable Output<String> backupSetName;
 
-    public Input<String> getBackupSetName() {
-        return this.backupSetName == null ? Input.empty() : this.backupSetName;
+    public Output<String> getBackupSetName() {
+        return this.backupSetName == null ? Output.empty() : this.backupSetName;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="containerName")
-      private final @Nullable Input<String> containerName;
+      private final @Nullable Output<String> containerName;
 
-    public Input<String> getContainerName() {
-        return this.containerName == null ? Input.empty() : this.containerName;
+    public Output<String> getContainerName() {
+        return this.containerName == null ? Output.empty() : this.containerName;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="createMode")
-      private final @Nullable Input<Either<String,CreateMode>> createMode;
+      private final @Nullable Output<Either<String,CreateMode>> createMode;
 
-    public Input<Either<String,CreateMode>> getCreateMode() {
-        return this.createMode == null ? Input.empty() : this.createMode;
+    public Output<Either<String,CreateMode>> getCreateMode() {
+        return this.createMode == null ? Output.empty() : this.createMode;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="deferredDeleteTimeInUTC")
-      private final @Nullable Input<String> deferredDeleteTimeInUTC;
+      private final @Nullable Output<String> deferredDeleteTimeInUTC;
 
-    public Input<String> getDeferredDeleteTimeInUTC() {
-        return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
+    public Output<String> getDeferredDeleteTimeInUTC() {
+        return this.deferredDeleteTimeInUTC == null ? Output.empty() : this.deferredDeleteTimeInUTC;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="deferredDeleteTimeRemaining")
-      private final @Nullable Input<String> deferredDeleteTimeRemaining;
+      private final @Nullable Output<String> deferredDeleteTimeRemaining;
 
-    public Input<String> getDeferredDeleteTimeRemaining() {
-        return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
+    public Output<String> getDeferredDeleteTimeRemaining() {
+        return this.deferredDeleteTimeRemaining == null ? Output.empty() : this.deferredDeleteTimeRemaining;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="extendedInfo")
-      private final @Nullable Input<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo;
+      private final @Nullable Output<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo;
 
-    public Input<AzureSqlProtectedItemExtendedInfoArgs> getExtendedInfo() {
-        return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
+    public Output<AzureSqlProtectedItemExtendedInfoArgs> getExtendedInfo() {
+        return this.extendedInfo == null ? Output.empty() : this.extendedInfo;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
-      private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
+      private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
 
-    public Input<Boolean> getIsDeferredDeleteScheduleUpcoming() {
-        return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
+    public Output<Boolean> getIsDeferredDeleteScheduleUpcoming() {
+        return this.isDeferredDeleteScheduleUpcoming == null ? Output.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isRehydrate")
-      private final @Nullable Input<Boolean> isRehydrate;
+      private final @Nullable Output<Boolean> isRehydrate;
 
-    public Input<Boolean> getIsRehydrate() {
-        return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
+    public Output<Boolean> getIsRehydrate() {
+        return this.isRehydrate == null ? Output.empty() : this.isRehydrate;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isScheduledForDeferredDelete")
-      private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
+      private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
 
-    public Input<Boolean> getIsScheduledForDeferredDelete() {
-        return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
+    public Output<Boolean> getIsScheduledForDeferredDelete() {
+        return this.isScheduledForDeferredDelete == null ? Output.empty() : this.isScheduledForDeferredDelete;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastRecoveryPoint")
-      private final @Nullable Input<String> lastRecoveryPoint;
+      private final @Nullable Output<String> lastRecoveryPoint;
 
-    public Input<String> getLastRecoveryPoint() {
-        return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
+    public Output<String> getLastRecoveryPoint() {
+        return this.lastRecoveryPoint == null ? Output.empty() : this.lastRecoveryPoint;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyId")
-      private final @Nullable Input<String> policyId;
+      private final @Nullable Output<String> policyId;
 
-    public Input<String> getPolicyId() {
-        return this.policyId == null ? Input.empty() : this.policyId;
+    public Output<String> getPolicyId() {
+        return this.policyId == null ? Output.empty() : this.policyId;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="protectedItemDataId")
-      private final @Nullable Input<String> protectedItemDataId;
+      private final @Nullable Output<String> protectedItemDataId;
 
-    public Input<String> getProtectedItemDataId() {
-        return this.protectedItemDataId == null ? Input.empty() : this.protectedItemDataId;
+    public Output<String> getProtectedItemDataId() {
+        return this.protectedItemDataId == null ? Output.empty() : this.protectedItemDataId;
     }
 
     /**
@@ -174,9 +174,9 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="protectedItemType", required=true)
-      private final Input<String> protectedItemType;
+      private final Output<String> protectedItemType;
 
-    public Input<String> getProtectedItemType() {
+    public Output<String> getProtectedItemType() {
         return this.protectedItemType;
     }
 
@@ -185,10 +185,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="protectionState")
-      private final @Nullable Input<Either<String,ProtectedItemState>> protectionState;
+      private final @Nullable Output<Either<String,ProtectedItemState>> protectionState;
 
-    public Input<Either<String,ProtectedItemState>> getProtectionState() {
-        return this.protectionState == null ? Input.empty() : this.protectionState;
+    public Output<Either<String,ProtectedItemState>> getProtectionState() {
+        return this.protectionState == null ? Output.empty() : this.protectionState;
     }
 
     /**
@@ -196,10 +196,10 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceResourceId")
-      private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Output<String> sourceResourceId;
 
-    public Input<String> getSourceResourceId() {
-        return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
+    public Output<String> getSourceResourceId() {
+        return this.sourceResourceId == null ? Output.empty() : this.sourceResourceId;
     }
 
     /**
@@ -207,30 +207,30 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="workloadType")
-      private final @Nullable Input<Either<String,DataSourceType>> workloadType;
+      private final @Nullable Output<Either<String,DataSourceType>> workloadType;
 
-    public Input<Either<String,DataSourceType>> getWorkloadType() {
-        return this.workloadType == null ? Input.empty() : this.workloadType;
+    public Output<Either<String,DataSourceType>> getWorkloadType() {
+        return this.workloadType == null ? Output.empty() : this.workloadType;
     }
 
     public AzureSqlProtectedItemArgs(
-        @Nullable Input<Either<String,BackupManagementType>> backupManagementType,
-        @Nullable Input<String> backupSetName,
-        @Nullable Input<String> containerName,
-        @Nullable Input<Either<String,CreateMode>> createMode,
-        @Nullable Input<String> deferredDeleteTimeInUTC,
-        @Nullable Input<String> deferredDeleteTimeRemaining,
-        @Nullable Input<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo,
-        @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming,
-        @Nullable Input<Boolean> isRehydrate,
-        @Nullable Input<Boolean> isScheduledForDeferredDelete,
-        @Nullable Input<String> lastRecoveryPoint,
-        @Nullable Input<String> policyId,
-        @Nullable Input<String> protectedItemDataId,
-        Input<String> protectedItemType,
-        @Nullable Input<Either<String,ProtectedItemState>> protectionState,
-        @Nullable Input<String> sourceResourceId,
-        @Nullable Input<Either<String,DataSourceType>> workloadType) {
+        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
+        @Nullable Output<String> backupSetName,
+        @Nullable Output<String> containerName,
+        @Nullable Output<Either<String,CreateMode>> createMode,
+        @Nullable Output<String> deferredDeleteTimeInUTC,
+        @Nullable Output<String> deferredDeleteTimeRemaining,
+        @Nullable Output<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo,
+        @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming,
+        @Nullable Output<Boolean> isRehydrate,
+        @Nullable Output<Boolean> isScheduledForDeferredDelete,
+        @Nullable Output<String> lastRecoveryPoint,
+        @Nullable Output<String> policyId,
+        @Nullable Output<String> protectedItemDataId,
+        Output<String> protectedItemType,
+        @Nullable Output<Either<String,ProtectedItemState>> protectionState,
+        @Nullable Output<String> sourceResourceId,
+        @Nullable Output<Either<String,DataSourceType>> workloadType) {
         this.backupManagementType = backupManagementType;
         this.backupSetName = backupSetName;
         this.containerName = containerName;
@@ -251,23 +251,23 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
     }
 
     private AzureSqlProtectedItemArgs() {
-        this.backupManagementType = Input.empty();
-        this.backupSetName = Input.empty();
-        this.containerName = Input.empty();
-        this.createMode = Input.empty();
-        this.deferredDeleteTimeInUTC = Input.empty();
-        this.deferredDeleteTimeRemaining = Input.empty();
-        this.extendedInfo = Input.empty();
-        this.isDeferredDeleteScheduleUpcoming = Input.empty();
-        this.isRehydrate = Input.empty();
-        this.isScheduledForDeferredDelete = Input.empty();
-        this.lastRecoveryPoint = Input.empty();
-        this.policyId = Input.empty();
-        this.protectedItemDataId = Input.empty();
-        this.protectedItemType = Input.empty();
-        this.protectionState = Input.empty();
-        this.sourceResourceId = Input.empty();
-        this.workloadType = Input.empty();
+        this.backupManagementType = Output.empty();
+        this.backupSetName = Output.empty();
+        this.containerName = Output.empty();
+        this.createMode = Output.empty();
+        this.deferredDeleteTimeInUTC = Output.empty();
+        this.deferredDeleteTimeRemaining = Output.empty();
+        this.extendedInfo = Output.empty();
+        this.isDeferredDeleteScheduleUpcoming = Output.empty();
+        this.isRehydrate = Output.empty();
+        this.isScheduledForDeferredDelete = Output.empty();
+        this.lastRecoveryPoint = Output.empty();
+        this.policyId = Output.empty();
+        this.protectedItemDataId = Output.empty();
+        this.protectedItemType = Output.empty();
+        this.protectionState = Output.empty();
+        this.sourceResourceId = Output.empty();
+        this.workloadType = Output.empty();
     }
 
     public static Builder builder() {
@@ -279,23 +279,23 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
-        private @Nullable Input<String> backupSetName;
-        private @Nullable Input<String> containerName;
-        private @Nullable Input<Either<String,CreateMode>> createMode;
-        private @Nullable Input<String> deferredDeleteTimeInUTC;
-        private @Nullable Input<String> deferredDeleteTimeRemaining;
-        private @Nullable Input<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo;
-        private @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
-        private @Nullable Input<Boolean> isRehydrate;
-        private @Nullable Input<Boolean> isScheduledForDeferredDelete;
-        private @Nullable Input<String> lastRecoveryPoint;
-        private @Nullable Input<String> policyId;
-        private @Nullable Input<String> protectedItemDataId;
-        private Input<String> protectedItemType;
-        private @Nullable Input<Either<String,ProtectedItemState>> protectionState;
-        private @Nullable Input<String> sourceResourceId;
-        private @Nullable Input<Either<String,DataSourceType>> workloadType;
+        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+        private @Nullable Output<String> backupSetName;
+        private @Nullable Output<String> containerName;
+        private @Nullable Output<Either<String,CreateMode>> createMode;
+        private @Nullable Output<String> deferredDeleteTimeInUTC;
+        private @Nullable Output<String> deferredDeleteTimeRemaining;
+        private @Nullable Output<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo;
+        private @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
+        private @Nullable Output<Boolean> isRehydrate;
+        private @Nullable Output<Boolean> isScheduledForDeferredDelete;
+        private @Nullable Output<String> lastRecoveryPoint;
+        private @Nullable Output<String> policyId;
+        private @Nullable Output<String> protectedItemDataId;
+        private Output<String> protectedItemType;
+        private @Nullable Output<Either<String,ProtectedItemState>> protectionState;
+        private @Nullable Output<String> sourceResourceId;
+        private @Nullable Output<Either<String,DataSourceType>> workloadType;
 
         public Builder() {
     	      // Empty
@@ -322,173 +322,173 @@ public final class AzureSqlProtectedItemArgs extends io.pulumi.resources.Resourc
     	      this.workloadType = defaults.workloadType;
         }
 
-        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Input.ofNullable(backupManagementType);
+            this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder backupSetName(@Nullable Input<String> backupSetName) {
+        public Builder backupSetName(@Nullable Output<String> backupSetName) {
             this.backupSetName = backupSetName;
             return this;
         }
 
         public Builder backupSetName(@Nullable String backupSetName) {
-            this.backupSetName = Input.ofNullable(backupSetName);
+            this.backupSetName = Output.ofNullable(backupSetName);
             return this;
         }
 
-        public Builder containerName(@Nullable Input<String> containerName) {
+        public Builder containerName(@Nullable Output<String> containerName) {
             this.containerName = containerName;
             return this;
         }
 
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Input.ofNullable(containerName);
+            this.containerName = Output.ofNullable(containerName);
             return this;
         }
 
-        public Builder createMode(@Nullable Input<Either<String,CreateMode>> createMode) {
+        public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
             this.createMode = createMode;
             return this;
         }
 
         public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
-            this.createMode = Input.ofNullable(createMode);
+            this.createMode = Output.ofNullable(createMode);
             return this;
         }
 
-        public Builder deferredDeleteTimeInUTC(@Nullable Input<String> deferredDeleteTimeInUTC) {
+        public Builder deferredDeleteTimeInUTC(@Nullable Output<String> deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
 
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
-            this.deferredDeleteTimeInUTC = Input.ofNullable(deferredDeleteTimeInUTC);
+            this.deferredDeleteTimeInUTC = Output.ofNullable(deferredDeleteTimeInUTC);
             return this;
         }
 
-        public Builder deferredDeleteTimeRemaining(@Nullable Input<String> deferredDeleteTimeRemaining) {
+        public Builder deferredDeleteTimeRemaining(@Nullable Output<String> deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
 
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
-            this.deferredDeleteTimeRemaining = Input.ofNullable(deferredDeleteTimeRemaining);
+            this.deferredDeleteTimeRemaining = Output.ofNullable(deferredDeleteTimeRemaining);
             return this;
         }
 
-        public Builder extendedInfo(@Nullable Input<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo) {
+        public Builder extendedInfo(@Nullable Output<AzureSqlProtectedItemExtendedInfoArgs> extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
         public Builder extendedInfo(@Nullable AzureSqlProtectedItemExtendedInfoArgs extendedInfo) {
-            this.extendedInfo = Input.ofNullable(extendedInfo);
+            this.extendedInfo = Output.ofNullable(extendedInfo);
             return this;
         }
 
-        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming) {
+        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
 
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
-            this.isDeferredDeleteScheduleUpcoming = Input.ofNullable(isDeferredDeleteScheduleUpcoming);
+            this.isDeferredDeleteScheduleUpcoming = Output.ofNullable(isDeferredDeleteScheduleUpcoming);
             return this;
         }
 
-        public Builder isRehydrate(@Nullable Input<Boolean> isRehydrate) {
+        public Builder isRehydrate(@Nullable Output<Boolean> isRehydrate) {
             this.isRehydrate = isRehydrate;
             return this;
         }
 
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
-            this.isRehydrate = Input.ofNullable(isRehydrate);
+            this.isRehydrate = Output.ofNullable(isRehydrate);
             return this;
         }
 
-        public Builder isScheduledForDeferredDelete(@Nullable Input<Boolean> isScheduledForDeferredDelete) {
+        public Builder isScheduledForDeferredDelete(@Nullable Output<Boolean> isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
 
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
-            this.isScheduledForDeferredDelete = Input.ofNullable(isScheduledForDeferredDelete);
+            this.isScheduledForDeferredDelete = Output.ofNullable(isScheduledForDeferredDelete);
             return this;
         }
 
-        public Builder lastRecoveryPoint(@Nullable Input<String> lastRecoveryPoint) {
+        public Builder lastRecoveryPoint(@Nullable Output<String> lastRecoveryPoint) {
             this.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
 
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
-            this.lastRecoveryPoint = Input.ofNullable(lastRecoveryPoint);
+            this.lastRecoveryPoint = Output.ofNullable(lastRecoveryPoint);
             return this;
         }
 
-        public Builder policyId(@Nullable Input<String> policyId) {
+        public Builder policyId(@Nullable Output<String> policyId) {
             this.policyId = policyId;
             return this;
         }
 
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Input.ofNullable(policyId);
+            this.policyId = Output.ofNullable(policyId);
             return this;
         }
 
-        public Builder protectedItemDataId(@Nullable Input<String> protectedItemDataId) {
+        public Builder protectedItemDataId(@Nullable Output<String> protectedItemDataId) {
             this.protectedItemDataId = protectedItemDataId;
             return this;
         }
 
         public Builder protectedItemDataId(@Nullable String protectedItemDataId) {
-            this.protectedItemDataId = Input.ofNullable(protectedItemDataId);
+            this.protectedItemDataId = Output.ofNullable(protectedItemDataId);
             return this;
         }
 
-        public Builder protectedItemType(Input<String> protectedItemType) {
+        public Builder protectedItemType(Output<String> protectedItemType) {
             this.protectedItemType = Objects.requireNonNull(protectedItemType);
             return this;
         }
 
         public Builder protectedItemType(String protectedItemType) {
-            this.protectedItemType = Input.of(Objects.requireNonNull(protectedItemType));
+            this.protectedItemType = Output.of(Objects.requireNonNull(protectedItemType));
             return this;
         }
 
-        public Builder protectionState(@Nullable Input<Either<String,ProtectedItemState>> protectionState) {
+        public Builder protectionState(@Nullable Output<Either<String,ProtectedItemState>> protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
         public Builder protectionState(@Nullable Either<String,ProtectedItemState> protectionState) {
-            this.protectionState = Input.ofNullable(protectionState);
+            this.protectionState = Output.ofNullable(protectionState);
             return this;
         }
 
-        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Input.ofNullable(sourceResourceId);
+            this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
         }
 
-        public Builder workloadType(@Nullable Input<Either<String,DataSourceType>> workloadType) {
+        public Builder workloadType(@Nullable Output<Either<String,DataSourceType>> workloadType) {
             this.workloadType = workloadType;
             return this;
         }
 
         public Builder workloadType(@Nullable Either<String,DataSourceType> workloadType) {
-            this.workloadType = Input.ofNullable(workloadType);
+            this.workloadType = Output.ofNullable(workloadType);
             return this;
         }
         public AzureSqlProtectedItemArgs build() {

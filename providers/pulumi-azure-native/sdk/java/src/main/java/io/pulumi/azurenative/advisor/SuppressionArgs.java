@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.advisor;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recommendationId", required=true)
-      private final Input<String> recommendationId;
+      private final Output<String> recommendationId;
 
-    public Input<String> getRecommendationId() {
+    public Output<String> getRecommendationId() {
         return this.recommendationId;
     }
 
@@ -41,9 +41,9 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri", required=true)
-      private final Input<String> resourceUri;
+      private final Output<String> resourceUri;
 
-    public Input<String> getResourceUri() {
+    public Output<String> getResourceUri() {
         return this.resourceUri;
     }
 
@@ -52,10 +52,10 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suppressionId")
-      private final @Nullable Input<String> suppressionId;
+      private final @Nullable Output<String> suppressionId;
 
-    public Input<String> getSuppressionId() {
-        return this.suppressionId == null ? Input.empty() : this.suppressionId;
+    public Output<String> getSuppressionId() {
+        return this.suppressionId == null ? Output.empty() : this.suppressionId;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-      private final @Nullable Input<String> ttl;
+      private final @Nullable Output<String> ttl;
 
-    public Input<String> getTtl() {
-        return this.ttl == null ? Input.empty() : this.ttl;
+    public Output<String> getTtl() {
+        return this.ttl == null ? Output.empty() : this.ttl;
     }
 
     public SuppressionArgs(
-        @Nullable Input<String> name,
-        Input<String> recommendationId,
-        Input<String> resourceUri,
-        @Nullable Input<String> suppressionId,
-        @Nullable Input<String> ttl) {
+        @Nullable Output<String> name,
+        Output<String> recommendationId,
+        Output<String> resourceUri,
+        @Nullable Output<String> suppressionId,
+        @Nullable Output<String> ttl) {
         this.name = name;
         this.recommendationId = Objects.requireNonNull(recommendationId, "expected parameter 'recommendationId' to be non-null");
         this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
@@ -83,11 +83,11 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SuppressionArgs() {
-        this.name = Input.empty();
-        this.recommendationId = Input.empty();
-        this.resourceUri = Input.empty();
-        this.suppressionId = Input.empty();
-        this.ttl = Input.empty();
+        this.name = Output.empty();
+        this.recommendationId = Output.empty();
+        this.resourceUri = Output.empty();
+        this.suppressionId = Output.empty();
+        this.ttl = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private Input<String> recommendationId;
-        private Input<String> resourceUri;
-        private @Nullable Input<String> suppressionId;
-        private @Nullable Input<String> ttl;
+        private @Nullable Output<String> name;
+        private Output<String> recommendationId;
+        private Output<String> resourceUri;
+        private @Nullable Output<String> suppressionId;
+        private @Nullable Output<String> ttl;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder recommendationId(Input<String> recommendationId) {
+        public Builder recommendationId(Output<String> recommendationId) {
             this.recommendationId = Objects.requireNonNull(recommendationId);
             return this;
         }
 
         public Builder recommendationId(String recommendationId) {
-            this.recommendationId = Input.of(Objects.requireNonNull(recommendationId));
+            this.recommendationId = Output.of(Objects.requireNonNull(recommendationId));
             return this;
         }
 
-        public Builder resourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Output<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
+            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
             return this;
         }
 
-        public Builder suppressionId(@Nullable Input<String> suppressionId) {
+        public Builder suppressionId(@Nullable Output<String> suppressionId) {
             this.suppressionId = suppressionId;
             return this;
         }
 
         public Builder suppressionId(@Nullable String suppressionId) {
-            this.suppressionId = Input.ofNullable(suppressionId);
+            this.suppressionId = Output.ofNullable(suppressionId);
             return this;
         }
 
-        public Builder ttl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Output<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Input.ofNullable(ttl);
+            this.ttl = Output.ofNullable(ttl);
             return this;
         }
         public SuppressionArgs build() {

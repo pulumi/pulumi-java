@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurestack;
 
 import io.pulumi.azurenative.azurestack.enums.Location;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkedSubscriptionId", required=true)
-      private final Input<String> linkedSubscriptionId;
+      private final Output<String> linkedSubscriptionId;
 
-    public Input<String> getLinkedSubscriptionId() {
+    public Output<String> getLinkedSubscriptionId() {
         return this.linkedSubscriptionId;
     }
 
@@ -32,10 +32,10 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkedSubscriptionName")
-      private final @Nullable Input<String> linkedSubscriptionName;
+      private final @Nullable Output<String> linkedSubscriptionName;
 
-    public Input<String> getLinkedSubscriptionName() {
-        return this.linkedSubscriptionName == null ? Input.empty() : this.linkedSubscriptionName;
+    public Output<String> getLinkedSubscriptionName() {
+        return this.linkedSubscriptionName == null ? Output.empty() : this.linkedSubscriptionName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<Either<String,Location>> location;
+      private final @Nullable Output<Either<String,Location>> location;
 
-    public Input<Either<String,Location>> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<Either<String,Location>> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="registrationResourceId", required=true)
-      private final Input<String> registrationResourceId;
+      private final Output<String> registrationResourceId;
 
-    public Input<String> getRegistrationResourceId() {
+    public Output<String> getRegistrationResourceId() {
         return this.registrationResourceId;
     }
 
@@ -65,18 +65,18 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-      private final Input<String> resourceGroup;
+      private final Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
+    public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
 
     public LinkedSubscriptionArgs(
-        Input<String> linkedSubscriptionId,
-        @Nullable Input<String> linkedSubscriptionName,
-        @Nullable Input<Either<String,Location>> location,
-        Input<String> registrationResourceId,
-        Input<String> resourceGroup) {
+        Output<String> linkedSubscriptionId,
+        @Nullable Output<String> linkedSubscriptionName,
+        @Nullable Output<Either<String,Location>> location,
+        Output<String> registrationResourceId,
+        Output<String> resourceGroup) {
         this.linkedSubscriptionId = Objects.requireNonNull(linkedSubscriptionId, "expected parameter 'linkedSubscriptionId' to be non-null");
         this.linkedSubscriptionName = linkedSubscriptionName;
         this.location = location;
@@ -85,11 +85,11 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LinkedSubscriptionArgs() {
-        this.linkedSubscriptionId = Input.empty();
-        this.linkedSubscriptionName = Input.empty();
-        this.location = Input.empty();
-        this.registrationResourceId = Input.empty();
-        this.resourceGroup = Input.empty();
+        this.linkedSubscriptionId = Output.empty();
+        this.linkedSubscriptionName = Output.empty();
+        this.location = Output.empty();
+        this.registrationResourceId = Output.empty();
+        this.resourceGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> linkedSubscriptionId;
-        private @Nullable Input<String> linkedSubscriptionName;
-        private @Nullable Input<Either<String,Location>> location;
-        private Input<String> registrationResourceId;
-        private Input<String> resourceGroup;
+        private Output<String> linkedSubscriptionId;
+        private @Nullable Output<String> linkedSubscriptionName;
+        private @Nullable Output<Either<String,Location>> location;
+        private Output<String> registrationResourceId;
+        private Output<String> resourceGroup;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
     	      this.resourceGroup = defaults.resourceGroup;
         }
 
-        public Builder linkedSubscriptionId(Input<String> linkedSubscriptionId) {
+        public Builder linkedSubscriptionId(Output<String> linkedSubscriptionId) {
             this.linkedSubscriptionId = Objects.requireNonNull(linkedSubscriptionId);
             return this;
         }
 
         public Builder linkedSubscriptionId(String linkedSubscriptionId) {
-            this.linkedSubscriptionId = Input.of(Objects.requireNonNull(linkedSubscriptionId));
+            this.linkedSubscriptionId = Output.of(Objects.requireNonNull(linkedSubscriptionId));
             return this;
         }
 
-        public Builder linkedSubscriptionName(@Nullable Input<String> linkedSubscriptionName) {
+        public Builder linkedSubscriptionName(@Nullable Output<String> linkedSubscriptionName) {
             this.linkedSubscriptionName = linkedSubscriptionName;
             return this;
         }
 
         public Builder linkedSubscriptionName(@Nullable String linkedSubscriptionName) {
-            this.linkedSubscriptionName = Input.ofNullable(linkedSubscriptionName);
+            this.linkedSubscriptionName = Output.ofNullable(linkedSubscriptionName);
             return this;
         }
 
-        public Builder location(@Nullable Input<Either<String,Location>> location) {
+        public Builder location(@Nullable Output<Either<String,Location>> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable Either<String,Location> location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder registrationResourceId(Input<String> registrationResourceId) {
+        public Builder registrationResourceId(Output<String> registrationResourceId) {
             this.registrationResourceId = Objects.requireNonNull(registrationResourceId);
             return this;
         }
 
         public Builder registrationResourceId(String registrationResourceId) {
-            this.registrationResourceId = Input.of(Objects.requireNonNull(registrationResourceId));
+            this.registrationResourceId = Output.of(Objects.requireNonNull(registrationResourceId));
             return this;
         }
 
-        public Builder resourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
+            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
         public LinkedSubscriptionArgs build() {

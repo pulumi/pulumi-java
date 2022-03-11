@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="begin")
-      private final @Nullable Input<Integer> begin;
+      private final @Nullable Output<Integer> begin;
 
-    public Input<Integer> getBegin() {
-        return this.begin == null ? Input.empty() : this.begin;
+    public Output<Integer> getBegin() {
+        return this.begin == null ? Output.empty() : this.begin;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="end")
-      private final @Nullable Input<Integer> end;
+      private final @Nullable Output<Integer> end;
 
-    public Input<Integer> getEnd() {
-        return this.end == null ? Input.empty() : this.end;
+    public Output<Integer> getEnd() {
+        return this.end == null ? Output.empty() : this.end;
     }
 
     public HttpErrorRangeParametersArgs(
-        @Nullable Input<Integer> begin,
-        @Nullable Input<Integer> end) {
+        @Nullable Output<Integer> begin,
+        @Nullable Output<Integer> end) {
         this.begin = begin;
         this.end = end;
     }
 
     private HttpErrorRangeParametersArgs() {
-        this.begin = Input.empty();
-        this.end = Input.empty();
+        this.begin = Output.empty();
+        this.end = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> begin;
-        private @Nullable Input<Integer> end;
+        private @Nullable Output<Integer> begin;
+        private @Nullable Output<Integer> end;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
     	      this.end = defaults.end;
         }
 
-        public Builder begin(@Nullable Input<Integer> begin) {
+        public Builder begin(@Nullable Output<Integer> begin) {
             this.begin = begin;
             return this;
         }
 
         public Builder begin(@Nullable Integer begin) {
-            this.begin = Input.ofNullable(begin);
+            this.begin = Output.ofNullable(begin);
             return this;
         }
 
-        public Builder end(@Nullable Input<Integer> end) {
+        public Builder end(@Nullable Output<Integer> end) {
             this.end = end;
             return this;
         }
 
         public Builder end(@Nullable Integer end) {
-            this.end = Input.ofNullable(end);
+            this.end = Output.ofNullable(end);
             return this;
         }
         public HttpErrorRangeParametersArgs build() {

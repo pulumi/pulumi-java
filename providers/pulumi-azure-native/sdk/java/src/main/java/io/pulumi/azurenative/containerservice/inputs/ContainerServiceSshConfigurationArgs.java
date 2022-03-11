@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.ContainerServiceSshPublicKeyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ContainerServiceSshConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="publicKeys", required=true)
-      private final Input<List<ContainerServiceSshPublicKeyArgs>> publicKeys;
+      private final Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys;
 
-    public Input<List<ContainerServiceSshPublicKeyArgs>> getPublicKeys() {
+    public Output<List<ContainerServiceSshPublicKeyArgs>> getPublicKeys() {
         return this.publicKeys;
     }
 
-    public ContainerServiceSshConfigurationArgs(Input<List<ContainerServiceSshPublicKeyArgs>> publicKeys) {
+    public ContainerServiceSshConfigurationArgs(Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys) {
         this.publicKeys = Objects.requireNonNull(publicKeys, "expected parameter 'publicKeys' to be non-null");
     }
 
     private ContainerServiceSshConfigurationArgs() {
-        this.publicKeys = Input.empty();
+        this.publicKeys = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ContainerServiceSshConfigurationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private Input<List<ContainerServiceSshPublicKeyArgs>> publicKeys;
+        private Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ContainerServiceSshConfigurationArgs extends io.pulumi.resour
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder publicKeys(Input<List<ContainerServiceSshPublicKeyArgs>> publicKeys) {
+        public Builder publicKeys(Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys) {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
 
         public Builder publicKeys(List<ContainerServiceSshPublicKeyArgs> publicKeys) {
-            this.publicKeys = Input.of(Objects.requireNonNull(publicKeys));
+            this.publicKeys = Output.of(Objects.requireNonNull(publicKeys));
             return this;
         }
         public ContainerServiceSshConfigurationArgs build() {

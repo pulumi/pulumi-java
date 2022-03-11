@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateZoneName")
-      private final @Nullable Input<String> privateZoneName;
+      private final @Nullable Output<String> privateZoneName;
 
-    public Input<String> getPrivateZoneName() {
-        return this.privateZoneName == null ? Input.empty() : this.privateZoneName;
+    public Output<String> getPrivateZoneName() {
+        return this.privateZoneName == null ? Output.empty() : this.privateZoneName;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PrivateZoneArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> privateZoneName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> privateZoneName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.privateZoneName = privateZoneName;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrivateZoneArgs() {
-        this.location = Input.empty();
-        this.privateZoneName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.privateZoneName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> privateZoneName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> privateZoneName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class PrivateZoneArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder privateZoneName(@Nullable Input<String> privateZoneName) {
+        public Builder privateZoneName(@Nullable Output<String> privateZoneName) {
             this.privateZoneName = privateZoneName;
             return this;
         }
 
         public Builder privateZoneName(@Nullable String privateZoneName) {
-            this.privateZoneName = Input.ofNullable(privateZoneName);
+            this.privateZoneName = Output.ofNullable(privateZoneName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PrivateZoneArgs build() {

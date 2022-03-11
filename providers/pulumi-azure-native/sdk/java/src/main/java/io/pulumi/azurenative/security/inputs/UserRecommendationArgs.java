@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="recommendationAction")
-      private final @Nullable Input<String> recommendationAction;
+      private final @Nullable Output<String> recommendationAction;
 
-    public Input<String> getRecommendationAction() {
-        return this.recommendationAction == null ? Input.empty() : this.recommendationAction;
+    public Output<String> getRecommendationAction() {
+        return this.recommendationAction == null ? Output.empty() : this.recommendationAction;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="username")
-      private final @Nullable Input<String> username;
+      private final @Nullable Output<String> username;
 
-    public Input<String> getUsername() {
-        return this.username == null ? Input.empty() : this.username;
+    public Output<String> getUsername() {
+        return this.username == null ? Output.empty() : this.username;
     }
 
     public UserRecommendationArgs(
-        @Nullable Input<String> recommendationAction,
-        @Nullable Input<String> username) {
+        @Nullable Output<String> recommendationAction,
+        @Nullable Output<String> username) {
         this.recommendationAction = recommendationAction;
         this.username = username;
     }
 
     private UserRecommendationArgs() {
-        this.recommendationAction = Input.empty();
-        this.username = Input.empty();
+        this.recommendationAction = Output.empty();
+        this.username = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> recommendationAction;
-        private @Nullable Input<String> username;
+        private @Nullable Output<String> recommendationAction;
+        private @Nullable Output<String> username;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class UserRecommendationArgs extends io.pulumi.resources.ResourceAr
     	      this.username = defaults.username;
         }
 
-        public Builder recommendationAction(@Nullable Input<String> recommendationAction) {
+        public Builder recommendationAction(@Nullable Output<String> recommendationAction) {
             this.recommendationAction = recommendationAction;
             return this;
         }
 
         public Builder recommendationAction(@Nullable String recommendationAction) {
-            this.recommendationAction = Input.ofNullable(recommendationAction);
+            this.recommendationAction = Output.ofNullable(recommendationAction);
             return this;
         }
 
-        public Builder username(@Nullable Input<String> username) {
+        public Builder username(@Nullable Output<String> username) {
             this.username = username;
             return this;
         }
 
         public Builder username(@Nullable String username) {
-            this.username = Input.ofNullable(username);
+            this.username = Output.ofNullable(username);
             return this;
         }
         public UserRecommendationArgs build() {

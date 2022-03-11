@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="partitionColumnName")
-      private final @Nullable Input<Object> partitionColumnName;
+      private final @Nullable Output<Object> partitionColumnName;
 
-    public Input<Object> getPartitionColumnName() {
-        return this.partitionColumnName == null ? Input.empty() : this.partitionColumnName;
+    public Output<Object> getPartitionColumnName() {
+        return this.partitionColumnName == null ? Output.empty() : this.partitionColumnName;
     }
 
-    public SapHanaPartitionSettingsArgs(@Nullable Input<Object> partitionColumnName) {
+    public SapHanaPartitionSettingsArgs(@Nullable Output<Object> partitionColumnName) {
         this.partitionColumnName = partitionColumnName;
     }
 
     private SapHanaPartitionSettingsArgs() {
-        this.partitionColumnName = Input.empty();
+        this.partitionColumnName = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> partitionColumnName;
+        private @Nullable Output<Object> partitionColumnName;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.Reso
     	      this.partitionColumnName = defaults.partitionColumnName;
         }
 
-        public Builder partitionColumnName(@Nullable Input<Object> partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Output<Object> partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
 
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
-            this.partitionColumnName = Input.ofNullable(partitionColumnName);
+            this.partitionColumnName = Output.ofNullable(partitionColumnName);
             return this;
         }
         public SapHanaPartitionSettingsArgs build() {

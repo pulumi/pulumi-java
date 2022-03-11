@@ -16,7 +16,6 @@ import io.pulumi.azurenative.insights.outputs.SmsReceiverResponse;
 import io.pulumi.azurenative.insights.outputs.VoiceReceiverResponse;
 import io.pulumi.azurenative.insights.outputs.WebhookReceiverResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -334,23 +333,23 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ActionGroup(String name, ActionGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:ActionGroup", name, args == null ? ActionGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:insights:ActionGroup", name, args == null ? ActionGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ActionGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ActionGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:insights:ActionGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:insights/v20170401:ActionGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:insights/v20180301:ActionGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:insights/v20180901:ActionGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:insights/v20190301:ActionGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:insights/v20190601:ActionGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:insights/v20210901:ActionGroup").build())
+                Output.of(Alias.builder().setType("azure-native:insights/v20170401:ActionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:insights/v20180301:ActionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:insights/v20180901:ActionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:insights/v20190301:ActionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:insights/v20190601:ActionGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:insights/v20210901:ActionGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -364,7 +363,7 @@ public class ActionGroup extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ActionGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ActionGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ActionGroup(name, id, options);
     }
 }

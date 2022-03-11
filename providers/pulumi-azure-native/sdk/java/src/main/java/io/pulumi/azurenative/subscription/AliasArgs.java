@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.subscription;
 
 import io.pulumi.azurenative.subscription.inputs.PutAliasRequestPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliasName")
-      private final @Nullable Input<String> aliasName;
+      private final @Nullable Output<String> aliasName;
 
-    public Input<String> getAliasName() {
-        return this.aliasName == null ? Input.empty() : this.aliasName;
+    public Output<String> getAliasName() {
+        return this.aliasName == null ? Output.empty() : this.aliasName;
     }
 
     /**
@@ -31,22 +31,22 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<PutAliasRequestPropertiesArgs> properties;
+      private final Output<PutAliasRequestPropertiesArgs> properties;
 
-    public Input<PutAliasRequestPropertiesArgs> getProperties() {
+    public Output<PutAliasRequestPropertiesArgs> getProperties() {
         return this.properties;
     }
 
     public AliasArgs(
-        @Nullable Input<String> aliasName,
-        Input<PutAliasRequestPropertiesArgs> properties) {
+        @Nullable Output<String> aliasName,
+        Output<PutAliasRequestPropertiesArgs> properties) {
         this.aliasName = aliasName;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
     }
 
     private AliasArgs() {
-        this.aliasName = Input.empty();
-        this.properties = Input.empty();
+        this.aliasName = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -58,8 +58,8 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> aliasName;
-        private Input<PutAliasRequestPropertiesArgs> properties;
+        private @Nullable Output<String> aliasName;
+        private Output<PutAliasRequestPropertiesArgs> properties;
 
         public Builder() {
     	      // Empty
@@ -71,23 +71,23 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder aliasName(@Nullable Input<String> aliasName) {
+        public Builder aliasName(@Nullable Output<String> aliasName) {
             this.aliasName = aliasName;
             return this;
         }
 
         public Builder aliasName(@Nullable String aliasName) {
-            this.aliasName = Input.ofNullable(aliasName);
+            this.aliasName = Output.ofNullable(aliasName);
             return this;
         }
 
-        public Builder properties(Input<PutAliasRequestPropertiesArgs> properties) {
+        public Builder properties(Output<PutAliasRequestPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(PutAliasRequestPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
         public AliasArgs build() {

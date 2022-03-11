@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -30,10 +30,10 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataSetName")
-      private final @Nullable Input<String> dataSetName;
+      private final @Nullable Output<String> dataSetName;
 
-    public Input<String> getDataSetName() {
-        return this.dataSetName == null ? Input.empty() : this.dataSetName;
+    public Output<String> getDataSetName() {
+        return this.dataSetName == null ? Output.empty() : this.dataSetName;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataWarehouseName", required=true)
-      private final Input<String> dataWarehouseName;
+      private final Output<String> dataWarehouseName;
 
-    public Input<String> getDataWarehouseName() {
+    public Output<String> getDataWarehouseName() {
         return this.dataWarehouseName;
     }
 
@@ -53,9 +53,9 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
@@ -64,9 +64,9 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,9 +75,9 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="schemaName", required=true)
-      private final Input<String> schemaName;
+      private final Output<String> schemaName;
 
-    public Input<String> getSchemaName() {
+    public Output<String> getSchemaName() {
         return this.schemaName;
     }
 
@@ -86,9 +86,9 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="shareName", required=true)
-      private final Input<String> shareName;
+      private final Output<String> shareName;
 
-    public Input<String> getShareName() {
+    public Output<String> getShareName() {
         return this.shareName;
     }
 
@@ -97,9 +97,9 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlServerResourceId", required=true)
-      private final Input<String> sqlServerResourceId;
+      private final Output<String> sqlServerResourceId;
 
-    public Input<String> getSqlServerResourceId() {
+    public Output<String> getSqlServerResourceId() {
         return this.sqlServerResourceId;
     }
 
@@ -108,22 +108,22 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tableName", required=true)
-      private final Input<String> tableName;
+      private final Output<String> tableName;
 
-    public Input<String> getTableName() {
+    public Output<String> getTableName() {
         return this.tableName;
     }
 
     public SqlDWTableDataSetArgs(
-        Input<String> accountName,
-        @Nullable Input<String> dataSetName,
-        Input<String> dataWarehouseName,
-        Input<String> kind,
-        Input<String> resourceGroupName,
-        Input<String> schemaName,
-        Input<String> shareName,
-        Input<String> sqlServerResourceId,
-        Input<String> tableName) {
+        Output<String> accountName,
+        @Nullable Output<String> dataSetName,
+        Output<String> dataWarehouseName,
+        Output<String> kind,
+        Output<String> resourceGroupName,
+        Output<String> schemaName,
+        Output<String> shareName,
+        Output<String> sqlServerResourceId,
+        Output<String> tableName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.dataSetName = dataSetName;
         this.dataWarehouseName = Objects.requireNonNull(dataWarehouseName, "expected parameter 'dataWarehouseName' to be non-null");
@@ -136,15 +136,15 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SqlDWTableDataSetArgs() {
-        this.accountName = Input.empty();
-        this.dataSetName = Input.empty();
-        this.dataWarehouseName = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.schemaName = Input.empty();
-        this.shareName = Input.empty();
-        this.sqlServerResourceId = Input.empty();
-        this.tableName = Input.empty();
+        this.accountName = Output.empty();
+        this.dataSetName = Output.empty();
+        this.dataWarehouseName = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.schemaName = Output.empty();
+        this.shareName = Output.empty();
+        this.sqlServerResourceId = Output.empty();
+        this.tableName = Output.empty();
     }
 
     public static Builder builder() {
@@ -156,15 +156,15 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> dataSetName;
-        private Input<String> dataWarehouseName;
-        private Input<String> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> schemaName;
-        private Input<String> shareName;
-        private Input<String> sqlServerResourceId;
-        private Input<String> tableName;
+        private Output<String> accountName;
+        private @Nullable Output<String> dataSetName;
+        private Output<String> dataWarehouseName;
+        private Output<String> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> schemaName;
+        private Output<String> shareName;
+        private Output<String> sqlServerResourceId;
+        private Output<String> tableName;
 
         public Builder() {
     	      // Empty
@@ -183,93 +183,93 @@ public final class SqlDWTableDataSetArgs extends io.pulumi.resources.ResourceArg
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder dataSetName(@Nullable Input<String> dataSetName) {
+        public Builder dataSetName(@Nullable Output<String> dataSetName) {
             this.dataSetName = dataSetName;
             return this;
         }
 
         public Builder dataSetName(@Nullable String dataSetName) {
-            this.dataSetName = Input.ofNullable(dataSetName);
+            this.dataSetName = Output.ofNullable(dataSetName);
             return this;
         }
 
-        public Builder dataWarehouseName(Input<String> dataWarehouseName) {
+        public Builder dataWarehouseName(Output<String> dataWarehouseName) {
             this.dataWarehouseName = Objects.requireNonNull(dataWarehouseName);
             return this;
         }
 
         public Builder dataWarehouseName(String dataWarehouseName) {
-            this.dataWarehouseName = Input.of(Objects.requireNonNull(dataWarehouseName));
+            this.dataWarehouseName = Output.of(Objects.requireNonNull(dataWarehouseName));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder schemaName(Input<String> schemaName) {
+        public Builder schemaName(Output<String> schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
         public Builder schemaName(String schemaName) {
-            this.schemaName = Input.of(Objects.requireNonNull(schemaName));
+            this.schemaName = Output.of(Objects.requireNonNull(schemaName));
             return this;
         }
 
-        public Builder shareName(Input<String> shareName) {
+        public Builder shareName(Output<String> shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
         public Builder shareName(String shareName) {
-            this.shareName = Input.of(Objects.requireNonNull(shareName));
+            this.shareName = Output.of(Objects.requireNonNull(shareName));
             return this;
         }
 
-        public Builder sqlServerResourceId(Input<String> sqlServerResourceId) {
+        public Builder sqlServerResourceId(Output<String> sqlServerResourceId) {
             this.sqlServerResourceId = Objects.requireNonNull(sqlServerResourceId);
             return this;
         }
 
         public Builder sqlServerResourceId(String sqlServerResourceId) {
-            this.sqlServerResourceId = Input.of(Objects.requireNonNull(sqlServerResourceId));
+            this.sqlServerResourceId = Output.of(Objects.requireNonNull(sqlServerResourceId));
             return this;
         }
 
-        public Builder tableName(Input<String> tableName) {
+        public Builder tableName(Output<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
         public Builder tableName(String tableName) {
-            this.tableName = Input.of(Objects.requireNonNull(tableName));
+            this.tableName = Output.of(Objects.requireNonNull(tableName));
             return this;
         }
         public SqlDWTableDataSetArgs build() {

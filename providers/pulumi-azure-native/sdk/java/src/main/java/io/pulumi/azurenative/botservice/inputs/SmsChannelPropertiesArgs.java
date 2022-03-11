@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="accountSID", required=true)
-      private final Input<String> accountSID;
+      private final Output<String> accountSID;
 
-    public Input<String> getAccountSID() {
+    public Output<String> getAccountSID() {
         return this.accountSID;
     }
 
@@ -35,10 +35,10 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="authToken")
-      private final @Nullable Input<String> authToken;
+      private final @Nullable Output<String> authToken;
 
-    public Input<String> getAuthToken() {
-        return this.authToken == null ? Input.empty() : this.authToken;
+    public Output<String> getAuthToken() {
+        return this.authToken == null ? Output.empty() : this.authToken;
     }
 
     /**
@@ -46,9 +46,9 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -57,10 +57,10 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isValidated")
-      private final @Nullable Input<Boolean> isValidated;
+      private final @Nullable Output<Boolean> isValidated;
 
-    public Input<Boolean> getIsValidated() {
-        return this.isValidated == null ? Input.empty() : this.isValidated;
+    public Output<Boolean> getIsValidated() {
+        return this.isValidated == null ? Output.empty() : this.isValidated;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="phone", required=true)
-      private final Input<String> phone;
+      private final Output<String> phone;
 
-    public Input<String> getPhone() {
+    public Output<String> getPhone() {
         return this.phone;
     }
 
     public SmsChannelPropertiesArgs(
-        Input<String> accountSID,
-        @Nullable Input<String> authToken,
-        Input<Boolean> isEnabled,
-        @Nullable Input<Boolean> isValidated,
-        Input<String> phone) {
+        Output<String> accountSID,
+        @Nullable Output<String> authToken,
+        Output<Boolean> isEnabled,
+        @Nullable Output<Boolean> isValidated,
+        Output<String> phone) {
         this.accountSID = Objects.requireNonNull(accountSID, "expected parameter 'accountSID' to be non-null");
         this.authToken = authToken;
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
@@ -88,11 +88,11 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private SmsChannelPropertiesArgs() {
-        this.accountSID = Input.empty();
-        this.authToken = Input.empty();
-        this.isEnabled = Input.empty();
-        this.isValidated = Input.empty();
-        this.phone = Input.empty();
+        this.accountSID = Output.empty();
+        this.authToken = Output.empty();
+        this.isEnabled = Output.empty();
+        this.isValidated = Output.empty();
+        this.phone = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<String> accountSID;
-        private @Nullable Input<String> authToken;
-        private Input<Boolean> isEnabled;
-        private @Nullable Input<Boolean> isValidated;
-        private Input<String> phone;
+        private Output<String> accountSID;
+        private @Nullable Output<String> authToken;
+        private Output<Boolean> isEnabled;
+        private @Nullable Output<Boolean> isValidated;
+        private Output<String> phone;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class SmsChannelPropertiesArgs extends io.pulumi.resources.Resource
     	      this.phone = defaults.phone;
         }
 
-        public Builder accountSID(Input<String> accountSID) {
+        public Builder accountSID(Output<String> accountSID) {
             this.accountSID = Objects.requireNonNull(accountSID);
             return this;
         }
 
         public Builder accountSID(String accountSID) {
-            this.accountSID = Input.of(Objects.requireNonNull(accountSID));
+            this.accountSID = Output.of(Objects.requireNonNull(accountSID));
             return this;
         }
 
-        public Builder authToken(@Nullable Input<String> authToken) {
+        public Builder authToken(@Nullable Output<String> authToken) {
             this.authToken = authToken;
             return this;
         }
 
         public Builder authToken(@Nullable String authToken) {
-            this.authToken = Input.ofNullable(authToken);
+            this.authToken = Output.ofNullable(authToken);
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder isValidated(@Nullable Input<Boolean> isValidated) {
+        public Builder isValidated(@Nullable Output<Boolean> isValidated) {
             this.isValidated = isValidated;
             return this;
         }
 
         public Builder isValidated(@Nullable Boolean isValidated) {
-            this.isValidated = Input.ofNullable(isValidated);
+            this.isValidated = Output.ofNullable(isValidated);
             return this;
         }
 
-        public Builder phone(Input<String> phone) {
+        public Builder phone(Output<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
         public Builder phone(String phone) {
-            this.phone = Input.of(Objects.requireNonNull(phone));
+            this.phone = Output.of(Objects.requireNonNull(phone));
             return this;
         }
         public SmsChannelPropertiesArgs build() {

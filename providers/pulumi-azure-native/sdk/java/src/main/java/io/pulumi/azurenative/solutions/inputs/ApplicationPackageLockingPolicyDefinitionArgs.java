@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
      * 
      */
     @InputImport(name="allowedActions")
-      private final @Nullable Input<List<String>> allowedActions;
+      private final @Nullable Output<List<String>> allowedActions;
 
-    public Input<List<String>> getAllowedActions() {
-        return this.allowedActions == null ? Input.empty() : this.allowedActions;
+    public Output<List<String>> getAllowedActions() {
+        return this.allowedActions == null ? Output.empty() : this.allowedActions;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
      * 
      */
     @InputImport(name="allowedDataActions")
-      private final @Nullable Input<List<String>> allowedDataActions;
+      private final @Nullable Output<List<String>> allowedDataActions;
 
-    public Input<List<String>> getAllowedDataActions() {
-        return this.allowedDataActions == null ? Input.empty() : this.allowedDataActions;
+    public Output<List<String>> getAllowedDataActions() {
+        return this.allowedDataActions == null ? Output.empty() : this.allowedDataActions;
     }
 
     public ApplicationPackageLockingPolicyDefinitionArgs(
-        @Nullable Input<List<String>> allowedActions,
-        @Nullable Input<List<String>> allowedDataActions) {
+        @Nullable Output<List<String>> allowedActions,
+        @Nullable Output<List<String>> allowedDataActions) {
         this.allowedActions = allowedActions;
         this.allowedDataActions = allowedDataActions;
     }
 
     private ApplicationPackageLockingPolicyDefinitionArgs() {
-        this.allowedActions = Input.empty();
-        this.allowedDataActions = Input.empty();
+        this.allowedActions = Output.empty();
+        this.allowedDataActions = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> allowedActions;
-        private @Nullable Input<List<String>> allowedDataActions;
+        private @Nullable Output<List<String>> allowedActions;
+        private @Nullable Output<List<String>> allowedDataActions;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ApplicationPackageLockingPolicyDefinitionArgs extends io.pulu
     	      this.allowedDataActions = defaults.allowedDataActions;
         }
 
-        public Builder allowedActions(@Nullable Input<List<String>> allowedActions) {
+        public Builder allowedActions(@Nullable Output<List<String>> allowedActions) {
             this.allowedActions = allowedActions;
             return this;
         }
 
         public Builder allowedActions(@Nullable List<String> allowedActions) {
-            this.allowedActions = Input.ofNullable(allowedActions);
+            this.allowedActions = Output.ofNullable(allowedActions);
             return this;
         }
 
-        public Builder allowedDataActions(@Nullable Input<List<String>> allowedDataActions) {
+        public Builder allowedDataActions(@Nullable Output<List<String>> allowedDataActions) {
             this.allowedDataActions = allowedDataActions;
             return this;
         }
 
         public Builder allowedDataActions(@Nullable List<String> allowedDataActions) {
-            this.allowedDataActions = Input.ofNullable(allowedDataActions);
+            this.allowedDataActions = Output.ofNullable(allowedDataActions);
             return this;
         }
         public ApplicationPackageLockingPolicyDefinitionArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.windowsesu;
 import io.pulumi.azurenative.windowsesu.enums.OsType;
 import io.pulumi.azurenative.windowsesu.enums.SupportType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="agreementNumber")
-      private final @Nullable Input<String> agreementNumber;
+      private final @Nullable Output<String> agreementNumber;
 
-    public Input<String> getAgreementNumber() {
-        return this.agreementNumber == null ? Input.empty() : this.agreementNumber;
+    public Output<String> getAgreementNumber() {
+        return this.agreementNumber == null ? Output.empty() : this.agreementNumber;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="installedServerNumber")
-      private final @Nullable Input<Integer> installedServerNumber;
+      private final @Nullable Output<Integer> installedServerNumber;
 
-    public Input<Integer> getInstalledServerNumber() {
-        return this.installedServerNumber == null ? Input.empty() : this.installedServerNumber;
+    public Output<Integer> getInstalledServerNumber() {
+        return this.installedServerNumber == null ? Output.empty() : this.installedServerNumber;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isEligible")
-      private final @Nullable Input<Boolean> isEligible;
+      private final @Nullable Output<Boolean> isEligible;
 
-    public Input<Boolean> getIsEligible() {
-        return this.isEligible == null ? Input.empty() : this.isEligible;
+    public Output<Boolean> getIsEligible() {
+        return this.isEligible == null ? Output.empty() : this.isEligible;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="multipleActivationKeyName")
-      private final @Nullable Input<String> multipleActivationKeyName;
+      private final @Nullable Output<String> multipleActivationKeyName;
 
-    public Input<String> getMultipleActivationKeyName() {
-        return this.multipleActivationKeyName == null ? Input.empty() : this.multipleActivationKeyName;
+    public Output<String> getMultipleActivationKeyName() {
+        return this.multipleActivationKeyName == null ? Output.empty() : this.multipleActivationKeyName;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="osType")
-      private final @Nullable Input<Either<String,OsType>> osType;
+      private final @Nullable Output<Either<String,OsType>> osType;
 
-    public Input<Either<String,OsType>> getOsType() {
-        return this.osType == null ? Input.empty() : this.osType;
+    public Output<Either<String,OsType>> getOsType() {
+        return this.osType == null ? Output.empty() : this.osType;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -102,10 +102,10 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="supportType")
-      private final @Nullable Input<Either<String,SupportType>> supportType;
+      private final @Nullable Output<Either<String,SupportType>> supportType;
 
-    public Input<Either<String,SupportType>> getSupportType() {
-        return this.supportType == null ? Input.empty() : this.supportType;
+    public Output<Either<String,SupportType>> getSupportType() {
+        return this.supportType == null ? Output.empty() : this.supportType;
     }
 
     /**
@@ -113,22 +113,22 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public MultipleActivationKeyArgs(
-        @Nullable Input<String> agreementNumber,
-        @Nullable Input<Integer> installedServerNumber,
-        @Nullable Input<Boolean> isEligible,
-        @Nullable Input<String> location,
-        @Nullable Input<String> multipleActivationKeyName,
-        @Nullable Input<Either<String,OsType>> osType,
-        Input<String> resourceGroupName,
-        @Nullable Input<Either<String,SupportType>> supportType,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> agreementNumber,
+        @Nullable Output<Integer> installedServerNumber,
+        @Nullable Output<Boolean> isEligible,
+        @Nullable Output<String> location,
+        @Nullable Output<String> multipleActivationKeyName,
+        @Nullable Output<Either<String,OsType>> osType,
+        Output<String> resourceGroupName,
+        @Nullable Output<Either<String,SupportType>> supportType,
+        @Nullable Output<Map<String,String>> tags) {
         this.agreementNumber = agreementNumber;
         this.installedServerNumber = installedServerNumber;
         this.isEligible = isEligible;
@@ -136,20 +136,20 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
         this.multipleActivationKeyName = multipleActivationKeyName;
         this.osType = osType;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.supportType = supportType == null ? Input.ofLeft("SupplementalServicing") : supportType;
+        this.supportType = supportType == null ? Output.ofLeft("SupplementalServicing") : supportType;
         this.tags = tags;
     }
 
     private MultipleActivationKeyArgs() {
-        this.agreementNumber = Input.empty();
-        this.installedServerNumber = Input.empty();
-        this.isEligible = Input.empty();
-        this.location = Input.empty();
-        this.multipleActivationKeyName = Input.empty();
-        this.osType = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.supportType = Input.empty();
-        this.tags = Input.empty();
+        this.agreementNumber = Output.empty();
+        this.installedServerNumber = Output.empty();
+        this.isEligible = Output.empty();
+        this.location = Output.empty();
+        this.multipleActivationKeyName = Output.empty();
+        this.osType = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.supportType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -161,15 +161,15 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> agreementNumber;
-        private @Nullable Input<Integer> installedServerNumber;
-        private @Nullable Input<Boolean> isEligible;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> multipleActivationKeyName;
-        private @Nullable Input<Either<String,OsType>> osType;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Either<String,SupportType>> supportType;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> agreementNumber;
+        private @Nullable Output<Integer> installedServerNumber;
+        private @Nullable Output<Boolean> isEligible;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> multipleActivationKeyName;
+        private @Nullable Output<Either<String,OsType>> osType;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Either<String,SupportType>> supportType;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -188,93 +188,93 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder agreementNumber(@Nullable Input<String> agreementNumber) {
+        public Builder agreementNumber(@Nullable Output<String> agreementNumber) {
             this.agreementNumber = agreementNumber;
             return this;
         }
 
         public Builder agreementNumber(@Nullable String agreementNumber) {
-            this.agreementNumber = Input.ofNullable(agreementNumber);
+            this.agreementNumber = Output.ofNullable(agreementNumber);
             return this;
         }
 
-        public Builder installedServerNumber(@Nullable Input<Integer> installedServerNumber) {
+        public Builder installedServerNumber(@Nullable Output<Integer> installedServerNumber) {
             this.installedServerNumber = installedServerNumber;
             return this;
         }
 
         public Builder installedServerNumber(@Nullable Integer installedServerNumber) {
-            this.installedServerNumber = Input.ofNullable(installedServerNumber);
+            this.installedServerNumber = Output.ofNullable(installedServerNumber);
             return this;
         }
 
-        public Builder isEligible(@Nullable Input<Boolean> isEligible) {
+        public Builder isEligible(@Nullable Output<Boolean> isEligible) {
             this.isEligible = isEligible;
             return this;
         }
 
         public Builder isEligible(@Nullable Boolean isEligible) {
-            this.isEligible = Input.ofNullable(isEligible);
+            this.isEligible = Output.ofNullable(isEligible);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder multipleActivationKeyName(@Nullable Input<String> multipleActivationKeyName) {
+        public Builder multipleActivationKeyName(@Nullable Output<String> multipleActivationKeyName) {
             this.multipleActivationKeyName = multipleActivationKeyName;
             return this;
         }
 
         public Builder multipleActivationKeyName(@Nullable String multipleActivationKeyName) {
-            this.multipleActivationKeyName = Input.ofNullable(multipleActivationKeyName);
+            this.multipleActivationKeyName = Output.ofNullable(multipleActivationKeyName);
             return this;
         }
 
-        public Builder osType(@Nullable Input<Either<String,OsType>> osType) {
+        public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
             this.osType = osType;
             return this;
         }
 
         public Builder osType(@Nullable Either<String,OsType> osType) {
-            this.osType = Input.ofNullable(osType);
+            this.osType = Output.ofNullable(osType);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder supportType(@Nullable Input<Either<String,SupportType>> supportType) {
+        public Builder supportType(@Nullable Output<Either<String,SupportType>> supportType) {
             this.supportType = supportType;
             return this;
         }
 
         public Builder supportType(@Nullable Either<String,SupportType> supportType) {
-            this.supportType = Input.ofNullable(supportType);
+            this.supportType = Output.ofNullable(supportType);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public MultipleActivationKeyArgs build() {

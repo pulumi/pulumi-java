@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinationType")
-      private final @Nullable Input<String> destinationType;
+      private final @Nullable Output<String> destinationType;
 
-    public Input<String> getDestinationType() {
-        return this.destinationType == null ? Input.empty() : this.destinationType;
+    public Output<String> getDestinationType() {
+        return this.destinationType == null ? Output.empty() : this.destinationType;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destinations")
-      private final @Nullable Input<List<String>> destinations;
+      private final @Nullable Output<List<String>> destinations;
 
-    public Input<List<String>> getDestinations() {
-        return this.destinations == null ? Input.empty() : this.destinations;
+    public Output<List<String>> getDestinations() {
+        return this.destinations == null ? Output.empty() : this.destinations;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nextHopType")
-      private final @Nullable Input<String> nextHopType;
+      private final @Nullable Output<String> nextHopType;
 
-    public Input<String> getNextHopType() {
-        return this.nextHopType == null ? Input.empty() : this.nextHopType;
+    public Output<String> getNextHopType() {
+        return this.nextHopType == null ? Output.empty() : this.nextHopType;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nextHops")
-      private final @Nullable Input<List<String>> nextHops;
+      private final @Nullable Output<List<String>> nextHops;
 
-    public Input<List<String>> getNextHops() {
-        return this.nextHops == null ? Input.empty() : this.nextHops;
+    public Output<List<String>> getNextHops() {
+        return this.nextHops == null ? Output.empty() : this.nextHops;
     }
 
     public VirtualHubRouteV2Args(
-        @Nullable Input<String> destinationType,
-        @Nullable Input<List<String>> destinations,
-        @Nullable Input<String> nextHopType,
-        @Nullable Input<List<String>> nextHops) {
+        @Nullable Output<String> destinationType,
+        @Nullable Output<List<String>> destinations,
+        @Nullable Output<String> nextHopType,
+        @Nullable Output<List<String>> nextHops) {
         this.destinationType = destinationType;
         this.destinations = destinations;
         this.nextHopType = nextHopType;
@@ -75,10 +75,10 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     }
 
     private VirtualHubRouteV2Args() {
-        this.destinationType = Input.empty();
-        this.destinations = Input.empty();
-        this.nextHopType = Input.empty();
-        this.nextHops = Input.empty();
+        this.destinationType = Output.empty();
+        this.destinations = Output.empty();
+        this.nextHopType = Output.empty();
+        this.nextHops = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> destinationType;
-        private @Nullable Input<List<String>> destinations;
-        private @Nullable Input<String> nextHopType;
-        private @Nullable Input<List<String>> nextHops;
+        private @Nullable Output<String> destinationType;
+        private @Nullable Output<List<String>> destinations;
+        private @Nullable Output<String> nextHopType;
+        private @Nullable Output<List<String>> nextHops;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class VirtualHubRouteV2Args extends io.pulumi.resources.ResourceArg
     	      this.nextHops = defaults.nextHops;
         }
 
-        public Builder destinationType(@Nullable Input<String> destinationType) {
+        public Builder destinationType(@Nullable Output<String> destinationType) {
             this.destinationType = destinationType;
             return this;
         }
 
         public Builder destinationType(@Nullable String destinationType) {
-            this.destinationType = Input.ofNullable(destinationType);
+            this.destinationType = Output.ofNullable(destinationType);
             return this;
         }
 
-        public Builder destinations(@Nullable Input<List<String>> destinations) {
+        public Builder destinations(@Nullable Output<List<String>> destinations) {
             this.destinations = destinations;
             return this;
         }
 
         public Builder destinations(@Nullable List<String> destinations) {
-            this.destinations = Input.ofNullable(destinations);
+            this.destinations = Output.ofNullable(destinations);
             return this;
         }
 
-        public Builder nextHopType(@Nullable Input<String> nextHopType) {
+        public Builder nextHopType(@Nullable Output<String> nextHopType) {
             this.nextHopType = nextHopType;
             return this;
         }
 
         public Builder nextHopType(@Nullable String nextHopType) {
-            this.nextHopType = Input.ofNullable(nextHopType);
+            this.nextHopType = Output.ofNullable(nextHopType);
             return this;
         }
 
-        public Builder nextHops(@Nullable Input<List<String>> nextHops) {
+        public Builder nextHops(@Nullable Output<List<String>> nextHops) {
             this.nextHops = nextHops;
             return this;
         }
 
         public Builder nextHops(@Nullable List<String> nextHops) {
-            this.nextHops = Input.ofNullable(nextHops);
+            this.nextHops = Output.ofNullable(nextHops);
             return this;
         }
         public VirtualHubRouteV2Args build() {

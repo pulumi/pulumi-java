@@ -8,7 +8,6 @@ import io.pulumi.azurenative.network.RouteTableArgs;
 import io.pulumi.azurenative.network.outputs.RouteResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -214,56 +213,56 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RouteTable(String name, RouteTableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:RouteTable", name, args == null ? RouteTableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:RouteTable", name, args == null ? RouteTableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RouteTable(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RouteTable(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:RouteTable", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20150501preview:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20150615:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160330:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160601:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160901:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20161201:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170301:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170601:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170801:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170901:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171001:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171101:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180101:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180201:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180601:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180701:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:RouteTable").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:RouteTable").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20150501preview:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20150615:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160330:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160601:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160901:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20161201:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:RouteTable").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:RouteTable").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -277,7 +276,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RouteTable get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RouteTable get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RouteTable(name, id, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cache;
 
 import io.pulumi.azurenative.cache.enums.ReplicationRole;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedRedisCacheId", required=true)
-      private final Input<String> linkedRedisCacheId;
+      private final Output<String> linkedRedisCacheId;
 
-    public Input<String> getLinkedRedisCacheId() {
+    public Output<String> getLinkedRedisCacheId() {
         return this.linkedRedisCacheId;
     }
 
@@ -31,9 +31,9 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedRedisCacheLocation", required=true)
-      private final Input<String> linkedRedisCacheLocation;
+      private final Output<String> linkedRedisCacheLocation;
 
-    public Input<String> getLinkedRedisCacheLocation() {
+    public Output<String> getLinkedRedisCacheLocation() {
         return this.linkedRedisCacheLocation;
     }
 
@@ -42,10 +42,10 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServerName")
-      private final @Nullable Input<String> linkedServerName;
+      private final @Nullable Output<String> linkedServerName;
 
-    public Input<String> getLinkedServerName() {
-        return this.linkedServerName == null ? Input.empty() : this.linkedServerName;
+    public Output<String> getLinkedServerName() {
+        return this.linkedServerName == null ? Output.empty() : this.linkedServerName;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -64,9 +64,9 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,19 +75,19 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverRole", required=true)
-      private final Input<ReplicationRole> serverRole;
+      private final Output<ReplicationRole> serverRole;
 
-    public Input<ReplicationRole> getServerRole() {
+    public Output<ReplicationRole> getServerRole() {
         return this.serverRole;
     }
 
     public LinkedServerArgs(
-        Input<String> linkedRedisCacheId,
-        Input<String> linkedRedisCacheLocation,
-        @Nullable Input<String> linkedServerName,
-        Input<String> name,
-        Input<String> resourceGroupName,
-        Input<ReplicationRole> serverRole) {
+        Output<String> linkedRedisCacheId,
+        Output<String> linkedRedisCacheLocation,
+        @Nullable Output<String> linkedServerName,
+        Output<String> name,
+        Output<String> resourceGroupName,
+        Output<ReplicationRole> serverRole) {
         this.linkedRedisCacheId = Objects.requireNonNull(linkedRedisCacheId, "expected parameter 'linkedRedisCacheId' to be non-null");
         this.linkedRedisCacheLocation = Objects.requireNonNull(linkedRedisCacheLocation, "expected parameter 'linkedRedisCacheLocation' to be non-null");
         this.linkedServerName = linkedServerName;
@@ -97,12 +97,12 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkedServerArgs() {
-        this.linkedRedisCacheId = Input.empty();
-        this.linkedRedisCacheLocation = Input.empty();
-        this.linkedServerName = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverRole = Input.empty();
+        this.linkedRedisCacheId = Output.empty();
+        this.linkedRedisCacheLocation = Output.empty();
+        this.linkedServerName = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverRole = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> linkedRedisCacheId;
-        private Input<String> linkedRedisCacheLocation;
-        private @Nullable Input<String> linkedServerName;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<ReplicationRole> serverRole;
+        private Output<String> linkedRedisCacheId;
+        private Output<String> linkedRedisCacheLocation;
+        private @Nullable Output<String> linkedServerName;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<ReplicationRole> serverRole;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class LinkedServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serverRole = defaults.serverRole;
         }
 
-        public Builder linkedRedisCacheId(Input<String> linkedRedisCacheId) {
+        public Builder linkedRedisCacheId(Output<String> linkedRedisCacheId) {
             this.linkedRedisCacheId = Objects.requireNonNull(linkedRedisCacheId);
             return this;
         }
 
         public Builder linkedRedisCacheId(String linkedRedisCacheId) {
-            this.linkedRedisCacheId = Input.of(Objects.requireNonNull(linkedRedisCacheId));
+            this.linkedRedisCacheId = Output.of(Objects.requireNonNull(linkedRedisCacheId));
             return this;
         }
 
-        public Builder linkedRedisCacheLocation(Input<String> linkedRedisCacheLocation) {
+        public Builder linkedRedisCacheLocation(Output<String> linkedRedisCacheLocation) {
             this.linkedRedisCacheLocation = Objects.requireNonNull(linkedRedisCacheLocation);
             return this;
         }
 
         public Builder linkedRedisCacheLocation(String linkedRedisCacheLocation) {
-            this.linkedRedisCacheLocation = Input.of(Objects.requireNonNull(linkedRedisCacheLocation));
+            this.linkedRedisCacheLocation = Output.of(Objects.requireNonNull(linkedRedisCacheLocation));
             return this;
         }
 
-        public Builder linkedServerName(@Nullable Input<String> linkedServerName) {
+        public Builder linkedServerName(@Nullable Output<String> linkedServerName) {
             this.linkedServerName = linkedServerName;
             return this;
         }
 
         public Builder linkedServerName(@Nullable String linkedServerName) {
-            this.linkedServerName = Input.ofNullable(linkedServerName);
+            this.linkedServerName = Output.ofNullable(linkedServerName);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverRole(Input<ReplicationRole> serverRole) {
+        public Builder serverRole(Output<ReplicationRole> serverRole) {
             this.serverRole = Objects.requireNonNull(serverRole);
             return this;
         }
 
         public Builder serverRole(ReplicationRole serverRole) {
-            this.serverRole = Input.of(Objects.requireNonNull(serverRole));
+            this.serverRole = Output.of(Objects.requireNonNull(serverRole));
             return this;
         }
         public LinkedServerArgs build() {

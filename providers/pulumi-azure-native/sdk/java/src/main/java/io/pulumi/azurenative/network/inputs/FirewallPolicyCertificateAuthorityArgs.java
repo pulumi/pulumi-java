@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="keyVaultSecretId")
-      private final @Nullable Input<String> keyVaultSecretId;
+      private final @Nullable Output<String> keyVaultSecretId;
 
-    public Input<String> getKeyVaultSecretId() {
-        return this.keyVaultSecretId == null ? Input.empty() : this.keyVaultSecretId;
+    public Output<String> getKeyVaultSecretId() {
+        return this.keyVaultSecretId == null ? Output.empty() : this.keyVaultSecretId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public FirewallPolicyCertificateAuthorityArgs(
-        @Nullable Input<String> keyVaultSecretId,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> keyVaultSecretId,
+        @Nullable Output<String> name) {
         this.keyVaultSecretId = keyVaultSecretId;
         this.name = name;
     }
 
     private FirewallPolicyCertificateAuthorityArgs() {
-        this.keyVaultSecretId = Input.empty();
-        this.name = Input.empty();
+        this.keyVaultSecretId = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> keyVaultSecretId;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> keyVaultSecretId;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class FirewallPolicyCertificateAuthorityArgs extends io.pulumi.reso
     	      this.name = defaults.name;
         }
 
-        public Builder keyVaultSecretId(@Nullable Input<String> keyVaultSecretId) {
+        public Builder keyVaultSecretId(@Nullable Output<String> keyVaultSecretId) {
             this.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
 
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
-            this.keyVaultSecretId = Input.ofNullable(keyVaultSecretId);
+            this.keyVaultSecretId = Output.ofNullable(keyVaultSecretId);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public FirewallPolicyCertificateAuthorityArgs build() {

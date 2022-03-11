@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -34,9 +34,9 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="product", required=true)
-      private final Input<String> product;
+      private final Output<String> product;
 
-    public Input<String> getProduct() {
+    public Output<String> getProduct() {
         return this.product;
     }
 
@@ -45,10 +45,10 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="promotionCode")
-      private final @Nullable Input<String> promotionCode;
+      private final @Nullable Output<String> promotionCode;
 
-    public Input<String> getPromotionCode() {
-        return this.promotionCode == null ? Input.empty() : this.promotionCode;
+    public Output<String> getPromotionCode() {
+        return this.promotionCode == null ? Output.empty() : this.promotionCode;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisher", required=true)
-      private final Input<String> publisher;
+      private final Output<String> publisher;
 
-    public Input<String> getPublisher() {
+    public Output<String> getPublisher() {
         return this.publisher;
     }
 
     public PurchasePlanArgs(
-        Input<String> name,
-        Input<String> product,
-        @Nullable Input<String> promotionCode,
-        Input<String> publisher) {
+        Output<String> name,
+        Output<String> product,
+        @Nullable Output<String> promotionCode,
+        Output<String> publisher) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.product = Objects.requireNonNull(product, "expected parameter 'product' to be non-null");
         this.promotionCode = promotionCode;
@@ -74,10 +74,10 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PurchasePlanArgs() {
-        this.name = Input.empty();
-        this.product = Input.empty();
-        this.promotionCode = Input.empty();
-        this.publisher = Input.empty();
+        this.name = Output.empty();
+        this.product = Output.empty();
+        this.promotionCode = Output.empty();
+        this.publisher = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> product;
-        private @Nullable Input<String> promotionCode;
-        private Input<String> publisher;
+        private Output<String> name;
+        private Output<String> product;
+        private @Nullable Output<String> promotionCode;
+        private Output<String> publisher;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class PurchasePlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.publisher = defaults.publisher;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder product(Input<String> product) {
+        public Builder product(Output<String> product) {
             this.product = Objects.requireNonNull(product);
             return this;
         }
 
         public Builder product(String product) {
-            this.product = Input.of(Objects.requireNonNull(product));
+            this.product = Output.of(Objects.requireNonNull(product));
             return this;
         }
 
-        public Builder promotionCode(@Nullable Input<String> promotionCode) {
+        public Builder promotionCode(@Nullable Output<String> promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
 
         public Builder promotionCode(@Nullable String promotionCode) {
-            this.promotionCode = Input.ofNullable(promotionCode);
+            this.promotionCode = Output.ofNullable(promotionCode);
             return this;
         }
 
-        public Builder publisher(Input<String> publisher) {
+        public Builder publisher(Output<String> publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
 
         public Builder publisher(String publisher) {
-            this.publisher = Input.of(Objects.requireNonNull(publisher));
+            this.publisher = Output.of(Objects.requireNonNull(publisher));
             return this;
         }
         public PurchasePlanArgs build() {

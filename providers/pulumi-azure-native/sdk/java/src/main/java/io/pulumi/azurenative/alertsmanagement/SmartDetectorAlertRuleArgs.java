@@ -9,7 +9,7 @@ import io.pulumi.azurenative.alertsmanagement.inputs.ActionGroupsInformationArgs
 import io.pulumi.azurenative.alertsmanagement.inputs.DetectorArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.ThrottlingInformationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,9 +27,9 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="actionGroups", required=true)
-      private final Input<ActionGroupsInformationArgs> actionGroups;
+      private final Output<ActionGroupsInformationArgs> actionGroups;
 
-    public Input<ActionGroupsInformationArgs> getActionGroups() {
+    public Output<ActionGroupsInformationArgs> getActionGroups() {
         return this.actionGroups;
     }
 
@@ -38,10 +38,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="alertRuleName")
-      private final @Nullable Input<String> alertRuleName;
+      private final @Nullable Output<String> alertRuleName;
 
-    public Input<String> getAlertRuleName() {
-        return this.alertRuleName == null ? Input.empty() : this.alertRuleName;
+    public Output<String> getAlertRuleName() {
+        return this.alertRuleName == null ? Output.empty() : this.alertRuleName;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -60,9 +60,9 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="detector", required=true)
-      private final Input<DetectorArgs> detector;
+      private final Output<DetectorArgs> detector;
 
-    public Input<DetectorArgs> getDetector() {
+    public Output<DetectorArgs> getDetector() {
         return this.detector;
     }
 
@@ -71,9 +71,9 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="frequency", required=true)
-      private final Input<String> frequency;
+      private final Output<String> frequency;
 
-    public Input<String> getFrequency() {
+    public Output<String> getFrequency() {
         return this.frequency;
     }
 
@@ -82,10 +82,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -93,9 +93,9 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -104,9 +104,9 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<List<String>> scope;
+      private final Output<List<String>> scope;
 
-    public Input<List<String>> getScope() {
+    public Output<List<String>> getScope() {
         return this.scope;
     }
 
@@ -115,9 +115,9 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="severity", required=true)
-      private final Input<Either<String,Severity>> severity;
+      private final Output<Either<String,Severity>> severity;
 
-    public Input<Either<String,Severity>> getSeverity() {
+    public Output<Either<String,Severity>> getSeverity() {
         return this.severity;
     }
 
@@ -126,9 +126,9 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="state", required=true)
-      private final Input<Either<String,AlertRuleState>> state;
+      private final Output<Either<String,AlertRuleState>> state;
 
-    public Input<Either<String,AlertRuleState>> getState() {
+    public Output<Either<String,AlertRuleState>> getState() {
         return this.state;
     }
 
@@ -137,10 +137,10 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -148,31 +148,31 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="throttling")
-      private final @Nullable Input<ThrottlingInformationArgs> throttling;
+      private final @Nullable Output<ThrottlingInformationArgs> throttling;
 
-    public Input<ThrottlingInformationArgs> getThrottling() {
-        return this.throttling == null ? Input.empty() : this.throttling;
+    public Output<ThrottlingInformationArgs> getThrottling() {
+        return this.throttling == null ? Output.empty() : this.throttling;
     }
 
     public SmartDetectorAlertRuleArgs(
-        Input<ActionGroupsInformationArgs> actionGroups,
-        @Nullable Input<String> alertRuleName,
-        @Nullable Input<String> description,
-        Input<DetectorArgs> detector,
-        Input<String> frequency,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        Input<List<String>> scope,
-        Input<Either<String,Severity>> severity,
-        Input<Either<String,AlertRuleState>> state,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<ThrottlingInformationArgs> throttling) {
+        Output<ActionGroupsInformationArgs> actionGroups,
+        @Nullable Output<String> alertRuleName,
+        @Nullable Output<String> description,
+        Output<DetectorArgs> detector,
+        Output<String> frequency,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        Output<List<String>> scope,
+        Output<Either<String,Severity>> severity,
+        Output<Either<String,AlertRuleState>> state,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<ThrottlingInformationArgs> throttling) {
         this.actionGroups = Objects.requireNonNull(actionGroups, "expected parameter 'actionGroups' to be non-null");
         this.alertRuleName = alertRuleName;
         this.description = description;
         this.detector = Objects.requireNonNull(detector, "expected parameter 'detector' to be non-null");
         this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.location = location == null ? Input.ofNullable("global") : location;
+        this.location = location == null ? Output.ofNullable("global") : location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
         this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
@@ -182,18 +182,18 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
     }
 
     private SmartDetectorAlertRuleArgs() {
-        this.actionGroups = Input.empty();
-        this.alertRuleName = Input.empty();
-        this.description = Input.empty();
-        this.detector = Input.empty();
-        this.frequency = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scope = Input.empty();
-        this.severity = Input.empty();
-        this.state = Input.empty();
-        this.tags = Input.empty();
-        this.throttling = Input.empty();
+        this.actionGroups = Output.empty();
+        this.alertRuleName = Output.empty();
+        this.description = Output.empty();
+        this.detector = Output.empty();
+        this.frequency = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scope = Output.empty();
+        this.severity = Output.empty();
+        this.state = Output.empty();
+        this.tags = Output.empty();
+        this.throttling = Output.empty();
     }
 
     public static Builder builder() {
@@ -205,18 +205,18 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<ActionGroupsInformationArgs> actionGroups;
-        private @Nullable Input<String> alertRuleName;
-        private @Nullable Input<String> description;
-        private Input<DetectorArgs> detector;
-        private Input<String> frequency;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private Input<List<String>> scope;
-        private Input<Either<String,Severity>> severity;
-        private Input<Either<String,AlertRuleState>> state;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<ThrottlingInformationArgs> throttling;
+        private Output<ActionGroupsInformationArgs> actionGroups;
+        private @Nullable Output<String> alertRuleName;
+        private @Nullable Output<String> description;
+        private Output<DetectorArgs> detector;
+        private Output<String> frequency;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private Output<List<String>> scope;
+        private Output<Either<String,Severity>> severity;
+        private Output<Either<String,AlertRuleState>> state;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<ThrottlingInformationArgs> throttling;
 
         public Builder() {
     	      // Empty
@@ -238,123 +238,123 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
     	      this.throttling = defaults.throttling;
         }
 
-        public Builder actionGroups(Input<ActionGroupsInformationArgs> actionGroups) {
+        public Builder actionGroups(Output<ActionGroupsInformationArgs> actionGroups) {
             this.actionGroups = Objects.requireNonNull(actionGroups);
             return this;
         }
 
         public Builder actionGroups(ActionGroupsInformationArgs actionGroups) {
-            this.actionGroups = Input.of(Objects.requireNonNull(actionGroups));
+            this.actionGroups = Output.of(Objects.requireNonNull(actionGroups));
             return this;
         }
 
-        public Builder alertRuleName(@Nullable Input<String> alertRuleName) {
+        public Builder alertRuleName(@Nullable Output<String> alertRuleName) {
             this.alertRuleName = alertRuleName;
             return this;
         }
 
         public Builder alertRuleName(@Nullable String alertRuleName) {
-            this.alertRuleName = Input.ofNullable(alertRuleName);
+            this.alertRuleName = Output.ofNullable(alertRuleName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder detector(Input<DetectorArgs> detector) {
+        public Builder detector(Output<DetectorArgs> detector) {
             this.detector = Objects.requireNonNull(detector);
             return this;
         }
 
         public Builder detector(DetectorArgs detector) {
-            this.detector = Input.of(Objects.requireNonNull(detector));
+            this.detector = Output.of(Objects.requireNonNull(detector));
             return this;
         }
 
-        public Builder frequency(Input<String> frequency) {
+        public Builder frequency(Output<String> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
         public Builder frequency(String frequency) {
-            this.frequency = Input.of(Objects.requireNonNull(frequency));
+            this.frequency = Output.of(Objects.requireNonNull(frequency));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scope(Input<List<String>> scope) {
+        public Builder scope(Output<List<String>> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(List<String> scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder severity(Input<Either<String,Severity>> severity) {
+        public Builder severity(Output<Either<String,Severity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
         public Builder severity(Either<String,Severity> severity) {
-            this.severity = Input.of(Objects.requireNonNull(severity));
+            this.severity = Output.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder state(Input<Either<String,AlertRuleState>> state) {
+        public Builder state(Output<Either<String,AlertRuleState>> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(Either<String,AlertRuleState> state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder throttling(@Nullable Input<ThrottlingInformationArgs> throttling) {
+        public Builder throttling(@Nullable Output<ThrottlingInformationArgs> throttling) {
             this.throttling = throttling;
             return this;
         }
 
         public Builder throttling(@Nullable ThrottlingInformationArgs throttling) {
-            this.throttling = Input.ofNullable(throttling);
+            this.throttling = Output.ofNullable(throttling);
             return this;
         }
         public SmartDetectorAlertRuleArgs build() {

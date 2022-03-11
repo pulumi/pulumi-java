@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledRegionSelection")
-      private final @Nullable Input<Boolean> enabledRegionSelection;
+      private final @Nullable Output<Boolean> enabledRegionSelection;
 
-    public Input<Boolean> getEnabledRegionSelection() {
-        return this.enabledRegionSelection == null ? Input.empty() : this.enabledRegionSelection;
+    public Output<Boolean> getEnabledRegionSelection() {
+        return this.enabledRegionSelection == null ? Output.empty() : this.enabledRegionSelection;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labAccountName")
-      private final @Nullable Input<String> labAccountName;
+      private final @Nullable Output<String> labAccountName;
 
-    public Input<String> getLabAccountName() {
-        return this.labAccountName == null ? Input.empty() : this.labAccountName;
+    public Output<String> getLabAccountName() {
+        return this.labAccountName == null ? Output.empty() : this.labAccountName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -65,9 +65,9 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -76,10 +76,10 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uniqueIdentifier")
-      private final @Nullable Input<String> uniqueIdentifier;
+      private final @Nullable Output<String> uniqueIdentifier;
 
-    public Input<String> getUniqueIdentifier() {
-        return this.uniqueIdentifier == null ? Input.empty() : this.uniqueIdentifier;
+    public Output<String> getUniqueIdentifier() {
+        return this.uniqueIdentifier == null ? Output.empty() : this.uniqueIdentifier;
     }
 
     public LabAccountArgs(
-        @Nullable Input<Boolean> enabledRegionSelection,
-        @Nullable Input<String> labAccountName,
-        @Nullable Input<String> location,
-        @Nullable Input<String> provisioningState,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> uniqueIdentifier) {
+        @Nullable Output<Boolean> enabledRegionSelection,
+        @Nullable Output<String> labAccountName,
+        @Nullable Output<String> location,
+        @Nullable Output<String> provisioningState,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> uniqueIdentifier) {
         this.enabledRegionSelection = enabledRegionSelection;
         this.labAccountName = labAccountName;
         this.location = location;
@@ -111,13 +111,13 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LabAccountArgs() {
-        this.enabledRegionSelection = Input.empty();
-        this.labAccountName = Input.empty();
-        this.location = Input.empty();
-        this.provisioningState = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.uniqueIdentifier = Input.empty();
+        this.enabledRegionSelection = Output.empty();
+        this.labAccountName = Output.empty();
+        this.location = Output.empty();
+        this.provisioningState = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.uniqueIdentifier = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enabledRegionSelection;
-        private @Nullable Input<String> labAccountName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> provisioningState;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> uniqueIdentifier;
+        private @Nullable Output<Boolean> enabledRegionSelection;
+        private @Nullable Output<String> labAccountName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> provisioningState;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> uniqueIdentifier;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class LabAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder enabledRegionSelection(@Nullable Input<Boolean> enabledRegionSelection) {
+        public Builder enabledRegionSelection(@Nullable Output<Boolean> enabledRegionSelection) {
             this.enabledRegionSelection = enabledRegionSelection;
             return this;
         }
 
         public Builder enabledRegionSelection(@Nullable Boolean enabledRegionSelection) {
-            this.enabledRegionSelection = Input.ofNullable(enabledRegionSelection);
+            this.enabledRegionSelection = Output.ofNullable(enabledRegionSelection);
             return this;
         }
 
-        public Builder labAccountName(@Nullable Input<String> labAccountName) {
+        public Builder labAccountName(@Nullable Output<String> labAccountName) {
             this.labAccountName = labAccountName;
             return this;
         }
 
         public Builder labAccountName(@Nullable String labAccountName) {
-            this.labAccountName = Input.ofNullable(labAccountName);
+            this.labAccountName = Output.ofNullable(labAccountName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder uniqueIdentifier(@Nullable Input<String> uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
 
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
-            this.uniqueIdentifier = Input.ofNullable(uniqueIdentifier);
+            this.uniqueIdentifier = Output.ofNullable(uniqueIdentifier);
             return this;
         }
         public LabAccountArgs build() {

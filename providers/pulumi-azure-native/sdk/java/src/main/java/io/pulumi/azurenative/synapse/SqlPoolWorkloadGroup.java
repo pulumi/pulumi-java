@@ -6,7 +6,6 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.SqlPoolWorkloadGroupArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -184,24 +183,24 @@ public class SqlPoolWorkloadGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SqlPoolWorkloadGroup(String name, SqlPoolWorkloadGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:synapse:SqlPoolWorkloadGroup", name, args == null ? SqlPoolWorkloadGroupArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:synapse:SqlPoolWorkloadGroup", name, args == null ? SqlPoolWorkloadGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SqlPoolWorkloadGroup(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SqlPoolWorkloadGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:synapse:SqlPoolWorkloadGroup", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:synapse/v20190601preview:SqlPoolWorkloadGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20201201:SqlPoolWorkloadGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210301:SqlPoolWorkloadGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210401preview:SqlPoolWorkloadGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210501:SqlPoolWorkloadGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601:SqlPoolWorkloadGroup").build()),
-                Input.of(Alias.builder().setType("azure-native:synapse/v20210601preview:SqlPoolWorkloadGroup").build())
+                Output.of(Alias.builder().setType("azure-native:synapse/v20190601preview:SqlPoolWorkloadGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20201201:SqlPoolWorkloadGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210301:SqlPoolWorkloadGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210401preview:SqlPoolWorkloadGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210501:SqlPoolWorkloadGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601:SqlPoolWorkloadGroup").build()),
+                Output.of(Alias.builder().setType("azure-native:synapse/v20210601preview:SqlPoolWorkloadGroup").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -215,7 +214,7 @@ public class SqlPoolWorkloadGroup extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SqlPoolWorkloadGroup get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SqlPoolWorkloadGroup get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SqlPoolWorkloadGroup(name, id, options);
     }
 }

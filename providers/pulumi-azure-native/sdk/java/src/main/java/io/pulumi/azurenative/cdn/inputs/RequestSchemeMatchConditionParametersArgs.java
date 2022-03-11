@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="matchValues")
-      private final @Nullable Input<List<String>> matchValues;
+      private final @Nullable Output<List<String>> matchValues;
 
-    public Input<List<String>> getMatchValues() {
-        return this.matchValues == null ? Input.empty() : this.matchValues;
+    public Output<List<String>> getMatchValues() {
+        return this.matchValues == null ? Output.empty() : this.matchValues;
     }
 
     /**
@@ -36,16 +36,16 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="negateCondition")
-      private final @Nullable Input<Boolean> negateCondition;
+      private final @Nullable Output<Boolean> negateCondition;
 
-    public Input<Boolean> getNegateCondition() {
-        return this.negateCondition == null ? Input.empty() : this.negateCondition;
+    public Output<Boolean> getNegateCondition() {
+        return this.negateCondition == null ? Output.empty() : this.negateCondition;
     }
 
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -54,17 +54,17 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="operator", required=true)
-      private final Input<String> operator;
+      private final Output<String> operator;
 
-    public Input<String> getOperator() {
+    public Output<String> getOperator() {
         return this.operator;
     }
 
     public RequestSchemeMatchConditionParametersArgs(
-        @Nullable Input<List<String>> matchValues,
-        @Nullable Input<Boolean> negateCondition,
-        Input<String> odataType,
-        Input<String> operator) {
+        @Nullable Output<List<String>> matchValues,
+        @Nullable Output<Boolean> negateCondition,
+        Output<String> odataType,
+        Output<String> operator) {
         this.matchValues = matchValues;
         this.negateCondition = negateCondition;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
@@ -72,10 +72,10 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
     }
 
     private RequestSchemeMatchConditionParametersArgs() {
-        this.matchValues = Input.empty();
-        this.negateCondition = Input.empty();
-        this.odataType = Input.empty();
-        this.operator = Input.empty();
+        this.matchValues = Output.empty();
+        this.negateCondition = Output.empty();
+        this.odataType = Output.empty();
+        this.operator = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> matchValues;
-        private @Nullable Input<Boolean> negateCondition;
-        private Input<String> odataType;
-        private Input<String> operator;
+        private @Nullable Output<List<String>> matchValues;
+        private @Nullable Output<Boolean> negateCondition;
+        private Output<String> odataType;
+        private Output<String> operator;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class RequestSchemeMatchConditionParametersArgs extends io.pulumi.r
     	      this.operator = defaults.operator;
         }
 
-        public Builder matchValues(@Nullable Input<List<String>> matchValues) {
+        public Builder matchValues(@Nullable Output<List<String>> matchValues) {
             this.matchValues = matchValues;
             return this;
         }
 
         public Builder matchValues(@Nullable List<String> matchValues) {
-            this.matchValues = Input.ofNullable(matchValues);
+            this.matchValues = Output.ofNullable(matchValues);
             return this;
         }
 
-        public Builder negateCondition(@Nullable Input<Boolean> negateCondition) {
+        public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
 
         public Builder negateCondition(@Nullable Boolean negateCondition) {
-            this.negateCondition = Input.ofNullable(negateCondition);
+            this.negateCondition = Output.ofNullable(negateCondition);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder operator(Input<String> operator) {
+        public Builder operator(Output<String> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
         public Builder operator(String operator) {
-            this.operator = Input.of(Objects.requireNonNull(operator));
+            this.operator = Output.of(Objects.requireNonNull(operator));
             return this;
         }
         public RequestSchemeMatchConditionParametersArgs build() {

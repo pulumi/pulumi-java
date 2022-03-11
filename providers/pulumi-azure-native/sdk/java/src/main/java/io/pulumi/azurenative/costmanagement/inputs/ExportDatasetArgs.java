@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.enums.GranularityType;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDatasetConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-      private final @Nullable Input<ExportDatasetConfigurationArgs> configuration;
+      private final @Nullable Output<ExportDatasetConfigurationArgs> configuration;
 
-    public Input<ExportDatasetConfigurationArgs> getConfiguration() {
-        return this.configuration == null ? Input.empty() : this.configuration;
+    public Output<ExportDatasetConfigurationArgs> getConfiguration() {
+        return this.configuration == null ? Output.empty() : this.configuration;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="granularity")
-      private final @Nullable Input<Either<String,GranularityType>> granularity;
+      private final @Nullable Output<Either<String,GranularityType>> granularity;
 
-    public Input<Either<String,GranularityType>> getGranularity() {
-        return this.granularity == null ? Input.empty() : this.granularity;
+    public Output<Either<String,GranularityType>> getGranularity() {
+        return this.granularity == null ? Output.empty() : this.granularity;
     }
 
     public ExportDatasetArgs(
-        @Nullable Input<ExportDatasetConfigurationArgs> configuration,
-        @Nullable Input<Either<String,GranularityType>> granularity) {
+        @Nullable Output<ExportDatasetConfigurationArgs> configuration,
+        @Nullable Output<Either<String,GranularityType>> granularity) {
         this.configuration = configuration;
         this.granularity = granularity;
     }
 
     private ExportDatasetArgs() {
-        this.configuration = Input.empty();
-        this.granularity = Input.empty();
+        this.configuration = Output.empty();
+        this.granularity = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ExportDatasetConfigurationArgs> configuration;
-        private @Nullable Input<Either<String,GranularityType>> granularity;
+        private @Nullable Output<ExportDatasetConfigurationArgs> configuration;
+        private @Nullable Output<Either<String,GranularityType>> granularity;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.granularity = defaults.granularity;
         }
 
-        public Builder configuration(@Nullable Input<ExportDatasetConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Output<ExportDatasetConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
         public Builder configuration(@Nullable ExportDatasetConfigurationArgs configuration) {
-            this.configuration = Input.ofNullable(configuration);
+            this.configuration = Output.ofNullable(configuration);
             return this;
         }
 
-        public Builder granularity(@Nullable Input<Either<String,GranularityType>> granularity) {
+        public Builder granularity(@Nullable Output<Either<String,GranularityType>> granularity) {
             this.granularity = granularity;
             return this;
         }
 
         public Builder granularity(@Nullable Either<String,GranularityType> granularity) {
-            this.granularity = Input.ofNullable(granularity);
+            this.granularity = Output.ofNullable(granularity);
             return this;
         }
         public ExportDatasetArgs build() {

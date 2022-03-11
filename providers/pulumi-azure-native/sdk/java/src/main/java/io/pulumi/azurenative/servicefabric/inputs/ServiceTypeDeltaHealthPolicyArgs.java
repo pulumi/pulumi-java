@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxPercentDeltaUnhealthyServices")
-      private final @Nullable Input<Integer> maxPercentDeltaUnhealthyServices;
+      private final @Nullable Output<Integer> maxPercentDeltaUnhealthyServices;
 
-    public Input<Integer> getMaxPercentDeltaUnhealthyServices() {
-        return this.maxPercentDeltaUnhealthyServices == null ? Input.empty() : this.maxPercentDeltaUnhealthyServices;
+    public Output<Integer> getMaxPercentDeltaUnhealthyServices() {
+        return this.maxPercentDeltaUnhealthyServices == null ? Output.empty() : this.maxPercentDeltaUnhealthyServices;
     }
 
-    public ServiceTypeDeltaHealthPolicyArgs(@Nullable Input<Integer> maxPercentDeltaUnhealthyServices) {
-        this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices == null ? Input.ofNullable(0) : maxPercentDeltaUnhealthyServices;
+    public ServiceTypeDeltaHealthPolicyArgs(@Nullable Output<Integer> maxPercentDeltaUnhealthyServices) {
+        this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices == null ? Output.ofNullable(0) : maxPercentDeltaUnhealthyServices;
     }
 
     private ServiceTypeDeltaHealthPolicyArgs() {
-        this.maxPercentDeltaUnhealthyServices = Input.empty();
+        this.maxPercentDeltaUnhealthyServices = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxPercentDeltaUnhealthyServices;
+        private @Nullable Output<Integer> maxPercentDeltaUnhealthyServices;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends io.pulumi.resources.
     	      this.maxPercentDeltaUnhealthyServices = defaults.maxPercentDeltaUnhealthyServices;
         }
 
-        public Builder maxPercentDeltaUnhealthyServices(@Nullable Input<Integer> maxPercentDeltaUnhealthyServices) {
+        public Builder maxPercentDeltaUnhealthyServices(@Nullable Output<Integer> maxPercentDeltaUnhealthyServices) {
             this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
             return this;
         }
 
         public Builder maxPercentDeltaUnhealthyServices(@Nullable Integer maxPercentDeltaUnhealthyServices) {
-            this.maxPercentDeltaUnhealthyServices = Input.ofNullable(maxPercentDeltaUnhealthyServices);
+            this.maxPercentDeltaUnhealthyServices = Output.ofNullable(maxPercentDeltaUnhealthyServices);
             return this;
         }
         public ServiceTypeDeltaHealthPolicyArgs build() {

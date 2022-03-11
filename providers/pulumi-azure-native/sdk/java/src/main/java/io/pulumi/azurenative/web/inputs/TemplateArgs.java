@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ContainerArgs;
 import io.pulumi.azurenative.web.inputs.DaprArgs;
 import io.pulumi.azurenative.web.inputs.ScaleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,10 +29,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containers")
-      private final @Nullable Input<List<ContainerArgs>> containers;
+      private final @Nullable Output<List<ContainerArgs>> containers;
 
-    public Input<List<ContainerArgs>> getContainers() {
-        return this.containers == null ? Input.empty() : this.containers;
+    public Output<List<ContainerArgs>> getContainers() {
+        return this.containers == null ? Output.empty() : this.containers;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dapr")
-      private final @Nullable Input<DaprArgs> dapr;
+      private final @Nullable Output<DaprArgs> dapr;
 
-    public Input<DaprArgs> getDapr() {
-        return this.dapr == null ? Input.empty() : this.dapr;
+    public Output<DaprArgs> getDapr() {
+        return this.dapr == null ? Output.empty() : this.dapr;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionSuffix")
-      private final @Nullable Input<String> revisionSuffix;
+      private final @Nullable Output<String> revisionSuffix;
 
-    public Input<String> getRevisionSuffix() {
-        return this.revisionSuffix == null ? Input.empty() : this.revisionSuffix;
+    public Output<String> getRevisionSuffix() {
+        return this.revisionSuffix == null ? Output.empty() : this.revisionSuffix;
     }
 
     /**
@@ -62,17 +62,17 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scale")
-      private final @Nullable Input<ScaleArgs> scale;
+      private final @Nullable Output<ScaleArgs> scale;
 
-    public Input<ScaleArgs> getScale() {
-        return this.scale == null ? Input.empty() : this.scale;
+    public Output<ScaleArgs> getScale() {
+        return this.scale == null ? Output.empty() : this.scale;
     }
 
     public TemplateArgs(
-        @Nullable Input<List<ContainerArgs>> containers,
-        @Nullable Input<DaprArgs> dapr,
-        @Nullable Input<String> revisionSuffix,
-        @Nullable Input<ScaleArgs> scale) {
+        @Nullable Output<List<ContainerArgs>> containers,
+        @Nullable Output<DaprArgs> dapr,
+        @Nullable Output<String> revisionSuffix,
+        @Nullable Output<ScaleArgs> scale) {
         this.containers = containers;
         this.dapr = dapr;
         this.revisionSuffix = revisionSuffix;
@@ -80,10 +80,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateArgs() {
-        this.containers = Input.empty();
-        this.dapr = Input.empty();
-        this.revisionSuffix = Input.empty();
-        this.scale = Input.empty();
+        this.containers = Output.empty();
+        this.dapr = Output.empty();
+        this.revisionSuffix = Output.empty();
+        this.scale = Output.empty();
     }
 
     public static Builder builder() {
@@ -95,10 +95,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ContainerArgs>> containers;
-        private @Nullable Input<DaprArgs> dapr;
-        private @Nullable Input<String> revisionSuffix;
-        private @Nullable Input<ScaleArgs> scale;
+        private @Nullable Output<List<ContainerArgs>> containers;
+        private @Nullable Output<DaprArgs> dapr;
+        private @Nullable Output<String> revisionSuffix;
+        private @Nullable Output<ScaleArgs> scale;
 
         public Builder() {
     	      // Empty
@@ -112,43 +112,43 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scale = defaults.scale;
         }
 
-        public Builder containers(@Nullable Input<List<ContainerArgs>> containers) {
+        public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
         public Builder containers(@Nullable List<ContainerArgs> containers) {
-            this.containers = Input.ofNullable(containers);
+            this.containers = Output.ofNullable(containers);
             return this;
         }
 
-        public Builder dapr(@Nullable Input<DaprArgs> dapr) {
+        public Builder dapr(@Nullable Output<DaprArgs> dapr) {
             this.dapr = dapr;
             return this;
         }
 
         public Builder dapr(@Nullable DaprArgs dapr) {
-            this.dapr = Input.ofNullable(dapr);
+            this.dapr = Output.ofNullable(dapr);
             return this;
         }
 
-        public Builder revisionSuffix(@Nullable Input<String> revisionSuffix) {
+        public Builder revisionSuffix(@Nullable Output<String> revisionSuffix) {
             this.revisionSuffix = revisionSuffix;
             return this;
         }
 
         public Builder revisionSuffix(@Nullable String revisionSuffix) {
-            this.revisionSuffix = Input.ofNullable(revisionSuffix);
+            this.revisionSuffix = Output.ofNullable(revisionSuffix);
             return this;
         }
 
-        public Builder scale(@Nullable Input<ScaleArgs> scale) {
+        public Builder scale(@Nullable Output<ScaleArgs> scale) {
             this.scale = scale;
             return this;
         }
 
         public Builder scale(@Nullable ScaleArgs scale) {
-            this.scale = Input.ofNullable(scale);
+            this.scale = Output.ofNullable(scale);
             return this;
         }
         public TemplateArgs build() {

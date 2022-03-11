@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<String> credentials;
+      private final @Nullable Output<String> credentials;
 
-    public Input<String> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<String> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-      private final Input<String> uri;
+      private final Output<String> uri;
 
-    public Input<String> getUri() {
+    public Output<String> getUri() {
         return this.uri;
     }
 
     public BlobLocationArgs(
-        @Nullable Input<String> credentials,
-        Input<String> uri) {
+        @Nullable Output<String> credentials,
+        Output<String> uri) {
         this.credentials = credentials;
         this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
     }
 
     private BlobLocationArgs() {
-        this.credentials = Input.empty();
-        this.uri = Input.empty();
+        this.credentials = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> credentials;
-        private Input<String> uri;
+        private @Nullable Output<String> credentials;
+        private Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class BlobLocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder credentials(@Nullable Input<String> credentials) {
+        public Builder credentials(@Nullable Output<String> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable String credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder uri(Input<String> uri) {
+        public Builder uri(Output<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
         public Builder uri(String uri) {
-            this.uri = Input.of(Objects.requireNonNull(uri));
+            this.uri = Output.of(Objects.requireNonNull(uri));
             return this;
         }
         public BlobLocationArgs build() {

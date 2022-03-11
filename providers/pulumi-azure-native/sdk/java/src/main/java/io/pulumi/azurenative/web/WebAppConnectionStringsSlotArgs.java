@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.ConnStringValueTypePairArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -43,10 +43,10 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Map<String,ConnStringValueTypePairArgs>> properties;
+      private final @Nullable Output<Map<String,ConnStringValueTypePairArgs>> properties;
 
-    public Input<Map<String,ConnStringValueTypePairArgs>> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Map<String,ConnStringValueTypePairArgs>> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="slot", required=true)
-      private final Input<String> slot;
+      private final Output<String> slot;
 
-    public Input<String> getSlot() {
+    public Output<String> getSlot() {
         return this.slot;
     }
 
     public WebAppConnectionStringsSlotArgs(
-        @Nullable Input<String> kind,
-        Input<String> name,
-        @Nullable Input<Map<String,ConnStringValueTypePairArgs>> properties,
-        Input<String> resourceGroupName,
-        Input<String> slot) {
+        @Nullable Output<String> kind,
+        Output<String> name,
+        @Nullable Output<Map<String,ConnStringValueTypePairArgs>> properties,
+        Output<String> resourceGroupName,
+        Output<String> slot) {
         this.kind = kind;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.properties = properties;
@@ -85,11 +85,11 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
     }
 
     private WebAppConnectionStringsSlotArgs() {
-        this.kind = Input.empty();
-        this.name = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.slot = Input.empty();
+        this.kind = Output.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.slot = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> kind;
-        private Input<String> name;
-        private @Nullable Input<Map<String,ConnStringValueTypePairArgs>> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> slot;
+        private @Nullable Output<String> kind;
+        private Output<String> name;
+        private @Nullable Output<Map<String,ConnStringValueTypePairArgs>> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> slot;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class WebAppConnectionStringsSlotArgs extends io.pulumi.resources.R
     	      this.slot = defaults.slot;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder properties(@Nullable Input<Map<String,ConnStringValueTypePairArgs>> properties) {
+        public Builder properties(@Nullable Output<Map<String,ConnStringValueTypePairArgs>> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Map<String,ConnStringValueTypePairArgs> properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder slot(Input<String> slot) {
+        public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
 
         public Builder slot(String slot) {
-            this.slot = Input.of(Objects.requireNonNull(slot));
+            this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
         }
         public WebAppConnectionStringsSlotArgs build() {

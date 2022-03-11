@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.enums.LinuxOsState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxOsState")
-      private final @Nullable Input<Either<String,LinuxOsState>> linuxOsState;
+      private final @Nullable Output<Either<String,LinuxOsState>> linuxOsState;
 
-    public Input<Either<String,LinuxOsState>> getLinuxOsState() {
-        return this.linuxOsState == null ? Input.empty() : this.linuxOsState;
+    public Output<Either<String,LinuxOsState>> getLinuxOsState() {
+        return this.linuxOsState == null ? Output.empty() : this.linuxOsState;
     }
 
-    public LinuxOsInfoArgs(@Nullable Input<Either<String,LinuxOsState>> linuxOsState) {
+    public LinuxOsInfoArgs(@Nullable Output<Either<String,LinuxOsState>> linuxOsState) {
         this.linuxOsState = linuxOsState;
     }
 
     private LinuxOsInfoArgs() {
-        this.linuxOsState = Input.empty();
+        this.linuxOsState = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,LinuxOsState>> linuxOsState;
+        private @Nullable Output<Either<String,LinuxOsState>> linuxOsState;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.linuxOsState = defaults.linuxOsState;
         }
 
-        public Builder linuxOsState(@Nullable Input<Either<String,LinuxOsState>> linuxOsState) {
+        public Builder linuxOsState(@Nullable Output<Either<String,LinuxOsState>> linuxOsState) {
             this.linuxOsState = linuxOsState;
             return this;
         }
 
         public Builder linuxOsState(@Nullable Either<String,LinuxOsState> linuxOsState) {
-            this.linuxOsState = Input.ofNullable(linuxOsState);
+            this.linuxOsState = Output.ofNullable(linuxOsState);
             return this;
         }
         public LinuxOsInfoArgs build() {

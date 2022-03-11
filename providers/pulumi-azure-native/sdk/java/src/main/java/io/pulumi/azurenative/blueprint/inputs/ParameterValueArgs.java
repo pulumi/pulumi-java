@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.inputs;
 
 import io.pulumi.azurenative.blueprint.inputs.SecretValueReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reference")
-      private final @Nullable Input<SecretValueReferenceArgs> reference;
+      private final @Nullable Output<SecretValueReferenceArgs> reference;
 
-    public Input<SecretValueReferenceArgs> getReference() {
-        return this.reference == null ? Input.empty() : this.reference;
+    public Output<SecretValueReferenceArgs> getReference() {
+        return this.reference == null ? Output.empty() : this.reference;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<Object> value;
+      private final @Nullable Output<Object> value;
 
-    public Input<Object> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Object> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public ParameterValueArgs(
-        @Nullable Input<SecretValueReferenceArgs> reference,
-        @Nullable Input<Object> value) {
+        @Nullable Output<SecretValueReferenceArgs> reference,
+        @Nullable Output<Object> value) {
         this.reference = reference;
         this.value = value;
     }
 
     private ParameterValueArgs() {
-        this.reference = Input.empty();
-        this.value = Input.empty();
+        this.reference = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SecretValueReferenceArgs> reference;
-        private @Nullable Input<Object> value;
+        private @Nullable Output<SecretValueReferenceArgs> reference;
+        private @Nullable Output<Object> value;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder reference(@Nullable Input<SecretValueReferenceArgs> reference) {
+        public Builder reference(@Nullable Output<SecretValueReferenceArgs> reference) {
             this.reference = reference;
             return this;
         }
 
         public Builder reference(@Nullable SecretValueReferenceArgs reference) {
-            this.reference = Input.ofNullable(reference);
+            this.reference = Output.ofNullable(reference);
             return this;
         }
 
-        public Builder value(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Output<Object> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Object value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ParameterValueArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customerinsights;
 import io.pulumi.azurenative.customerinsights.enums.EntityTypes;
 import io.pulumi.azurenative.customerinsights.inputs.PropertyDefinitionArgs;
 import io.pulumi.azurenative.customerinsights.inputs.StrongIdArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiEntitySetName")
-      private final @Nullable Input<String> apiEntitySetName;
+      private final @Nullable Output<String> apiEntitySetName;
 
-    public Input<String> getApiEntitySetName() {
-        return this.apiEntitySetName == null ? Input.empty() : this.apiEntitySetName;
+    public Output<String> getApiEntitySetName() {
+        return this.apiEntitySetName == null ? Output.empty() : this.apiEntitySetName;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-      private final @Nullable Input<Map<String,List<String>>> attributes;
+      private final @Nullable Output<Map<String,List<String>>> attributes;
 
-    public Input<Map<String,List<String>>> getAttributes() {
-        return this.attributes == null ? Input.empty() : this.attributes;
+    public Output<Map<String,List<String>>> getAttributes() {
+        return this.attributes == null ? Output.empty() : this.attributes;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<Map<String,String>> description;
+      private final @Nullable Output<Map<String,String>> description;
 
-    public Input<Map<String,String>> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<Map<String,String>> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<Map<String,String>> displayName;
+      private final @Nullable Output<Map<String,String>> displayName;
 
-    public Input<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<Map<String,String>> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityType")
-      private final @Nullable Input<EntityTypes> entityType;
+      private final @Nullable Output<EntityTypes> entityType;
 
-    public Input<EntityTypes> getEntityType() {
-        return this.entityType == null ? Input.empty() : this.entityType;
+    public Output<EntityTypes> getEntityType() {
+        return this.entityType == null ? Output.empty() : this.entityType;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-      private final @Nullable Input<List<PropertyDefinitionArgs>> fields;
+      private final @Nullable Output<List<PropertyDefinitionArgs>> fields;
 
-    public Input<List<PropertyDefinitionArgs>> getFields() {
-        return this.fields == null ? Input.empty() : this.fields;
+    public Output<List<PropertyDefinitionArgs>> getFields() {
+        return this.fields == null ? Output.empty() : this.fields;
     }
 
     /**
@@ -91,9 +91,9 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-      private final Input<String> hubName;
+      private final Output<String> hubName;
 
-    public Input<String> getHubName() {
+    public Output<String> getHubName() {
         return this.hubName;
     }
 
@@ -102,10 +102,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instancesCount")
-      private final @Nullable Input<Integer> instancesCount;
+      private final @Nullable Output<Integer> instancesCount;
 
-    public Input<Integer> getInstancesCount() {
-        return this.instancesCount == null ? Input.empty() : this.instancesCount;
+    public Output<Integer> getInstancesCount() {
+        return this.instancesCount == null ? Output.empty() : this.instancesCount;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="largeImage")
-      private final @Nullable Input<String> largeImage;
+      private final @Nullable Output<String> largeImage;
 
-    public Input<String> getLargeImage() {
-        return this.largeImage == null ? Input.empty() : this.largeImage;
+    public Output<String> getLargeImage() {
+        return this.largeImage == null ? Output.empty() : this.largeImage;
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localizedAttributes")
-      private final @Nullable Input<Map<String,Map<String,String>>> localizedAttributes;
+      private final @Nullable Output<Map<String,Map<String,String>>> localizedAttributes;
 
-    public Input<Map<String,Map<String,String>>> getLocalizedAttributes() {
-        return this.localizedAttributes == null ? Input.empty() : this.localizedAttributes;
+    public Output<Map<String,Map<String,String>>> getLocalizedAttributes() {
+        return this.localizedAttributes == null ? Output.empty() : this.localizedAttributes;
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mediumImage")
-      private final @Nullable Input<String> mediumImage;
+      private final @Nullable Output<String> mediumImage;
 
-    public Input<String> getMediumImage() {
-        return this.mediumImage == null ? Input.empty() : this.mediumImage;
+    public Output<String> getMediumImage() {
+        return this.mediumImage == null ? Output.empty() : this.mediumImage;
     }
 
     /**
@@ -146,10 +146,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName")
-      private final @Nullable Input<String> profileName;
+      private final @Nullable Output<String> profileName;
 
-    public Input<String> getProfileName() {
-        return this.profileName == null ? Input.empty() : this.profileName;
+    public Output<String> getProfileName() {
+        return this.profileName == null ? Output.empty() : this.profileName;
     }
 
     /**
@@ -157,9 +157,9 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -168,10 +168,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaItemTypeLink")
-      private final @Nullable Input<String> schemaItemTypeLink;
+      private final @Nullable Output<String> schemaItemTypeLink;
 
-    public Input<String> getSchemaItemTypeLink() {
-        return this.schemaItemTypeLink == null ? Input.empty() : this.schemaItemTypeLink;
+    public Output<String> getSchemaItemTypeLink() {
+        return this.schemaItemTypeLink == null ? Output.empty() : this.schemaItemTypeLink;
     }
 
     /**
@@ -179,10 +179,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smallImage")
-      private final @Nullable Input<String> smallImage;
+      private final @Nullable Output<String> smallImage;
 
-    public Input<String> getSmallImage() {
-        return this.smallImage == null ? Input.empty() : this.smallImage;
+    public Output<String> getSmallImage() {
+        return this.smallImage == null ? Output.empty() : this.smallImage;
     }
 
     /**
@@ -190,10 +190,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strongIds")
-      private final @Nullable Input<List<StrongIdArgs>> strongIds;
+      private final @Nullable Output<List<StrongIdArgs>> strongIds;
 
-    public Input<List<StrongIdArgs>> getStrongIds() {
-        return this.strongIds == null ? Input.empty() : this.strongIds;
+    public Output<List<StrongIdArgs>> getStrongIds() {
+        return this.strongIds == null ? Output.empty() : this.strongIds;
     }
 
     /**
@@ -201,10 +201,10 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timestampFieldName")
-      private final @Nullable Input<String> timestampFieldName;
+      private final @Nullable Output<String> timestampFieldName;
 
-    public Input<String> getTimestampFieldName() {
-        return this.timestampFieldName == null ? Input.empty() : this.timestampFieldName;
+    public Output<String> getTimestampFieldName() {
+        return this.timestampFieldName == null ? Output.empty() : this.timestampFieldName;
     }
 
     /**
@@ -212,31 +212,31 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName")
-      private final @Nullable Input<String> typeName;
+      private final @Nullable Output<String> typeName;
 
-    public Input<String> getTypeName() {
-        return this.typeName == null ? Input.empty() : this.typeName;
+    public Output<String> getTypeName() {
+        return this.typeName == null ? Output.empty() : this.typeName;
     }
 
     public ProfileArgs(
-        @Nullable Input<String> apiEntitySetName,
-        @Nullable Input<Map<String,List<String>>> attributes,
-        @Nullable Input<Map<String,String>> description,
-        @Nullable Input<Map<String,String>> displayName,
-        @Nullable Input<EntityTypes> entityType,
-        @Nullable Input<List<PropertyDefinitionArgs>> fields,
-        Input<String> hubName,
-        @Nullable Input<Integer> instancesCount,
-        @Nullable Input<String> largeImage,
-        @Nullable Input<Map<String,Map<String,String>>> localizedAttributes,
-        @Nullable Input<String> mediumImage,
-        @Nullable Input<String> profileName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> schemaItemTypeLink,
-        @Nullable Input<String> smallImage,
-        @Nullable Input<List<StrongIdArgs>> strongIds,
-        @Nullable Input<String> timestampFieldName,
-        @Nullable Input<String> typeName) {
+        @Nullable Output<String> apiEntitySetName,
+        @Nullable Output<Map<String,List<String>>> attributes,
+        @Nullable Output<Map<String,String>> description,
+        @Nullable Output<Map<String,String>> displayName,
+        @Nullable Output<EntityTypes> entityType,
+        @Nullable Output<List<PropertyDefinitionArgs>> fields,
+        Output<String> hubName,
+        @Nullable Output<Integer> instancesCount,
+        @Nullable Output<String> largeImage,
+        @Nullable Output<Map<String,Map<String,String>>> localizedAttributes,
+        @Nullable Output<String> mediumImage,
+        @Nullable Output<String> profileName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> schemaItemTypeLink,
+        @Nullable Output<String> smallImage,
+        @Nullable Output<List<StrongIdArgs>> strongIds,
+        @Nullable Output<String> timestampFieldName,
+        @Nullable Output<String> typeName) {
         this.apiEntitySetName = apiEntitySetName;
         this.attributes = attributes;
         this.description = description;
@@ -258,24 +258,24 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProfileArgs() {
-        this.apiEntitySetName = Input.empty();
-        this.attributes = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.entityType = Input.empty();
-        this.fields = Input.empty();
-        this.hubName = Input.empty();
-        this.instancesCount = Input.empty();
-        this.largeImage = Input.empty();
-        this.localizedAttributes = Input.empty();
-        this.mediumImage = Input.empty();
-        this.profileName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.schemaItemTypeLink = Input.empty();
-        this.smallImage = Input.empty();
-        this.strongIds = Input.empty();
-        this.timestampFieldName = Input.empty();
-        this.typeName = Input.empty();
+        this.apiEntitySetName = Output.empty();
+        this.attributes = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.entityType = Output.empty();
+        this.fields = Output.empty();
+        this.hubName = Output.empty();
+        this.instancesCount = Output.empty();
+        this.largeImage = Output.empty();
+        this.localizedAttributes = Output.empty();
+        this.mediumImage = Output.empty();
+        this.profileName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.schemaItemTypeLink = Output.empty();
+        this.smallImage = Output.empty();
+        this.strongIds = Output.empty();
+        this.timestampFieldName = Output.empty();
+        this.typeName = Output.empty();
     }
 
     public static Builder builder() {
@@ -287,24 +287,24 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiEntitySetName;
-        private @Nullable Input<Map<String,List<String>>> attributes;
-        private @Nullable Input<Map<String,String>> description;
-        private @Nullable Input<Map<String,String>> displayName;
-        private @Nullable Input<EntityTypes> entityType;
-        private @Nullable Input<List<PropertyDefinitionArgs>> fields;
-        private Input<String> hubName;
-        private @Nullable Input<Integer> instancesCount;
-        private @Nullable Input<String> largeImage;
-        private @Nullable Input<Map<String,Map<String,String>>> localizedAttributes;
-        private @Nullable Input<String> mediumImage;
-        private @Nullable Input<String> profileName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> schemaItemTypeLink;
-        private @Nullable Input<String> smallImage;
-        private @Nullable Input<List<StrongIdArgs>> strongIds;
-        private @Nullable Input<String> timestampFieldName;
-        private @Nullable Input<String> typeName;
+        private @Nullable Output<String> apiEntitySetName;
+        private @Nullable Output<Map<String,List<String>>> attributes;
+        private @Nullable Output<Map<String,String>> description;
+        private @Nullable Output<Map<String,String>> displayName;
+        private @Nullable Output<EntityTypes> entityType;
+        private @Nullable Output<List<PropertyDefinitionArgs>> fields;
+        private Output<String> hubName;
+        private @Nullable Output<Integer> instancesCount;
+        private @Nullable Output<String> largeImage;
+        private @Nullable Output<Map<String,Map<String,String>>> localizedAttributes;
+        private @Nullable Output<String> mediumImage;
+        private @Nullable Output<String> profileName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> schemaItemTypeLink;
+        private @Nullable Output<String> smallImage;
+        private @Nullable Output<List<StrongIdArgs>> strongIds;
+        private @Nullable Output<String> timestampFieldName;
+        private @Nullable Output<String> typeName;
 
         public Builder() {
     	      // Empty
@@ -332,183 +332,183 @@ public final class ProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder apiEntitySetName(@Nullable Input<String> apiEntitySetName) {
+        public Builder apiEntitySetName(@Nullable Output<String> apiEntitySetName) {
             this.apiEntitySetName = apiEntitySetName;
             return this;
         }
 
         public Builder apiEntitySetName(@Nullable String apiEntitySetName) {
-            this.apiEntitySetName = Input.ofNullable(apiEntitySetName);
+            this.apiEntitySetName = Output.ofNullable(apiEntitySetName);
             return this;
         }
 
-        public Builder attributes(@Nullable Input<Map<String,List<String>>> attributes) {
+        public Builder attributes(@Nullable Output<Map<String,List<String>>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
         public Builder attributes(@Nullable Map<String,List<String>> attributes) {
-            this.attributes = Input.ofNullable(attributes);
+            this.attributes = Output.ofNullable(attributes);
             return this;
         }
 
-        public Builder description(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Output<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder entityType(@Nullable Input<EntityTypes> entityType) {
+        public Builder entityType(@Nullable Output<EntityTypes> entityType) {
             this.entityType = entityType;
             return this;
         }
 
         public Builder entityType(@Nullable EntityTypes entityType) {
-            this.entityType = Input.ofNullable(entityType);
+            this.entityType = Output.ofNullable(entityType);
             return this;
         }
 
-        public Builder fields(@Nullable Input<List<PropertyDefinitionArgs>> fields) {
+        public Builder fields(@Nullable Output<List<PropertyDefinitionArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
         public Builder fields(@Nullable List<PropertyDefinitionArgs> fields) {
-            this.fields = Input.ofNullable(fields);
+            this.fields = Output.ofNullable(fields);
             return this;
         }
 
-        public Builder hubName(Input<String> hubName) {
+        public Builder hubName(Output<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
         public Builder hubName(String hubName) {
-            this.hubName = Input.of(Objects.requireNonNull(hubName));
+            this.hubName = Output.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder instancesCount(@Nullable Input<Integer> instancesCount) {
+        public Builder instancesCount(@Nullable Output<Integer> instancesCount) {
             this.instancesCount = instancesCount;
             return this;
         }
 
         public Builder instancesCount(@Nullable Integer instancesCount) {
-            this.instancesCount = Input.ofNullable(instancesCount);
+            this.instancesCount = Output.ofNullable(instancesCount);
             return this;
         }
 
-        public Builder largeImage(@Nullable Input<String> largeImage) {
+        public Builder largeImage(@Nullable Output<String> largeImage) {
             this.largeImage = largeImage;
             return this;
         }
 
         public Builder largeImage(@Nullable String largeImage) {
-            this.largeImage = Input.ofNullable(largeImage);
+            this.largeImage = Output.ofNullable(largeImage);
             return this;
         }
 
-        public Builder localizedAttributes(@Nullable Input<Map<String,Map<String,String>>> localizedAttributes) {
+        public Builder localizedAttributes(@Nullable Output<Map<String,Map<String,String>>> localizedAttributes) {
             this.localizedAttributes = localizedAttributes;
             return this;
         }
 
         public Builder localizedAttributes(@Nullable Map<String,Map<String,String>> localizedAttributes) {
-            this.localizedAttributes = Input.ofNullable(localizedAttributes);
+            this.localizedAttributes = Output.ofNullable(localizedAttributes);
             return this;
         }
 
-        public Builder mediumImage(@Nullable Input<String> mediumImage) {
+        public Builder mediumImage(@Nullable Output<String> mediumImage) {
             this.mediumImage = mediumImage;
             return this;
         }
 
         public Builder mediumImage(@Nullable String mediumImage) {
-            this.mediumImage = Input.ofNullable(mediumImage);
+            this.mediumImage = Output.ofNullable(mediumImage);
             return this;
         }
 
-        public Builder profileName(@Nullable Input<String> profileName) {
+        public Builder profileName(@Nullable Output<String> profileName) {
             this.profileName = profileName;
             return this;
         }
 
         public Builder profileName(@Nullable String profileName) {
-            this.profileName = Input.ofNullable(profileName);
+            this.profileName = Output.ofNullable(profileName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder schemaItemTypeLink(@Nullable Input<String> schemaItemTypeLink) {
+        public Builder schemaItemTypeLink(@Nullable Output<String> schemaItemTypeLink) {
             this.schemaItemTypeLink = schemaItemTypeLink;
             return this;
         }
 
         public Builder schemaItemTypeLink(@Nullable String schemaItemTypeLink) {
-            this.schemaItemTypeLink = Input.ofNullable(schemaItemTypeLink);
+            this.schemaItemTypeLink = Output.ofNullable(schemaItemTypeLink);
             return this;
         }
 
-        public Builder smallImage(@Nullable Input<String> smallImage) {
+        public Builder smallImage(@Nullable Output<String> smallImage) {
             this.smallImage = smallImage;
             return this;
         }
 
         public Builder smallImage(@Nullable String smallImage) {
-            this.smallImage = Input.ofNullable(smallImage);
+            this.smallImage = Output.ofNullable(smallImage);
             return this;
         }
 
-        public Builder strongIds(@Nullable Input<List<StrongIdArgs>> strongIds) {
+        public Builder strongIds(@Nullable Output<List<StrongIdArgs>> strongIds) {
             this.strongIds = strongIds;
             return this;
         }
 
         public Builder strongIds(@Nullable List<StrongIdArgs> strongIds) {
-            this.strongIds = Input.ofNullable(strongIds);
+            this.strongIds = Output.ofNullable(strongIds);
             return this;
         }
 
-        public Builder timestampFieldName(@Nullable Input<String> timestampFieldName) {
+        public Builder timestampFieldName(@Nullable Output<String> timestampFieldName) {
             this.timestampFieldName = timestampFieldName;
             return this;
         }
 
         public Builder timestampFieldName(@Nullable String timestampFieldName) {
-            this.timestampFieldName = Input.ofNullable(timestampFieldName);
+            this.timestampFieldName = Output.ofNullable(timestampFieldName);
             return this;
         }
 
-        public Builder typeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Output<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Input.ofNullable(typeName);
+            this.typeName = Output.ofNullable(typeName);
             return this;
         }
         public ProfileArgs build() {

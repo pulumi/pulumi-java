@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.AuthorizationUseStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizationKey")
-      private final @Nullable Input<String> authorizationKey;
+      private final @Nullable Output<String> authorizationKey;
 
-    public Input<String> getAuthorizationKey() {
-        return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
+    public Output<String> getAuthorizationKey() {
+        return this.authorizationKey == null ? Output.empty() : this.authorizationKey;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizationUseStatus")
-      private final @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
+      private final @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
-    public Input<Either<String,AuthorizationUseStatus>> getAuthorizationUseStatus() {
-        return this.authorizationUseStatus == null ? Input.empty() : this.authorizationUseStatus;
+    public Output<Either<String,AuthorizationUseStatus>> getAuthorizationUseStatus() {
+        return this.authorizationUseStatus == null ? Output.empty() : this.authorizationUseStatus;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public ExpressRouteCircuitAuthorizationArgs(
-        @Nullable Input<String> authorizationKey,
-        @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> authorizationKey,
+        @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name) {
         this.authorizationKey = authorizationKey;
         this.authorizationUseStatus = authorizationUseStatus;
         this.id = id;
@@ -76,10 +76,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     }
 
     private ExpressRouteCircuitAuthorizationArgs() {
-        this.authorizationKey = Input.empty();
-        this.authorizationUseStatus = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
+        this.authorizationKey = Output.empty();
+        this.authorizationUseStatus = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizationKey;
-        private @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> authorizationKey;
+        private @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     	      this.name = defaults.name;
         }
 
-        public Builder authorizationKey(@Nullable Input<String> authorizationKey) {
+        public Builder authorizationKey(@Nullable Output<String> authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
         public Builder authorizationKey(@Nullable String authorizationKey) {
-            this.authorizationKey = Input.ofNullable(authorizationKey);
+            this.authorizationKey = Output.ofNullable(authorizationKey);
             return this;
         }
 
-        public Builder authorizationUseStatus(@Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus) {
+        public Builder authorizationUseStatus(@Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus) {
             this.authorizationUseStatus = authorizationUseStatus;
             return this;
         }
 
         public Builder authorizationUseStatus(@Nullable Either<String,AuthorizationUseStatus> authorizationUseStatus) {
-            this.authorizationUseStatus = Input.ofNullable(authorizationUseStatus);
+            this.authorizationUseStatus = Output.ofNullable(authorizationUseStatus);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public ExpressRouteCircuitAuthorizationArgs build() {

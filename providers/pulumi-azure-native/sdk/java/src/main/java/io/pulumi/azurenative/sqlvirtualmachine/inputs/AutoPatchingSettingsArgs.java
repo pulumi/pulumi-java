@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.enums.DayOfWeek;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,10 +25,10 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dayOfWeek")
-      private final @Nullable Input<DayOfWeek> dayOfWeek;
+      private final @Nullable Output<DayOfWeek> dayOfWeek;
 
-    public Input<DayOfWeek> getDayOfWeek() {
-        return this.dayOfWeek == null ? Input.empty() : this.dayOfWeek;
+    public Output<DayOfWeek> getDayOfWeek() {
+        return this.dayOfWeek == null ? Output.empty() : this.dayOfWeek;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enable")
-      private final @Nullable Input<Boolean> enable;
+      private final @Nullable Output<Boolean> enable;
 
-    public Input<Boolean> getEnable() {
-        return this.enable == null ? Input.empty() : this.enable;
+    public Output<Boolean> getEnable() {
+        return this.enable == null ? Output.empty() : this.enable;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maintenanceWindowDuration")
-      private final @Nullable Input<Integer> maintenanceWindowDuration;
+      private final @Nullable Output<Integer> maintenanceWindowDuration;
 
-    public Input<Integer> getMaintenanceWindowDuration() {
-        return this.maintenanceWindowDuration == null ? Input.empty() : this.maintenanceWindowDuration;
+    public Output<Integer> getMaintenanceWindowDuration() {
+        return this.maintenanceWindowDuration == null ? Output.empty() : this.maintenanceWindowDuration;
     }
 
     /**
@@ -58,17 +58,17 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maintenanceWindowStartingHour")
-      private final @Nullable Input<Integer> maintenanceWindowStartingHour;
+      private final @Nullable Output<Integer> maintenanceWindowStartingHour;
 
-    public Input<Integer> getMaintenanceWindowStartingHour() {
-        return this.maintenanceWindowStartingHour == null ? Input.empty() : this.maintenanceWindowStartingHour;
+    public Output<Integer> getMaintenanceWindowStartingHour() {
+        return this.maintenanceWindowStartingHour == null ? Output.empty() : this.maintenanceWindowStartingHour;
     }
 
     public AutoPatchingSettingsArgs(
-        @Nullable Input<DayOfWeek> dayOfWeek,
-        @Nullable Input<Boolean> enable,
-        @Nullable Input<Integer> maintenanceWindowDuration,
-        @Nullable Input<Integer> maintenanceWindowStartingHour) {
+        @Nullable Output<DayOfWeek> dayOfWeek,
+        @Nullable Output<Boolean> enable,
+        @Nullable Output<Integer> maintenanceWindowDuration,
+        @Nullable Output<Integer> maintenanceWindowStartingHour) {
         this.dayOfWeek = dayOfWeek;
         this.enable = enable;
         this.maintenanceWindowDuration = maintenanceWindowDuration;
@@ -76,10 +76,10 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
     }
 
     private AutoPatchingSettingsArgs() {
-        this.dayOfWeek = Input.empty();
-        this.enable = Input.empty();
-        this.maintenanceWindowDuration = Input.empty();
-        this.maintenanceWindowStartingHour = Input.empty();
+        this.dayOfWeek = Output.empty();
+        this.enable = Output.empty();
+        this.maintenanceWindowDuration = Output.empty();
+        this.maintenanceWindowStartingHour = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<DayOfWeek> dayOfWeek;
-        private @Nullable Input<Boolean> enable;
-        private @Nullable Input<Integer> maintenanceWindowDuration;
-        private @Nullable Input<Integer> maintenanceWindowStartingHour;
+        private @Nullable Output<DayOfWeek> dayOfWeek;
+        private @Nullable Output<Boolean> enable;
+        private @Nullable Output<Integer> maintenanceWindowDuration;
+        private @Nullable Output<Integer> maintenanceWindowStartingHour;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class AutoPatchingSettingsArgs extends io.pulumi.resources.Resource
     	      this.maintenanceWindowStartingHour = defaults.maintenanceWindowStartingHour;
         }
 
-        public Builder dayOfWeek(@Nullable Input<DayOfWeek> dayOfWeek) {
+        public Builder dayOfWeek(@Nullable Output<DayOfWeek> dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
 
         public Builder dayOfWeek(@Nullable DayOfWeek dayOfWeek) {
-            this.dayOfWeek = Input.ofNullable(dayOfWeek);
+            this.dayOfWeek = Output.ofNullable(dayOfWeek);
             return this;
         }
 
-        public Builder enable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Output<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Input.ofNullable(enable);
+            this.enable = Output.ofNullable(enable);
             return this;
         }
 
-        public Builder maintenanceWindowDuration(@Nullable Input<Integer> maintenanceWindowDuration) {
+        public Builder maintenanceWindowDuration(@Nullable Output<Integer> maintenanceWindowDuration) {
             this.maintenanceWindowDuration = maintenanceWindowDuration;
             return this;
         }
 
         public Builder maintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
-            this.maintenanceWindowDuration = Input.ofNullable(maintenanceWindowDuration);
+            this.maintenanceWindowDuration = Output.ofNullable(maintenanceWindowDuration);
             return this;
         }
 
-        public Builder maintenanceWindowStartingHour(@Nullable Input<Integer> maintenanceWindowStartingHour) {
+        public Builder maintenanceWindowStartingHour(@Nullable Output<Integer> maintenanceWindowStartingHour) {
             this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
         }
 
         public Builder maintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
-            this.maintenanceWindowStartingHour = Input.ofNullable(maintenanceWindowStartingHour);
+            this.maintenanceWindowStartingHour = Output.ofNullable(maintenanceWindowStartingHour);
             return this;
         }
         public AutoPatchingSettingsArgs build() {

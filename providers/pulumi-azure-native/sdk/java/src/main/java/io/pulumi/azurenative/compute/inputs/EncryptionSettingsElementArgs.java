@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.KeyVaultAndKeyReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.KeyVaultAndSecretReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="diskEncryptionKey")
-      private final @Nullable Input<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
+      private final @Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
 
-    public Input<KeyVaultAndSecretReferenceArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
+    public Output<KeyVaultAndSecretReferenceArgs> getDiskEncryptionKey() {
+        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="keyEncryptionKey")
-      private final @Nullable Input<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
+      private final @Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
 
-    public Input<KeyVaultAndKeyReferenceArgs> getKeyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Input.empty() : this.keyEncryptionKey;
+    public Output<KeyVaultAndKeyReferenceArgs> getKeyEncryptionKey() {
+        return this.keyEncryptionKey == null ? Output.empty() : this.keyEncryptionKey;
     }
 
     public EncryptionSettingsElementArgs(
-        @Nullable Input<KeyVaultAndSecretReferenceArgs> diskEncryptionKey,
-        @Nullable Input<KeyVaultAndKeyReferenceArgs> keyEncryptionKey) {
+        @Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey,
+        @Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey) {
         this.diskEncryptionKey = diskEncryptionKey;
         this.keyEncryptionKey = keyEncryptionKey;
     }
 
     private EncryptionSettingsElementArgs() {
-        this.diskEncryptionKey = Input.empty();
-        this.keyEncryptionKey = Input.empty();
+        this.diskEncryptionKey = Output.empty();
+        this.keyEncryptionKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
-        private @Nullable Input<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
+        private @Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey;
+        private @Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class EncryptionSettingsElementArgs extends io.pulumi.resources.Res
     	      this.keyEncryptionKey = defaults.keyEncryptionKey;
         }
 
-        public Builder diskEncryptionKey(@Nullable Input<KeyVaultAndSecretReferenceArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Output<KeyVaultAndSecretReferenceArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
         public Builder diskEncryptionKey(@Nullable KeyVaultAndSecretReferenceArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder keyEncryptionKey(@Nullable Input<KeyVaultAndKeyReferenceArgs> keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable Output<KeyVaultAndKeyReferenceArgs> keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
         public Builder keyEncryptionKey(@Nullable KeyVaultAndKeyReferenceArgs keyEncryptionKey) {
-            this.keyEncryptionKey = Input.ofNullable(keyEncryptionKey);
+            this.keyEncryptionKey = Output.ofNullable(keyEncryptionKey);
             return this;
         }
         public EncryptionSettingsElementArgs build() {

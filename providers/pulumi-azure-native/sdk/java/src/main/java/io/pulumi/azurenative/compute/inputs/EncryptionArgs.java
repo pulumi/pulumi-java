@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.enums.EncryptionType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-      private final @Nullable Input<String> diskEncryptionSetId;
+      private final @Nullable Output<String> diskEncryptionSetId;
 
-    public Input<String> getDiskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;
+    public Output<String> getDiskEncryptionSetId() {
+        return this.diskEncryptionSetId == null ? Output.empty() : this.diskEncryptionSetId;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,EncryptionType>> type;
+      private final @Nullable Output<Either<String,EncryptionType>> type;
 
-    public Input<Either<String,EncryptionType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,EncryptionType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public EncryptionArgs(
-        @Nullable Input<String> diskEncryptionSetId,
-        @Nullable Input<Either<String,EncryptionType>> type) {
+        @Nullable Output<String> diskEncryptionSetId,
+        @Nullable Output<Either<String,EncryptionType>> type) {
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.type = type;
     }
 
     private EncryptionArgs() {
-        this.diskEncryptionSetId = Input.empty();
-        this.type = Input.empty();
+        this.diskEncryptionSetId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskEncryptionSetId;
-        private @Nullable Input<Either<String,EncryptionType>> type;
+        private @Nullable Output<String> diskEncryptionSetId;
+        private @Nullable Output<Either<String,EncryptionType>> type;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder diskEncryptionSetId(@Nullable Input<String> diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable Output<String> diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Input.ofNullable(diskEncryptionSetId);
+            this.diskEncryptionSetId = Output.ofNullable(diskEncryptionSetId);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,EncryptionType>> type) {
+        public Builder type(@Nullable Output<Either<String,EncryptionType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,EncryptionType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public EncryptionArgs build() {

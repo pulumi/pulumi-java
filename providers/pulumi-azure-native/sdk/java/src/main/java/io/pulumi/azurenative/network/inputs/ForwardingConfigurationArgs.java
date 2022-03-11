@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.FrontDoorForwardingProtocol;
 import io.pulumi.azurenative.network.inputs.CacheConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="backendPool")
-      private final @Nullable Input<SubResourceArgs> backendPool;
+      private final @Nullable Output<SubResourceArgs> backendPool;
 
-    public Input<SubResourceArgs> getBackendPool() {
-        return this.backendPool == null ? Input.empty() : this.backendPool;
+    public Output<SubResourceArgs> getBackendPool() {
+        return this.backendPool == null ? Output.empty() : this.backendPool;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cacheConfiguration")
-      private final @Nullable Input<CacheConfigurationArgs> cacheConfiguration;
+      private final @Nullable Output<CacheConfigurationArgs> cacheConfiguration;
 
-    public Input<CacheConfigurationArgs> getCacheConfiguration() {
-        return this.cacheConfiguration == null ? Input.empty() : this.cacheConfiguration;
+    public Output<CacheConfigurationArgs> getCacheConfiguration() {
+        return this.cacheConfiguration == null ? Output.empty() : this.cacheConfiguration;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customForwardingPath")
-      private final @Nullable Input<String> customForwardingPath;
+      private final @Nullable Output<String> customForwardingPath;
 
-    public Input<String> getCustomForwardingPath() {
-        return this.customForwardingPath == null ? Input.empty() : this.customForwardingPath;
+    public Output<String> getCustomForwardingPath() {
+        return this.customForwardingPath == null ? Output.empty() : this.customForwardingPath;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="forwardingProtocol")
-      private final @Nullable Input<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
+      private final @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
 
-    public Input<Either<String,FrontDoorForwardingProtocol>> getForwardingProtocol() {
-        return this.forwardingProtocol == null ? Input.empty() : this.forwardingProtocol;
+    public Output<Either<String,FrontDoorForwardingProtocol>> getForwardingProtocol() {
+        return this.forwardingProtocol == null ? Output.empty() : this.forwardingProtocol;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public ForwardingConfigurationArgs(
-        @Nullable Input<SubResourceArgs> backendPool,
-        @Nullable Input<CacheConfigurationArgs> cacheConfiguration,
-        @Nullable Input<String> customForwardingPath,
-        @Nullable Input<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol,
-        Input<String> odataType) {
+        @Nullable Output<SubResourceArgs> backendPool,
+        @Nullable Output<CacheConfigurationArgs> cacheConfiguration,
+        @Nullable Output<String> customForwardingPath,
+        @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol,
+        Output<String> odataType) {
         this.backendPool = backendPool;
         this.cacheConfiguration = cacheConfiguration;
         this.customForwardingPath = customForwardingPath;
@@ -91,11 +91,11 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private ForwardingConfigurationArgs() {
-        this.backendPool = Input.empty();
-        this.cacheConfiguration = Input.empty();
-        this.customForwardingPath = Input.empty();
-        this.forwardingProtocol = Input.empty();
-        this.odataType = Input.empty();
+        this.backendPool = Output.empty();
+        this.cacheConfiguration = Output.empty();
+        this.customForwardingPath = Output.empty();
+        this.forwardingProtocol = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<SubResourceArgs> backendPool;
-        private @Nullable Input<CacheConfigurationArgs> cacheConfiguration;
-        private @Nullable Input<String> customForwardingPath;
-        private @Nullable Input<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
-        private Input<String> odataType;
+        private @Nullable Output<SubResourceArgs> backendPool;
+        private @Nullable Output<CacheConfigurationArgs> cacheConfiguration;
+        private @Nullable Output<String> customForwardingPath;
+        private @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder backendPool(@Nullable Input<SubResourceArgs> backendPool) {
+        public Builder backendPool(@Nullable Output<SubResourceArgs> backendPool) {
             this.backendPool = backendPool;
             return this;
         }
 
         public Builder backendPool(@Nullable SubResourceArgs backendPool) {
-            this.backendPool = Input.ofNullable(backendPool);
+            this.backendPool = Output.ofNullable(backendPool);
             return this;
         }
 
-        public Builder cacheConfiguration(@Nullable Input<CacheConfigurationArgs> cacheConfiguration) {
+        public Builder cacheConfiguration(@Nullable Output<CacheConfigurationArgs> cacheConfiguration) {
             this.cacheConfiguration = cacheConfiguration;
             return this;
         }
 
         public Builder cacheConfiguration(@Nullable CacheConfigurationArgs cacheConfiguration) {
-            this.cacheConfiguration = Input.ofNullable(cacheConfiguration);
+            this.cacheConfiguration = Output.ofNullable(cacheConfiguration);
             return this;
         }
 
-        public Builder customForwardingPath(@Nullable Input<String> customForwardingPath) {
+        public Builder customForwardingPath(@Nullable Output<String> customForwardingPath) {
             this.customForwardingPath = customForwardingPath;
             return this;
         }
 
         public Builder customForwardingPath(@Nullable String customForwardingPath) {
-            this.customForwardingPath = Input.ofNullable(customForwardingPath);
+            this.customForwardingPath = Output.ofNullable(customForwardingPath);
             return this;
         }
 
-        public Builder forwardingProtocol(@Nullable Input<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol) {
+        public Builder forwardingProtocol(@Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol) {
             this.forwardingProtocol = forwardingProtocol;
             return this;
         }
 
         public Builder forwardingProtocol(@Nullable Either<String,FrontDoorForwardingProtocol> forwardingProtocol) {
-            this.forwardingProtocol = Input.ofNullable(forwardingProtocol);
+            this.forwardingProtocol = Output.ofNullable(forwardingProtocol);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public ForwardingConfigurationArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.MoveResourcePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,9 +20,9 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moveCollectionName", required=true)
-      private final Input<String> moveCollectionName;
+      private final Output<String> moveCollectionName;
 
-    public Input<String> getMoveCollectionName() {
+    public Output<String> getMoveCollectionName() {
         return this.moveCollectionName;
     }
 
@@ -31,10 +31,10 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="moveResourceName")
-      private final @Nullable Input<String> moveResourceName;
+      private final @Nullable Output<String> moveResourceName;
 
-    public Input<String> getMoveResourceName() {
-        return this.moveResourceName == null ? Input.empty() : this.moveResourceName;
+    public Output<String> getMoveResourceName() {
+        return this.moveResourceName == null ? Output.empty() : this.moveResourceName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<MoveResourcePropertiesArgs> properties;
+      private final @Nullable Output<MoveResourcePropertiesArgs> properties;
 
-    public Input<MoveResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<MoveResourcePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public MoveResourceArgs(
-        Input<String> moveCollectionName,
-        @Nullable Input<String> moveResourceName,
-        @Nullable Input<MoveResourcePropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        Output<String> moveCollectionName,
+        @Nullable Output<String> moveResourceName,
+        @Nullable Output<MoveResourcePropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.moveCollectionName = Objects.requireNonNull(moveCollectionName, "expected parameter 'moveCollectionName' to be non-null");
         this.moveResourceName = moveResourceName;
         this.properties = properties;
@@ -71,10 +71,10 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MoveResourceArgs() {
-        this.moveCollectionName = Input.empty();
-        this.moveResourceName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.moveCollectionName = Output.empty();
+        this.moveResourceName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> moveCollectionName;
-        private @Nullable Input<String> moveResourceName;
-        private @Nullable Input<MoveResourcePropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private Output<String> moveCollectionName;
+        private @Nullable Output<String> moveResourceName;
+        private @Nullable Output<MoveResourcePropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class MoveResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder moveCollectionName(Input<String> moveCollectionName) {
+        public Builder moveCollectionName(Output<String> moveCollectionName) {
             this.moveCollectionName = Objects.requireNonNull(moveCollectionName);
             return this;
         }
 
         public Builder moveCollectionName(String moveCollectionName) {
-            this.moveCollectionName = Input.of(Objects.requireNonNull(moveCollectionName));
+            this.moveCollectionName = Output.of(Objects.requireNonNull(moveCollectionName));
             return this;
         }
 
-        public Builder moveResourceName(@Nullable Input<String> moveResourceName) {
+        public Builder moveResourceName(@Nullable Output<String> moveResourceName) {
             this.moveResourceName = moveResourceName;
             return this;
         }
 
         public Builder moveResourceName(@Nullable String moveResourceName) {
-            this.moveResourceName = Input.ofNullable(moveResourceName);
+            this.moveResourceName = Output.ofNullable(moveResourceName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<MoveResourcePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<MoveResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable MoveResourcePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public MoveResourceArgs build() {

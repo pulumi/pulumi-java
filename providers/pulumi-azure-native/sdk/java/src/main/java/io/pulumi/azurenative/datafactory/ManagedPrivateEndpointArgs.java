@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="factoryName", required=true)
-      private final Input<String> factoryName;
+      private final Output<String> factoryName;
 
-    public Input<String> getFactoryName() {
+    public Output<String> getFactoryName() {
         return this.factoryName;
     }
 
@@ -30,10 +30,10 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="managedPrivateEndpointName")
-      private final @Nullable Input<String> managedPrivateEndpointName;
+      private final @Nullable Output<String> managedPrivateEndpointName;
 
-    public Input<String> getManagedPrivateEndpointName() {
-        return this.managedPrivateEndpointName == null ? Input.empty() : this.managedPrivateEndpointName;
+    public Output<String> getManagedPrivateEndpointName() {
+        return this.managedPrivateEndpointName == null ? Output.empty() : this.managedPrivateEndpointName;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="managedVirtualNetworkName", required=true)
-      private final Input<String> managedVirtualNetworkName;
+      private final Output<String> managedVirtualNetworkName;
 
-    public Input<String> getManagedVirtualNetworkName() {
+    public Output<String> getManagedVirtualNetworkName() {
         return this.managedVirtualNetworkName;
     }
 
@@ -52,9 +52,9 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
+      private final Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
 
-    public Input<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> getProperties() {
+    public Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> getProperties() {
         return this.properties;
     }
 
@@ -63,18 +63,18 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ManagedPrivateEndpointArgs(
-        Input<String> factoryName,
-        @Nullable Input<String> managedPrivateEndpointName,
-        Input<String> managedVirtualNetworkName,
-        Input<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties,
-        Input<String> resourceGroupName) {
+        Output<String> factoryName,
+        @Nullable Output<String> managedPrivateEndpointName,
+        Output<String> managedVirtualNetworkName,
+        Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties,
+        Output<String> resourceGroupName) {
         this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
         this.managedPrivateEndpointName = managedPrivateEndpointName;
         this.managedVirtualNetworkName = Objects.requireNonNull(managedVirtualNetworkName, "expected parameter 'managedVirtualNetworkName' to be non-null");
@@ -83,11 +83,11 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     }
 
     private ManagedPrivateEndpointArgs() {
-        this.factoryName = Input.empty();
-        this.managedPrivateEndpointName = Input.empty();
-        this.managedVirtualNetworkName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.factoryName = Output.empty();
+        this.managedPrivateEndpointName = Output.empty();
+        this.managedVirtualNetworkName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> factoryName;
-        private @Nullable Input<String> managedPrivateEndpointName;
-        private Input<String> managedVirtualNetworkName;
-        private Input<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
-        private Input<String> resourceGroupName;
+        private Output<String> factoryName;
+        private @Nullable Output<String> managedPrivateEndpointName;
+        private Output<String> managedVirtualNetworkName;
+        private Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder factoryName(Input<String> factoryName) {
+        public Builder factoryName(Output<String> factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Input.of(Objects.requireNonNull(factoryName));
+            this.factoryName = Output.of(Objects.requireNonNull(factoryName));
             return this;
         }
 
-        public Builder managedPrivateEndpointName(@Nullable Input<String> managedPrivateEndpointName) {
+        public Builder managedPrivateEndpointName(@Nullable Output<String> managedPrivateEndpointName) {
             this.managedPrivateEndpointName = managedPrivateEndpointName;
             return this;
         }
 
         public Builder managedPrivateEndpointName(@Nullable String managedPrivateEndpointName) {
-            this.managedPrivateEndpointName = Input.ofNullable(managedPrivateEndpointName);
+            this.managedPrivateEndpointName = Output.ofNullable(managedPrivateEndpointName);
             return this;
         }
 
-        public Builder managedVirtualNetworkName(Input<String> managedVirtualNetworkName) {
+        public Builder managedVirtualNetworkName(Output<String> managedVirtualNetworkName) {
             this.managedVirtualNetworkName = Objects.requireNonNull(managedVirtualNetworkName);
             return this;
         }
 
         public Builder managedVirtualNetworkName(String managedVirtualNetworkName) {
-            this.managedVirtualNetworkName = Input.of(Objects.requireNonNull(managedVirtualNetworkName));
+            this.managedVirtualNetworkName = Output.of(Objects.requireNonNull(managedVirtualNetworkName));
             return this;
         }
 
-        public Builder properties(Input<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties) {
+        public Builder properties(Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ManagedPrivateEndpointArgs build() {

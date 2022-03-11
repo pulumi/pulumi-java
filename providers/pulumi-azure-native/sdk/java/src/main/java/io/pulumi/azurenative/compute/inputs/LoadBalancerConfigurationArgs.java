@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.LoadBalancerConfigurationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -46,25 +46,25 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<LoadBalancerConfigurationPropertiesArgs> properties;
+      private final Output<LoadBalancerConfigurationPropertiesArgs> properties;
 
-    public Input<LoadBalancerConfigurationPropertiesArgs> getProperties() {
+    public Output<LoadBalancerConfigurationPropertiesArgs> getProperties() {
         return this.properties;
     }
 
     public LoadBalancerConfigurationArgs(
-        @Nullable Input<String> id,
-        Input<String> name,
-        Input<LoadBalancerConfigurationPropertiesArgs> properties) {
+        @Nullable Output<String> id,
+        Output<String> name,
+        Output<LoadBalancerConfigurationPropertiesArgs> properties) {
         this.id = id;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
     }
 
     private LoadBalancerConfigurationArgs() {
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.properties = Input.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private Input<String> name;
-        private Input<LoadBalancerConfigurationPropertiesArgs> properties;
+        private @Nullable Output<String> id;
+        private Output<String> name;
+        private Output<LoadBalancerConfigurationPropertiesArgs> properties;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class LoadBalancerConfigurationArgs extends io.pulumi.resources.Res
     	      this.properties = defaults.properties;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder properties(Input<LoadBalancerConfigurationPropertiesArgs> properties) {
+        public Builder properties(Output<LoadBalancerConfigurationPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(LoadBalancerConfigurationPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
         public LoadBalancerConfigurationArgs build() {

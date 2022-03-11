@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cache.inputs;
 import io.pulumi.azurenative.cache.enums.AofFrequency;
 import io.pulumi.azurenative.cache.enums.RdbFrequency;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aofEnabled")
-      private final @Nullable Input<Boolean> aofEnabled;
+      private final @Nullable Output<Boolean> aofEnabled;
 
-    public Input<Boolean> getAofEnabled() {
-        return this.aofEnabled == null ? Input.empty() : this.aofEnabled;
+    public Output<Boolean> getAofEnabled() {
+        return this.aofEnabled == null ? Output.empty() : this.aofEnabled;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aofFrequency")
-      private final @Nullable Input<Either<String,AofFrequency>> aofFrequency;
+      private final @Nullable Output<Either<String,AofFrequency>> aofFrequency;
 
-    public Input<Either<String,AofFrequency>> getAofFrequency() {
-        return this.aofFrequency == null ? Input.empty() : this.aofFrequency;
+    public Output<Either<String,AofFrequency>> getAofFrequency() {
+        return this.aofFrequency == null ? Output.empty() : this.aofFrequency;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rdbEnabled")
-      private final @Nullable Input<Boolean> rdbEnabled;
+      private final @Nullable Output<Boolean> rdbEnabled;
 
-    public Input<Boolean> getRdbEnabled() {
-        return this.rdbEnabled == null ? Input.empty() : this.rdbEnabled;
+    public Output<Boolean> getRdbEnabled() {
+        return this.rdbEnabled == null ? Output.empty() : this.rdbEnabled;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rdbFrequency")
-      private final @Nullable Input<Either<String,RdbFrequency>> rdbFrequency;
+      private final @Nullable Output<Either<String,RdbFrequency>> rdbFrequency;
 
-    public Input<Either<String,RdbFrequency>> getRdbFrequency() {
-        return this.rdbFrequency == null ? Input.empty() : this.rdbFrequency;
+    public Output<Either<String,RdbFrequency>> getRdbFrequency() {
+        return this.rdbFrequency == null ? Output.empty() : this.rdbFrequency;
     }
 
     public PersistenceArgs(
-        @Nullable Input<Boolean> aofEnabled,
-        @Nullable Input<Either<String,AofFrequency>> aofFrequency,
-        @Nullable Input<Boolean> rdbEnabled,
-        @Nullable Input<Either<String,RdbFrequency>> rdbFrequency) {
+        @Nullable Output<Boolean> aofEnabled,
+        @Nullable Output<Either<String,AofFrequency>> aofFrequency,
+        @Nullable Output<Boolean> rdbEnabled,
+        @Nullable Output<Either<String,RdbFrequency>> rdbFrequency) {
         this.aofEnabled = aofEnabled;
         this.aofFrequency = aofFrequency;
         this.rdbEnabled = rdbEnabled;
@@ -78,10 +78,10 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PersistenceArgs() {
-        this.aofEnabled = Input.empty();
-        this.aofFrequency = Input.empty();
-        this.rdbEnabled = Input.empty();
-        this.rdbFrequency = Input.empty();
+        this.aofEnabled = Output.empty();
+        this.aofFrequency = Output.empty();
+        this.rdbEnabled = Output.empty();
+        this.rdbFrequency = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> aofEnabled;
-        private @Nullable Input<Either<String,AofFrequency>> aofFrequency;
-        private @Nullable Input<Boolean> rdbEnabled;
-        private @Nullable Input<Either<String,RdbFrequency>> rdbFrequency;
+        private @Nullable Output<Boolean> aofEnabled;
+        private @Nullable Output<Either<String,AofFrequency>> aofFrequency;
+        private @Nullable Output<Boolean> rdbEnabled;
+        private @Nullable Output<Either<String,RdbFrequency>> rdbFrequency;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class PersistenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rdbFrequency = defaults.rdbFrequency;
         }
 
-        public Builder aofEnabled(@Nullable Input<Boolean> aofEnabled) {
+        public Builder aofEnabled(@Nullable Output<Boolean> aofEnabled) {
             this.aofEnabled = aofEnabled;
             return this;
         }
 
         public Builder aofEnabled(@Nullable Boolean aofEnabled) {
-            this.aofEnabled = Input.ofNullable(aofEnabled);
+            this.aofEnabled = Output.ofNullable(aofEnabled);
             return this;
         }
 
-        public Builder aofFrequency(@Nullable Input<Either<String,AofFrequency>> aofFrequency) {
+        public Builder aofFrequency(@Nullable Output<Either<String,AofFrequency>> aofFrequency) {
             this.aofFrequency = aofFrequency;
             return this;
         }
 
         public Builder aofFrequency(@Nullable Either<String,AofFrequency> aofFrequency) {
-            this.aofFrequency = Input.ofNullable(aofFrequency);
+            this.aofFrequency = Output.ofNullable(aofFrequency);
             return this;
         }
 
-        public Builder rdbEnabled(@Nullable Input<Boolean> rdbEnabled) {
+        public Builder rdbEnabled(@Nullable Output<Boolean> rdbEnabled) {
             this.rdbEnabled = rdbEnabled;
             return this;
         }
 
         public Builder rdbEnabled(@Nullable Boolean rdbEnabled) {
-            this.rdbEnabled = Input.ofNullable(rdbEnabled);
+            this.rdbEnabled = Output.ofNullable(rdbEnabled);
             return this;
         }
 
-        public Builder rdbFrequency(@Nullable Input<Either<String,RdbFrequency>> rdbFrequency) {
+        public Builder rdbFrequency(@Nullable Output<Either<String,RdbFrequency>> rdbFrequency) {
             this.rdbFrequency = rdbFrequency;
             return this;
         }
 
         public Builder rdbFrequency(@Nullable Either<String,RdbFrequency> rdbFrequency) {
-            this.rdbFrequency = Input.ofNullable(rdbFrequency);
+            this.rdbFrequency = Output.ofNullable(rdbFrequency);
             return this;
         }
         public PersistenceArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,10 +21,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auxiliaryTenantIds", json=true)
-      private final @Nullable Input<List<String>> auxiliaryTenantIds;
+      private final @Nullable Output<List<String>> auxiliaryTenantIds;
 
-    public Input<List<String>> getAuxiliaryTenantIds() {
-        return this.auxiliaryTenantIds == null ? Input.empty() : this.auxiliaryTenantIds;
+    public Output<List<String>> getAuxiliaryTenantIds() {
+        return this.auxiliaryTenantIds == null ? Output.empty() : this.auxiliaryTenantIds;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificatePassword")
-      private final @Nullable Input<String> clientCertificatePassword;
+      private final @Nullable Output<String> clientCertificatePassword;
 
-    public Input<String> getClientCertificatePassword() {
-        return this.clientCertificatePassword == null ? Input.empty() : this.clientCertificatePassword;
+    public Output<String> getClientCertificatePassword() {
+        return this.clientCertificatePassword == null ? Output.empty() : this.clientCertificatePassword;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificatePath")
-      private final @Nullable Input<String> clientCertificatePath;
+      private final @Nullable Output<String> clientCertificatePath;
 
-    public Input<String> getClientCertificatePath() {
-        return this.clientCertificatePath == null ? Input.empty() : this.clientCertificatePath;
+    public Output<String> getClientCertificatePath() {
+        return this.clientCertificatePath == null ? Output.empty() : this.clientCertificatePath;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientId")
-      private final @Nullable Input<String> clientId;
+      private final @Nullable Output<String> clientId;
 
-    public Input<String> getClientId() {
-        return this.clientId == null ? Input.empty() : this.clientId;
+    public Output<String> getClientId() {
+        return this.clientId == null ? Output.empty() : this.clientId;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientSecret")
-      private final @Nullable Input<String> clientSecret;
+      private final @Nullable Output<String> clientSecret;
 
-    public Input<String> getClientSecret() {
-        return this.clientSecret == null ? Input.empty() : this.clientSecret;
+    public Output<String> getClientSecret() {
+        return this.clientSecret == null ? Output.empty() : this.clientSecret;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disablePulumiPartnerId", json=true)
-      private final @Nullable Input<Boolean> disablePulumiPartnerId;
+      private final @Nullable Output<Boolean> disablePulumiPartnerId;
 
-    public Input<Boolean> getDisablePulumiPartnerId() {
-        return this.disablePulumiPartnerId == null ? Input.empty() : this.disablePulumiPartnerId;
+    public Output<Boolean> getDisablePulumiPartnerId() {
+        return this.disablePulumiPartnerId == null ? Output.empty() : this.disablePulumiPartnerId;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-      private final @Nullable Input<String> environment;
+      private final @Nullable Output<String> environment;
 
-    public Input<String> getEnvironment() {
-        return this.environment == null ? Input.empty() : this.environment;
+    public Output<String> getEnvironment() {
+        return this.environment == null ? Output.empty() : this.environment;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msiEndpoint")
-      private final @Nullable Input<String> msiEndpoint;
+      private final @Nullable Output<String> msiEndpoint;
 
-    public Input<String> getMsiEndpoint() {
-        return this.msiEndpoint == null ? Input.empty() : this.msiEndpoint;
+    public Output<String> getMsiEndpoint() {
+        return this.msiEndpoint == null ? Output.empty() : this.msiEndpoint;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerId")
-      private final @Nullable Input<String> partnerId;
+      private final @Nullable Output<String> partnerId;
 
-    public Input<String> getPartnerId() {
-        return this.partnerId == null ? Input.empty() : this.partnerId;
+    public Output<String> getPartnerId() {
+        return this.partnerId == null ? Output.empty() : this.partnerId;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     /**
@@ -142,52 +142,52 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useMsi", json=true)
-      private final @Nullable Input<Boolean> useMsi;
+      private final @Nullable Output<Boolean> useMsi;
 
-    public Input<Boolean> getUseMsi() {
-        return this.useMsi == null ? Input.empty() : this.useMsi;
+    public Output<Boolean> getUseMsi() {
+        return this.useMsi == null ? Output.empty() : this.useMsi;
     }
 
     public ProviderArgs(
-        @Nullable Input<List<String>> auxiliaryTenantIds,
-        @Nullable Input<String> clientCertificatePassword,
-        @Nullable Input<String> clientCertificatePath,
-        @Nullable Input<String> clientId,
-        @Nullable Input<String> clientSecret,
-        @Nullable Input<Boolean> disablePulumiPartnerId,
-        @Nullable Input<String> environment,
-        @Nullable Input<String> msiEndpoint,
-        @Nullable Input<String> partnerId,
-        @Nullable Input<String> subscriptionId,
-        @Nullable Input<String> tenantId,
-        @Nullable Input<Boolean> useMsi) {
+        @Nullable Output<List<String>> auxiliaryTenantIds,
+        @Nullable Output<String> clientCertificatePassword,
+        @Nullable Output<String> clientCertificatePath,
+        @Nullable Output<String> clientId,
+        @Nullable Output<String> clientSecret,
+        @Nullable Output<Boolean> disablePulumiPartnerId,
+        @Nullable Output<String> environment,
+        @Nullable Output<String> msiEndpoint,
+        @Nullable Output<String> partnerId,
+        @Nullable Output<String> subscriptionId,
+        @Nullable Output<String> tenantId,
+        @Nullable Output<Boolean> useMsi) {
         this.auxiliaryTenantIds = auxiliaryTenantIds;
         this.clientCertificatePassword = clientCertificatePassword;
         this.clientCertificatePath = clientCertificatePath;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.disablePulumiPartnerId = disablePulumiPartnerId;
-        this.environment = environment == null ? Input.ofNullable("public") : environment;
+        this.environment = environment == null ? Output.ofNullable("public") : environment;
         this.msiEndpoint = msiEndpoint;
         this.partnerId = partnerId;
         this.subscriptionId = subscriptionId;
         this.tenantId = tenantId;
-        this.useMsi = useMsi == null ? Input.ofNullable(false) : useMsi;
+        this.useMsi = useMsi == null ? Output.ofNullable(false) : useMsi;
     }
 
     private ProviderArgs() {
-        this.auxiliaryTenantIds = Input.empty();
-        this.clientCertificatePassword = Input.empty();
-        this.clientCertificatePath = Input.empty();
-        this.clientId = Input.empty();
-        this.clientSecret = Input.empty();
-        this.disablePulumiPartnerId = Input.empty();
-        this.environment = Input.empty();
-        this.msiEndpoint = Input.empty();
-        this.partnerId = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.tenantId = Input.empty();
-        this.useMsi = Input.empty();
+        this.auxiliaryTenantIds = Output.empty();
+        this.clientCertificatePassword = Output.empty();
+        this.clientCertificatePath = Output.empty();
+        this.clientId = Output.empty();
+        this.clientSecret = Output.empty();
+        this.disablePulumiPartnerId = Output.empty();
+        this.environment = Output.empty();
+        this.msiEndpoint = Output.empty();
+        this.partnerId = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.tenantId = Output.empty();
+        this.useMsi = Output.empty();
     }
 
     public static Builder builder() {
@@ -199,18 +199,18 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> auxiliaryTenantIds;
-        private @Nullable Input<String> clientCertificatePassword;
-        private @Nullable Input<String> clientCertificatePath;
-        private @Nullable Input<String> clientId;
-        private @Nullable Input<String> clientSecret;
-        private @Nullable Input<Boolean> disablePulumiPartnerId;
-        private @Nullable Input<String> environment;
-        private @Nullable Input<String> msiEndpoint;
-        private @Nullable Input<String> partnerId;
-        private @Nullable Input<String> subscriptionId;
-        private @Nullable Input<String> tenantId;
-        private @Nullable Input<Boolean> useMsi;
+        private @Nullable Output<List<String>> auxiliaryTenantIds;
+        private @Nullable Output<String> clientCertificatePassword;
+        private @Nullable Output<String> clientCertificatePath;
+        private @Nullable Output<String> clientId;
+        private @Nullable Output<String> clientSecret;
+        private @Nullable Output<Boolean> disablePulumiPartnerId;
+        private @Nullable Output<String> environment;
+        private @Nullable Output<String> msiEndpoint;
+        private @Nullable Output<String> partnerId;
+        private @Nullable Output<String> subscriptionId;
+        private @Nullable Output<String> tenantId;
+        private @Nullable Output<Boolean> useMsi;
 
         public Builder() {
     	      // Empty
@@ -232,123 +232,123 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useMsi = defaults.useMsi;
         }
 
-        public Builder auxiliaryTenantIds(@Nullable Input<List<String>> auxiliaryTenantIds) {
+        public Builder auxiliaryTenantIds(@Nullable Output<List<String>> auxiliaryTenantIds) {
             this.auxiliaryTenantIds = auxiliaryTenantIds;
             return this;
         }
 
         public Builder auxiliaryTenantIds(@Nullable List<String> auxiliaryTenantIds) {
-            this.auxiliaryTenantIds = Input.ofNullable(auxiliaryTenantIds);
+            this.auxiliaryTenantIds = Output.ofNullable(auxiliaryTenantIds);
             return this;
         }
 
-        public Builder clientCertificatePassword(@Nullable Input<String> clientCertificatePassword) {
-            this.clientCertificatePassword = Input.ofNullable(clientCertificatePassword).asSecret();
+        public Builder clientCertificatePassword(@Nullable Output<String> clientCertificatePassword) {
+            this.clientCertificatePassword = Output.ofNullable(clientCertificatePassword).asSecret();
             return this;
         }
 
         public Builder clientCertificatePassword(@Nullable String clientCertificatePassword) {
-            this.clientCertificatePassword = Input.ofNullable(clientCertificatePassword).asSecret();
+            this.clientCertificatePassword = Output.ofNullable(clientCertificatePassword).asSecret();
             return this;
         }
 
-        public Builder clientCertificatePath(@Nullable Input<String> clientCertificatePath) {
+        public Builder clientCertificatePath(@Nullable Output<String> clientCertificatePath) {
             this.clientCertificatePath = clientCertificatePath;
             return this;
         }
 
         public Builder clientCertificatePath(@Nullable String clientCertificatePath) {
-            this.clientCertificatePath = Input.ofNullable(clientCertificatePath);
+            this.clientCertificatePath = Output.ofNullable(clientCertificatePath);
             return this;
         }
 
-        public Builder clientId(@Nullable Input<String> clientId) {
-            this.clientId = Input.ofNullable(clientId).asSecret();
+        public Builder clientId(@Nullable Output<String> clientId) {
+            this.clientId = Output.ofNullable(clientId).asSecret();
             return this;
         }
 
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Input.ofNullable(clientId).asSecret();
+            this.clientId = Output.ofNullable(clientId).asSecret();
             return this;
         }
 
-        public Builder clientSecret(@Nullable Input<String> clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret).asSecret();
+        public Builder clientSecret(@Nullable Output<String> clientSecret) {
+            this.clientSecret = Output.ofNullable(clientSecret).asSecret();
             return this;
         }
 
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Input.ofNullable(clientSecret).asSecret();
+            this.clientSecret = Output.ofNullable(clientSecret).asSecret();
             return this;
         }
 
-        public Builder disablePulumiPartnerId(@Nullable Input<Boolean> disablePulumiPartnerId) {
+        public Builder disablePulumiPartnerId(@Nullable Output<Boolean> disablePulumiPartnerId) {
             this.disablePulumiPartnerId = disablePulumiPartnerId;
             return this;
         }
 
         public Builder disablePulumiPartnerId(@Nullable Boolean disablePulumiPartnerId) {
-            this.disablePulumiPartnerId = Input.ofNullable(disablePulumiPartnerId);
+            this.disablePulumiPartnerId = Output.ofNullable(disablePulumiPartnerId);
             return this;
         }
 
-        public Builder environment(@Nullable Input<String> environment) {
+        public Builder environment(@Nullable Output<String> environment) {
             this.environment = environment;
             return this;
         }
 
         public Builder environment(@Nullable String environment) {
-            this.environment = Input.ofNullable(environment);
+            this.environment = Output.ofNullable(environment);
             return this;
         }
 
-        public Builder msiEndpoint(@Nullable Input<String> msiEndpoint) {
+        public Builder msiEndpoint(@Nullable Output<String> msiEndpoint) {
             this.msiEndpoint = msiEndpoint;
             return this;
         }
 
         public Builder msiEndpoint(@Nullable String msiEndpoint) {
-            this.msiEndpoint = Input.ofNullable(msiEndpoint);
+            this.msiEndpoint = Output.ofNullable(msiEndpoint);
             return this;
         }
 
-        public Builder partnerId(@Nullable Input<String> partnerId) {
+        public Builder partnerId(@Nullable Output<String> partnerId) {
             this.partnerId = partnerId;
             return this;
         }
 
         public Builder partnerId(@Nullable String partnerId) {
-            this.partnerId = Input.ofNullable(partnerId);
+            this.partnerId = Output.ofNullable(partnerId);
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
 
-        public Builder useMsi(@Nullable Input<Boolean> useMsi) {
+        public Builder useMsi(@Nullable Output<Boolean> useMsi) {
             this.useMsi = useMsi;
             return this;
         }
 
         public Builder useMsi(@Nullable Boolean useMsi) {
-            this.useMsi = Input.ofNullable(useMsi);
+            this.useMsi = Output.ofNullable(useMsi);
             return this;
         }
         public ProviderArgs build() {

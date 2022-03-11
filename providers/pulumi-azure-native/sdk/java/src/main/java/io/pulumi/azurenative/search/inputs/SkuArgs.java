@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.search.inputs;
 
 import io.pulumi.azurenative.search.enums.SkuName;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<SkuName> name;
+      private final @Nullable Output<SkuName> name;
 
-    public Input<SkuName> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<SkuName> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
-    public SkuArgs(@Nullable Input<SkuName> name) {
+    public SkuArgs(@Nullable Output<SkuName> name) {
         this.name = name;
     }
 
     private SkuArgs() {
-        this.name = Input.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<SkuName> name;
+        private @Nullable Output<SkuName> name;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder name(@Nullable Input<SkuName> name) {
+        public Builder name(@Nullable Output<SkuName> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable SkuName name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public SkuArgs build() {

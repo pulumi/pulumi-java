@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.ContainerExecArgs;
 import io.pulumi.azurenative.containerinstance.inputs.ContainerHttpGetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exec")
-      private final @Nullable Input<ContainerExecArgs> exec;
+      private final @Nullable Output<ContainerExecArgs> exec;
 
-    public Input<ContainerExecArgs> getExec() {
-        return this.exec == null ? Input.empty() : this.exec;
+    public Output<ContainerExecArgs> getExec() {
+        return this.exec == null ? Output.empty() : this.exec;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureThreshold")
-      private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Output<Integer> failureThreshold;
 
-    public Input<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
+    public Output<Integer> getFailureThreshold() {
+        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpGet")
-      private final @Nullable Input<ContainerHttpGetArgs> httpGet;
+      private final @Nullable Output<ContainerHttpGetArgs> httpGet;
 
-    public Input<ContainerHttpGetArgs> getHttpGet() {
-        return this.httpGet == null ? Input.empty() : this.httpGet;
+    public Output<ContainerHttpGetArgs> getHttpGet() {
+        return this.httpGet == null ? Output.empty() : this.httpGet;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialDelaySeconds")
-      private final @Nullable Input<Integer> initialDelaySeconds;
+      private final @Nullable Output<Integer> initialDelaySeconds;
 
-    public Input<Integer> getInitialDelaySeconds() {
-        return this.initialDelaySeconds == null ? Input.empty() : this.initialDelaySeconds;
+    public Output<Integer> getInitialDelaySeconds() {
+        return this.initialDelaySeconds == null ? Output.empty() : this.initialDelaySeconds;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="periodSeconds")
-      private final @Nullable Input<Integer> periodSeconds;
+      private final @Nullable Output<Integer> periodSeconds;
 
-    public Input<Integer> getPeriodSeconds() {
-        return this.periodSeconds == null ? Input.empty() : this.periodSeconds;
+    public Output<Integer> getPeriodSeconds() {
+        return this.periodSeconds == null ? Output.empty() : this.periodSeconds;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successThreshold")
-      private final @Nullable Input<Integer> successThreshold;
+      private final @Nullable Output<Integer> successThreshold;
 
-    public Input<Integer> getSuccessThreshold() {
-        return this.successThreshold == null ? Input.empty() : this.successThreshold;
+    public Output<Integer> getSuccessThreshold() {
+        return this.successThreshold == null ? Output.empty() : this.successThreshold;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutSeconds")
-      private final @Nullable Input<Integer> timeoutSeconds;
+      private final @Nullable Output<Integer> timeoutSeconds;
 
-    public Input<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
+    public Output<Integer> getTimeoutSeconds() {
+        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
     }
 
     public ContainerProbeArgs(
-        @Nullable Input<ContainerExecArgs> exec,
-        @Nullable Input<Integer> failureThreshold,
-        @Nullable Input<ContainerHttpGetArgs> httpGet,
-        @Nullable Input<Integer> initialDelaySeconds,
-        @Nullable Input<Integer> periodSeconds,
-        @Nullable Input<Integer> successThreshold,
-        @Nullable Input<Integer> timeoutSeconds) {
+        @Nullable Output<ContainerExecArgs> exec,
+        @Nullable Output<Integer> failureThreshold,
+        @Nullable Output<ContainerHttpGetArgs> httpGet,
+        @Nullable Output<Integer> initialDelaySeconds,
+        @Nullable Output<Integer> periodSeconds,
+        @Nullable Output<Integer> successThreshold,
+        @Nullable Output<Integer> timeoutSeconds) {
         this.exec = exec;
         this.failureThreshold = failureThreshold;
         this.httpGet = httpGet;
@@ -115,13 +115,13 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerProbeArgs() {
-        this.exec = Input.empty();
-        this.failureThreshold = Input.empty();
-        this.httpGet = Input.empty();
-        this.initialDelaySeconds = Input.empty();
-        this.periodSeconds = Input.empty();
-        this.successThreshold = Input.empty();
-        this.timeoutSeconds = Input.empty();
+        this.exec = Output.empty();
+        this.failureThreshold = Output.empty();
+        this.httpGet = Output.empty();
+        this.initialDelaySeconds = Output.empty();
+        this.periodSeconds = Output.empty();
+        this.successThreshold = Output.empty();
+        this.timeoutSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ContainerExecArgs> exec;
-        private @Nullable Input<Integer> failureThreshold;
-        private @Nullable Input<ContainerHttpGetArgs> httpGet;
-        private @Nullable Input<Integer> initialDelaySeconds;
-        private @Nullable Input<Integer> periodSeconds;
-        private @Nullable Input<Integer> successThreshold;
-        private @Nullable Input<Integer> timeoutSeconds;
+        private @Nullable Output<ContainerExecArgs> exec;
+        private @Nullable Output<Integer> failureThreshold;
+        private @Nullable Output<ContainerHttpGetArgs> httpGet;
+        private @Nullable Output<Integer> initialDelaySeconds;
+        private @Nullable Output<Integer> periodSeconds;
+        private @Nullable Output<Integer> successThreshold;
+        private @Nullable Output<Integer> timeoutSeconds;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class ContainerProbeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder exec(@Nullable Input<ContainerExecArgs> exec) {
+        public Builder exec(@Nullable Output<ContainerExecArgs> exec) {
             this.exec = exec;
             return this;
         }
 
         public Builder exec(@Nullable ContainerExecArgs exec) {
-            this.exec = Input.ofNullable(exec);
+            this.exec = Output.ofNullable(exec);
             return this;
         }
 
-        public Builder failureThreshold(@Nullable Input<Integer> failureThreshold) {
+        public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Input.ofNullable(failureThreshold);
+            this.failureThreshold = Output.ofNullable(failureThreshold);
             return this;
         }
 
-        public Builder httpGet(@Nullable Input<ContainerHttpGetArgs> httpGet) {
+        public Builder httpGet(@Nullable Output<ContainerHttpGetArgs> httpGet) {
             this.httpGet = httpGet;
             return this;
         }
 
         public Builder httpGet(@Nullable ContainerHttpGetArgs httpGet) {
-            this.httpGet = Input.ofNullable(httpGet);
+            this.httpGet = Output.ofNullable(httpGet);
             return this;
         }
 
-        public Builder initialDelaySeconds(@Nullable Input<Integer> initialDelaySeconds) {
+        public Builder initialDelaySeconds(@Nullable Output<Integer> initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
 
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
-            this.initialDelaySeconds = Input.ofNullable(initialDelaySeconds);
+            this.initialDelaySeconds = Output.ofNullable(initialDelaySeconds);
             return this;
         }
 
-        public Builder periodSeconds(@Nullable Input<Integer> periodSeconds) {
+        public Builder periodSeconds(@Nullable Output<Integer> periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
 
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
-            this.periodSeconds = Input.ofNullable(periodSeconds);
+            this.periodSeconds = Output.ofNullable(periodSeconds);
             return this;
         }
 
-        public Builder successThreshold(@Nullable Input<Integer> successThreshold) {
+        public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
         public Builder successThreshold(@Nullable Integer successThreshold) {
-            this.successThreshold = Input.ofNullable(successThreshold);
+            this.successThreshold = Output.ofNullable(successThreshold);
             return this;
         }
 
-        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
             return this;
         }
         public ContainerProbeArgs build() {

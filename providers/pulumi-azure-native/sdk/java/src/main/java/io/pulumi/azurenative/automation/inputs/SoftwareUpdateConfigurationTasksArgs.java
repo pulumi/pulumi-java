@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.TaskPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="postTask")
-      private final @Nullable Input<TaskPropertiesArgs> postTask;
+      private final @Nullable Output<TaskPropertiesArgs> postTask;
 
-    public Input<TaskPropertiesArgs> getPostTask() {
-        return this.postTask == null ? Input.empty() : this.postTask;
+    public Output<TaskPropertiesArgs> getPostTask() {
+        return this.postTask == null ? Output.empty() : this.postTask;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="preTask")
-      private final @Nullable Input<TaskPropertiesArgs> preTask;
+      private final @Nullable Output<TaskPropertiesArgs> preTask;
 
-    public Input<TaskPropertiesArgs> getPreTask() {
-        return this.preTask == null ? Input.empty() : this.preTask;
+    public Output<TaskPropertiesArgs> getPreTask() {
+        return this.preTask == null ? Output.empty() : this.preTask;
     }
 
     public SoftwareUpdateConfigurationTasksArgs(
-        @Nullable Input<TaskPropertiesArgs> postTask,
-        @Nullable Input<TaskPropertiesArgs> preTask) {
+        @Nullable Output<TaskPropertiesArgs> postTask,
+        @Nullable Output<TaskPropertiesArgs> preTask) {
         this.postTask = postTask;
         this.preTask = preTask;
     }
 
     private SoftwareUpdateConfigurationTasksArgs() {
-        this.postTask = Input.empty();
-        this.preTask = Input.empty();
+        this.postTask = Output.empty();
+        this.preTask = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<TaskPropertiesArgs> postTask;
-        private @Nullable Input<TaskPropertiesArgs> preTask;
+        private @Nullable Output<TaskPropertiesArgs> postTask;
+        private @Nullable Output<TaskPropertiesArgs> preTask;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
     	      this.preTask = defaults.preTask;
         }
 
-        public Builder postTask(@Nullable Input<TaskPropertiesArgs> postTask) {
+        public Builder postTask(@Nullable Output<TaskPropertiesArgs> postTask) {
             this.postTask = postTask;
             return this;
         }
 
         public Builder postTask(@Nullable TaskPropertiesArgs postTask) {
-            this.postTask = Input.ofNullable(postTask);
+            this.postTask = Output.ofNullable(postTask);
             return this;
         }
 
-        public Builder preTask(@Nullable Input<TaskPropertiesArgs> preTask) {
+        public Builder preTask(@Nullable Output<TaskPropertiesArgs> preTask) {
             this.preTask = preTask;
             return this;
         }
 
         public Builder preTask(@Nullable TaskPropertiesArgs preTask) {
-            this.preTask = Input.ofNullable(preTask);
+            this.preTask = Output.ofNullable(preTask);
             return this;
         }
         public SoftwareUpdateConfigurationTasksArgs build() {

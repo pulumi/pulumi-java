@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.enums.IdentityManagementTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
     public static final ResourceTypeRegistrationPropertiesIdentityManagementArgs Empty = new ResourceTypeRegistrationPropertiesIdentityManagementArgs();
 
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,IdentityManagementTypes>> type;
+      private final @Nullable Output<Either<String,IdentityManagementTypes>> type;
 
-    public Input<Either<String,IdentityManagementTypes>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,IdentityManagementTypes>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ResourceTypeRegistrationPropertiesIdentityManagementArgs(
-        @Nullable Input<String> applicationId,
-        @Nullable Input<Either<String,IdentityManagementTypes>> type) {
+        @Nullable Output<String> applicationId,
+        @Nullable Output<Either<String,IdentityManagementTypes>> type) {
         this.applicationId = applicationId;
         this.type = type;
     }
 
     private ResourceTypeRegistrationPropertiesIdentityManagementArgs() {
-        this.applicationId = Input.empty();
-        this.type = Input.empty();
+        this.applicationId = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<Either<String,IdentityManagementTypes>> type;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<Either<String,IdentityManagementTypes>> type;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
     	      this.type = defaults.type;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,IdentityManagementTypes>> type) {
+        public Builder type(@Nullable Output<Either<String,IdentityManagementTypes>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,IdentityManagementTypes> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ResourceTypeRegistrationPropertiesIdentityManagementArgs build() {

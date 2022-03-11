@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.enums.SamplingType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="percentage")
-      private final @Nullable Input<Double> percentage;
+      private final @Nullable Output<Double> percentage;
 
-    public Input<Double> getPercentage() {
-        return this.percentage == null ? Input.empty() : this.percentage;
+    public Output<Double> getPercentage() {
+        return this.percentage == null ? Output.empty() : this.percentage;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="samplingType")
-      private final @Nullable Input<Either<String,SamplingType>> samplingType;
+      private final @Nullable Output<Either<String,SamplingType>> samplingType;
 
-    public Input<Either<String,SamplingType>> getSamplingType() {
-        return this.samplingType == null ? Input.empty() : this.samplingType;
+    public Output<Either<String,SamplingType>> getSamplingType() {
+        return this.samplingType == null ? Output.empty() : this.samplingType;
     }
 
     public SamplingSettingsArgs(
-        @Nullable Input<Double> percentage,
-        @Nullable Input<Either<String,SamplingType>> samplingType) {
+        @Nullable Output<Double> percentage,
+        @Nullable Output<Either<String,SamplingType>> samplingType) {
         this.percentage = percentage;
         this.samplingType = samplingType;
     }
 
     private SamplingSettingsArgs() {
-        this.percentage = Input.empty();
-        this.samplingType = Input.empty();
+        this.percentage = Output.empty();
+        this.samplingType = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Double> percentage;
-        private @Nullable Input<Either<String,SamplingType>> samplingType;
+        private @Nullable Output<Double> percentage;
+        private @Nullable Output<Either<String,SamplingType>> samplingType;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.samplingType = defaults.samplingType;
         }
 
-        public Builder percentage(@Nullable Input<Double> percentage) {
+        public Builder percentage(@Nullable Output<Double> percentage) {
             this.percentage = percentage;
             return this;
         }
 
         public Builder percentage(@Nullable Double percentage) {
-            this.percentage = Input.ofNullable(percentage);
+            this.percentage = Output.ofNullable(percentage);
             return this;
         }
 
-        public Builder samplingType(@Nullable Input<Either<String,SamplingType>> samplingType) {
+        public Builder samplingType(@Nullable Output<Either<String,SamplingType>> samplingType) {
             this.samplingType = samplingType;
             return this;
         }
 
         public Builder samplingType(@Nullable Either<String,SamplingType> samplingType) {
-            this.samplingType = Input.ofNullable(samplingType);
+            this.samplingType = Output.ofNullable(samplingType);
             return this;
         }
         public SamplingSettingsArgs build() {

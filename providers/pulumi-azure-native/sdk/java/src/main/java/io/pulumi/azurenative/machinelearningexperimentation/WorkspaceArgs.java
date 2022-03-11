@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningexperimentation;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,9 +20,9 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -31,10 +31,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName", required=true)
-      private final Input<String> friendlyName;
+      private final Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
+    public Output<String> getFriendlyName() {
         return this.friendlyName;
     }
 
@@ -53,10 +53,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -75,10 +75,10 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName")
-      private final @Nullable Input<String> workspaceName;
+      private final @Nullable Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
-        return this.workspaceName == null ? Input.empty() : this.workspaceName;
+    public Output<String> getWorkspaceName() {
+        return this.workspaceName == null ? Output.empty() : this.workspaceName;
     }
 
     public WorkspaceArgs(
-        Input<String> accountName,
-        @Nullable Input<String> description,
-        Input<String> friendlyName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> workspaceName) {
+        Output<String> accountName,
+        @Nullable Output<String> description,
+        Output<String> friendlyName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> workspaceName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.description = description;
         this.friendlyName = Objects.requireNonNull(friendlyName, "expected parameter 'friendlyName' to be non-null");
@@ -110,13 +110,13 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceArgs() {
-        this.accountName = Input.empty();
-        this.description = Input.empty();
-        this.friendlyName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
-        this.workspaceName = Input.empty();
+        this.accountName = Output.empty();
+        this.description = Output.empty();
+        this.friendlyName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> description;
-        private Input<String> friendlyName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> workspaceName;
+        private Output<String> accountName;
+        private @Nullable Output<String> description;
+        private Output<String> friendlyName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder friendlyName(Input<String> friendlyName) {
+        public Builder friendlyName(Output<String> friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
         public Builder friendlyName(String friendlyName) {
-            this.friendlyName = Input.of(Objects.requireNonNull(friendlyName));
+            this.friendlyName = Output.of(Objects.requireNonNull(friendlyName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Output<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
         public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Input.ofNullable(workspaceName);
+            this.workspaceName = Output.ofNullable(workspaceName);
             return this;
         }
         public WorkspaceArgs build() {

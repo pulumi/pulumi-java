@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cache.inputs;
 
 import io.pulumi.azurenative.cache.enums.DayOfWeek;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,9 +25,9 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-      private final Input<DayOfWeek> dayOfWeek;
+      private final Output<DayOfWeek> dayOfWeek;
 
-    public Input<DayOfWeek> getDayOfWeek() {
+    public Output<DayOfWeek> getDayOfWeek() {
         return this.dayOfWeek;
     }
 
@@ -36,10 +36,10 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceWindow")
-      private final @Nullable Input<String> maintenanceWindow;
+      private final @Nullable Output<String> maintenanceWindow;
 
-    public Input<String> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
+    public Output<String> getMaintenanceWindow() {
+        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startHourUtc", required=true)
-      private final Input<Integer> startHourUtc;
+      private final Output<Integer> startHourUtc;
 
-    public Input<Integer> getStartHourUtc() {
+    public Output<Integer> getStartHourUtc() {
         return this.startHourUtc;
     }
 
     public ScheduleEntryArgs(
-        Input<DayOfWeek> dayOfWeek,
-        @Nullable Input<String> maintenanceWindow,
-        Input<Integer> startHourUtc) {
+        Output<DayOfWeek> dayOfWeek,
+        @Nullable Output<String> maintenanceWindow,
+        Output<Integer> startHourUtc) {
         this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
         this.maintenanceWindow = maintenanceWindow;
         this.startHourUtc = Objects.requireNonNull(startHourUtc, "expected parameter 'startHourUtc' to be non-null");
     }
 
     private ScheduleEntryArgs() {
-        this.dayOfWeek = Input.empty();
-        this.maintenanceWindow = Input.empty();
-        this.startHourUtc = Input.empty();
+        this.dayOfWeek = Output.empty();
+        this.maintenanceWindow = Output.empty();
+        this.startHourUtc = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<DayOfWeek> dayOfWeek;
-        private @Nullable Input<String> maintenanceWindow;
-        private Input<Integer> startHourUtc;
+        private Output<DayOfWeek> dayOfWeek;
+        private @Nullable Output<String> maintenanceWindow;
+        private Output<Integer> startHourUtc;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ScheduleEntryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startHourUtc = defaults.startHourUtc;
         }
 
-        public Builder dayOfWeek(Input<DayOfWeek> dayOfWeek) {
+        public Builder dayOfWeek(Output<DayOfWeek> dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
         public Builder dayOfWeek(DayOfWeek dayOfWeek) {
-            this.dayOfWeek = Input.of(Objects.requireNonNull(dayOfWeek));
+            this.dayOfWeek = Output.of(Objects.requireNonNull(dayOfWeek));
             return this;
         }
 
-        public Builder maintenanceWindow(@Nullable Input<String> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
             return this;
         }
 
-        public Builder startHourUtc(Input<Integer> startHourUtc) {
+        public Builder startHourUtc(Output<Integer> startHourUtc) {
             this.startHourUtc = Objects.requireNonNull(startHourUtc);
             return this;
         }
 
         public Builder startHourUtc(Integer startHourUtc) {
-            this.startHourUtc = Input.of(Objects.requireNonNull(startHourUtc));
+            this.startHourUtc = Output.of(Objects.requireNonNull(startHourUtc));
             return this;
         }
         public ScheduleEntryArgs build() {

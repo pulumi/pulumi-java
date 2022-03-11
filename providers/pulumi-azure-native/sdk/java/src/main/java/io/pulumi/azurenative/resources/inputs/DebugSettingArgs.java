@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detailLevel")
-      private final @Nullable Input<String> detailLevel;
+      private final @Nullable Output<String> detailLevel;
 
-    public Input<String> getDetailLevel() {
-        return this.detailLevel == null ? Input.empty() : this.detailLevel;
+    public Output<String> getDetailLevel() {
+        return this.detailLevel == null ? Output.empty() : this.detailLevel;
     }
 
-    public DebugSettingArgs(@Nullable Input<String> detailLevel) {
+    public DebugSettingArgs(@Nullable Output<String> detailLevel) {
         this.detailLevel = detailLevel;
     }
 
     private DebugSettingArgs() {
-        this.detailLevel = Input.empty();
+        this.detailLevel = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> detailLevel;
+        private @Nullable Output<String> detailLevel;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.detailLevel = defaults.detailLevel;
         }
 
-        public Builder detailLevel(@Nullable Input<String> detailLevel) {
+        public Builder detailLevel(@Nullable Output<String> detailLevel) {
             this.detailLevel = detailLevel;
             return this;
         }
 
         public Builder detailLevel(@Nullable String detailLevel) {
-            this.detailLevel = Input.ofNullable(detailLevel);
+            this.detailLevel = Output.ofNullable(detailLevel);
             return this;
         }
         public DebugSettingArgs build() {

@@ -9,7 +9,6 @@ import io.pulumi.azurenative.authorization.outputs.IdentityResponse;
 import io.pulumi.azurenative.authorization.outputs.NonComplianceMessageResponse;
 import io.pulumi.azurenative.authorization.outputs.ParameterValuesValueResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -257,29 +256,29 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PolicyAssignment(String name, PolicyAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:PolicyAssignment", name, args == null ? PolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:authorization:PolicyAssignment", name, args == null ? PolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private PolicyAssignment(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private PolicyAssignment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:PolicyAssignment", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:authorization/v20151001preview:PolicyAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20160401:PolicyAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20161201:PolicyAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20170601preview:PolicyAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20180301:PolicyAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20180501:PolicyAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20190101:PolicyAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20190601:PolicyAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20190901:PolicyAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20200301:PolicyAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20200901:PolicyAssignment").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20210601:PolicyAssignment").build())
+                Output.of(Alias.builder().setType("azure-native:authorization/v20151001preview:PolicyAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20160401:PolicyAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20161201:PolicyAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20170601preview:PolicyAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20180301:PolicyAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20180501:PolicyAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20190101:PolicyAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20190601:PolicyAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20190901:PolicyAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20200301:PolicyAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20200901:PolicyAssignment").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20210601:PolicyAssignment").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -293,7 +292,7 @@ public class PolicyAssignment extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PolicyAssignment get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static PolicyAssignment get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new PolicyAssignment(name, id, options);
     }
 }

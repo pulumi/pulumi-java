@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.keyvault.VaultArgs;
 import io.pulumi.azurenative.keyvault.outputs.VaultPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -142,27 +141,27 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Vault(String name, VaultArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:keyvault:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:keyvault:Vault", name, args == null ? VaultArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Vault(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Vault(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:keyvault:Vault", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20150601:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20161001:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20180214:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20180214preview:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20190901:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20200401preview:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20210401preview:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20210601preview:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20211001:Vault").build()),
-                Input.of(Alias.builder().setType("azure-native:keyvault/v20211101preview:Vault").build())
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20150601:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20161001:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20180214:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20180214preview:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20190901:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20200401preview:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20210401preview:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20210601preview:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20211001:Vault").build()),
+                Output.of(Alias.builder().setType("azure-native:keyvault/v20211101preview:Vault").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -176,7 +175,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Vault get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Vault get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Vault(name, id, options);
     }
 }

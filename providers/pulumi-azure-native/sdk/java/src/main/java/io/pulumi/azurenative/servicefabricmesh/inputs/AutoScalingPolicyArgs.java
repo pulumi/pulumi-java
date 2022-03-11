@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.AddRemoveReplicaScalingMechanismArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.AverageLoadScalingTriggerArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mechanism", required=true)
-      private final Input<AddRemoveReplicaScalingMechanismArgs> mechanism;
+      private final Output<AddRemoveReplicaScalingMechanismArgs> mechanism;
 
-    public Input<AddRemoveReplicaScalingMechanismArgs> getMechanism() {
+    public Output<AddRemoveReplicaScalingMechanismArgs> getMechanism() {
         return this.mechanism;
     }
 
@@ -35,9 +35,9 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -46,25 +46,25 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="trigger", required=true)
-      private final Input<AverageLoadScalingTriggerArgs> trigger;
+      private final Output<AverageLoadScalingTriggerArgs> trigger;
 
-    public Input<AverageLoadScalingTriggerArgs> getTrigger() {
+    public Output<AverageLoadScalingTriggerArgs> getTrigger() {
         return this.trigger;
     }
 
     public AutoScalingPolicyArgs(
-        Input<AddRemoveReplicaScalingMechanismArgs> mechanism,
-        Input<String> name,
-        Input<AverageLoadScalingTriggerArgs> trigger) {
+        Output<AddRemoveReplicaScalingMechanismArgs> mechanism,
+        Output<String> name,
+        Output<AverageLoadScalingTriggerArgs> trigger) {
         this.mechanism = Objects.requireNonNull(mechanism, "expected parameter 'mechanism' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.trigger = Objects.requireNonNull(trigger, "expected parameter 'trigger' to be non-null");
     }
 
     private AutoScalingPolicyArgs() {
-        this.mechanism = Input.empty();
-        this.name = Input.empty();
-        this.trigger = Input.empty();
+        this.mechanism = Output.empty();
+        this.name = Output.empty();
+        this.trigger = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<AddRemoveReplicaScalingMechanismArgs> mechanism;
-        private Input<String> name;
-        private Input<AverageLoadScalingTriggerArgs> trigger;
+        private Output<AddRemoveReplicaScalingMechanismArgs> mechanism;
+        private Output<String> name;
+        private Output<AverageLoadScalingTriggerArgs> trigger;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class AutoScalingPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder mechanism(Input<AddRemoveReplicaScalingMechanismArgs> mechanism) {
+        public Builder mechanism(Output<AddRemoveReplicaScalingMechanismArgs> mechanism) {
             this.mechanism = Objects.requireNonNull(mechanism);
             return this;
         }
 
         public Builder mechanism(AddRemoveReplicaScalingMechanismArgs mechanism) {
-            this.mechanism = Input.of(Objects.requireNonNull(mechanism));
+            this.mechanism = Output.of(Objects.requireNonNull(mechanism));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder trigger(Input<AverageLoadScalingTriggerArgs> trigger) {
+        public Builder trigger(Output<AverageLoadScalingTriggerArgs> trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
 
         public Builder trigger(AverageLoadScalingTriggerArgs trigger) {
-            this.trigger = Input.of(Objects.requireNonNull(trigger));
+            this.trigger = Output.of(Objects.requireNonNull(trigger));
             return this;
         }
         public AutoScalingPolicyArgs build() {

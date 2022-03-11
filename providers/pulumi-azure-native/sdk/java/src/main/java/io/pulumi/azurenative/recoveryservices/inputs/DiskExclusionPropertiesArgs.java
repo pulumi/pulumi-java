@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="diskLunList")
-      private final @Nullable Input<List<Integer>> diskLunList;
+      private final @Nullable Output<List<Integer>> diskLunList;
 
-    public Input<List<Integer>> getDiskLunList() {
-        return this.diskLunList == null ? Input.empty() : this.diskLunList;
+    public Output<List<Integer>> getDiskLunList() {
+        return this.diskLunList == null ? Output.empty() : this.diskLunList;
     }
 
     /**
@@ -32,22 +32,22 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="isInclusionList")
-      private final @Nullable Input<Boolean> isInclusionList;
+      private final @Nullable Output<Boolean> isInclusionList;
 
-    public Input<Boolean> getIsInclusionList() {
-        return this.isInclusionList == null ? Input.empty() : this.isInclusionList;
+    public Output<Boolean> getIsInclusionList() {
+        return this.isInclusionList == null ? Output.empty() : this.isInclusionList;
     }
 
     public DiskExclusionPropertiesArgs(
-        @Nullable Input<List<Integer>> diskLunList,
-        @Nullable Input<Boolean> isInclusionList) {
+        @Nullable Output<List<Integer>> diskLunList,
+        @Nullable Output<Boolean> isInclusionList) {
         this.diskLunList = diskLunList;
         this.isInclusionList = isInclusionList;
     }
 
     private DiskExclusionPropertiesArgs() {
-        this.diskLunList = Input.empty();
-        this.isInclusionList = Input.empty();
+        this.diskLunList = Output.empty();
+        this.isInclusionList = Output.empty();
     }
 
     public static Builder builder() {
@@ -59,8 +59,8 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Integer>> diskLunList;
-        private @Nullable Input<Boolean> isInclusionList;
+        private @Nullable Output<List<Integer>> diskLunList;
+        private @Nullable Output<Boolean> isInclusionList;
 
         public Builder() {
     	      // Empty
@@ -72,23 +72,23 @@ public final class DiskExclusionPropertiesArgs extends io.pulumi.resources.Resou
     	      this.isInclusionList = defaults.isInclusionList;
         }
 
-        public Builder diskLunList(@Nullable Input<List<Integer>> diskLunList) {
+        public Builder diskLunList(@Nullable Output<List<Integer>> diskLunList) {
             this.diskLunList = diskLunList;
             return this;
         }
 
         public Builder diskLunList(@Nullable List<Integer> diskLunList) {
-            this.diskLunList = Input.ofNullable(diskLunList);
+            this.diskLunList = Output.ofNullable(diskLunList);
             return this;
         }
 
-        public Builder isInclusionList(@Nullable Input<Boolean> isInclusionList) {
+        public Builder isInclusionList(@Nullable Output<Boolean> isInclusionList) {
             this.isInclusionList = isInclusionList;
             return this;
         }
 
         public Builder isInclusionList(@Nullable Boolean isInclusionList) {
-            this.isInclusionList = Input.ofNullable(isInclusionList);
+            this.isInclusionList = Output.ofNullable(isInclusionList);
             return this;
         }
         public DiskExclusionPropertiesArgs build() {

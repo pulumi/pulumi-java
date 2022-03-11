@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managednetwork;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="assignedManagedNetwork")
-      private final @Nullable Input<String> assignedManagedNetwork;
+      private final @Nullable Output<String> assignedManagedNetwork;
 
-    public Input<String> getAssignedManagedNetwork() {
-        return this.assignedManagedNetwork == null ? Input.empty() : this.assignedManagedNetwork;
+    public Output<String> getAssignedManagedNetwork() {
+        return this.assignedManagedNetwork == null ? Output.empty() : this.assignedManagedNetwork;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -52,17 +52,17 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scopeAssignmentName")
-      private final @Nullable Input<String> scopeAssignmentName;
+      private final @Nullable Output<String> scopeAssignmentName;
 
-    public Input<String> getScopeAssignmentName() {
-        return this.scopeAssignmentName == null ? Input.empty() : this.scopeAssignmentName;
+    public Output<String> getScopeAssignmentName() {
+        return this.scopeAssignmentName == null ? Output.empty() : this.scopeAssignmentName;
     }
 
     public ScopeAssignmentArgs(
-        @Nullable Input<String> assignedManagedNetwork,
-        @Nullable Input<String> location,
-        Input<String> scope,
-        @Nullable Input<String> scopeAssignmentName) {
+        @Nullable Output<String> assignedManagedNetwork,
+        @Nullable Output<String> location,
+        Output<String> scope,
+        @Nullable Output<String> scopeAssignmentName) {
         this.assignedManagedNetwork = assignedManagedNetwork;
         this.location = location;
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
@@ -70,10 +70,10 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScopeAssignmentArgs() {
-        this.assignedManagedNetwork = Input.empty();
-        this.location = Input.empty();
-        this.scope = Input.empty();
-        this.scopeAssignmentName = Input.empty();
+        this.assignedManagedNetwork = Output.empty();
+        this.location = Output.empty();
+        this.scope = Output.empty();
+        this.scopeAssignmentName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<String> assignedManagedNetwork;
-        private @Nullable Input<String> location;
-        private Input<String> scope;
-        private @Nullable Input<String> scopeAssignmentName;
+        private @Nullable Output<String> assignedManagedNetwork;
+        private @Nullable Output<String> location;
+        private Output<String> scope;
+        private @Nullable Output<String> scopeAssignmentName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ScopeAssignmentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.scopeAssignmentName = defaults.scopeAssignmentName;
         }
 
-        public Builder assignedManagedNetwork(@Nullable Input<String> assignedManagedNetwork) {
+        public Builder assignedManagedNetwork(@Nullable Output<String> assignedManagedNetwork) {
             this.assignedManagedNetwork = assignedManagedNetwork;
             return this;
         }
 
         public Builder assignedManagedNetwork(@Nullable String assignedManagedNetwork) {
-            this.assignedManagedNetwork = Input.ofNullable(assignedManagedNetwork);
+            this.assignedManagedNetwork = Output.ofNullable(assignedManagedNetwork);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder scopeAssignmentName(@Nullable Input<String> scopeAssignmentName) {
+        public Builder scopeAssignmentName(@Nullable Output<String> scopeAssignmentName) {
             this.scopeAssignmentName = scopeAssignmentName;
             return this;
         }
 
         public Builder scopeAssignmentName(@Nullable String scopeAssignmentName) {
-            this.scopeAssignmentName = Input.ofNullable(scopeAssignmentName);
+            this.scopeAssignmentName = Output.ofNullable(scopeAssignmentName);
             return this;
         }
         public ScopeAssignmentArgs build() {

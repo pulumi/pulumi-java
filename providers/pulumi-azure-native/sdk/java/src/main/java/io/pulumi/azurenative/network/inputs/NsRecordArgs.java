@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class NsRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nsdname")
-      private final @Nullable Input<String> nsdname;
+      private final @Nullable Output<String> nsdname;
 
-    public Input<String> getNsdname() {
-        return this.nsdname == null ? Input.empty() : this.nsdname;
+    public Output<String> getNsdname() {
+        return this.nsdname == null ? Output.empty() : this.nsdname;
     }
 
-    public NsRecordArgs(@Nullable Input<String> nsdname) {
+    public NsRecordArgs(@Nullable Output<String> nsdname) {
         this.nsdname = nsdname;
     }
 
     private NsRecordArgs() {
-        this.nsdname = Input.empty();
+        this.nsdname = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NsRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> nsdname;
+        private @Nullable Output<String> nsdname;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NsRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nsdname = defaults.nsdname;
         }
 
-        public Builder nsdname(@Nullable Input<String> nsdname) {
+        public Builder nsdname(@Nullable Output<String> nsdname) {
             this.nsdname = nsdname;
             return this;
         }
 
         public Builder nsdname(@Nullable String nsdname) {
-            this.nsdname = Input.ofNullable(nsdname);
+            this.nsdname = Output.ofNullable(nsdname);
             return this;
         }
         public NsRecordArgs build() {

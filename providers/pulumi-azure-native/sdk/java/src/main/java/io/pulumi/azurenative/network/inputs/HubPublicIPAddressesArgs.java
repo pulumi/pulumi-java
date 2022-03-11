@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.AzureFirewallPublicIPAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="addresses")
-      private final @Nullable Input<List<AzureFirewallPublicIPAddressArgs>> addresses;
+      private final @Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses;
 
-    public Input<List<AzureFirewallPublicIPAddressArgs>> getAddresses() {
-        return this.addresses == null ? Input.empty() : this.addresses;
+    public Output<List<AzureFirewallPublicIPAddressArgs>> getAddresses() {
+        return this.addresses == null ? Output.empty() : this.addresses;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     public HubPublicIPAddressesArgs(
-        @Nullable Input<List<AzureFirewallPublicIPAddressArgs>> addresses,
-        @Nullable Input<Integer> count) {
+        @Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses,
+        @Nullable Output<Integer> count) {
         this.addresses = addresses;
         this.count = count;
     }
 
     private HubPublicIPAddressesArgs() {
-        this.addresses = Input.empty();
-        this.count = Input.empty();
+        this.addresses = Output.empty();
+        this.count = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AzureFirewallPublicIPAddressArgs>> addresses;
-        private @Nullable Input<Integer> count;
+        private @Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses;
+        private @Nullable Output<Integer> count;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class HubPublicIPAddressesArgs extends io.pulumi.resources.Resource
     	      this.count = defaults.count;
         }
 
-        public Builder addresses(@Nullable Input<List<AzureFirewallPublicIPAddressArgs>> addresses) {
+        public Builder addresses(@Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses) {
             this.addresses = addresses;
             return this;
         }
 
         public Builder addresses(@Nullable List<AzureFirewallPublicIPAddressArgs> addresses) {
-            this.addresses = Input.ofNullable(addresses);
+            this.addresses = Output.ofNullable(addresses);
             return this;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
         public HubPublicIPAddressesArgs build() {

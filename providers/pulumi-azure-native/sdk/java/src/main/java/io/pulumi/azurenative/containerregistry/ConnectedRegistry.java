@@ -12,7 +12,6 @@ import io.pulumi.azurenative.containerregistry.outputs.ParentPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StatusDetailPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -272,21 +271,21 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectedRegistry(String name, ConnectedRegistryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:containerregistry:ConnectedRegistry", name, args == null ? ConnectedRegistryArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:containerregistry:ConnectedRegistry", name, args == null ? ConnectedRegistryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ConnectedRegistry(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ConnectedRegistry(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:containerregistry:ConnectedRegistry", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20201101preview:ConnectedRegistry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20210601preview:ConnectedRegistry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20210801preview:ConnectedRegistry").build()),
-                Input.of(Alias.builder().setType("azure-native:containerregistry/v20211201preview:ConnectedRegistry").build())
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20201101preview:ConnectedRegistry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210601preview:ConnectedRegistry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20210801preview:ConnectedRegistry").build()),
+                Output.of(Alias.builder().setType("azure-native:containerregistry/v20211201preview:ConnectedRegistry").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -300,7 +299,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConnectedRegistry get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ConnectedRegistry get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ConnectedRegistry(name, id, options);
     }
 }

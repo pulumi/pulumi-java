@@ -15,7 +15,7 @@ import io.pulumi.azurenative.logic.inputs.X12SchemaReferenceArgs;
 import io.pulumi.azurenative.logic.inputs.X12SecuritySettingsArgs;
 import io.pulumi.azurenative.logic.inputs.X12ValidationOverrideArgs;
 import io.pulumi.azurenative.logic.inputs.X12ValidationSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -35,9 +35,9 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="acknowledgementSettings", required=true)
-      private final Input<X12AcknowledgementSettingsArgs> acknowledgementSettings;
+      private final Output<X12AcknowledgementSettingsArgs> acknowledgementSettings;
 
-    public Input<X12AcknowledgementSettingsArgs> getAcknowledgementSettings() {
+    public Output<X12AcknowledgementSettingsArgs> getAcknowledgementSettings() {
         return this.acknowledgementSettings;
     }
 
@@ -46,10 +46,10 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="envelopeOverrides")
-      private final @Nullable Input<List<X12EnvelopeOverrideArgs>> envelopeOverrides;
+      private final @Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides;
 
-    public Input<List<X12EnvelopeOverrideArgs>> getEnvelopeOverrides() {
-        return this.envelopeOverrides == null ? Input.empty() : this.envelopeOverrides;
+    public Output<List<X12EnvelopeOverrideArgs>> getEnvelopeOverrides() {
+        return this.envelopeOverrides == null ? Output.empty() : this.envelopeOverrides;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="envelopeSettings", required=true)
-      private final Input<X12EnvelopeSettingsArgs> envelopeSettings;
+      private final Output<X12EnvelopeSettingsArgs> envelopeSettings;
 
-    public Input<X12EnvelopeSettingsArgs> getEnvelopeSettings() {
+    public Output<X12EnvelopeSettingsArgs> getEnvelopeSettings() {
         return this.envelopeSettings;
     }
 
@@ -68,9 +68,9 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="framingSettings", required=true)
-      private final Input<X12FramingSettingsArgs> framingSettings;
+      private final Output<X12FramingSettingsArgs> framingSettings;
 
-    public Input<X12FramingSettingsArgs> getFramingSettings() {
+    public Output<X12FramingSettingsArgs> getFramingSettings() {
         return this.framingSettings;
     }
 
@@ -79,9 +79,9 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="messageFilter", required=true)
-      private final Input<X12MessageFilterArgs> messageFilter;
+      private final Output<X12MessageFilterArgs> messageFilter;
 
-    public Input<X12MessageFilterArgs> getMessageFilter() {
+    public Output<X12MessageFilterArgs> getMessageFilter() {
         return this.messageFilter;
     }
 
@@ -90,10 +90,10 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="messageFilterList")
-      private final @Nullable Input<List<X12MessageIdentifierArgs>> messageFilterList;
+      private final @Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList;
 
-    public Input<List<X12MessageIdentifierArgs>> getMessageFilterList() {
-        return this.messageFilterList == null ? Input.empty() : this.messageFilterList;
+    public Output<List<X12MessageIdentifierArgs>> getMessageFilterList() {
+        return this.messageFilterList == null ? Output.empty() : this.messageFilterList;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="processingSettings", required=true)
-      private final Input<X12ProcessingSettingsArgs> processingSettings;
+      private final Output<X12ProcessingSettingsArgs> processingSettings;
 
-    public Input<X12ProcessingSettingsArgs> getProcessingSettings() {
+    public Output<X12ProcessingSettingsArgs> getProcessingSettings() {
         return this.processingSettings;
     }
 
@@ -112,9 +112,9 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schemaReferences", required=true)
-      private final Input<List<X12SchemaReferenceArgs>> schemaReferences;
+      private final Output<List<X12SchemaReferenceArgs>> schemaReferences;
 
-    public Input<List<X12SchemaReferenceArgs>> getSchemaReferences() {
+    public Output<List<X12SchemaReferenceArgs>> getSchemaReferences() {
         return this.schemaReferences;
     }
 
@@ -123,9 +123,9 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securitySettings", required=true)
-      private final Input<X12SecuritySettingsArgs> securitySettings;
+      private final Output<X12SecuritySettingsArgs> securitySettings;
 
-    public Input<X12SecuritySettingsArgs> getSecuritySettings() {
+    public Output<X12SecuritySettingsArgs> getSecuritySettings() {
         return this.securitySettings;
     }
 
@@ -134,10 +134,10 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="validationOverrides")
-      private final @Nullable Input<List<X12ValidationOverrideArgs>> validationOverrides;
+      private final @Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides;
 
-    public Input<List<X12ValidationOverrideArgs>> getValidationOverrides() {
-        return this.validationOverrides == null ? Input.empty() : this.validationOverrides;
+    public Output<List<X12ValidationOverrideArgs>> getValidationOverrides() {
+        return this.validationOverrides == null ? Output.empty() : this.validationOverrides;
     }
 
     /**
@@ -145,9 +145,9 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="validationSettings", required=true)
-      private final Input<X12ValidationSettingsArgs> validationSettings;
+      private final Output<X12ValidationSettingsArgs> validationSettings;
 
-    public Input<X12ValidationSettingsArgs> getValidationSettings() {
+    public Output<X12ValidationSettingsArgs> getValidationSettings() {
         return this.validationSettings;
     }
 
@@ -156,25 +156,25 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="x12DelimiterOverrides")
-      private final @Nullable Input<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides;
+      private final @Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides;
 
-    public Input<List<X12DelimiterOverridesArgs>> getX12DelimiterOverrides() {
-        return this.x12DelimiterOverrides == null ? Input.empty() : this.x12DelimiterOverrides;
+    public Output<List<X12DelimiterOverridesArgs>> getX12DelimiterOverrides() {
+        return this.x12DelimiterOverrides == null ? Output.empty() : this.x12DelimiterOverrides;
     }
 
     public X12ProtocolSettingsArgs(
-        Input<X12AcknowledgementSettingsArgs> acknowledgementSettings,
-        @Nullable Input<List<X12EnvelopeOverrideArgs>> envelopeOverrides,
-        Input<X12EnvelopeSettingsArgs> envelopeSettings,
-        Input<X12FramingSettingsArgs> framingSettings,
-        Input<X12MessageFilterArgs> messageFilter,
-        @Nullable Input<List<X12MessageIdentifierArgs>> messageFilterList,
-        Input<X12ProcessingSettingsArgs> processingSettings,
-        Input<List<X12SchemaReferenceArgs>> schemaReferences,
-        Input<X12SecuritySettingsArgs> securitySettings,
-        @Nullable Input<List<X12ValidationOverrideArgs>> validationOverrides,
-        Input<X12ValidationSettingsArgs> validationSettings,
-        @Nullable Input<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides) {
+        Output<X12AcknowledgementSettingsArgs> acknowledgementSettings,
+        @Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides,
+        Output<X12EnvelopeSettingsArgs> envelopeSettings,
+        Output<X12FramingSettingsArgs> framingSettings,
+        Output<X12MessageFilterArgs> messageFilter,
+        @Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList,
+        Output<X12ProcessingSettingsArgs> processingSettings,
+        Output<List<X12SchemaReferenceArgs>> schemaReferences,
+        Output<X12SecuritySettingsArgs> securitySettings,
+        @Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides,
+        Output<X12ValidationSettingsArgs> validationSettings,
+        @Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides) {
         this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings, "expected parameter 'acknowledgementSettings' to be non-null");
         this.envelopeOverrides = envelopeOverrides;
         this.envelopeSettings = Objects.requireNonNull(envelopeSettings, "expected parameter 'envelopeSettings' to be non-null");
@@ -190,18 +190,18 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private X12ProtocolSettingsArgs() {
-        this.acknowledgementSettings = Input.empty();
-        this.envelopeOverrides = Input.empty();
-        this.envelopeSettings = Input.empty();
-        this.framingSettings = Input.empty();
-        this.messageFilter = Input.empty();
-        this.messageFilterList = Input.empty();
-        this.processingSettings = Input.empty();
-        this.schemaReferences = Input.empty();
-        this.securitySettings = Input.empty();
-        this.validationOverrides = Input.empty();
-        this.validationSettings = Input.empty();
-        this.x12DelimiterOverrides = Input.empty();
+        this.acknowledgementSettings = Output.empty();
+        this.envelopeOverrides = Output.empty();
+        this.envelopeSettings = Output.empty();
+        this.framingSettings = Output.empty();
+        this.messageFilter = Output.empty();
+        this.messageFilterList = Output.empty();
+        this.processingSettings = Output.empty();
+        this.schemaReferences = Output.empty();
+        this.securitySettings = Output.empty();
+        this.validationOverrides = Output.empty();
+        this.validationSettings = Output.empty();
+        this.x12DelimiterOverrides = Output.empty();
     }
 
     public static Builder builder() {
@@ -213,18 +213,18 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<X12AcknowledgementSettingsArgs> acknowledgementSettings;
-        private @Nullable Input<List<X12EnvelopeOverrideArgs>> envelopeOverrides;
-        private Input<X12EnvelopeSettingsArgs> envelopeSettings;
-        private Input<X12FramingSettingsArgs> framingSettings;
-        private Input<X12MessageFilterArgs> messageFilter;
-        private @Nullable Input<List<X12MessageIdentifierArgs>> messageFilterList;
-        private Input<X12ProcessingSettingsArgs> processingSettings;
-        private Input<List<X12SchemaReferenceArgs>> schemaReferences;
-        private Input<X12SecuritySettingsArgs> securitySettings;
-        private @Nullable Input<List<X12ValidationOverrideArgs>> validationOverrides;
-        private Input<X12ValidationSettingsArgs> validationSettings;
-        private @Nullable Input<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides;
+        private Output<X12AcknowledgementSettingsArgs> acknowledgementSettings;
+        private @Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides;
+        private Output<X12EnvelopeSettingsArgs> envelopeSettings;
+        private Output<X12FramingSettingsArgs> framingSettings;
+        private Output<X12MessageFilterArgs> messageFilter;
+        private @Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList;
+        private Output<X12ProcessingSettingsArgs> processingSettings;
+        private Output<List<X12SchemaReferenceArgs>> schemaReferences;
+        private Output<X12SecuritySettingsArgs> securitySettings;
+        private @Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides;
+        private Output<X12ValidationSettingsArgs> validationSettings;
+        private @Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides;
 
         public Builder() {
     	      // Empty
@@ -246,123 +246,123 @@ public final class X12ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.x12DelimiterOverrides = defaults.x12DelimiterOverrides;
         }
 
-        public Builder acknowledgementSettings(Input<X12AcknowledgementSettingsArgs> acknowledgementSettings) {
+        public Builder acknowledgementSettings(Output<X12AcknowledgementSettingsArgs> acknowledgementSettings) {
             this.acknowledgementSettings = Objects.requireNonNull(acknowledgementSettings);
             return this;
         }
 
         public Builder acknowledgementSettings(X12AcknowledgementSettingsArgs acknowledgementSettings) {
-            this.acknowledgementSettings = Input.of(Objects.requireNonNull(acknowledgementSettings));
+            this.acknowledgementSettings = Output.of(Objects.requireNonNull(acknowledgementSettings));
             return this;
         }
 
-        public Builder envelopeOverrides(@Nullable Input<List<X12EnvelopeOverrideArgs>> envelopeOverrides) {
+        public Builder envelopeOverrides(@Nullable Output<List<X12EnvelopeOverrideArgs>> envelopeOverrides) {
             this.envelopeOverrides = envelopeOverrides;
             return this;
         }
 
         public Builder envelopeOverrides(@Nullable List<X12EnvelopeOverrideArgs> envelopeOverrides) {
-            this.envelopeOverrides = Input.ofNullable(envelopeOverrides);
+            this.envelopeOverrides = Output.ofNullable(envelopeOverrides);
             return this;
         }
 
-        public Builder envelopeSettings(Input<X12EnvelopeSettingsArgs> envelopeSettings) {
+        public Builder envelopeSettings(Output<X12EnvelopeSettingsArgs> envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
 
         public Builder envelopeSettings(X12EnvelopeSettingsArgs envelopeSettings) {
-            this.envelopeSettings = Input.of(Objects.requireNonNull(envelopeSettings));
+            this.envelopeSettings = Output.of(Objects.requireNonNull(envelopeSettings));
             return this;
         }
 
-        public Builder framingSettings(Input<X12FramingSettingsArgs> framingSettings) {
+        public Builder framingSettings(Output<X12FramingSettingsArgs> framingSettings) {
             this.framingSettings = Objects.requireNonNull(framingSettings);
             return this;
         }
 
         public Builder framingSettings(X12FramingSettingsArgs framingSettings) {
-            this.framingSettings = Input.of(Objects.requireNonNull(framingSettings));
+            this.framingSettings = Output.of(Objects.requireNonNull(framingSettings));
             return this;
         }
 
-        public Builder messageFilter(Input<X12MessageFilterArgs> messageFilter) {
+        public Builder messageFilter(Output<X12MessageFilterArgs> messageFilter) {
             this.messageFilter = Objects.requireNonNull(messageFilter);
             return this;
         }
 
         public Builder messageFilter(X12MessageFilterArgs messageFilter) {
-            this.messageFilter = Input.of(Objects.requireNonNull(messageFilter));
+            this.messageFilter = Output.of(Objects.requireNonNull(messageFilter));
             return this;
         }
 
-        public Builder messageFilterList(@Nullable Input<List<X12MessageIdentifierArgs>> messageFilterList) {
+        public Builder messageFilterList(@Nullable Output<List<X12MessageIdentifierArgs>> messageFilterList) {
             this.messageFilterList = messageFilterList;
             return this;
         }
 
         public Builder messageFilterList(@Nullable List<X12MessageIdentifierArgs> messageFilterList) {
-            this.messageFilterList = Input.ofNullable(messageFilterList);
+            this.messageFilterList = Output.ofNullable(messageFilterList);
             return this;
         }
 
-        public Builder processingSettings(Input<X12ProcessingSettingsArgs> processingSettings) {
+        public Builder processingSettings(Output<X12ProcessingSettingsArgs> processingSettings) {
             this.processingSettings = Objects.requireNonNull(processingSettings);
             return this;
         }
 
         public Builder processingSettings(X12ProcessingSettingsArgs processingSettings) {
-            this.processingSettings = Input.of(Objects.requireNonNull(processingSettings));
+            this.processingSettings = Output.of(Objects.requireNonNull(processingSettings));
             return this;
         }
 
-        public Builder schemaReferences(Input<List<X12SchemaReferenceArgs>> schemaReferences) {
+        public Builder schemaReferences(Output<List<X12SchemaReferenceArgs>> schemaReferences) {
             this.schemaReferences = Objects.requireNonNull(schemaReferences);
             return this;
         }
 
         public Builder schemaReferences(List<X12SchemaReferenceArgs> schemaReferences) {
-            this.schemaReferences = Input.of(Objects.requireNonNull(schemaReferences));
+            this.schemaReferences = Output.of(Objects.requireNonNull(schemaReferences));
             return this;
         }
 
-        public Builder securitySettings(Input<X12SecuritySettingsArgs> securitySettings) {
+        public Builder securitySettings(Output<X12SecuritySettingsArgs> securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
 
         public Builder securitySettings(X12SecuritySettingsArgs securitySettings) {
-            this.securitySettings = Input.of(Objects.requireNonNull(securitySettings));
+            this.securitySettings = Output.of(Objects.requireNonNull(securitySettings));
             return this;
         }
 
-        public Builder validationOverrides(@Nullable Input<List<X12ValidationOverrideArgs>> validationOverrides) {
+        public Builder validationOverrides(@Nullable Output<List<X12ValidationOverrideArgs>> validationOverrides) {
             this.validationOverrides = validationOverrides;
             return this;
         }
 
         public Builder validationOverrides(@Nullable List<X12ValidationOverrideArgs> validationOverrides) {
-            this.validationOverrides = Input.ofNullable(validationOverrides);
+            this.validationOverrides = Output.ofNullable(validationOverrides);
             return this;
         }
 
-        public Builder validationSettings(Input<X12ValidationSettingsArgs> validationSettings) {
+        public Builder validationSettings(Output<X12ValidationSettingsArgs> validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
 
         public Builder validationSettings(X12ValidationSettingsArgs validationSettings) {
-            this.validationSettings = Input.of(Objects.requireNonNull(validationSettings));
+            this.validationSettings = Output.of(Objects.requireNonNull(validationSettings));
             return this;
         }
 
-        public Builder x12DelimiterOverrides(@Nullable Input<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides) {
+        public Builder x12DelimiterOverrides(@Nullable Output<List<X12DelimiterOverridesArgs>> x12DelimiterOverrides) {
             this.x12DelimiterOverrides = x12DelimiterOverrides;
             return this;
         }
 
         public Builder x12DelimiterOverrides(@Nullable List<X12DelimiterOverridesArgs> x12DelimiterOverrides) {
-            this.x12DelimiterOverrides = Input.ofNullable(x12DelimiterOverrides);
+            this.x12DelimiterOverrides = Output.ofNullable(x12DelimiterOverrides);
             return this;
         }
         public X12ProtocolSettingsArgs build() {

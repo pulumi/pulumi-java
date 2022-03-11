@@ -6,7 +6,6 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.SyncMemberArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -253,25 +252,25 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SyncMember(String name, SyncMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:SyncMember", name, args == null ? SyncMemberArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:sql:SyncMember", name, args == null ? SyncMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SyncMember(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SyncMember(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:SyncMember", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:sql/v20150501preview:SyncMember").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20190601preview:SyncMember").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200202preview:SyncMember").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200801preview:SyncMember").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20201101preview:SyncMember").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210201preview:SyncMember").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210501preview:SyncMember").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210801preview:SyncMember").build())
+                Output.of(Alias.builder().setType("azure-native:sql/v20150501preview:SyncMember").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20190601preview:SyncMember").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:SyncMember").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:SyncMember").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:SyncMember").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:SyncMember").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:SyncMember").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:SyncMember").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -285,7 +284,7 @@ public class SyncMember extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SyncMember get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SyncMember get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SyncMember(name, id, options);
     }
 }

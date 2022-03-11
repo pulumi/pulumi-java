@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cdn.RuleSetArgs;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -133,19 +132,19 @@ public class RuleSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RuleSet(String name, RuleSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:cdn:RuleSet", name, args == null ? RuleSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:cdn:RuleSet", name, args == null ? RuleSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RuleSet(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RuleSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:cdn:RuleSet", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:cdn/v20200901:RuleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:cdn/v20210601:RuleSet").build())
+                Output.of(Alias.builder().setType("azure-native:cdn/v20200901:RuleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:cdn/v20210601:RuleSet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -159,7 +158,7 @@ public class RuleSet extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RuleSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RuleSet get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RuleSet(name, id, options);
     }
 }

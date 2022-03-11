@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupManagementType")
-      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Input<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
+    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
     }
 
     /**
@@ -40,9 +40,9 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="containerType", required=true)
-      private final Input<String> containerType;
+      private final Output<String> containerType;
 
-    public Input<String> getContainerType() {
+    public Output<String> getContainerType() {
         return this.containerType;
     }
 
@@ -51,10 +51,10 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="healthStatus")
-      private final @Nullable Input<String> healthStatus;
+      private final @Nullable Output<String> healthStatus;
 
-    public Input<String> getHealthStatus() {
-        return this.healthStatus == null ? Input.empty() : this.healthStatus;
+    public Output<String> getHealthStatus() {
+        return this.healthStatus == null ? Output.empty() : this.healthStatus;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="registrationStatus")
-      private final @Nullable Input<String> registrationStatus;
+      private final @Nullable Output<String> registrationStatus;
 
-    public Input<String> getRegistrationStatus() {
-        return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
+    public Output<String> getRegistrationStatus() {
+        return this.registrationStatus == null ? Output.empty() : this.registrationStatus;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroup")
-      private final @Nullable Input<String> resourceGroup;
+      private final @Nullable Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
-        return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
+    public Output<String> getResourceGroup() {
+        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="virtualMachineId")
-      private final @Nullable Input<String> virtualMachineId;
+      private final @Nullable Output<String> virtualMachineId;
 
-    public Input<String> getVirtualMachineId() {
-        return this.virtualMachineId == null ? Input.empty() : this.virtualMachineId;
+    public Output<String> getVirtualMachineId() {
+        return this.virtualMachineId == null ? Output.empty() : this.virtualMachineId;
     }
 
     /**
@@ -106,21 +106,21 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="virtualMachineVersion")
-      private final @Nullable Input<String> virtualMachineVersion;
+      private final @Nullable Output<String> virtualMachineVersion;
 
-    public Input<String> getVirtualMachineVersion() {
-        return this.virtualMachineVersion == null ? Input.empty() : this.virtualMachineVersion;
+    public Output<String> getVirtualMachineVersion() {
+        return this.virtualMachineVersion == null ? Output.empty() : this.virtualMachineVersion;
     }
 
     public AzureIaaSClassicComputeVMContainerArgs(
-        @Nullable Input<Either<String,BackupManagementType>> backupManagementType,
-        Input<String> containerType,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<String> healthStatus,
-        @Nullable Input<String> registrationStatus,
-        @Nullable Input<String> resourceGroup,
-        @Nullable Input<String> virtualMachineId,
-        @Nullable Input<String> virtualMachineVersion) {
+        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
+        Output<String> containerType,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<String> healthStatus,
+        @Nullable Output<String> registrationStatus,
+        @Nullable Output<String> resourceGroup,
+        @Nullable Output<String> virtualMachineId,
+        @Nullable Output<String> virtualMachineVersion) {
         this.backupManagementType = backupManagementType;
         this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
         this.friendlyName = friendlyName;
@@ -132,14 +132,14 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
     }
 
     private AzureIaaSClassicComputeVMContainerArgs() {
-        this.backupManagementType = Input.empty();
-        this.containerType = Input.empty();
-        this.friendlyName = Input.empty();
-        this.healthStatus = Input.empty();
-        this.registrationStatus = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.virtualMachineId = Input.empty();
-        this.virtualMachineVersion = Input.empty();
+        this.backupManagementType = Output.empty();
+        this.containerType = Output.empty();
+        this.friendlyName = Output.empty();
+        this.healthStatus = Output.empty();
+        this.registrationStatus = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.virtualMachineId = Output.empty();
+        this.virtualMachineVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
-        private Input<String> containerType;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<String> healthStatus;
-        private @Nullable Input<String> registrationStatus;
-        private @Nullable Input<String> resourceGroup;
-        private @Nullable Input<String> virtualMachineId;
-        private @Nullable Input<String> virtualMachineVersion;
+        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+        private Output<String> containerType;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<String> healthStatus;
+        private @Nullable Output<String> registrationStatus;
+        private @Nullable Output<String> resourceGroup;
+        private @Nullable Output<String> virtualMachineId;
+        private @Nullable Output<String> virtualMachineVersion;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class AzureIaaSClassicComputeVMContainerArgs extends io.pulumi.reso
     	      this.virtualMachineVersion = defaults.virtualMachineVersion;
         }
 
-        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Input.ofNullable(backupManagementType);
+            this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder containerType(Input<String> containerType) {
+        public Builder containerType(Output<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
         public Builder containerType(String containerType) {
-            this.containerType = Input.of(Objects.requireNonNull(containerType));
+            this.containerType = Output.of(Objects.requireNonNull(containerType));
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder healthStatus(@Nullable Input<String> healthStatus) {
+        public Builder healthStatus(@Nullable Output<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Input.ofNullable(healthStatus);
+            this.healthStatus = Output.ofNullable(healthStatus);
             return this;
         }
 
-        public Builder registrationStatus(@Nullable Input<String> registrationStatus) {
+        public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
 
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Input.ofNullable(registrationStatus);
+            this.registrationStatus = Output.ofNullable(registrationStatus);
             return this;
         }
 
-        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Input.ofNullable(resourceGroup);
+            this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder virtualMachineId(@Nullable Input<String> virtualMachineId) {
+        public Builder virtualMachineId(@Nullable Output<String> virtualMachineId) {
             this.virtualMachineId = virtualMachineId;
             return this;
         }
 
         public Builder virtualMachineId(@Nullable String virtualMachineId) {
-            this.virtualMachineId = Input.ofNullable(virtualMachineId);
+            this.virtualMachineId = Output.ofNullable(virtualMachineId);
             return this;
         }
 
-        public Builder virtualMachineVersion(@Nullable Input<String> virtualMachineVersion) {
+        public Builder virtualMachineVersion(@Nullable Output<String> virtualMachineVersion) {
             this.virtualMachineVersion = virtualMachineVersion;
             return this;
         }
 
         public Builder virtualMachineVersion(@Nullable String virtualMachineVersion) {
-            this.virtualMachineVersion = Input.ofNullable(virtualMachineVersion);
+            this.virtualMachineVersion = Output.ofNullable(virtualMachineVersion);
             return this;
         }
         public AzureIaaSClassicComputeVMContainerArgs build() {

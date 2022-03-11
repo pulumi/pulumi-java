@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.elastic.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="business")
-      private final @Nullable Input<String> business;
+      private final @Nullable Output<String> business;
 
-    public Input<String> getBusiness() {
-        return this.business == null ? Input.empty() : this.business;
+    public Output<String> getBusiness() {
+        return this.business == null ? Output.empty() : this.business;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="country")
-      private final @Nullable Input<String> country;
+      private final @Nullable Output<String> country;
 
-    public Input<String> getCountry() {
-        return this.country == null ? Input.empty() : this.country;
+    public Output<String> getCountry() {
+        return this.country == null ? Output.empty() : this.country;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-      private final @Nullable Input<String> domain;
+      private final @Nullable Output<String> domain;
 
-    public Input<String> getDomain() {
-        return this.domain == null ? Input.empty() : this.domain;
+    public Output<String> getDomain() {
+        return this.domain == null ? Output.empty() : this.domain;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="employeesNumber")
-      private final @Nullable Input<String> employeesNumber;
+      private final @Nullable Output<String> employeesNumber;
 
-    public Input<String> getEmployeesNumber() {
-        return this.employeesNumber == null ? Input.empty() : this.employeesNumber;
+    public Output<String> getEmployeesNumber() {
+        return this.employeesNumber == null ? Output.empty() : this.employeesNumber;
     }
 
     /**
@@ -67,18 +67,18 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-      private final @Nullable Input<String> state;
+      private final @Nullable Output<String> state;
 
-    public Input<String> getState() {
-        return this.state == null ? Input.empty() : this.state;
+    public Output<String> getState() {
+        return this.state == null ? Output.empty() : this.state;
     }
 
     public CompanyInfoArgs(
-        @Nullable Input<String> business,
-        @Nullable Input<String> country,
-        @Nullable Input<String> domain,
-        @Nullable Input<String> employeesNumber,
-        @Nullable Input<String> state) {
+        @Nullable Output<String> business,
+        @Nullable Output<String> country,
+        @Nullable Output<String> domain,
+        @Nullable Output<String> employeesNumber,
+        @Nullable Output<String> state) {
         this.business = business;
         this.country = country;
         this.domain = domain;
@@ -87,11 +87,11 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CompanyInfoArgs() {
-        this.business = Input.empty();
-        this.country = Input.empty();
-        this.domain = Input.empty();
-        this.employeesNumber = Input.empty();
-        this.state = Input.empty();
+        this.business = Output.empty();
+        this.country = Output.empty();
+        this.domain = Output.empty();
+        this.employeesNumber = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -103,11 +103,11 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> business;
-        private @Nullable Input<String> country;
-        private @Nullable Input<String> domain;
-        private @Nullable Input<String> employeesNumber;
-        private @Nullable Input<String> state;
+        private @Nullable Output<String> business;
+        private @Nullable Output<String> country;
+        private @Nullable Output<String> domain;
+        private @Nullable Output<String> employeesNumber;
+        private @Nullable Output<String> state;
 
         public Builder() {
     	      // Empty
@@ -122,53 +122,53 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder business(@Nullable Input<String> business) {
+        public Builder business(@Nullable Output<String> business) {
             this.business = business;
             return this;
         }
 
         public Builder business(@Nullable String business) {
-            this.business = Input.ofNullable(business);
+            this.business = Output.ofNullable(business);
             return this;
         }
 
-        public Builder country(@Nullable Input<String> country) {
+        public Builder country(@Nullable Output<String> country) {
             this.country = country;
             return this;
         }
 
         public Builder country(@Nullable String country) {
-            this.country = Input.ofNullable(country);
+            this.country = Output.ofNullable(country);
             return this;
         }
 
-        public Builder domain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Output<String> domain) {
             this.domain = domain;
             return this;
         }
 
         public Builder domain(@Nullable String domain) {
-            this.domain = Input.ofNullable(domain);
+            this.domain = Output.ofNullable(domain);
             return this;
         }
 
-        public Builder employeesNumber(@Nullable Input<String> employeesNumber) {
+        public Builder employeesNumber(@Nullable Output<String> employeesNumber) {
             this.employeesNumber = employeesNumber;
             return this;
         }
 
         public Builder employeesNumber(@Nullable String employeesNumber) {
-            this.employeesNumber = Input.ofNullable(employeesNumber);
+            this.employeesNumber = Output.ofNullable(employeesNumber);
             return this;
         }
 
-        public Builder state(@Nullable Input<String> state) {
+        public Builder state(@Nullable Output<String> state) {
             this.state = state;
             return this;
         }
 
         public Builder state(@Nullable String state) {
-            this.state = Input.ofNullable(state);
+            this.state = Output.ofNullable(state);
             return this;
         }
         public CompanyInfoArgs build() {

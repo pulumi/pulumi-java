@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     /**
@@ -34,9 +34,9 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path", required=true)
-      private final Input<String> path;
+      private final Output<String> path;
 
-    public Input<String> getPath() {
+    public Output<String> getPath() {
         return this.path;
     }
 
@@ -45,25 +45,25 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-      private final @Nullable Input<String> userName;
+      private final @Nullable Output<String> userName;
 
-    public Input<String> getUserName() {
-        return this.userName == null ? Input.empty() : this.userName;
+    public Output<String> getUserName() {
+        return this.userName == null ? Output.empty() : this.userName;
     }
 
     public FileShareArgs(
-        @Nullable Input<String> password,
-        Input<String> path,
-        @Nullable Input<String> userName) {
+        @Nullable Output<String> password,
+        Output<String> path,
+        @Nullable Output<String> userName) {
         this.password = password;
         this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
         this.userName = userName;
     }
 
     private FileShareArgs() {
-        this.password = Input.empty();
-        this.path = Input.empty();
-        this.userName = Input.empty();
+        this.password = Output.empty();
+        this.path = Output.empty();
+        this.userName = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> password;
-        private Input<String> path;
-        private @Nullable Input<String> userName;
+        private @Nullable Output<String> password;
+        private Output<String> path;
+        private @Nullable Output<String> userName;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
 
-        public Builder path(Input<String> path) {
+        public Builder path(Output<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
         public Builder path(String path) {
-            this.path = Input.of(Objects.requireNonNull(path));
+            this.path = Output.of(Objects.requireNonNull(path));
             return this;
         }
 
-        public Builder userName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Output<String> userName) {
             this.userName = userName;
             return this;
         }
 
         public Builder userName(@Nullable String userName) {
-            this.userName = Input.ofNullable(userName);
+            this.userName = Output.ofNullable(userName);
             return this;
         }
         public FileShareArgs build() {

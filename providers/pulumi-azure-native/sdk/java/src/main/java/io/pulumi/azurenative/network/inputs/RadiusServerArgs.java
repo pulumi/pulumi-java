@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="radiusServerAddress", required=true)
-      private final Input<String> radiusServerAddress;
+      private final Output<String> radiusServerAddress;
 
-    public Input<String> getRadiusServerAddress() {
+    public Output<String> getRadiusServerAddress() {
         return this.radiusServerAddress;
     }
 
@@ -35,10 +35,10 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="radiusServerScore")
-      private final @Nullable Input<Double> radiusServerScore;
+      private final @Nullable Output<Double> radiusServerScore;
 
-    public Input<Double> getRadiusServerScore() {
-        return this.radiusServerScore == null ? Input.empty() : this.radiusServerScore;
+    public Output<Double> getRadiusServerScore() {
+        return this.radiusServerScore == null ? Output.empty() : this.radiusServerScore;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="radiusServerSecret")
-      private final @Nullable Input<String> radiusServerSecret;
+      private final @Nullable Output<String> radiusServerSecret;
 
-    public Input<String> getRadiusServerSecret() {
-        return this.radiusServerSecret == null ? Input.empty() : this.radiusServerSecret;
+    public Output<String> getRadiusServerSecret() {
+        return this.radiusServerSecret == null ? Output.empty() : this.radiusServerSecret;
     }
 
     public RadiusServerArgs(
-        Input<String> radiusServerAddress,
-        @Nullable Input<Double> radiusServerScore,
-        @Nullable Input<String> radiusServerSecret) {
+        Output<String> radiusServerAddress,
+        @Nullable Output<Double> radiusServerScore,
+        @Nullable Output<String> radiusServerSecret) {
         this.radiusServerAddress = Objects.requireNonNull(radiusServerAddress, "expected parameter 'radiusServerAddress' to be non-null");
         this.radiusServerScore = radiusServerScore;
         this.radiusServerSecret = radiusServerSecret;
     }
 
     private RadiusServerArgs() {
-        this.radiusServerAddress = Input.empty();
-        this.radiusServerScore = Input.empty();
-        this.radiusServerSecret = Input.empty();
+        this.radiusServerAddress = Output.empty();
+        this.radiusServerScore = Output.empty();
+        this.radiusServerSecret = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> radiusServerAddress;
-        private @Nullable Input<Double> radiusServerScore;
-        private @Nullable Input<String> radiusServerSecret;
+        private Output<String> radiusServerAddress;
+        private @Nullable Output<Double> radiusServerScore;
+        private @Nullable Output<String> radiusServerSecret;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.radiusServerSecret = defaults.radiusServerSecret;
         }
 
-        public Builder radiusServerAddress(Input<String> radiusServerAddress) {
+        public Builder radiusServerAddress(Output<String> radiusServerAddress) {
             this.radiusServerAddress = Objects.requireNonNull(radiusServerAddress);
             return this;
         }
 
         public Builder radiusServerAddress(String radiusServerAddress) {
-            this.radiusServerAddress = Input.of(Objects.requireNonNull(radiusServerAddress));
+            this.radiusServerAddress = Output.of(Objects.requireNonNull(radiusServerAddress));
             return this;
         }
 
-        public Builder radiusServerScore(@Nullable Input<Double> radiusServerScore) {
+        public Builder radiusServerScore(@Nullable Output<Double> radiusServerScore) {
             this.radiusServerScore = radiusServerScore;
             return this;
         }
 
         public Builder radiusServerScore(@Nullable Double radiusServerScore) {
-            this.radiusServerScore = Input.ofNullable(radiusServerScore);
+            this.radiusServerScore = Output.ofNullable(radiusServerScore);
             return this;
         }
 
-        public Builder radiusServerSecret(@Nullable Input<String> radiusServerSecret) {
+        public Builder radiusServerSecret(@Nullable Output<String> radiusServerSecret) {
             this.radiusServerSecret = radiusServerSecret;
             return this;
         }
 
         public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
-            this.radiusServerSecret = Input.ofNullable(radiusServerSecret);
+            this.radiusServerSecret = Output.ofNullable(radiusServerSecret);
             return this;
         }
         public RadiusServerArgs build() {

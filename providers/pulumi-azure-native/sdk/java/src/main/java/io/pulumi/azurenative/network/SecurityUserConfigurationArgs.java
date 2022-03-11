@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.enums.DeleteExistingNSGs;
 import io.pulumi.azurenative.network.enums.SecurityType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="configurationName")
-      private final @Nullable Input<String> configurationName;
+      private final @Nullable Output<String> configurationName;
 
-    public Input<String> getConfigurationName() {
-        return this.configurationName == null ? Input.empty() : this.configurationName;
+    public Output<String> getConfigurationName() {
+        return this.configurationName == null ? Output.empty() : this.configurationName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="deleteExistingNSGs")
-      private final @Nullable Input<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
+      private final @Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
 
-    public Input<Either<String,DeleteExistingNSGs>> getDeleteExistingNSGs() {
-        return this.deleteExistingNSGs == null ? Input.empty() : this.deleteExistingNSGs;
+    public Output<Either<String,DeleteExistingNSGs>> getDeleteExistingNSGs() {
+        return this.deleteExistingNSGs == null ? Output.empty() : this.deleteExistingNSGs;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -66,9 +66,9 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-      private final Input<String> networkManagerName;
+      private final Output<String> networkManagerName;
 
-    public Input<String> getNetworkManagerName() {
+    public Output<String> getNetworkManagerName() {
         return this.networkManagerName;
     }
 
@@ -77,9 +77,9 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,20 +88,20 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="securityType")
-      private final @Nullable Input<Either<String,SecurityType>> securityType;
+      private final @Nullable Output<Either<String,SecurityType>> securityType;
 
-    public Input<Either<String,SecurityType>> getSecurityType() {
-        return this.securityType == null ? Input.empty() : this.securityType;
+    public Output<Either<String,SecurityType>> getSecurityType() {
+        return this.securityType == null ? Output.empty() : this.securityType;
     }
 
     public SecurityUserConfigurationArgs(
-        @Nullable Input<String> configurationName,
-        @Nullable Input<Either<String,DeleteExistingNSGs>> deleteExistingNSGs,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<String> networkManagerName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Either<String,SecurityType>> securityType) {
+        @Nullable Output<String> configurationName,
+        @Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<String> networkManagerName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Either<String,SecurityType>> securityType) {
         this.configurationName = configurationName;
         this.deleteExistingNSGs = deleteExistingNSGs;
         this.description = description;
@@ -112,13 +112,13 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private SecurityUserConfigurationArgs() {
-        this.configurationName = Input.empty();
-        this.deleteExistingNSGs = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.networkManagerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.securityType = Input.empty();
+        this.configurationName = Output.empty();
+        this.deleteExistingNSGs = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.networkManagerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.securityType = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configurationName;
-        private @Nullable Input<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<String> networkManagerName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Either<String,SecurityType>> securityType;
+        private @Nullable Output<String> configurationName;
+        private @Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<String> networkManagerName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Either<String,SecurityType>> securityType;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class SecurityUserConfigurationArgs extends io.pulumi.resources.Res
     	      this.securityType = defaults.securityType;
         }
 
-        public Builder configurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Output<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Input.ofNullable(configurationName);
+            this.configurationName = Output.ofNullable(configurationName);
             return this;
         }
 
-        public Builder deleteExistingNSGs(@Nullable Input<Either<String,DeleteExistingNSGs>> deleteExistingNSGs) {
+        public Builder deleteExistingNSGs(@Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs) {
             this.deleteExistingNSGs = deleteExistingNSGs;
             return this;
         }
 
         public Builder deleteExistingNSGs(@Nullable Either<String,DeleteExistingNSGs> deleteExistingNSGs) {
-            this.deleteExistingNSGs = Input.ofNullable(deleteExistingNSGs);
+            this.deleteExistingNSGs = Output.ofNullable(deleteExistingNSGs);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder networkManagerName(Input<String> networkManagerName) {
+        public Builder networkManagerName(Output<String> networkManagerName) {
             this.networkManagerName = Objects.requireNonNull(networkManagerName);
             return this;
         }
 
         public Builder networkManagerName(String networkManagerName) {
-            this.networkManagerName = Input.of(Objects.requireNonNull(networkManagerName));
+            this.networkManagerName = Output.of(Objects.requireNonNull(networkManagerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder securityType(@Nullable Input<Either<String,SecurityType>> securityType) {
+        public Builder securityType(@Nullable Output<Either<String,SecurityType>> securityType) {
             this.securityType = securityType;
             return this;
         }
 
         public Builder securityType(@Nullable Either<String,SecurityType> securityType) {
-            this.securityType = Input.ofNullable(securityType);
+            this.securityType = Output.ofNullable(securityType);
             return this;
         }
         public SecurityUserConfigurationArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.securityinsights.enums.CustomEntityQueryKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityQueryId")
-      private final @Nullable Input<String> entityQueryId;
+      private final @Nullable Output<String> entityQueryId;
 
-    public Input<String> getEntityQueryId() {
-        return this.entityQueryId == null ? Input.empty() : this.entityQueryId;
+    public Output<String> getEntityQueryId() {
+        return this.entityQueryId == null ? Output.empty() : this.entityQueryId;
     }
 
     /**
@@ -32,9 +32,9 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,CustomEntityQueryKind>> kind;
+      private final Output<Either<String,CustomEntityQueryKind>> kind;
 
-    public Input<Either<String,CustomEntityQueryKind>> getKind() {
+    public Output<Either<String,CustomEntityQueryKind>> getKind() {
         return this.kind;
     }
 
@@ -43,9 +43,9 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-      private final Input<String> operationalInsightsResourceProvider;
+      private final Output<String> operationalInsightsResourceProvider;
 
-    public Input<String> getOperationalInsightsResourceProvider() {
+    public Output<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
     }
 
@@ -54,9 +54,9 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public EntityQueryArgs(
-        @Nullable Input<String> entityQueryId,
-        Input<Either<String,CustomEntityQueryKind>> kind,
-        Input<String> operationalInsightsResourceProvider,
-        Input<String> resourceGroupName,
-        Input<String> workspaceName) {
+        @Nullable Output<String> entityQueryId,
+        Output<Either<String,CustomEntityQueryKind>> kind,
+        Output<String> operationalInsightsResourceProvider,
+        Output<String> resourceGroupName,
+        Output<String> workspaceName) {
         this.entityQueryId = entityQueryId;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
         this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
@@ -85,11 +85,11 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntityQueryArgs() {
-        this.entityQueryId = Input.empty();
-        this.kind = Input.empty();
-        this.operationalInsightsResourceProvider = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.workspaceName = Input.empty();
+        this.entityQueryId = Output.empty();
+        this.kind = Output.empty();
+        this.operationalInsightsResourceProvider = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> entityQueryId;
-        private Input<Either<String,CustomEntityQueryKind>> kind;
-        private Input<String> operationalInsightsResourceProvider;
-        private Input<String> resourceGroupName;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> entityQueryId;
+        private Output<Either<String,CustomEntityQueryKind>> kind;
+        private Output<String> operationalInsightsResourceProvider;
+        private Output<String> resourceGroupName;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class EntityQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder entityQueryId(@Nullable Input<String> entityQueryId) {
+        public Builder entityQueryId(@Nullable Output<String> entityQueryId) {
             this.entityQueryId = entityQueryId;
             return this;
         }
 
         public Builder entityQueryId(@Nullable String entityQueryId) {
-            this.entityQueryId = Input.ofNullable(entityQueryId);
+            this.entityQueryId = Output.ofNullable(entityQueryId);
             return this;
         }
 
-        public Builder kind(Input<Either<String,CustomEntityQueryKind>> kind) {
+        public Builder kind(Output<Either<String,CustomEntityQueryKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,CustomEntityQueryKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
+            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public EntityQueryArgs build() {

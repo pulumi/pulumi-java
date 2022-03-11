@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.RetentionDurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retentionDuration")
-      private final @Nullable Input<RetentionDurationArgs> retentionDuration;
+      private final @Nullable Output<RetentionDurationArgs> retentionDuration;
 
-    public Input<RetentionDurationArgs> getRetentionDuration() {
-        return this.retentionDuration == null ? Input.empty() : this.retentionDuration;
+    public Output<RetentionDurationArgs> getRetentionDuration() {
+        return this.retentionDuration == null ? Output.empty() : this.retentionDuration;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="retentionPolicyType", required=true)
-      private final Input<String> retentionPolicyType;
+      private final Output<String> retentionPolicyType;
 
-    public Input<String> getRetentionPolicyType() {
+    public Output<String> getRetentionPolicyType() {
         return this.retentionPolicyType;
     }
 
     public SimpleRetentionPolicyArgs(
-        @Nullable Input<RetentionDurationArgs> retentionDuration,
-        Input<String> retentionPolicyType) {
+        @Nullable Output<RetentionDurationArgs> retentionDuration,
+        Output<String> retentionPolicyType) {
         this.retentionDuration = retentionDuration;
         this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType, "expected parameter 'retentionPolicyType' to be non-null");
     }
 
     private SimpleRetentionPolicyArgs() {
-        this.retentionDuration = Input.empty();
-        this.retentionPolicyType = Input.empty();
+        this.retentionDuration = Output.empty();
+        this.retentionPolicyType = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<RetentionDurationArgs> retentionDuration;
-        private Input<String> retentionPolicyType;
+        private @Nullable Output<RetentionDurationArgs> retentionDuration;
+        private Output<String> retentionPolicyType;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class SimpleRetentionPolicyArgs extends io.pulumi.resources.Resourc
     	      this.retentionPolicyType = defaults.retentionPolicyType;
         }
 
-        public Builder retentionDuration(@Nullable Input<RetentionDurationArgs> retentionDuration) {
+        public Builder retentionDuration(@Nullable Output<RetentionDurationArgs> retentionDuration) {
             this.retentionDuration = retentionDuration;
             return this;
         }
 
         public Builder retentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
-            this.retentionDuration = Input.ofNullable(retentionDuration);
+            this.retentionDuration = Output.ofNullable(retentionDuration);
             return this;
         }
 
-        public Builder retentionPolicyType(Input<String> retentionPolicyType) {
+        public Builder retentionPolicyType(Output<String> retentionPolicyType) {
             this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
             return this;
         }
 
         public Builder retentionPolicyType(String retentionPolicyType) {
-            this.retentionPolicyType = Input.of(Objects.requireNonNull(retentionPolicyType));
+            this.retentionPolicyType = Output.of(Objects.requireNonNull(retentionPolicyType));
             return this;
         }
         public SimpleRetentionPolicyArgs build() {

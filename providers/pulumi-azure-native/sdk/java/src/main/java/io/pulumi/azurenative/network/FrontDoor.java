@@ -13,7 +13,6 @@ import io.pulumi.azurenative.network.outputs.LoadBalancingSettingsModelResponse;
 import io.pulumi.azurenative.network.outputs.RoutingRuleResponse;
 import io.pulumi.azurenative.network.outputs.RulesEngineResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -316,22 +315,22 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FrontDoor(String name, FrontDoorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:FrontDoor", name, args == null ? FrontDoorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:FrontDoor", name, args == null ? FrontDoorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private FrontDoor(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private FrontDoor(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:FrontDoor", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:FrontDoor").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190501:FrontDoor").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200101:FrontDoor").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:FrontDoor").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:FrontDoor").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:FrontDoor").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190501:FrontDoor").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200101:FrontDoor").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:FrontDoor").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:FrontDoor").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -345,7 +344,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FrontDoor get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static FrontDoor get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new FrontDoor(name, id, options);
     }
 }

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.TagByOperationArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -112,28 +111,28 @@ public class TagByOperation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagByOperation(String name, TagByOperationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:TagByOperation", name, args == null ? TagByOperationArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:TagByOperation", name, args == null ? TagByOperationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TagByOperation(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TagByOperation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:TagByOperation", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20170301:TagByOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180101:TagByOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:TagByOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20190101:TagByOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:TagByOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:TagByOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:TagByOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:TagByOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:TagByOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:TagByOperation").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:TagByOperation").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:TagByOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:TagByOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:TagByOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:TagByOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:TagByOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:TagByOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:TagByOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:TagByOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:TagByOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:TagByOperation").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:TagByOperation").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -147,7 +146,7 @@ public class TagByOperation extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TagByOperation get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TagByOperation get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TagByOperation(name, id, options);
     }
 }

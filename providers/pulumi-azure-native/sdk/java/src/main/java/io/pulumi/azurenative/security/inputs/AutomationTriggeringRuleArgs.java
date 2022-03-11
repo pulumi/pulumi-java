@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.enums.Operator;
 import io.pulumi.azurenative.security.enums.PropertyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="expectedValue")
-      private final @Nullable Input<String> expectedValue;
+      private final @Nullable Output<String> expectedValue;
 
-    public Input<String> getExpectedValue() {
-        return this.expectedValue == null ? Input.empty() : this.expectedValue;
+    public Output<String> getExpectedValue() {
+        return this.expectedValue == null ? Output.empty() : this.expectedValue;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="operator")
-      private final @Nullable Input<Either<String,Operator>> operator;
+      private final @Nullable Output<Either<String,Operator>> operator;
 
-    public Input<Either<String,Operator>> getOperator() {
-        return this.operator == null ? Input.empty() : this.operator;
+    public Output<Either<String,Operator>> getOperator() {
+        return this.operator == null ? Output.empty() : this.operator;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="propertyJPath")
-      private final @Nullable Input<String> propertyJPath;
+      private final @Nullable Output<String> propertyJPath;
 
-    public Input<String> getPropertyJPath() {
-        return this.propertyJPath == null ? Input.empty() : this.propertyJPath;
+    public Output<String> getPropertyJPath() {
+        return this.propertyJPath == null ? Output.empty() : this.propertyJPath;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="propertyType")
-      private final @Nullable Input<Either<String,PropertyType>> propertyType;
+      private final @Nullable Output<Either<String,PropertyType>> propertyType;
 
-    public Input<Either<String,PropertyType>> getPropertyType() {
-        return this.propertyType == null ? Input.empty() : this.propertyType;
+    public Output<Either<String,PropertyType>> getPropertyType() {
+        return this.propertyType == null ? Output.empty() : this.propertyType;
     }
 
     public AutomationTriggeringRuleArgs(
-        @Nullable Input<String> expectedValue,
-        @Nullable Input<Either<String,Operator>> operator,
-        @Nullable Input<String> propertyJPath,
-        @Nullable Input<Either<String,PropertyType>> propertyType) {
+        @Nullable Output<String> expectedValue,
+        @Nullable Output<Either<String,Operator>> operator,
+        @Nullable Output<String> propertyJPath,
+        @Nullable Output<Either<String,PropertyType>> propertyType) {
         this.expectedValue = expectedValue;
         this.operator = operator;
         this.propertyJPath = propertyJPath;
@@ -77,10 +77,10 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
     }
 
     private AutomationTriggeringRuleArgs() {
-        this.expectedValue = Input.empty();
-        this.operator = Input.empty();
-        this.propertyJPath = Input.empty();
-        this.propertyType = Input.empty();
+        this.expectedValue = Output.empty();
+        this.operator = Output.empty();
+        this.propertyJPath = Output.empty();
+        this.propertyType = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> expectedValue;
-        private @Nullable Input<Either<String,Operator>> operator;
-        private @Nullable Input<String> propertyJPath;
-        private @Nullable Input<Either<String,PropertyType>> propertyType;
+        private @Nullable Output<String> expectedValue;
+        private @Nullable Output<Either<String,Operator>> operator;
+        private @Nullable Output<String> propertyJPath;
+        private @Nullable Output<Either<String,PropertyType>> propertyType;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class AutomationTriggeringRuleArgs extends io.pulumi.resources.Reso
     	      this.propertyType = defaults.propertyType;
         }
 
-        public Builder expectedValue(@Nullable Input<String> expectedValue) {
+        public Builder expectedValue(@Nullable Output<String> expectedValue) {
             this.expectedValue = expectedValue;
             return this;
         }
 
         public Builder expectedValue(@Nullable String expectedValue) {
-            this.expectedValue = Input.ofNullable(expectedValue);
+            this.expectedValue = Output.ofNullable(expectedValue);
             return this;
         }
 
-        public Builder operator(@Nullable Input<Either<String,Operator>> operator) {
+        public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
             this.operator = operator;
             return this;
         }
 
         public Builder operator(@Nullable Either<String,Operator> operator) {
-            this.operator = Input.ofNullable(operator);
+            this.operator = Output.ofNullable(operator);
             return this;
         }
 
-        public Builder propertyJPath(@Nullable Input<String> propertyJPath) {
+        public Builder propertyJPath(@Nullable Output<String> propertyJPath) {
             this.propertyJPath = propertyJPath;
             return this;
         }
 
         public Builder propertyJPath(@Nullable String propertyJPath) {
-            this.propertyJPath = Input.ofNullable(propertyJPath);
+            this.propertyJPath = Output.ofNullable(propertyJPath);
             return this;
         }
 
-        public Builder propertyType(@Nullable Input<Either<String,PropertyType>> propertyType) {
+        public Builder propertyType(@Nullable Output<Either<String,PropertyType>> propertyType) {
             this.propertyType = propertyType;
             return this;
         }
 
         public Builder propertyType(@Nullable Either<String,PropertyType> propertyType) {
-            this.propertyType = Input.ofNullable(propertyType);
+            this.propertyType = Output.ofNullable(propertyType);
             return this;
         }
         public AutomationTriggeringRuleArgs build() {

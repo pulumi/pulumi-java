@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurestack;
 
 import io.pulumi.azurenative.azurestack.enums.Location;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<Either<String,Location>> location;
+      private final @Nullable Output<Either<String,Location>> location;
 
-    public Input<Either<String,Location>> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<Either<String,Location>> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationName")
-      private final @Nullable Input<String> registrationName;
+      private final @Nullable Output<String> registrationName;
 
-    public Input<String> getRegistrationName() {
-        return this.registrationName == null ? Input.empty() : this.registrationName;
+    public Output<String> getRegistrationName() {
+        return this.registrationName == null ? Output.empty() : this.registrationName;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationToken", required=true)
-      private final Input<String> registrationToken;
+      private final Output<String> registrationToken;
 
-    public Input<String> getRegistrationToken() {
+    public Output<String> getRegistrationToken() {
         return this.registrationToken;
     }
 
@@ -54,17 +54,17 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-      private final Input<String> resourceGroup;
+      private final Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
+    public Output<String> getResourceGroup() {
         return this.resourceGroup;
     }
 
     public RegistrationArgs(
-        @Nullable Input<Either<String,Location>> location,
-        @Nullable Input<String> registrationName,
-        Input<String> registrationToken,
-        Input<String> resourceGroup) {
+        @Nullable Output<Either<String,Location>> location,
+        @Nullable Output<String> registrationName,
+        Output<String> registrationToken,
+        Output<String> resourceGroup) {
         this.location = location;
         this.registrationName = registrationName;
         this.registrationToken = Objects.requireNonNull(registrationToken, "expected parameter 'registrationToken' to be non-null");
@@ -72,10 +72,10 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegistrationArgs() {
-        this.location = Input.empty();
-        this.registrationName = Input.empty();
-        this.registrationToken = Input.empty();
-        this.resourceGroup = Input.empty();
+        this.location = Output.empty();
+        this.registrationName = Output.empty();
+        this.registrationToken = Output.empty();
+        this.resourceGroup = Output.empty();
     }
 
     public static Builder builder() {
@@ -87,10 +87,10 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Location>> location;
-        private @Nullable Input<String> registrationName;
-        private Input<String> registrationToken;
-        private Input<String> resourceGroup;
+        private @Nullable Output<Either<String,Location>> location;
+        private @Nullable Output<String> registrationName;
+        private Output<String> registrationToken;
+        private Output<String> resourceGroup;
 
         public Builder() {
     	      // Empty
@@ -104,43 +104,43 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroup = defaults.resourceGroup;
         }
 
-        public Builder location(@Nullable Input<Either<String,Location>> location) {
+        public Builder location(@Nullable Output<Either<String,Location>> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable Either<String,Location> location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder registrationName(@Nullable Input<String> registrationName) {
+        public Builder registrationName(@Nullable Output<String> registrationName) {
             this.registrationName = registrationName;
             return this;
         }
 
         public Builder registrationName(@Nullable String registrationName) {
-            this.registrationName = Input.ofNullable(registrationName);
+            this.registrationName = Output.ofNullable(registrationName);
             return this;
         }
 
-        public Builder registrationToken(Input<String> registrationToken) {
+        public Builder registrationToken(Output<String> registrationToken) {
             this.registrationToken = Objects.requireNonNull(registrationToken);
             return this;
         }
 
         public Builder registrationToken(String registrationToken) {
-            this.registrationToken = Input.of(Objects.requireNonNull(registrationToken));
+            this.registrationToken = Output.of(Objects.requireNonNull(registrationToken));
             return this;
         }
 
-        public Builder resourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Output<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
         public Builder resourceGroup(String resourceGroup) {
-            this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
+            this.resourceGroup = Output.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
         public RegistrationArgs build() {

@@ -8,7 +8,6 @@ import io.pulumi.azurenative.hardwaresecuritymodules.DedicatedHsmArgs;
 import io.pulumi.azurenative.hardwaresecuritymodules.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.hardwaresecuritymodules.outputs.SkuResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -213,19 +212,19 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DedicatedHsm(String name, DedicatedHsmArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:hardwaresecuritymodules:DedicatedHsm", name, args == null ? DedicatedHsmArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:hardwaresecuritymodules:DedicatedHsm", name, args == null ? DedicatedHsmArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private DedicatedHsm(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private DedicatedHsm(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:hardwaresecuritymodules:DedicatedHsm", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:hardwaresecuritymodules/v20181031preview:DedicatedHsm").build()),
-                Input.of(Alias.builder().setType("azure-native:hardwaresecuritymodules/v20211130:DedicatedHsm").build())
+                Output.of(Alias.builder().setType("azure-native:hardwaresecuritymodules/v20181031preview:DedicatedHsm").build()),
+                Output.of(Alias.builder().setType("azure-native:hardwaresecuritymodules/v20211130:DedicatedHsm").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -239,7 +238,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DedicatedHsm get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static DedicatedHsm get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new DedicatedHsm(name, id, options);
     }
 }

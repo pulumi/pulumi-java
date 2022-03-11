@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="computeSubnetId")
-      private final @Nullable Input<String> computeSubnetId;
+      private final @Nullable Output<String> computeSubnetId;
 
-    public Input<String> getComputeSubnetId() {
-        return this.computeSubnetId == null ? Input.empty() : this.computeSubnetId;
+    public Output<String> getComputeSubnetId() {
+        return this.computeSubnetId == null ? Output.empty() : this.computeSubnetId;
     }
 
-    public VirtualNetworkProfileArgs(@Nullable Input<String> computeSubnetId) {
+    public VirtualNetworkProfileArgs(@Nullable Output<String> computeSubnetId) {
         this.computeSubnetId = computeSubnetId;
     }
 
     private VirtualNetworkProfileArgs() {
-        this.computeSubnetId = Input.empty();
+        this.computeSubnetId = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> computeSubnetId;
+        private @Nullable Output<String> computeSubnetId;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class VirtualNetworkProfileArgs extends io.pulumi.resources.Resourc
     	      this.computeSubnetId = defaults.computeSubnetId;
         }
 
-        public Builder computeSubnetId(@Nullable Input<String> computeSubnetId) {
+        public Builder computeSubnetId(@Nullable Output<String> computeSubnetId) {
             this.computeSubnetId = computeSubnetId;
             return this;
         }
 
         public Builder computeSubnetId(@Nullable String computeSubnetId) {
-            this.computeSubnetId = Input.ofNullable(computeSubnetId);
+            this.computeSubnetId = Output.ofNullable(computeSubnetId);
             return this;
         }
         public VirtualNetworkProfileArgs build() {

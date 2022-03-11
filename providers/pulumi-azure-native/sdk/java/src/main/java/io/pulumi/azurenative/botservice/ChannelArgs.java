@@ -19,7 +19,7 @@ import io.pulumi.azurenative.botservice.inputs.SmsChannelArgs;
 import io.pulumi.azurenative.botservice.inputs.TelegramChannelArgs;
 import io.pulumi.azurenative.botservice.inputs.WebChatChannelArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -37,10 +37,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelName")
-      private final @Nullable Input<String> channelName;
+      private final @Nullable Output<String> channelName;
 
-    public Input<String> getChannelName() {
-        return this.channelName == null ? Input.empty() : this.channelName;
+    public Output<String> getChannelName() {
+        return this.channelName == null ? Output.empty() : this.channelName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Either<String,Kind>> kind;
+      private final @Nullable Output<Either<String,Kind>> kind;
 
-    public Input<Either<String,Kind>> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Either<String,Kind>> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<Object> properties;
+      private final @Nullable Output<Object> properties;
 
-    public Input<Object> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Object> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -81,9 +81,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -92,9 +92,9 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-      private final Input<String> resourceName;
+      private final Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
+    public Output<String> getPropResourceName() {
         return this.resourceName;
     }
 
@@ -103,10 +103,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -114,21 +114,21 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ChannelArgs(
-        @Nullable Input<String> channelName,
-        @Nullable Input<Either<String,Kind>> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> properties,
-        Input<String> resourceGroupName,
-        Input<String> resourceName,
-        @Nullable Input<SkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> channelName,
+        @Nullable Output<Either<String,Kind>> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> properties,
+        Output<String> resourceGroupName,
+        Output<String> resourceName,
+        @Nullable Output<SkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.channelName = channelName;
         this.kind = kind;
         this.location = location;
@@ -140,14 +140,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChannelArgs() {
-        this.channelName = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.channelName = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -159,14 +159,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> channelName;
-        private @Nullable Input<Either<String,Kind>> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> resourceName;
-        private @Nullable Input<SkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> channelName;
+        private @Nullable Output<Either<String,Kind>> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> resourceName;
+        private @Nullable Output<SkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -184,83 +184,83 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder channelName(@Nullable Input<String> channelName) {
+        public Builder channelName(@Nullable Output<String> channelName) {
             this.channelName = channelName;
             return this;
         }
 
         public Builder channelName(@Nullable String channelName) {
-            this.channelName = Input.ofNullable(channelName);
+            this.channelName = Output.ofNullable(channelName);
             return this;
         }
 
-        public Builder kind(@Nullable Input<Either<String,Kind>> kind) {
+        public Builder kind(@Nullable Output<Either<String,Kind>> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Object properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(Input<String> resourceName) {
+        public Builder resourceName(Output<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Input.of(Objects.requireNonNull(resourceName));
+            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ChannelArgs build() {

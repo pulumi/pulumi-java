@@ -6,7 +6,6 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ServerAzureADAdministratorArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -169,26 +168,26 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerAzureADAdministrator(String name, ServerAzureADAdministratorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:ServerAzureADAdministrator", name, args == null ? ServerAzureADAdministratorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:sql:ServerAzureADAdministrator", name, args == null ? ServerAzureADAdministratorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ServerAzureADAdministrator(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ServerAzureADAdministrator(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ServerAzureADAdministrator", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:sql/v20140401:ServerAzureADAdministrator").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20180601preview:ServerAzureADAdministrator").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20190601preview:ServerAzureADAdministrator").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200202preview:ServerAzureADAdministrator").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200801preview:ServerAzureADAdministrator").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20201101preview:ServerAzureADAdministrator").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210201preview:ServerAzureADAdministrator").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210501preview:ServerAzureADAdministrator").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210801preview:ServerAzureADAdministrator").build())
+                Output.of(Alias.builder().setType("azure-native:sql/v20140401:ServerAzureADAdministrator").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20180601preview:ServerAzureADAdministrator").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20190601preview:ServerAzureADAdministrator").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:ServerAzureADAdministrator").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:ServerAzureADAdministrator").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:ServerAzureADAdministrator").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:ServerAzureADAdministrator").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:ServerAzureADAdministrator").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:ServerAzureADAdministrator").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -202,7 +201,7 @@ public class ServerAzureADAdministrator extends io.pulumi.resources.CustomResour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ServerAzureADAdministrator get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ServerAzureADAdministrator get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ServerAzureADAdministrator(name, id, options);
     }
 }

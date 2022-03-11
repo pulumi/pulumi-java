@@ -16,7 +16,7 @@ import io.pulumi.azurenative.containerservice.inputs.AgentPoolUpgradeSettingsArg
 import io.pulumi.azurenative.containerservice.inputs.KubeletConfigArgs;
 import io.pulumi.azurenative.containerservice.inputs.LinuxOSConfigArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -41,10 +41,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="availabilityZones")
-      private final @Nullable Input<List<String>> availabilityZones;
+      private final @Nullable Output<List<String>> availabilityZones;
 
-    public Input<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
+    public Output<List<String>> getAvailabilityZones() {
+        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="count")
-      private final @Nullable Input<Integer> count;
+      private final @Nullable Output<Integer> count;
 
-    public Input<Integer> getCount() {
-        return this.count == null ? Input.empty() : this.count;
+    public Output<Integer> getCount() {
+        return this.count == null ? Output.empty() : this.count;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableAutoScaling")
-      private final @Nullable Input<Boolean> enableAutoScaling;
+      private final @Nullable Output<Boolean> enableAutoScaling;
 
-    public Input<Boolean> getEnableAutoScaling() {
-        return this.enableAutoScaling == null ? Input.empty() : this.enableAutoScaling;
+    public Output<Boolean> getEnableAutoScaling() {
+        return this.enableAutoScaling == null ? Output.empty() : this.enableAutoScaling;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableEncryptionAtHost")
-      private final @Nullable Input<Boolean> enableEncryptionAtHost;
+      private final @Nullable Output<Boolean> enableEncryptionAtHost;
 
-    public Input<Boolean> getEnableEncryptionAtHost() {
-        return this.enableEncryptionAtHost == null ? Input.empty() : this.enableEncryptionAtHost;
+    public Output<Boolean> getEnableEncryptionAtHost() {
+        return this.enableEncryptionAtHost == null ? Output.empty() : this.enableEncryptionAtHost;
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableFIPS")
-      private final @Nullable Input<Boolean> enableFIPS;
+      private final @Nullable Output<Boolean> enableFIPS;
 
-    public Input<Boolean> getEnableFIPS() {
-        return this.enableFIPS == null ? Input.empty() : this.enableFIPS;
+    public Output<Boolean> getEnableFIPS() {
+        return this.enableFIPS == null ? Output.empty() : this.enableFIPS;
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableNodePublicIP")
-      private final @Nullable Input<Boolean> enableNodePublicIP;
+      private final @Nullable Output<Boolean> enableNodePublicIP;
 
-    public Input<Boolean> getEnableNodePublicIP() {
-        return this.enableNodePublicIP == null ? Input.empty() : this.enableNodePublicIP;
+    public Output<Boolean> getEnableNodePublicIP() {
+        return this.enableNodePublicIP == null ? Output.empty() : this.enableNodePublicIP;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="gpuInstanceProfile")
-      private final @Nullable Input<Either<String,GPUInstanceProfile>> gpuInstanceProfile;
+      private final @Nullable Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile;
 
-    public Input<Either<String,GPUInstanceProfile>> getGpuInstanceProfile() {
-        return this.gpuInstanceProfile == null ? Input.empty() : this.gpuInstanceProfile;
+    public Output<Either<String,GPUInstanceProfile>> getGpuInstanceProfile() {
+        return this.gpuInstanceProfile == null ? Output.empty() : this.gpuInstanceProfile;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kubeletConfig")
-      private final @Nullable Input<KubeletConfigArgs> kubeletConfig;
+      private final @Nullable Output<KubeletConfigArgs> kubeletConfig;
 
-    public Input<KubeletConfigArgs> getKubeletConfig() {
-        return this.kubeletConfig == null ? Input.empty() : this.kubeletConfig;
+    public Output<KubeletConfigArgs> getKubeletConfig() {
+        return this.kubeletConfig == null ? Output.empty() : this.kubeletConfig;
     }
 
     /**
@@ -129,10 +129,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kubeletDiskType")
-      private final @Nullable Input<Either<String,KubeletDiskType>> kubeletDiskType;
+      private final @Nullable Output<Either<String,KubeletDiskType>> kubeletDiskType;
 
-    public Input<Either<String,KubeletDiskType>> getKubeletDiskType() {
-        return this.kubeletDiskType == null ? Input.empty() : this.kubeletDiskType;
+    public Output<Either<String,KubeletDiskType>> getKubeletDiskType() {
+        return this.kubeletDiskType == null ? Output.empty() : this.kubeletDiskType;
     }
 
     /**
@@ -140,10 +140,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="linuxOSConfig")
-      private final @Nullable Input<LinuxOSConfigArgs> linuxOSConfig;
+      private final @Nullable Output<LinuxOSConfigArgs> linuxOSConfig;
 
-    public Input<LinuxOSConfigArgs> getLinuxOSConfig() {
-        return this.linuxOSConfig == null ? Input.empty() : this.linuxOSConfig;
+    public Output<LinuxOSConfigArgs> getLinuxOSConfig() {
+        return this.linuxOSConfig == null ? Output.empty() : this.linuxOSConfig;
     }
 
     /**
@@ -151,10 +151,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxCount")
-      private final @Nullable Input<Integer> maxCount;
+      private final @Nullable Output<Integer> maxCount;
 
-    public Input<Integer> getMaxCount() {
-        return this.maxCount == null ? Input.empty() : this.maxCount;
+    public Output<Integer> getMaxCount() {
+        return this.maxCount == null ? Output.empty() : this.maxCount;
     }
 
     /**
@@ -162,10 +162,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxPods")
-      private final @Nullable Input<Integer> maxPods;
+      private final @Nullable Output<Integer> maxPods;
 
-    public Input<Integer> getMaxPods() {
-        return this.maxPods == null ? Input.empty() : this.maxPods;
+    public Output<Integer> getMaxPods() {
+        return this.maxPods == null ? Output.empty() : this.maxPods;
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="minCount")
-      private final @Nullable Input<Integer> minCount;
+      private final @Nullable Output<Integer> minCount;
 
-    public Input<Integer> getMinCount() {
-        return this.minCount == null ? Input.empty() : this.minCount;
+    public Output<Integer> getMinCount() {
+        return this.minCount == null ? Output.empty() : this.minCount;
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mode")
-      private final @Nullable Input<Either<String,AgentPoolMode>> mode;
+      private final @Nullable Output<Either<String,AgentPoolMode>> mode;
 
-    public Input<Either<String,AgentPoolMode>> getMode() {
-        return this.mode == null ? Input.empty() : this.mode;
+    public Output<Either<String,AgentPoolMode>> getMode() {
+        return this.mode == null ? Output.empty() : this.mode;
     }
 
     /**
@@ -195,9 +195,9 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -206,10 +206,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nodeLabels")
-      private final @Nullable Input<Map<String,String>> nodeLabels;
+      private final @Nullable Output<Map<String,String>> nodeLabels;
 
-    public Input<Map<String,String>> getNodeLabels() {
-        return this.nodeLabels == null ? Input.empty() : this.nodeLabels;
+    public Output<Map<String,String>> getNodeLabels() {
+        return this.nodeLabels == null ? Output.empty() : this.nodeLabels;
     }
 
     /**
@@ -217,10 +217,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nodePublicIPPrefixID")
-      private final @Nullable Input<String> nodePublicIPPrefixID;
+      private final @Nullable Output<String> nodePublicIPPrefixID;
 
-    public Input<String> getNodePublicIPPrefixID() {
-        return this.nodePublicIPPrefixID == null ? Input.empty() : this.nodePublicIPPrefixID;
+    public Output<String> getNodePublicIPPrefixID() {
+        return this.nodePublicIPPrefixID == null ? Output.empty() : this.nodePublicIPPrefixID;
     }
 
     /**
@@ -228,10 +228,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nodeTaints")
-      private final @Nullable Input<List<String>> nodeTaints;
+      private final @Nullable Output<List<String>> nodeTaints;
 
-    public Input<List<String>> getNodeTaints() {
-        return this.nodeTaints == null ? Input.empty() : this.nodeTaints;
+    public Output<List<String>> getNodeTaints() {
+        return this.nodeTaints == null ? Output.empty() : this.nodeTaints;
     }
 
     /**
@@ -239,10 +239,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="orchestratorVersion")
-      private final @Nullable Input<String> orchestratorVersion;
+      private final @Nullable Output<String> orchestratorVersion;
 
-    public Input<String> getOrchestratorVersion() {
-        return this.orchestratorVersion == null ? Input.empty() : this.orchestratorVersion;
+    public Output<String> getOrchestratorVersion() {
+        return this.orchestratorVersion == null ? Output.empty() : this.orchestratorVersion;
     }
 
     /**
@@ -250,10 +250,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="osDiskSizeGB")
-      private final @Nullable Input<Integer> osDiskSizeGB;
+      private final @Nullable Output<Integer> osDiskSizeGB;
 
-    public Input<Integer> getOsDiskSizeGB() {
-        return this.osDiskSizeGB == null ? Input.empty() : this.osDiskSizeGB;
+    public Output<Integer> getOsDiskSizeGB() {
+        return this.osDiskSizeGB == null ? Output.empty() : this.osDiskSizeGB;
     }
 
     /**
@@ -261,10 +261,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="osDiskType")
-      private final @Nullable Input<Either<String,OSDiskType>> osDiskType;
+      private final @Nullable Output<Either<String,OSDiskType>> osDiskType;
 
-    public Input<Either<String,OSDiskType>> getOsDiskType() {
-        return this.osDiskType == null ? Input.empty() : this.osDiskType;
+    public Output<Either<String,OSDiskType>> getOsDiskType() {
+        return this.osDiskType == null ? Output.empty() : this.osDiskType;
     }
 
     /**
@@ -272,10 +272,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="osSKU")
-      private final @Nullable Input<Either<String,OSSKU>> osSKU;
+      private final @Nullable Output<Either<String,OSSKU>> osSKU;
 
-    public Input<Either<String,OSSKU>> getOsSKU() {
-        return this.osSKU == null ? Input.empty() : this.osSKU;
+    public Output<Either<String,OSSKU>> getOsSKU() {
+        return this.osSKU == null ? Output.empty() : this.osSKU;
     }
 
     /**
@@ -283,10 +283,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="osType")
-      private final @Nullable Input<Either<String,OSType>> osType;
+      private final @Nullable Output<Either<String,OSType>> osType;
 
-    public Input<Either<String,OSType>> getOsType() {
-        return this.osType == null ? Input.empty() : this.osType;
+    public Output<Either<String,OSType>> getOsType() {
+        return this.osType == null ? Output.empty() : this.osType;
     }
 
     /**
@@ -294,10 +294,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="podSubnetID")
-      private final @Nullable Input<String> podSubnetID;
+      private final @Nullable Output<String> podSubnetID;
 
-    public Input<String> getPodSubnetID() {
-        return this.podSubnetID == null ? Input.empty() : this.podSubnetID;
+    public Output<String> getPodSubnetID() {
+        return this.podSubnetID == null ? Output.empty() : this.podSubnetID;
     }
 
     /**
@@ -305,10 +305,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="proximityPlacementGroupID")
-      private final @Nullable Input<String> proximityPlacementGroupID;
+      private final @Nullable Output<String> proximityPlacementGroupID;
 
-    public Input<String> getProximityPlacementGroupID() {
-        return this.proximityPlacementGroupID == null ? Input.empty() : this.proximityPlacementGroupID;
+    public Output<String> getProximityPlacementGroupID() {
+        return this.proximityPlacementGroupID == null ? Output.empty() : this.proximityPlacementGroupID;
     }
 
     /**
@@ -316,10 +316,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scaleSetEvictionPolicy")
-      private final @Nullable Input<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy;
+      private final @Nullable Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy;
 
-    public Input<Either<String,ScaleSetEvictionPolicy>> getScaleSetEvictionPolicy() {
-        return this.scaleSetEvictionPolicy == null ? Input.empty() : this.scaleSetEvictionPolicy;
+    public Output<Either<String,ScaleSetEvictionPolicy>> getScaleSetEvictionPolicy() {
+        return this.scaleSetEvictionPolicy == null ? Output.empty() : this.scaleSetEvictionPolicy;
     }
 
     /**
@@ -327,10 +327,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scaleSetPriority")
-      private final @Nullable Input<Either<String,ScaleSetPriority>> scaleSetPriority;
+      private final @Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority;
 
-    public Input<Either<String,ScaleSetPriority>> getScaleSetPriority() {
-        return this.scaleSetPriority == null ? Input.empty() : this.scaleSetPriority;
+    public Output<Either<String,ScaleSetPriority>> getScaleSetPriority() {
+        return this.scaleSetPriority == null ? Output.empty() : this.scaleSetPriority;
     }
 
     /**
@@ -338,10 +338,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="spotMaxPrice")
-      private final @Nullable Input<Double> spotMaxPrice;
+      private final @Nullable Output<Double> spotMaxPrice;
 
-    public Input<Double> getSpotMaxPrice() {
-        return this.spotMaxPrice == null ? Input.empty() : this.spotMaxPrice;
+    public Output<Double> getSpotMaxPrice() {
+        return this.spotMaxPrice == null ? Output.empty() : this.spotMaxPrice;
     }
 
     /**
@@ -349,10 +349,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -360,10 +360,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,AgentPoolType>> type;
+      private final @Nullable Output<Either<String,AgentPoolType>> type;
 
-    public Input<Either<String,AgentPoolType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,AgentPoolType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -371,10 +371,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="upgradeSettings")
-      private final @Nullable Input<AgentPoolUpgradeSettingsArgs> upgradeSettings;
+      private final @Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings;
 
-    public Input<AgentPoolUpgradeSettingsArgs> getUpgradeSettings() {
-        return this.upgradeSettings == null ? Input.empty() : this.upgradeSettings;
+    public Output<AgentPoolUpgradeSettingsArgs> getUpgradeSettings() {
+        return this.upgradeSettings == null ? Output.empty() : this.upgradeSettings;
     }
 
     /**
@@ -382,10 +382,10 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="vmSize")
-      private final @Nullable Input<String> vmSize;
+      private final @Nullable Output<String> vmSize;
 
-    public Input<String> getVmSize() {
-        return this.vmSize == null ? Input.empty() : this.vmSize;
+    public Output<String> getVmSize() {
+        return this.vmSize == null ? Output.empty() : this.vmSize;
     }
 
     /**
@@ -393,46 +393,46 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="vnetSubnetID")
-      private final @Nullable Input<String> vnetSubnetID;
+      private final @Nullable Output<String> vnetSubnetID;
 
-    public Input<String> getVnetSubnetID() {
-        return this.vnetSubnetID == null ? Input.empty() : this.vnetSubnetID;
+    public Output<String> getVnetSubnetID() {
+        return this.vnetSubnetID == null ? Output.empty() : this.vnetSubnetID;
     }
 
     public ManagedClusterAgentPoolProfileArgs(
-        @Nullable Input<List<String>> availabilityZones,
-        @Nullable Input<Integer> count,
-        @Nullable Input<Boolean> enableAutoScaling,
-        @Nullable Input<Boolean> enableEncryptionAtHost,
-        @Nullable Input<Boolean> enableFIPS,
-        @Nullable Input<Boolean> enableNodePublicIP,
-        @Nullable Input<Either<String,GPUInstanceProfile>> gpuInstanceProfile,
-        @Nullable Input<KubeletConfigArgs> kubeletConfig,
-        @Nullable Input<Either<String,KubeletDiskType>> kubeletDiskType,
-        @Nullable Input<LinuxOSConfigArgs> linuxOSConfig,
-        @Nullable Input<Integer> maxCount,
-        @Nullable Input<Integer> maxPods,
-        @Nullable Input<Integer> minCount,
-        @Nullable Input<Either<String,AgentPoolMode>> mode,
-        Input<String> name,
-        @Nullable Input<Map<String,String>> nodeLabels,
-        @Nullable Input<String> nodePublicIPPrefixID,
-        @Nullable Input<List<String>> nodeTaints,
-        @Nullable Input<String> orchestratorVersion,
-        @Nullable Input<Integer> osDiskSizeGB,
-        @Nullable Input<Either<String,OSDiskType>> osDiskType,
-        @Nullable Input<Either<String,OSSKU>> osSKU,
-        @Nullable Input<Either<String,OSType>> osType,
-        @Nullable Input<String> podSubnetID,
-        @Nullable Input<String> proximityPlacementGroupID,
-        @Nullable Input<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy,
-        @Nullable Input<Either<String,ScaleSetPriority>> scaleSetPriority,
-        @Nullable Input<Double> spotMaxPrice,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Either<String,AgentPoolType>> type,
-        @Nullable Input<AgentPoolUpgradeSettingsArgs> upgradeSettings,
-        @Nullable Input<String> vmSize,
-        @Nullable Input<String> vnetSubnetID) {
+        @Nullable Output<List<String>> availabilityZones,
+        @Nullable Output<Integer> count,
+        @Nullable Output<Boolean> enableAutoScaling,
+        @Nullable Output<Boolean> enableEncryptionAtHost,
+        @Nullable Output<Boolean> enableFIPS,
+        @Nullable Output<Boolean> enableNodePublicIP,
+        @Nullable Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile,
+        @Nullable Output<KubeletConfigArgs> kubeletConfig,
+        @Nullable Output<Either<String,KubeletDiskType>> kubeletDiskType,
+        @Nullable Output<LinuxOSConfigArgs> linuxOSConfig,
+        @Nullable Output<Integer> maxCount,
+        @Nullable Output<Integer> maxPods,
+        @Nullable Output<Integer> minCount,
+        @Nullable Output<Either<String,AgentPoolMode>> mode,
+        Output<String> name,
+        @Nullable Output<Map<String,String>> nodeLabels,
+        @Nullable Output<String> nodePublicIPPrefixID,
+        @Nullable Output<List<String>> nodeTaints,
+        @Nullable Output<String> orchestratorVersion,
+        @Nullable Output<Integer> osDiskSizeGB,
+        @Nullable Output<Either<String,OSDiskType>> osDiskType,
+        @Nullable Output<Either<String,OSSKU>> osSKU,
+        @Nullable Output<Either<String,OSType>> osType,
+        @Nullable Output<String> podSubnetID,
+        @Nullable Output<String> proximityPlacementGroupID,
+        @Nullable Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy,
+        @Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority,
+        @Nullable Output<Double> spotMaxPrice,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Either<String,AgentPoolType>> type,
+        @Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings,
+        @Nullable Output<String> vmSize,
+        @Nullable Output<String> vnetSubnetID) {
         this.availabilityZones = availabilityZones;
         this.count = count;
         this.enableAutoScaling = enableAutoScaling;
@@ -469,39 +469,39 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
     }
 
     private ManagedClusterAgentPoolProfileArgs() {
-        this.availabilityZones = Input.empty();
-        this.count = Input.empty();
-        this.enableAutoScaling = Input.empty();
-        this.enableEncryptionAtHost = Input.empty();
-        this.enableFIPS = Input.empty();
-        this.enableNodePublicIP = Input.empty();
-        this.gpuInstanceProfile = Input.empty();
-        this.kubeletConfig = Input.empty();
-        this.kubeletDiskType = Input.empty();
-        this.linuxOSConfig = Input.empty();
-        this.maxCount = Input.empty();
-        this.maxPods = Input.empty();
-        this.minCount = Input.empty();
-        this.mode = Input.empty();
-        this.name = Input.empty();
-        this.nodeLabels = Input.empty();
-        this.nodePublicIPPrefixID = Input.empty();
-        this.nodeTaints = Input.empty();
-        this.orchestratorVersion = Input.empty();
-        this.osDiskSizeGB = Input.empty();
-        this.osDiskType = Input.empty();
-        this.osSKU = Input.empty();
-        this.osType = Input.empty();
-        this.podSubnetID = Input.empty();
-        this.proximityPlacementGroupID = Input.empty();
-        this.scaleSetEvictionPolicy = Input.empty();
-        this.scaleSetPriority = Input.empty();
-        this.spotMaxPrice = Input.empty();
-        this.tags = Input.empty();
-        this.type = Input.empty();
-        this.upgradeSettings = Input.empty();
-        this.vmSize = Input.empty();
-        this.vnetSubnetID = Input.empty();
+        this.availabilityZones = Output.empty();
+        this.count = Output.empty();
+        this.enableAutoScaling = Output.empty();
+        this.enableEncryptionAtHost = Output.empty();
+        this.enableFIPS = Output.empty();
+        this.enableNodePublicIP = Output.empty();
+        this.gpuInstanceProfile = Output.empty();
+        this.kubeletConfig = Output.empty();
+        this.kubeletDiskType = Output.empty();
+        this.linuxOSConfig = Output.empty();
+        this.maxCount = Output.empty();
+        this.maxPods = Output.empty();
+        this.minCount = Output.empty();
+        this.mode = Output.empty();
+        this.name = Output.empty();
+        this.nodeLabels = Output.empty();
+        this.nodePublicIPPrefixID = Output.empty();
+        this.nodeTaints = Output.empty();
+        this.orchestratorVersion = Output.empty();
+        this.osDiskSizeGB = Output.empty();
+        this.osDiskType = Output.empty();
+        this.osSKU = Output.empty();
+        this.osType = Output.empty();
+        this.podSubnetID = Output.empty();
+        this.proximityPlacementGroupID = Output.empty();
+        this.scaleSetEvictionPolicy = Output.empty();
+        this.scaleSetPriority = Output.empty();
+        this.spotMaxPrice = Output.empty();
+        this.tags = Output.empty();
+        this.type = Output.empty();
+        this.upgradeSettings = Output.empty();
+        this.vmSize = Output.empty();
+        this.vnetSubnetID = Output.empty();
     }
 
     public static Builder builder() {
@@ -513,39 +513,39 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> availabilityZones;
-        private @Nullable Input<Integer> count;
-        private @Nullable Input<Boolean> enableAutoScaling;
-        private @Nullable Input<Boolean> enableEncryptionAtHost;
-        private @Nullable Input<Boolean> enableFIPS;
-        private @Nullable Input<Boolean> enableNodePublicIP;
-        private @Nullable Input<Either<String,GPUInstanceProfile>> gpuInstanceProfile;
-        private @Nullable Input<KubeletConfigArgs> kubeletConfig;
-        private @Nullable Input<Either<String,KubeletDiskType>> kubeletDiskType;
-        private @Nullable Input<LinuxOSConfigArgs> linuxOSConfig;
-        private @Nullable Input<Integer> maxCount;
-        private @Nullable Input<Integer> maxPods;
-        private @Nullable Input<Integer> minCount;
-        private @Nullable Input<Either<String,AgentPoolMode>> mode;
-        private Input<String> name;
-        private @Nullable Input<Map<String,String>> nodeLabels;
-        private @Nullable Input<String> nodePublicIPPrefixID;
-        private @Nullable Input<List<String>> nodeTaints;
-        private @Nullable Input<String> orchestratorVersion;
-        private @Nullable Input<Integer> osDiskSizeGB;
-        private @Nullable Input<Either<String,OSDiskType>> osDiskType;
-        private @Nullable Input<Either<String,OSSKU>> osSKU;
-        private @Nullable Input<Either<String,OSType>> osType;
-        private @Nullable Input<String> podSubnetID;
-        private @Nullable Input<String> proximityPlacementGroupID;
-        private @Nullable Input<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy;
-        private @Nullable Input<Either<String,ScaleSetPriority>> scaleSetPriority;
-        private @Nullable Input<Double> spotMaxPrice;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Either<String,AgentPoolType>> type;
-        private @Nullable Input<AgentPoolUpgradeSettingsArgs> upgradeSettings;
-        private @Nullable Input<String> vmSize;
-        private @Nullable Input<String> vnetSubnetID;
+        private @Nullable Output<List<String>> availabilityZones;
+        private @Nullable Output<Integer> count;
+        private @Nullable Output<Boolean> enableAutoScaling;
+        private @Nullable Output<Boolean> enableEncryptionAtHost;
+        private @Nullable Output<Boolean> enableFIPS;
+        private @Nullable Output<Boolean> enableNodePublicIP;
+        private @Nullable Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile;
+        private @Nullable Output<KubeletConfigArgs> kubeletConfig;
+        private @Nullable Output<Either<String,KubeletDiskType>> kubeletDiskType;
+        private @Nullable Output<LinuxOSConfigArgs> linuxOSConfig;
+        private @Nullable Output<Integer> maxCount;
+        private @Nullable Output<Integer> maxPods;
+        private @Nullable Output<Integer> minCount;
+        private @Nullable Output<Either<String,AgentPoolMode>> mode;
+        private Output<String> name;
+        private @Nullable Output<Map<String,String>> nodeLabels;
+        private @Nullable Output<String> nodePublicIPPrefixID;
+        private @Nullable Output<List<String>> nodeTaints;
+        private @Nullable Output<String> orchestratorVersion;
+        private @Nullable Output<Integer> osDiskSizeGB;
+        private @Nullable Output<Either<String,OSDiskType>> osDiskType;
+        private @Nullable Output<Either<String,OSSKU>> osSKU;
+        private @Nullable Output<Either<String,OSType>> osType;
+        private @Nullable Output<String> podSubnetID;
+        private @Nullable Output<String> proximityPlacementGroupID;
+        private @Nullable Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy;
+        private @Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority;
+        private @Nullable Output<Double> spotMaxPrice;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Either<String,AgentPoolType>> type;
+        private @Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings;
+        private @Nullable Output<String> vmSize;
+        private @Nullable Output<String> vnetSubnetID;
 
         public Builder() {
     	      // Empty
@@ -588,333 +588,333 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
     	      this.vnetSubnetID = defaults.vnetSubnetID;
         }
 
-        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Input.ofNullable(availabilityZones);
+            this.availabilityZones = Output.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder count(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             this.count = count;
             return this;
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = Input.ofNullable(count);
+            this.count = Output.ofNullable(count);
             return this;
         }
 
-        public Builder enableAutoScaling(@Nullable Input<Boolean> enableAutoScaling) {
+        public Builder enableAutoScaling(@Nullable Output<Boolean> enableAutoScaling) {
             this.enableAutoScaling = enableAutoScaling;
             return this;
         }
 
         public Builder enableAutoScaling(@Nullable Boolean enableAutoScaling) {
-            this.enableAutoScaling = Input.ofNullable(enableAutoScaling);
+            this.enableAutoScaling = Output.ofNullable(enableAutoScaling);
             return this;
         }
 
-        public Builder enableEncryptionAtHost(@Nullable Input<Boolean> enableEncryptionAtHost) {
+        public Builder enableEncryptionAtHost(@Nullable Output<Boolean> enableEncryptionAtHost) {
             this.enableEncryptionAtHost = enableEncryptionAtHost;
             return this;
         }
 
         public Builder enableEncryptionAtHost(@Nullable Boolean enableEncryptionAtHost) {
-            this.enableEncryptionAtHost = Input.ofNullable(enableEncryptionAtHost);
+            this.enableEncryptionAtHost = Output.ofNullable(enableEncryptionAtHost);
             return this;
         }
 
-        public Builder enableFIPS(@Nullable Input<Boolean> enableFIPS) {
+        public Builder enableFIPS(@Nullable Output<Boolean> enableFIPS) {
             this.enableFIPS = enableFIPS;
             return this;
         }
 
         public Builder enableFIPS(@Nullable Boolean enableFIPS) {
-            this.enableFIPS = Input.ofNullable(enableFIPS);
+            this.enableFIPS = Output.ofNullable(enableFIPS);
             return this;
         }
 
-        public Builder enableNodePublicIP(@Nullable Input<Boolean> enableNodePublicIP) {
+        public Builder enableNodePublicIP(@Nullable Output<Boolean> enableNodePublicIP) {
             this.enableNodePublicIP = enableNodePublicIP;
             return this;
         }
 
         public Builder enableNodePublicIP(@Nullable Boolean enableNodePublicIP) {
-            this.enableNodePublicIP = Input.ofNullable(enableNodePublicIP);
+            this.enableNodePublicIP = Output.ofNullable(enableNodePublicIP);
             return this;
         }
 
-        public Builder gpuInstanceProfile(@Nullable Input<Either<String,GPUInstanceProfile>> gpuInstanceProfile) {
+        public Builder gpuInstanceProfile(@Nullable Output<Either<String,GPUInstanceProfile>> gpuInstanceProfile) {
             this.gpuInstanceProfile = gpuInstanceProfile;
             return this;
         }
 
         public Builder gpuInstanceProfile(@Nullable Either<String,GPUInstanceProfile> gpuInstanceProfile) {
-            this.gpuInstanceProfile = Input.ofNullable(gpuInstanceProfile);
+            this.gpuInstanceProfile = Output.ofNullable(gpuInstanceProfile);
             return this;
         }
 
-        public Builder kubeletConfig(@Nullable Input<KubeletConfigArgs> kubeletConfig) {
+        public Builder kubeletConfig(@Nullable Output<KubeletConfigArgs> kubeletConfig) {
             this.kubeletConfig = kubeletConfig;
             return this;
         }
 
         public Builder kubeletConfig(@Nullable KubeletConfigArgs kubeletConfig) {
-            this.kubeletConfig = Input.ofNullable(kubeletConfig);
+            this.kubeletConfig = Output.ofNullable(kubeletConfig);
             return this;
         }
 
-        public Builder kubeletDiskType(@Nullable Input<Either<String,KubeletDiskType>> kubeletDiskType) {
+        public Builder kubeletDiskType(@Nullable Output<Either<String,KubeletDiskType>> kubeletDiskType) {
             this.kubeletDiskType = kubeletDiskType;
             return this;
         }
 
         public Builder kubeletDiskType(@Nullable Either<String,KubeletDiskType> kubeletDiskType) {
-            this.kubeletDiskType = Input.ofNullable(kubeletDiskType);
+            this.kubeletDiskType = Output.ofNullable(kubeletDiskType);
             return this;
         }
 
-        public Builder linuxOSConfig(@Nullable Input<LinuxOSConfigArgs> linuxOSConfig) {
+        public Builder linuxOSConfig(@Nullable Output<LinuxOSConfigArgs> linuxOSConfig) {
             this.linuxOSConfig = linuxOSConfig;
             return this;
         }
 
         public Builder linuxOSConfig(@Nullable LinuxOSConfigArgs linuxOSConfig) {
-            this.linuxOSConfig = Input.ofNullable(linuxOSConfig);
+            this.linuxOSConfig = Output.ofNullable(linuxOSConfig);
             return this;
         }
 
-        public Builder maxCount(@Nullable Input<Integer> maxCount) {
+        public Builder maxCount(@Nullable Output<Integer> maxCount) {
             this.maxCount = maxCount;
             return this;
         }
 
         public Builder maxCount(@Nullable Integer maxCount) {
-            this.maxCount = Input.ofNullable(maxCount);
+            this.maxCount = Output.ofNullable(maxCount);
             return this;
         }
 
-        public Builder maxPods(@Nullable Input<Integer> maxPods) {
+        public Builder maxPods(@Nullable Output<Integer> maxPods) {
             this.maxPods = maxPods;
             return this;
         }
 
         public Builder maxPods(@Nullable Integer maxPods) {
-            this.maxPods = Input.ofNullable(maxPods);
+            this.maxPods = Output.ofNullable(maxPods);
             return this;
         }
 
-        public Builder minCount(@Nullable Input<Integer> minCount) {
+        public Builder minCount(@Nullable Output<Integer> minCount) {
             this.minCount = minCount;
             return this;
         }
 
         public Builder minCount(@Nullable Integer minCount) {
-            this.minCount = Input.ofNullable(minCount);
+            this.minCount = Output.ofNullable(minCount);
             return this;
         }
 
-        public Builder mode(@Nullable Input<Either<String,AgentPoolMode>> mode) {
+        public Builder mode(@Nullable Output<Either<String,AgentPoolMode>> mode) {
             this.mode = mode;
             return this;
         }
 
         public Builder mode(@Nullable Either<String,AgentPoolMode> mode) {
-            this.mode = Input.ofNullable(mode);
+            this.mode = Output.ofNullable(mode);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder nodeLabels(@Nullable Input<Map<String,String>> nodeLabels) {
+        public Builder nodeLabels(@Nullable Output<Map<String,String>> nodeLabels) {
             this.nodeLabels = nodeLabels;
             return this;
         }
 
         public Builder nodeLabels(@Nullable Map<String,String> nodeLabels) {
-            this.nodeLabels = Input.ofNullable(nodeLabels);
+            this.nodeLabels = Output.ofNullable(nodeLabels);
             return this;
         }
 
-        public Builder nodePublicIPPrefixID(@Nullable Input<String> nodePublicIPPrefixID) {
+        public Builder nodePublicIPPrefixID(@Nullable Output<String> nodePublicIPPrefixID) {
             this.nodePublicIPPrefixID = nodePublicIPPrefixID;
             return this;
         }
 
         public Builder nodePublicIPPrefixID(@Nullable String nodePublicIPPrefixID) {
-            this.nodePublicIPPrefixID = Input.ofNullable(nodePublicIPPrefixID);
+            this.nodePublicIPPrefixID = Output.ofNullable(nodePublicIPPrefixID);
             return this;
         }
 
-        public Builder nodeTaints(@Nullable Input<List<String>> nodeTaints) {
+        public Builder nodeTaints(@Nullable Output<List<String>> nodeTaints) {
             this.nodeTaints = nodeTaints;
             return this;
         }
 
         public Builder nodeTaints(@Nullable List<String> nodeTaints) {
-            this.nodeTaints = Input.ofNullable(nodeTaints);
+            this.nodeTaints = Output.ofNullable(nodeTaints);
             return this;
         }
 
-        public Builder orchestratorVersion(@Nullable Input<String> orchestratorVersion) {
+        public Builder orchestratorVersion(@Nullable Output<String> orchestratorVersion) {
             this.orchestratorVersion = orchestratorVersion;
             return this;
         }
 
         public Builder orchestratorVersion(@Nullable String orchestratorVersion) {
-            this.orchestratorVersion = Input.ofNullable(orchestratorVersion);
+            this.orchestratorVersion = Output.ofNullable(orchestratorVersion);
             return this;
         }
 
-        public Builder osDiskSizeGB(@Nullable Input<Integer> osDiskSizeGB) {
+        public Builder osDiskSizeGB(@Nullable Output<Integer> osDiskSizeGB) {
             this.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
 
         public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
-            this.osDiskSizeGB = Input.ofNullable(osDiskSizeGB);
+            this.osDiskSizeGB = Output.ofNullable(osDiskSizeGB);
             return this;
         }
 
-        public Builder osDiskType(@Nullable Input<Either<String,OSDiskType>> osDiskType) {
+        public Builder osDiskType(@Nullable Output<Either<String,OSDiskType>> osDiskType) {
             this.osDiskType = osDiskType;
             return this;
         }
 
         public Builder osDiskType(@Nullable Either<String,OSDiskType> osDiskType) {
-            this.osDiskType = Input.ofNullable(osDiskType);
+            this.osDiskType = Output.ofNullable(osDiskType);
             return this;
         }
 
-        public Builder osSKU(@Nullable Input<Either<String,OSSKU>> osSKU) {
+        public Builder osSKU(@Nullable Output<Either<String,OSSKU>> osSKU) {
             this.osSKU = osSKU;
             return this;
         }
 
         public Builder osSKU(@Nullable Either<String,OSSKU> osSKU) {
-            this.osSKU = Input.ofNullable(osSKU);
+            this.osSKU = Output.ofNullable(osSKU);
             return this;
         }
 
-        public Builder osType(@Nullable Input<Either<String,OSType>> osType) {
+        public Builder osType(@Nullable Output<Either<String,OSType>> osType) {
             this.osType = osType;
             return this;
         }
 
         public Builder osType(@Nullable Either<String,OSType> osType) {
-            this.osType = Input.ofNullable(osType);
+            this.osType = Output.ofNullable(osType);
             return this;
         }
 
-        public Builder podSubnetID(@Nullable Input<String> podSubnetID) {
+        public Builder podSubnetID(@Nullable Output<String> podSubnetID) {
             this.podSubnetID = podSubnetID;
             return this;
         }
 
         public Builder podSubnetID(@Nullable String podSubnetID) {
-            this.podSubnetID = Input.ofNullable(podSubnetID);
+            this.podSubnetID = Output.ofNullable(podSubnetID);
             return this;
         }
 
-        public Builder proximityPlacementGroupID(@Nullable Input<String> proximityPlacementGroupID) {
+        public Builder proximityPlacementGroupID(@Nullable Output<String> proximityPlacementGroupID) {
             this.proximityPlacementGroupID = proximityPlacementGroupID;
             return this;
         }
 
         public Builder proximityPlacementGroupID(@Nullable String proximityPlacementGroupID) {
-            this.proximityPlacementGroupID = Input.ofNullable(proximityPlacementGroupID);
+            this.proximityPlacementGroupID = Output.ofNullable(proximityPlacementGroupID);
             return this;
         }
 
-        public Builder scaleSetEvictionPolicy(@Nullable Input<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy) {
+        public Builder scaleSetEvictionPolicy(@Nullable Output<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy) {
             this.scaleSetEvictionPolicy = scaleSetEvictionPolicy;
             return this;
         }
 
         public Builder scaleSetEvictionPolicy(@Nullable Either<String,ScaleSetEvictionPolicy> scaleSetEvictionPolicy) {
-            this.scaleSetEvictionPolicy = Input.ofNullable(scaleSetEvictionPolicy);
+            this.scaleSetEvictionPolicy = Output.ofNullable(scaleSetEvictionPolicy);
             return this;
         }
 
-        public Builder scaleSetPriority(@Nullable Input<Either<String,ScaleSetPriority>> scaleSetPriority) {
+        public Builder scaleSetPriority(@Nullable Output<Either<String,ScaleSetPriority>> scaleSetPriority) {
             this.scaleSetPriority = scaleSetPriority;
             return this;
         }
 
         public Builder scaleSetPriority(@Nullable Either<String,ScaleSetPriority> scaleSetPriority) {
-            this.scaleSetPriority = Input.ofNullable(scaleSetPriority);
+            this.scaleSetPriority = Output.ofNullable(scaleSetPriority);
             return this;
         }
 
-        public Builder spotMaxPrice(@Nullable Input<Double> spotMaxPrice) {
+        public Builder spotMaxPrice(@Nullable Output<Double> spotMaxPrice) {
             this.spotMaxPrice = spotMaxPrice;
             return this;
         }
 
         public Builder spotMaxPrice(@Nullable Double spotMaxPrice) {
-            this.spotMaxPrice = Input.ofNullable(spotMaxPrice);
+            this.spotMaxPrice = Output.ofNullable(spotMaxPrice);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder type(@Nullable Input<Either<String,AgentPoolType>> type) {
+        public Builder type(@Nullable Output<Either<String,AgentPoolType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,AgentPoolType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder upgradeSettings(@Nullable Input<AgentPoolUpgradeSettingsArgs> upgradeSettings) {
+        public Builder upgradeSettings(@Nullable Output<AgentPoolUpgradeSettingsArgs> upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
 
         public Builder upgradeSettings(@Nullable AgentPoolUpgradeSettingsArgs upgradeSettings) {
-            this.upgradeSettings = Input.ofNullable(upgradeSettings);
+            this.upgradeSettings = Output.ofNullable(upgradeSettings);
             return this;
         }
 
-        public Builder vmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Output<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Input.ofNullable(vmSize);
+            this.vmSize = Output.ofNullable(vmSize);
             return this;
         }
 
-        public Builder vnetSubnetID(@Nullable Input<String> vnetSubnetID) {
+        public Builder vnetSubnetID(@Nullable Output<String> vnetSubnetID) {
             this.vnetSubnetID = vnetSubnetID;
             return this;
         }
 
         public Builder vnetSubnetID(@Nullable String vnetSubnetID) {
-            this.vnetSubnetID = Input.ofNullable(vnetSubnetID);
+            this.vnetSubnetID = Output.ofNullable(vnetSubnetID);
             return this;
         }
         public ManagedClusterAgentPoolProfileArgs build() {

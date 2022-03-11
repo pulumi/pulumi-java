@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ingestionSettingName")
-      private final @Nullable Input<String> ingestionSettingName;
+      private final @Nullable Output<String> ingestionSettingName;
 
-    public Input<String> getIngestionSettingName() {
-        return this.ingestionSettingName == null ? Input.empty() : this.ingestionSettingName;
+    public Output<String> getIngestionSettingName() {
+        return this.ingestionSettingName == null ? Output.empty() : this.ingestionSettingName;
     }
 
-    public IngestionSettingArgs(@Nullable Input<String> ingestionSettingName) {
+    public IngestionSettingArgs(@Nullable Output<String> ingestionSettingName) {
         this.ingestionSettingName = ingestionSettingName;
     }
 
     private IngestionSettingArgs() {
-        this.ingestionSettingName = Input.empty();
+        this.ingestionSettingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ingestionSettingName;
+        private @Nullable Output<String> ingestionSettingName;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class IngestionSettingArgs extends io.pulumi.resources.ResourceArgs
     	      this.ingestionSettingName = defaults.ingestionSettingName;
         }
 
-        public Builder ingestionSettingName(@Nullable Input<String> ingestionSettingName) {
+        public Builder ingestionSettingName(@Nullable Output<String> ingestionSettingName) {
             this.ingestionSettingName = ingestionSettingName;
             return this;
         }
 
         public Builder ingestionSettingName(@Nullable String ingestionSettingName) {
-            this.ingestionSettingName = Input.ofNullable(ingestionSettingName);
+            this.ingestionSettingName = Output.ofNullable(ingestionSettingName);
             return this;
         }
         public IngestionSettingArgs build() {

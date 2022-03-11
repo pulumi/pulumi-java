@@ -18,7 +18,6 @@ import io.pulumi.azurenative.recoveryservices.outputs.DPMProtectedItemResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.GenericProtectedItemResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.MabFileFolderProtectedItemResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -168,33 +167,33 @@ public class ProtectedItem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProtectedItem(String name, ProtectedItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:recoveryservices:ProtectedItem", name, args == null ? ProtectedItemArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:recoveryservices:ProtectedItem", name, args == null ? ProtectedItemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ProtectedItem(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ProtectedItem(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:recoveryservices:ProtectedItem", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20160601:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20190513:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20190615:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20201001:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20201201:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210101:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210201:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210201preview:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ProtectedItem").build()),
-                Input.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ProtectedItem").build())
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20160601:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20190513:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20190615:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20201001:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20201201:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210101:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210201:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210201preview:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210210:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210301:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210401:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210601:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210701:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20210801:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211001:ProtectedItem").build()),
+                Output.of(Alias.builder().setType("azure-native:recoveryservices/v20211201:ProtectedItem").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -208,7 +207,7 @@ public class ProtectedItem extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ProtectedItem get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ProtectedItem get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ProtectedItem(name, id, options);
     }
 }

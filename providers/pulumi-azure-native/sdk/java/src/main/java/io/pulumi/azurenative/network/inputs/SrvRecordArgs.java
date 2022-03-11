@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Integer> priority;
+      private final @Nullable Output<Integer> priority;
 
-    public Input<Integer> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Integer> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-      private final @Nullable Input<String> target;
+      private final @Nullable Output<String> target;
 
-    public Input<String> getTarget() {
-        return this.target == null ? Input.empty() : this.target;
+    public Output<String> getTarget() {
+        return this.target == null ? Output.empty() : this.target;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-      private final @Nullable Input<Integer> weight;
+      private final @Nullable Output<Integer> weight;
 
-    public Input<Integer> getWeight() {
-        return this.weight == null ? Input.empty() : this.weight;
+    public Output<Integer> getWeight() {
+        return this.weight == null ? Output.empty() : this.weight;
     }
 
     public SrvRecordArgs(
-        @Nullable Input<Integer> port,
-        @Nullable Input<Integer> priority,
-        @Nullable Input<String> target,
-        @Nullable Input<Integer> weight) {
+        @Nullable Output<Integer> port,
+        @Nullable Output<Integer> priority,
+        @Nullable Output<String> target,
+        @Nullable Output<Integer> weight) {
         this.port = port;
         this.priority = priority;
         this.target = target;
@@ -75,10 +75,10 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SrvRecordArgs() {
-        this.port = Input.empty();
-        this.priority = Input.empty();
-        this.target = Input.empty();
-        this.weight = Input.empty();
+        this.port = Output.empty();
+        this.priority = Output.empty();
+        this.target = Output.empty();
+        this.weight = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> port;
-        private @Nullable Input<Integer> priority;
-        private @Nullable Input<String> target;
-        private @Nullable Input<Integer> weight;
+        private @Nullable Output<Integer> port;
+        private @Nullable Output<Integer> priority;
+        private @Nullable Output<String> target;
+        private @Nullable Output<Integer> weight;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.weight = defaults.weight;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder target(@Nullable Input<String> target) {
+        public Builder target(@Nullable Output<String> target) {
             this.target = target;
             return this;
         }
 
         public Builder target(@Nullable String target) {
-            this.target = Input.ofNullable(target);
+            this.target = Output.ofNullable(target);
             return this;
         }
 
-        public Builder weight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Output<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Input.ofNullable(weight);
+            this.weight = Output.ofNullable(weight);
             return this;
         }
         public SrvRecordArgs build() {

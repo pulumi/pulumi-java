@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.OperationsDefinitionDisplayArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -22,10 +22,10 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
     public static final OperationsDefinitionArgs Empty = new OperationsDefinitionArgs();
 
     @InputImport(name="actionType")
-      private final @Nullable Input<String> actionType;
+      private final @Nullable Output<String> actionType;
 
-    public Input<String> getActionType() {
-        return this.actionType == null ? Input.empty() : this.actionType;
+    public Output<String> getActionType() {
+        return this.actionType == null ? Output.empty() : this.actionType;
     }
 
     /**
@@ -33,9 +33,9 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="display", required=true)
-      private final Input<OperationsDefinitionDisplayArgs> display;
+      private final Output<OperationsDefinitionDisplayArgs> display;
 
-    public Input<OperationsDefinitionDisplayArgs> getDisplay() {
+    public Output<OperationsDefinitionDisplayArgs> getDisplay() {
         return this.display;
     }
 
@@ -44,10 +44,10 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isDataAction")
-      private final @Nullable Input<Boolean> isDataAction;
+      private final @Nullable Output<Boolean> isDataAction;
 
-    public Input<Boolean> getIsDataAction() {
-        return this.isDataAction == null ? Input.empty() : this.isDataAction;
+    public Output<Boolean> getIsDataAction() {
+        return this.isDataAction == null ? Output.empty() : this.isDataAction;
     }
 
     /**
@@ -55,33 +55,33 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="origin")
-      private final @Nullable Input<String> origin;
+      private final @Nullable Output<String> origin;
 
-    public Input<String> getOrigin() {
-        return this.origin == null ? Input.empty() : this.origin;
+    public Output<String> getOrigin() {
+        return this.origin == null ? Output.empty() : this.origin;
     }
 
     @InputImport(name="properties")
-      private final @Nullable Input<Object> properties;
+      private final @Nullable Output<Object> properties;
 
-    public Input<Object> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<Object> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     public OperationsDefinitionArgs(
-        @Nullable Input<String> actionType,
-        Input<OperationsDefinitionDisplayArgs> display,
-        @Nullable Input<Boolean> isDataAction,
-        Input<String> name,
-        @Nullable Input<String> origin,
-        @Nullable Input<Object> properties) {
+        @Nullable Output<String> actionType,
+        Output<OperationsDefinitionDisplayArgs> display,
+        @Nullable Output<Boolean> isDataAction,
+        Output<String> name,
+        @Nullable Output<String> origin,
+        @Nullable Output<Object> properties) {
         this.actionType = actionType;
         this.display = Objects.requireNonNull(display, "expected parameter 'display' to be non-null");
         this.isDataAction = isDataAction;
@@ -91,12 +91,12 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
     }
 
     private OperationsDefinitionArgs() {
-        this.actionType = Input.empty();
-        this.display = Input.empty();
-        this.isDataAction = Input.empty();
-        this.name = Input.empty();
-        this.origin = Input.empty();
-        this.properties = Input.empty();
+        this.actionType = Output.empty();
+        this.display = Output.empty();
+        this.isDataAction = Output.empty();
+        this.name = Output.empty();
+        this.origin = Output.empty();
+        this.properties = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,12 +108,12 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> actionType;
-        private Input<OperationsDefinitionDisplayArgs> display;
-        private @Nullable Input<Boolean> isDataAction;
-        private Input<String> name;
-        private @Nullable Input<String> origin;
-        private @Nullable Input<Object> properties;
+        private @Nullable Output<String> actionType;
+        private Output<OperationsDefinitionDisplayArgs> display;
+        private @Nullable Output<Boolean> isDataAction;
+        private Output<String> name;
+        private @Nullable Output<String> origin;
+        private @Nullable Output<Object> properties;
 
         public Builder() {
     	      // Empty
@@ -129,63 +129,63 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
     	      this.properties = defaults.properties;
         }
 
-        public Builder actionType(@Nullable Input<String> actionType) {
+        public Builder actionType(@Nullable Output<String> actionType) {
             this.actionType = actionType;
             return this;
         }
 
         public Builder actionType(@Nullable String actionType) {
-            this.actionType = Input.ofNullable(actionType);
+            this.actionType = Output.ofNullable(actionType);
             return this;
         }
 
-        public Builder display(Input<OperationsDefinitionDisplayArgs> display) {
+        public Builder display(Output<OperationsDefinitionDisplayArgs> display) {
             this.display = Objects.requireNonNull(display);
             return this;
         }
 
         public Builder display(OperationsDefinitionDisplayArgs display) {
-            this.display = Input.of(Objects.requireNonNull(display));
+            this.display = Output.of(Objects.requireNonNull(display));
             return this;
         }
 
-        public Builder isDataAction(@Nullable Input<Boolean> isDataAction) {
+        public Builder isDataAction(@Nullable Output<Boolean> isDataAction) {
             this.isDataAction = isDataAction;
             return this;
         }
 
         public Builder isDataAction(@Nullable Boolean isDataAction) {
-            this.isDataAction = Input.ofNullable(isDataAction);
+            this.isDataAction = Output.ofNullable(isDataAction);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder origin(@Nullable Input<String> origin) {
+        public Builder origin(@Nullable Output<String> origin) {
             this.origin = origin;
             return this;
         }
 
         public Builder origin(@Nullable String origin) {
-            this.origin = Input.ofNullable(origin);
+            this.origin = Output.ofNullable(origin);
             return this;
         }
 
-        public Builder properties(@Nullable Input<Object> properties) {
+        public Builder properties(@Nullable Output<Object> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable Object properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
         public OperationsDefinitionArgs build() {

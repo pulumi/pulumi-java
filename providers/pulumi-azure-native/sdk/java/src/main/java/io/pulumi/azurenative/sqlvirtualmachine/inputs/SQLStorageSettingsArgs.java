@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultFilePath")
-      private final @Nullable Input<String> defaultFilePath;
+      private final @Nullable Output<String> defaultFilePath;
 
-    public Input<String> getDefaultFilePath() {
-        return this.defaultFilePath == null ? Input.empty() : this.defaultFilePath;
+    public Output<String> getDefaultFilePath() {
+        return this.defaultFilePath == null ? Output.empty() : this.defaultFilePath;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="luns")
-      private final @Nullable Input<List<Integer>> luns;
+      private final @Nullable Output<List<Integer>> luns;
 
-    public Input<List<Integer>> getLuns() {
-        return this.luns == null ? Input.empty() : this.luns;
+    public Output<List<Integer>> getLuns() {
+        return this.luns == null ? Output.empty() : this.luns;
     }
 
     public SQLStorageSettingsArgs(
-        @Nullable Input<String> defaultFilePath,
-        @Nullable Input<List<Integer>> luns) {
+        @Nullable Output<String> defaultFilePath,
+        @Nullable Output<List<Integer>> luns) {
         this.defaultFilePath = defaultFilePath;
         this.luns = luns;
     }
 
     private SQLStorageSettingsArgs() {
-        this.defaultFilePath = Input.empty();
-        this.luns = Input.empty();
+        this.defaultFilePath = Output.empty();
+        this.luns = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> defaultFilePath;
-        private @Nullable Input<List<Integer>> luns;
+        private @Nullable Output<String> defaultFilePath;
+        private @Nullable Output<List<Integer>> luns;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
     	      this.luns = defaults.luns;
         }
 
-        public Builder defaultFilePath(@Nullable Input<String> defaultFilePath) {
+        public Builder defaultFilePath(@Nullable Output<String> defaultFilePath) {
             this.defaultFilePath = defaultFilePath;
             return this;
         }
 
         public Builder defaultFilePath(@Nullable String defaultFilePath) {
-            this.defaultFilePath = Input.ofNullable(defaultFilePath);
+            this.defaultFilePath = Output.ofNullable(defaultFilePath);
             return this;
         }
 
-        public Builder luns(@Nullable Input<List<Integer>> luns) {
+        public Builder luns(@Nullable Output<List<Integer>> luns) {
             this.luns = luns;
             return this;
         }
 
         public Builder luns(@Nullable List<Integer> luns) {
-            this.luns = Input.ofNullable(luns);
+            this.luns = Output.ofNullable(luns);
             return this;
         }
         public SQLStorageSettingsArgs build() {

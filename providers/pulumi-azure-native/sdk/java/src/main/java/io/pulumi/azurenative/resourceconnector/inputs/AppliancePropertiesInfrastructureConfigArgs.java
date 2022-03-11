@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resourceconnector.inputs;
 
 import io.pulumi.azurenative.resourceconnector.enums.Provider;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="provider")
-      private final @Nullable Input<Either<String,Provider>> provider;
+      private final @Nullable Output<Either<String,Provider>> provider;
 
-    public Input<Either<String,Provider>> getProvider() {
-        return this.provider == null ? Input.empty() : this.provider;
+    public Output<Either<String,Provider>> getProvider() {
+        return this.provider == null ? Output.empty() : this.provider;
     }
 
-    public AppliancePropertiesInfrastructureConfigArgs(@Nullable Input<Either<String,Provider>> provider) {
+    public AppliancePropertiesInfrastructureConfigArgs(@Nullable Output<Either<String,Provider>> provider) {
         this.provider = provider;
     }
 
     private AppliancePropertiesInfrastructureConfigArgs() {
-        this.provider = Input.empty();
+        this.provider = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Provider>> provider;
+        private @Nullable Output<Either<String,Provider>> provider;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
     	      this.provider = defaults.provider;
         }
 
-        public Builder provider(@Nullable Input<Either<String,Provider>> provider) {
+        public Builder provider(@Nullable Output<Either<String,Provider>> provider) {
             this.provider = provider;
             return this;
         }
 
         public Builder provider(@Nullable Either<String,Provider> provider) {
-            this.provider = Input.ofNullable(provider);
+            this.provider = Output.ofNullable(provider);
             return this;
         }
         public AppliancePropertiesInfrastructureConfigArgs build() {

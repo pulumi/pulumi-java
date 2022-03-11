@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="directory")
-      private final @Nullable Input<String> directory;
+      private final @Nullable Output<String> directory;
 
-    public Input<String> getDirectory() {
-        return this.directory == null ? Input.empty() : this.directory;
+    public Output<String> getDirectory() {
+        return this.directory == null ? Output.empty() : this.directory;
     }
 
-    public FileSystemTokenStoreArgs(@Nullable Input<String> directory) {
+    public FileSystemTokenStoreArgs(@Nullable Output<String> directory) {
         this.directory = directory;
     }
 
     private FileSystemTokenStoreArgs() {
-        this.directory = Input.empty();
+        this.directory = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> directory;
+        private @Nullable Output<String> directory;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
     	      this.directory = defaults.directory;
         }
 
-        public Builder directory(@Nullable Input<String> directory) {
+        public Builder directory(@Nullable Output<String> directory) {
             this.directory = directory;
             return this;
         }
 
         public Builder directory(@Nullable String directory) {
-            this.directory = Input.ofNullable(directory);
+            this.directory = Output.ofNullable(directory);
             return this;
         }
         public FileSystemTokenStoreArgs build() {

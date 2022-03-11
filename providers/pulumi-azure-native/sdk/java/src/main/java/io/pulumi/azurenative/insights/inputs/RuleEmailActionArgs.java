@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customEmails")
-      private final @Nullable Input<List<String>> customEmails;
+      private final @Nullable Output<List<String>> customEmails;
 
-    public Input<List<String>> getCustomEmails() {
-        return this.customEmails == null ? Input.empty() : this.customEmails;
+    public Output<List<String>> getCustomEmails() {
+        return this.customEmails == null ? Output.empty() : this.customEmails;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -48,25 +48,25 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sendToServiceOwners")
-      private final @Nullable Input<Boolean> sendToServiceOwners;
+      private final @Nullable Output<Boolean> sendToServiceOwners;
 
-    public Input<Boolean> getSendToServiceOwners() {
-        return this.sendToServiceOwners == null ? Input.empty() : this.sendToServiceOwners;
+    public Output<Boolean> getSendToServiceOwners() {
+        return this.sendToServiceOwners == null ? Output.empty() : this.sendToServiceOwners;
     }
 
     public RuleEmailActionArgs(
-        @Nullable Input<List<String>> customEmails,
-        Input<String> odataType,
-        @Nullable Input<Boolean> sendToServiceOwners) {
+        @Nullable Output<List<String>> customEmails,
+        Output<String> odataType,
+        @Nullable Output<Boolean> sendToServiceOwners) {
         this.customEmails = customEmails;
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.sendToServiceOwners = sendToServiceOwners;
     }
 
     private RuleEmailActionArgs() {
-        this.customEmails = Input.empty();
-        this.odataType = Input.empty();
-        this.sendToServiceOwners = Input.empty();
+        this.customEmails = Output.empty();
+        this.odataType = Output.empty();
+        this.sendToServiceOwners = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> customEmails;
-        private Input<String> odataType;
-        private @Nullable Input<Boolean> sendToServiceOwners;
+        private @Nullable Output<List<String>> customEmails;
+        private Output<String> odataType;
+        private @Nullable Output<Boolean> sendToServiceOwners;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class RuleEmailActionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sendToServiceOwners = defaults.sendToServiceOwners;
         }
 
-        public Builder customEmails(@Nullable Input<List<String>> customEmails) {
+        public Builder customEmails(@Nullable Output<List<String>> customEmails) {
             this.customEmails = customEmails;
             return this;
         }
 
         public Builder customEmails(@Nullable List<String> customEmails) {
-            this.customEmails = Input.ofNullable(customEmails);
+            this.customEmails = Output.ofNullable(customEmails);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder sendToServiceOwners(@Nullable Input<Boolean> sendToServiceOwners) {
+        public Builder sendToServiceOwners(@Nullable Output<Boolean> sendToServiceOwners) {
             this.sendToServiceOwners = sendToServiceOwners;
             return this;
         }
 
         public Builder sendToServiceOwners(@Nullable Boolean sendToServiceOwners) {
-            this.sendToServiceOwners = Input.ofNullable(sendToServiceOwners);
+            this.sendToServiceOwners = Output.ofNullable(sendToServiceOwners);
             return this;
         }
         public RuleEmailActionArgs build() {

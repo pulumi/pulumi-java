@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-      private final @Nullable Input<String> diskEncryptionSetId;
+      private final @Nullable Output<String> diskEncryptionSetId;
 
-    public Input<String> getDiskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Input.empty() : this.diskEncryptionSetId;
+    public Output<String> getDiskEncryptionSetId() {
+        return this.diskEncryptionSetId == null ? Output.empty() : this.diskEncryptionSetId;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="diskType")
-      private final @Nullable Input<Either<String,DiskAccountType>> diskType;
+      private final @Nullable Output<Either<String,DiskAccountType>> diskType;
 
-    public Input<Either<String,DiskAccountType>> getDiskType() {
-        return this.diskType == null ? Input.empty() : this.diskType;
+    public Output<Either<String,DiskAccountType>> getDiskType() {
+        return this.diskType == null ? Output.empty() : this.diskType;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="logStorageAccountId")
-      private final @Nullable Input<String> logStorageAccountId;
+      private final @Nullable Output<String> logStorageAccountId;
 
-    public Input<String> getLogStorageAccountId() {
-        return this.logStorageAccountId == null ? Input.empty() : this.logStorageAccountId;
+    public Output<String> getLogStorageAccountId() {
+        return this.logStorageAccountId == null ? Output.empty() : this.logStorageAccountId;
     }
 
     public InMageRcmDisksDefaultInputArgs(
-        @Nullable Input<String> diskEncryptionSetId,
-        @Nullable Input<Either<String,DiskAccountType>> diskType,
-        @Nullable Input<String> logStorageAccountId) {
+        @Nullable Output<String> diskEncryptionSetId,
+        @Nullable Output<Either<String,DiskAccountType>> diskType,
+        @Nullable Output<String> logStorageAccountId) {
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.diskType = diskType;
         this.logStorageAccountId = logStorageAccountId;
     }
 
     private InMageRcmDisksDefaultInputArgs() {
-        this.diskEncryptionSetId = Input.empty();
-        this.diskType = Input.empty();
-        this.logStorageAccountId = Input.empty();
+        this.diskEncryptionSetId = Output.empty();
+        this.diskType = Output.empty();
+        this.logStorageAccountId = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskEncryptionSetId;
-        private @Nullable Input<Either<String,DiskAccountType>> diskType;
-        private @Nullable Input<String> logStorageAccountId;
+        private @Nullable Output<String> diskEncryptionSetId;
+        private @Nullable Output<Either<String,DiskAccountType>> diskType;
+        private @Nullable Output<String> logStorageAccountId;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class InMageRcmDisksDefaultInputArgs extends io.pulumi.resources.Re
     	      this.logStorageAccountId = defaults.logStorageAccountId;
         }
 
-        public Builder diskEncryptionSetId(@Nullable Input<String> diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable Output<String> diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Input.ofNullable(diskEncryptionSetId);
+            this.diskEncryptionSetId = Output.ofNullable(diskEncryptionSetId);
             return this;
         }
 
-        public Builder diskType(@Nullable Input<Either<String,DiskAccountType>> diskType) {
+        public Builder diskType(@Nullable Output<Either<String,DiskAccountType>> diskType) {
             this.diskType = diskType;
             return this;
         }
 
         public Builder diskType(@Nullable Either<String,DiskAccountType> diskType) {
-            this.diskType = Input.ofNullable(diskType);
+            this.diskType = Output.ofNullable(diskType);
             return this;
         }
 
-        public Builder logStorageAccountId(@Nullable Input<String> logStorageAccountId) {
+        public Builder logStorageAccountId(@Nullable Output<String> logStorageAccountId) {
             this.logStorageAccountId = logStorageAccountId;
             return this;
         }
 
         public Builder logStorageAccountId(@Nullable String logStorageAccountId) {
-            this.logStorageAccountId = Input.ofNullable(logStorageAccountId);
+            this.logStorageAccountId = Output.ofNullable(logStorageAccountId);
             return this;
         }
         public InMageRcmDisksDefaultInputArgs build() {

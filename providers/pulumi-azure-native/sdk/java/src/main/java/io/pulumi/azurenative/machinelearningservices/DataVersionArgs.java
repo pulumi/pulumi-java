@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -30,9 +30,9 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties;
+      private final Output<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties;
 
-    public Input<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> getProperties() {
+    public Output<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> getProperties() {
         return this.properties;
     }
 
@@ -41,9 +41,9 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,10 +52,10 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-      private final @Nullable Input<String> version;
+      private final @Nullable Output<String> version;
 
-    public Input<String> getVersion() {
-        return this.version == null ? Input.empty() : this.version;
+    public Output<String> getVersion() {
+        return this.version == null ? Output.empty() : this.version;
     }
 
     /**
@@ -63,18 +63,18 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public DataVersionArgs(
-        Input<String> name,
-        Input<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> version,
-        Input<String> workspaceName) {
+        Output<String> name,
+        Output<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> version,
+        Output<String> workspaceName) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -83,11 +83,11 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataVersionArgs() {
-        this.name = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.version = Input.empty();
-        this.workspaceName = Input.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.version = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -99,11 +99,11 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> version;
-        private Input<String> workspaceName;
+        private Output<String> name;
+        private Output<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> version;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -118,53 +118,53 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder properties(Input<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties) {
+        public Builder properties(Output<io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(io.pulumi.azurenative.machinelearningservices.inputs.DataVersionArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder version(@Nullable Input<String> version) {
+        public Builder version(@Nullable Output<String> version) {
             this.version = version;
             return this;
         }
 
         public Builder version(@Nullable String version) {
-            this.version = Input.ofNullable(version);
+            this.version = Output.ofNullable(version);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public DataVersionArgs build() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.databox.inputs.DataImportDetailsArgs;
 import io.pulumi.azurenative.databox.inputs.KeyEncryptionKeyArgs;
 import io.pulumi.azurenative.databox.inputs.PreferencesArgs;
 import io.pulumi.azurenative.databox.inputs.ShippingAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,9 +31,9 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="contactDetails", required=true)
-      private final Input<ContactDetailsArgs> contactDetails;
+      private final Output<ContactDetailsArgs> contactDetails;
 
-    public Input<ContactDetailsArgs> getContactDetails() {
+    public Output<ContactDetailsArgs> getContactDetails() {
         return this.contactDetails;
     }
 
@@ -42,10 +42,10 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataExportDetails")
-      private final @Nullable Input<List<DataExportDetailsArgs>> dataExportDetails;
+      private final @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails;
 
-    public Input<List<DataExportDetailsArgs>> getDataExportDetails() {
-        return this.dataExportDetails == null ? Input.empty() : this.dataExportDetails;
+    public Output<List<DataExportDetailsArgs>> getDataExportDetails() {
+        return this.dataExportDetails == null ? Output.empty() : this.dataExportDetails;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataImportDetails")
-      private final @Nullable Input<List<DataImportDetailsArgs>> dataImportDetails;
+      private final @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails;
 
-    public Input<List<DataImportDetailsArgs>> getDataImportDetails() {
-        return this.dataImportDetails == null ? Input.empty() : this.dataImportDetails;
+    public Output<List<DataImportDetailsArgs>> getDataImportDetails() {
+        return this.dataImportDetails == null ? Output.empty() : this.dataImportDetails;
     }
 
     /**
@@ -64,10 +64,10 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="devicePassword")
-      private final @Nullable Input<String> devicePassword;
+      private final @Nullable Output<String> devicePassword;
 
-    public Input<String> getDevicePassword() {
-        return this.devicePassword == null ? Input.empty() : this.devicePassword;
+    public Output<String> getDevicePassword() {
+        return this.devicePassword == null ? Output.empty() : this.devicePassword;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expectedDataSizeInTeraBytes")
-      private final @Nullable Input<Integer> expectedDataSizeInTeraBytes;
+      private final @Nullable Output<Integer> expectedDataSizeInTeraBytes;
 
-    public Input<Integer> getExpectedDataSizeInTeraBytes() {
-        return this.expectedDataSizeInTeraBytes == null ? Input.empty() : this.expectedDataSizeInTeraBytes;
+    public Output<Integer> getExpectedDataSizeInTeraBytes() {
+        return this.expectedDataSizeInTeraBytes == null ? Output.empty() : this.expectedDataSizeInTeraBytes;
     }
 
     /**
@@ -87,9 +87,9 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="jobDetailsType", required=true)
-      private final Input<String> jobDetailsType;
+      private final Output<String> jobDetailsType;
 
-    public Input<String> getJobDetailsType() {
+    public Output<String> getJobDetailsType() {
         return this.jobDetailsType;
     }
 
@@ -98,10 +98,10 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyEncryptionKey")
-      private final @Nullable Input<KeyEncryptionKeyArgs> keyEncryptionKey;
+      private final @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey;
 
-    public Input<KeyEncryptionKeyArgs> getKeyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Input.empty() : this.keyEncryptionKey;
+    public Output<KeyEncryptionKeyArgs> getKeyEncryptionKey() {
+        return this.keyEncryptionKey == null ? Output.empty() : this.keyEncryptionKey;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="preferences")
-      private final @Nullable Input<PreferencesArgs> preferences;
+      private final @Nullable Output<PreferencesArgs> preferences;
 
-    public Input<PreferencesArgs> getPreferences() {
-        return this.preferences == null ? Input.empty() : this.preferences;
+    public Output<PreferencesArgs> getPreferences() {
+        return this.preferences == null ? Output.empty() : this.preferences;
     }
 
     /**
@@ -120,22 +120,22 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="shippingAddress")
-      private final @Nullable Input<ShippingAddressArgs> shippingAddress;
+      private final @Nullable Output<ShippingAddressArgs> shippingAddress;
 
-    public Input<ShippingAddressArgs> getShippingAddress() {
-        return this.shippingAddress == null ? Input.empty() : this.shippingAddress;
+    public Output<ShippingAddressArgs> getShippingAddress() {
+        return this.shippingAddress == null ? Output.empty() : this.shippingAddress;
     }
 
     public DataBoxJobDetailsArgs(
-        Input<ContactDetailsArgs> contactDetails,
-        @Nullable Input<List<DataExportDetailsArgs>> dataExportDetails,
-        @Nullable Input<List<DataImportDetailsArgs>> dataImportDetails,
-        @Nullable Input<String> devicePassword,
-        @Nullable Input<Integer> expectedDataSizeInTeraBytes,
-        Input<String> jobDetailsType,
-        @Nullable Input<KeyEncryptionKeyArgs> keyEncryptionKey,
-        @Nullable Input<PreferencesArgs> preferences,
-        @Nullable Input<ShippingAddressArgs> shippingAddress) {
+        Output<ContactDetailsArgs> contactDetails,
+        @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails,
+        @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails,
+        @Nullable Output<String> devicePassword,
+        @Nullable Output<Integer> expectedDataSizeInTeraBytes,
+        Output<String> jobDetailsType,
+        @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey,
+        @Nullable Output<PreferencesArgs> preferences,
+        @Nullable Output<ShippingAddressArgs> shippingAddress) {
         this.contactDetails = Objects.requireNonNull(contactDetails, "expected parameter 'contactDetails' to be non-null");
         this.dataExportDetails = dataExportDetails;
         this.dataImportDetails = dataImportDetails;
@@ -148,15 +148,15 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DataBoxJobDetailsArgs() {
-        this.contactDetails = Input.empty();
-        this.dataExportDetails = Input.empty();
-        this.dataImportDetails = Input.empty();
-        this.devicePassword = Input.empty();
-        this.expectedDataSizeInTeraBytes = Input.empty();
-        this.jobDetailsType = Input.empty();
-        this.keyEncryptionKey = Input.empty();
-        this.preferences = Input.empty();
-        this.shippingAddress = Input.empty();
+        this.contactDetails = Output.empty();
+        this.dataExportDetails = Output.empty();
+        this.dataImportDetails = Output.empty();
+        this.devicePassword = Output.empty();
+        this.expectedDataSizeInTeraBytes = Output.empty();
+        this.jobDetailsType = Output.empty();
+        this.keyEncryptionKey = Output.empty();
+        this.preferences = Output.empty();
+        this.shippingAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -168,15 +168,15 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<ContactDetailsArgs> contactDetails;
-        private @Nullable Input<List<DataExportDetailsArgs>> dataExportDetails;
-        private @Nullable Input<List<DataImportDetailsArgs>> dataImportDetails;
-        private @Nullable Input<String> devicePassword;
-        private @Nullable Input<Integer> expectedDataSizeInTeraBytes;
-        private Input<String> jobDetailsType;
-        private @Nullable Input<KeyEncryptionKeyArgs> keyEncryptionKey;
-        private @Nullable Input<PreferencesArgs> preferences;
-        private @Nullable Input<ShippingAddressArgs> shippingAddress;
+        private Output<ContactDetailsArgs> contactDetails;
+        private @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails;
+        private @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails;
+        private @Nullable Output<String> devicePassword;
+        private @Nullable Output<Integer> expectedDataSizeInTeraBytes;
+        private Output<String> jobDetailsType;
+        private @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey;
+        private @Nullable Output<PreferencesArgs> preferences;
+        private @Nullable Output<ShippingAddressArgs> shippingAddress;
 
         public Builder() {
     	      // Empty
@@ -195,93 +195,93 @@ public final class DataBoxJobDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.shippingAddress = defaults.shippingAddress;
         }
 
-        public Builder contactDetails(Input<ContactDetailsArgs> contactDetails) {
+        public Builder contactDetails(Output<ContactDetailsArgs> contactDetails) {
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
 
         public Builder contactDetails(ContactDetailsArgs contactDetails) {
-            this.contactDetails = Input.of(Objects.requireNonNull(contactDetails));
+            this.contactDetails = Output.of(Objects.requireNonNull(contactDetails));
             return this;
         }
 
-        public Builder dataExportDetails(@Nullable Input<List<DataExportDetailsArgs>> dataExportDetails) {
+        public Builder dataExportDetails(@Nullable Output<List<DataExportDetailsArgs>> dataExportDetails) {
             this.dataExportDetails = dataExportDetails;
             return this;
         }
 
         public Builder dataExportDetails(@Nullable List<DataExportDetailsArgs> dataExportDetails) {
-            this.dataExportDetails = Input.ofNullable(dataExportDetails);
+            this.dataExportDetails = Output.ofNullable(dataExportDetails);
             return this;
         }
 
-        public Builder dataImportDetails(@Nullable Input<List<DataImportDetailsArgs>> dataImportDetails) {
+        public Builder dataImportDetails(@Nullable Output<List<DataImportDetailsArgs>> dataImportDetails) {
             this.dataImportDetails = dataImportDetails;
             return this;
         }
 
         public Builder dataImportDetails(@Nullable List<DataImportDetailsArgs> dataImportDetails) {
-            this.dataImportDetails = Input.ofNullable(dataImportDetails);
+            this.dataImportDetails = Output.ofNullable(dataImportDetails);
             return this;
         }
 
-        public Builder devicePassword(@Nullable Input<String> devicePassword) {
+        public Builder devicePassword(@Nullable Output<String> devicePassword) {
             this.devicePassword = devicePassword;
             return this;
         }
 
         public Builder devicePassword(@Nullable String devicePassword) {
-            this.devicePassword = Input.ofNullable(devicePassword);
+            this.devicePassword = Output.ofNullable(devicePassword);
             return this;
         }
 
-        public Builder expectedDataSizeInTeraBytes(@Nullable Input<Integer> expectedDataSizeInTeraBytes) {
+        public Builder expectedDataSizeInTeraBytes(@Nullable Output<Integer> expectedDataSizeInTeraBytes) {
             this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
             return this;
         }
 
         public Builder expectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
-            this.expectedDataSizeInTeraBytes = Input.ofNullable(expectedDataSizeInTeraBytes);
+            this.expectedDataSizeInTeraBytes = Output.ofNullable(expectedDataSizeInTeraBytes);
             return this;
         }
 
-        public Builder jobDetailsType(Input<String> jobDetailsType) {
+        public Builder jobDetailsType(Output<String> jobDetailsType) {
             this.jobDetailsType = Objects.requireNonNull(jobDetailsType);
             return this;
         }
 
         public Builder jobDetailsType(String jobDetailsType) {
-            this.jobDetailsType = Input.of(Objects.requireNonNull(jobDetailsType));
+            this.jobDetailsType = Output.of(Objects.requireNonNull(jobDetailsType));
             return this;
         }
 
-        public Builder keyEncryptionKey(@Nullable Input<KeyEncryptionKeyArgs> keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
         public Builder keyEncryptionKey(@Nullable KeyEncryptionKeyArgs keyEncryptionKey) {
-            this.keyEncryptionKey = Input.ofNullable(keyEncryptionKey);
+            this.keyEncryptionKey = Output.ofNullable(keyEncryptionKey);
             return this;
         }
 
-        public Builder preferences(@Nullable Input<PreferencesArgs> preferences) {
+        public Builder preferences(@Nullable Output<PreferencesArgs> preferences) {
             this.preferences = preferences;
             return this;
         }
 
         public Builder preferences(@Nullable PreferencesArgs preferences) {
-            this.preferences = Input.ofNullable(preferences);
+            this.preferences = Output.ofNullable(preferences);
             return this;
         }
 
-        public Builder shippingAddress(@Nullable Input<ShippingAddressArgs> shippingAddress) {
+        public Builder shippingAddress(@Nullable Output<ShippingAddressArgs> shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
 
         public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
-            this.shippingAddress = Input.ofNullable(shippingAddress);
+            this.shippingAddress = Output.ofNullable(shippingAddress);
             return this;
         }
         public DataBoxJobDetailsArgs build() {

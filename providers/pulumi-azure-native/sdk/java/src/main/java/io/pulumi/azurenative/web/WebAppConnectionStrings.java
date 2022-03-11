@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppConnectionStringsArgs;
 import io.pulumi.azurenative.web.outputs.ConnStringValueTypePairResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -125,30 +124,30 @@ public class WebAppConnectionStrings extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppConnectionStrings(String name, WebAppConnectionStringsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppConnectionStrings", name, args == null ? WebAppConnectionStringsArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:web:WebAppConnectionStrings", name, args == null ? WebAppConnectionStringsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private WebAppConnectionStrings(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private WebAppConnectionStrings(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:web:WebAppConnectionStrings", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:web/v20150801:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20160801:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20180201:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20181101:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20190801:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200601:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20200901:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201001:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20201201:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210101:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210115:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210201:WebAppConnectionStrings").build()),
-                Input.of(Alias.builder().setType("azure-native:web/v20210301:WebAppConnectionStrings").build())
+                Output.of(Alias.builder().setType("azure-native:web/v20150801:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20160801:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20180201:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20181101:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20190801:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200601:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20200901:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201001:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20201201:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210101:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210115:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210201:WebAppConnectionStrings").build()),
+                Output.of(Alias.builder().setType("azure-native:web/v20210301:WebAppConnectionStrings").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -162,7 +161,7 @@ public class WebAppConnectionStrings extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WebAppConnectionStrings get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static WebAppConnectionStrings get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new WebAppConnectionStrings(name, id, options);
     }
 }

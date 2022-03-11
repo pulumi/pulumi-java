@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.SourceControlType;
 import io.pulumi.azurenative.containerregistry.inputs.AuthInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="branch")
-      private final @Nullable Input<String> branch;
+      private final @Nullable Output<String> branch;
 
-    public Input<String> getBranch() {
-        return this.branch == null ? Input.empty() : this.branch;
+    public Output<String> getBranch() {
+        return this.branch == null ? Output.empty() : this.branch;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="repositoryUrl", required=true)
-      private final Input<String> repositoryUrl;
+      private final Output<String> repositoryUrl;
 
-    public Input<String> getRepositoryUrl() {
+    public Output<String> getRepositoryUrl() {
         return this.repositoryUrl;
     }
 
@@ -49,10 +49,10 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceControlAuthProperties")
-      private final @Nullable Input<AuthInfoArgs> sourceControlAuthProperties;
+      private final @Nullable Output<AuthInfoArgs> sourceControlAuthProperties;
 
-    public Input<AuthInfoArgs> getSourceControlAuthProperties() {
-        return this.sourceControlAuthProperties == null ? Input.empty() : this.sourceControlAuthProperties;
+    public Output<AuthInfoArgs> getSourceControlAuthProperties() {
+        return this.sourceControlAuthProperties == null ? Output.empty() : this.sourceControlAuthProperties;
     }
 
     /**
@@ -60,17 +60,17 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sourceControlType", required=true)
-      private final Input<Either<String,SourceControlType>> sourceControlType;
+      private final Output<Either<String,SourceControlType>> sourceControlType;
 
-    public Input<Either<String,SourceControlType>> getSourceControlType() {
+    public Output<Either<String,SourceControlType>> getSourceControlType() {
         return this.sourceControlType;
     }
 
     public SourcePropertiesArgs(
-        @Nullable Input<String> branch,
-        Input<String> repositoryUrl,
-        @Nullable Input<AuthInfoArgs> sourceControlAuthProperties,
-        Input<Either<String,SourceControlType>> sourceControlType) {
+        @Nullable Output<String> branch,
+        Output<String> repositoryUrl,
+        @Nullable Output<AuthInfoArgs> sourceControlAuthProperties,
+        Output<Either<String,SourceControlType>> sourceControlType) {
         this.branch = branch;
         this.repositoryUrl = Objects.requireNonNull(repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
         this.sourceControlAuthProperties = sourceControlAuthProperties;
@@ -78,10 +78,10 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SourcePropertiesArgs() {
-        this.branch = Input.empty();
-        this.repositoryUrl = Input.empty();
-        this.sourceControlAuthProperties = Input.empty();
-        this.sourceControlType = Input.empty();
+        this.branch = Output.empty();
+        this.repositoryUrl = Output.empty();
+        this.sourceControlAuthProperties = Output.empty();
+        this.sourceControlType = Output.empty();
     }
 
     public static Builder builder() {
@@ -93,10 +93,10 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> branch;
-        private Input<String> repositoryUrl;
-        private @Nullable Input<AuthInfoArgs> sourceControlAuthProperties;
-        private Input<Either<String,SourceControlType>> sourceControlType;
+        private @Nullable Output<String> branch;
+        private Output<String> repositoryUrl;
+        private @Nullable Output<AuthInfoArgs> sourceControlAuthProperties;
+        private Output<Either<String,SourceControlType>> sourceControlType;
 
         public Builder() {
     	      // Empty
@@ -110,43 +110,43 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.sourceControlType = defaults.sourceControlType;
         }
 
-        public Builder branch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Output<String> branch) {
             this.branch = branch;
             return this;
         }
 
         public Builder branch(@Nullable String branch) {
-            this.branch = Input.ofNullable(branch);
+            this.branch = Output.ofNullable(branch);
             return this;
         }
 
-        public Builder repositoryUrl(Input<String> repositoryUrl) {
+        public Builder repositoryUrl(Output<String> repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
         public Builder repositoryUrl(String repositoryUrl) {
-            this.repositoryUrl = Input.of(Objects.requireNonNull(repositoryUrl));
+            this.repositoryUrl = Output.of(Objects.requireNonNull(repositoryUrl));
             return this;
         }
 
-        public Builder sourceControlAuthProperties(@Nullable Input<AuthInfoArgs> sourceControlAuthProperties) {
+        public Builder sourceControlAuthProperties(@Nullable Output<AuthInfoArgs> sourceControlAuthProperties) {
             this.sourceControlAuthProperties = sourceControlAuthProperties;
             return this;
         }
 
         public Builder sourceControlAuthProperties(@Nullable AuthInfoArgs sourceControlAuthProperties) {
-            this.sourceControlAuthProperties = Input.ofNullable(sourceControlAuthProperties);
+            this.sourceControlAuthProperties = Output.ofNullable(sourceControlAuthProperties);
             return this;
         }
 
-        public Builder sourceControlType(Input<Either<String,SourceControlType>> sourceControlType) {
+        public Builder sourceControlType(Output<Either<String,SourceControlType>> sourceControlType) {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
         }
 
         public Builder sourceControlType(Either<String,SourceControlType> sourceControlType) {
-            this.sourceControlType = Input.of(Objects.requireNonNull(sourceControlType));
+            this.sourceControlType = Output.of(Objects.requireNonNull(sourceControlType));
             return this;
         }
         public SourcePropertiesArgs build() {

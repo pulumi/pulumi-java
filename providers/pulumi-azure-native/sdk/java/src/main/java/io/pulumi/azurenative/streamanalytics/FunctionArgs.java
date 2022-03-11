@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics;
 
 import io.pulumi.azurenative.streamanalytics.inputs.ScalarFunctionPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="functionName")
-      private final @Nullable Input<String> functionName;
+      private final @Nullable Output<String> functionName;
 
-    public Input<String> getFunctionName() {
-        return this.functionName == null ? Input.empty() : this.functionName;
+    public Output<String> getFunctionName() {
+        return this.functionName == null ? Output.empty() : this.functionName;
     }
 
     /**
@@ -31,9 +31,9 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-      private final Input<String> jobName;
+      private final Output<String> jobName;
 
-    public Input<String> getJobName() {
+    public Output<String> getJobName() {
         return this.jobName;
     }
 
@@ -42,10 +42,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -53,10 +53,10 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ScalarFunctionPropertiesArgs> properties;
+      private final @Nullable Output<ScalarFunctionPropertiesArgs> properties;
 
-    public Input<ScalarFunctionPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ScalarFunctionPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -64,18 +64,18 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public FunctionArgs(
-        @Nullable Input<String> functionName,
-        Input<String> jobName,
-        @Nullable Input<String> name,
-        @Nullable Input<ScalarFunctionPropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> functionName,
+        Output<String> jobName,
+        @Nullable Output<String> name,
+        @Nullable Output<ScalarFunctionPropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.functionName = functionName;
         this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
         this.name = name;
@@ -84,11 +84,11 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionArgs() {
-        this.functionName = Input.empty();
-        this.jobName = Input.empty();
-        this.name = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.functionName = Output.empty();
+        this.jobName = Output.empty();
+        this.name = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> functionName;
-        private Input<String> jobName;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ScalarFunctionPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> functionName;
+        private Output<String> jobName;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ScalarFunctionPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder functionName(@Nullable Input<String> functionName) {
+        public Builder functionName(@Nullable Output<String> functionName) {
             this.functionName = functionName;
             return this;
         }
 
         public Builder functionName(@Nullable String functionName) {
-            this.functionName = Input.ofNullable(functionName);
+            this.functionName = Output.ofNullable(functionName);
             return this;
         }
 
-        public Builder jobName(Input<String> jobName) {
+        public Builder jobName(Output<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
         public Builder jobName(String jobName) {
-            this.jobName = Input.of(Objects.requireNonNull(jobName));
+            this.jobName = Output.of(Objects.requireNonNull(jobName));
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ScalarFunctionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ScalarFunctionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ScalarFunctionPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public FunctionArgs build() {

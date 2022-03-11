@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azurearcdata;
 import io.pulumi.azurenative.azurearcdata.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.PostgresInstancePropertiesArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.PostgresInstanceSkuArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -23,10 +23,10 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="postgresInstanceName")
-      private final @Nullable Input<String> postgresInstanceName;
+      private final @Nullable Output<String> postgresInstanceName;
 
-    public Input<String> getPostgresInstanceName() {
-        return this.postgresInstanceName == null ? Input.empty() : this.postgresInstanceName;
+    public Output<String> getPostgresInstanceName() {
+        return this.postgresInstanceName == null ? Output.empty() : this.postgresInstanceName;
     }
 
     /**
@@ -56,9 +56,9 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<PostgresInstancePropertiesArgs> properties;
+      private final Output<PostgresInstancePropertiesArgs> properties;
 
-    public Input<PostgresInstancePropertiesArgs> getProperties() {
+    public Output<PostgresInstancePropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -67,9 +67,9 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,10 +78,10 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<PostgresInstanceSkuArgs> sku;
+      private final @Nullable Output<PostgresInstanceSkuArgs> sku;
 
-    public Input<PostgresInstanceSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<PostgresInstanceSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -89,20 +89,20 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PostgresInstanceArgs(
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<String> location,
-        @Nullable Input<String> postgresInstanceName,
-        Input<PostgresInstancePropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<PostgresInstanceSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<String> location,
+        @Nullable Output<String> postgresInstanceName,
+        Output<PostgresInstancePropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<PostgresInstanceSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags) {
         this.extendedLocation = extendedLocation;
         this.location = location;
         this.postgresInstanceName = postgresInstanceName;
@@ -113,13 +113,13 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PostgresInstanceArgs() {
-        this.extendedLocation = Input.empty();
-        this.location = Input.empty();
-        this.postgresInstanceName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
+        this.extendedLocation = Output.empty();
+        this.location = Output.empty();
+        this.postgresInstanceName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -131,13 +131,13 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> postgresInstanceName;
-        private Input<PostgresInstancePropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<PostgresInstanceSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> postgresInstanceName;
+        private Output<PostgresInstancePropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<PostgresInstanceSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -154,73 +154,73 @@ public final class PostgresInstanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder postgresInstanceName(@Nullable Input<String> postgresInstanceName) {
+        public Builder postgresInstanceName(@Nullable Output<String> postgresInstanceName) {
             this.postgresInstanceName = postgresInstanceName;
             return this;
         }
 
         public Builder postgresInstanceName(@Nullable String postgresInstanceName) {
-            this.postgresInstanceName = Input.ofNullable(postgresInstanceName);
+            this.postgresInstanceName = Output.ofNullable(postgresInstanceName);
             return this;
         }
 
-        public Builder properties(Input<PostgresInstancePropertiesArgs> properties) {
+        public Builder properties(Output<PostgresInstancePropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(PostgresInstancePropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<PostgresInstanceSkuArgs> sku) {
+        public Builder sku(@Nullable Output<PostgresInstanceSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable PostgresInstanceSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PostgresInstanceArgs build() {

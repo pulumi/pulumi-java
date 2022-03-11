@@ -8,7 +8,6 @@ import io.pulumi.azurenative.documentdb.TableResourceTableArgs;
 import io.pulumi.azurenative.documentdb.outputs.TableGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.TableGetPropertiesResponseResource;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -141,38 +140,38 @@ public class TableResourceTable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TableResourceTable(String name, TableResourceTableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:documentdb:TableResourceTable", name, args == null ? TableResourceTableArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:documentdb:TableResourceTable", name, args == null ? TableResourceTableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private TableResourceTable(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private TableResourceTable(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:documentdb:TableResourceTable", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20150401:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20150408:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20151106:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20160319:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20160331:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20190801:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20191212:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200301:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200401:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20200901:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210115:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210315:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210415:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210515:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210615:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015:TableResourceTable").build()),
-                Input.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:TableResourceTable").build())
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20150401:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20150408:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20151106:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20160319:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20160331:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20190801:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20191212:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200301:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200401:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200601preview:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20200901:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210115:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210301preview:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210315:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210401preview:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210415:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210515:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210615:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20210701preview:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015:TableResourceTable").build()),
+                Output.of(Alias.builder().setType("azure-native:documentdb/v20211015preview:TableResourceTable").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -186,7 +185,7 @@ public class TableResourceTable extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static TableResourceTable get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static TableResourceTable get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new TableResourceTable(name, id, options);
     }
 }

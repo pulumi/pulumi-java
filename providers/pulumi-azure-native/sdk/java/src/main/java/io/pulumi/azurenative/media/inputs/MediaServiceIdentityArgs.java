@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.enums.ManagedIdentityType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<Either<String,ManagedIdentityType>> type;
+      private final Output<Either<String,ManagedIdentityType>> type;
 
-    public Input<Either<String,ManagedIdentityType>> getType() {
+    public Output<Either<String,ManagedIdentityType>> getType() {
         return this.type;
     }
 
-    public MediaServiceIdentityArgs(Input<Either<String,ManagedIdentityType>> type) {
+    public MediaServiceIdentityArgs(Output<Either<String,ManagedIdentityType>> type) {
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private MediaServiceIdentityArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private Input<Either<String,ManagedIdentityType>> type;
+        private Output<Either<String,ManagedIdentityType>> type;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class MediaServiceIdentityArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder type(Input<Either<String,ManagedIdentityType>> type) {
+        public Builder type(Output<Either<String,ManagedIdentityType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(Either<String,ManagedIdentityType> type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public MediaServiceIdentityArgs build() {

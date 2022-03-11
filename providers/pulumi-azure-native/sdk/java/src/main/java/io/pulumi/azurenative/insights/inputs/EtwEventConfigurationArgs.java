@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,39 +16,39 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
     public static final EtwEventConfigurationArgs Empty = new EtwEventConfigurationArgs();
 
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     @InputImport(name="id", required=true)
-      private final Input<Integer> id;
+      private final Output<Integer> id;
 
-    public Input<Integer> getId() {
+    public Output<Integer> getId() {
         return this.id;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public EtwEventConfigurationArgs(
-        @Nullable Input<String> filter,
-        Input<Integer> id,
-        Input<String> name) {
+        @Nullable Output<String> filter,
+        Output<Integer> id,
+        Output<String> name) {
         this.filter = filter;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private EtwEventConfigurationArgs() {
-        this.filter = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
+        this.filter = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,9 +60,9 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> filter;
-        private Input<Integer> id;
-        private Input<String> name;
+        private @Nullable Output<String> filter;
+        private Output<Integer> id;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -75,33 +75,33 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.name = defaults.name;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder id(Input<Integer> id) {
+        public Builder id(Output<Integer> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(Integer id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public EtwEventConfigurationArgs build() {

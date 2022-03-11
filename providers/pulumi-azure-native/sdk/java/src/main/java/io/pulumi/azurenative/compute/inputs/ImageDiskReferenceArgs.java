@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -35,22 +35,22 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lun")
-      private final @Nullable Input<Integer> lun;
+      private final @Nullable Output<Integer> lun;
 
-    public Input<Integer> getLun() {
-        return this.lun == null ? Input.empty() : this.lun;
+    public Output<Integer> getLun() {
+        return this.lun == null ? Output.empty() : this.lun;
     }
 
     public ImageDiskReferenceArgs(
-        Input<String> id,
-        @Nullable Input<Integer> lun) {
+        Output<String> id,
+        @Nullable Output<Integer> lun) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.lun = lun;
     }
 
     private ImageDiskReferenceArgs() {
-        this.id = Input.empty();
-        this.lun = Input.empty();
+        this.id = Output.empty();
+        this.lun = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private @Nullable Input<Integer> lun;
+        private Output<String> id;
+        private @Nullable Output<Integer> lun;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ImageDiskReferenceArgs extends io.pulumi.resources.ResourceAr
     	      this.lun = defaults.lun;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder lun(@Nullable Input<Integer> lun) {
+        public Builder lun(@Nullable Output<Integer> lun) {
             this.lun = lun;
             return this;
         }
 
         public Builder lun(@Nullable Integer lun) {
-            this.lun = Input.ofNullable(lun);
+            this.lun = Output.ofNullable(lun);
             return this;
         }
         public ImageDiskReferenceArgs build() {

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.redhatopenshift.inputs.MasterProfileArgs;
 import io.pulumi.azurenative.redhatopenshift.inputs.NetworkProfileArgs;
 import io.pulumi.azurenative.redhatopenshift.inputs.ServicePrincipalProfileArgs;
 import io.pulumi.azurenative.redhatopenshift.inputs.WorkerProfileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,10 +29,10 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="apiserverProfile")
-      private final @Nullable Input<APIServerProfileArgs> apiserverProfile;
+      private final @Nullable Output<APIServerProfileArgs> apiserverProfile;
 
-    public Input<APIServerProfileArgs> getApiserverProfile() {
-        return this.apiserverProfile == null ? Input.empty() : this.apiserverProfile;
+    public Output<APIServerProfileArgs> getApiserverProfile() {
+        return this.apiserverProfile == null ? Output.empty() : this.apiserverProfile;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clusterProfile")
-      private final @Nullable Input<ClusterProfileArgs> clusterProfile;
+      private final @Nullable Output<ClusterProfileArgs> clusterProfile;
 
-    public Input<ClusterProfileArgs> getClusterProfile() {
-        return this.clusterProfile == null ? Input.empty() : this.clusterProfile;
+    public Output<ClusterProfileArgs> getClusterProfile() {
+        return this.clusterProfile == null ? Output.empty() : this.clusterProfile;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="consoleProfile")
-      private final @Nullable Input<ConsoleProfileArgs> consoleProfile;
+      private final @Nullable Output<ConsoleProfileArgs> consoleProfile;
 
-    public Input<ConsoleProfileArgs> getConsoleProfile() {
-        return this.consoleProfile == null ? Input.empty() : this.consoleProfile;
+    public Output<ConsoleProfileArgs> getConsoleProfile() {
+        return this.consoleProfile == null ? Output.empty() : this.consoleProfile;
     }
 
     /**
@@ -62,10 +62,10 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ingressProfiles")
-      private final @Nullable Input<List<IngressProfileArgs>> ingressProfiles;
+      private final @Nullable Output<List<IngressProfileArgs>> ingressProfiles;
 
-    public Input<List<IngressProfileArgs>> getIngressProfiles() {
-        return this.ingressProfiles == null ? Input.empty() : this.ingressProfiles;
+    public Output<List<IngressProfileArgs>> getIngressProfiles() {
+        return this.ingressProfiles == null ? Output.empty() : this.ingressProfiles;
     }
 
     /**
@@ -73,10 +73,10 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="masterProfile")
-      private final @Nullable Input<MasterProfileArgs> masterProfile;
+      private final @Nullable Output<MasterProfileArgs> masterProfile;
 
-    public Input<MasterProfileArgs> getMasterProfile() {
-        return this.masterProfile == null ? Input.empty() : this.masterProfile;
+    public Output<MasterProfileArgs> getMasterProfile() {
+        return this.masterProfile == null ? Output.empty() : this.masterProfile;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkProfile")
-      private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Input<NetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Input.empty() : this.networkProfile;
+    public Output<NetworkProfileArgs> getNetworkProfile() {
+        return this.networkProfile == null ? Output.empty() : this.networkProfile;
     }
 
     /**
@@ -106,10 +106,10 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -117,9 +117,9 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -128,10 +128,10 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -139,10 +139,10 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="servicePrincipalProfile")
-      private final @Nullable Input<ServicePrincipalProfileArgs> servicePrincipalProfile;
+      private final @Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile;
 
-    public Input<ServicePrincipalProfileArgs> getServicePrincipalProfile() {
-        return this.servicePrincipalProfile == null ? Input.empty() : this.servicePrincipalProfile;
+    public Output<ServicePrincipalProfileArgs> getServicePrincipalProfile() {
+        return this.servicePrincipalProfile == null ? Output.empty() : this.servicePrincipalProfile;
     }
 
     /**
@@ -150,10 +150,10 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -161,26 +161,26 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workerProfiles")
-      private final @Nullable Input<List<WorkerProfileArgs>> workerProfiles;
+      private final @Nullable Output<List<WorkerProfileArgs>> workerProfiles;
 
-    public Input<List<WorkerProfileArgs>> getWorkerProfiles() {
-        return this.workerProfiles == null ? Input.empty() : this.workerProfiles;
+    public Output<List<WorkerProfileArgs>> getWorkerProfiles() {
+        return this.workerProfiles == null ? Output.empty() : this.workerProfiles;
     }
 
     public OpenShiftClusterArgs(
-        @Nullable Input<APIServerProfileArgs> apiserverProfile,
-        @Nullable Input<ClusterProfileArgs> clusterProfile,
-        @Nullable Input<ConsoleProfileArgs> consoleProfile,
-        @Nullable Input<List<IngressProfileArgs>> ingressProfiles,
-        @Nullable Input<String> location,
-        @Nullable Input<MasterProfileArgs> masterProfile,
-        @Nullable Input<NetworkProfileArgs> networkProfile,
-        @Nullable Input<String> provisioningState,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<ServicePrincipalProfileArgs> servicePrincipalProfile,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<WorkerProfileArgs>> workerProfiles) {
+        @Nullable Output<APIServerProfileArgs> apiserverProfile,
+        @Nullable Output<ClusterProfileArgs> clusterProfile,
+        @Nullable Output<ConsoleProfileArgs> consoleProfile,
+        @Nullable Output<List<IngressProfileArgs>> ingressProfiles,
+        @Nullable Output<String> location,
+        @Nullable Output<MasterProfileArgs> masterProfile,
+        @Nullable Output<NetworkProfileArgs> networkProfile,
+        @Nullable Output<String> provisioningState,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<WorkerProfileArgs>> workerProfiles) {
         this.apiserverProfile = apiserverProfile;
         this.clusterProfile = clusterProfile;
         this.consoleProfile = consoleProfile;
@@ -197,19 +197,19 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private OpenShiftClusterArgs() {
-        this.apiserverProfile = Input.empty();
-        this.clusterProfile = Input.empty();
-        this.consoleProfile = Input.empty();
-        this.ingressProfiles = Input.empty();
-        this.location = Input.empty();
-        this.masterProfile = Input.empty();
-        this.networkProfile = Input.empty();
-        this.provisioningState = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.servicePrincipalProfile = Input.empty();
-        this.tags = Input.empty();
-        this.workerProfiles = Input.empty();
+        this.apiserverProfile = Output.empty();
+        this.clusterProfile = Output.empty();
+        this.consoleProfile = Output.empty();
+        this.ingressProfiles = Output.empty();
+        this.location = Output.empty();
+        this.masterProfile = Output.empty();
+        this.networkProfile = Output.empty();
+        this.provisioningState = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.servicePrincipalProfile = Output.empty();
+        this.tags = Output.empty();
+        this.workerProfiles = Output.empty();
     }
 
     public static Builder builder() {
@@ -221,19 +221,19 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<APIServerProfileArgs> apiserverProfile;
-        private @Nullable Input<ClusterProfileArgs> clusterProfile;
-        private @Nullable Input<ConsoleProfileArgs> consoleProfile;
-        private @Nullable Input<List<IngressProfileArgs>> ingressProfiles;
-        private @Nullable Input<String> location;
-        private @Nullable Input<MasterProfileArgs> masterProfile;
-        private @Nullable Input<NetworkProfileArgs> networkProfile;
-        private @Nullable Input<String> provisioningState;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<ServicePrincipalProfileArgs> servicePrincipalProfile;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<WorkerProfileArgs>> workerProfiles;
+        private @Nullable Output<APIServerProfileArgs> apiserverProfile;
+        private @Nullable Output<ClusterProfileArgs> clusterProfile;
+        private @Nullable Output<ConsoleProfileArgs> consoleProfile;
+        private @Nullable Output<List<IngressProfileArgs>> ingressProfiles;
+        private @Nullable Output<String> location;
+        private @Nullable Output<MasterProfileArgs> masterProfile;
+        private @Nullable Output<NetworkProfileArgs> networkProfile;
+        private @Nullable Output<String> provisioningState;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<WorkerProfileArgs>> workerProfiles;
 
         public Builder() {
     	      // Empty
@@ -256,133 +256,133 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     	      this.workerProfiles = defaults.workerProfiles;
         }
 
-        public Builder apiserverProfile(@Nullable Input<APIServerProfileArgs> apiserverProfile) {
+        public Builder apiserverProfile(@Nullable Output<APIServerProfileArgs> apiserverProfile) {
             this.apiserverProfile = apiserverProfile;
             return this;
         }
 
         public Builder apiserverProfile(@Nullable APIServerProfileArgs apiserverProfile) {
-            this.apiserverProfile = Input.ofNullable(apiserverProfile);
+            this.apiserverProfile = Output.ofNullable(apiserverProfile);
             return this;
         }
 
-        public Builder clusterProfile(@Nullable Input<ClusterProfileArgs> clusterProfile) {
+        public Builder clusterProfile(@Nullable Output<ClusterProfileArgs> clusterProfile) {
             this.clusterProfile = clusterProfile;
             return this;
         }
 
         public Builder clusterProfile(@Nullable ClusterProfileArgs clusterProfile) {
-            this.clusterProfile = Input.ofNullable(clusterProfile);
+            this.clusterProfile = Output.ofNullable(clusterProfile);
             return this;
         }
 
-        public Builder consoleProfile(@Nullable Input<ConsoleProfileArgs> consoleProfile) {
+        public Builder consoleProfile(@Nullable Output<ConsoleProfileArgs> consoleProfile) {
             this.consoleProfile = consoleProfile;
             return this;
         }
 
         public Builder consoleProfile(@Nullable ConsoleProfileArgs consoleProfile) {
-            this.consoleProfile = Input.ofNullable(consoleProfile);
+            this.consoleProfile = Output.ofNullable(consoleProfile);
             return this;
         }
 
-        public Builder ingressProfiles(@Nullable Input<List<IngressProfileArgs>> ingressProfiles) {
+        public Builder ingressProfiles(@Nullable Output<List<IngressProfileArgs>> ingressProfiles) {
             this.ingressProfiles = ingressProfiles;
             return this;
         }
 
         public Builder ingressProfiles(@Nullable List<IngressProfileArgs> ingressProfiles) {
-            this.ingressProfiles = Input.ofNullable(ingressProfiles);
+            this.ingressProfiles = Output.ofNullable(ingressProfiles);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder masterProfile(@Nullable Input<MasterProfileArgs> masterProfile) {
+        public Builder masterProfile(@Nullable Output<MasterProfileArgs> masterProfile) {
             this.masterProfile = masterProfile;
             return this;
         }
 
         public Builder masterProfile(@Nullable MasterProfileArgs masterProfile) {
-            this.masterProfile = Input.ofNullable(masterProfile);
+            this.masterProfile = Output.ofNullable(masterProfile);
             return this;
         }
 
-        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Input.ofNullable(networkProfile);
+            this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder servicePrincipalProfile(@Nullable Input<ServicePrincipalProfileArgs> servicePrincipalProfile) {
+        public Builder servicePrincipalProfile(@Nullable Output<ServicePrincipalProfileArgs> servicePrincipalProfile) {
             this.servicePrincipalProfile = servicePrincipalProfile;
             return this;
         }
 
         public Builder servicePrincipalProfile(@Nullable ServicePrincipalProfileArgs servicePrincipalProfile) {
-            this.servicePrincipalProfile = Input.ofNullable(servicePrincipalProfile);
+            this.servicePrincipalProfile = Output.ofNullable(servicePrincipalProfile);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder workerProfiles(@Nullable Input<List<WorkerProfileArgs>> workerProfiles) {
+        public Builder workerProfiles(@Nullable Output<List<WorkerProfileArgs>> workerProfiles) {
             this.workerProfiles = workerProfiles;
             return this;
         }
 
         public Builder workerProfiles(@Nullable List<WorkerProfileArgs> workerProfiles) {
-            this.workerProfiles = Input.ofNullable(workerProfiles);
+            this.workerProfiles = Output.ofNullable(workerProfiles);
             return this;
         }
         public OpenShiftClusterArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.UnauthenticatedClientActionV2;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="excludedPaths")
-      private final @Nullable Input<List<String>> excludedPaths;
+      private final @Nullable Output<List<String>> excludedPaths;
 
-    public Input<List<String>> getExcludedPaths() {
-        return this.excludedPaths == null ? Input.empty() : this.excludedPaths;
+    public Output<List<String>> getExcludedPaths() {
+        return this.excludedPaths == null ? Output.empty() : this.excludedPaths;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="redirectToProvider")
-      private final @Nullable Input<String> redirectToProvider;
+      private final @Nullable Output<String> redirectToProvider;
 
-    public Input<String> getRedirectToProvider() {
-        return this.redirectToProvider == null ? Input.empty() : this.redirectToProvider;
+    public Output<String> getRedirectToProvider() {
+        return this.redirectToProvider == null ? Output.empty() : this.redirectToProvider;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requireAuthentication")
-      private final @Nullable Input<Boolean> requireAuthentication;
+      private final @Nullable Output<Boolean> requireAuthentication;
 
-    public Input<Boolean> getRequireAuthentication() {
-        return this.requireAuthentication == null ? Input.empty() : this.requireAuthentication;
+    public Output<Boolean> getRequireAuthentication() {
+        return this.requireAuthentication == null ? Output.empty() : this.requireAuthentication;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="unauthenticatedClientAction")
-      private final @Nullable Input<UnauthenticatedClientActionV2> unauthenticatedClientAction;
+      private final @Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction;
 
-    public Input<UnauthenticatedClientActionV2> getUnauthenticatedClientAction() {
-        return this.unauthenticatedClientAction == null ? Input.empty() : this.unauthenticatedClientAction;
+    public Output<UnauthenticatedClientActionV2> getUnauthenticatedClientAction() {
+        return this.unauthenticatedClientAction == null ? Output.empty() : this.unauthenticatedClientAction;
     }
 
     public GlobalValidationArgs(
-        @Nullable Input<List<String>> excludedPaths,
-        @Nullable Input<String> redirectToProvider,
-        @Nullable Input<Boolean> requireAuthentication,
-        @Nullable Input<UnauthenticatedClientActionV2> unauthenticatedClientAction) {
+        @Nullable Output<List<String>> excludedPaths,
+        @Nullable Output<String> redirectToProvider,
+        @Nullable Output<Boolean> requireAuthentication,
+        @Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction) {
         this.excludedPaths = excludedPaths;
         this.redirectToProvider = redirectToProvider;
         this.requireAuthentication = requireAuthentication;
@@ -79,10 +79,10 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private GlobalValidationArgs() {
-        this.excludedPaths = Input.empty();
-        this.redirectToProvider = Input.empty();
-        this.requireAuthentication = Input.empty();
-        this.unauthenticatedClientAction = Input.empty();
+        this.excludedPaths = Output.empty();
+        this.redirectToProvider = Output.empty();
+        this.requireAuthentication = Output.empty();
+        this.unauthenticatedClientAction = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> excludedPaths;
-        private @Nullable Input<String> redirectToProvider;
-        private @Nullable Input<Boolean> requireAuthentication;
-        private @Nullable Input<UnauthenticatedClientActionV2> unauthenticatedClientAction;
+        private @Nullable Output<List<String>> excludedPaths;
+        private @Nullable Output<String> redirectToProvider;
+        private @Nullable Output<Boolean> requireAuthentication;
+        private @Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class GlobalValidationArgs extends io.pulumi.resources.ResourceArgs
     	      this.unauthenticatedClientAction = defaults.unauthenticatedClientAction;
         }
 
-        public Builder excludedPaths(@Nullable Input<List<String>> excludedPaths) {
+        public Builder excludedPaths(@Nullable Output<List<String>> excludedPaths) {
             this.excludedPaths = excludedPaths;
             return this;
         }
 
         public Builder excludedPaths(@Nullable List<String> excludedPaths) {
-            this.excludedPaths = Input.ofNullable(excludedPaths);
+            this.excludedPaths = Output.ofNullable(excludedPaths);
             return this;
         }
 
-        public Builder redirectToProvider(@Nullable Input<String> redirectToProvider) {
+        public Builder redirectToProvider(@Nullable Output<String> redirectToProvider) {
             this.redirectToProvider = redirectToProvider;
             return this;
         }
 
         public Builder redirectToProvider(@Nullable String redirectToProvider) {
-            this.redirectToProvider = Input.ofNullable(redirectToProvider);
+            this.redirectToProvider = Output.ofNullable(redirectToProvider);
             return this;
         }
 
-        public Builder requireAuthentication(@Nullable Input<Boolean> requireAuthentication) {
+        public Builder requireAuthentication(@Nullable Output<Boolean> requireAuthentication) {
             this.requireAuthentication = requireAuthentication;
             return this;
         }
 
         public Builder requireAuthentication(@Nullable Boolean requireAuthentication) {
-            this.requireAuthentication = Input.ofNullable(requireAuthentication);
+            this.requireAuthentication = Output.ofNullable(requireAuthentication);
             return this;
         }
 
-        public Builder unauthenticatedClientAction(@Nullable Input<UnauthenticatedClientActionV2> unauthenticatedClientAction) {
+        public Builder unauthenticatedClientAction(@Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction) {
             this.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }
 
         public Builder unauthenticatedClientAction(@Nullable UnauthenticatedClientActionV2 unauthenticatedClientAction) {
-            this.unauthenticatedClientAction = Input.ofNullable(unauthenticatedClientAction);
+            this.unauthenticatedClientAction = Output.ofNullable(unauthenticatedClientAction);
             return this;
         }
         public GlobalValidationArgs build() {

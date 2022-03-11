@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,10 +24,10 @@ public final class EventHubPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="partitionCount")
-      private final @Nullable Input<Integer> partitionCount;
+      private final @Nullable Output<Integer> partitionCount;
 
-    public Input<Integer> getPartitionCount() {
-        return this.partitionCount == null ? Input.empty() : this.partitionCount;
+    public Output<Integer> getPartitionCount() {
+        return this.partitionCount == null ? Output.empty() : this.partitionCount;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class EventHubPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="retentionTimeInDays")
-      private final @Nullable Input<Double> retentionTimeInDays;
+      private final @Nullable Output<Double> retentionTimeInDays;
 
-    public Input<Double> getRetentionTimeInDays() {
-        return this.retentionTimeInDays == null ? Input.empty() : this.retentionTimeInDays;
+    public Output<Double> getRetentionTimeInDays() {
+        return this.retentionTimeInDays == null ? Output.empty() : this.retentionTimeInDays;
     }
 
     public EventHubPropertiesArgs(
-        @Nullable Input<Integer> partitionCount,
-        @Nullable Input<Double> retentionTimeInDays) {
+        @Nullable Output<Integer> partitionCount,
+        @Nullable Output<Double> retentionTimeInDays) {
         this.partitionCount = partitionCount;
         this.retentionTimeInDays = retentionTimeInDays;
     }
 
     private EventHubPropertiesArgs() {
-        this.partitionCount = Input.empty();
-        this.retentionTimeInDays = Input.empty();
+        this.partitionCount = Output.empty();
+        this.retentionTimeInDays = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class EventHubPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> partitionCount;
-        private @Nullable Input<Double> retentionTimeInDays;
+        private @Nullable Output<Integer> partitionCount;
+        private @Nullable Output<Double> retentionTimeInDays;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class EventHubPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.retentionTimeInDays = defaults.retentionTimeInDays;
         }
 
-        public Builder partitionCount(@Nullable Input<Integer> partitionCount) {
+        public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
 
         public Builder partitionCount(@Nullable Integer partitionCount) {
-            this.partitionCount = Input.ofNullable(partitionCount);
+            this.partitionCount = Output.ofNullable(partitionCount);
             return this;
         }
 
-        public Builder retentionTimeInDays(@Nullable Input<Double> retentionTimeInDays) {
+        public Builder retentionTimeInDays(@Nullable Output<Double> retentionTimeInDays) {
             this.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
 
         public Builder retentionTimeInDays(@Nullable Double retentionTimeInDays) {
-            this.retentionTimeInDays = Input.ofNullable(retentionTimeInDays);
+            this.retentionTimeInDays = Output.ofNullable(retentionTimeInDays);
             return this;
         }
         public EventHubPropertiesArgs build() {

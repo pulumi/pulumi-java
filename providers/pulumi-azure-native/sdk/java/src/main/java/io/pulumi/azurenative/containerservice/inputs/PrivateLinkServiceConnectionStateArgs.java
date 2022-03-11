@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.enums.ConnectionStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Either<String,ConnectionStatus>> status;
+      private final @Nullable Output<Either<String,ConnectionStatus>> status;
 
-    public Input<Either<String,ConnectionStatus>> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Either<String,ConnectionStatus>> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public PrivateLinkServiceConnectionStateArgs(
-        @Nullable Input<String> description,
-        @Nullable Input<Either<String,ConnectionStatus>> status) {
+        @Nullable Output<String> description,
+        @Nullable Output<Either<String,ConnectionStatus>> status) {
         this.description = description;
         this.status = status;
     }
 
     private PrivateLinkServiceConnectionStateArgs() {
-        this.description = Input.empty();
-        this.status = Input.empty();
+        this.description = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> description;
-        private @Nullable Input<Either<String,ConnectionStatus>> status;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Either<String,ConnectionStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
     	      this.status = defaults.status;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder status(@Nullable Input<Either<String,ConnectionStatus>> status) {
+        public Builder status(@Nullable Output<Either<String,ConnectionStatus>> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Either<String,ConnectionStatus> status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public PrivateLinkServiceConnectionStateArgs build() {

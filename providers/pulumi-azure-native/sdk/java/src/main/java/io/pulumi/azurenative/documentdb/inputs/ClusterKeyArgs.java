@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orderBy")
-      private final @Nullable Input<String> orderBy;
+      private final @Nullable Output<String> orderBy;
 
-    public Input<String> getOrderBy() {
-        return this.orderBy == null ? Input.empty() : this.orderBy;
+    public Output<String> getOrderBy() {
+        return this.orderBy == null ? Output.empty() : this.orderBy;
     }
 
     public ClusterKeyArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> orderBy) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> orderBy) {
         this.name = name;
         this.orderBy = orderBy;
     }
 
     private ClusterKeyArgs() {
-        this.name = Input.empty();
-        this.orderBy = Input.empty();
+        this.name = Output.empty();
+        this.orderBy = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> orderBy;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> orderBy;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.orderBy = defaults.orderBy;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder orderBy(@Nullable Input<String> orderBy) {
+        public Builder orderBy(@Nullable Output<String> orderBy) {
             this.orderBy = orderBy;
             return this;
         }
 
         public Builder orderBy(@Nullable String orderBy) {
-            this.orderBy = Input.ofNullable(orderBy);
+            this.orderBy = Output.ofNullable(orderBy);
             return this;
         }
         public ClusterKeyArgs build() {

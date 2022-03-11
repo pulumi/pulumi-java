@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.enums.OperationType;
 import io.pulumi.azurenative.recoveryservices.enums.WorkloadType;
 import io.pulumi.azurenative.recoveryservices.inputs.AzureWorkloadContainerExtendedInfoArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -28,10 +28,10 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backupManagementType")
-      private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+      private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
-    public Input<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
+    public Output<Either<String,BackupManagementType>> getBackupManagementType() {
+        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="containerType", required=true)
-      private final Input<String> containerType;
+      private final Output<String> containerType;
 
-    public Input<String> getContainerType() {
+    public Output<String> getContainerType() {
         return this.containerType;
     }
 
@@ -54,10 +54,10 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="extendedInfo")
-      private final @Nullable Input<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
+      private final @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
 
-    public Input<AzureWorkloadContainerExtendedInfoArgs> getExtendedInfo() {
-        return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
+    public Output<AzureWorkloadContainerExtendedInfoArgs> getExtendedInfo() {
+        return this.extendedInfo == null ? Output.empty() : this.extendedInfo;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="healthStatus")
-      private final @Nullable Input<String> healthStatus;
+      private final @Nullable Output<String> healthStatus;
 
-    public Input<String> getHealthStatus() {
-        return this.healthStatus == null ? Input.empty() : this.healthStatus;
+    public Output<String> getHealthStatus() {
+        return this.healthStatus == null ? Output.empty() : this.healthStatus;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="lastUpdatedTime")
-      private final @Nullable Input<String> lastUpdatedTime;
+      private final @Nullable Output<String> lastUpdatedTime;
 
-    public Input<String> getLastUpdatedTime() {
-        return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
+    public Output<String> getLastUpdatedTime() {
+        return this.lastUpdatedTime == null ? Output.empty() : this.lastUpdatedTime;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="operationType")
-      private final @Nullable Input<Either<String,OperationType>> operationType;
+      private final @Nullable Output<Either<String,OperationType>> operationType;
 
-    public Input<Either<String,OperationType>> getOperationType() {
-        return this.operationType == null ? Input.empty() : this.operationType;
+    public Output<Either<String,OperationType>> getOperationType() {
+        return this.operationType == null ? Output.empty() : this.operationType;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="registrationStatus")
-      private final @Nullable Input<String> registrationStatus;
+      private final @Nullable Output<String> registrationStatus;
 
-    public Input<String> getRegistrationStatus() {
-        return this.registrationStatus == null ? Input.empty() : this.registrationStatus;
+    public Output<String> getRegistrationStatus() {
+        return this.registrationStatus == null ? Output.empty() : this.registrationStatus;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sourceResourceId")
-      private final @Nullable Input<String> sourceResourceId;
+      private final @Nullable Output<String> sourceResourceId;
 
-    public Input<String> getSourceResourceId() {
-        return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
+    public Output<String> getSourceResourceId() {
+        return this.sourceResourceId == null ? Output.empty() : this.sourceResourceId;
     }
 
     /**
@@ -131,23 +131,23 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workloadType")
-      private final @Nullable Input<Either<String,WorkloadType>> workloadType;
+      private final @Nullable Output<Either<String,WorkloadType>> workloadType;
 
-    public Input<Either<String,WorkloadType>> getWorkloadType() {
-        return this.workloadType == null ? Input.empty() : this.workloadType;
+    public Output<Either<String,WorkloadType>> getWorkloadType() {
+        return this.workloadType == null ? Output.empty() : this.workloadType;
     }
 
     public AzureWorkloadContainerArgs(
-        @Nullable Input<Either<String,BackupManagementType>> backupManagementType,
-        Input<String> containerType,
-        @Nullable Input<AzureWorkloadContainerExtendedInfoArgs> extendedInfo,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<String> healthStatus,
-        @Nullable Input<String> lastUpdatedTime,
-        @Nullable Input<Either<String,OperationType>> operationType,
-        @Nullable Input<String> registrationStatus,
-        @Nullable Input<String> sourceResourceId,
-        @Nullable Input<Either<String,WorkloadType>> workloadType) {
+        @Nullable Output<Either<String,BackupManagementType>> backupManagementType,
+        Output<String> containerType,
+        @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<String> healthStatus,
+        @Nullable Output<String> lastUpdatedTime,
+        @Nullable Output<Either<String,OperationType>> operationType,
+        @Nullable Output<String> registrationStatus,
+        @Nullable Output<String> sourceResourceId,
+        @Nullable Output<Either<String,WorkloadType>> workloadType) {
         this.backupManagementType = backupManagementType;
         this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
         this.extendedInfo = extendedInfo;
@@ -161,16 +161,16 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     }
 
     private AzureWorkloadContainerArgs() {
-        this.backupManagementType = Input.empty();
-        this.containerType = Input.empty();
-        this.extendedInfo = Input.empty();
-        this.friendlyName = Input.empty();
-        this.healthStatus = Input.empty();
-        this.lastUpdatedTime = Input.empty();
-        this.operationType = Input.empty();
-        this.registrationStatus = Input.empty();
-        this.sourceResourceId = Input.empty();
-        this.workloadType = Input.empty();
+        this.backupManagementType = Output.empty();
+        this.containerType = Output.empty();
+        this.extendedInfo = Output.empty();
+        this.friendlyName = Output.empty();
+        this.healthStatus = Output.empty();
+        this.lastUpdatedTime = Output.empty();
+        this.operationType = Output.empty();
+        this.registrationStatus = Output.empty();
+        this.sourceResourceId = Output.empty();
+        this.workloadType = Output.empty();
     }
 
     public static Builder builder() {
@@ -182,16 +182,16 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
-        private Input<String> containerType;
-        private @Nullable Input<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<String> healthStatus;
-        private @Nullable Input<String> lastUpdatedTime;
-        private @Nullable Input<Either<String,OperationType>> operationType;
-        private @Nullable Input<String> registrationStatus;
-        private @Nullable Input<String> sourceResourceId;
-        private @Nullable Input<Either<String,WorkloadType>> workloadType;
+        private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
+        private Output<String> containerType;
+        private @Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<String> healthStatus;
+        private @Nullable Output<String> lastUpdatedTime;
+        private @Nullable Output<Either<String,OperationType>> operationType;
+        private @Nullable Output<String> registrationStatus;
+        private @Nullable Output<String> sourceResourceId;
+        private @Nullable Output<Either<String,WorkloadType>> workloadType;
 
         public Builder() {
     	      // Empty
@@ -211,103 +211,103 @@ public final class AzureWorkloadContainerArgs extends io.pulumi.resources.Resour
     	      this.workloadType = defaults.workloadType;
         }
 
-        public Builder backupManagementType(@Nullable Input<Either<String,BackupManagementType>> backupManagementType) {
+        public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Input.ofNullable(backupManagementType);
+            this.backupManagementType = Output.ofNullable(backupManagementType);
             return this;
         }
 
-        public Builder containerType(Input<String> containerType) {
+        public Builder containerType(Output<String> containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
         public Builder containerType(String containerType) {
-            this.containerType = Input.of(Objects.requireNonNull(containerType));
+            this.containerType = Output.of(Objects.requireNonNull(containerType));
             return this;
         }
 
-        public Builder extendedInfo(@Nullable Input<AzureWorkloadContainerExtendedInfoArgs> extendedInfo) {
+        public Builder extendedInfo(@Nullable Output<AzureWorkloadContainerExtendedInfoArgs> extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
         public Builder extendedInfo(@Nullable AzureWorkloadContainerExtendedInfoArgs extendedInfo) {
-            this.extendedInfo = Input.ofNullable(extendedInfo);
+            this.extendedInfo = Output.ofNullable(extendedInfo);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder healthStatus(@Nullable Input<String> healthStatus) {
+        public Builder healthStatus(@Nullable Output<String> healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Input.ofNullable(healthStatus);
+            this.healthStatus = Output.ofNullable(healthStatus);
             return this;
         }
 
-        public Builder lastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable Output<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
-            this.lastUpdatedTime = Input.ofNullable(lastUpdatedTime);
+            this.lastUpdatedTime = Output.ofNullable(lastUpdatedTime);
             return this;
         }
 
-        public Builder operationType(@Nullable Input<Either<String,OperationType>> operationType) {
+        public Builder operationType(@Nullable Output<Either<String,OperationType>> operationType) {
             this.operationType = operationType;
             return this;
         }
 
         public Builder operationType(@Nullable Either<String,OperationType> operationType) {
-            this.operationType = Input.ofNullable(operationType);
+            this.operationType = Output.ofNullable(operationType);
             return this;
         }
 
-        public Builder registrationStatus(@Nullable Input<String> registrationStatus) {
+        public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
 
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Input.ofNullable(registrationStatus);
+            this.registrationStatus = Output.ofNullable(registrationStatus);
             return this;
         }
 
-        public Builder sourceResourceId(@Nullable Input<String> sourceResourceId) {
+        public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Input.ofNullable(sourceResourceId);
+            this.sourceResourceId = Output.ofNullable(sourceResourceId);
             return this;
         }
 
-        public Builder workloadType(@Nullable Input<Either<String,WorkloadType>> workloadType) {
+        public Builder workloadType(@Nullable Output<Either<String,WorkloadType>> workloadType) {
             this.workloadType = workloadType;
             return this;
         }
 
         public Builder workloadType(@Nullable Either<String,WorkloadType> workloadType) {
-            this.workloadType = Input.ofNullable(workloadType);
+            this.workloadType = Output.ofNullable(workloadType);
             return this;
         }
         public AzureWorkloadContainerArgs build() {

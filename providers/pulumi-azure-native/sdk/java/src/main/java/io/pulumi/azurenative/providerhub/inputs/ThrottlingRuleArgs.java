@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ThrottlingMetricArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,39 +17,39 @@ public final class ThrottlingRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final ThrottlingRuleArgs Empty = new ThrottlingRuleArgs();
 
     @InputImport(name="action", required=true)
-      private final Input<String> action;
+      private final Output<String> action;
 
-    public Input<String> getAction() {
+    public Output<String> getAction() {
         return this.action;
     }
 
     @InputImport(name="metrics", required=true)
-      private final Input<List<ThrottlingMetricArgs>> metrics;
+      private final Output<List<ThrottlingMetricArgs>> metrics;
 
-    public Input<List<ThrottlingMetricArgs>> getMetrics() {
+    public Output<List<ThrottlingMetricArgs>> getMetrics() {
         return this.metrics;
     }
 
     @InputImport(name="requiredFeatures")
-      private final @Nullable Input<List<String>> requiredFeatures;
+      private final @Nullable Output<List<String>> requiredFeatures;
 
-    public Input<List<String>> getRequiredFeatures() {
-        return this.requiredFeatures == null ? Input.empty() : this.requiredFeatures;
+    public Output<List<String>> getRequiredFeatures() {
+        return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
     }
 
     public ThrottlingRuleArgs(
-        Input<String> action,
-        Input<List<ThrottlingMetricArgs>> metrics,
-        @Nullable Input<List<String>> requiredFeatures) {
+        Output<String> action,
+        Output<List<ThrottlingMetricArgs>> metrics,
+        @Nullable Output<List<String>> requiredFeatures) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.metrics = Objects.requireNonNull(metrics, "expected parameter 'metrics' to be non-null");
         this.requiredFeatures = requiredFeatures;
     }
 
     private ThrottlingRuleArgs() {
-        this.action = Input.empty();
-        this.metrics = Input.empty();
-        this.requiredFeatures = Input.empty();
+        this.action = Output.empty();
+        this.metrics = Output.empty();
+        this.requiredFeatures = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,9 +61,9 @@ public final class ThrottlingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> action;
-        private Input<List<ThrottlingMetricArgs>> metrics;
-        private @Nullable Input<List<String>> requiredFeatures;
+        private Output<String> action;
+        private Output<List<ThrottlingMetricArgs>> metrics;
+        private @Nullable Output<List<String>> requiredFeatures;
 
         public Builder() {
     	      // Empty
@@ -76,33 +76,33 @@ public final class ThrottlingRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requiredFeatures = defaults.requiredFeatures;
         }
 
-        public Builder action(Input<String> action) {
+        public Builder action(Output<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(String action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder metrics(Input<List<ThrottlingMetricArgs>> metrics) {
+        public Builder metrics(Output<List<ThrottlingMetricArgs>> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
         public Builder metrics(List<ThrottlingMetricArgs> metrics) {
-            this.metrics = Input.of(Objects.requireNonNull(metrics));
+            this.metrics = Output.of(Objects.requireNonNull(metrics));
             return this;
         }
 
-        public Builder requiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable Output<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Input.ofNullable(requiredFeatures);
+            this.requiredFeatures = Output.ofNullable(requiredFeatures);
             return this;
         }
         public ThrottlingRuleArgs build() {

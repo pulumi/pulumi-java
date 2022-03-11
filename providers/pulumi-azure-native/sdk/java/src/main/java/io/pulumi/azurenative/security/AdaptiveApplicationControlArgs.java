@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.security.inputs.PathRecommendationArgs;
 import io.pulumi.azurenative.security.inputs.ProtectionModeArgs;
 import io.pulumi.azurenative.security.inputs.VmRecommendationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,9 +23,9 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ascLocation", required=true)
-      private final Input<String> ascLocation;
+      private final Output<String> ascLocation;
 
-    public Input<String> getAscLocation() {
+    public Output<String> getAscLocation() {
         return this.ascLocation;
     }
 
@@ -34,10 +34,10 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enforcementMode")
-      private final @Nullable Input<String> enforcementMode;
+      private final @Nullable Output<String> enforcementMode;
 
-    public Input<String> getEnforcementMode() {
-        return this.enforcementMode == null ? Input.empty() : this.enforcementMode;
+    public Output<String> getEnforcementMode() {
+        return this.enforcementMode == null ? Output.empty() : this.enforcementMode;
     }
 
     /**
@@ -45,17 +45,17 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="groupName")
-      private final @Nullable Input<String> groupName;
+      private final @Nullable Output<String> groupName;
 
-    public Input<String> getGroupName() {
-        return this.groupName == null ? Input.empty() : this.groupName;
+    public Output<String> getGroupName() {
+        return this.groupName == null ? Output.empty() : this.groupName;
     }
 
     @InputImport(name="pathRecommendations")
-      private final @Nullable Input<List<PathRecommendationArgs>> pathRecommendations;
+      private final @Nullable Output<List<PathRecommendationArgs>> pathRecommendations;
 
-    public Input<List<PathRecommendationArgs>> getPathRecommendations() {
-        return this.pathRecommendations == null ? Input.empty() : this.pathRecommendations;
+    public Output<List<PathRecommendationArgs>> getPathRecommendations() {
+        return this.pathRecommendations == null ? Output.empty() : this.pathRecommendations;
     }
 
     /**
@@ -63,26 +63,26 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="protectionMode")
-      private final @Nullable Input<ProtectionModeArgs> protectionMode;
+      private final @Nullable Output<ProtectionModeArgs> protectionMode;
 
-    public Input<ProtectionModeArgs> getProtectionMode() {
-        return this.protectionMode == null ? Input.empty() : this.protectionMode;
+    public Output<ProtectionModeArgs> getProtectionMode() {
+        return this.protectionMode == null ? Output.empty() : this.protectionMode;
     }
 
     @InputImport(name="vmRecommendations")
-      private final @Nullable Input<List<VmRecommendationArgs>> vmRecommendations;
+      private final @Nullable Output<List<VmRecommendationArgs>> vmRecommendations;
 
-    public Input<List<VmRecommendationArgs>> getVmRecommendations() {
-        return this.vmRecommendations == null ? Input.empty() : this.vmRecommendations;
+    public Output<List<VmRecommendationArgs>> getVmRecommendations() {
+        return this.vmRecommendations == null ? Output.empty() : this.vmRecommendations;
     }
 
     public AdaptiveApplicationControlArgs(
-        Input<String> ascLocation,
-        @Nullable Input<String> enforcementMode,
-        @Nullable Input<String> groupName,
-        @Nullable Input<List<PathRecommendationArgs>> pathRecommendations,
-        @Nullable Input<ProtectionModeArgs> protectionMode,
-        @Nullable Input<List<VmRecommendationArgs>> vmRecommendations) {
+        Output<String> ascLocation,
+        @Nullable Output<String> enforcementMode,
+        @Nullable Output<String> groupName,
+        @Nullable Output<List<PathRecommendationArgs>> pathRecommendations,
+        @Nullable Output<ProtectionModeArgs> protectionMode,
+        @Nullable Output<List<VmRecommendationArgs>> vmRecommendations) {
         this.ascLocation = Objects.requireNonNull(ascLocation, "expected parameter 'ascLocation' to be non-null");
         this.enforcementMode = enforcementMode;
         this.groupName = groupName;
@@ -92,12 +92,12 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
     }
 
     private AdaptiveApplicationControlArgs() {
-        this.ascLocation = Input.empty();
-        this.enforcementMode = Input.empty();
-        this.groupName = Input.empty();
-        this.pathRecommendations = Input.empty();
-        this.protectionMode = Input.empty();
-        this.vmRecommendations = Input.empty();
+        this.ascLocation = Output.empty();
+        this.enforcementMode = Output.empty();
+        this.groupName = Output.empty();
+        this.pathRecommendations = Output.empty();
+        this.protectionMode = Output.empty();
+        this.vmRecommendations = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,12 +109,12 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private Input<String> ascLocation;
-        private @Nullable Input<String> enforcementMode;
-        private @Nullable Input<String> groupName;
-        private @Nullable Input<List<PathRecommendationArgs>> pathRecommendations;
-        private @Nullable Input<ProtectionModeArgs> protectionMode;
-        private @Nullable Input<List<VmRecommendationArgs>> vmRecommendations;
+        private Output<String> ascLocation;
+        private @Nullable Output<String> enforcementMode;
+        private @Nullable Output<String> groupName;
+        private @Nullable Output<List<PathRecommendationArgs>> pathRecommendations;
+        private @Nullable Output<ProtectionModeArgs> protectionMode;
+        private @Nullable Output<List<VmRecommendationArgs>> vmRecommendations;
 
         public Builder() {
     	      // Empty
@@ -130,63 +130,63 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
     	      this.vmRecommendations = defaults.vmRecommendations;
         }
 
-        public Builder ascLocation(Input<String> ascLocation) {
+        public Builder ascLocation(Output<String> ascLocation) {
             this.ascLocation = Objects.requireNonNull(ascLocation);
             return this;
         }
 
         public Builder ascLocation(String ascLocation) {
-            this.ascLocation = Input.of(Objects.requireNonNull(ascLocation));
+            this.ascLocation = Output.of(Objects.requireNonNull(ascLocation));
             return this;
         }
 
-        public Builder enforcementMode(@Nullable Input<String> enforcementMode) {
+        public Builder enforcementMode(@Nullable Output<String> enforcementMode) {
             this.enforcementMode = enforcementMode;
             return this;
         }
 
         public Builder enforcementMode(@Nullable String enforcementMode) {
-            this.enforcementMode = Input.ofNullable(enforcementMode);
+            this.enforcementMode = Output.ofNullable(enforcementMode);
             return this;
         }
 
-        public Builder groupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Output<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Input.ofNullable(groupName);
+            this.groupName = Output.ofNullable(groupName);
             return this;
         }
 
-        public Builder pathRecommendations(@Nullable Input<List<PathRecommendationArgs>> pathRecommendations) {
+        public Builder pathRecommendations(@Nullable Output<List<PathRecommendationArgs>> pathRecommendations) {
             this.pathRecommendations = pathRecommendations;
             return this;
         }
 
         public Builder pathRecommendations(@Nullable List<PathRecommendationArgs> pathRecommendations) {
-            this.pathRecommendations = Input.ofNullable(pathRecommendations);
+            this.pathRecommendations = Output.ofNullable(pathRecommendations);
             return this;
         }
 
-        public Builder protectionMode(@Nullable Input<ProtectionModeArgs> protectionMode) {
+        public Builder protectionMode(@Nullable Output<ProtectionModeArgs> protectionMode) {
             this.protectionMode = protectionMode;
             return this;
         }
 
         public Builder protectionMode(@Nullable ProtectionModeArgs protectionMode) {
-            this.protectionMode = Input.ofNullable(protectionMode);
+            this.protectionMode = Output.ofNullable(protectionMode);
             return this;
         }
 
-        public Builder vmRecommendations(@Nullable Input<List<VmRecommendationArgs>> vmRecommendations) {
+        public Builder vmRecommendations(@Nullable Output<List<VmRecommendationArgs>> vmRecommendations) {
             this.vmRecommendations = vmRecommendations;
             return this;
         }
 
         public Builder vmRecommendations(@Nullable List<VmRecommendationArgs> vmRecommendations) {
-            this.vmRecommendations = Input.ofNullable(vmRecommendations);
+            this.vmRecommendations = Output.ofNullable(vmRecommendations);
             return this;
         }
         public AdaptiveApplicationControlArgs build() {

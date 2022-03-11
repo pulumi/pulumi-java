@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.BackendAuthorizationHeaderCredentialsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="authorization")
-      private final @Nullable Input<BackendAuthorizationHeaderCredentialsArgs> authorization;
+      private final @Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization;
 
-    public Input<BackendAuthorizationHeaderCredentialsArgs> getAuthorization() {
-        return this.authorization == null ? Input.empty() : this.authorization;
+    public Output<BackendAuthorizationHeaderCredentialsArgs> getAuthorization() {
+        return this.authorization == null ? Output.empty() : this.authorization;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<List<String>> certificate;
+      private final @Nullable Output<List<String>> certificate;
 
-    public Input<List<String>> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<List<String>> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="certificateIds")
-      private final @Nullable Input<List<String>> certificateIds;
+      private final @Nullable Output<List<String>> certificateIds;
 
-    public Input<List<String>> getCertificateIds() {
-        return this.certificateIds == null ? Input.empty() : this.certificateIds;
+    public Output<List<String>> getCertificateIds() {
+        return this.certificateIds == null ? Output.empty() : this.certificateIds;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="header")
-      private final @Nullable Input<Map<String,List<String>>> header;
+      private final @Nullable Output<Map<String,List<String>>> header;
 
-    public Input<Map<String,List<String>>> getHeader() {
-        return this.header == null ? Input.empty() : this.header;
+    public Output<Map<String,List<String>>> getHeader() {
+        return this.header == null ? Output.empty() : this.header;
     }
 
     /**
@@ -70,18 +70,18 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="query")
-      private final @Nullable Input<Map<String,List<String>>> query;
+      private final @Nullable Output<Map<String,List<String>>> query;
 
-    public Input<Map<String,List<String>>> getQuery() {
-        return this.query == null ? Input.empty() : this.query;
+    public Output<Map<String,List<String>>> getQuery() {
+        return this.query == null ? Output.empty() : this.query;
     }
 
     public BackendCredentialsContractArgs(
-        @Nullable Input<BackendAuthorizationHeaderCredentialsArgs> authorization,
-        @Nullable Input<List<String>> certificate,
-        @Nullable Input<List<String>> certificateIds,
-        @Nullable Input<Map<String,List<String>>> header,
-        @Nullable Input<Map<String,List<String>>> query) {
+        @Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization,
+        @Nullable Output<List<String>> certificate,
+        @Nullable Output<List<String>> certificateIds,
+        @Nullable Output<Map<String,List<String>>> header,
+        @Nullable Output<Map<String,List<String>>> query) {
         this.authorization = authorization;
         this.certificate = certificate;
         this.certificateIds = certificateIds;
@@ -90,11 +90,11 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
     }
 
     private BackendCredentialsContractArgs() {
-        this.authorization = Input.empty();
-        this.certificate = Input.empty();
-        this.certificateIds = Input.empty();
-        this.header = Input.empty();
-        this.query = Input.empty();
+        this.authorization = Output.empty();
+        this.certificate = Output.empty();
+        this.certificateIds = Output.empty();
+        this.header = Output.empty();
+        this.query = Output.empty();
     }
 
     public static Builder builder() {
@@ -106,11 +106,11 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<BackendAuthorizationHeaderCredentialsArgs> authorization;
-        private @Nullable Input<List<String>> certificate;
-        private @Nullable Input<List<String>> certificateIds;
-        private @Nullable Input<Map<String,List<String>>> header;
-        private @Nullable Input<Map<String,List<String>>> query;
+        private @Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization;
+        private @Nullable Output<List<String>> certificate;
+        private @Nullable Output<List<String>> certificateIds;
+        private @Nullable Output<Map<String,List<String>>> header;
+        private @Nullable Output<Map<String,List<String>>> query;
 
         public Builder() {
     	      // Empty
@@ -125,53 +125,53 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
     	      this.query = defaults.query;
         }
 
-        public Builder authorization(@Nullable Input<BackendAuthorizationHeaderCredentialsArgs> authorization) {
+        public Builder authorization(@Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization) {
             this.authorization = authorization;
             return this;
         }
 
         public Builder authorization(@Nullable BackendAuthorizationHeaderCredentialsArgs authorization) {
-            this.authorization = Input.ofNullable(authorization);
+            this.authorization = Output.ofNullable(authorization);
             return this;
         }
 
-        public Builder certificate(@Nullable Input<List<String>> certificate) {
+        public Builder certificate(@Nullable Output<List<String>> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable List<String> certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder certificateIds(@Nullable Input<List<String>> certificateIds) {
+        public Builder certificateIds(@Nullable Output<List<String>> certificateIds) {
             this.certificateIds = certificateIds;
             return this;
         }
 
         public Builder certificateIds(@Nullable List<String> certificateIds) {
-            this.certificateIds = Input.ofNullable(certificateIds);
+            this.certificateIds = Output.ofNullable(certificateIds);
             return this;
         }
 
-        public Builder header(@Nullable Input<Map<String,List<String>>> header) {
+        public Builder header(@Nullable Output<Map<String,List<String>>> header) {
             this.header = header;
             return this;
         }
 
         public Builder header(@Nullable Map<String,List<String>> header) {
-            this.header = Input.ofNullable(header);
+            this.header = Output.ofNullable(header);
             return this;
         }
 
-        public Builder query(@Nullable Input<Map<String,List<String>>> query) {
+        public Builder query(@Nullable Output<Map<String,List<String>>> query) {
             this.query = query;
             return this;
         }
 
         public Builder query(@Nullable Map<String,List<String>> query) {
-            this.query = Input.ofNullable(query);
+            this.query = Output.ofNullable(query);
             return this;
         }
         public BackendCredentialsContractArgs build() {

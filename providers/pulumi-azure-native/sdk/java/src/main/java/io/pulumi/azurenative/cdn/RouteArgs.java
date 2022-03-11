@@ -12,7 +12,7 @@ import io.pulumi.azurenative.cdn.enums.LinkToDefaultDomain;
 import io.pulumi.azurenative.cdn.inputs.CompressionSettingsArgs;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -29,10 +29,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="compressionSettings")
-      private final @Nullable Input<CompressionSettingsArgs> compressionSettings;
+      private final @Nullable Output<CompressionSettingsArgs> compressionSettings;
 
-    public Input<CompressionSettingsArgs> getCompressionSettings() {
-        return this.compressionSettings == null ? Input.empty() : this.compressionSettings;
+    public Output<CompressionSettingsArgs> getCompressionSettings() {
+        return this.compressionSettings == null ? Output.empty() : this.compressionSettings;
     }
 
     /**
@@ -40,10 +40,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDomains")
-      private final @Nullable Input<List<ResourceReferenceArgs>> customDomains;
+      private final @Nullable Output<List<ResourceReferenceArgs>> customDomains;
 
-    public Input<List<ResourceReferenceArgs>> getCustomDomains() {
-        return this.customDomains == null ? Input.empty() : this.customDomains;
+    public Output<List<ResourceReferenceArgs>> getCustomDomains() {
+        return this.customDomains == null ? Output.empty() : this.customDomains;
     }
 
     /**
@@ -51,10 +51,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-      private final @Nullable Input<Either<String,EnabledState>> enabledState;
+      private final @Nullable Output<Either<String,EnabledState>> enabledState;
 
-    public Input<Either<String,EnabledState>> getEnabledState() {
-        return this.enabledState == null ? Input.empty() : this.enabledState;
+    public Output<Either<String,EnabledState>> getEnabledState() {
+        return this.enabledState == null ? Output.empty() : this.enabledState;
     }
 
     /**
@@ -62,9 +62,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-      private final Input<String> endpointName;
+      private final Output<String> endpointName;
 
-    public Input<String> getEndpointName() {
+    public Output<String> getEndpointName() {
         return this.endpointName;
     }
 
@@ -73,10 +73,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardingProtocol")
-      private final @Nullable Input<Either<String,ForwardingProtocol>> forwardingProtocol;
+      private final @Nullable Output<Either<String,ForwardingProtocol>> forwardingProtocol;
 
-    public Input<Either<String,ForwardingProtocol>> getForwardingProtocol() {
-        return this.forwardingProtocol == null ? Input.empty() : this.forwardingProtocol;
+    public Output<Either<String,ForwardingProtocol>> getForwardingProtocol() {
+        return this.forwardingProtocol == null ? Output.empty() : this.forwardingProtocol;
     }
 
     /**
@@ -84,10 +84,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpsRedirect")
-      private final @Nullable Input<Either<String,HttpsRedirect>> httpsRedirect;
+      private final @Nullable Output<Either<String,HttpsRedirect>> httpsRedirect;
 
-    public Input<Either<String,HttpsRedirect>> getHttpsRedirect() {
-        return this.httpsRedirect == null ? Input.empty() : this.httpsRedirect;
+    public Output<Either<String,HttpsRedirect>> getHttpsRedirect() {
+        return this.httpsRedirect == null ? Output.empty() : this.httpsRedirect;
     }
 
     /**
@@ -95,10 +95,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkToDefaultDomain")
-      private final @Nullable Input<Either<String,LinkToDefaultDomain>> linkToDefaultDomain;
+      private final @Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain;
 
-    public Input<Either<String,LinkToDefaultDomain>> getLinkToDefaultDomain() {
-        return this.linkToDefaultDomain == null ? Input.empty() : this.linkToDefaultDomain;
+    public Output<Either<String,LinkToDefaultDomain>> getLinkToDefaultDomain() {
+        return this.linkToDefaultDomain == null ? Output.empty() : this.linkToDefaultDomain;
     }
 
     /**
@@ -106,9 +106,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originGroup", required=true)
-      private final Input<ResourceReferenceArgs> originGroup;
+      private final Output<ResourceReferenceArgs> originGroup;
 
-    public Input<ResourceReferenceArgs> getOriginGroup() {
+    public Output<ResourceReferenceArgs> getOriginGroup() {
         return this.originGroup;
     }
 
@@ -117,10 +117,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originPath")
-      private final @Nullable Input<String> originPath;
+      private final @Nullable Output<String> originPath;
 
-    public Input<String> getOriginPath() {
-        return this.originPath == null ? Input.empty() : this.originPath;
+    public Output<String> getOriginPath() {
+        return this.originPath == null ? Output.empty() : this.originPath;
     }
 
     /**
@@ -128,10 +128,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patternsToMatch")
-      private final @Nullable Input<List<String>> patternsToMatch;
+      private final @Nullable Output<List<String>> patternsToMatch;
 
-    public Input<List<String>> getPatternsToMatch() {
-        return this.patternsToMatch == null ? Input.empty() : this.patternsToMatch;
+    public Output<List<String>> getPatternsToMatch() {
+        return this.patternsToMatch == null ? Output.empty() : this.patternsToMatch;
     }
 
     /**
@@ -139,9 +139,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-      private final Input<String> profileName;
+      private final Output<String> profileName;
 
-    public Input<String> getProfileName() {
+    public Output<String> getProfileName() {
         return this.profileName;
     }
 
@@ -150,10 +150,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryStringCachingBehavior")
-      private final @Nullable Input<AfdQueryStringCachingBehavior> queryStringCachingBehavior;
+      private final @Nullable Output<AfdQueryStringCachingBehavior> queryStringCachingBehavior;
 
-    public Input<AfdQueryStringCachingBehavior> getQueryStringCachingBehavior() {
-        return this.queryStringCachingBehavior == null ? Input.empty() : this.queryStringCachingBehavior;
+    public Output<AfdQueryStringCachingBehavior> getQueryStringCachingBehavior() {
+        return this.queryStringCachingBehavior == null ? Output.empty() : this.queryStringCachingBehavior;
     }
 
     /**
@@ -161,9 +161,9 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -172,10 +172,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeName")
-      private final @Nullable Input<String> routeName;
+      private final @Nullable Output<String> routeName;
 
-    public Input<String> getRouteName() {
-        return this.routeName == null ? Input.empty() : this.routeName;
+    public Output<String> getRouteName() {
+        return this.routeName == null ? Output.empty() : this.routeName;
     }
 
     /**
@@ -183,10 +183,10 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleSets")
-      private final @Nullable Input<List<ResourceReferenceArgs>> ruleSets;
+      private final @Nullable Output<List<ResourceReferenceArgs>> ruleSets;
 
-    public Input<List<ResourceReferenceArgs>> getRuleSets() {
-        return this.ruleSets == null ? Input.empty() : this.ruleSets;
+    public Output<List<ResourceReferenceArgs>> getRuleSets() {
+        return this.ruleSets == null ? Output.empty() : this.ruleSets;
     }
 
     /**
@@ -194,29 +194,29 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportedProtocols")
-      private final @Nullable Input<List<Either<String,AFDEndpointProtocols>>> supportedProtocols;
+      private final @Nullable Output<List<Either<String,AFDEndpointProtocols>>> supportedProtocols;
 
-    public Input<List<Either<String,AFDEndpointProtocols>>> getSupportedProtocols() {
-        return this.supportedProtocols == null ? Input.empty() : this.supportedProtocols;
+    public Output<List<Either<String,AFDEndpointProtocols>>> getSupportedProtocols() {
+        return this.supportedProtocols == null ? Output.empty() : this.supportedProtocols;
     }
 
     public RouteArgs(
-        @Nullable Input<CompressionSettingsArgs> compressionSettings,
-        @Nullable Input<List<ResourceReferenceArgs>> customDomains,
-        @Nullable Input<Either<String,EnabledState>> enabledState,
-        Input<String> endpointName,
-        @Nullable Input<Either<String,ForwardingProtocol>> forwardingProtocol,
-        @Nullable Input<Either<String,HttpsRedirect>> httpsRedirect,
-        @Nullable Input<Either<String,LinkToDefaultDomain>> linkToDefaultDomain,
-        Input<ResourceReferenceArgs> originGroup,
-        @Nullable Input<String> originPath,
-        @Nullable Input<List<String>> patternsToMatch,
-        Input<String> profileName,
-        @Nullable Input<AfdQueryStringCachingBehavior> queryStringCachingBehavior,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> routeName,
-        @Nullable Input<List<ResourceReferenceArgs>> ruleSets,
-        @Nullable Input<List<Either<String,AFDEndpointProtocols>>> supportedProtocols) {
+        @Nullable Output<CompressionSettingsArgs> compressionSettings,
+        @Nullable Output<List<ResourceReferenceArgs>> customDomains,
+        @Nullable Output<Either<String,EnabledState>> enabledState,
+        Output<String> endpointName,
+        @Nullable Output<Either<String,ForwardingProtocol>> forwardingProtocol,
+        @Nullable Output<Either<String,HttpsRedirect>> httpsRedirect,
+        @Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain,
+        Output<ResourceReferenceArgs> originGroup,
+        @Nullable Output<String> originPath,
+        @Nullable Output<List<String>> patternsToMatch,
+        Output<String> profileName,
+        @Nullable Output<AfdQueryStringCachingBehavior> queryStringCachingBehavior,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> routeName,
+        @Nullable Output<List<ResourceReferenceArgs>> ruleSets,
+        @Nullable Output<List<Either<String,AFDEndpointProtocols>>> supportedProtocols) {
         this.compressionSettings = compressionSettings;
         this.customDomains = customDomains;
         this.enabledState = enabledState;
@@ -236,22 +236,22 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteArgs() {
-        this.compressionSettings = Input.empty();
-        this.customDomains = Input.empty();
-        this.enabledState = Input.empty();
-        this.endpointName = Input.empty();
-        this.forwardingProtocol = Input.empty();
-        this.httpsRedirect = Input.empty();
-        this.linkToDefaultDomain = Input.empty();
-        this.originGroup = Input.empty();
-        this.originPath = Input.empty();
-        this.patternsToMatch = Input.empty();
-        this.profileName = Input.empty();
-        this.queryStringCachingBehavior = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.routeName = Input.empty();
-        this.ruleSets = Input.empty();
-        this.supportedProtocols = Input.empty();
+        this.compressionSettings = Output.empty();
+        this.customDomains = Output.empty();
+        this.enabledState = Output.empty();
+        this.endpointName = Output.empty();
+        this.forwardingProtocol = Output.empty();
+        this.httpsRedirect = Output.empty();
+        this.linkToDefaultDomain = Output.empty();
+        this.originGroup = Output.empty();
+        this.originPath = Output.empty();
+        this.patternsToMatch = Output.empty();
+        this.profileName = Output.empty();
+        this.queryStringCachingBehavior = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.routeName = Output.empty();
+        this.ruleSets = Output.empty();
+        this.supportedProtocols = Output.empty();
     }
 
     public static Builder builder() {
@@ -263,22 +263,22 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CompressionSettingsArgs> compressionSettings;
-        private @Nullable Input<List<ResourceReferenceArgs>> customDomains;
-        private @Nullable Input<Either<String,EnabledState>> enabledState;
-        private Input<String> endpointName;
-        private @Nullable Input<Either<String,ForwardingProtocol>> forwardingProtocol;
-        private @Nullable Input<Either<String,HttpsRedirect>> httpsRedirect;
-        private @Nullable Input<Either<String,LinkToDefaultDomain>> linkToDefaultDomain;
-        private Input<ResourceReferenceArgs> originGroup;
-        private @Nullable Input<String> originPath;
-        private @Nullable Input<List<String>> patternsToMatch;
-        private Input<String> profileName;
-        private @Nullable Input<AfdQueryStringCachingBehavior> queryStringCachingBehavior;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> routeName;
-        private @Nullable Input<List<ResourceReferenceArgs>> ruleSets;
-        private @Nullable Input<List<Either<String,AFDEndpointProtocols>>> supportedProtocols;
+        private @Nullable Output<CompressionSettingsArgs> compressionSettings;
+        private @Nullable Output<List<ResourceReferenceArgs>> customDomains;
+        private @Nullable Output<Either<String,EnabledState>> enabledState;
+        private Output<String> endpointName;
+        private @Nullable Output<Either<String,ForwardingProtocol>> forwardingProtocol;
+        private @Nullable Output<Either<String,HttpsRedirect>> httpsRedirect;
+        private @Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain;
+        private Output<ResourceReferenceArgs> originGroup;
+        private @Nullable Output<String> originPath;
+        private @Nullable Output<List<String>> patternsToMatch;
+        private Output<String> profileName;
+        private @Nullable Output<AfdQueryStringCachingBehavior> queryStringCachingBehavior;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> routeName;
+        private @Nullable Output<List<ResourceReferenceArgs>> ruleSets;
+        private @Nullable Output<List<Either<String,AFDEndpointProtocols>>> supportedProtocols;
 
         public Builder() {
     	      // Empty
@@ -304,163 +304,163 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.supportedProtocols = defaults.supportedProtocols;
         }
 
-        public Builder compressionSettings(@Nullable Input<CompressionSettingsArgs> compressionSettings) {
+        public Builder compressionSettings(@Nullable Output<CompressionSettingsArgs> compressionSettings) {
             this.compressionSettings = compressionSettings;
             return this;
         }
 
         public Builder compressionSettings(@Nullable CompressionSettingsArgs compressionSettings) {
-            this.compressionSettings = Input.ofNullable(compressionSettings);
+            this.compressionSettings = Output.ofNullable(compressionSettings);
             return this;
         }
 
-        public Builder customDomains(@Nullable Input<List<ResourceReferenceArgs>> customDomains) {
+        public Builder customDomains(@Nullable Output<List<ResourceReferenceArgs>> customDomains) {
             this.customDomains = customDomains;
             return this;
         }
 
         public Builder customDomains(@Nullable List<ResourceReferenceArgs> customDomains) {
-            this.customDomains = Input.ofNullable(customDomains);
+            this.customDomains = Output.ofNullable(customDomains);
             return this;
         }
 
-        public Builder enabledState(@Nullable Input<Either<String,EnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Output<Either<String,EnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
         public Builder enabledState(@Nullable Either<String,EnabledState> enabledState) {
-            this.enabledState = Input.ofNullable(enabledState);
+            this.enabledState = Output.ofNullable(enabledState);
             return this;
         }
 
-        public Builder endpointName(Input<String> endpointName) {
+        public Builder endpointName(Output<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
         public Builder endpointName(String endpointName) {
-            this.endpointName = Input.of(Objects.requireNonNull(endpointName));
+            this.endpointName = Output.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder forwardingProtocol(@Nullable Input<Either<String,ForwardingProtocol>> forwardingProtocol) {
+        public Builder forwardingProtocol(@Nullable Output<Either<String,ForwardingProtocol>> forwardingProtocol) {
             this.forwardingProtocol = forwardingProtocol;
             return this;
         }
 
         public Builder forwardingProtocol(@Nullable Either<String,ForwardingProtocol> forwardingProtocol) {
-            this.forwardingProtocol = Input.ofNullable(forwardingProtocol);
+            this.forwardingProtocol = Output.ofNullable(forwardingProtocol);
             return this;
         }
 
-        public Builder httpsRedirect(@Nullable Input<Either<String,HttpsRedirect>> httpsRedirect) {
+        public Builder httpsRedirect(@Nullable Output<Either<String,HttpsRedirect>> httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
 
         public Builder httpsRedirect(@Nullable Either<String,HttpsRedirect> httpsRedirect) {
-            this.httpsRedirect = Input.ofNullable(httpsRedirect);
+            this.httpsRedirect = Output.ofNullable(httpsRedirect);
             return this;
         }
 
-        public Builder linkToDefaultDomain(@Nullable Input<Either<String,LinkToDefaultDomain>> linkToDefaultDomain) {
+        public Builder linkToDefaultDomain(@Nullable Output<Either<String,LinkToDefaultDomain>> linkToDefaultDomain) {
             this.linkToDefaultDomain = linkToDefaultDomain;
             return this;
         }
 
         public Builder linkToDefaultDomain(@Nullable Either<String,LinkToDefaultDomain> linkToDefaultDomain) {
-            this.linkToDefaultDomain = Input.ofNullable(linkToDefaultDomain);
+            this.linkToDefaultDomain = Output.ofNullable(linkToDefaultDomain);
             return this;
         }
 
-        public Builder originGroup(Input<ResourceReferenceArgs> originGroup) {
+        public Builder originGroup(Output<ResourceReferenceArgs> originGroup) {
             this.originGroup = Objects.requireNonNull(originGroup);
             return this;
         }
 
         public Builder originGroup(ResourceReferenceArgs originGroup) {
-            this.originGroup = Input.of(Objects.requireNonNull(originGroup));
+            this.originGroup = Output.of(Objects.requireNonNull(originGroup));
             return this;
         }
 
-        public Builder originPath(@Nullable Input<String> originPath) {
+        public Builder originPath(@Nullable Output<String> originPath) {
             this.originPath = originPath;
             return this;
         }
 
         public Builder originPath(@Nullable String originPath) {
-            this.originPath = Input.ofNullable(originPath);
+            this.originPath = Output.ofNullable(originPath);
             return this;
         }
 
-        public Builder patternsToMatch(@Nullable Input<List<String>> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable Output<List<String>> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
 
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
-            this.patternsToMatch = Input.ofNullable(patternsToMatch);
+            this.patternsToMatch = Output.ofNullable(patternsToMatch);
             return this;
         }
 
-        public Builder profileName(Input<String> profileName) {
+        public Builder profileName(Output<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
         public Builder profileName(String profileName) {
-            this.profileName = Input.of(Objects.requireNonNull(profileName));
+            this.profileName = Output.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder queryStringCachingBehavior(@Nullable Input<AfdQueryStringCachingBehavior> queryStringCachingBehavior) {
+        public Builder queryStringCachingBehavior(@Nullable Output<AfdQueryStringCachingBehavior> queryStringCachingBehavior) {
             this.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
 
         public Builder queryStringCachingBehavior(@Nullable AfdQueryStringCachingBehavior queryStringCachingBehavior) {
-            this.queryStringCachingBehavior = Input.ofNullable(queryStringCachingBehavior);
+            this.queryStringCachingBehavior = Output.ofNullable(queryStringCachingBehavior);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder routeName(@Nullable Input<String> routeName) {
+        public Builder routeName(@Nullable Output<String> routeName) {
             this.routeName = routeName;
             return this;
         }
 
         public Builder routeName(@Nullable String routeName) {
-            this.routeName = Input.ofNullable(routeName);
+            this.routeName = Output.ofNullable(routeName);
             return this;
         }
 
-        public Builder ruleSets(@Nullable Input<List<ResourceReferenceArgs>> ruleSets) {
+        public Builder ruleSets(@Nullable Output<List<ResourceReferenceArgs>> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
 
         public Builder ruleSets(@Nullable List<ResourceReferenceArgs> ruleSets) {
-            this.ruleSets = Input.ofNullable(ruleSets);
+            this.ruleSets = Output.ofNullable(ruleSets);
             return this;
         }
 
-        public Builder supportedProtocols(@Nullable Input<List<Either<String,AFDEndpointProtocols>>> supportedProtocols) {
+        public Builder supportedProtocols(@Nullable Output<List<Either<String,AFDEndpointProtocols>>> supportedProtocols) {
             this.supportedProtocols = supportedProtocols;
             return this;
         }
 
         public Builder supportedProtocols(@Nullable List<Either<String,AFDEndpointProtocols>> supportedProtocols) {
-            this.supportedProtocols = Input.ofNullable(supportedProtocols);
+            this.supportedProtocols = Output.ofNullable(supportedProtocols);
             return this;
         }
         public RouteArgs build() {

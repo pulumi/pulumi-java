@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepId", required=true)
-      private final Input<String> stepId;
+      private final Output<String> stepId;
 
-    public Input<String> getStepId() {
+    public Output<String> getStepId() {
         return this.stepId;
     }
 
-    public PrePostStepArgs(Input<String> stepId) {
+    public PrePostStepArgs(Output<String> stepId) {
         this.stepId = Objects.requireNonNull(stepId, "expected parameter 'stepId' to be non-null");
     }
 
     private PrePostStepArgs() {
-        this.stepId = Input.empty();
+        this.stepId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> stepId;
+        private Output<String> stepId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder stepId(Input<String> stepId) {
+        public Builder stepId(Output<String> stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
 
         public Builder stepId(String stepId) {
-            this.stepId = Input.of(Objects.requireNonNull(stepId));
+            this.stepId = Output.of(Objects.requireNonNull(stepId));
             return this;
         }
         public PrePostStepArgs build() {

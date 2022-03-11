@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayClientAuthConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewaySslPolicyArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -27,10 +27,10 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clientAuthConfiguration")
-      private final @Nullable Input<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
+      private final @Nullable Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
 
-    public Input<ApplicationGatewayClientAuthConfigurationArgs> getClientAuthConfiguration() {
-        return this.clientAuthConfiguration == null ? Input.empty() : this.clientAuthConfiguration;
+    public Output<ApplicationGatewayClientAuthConfigurationArgs> getClientAuthConfiguration() {
+        return this.clientAuthConfiguration == null ? Output.empty() : this.clientAuthConfiguration;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sslPolicy")
-      private final @Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy;
+      private final @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy;
 
-    public Input<ApplicationGatewaySslPolicyArgs> getSslPolicy() {
-        return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
+    public Output<ApplicationGatewaySslPolicyArgs> getSslPolicy() {
+        return this.sslPolicy == null ? Output.empty() : this.sslPolicy;
     }
 
     /**
@@ -71,18 +71,18 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="trustedClientCertificates")
-      private final @Nullable Input<List<SubResourceArgs>> trustedClientCertificates;
+      private final @Nullable Output<List<SubResourceArgs>> trustedClientCertificates;
 
-    public Input<List<SubResourceArgs>> getTrustedClientCertificates() {
-        return this.trustedClientCertificates == null ? Input.empty() : this.trustedClientCertificates;
+    public Output<List<SubResourceArgs>> getTrustedClientCertificates() {
+        return this.trustedClientCertificates == null ? Output.empty() : this.trustedClientCertificates;
     }
 
     public ApplicationGatewaySslProfileArgs(
-        @Nullable Input<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy,
-        @Nullable Input<List<SubResourceArgs>> trustedClientCertificates) {
+        @Nullable Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy,
+        @Nullable Output<List<SubResourceArgs>> trustedClientCertificates) {
         this.clientAuthConfiguration = clientAuthConfiguration;
         this.id = id;
         this.name = name;
@@ -91,11 +91,11 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
     }
 
     private ApplicationGatewaySslProfileArgs() {
-        this.clientAuthConfiguration = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.sslPolicy = Input.empty();
-        this.trustedClientCertificates = Input.empty();
+        this.clientAuthConfiguration = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.sslPolicy = Output.empty();
+        this.trustedClientCertificates = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy;
-        private @Nullable Input<List<SubResourceArgs>> trustedClientCertificates;
+        private @Nullable Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy;
+        private @Nullable Output<List<SubResourceArgs>> trustedClientCertificates;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class ApplicationGatewaySslProfileArgs extends io.pulumi.resources.
     	      this.trustedClientCertificates = defaults.trustedClientCertificates;
         }
 
-        public Builder clientAuthConfiguration(@Nullable Input<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration) {
+        public Builder clientAuthConfiguration(@Nullable Output<ApplicationGatewayClientAuthConfigurationArgs> clientAuthConfiguration) {
             this.clientAuthConfiguration = clientAuthConfiguration;
             return this;
         }
 
         public Builder clientAuthConfiguration(@Nullable ApplicationGatewayClientAuthConfigurationArgs clientAuthConfiguration) {
-            this.clientAuthConfiguration = Input.ofNullable(clientAuthConfiguration);
+            this.clientAuthConfiguration = Output.ofNullable(clientAuthConfiguration);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sslPolicy(@Nullable Input<ApplicationGatewaySslPolicyArgs> sslPolicy) {
+        public Builder sslPolicy(@Nullable Output<ApplicationGatewaySslPolicyArgs> sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
         public Builder sslPolicy(@Nullable ApplicationGatewaySslPolicyArgs sslPolicy) {
-            this.sslPolicy = Input.ofNullable(sslPolicy);
+            this.sslPolicy = Output.ofNullable(sslPolicy);
             return this;
         }
 
-        public Builder trustedClientCertificates(@Nullable Input<List<SubResourceArgs>> trustedClientCertificates) {
+        public Builder trustedClientCertificates(@Nullable Output<List<SubResourceArgs>> trustedClientCertificates) {
             this.trustedClientCertificates = trustedClientCertificates;
             return this;
         }
 
         public Builder trustedClientCertificates(@Nullable List<SubResourceArgs> trustedClientCertificates) {
-            this.trustedClientCertificates = Input.ofNullable(trustedClientCertificates);
+            this.trustedClientCertificates = Output.ofNullable(trustedClientCertificates);
             return this;
         }
         public ApplicationGatewaySslProfileArgs build() {

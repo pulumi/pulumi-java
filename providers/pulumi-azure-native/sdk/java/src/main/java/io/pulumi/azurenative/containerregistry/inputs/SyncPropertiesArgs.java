@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageTtl", required=true)
-      private final Input<String> messageTtl;
+      private final Output<String> messageTtl;
 
-    public Input<String> getMessageTtl() {
+    public Output<String> getMessageTtl() {
         return this.messageTtl;
     }
 
@@ -34,10 +34,10 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-      private final @Nullable Input<String> schedule;
+      private final @Nullable Output<String> schedule;
 
-    public Input<String> getSchedule() {
-        return this.schedule == null ? Input.empty() : this.schedule;
+    public Output<String> getSchedule() {
+        return this.schedule == null ? Output.empty() : this.schedule;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncWindow")
-      private final @Nullable Input<String> syncWindow;
+      private final @Nullable Output<String> syncWindow;
 
-    public Input<String> getSyncWindow() {
-        return this.syncWindow == null ? Input.empty() : this.syncWindow;
+    public Output<String> getSyncWindow() {
+        return this.syncWindow == null ? Output.empty() : this.syncWindow;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tokenId", required=true)
-      private final Input<String> tokenId;
+      private final Output<String> tokenId;
 
-    public Input<String> getTokenId() {
+    public Output<String> getTokenId() {
         return this.tokenId;
     }
 
     public SyncPropertiesArgs(
-        Input<String> messageTtl,
-        @Nullable Input<String> schedule,
-        @Nullable Input<String> syncWindow,
-        Input<String> tokenId) {
+        Output<String> messageTtl,
+        @Nullable Output<String> schedule,
+        @Nullable Output<String> syncWindow,
+        Output<String> tokenId) {
         this.messageTtl = Objects.requireNonNull(messageTtl, "expected parameter 'messageTtl' to be non-null");
         this.schedule = schedule;
         this.syncWindow = syncWindow;
@@ -74,10 +74,10 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SyncPropertiesArgs() {
-        this.messageTtl = Input.empty();
-        this.schedule = Input.empty();
-        this.syncWindow = Input.empty();
-        this.tokenId = Input.empty();
+        this.messageTtl = Output.empty();
+        this.schedule = Output.empty();
+        this.syncWindow = Output.empty();
+        this.tokenId = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> messageTtl;
-        private @Nullable Input<String> schedule;
-        private @Nullable Input<String> syncWindow;
-        private Input<String> tokenId;
+        private Output<String> messageTtl;
+        private @Nullable Output<String> schedule;
+        private @Nullable Output<String> syncWindow;
+        private Output<String> tokenId;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tokenId = defaults.tokenId;
         }
 
-        public Builder messageTtl(Input<String> messageTtl) {
+        public Builder messageTtl(Output<String> messageTtl) {
             this.messageTtl = Objects.requireNonNull(messageTtl);
             return this;
         }
 
         public Builder messageTtl(String messageTtl) {
-            this.messageTtl = Input.of(Objects.requireNonNull(messageTtl));
+            this.messageTtl = Output.of(Objects.requireNonNull(messageTtl));
             return this;
         }
 
-        public Builder schedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Output<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Input.ofNullable(schedule);
+            this.schedule = Output.ofNullable(schedule);
             return this;
         }
 
-        public Builder syncWindow(@Nullable Input<String> syncWindow) {
+        public Builder syncWindow(@Nullable Output<String> syncWindow) {
             this.syncWindow = syncWindow;
             return this;
         }
 
         public Builder syncWindow(@Nullable String syncWindow) {
-            this.syncWindow = Input.ofNullable(syncWindow);
+            this.syncWindow = Output.ofNullable(syncWindow);
             return this;
         }
 
-        public Builder tokenId(Input<String> tokenId) {
+        public Builder tokenId(Output<String> tokenId) {
             this.tokenId = Objects.requireNonNull(tokenId);
             return this;
         }
 
         public Builder tokenId(String tokenId) {
-            this.tokenId = Input.of(Objects.requireNonNull(tokenId));
+            this.tokenId = Output.of(Objects.requireNonNull(tokenId));
             return this;
         }
         public SyncPropertiesArgs build() {

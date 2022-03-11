@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="port")
-      private final @Nullable Input<Integer> port;
+      private final @Nullable Output<Integer> port;
 
-    public Input<Integer> getPort() {
-        return this.port == null ? Input.empty() : this.port;
+    public Output<Integer> getPort() {
+        return this.port == null ? Output.empty() : this.port;
     }
 
     public EndpointPropertiesArgs(
-        Input<String> name,
-        @Nullable Input<Integer> port) {
+        Output<String> name,
+        @Nullable Output<Integer> port) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.port = port;
     }
 
     private EndpointPropertiesArgs() {
-        this.name = Input.empty();
-        this.port = Input.empty();
+        this.name = Output.empty();
+        this.port = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private @Nullable Input<Integer> port;
+        private Output<String> name;
+        private @Nullable Output<Integer> port;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class EndpointPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.port = defaults.port;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder port(@Nullable Input<Integer> port) {
+        public Builder port(@Nullable Output<Integer> port) {
             this.port = port;
             return this;
         }
 
         public Builder port(@Nullable Integer port) {
-            this.port = Input.ofNullable(port);
+            this.port = Output.ofNullable(port);
             return this;
         }
         public EndpointPropertiesArgs build() {

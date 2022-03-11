@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class IpAddressOrRangeArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipAddressOrRange")
-      private final @Nullable Input<String> ipAddressOrRange;
+      private final @Nullable Output<String> ipAddressOrRange;
 
-    public Input<String> getIpAddressOrRange() {
-        return this.ipAddressOrRange == null ? Input.empty() : this.ipAddressOrRange;
+    public Output<String> getIpAddressOrRange() {
+        return this.ipAddressOrRange == null ? Output.empty() : this.ipAddressOrRange;
     }
 
-    public IpAddressOrRangeArgs(@Nullable Input<String> ipAddressOrRange) {
+    public IpAddressOrRangeArgs(@Nullable Output<String> ipAddressOrRange) {
         this.ipAddressOrRange = ipAddressOrRange;
     }
 
     private IpAddressOrRangeArgs() {
-        this.ipAddressOrRange = Input.empty();
+        this.ipAddressOrRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class IpAddressOrRangeArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipAddressOrRange;
+        private @Nullable Output<String> ipAddressOrRange;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class IpAddressOrRangeArgs extends io.pulumi.resources.ResourceArgs
     	      this.ipAddressOrRange = defaults.ipAddressOrRange;
         }
 
-        public Builder ipAddressOrRange(@Nullable Input<String> ipAddressOrRange) {
+        public Builder ipAddressOrRange(@Nullable Output<String> ipAddressOrRange) {
             this.ipAddressOrRange = ipAddressOrRange;
             return this;
         }
 
         public Builder ipAddressOrRange(@Nullable String ipAddressOrRange) {
-            this.ipAddressOrRange = Input.ofNullable(ipAddressOrRange);
+            this.ipAddressOrRange = Output.ofNullable(ipAddressOrRange);
             return this;
         }
         public IpAddressOrRangeArgs build() {

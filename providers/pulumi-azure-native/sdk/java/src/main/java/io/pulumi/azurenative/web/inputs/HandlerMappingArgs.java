@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-      private final @Nullable Input<String> arguments;
+      private final @Nullable Output<String> arguments;
 
-    public Input<String> getArguments() {
-        return this.arguments == null ? Input.empty() : this.arguments;
+    public Output<String> getArguments() {
+        return this.arguments == null ? Output.empty() : this.arguments;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extension")
-      private final @Nullable Input<String> extension;
+      private final @Nullable Output<String> extension;
 
-    public Input<String> getExtension() {
-        return this.extension == null ? Input.empty() : this.extension;
+    public Output<String> getExtension() {
+        return this.extension == null ? Output.empty() : this.extension;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptProcessor")
-      private final @Nullable Input<String> scriptProcessor;
+      private final @Nullable Output<String> scriptProcessor;
 
-    public Input<String> getScriptProcessor() {
-        return this.scriptProcessor == null ? Input.empty() : this.scriptProcessor;
+    public Output<String> getScriptProcessor() {
+        return this.scriptProcessor == null ? Output.empty() : this.scriptProcessor;
     }
 
     public HandlerMappingArgs(
-        @Nullable Input<String> arguments,
-        @Nullable Input<String> extension,
-        @Nullable Input<String> scriptProcessor) {
+        @Nullable Output<String> arguments,
+        @Nullable Output<String> extension,
+        @Nullable Output<String> scriptProcessor) {
         this.arguments = arguments;
         this.extension = extension;
         this.scriptProcessor = scriptProcessor;
     }
 
     private HandlerMappingArgs() {
-        this.arguments = Input.empty();
-        this.extension = Input.empty();
-        this.scriptProcessor = Input.empty();
+        this.arguments = Output.empty();
+        this.extension = Output.empty();
+        this.scriptProcessor = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> arguments;
-        private @Nullable Input<String> extension;
-        private @Nullable Input<String> scriptProcessor;
+        private @Nullable Output<String> arguments;
+        private @Nullable Output<String> extension;
+        private @Nullable Output<String> scriptProcessor;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class HandlerMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scriptProcessor = defaults.scriptProcessor;
         }
 
-        public Builder arguments(@Nullable Input<String> arguments) {
+        public Builder arguments(@Nullable Output<String> arguments) {
             this.arguments = arguments;
             return this;
         }
 
         public Builder arguments(@Nullable String arguments) {
-            this.arguments = Input.ofNullable(arguments);
+            this.arguments = Output.ofNullable(arguments);
             return this;
         }
 
-        public Builder extension(@Nullable Input<String> extension) {
+        public Builder extension(@Nullable Output<String> extension) {
             this.extension = extension;
             return this;
         }
 
         public Builder extension(@Nullable String extension) {
-            this.extension = Input.ofNullable(extension);
+            this.extension = Output.ofNullable(extension);
             return this;
         }
 
-        public Builder scriptProcessor(@Nullable Input<String> scriptProcessor) {
+        public Builder scriptProcessor(@Nullable Output<String> scriptProcessor) {
             this.scriptProcessor = scriptProcessor;
             return this;
         }
 
         public Builder scriptProcessor(@Nullable String scriptProcessor) {
-            this.scriptProcessor = Input.ofNullable(scriptProcessor);
+            this.scriptProcessor = Output.ofNullable(scriptProcessor);
             return this;
         }
         public HandlerMappingArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.ApiManagementServiceSkuPropertiesArgs;
 import io.pulumi.azurenative.apimanagement.inputs.VirtualNetworkConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disableGateway")
-      private final @Nullable Input<Boolean> disableGateway;
+      private final @Nullable Output<Boolean> disableGateway;
 
-    public Input<Boolean> getDisableGateway() {
-        return this.disableGateway == null ? Input.empty() : this.disableGateway;
+    public Output<Boolean> getDisableGateway() {
+        return this.disableGateway == null ? Output.empty() : this.disableGateway;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
@@ -49,9 +49,9 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<ApiManagementServiceSkuPropertiesArgs> sku;
+      private final Output<ApiManagementServiceSkuPropertiesArgs> sku;
 
-    public Input<ApiManagementServiceSkuPropertiesArgs> getSku() {
+    public Output<ApiManagementServiceSkuPropertiesArgs> getSku() {
         return this.sku;
     }
 
@@ -60,10 +60,10 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetworkConfiguration")
-      private final @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
+      private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
-    public Input<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
-        return this.virtualNetworkConfiguration == null ? Input.empty() : this.virtualNetworkConfiguration;
+    public Output<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
+        return this.virtualNetworkConfiguration == null ? Output.empty() : this.virtualNetworkConfiguration;
     }
 
     /**
@@ -71,19 +71,19 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public AdditionalLocationArgs(
-        @Nullable Input<Boolean> disableGateway,
-        Input<String> location,
-        Input<ApiManagementServiceSkuPropertiesArgs> sku,
-        @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration,
-        @Nullable Input<List<String>> zones) {
-        this.disableGateway = disableGateway == null ? Input.ofNullable(false) : disableGateway;
+        @Nullable Output<Boolean> disableGateway,
+        Output<String> location,
+        Output<ApiManagementServiceSkuPropertiesArgs> sku,
+        @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration,
+        @Nullable Output<List<String>> zones) {
+        this.disableGateway = disableGateway == null ? Output.ofNullable(false) : disableGateway;
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
         this.virtualNetworkConfiguration = virtualNetworkConfiguration;
@@ -91,11 +91,11 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AdditionalLocationArgs() {
-        this.disableGateway = Input.empty();
-        this.location = Input.empty();
-        this.sku = Input.empty();
-        this.virtualNetworkConfiguration = Input.empty();
-        this.zones = Input.empty();
+        this.disableGateway = Output.empty();
+        this.location = Output.empty();
+        this.sku = Output.empty();
+        this.virtualNetworkConfiguration = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -107,11 +107,11 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> disableGateway;
-        private Input<String> location;
-        private Input<ApiManagementServiceSkuPropertiesArgs> sku;
-        private @Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<Boolean> disableGateway;
+        private Output<String> location;
+        private Output<ApiManagementServiceSkuPropertiesArgs> sku;
+        private @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -126,53 +126,53 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
     	      this.zones = defaults.zones;
         }
 
-        public Builder disableGateway(@Nullable Input<Boolean> disableGateway) {
+        public Builder disableGateway(@Nullable Output<Boolean> disableGateway) {
             this.disableGateway = disableGateway;
             return this;
         }
 
         public Builder disableGateway(@Nullable Boolean disableGateway) {
-            this.disableGateway = Input.ofNullable(disableGateway);
+            this.disableGateway = Output.ofNullable(disableGateway);
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder sku(Input<ApiManagementServiceSkuPropertiesArgs> sku) {
+        public Builder sku(Output<ApiManagementServiceSkuPropertiesArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(ApiManagementServiceSkuPropertiesArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder virtualNetworkConfiguration(@Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
+        public Builder virtualNetworkConfiguration(@Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
 
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
-            this.virtualNetworkConfiguration = Input.ofNullable(virtualNetworkConfiguration);
+            this.virtualNetworkConfiguration = Output.ofNullable(virtualNetworkConfiguration);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public AdditionalLocationArgs build() {

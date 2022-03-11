@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.enums.LinkTypes;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="linkType")
-      private final @Nullable Input<LinkTypes> linkType;
+      private final @Nullable Output<LinkTypes> linkType;
 
-    public Input<LinkTypes> getLinkType() {
-        return this.linkType == null ? Input.empty() : this.linkType;
+    public Output<LinkTypes> getLinkType() {
+        return this.linkType == null ? Output.empty() : this.linkType;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourcePropertyName", required=true)
-      private final Input<String> sourcePropertyName;
+      private final Output<String> sourcePropertyName;
 
-    public Input<String> getSourcePropertyName() {
+    public Output<String> getSourcePropertyName() {
         return this.sourcePropertyName;
     }
 
@@ -46,25 +46,25 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="targetPropertyName", required=true)
-      private final Input<String> targetPropertyName;
+      private final Output<String> targetPropertyName;
 
-    public Input<String> getTargetPropertyName() {
+    public Output<String> getTargetPropertyName() {
         return this.targetPropertyName;
     }
 
     public TypePropertiesMappingArgs(
-        @Nullable Input<LinkTypes> linkType,
-        Input<String> sourcePropertyName,
-        Input<String> targetPropertyName) {
+        @Nullable Output<LinkTypes> linkType,
+        Output<String> sourcePropertyName,
+        Output<String> targetPropertyName) {
         this.linkType = linkType;
         this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName, "expected parameter 'sourcePropertyName' to be non-null");
         this.targetPropertyName = Objects.requireNonNull(targetPropertyName, "expected parameter 'targetPropertyName' to be non-null");
     }
 
     private TypePropertiesMappingArgs() {
-        this.linkType = Input.empty();
-        this.sourcePropertyName = Input.empty();
-        this.targetPropertyName = Input.empty();
+        this.linkType = Output.empty();
+        this.sourcePropertyName = Output.empty();
+        this.targetPropertyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<LinkTypes> linkType;
-        private Input<String> sourcePropertyName;
-        private Input<String> targetPropertyName;
+        private @Nullable Output<LinkTypes> linkType;
+        private Output<String> sourcePropertyName;
+        private Output<String> targetPropertyName;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
     	      this.targetPropertyName = defaults.targetPropertyName;
         }
 
-        public Builder linkType(@Nullable Input<LinkTypes> linkType) {
+        public Builder linkType(@Nullable Output<LinkTypes> linkType) {
             this.linkType = linkType;
             return this;
         }
 
         public Builder linkType(@Nullable LinkTypes linkType) {
-            this.linkType = Input.ofNullable(linkType);
+            this.linkType = Output.ofNullable(linkType);
             return this;
         }
 
-        public Builder sourcePropertyName(Input<String> sourcePropertyName) {
+        public Builder sourcePropertyName(Output<String> sourcePropertyName) {
             this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
             return this;
         }
 
         public Builder sourcePropertyName(String sourcePropertyName) {
-            this.sourcePropertyName = Input.of(Objects.requireNonNull(sourcePropertyName));
+            this.sourcePropertyName = Output.of(Objects.requireNonNull(sourcePropertyName));
             return this;
         }
 
-        public Builder targetPropertyName(Input<String> targetPropertyName) {
+        public Builder targetPropertyName(Output<String> targetPropertyName) {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
         }
 
         public Builder targetPropertyName(String targetPropertyName) {
-            this.targetPropertyName = Input.of(Objects.requireNonNull(targetPropertyName));
+            this.targetPropertyName = Output.of(Objects.requireNonNull(targetPropertyName));
             return this;
         }
         public TypePropertiesMappingArgs build() {

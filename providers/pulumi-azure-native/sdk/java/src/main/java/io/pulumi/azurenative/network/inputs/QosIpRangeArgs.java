@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endIP")
-      private final @Nullable Input<String> endIP;
+      private final @Nullable Output<String> endIP;
 
-    public Input<String> getEndIP() {
-        return this.endIP == null ? Input.empty() : this.endIP;
+    public Output<String> getEndIP() {
+        return this.endIP == null ? Output.empty() : this.endIP;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startIP")
-      private final @Nullable Input<String> startIP;
+      private final @Nullable Output<String> startIP;
 
-    public Input<String> getStartIP() {
-        return this.startIP == null ? Input.empty() : this.startIP;
+    public Output<String> getStartIP() {
+        return this.startIP == null ? Output.empty() : this.startIP;
     }
 
     public QosIpRangeArgs(
-        @Nullable Input<String> endIP,
-        @Nullable Input<String> startIP) {
+        @Nullable Output<String> endIP,
+        @Nullable Output<String> startIP) {
         this.endIP = endIP;
         this.startIP = startIP;
     }
 
     private QosIpRangeArgs() {
-        this.endIP = Input.empty();
-        this.startIP = Input.empty();
+        this.endIP = Output.empty();
+        this.startIP = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> endIP;
-        private @Nullable Input<String> startIP;
+        private @Nullable Output<String> endIP;
+        private @Nullable Output<String> startIP;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class QosIpRangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startIP = defaults.startIP;
         }
 
-        public Builder endIP(@Nullable Input<String> endIP) {
+        public Builder endIP(@Nullable Output<String> endIP) {
             this.endIP = endIP;
             return this;
         }
 
         public Builder endIP(@Nullable String endIP) {
-            this.endIP = Input.ofNullable(endIP);
+            this.endIP = Output.ofNullable(endIP);
             return this;
         }
 
-        public Builder startIP(@Nullable Input<String> startIP) {
+        public Builder startIP(@Nullable Output<String> startIP) {
             this.startIP = startIP;
             return this;
         }
 
         public Builder startIP(@Nullable String startIP) {
-            this.startIP = Input.ofNullable(startIP);
+            this.startIP = Output.ofNullable(startIP);
             return this;
         }
         public QosIpRangeArgs build() {

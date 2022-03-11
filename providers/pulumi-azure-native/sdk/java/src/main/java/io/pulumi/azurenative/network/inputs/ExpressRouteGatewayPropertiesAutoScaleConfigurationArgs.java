@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ExpressRouteGatewayPropertiesBoundsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
      * 
      */
     @InputImport(name="bounds")
-      private final @Nullable Input<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
+      private final @Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
 
-    public Input<ExpressRouteGatewayPropertiesBoundsArgs> getBounds() {
-        return this.bounds == null ? Input.empty() : this.bounds;
+    public Output<ExpressRouteGatewayPropertiesBoundsArgs> getBounds() {
+        return this.bounds == null ? Output.empty() : this.bounds;
     }
 
-    public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(@Nullable Input<ExpressRouteGatewayPropertiesBoundsArgs> bounds) {
+    public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs(@Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds) {
         this.bounds = bounds;
     }
 
     private ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs() {
-        this.bounds = Input.empty();
+        this.bounds = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
     }
 
     public static final class Builder {
-        private @Nullable Input<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
+        private @Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs exten
     	      this.bounds = defaults.bounds;
         }
 
-        public Builder bounds(@Nullable Input<ExpressRouteGatewayPropertiesBoundsArgs> bounds) {
+        public Builder bounds(@Nullable Output<ExpressRouteGatewayPropertiesBoundsArgs> bounds) {
             this.bounds = bounds;
             return this;
         }
 
         public Builder bounds(@Nullable ExpressRouteGatewayPropertiesBoundsArgs bounds) {
-            this.bounds = Input.ofNullable(bounds);
+            this.bounds = Output.ofNullable(bounds);
             return this;
         }
         public ExpressRouteGatewayPropertiesAutoScaleConfigurationArgs build() {

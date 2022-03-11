@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cname")
-      private final @Nullable Input<String> cname;
+      private final @Nullable Output<String> cname;
 
-    public Input<String> getCname() {
-        return this.cname == null ? Input.empty() : this.cname;
+    public Output<String> getCname() {
+        return this.cname == null ? Output.empty() : this.cname;
     }
 
-    public CnameRecordArgs(@Nullable Input<String> cname) {
+    public CnameRecordArgs(@Nullable Output<String> cname) {
         this.cname = cname;
     }
 
     private CnameRecordArgs() {
-        this.cname = Input.empty();
+        this.cname = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> cname;
+        private @Nullable Output<String> cname;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CnameRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cname = defaults.cname;
         }
 
-        public Builder cname(@Nullable Input<String> cname) {
+        public Builder cname(@Nullable Output<String> cname) {
             this.cname = cname;
             return this;
         }
 
         public Builder cname(@Nullable String cname) {
-            this.cname = Input.ofNullable(cname);
+            this.cname = Output.ofNullable(cname);
             return this;
         }
         public CnameRecordArgs build() {

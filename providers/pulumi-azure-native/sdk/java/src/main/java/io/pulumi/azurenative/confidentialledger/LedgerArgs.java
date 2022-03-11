@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.confidentialledger;
 
 import io.pulumi.azurenative.confidentialledger.inputs.LedgerPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ledgerName")
-      private final @Nullable Input<String> ledgerName;
+      private final @Nullable Output<String> ledgerName;
 
-    public Input<String> getLedgerName() {
-        return this.ledgerName == null ? Input.empty() : this.ledgerName;
+    public Output<String> getLedgerName() {
+        return this.ledgerName == null ? Output.empty() : this.ledgerName;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<LedgerPropertiesArgs> properties;
+      private final @Nullable Output<LedgerPropertiesArgs> properties;
 
-    public Input<LedgerPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<LedgerPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public LedgerArgs(
-        @Nullable Input<String> ledgerName,
-        @Nullable Input<String> location,
-        @Nullable Input<LedgerPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> ledgerName,
+        @Nullable Output<String> location,
+        @Nullable Output<LedgerPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.ledgerName = ledgerName;
         this.location = location;
         this.properties = properties;
@@ -85,11 +85,11 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LedgerArgs() {
-        this.ledgerName = Input.empty();
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.ledgerName = Output.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ledgerName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<LedgerPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> ledgerName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<LedgerPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class LedgerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder ledgerName(@Nullable Input<String> ledgerName) {
+        public Builder ledgerName(@Nullable Output<String> ledgerName) {
             this.ledgerName = ledgerName;
             return this;
         }
 
         public Builder ledgerName(@Nullable String ledgerName) {
-            this.ledgerName = Input.ofNullable(ledgerName);
+            this.ledgerName = Output.ofNullable(ledgerName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<LedgerPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<LedgerPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable LedgerPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public LedgerArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="aadAuthority", required=true)
-      private final Input<String> aadAuthority;
+      private final Output<String> aadAuthority;
 
-    public Input<String> getAadAuthority() {
+    public Output<String> getAadAuthority() {
         return this.aadAuthority;
     }
 
@@ -33,9 +33,9 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="applicationId", required=true)
-      private final Input<String> applicationId;
+      private final Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
+    public Output<String> getApplicationId() {
         return this.applicationId;
     }
 
@@ -44,9 +44,9 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="audience", required=true)
-      private final Input<String> audience;
+      private final Output<String> audience;
 
-    public Input<String> getAudience() {
+    public Output<String> getAudience() {
         return this.audience;
     }
 
@@ -55,9 +55,9 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="objectId", required=true)
-      private final Input<String> objectId;
+      private final Output<String> objectId;
 
-    public Input<String> getObjectId() {
+    public Output<String> getObjectId() {
         return this.objectId;
     }
 
@@ -66,18 +66,18 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tenantId", required=true)
-      private final Input<String> tenantId;
+      private final Output<String> tenantId;
 
-    public Input<String> getTenantId() {
+    public Output<String> getTenantId() {
         return this.tenantId;
     }
 
     public IdentityProviderInputArgs(
-        Input<String> aadAuthority,
-        Input<String> applicationId,
-        Input<String> audience,
-        Input<String> objectId,
-        Input<String> tenantId) {
+        Output<String> aadAuthority,
+        Output<String> applicationId,
+        Output<String> audience,
+        Output<String> objectId,
+        Output<String> tenantId) {
         this.aadAuthority = Objects.requireNonNull(aadAuthority, "expected parameter 'aadAuthority' to be non-null");
         this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
         this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
@@ -86,11 +86,11 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
     }
 
     private IdentityProviderInputArgs() {
-        this.aadAuthority = Input.empty();
-        this.applicationId = Input.empty();
-        this.audience = Input.empty();
-        this.objectId = Input.empty();
-        this.tenantId = Input.empty();
+        this.aadAuthority = Output.empty();
+        this.applicationId = Output.empty();
+        this.audience = Output.empty();
+        this.objectId = Output.empty();
+        this.tenantId = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<String> aadAuthority;
-        private Input<String> applicationId;
-        private Input<String> audience;
-        private Input<String> objectId;
-        private Input<String> tenantId;
+        private Output<String> aadAuthority;
+        private Output<String> applicationId;
+        private Output<String> audience;
+        private Output<String> objectId;
+        private Output<String> tenantId;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder aadAuthority(Input<String> aadAuthority) {
+        public Builder aadAuthority(Output<String> aadAuthority) {
             this.aadAuthority = Objects.requireNonNull(aadAuthority);
             return this;
         }
 
         public Builder aadAuthority(String aadAuthority) {
-            this.aadAuthority = Input.of(Objects.requireNonNull(aadAuthority));
+            this.aadAuthority = Output.of(Objects.requireNonNull(aadAuthority));
             return this;
         }
 
-        public Builder applicationId(Input<String> applicationId) {
+        public Builder applicationId(Output<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
         public Builder applicationId(String applicationId) {
-            this.applicationId = Input.of(Objects.requireNonNull(applicationId));
+            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder audience(Input<String> audience) {
+        public Builder audience(Output<String> audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
         public Builder audience(String audience) {
-            this.audience = Input.of(Objects.requireNonNull(audience));
+            this.audience = Output.of(Objects.requireNonNull(audience));
             return this;
         }
 
-        public Builder objectId(Input<String> objectId) {
+        public Builder objectId(Output<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
         public Builder objectId(String objectId) {
-            this.objectId = Input.of(Objects.requireNonNull(objectId));
+            this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder tenantId(Input<String> tenantId) {
+        public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
         public Builder tenantId(String tenantId) {
-            this.tenantId = Input.of(Objects.requireNonNull(tenantId));
+            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
         }
         public IdentityProviderInputArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.PipelineReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -27,10 +27,10 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -38,9 +38,9 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dependsOn", required=true)
-      private final Input<List<PipelineReferenceArgs>> dependsOn;
+      private final Output<List<PipelineReferenceArgs>> dependsOn;
 
-    public Input<List<PipelineReferenceArgs>> getDependsOn() {
+    public Output<List<PipelineReferenceArgs>> getDependsOn() {
         return this.dependsOn;
     }
 
@@ -49,10 +49,10 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -60,9 +60,9 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pipeline", required=true)
-      private final Input<TriggerPipelineReferenceArgs> pipeline;
+      private final Output<TriggerPipelineReferenceArgs> pipeline;
 
-    public Input<TriggerPipelineReferenceArgs> getPipeline() {
+    public Output<TriggerPipelineReferenceArgs> getPipeline() {
         return this.pipeline;
     }
 
@@ -71,9 +71,9 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="runDimension", required=true)
-      private final Input<String> runDimension;
+      private final Output<String> runDimension;
 
-    public Input<String> getRunDimension() {
+    public Output<String> getRunDimension() {
         return this.runDimension;
     }
 
@@ -83,19 +83,19 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ChainingTriggerArgs(
-        @Nullable Input<List<Object>> annotations,
-        Input<List<PipelineReferenceArgs>> dependsOn,
-        @Nullable Input<String> description,
-        Input<TriggerPipelineReferenceArgs> pipeline,
-        Input<String> runDimension,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        Output<List<PipelineReferenceArgs>> dependsOn,
+        @Nullable Output<String> description,
+        Output<TriggerPipelineReferenceArgs> pipeline,
+        Output<String> runDimension,
+        Output<String> type) {
         this.annotations = annotations;
         this.dependsOn = Objects.requireNonNull(dependsOn, "expected parameter 'dependsOn' to be non-null");
         this.description = description;
@@ -105,12 +105,12 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ChainingTriggerArgs() {
-        this.annotations = Input.empty();
-        this.dependsOn = Input.empty();
-        this.description = Input.empty();
-        this.pipeline = Input.empty();
-        this.runDimension = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.dependsOn = Output.empty();
+        this.description = Output.empty();
+        this.pipeline = Output.empty();
+        this.runDimension = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private Input<List<PipelineReferenceArgs>> dependsOn;
-        private @Nullable Input<String> description;
-        private Input<TriggerPipelineReferenceArgs> pipeline;
-        private Input<String> runDimension;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private Output<List<PipelineReferenceArgs>> dependsOn;
+        private @Nullable Output<String> description;
+        private Output<TriggerPipelineReferenceArgs> pipeline;
+        private Output<String> runDimension;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class ChainingTriggerArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder dependsOn(Input<List<PipelineReferenceArgs>> dependsOn) {
+        public Builder dependsOn(Output<List<PipelineReferenceArgs>> dependsOn) {
             this.dependsOn = Objects.requireNonNull(dependsOn);
             return this;
         }
 
         public Builder dependsOn(List<PipelineReferenceArgs> dependsOn) {
-            this.dependsOn = Input.of(Objects.requireNonNull(dependsOn));
+            this.dependsOn = Output.of(Objects.requireNonNull(dependsOn));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder pipeline(Input<TriggerPipelineReferenceArgs> pipeline) {
+        public Builder pipeline(Output<TriggerPipelineReferenceArgs> pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
 
         public Builder pipeline(TriggerPipelineReferenceArgs pipeline) {
-            this.pipeline = Input.of(Objects.requireNonNull(pipeline));
+            this.pipeline = Output.of(Objects.requireNonNull(pipeline));
             return this;
         }
 
-        public Builder runDimension(Input<String> runDimension) {
+        public Builder runDimension(Output<String> runDimension) {
             this.runDimension = Objects.requireNonNull(runDimension);
             return this;
         }
 
         public Builder runDimension(String runDimension) {
-            this.runDimension = Input.of(Objects.requireNonNull(runDimension));
+            this.runDimension = Output.of(Objects.requireNonNull(runDimension));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ChainingTriggerArgs build() {

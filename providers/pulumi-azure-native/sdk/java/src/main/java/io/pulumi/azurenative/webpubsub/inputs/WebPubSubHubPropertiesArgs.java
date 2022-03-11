@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.EventHandlerArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="anonymousConnectPolicy")
-      private final @Nullable Input<String> anonymousConnectPolicy;
+      private final @Nullable Output<String> anonymousConnectPolicy;
 
-    public Input<String> getAnonymousConnectPolicy() {
-        return this.anonymousConnectPolicy == null ? Input.empty() : this.anonymousConnectPolicy;
+    public Output<String> getAnonymousConnectPolicy() {
+        return this.anonymousConnectPolicy == null ? Output.empty() : this.anonymousConnectPolicy;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="eventHandlers")
-      private final @Nullable Input<List<EventHandlerArgs>> eventHandlers;
+      private final @Nullable Output<List<EventHandlerArgs>> eventHandlers;
 
-    public Input<List<EventHandlerArgs>> getEventHandlers() {
-        return this.eventHandlers == null ? Input.empty() : this.eventHandlers;
+    public Output<List<EventHandlerArgs>> getEventHandlers() {
+        return this.eventHandlers == null ? Output.empty() : this.eventHandlers;
     }
 
     public WebPubSubHubPropertiesArgs(
-        @Nullable Input<String> anonymousConnectPolicy,
-        @Nullable Input<List<EventHandlerArgs>> eventHandlers) {
-        this.anonymousConnectPolicy = anonymousConnectPolicy == null ? Input.ofNullable("deny") : anonymousConnectPolicy;
+        @Nullable Output<String> anonymousConnectPolicy,
+        @Nullable Output<List<EventHandlerArgs>> eventHandlers) {
+        this.anonymousConnectPolicy = anonymousConnectPolicy == null ? Output.ofNullable("deny") : anonymousConnectPolicy;
         this.eventHandlers = eventHandlers;
     }
 
     private WebPubSubHubPropertiesArgs() {
-        this.anonymousConnectPolicy = Input.empty();
-        this.eventHandlers = Input.empty();
+        this.anonymousConnectPolicy = Output.empty();
+        this.eventHandlers = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> anonymousConnectPolicy;
-        private @Nullable Input<List<EventHandlerArgs>> eventHandlers;
+        private @Nullable Output<String> anonymousConnectPolicy;
+        private @Nullable Output<List<EventHandlerArgs>> eventHandlers;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class WebPubSubHubPropertiesArgs extends io.pulumi.resources.Resour
     	      this.eventHandlers = defaults.eventHandlers;
         }
 
-        public Builder anonymousConnectPolicy(@Nullable Input<String> anonymousConnectPolicy) {
+        public Builder anonymousConnectPolicy(@Nullable Output<String> anonymousConnectPolicy) {
             this.anonymousConnectPolicy = anonymousConnectPolicy;
             return this;
         }
 
         public Builder anonymousConnectPolicy(@Nullable String anonymousConnectPolicy) {
-            this.anonymousConnectPolicy = Input.ofNullable(anonymousConnectPolicy);
+            this.anonymousConnectPolicy = Output.ofNullable(anonymousConnectPolicy);
             return this;
         }
 
-        public Builder eventHandlers(@Nullable Input<List<EventHandlerArgs>> eventHandlers) {
+        public Builder eventHandlers(@Nullable Output<List<EventHandlerArgs>> eventHandlers) {
             this.eventHandlers = eventHandlers;
             return this;
         }
 
         public Builder eventHandlers(@Nullable List<EventHandlerArgs> eventHandlers) {
-            this.eventHandlers = Input.ofNullable(eventHandlers);
+            this.eventHandlers = Output.ofNullable(eventHandlers);
             return this;
         }
         public WebPubSubHubPropertiesArgs build() {

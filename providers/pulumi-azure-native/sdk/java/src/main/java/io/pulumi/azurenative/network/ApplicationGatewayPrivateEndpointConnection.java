@@ -8,7 +8,6 @@ import io.pulumi.azurenative.network.ApplicationGatewayPrivateEndpointConnection
 import io.pulumi.azurenative.network.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.network.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -170,25 +169,25 @@ public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resou
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplicationGatewayPrivateEndpointConnection(String name, ApplicationGatewayPrivateEndpointConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:ApplicationGatewayPrivateEndpointConnection", name, args == null ? ApplicationGatewayPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:ApplicationGatewayPrivateEndpointConnection", name, args == null ? ApplicationGatewayPrivateEndpointConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApplicationGatewayPrivateEndpointConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApplicationGatewayPrivateEndpointConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:ApplicationGatewayPrivateEndpointConnection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:ApplicationGatewayPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:ApplicationGatewayPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:ApplicationGatewayPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:ApplicationGatewayPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:ApplicationGatewayPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:ApplicationGatewayPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:ApplicationGatewayPrivateEndpointConnection").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:ApplicationGatewayPrivateEndpointConnection").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:ApplicationGatewayPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:ApplicationGatewayPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:ApplicationGatewayPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:ApplicationGatewayPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:ApplicationGatewayPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:ApplicationGatewayPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:ApplicationGatewayPrivateEndpointConnection").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:ApplicationGatewayPrivateEndpointConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -202,7 +201,7 @@ public class ApplicationGatewayPrivateEndpointConnection extends io.pulumi.resou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplicationGatewayPrivateEndpointConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApplicationGatewayPrivateEndpointConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApplicationGatewayPrivateEndpointConnection(name, id, options);
     }
 }

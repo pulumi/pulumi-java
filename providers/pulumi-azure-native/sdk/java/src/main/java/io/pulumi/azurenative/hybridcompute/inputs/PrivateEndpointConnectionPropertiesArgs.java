@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridcompute.inputs;
 
 import io.pulumi.azurenative.hybridcompute.inputs.PrivateEndpointPropertyArgs;
 import io.pulumi.azurenative.hybridcompute.inputs.PrivateLinkServiceConnectionStatePropertyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="privateEndpoint")
-      private final @Nullable Input<PrivateEndpointPropertyArgs> privateEndpoint;
+      private final @Nullable Output<PrivateEndpointPropertyArgs> privateEndpoint;
 
-    public Input<PrivateEndpointPropertyArgs> getPrivateEndpoint() {
-        return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
+    public Output<PrivateEndpointPropertyArgs> getPrivateEndpoint() {
+        return this.privateEndpoint == null ? Output.empty() : this.privateEndpoint;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-      private final @Nullable Input<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
+      private final @Nullable Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
-    public Input<PrivateLinkServiceConnectionStatePropertyArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
+    public Output<PrivateLinkServiceConnectionStatePropertyArgs> getPrivateLinkServiceConnectionState() {
+        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
     }
 
     public PrivateEndpointConnectionPropertiesArgs(
-        @Nullable Input<PrivateEndpointPropertyArgs> privateEndpoint,
-        @Nullable Input<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState) {
+        @Nullable Output<PrivateEndpointPropertyArgs> privateEndpoint,
+        @Nullable Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState) {
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
     }
 
     private PrivateEndpointConnectionPropertiesArgs() {
-        this.privateEndpoint = Input.empty();
-        this.privateLinkServiceConnectionState = Input.empty();
+        this.privateEndpoint = Output.empty();
+        this.privateLinkServiceConnectionState = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<PrivateEndpointPropertyArgs> privateEndpoint;
-        private @Nullable Input<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
+        private @Nullable Output<PrivateEndpointPropertyArgs> privateEndpoint;
+        private @Nullable Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
     	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
         }
 
-        public Builder privateEndpoint(@Nullable Input<PrivateEndpointPropertyArgs> privateEndpoint) {
+        public Builder privateEndpoint(@Nullable Output<PrivateEndpointPropertyArgs> privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
         public Builder privateEndpoint(@Nullable PrivateEndpointPropertyArgs privateEndpoint) {
-            this.privateEndpoint = Input.ofNullable(privateEndpoint);
+            this.privateEndpoint = Output.ofNullable(privateEndpoint);
             return this;
         }
 
-        public Builder privateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStatePropertyArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
         public PrivateEndpointConnectionPropertiesArgs build() {

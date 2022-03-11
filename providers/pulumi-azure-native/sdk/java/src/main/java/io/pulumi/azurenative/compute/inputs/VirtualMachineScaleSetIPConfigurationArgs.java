@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetPublicIPAddressConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -30,10 +30,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="applicationGatewayBackendAddressPools")
-      private final @Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
+      private final @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
 
-    public Input<List<SubResourceArgs>> getApplicationGatewayBackendAddressPools() {
-        return this.applicationGatewayBackendAddressPools == null ? Input.empty() : this.applicationGatewayBackendAddressPools;
+    public Output<List<SubResourceArgs>> getApplicationGatewayBackendAddressPools() {
+        return this.applicationGatewayBackendAddressPools == null ? Output.empty() : this.applicationGatewayBackendAddressPools;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="applicationSecurityGroups")
-      private final @Nullable Input<List<SubResourceArgs>> applicationSecurityGroups;
+      private final @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups;
 
-    public Input<List<SubResourceArgs>> getApplicationSecurityGroups() {
-        return this.applicationSecurityGroups == null ? Input.empty() : this.applicationSecurityGroups;
+    public Output<List<SubResourceArgs>> getApplicationSecurityGroups() {
+        return this.applicationSecurityGroups == null ? Output.empty() : this.applicationSecurityGroups;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="loadBalancerBackendAddressPools")
-      private final @Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools;
+      private final @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools;
 
-    public Input<List<SubResourceArgs>> getLoadBalancerBackendAddressPools() {
-        return this.loadBalancerBackendAddressPools == null ? Input.empty() : this.loadBalancerBackendAddressPools;
+    public Output<List<SubResourceArgs>> getLoadBalancerBackendAddressPools() {
+        return this.loadBalancerBackendAddressPools == null ? Output.empty() : this.loadBalancerBackendAddressPools;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="loadBalancerInboundNatPools")
-      private final @Nullable Input<List<SubResourceArgs>> loadBalancerInboundNatPools;
+      private final @Nullable Output<List<SubResourceArgs>> loadBalancerInboundNatPools;
 
-    public Input<List<SubResourceArgs>> getLoadBalancerInboundNatPools() {
-        return this.loadBalancerInboundNatPools == null ? Input.empty() : this.loadBalancerInboundNatPools;
+    public Output<List<SubResourceArgs>> getLoadBalancerInboundNatPools() {
+        return this.loadBalancerInboundNatPools == null ? Output.empty() : this.loadBalancerInboundNatPools;
     }
 
     /**
@@ -85,9 +85,9 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -96,10 +96,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="primary")
-      private final @Nullable Input<Boolean> primary;
+      private final @Nullable Output<Boolean> primary;
 
-    public Input<Boolean> getPrimary() {
-        return this.primary == null ? Input.empty() : this.primary;
+    public Output<Boolean> getPrimary() {
+        return this.primary == null ? Output.empty() : this.primary;
     }
 
     /**
@@ -107,10 +107,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="privateIPAddressVersion")
-      private final @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
+      private final @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
 
-    public Input<Either<String,IPVersion>> getPrivateIPAddressVersion() {
-        return this.privateIPAddressVersion == null ? Input.empty() : this.privateIPAddressVersion;
+    public Output<Either<String,IPVersion>> getPrivateIPAddressVersion() {
+        return this.privateIPAddressVersion == null ? Output.empty() : this.privateIPAddressVersion;
     }
 
     /**
@@ -118,10 +118,10 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="publicIPAddressConfiguration")
-      private final @Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
+      private final @Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
-    public Input<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
-        return this.publicIPAddressConfiguration == null ? Input.empty() : this.publicIPAddressConfiguration;
+    public Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
+        return this.publicIPAddressConfiguration == null ? Output.empty() : this.publicIPAddressConfiguration;
     }
 
     /**
@@ -129,23 +129,23 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="subnet")
-      private final @Nullable Input<ApiEntityReferenceArgs> subnet;
+      private final @Nullable Output<ApiEntityReferenceArgs> subnet;
 
-    public Input<ApiEntityReferenceArgs> getSubnet() {
-        return this.subnet == null ? Input.empty() : this.subnet;
+    public Output<ApiEntityReferenceArgs> getSubnet() {
+        return this.subnet == null ? Output.empty() : this.subnet;
     }
 
     public VirtualMachineScaleSetIPConfigurationArgs(
-        @Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools,
-        @Nullable Input<List<SubResourceArgs>> applicationSecurityGroups,
-        @Nullable Input<String> id,
-        @Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools,
-        @Nullable Input<List<SubResourceArgs>> loadBalancerInboundNatPools,
-        Input<String> name,
-        @Nullable Input<Boolean> primary,
-        @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion,
-        @Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration,
-        @Nullable Input<ApiEntityReferenceArgs> subnet) {
+        @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools,
+        @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups,
+        @Nullable Output<String> id,
+        @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools,
+        @Nullable Output<List<SubResourceArgs>> loadBalancerInboundNatPools,
+        Output<String> name,
+        @Nullable Output<Boolean> primary,
+        @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion,
+        @Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration,
+        @Nullable Output<ApiEntityReferenceArgs> subnet) {
         this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
         this.applicationSecurityGroups = applicationSecurityGroups;
         this.id = id;
@@ -159,16 +159,16 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
     }
 
     private VirtualMachineScaleSetIPConfigurationArgs() {
-        this.applicationGatewayBackendAddressPools = Input.empty();
-        this.applicationSecurityGroups = Input.empty();
-        this.id = Input.empty();
-        this.loadBalancerBackendAddressPools = Input.empty();
-        this.loadBalancerInboundNatPools = Input.empty();
-        this.name = Input.empty();
-        this.primary = Input.empty();
-        this.privateIPAddressVersion = Input.empty();
-        this.publicIPAddressConfiguration = Input.empty();
-        this.subnet = Input.empty();
+        this.applicationGatewayBackendAddressPools = Output.empty();
+        this.applicationSecurityGroups = Output.empty();
+        this.id = Output.empty();
+        this.loadBalancerBackendAddressPools = Output.empty();
+        this.loadBalancerInboundNatPools = Output.empty();
+        this.name = Output.empty();
+        this.primary = Output.empty();
+        this.privateIPAddressVersion = Output.empty();
+        this.publicIPAddressConfiguration = Output.empty();
+        this.subnet = Output.empty();
     }
 
     public static Builder builder() {
@@ -180,16 +180,16 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
-        private @Nullable Input<List<SubResourceArgs>> applicationSecurityGroups;
-        private @Nullable Input<String> id;
-        private @Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools;
-        private @Nullable Input<List<SubResourceArgs>> loadBalancerInboundNatPools;
-        private Input<String> name;
-        private @Nullable Input<Boolean> primary;
-        private @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
-        private @Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
-        private @Nullable Input<ApiEntityReferenceArgs> subnet;
+        private @Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools;
+        private @Nullable Output<List<SubResourceArgs>> applicationSecurityGroups;
+        private @Nullable Output<String> id;
+        private @Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools;
+        private @Nullable Output<List<SubResourceArgs>> loadBalancerInboundNatPools;
+        private Output<String> name;
+        private @Nullable Output<Boolean> primary;
+        private @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
+        private @Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
+        private @Nullable Output<ApiEntityReferenceArgs> subnet;
 
         public Builder() {
     	      // Empty
@@ -209,103 +209,103 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends io.pulumi.r
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder applicationGatewayBackendAddressPools(@Nullable Input<List<SubResourceArgs>> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable Output<List<SubResourceArgs>> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
 
         public Builder applicationGatewayBackendAddressPools(@Nullable List<SubResourceArgs> applicationGatewayBackendAddressPools) {
-            this.applicationGatewayBackendAddressPools = Input.ofNullable(applicationGatewayBackendAddressPools);
+            this.applicationGatewayBackendAddressPools = Output.ofNullable(applicationGatewayBackendAddressPools);
             return this;
         }
 
-        public Builder applicationSecurityGroups(@Nullable Input<List<SubResourceArgs>> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable Output<List<SubResourceArgs>> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
 
         public Builder applicationSecurityGroups(@Nullable List<SubResourceArgs> applicationSecurityGroups) {
-            this.applicationSecurityGroups = Input.ofNullable(applicationSecurityGroups);
+            this.applicationSecurityGroups = Output.ofNullable(applicationSecurityGroups);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder loadBalancerBackendAddressPools(@Nullable Input<List<SubResourceArgs>> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable Output<List<SubResourceArgs>> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
         public Builder loadBalancerBackendAddressPools(@Nullable List<SubResourceArgs> loadBalancerBackendAddressPools) {
-            this.loadBalancerBackendAddressPools = Input.ofNullable(loadBalancerBackendAddressPools);
+            this.loadBalancerBackendAddressPools = Output.ofNullable(loadBalancerBackendAddressPools);
             return this;
         }
 
-        public Builder loadBalancerInboundNatPools(@Nullable Input<List<SubResourceArgs>> loadBalancerInboundNatPools) {
+        public Builder loadBalancerInboundNatPools(@Nullable Output<List<SubResourceArgs>> loadBalancerInboundNatPools) {
             this.loadBalancerInboundNatPools = loadBalancerInboundNatPools;
             return this;
         }
 
         public Builder loadBalancerInboundNatPools(@Nullable List<SubResourceArgs> loadBalancerInboundNatPools) {
-            this.loadBalancerInboundNatPools = Input.ofNullable(loadBalancerInboundNatPools);
+            this.loadBalancerInboundNatPools = Output.ofNullable(loadBalancerInboundNatPools);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder primary(@Nullable Input<Boolean> primary) {
+        public Builder primary(@Nullable Output<Boolean> primary) {
             this.primary = primary;
             return this;
         }
 
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = Input.ofNullable(primary);
+            this.primary = Output.ofNullable(primary);
             return this;
         }
 
-        public Builder privateIPAddressVersion(@Nullable Input<Either<String,IPVersion>> privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable Output<Either<String,IPVersion>> privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
         public Builder privateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
-            this.privateIPAddressVersion = Input.ofNullable(privateIPAddressVersion);
+            this.privateIPAddressVersion = Output.ofNullable(privateIPAddressVersion);
             return this;
         }
 
-        public Builder publicIPAddressConfiguration(@Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
         public Builder publicIPAddressConfiguration(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationArgs publicIPAddressConfiguration) {
-            this.publicIPAddressConfiguration = Input.ofNullable(publicIPAddressConfiguration);
+            this.publicIPAddressConfiguration = Output.ofNullable(publicIPAddressConfiguration);
             return this;
         }
 
-        public Builder subnet(@Nullable Input<ApiEntityReferenceArgs> subnet) {
+        public Builder subnet(@Nullable Output<ApiEntityReferenceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
         public Builder subnet(@Nullable ApiEntityReferenceArgs subnet) {
-            this.subnet = Input.ofNullable(subnet);
+            this.subnet = Output.ofNullable(subnet);
             return this;
         }
         public VirtualMachineScaleSetIPConfigurationArgs build() {

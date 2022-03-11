@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 import io.pulumi.azurenative.storagecache.enums.NfsAccessRuleAccess;
 import io.pulumi.azurenative.storagecache.enums.NfsAccessRuleScope;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,9 +27,9 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="access", required=true)
-      private final Input<Either<String,NfsAccessRuleAccess>> access;
+      private final Output<Either<String,NfsAccessRuleAccess>> access;
 
-    public Input<Either<String,NfsAccessRuleAccess>> getAccess() {
+    public Output<Either<String,NfsAccessRuleAccess>> getAccess() {
         return this.access;
     }
 
@@ -38,10 +38,10 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="anonymousGID")
-      private final @Nullable Input<String> anonymousGID;
+      private final @Nullable Output<String> anonymousGID;
 
-    public Input<String> getAnonymousGID() {
-        return this.anonymousGID == null ? Input.empty() : this.anonymousGID;
+    public Output<String> getAnonymousGID() {
+        return this.anonymousGID == null ? Output.empty() : this.anonymousGID;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="anonymousUID")
-      private final @Nullable Input<String> anonymousUID;
+      private final @Nullable Output<String> anonymousUID;
 
-    public Input<String> getAnonymousUID() {
-        return this.anonymousUID == null ? Input.empty() : this.anonymousUID;
+    public Output<String> getAnonymousUID() {
+        return this.anonymousUID == null ? Output.empty() : this.anonymousUID;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-      private final @Nullable Input<String> filter;
+      private final @Nullable Output<String> filter;
 
-    public Input<String> getFilter() {
-        return this.filter == null ? Input.empty() : this.filter;
+    public Output<String> getFilter() {
+        return this.filter == null ? Output.empty() : this.filter;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootSquash")
-      private final @Nullable Input<Boolean> rootSquash;
+      private final @Nullable Output<Boolean> rootSquash;
 
-    public Input<Boolean> getRootSquash() {
-        return this.rootSquash == null ? Input.empty() : this.rootSquash;
+    public Output<Boolean> getRootSquash() {
+        return this.rootSquash == null ? Output.empty() : this.rootSquash;
     }
 
     /**
@@ -82,9 +82,9 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<Either<String,NfsAccessRuleScope>> scope;
+      private final Output<Either<String,NfsAccessRuleScope>> scope;
 
-    public Input<Either<String,NfsAccessRuleScope>> getScope() {
+    public Output<Either<String,NfsAccessRuleScope>> getScope() {
         return this.scope;
     }
 
@@ -93,10 +93,10 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="submountAccess")
-      private final @Nullable Input<Boolean> submountAccess;
+      private final @Nullable Output<Boolean> submountAccess;
 
-    public Input<Boolean> getSubmountAccess() {
-        return this.submountAccess == null ? Input.empty() : this.submountAccess;
+    public Output<Boolean> getSubmountAccess() {
+        return this.submountAccess == null ? Output.empty() : this.submountAccess;
     }
 
     /**
@@ -104,21 +104,21 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suid")
-      private final @Nullable Input<Boolean> suid;
+      private final @Nullable Output<Boolean> suid;
 
-    public Input<Boolean> getSuid() {
-        return this.suid == null ? Input.empty() : this.suid;
+    public Output<Boolean> getSuid() {
+        return this.suid == null ? Output.empty() : this.suid;
     }
 
     public NfsAccessRuleArgs(
-        Input<Either<String,NfsAccessRuleAccess>> access,
-        @Nullable Input<String> anonymousGID,
-        @Nullable Input<String> anonymousUID,
-        @Nullable Input<String> filter,
-        @Nullable Input<Boolean> rootSquash,
-        Input<Either<String,NfsAccessRuleScope>> scope,
-        @Nullable Input<Boolean> submountAccess,
-        @Nullable Input<Boolean> suid) {
+        Output<Either<String,NfsAccessRuleAccess>> access,
+        @Nullable Output<String> anonymousGID,
+        @Nullable Output<String> anonymousUID,
+        @Nullable Output<String> filter,
+        @Nullable Output<Boolean> rootSquash,
+        Output<Either<String,NfsAccessRuleScope>> scope,
+        @Nullable Output<Boolean> submountAccess,
+        @Nullable Output<Boolean> suid) {
         this.access = Objects.requireNonNull(access, "expected parameter 'access' to be non-null");
         this.anonymousGID = anonymousGID;
         this.anonymousUID = anonymousUID;
@@ -130,14 +130,14 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NfsAccessRuleArgs() {
-        this.access = Input.empty();
-        this.anonymousGID = Input.empty();
-        this.anonymousUID = Input.empty();
-        this.filter = Input.empty();
-        this.rootSquash = Input.empty();
-        this.scope = Input.empty();
-        this.submountAccess = Input.empty();
-        this.suid = Input.empty();
+        this.access = Output.empty();
+        this.anonymousGID = Output.empty();
+        this.anonymousUID = Output.empty();
+        this.filter = Output.empty();
+        this.rootSquash = Output.empty();
+        this.scope = Output.empty();
+        this.submountAccess = Output.empty();
+        this.suid = Output.empty();
     }
 
     public static Builder builder() {
@@ -149,14 +149,14 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,NfsAccessRuleAccess>> access;
-        private @Nullable Input<String> anonymousGID;
-        private @Nullable Input<String> anonymousUID;
-        private @Nullable Input<String> filter;
-        private @Nullable Input<Boolean> rootSquash;
-        private Input<Either<String,NfsAccessRuleScope>> scope;
-        private @Nullable Input<Boolean> submountAccess;
-        private @Nullable Input<Boolean> suid;
+        private Output<Either<String,NfsAccessRuleAccess>> access;
+        private @Nullable Output<String> anonymousGID;
+        private @Nullable Output<String> anonymousUID;
+        private @Nullable Output<String> filter;
+        private @Nullable Output<Boolean> rootSquash;
+        private Output<Either<String,NfsAccessRuleScope>> scope;
+        private @Nullable Output<Boolean> submountAccess;
+        private @Nullable Output<Boolean> suid;
 
         public Builder() {
     	      // Empty
@@ -174,83 +174,83 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.suid = defaults.suid;
         }
 
-        public Builder access(Input<Either<String,NfsAccessRuleAccess>> access) {
+        public Builder access(Output<Either<String,NfsAccessRuleAccess>> access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
         public Builder access(Either<String,NfsAccessRuleAccess> access) {
-            this.access = Input.of(Objects.requireNonNull(access));
+            this.access = Output.of(Objects.requireNonNull(access));
             return this;
         }
 
-        public Builder anonymousGID(@Nullable Input<String> anonymousGID) {
+        public Builder anonymousGID(@Nullable Output<String> anonymousGID) {
             this.anonymousGID = anonymousGID;
             return this;
         }
 
         public Builder anonymousGID(@Nullable String anonymousGID) {
-            this.anonymousGID = Input.ofNullable(anonymousGID);
+            this.anonymousGID = Output.ofNullable(anonymousGID);
             return this;
         }
 
-        public Builder anonymousUID(@Nullable Input<String> anonymousUID) {
+        public Builder anonymousUID(@Nullable Output<String> anonymousUID) {
             this.anonymousUID = anonymousUID;
             return this;
         }
 
         public Builder anonymousUID(@Nullable String anonymousUID) {
-            this.anonymousUID = Input.ofNullable(anonymousUID);
+            this.anonymousUID = Output.ofNullable(anonymousUID);
             return this;
         }
 
-        public Builder filter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Output<String> filter) {
             this.filter = filter;
             return this;
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = Input.ofNullable(filter);
+            this.filter = Output.ofNullable(filter);
             return this;
         }
 
-        public Builder rootSquash(@Nullable Input<Boolean> rootSquash) {
+        public Builder rootSquash(@Nullable Output<Boolean> rootSquash) {
             this.rootSquash = rootSquash;
             return this;
         }
 
         public Builder rootSquash(@Nullable Boolean rootSquash) {
-            this.rootSquash = Input.ofNullable(rootSquash);
+            this.rootSquash = Output.ofNullable(rootSquash);
             return this;
         }
 
-        public Builder scope(Input<Either<String,NfsAccessRuleScope>> scope) {
+        public Builder scope(Output<Either<String,NfsAccessRuleScope>> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(Either<String,NfsAccessRuleScope> scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder submountAccess(@Nullable Input<Boolean> submountAccess) {
+        public Builder submountAccess(@Nullable Output<Boolean> submountAccess) {
             this.submountAccess = submountAccess;
             return this;
         }
 
         public Builder submountAccess(@Nullable Boolean submountAccess) {
-            this.submountAccess = Input.ofNullable(submountAccess);
+            this.submountAccess = Output.ofNullable(submountAccess);
             return this;
         }
 
-        public Builder suid(@Nullable Input<Boolean> suid) {
+        public Builder suid(@Nullable Output<Boolean> suid) {
             this.suid = suid;
             return this;
         }
 
         public Builder suid(@Nullable Boolean suid) {
-            this.suid = Input.ofNullable(suid);
+            this.suid = Output.ofNullable(suid);
             return this;
         }
         public NfsAccessRuleArgs build() {

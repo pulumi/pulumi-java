@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.enums.Action;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-      private final @Nullable Input<Either<String,Action>> action;
+      private final @Nullable Output<Either<String,Action>> action;
 
-    public Input<Either<String,Action>> getAction() {
-        return this.action == null ? Input.empty() : this.action;
+    public Output<Either<String,Action>> getAction() {
+        return this.action == null ? Output.empty() : this.action;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iPAddressOrRange", required=true)
-      private final Input<String> iPAddressOrRange;
+      private final Output<String> iPAddressOrRange;
 
-    public Input<String> getIPAddressOrRange() {
+    public Output<String> getIPAddressOrRange() {
         return this.iPAddressOrRange;
     }
 
     public IPRuleArgs(
-        @Nullable Input<Either<String,Action>> action,
-        Input<String> iPAddressOrRange) {
-        this.action = action == null ? Input.ofLeft("Allow") : action;
+        @Nullable Output<Either<String,Action>> action,
+        Output<String> iPAddressOrRange) {
+        this.action = action == null ? Output.ofLeft("Allow") : action;
         this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange, "expected parameter 'iPAddressOrRange' to be non-null");
     }
 
     private IPRuleArgs() {
-        this.action = Input.empty();
-        this.iPAddressOrRange = Input.empty();
+        this.action = Output.empty();
+        this.iPAddressOrRange = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,Action>> action;
-        private Input<String> iPAddressOrRange;
+        private @Nullable Output<Either<String,Action>> action;
+        private Output<String> iPAddressOrRange;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.iPAddressOrRange = defaults.iPAddressOrRange;
         }
 
-        public Builder action(@Nullable Input<Either<String,Action>> action) {
+        public Builder action(@Nullable Output<Either<String,Action>> action) {
             this.action = action;
             return this;
         }
 
         public Builder action(@Nullable Either<String,Action> action) {
-            this.action = Input.ofNullable(action);
+            this.action = Output.ofNullable(action);
             return this;
         }
 
-        public Builder iPAddressOrRange(Input<String> iPAddressOrRange) {
+        public Builder iPAddressOrRange(Output<String> iPAddressOrRange) {
             this.iPAddressOrRange = Objects.requireNonNull(iPAddressOrRange);
             return this;
         }
 
         public Builder iPAddressOrRange(String iPAddressOrRange) {
-            this.iPAddressOrRange = Input.of(Objects.requireNonNull(iPAddressOrRange));
+            this.iPAddressOrRange = Output.of(Objects.requireNonNull(iPAddressOrRange));
             return this;
         }
         public IPRuleArgs build() {

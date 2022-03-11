@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ParameterValuesValueArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<Object> value;
+      private final @Nullable Output<Object> value;
 
-    public Input<Object> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Object> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
-    public ParameterValuesValueArgs(@Nullable Input<Object> value) {
+    public ParameterValuesValueArgs(@Nullable Output<Object> value) {
         this.value = value;
     }
 
     private ParameterValuesValueArgs() {
-        this.value = Input.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ParameterValuesValueArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> value;
+        private @Nullable Output<Object> value;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ParameterValuesValueArgs extends io.pulumi.resources.Resource
     	      this.value = defaults.value;
         }
 
-        public Builder value(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Output<Object> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Object value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public ParameterValuesValueArgs build() {

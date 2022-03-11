@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.enums.TransportProtocol;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendPort")
-      private final @Nullable Input<Integer> backendPort;
+      private final @Nullable Output<Integer> backendPort;
 
-    public Input<Integer> getBackendPort() {
-        return this.backendPort == null ? Input.empty() : this.backendPort;
+    public Output<Integer> getBackendPort() {
+        return this.backendPort == null ? Output.empty() : this.backendPort;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportProtocol")
-      private final @Nullable Input<Either<String,TransportProtocol>> transportProtocol;
+      private final @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
 
-    public Input<Either<String,TransportProtocol>> getTransportProtocol() {
-        return this.transportProtocol == null ? Input.empty() : this.transportProtocol;
+    public Output<Either<String,TransportProtocol>> getTransportProtocol() {
+        return this.transportProtocol == null ? Output.empty() : this.transportProtocol;
     }
 
     public PortArgs(
-        @Nullable Input<Integer> backendPort,
-        @Nullable Input<Either<String,TransportProtocol>> transportProtocol) {
+        @Nullable Output<Integer> backendPort,
+        @Nullable Output<Either<String,TransportProtocol>> transportProtocol) {
         this.backendPort = backendPort;
         this.transportProtocol = transportProtocol;
     }
 
     private PortArgs() {
-        this.backendPort = Input.empty();
-        this.transportProtocol = Input.empty();
+        this.backendPort = Output.empty();
+        this.transportProtocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> backendPort;
-        private @Nullable Input<Either<String,TransportProtocol>> transportProtocol;
+        private @Nullable Output<Integer> backendPort;
+        private @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transportProtocol = defaults.transportProtocol;
         }
 
-        public Builder backendPort(@Nullable Input<Integer> backendPort) {
+        public Builder backendPort(@Nullable Output<Integer> backendPort) {
             this.backendPort = backendPort;
             return this;
         }
 
         public Builder backendPort(@Nullable Integer backendPort) {
-            this.backendPort = Input.ofNullable(backendPort);
+            this.backendPort = Output.ofNullable(backendPort);
             return this;
         }
 
-        public Builder transportProtocol(@Nullable Input<Either<String,TransportProtocol>> transportProtocol) {
+        public Builder transportProtocol(@Nullable Output<Either<String,TransportProtocol>> transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }
 
         public Builder transportProtocol(@Nullable Either<String,TransportProtocol> transportProtocol) {
-            this.transportProtocol = Input.ofNullable(transportProtocol);
+            this.transportProtocol = Output.ofNullable(transportProtocol);
             return this;
         }
         public PortArgs build() {

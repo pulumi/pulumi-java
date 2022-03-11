@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.enums.StatusLevelTypes;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="code")
-      private final @Nullable Input<String> code;
+      private final @Nullable Output<String> code;
 
-    public Input<String> getCode() {
-        return this.code == null ? Input.empty() : this.code;
+    public Output<String> getCode() {
+        return this.code == null ? Output.empty() : this.code;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayStatus")
-      private final @Nullable Input<String> displayStatus;
+      private final @Nullable Output<String> displayStatus;
 
-    public Input<String> getDisplayStatus() {
-        return this.displayStatus == null ? Input.empty() : this.displayStatus;
+    public Output<String> getDisplayStatus() {
+        return this.displayStatus == null ? Output.empty() : this.displayStatus;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="level")
-      private final @Nullable Input<StatusLevelTypes> level;
+      private final @Nullable Output<StatusLevelTypes> level;
 
-    public Input<StatusLevelTypes> getLevel() {
-        return this.level == null ? Input.empty() : this.level;
+    public Output<StatusLevelTypes> getLevel() {
+        return this.level == null ? Output.empty() : this.level;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="time")
-      private final @Nullable Input<String> time;
+      private final @Nullable Output<String> time;
 
-    public Input<String> getTime() {
-        return this.time == null ? Input.empty() : this.time;
+    public Output<String> getTime() {
+        return this.time == null ? Output.empty() : this.time;
     }
 
     public InstanceViewStatusArgs(
-        @Nullable Input<String> code,
-        @Nullable Input<String> displayStatus,
-        @Nullable Input<StatusLevelTypes> level,
-        @Nullable Input<String> message,
-        @Nullable Input<String> time) {
+        @Nullable Output<String> code,
+        @Nullable Output<String> displayStatus,
+        @Nullable Output<StatusLevelTypes> level,
+        @Nullable Output<String> message,
+        @Nullable Output<String> time) {
         this.code = code;
         this.displayStatus = displayStatus;
         this.level = level;
@@ -88,11 +88,11 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
     }
 
     private InstanceViewStatusArgs() {
-        this.code = Input.empty();
-        this.displayStatus = Input.empty();
-        this.level = Input.empty();
-        this.message = Input.empty();
-        this.time = Input.empty();
+        this.code = Output.empty();
+        this.displayStatus = Output.empty();
+        this.level = Output.empty();
+        this.message = Output.empty();
+        this.time = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> code;
-        private @Nullable Input<String> displayStatus;
-        private @Nullable Input<StatusLevelTypes> level;
-        private @Nullable Input<String> message;
-        private @Nullable Input<String> time;
+        private @Nullable Output<String> code;
+        private @Nullable Output<String> displayStatus;
+        private @Nullable Output<StatusLevelTypes> level;
+        private @Nullable Output<String> message;
+        private @Nullable Output<String> time;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class InstanceViewStatusArgs extends io.pulumi.resources.ResourceAr
     	      this.time = defaults.time;
         }
 
-        public Builder code(@Nullable Input<String> code) {
+        public Builder code(@Nullable Output<String> code) {
             this.code = code;
             return this;
         }
 
         public Builder code(@Nullable String code) {
-            this.code = Input.ofNullable(code);
+            this.code = Output.ofNullable(code);
             return this;
         }
 
-        public Builder displayStatus(@Nullable Input<String> displayStatus) {
+        public Builder displayStatus(@Nullable Output<String> displayStatus) {
             this.displayStatus = displayStatus;
             return this;
         }
 
         public Builder displayStatus(@Nullable String displayStatus) {
-            this.displayStatus = Input.ofNullable(displayStatus);
+            this.displayStatus = Output.ofNullable(displayStatus);
             return this;
         }
 
-        public Builder level(@Nullable Input<StatusLevelTypes> level) {
+        public Builder level(@Nullable Output<StatusLevelTypes> level) {
             this.level = level;
             return this;
         }
 
         public Builder level(@Nullable StatusLevelTypes level) {
-            this.level = Input.ofNullable(level);
+            this.level = Output.ofNullable(level);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder time(@Nullable Input<String> time) {
+        public Builder time(@Nullable Output<String> time) {
             this.time = time;
             return this;
         }
 
         public Builder time(@Nullable String time) {
-            this.time = Input.ofNullable(time);
+            this.time = Output.ofNullable(time);
             return this;
         }
         public InstanceViewStatusArgs build() {

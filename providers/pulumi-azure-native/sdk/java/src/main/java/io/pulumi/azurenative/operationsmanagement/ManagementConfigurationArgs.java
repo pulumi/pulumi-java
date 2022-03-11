@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationsmanagement;
 
 import io.pulumi.azurenative.operationsmanagement.inputs.ManagementConfigurationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="managementConfigurationName")
-      private final @Nullable Input<String> managementConfigurationName;
+      private final @Nullable Output<String> managementConfigurationName;
 
-    public Input<String> getManagementConfigurationName() {
-        return this.managementConfigurationName == null ? Input.empty() : this.managementConfigurationName;
+    public Output<String> getManagementConfigurationName() {
+        return this.managementConfigurationName == null ? Output.empty() : this.managementConfigurationName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ManagementConfigurationPropertiesArgs> properties;
+      private final @Nullable Output<ManagementConfigurationPropertiesArgs> properties;
 
-    public Input<ManagementConfigurationPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ManagementConfigurationPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -53,17 +53,17 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ManagementConfigurationArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> managementConfigurationName,
-        @Nullable Input<ManagementConfigurationPropertiesArgs> properties,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> managementConfigurationName,
+        @Nullable Output<ManagementConfigurationPropertiesArgs> properties,
+        Output<String> resourceGroupName) {
         this.location = location;
         this.managementConfigurationName = managementConfigurationName;
         this.properties = properties;
@@ -71,10 +71,10 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private ManagementConfigurationArgs() {
-        this.location = Input.empty();
-        this.managementConfigurationName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.location = Output.empty();
+        this.managementConfigurationName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> managementConfigurationName;
-        private @Nullable Input<ManagementConfigurationPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> managementConfigurationName;
+        private @Nullable Output<ManagementConfigurationPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder managementConfigurationName(@Nullable Input<String> managementConfigurationName) {
+        public Builder managementConfigurationName(@Nullable Output<String> managementConfigurationName) {
             this.managementConfigurationName = managementConfigurationName;
             return this;
         }
 
         public Builder managementConfigurationName(@Nullable String managementConfigurationName) {
-            this.managementConfigurationName = Input.ofNullable(managementConfigurationName);
+            this.managementConfigurationName = Output.ofNullable(managementConfigurationName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ManagementConfigurationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ManagementConfigurationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ManagementConfigurationPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ManagementConfigurationArgs build() {

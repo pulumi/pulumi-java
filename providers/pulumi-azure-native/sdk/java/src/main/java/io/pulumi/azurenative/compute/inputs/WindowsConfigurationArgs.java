@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.AdditionalUnattendContentArgs;
 import io.pulumi.azurenative.compute.inputs.PatchSettingsArgs;
 import io.pulumi.azurenative.compute.inputs.WinRMConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="additionalUnattendContent")
-      private final @Nullable Input<List<AdditionalUnattendContentArgs>> additionalUnattendContent;
+      private final @Nullable Output<List<AdditionalUnattendContentArgs>> additionalUnattendContent;
 
-    public Input<List<AdditionalUnattendContentArgs>> getAdditionalUnattendContent() {
-        return this.additionalUnattendContent == null ? Input.empty() : this.additionalUnattendContent;
+    public Output<List<AdditionalUnattendContentArgs>> getAdditionalUnattendContent() {
+        return this.additionalUnattendContent == null ? Output.empty() : this.additionalUnattendContent;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableAutomaticUpdates")
-      private final @Nullable Input<Boolean> enableAutomaticUpdates;
+      private final @Nullable Output<Boolean> enableAutomaticUpdates;
 
-    public Input<Boolean> getEnableAutomaticUpdates() {
-        return this.enableAutomaticUpdates == null ? Input.empty() : this.enableAutomaticUpdates;
+    public Output<Boolean> getEnableAutomaticUpdates() {
+        return this.enableAutomaticUpdates == null ? Output.empty() : this.enableAutomaticUpdates;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="patchSettings")
-      private final @Nullable Input<PatchSettingsArgs> patchSettings;
+      private final @Nullable Output<PatchSettingsArgs> patchSettings;
 
-    public Input<PatchSettingsArgs> getPatchSettings() {
-        return this.patchSettings == null ? Input.empty() : this.patchSettings;
+    public Output<PatchSettingsArgs> getPatchSettings() {
+        return this.patchSettings == null ? Output.empty() : this.patchSettings;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="provisionVMAgent")
-      private final @Nullable Input<Boolean> provisionVMAgent;
+      private final @Nullable Output<Boolean> provisionVMAgent;
 
-    public Input<Boolean> getProvisionVMAgent() {
-        return this.provisionVMAgent == null ? Input.empty() : this.provisionVMAgent;
+    public Output<Boolean> getProvisionVMAgent() {
+        return this.provisionVMAgent == null ? Output.empty() : this.provisionVMAgent;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="timeZone")
-      private final @Nullable Input<String> timeZone;
+      private final @Nullable Output<String> timeZone;
 
-    public Input<String> getTimeZone() {
-        return this.timeZone == null ? Input.empty() : this.timeZone;
+    public Output<String> getTimeZone() {
+        return this.timeZone == null ? Output.empty() : this.timeZone;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="winRM")
-      private final @Nullable Input<WinRMConfigurationArgs> winRM;
+      private final @Nullable Output<WinRMConfigurationArgs> winRM;
 
-    public Input<WinRMConfigurationArgs> getWinRM() {
-        return this.winRM == null ? Input.empty() : this.winRM;
+    public Output<WinRMConfigurationArgs> getWinRM() {
+        return this.winRM == null ? Output.empty() : this.winRM;
     }
 
     public WindowsConfigurationArgs(
-        @Nullable Input<List<AdditionalUnattendContentArgs>> additionalUnattendContent,
-        @Nullable Input<Boolean> enableAutomaticUpdates,
-        @Nullable Input<PatchSettingsArgs> patchSettings,
-        @Nullable Input<Boolean> provisionVMAgent,
-        @Nullable Input<String> timeZone,
-        @Nullable Input<WinRMConfigurationArgs> winRM) {
+        @Nullable Output<List<AdditionalUnattendContentArgs>> additionalUnattendContent,
+        @Nullable Output<Boolean> enableAutomaticUpdates,
+        @Nullable Output<PatchSettingsArgs> patchSettings,
+        @Nullable Output<Boolean> provisionVMAgent,
+        @Nullable Output<String> timeZone,
+        @Nullable Output<WinRMConfigurationArgs> winRM) {
         this.additionalUnattendContent = additionalUnattendContent;
         this.enableAutomaticUpdates = enableAutomaticUpdates;
         this.patchSettings = patchSettings;
@@ -105,12 +105,12 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private WindowsConfigurationArgs() {
-        this.additionalUnattendContent = Input.empty();
-        this.enableAutomaticUpdates = Input.empty();
-        this.patchSettings = Input.empty();
-        this.provisionVMAgent = Input.empty();
-        this.timeZone = Input.empty();
-        this.winRM = Input.empty();
+        this.additionalUnattendContent = Output.empty();
+        this.enableAutomaticUpdates = Output.empty();
+        this.patchSettings = Output.empty();
+        this.provisionVMAgent = Output.empty();
+        this.timeZone = Output.empty();
+        this.winRM = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AdditionalUnattendContentArgs>> additionalUnattendContent;
-        private @Nullable Input<Boolean> enableAutomaticUpdates;
-        private @Nullable Input<PatchSettingsArgs> patchSettings;
-        private @Nullable Input<Boolean> provisionVMAgent;
-        private @Nullable Input<String> timeZone;
-        private @Nullable Input<WinRMConfigurationArgs> winRM;
+        private @Nullable Output<List<AdditionalUnattendContentArgs>> additionalUnattendContent;
+        private @Nullable Output<Boolean> enableAutomaticUpdates;
+        private @Nullable Output<PatchSettingsArgs> patchSettings;
+        private @Nullable Output<Boolean> provisionVMAgent;
+        private @Nullable Output<String> timeZone;
+        private @Nullable Output<WinRMConfigurationArgs> winRM;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class WindowsConfigurationArgs extends io.pulumi.resources.Resource
     	      this.winRM = defaults.winRM;
         }
 
-        public Builder additionalUnattendContent(@Nullable Input<List<AdditionalUnattendContentArgs>> additionalUnattendContent) {
+        public Builder additionalUnattendContent(@Nullable Output<List<AdditionalUnattendContentArgs>> additionalUnattendContent) {
             this.additionalUnattendContent = additionalUnattendContent;
             return this;
         }
 
         public Builder additionalUnattendContent(@Nullable List<AdditionalUnattendContentArgs> additionalUnattendContent) {
-            this.additionalUnattendContent = Input.ofNullable(additionalUnattendContent);
+            this.additionalUnattendContent = Output.ofNullable(additionalUnattendContent);
             return this;
         }
 
-        public Builder enableAutomaticUpdates(@Nullable Input<Boolean> enableAutomaticUpdates) {
+        public Builder enableAutomaticUpdates(@Nullable Output<Boolean> enableAutomaticUpdates) {
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
 
         public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
-            this.enableAutomaticUpdates = Input.ofNullable(enableAutomaticUpdates);
+            this.enableAutomaticUpdates = Output.ofNullable(enableAutomaticUpdates);
             return this;
         }
 
-        public Builder patchSettings(@Nullable Input<PatchSettingsArgs> patchSettings) {
+        public Builder patchSettings(@Nullable Output<PatchSettingsArgs> patchSettings) {
             this.patchSettings = patchSettings;
             return this;
         }
 
         public Builder patchSettings(@Nullable PatchSettingsArgs patchSettings) {
-            this.patchSettings = Input.ofNullable(patchSettings);
+            this.patchSettings = Output.ofNullable(patchSettings);
             return this;
         }
 
-        public Builder provisionVMAgent(@Nullable Input<Boolean> provisionVMAgent) {
+        public Builder provisionVMAgent(@Nullable Output<Boolean> provisionVMAgent) {
             this.provisionVMAgent = provisionVMAgent;
             return this;
         }
 
         public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
-            this.provisionVMAgent = Input.ofNullable(provisionVMAgent);
+            this.provisionVMAgent = Output.ofNullable(provisionVMAgent);
             return this;
         }
 
-        public Builder timeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Output<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Input.ofNullable(timeZone);
+            this.timeZone = Output.ofNullable(timeZone);
             return this;
         }
 
-        public Builder winRM(@Nullable Input<WinRMConfigurationArgs> winRM) {
+        public Builder winRM(@Nullable Output<WinRMConfigurationArgs> winRM) {
             this.winRM = winRM;
             return this;
         }
 
         public Builder winRM(@Nullable WinRMConfigurationArgs winRM) {
-            this.winRM = Input.ofNullable(winRM);
+            this.winRM = Output.ofNullable(winRM);
             return this;
         }
         public WindowsConfigurationArgs build() {

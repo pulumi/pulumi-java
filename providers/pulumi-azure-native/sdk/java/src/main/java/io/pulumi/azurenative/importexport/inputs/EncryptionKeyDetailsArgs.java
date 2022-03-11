@@ -5,7 +5,7 @@ package io.pulumi.azurenative.importexport.inputs;
 
 import io.pulumi.azurenative.importexport.enums.EncryptionKekType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kekType")
-      private final @Nullable Input<Either<String,EncryptionKekType>> kekType;
+      private final @Nullable Output<Either<String,EncryptionKekType>> kekType;
 
-    public Input<Either<String,EncryptionKekType>> getKekType() {
-        return this.kekType == null ? Input.empty() : this.kekType;
+    public Output<Either<String,EncryptionKekType>> getKekType() {
+        return this.kekType == null ? Output.empty() : this.kekType;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kekUrl")
-      private final @Nullable Input<String> kekUrl;
+      private final @Nullable Output<String> kekUrl;
 
-    public Input<String> getKekUrl() {
-        return this.kekUrl == null ? Input.empty() : this.kekUrl;
+    public Output<String> getKekUrl() {
+        return this.kekUrl == null ? Output.empty() : this.kekUrl;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kekVaultResourceID")
-      private final @Nullable Input<String> kekVaultResourceID;
+      private final @Nullable Output<String> kekVaultResourceID;
 
-    public Input<String> getKekVaultResourceID() {
-        return this.kekVaultResourceID == null ? Input.empty() : this.kekVaultResourceID;
+    public Output<String> getKekVaultResourceID() {
+        return this.kekVaultResourceID == null ? Output.empty() : this.kekVaultResourceID;
     }
 
     public EncryptionKeyDetailsArgs(
-        @Nullable Input<Either<String,EncryptionKekType>> kekType,
-        @Nullable Input<String> kekUrl,
-        @Nullable Input<String> kekVaultResourceID) {
-        this.kekType = kekType == null ? Input.ofLeft("MicrosoftManaged") : kekType;
+        @Nullable Output<Either<String,EncryptionKekType>> kekType,
+        @Nullable Output<String> kekUrl,
+        @Nullable Output<String> kekVaultResourceID) {
+        this.kekType = kekType == null ? Output.ofLeft("MicrosoftManaged") : kekType;
         this.kekUrl = kekUrl;
         this.kekVaultResourceID = kekVaultResourceID;
     }
 
     private EncryptionKeyDetailsArgs() {
-        this.kekType = Input.empty();
-        this.kekUrl = Input.empty();
-        this.kekVaultResourceID = Input.empty();
+        this.kekType = Output.empty();
+        this.kekUrl = Output.empty();
+        this.kekVaultResourceID = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,EncryptionKekType>> kekType;
-        private @Nullable Input<String> kekUrl;
-        private @Nullable Input<String> kekVaultResourceID;
+        private @Nullable Output<Either<String,EncryptionKekType>> kekType;
+        private @Nullable Output<String> kekUrl;
+        private @Nullable Output<String> kekVaultResourceID;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
     	      this.kekVaultResourceID = defaults.kekVaultResourceID;
         }
 
-        public Builder kekType(@Nullable Input<Either<String,EncryptionKekType>> kekType) {
+        public Builder kekType(@Nullable Output<Either<String,EncryptionKekType>> kekType) {
             this.kekType = kekType;
             return this;
         }
 
         public Builder kekType(@Nullable Either<String,EncryptionKekType> kekType) {
-            this.kekType = Input.ofNullable(kekType);
+            this.kekType = Output.ofNullable(kekType);
             return this;
         }
 
-        public Builder kekUrl(@Nullable Input<String> kekUrl) {
+        public Builder kekUrl(@Nullable Output<String> kekUrl) {
             this.kekUrl = kekUrl;
             return this;
         }
 
         public Builder kekUrl(@Nullable String kekUrl) {
-            this.kekUrl = Input.ofNullable(kekUrl);
+            this.kekUrl = Output.ofNullable(kekUrl);
             return this;
         }
 
-        public Builder kekVaultResourceID(@Nullable Input<String> kekVaultResourceID) {
+        public Builder kekVaultResourceID(@Nullable Output<String> kekVaultResourceID) {
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }
 
         public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
-            this.kekVaultResourceID = Input.ofNullable(kekVaultResourceID);
+            this.kekVaultResourceID = Output.ofNullable(kekVaultResourceID);
             return this;
         }
         public EncryptionKeyDetailsArgs build() {

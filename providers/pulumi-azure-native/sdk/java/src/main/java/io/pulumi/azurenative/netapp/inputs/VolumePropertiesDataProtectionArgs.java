@@ -6,7 +6,7 @@ package io.pulumi.azurenative.netapp.inputs;
 import io.pulumi.azurenative.netapp.inputs.ReplicationObjectArgs;
 import io.pulumi.azurenative.netapp.inputs.VolumeBackupPropertiesArgs;
 import io.pulumi.azurenative.netapp.inputs.VolumeSnapshotPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,10 +25,10 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="backup")
-      private final @Nullable Input<VolumeBackupPropertiesArgs> backup;
+      private final @Nullable Output<VolumeBackupPropertiesArgs> backup;
 
-    public Input<VolumeBackupPropertiesArgs> getBackup() {
-        return this.backup == null ? Input.empty() : this.backup;
+    public Output<VolumeBackupPropertiesArgs> getBackup() {
+        return this.backup == null ? Output.empty() : this.backup;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="replication")
-      private final @Nullable Input<ReplicationObjectArgs> replication;
+      private final @Nullable Output<ReplicationObjectArgs> replication;
 
-    public Input<ReplicationObjectArgs> getReplication() {
-        return this.replication == null ? Input.empty() : this.replication;
+    public Output<ReplicationObjectArgs> getReplication() {
+        return this.replication == null ? Output.empty() : this.replication;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="snapshot")
-      private final @Nullable Input<VolumeSnapshotPropertiesArgs> snapshot;
+      private final @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot;
 
-    public Input<VolumeSnapshotPropertiesArgs> getSnapshot() {
-        return this.snapshot == null ? Input.empty() : this.snapshot;
+    public Output<VolumeSnapshotPropertiesArgs> getSnapshot() {
+        return this.snapshot == null ? Output.empty() : this.snapshot;
     }
 
     public VolumePropertiesDataProtectionArgs(
-        @Nullable Input<VolumeBackupPropertiesArgs> backup,
-        @Nullable Input<ReplicationObjectArgs> replication,
-        @Nullable Input<VolumeSnapshotPropertiesArgs> snapshot) {
+        @Nullable Output<VolumeBackupPropertiesArgs> backup,
+        @Nullable Output<ReplicationObjectArgs> replication,
+        @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot) {
         this.backup = backup;
         this.replication = replication;
         this.snapshot = snapshot;
     }
 
     private VolumePropertiesDataProtectionArgs() {
-        this.backup = Input.empty();
-        this.replication = Input.empty();
-        this.snapshot = Input.empty();
+        this.backup = Output.empty();
+        this.replication = Output.empty();
+        this.snapshot = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<VolumeBackupPropertiesArgs> backup;
-        private @Nullable Input<ReplicationObjectArgs> replication;
-        private @Nullable Input<VolumeSnapshotPropertiesArgs> snapshot;
+        private @Nullable Output<VolumeBackupPropertiesArgs> backup;
+        private @Nullable Output<ReplicationObjectArgs> replication;
+        private @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
     	      this.snapshot = defaults.snapshot;
         }
 
-        public Builder backup(@Nullable Input<VolumeBackupPropertiesArgs> backup) {
+        public Builder backup(@Nullable Output<VolumeBackupPropertiesArgs> backup) {
             this.backup = backup;
             return this;
         }
 
         public Builder backup(@Nullable VolumeBackupPropertiesArgs backup) {
-            this.backup = Input.ofNullable(backup);
+            this.backup = Output.ofNullable(backup);
             return this;
         }
 
-        public Builder replication(@Nullable Input<ReplicationObjectArgs> replication) {
+        public Builder replication(@Nullable Output<ReplicationObjectArgs> replication) {
             this.replication = replication;
             return this;
         }
 
         public Builder replication(@Nullable ReplicationObjectArgs replication) {
-            this.replication = Input.ofNullable(replication);
+            this.replication = Output.ofNullable(replication);
             return this;
         }
 
-        public Builder snapshot(@Nullable Input<VolumeSnapshotPropertiesArgs> snapshot) {
+        public Builder snapshot(@Nullable Output<VolumeSnapshotPropertiesArgs> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
         public Builder snapshot(@Nullable VolumeSnapshotPropertiesArgs snapshot) {
-            this.snapshot = Input.ofNullable(snapshot);
+            this.snapshot = Output.ofNullable(snapshot);
             return this;
         }
         public VolumePropertiesDataProtectionArgs build() {

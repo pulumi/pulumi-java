@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.DefaultKeyArgs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="defaultKey")
-      private final @Nullable Input<DefaultKeyArgs> defaultKey;
+      private final @Nullable Output<DefaultKeyArgs> defaultKey;
 
-    public Input<DefaultKeyArgs> getDefaultKey() {
-        return this.defaultKey == null ? Input.empty() : this.defaultKey;
+    public Output<DefaultKeyArgs> getDefaultKey() {
+        return this.defaultKey == null ? Output.empty() : this.defaultKey;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="keyToTrackMappings")
-      private final @Nullable Input<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings;
+      private final @Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings;
 
-    public Input<List<StreamingPolicyContentKeyArgs>> getKeyToTrackMappings() {
-        return this.keyToTrackMappings == null ? Input.empty() : this.keyToTrackMappings;
+    public Output<List<StreamingPolicyContentKeyArgs>> getKeyToTrackMappings() {
+        return this.keyToTrackMappings == null ? Output.empty() : this.keyToTrackMappings;
     }
 
     public StreamingPolicyContentKeysArgs(
-        @Nullable Input<DefaultKeyArgs> defaultKey,
-        @Nullable Input<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings) {
+        @Nullable Output<DefaultKeyArgs> defaultKey,
+        @Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings) {
         this.defaultKey = defaultKey;
         this.keyToTrackMappings = keyToTrackMappings;
     }
 
     private StreamingPolicyContentKeysArgs() {
-        this.defaultKey = Input.empty();
-        this.keyToTrackMappings = Input.empty();
+        this.defaultKey = Output.empty();
+        this.keyToTrackMappings = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<DefaultKeyArgs> defaultKey;
-        private @Nullable Input<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings;
+        private @Nullable Output<DefaultKeyArgs> defaultKey;
+        private @Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class StreamingPolicyContentKeysArgs extends io.pulumi.resources.Re
     	      this.keyToTrackMappings = defaults.keyToTrackMappings;
         }
 
-        public Builder defaultKey(@Nullable Input<DefaultKeyArgs> defaultKey) {
+        public Builder defaultKey(@Nullable Output<DefaultKeyArgs> defaultKey) {
             this.defaultKey = defaultKey;
             return this;
         }
 
         public Builder defaultKey(@Nullable DefaultKeyArgs defaultKey) {
-            this.defaultKey = Input.ofNullable(defaultKey);
+            this.defaultKey = Output.ofNullable(defaultKey);
             return this;
         }
 
-        public Builder keyToTrackMappings(@Nullable Input<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings) {
+        public Builder keyToTrackMappings(@Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings) {
             this.keyToTrackMappings = keyToTrackMappings;
             return this;
         }
 
         public Builder keyToTrackMappings(@Nullable List<StreamingPolicyContentKeyArgs> keyToTrackMappings) {
-            this.keyToTrackMappings = Input.ofNullable(keyToTrackMappings);
+            this.keyToTrackMappings = Output.ofNullable(keyToTrackMappings);
             return this;
         }
         public StreamingPolicyContentKeysArgs build() {

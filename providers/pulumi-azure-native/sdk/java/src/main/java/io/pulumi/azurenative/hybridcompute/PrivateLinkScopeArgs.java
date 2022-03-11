@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridcompute;
 
 import io.pulumi.azurenative.hybridcompute.inputs.HybridComputePrivateLinkScopePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,10 +21,10 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<HybridComputePrivateLinkScopePropertiesArgs> properties;
+      private final @Nullable Output<HybridComputePrivateLinkScopePropertiesArgs> properties;
 
-    public Input<HybridComputePrivateLinkScopePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<HybridComputePrivateLinkScopePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -54,10 +54,10 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scopeName")
-      private final @Nullable Input<String> scopeName;
+      private final @Nullable Output<String> scopeName;
 
-    public Input<String> getScopeName() {
-        return this.scopeName == null ? Input.empty() : this.scopeName;
+    public Output<String> getScopeName() {
+        return this.scopeName == null ? Output.empty() : this.scopeName;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public PrivateLinkScopeArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<HybridComputePrivateLinkScopePropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> scopeName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        @Nullable Output<HybridComputePrivateLinkScopePropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> scopeName,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -85,11 +85,11 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PrivateLinkScopeArgs() {
-        this.location = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scopeName = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scopeName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<HybridComputePrivateLinkScopePropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> scopeName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<HybridComputePrivateLinkScopePropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> scopeName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder properties(@Nullable Input<HybridComputePrivateLinkScopePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<HybridComputePrivateLinkScopePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable HybridComputePrivateLinkScopePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scopeName(@Nullable Input<String> scopeName) {
+        public Builder scopeName(@Nullable Output<String> scopeName) {
             this.scopeName = scopeName;
             return this;
         }
 
         public Builder scopeName(@Nullable String scopeName) {
-            this.scopeName = Input.ofNullable(scopeName);
+            this.scopeName = Output.ofNullable(scopeName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public PrivateLinkScopeArgs build() {

@@ -9,7 +9,6 @@ import io.pulumi.azurenative.datafactory.outputs.ManagedIntegrationRuntimeRespon
 import io.pulumi.azurenative.datafactory.outputs.SelfHostedIntegrationRuntimeResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -129,19 +128,19 @@ public class IntegrationRuntime extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IntegrationRuntime(String name, IntegrationRuntimeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datafactory:IntegrationRuntime", name, args == null ? IntegrationRuntimeArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:datafactory:IntegrationRuntime", name, args == null ? IntegrationRuntimeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private IntegrationRuntime(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private IntegrationRuntime(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:datafactory:IntegrationRuntime", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:datafactory/v20170901preview:IntegrationRuntime").build()),
-                Input.of(Alias.builder().setType("azure-native:datafactory/v20180601:IntegrationRuntime").build())
+                Output.of(Alias.builder().setType("azure-native:datafactory/v20170901preview:IntegrationRuntime").build()),
+                Output.of(Alias.builder().setType("azure-native:datafactory/v20180601:IntegrationRuntime").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -155,7 +154,7 @@ public class IntegrationRuntime extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static IntegrationRuntime get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static IntegrationRuntime get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new IntegrationRuntime(name, id, options);
     }
 }

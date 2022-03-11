@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="emailAddress", required=true)
-      private final Input<String> emailAddress;
+      private final Output<String> emailAddress;
 
-    public Input<String> getEmailAddress() {
+    public Output<String> getEmailAddress() {
         return this.emailAddress;
     }
 
@@ -35,9 +35,9 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
@@ -46,25 +46,25 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="password")
-      private final @Nullable Input<String> password;
+      private final @Nullable Output<String> password;
 
-    public Input<String> getPassword() {
-        return this.password == null ? Input.empty() : this.password;
+    public Output<String> getPassword() {
+        return this.password == null ? Output.empty() : this.password;
     }
 
     public EmailChannelPropertiesArgs(
-        Input<String> emailAddress,
-        Input<Boolean> isEnabled,
-        @Nullable Input<String> password) {
+        Output<String> emailAddress,
+        Output<Boolean> isEnabled,
+        @Nullable Output<String> password) {
         this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
         this.password = password;
     }
 
     private EmailChannelPropertiesArgs() {
-        this.emailAddress = Input.empty();
-        this.isEnabled = Input.empty();
-        this.password = Input.empty();
+        this.emailAddress = Output.empty();
+        this.isEnabled = Output.empty();
+        this.password = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> emailAddress;
-        private Input<Boolean> isEnabled;
-        private @Nullable Input<String> password;
+        private Output<String> emailAddress;
+        private Output<Boolean> isEnabled;
+        private @Nullable Output<String> password;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class EmailChannelPropertiesArgs extends io.pulumi.resources.Resour
     	      this.password = defaults.password;
         }
 
-        public Builder emailAddress(Input<String> emailAddress) {
+        public Builder emailAddress(Output<String> emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
 
         public Builder emailAddress(String emailAddress) {
-            this.emailAddress = Input.of(Objects.requireNonNull(emailAddress));
+            this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder password(@Nullable Input<String> password) {
+        public Builder password(@Nullable Output<String> password) {
             this.password = password;
             return this;
         }
 
         public Builder password(@Nullable String password) {
-            this.password = Input.ofNullable(password);
+            this.password = Output.ofNullable(password);
             return this;
         }
         public EmailChannelPropertiesArgs build() {

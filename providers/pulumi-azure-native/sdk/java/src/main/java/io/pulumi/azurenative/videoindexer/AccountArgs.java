@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoindexer;
 
 import io.pulumi.azurenative.videoindexer.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.videoindexer.inputs.MediaServicesForPutRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,10 +22,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountId")
-      private final @Nullable Input<String> accountId;
+      private final @Nullable Output<String> accountId;
 
-    public Input<String> getAccountId() {
-        return this.accountId == null ? Input.empty() : this.accountId;
+    public Output<String> getAccountId() {
+        return this.accountId == null ? Output.empty() : this.accountId;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-      private final @Nullable Input<String> accountName;
+      private final @Nullable Output<String> accountName;
 
-    public Input<String> getAccountName() {
-        return this.accountName == null ? Input.empty() : this.accountName;
+    public Output<String> getAccountName() {
+        return this.accountName == null ? Output.empty() : this.accountName;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+      private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mediaServices")
-      private final @Nullable Input<MediaServicesForPutRequestArgs> mediaServices;
+      private final @Nullable Output<MediaServicesForPutRequestArgs> mediaServices;
 
-    public Input<MediaServicesForPutRequestArgs> getMediaServices() {
-        return this.mediaServices == null ? Input.empty() : this.mediaServices;
+    public Output<MediaServicesForPutRequestArgs> getMediaServices() {
+        return this.mediaServices == null ? Output.empty() : this.mediaServices;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,20 +88,20 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AccountArgs(
-        @Nullable Input<String> accountId,
-        @Nullable Input<String> accountName,
-        @Nullable Input<ManagedServiceIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<MediaServicesForPutRequestArgs> mediaServices,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> accountId,
+        @Nullable Output<String> accountName,
+        @Nullable Output<ManagedServiceIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<MediaServicesForPutRequestArgs> mediaServices,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.accountId = accountId;
         this.accountName = accountName;
         this.identity = identity;
@@ -112,13 +112,13 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.accountId = Input.empty();
-        this.accountName = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.mediaServices = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.accountId = Output.empty();
+        this.accountName = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.mediaServices = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -130,13 +130,13 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> accountId;
-        private @Nullable Input<String> accountName;
-        private @Nullable Input<ManagedServiceIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<MediaServicesForPutRequestArgs> mediaServices;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> accountId;
+        private @Nullable Output<String> accountName;
+        private @Nullable Output<ManagedServiceIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<MediaServicesForPutRequestArgs> mediaServices;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -153,73 +153,73 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder accountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Output<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Input.ofNullable(accountId);
+            this.accountId = Output.ofNullable(accountId);
             return this;
         }
 
-        public Builder accountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Output<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Input.ofNullable(accountName);
+            this.accountName = Output.ofNullable(accountName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder mediaServices(@Nullable Input<MediaServicesForPutRequestArgs> mediaServices) {
+        public Builder mediaServices(@Nullable Output<MediaServicesForPutRequestArgs> mediaServices) {
             this.mediaServices = mediaServices;
             return this;
         }
 
         public Builder mediaServices(@Nullable MediaServicesForPutRequestArgs mediaServices) {
-            this.mediaServices = Input.ofNullable(mediaServices);
+            this.mediaServices = Output.ofNullable(mediaServices);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AccountArgs build() {

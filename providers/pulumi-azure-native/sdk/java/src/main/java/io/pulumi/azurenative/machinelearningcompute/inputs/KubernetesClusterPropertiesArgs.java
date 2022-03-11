@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.azurenative.machinelearningcompute.inputs.ServicePrincipalPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class KubernetesClusterPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="servicePrincipal")
-      private final @Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal;
+      private final @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
 
-    public Input<ServicePrincipalPropertiesArgs> getServicePrincipal() {
-        return this.servicePrincipal == null ? Input.empty() : this.servicePrincipal;
+    public Output<ServicePrincipalPropertiesArgs> getServicePrincipal() {
+        return this.servicePrincipal == null ? Output.empty() : this.servicePrincipal;
     }
 
-    public KubernetesClusterPropertiesArgs(@Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal) {
+    public KubernetesClusterPropertiesArgs(@Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal) {
         this.servicePrincipal = servicePrincipal;
     }
 
     private KubernetesClusterPropertiesArgs() {
-        this.servicePrincipal = Input.empty();
+        this.servicePrincipal = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class KubernetesClusterPropertiesArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal;
+        private @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class KubernetesClusterPropertiesArgs extends io.pulumi.resources.R
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder servicePrincipal(@Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal) {
+        public Builder servicePrincipal(@Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
 
         public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesArgs servicePrincipal) {
-            this.servicePrincipal = Input.ofNullable(servicePrincipal);
+            this.servicePrincipal = Output.ofNullable(servicePrincipal);
             return this;
         }
         public KubernetesClusterPropertiesArgs build() {

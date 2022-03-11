@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="collection")
-      private final @Nullable Input<String> collection;
+      private final @Nullable Output<String> collection;
 
-    public Input<String> getCollection() {
-        return this.collection == null ? Input.empty() : this.collection;
+    public Output<String> getCollection() {
+        return this.collection == null ? Output.empty() : this.collection;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="db")
-      private final @Nullable Input<String> db;
+      private final @Nullable Output<String> db;
 
-    public Input<String> getDb() {
-        return this.db == null ? Input.empty() : this.db;
+    public Output<String> getDb() {
+        return this.db == null ? Output.empty() : this.db;
     }
 
     public PrivilegeResourceArgs(
-        @Nullable Input<String> collection,
-        @Nullable Input<String> db) {
+        @Nullable Output<String> collection,
+        @Nullable Output<String> db) {
         this.collection = collection;
         this.db = db;
     }
 
     private PrivilegeResourceArgs() {
-        this.collection = Input.empty();
-        this.db = Input.empty();
+        this.collection = Output.empty();
+        this.db = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> collection;
-        private @Nullable Input<String> db;
+        private @Nullable Output<String> collection;
+        private @Nullable Output<String> db;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
     	      this.db = defaults.db;
         }
 
-        public Builder collection(@Nullable Input<String> collection) {
+        public Builder collection(@Nullable Output<String> collection) {
             this.collection = collection;
             return this;
         }
 
         public Builder collection(@Nullable String collection) {
-            this.collection = Input.ofNullable(collection);
+            this.collection = Output.ofNullable(collection);
             return this;
         }
 
-        public Builder db(@Nullable Input<String> db) {
+        public Builder db(@Nullable Output<String> db) {
             this.db = db;
             return this;
         }
 
         public Builder db(@Nullable String db) {
-            this.db = Input.ofNullable(db);
+            this.db = Output.ofNullable(db);
             return this;
         }
         public PrivilegeResourceArgs build() {

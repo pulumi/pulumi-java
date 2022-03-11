@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityandcompliance.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class ServiceAccessPolicyEntryArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="objectId", required=true)
-      private final Input<String> objectId;
+      private final Output<String> objectId;
 
-    public Input<String> getObjectId() {
+    public Output<String> getObjectId() {
         return this.objectId;
     }
 
-    public ServiceAccessPolicyEntryArgs(Input<String> objectId) {
+    public ServiceAccessPolicyEntryArgs(Output<String> objectId) {
         this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
     }
 
     private ServiceAccessPolicyEntryArgs() {
-        this.objectId = Input.empty();
+        this.objectId = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class ServiceAccessPolicyEntryArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private Input<String> objectId;
+        private Output<String> objectId;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class ServiceAccessPolicyEntryArgs extends io.pulumi.resources.Reso
     	      this.objectId = defaults.objectId;
         }
 
-        public Builder objectId(Input<String> objectId) {
+        public Builder objectId(Output<String> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
         public Builder objectId(String objectId) {
-            this.objectId = Input.of(Objects.requireNonNull(objectId));
+            this.objectId = Output.of(Objects.requireNonNull(objectId));
             return this;
         }
         public ServiceAccessPolicyEntryArgs build() {

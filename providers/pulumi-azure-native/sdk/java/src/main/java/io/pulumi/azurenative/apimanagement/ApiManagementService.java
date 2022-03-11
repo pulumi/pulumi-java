@@ -13,7 +13,6 @@ import io.pulumi.azurenative.apimanagement.outputs.CertificateConfigurationRespo
 import io.pulumi.azurenative.apimanagement.outputs.HostnameConfigurationResponse;
 import io.pulumi.azurenative.apimanagement.outputs.VirtualNetworkConfigurationResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -527,30 +526,30 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiManagementService(String name, ApiManagementServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:ApiManagementService", name, args == null ? ApiManagementServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:ApiManagementService", name, args == null ? ApiManagementServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ApiManagementService(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ApiManagementService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:ApiManagementService", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20160707:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20161010:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ApiManagementService").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ApiManagementService").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20160707:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20161010:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20170301:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180101:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20180601preview:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20190101:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:ApiManagementService").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:ApiManagementService").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -564,7 +563,7 @@ public class ApiManagementService extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApiManagementService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ApiManagementService get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ApiManagementService(name, id, options);
     }
 }

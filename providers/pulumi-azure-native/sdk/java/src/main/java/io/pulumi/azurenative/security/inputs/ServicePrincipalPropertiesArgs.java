@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="applicationId")
-      private final @Nullable Input<String> applicationId;
+      private final @Nullable Output<String> applicationId;
 
-    public Input<String> getApplicationId() {
-        return this.applicationId == null ? Input.empty() : this.applicationId;
+    public Output<String> getApplicationId() {
+        return this.applicationId == null ? Output.empty() : this.applicationId;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="secret")
-      private final @Nullable Input<String> secret;
+      private final @Nullable Output<String> secret;
 
-    public Input<String> getSecret() {
-        return this.secret == null ? Input.empty() : this.secret;
+    public Output<String> getSecret() {
+        return this.secret == null ? Output.empty() : this.secret;
     }
 
     public ServicePrincipalPropertiesArgs(
-        @Nullable Input<String> applicationId,
-        @Nullable Input<String> secret) {
+        @Nullable Output<String> applicationId,
+        @Nullable Output<String> secret) {
         this.applicationId = applicationId;
         this.secret = secret;
     }
 
     private ServicePrincipalPropertiesArgs() {
-        this.applicationId = Input.empty();
-        this.secret = Input.empty();
+        this.applicationId = Output.empty();
+        this.secret = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<String> applicationId;
-        private @Nullable Input<String> secret;
+        private @Nullable Output<String> applicationId;
+        private @Nullable Output<String> secret;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ServicePrincipalPropertiesArgs extends io.pulumi.resources.Re
     	      this.secret = defaults.secret;
         }
 
-        public Builder applicationId(@Nullable Input<String> applicationId) {
+        public Builder applicationId(@Nullable Output<String> applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Input.ofNullable(applicationId);
+            this.applicationId = Output.ofNullable(applicationId);
             return this;
         }
 
-        public Builder secret(@Nullable Input<String> secret) {
+        public Builder secret(@Nullable Output<String> secret) {
             this.secret = secret;
             return this;
         }
 
         public Builder secret(@Nullable String secret) {
-            this.secret = Input.ofNullable(secret);
+            this.secret = Output.ofNullable(secret);
             return this;
         }
         public ServicePrincipalPropertiesArgs build() {

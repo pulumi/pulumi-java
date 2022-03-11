@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.GatewayArgs;
 import io.pulumi.azurenative.apimanagement.outputs.ResourceLocationDataContractResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -127,24 +126,24 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Gateway(String name, GatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:apimanagement:Gateway", name, args == null ? GatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:apimanagement:Gateway", name, args == null ? GatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Gateway(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Gateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:apimanagement:Gateway", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201:Gateway").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:Gateway").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:Gateway").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20201201:Gateway").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:Gateway").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:Gateway").build()),
-                Input.of(Alias.builder().setType("azure-native:apimanagement/v20210801:Gateway").build())
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201:Gateway").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20191201preview:Gateway").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20200601preview:Gateway").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20201201:Gateway").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210101preview:Gateway").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210401preview:Gateway").build()),
+                Output.of(Alias.builder().setType("azure-native:apimanagement/v20210801:Gateway").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -158,7 +157,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Gateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Gateway get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Gateway(name, id, options);
     }
 }

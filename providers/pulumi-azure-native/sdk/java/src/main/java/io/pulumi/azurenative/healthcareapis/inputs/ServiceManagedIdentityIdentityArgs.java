@@ -5,7 +5,7 @@ package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.azurenative.healthcareapis.enums.ManagedServiceIdentityType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class ServiceManagedIdentityIdentityArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,ManagedServiceIdentityType>> type;
+      private final @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
-    public Input<Either<String,ManagedServiceIdentityType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,ManagedServiceIdentityType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public ServiceManagedIdentityIdentityArgs(@Nullable Input<Either<String,ManagedServiceIdentityType>> type) {
+    public ServiceManagedIdentityIdentityArgs(@Nullable Output<Either<String,ManagedServiceIdentityType>> type) {
         this.type = type;
     }
 
     private ServiceManagedIdentityIdentityArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class ServiceManagedIdentityIdentityArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,ManagedServiceIdentityType>> type;
+        private @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class ServiceManagedIdentityIdentityArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<Either<String,ManagedServiceIdentityType>> type) {
+        public Builder type(@Nullable Output<Either<String,ManagedServiceIdentityType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,ManagedServiceIdentityType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ServiceManagedIdentityIdentityArgs build() {

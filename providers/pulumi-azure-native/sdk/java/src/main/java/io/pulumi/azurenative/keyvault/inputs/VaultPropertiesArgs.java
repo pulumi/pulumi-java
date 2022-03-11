@@ -9,7 +9,7 @@ import io.pulumi.azurenative.keyvault.inputs.AccessPolicyEntryArgs;
 import io.pulumi.azurenative.keyvault.inputs.NetworkRuleSetArgs;
 import io.pulumi.azurenative.keyvault.inputs.SkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -32,10 +32,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="accessPolicies")
-      private final @Nullable Input<List<AccessPolicyEntryArgs>> accessPolicies;
+      private final @Nullable Output<List<AccessPolicyEntryArgs>> accessPolicies;
 
-    public Input<List<AccessPolicyEntryArgs>> getAccessPolicies() {
-        return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
+    public Output<List<AccessPolicyEntryArgs>> getAccessPolicies() {
+        return this.accessPolicies == null ? Output.empty() : this.accessPolicies;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createMode")
-      private final @Nullable Input<CreateMode> createMode;
+      private final @Nullable Output<CreateMode> createMode;
 
-    public Input<CreateMode> getCreateMode() {
-        return this.createMode == null ? Input.empty() : this.createMode;
+    public Output<CreateMode> getCreateMode() {
+        return this.createMode == null ? Output.empty() : this.createMode;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enablePurgeProtection")
-      private final @Nullable Input<Boolean> enablePurgeProtection;
+      private final @Nullable Output<Boolean> enablePurgeProtection;
 
-    public Input<Boolean> getEnablePurgeProtection() {
-        return this.enablePurgeProtection == null ? Input.empty() : this.enablePurgeProtection;
+    public Output<Boolean> getEnablePurgeProtection() {
+        return this.enablePurgeProtection == null ? Output.empty() : this.enablePurgeProtection;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableRbacAuthorization")
-      private final @Nullable Input<Boolean> enableRbacAuthorization;
+      private final @Nullable Output<Boolean> enableRbacAuthorization;
 
-    public Input<Boolean> getEnableRbacAuthorization() {
-        return this.enableRbacAuthorization == null ? Input.empty() : this.enableRbacAuthorization;
+    public Output<Boolean> getEnableRbacAuthorization() {
+        return this.enableRbacAuthorization == null ? Output.empty() : this.enableRbacAuthorization;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableSoftDelete")
-      private final @Nullable Input<Boolean> enableSoftDelete;
+      private final @Nullable Output<Boolean> enableSoftDelete;
 
-    public Input<Boolean> getEnableSoftDelete() {
-        return this.enableSoftDelete == null ? Input.empty() : this.enableSoftDelete;
+    public Output<Boolean> getEnableSoftDelete() {
+        return this.enableSoftDelete == null ? Output.empty() : this.enableSoftDelete;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabledForDeployment")
-      private final @Nullable Input<Boolean> enabledForDeployment;
+      private final @Nullable Output<Boolean> enabledForDeployment;
 
-    public Input<Boolean> getEnabledForDeployment() {
-        return this.enabledForDeployment == null ? Input.empty() : this.enabledForDeployment;
+    public Output<Boolean> getEnabledForDeployment() {
+        return this.enabledForDeployment == null ? Output.empty() : this.enabledForDeployment;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabledForDiskEncryption")
-      private final @Nullable Input<Boolean> enabledForDiskEncryption;
+      private final @Nullable Output<Boolean> enabledForDiskEncryption;
 
-    public Input<Boolean> getEnabledForDiskEncryption() {
-        return this.enabledForDiskEncryption == null ? Input.empty() : this.enabledForDiskEncryption;
+    public Output<Boolean> getEnabledForDiskEncryption() {
+        return this.enabledForDiskEncryption == null ? Output.empty() : this.enabledForDiskEncryption;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enabledForTemplateDeployment")
-      private final @Nullable Input<Boolean> enabledForTemplateDeployment;
+      private final @Nullable Output<Boolean> enabledForTemplateDeployment;
 
-    public Input<Boolean> getEnabledForTemplateDeployment() {
-        return this.enabledForTemplateDeployment == null ? Input.empty() : this.enabledForTemplateDeployment;
+    public Output<Boolean> getEnabledForTemplateDeployment() {
+        return this.enabledForTemplateDeployment == null ? Output.empty() : this.enabledForTemplateDeployment;
     }
 
     /**
@@ -120,10 +120,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkAcls")
-      private final @Nullable Input<NetworkRuleSetArgs> networkAcls;
+      private final @Nullable Output<NetworkRuleSetArgs> networkAcls;
 
-    public Input<NetworkRuleSetArgs> getNetworkAcls() {
-        return this.networkAcls == null ? Input.empty() : this.networkAcls;
+    public Output<NetworkRuleSetArgs> getNetworkAcls() {
+        return this.networkAcls == null ? Output.empty() : this.networkAcls;
     }
 
     /**
@@ -131,10 +131,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<Either<String,VaultProvisioningState>> provisioningState;
+      private final @Nullable Output<Either<String,VaultProvisioningState>> provisioningState;
 
-    public Input<Either<String,VaultProvisioningState>> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<Either<String,VaultProvisioningState>> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -142,9 +142,9 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -153,10 +153,10 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="softDeleteRetentionInDays")
-      private final @Nullable Input<Integer> softDeleteRetentionInDays;
+      private final @Nullable Output<Integer> softDeleteRetentionInDays;
 
-    public Input<Integer> getSoftDeleteRetentionInDays() {
-        return this.softDeleteRetentionInDays == null ? Input.empty() : this.softDeleteRetentionInDays;
+    public Output<Integer> getSoftDeleteRetentionInDays() {
+        return this.softDeleteRetentionInDays == null ? Output.empty() : this.softDeleteRetentionInDays;
     }
 
     /**
@@ -164,9 +164,9 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tenantId", required=true)
-      private final Input<String> tenantId;
+      private final Output<String> tenantId;
 
-    public Input<String> getTenantId() {
+    public Output<String> getTenantId() {
         return this.tenantId;
     }
 
@@ -175,58 +175,58 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vaultUri")
-      private final @Nullable Input<String> vaultUri;
+      private final @Nullable Output<String> vaultUri;
 
-    public Input<String> getVaultUri() {
-        return this.vaultUri == null ? Input.empty() : this.vaultUri;
+    public Output<String> getVaultUri() {
+        return this.vaultUri == null ? Output.empty() : this.vaultUri;
     }
 
     public VaultPropertiesArgs(
-        @Nullable Input<List<AccessPolicyEntryArgs>> accessPolicies,
-        @Nullable Input<CreateMode> createMode,
-        @Nullable Input<Boolean> enablePurgeProtection,
-        @Nullable Input<Boolean> enableRbacAuthorization,
-        @Nullable Input<Boolean> enableSoftDelete,
-        @Nullable Input<Boolean> enabledForDeployment,
-        @Nullable Input<Boolean> enabledForDiskEncryption,
-        @Nullable Input<Boolean> enabledForTemplateDeployment,
-        @Nullable Input<NetworkRuleSetArgs> networkAcls,
-        @Nullable Input<Either<String,VaultProvisioningState>> provisioningState,
-        Input<SkuArgs> sku,
-        @Nullable Input<Integer> softDeleteRetentionInDays,
-        Input<String> tenantId,
-        @Nullable Input<String> vaultUri) {
+        @Nullable Output<List<AccessPolicyEntryArgs>> accessPolicies,
+        @Nullable Output<CreateMode> createMode,
+        @Nullable Output<Boolean> enablePurgeProtection,
+        @Nullable Output<Boolean> enableRbacAuthorization,
+        @Nullable Output<Boolean> enableSoftDelete,
+        @Nullable Output<Boolean> enabledForDeployment,
+        @Nullable Output<Boolean> enabledForDiskEncryption,
+        @Nullable Output<Boolean> enabledForTemplateDeployment,
+        @Nullable Output<NetworkRuleSetArgs> networkAcls,
+        @Nullable Output<Either<String,VaultProvisioningState>> provisioningState,
+        Output<SkuArgs> sku,
+        @Nullable Output<Integer> softDeleteRetentionInDays,
+        Output<String> tenantId,
+        @Nullable Output<String> vaultUri) {
         this.accessPolicies = accessPolicies;
         this.createMode = createMode;
         this.enablePurgeProtection = enablePurgeProtection;
-        this.enableRbacAuthorization = enableRbacAuthorization == null ? Input.ofNullable(false) : enableRbacAuthorization;
-        this.enableSoftDelete = enableSoftDelete == null ? Input.ofNullable(true) : enableSoftDelete;
+        this.enableRbacAuthorization = enableRbacAuthorization == null ? Output.ofNullable(false) : enableRbacAuthorization;
+        this.enableSoftDelete = enableSoftDelete == null ? Output.ofNullable(true) : enableSoftDelete;
         this.enabledForDeployment = enabledForDeployment;
         this.enabledForDiskEncryption = enabledForDiskEncryption;
         this.enabledForTemplateDeployment = enabledForTemplateDeployment;
         this.networkAcls = networkAcls;
         this.provisioningState = provisioningState;
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
-        this.softDeleteRetentionInDays = softDeleteRetentionInDays == null ? Input.ofNullable(90) : softDeleteRetentionInDays;
+        this.softDeleteRetentionInDays = softDeleteRetentionInDays == null ? Output.ofNullable(90) : softDeleteRetentionInDays;
         this.tenantId = Objects.requireNonNull(tenantId, "expected parameter 'tenantId' to be non-null");
         this.vaultUri = vaultUri;
     }
 
     private VaultPropertiesArgs() {
-        this.accessPolicies = Input.empty();
-        this.createMode = Input.empty();
-        this.enablePurgeProtection = Input.empty();
-        this.enableRbacAuthorization = Input.empty();
-        this.enableSoftDelete = Input.empty();
-        this.enabledForDeployment = Input.empty();
-        this.enabledForDiskEncryption = Input.empty();
-        this.enabledForTemplateDeployment = Input.empty();
-        this.networkAcls = Input.empty();
-        this.provisioningState = Input.empty();
-        this.sku = Input.empty();
-        this.softDeleteRetentionInDays = Input.empty();
-        this.tenantId = Input.empty();
-        this.vaultUri = Input.empty();
+        this.accessPolicies = Output.empty();
+        this.createMode = Output.empty();
+        this.enablePurgeProtection = Output.empty();
+        this.enableRbacAuthorization = Output.empty();
+        this.enableSoftDelete = Output.empty();
+        this.enabledForDeployment = Output.empty();
+        this.enabledForDiskEncryption = Output.empty();
+        this.enabledForTemplateDeployment = Output.empty();
+        this.networkAcls = Output.empty();
+        this.provisioningState = Output.empty();
+        this.sku = Output.empty();
+        this.softDeleteRetentionInDays = Output.empty();
+        this.tenantId = Output.empty();
+        this.vaultUri = Output.empty();
     }
 
     public static Builder builder() {
@@ -238,20 +238,20 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AccessPolicyEntryArgs>> accessPolicies;
-        private @Nullable Input<CreateMode> createMode;
-        private @Nullable Input<Boolean> enablePurgeProtection;
-        private @Nullable Input<Boolean> enableRbacAuthorization;
-        private @Nullable Input<Boolean> enableSoftDelete;
-        private @Nullable Input<Boolean> enabledForDeployment;
-        private @Nullable Input<Boolean> enabledForDiskEncryption;
-        private @Nullable Input<Boolean> enabledForTemplateDeployment;
-        private @Nullable Input<NetworkRuleSetArgs> networkAcls;
-        private @Nullable Input<Either<String,VaultProvisioningState>> provisioningState;
-        private Input<SkuArgs> sku;
-        private @Nullable Input<Integer> softDeleteRetentionInDays;
-        private Input<String> tenantId;
-        private @Nullable Input<String> vaultUri;
+        private @Nullable Output<List<AccessPolicyEntryArgs>> accessPolicies;
+        private @Nullable Output<CreateMode> createMode;
+        private @Nullable Output<Boolean> enablePurgeProtection;
+        private @Nullable Output<Boolean> enableRbacAuthorization;
+        private @Nullable Output<Boolean> enableSoftDelete;
+        private @Nullable Output<Boolean> enabledForDeployment;
+        private @Nullable Output<Boolean> enabledForDiskEncryption;
+        private @Nullable Output<Boolean> enabledForTemplateDeployment;
+        private @Nullable Output<NetworkRuleSetArgs> networkAcls;
+        private @Nullable Output<Either<String,VaultProvisioningState>> provisioningState;
+        private Output<SkuArgs> sku;
+        private @Nullable Output<Integer> softDeleteRetentionInDays;
+        private Output<String> tenantId;
+        private @Nullable Output<String> vaultUri;
 
         public Builder() {
     	      // Empty
@@ -275,143 +275,143 @@ public final class VaultPropertiesArgs extends io.pulumi.resources.ResourceArgs 
     	      this.vaultUri = defaults.vaultUri;
         }
 
-        public Builder accessPolicies(@Nullable Input<List<AccessPolicyEntryArgs>> accessPolicies) {
+        public Builder accessPolicies(@Nullable Output<List<AccessPolicyEntryArgs>> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
         public Builder accessPolicies(@Nullable List<AccessPolicyEntryArgs> accessPolicies) {
-            this.accessPolicies = Input.ofNullable(accessPolicies);
+            this.accessPolicies = Output.ofNullable(accessPolicies);
             return this;
         }
 
-        public Builder createMode(@Nullable Input<CreateMode> createMode) {
+        public Builder createMode(@Nullable Output<CreateMode> createMode) {
             this.createMode = createMode;
             return this;
         }
 
         public Builder createMode(@Nullable CreateMode createMode) {
-            this.createMode = Input.ofNullable(createMode);
+            this.createMode = Output.ofNullable(createMode);
             return this;
         }
 
-        public Builder enablePurgeProtection(@Nullable Input<Boolean> enablePurgeProtection) {
+        public Builder enablePurgeProtection(@Nullable Output<Boolean> enablePurgeProtection) {
             this.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
 
         public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
-            this.enablePurgeProtection = Input.ofNullable(enablePurgeProtection);
+            this.enablePurgeProtection = Output.ofNullable(enablePurgeProtection);
             return this;
         }
 
-        public Builder enableRbacAuthorization(@Nullable Input<Boolean> enableRbacAuthorization) {
+        public Builder enableRbacAuthorization(@Nullable Output<Boolean> enableRbacAuthorization) {
             this.enableRbacAuthorization = enableRbacAuthorization;
             return this;
         }
 
         public Builder enableRbacAuthorization(@Nullable Boolean enableRbacAuthorization) {
-            this.enableRbacAuthorization = Input.ofNullable(enableRbacAuthorization);
+            this.enableRbacAuthorization = Output.ofNullable(enableRbacAuthorization);
             return this;
         }
 
-        public Builder enableSoftDelete(@Nullable Input<Boolean> enableSoftDelete) {
+        public Builder enableSoftDelete(@Nullable Output<Boolean> enableSoftDelete) {
             this.enableSoftDelete = enableSoftDelete;
             return this;
         }
 
         public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
-            this.enableSoftDelete = Input.ofNullable(enableSoftDelete);
+            this.enableSoftDelete = Output.ofNullable(enableSoftDelete);
             return this;
         }
 
-        public Builder enabledForDeployment(@Nullable Input<Boolean> enabledForDeployment) {
+        public Builder enabledForDeployment(@Nullable Output<Boolean> enabledForDeployment) {
             this.enabledForDeployment = enabledForDeployment;
             return this;
         }
 
         public Builder enabledForDeployment(@Nullable Boolean enabledForDeployment) {
-            this.enabledForDeployment = Input.ofNullable(enabledForDeployment);
+            this.enabledForDeployment = Output.ofNullable(enabledForDeployment);
             return this;
         }
 
-        public Builder enabledForDiskEncryption(@Nullable Input<Boolean> enabledForDiskEncryption) {
+        public Builder enabledForDiskEncryption(@Nullable Output<Boolean> enabledForDiskEncryption) {
             this.enabledForDiskEncryption = enabledForDiskEncryption;
             return this;
         }
 
         public Builder enabledForDiskEncryption(@Nullable Boolean enabledForDiskEncryption) {
-            this.enabledForDiskEncryption = Input.ofNullable(enabledForDiskEncryption);
+            this.enabledForDiskEncryption = Output.ofNullable(enabledForDiskEncryption);
             return this;
         }
 
-        public Builder enabledForTemplateDeployment(@Nullable Input<Boolean> enabledForTemplateDeployment) {
+        public Builder enabledForTemplateDeployment(@Nullable Output<Boolean> enabledForTemplateDeployment) {
             this.enabledForTemplateDeployment = enabledForTemplateDeployment;
             return this;
         }
 
         public Builder enabledForTemplateDeployment(@Nullable Boolean enabledForTemplateDeployment) {
-            this.enabledForTemplateDeployment = Input.ofNullable(enabledForTemplateDeployment);
+            this.enabledForTemplateDeployment = Output.ofNullable(enabledForTemplateDeployment);
             return this;
         }
 
-        public Builder networkAcls(@Nullable Input<NetworkRuleSetArgs> networkAcls) {
+        public Builder networkAcls(@Nullable Output<NetworkRuleSetArgs> networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
 
         public Builder networkAcls(@Nullable NetworkRuleSetArgs networkAcls) {
-            this.networkAcls = Input.ofNullable(networkAcls);
+            this.networkAcls = Output.ofNullable(networkAcls);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<Either<String,VaultProvisioningState>> provisioningState) {
+        public Builder provisioningState(@Nullable Output<Either<String,VaultProvisioningState>> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable Either<String,VaultProvisioningState> provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder softDeleteRetentionInDays(@Nullable Input<Integer> softDeleteRetentionInDays) {
+        public Builder softDeleteRetentionInDays(@Nullable Output<Integer> softDeleteRetentionInDays) {
             this.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
 
         public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
-            this.softDeleteRetentionInDays = Input.ofNullable(softDeleteRetentionInDays);
+            this.softDeleteRetentionInDays = Output.ofNullable(softDeleteRetentionInDays);
             return this;
         }
 
-        public Builder tenantId(Input<String> tenantId) {
+        public Builder tenantId(Output<String> tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
         public Builder tenantId(String tenantId) {
-            this.tenantId = Input.of(Objects.requireNonNull(tenantId));
+            this.tenantId = Output.of(Objects.requireNonNull(tenantId));
             return this;
         }
 
-        public Builder vaultUri(@Nullable Input<String> vaultUri) {
+        public Builder vaultUri(@Nullable Output<String> vaultUri) {
             this.vaultUri = vaultUri;
             return this;
         }
 
         public Builder vaultUri(@Nullable String vaultUri) {
-            this.vaultUri = Input.ofNullable(vaultUri);
+            this.vaultUri = Output.ofNullable(vaultUri);
             return this;
         }
         public VaultPropertiesArgs build() {

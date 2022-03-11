@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.NetworkProfileArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkProfile")
-      private final @Nullable Input<NetworkProfileArgs> networkProfile;
+      private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
-    public Input<NetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Input.empty() : this.networkProfile;
+    public Output<NetworkProfileArgs> getNetworkProfile() {
+        return this.networkProfile == null ? Output.empty() : this.networkProfile;
     }
 
-    public ClusterResourcePropertiesArgs(@Nullable Input<NetworkProfileArgs> networkProfile) {
+    public ClusterResourcePropertiesArgs(@Nullable Output<NetworkProfileArgs> networkProfile) {
         this.networkProfile = networkProfile;
     }
 
     private ClusterResourcePropertiesArgs() {
-        this.networkProfile = Input.empty();
+        this.networkProfile = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<NetworkProfileArgs> networkProfile;
+        private @Nullable Output<NetworkProfileArgs> networkProfile;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ClusterResourcePropertiesArgs extends io.pulumi.resources.Res
     	      this.networkProfile = defaults.networkProfile;
         }
 
-        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Input.ofNullable(networkProfile);
+            this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
         public ClusterResourcePropertiesArgs build() {

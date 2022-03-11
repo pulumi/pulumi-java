@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="authType", required=true)
-      private final Input<String> authType;
+      private final Output<String> authType;
 
-    public Input<String> getAuthType() {
+    public Output<String> getAuthType() {
         return this.authType;
     }
 
-    public SystemAssignedIdentityAuthInfoArgs(Input<String> authType) {
+    public SystemAssignedIdentityAuthInfoArgs(Output<String> authType) {
         this.authType = Objects.requireNonNull(authType, "expected parameter 'authType' to be non-null");
     }
 
     private SystemAssignedIdentityAuthInfoArgs() {
-        this.authType = Input.empty();
+        this.authType = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resource
     }
 
     public static final class Builder {
-        private Input<String> authType;
+        private Output<String> authType;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class SystemAssignedIdentityAuthInfoArgs extends io.pulumi.resource
     	      this.authType = defaults.authType;
         }
 
-        public Builder authType(Input<String> authType) {
+        public Builder authType(Output<String> authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
         public Builder authType(String authType) {
-            this.authType = Input.of(Objects.requireNonNull(authType));
+            this.authType = Output.of(Objects.requireNonNull(authType));
             return this;
         }
         public SystemAssignedIdentityAuthInfoArgs build() {

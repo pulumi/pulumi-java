@@ -6,7 +6,7 @@ package io.pulumi.azurenative.portal.inputs;
 import io.pulumi.azurenative.portal.enums.FontSize;
 import io.pulumi.azurenative.portal.enums.FontStyle;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fontSize")
-      private final @Nullable Input<Either<String,FontSize>> fontSize;
+      private final @Nullable Output<Either<String,FontSize>> fontSize;
 
-    public Input<Either<String,FontSize>> getFontSize() {
-        return this.fontSize == null ? Input.empty() : this.fontSize;
+    public Output<Either<String,FontSize>> getFontSize() {
+        return this.fontSize == null ? Output.empty() : this.fontSize;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fontStyle")
-      private final @Nullable Input<Either<String,FontStyle>> fontStyle;
+      private final @Nullable Output<Either<String,FontStyle>> fontStyle;
 
-    public Input<Either<String,FontStyle>> getFontStyle() {
-        return this.fontStyle == null ? Input.empty() : this.fontStyle;
+    public Output<Either<String,FontStyle>> getFontStyle() {
+        return this.fontStyle == null ? Output.empty() : this.fontStyle;
     }
 
     public TerminalSettingsArgs(
-        @Nullable Input<Either<String,FontSize>> fontSize,
-        @Nullable Input<Either<String,FontStyle>> fontStyle) {
+        @Nullable Output<Either<String,FontSize>> fontSize,
+        @Nullable Output<Either<String,FontStyle>> fontStyle) {
         this.fontSize = fontSize;
         this.fontStyle = fontStyle;
     }
 
     private TerminalSettingsArgs() {
-        this.fontSize = Input.empty();
-        this.fontStyle = Input.empty();
+        this.fontSize = Output.empty();
+        this.fontStyle = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,FontSize>> fontSize;
-        private @Nullable Input<Either<String,FontStyle>> fontStyle;
+        private @Nullable Output<Either<String,FontSize>> fontSize;
+        private @Nullable Output<Either<String,FontStyle>> fontStyle;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.fontStyle = defaults.fontStyle;
         }
 
-        public Builder fontSize(@Nullable Input<Either<String,FontSize>> fontSize) {
+        public Builder fontSize(@Nullable Output<Either<String,FontSize>> fontSize) {
             this.fontSize = fontSize;
             return this;
         }
 
         public Builder fontSize(@Nullable Either<String,FontSize> fontSize) {
-            this.fontSize = Input.ofNullable(fontSize);
+            this.fontSize = Output.ofNullable(fontSize);
             return this;
         }
 
-        public Builder fontStyle(@Nullable Input<Either<String,FontStyle>> fontStyle) {
+        public Builder fontStyle(@Nullable Output<Either<String,FontStyle>> fontStyle) {
             this.fontStyle = fontStyle;
             return this;
         }
 
         public Builder fontStyle(@Nullable Either<String,FontStyle> fontStyle) {
-            this.fontStyle = Input.ofNullable(fontStyle);
+            this.fontStyle = Output.ofNullable(fontStyle);
             return this;
         }
         public TerminalSettingsArgs build() {

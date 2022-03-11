@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeInGB")
-      private final @Nullable Input<Integer> diskSizeInGB;
+      private final @Nullable Output<Integer> diskSizeInGB;
 
-    public Input<Integer> getDiskSizeInGB() {
-        return this.diskSizeInGB == null ? Input.empty() : this.diskSizeInGB;
+    public Output<Integer> getDiskSizeInGB() {
+        return this.diskSizeInGB == null ? Output.empty() : this.diskSizeInGB;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileShareName")
-      private final @Nullable Input<String> fileShareName;
+      private final @Nullable Output<String> fileShareName;
 
-    public Input<String> getFileShareName() {
-        return this.fileShareName == null ? Input.empty() : this.fileShareName;
+    public Output<String> getFileShareName() {
+        return this.fileShareName == null ? Output.empty() : this.fileShareName;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountResourceId")
-      private final @Nullable Input<String> storageAccountResourceId;
+      private final @Nullable Output<String> storageAccountResourceId;
 
-    public Input<String> getStorageAccountResourceId() {
-        return this.storageAccountResourceId == null ? Input.empty() : this.storageAccountResourceId;
+    public Output<String> getStorageAccountResourceId() {
+        return this.storageAccountResourceId == null ? Output.empty() : this.storageAccountResourceId;
     }
 
     public StorageProfileArgs(
-        @Nullable Input<Integer> diskSizeInGB,
-        @Nullable Input<String> fileShareName,
-        @Nullable Input<String> storageAccountResourceId) {
+        @Nullable Output<Integer> diskSizeInGB,
+        @Nullable Output<String> fileShareName,
+        @Nullable Output<String> storageAccountResourceId) {
         this.diskSizeInGB = diskSizeInGB;
         this.fileShareName = fileShareName;
         this.storageAccountResourceId = storageAccountResourceId;
     }
 
     private StorageProfileArgs() {
-        this.diskSizeInGB = Input.empty();
-        this.fileShareName = Input.empty();
-        this.storageAccountResourceId = Input.empty();
+        this.diskSizeInGB = Output.empty();
+        this.fileShareName = Output.empty();
+        this.storageAccountResourceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> diskSizeInGB;
-        private @Nullable Input<String> fileShareName;
-        private @Nullable Input<String> storageAccountResourceId;
+        private @Nullable Output<Integer> diskSizeInGB;
+        private @Nullable Output<String> fileShareName;
+        private @Nullable Output<String> storageAccountResourceId;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountResourceId = defaults.storageAccountResourceId;
         }
 
-        public Builder diskSizeInGB(@Nullable Input<Integer> diskSizeInGB) {
+        public Builder diskSizeInGB(@Nullable Output<Integer> diskSizeInGB) {
             this.diskSizeInGB = diskSizeInGB;
             return this;
         }
 
         public Builder diskSizeInGB(@Nullable Integer diskSizeInGB) {
-            this.diskSizeInGB = Input.ofNullable(diskSizeInGB);
+            this.diskSizeInGB = Output.ofNullable(diskSizeInGB);
             return this;
         }
 
-        public Builder fileShareName(@Nullable Input<String> fileShareName) {
+        public Builder fileShareName(@Nullable Output<String> fileShareName) {
             this.fileShareName = fileShareName;
             return this;
         }
 
         public Builder fileShareName(@Nullable String fileShareName) {
-            this.fileShareName = Input.ofNullable(fileShareName);
+            this.fileShareName = Output.ofNullable(fileShareName);
             return this;
         }
 
-        public Builder storageAccountResourceId(@Nullable Input<String> storageAccountResourceId) {
+        public Builder storageAccountResourceId(@Nullable Output<String> storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
 
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
-            this.storageAccountResourceId = Input.ofNullable(storageAccountResourceId);
+            this.storageAccountResourceId = Output.ofNullable(storageAccountResourceId);
             return this;
         }
         public StorageProfileArgs build() {

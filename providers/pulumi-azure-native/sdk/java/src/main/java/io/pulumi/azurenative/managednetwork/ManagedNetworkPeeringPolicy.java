@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.managednetwork.ManagedNetworkPeeringPolicyArgs;
 import io.pulumi.azurenative.managednetwork.outputs.ManagedNetworkPeeringPolicyPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -127,18 +126,18 @@ public class ManagedNetworkPeeringPolicy extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagedNetworkPeeringPolicy(String name, ManagedNetworkPeeringPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:managednetwork:ManagedNetworkPeeringPolicy", name, args == null ? ManagedNetworkPeeringPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:managednetwork:ManagedNetworkPeeringPolicy", name, args == null ? ManagedNetworkPeeringPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ManagedNetworkPeeringPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ManagedNetworkPeeringPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:managednetwork:ManagedNetworkPeeringPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:managednetwork/v20190601preview:ManagedNetworkPeeringPolicy").build())
+                Output.of(Alias.builder().setType("azure-native:managednetwork/v20190601preview:ManagedNetworkPeeringPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -152,7 +151,7 @@ public class ManagedNetworkPeeringPolicy extends io.pulumi.resources.CustomResou
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagedNetworkPeeringPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ManagedNetworkPeeringPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ManagedNetworkPeeringPolicy(name, id, options);
     }
 }

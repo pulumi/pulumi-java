@@ -10,7 +10,6 @@ import io.pulumi.azurenative.dbformysql.outputs.ServerPrivateEndpointConnectionR
 import io.pulumi.azurenative.dbformysql.outputs.SkuResponse;
 import io.pulumi.azurenative.dbformysql.outputs.StorageProfileResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -370,19 +369,19 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Server(String name, ServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:dbformysql:Server", name, args == null ? ServerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:dbformysql:Server", name, args == null ? ServerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Server(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Server(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:dbformysql:Server", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:dbformysql/v20171201:Server").build()),
-                Input.of(Alias.builder().setType("azure-native:dbformysql/v20171201preview:Server").build())
+                Output.of(Alias.builder().setType("azure-native:dbformysql/v20171201:Server").build()),
+                Output.of(Alias.builder().setType("azure-native:dbformysql/v20171201preview:Server").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -396,7 +395,7 @@ public class Server extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Server get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Server get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Server(name, id, options);
     }
 }

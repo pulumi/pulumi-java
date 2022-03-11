@@ -7,7 +7,7 @@ import io.pulumi.azurenative.confidentialledger.enums.LedgerType;
 import io.pulumi.azurenative.confidentialledger.inputs.AADBasedSecurityPrincipalArgs;
 import io.pulumi.azurenative.confidentialledger.inputs.CertBasedSecurityPrincipalArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="aadBasedSecurityPrincipals")
-      private final @Nullable Input<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
+      private final @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
 
-    public Input<List<AADBasedSecurityPrincipalArgs>> getAadBasedSecurityPrincipals() {
-        return this.aadBasedSecurityPrincipals == null ? Input.empty() : this.aadBasedSecurityPrincipals;
+    public Output<List<AADBasedSecurityPrincipalArgs>> getAadBasedSecurityPrincipals() {
+        return this.aadBasedSecurityPrincipals == null ? Output.empty() : this.aadBasedSecurityPrincipals;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="certBasedSecurityPrincipals")
-      private final @Nullable Input<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
+      private final @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
 
-    public Input<List<CertBasedSecurityPrincipalArgs>> getCertBasedSecurityPrincipals() {
-        return this.certBasedSecurityPrincipals == null ? Input.empty() : this.certBasedSecurityPrincipals;
+    public Output<List<CertBasedSecurityPrincipalArgs>> getCertBasedSecurityPrincipals() {
+        return this.certBasedSecurityPrincipals == null ? Output.empty() : this.certBasedSecurityPrincipals;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ledgerStorageAccount")
-      private final @Nullable Input<String> ledgerStorageAccount;
+      private final @Nullable Output<String> ledgerStorageAccount;
 
-    public Input<String> getLedgerStorageAccount() {
-        return this.ledgerStorageAccount == null ? Input.empty() : this.ledgerStorageAccount;
+    public Output<String> getLedgerStorageAccount() {
+        return this.ledgerStorageAccount == null ? Output.empty() : this.ledgerStorageAccount;
     }
 
     /**
@@ -61,17 +61,17 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ledgerType")
-      private final @Nullable Input<Either<String,LedgerType>> ledgerType;
+      private final @Nullable Output<Either<String,LedgerType>> ledgerType;
 
-    public Input<Either<String,LedgerType>> getLedgerType() {
-        return this.ledgerType == null ? Input.empty() : this.ledgerType;
+    public Output<Either<String,LedgerType>> getLedgerType() {
+        return this.ledgerType == null ? Output.empty() : this.ledgerType;
     }
 
     public LedgerPropertiesArgs(
-        @Nullable Input<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals,
-        @Nullable Input<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals,
-        @Nullable Input<String> ledgerStorageAccount,
-        @Nullable Input<Either<String,LedgerType>> ledgerType) {
+        @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals,
+        @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals,
+        @Nullable Output<String> ledgerStorageAccount,
+        @Nullable Output<Either<String,LedgerType>> ledgerType) {
         this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
         this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
         this.ledgerStorageAccount = ledgerStorageAccount;
@@ -79,10 +79,10 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private LedgerPropertiesArgs() {
-        this.aadBasedSecurityPrincipals = Input.empty();
-        this.certBasedSecurityPrincipals = Input.empty();
-        this.ledgerStorageAccount = Input.empty();
-        this.ledgerType = Input.empty();
+        this.aadBasedSecurityPrincipals = Output.empty();
+        this.certBasedSecurityPrincipals = Output.empty();
+        this.ledgerStorageAccount = Output.empty();
+        this.ledgerType = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,10 +94,10 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
-        private @Nullable Input<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
-        private @Nullable Input<String> ledgerStorageAccount;
-        private @Nullable Input<Either<String,LedgerType>> ledgerType;
+        private @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
+        private @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
+        private @Nullable Output<String> ledgerStorageAccount;
+        private @Nullable Output<Either<String,LedgerType>> ledgerType;
 
         public Builder() {
     	      // Empty
@@ -111,43 +111,43 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.ledgerType = defaults.ledgerType;
         }
 
-        public Builder aadBasedSecurityPrincipals(@Nullable Input<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals) {
+        public Builder aadBasedSecurityPrincipals(@Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals) {
             this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
             return this;
         }
 
         public Builder aadBasedSecurityPrincipals(@Nullable List<AADBasedSecurityPrincipalArgs> aadBasedSecurityPrincipals) {
-            this.aadBasedSecurityPrincipals = Input.ofNullable(aadBasedSecurityPrincipals);
+            this.aadBasedSecurityPrincipals = Output.ofNullable(aadBasedSecurityPrincipals);
             return this;
         }
 
-        public Builder certBasedSecurityPrincipals(@Nullable Input<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals) {
+        public Builder certBasedSecurityPrincipals(@Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals) {
             this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
             return this;
         }
 
         public Builder certBasedSecurityPrincipals(@Nullable List<CertBasedSecurityPrincipalArgs> certBasedSecurityPrincipals) {
-            this.certBasedSecurityPrincipals = Input.ofNullable(certBasedSecurityPrincipals);
+            this.certBasedSecurityPrincipals = Output.ofNullable(certBasedSecurityPrincipals);
             return this;
         }
 
-        public Builder ledgerStorageAccount(@Nullable Input<String> ledgerStorageAccount) {
+        public Builder ledgerStorageAccount(@Nullable Output<String> ledgerStorageAccount) {
             this.ledgerStorageAccount = ledgerStorageAccount;
             return this;
         }
 
         public Builder ledgerStorageAccount(@Nullable String ledgerStorageAccount) {
-            this.ledgerStorageAccount = Input.ofNullable(ledgerStorageAccount);
+            this.ledgerStorageAccount = Output.ofNullable(ledgerStorageAccount);
             return this;
         }
 
-        public Builder ledgerType(@Nullable Input<Either<String,LedgerType>> ledgerType) {
+        public Builder ledgerType(@Nullable Output<Either<String,LedgerType>> ledgerType) {
             this.ledgerType = ledgerType;
             return this;
         }
 
         public Builder ledgerType(@Nullable Either<String,LedgerType> ledgerType) {
-            this.ledgerType = Input.ofNullable(ledgerType);
+            this.ledgerType = Output.ofNullable(ledgerType);
             return this;
         }
         public LedgerPropertiesArgs build() {

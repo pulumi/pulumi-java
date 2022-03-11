@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.SecurityAlertsPolicyState;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,9 +23,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="databaseName", required=true)
-      private final Input<String> databaseName;
+      private final Output<String> databaseName;
 
-    public Input<String> getDatabaseName() {
+    public Output<String> getDatabaseName() {
         return this.databaseName;
     }
 
@@ -34,10 +34,10 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="disabledAlerts")
-      private final @Nullable Input<List<String>> disabledAlerts;
+      private final @Nullable Output<List<String>> disabledAlerts;
 
-    public Input<List<String>> getDisabledAlerts() {
-        return this.disabledAlerts == null ? Input.empty() : this.disabledAlerts;
+    public Output<List<String>> getDisabledAlerts() {
+        return this.disabledAlerts == null ? Output.empty() : this.disabledAlerts;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="emailAccountAdmins")
-      private final @Nullable Input<Boolean> emailAccountAdmins;
+      private final @Nullable Output<Boolean> emailAccountAdmins;
 
-    public Input<Boolean> getEmailAccountAdmins() {
-        return this.emailAccountAdmins == null ? Input.empty() : this.emailAccountAdmins;
+    public Output<Boolean> getEmailAccountAdmins() {
+        return this.emailAccountAdmins == null ? Output.empty() : this.emailAccountAdmins;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="emailAddresses")
-      private final @Nullable Input<List<String>> emailAddresses;
+      private final @Nullable Output<List<String>> emailAddresses;
 
-    public Input<List<String>> getEmailAddresses() {
-        return this.emailAddresses == null ? Input.empty() : this.emailAddresses;
+    public Output<List<String>> getEmailAddresses() {
+        return this.emailAddresses == null ? Output.empty() : this.emailAddresses;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -78,10 +78,10 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="retentionDays")
-      private final @Nullable Input<Integer> retentionDays;
+      private final @Nullable Output<Integer> retentionDays;
 
-    public Input<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Input.empty() : this.retentionDays;
+    public Output<Integer> getRetentionDays() {
+        return this.retentionDays == null ? Output.empty() : this.retentionDays;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="securityAlertPolicyName")
-      private final @Nullable Input<String> securityAlertPolicyName;
+      private final @Nullable Output<String> securityAlertPolicyName;
 
-    public Input<String> getSecurityAlertPolicyName() {
-        return this.securityAlertPolicyName == null ? Input.empty() : this.securityAlertPolicyName;
+    public Output<String> getSecurityAlertPolicyName() {
+        return this.securityAlertPolicyName == null ? Output.empty() : this.securityAlertPolicyName;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
@@ -111,9 +111,9 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="state", required=true)
-      private final Input<SecurityAlertsPolicyState> state;
+      private final Output<SecurityAlertsPolicyState> state;
 
-    public Input<SecurityAlertsPolicyState> getState() {
+    public Output<SecurityAlertsPolicyState> getState() {
         return this.state;
     }
 
@@ -122,10 +122,10 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="storageAccountAccessKey")
-      private final @Nullable Input<String> storageAccountAccessKey;
+      private final @Nullable Output<String> storageAccountAccessKey;
 
-    public Input<String> getStorageAccountAccessKey() {
-        return this.storageAccountAccessKey == null ? Input.empty() : this.storageAccountAccessKey;
+    public Output<String> getStorageAccountAccessKey() {
+        return this.storageAccountAccessKey == null ? Output.empty() : this.storageAccountAccessKey;
     }
 
     /**
@@ -133,24 +133,24 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="storageEndpoint")
-      private final @Nullable Input<String> storageEndpoint;
+      private final @Nullable Output<String> storageEndpoint;
 
-    public Input<String> getStorageEndpoint() {
-        return this.storageEndpoint == null ? Input.empty() : this.storageEndpoint;
+    public Output<String> getStorageEndpoint() {
+        return this.storageEndpoint == null ? Output.empty() : this.storageEndpoint;
     }
 
     public DatabaseSecurityAlertPolicyArgs(
-        Input<String> databaseName,
-        @Nullable Input<List<String>> disabledAlerts,
-        @Nullable Input<Boolean> emailAccountAdmins,
-        @Nullable Input<List<String>> emailAddresses,
-        Input<String> resourceGroupName,
-        @Nullable Input<Integer> retentionDays,
-        @Nullable Input<String> securityAlertPolicyName,
-        Input<String> serverName,
-        Input<SecurityAlertsPolicyState> state,
-        @Nullable Input<String> storageAccountAccessKey,
-        @Nullable Input<String> storageEndpoint) {
+        Output<String> databaseName,
+        @Nullable Output<List<String>> disabledAlerts,
+        @Nullable Output<Boolean> emailAccountAdmins,
+        @Nullable Output<List<String>> emailAddresses,
+        Output<String> resourceGroupName,
+        @Nullable Output<Integer> retentionDays,
+        @Nullable Output<String> securityAlertPolicyName,
+        Output<String> serverName,
+        Output<SecurityAlertsPolicyState> state,
+        @Nullable Output<String> storageAccountAccessKey,
+        @Nullable Output<String> storageEndpoint) {
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.disabledAlerts = disabledAlerts;
         this.emailAccountAdmins = emailAccountAdmins;
@@ -165,17 +165,17 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     }
 
     private DatabaseSecurityAlertPolicyArgs() {
-        this.databaseName = Input.empty();
-        this.disabledAlerts = Input.empty();
-        this.emailAccountAdmins = Input.empty();
-        this.emailAddresses = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.retentionDays = Input.empty();
-        this.securityAlertPolicyName = Input.empty();
-        this.serverName = Input.empty();
-        this.state = Input.empty();
-        this.storageAccountAccessKey = Input.empty();
-        this.storageEndpoint = Input.empty();
+        this.databaseName = Output.empty();
+        this.disabledAlerts = Output.empty();
+        this.emailAccountAdmins = Output.empty();
+        this.emailAddresses = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.retentionDays = Output.empty();
+        this.securityAlertPolicyName = Output.empty();
+        this.serverName = Output.empty();
+        this.state = Output.empty();
+        this.storageAccountAccessKey = Output.empty();
+        this.storageEndpoint = Output.empty();
     }
 
     public static Builder builder() {
@@ -187,17 +187,17 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> databaseName;
-        private @Nullable Input<List<String>> disabledAlerts;
-        private @Nullable Input<Boolean> emailAccountAdmins;
-        private @Nullable Input<List<String>> emailAddresses;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Integer> retentionDays;
-        private @Nullable Input<String> securityAlertPolicyName;
-        private Input<String> serverName;
-        private Input<SecurityAlertsPolicyState> state;
-        private @Nullable Input<String> storageAccountAccessKey;
-        private @Nullable Input<String> storageEndpoint;
+        private Output<String> databaseName;
+        private @Nullable Output<List<String>> disabledAlerts;
+        private @Nullable Output<Boolean> emailAccountAdmins;
+        private @Nullable Output<List<String>> emailAddresses;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Integer> retentionDays;
+        private @Nullable Output<String> securityAlertPolicyName;
+        private Output<String> serverName;
+        private Output<SecurityAlertsPolicyState> state;
+        private @Nullable Output<String> storageAccountAccessKey;
+        private @Nullable Output<String> storageEndpoint;
 
         public Builder() {
     	      // Empty
@@ -218,113 +218,113 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     	      this.storageEndpoint = defaults.storageEndpoint;
         }
 
-        public Builder databaseName(Input<String> databaseName) {
+        public Builder databaseName(Output<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Input.of(Objects.requireNonNull(databaseName));
+            this.databaseName = Output.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder disabledAlerts(@Nullable Input<List<String>> disabledAlerts) {
+        public Builder disabledAlerts(@Nullable Output<List<String>> disabledAlerts) {
             this.disabledAlerts = disabledAlerts;
             return this;
         }
 
         public Builder disabledAlerts(@Nullable List<String> disabledAlerts) {
-            this.disabledAlerts = Input.ofNullable(disabledAlerts);
+            this.disabledAlerts = Output.ofNullable(disabledAlerts);
             return this;
         }
 
-        public Builder emailAccountAdmins(@Nullable Input<Boolean> emailAccountAdmins) {
+        public Builder emailAccountAdmins(@Nullable Output<Boolean> emailAccountAdmins) {
             this.emailAccountAdmins = emailAccountAdmins;
             return this;
         }
 
         public Builder emailAccountAdmins(@Nullable Boolean emailAccountAdmins) {
-            this.emailAccountAdmins = Input.ofNullable(emailAccountAdmins);
+            this.emailAccountAdmins = Output.ofNullable(emailAccountAdmins);
             return this;
         }
 
-        public Builder emailAddresses(@Nullable Input<List<String>> emailAddresses) {
+        public Builder emailAddresses(@Nullable Output<List<String>> emailAddresses) {
             this.emailAddresses = emailAddresses;
             return this;
         }
 
         public Builder emailAddresses(@Nullable List<String> emailAddresses) {
-            this.emailAddresses = Input.ofNullable(emailAddresses);
+            this.emailAddresses = Output.ofNullable(emailAddresses);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Input.ofNullable(retentionDays);
+            this.retentionDays = Output.ofNullable(retentionDays);
             return this;
         }
 
-        public Builder securityAlertPolicyName(@Nullable Input<String> securityAlertPolicyName) {
+        public Builder securityAlertPolicyName(@Nullable Output<String> securityAlertPolicyName) {
             this.securityAlertPolicyName = securityAlertPolicyName;
             return this;
         }
 
         public Builder securityAlertPolicyName(@Nullable String securityAlertPolicyName) {
-            this.securityAlertPolicyName = Input.ofNullable(securityAlertPolicyName);
+            this.securityAlertPolicyName = Output.ofNullable(securityAlertPolicyName);
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder state(Input<SecurityAlertsPolicyState> state) {
+        public Builder state(Output<SecurityAlertsPolicyState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(SecurityAlertsPolicyState state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder storageAccountAccessKey(@Nullable Input<String> storageAccountAccessKey) {
+        public Builder storageAccountAccessKey(@Nullable Output<String> storageAccountAccessKey) {
             this.storageAccountAccessKey = storageAccountAccessKey;
             return this;
         }
 
         public Builder storageAccountAccessKey(@Nullable String storageAccountAccessKey) {
-            this.storageAccountAccessKey = Input.ofNullable(storageAccountAccessKey);
+            this.storageAccountAccessKey = Output.ofNullable(storageAccountAccessKey);
             return this;
         }
 
-        public Builder storageEndpoint(@Nullable Input<String> storageEndpoint) {
+        public Builder storageEndpoint(@Nullable Output<String> storageEndpoint) {
             this.storageEndpoint = storageEndpoint;
             return this;
         }
 
         public Builder storageEndpoint(@Nullable String storageEndpoint) {
-            this.storageEndpoint = Input.ofNullable(storageEndpoint);
+            this.storageEndpoint = Output.ofNullable(storageEndpoint);
             return this;
         }
         public DatabaseSecurityAlertPolicyArgs build() {

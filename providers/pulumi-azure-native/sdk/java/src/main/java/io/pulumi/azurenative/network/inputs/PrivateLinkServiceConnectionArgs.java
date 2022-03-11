@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="groupIds")
-      private final @Nullable Input<List<String>> groupIds;
+      private final @Nullable Output<List<String>> groupIds;
 
-    public Input<List<String>> getGroupIds() {
-        return this.groupIds == null ? Input.empty() : this.groupIds;
+    public Output<List<String>> getGroupIds() {
+        return this.groupIds == null ? Output.empty() : this.groupIds;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-      private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+      private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
-    public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
-        return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
+    public Output<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
+        return this.privateLinkServiceConnectionState == null ? Output.empty() : this.privateLinkServiceConnectionState;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateLinkServiceId")
-      private final @Nullable Input<String> privateLinkServiceId;
+      private final @Nullable Output<String> privateLinkServiceId;
 
-    public Input<String> getPrivateLinkServiceId() {
-        return this.privateLinkServiceId == null ? Input.empty() : this.privateLinkServiceId;
+    public Output<String> getPrivateLinkServiceId() {
+        return this.privateLinkServiceId == null ? Output.empty() : this.privateLinkServiceId;
     }
 
     /**
@@ -80,19 +80,19 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="requestMessage")
-      private final @Nullable Input<String> requestMessage;
+      private final @Nullable Output<String> requestMessage;
 
-    public Input<String> getRequestMessage() {
-        return this.requestMessage == null ? Input.empty() : this.requestMessage;
+    public Output<String> getRequestMessage() {
+        return this.requestMessage == null ? Output.empty() : this.requestMessage;
     }
 
     public PrivateLinkServiceConnectionArgs(
-        @Nullable Input<List<String>> groupIds,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState,
-        @Nullable Input<String> privateLinkServiceId,
-        @Nullable Input<String> requestMessage) {
+        @Nullable Output<List<String>> groupIds,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState,
+        @Nullable Output<String> privateLinkServiceId,
+        @Nullable Output<String> requestMessage) {
         this.groupIds = groupIds;
         this.id = id;
         this.name = name;
@@ -102,12 +102,12 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     }
 
     private PrivateLinkServiceConnectionArgs() {
-        this.groupIds = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.privateLinkServiceConnectionState = Input.empty();
-        this.privateLinkServiceId = Input.empty();
-        this.requestMessage = Input.empty();
+        this.groupIds = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.privateLinkServiceConnectionState = Output.empty();
+        this.privateLinkServiceId = Output.empty();
+        this.requestMessage = Output.empty();
     }
 
     public static Builder builder() {
@@ -119,12 +119,12 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> groupIds;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
-        private @Nullable Input<String> privateLinkServiceId;
-        private @Nullable Input<String> requestMessage;
+        private @Nullable Output<List<String>> groupIds;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+        private @Nullable Output<String> privateLinkServiceId;
+        private @Nullable Output<String> requestMessage;
 
         public Builder() {
     	      // Empty
@@ -140,63 +140,63 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     	      this.requestMessage = defaults.requestMessage;
         }
 
-        public Builder groupIds(@Nullable Input<List<String>> groupIds) {
+        public Builder groupIds(@Nullable Output<List<String>> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
 
         public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = Input.ofNullable(groupIds);
+            this.groupIds = Output.ofNullable(groupIds);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder privateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
-            this.privateLinkServiceConnectionState = Input.ofNullable(privateLinkServiceConnectionState);
+            this.privateLinkServiceConnectionState = Output.ofNullable(privateLinkServiceConnectionState);
             return this;
         }
 
-        public Builder privateLinkServiceId(@Nullable Input<String> privateLinkServiceId) {
+        public Builder privateLinkServiceId(@Nullable Output<String> privateLinkServiceId) {
             this.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
 
         public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
-            this.privateLinkServiceId = Input.ofNullable(privateLinkServiceId);
+            this.privateLinkServiceId = Output.ofNullable(privateLinkServiceId);
             return this;
         }
 
-        public Builder requestMessage(@Nullable Input<String> requestMessage) {
+        public Builder requestMessage(@Nullable Output<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
         public Builder requestMessage(@Nullable String requestMessage) {
-            this.requestMessage = Input.ofNullable(requestMessage);
+            this.requestMessage = Output.ofNullable(requestMessage);
             return this;
         }
         public PrivateLinkServiceConnectionArgs build() {

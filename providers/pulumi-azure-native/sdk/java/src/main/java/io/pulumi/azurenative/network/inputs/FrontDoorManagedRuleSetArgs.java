@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ManagedRuleSetActionType;
 import io.pulumi.azurenative.network.inputs.FrontDoorManagedRuleGroupOverrideArgs;
 import io.pulumi.azurenative.network.inputs.ManagedRuleExclusionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="exclusions")
-      private final @Nullable Input<List<ManagedRuleExclusionArgs>> exclusions;
+      private final @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
-    public Input<List<ManagedRuleExclusionArgs>> getExclusions() {
-        return this.exclusions == null ? Input.empty() : this.exclusions;
+    public Output<List<ManagedRuleExclusionArgs>> getExclusions() {
+        return this.exclusions == null ? Output.empty() : this.exclusions;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleGroupOverrides")
-      private final @Nullable Input<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
+      private final @Nullable Output<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
-    public Input<List<FrontDoorManagedRuleGroupOverrideArgs>> getRuleGroupOverrides() {
-        return this.ruleGroupOverrides == null ? Input.empty() : this.ruleGroupOverrides;
+    public Output<List<FrontDoorManagedRuleGroupOverrideArgs>> getRuleGroupOverrides() {
+        return this.ruleGroupOverrides == null ? Output.empty() : this.ruleGroupOverrides;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleSetAction")
-      private final @Nullable Input<Either<String,ManagedRuleSetActionType>> ruleSetAction;
+      private final @Nullable Output<Either<String,ManagedRuleSetActionType>> ruleSetAction;
 
-    public Input<Either<String,ManagedRuleSetActionType>> getRuleSetAction() {
-        return this.ruleSetAction == null ? Input.empty() : this.ruleSetAction;
+    public Output<Either<String,ManagedRuleSetActionType>> getRuleSetAction() {
+        return this.ruleSetAction == null ? Output.empty() : this.ruleSetAction;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleSetType", required=true)
-      private final Input<String> ruleSetType;
+      private final Output<String> ruleSetType;
 
-    public Input<String> getRuleSetType() {
+    public Output<String> getRuleSetType() {
         return this.ruleSetType;
     }
 
@@ -72,18 +72,18 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleSetVersion", required=true)
-      private final Input<String> ruleSetVersion;
+      private final Output<String> ruleSetVersion;
 
-    public Input<String> getRuleSetVersion() {
+    public Output<String> getRuleSetVersion() {
         return this.ruleSetVersion;
     }
 
     public FrontDoorManagedRuleSetArgs(
-        @Nullable Input<List<ManagedRuleExclusionArgs>> exclusions,
-        @Nullable Input<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides,
-        @Nullable Input<Either<String,ManagedRuleSetActionType>> ruleSetAction,
-        Input<String> ruleSetType,
-        Input<String> ruleSetVersion) {
+        @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions,
+        @Nullable Output<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides,
+        @Nullable Output<Either<String,ManagedRuleSetActionType>> ruleSetAction,
+        Output<String> ruleSetType,
+        Output<String> ruleSetVersion) {
         this.exclusions = exclusions;
         this.ruleGroupOverrides = ruleGroupOverrides;
         this.ruleSetAction = ruleSetAction;
@@ -92,11 +92,11 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
     }
 
     private FrontDoorManagedRuleSetArgs() {
-        this.exclusions = Input.empty();
-        this.ruleGroupOverrides = Input.empty();
-        this.ruleSetAction = Input.empty();
-        this.ruleSetType = Input.empty();
-        this.ruleSetVersion = Input.empty();
+        this.exclusions = Output.empty();
+        this.ruleGroupOverrides = Output.empty();
+        this.ruleSetAction = Output.empty();
+        this.ruleSetType = Output.empty();
+        this.ruleSetVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ManagedRuleExclusionArgs>> exclusions;
-        private @Nullable Input<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
-        private @Nullable Input<Either<String,ManagedRuleSetActionType>> ruleSetAction;
-        private Input<String> ruleSetType;
-        private Input<String> ruleSetVersion;
+        private @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
+        private @Nullable Output<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
+        private @Nullable Output<Either<String,ManagedRuleSetActionType>> ruleSetAction;
+        private Output<String> ruleSetType;
+        private Output<String> ruleSetVersion;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
     	      this.ruleSetVersion = defaults.ruleSetVersion;
         }
 
-        public Builder exclusions(@Nullable Input<List<ManagedRuleExclusionArgs>> exclusions) {
+        public Builder exclusions(@Nullable Output<List<ManagedRuleExclusionArgs>> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
         public Builder exclusions(@Nullable List<ManagedRuleExclusionArgs> exclusions) {
-            this.exclusions = Input.ofNullable(exclusions);
+            this.exclusions = Output.ofNullable(exclusions);
             return this;
         }
 
-        public Builder ruleGroupOverrides(@Nullable Input<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
+        public Builder ruleGroupOverrides(@Nullable Output<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
             this.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
 
         public Builder ruleGroupOverrides(@Nullable List<FrontDoorManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
-            this.ruleGroupOverrides = Input.ofNullable(ruleGroupOverrides);
+            this.ruleGroupOverrides = Output.ofNullable(ruleGroupOverrides);
             return this;
         }
 
-        public Builder ruleSetAction(@Nullable Input<Either<String,ManagedRuleSetActionType>> ruleSetAction) {
+        public Builder ruleSetAction(@Nullable Output<Either<String,ManagedRuleSetActionType>> ruleSetAction) {
             this.ruleSetAction = ruleSetAction;
             return this;
         }
 
         public Builder ruleSetAction(@Nullable Either<String,ManagedRuleSetActionType> ruleSetAction) {
-            this.ruleSetAction = Input.ofNullable(ruleSetAction);
+            this.ruleSetAction = Output.ofNullable(ruleSetAction);
             return this;
         }
 
-        public Builder ruleSetType(Input<String> ruleSetType) {
+        public Builder ruleSetType(Output<String> ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
 
         public Builder ruleSetType(String ruleSetType) {
-            this.ruleSetType = Input.of(Objects.requireNonNull(ruleSetType));
+            this.ruleSetType = Output.of(Objects.requireNonNull(ruleSetType));
             return this;
         }
 
-        public Builder ruleSetVersion(Input<String> ruleSetVersion) {
+        public Builder ruleSetVersion(Output<String> ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }
 
         public Builder ruleSetVersion(String ruleSetVersion) {
-            this.ruleSetVersion = Input.of(Objects.requireNonNull(ruleSetVersion));
+            this.ruleSetVersion = Output.of(Objects.requireNonNull(ruleSetVersion));
             return this;
         }
         public FrontDoorManagedRuleSetArgs build() {

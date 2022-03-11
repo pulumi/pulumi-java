@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="auth")
-      private final @Nullable Input<List<ScaleRuleAuthArgs>> auth;
+      private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
-    public Input<List<ScaleRuleAuthArgs>> getAuth() {
-        return this.auth == null ? Input.empty() : this.auth;
+    public Output<List<ScaleRuleAuthArgs>> getAuth() {
+        return this.auth == null ? Output.empty() : this.auth;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Output<Map<String,String>> metadata;
 
-    public Input<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Map<String,String>> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -49,25 +49,25 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public CustomScaleRuleArgs(
-        @Nullable Input<List<ScaleRuleAuthArgs>> auth,
-        @Nullable Input<Map<String,String>> metadata,
-        @Nullable Input<String> type) {
+        @Nullable Output<List<ScaleRuleAuthArgs>> auth,
+        @Nullable Output<Map<String,String>> metadata,
+        @Nullable Output<String> type) {
         this.auth = auth;
         this.metadata = metadata;
         this.type = type;
     }
 
     private CustomScaleRuleArgs() {
-        this.auth = Input.empty();
-        this.metadata = Input.empty();
-        this.type = Input.empty();
+        this.auth = Output.empty();
+        this.metadata = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -79,9 +79,9 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<List<ScaleRuleAuthArgs>> auth;
-        private @Nullable Input<Map<String,String>> metadata;
-        private @Nullable Input<String> type;
+        private @Nullable Output<List<ScaleRuleAuthArgs>> auth;
+        private @Nullable Output<Map<String,String>> metadata;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -94,33 +94,33 @@ public final class CustomScaleRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder auth(@Nullable Input<List<ScaleRuleAuthArgs>> auth) {
+        public Builder auth(@Nullable Output<List<ScaleRuleAuthArgs>> auth) {
             this.auth = auth;
             return this;
         }
 
         public Builder auth(@Nullable List<ScaleRuleAuthArgs> auth) {
-            this.auth = Input.ofNullable(auth);
+            this.auth = Output.ofNullable(auth);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public CustomScaleRuleArgs build() {

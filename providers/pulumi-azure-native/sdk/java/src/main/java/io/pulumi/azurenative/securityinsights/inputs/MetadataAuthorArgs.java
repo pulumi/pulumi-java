@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-      private final @Nullable Input<String> email;
+      private final @Nullable Output<String> email;
 
-    public Input<String> getEmail() {
-        return this.email == null ? Input.empty() : this.email;
+    public Output<String> getEmail() {
+        return this.email == null ? Output.empty() : this.email;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="link")
-      private final @Nullable Input<String> link;
+      private final @Nullable Output<String> link;
 
-    public Input<String> getLink() {
-        return this.link == null ? Input.empty() : this.link;
+    public Output<String> getLink() {
+        return this.link == null ? Output.empty() : this.link;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     public MetadataAuthorArgs(
-        @Nullable Input<String> email,
-        @Nullable Input<String> link,
-        @Nullable Input<String> name) {
+        @Nullable Output<String> email,
+        @Nullable Output<String> link,
+        @Nullable Output<String> name) {
         this.email = email;
         this.link = link;
         this.name = name;
     }
 
     private MetadataAuthorArgs() {
-        this.email = Input.empty();
-        this.link = Input.empty();
-        this.name = Input.empty();
+        this.email = Output.empty();
+        this.link = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> email;
-        private @Nullable Input<String> link;
-        private @Nullable Input<String> name;
+        private @Nullable Output<String> email;
+        private @Nullable Output<String> link;
+        private @Nullable Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder email(@Nullable Input<String> email) {
+        public Builder email(@Nullable Output<String> email) {
             this.email = email;
             return this;
         }
 
         public Builder email(@Nullable String email) {
-            this.email = Input.ofNullable(email);
+            this.email = Output.ofNullable(email);
             return this;
         }
 
-        public Builder link(@Nullable Input<String> link) {
+        public Builder link(@Nullable Output<String> link) {
             this.link = link;
             return this;
         }
 
         public Builder link(@Nullable String link) {
-            this.link = Input.ofNullable(link);
+            this.link = Output.ofNullable(link);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
         public MetadataAuthorArgs build() {

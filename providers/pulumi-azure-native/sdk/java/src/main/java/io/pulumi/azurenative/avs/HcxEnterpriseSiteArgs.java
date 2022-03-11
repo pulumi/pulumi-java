@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hcxEnterpriseSiteName")
-      private final @Nullable Input<String> hcxEnterpriseSiteName;
+      private final @Nullable Output<String> hcxEnterpriseSiteName;
 
-    public Input<String> getHcxEnterpriseSiteName() {
-        return this.hcxEnterpriseSiteName == null ? Input.empty() : this.hcxEnterpriseSiteName;
+    public Output<String> getHcxEnterpriseSiteName() {
+        return this.hcxEnterpriseSiteName == null ? Output.empty() : this.hcxEnterpriseSiteName;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-      private final Input<String> privateCloudName;
+      private final Output<String> privateCloudName;
 
-    public Input<String> getPrivateCloudName() {
+    public Output<String> getPrivateCloudName() {
         return this.privateCloudName;
     }
 
@@ -41,25 +41,25 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public HcxEnterpriseSiteArgs(
-        @Nullable Input<String> hcxEnterpriseSiteName,
-        Input<String> privateCloudName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> hcxEnterpriseSiteName,
+        Output<String> privateCloudName,
+        Output<String> resourceGroupName) {
         this.hcxEnterpriseSiteName = hcxEnterpriseSiteName;
         this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
     }
 
     private HcxEnterpriseSiteArgs() {
-        this.hcxEnterpriseSiteName = Input.empty();
-        this.privateCloudName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.hcxEnterpriseSiteName = Output.empty();
+        this.privateCloudName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> hcxEnterpriseSiteName;
-        private Input<String> privateCloudName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> hcxEnterpriseSiteName;
+        private Output<String> privateCloudName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class HcxEnterpriseSiteArgs extends io.pulumi.resources.ResourceArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder hcxEnterpriseSiteName(@Nullable Input<String> hcxEnterpriseSiteName) {
+        public Builder hcxEnterpriseSiteName(@Nullable Output<String> hcxEnterpriseSiteName) {
             this.hcxEnterpriseSiteName = hcxEnterpriseSiteName;
             return this;
         }
 
         public Builder hcxEnterpriseSiteName(@Nullable String hcxEnterpriseSiteName) {
-            this.hcxEnterpriseSiteName = Input.ofNullable(hcxEnterpriseSiteName);
+            this.hcxEnterpriseSiteName = Output.ofNullable(hcxEnterpriseSiteName);
             return this;
         }
 
-        public Builder privateCloudName(Input<String> privateCloudName) {
+        public Builder privateCloudName(Output<String> privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Input.of(Objects.requireNonNull(privateCloudName));
+            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public HcxEnterpriseSiteArgs build() {

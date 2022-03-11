@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.OwaspCrsExclusionEntryMatchVariable;
 import io.pulumi.azurenative.network.enums.OwaspCrsExclusionEntrySelectorMatchOperator;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="matchVariable", required=true)
-      private final Input<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable;
+      private final Output<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable;
 
-    public Input<Either<String,OwaspCrsExclusionEntryMatchVariable>> getMatchVariable() {
+    public Output<Either<String,OwaspCrsExclusionEntryMatchVariable>> getMatchVariable() {
         return this.matchVariable;
     }
 
@@ -36,9 +36,9 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="selector", required=true)
-      private final Input<String> selector;
+      private final Output<String> selector;
 
-    public Input<String> getSelector() {
+    public Output<String> getSelector() {
         return this.selector;
     }
 
@@ -47,25 +47,25 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="selectorMatchOperator", required=true)
-      private final Input<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator;
+      private final Output<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator;
 
-    public Input<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> getSelectorMatchOperator() {
+    public Output<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> getSelectorMatchOperator() {
         return this.selectorMatchOperator;
     }
 
     public OwaspCrsExclusionEntryArgs(
-        Input<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable,
-        Input<String> selector,
-        Input<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator) {
+        Output<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable,
+        Output<String> selector,
+        Output<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator) {
         this.matchVariable = Objects.requireNonNull(matchVariable, "expected parameter 'matchVariable' to be non-null");
         this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
         this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator, "expected parameter 'selectorMatchOperator' to be non-null");
     }
 
     private OwaspCrsExclusionEntryArgs() {
-        this.matchVariable = Input.empty();
-        this.selector = Input.empty();
-        this.selectorMatchOperator = Input.empty();
+        this.matchVariable = Output.empty();
+        this.selector = Output.empty();
+        this.selectorMatchOperator = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable;
-        private Input<String> selector;
-        private Input<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator;
+        private Output<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable;
+        private Output<String> selector;
+        private Output<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
     	      this.selectorMatchOperator = defaults.selectorMatchOperator;
         }
 
-        public Builder matchVariable(Input<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable) {
+        public Builder matchVariable(Output<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
 
         public Builder matchVariable(Either<String,OwaspCrsExclusionEntryMatchVariable> matchVariable) {
-            this.matchVariable = Input.of(Objects.requireNonNull(matchVariable));
+            this.matchVariable = Output.of(Objects.requireNonNull(matchVariable));
             return this;
         }
 
-        public Builder selector(Input<String> selector) {
+        public Builder selector(Output<String> selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
         public Builder selector(String selector) {
-            this.selector = Input.of(Objects.requireNonNull(selector));
+            this.selector = Output.of(Objects.requireNonNull(selector));
             return this;
         }
 
-        public Builder selectorMatchOperator(Input<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator) {
+        public Builder selectorMatchOperator(Output<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }
 
         public Builder selectorMatchOperator(Either<String,OwaspCrsExclusionEntrySelectorMatchOperator> selectorMatchOperator) {
-            this.selectorMatchOperator = Input.of(Objects.requireNonNull(selectorMatchOperator));
+            this.selectorMatchOperator = Output.of(Objects.requireNonNull(selectorMatchOperator));
             return this;
         }
         public OwaspCrsExclusionEntryArgs build() {

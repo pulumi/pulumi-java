@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliasName", required=true)
-      private final Input<String> aliasName;
+      private final Output<String> aliasName;
 
-    public Input<String> getAliasName() {
+    public Output<String> getAliasName() {
         return this.aliasName;
     }
 
@@ -33,22 +33,22 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-      private final Input<String> expression;
+      private final Output<String> expression;
 
-    public Input<String> getExpression() {
+    public Output<String> getExpression() {
         return this.expression;
     }
 
     public KpiAliasArgs(
-        Input<String> aliasName,
-        Input<String> expression) {
+        Output<String> aliasName,
+        Output<String> expression) {
         this.aliasName = Objects.requireNonNull(aliasName, "expected parameter 'aliasName' to be non-null");
         this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
     }
 
     private KpiAliasArgs() {
-        this.aliasName = Input.empty();
-        this.expression = Input.empty();
+        this.aliasName = Output.empty();
+        this.expression = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> aliasName;
-        private Input<String> expression;
+        private Output<String> aliasName;
+        private Output<String> expression;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class KpiAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.expression = defaults.expression;
         }
 
-        public Builder aliasName(Input<String> aliasName) {
+        public Builder aliasName(Output<String> aliasName) {
             this.aliasName = Objects.requireNonNull(aliasName);
             return this;
         }
 
         public Builder aliasName(String aliasName) {
-            this.aliasName = Input.of(Objects.requireNonNull(aliasName));
+            this.aliasName = Output.of(Objects.requireNonNull(aliasName));
             return this;
         }
 
-        public Builder expression(Input<String> expression) {
+        public Builder expression(Output<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
         public Builder expression(String expression) {
-            this.expression = Input.of(Objects.requireNonNull(expression));
+            this.expression = Output.of(Objects.requireNonNull(expression));
             return this;
         }
         public KpiAliasArgs build() {

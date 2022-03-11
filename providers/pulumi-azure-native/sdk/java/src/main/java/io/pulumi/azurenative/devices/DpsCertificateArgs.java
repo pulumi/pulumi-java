@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,10 +20,10 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificate")
-      private final @Nullable Input<String> certificate;
+      private final @Nullable Output<String> certificate;
 
-    public Input<String> getCertificate() {
-        return this.certificate == null ? Input.empty() : this.certificate;
+    public Output<String> getCertificate() {
+        return this.certificate == null ? Output.empty() : this.certificate;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateName")
-      private final @Nullable Input<String> certificateName;
+      private final @Nullable Output<String> certificateName;
 
-    public Input<String> getCertificateName() {
-        return this.certificateName == null ? Input.empty() : this.certificateName;
+    public Output<String> getCertificateName() {
+        return this.certificateName == null ? Output.empty() : this.certificateName;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isVerified")
-      private final @Nullable Input<Boolean> isVerified;
+      private final @Nullable Output<Boolean> isVerified;
 
-    public Input<Boolean> getIsVerified() {
-        return this.isVerified == null ? Input.empty() : this.isVerified;
+    public Output<Boolean> getIsVerified() {
+        return this.isVerified == null ? Output.empty() : this.isVerified;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningServiceName", required=true)
-      private final Input<String> provisioningServiceName;
+      private final Output<String> provisioningServiceName;
 
-    public Input<String> getProvisioningServiceName() {
+    public Output<String> getProvisioningServiceName() {
         return this.provisioningServiceName;
     }
 
@@ -64,18 +64,18 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public DpsCertificateArgs(
-        @Nullable Input<String> certificate,
-        @Nullable Input<String> certificateName,
-        @Nullable Input<Boolean> isVerified,
-        Input<String> provisioningServiceName,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> certificate,
+        @Nullable Output<String> certificateName,
+        @Nullable Output<Boolean> isVerified,
+        Output<String> provisioningServiceName,
+        Output<String> resourceGroupName) {
         this.certificate = certificate;
         this.certificateName = certificateName;
         this.isVerified = isVerified;
@@ -84,11 +84,11 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DpsCertificateArgs() {
-        this.certificate = Input.empty();
-        this.certificateName = Input.empty();
-        this.isVerified = Input.empty();
-        this.provisioningServiceName = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.certificate = Output.empty();
+        this.certificateName = Output.empty();
+        this.isVerified = Output.empty();
+        this.provisioningServiceName = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -100,11 +100,11 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> certificate;
-        private @Nullable Input<String> certificateName;
-        private @Nullable Input<Boolean> isVerified;
-        private Input<String> provisioningServiceName;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> certificate;
+        private @Nullable Output<String> certificateName;
+        private @Nullable Output<Boolean> isVerified;
+        private Output<String> provisioningServiceName;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -119,53 +119,53 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder certificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Output<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Input.ofNullable(certificate);
+            this.certificate = Output.ofNullable(certificate);
             return this;
         }
 
-        public Builder certificateName(@Nullable Input<String> certificateName) {
+        public Builder certificateName(@Nullable Output<String> certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Input.ofNullable(certificateName);
+            this.certificateName = Output.ofNullable(certificateName);
             return this;
         }
 
-        public Builder isVerified(@Nullable Input<Boolean> isVerified) {
+        public Builder isVerified(@Nullable Output<Boolean> isVerified) {
             this.isVerified = isVerified;
             return this;
         }
 
         public Builder isVerified(@Nullable Boolean isVerified) {
-            this.isVerified = Input.ofNullable(isVerified);
+            this.isVerified = Output.ofNullable(isVerified);
             return this;
         }
 
-        public Builder provisioningServiceName(Input<String> provisioningServiceName) {
+        public Builder provisioningServiceName(Output<String> provisioningServiceName) {
             this.provisioningServiceName = Objects.requireNonNull(provisioningServiceName);
             return this;
         }
 
         public Builder provisioningServiceName(String provisioningServiceName) {
-            this.provisioningServiceName = Input.of(Objects.requireNonNull(provisioningServiceName));
+            this.provisioningServiceName = Output.of(Objects.requireNonNull(provisioningServiceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public DpsCertificateArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,10 +21,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="active")
-      private final @Nullable Input<Boolean> active;
+      private final @Nullable Output<Boolean> active;
 
-    public Input<Boolean> getActive() {
-        return this.active == null ? Input.empty() : this.active;
+    public Output<Boolean> getActive() {
+        return this.active == null ? Output.empty() : this.active;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="author")
-      private final @Nullable Input<String> author;
+      private final @Nullable Output<String> author;
 
-    public Input<String> getAuthor() {
-        return this.author == null ? Input.empty() : this.author;
+    public Output<String> getAuthor() {
+        return this.author == null ? Output.empty() : this.author;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="authorEmail")
-      private final @Nullable Input<String> authorEmail;
+      private final @Nullable Output<String> authorEmail;
 
-    public Input<String> getAuthorEmail() {
-        return this.authorEmail == null ? Input.empty() : this.authorEmail;
+    public Output<String> getAuthorEmail() {
+        return this.authorEmail == null ? Output.empty() : this.authorEmail;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="deployer")
-      private final @Nullable Input<String> deployer;
+      private final @Nullable Output<String> deployer;
 
-    public Input<String> getDeployer() {
-        return this.deployer == null ? Input.empty() : this.deployer;
+    public Output<String> getDeployer() {
+        return this.deployer == null ? Output.empty() : this.deployer;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="details")
-      private final @Nullable Input<String> details;
+      private final @Nullable Output<String> details;
 
-    public Input<String> getDetails() {
-        return this.details == null ? Input.empty() : this.details;
+    public Output<String> getDetails() {
+        return this.details == null ? Output.empty() : this.details;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endTime")
-      private final @Nullable Input<String> endTime;
+      private final @Nullable Output<String> endTime;
 
-    public Input<String> getEndTime() {
-        return this.endTime == null ? Input.empty() : this.endTime;
+    public Output<String> getEndTime() {
+        return this.endTime == null ? Output.empty() : this.endTime;
     }
 
     /**
@@ -87,10 +87,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -98,10 +98,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -109,10 +109,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="message")
-      private final @Nullable Input<String> message;
+      private final @Nullable Output<String> message;
 
-    public Input<String> getMessage() {
-        return this.message == null ? Input.empty() : this.message;
+    public Output<String> getMessage() {
+        return this.message == null ? Output.empty() : this.message;
     }
 
     /**
@@ -120,9 +120,9 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -131,9 +131,9 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -142,9 +142,9 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="slot", required=true)
-      private final Input<String> slot;
+      private final Output<String> slot;
 
-    public Input<String> getSlot() {
+    public Output<String> getSlot() {
         return this.slot;
     }
 
@@ -153,10 +153,10 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="startTime")
-      private final @Nullable Input<String> startTime;
+      private final @Nullable Output<String> startTime;
 
-    public Input<String> getStartTime() {
-        return this.startTime == null ? Input.empty() : this.startTime;
+    public Output<String> getStartTime() {
+        return this.startTime == null ? Output.empty() : this.startTime;
     }
 
     /**
@@ -164,27 +164,27 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="status")
-      private final @Nullable Input<Integer> status;
+      private final @Nullable Output<Integer> status;
 
-    public Input<Integer> getStatus() {
-        return this.status == null ? Input.empty() : this.status;
+    public Output<Integer> getStatus() {
+        return this.status == null ? Output.empty() : this.status;
     }
 
     public WebAppDeploymentSlotArgs(
-        @Nullable Input<Boolean> active,
-        @Nullable Input<String> author,
-        @Nullable Input<String> authorEmail,
-        @Nullable Input<String> deployer,
-        @Nullable Input<String> details,
-        @Nullable Input<String> endTime,
-        @Nullable Input<String> id,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> message,
-        Input<String> name,
-        Input<String> resourceGroupName,
-        Input<String> slot,
-        @Nullable Input<String> startTime,
-        @Nullable Input<Integer> status) {
+        @Nullable Output<Boolean> active,
+        @Nullable Output<String> author,
+        @Nullable Output<String> authorEmail,
+        @Nullable Output<String> deployer,
+        @Nullable Output<String> details,
+        @Nullable Output<String> endTime,
+        @Nullable Output<String> id,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> message,
+        Output<String> name,
+        Output<String> resourceGroupName,
+        Output<String> slot,
+        @Nullable Output<String> startTime,
+        @Nullable Output<Integer> status) {
         this.active = active;
         this.author = author;
         this.authorEmail = authorEmail;
@@ -202,20 +202,20 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
     }
 
     private WebAppDeploymentSlotArgs() {
-        this.active = Input.empty();
-        this.author = Input.empty();
-        this.authorEmail = Input.empty();
-        this.deployer = Input.empty();
-        this.details = Input.empty();
-        this.endTime = Input.empty();
-        this.id = Input.empty();
-        this.kind = Input.empty();
-        this.message = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.slot = Input.empty();
-        this.startTime = Input.empty();
-        this.status = Input.empty();
+        this.active = Output.empty();
+        this.author = Output.empty();
+        this.authorEmail = Output.empty();
+        this.deployer = Output.empty();
+        this.details = Output.empty();
+        this.endTime = Output.empty();
+        this.id = Output.empty();
+        this.kind = Output.empty();
+        this.message = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.slot = Output.empty();
+        this.startTime = Output.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -227,20 +227,20 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> active;
-        private @Nullable Input<String> author;
-        private @Nullable Input<String> authorEmail;
-        private @Nullable Input<String> deployer;
-        private @Nullable Input<String> details;
-        private @Nullable Input<String> endTime;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> message;
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private Input<String> slot;
-        private @Nullable Input<String> startTime;
-        private @Nullable Input<Integer> status;
+        private @Nullable Output<Boolean> active;
+        private @Nullable Output<String> author;
+        private @Nullable Output<String> authorEmail;
+        private @Nullable Output<String> deployer;
+        private @Nullable Output<String> details;
+        private @Nullable Output<String> endTime;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> message;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private Output<String> slot;
+        private @Nullable Output<String> startTime;
+        private @Nullable Output<Integer> status;
 
         public Builder() {
     	      // Empty
@@ -264,143 +264,143 @@ public final class WebAppDeploymentSlotArgs extends io.pulumi.resources.Resource
     	      this.status = defaults.status;
         }
 
-        public Builder active(@Nullable Input<Boolean> active) {
+        public Builder active(@Nullable Output<Boolean> active) {
             this.active = active;
             return this;
         }
 
         public Builder active(@Nullable Boolean active) {
-            this.active = Input.ofNullable(active);
+            this.active = Output.ofNullable(active);
             return this;
         }
 
-        public Builder author(@Nullable Input<String> author) {
+        public Builder author(@Nullable Output<String> author) {
             this.author = author;
             return this;
         }
 
         public Builder author(@Nullable String author) {
-            this.author = Input.ofNullable(author);
+            this.author = Output.ofNullable(author);
             return this;
         }
 
-        public Builder authorEmail(@Nullable Input<String> authorEmail) {
+        public Builder authorEmail(@Nullable Output<String> authorEmail) {
             this.authorEmail = authorEmail;
             return this;
         }
 
         public Builder authorEmail(@Nullable String authorEmail) {
-            this.authorEmail = Input.ofNullable(authorEmail);
+            this.authorEmail = Output.ofNullable(authorEmail);
             return this;
         }
 
-        public Builder deployer(@Nullable Input<String> deployer) {
+        public Builder deployer(@Nullable Output<String> deployer) {
             this.deployer = deployer;
             return this;
         }
 
         public Builder deployer(@Nullable String deployer) {
-            this.deployer = Input.ofNullable(deployer);
+            this.deployer = Output.ofNullable(deployer);
             return this;
         }
 
-        public Builder details(@Nullable Input<String> details) {
+        public Builder details(@Nullable Output<String> details) {
             this.details = details;
             return this;
         }
 
         public Builder details(@Nullable String details) {
-            this.details = Input.ofNullable(details);
+            this.details = Output.ofNullable(details);
             return this;
         }
 
-        public Builder endTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Output<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Input.ofNullable(endTime);
+            this.endTime = Output.ofNullable(endTime);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder message(@Nullable Input<String> message) {
+        public Builder message(@Nullable Output<String> message) {
             this.message = message;
             return this;
         }
 
         public Builder message(@Nullable String message) {
-            this.message = Input.ofNullable(message);
+            this.message = Output.ofNullable(message);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder slot(Input<String> slot) {
+        public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
 
         public Builder slot(String slot) {
-            this.slot = Input.of(Objects.requireNonNull(slot));
+            this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
         }
 
-        public Builder startTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Output<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Input.ofNullable(startTime);
+            this.startTime = Output.ofNullable(startTime);
             return this;
         }
 
-        public Builder status(@Nullable Input<Integer> status) {
+        public Builder status(@Nullable Output<Integer> status) {
             this.status = status;
             return this;
         }
 
         public Builder status(@Nullable Integer status) {
-            this.status = Input.ofNullable(status);
+            this.status = Output.ofNullable(status);
             return this;
         }
         public WebAppDeploymentSlotArgs build() {

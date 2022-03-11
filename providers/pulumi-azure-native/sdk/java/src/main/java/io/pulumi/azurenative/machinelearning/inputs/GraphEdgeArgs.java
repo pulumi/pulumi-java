@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceNodeId")
-      private final @Nullable Input<String> sourceNodeId;
+      private final @Nullable Output<String> sourceNodeId;
 
-    public Input<String> getSourceNodeId() {
-        return this.sourceNodeId == null ? Input.empty() : this.sourceNodeId;
+    public Output<String> getSourceNodeId() {
+        return this.sourceNodeId == null ? Output.empty() : this.sourceNodeId;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourcePortId")
-      private final @Nullable Input<String> sourcePortId;
+      private final @Nullable Output<String> sourcePortId;
 
-    public Input<String> getSourcePortId() {
-        return this.sourcePortId == null ? Input.empty() : this.sourcePortId;
+    public Output<String> getSourcePortId() {
+        return this.sourcePortId == null ? Output.empty() : this.sourcePortId;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetNodeId")
-      private final @Nullable Input<String> targetNodeId;
+      private final @Nullable Output<String> targetNodeId;
 
-    public Input<String> getTargetNodeId() {
-        return this.targetNodeId == null ? Input.empty() : this.targetNodeId;
+    public Output<String> getTargetNodeId() {
+        return this.targetNodeId == null ? Output.empty() : this.targetNodeId;
     }
 
     /**
@@ -56,17 +56,17 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetPortId")
-      private final @Nullable Input<String> targetPortId;
+      private final @Nullable Output<String> targetPortId;
 
-    public Input<String> getTargetPortId() {
-        return this.targetPortId == null ? Input.empty() : this.targetPortId;
+    public Output<String> getTargetPortId() {
+        return this.targetPortId == null ? Output.empty() : this.targetPortId;
     }
 
     public GraphEdgeArgs(
-        @Nullable Input<String> sourceNodeId,
-        @Nullable Input<String> sourcePortId,
-        @Nullable Input<String> targetNodeId,
-        @Nullable Input<String> targetPortId) {
+        @Nullable Output<String> sourceNodeId,
+        @Nullable Output<String> sourcePortId,
+        @Nullable Output<String> targetNodeId,
+        @Nullable Output<String> targetPortId) {
         this.sourceNodeId = sourceNodeId;
         this.sourcePortId = sourcePortId;
         this.targetNodeId = targetNodeId;
@@ -74,10 +74,10 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GraphEdgeArgs() {
-        this.sourceNodeId = Input.empty();
-        this.sourcePortId = Input.empty();
-        this.targetNodeId = Input.empty();
-        this.targetPortId = Input.empty();
+        this.sourceNodeId = Output.empty();
+        this.sourcePortId = Output.empty();
+        this.targetNodeId = Output.empty();
+        this.targetPortId = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> sourceNodeId;
-        private @Nullable Input<String> sourcePortId;
-        private @Nullable Input<String> targetNodeId;
-        private @Nullable Input<String> targetPortId;
+        private @Nullable Output<String> sourceNodeId;
+        private @Nullable Output<String> sourcePortId;
+        private @Nullable Output<String> targetNodeId;
+        private @Nullable Output<String> targetPortId;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class GraphEdgeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetPortId = defaults.targetPortId;
         }
 
-        public Builder sourceNodeId(@Nullable Input<String> sourceNodeId) {
+        public Builder sourceNodeId(@Nullable Output<String> sourceNodeId) {
             this.sourceNodeId = sourceNodeId;
             return this;
         }
 
         public Builder sourceNodeId(@Nullable String sourceNodeId) {
-            this.sourceNodeId = Input.ofNullable(sourceNodeId);
+            this.sourceNodeId = Output.ofNullable(sourceNodeId);
             return this;
         }
 
-        public Builder sourcePortId(@Nullable Input<String> sourcePortId) {
+        public Builder sourcePortId(@Nullable Output<String> sourcePortId) {
             this.sourcePortId = sourcePortId;
             return this;
         }
 
         public Builder sourcePortId(@Nullable String sourcePortId) {
-            this.sourcePortId = Input.ofNullable(sourcePortId);
+            this.sourcePortId = Output.ofNullable(sourcePortId);
             return this;
         }
 
-        public Builder targetNodeId(@Nullable Input<String> targetNodeId) {
+        public Builder targetNodeId(@Nullable Output<String> targetNodeId) {
             this.targetNodeId = targetNodeId;
             return this;
         }
 
         public Builder targetNodeId(@Nullable String targetNodeId) {
-            this.targetNodeId = Input.ofNullable(targetNodeId);
+            this.targetNodeId = Output.ofNullable(targetNodeId);
             return this;
         }
 
-        public Builder targetPortId(@Nullable Input<String> targetPortId) {
+        public Builder targetPortId(@Nullable Output<String> targetPortId) {
             this.targetPortId = targetPortId;
             return this;
         }
 
         public Builder targetPortId(@Nullable String targetPortId) {
-            this.targetPortId = Input.ofNullable(targetPortId);
+            this.targetPortId = Output.ofNullable(targetPortId);
             return this;
         }
         public GraphEdgeArgs build() {

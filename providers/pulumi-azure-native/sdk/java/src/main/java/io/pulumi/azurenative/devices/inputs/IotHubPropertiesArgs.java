@@ -15,7 +15,7 @@ import io.pulumi.azurenative.devices.inputs.RoutingPropertiesArgs;
 import io.pulumi.azurenative.devices.inputs.SharedAccessSignatureAuthorizationRuleArgs;
 import io.pulumi.azurenative.devices.inputs.StorageEndpointPropertiesArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,10 +38,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authorizationPolicies")
-      private final @Nullable Input<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies;
+      private final @Nullable Output<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies;
 
-    public Input<List<SharedAccessSignatureAuthorizationRuleArgs>> getAuthorizationPolicies() {
-        return this.authorizationPolicies == null ? Input.empty() : this.authorizationPolicies;
+    public Output<List<SharedAccessSignatureAuthorizationRuleArgs>> getAuthorizationPolicies() {
+        return this.authorizationPolicies == null ? Output.empty() : this.authorizationPolicies;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cloudToDevice")
-      private final @Nullable Input<CloudToDevicePropertiesArgs> cloudToDevice;
+      private final @Nullable Output<CloudToDevicePropertiesArgs> cloudToDevice;
 
-    public Input<CloudToDevicePropertiesArgs> getCloudToDevice() {
-        return this.cloudToDevice == null ? Input.empty() : this.cloudToDevice;
+    public Output<CloudToDevicePropertiesArgs> getCloudToDevice() {
+        return this.cloudToDevice == null ? Output.empty() : this.cloudToDevice;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="comments")
-      private final @Nullable Input<String> comments;
+      private final @Nullable Output<String> comments;
 
-    public Input<String> getComments() {
-        return this.comments == null ? Input.empty() : this.comments;
+    public Output<String> getComments() {
+        return this.comments == null ? Output.empty() : this.comments;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enableFileUploadNotifications")
-      private final @Nullable Input<Boolean> enableFileUploadNotifications;
+      private final @Nullable Output<Boolean> enableFileUploadNotifications;
 
-    public Input<Boolean> getEnableFileUploadNotifications() {
-        return this.enableFileUploadNotifications == null ? Input.empty() : this.enableFileUploadNotifications;
+    public Output<Boolean> getEnableFileUploadNotifications() {
+        return this.enableFileUploadNotifications == null ? Output.empty() : this.enableFileUploadNotifications;
     }
 
     /**
@@ -82,10 +82,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="eventHubEndpoints")
-      private final @Nullable Input<Map<String,EventHubPropertiesArgs>> eventHubEndpoints;
+      private final @Nullable Output<Map<String,EventHubPropertiesArgs>> eventHubEndpoints;
 
-    public Input<Map<String,EventHubPropertiesArgs>> getEventHubEndpoints() {
-        return this.eventHubEndpoints == null ? Input.empty() : this.eventHubEndpoints;
+    public Output<Map<String,EventHubPropertiesArgs>> getEventHubEndpoints() {
+        return this.eventHubEndpoints == null ? Output.empty() : this.eventHubEndpoints;
     }
 
     /**
@@ -93,10 +93,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="features")
-      private final @Nullable Input<Either<String,Capabilities>> features;
+      private final @Nullable Output<Either<String,Capabilities>> features;
 
-    public Input<Either<String,Capabilities>> getFeatures() {
-        return this.features == null ? Input.empty() : this.features;
+    public Output<Either<String,Capabilities>> getFeatures() {
+        return this.features == null ? Output.empty() : this.features;
     }
 
     /**
@@ -104,10 +104,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipFilterRules")
-      private final @Nullable Input<List<IpFilterRuleArgs>> ipFilterRules;
+      private final @Nullable Output<List<IpFilterRuleArgs>> ipFilterRules;
 
-    public Input<List<IpFilterRuleArgs>> getIpFilterRules() {
-        return this.ipFilterRules == null ? Input.empty() : this.ipFilterRules;
+    public Output<List<IpFilterRuleArgs>> getIpFilterRules() {
+        return this.ipFilterRules == null ? Output.empty() : this.ipFilterRules;
     }
 
     /**
@@ -115,10 +115,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="messagingEndpoints")
-      private final @Nullable Input<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints;
+      private final @Nullable Output<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints;
 
-    public Input<Map<String,MessagingEndpointPropertiesArgs>> getMessagingEndpoints() {
-        return this.messagingEndpoints == null ? Input.empty() : this.messagingEndpoints;
+    public Output<Map<String,MessagingEndpointPropertiesArgs>> getMessagingEndpoints() {
+        return this.messagingEndpoints == null ? Output.empty() : this.messagingEndpoints;
     }
 
     /**
@@ -126,10 +126,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minTlsVersion")
-      private final @Nullable Input<String> minTlsVersion;
+      private final @Nullable Output<String> minTlsVersion;
 
-    public Input<String> getMinTlsVersion() {
-        return this.minTlsVersion == null ? Input.empty() : this.minTlsVersion;
+    public Output<String> getMinTlsVersion() {
+        return this.minTlsVersion == null ? Output.empty() : this.minTlsVersion;
     }
 
     /**
@@ -137,10 +137,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkRuleSets")
-      private final @Nullable Input<NetworkRuleSetPropertiesArgs> networkRuleSets;
+      private final @Nullable Output<NetworkRuleSetPropertiesArgs> networkRuleSets;
 
-    public Input<NetworkRuleSetPropertiesArgs> getNetworkRuleSets() {
-        return this.networkRuleSets == null ? Input.empty() : this.networkRuleSets;
+    public Output<NetworkRuleSetPropertiesArgs> getNetworkRuleSets() {
+        return this.networkRuleSets == null ? Output.empty() : this.networkRuleSets;
     }
 
     /**
@@ -148,10 +148,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="privateEndpointConnections")
-      private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+      private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Input<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
-        return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
+    public Output<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
+        return this.privateEndpointConnections == null ? Output.empty() : this.privateEndpointConnections;
     }
 
     /**
@@ -159,10 +159,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -170,10 +170,10 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="routing")
-      private final @Nullable Input<RoutingPropertiesArgs> routing;
+      private final @Nullable Output<RoutingPropertiesArgs> routing;
 
-    public Input<RoutingPropertiesArgs> getRouting() {
-        return this.routing == null ? Input.empty() : this.routing;
+    public Output<RoutingPropertiesArgs> getRouting() {
+        return this.routing == null ? Output.empty() : this.routing;
     }
 
     /**
@@ -181,27 +181,27 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="storageEndpoints")
-      private final @Nullable Input<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints;
+      private final @Nullable Output<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints;
 
-    public Input<Map<String,StorageEndpointPropertiesArgs>> getStorageEndpoints() {
-        return this.storageEndpoints == null ? Input.empty() : this.storageEndpoints;
+    public Output<Map<String,StorageEndpointPropertiesArgs>> getStorageEndpoints() {
+        return this.storageEndpoints == null ? Output.empty() : this.storageEndpoints;
     }
 
     public IotHubPropertiesArgs(
-        @Nullable Input<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies,
-        @Nullable Input<CloudToDevicePropertiesArgs> cloudToDevice,
-        @Nullable Input<String> comments,
-        @Nullable Input<Boolean> enableFileUploadNotifications,
-        @Nullable Input<Map<String,EventHubPropertiesArgs>> eventHubEndpoints,
-        @Nullable Input<Either<String,Capabilities>> features,
-        @Nullable Input<List<IpFilterRuleArgs>> ipFilterRules,
-        @Nullable Input<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints,
-        @Nullable Input<String> minTlsVersion,
-        @Nullable Input<NetworkRuleSetPropertiesArgs> networkRuleSets,
-        @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections,
-        @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        @Nullable Input<RoutingPropertiesArgs> routing,
-        @Nullable Input<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints) {
+        @Nullable Output<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies,
+        @Nullable Output<CloudToDevicePropertiesArgs> cloudToDevice,
+        @Nullable Output<String> comments,
+        @Nullable Output<Boolean> enableFileUploadNotifications,
+        @Nullable Output<Map<String,EventHubPropertiesArgs>> eventHubEndpoints,
+        @Nullable Output<Either<String,Capabilities>> features,
+        @Nullable Output<List<IpFilterRuleArgs>> ipFilterRules,
+        @Nullable Output<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints,
+        @Nullable Output<String> minTlsVersion,
+        @Nullable Output<NetworkRuleSetPropertiesArgs> networkRuleSets,
+        @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections,
+        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
+        @Nullable Output<RoutingPropertiesArgs> routing,
+        @Nullable Output<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints) {
         this.authorizationPolicies = authorizationPolicies;
         this.cloudToDevice = cloudToDevice;
         this.comments = comments;
@@ -219,20 +219,20 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IotHubPropertiesArgs() {
-        this.authorizationPolicies = Input.empty();
-        this.cloudToDevice = Input.empty();
-        this.comments = Input.empty();
-        this.enableFileUploadNotifications = Input.empty();
-        this.eventHubEndpoints = Input.empty();
-        this.features = Input.empty();
-        this.ipFilterRules = Input.empty();
-        this.messagingEndpoints = Input.empty();
-        this.minTlsVersion = Input.empty();
-        this.networkRuleSets = Input.empty();
-        this.privateEndpointConnections = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.routing = Input.empty();
-        this.storageEndpoints = Input.empty();
+        this.authorizationPolicies = Output.empty();
+        this.cloudToDevice = Output.empty();
+        this.comments = Output.empty();
+        this.enableFileUploadNotifications = Output.empty();
+        this.eventHubEndpoints = Output.empty();
+        this.features = Output.empty();
+        this.ipFilterRules = Output.empty();
+        this.messagingEndpoints = Output.empty();
+        this.minTlsVersion = Output.empty();
+        this.networkRuleSets = Output.empty();
+        this.privateEndpointConnections = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.routing = Output.empty();
+        this.storageEndpoints = Output.empty();
     }
 
     public static Builder builder() {
@@ -244,20 +244,20 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies;
-        private @Nullable Input<CloudToDevicePropertiesArgs> cloudToDevice;
-        private @Nullable Input<String> comments;
-        private @Nullable Input<Boolean> enableFileUploadNotifications;
-        private @Nullable Input<Map<String,EventHubPropertiesArgs>> eventHubEndpoints;
-        private @Nullable Input<Either<String,Capabilities>> features;
-        private @Nullable Input<List<IpFilterRuleArgs>> ipFilterRules;
-        private @Nullable Input<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints;
-        private @Nullable Input<String> minTlsVersion;
-        private @Nullable Input<NetworkRuleSetPropertiesArgs> networkRuleSets;
-        private @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
-        private @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private @Nullable Input<RoutingPropertiesArgs> routing;
-        private @Nullable Input<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints;
+        private @Nullable Output<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies;
+        private @Nullable Output<CloudToDevicePropertiesArgs> cloudToDevice;
+        private @Nullable Output<String> comments;
+        private @Nullable Output<Boolean> enableFileUploadNotifications;
+        private @Nullable Output<Map<String,EventHubPropertiesArgs>> eventHubEndpoints;
+        private @Nullable Output<Either<String,Capabilities>> features;
+        private @Nullable Output<List<IpFilterRuleArgs>> ipFilterRules;
+        private @Nullable Output<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints;
+        private @Nullable Output<String> minTlsVersion;
+        private @Nullable Output<NetworkRuleSetPropertiesArgs> networkRuleSets;
+        private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private @Nullable Output<RoutingPropertiesArgs> routing;
+        private @Nullable Output<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints;
 
         public Builder() {
     	      // Empty
@@ -281,143 +281,143 @@ public final class IotHubPropertiesArgs extends io.pulumi.resources.ResourceArgs
     	      this.storageEndpoints = defaults.storageEndpoints;
         }
 
-        public Builder authorizationPolicies(@Nullable Input<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies) {
+        public Builder authorizationPolicies(@Nullable Output<List<SharedAccessSignatureAuthorizationRuleArgs>> authorizationPolicies) {
             this.authorizationPolicies = authorizationPolicies;
             return this;
         }
 
         public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleArgs> authorizationPolicies) {
-            this.authorizationPolicies = Input.ofNullable(authorizationPolicies);
+            this.authorizationPolicies = Output.ofNullable(authorizationPolicies);
             return this;
         }
 
-        public Builder cloudToDevice(@Nullable Input<CloudToDevicePropertiesArgs> cloudToDevice) {
+        public Builder cloudToDevice(@Nullable Output<CloudToDevicePropertiesArgs> cloudToDevice) {
             this.cloudToDevice = cloudToDevice;
             return this;
         }
 
         public Builder cloudToDevice(@Nullable CloudToDevicePropertiesArgs cloudToDevice) {
-            this.cloudToDevice = Input.ofNullable(cloudToDevice);
+            this.cloudToDevice = Output.ofNullable(cloudToDevice);
             return this;
         }
 
-        public Builder comments(@Nullable Input<String> comments) {
+        public Builder comments(@Nullable Output<String> comments) {
             this.comments = comments;
             return this;
         }
 
         public Builder comments(@Nullable String comments) {
-            this.comments = Input.ofNullable(comments);
+            this.comments = Output.ofNullable(comments);
             return this;
         }
 
-        public Builder enableFileUploadNotifications(@Nullable Input<Boolean> enableFileUploadNotifications) {
+        public Builder enableFileUploadNotifications(@Nullable Output<Boolean> enableFileUploadNotifications) {
             this.enableFileUploadNotifications = enableFileUploadNotifications;
             return this;
         }
 
         public Builder enableFileUploadNotifications(@Nullable Boolean enableFileUploadNotifications) {
-            this.enableFileUploadNotifications = Input.ofNullable(enableFileUploadNotifications);
+            this.enableFileUploadNotifications = Output.ofNullable(enableFileUploadNotifications);
             return this;
         }
 
-        public Builder eventHubEndpoints(@Nullable Input<Map<String,EventHubPropertiesArgs>> eventHubEndpoints) {
+        public Builder eventHubEndpoints(@Nullable Output<Map<String,EventHubPropertiesArgs>> eventHubEndpoints) {
             this.eventHubEndpoints = eventHubEndpoints;
             return this;
         }
 
         public Builder eventHubEndpoints(@Nullable Map<String,EventHubPropertiesArgs> eventHubEndpoints) {
-            this.eventHubEndpoints = Input.ofNullable(eventHubEndpoints);
+            this.eventHubEndpoints = Output.ofNullable(eventHubEndpoints);
             return this;
         }
 
-        public Builder features(@Nullable Input<Either<String,Capabilities>> features) {
+        public Builder features(@Nullable Output<Either<String,Capabilities>> features) {
             this.features = features;
             return this;
         }
 
         public Builder features(@Nullable Either<String,Capabilities> features) {
-            this.features = Input.ofNullable(features);
+            this.features = Output.ofNullable(features);
             return this;
         }
 
-        public Builder ipFilterRules(@Nullable Input<List<IpFilterRuleArgs>> ipFilterRules) {
+        public Builder ipFilterRules(@Nullable Output<List<IpFilterRuleArgs>> ipFilterRules) {
             this.ipFilterRules = ipFilterRules;
             return this;
         }
 
         public Builder ipFilterRules(@Nullable List<IpFilterRuleArgs> ipFilterRules) {
-            this.ipFilterRules = Input.ofNullable(ipFilterRules);
+            this.ipFilterRules = Output.ofNullable(ipFilterRules);
             return this;
         }
 
-        public Builder messagingEndpoints(@Nullable Input<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints) {
+        public Builder messagingEndpoints(@Nullable Output<Map<String,MessagingEndpointPropertiesArgs>> messagingEndpoints) {
             this.messagingEndpoints = messagingEndpoints;
             return this;
         }
 
         public Builder messagingEndpoints(@Nullable Map<String,MessagingEndpointPropertiesArgs> messagingEndpoints) {
-            this.messagingEndpoints = Input.ofNullable(messagingEndpoints);
+            this.messagingEndpoints = Output.ofNullable(messagingEndpoints);
             return this;
         }
 
-        public Builder minTlsVersion(@Nullable Input<String> minTlsVersion) {
+        public Builder minTlsVersion(@Nullable Output<String> minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
 
         public Builder minTlsVersion(@Nullable String minTlsVersion) {
-            this.minTlsVersion = Input.ofNullable(minTlsVersion);
+            this.minTlsVersion = Output.ofNullable(minTlsVersion);
             return this;
         }
 
-        public Builder networkRuleSets(@Nullable Input<NetworkRuleSetPropertiesArgs> networkRuleSets) {
+        public Builder networkRuleSets(@Nullable Output<NetworkRuleSetPropertiesArgs> networkRuleSets) {
             this.networkRuleSets = networkRuleSets;
             return this;
         }
 
         public Builder networkRuleSets(@Nullable NetworkRuleSetPropertiesArgs networkRuleSets) {
-            this.networkRuleSets = Input.ofNullable(networkRuleSets);
+            this.networkRuleSets = Output.ofNullable(networkRuleSets);
             return this;
         }
 
-        public Builder privateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
-            this.privateEndpointConnections = Input.ofNullable(privateEndpointConnections);
+            this.privateEndpointConnections = Output.ofNullable(privateEndpointConnections);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder routing(@Nullable Input<RoutingPropertiesArgs> routing) {
+        public Builder routing(@Nullable Output<RoutingPropertiesArgs> routing) {
             this.routing = routing;
             return this;
         }
 
         public Builder routing(@Nullable RoutingPropertiesArgs routing) {
-            this.routing = Input.ofNullable(routing);
+            this.routing = Output.ofNullable(routing);
             return this;
         }
 
-        public Builder storageEndpoints(@Nullable Input<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints) {
+        public Builder storageEndpoints(@Nullable Output<Map<String,StorageEndpointPropertiesArgs>> storageEndpoints) {
             this.storageEndpoints = storageEndpoints;
             return this;
         }
 
         public Builder storageEndpoints(@Nullable Map<String,StorageEndpointPropertiesArgs> storageEndpoints) {
-            this.storageEndpoints = Input.ofNullable(storageEndpoints);
+            this.storageEndpoints = Output.ofNullable(storageEndpoints);
             return this;
         }
         public IotHubPropertiesArgs build() {

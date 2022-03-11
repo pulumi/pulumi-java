@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.ObjectReplicationPolicyFilterArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,9 +24,9 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="destinationContainer", required=true)
-      private final Input<String> destinationContainer;
+      private final Output<String> destinationContainer;
 
-    public Input<String> getDestinationContainer() {
+    public Output<String> getDestinationContainer() {
         return this.destinationContainer;
     }
 
@@ -35,10 +35,10 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="filters")
-      private final @Nullable Input<ObjectReplicationPolicyFilterArgs> filters;
+      private final @Nullable Output<ObjectReplicationPolicyFilterArgs> filters;
 
-    public Input<ObjectReplicationPolicyFilterArgs> getFilters() {
-        return this.filters == null ? Input.empty() : this.filters;
+    public Output<ObjectReplicationPolicyFilterArgs> getFilters() {
+        return this.filters == null ? Output.empty() : this.filters;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ruleId")
-      private final @Nullable Input<String> ruleId;
+      private final @Nullable Output<String> ruleId;
 
-    public Input<String> getRuleId() {
-        return this.ruleId == null ? Input.empty() : this.ruleId;
+    public Output<String> getRuleId() {
+        return this.ruleId == null ? Output.empty() : this.ruleId;
     }
 
     /**
@@ -57,17 +57,17 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sourceContainer", required=true)
-      private final Input<String> sourceContainer;
+      private final Output<String> sourceContainer;
 
-    public Input<String> getSourceContainer() {
+    public Output<String> getSourceContainer() {
         return this.sourceContainer;
     }
 
     public ObjectReplicationPolicyRuleArgs(
-        Input<String> destinationContainer,
-        @Nullable Input<ObjectReplicationPolicyFilterArgs> filters,
-        @Nullable Input<String> ruleId,
-        Input<String> sourceContainer) {
+        Output<String> destinationContainer,
+        @Nullable Output<ObjectReplicationPolicyFilterArgs> filters,
+        @Nullable Output<String> ruleId,
+        Output<String> sourceContainer) {
         this.destinationContainer = Objects.requireNonNull(destinationContainer, "expected parameter 'destinationContainer' to be non-null");
         this.filters = filters;
         this.ruleId = ruleId;
@@ -75,10 +75,10 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
     }
 
     private ObjectReplicationPolicyRuleArgs() {
-        this.destinationContainer = Input.empty();
-        this.filters = Input.empty();
-        this.ruleId = Input.empty();
-        this.sourceContainer = Input.empty();
+        this.destinationContainer = Output.empty();
+        this.filters = Output.empty();
+        this.ruleId = Output.empty();
+        this.sourceContainer = Output.empty();
     }
 
     public static Builder builder() {
@@ -90,10 +90,10 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> destinationContainer;
-        private @Nullable Input<ObjectReplicationPolicyFilterArgs> filters;
-        private @Nullable Input<String> ruleId;
-        private Input<String> sourceContainer;
+        private Output<String> destinationContainer;
+        private @Nullable Output<ObjectReplicationPolicyFilterArgs> filters;
+        private @Nullable Output<String> ruleId;
+        private Output<String> sourceContainer;
 
         public Builder() {
     	      // Empty
@@ -107,43 +107,43 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
     	      this.sourceContainer = defaults.sourceContainer;
         }
 
-        public Builder destinationContainer(Input<String> destinationContainer) {
+        public Builder destinationContainer(Output<String> destinationContainer) {
             this.destinationContainer = Objects.requireNonNull(destinationContainer);
             return this;
         }
 
         public Builder destinationContainer(String destinationContainer) {
-            this.destinationContainer = Input.of(Objects.requireNonNull(destinationContainer));
+            this.destinationContainer = Output.of(Objects.requireNonNull(destinationContainer));
             return this;
         }
 
-        public Builder filters(@Nullable Input<ObjectReplicationPolicyFilterArgs> filters) {
+        public Builder filters(@Nullable Output<ObjectReplicationPolicyFilterArgs> filters) {
             this.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable ObjectReplicationPolicyFilterArgs filters) {
-            this.filters = Input.ofNullable(filters);
+            this.filters = Output.ofNullable(filters);
             return this;
         }
 
-        public Builder ruleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Output<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Input.ofNullable(ruleId);
+            this.ruleId = Output.ofNullable(ruleId);
             return this;
         }
 
-        public Builder sourceContainer(Input<String> sourceContainer) {
+        public Builder sourceContainer(Output<String> sourceContainer) {
             this.sourceContainer = Objects.requireNonNull(sourceContainer);
             return this;
         }
 
         public Builder sourceContainer(String sourceContainer) {
-            this.sourceContainer = Input.of(Objects.requireNonNull(sourceContainer));
+            this.sourceContainer = Output.of(Objects.requireNonNull(sourceContainer));
             return this;
         }
         public ObjectReplicationPolicyRuleArgs build() {

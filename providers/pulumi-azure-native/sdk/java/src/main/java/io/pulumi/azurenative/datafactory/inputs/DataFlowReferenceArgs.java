@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="datasetParameters")
-      private final @Nullable Input<Object> datasetParameters;
+      private final @Nullable Output<Object> datasetParameters;
 
-    public Input<Object> getDatasetParameters() {
-        return this.datasetParameters == null ? Input.empty() : this.datasetParameters;
+    public Output<Object> getDatasetParameters() {
+        return this.datasetParameters == null ? Output.empty() : this.datasetParameters;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,Object>> parameters;
+      private final @Nullable Output<Map<String,Object>> parameters;
 
-    public Input<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,Object>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -47,9 +47,9 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="referenceName", required=true)
-      private final Input<String> referenceName;
+      private final Output<String> referenceName;
 
-    public Input<String> getReferenceName() {
+    public Output<String> getReferenceName() {
         return this.referenceName;
     }
 
@@ -58,17 +58,17 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public DataFlowReferenceArgs(
-        @Nullable Input<Object> datasetParameters,
-        @Nullable Input<Map<String,Object>> parameters,
-        Input<String> referenceName,
-        Input<String> type) {
+        @Nullable Output<Object> datasetParameters,
+        @Nullable Output<Map<String,Object>> parameters,
+        Output<String> referenceName,
+        Output<String> type) {
         this.datasetParameters = datasetParameters;
         this.parameters = parameters;
         this.referenceName = Objects.requireNonNull(referenceName, "expected parameter 'referenceName' to be non-null");
@@ -76,10 +76,10 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DataFlowReferenceArgs() {
-        this.datasetParameters = Input.empty();
-        this.parameters = Input.empty();
-        this.referenceName = Input.empty();
-        this.type = Input.empty();
+        this.datasetParameters = Output.empty();
+        this.parameters = Output.empty();
+        this.referenceName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> datasetParameters;
-        private @Nullable Input<Map<String,Object>> parameters;
-        private Input<String> referenceName;
-        private Input<String> type;
+        private @Nullable Output<Object> datasetParameters;
+        private @Nullable Output<Map<String,Object>> parameters;
+        private Output<String> referenceName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder datasetParameters(@Nullable Input<Object> datasetParameters) {
+        public Builder datasetParameters(@Nullable Output<Object> datasetParameters) {
             this.datasetParameters = datasetParameters;
             return this;
         }
 
         public Builder datasetParameters(@Nullable Object datasetParameters) {
-            this.datasetParameters = Input.ofNullable(datasetParameters);
+            this.datasetParameters = Output.ofNullable(datasetParameters);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder referenceName(Input<String> referenceName) {
+        public Builder referenceName(Output<String> referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
 
         public Builder referenceName(String referenceName) {
-            this.referenceName = Input.of(Objects.requireNonNull(referenceName));
+            this.referenceName = Output.of(Objects.requireNonNull(referenceName));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public DataFlowReferenceArgs build() {

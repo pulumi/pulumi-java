@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.InstancePoolLicenseType;
 import io.pulumi.azurenative.sql.inputs.SkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instancePoolName")
-      private final @Nullable Input<String> instancePoolName;
+      private final @Nullable Output<String> instancePoolName;
 
-    public Input<String> getInstancePoolName() {
-        return this.instancePoolName == null ? Input.empty() : this.instancePoolName;
+    public Output<String> getInstancePoolName() {
+        return this.instancePoolName == null ? Output.empty() : this.instancePoolName;
     }
 
     /**
@@ -35,9 +35,9 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseType", required=true)
-      private final Input<Either<String,InstancePoolLicenseType>> licenseType;
+      private final Output<Either<String,InstancePoolLicenseType>> licenseType;
 
-    public Input<Either<String,InstancePoolLicenseType>> getLicenseType() {
+    public Output<Either<String,InstancePoolLicenseType>> getLicenseType() {
         return this.licenseType;
     }
 
@@ -46,10 +46,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -68,10 +68,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<SkuArgs> sku;
+      private final @Nullable Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<SkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -79,9 +79,9 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-      private final Input<String> subnetId;
+      private final Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
+    public Output<String> getSubnetId() {
         return this.subnetId;
     }
 
@@ -90,10 +90,10 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -101,21 +101,21 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vCores", required=true)
-      private final Input<Integer> vCores;
+      private final Output<Integer> vCores;
 
-    public Input<Integer> getVCores() {
+    public Output<Integer> getVCores() {
         return this.vCores;
     }
 
     public InstancePoolArgs(
-        @Nullable Input<String> instancePoolName,
-        Input<Either<String,InstancePoolLicenseType>> licenseType,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<SkuArgs> sku,
-        Input<String> subnetId,
-        @Nullable Input<Map<String,String>> tags,
-        Input<Integer> vCores) {
+        @Nullable Output<String> instancePoolName,
+        Output<Either<String,InstancePoolLicenseType>> licenseType,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<SkuArgs> sku,
+        Output<String> subnetId,
+        @Nullable Output<Map<String,String>> tags,
+        Output<Integer> vCores) {
         this.instancePoolName = instancePoolName;
         this.licenseType = Objects.requireNonNull(licenseType, "expected parameter 'licenseType' to be non-null");
         this.location = location;
@@ -127,14 +127,14 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstancePoolArgs() {
-        this.instancePoolName = Input.empty();
-        this.licenseType = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sku = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
-        this.vCores = Input.empty();
+        this.instancePoolName = Output.empty();
+        this.licenseType = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sku = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
+        this.vCores = Output.empty();
     }
 
     public static Builder builder() {
@@ -146,14 +146,14 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> instancePoolName;
-        private Input<Either<String,InstancePoolLicenseType>> licenseType;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SkuArgs> sku;
-        private Input<String> subnetId;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<Integer> vCores;
+        private @Nullable Output<String> instancePoolName;
+        private Output<Either<String,InstancePoolLicenseType>> licenseType;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SkuArgs> sku;
+        private Output<String> subnetId;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<Integer> vCores;
 
         public Builder() {
     	      // Empty
@@ -171,83 +171,83 @@ public final class InstancePoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vCores = defaults.vCores;
         }
 
-        public Builder instancePoolName(@Nullable Input<String> instancePoolName) {
+        public Builder instancePoolName(@Nullable Output<String> instancePoolName) {
             this.instancePoolName = instancePoolName;
             return this;
         }
 
         public Builder instancePoolName(@Nullable String instancePoolName) {
-            this.instancePoolName = Input.ofNullable(instancePoolName);
+            this.instancePoolName = Output.ofNullable(instancePoolName);
             return this;
         }
 
-        public Builder licenseType(Input<Either<String,InstancePoolLicenseType>> licenseType) {
+        public Builder licenseType(Output<Either<String,InstancePoolLicenseType>> licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
 
         public Builder licenseType(Either<String,InstancePoolLicenseType> licenseType) {
-            this.licenseType = Input.of(Objects.requireNonNull(licenseType));
+            this.licenseType = Output.of(Objects.requireNonNull(licenseType));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Output<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder subnetId(Input<String> subnetId) {
+        public Builder subnetId(Output<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
         public Builder subnetId(String subnetId) {
-            this.subnetId = Input.of(Objects.requireNonNull(subnetId));
+            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vCores(Input<Integer> vCores) {
+        public Builder vCores(Output<Integer> vCores) {
             this.vCores = Objects.requireNonNull(vCores);
             return this;
         }
 
         public Builder vCores(Integer vCores) {
-            this.vCores = Input.of(Objects.requireNonNull(vCores));
+            this.vCores = Output.of(Objects.requireNonNull(vCores));
             return this;
         }
         public InstancePoolArgs build() {

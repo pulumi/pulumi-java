@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class DppIdentityDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<String> type;
+      private final @Nullable Output<String> type;
 
-    public Input<String> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<String> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
-    public DppIdentityDetailsArgs(@Nullable Input<String> type) {
+    public DppIdentityDetailsArgs(@Nullable Output<String> type) {
         this.type = type;
     }
 
     private DppIdentityDetailsArgs() {
-        this.type = Input.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class DppIdentityDetailsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> type;
+        private @Nullable Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class DppIdentityDetailsArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder type(@Nullable Input<String> type) {
+        public Builder type(@Nullable Output<String> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable String type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public DppIdentityDetailsArgs build() {

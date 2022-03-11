@@ -8,7 +8,6 @@ import io.pulumi.azurenative.network.LocalNetworkGatewayArgs;
 import io.pulumi.azurenative.network.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.outputs.BgpSettingsResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -227,55 +226,55 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocalNetworkGateway(String name, LocalNetworkGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:LocalNetworkGateway", name, args == null ? LocalNetworkGatewayArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:LocalNetworkGateway", name, args == null ? LocalNetworkGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LocalNetworkGateway(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LocalNetworkGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:LocalNetworkGateway", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20150615:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160330:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160601:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20160901:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20161201:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170301:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170601:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170801:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20170901:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171001:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20171101:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180101:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180201:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180401:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180601:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180701:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20180801:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181001:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181101:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20181201:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190201:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190401:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190601:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190701:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190801:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20190901:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191101:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20191201:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200301:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200401:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200501:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200601:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200701:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20200801:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20201101:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210201:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210301:LocalNetworkGateway").build()),
-                Input.of(Alias.builder().setType("azure-native:network/v20210501:LocalNetworkGateway").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20150615:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160330:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160601:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20160901:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20161201:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170301:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170601:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170801:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20170901:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171001:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20171101:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180101:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180201:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180401:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180601:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180701:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20180801:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181001:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181101:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20181201:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190201:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190401:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190601:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190701:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190801:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20190901:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191101:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20191201:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200301:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200401:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200501:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200601:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200701:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20200801:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20201101:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210201:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210301:LocalNetworkGateway").build()),
+                Output.of(Alias.builder().setType("azure-native:network/v20210501:LocalNetworkGateway").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -289,7 +288,7 @@ public class LocalNetworkGateway extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LocalNetworkGateway get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LocalNetworkGateway get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LocalNetworkGateway(name, id, options);
     }
 }

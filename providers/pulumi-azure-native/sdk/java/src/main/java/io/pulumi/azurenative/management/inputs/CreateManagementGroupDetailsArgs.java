@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.management.inputs;
 
 import io.pulumi.azurenative.management.inputs.CreateParentGroupInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parent")
-      private final @Nullable Input<CreateParentGroupInfoArgs> parent;
+      private final @Nullable Output<CreateParentGroupInfoArgs> parent;
 
-    public Input<CreateParentGroupInfoArgs> getParent() {
-        return this.parent == null ? Input.empty() : this.parent;
+    public Output<CreateParentGroupInfoArgs> getParent() {
+        return this.parent == null ? Output.empty() : this.parent;
     }
 
-    public CreateManagementGroupDetailsArgs(@Nullable Input<CreateParentGroupInfoArgs> parent) {
+    public CreateManagementGroupDetailsArgs(@Nullable Output<CreateParentGroupInfoArgs> parent) {
         this.parent = parent;
     }
 
     private CreateManagementGroupDetailsArgs() {
-        this.parent = Input.empty();
+        this.parent = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<CreateParentGroupInfoArgs> parent;
+        private @Nullable Output<CreateParentGroupInfoArgs> parent;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
     	      this.parent = defaults.parent;
         }
 
-        public Builder parent(@Nullable Input<CreateParentGroupInfoArgs> parent) {
+        public Builder parent(@Nullable Output<CreateParentGroupInfoArgs> parent) {
             this.parent = parent;
             return this;
         }
 
         public Builder parent(@Nullable CreateParentGroupInfoArgs parent) {
-            this.parent = Input.ofNullable(parent);
+            this.parent = Output.ofNullable(parent);
             return this;
         }
         public CreateManagementGroupDetailsArgs build() {

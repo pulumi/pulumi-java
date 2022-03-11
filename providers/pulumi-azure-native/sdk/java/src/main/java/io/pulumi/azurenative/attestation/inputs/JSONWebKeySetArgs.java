@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.attestation.inputs;
 
 import io.pulumi.azurenative.attestation.inputs.JSONWebKeyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class JSONWebKeySetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-      private final @Nullable Input<List<JSONWebKeyArgs>> keys;
+      private final @Nullable Output<List<JSONWebKeyArgs>> keys;
 
-    public Input<List<JSONWebKeyArgs>> getKeys() {
-        return this.keys == null ? Input.empty() : this.keys;
+    public Output<List<JSONWebKeyArgs>> getKeys() {
+        return this.keys == null ? Output.empty() : this.keys;
     }
 
-    public JSONWebKeySetArgs(@Nullable Input<List<JSONWebKeyArgs>> keys) {
+    public JSONWebKeySetArgs(@Nullable Output<List<JSONWebKeyArgs>> keys) {
         this.keys = keys;
     }
 
     private JSONWebKeySetArgs() {
-        this.keys = Input.empty();
+        this.keys = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class JSONWebKeySetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<JSONWebKeyArgs>> keys;
+        private @Nullable Output<List<JSONWebKeyArgs>> keys;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class JSONWebKeySetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keys = defaults.keys;
         }
 
-        public Builder keys(@Nullable Input<List<JSONWebKeyArgs>> keys) {
+        public Builder keys(@Nullable Output<List<JSONWebKeyArgs>> keys) {
             this.keys = keys;
             return this;
         }
 
         public Builder keys(@Nullable List<JSONWebKeyArgs> keys) {
-            this.keys = Input.ofNullable(keys);
+            this.keys = Output.ofNullable(keys);
             return this;
         }
         public JSONWebKeySetArgs build() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.DWCopyCommandDefaultValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="additionalOptions")
-      private final @Nullable Input<Map<String,String>> additionalOptions;
+      private final @Nullable Output<Map<String,String>> additionalOptions;
 
-    public Input<Map<String,String>> getAdditionalOptions() {
-        return this.additionalOptions == null ? Input.empty() : this.additionalOptions;
+    public Output<Map<String,String>> getAdditionalOptions() {
+        return this.additionalOptions == null ? Output.empty() : this.additionalOptions;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultValues")
-      private final @Nullable Input<List<DWCopyCommandDefaultValueArgs>> defaultValues;
+      private final @Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues;
 
-    public Input<List<DWCopyCommandDefaultValueArgs>> getDefaultValues() {
-        return this.defaultValues == null ? Input.empty() : this.defaultValues;
+    public Output<List<DWCopyCommandDefaultValueArgs>> getDefaultValues() {
+        return this.defaultValues == null ? Output.empty() : this.defaultValues;
     }
 
     public DWCopyCommandSettingsArgs(
-        @Nullable Input<Map<String,String>> additionalOptions,
-        @Nullable Input<List<DWCopyCommandDefaultValueArgs>> defaultValues) {
+        @Nullable Output<Map<String,String>> additionalOptions,
+        @Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues) {
         this.additionalOptions = additionalOptions;
         this.defaultValues = defaultValues;
     }
 
     private DWCopyCommandSettingsArgs() {
-        this.additionalOptions = Input.empty();
-        this.defaultValues = Input.empty();
+        this.additionalOptions = Output.empty();
+        this.defaultValues = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> additionalOptions;
-        private @Nullable Input<List<DWCopyCommandDefaultValueArgs>> defaultValues;
+        private @Nullable Output<Map<String,String>> additionalOptions;
+        private @Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
     	      this.defaultValues = defaults.defaultValues;
         }
 
-        public Builder additionalOptions(@Nullable Input<Map<String,String>> additionalOptions) {
+        public Builder additionalOptions(@Nullable Output<Map<String,String>> additionalOptions) {
             this.additionalOptions = additionalOptions;
             return this;
         }
 
         public Builder additionalOptions(@Nullable Map<String,String> additionalOptions) {
-            this.additionalOptions = Input.ofNullable(additionalOptions);
+            this.additionalOptions = Output.ofNullable(additionalOptions);
             return this;
         }
 
-        public Builder defaultValues(@Nullable Input<List<DWCopyCommandDefaultValueArgs>> defaultValues) {
+        public Builder defaultValues(@Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues) {
             this.defaultValues = defaultValues;
             return this;
         }
 
         public Builder defaultValues(@Nullable List<DWCopyCommandDefaultValueArgs> defaultValues) {
-            this.defaultValues = Input.ofNullable(defaultValues);
+            this.defaultValues = Output.ofNullable(defaultValues);
             return this;
         }
         public DWCopyCommandSettingsArgs build() {

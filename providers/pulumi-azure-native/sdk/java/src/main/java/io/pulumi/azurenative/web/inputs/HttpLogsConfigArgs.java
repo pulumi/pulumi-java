@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.AzureBlobStorageHttpLogsConfigArgs;
 import io.pulumi.azurenative.web.inputs.FileSystemHttpLogsConfigArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureBlobStorage")
-      private final @Nullable Input<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage;
+      private final @Nullable Output<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage;
 
-    public Input<AzureBlobStorageHttpLogsConfigArgs> getAzureBlobStorage() {
-        return this.azureBlobStorage == null ? Input.empty() : this.azureBlobStorage;
+    public Output<AzureBlobStorageHttpLogsConfigArgs> getAzureBlobStorage() {
+        return this.azureBlobStorage == null ? Output.empty() : this.azureBlobStorage;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileSystem")
-      private final @Nullable Input<FileSystemHttpLogsConfigArgs> fileSystem;
+      private final @Nullable Output<FileSystemHttpLogsConfigArgs> fileSystem;
 
-    public Input<FileSystemHttpLogsConfigArgs> getFileSystem() {
-        return this.fileSystem == null ? Input.empty() : this.fileSystem;
+    public Output<FileSystemHttpLogsConfigArgs> getFileSystem() {
+        return this.fileSystem == null ? Output.empty() : this.fileSystem;
     }
 
     public HttpLogsConfigArgs(
-        @Nullable Input<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage,
-        @Nullable Input<FileSystemHttpLogsConfigArgs> fileSystem) {
+        @Nullable Output<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage,
+        @Nullable Output<FileSystemHttpLogsConfigArgs> fileSystem) {
         this.azureBlobStorage = azureBlobStorage;
         this.fileSystem = fileSystem;
     }
 
     private HttpLogsConfigArgs() {
-        this.azureBlobStorage = Input.empty();
-        this.fileSystem = Input.empty();
+        this.azureBlobStorage = Output.empty();
+        this.fileSystem = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage;
-        private @Nullable Input<FileSystemHttpLogsConfigArgs> fileSystem;
+        private @Nullable Output<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage;
+        private @Nullable Output<FileSystemHttpLogsConfigArgs> fileSystem;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class HttpLogsConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fileSystem = defaults.fileSystem;
         }
 
-        public Builder azureBlobStorage(@Nullable Input<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage) {
+        public Builder azureBlobStorage(@Nullable Output<AzureBlobStorageHttpLogsConfigArgs> azureBlobStorage) {
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
         public Builder azureBlobStorage(@Nullable AzureBlobStorageHttpLogsConfigArgs azureBlobStorage) {
-            this.azureBlobStorage = Input.ofNullable(azureBlobStorage);
+            this.azureBlobStorage = Output.ofNullable(azureBlobStorage);
             return this;
         }
 
-        public Builder fileSystem(@Nullable Input<FileSystemHttpLogsConfigArgs> fileSystem) {
+        public Builder fileSystem(@Nullable Output<FileSystemHttpLogsConfigArgs> fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
         public Builder fileSystem(@Nullable FileSystemHttpLogsConfigArgs fileSystem) {
-            this.fileSystem = Input.ofNullable(fileSystem);
+            this.fileSystem = Output.ofNullable(fileSystem);
             return this;
         }
         public HttpLogsConfigArgs build() {

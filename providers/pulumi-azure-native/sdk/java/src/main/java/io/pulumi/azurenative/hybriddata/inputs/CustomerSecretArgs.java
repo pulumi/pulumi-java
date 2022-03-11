@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybriddata.inputs;
 
 import io.pulumi.azurenative.hybriddata.enums.SupportedAlgorithm;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-      private final Input<SupportedAlgorithm> algorithm;
+      private final Output<SupportedAlgorithm> algorithm;
 
-    public Input<SupportedAlgorithm> getAlgorithm() {
+    public Output<SupportedAlgorithm> getAlgorithm() {
         return this.algorithm;
     }
 
@@ -34,9 +34,9 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyIdentifier", required=true)
-      private final Input<String> keyIdentifier;
+      private final Output<String> keyIdentifier;
 
-    public Input<String> getKeyIdentifier() {
+    public Output<String> getKeyIdentifier() {
         return this.keyIdentifier;
     }
 
@@ -45,25 +45,25 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyValue", required=true)
-      private final Input<String> keyValue;
+      private final Output<String> keyValue;
 
-    public Input<String> getKeyValue() {
+    public Output<String> getKeyValue() {
         return this.keyValue;
     }
 
     public CustomerSecretArgs(
-        Input<SupportedAlgorithm> algorithm,
-        Input<String> keyIdentifier,
-        Input<String> keyValue) {
+        Output<SupportedAlgorithm> algorithm,
+        Output<String> keyIdentifier,
+        Output<String> keyValue) {
         this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
         this.keyIdentifier = Objects.requireNonNull(keyIdentifier, "expected parameter 'keyIdentifier' to be non-null");
         this.keyValue = Objects.requireNonNull(keyValue, "expected parameter 'keyValue' to be non-null");
     }
 
     private CustomerSecretArgs() {
-        this.algorithm = Input.empty();
-        this.keyIdentifier = Input.empty();
-        this.keyValue = Input.empty();
+        this.algorithm = Output.empty();
+        this.keyIdentifier = Output.empty();
+        this.keyValue = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<SupportedAlgorithm> algorithm;
-        private Input<String> keyIdentifier;
-        private Input<String> keyValue;
+        private Output<SupportedAlgorithm> algorithm;
+        private Output<String> keyIdentifier;
+        private Output<String> keyValue;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keyValue = defaults.keyValue;
         }
 
-        public Builder algorithm(Input<SupportedAlgorithm> algorithm) {
+        public Builder algorithm(Output<SupportedAlgorithm> algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
         public Builder algorithm(SupportedAlgorithm algorithm) {
-            this.algorithm = Input.of(Objects.requireNonNull(algorithm));
+            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
             return this;
         }
 
-        public Builder keyIdentifier(Input<String> keyIdentifier) {
+        public Builder keyIdentifier(Output<String> keyIdentifier) {
             this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
             return this;
         }
 
         public Builder keyIdentifier(String keyIdentifier) {
-            this.keyIdentifier = Input.of(Objects.requireNonNull(keyIdentifier));
+            this.keyIdentifier = Output.of(Objects.requireNonNull(keyIdentifier));
             return this;
         }
 
-        public Builder keyValue(Input<String> keyValue) {
+        public Builder keyValue(Output<String> keyValue) {
             this.keyValue = Objects.requireNonNull(keyValue);
             return this;
         }
 
         public Builder keyValue(String keyValue) {
-            this.keyValue = Input.of(Objects.requireNonNull(keyValue));
+            this.keyValue = Output.of(Objects.requireNonNull(keyValue));
             return this;
         }
         public CustomerSecretArgs build() {

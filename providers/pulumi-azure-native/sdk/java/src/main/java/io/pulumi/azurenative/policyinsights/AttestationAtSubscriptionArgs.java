@@ -6,7 +6,7 @@ package io.pulumi.azurenative.policyinsights;
 import io.pulumi.azurenative.policyinsights.enums.ComplianceState;
 import io.pulumi.azurenative.policyinsights.inputs.AttestationEvidenceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -23,10 +23,10 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attestationName")
-      private final @Nullable Input<String> attestationName;
+      private final @Nullable Output<String> attestationName;
 
-    public Input<String> getAttestationName() {
-        return this.attestationName == null ? Input.empty() : this.attestationName;
+    public Output<String> getAttestationName() {
+        return this.attestationName == null ? Output.empty() : this.attestationName;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="comments")
-      private final @Nullable Input<String> comments;
+      private final @Nullable Output<String> comments;
 
-    public Input<String> getComments() {
-        return this.comments == null ? Input.empty() : this.comments;
+    public Output<String> getComments() {
+        return this.comments == null ? Output.empty() : this.comments;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="complianceState")
-      private final @Nullable Input<Either<String,ComplianceState>> complianceState;
+      private final @Nullable Output<Either<String,ComplianceState>> complianceState;
 
-    public Input<Either<String,ComplianceState>> getComplianceState() {
-        return this.complianceState == null ? Input.empty() : this.complianceState;
+    public Output<Either<String,ComplianceState>> getComplianceState() {
+        return this.complianceState == null ? Output.empty() : this.complianceState;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="evidence")
-      private final @Nullable Input<List<AttestationEvidenceArgs>> evidence;
+      private final @Nullable Output<List<AttestationEvidenceArgs>> evidence;
 
-    public Input<List<AttestationEvidenceArgs>> getEvidence() {
-        return this.evidence == null ? Input.empty() : this.evidence;
+    public Output<List<AttestationEvidenceArgs>> getEvidence() {
+        return this.evidence == null ? Output.empty() : this.evidence;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="expiresOn")
-      private final @Nullable Input<String> expiresOn;
+      private final @Nullable Output<String> expiresOn;
 
-    public Input<String> getExpiresOn() {
-        return this.expiresOn == null ? Input.empty() : this.expiresOn;
+    public Output<String> getExpiresOn() {
+        return this.expiresOn == null ? Output.empty() : this.expiresOn;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="owner")
-      private final @Nullable Input<String> owner;
+      private final @Nullable Output<String> owner;
 
-    public Input<String> getOwner() {
-        return this.owner == null ? Input.empty() : this.owner;
+    public Output<String> getOwner() {
+        return this.owner == null ? Output.empty() : this.owner;
     }
 
     /**
@@ -89,9 +89,9 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyAssignmentId", required=true)
-      private final Input<String> policyAssignmentId;
+      private final Output<String> policyAssignmentId;
 
-    public Input<String> getPolicyAssignmentId() {
+    public Output<String> getPolicyAssignmentId() {
         return this.policyAssignmentId;
     }
 
@@ -100,21 +100,21 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="policyDefinitionReferenceId")
-      private final @Nullable Input<String> policyDefinitionReferenceId;
+      private final @Nullable Output<String> policyDefinitionReferenceId;
 
-    public Input<String> getPolicyDefinitionReferenceId() {
-        return this.policyDefinitionReferenceId == null ? Input.empty() : this.policyDefinitionReferenceId;
+    public Output<String> getPolicyDefinitionReferenceId() {
+        return this.policyDefinitionReferenceId == null ? Output.empty() : this.policyDefinitionReferenceId;
     }
 
     public AttestationAtSubscriptionArgs(
-        @Nullable Input<String> attestationName,
-        @Nullable Input<String> comments,
-        @Nullable Input<Either<String,ComplianceState>> complianceState,
-        @Nullable Input<List<AttestationEvidenceArgs>> evidence,
-        @Nullable Input<String> expiresOn,
-        @Nullable Input<String> owner,
-        Input<String> policyAssignmentId,
-        @Nullable Input<String> policyDefinitionReferenceId) {
+        @Nullable Output<String> attestationName,
+        @Nullable Output<String> comments,
+        @Nullable Output<Either<String,ComplianceState>> complianceState,
+        @Nullable Output<List<AttestationEvidenceArgs>> evidence,
+        @Nullable Output<String> expiresOn,
+        @Nullable Output<String> owner,
+        Output<String> policyAssignmentId,
+        @Nullable Output<String> policyDefinitionReferenceId) {
         this.attestationName = attestationName;
         this.comments = comments;
         this.complianceState = complianceState;
@@ -126,14 +126,14 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     }
 
     private AttestationAtSubscriptionArgs() {
-        this.attestationName = Input.empty();
-        this.comments = Input.empty();
-        this.complianceState = Input.empty();
-        this.evidence = Input.empty();
-        this.expiresOn = Input.empty();
-        this.owner = Input.empty();
-        this.policyAssignmentId = Input.empty();
-        this.policyDefinitionReferenceId = Input.empty();
+        this.attestationName = Output.empty();
+        this.comments = Output.empty();
+        this.complianceState = Output.empty();
+        this.evidence = Output.empty();
+        this.expiresOn = Output.empty();
+        this.owner = Output.empty();
+        this.policyAssignmentId = Output.empty();
+        this.policyDefinitionReferenceId = Output.empty();
     }
 
     public static Builder builder() {
@@ -145,14 +145,14 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> attestationName;
-        private @Nullable Input<String> comments;
-        private @Nullable Input<Either<String,ComplianceState>> complianceState;
-        private @Nullable Input<List<AttestationEvidenceArgs>> evidence;
-        private @Nullable Input<String> expiresOn;
-        private @Nullable Input<String> owner;
-        private Input<String> policyAssignmentId;
-        private @Nullable Input<String> policyDefinitionReferenceId;
+        private @Nullable Output<String> attestationName;
+        private @Nullable Output<String> comments;
+        private @Nullable Output<Either<String,ComplianceState>> complianceState;
+        private @Nullable Output<List<AttestationEvidenceArgs>> evidence;
+        private @Nullable Output<String> expiresOn;
+        private @Nullable Output<String> owner;
+        private Output<String> policyAssignmentId;
+        private @Nullable Output<String> policyDefinitionReferenceId;
 
         public Builder() {
     	      // Empty
@@ -170,83 +170,83 @@ public final class AttestationAtSubscriptionArgs extends io.pulumi.resources.Res
     	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
         }
 
-        public Builder attestationName(@Nullable Input<String> attestationName) {
+        public Builder attestationName(@Nullable Output<String> attestationName) {
             this.attestationName = attestationName;
             return this;
         }
 
         public Builder attestationName(@Nullable String attestationName) {
-            this.attestationName = Input.ofNullable(attestationName);
+            this.attestationName = Output.ofNullable(attestationName);
             return this;
         }
 
-        public Builder comments(@Nullable Input<String> comments) {
+        public Builder comments(@Nullable Output<String> comments) {
             this.comments = comments;
             return this;
         }
 
         public Builder comments(@Nullable String comments) {
-            this.comments = Input.ofNullable(comments);
+            this.comments = Output.ofNullable(comments);
             return this;
         }
 
-        public Builder complianceState(@Nullable Input<Either<String,ComplianceState>> complianceState) {
+        public Builder complianceState(@Nullable Output<Either<String,ComplianceState>> complianceState) {
             this.complianceState = complianceState;
             return this;
         }
 
         public Builder complianceState(@Nullable Either<String,ComplianceState> complianceState) {
-            this.complianceState = Input.ofNullable(complianceState);
+            this.complianceState = Output.ofNullable(complianceState);
             return this;
         }
 
-        public Builder evidence(@Nullable Input<List<AttestationEvidenceArgs>> evidence) {
+        public Builder evidence(@Nullable Output<List<AttestationEvidenceArgs>> evidence) {
             this.evidence = evidence;
             return this;
         }
 
         public Builder evidence(@Nullable List<AttestationEvidenceArgs> evidence) {
-            this.evidence = Input.ofNullable(evidence);
+            this.evidence = Output.ofNullable(evidence);
             return this;
         }
 
-        public Builder expiresOn(@Nullable Input<String> expiresOn) {
+        public Builder expiresOn(@Nullable Output<String> expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
 
         public Builder expiresOn(@Nullable String expiresOn) {
-            this.expiresOn = Input.ofNullable(expiresOn);
+            this.expiresOn = Output.ofNullable(expiresOn);
             return this;
         }
 
-        public Builder owner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Output<String> owner) {
             this.owner = owner;
             return this;
         }
 
         public Builder owner(@Nullable String owner) {
-            this.owner = Input.ofNullable(owner);
+            this.owner = Output.ofNullable(owner);
             return this;
         }
 
-        public Builder policyAssignmentId(Input<String> policyAssignmentId) {
+        public Builder policyAssignmentId(Output<String> policyAssignmentId) {
             this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
             return this;
         }
 
         public Builder policyAssignmentId(String policyAssignmentId) {
-            this.policyAssignmentId = Input.of(Objects.requireNonNull(policyAssignmentId));
+            this.policyAssignmentId = Output.of(Objects.requireNonNull(policyAssignmentId));
             return this;
         }
 
-        public Builder policyDefinitionReferenceId(@Nullable Input<String> policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable Output<String> policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
         public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
-            this.policyDefinitionReferenceId = Input.ofNullable(policyDefinitionReferenceId);
+            this.policyDefinitionReferenceId = Output.ofNullable(policyDefinitionReferenceId);
             return this;
         }
         public AttestationAtSubscriptionArgs build() {

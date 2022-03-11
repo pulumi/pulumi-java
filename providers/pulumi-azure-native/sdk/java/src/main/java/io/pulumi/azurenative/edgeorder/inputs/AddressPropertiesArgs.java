@@ -5,7 +5,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.ContactDetailsArgs;
 import io.pulumi.azurenative.edgeorder.inputs.ShippingAddressArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,9 +24,9 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="contactDetails", required=true)
-      private final Input<ContactDetailsArgs> contactDetails;
+      private final Output<ContactDetailsArgs> contactDetails;
 
-    public Input<ContactDetailsArgs> getContactDetails() {
+    public Output<ContactDetailsArgs> getContactDetails() {
         return this.contactDetails;
     }
 
@@ -35,22 +35,22 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="shippingAddress")
-      private final @Nullable Input<ShippingAddressArgs> shippingAddress;
+      private final @Nullable Output<ShippingAddressArgs> shippingAddress;
 
-    public Input<ShippingAddressArgs> getShippingAddress() {
-        return this.shippingAddress == null ? Input.empty() : this.shippingAddress;
+    public Output<ShippingAddressArgs> getShippingAddress() {
+        return this.shippingAddress == null ? Output.empty() : this.shippingAddress;
     }
 
     public AddressPropertiesArgs(
-        Input<ContactDetailsArgs> contactDetails,
-        @Nullable Input<ShippingAddressArgs> shippingAddress) {
+        Output<ContactDetailsArgs> contactDetails,
+        @Nullable Output<ShippingAddressArgs> shippingAddress) {
         this.contactDetails = Objects.requireNonNull(contactDetails, "expected parameter 'contactDetails' to be non-null");
         this.shippingAddress = shippingAddress;
     }
 
     private AddressPropertiesArgs() {
-        this.contactDetails = Input.empty();
-        this.shippingAddress = Input.empty();
+        this.contactDetails = Output.empty();
+        this.shippingAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private Input<ContactDetailsArgs> contactDetails;
-        private @Nullable Input<ShippingAddressArgs> shippingAddress;
+        private Output<ContactDetailsArgs> contactDetails;
+        private @Nullable Output<ShippingAddressArgs> shippingAddress;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.shippingAddress = defaults.shippingAddress;
         }
 
-        public Builder contactDetails(Input<ContactDetailsArgs> contactDetails) {
+        public Builder contactDetails(Output<ContactDetailsArgs> contactDetails) {
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
 
         public Builder contactDetails(ContactDetailsArgs contactDetails) {
-            this.contactDetails = Input.of(Objects.requireNonNull(contactDetails));
+            this.contactDetails = Output.of(Objects.requireNonNull(contactDetails));
             return this;
         }
 
-        public Builder shippingAddress(@Nullable Input<ShippingAddressArgs> shippingAddress) {
+        public Builder shippingAddress(@Nullable Output<ShippingAddressArgs> shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
 
         public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
-            this.shippingAddress = Input.ofNullable(shippingAddress);
+            this.shippingAddress = Output.ofNullable(shippingAddress);
             return this;
         }
         public AddressPropertiesArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayPathRuleArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,10 +26,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultBackendAddressPool")
-      private final @Nullable Input<SubResourceArgs> defaultBackendAddressPool;
+      private final @Nullable Output<SubResourceArgs> defaultBackendAddressPool;
 
-    public Input<SubResourceArgs> getDefaultBackendAddressPool() {
-        return this.defaultBackendAddressPool == null ? Input.empty() : this.defaultBackendAddressPool;
+    public Output<SubResourceArgs> getDefaultBackendAddressPool() {
+        return this.defaultBackendAddressPool == null ? Output.empty() : this.defaultBackendAddressPool;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultBackendHttpSettings")
-      private final @Nullable Input<SubResourceArgs> defaultBackendHttpSettings;
+      private final @Nullable Output<SubResourceArgs> defaultBackendHttpSettings;
 
-    public Input<SubResourceArgs> getDefaultBackendHttpSettings() {
-        return this.defaultBackendHttpSettings == null ? Input.empty() : this.defaultBackendHttpSettings;
+    public Output<SubResourceArgs> getDefaultBackendHttpSettings() {
+        return this.defaultBackendHttpSettings == null ? Output.empty() : this.defaultBackendHttpSettings;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultRedirectConfiguration")
-      private final @Nullable Input<SubResourceArgs> defaultRedirectConfiguration;
+      private final @Nullable Output<SubResourceArgs> defaultRedirectConfiguration;
 
-    public Input<SubResourceArgs> getDefaultRedirectConfiguration() {
-        return this.defaultRedirectConfiguration == null ? Input.empty() : this.defaultRedirectConfiguration;
+    public Output<SubResourceArgs> getDefaultRedirectConfiguration() {
+        return this.defaultRedirectConfiguration == null ? Output.empty() : this.defaultRedirectConfiguration;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="defaultRewriteRuleSet")
-      private final @Nullable Input<SubResourceArgs> defaultRewriteRuleSet;
+      private final @Nullable Output<SubResourceArgs> defaultRewriteRuleSet;
 
-    public Input<SubResourceArgs> getDefaultRewriteRuleSet() {
-        return this.defaultRewriteRuleSet == null ? Input.empty() : this.defaultRewriteRuleSet;
+    public Output<SubResourceArgs> getDefaultRewriteRuleSet() {
+        return this.defaultRewriteRuleSet == null ? Output.empty() : this.defaultRewriteRuleSet;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -92,20 +92,20 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="pathRules")
-      private final @Nullable Input<List<ApplicationGatewayPathRuleArgs>> pathRules;
+      private final @Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules;
 
-    public Input<List<ApplicationGatewayPathRuleArgs>> getPathRules() {
-        return this.pathRules == null ? Input.empty() : this.pathRules;
+    public Output<List<ApplicationGatewayPathRuleArgs>> getPathRules() {
+        return this.pathRules == null ? Output.empty() : this.pathRules;
     }
 
     public ApplicationGatewayUrlPathMapArgs(
-        @Nullable Input<SubResourceArgs> defaultBackendAddressPool,
-        @Nullable Input<SubResourceArgs> defaultBackendHttpSettings,
-        @Nullable Input<SubResourceArgs> defaultRedirectConfiguration,
-        @Nullable Input<SubResourceArgs> defaultRewriteRuleSet,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ApplicationGatewayPathRuleArgs>> pathRules) {
+        @Nullable Output<SubResourceArgs> defaultBackendAddressPool,
+        @Nullable Output<SubResourceArgs> defaultBackendHttpSettings,
+        @Nullable Output<SubResourceArgs> defaultRedirectConfiguration,
+        @Nullable Output<SubResourceArgs> defaultRewriteRuleSet,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules) {
         this.defaultBackendAddressPool = defaultBackendAddressPool;
         this.defaultBackendHttpSettings = defaultBackendHttpSettings;
         this.defaultRedirectConfiguration = defaultRedirectConfiguration;
@@ -116,13 +116,13 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
     }
 
     private ApplicationGatewayUrlPathMapArgs() {
-        this.defaultBackendAddressPool = Input.empty();
-        this.defaultBackendHttpSettings = Input.empty();
-        this.defaultRedirectConfiguration = Input.empty();
-        this.defaultRewriteRuleSet = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.pathRules = Input.empty();
+        this.defaultBackendAddressPool = Output.empty();
+        this.defaultBackendHttpSettings = Output.empty();
+        this.defaultRedirectConfiguration = Output.empty();
+        this.defaultRewriteRuleSet = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.pathRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<SubResourceArgs> defaultBackendAddressPool;
-        private @Nullable Input<SubResourceArgs> defaultBackendHttpSettings;
-        private @Nullable Input<SubResourceArgs> defaultRedirectConfiguration;
-        private @Nullable Input<SubResourceArgs> defaultRewriteRuleSet;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ApplicationGatewayPathRuleArgs>> pathRules;
+        private @Nullable Output<SubResourceArgs> defaultBackendAddressPool;
+        private @Nullable Output<SubResourceArgs> defaultBackendHttpSettings;
+        private @Nullable Output<SubResourceArgs> defaultRedirectConfiguration;
+        private @Nullable Output<SubResourceArgs> defaultRewriteRuleSet;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class ApplicationGatewayUrlPathMapArgs extends io.pulumi.resources.
     	      this.pathRules = defaults.pathRules;
         }
 
-        public Builder defaultBackendAddressPool(@Nullable Input<SubResourceArgs> defaultBackendAddressPool) {
+        public Builder defaultBackendAddressPool(@Nullable Output<SubResourceArgs> defaultBackendAddressPool) {
             this.defaultBackendAddressPool = defaultBackendAddressPool;
             return this;
         }
 
         public Builder defaultBackendAddressPool(@Nullable SubResourceArgs defaultBackendAddressPool) {
-            this.defaultBackendAddressPool = Input.ofNullable(defaultBackendAddressPool);
+            this.defaultBackendAddressPool = Output.ofNullable(defaultBackendAddressPool);
             return this;
         }
 
-        public Builder defaultBackendHttpSettings(@Nullable Input<SubResourceArgs> defaultBackendHttpSettings) {
+        public Builder defaultBackendHttpSettings(@Nullable Output<SubResourceArgs> defaultBackendHttpSettings) {
             this.defaultBackendHttpSettings = defaultBackendHttpSettings;
             return this;
         }
 
         public Builder defaultBackendHttpSettings(@Nullable SubResourceArgs defaultBackendHttpSettings) {
-            this.defaultBackendHttpSettings = Input.ofNullable(defaultBackendHttpSettings);
+            this.defaultBackendHttpSettings = Output.ofNullable(defaultBackendHttpSettings);
             return this;
         }
 
-        public Builder defaultRedirectConfiguration(@Nullable Input<SubResourceArgs> defaultRedirectConfiguration) {
+        public Builder defaultRedirectConfiguration(@Nullable Output<SubResourceArgs> defaultRedirectConfiguration) {
             this.defaultRedirectConfiguration = defaultRedirectConfiguration;
             return this;
         }
 
         public Builder defaultRedirectConfiguration(@Nullable SubResourceArgs defaultRedirectConfiguration) {
-            this.defaultRedirectConfiguration = Input.ofNullable(defaultRedirectConfiguration);
+            this.defaultRedirectConfiguration = Output.ofNullable(defaultRedirectConfiguration);
             return this;
         }
 
-        public Builder defaultRewriteRuleSet(@Nullable Input<SubResourceArgs> defaultRewriteRuleSet) {
+        public Builder defaultRewriteRuleSet(@Nullable Output<SubResourceArgs> defaultRewriteRuleSet) {
             this.defaultRewriteRuleSet = defaultRewriteRuleSet;
             return this;
         }
 
         public Builder defaultRewriteRuleSet(@Nullable SubResourceArgs defaultRewriteRuleSet) {
-            this.defaultRewriteRuleSet = Input.ofNullable(defaultRewriteRuleSet);
+            this.defaultRewriteRuleSet = Output.ofNullable(defaultRewriteRuleSet);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder pathRules(@Nullable Input<List<ApplicationGatewayPathRuleArgs>> pathRules) {
+        public Builder pathRules(@Nullable Output<List<ApplicationGatewayPathRuleArgs>> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
 
         public Builder pathRules(@Nullable List<ApplicationGatewayPathRuleArgs> pathRules) {
-            this.pathRules = Input.ofNullable(pathRules);
+            this.pathRules = Output.ofNullable(pathRules);
             return this;
         }
         public ApplicationGatewayUrlPathMapArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aadiam;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,10 +22,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="allTenants")
-      private final @Nullable Input<Boolean> allTenants;
+      private final @Nullable Output<Boolean> allTenants;
 
-    public Input<Boolean> getAllTenants() {
-        return this.allTenants == null ? Input.empty() : this.allTenants;
+    public Output<Boolean> getAllTenants() {
+        return this.allTenants == null ? Output.empty() : this.allTenants;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ownerTenantId")
-      private final @Nullable Input<String> ownerTenantId;
+      private final @Nullable Output<String> ownerTenantId;
 
-    public Input<String> getOwnerTenantId() {
-        return this.ownerTenantId == null ? Input.empty() : this.ownerTenantId;
+    public Output<String> getOwnerTenantId() {
+        return this.ownerTenantId == null ? Output.empty() : this.ownerTenantId;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyName")
-      private final @Nullable Input<String> policyName;
+      private final @Nullable Output<String> policyName;
 
-    public Input<String> getPolicyName() {
-        return this.policyName == null ? Input.empty() : this.policyName;
+    public Output<String> getPolicyName() {
+        return this.policyName == null ? Output.empty() : this.policyName;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroup")
-      private final @Nullable Input<String> resourceGroup;
+      private final @Nullable Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
-        return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
+    public Output<String> getResourceGroup() {
+        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
     }
 
     /**
@@ -77,9 +77,9 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -88,10 +88,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -121,23 +121,23 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tenants")
-      private final @Nullable Input<List<String>> tenants;
+      private final @Nullable Output<List<String>> tenants;
 
-    public Input<List<String>> getTenants() {
-        return this.tenants == null ? Input.empty() : this.tenants;
+    public Output<List<String>> getTenants() {
+        return this.tenants == null ? Output.empty() : this.tenants;
     }
 
     public PrivateLinkForAzureAdArgs(
-        @Nullable Input<Boolean> allTenants,
-        @Nullable Input<String> name,
-        @Nullable Input<String> ownerTenantId,
-        @Nullable Input<String> policyName,
-        @Nullable Input<String> resourceGroup,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<String> subscriptionId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<String>> tenants) {
+        @Nullable Output<Boolean> allTenants,
+        @Nullable Output<String> name,
+        @Nullable Output<String> ownerTenantId,
+        @Nullable Output<String> policyName,
+        @Nullable Output<String> resourceGroup,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<String> subscriptionId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<String>> tenants) {
         this.allTenants = allTenants;
         this.name = name;
         this.ownerTenantId = ownerTenantId;
@@ -151,16 +151,16 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     }
 
     private PrivateLinkForAzureAdArgs() {
-        this.allTenants = Input.empty();
-        this.name = Input.empty();
-        this.ownerTenantId = Input.empty();
-        this.policyName = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.tags = Input.empty();
-        this.tenants = Input.empty();
+        this.allTenants = Output.empty();
+        this.name = Output.empty();
+        this.ownerTenantId = Output.empty();
+        this.policyName = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.tags = Output.empty();
+        this.tenants = Output.empty();
     }
 
     public static Builder builder() {
@@ -172,16 +172,16 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> allTenants;
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> ownerTenantId;
-        private @Nullable Input<String> policyName;
-        private @Nullable Input<String> resourceGroup;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<String> subscriptionId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<String>> tenants;
+        private @Nullable Output<Boolean> allTenants;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> ownerTenantId;
+        private @Nullable Output<String> policyName;
+        private @Nullable Output<String> resourceGroup;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<String> subscriptionId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<String>> tenants;
 
         public Builder() {
     	      // Empty
@@ -201,103 +201,103 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     	      this.tenants = defaults.tenants;
         }
 
-        public Builder allTenants(@Nullable Input<Boolean> allTenants) {
+        public Builder allTenants(@Nullable Output<Boolean> allTenants) {
             this.allTenants = allTenants;
             return this;
         }
 
         public Builder allTenants(@Nullable Boolean allTenants) {
-            this.allTenants = Input.ofNullable(allTenants);
+            this.allTenants = Output.ofNullable(allTenants);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder ownerTenantId(@Nullable Input<String> ownerTenantId) {
+        public Builder ownerTenantId(@Nullable Output<String> ownerTenantId) {
             this.ownerTenantId = ownerTenantId;
             return this;
         }
 
         public Builder ownerTenantId(@Nullable String ownerTenantId) {
-            this.ownerTenantId = Input.ofNullable(ownerTenantId);
+            this.ownerTenantId = Output.ofNullable(ownerTenantId);
             return this;
         }
 
-        public Builder policyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Output<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Input.ofNullable(policyName);
+            this.policyName = Output.ofNullable(policyName);
             return this;
         }
 
-        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Input.ofNullable(resourceGroup);
+            this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tenants(@Nullable Input<List<String>> tenants) {
+        public Builder tenants(@Nullable Output<List<String>> tenants) {
             this.tenants = tenants;
             return this;
         }
 
         public Builder tenants(@Nullable List<String> tenants) {
-            this.tenants = Input.ofNullable(tenants);
+            this.tenants = Output.ofNullable(tenants);
             return this;
         }
         public PrivateLinkForAzureAdArgs build() {

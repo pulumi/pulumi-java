@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.ConnectionParameterType;
 import io.pulumi.azurenative.web.inputs.ApiOAuthSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="oAuthSettings")
-      private final @Nullable Input<ApiOAuthSettingsArgs> oAuthSettings;
+      private final @Nullable Output<ApiOAuthSettingsArgs> oAuthSettings;
 
-    public Input<ApiOAuthSettingsArgs> getOAuthSettings() {
-        return this.oAuthSettings == null ? Input.empty() : this.oAuthSettings;
+    public Output<ApiOAuthSettingsArgs> getOAuthSettings() {
+        return this.oAuthSettings == null ? Output.empty() : this.oAuthSettings;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<ConnectionParameterType> type;
+      private final @Nullable Output<ConnectionParameterType> type;
 
-    public Input<ConnectionParameterType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<ConnectionParameterType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public ConnectionParameterArgs(
-        @Nullable Input<ApiOAuthSettingsArgs> oAuthSettings,
-        @Nullable Input<ConnectionParameterType> type) {
+        @Nullable Output<ApiOAuthSettingsArgs> oAuthSettings,
+        @Nullable Output<ConnectionParameterType> type) {
         this.oAuthSettings = oAuthSettings;
         this.type = type;
     }
 
     private ConnectionParameterArgs() {
-        this.oAuthSettings = Input.empty();
-        this.type = Input.empty();
+        this.oAuthSettings = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<ApiOAuthSettingsArgs> oAuthSettings;
-        private @Nullable Input<ConnectionParameterType> type;
+        private @Nullable Output<ApiOAuthSettingsArgs> oAuthSettings;
+        private @Nullable Output<ConnectionParameterType> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder oAuthSettings(@Nullable Input<ApiOAuthSettingsArgs> oAuthSettings) {
+        public Builder oAuthSettings(@Nullable Output<ApiOAuthSettingsArgs> oAuthSettings) {
             this.oAuthSettings = oAuthSettings;
             return this;
         }
 
         public Builder oAuthSettings(@Nullable ApiOAuthSettingsArgs oAuthSettings) {
-            this.oAuthSettings = Input.ofNullable(oAuthSettings);
+            this.oAuthSettings = Output.ofNullable(oAuthSettings);
             return this;
         }
 
-        public Builder type(@Nullable Input<ConnectionParameterType> type) {
+        public Builder type(@Nullable Output<ConnectionParameterType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable ConnectionParameterType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public ConnectionParameterArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clusterBootstrapAccountPassword")
-      private final @Nullable Input<String> clusterBootstrapAccountPassword;
+      private final @Nullable Output<String> clusterBootstrapAccountPassword;
 
-    public Input<String> getClusterBootstrapAccountPassword() {
-        return this.clusterBootstrapAccountPassword == null ? Input.empty() : this.clusterBootstrapAccountPassword;
+    public Output<String> getClusterBootstrapAccountPassword() {
+        return this.clusterBootstrapAccountPassword == null ? Output.empty() : this.clusterBootstrapAccountPassword;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clusterOperatorAccountPassword")
-      private final @Nullable Input<String> clusterOperatorAccountPassword;
+      private final @Nullable Output<String> clusterOperatorAccountPassword;
 
-    public Input<String> getClusterOperatorAccountPassword() {
-        return this.clusterOperatorAccountPassword == null ? Input.empty() : this.clusterOperatorAccountPassword;
+    public Output<String> getClusterOperatorAccountPassword() {
+        return this.clusterOperatorAccountPassword == null ? Output.empty() : this.clusterOperatorAccountPassword;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sqlServiceAccountPassword")
-      private final @Nullable Input<String> sqlServiceAccountPassword;
+      private final @Nullable Output<String> sqlServiceAccountPassword;
 
-    public Input<String> getSqlServiceAccountPassword() {
-        return this.sqlServiceAccountPassword == null ? Input.empty() : this.sqlServiceAccountPassword;
+    public Output<String> getSqlServiceAccountPassword() {
+        return this.sqlServiceAccountPassword == null ? Output.empty() : this.sqlServiceAccountPassword;
     }
 
     public WsfcDomainCredentialsArgs(
-        @Nullable Input<String> clusterBootstrapAccountPassword,
-        @Nullable Input<String> clusterOperatorAccountPassword,
-        @Nullable Input<String> sqlServiceAccountPassword) {
+        @Nullable Output<String> clusterBootstrapAccountPassword,
+        @Nullable Output<String> clusterOperatorAccountPassword,
+        @Nullable Output<String> sqlServiceAccountPassword) {
         this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
         this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
         this.sqlServiceAccountPassword = sqlServiceAccountPassword;
     }
 
     private WsfcDomainCredentialsArgs() {
-        this.clusterBootstrapAccountPassword = Input.empty();
-        this.clusterOperatorAccountPassword = Input.empty();
-        this.sqlServiceAccountPassword = Input.empty();
+        this.clusterBootstrapAccountPassword = Output.empty();
+        this.clusterOperatorAccountPassword = Output.empty();
+        this.sqlServiceAccountPassword = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> clusterBootstrapAccountPassword;
-        private @Nullable Input<String> clusterOperatorAccountPassword;
-        private @Nullable Input<String> sqlServiceAccountPassword;
+        private @Nullable Output<String> clusterBootstrapAccountPassword;
+        private @Nullable Output<String> clusterOperatorAccountPassword;
+        private @Nullable Output<String> sqlServiceAccountPassword;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
     	      this.sqlServiceAccountPassword = defaults.sqlServiceAccountPassword;
         }
 
-        public Builder clusterBootstrapAccountPassword(@Nullable Input<String> clusterBootstrapAccountPassword) {
+        public Builder clusterBootstrapAccountPassword(@Nullable Output<String> clusterBootstrapAccountPassword) {
             this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
             return this;
         }
 
         public Builder clusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
-            this.clusterBootstrapAccountPassword = Input.ofNullable(clusterBootstrapAccountPassword);
+            this.clusterBootstrapAccountPassword = Output.ofNullable(clusterBootstrapAccountPassword);
             return this;
         }
 
-        public Builder clusterOperatorAccountPassword(@Nullable Input<String> clusterOperatorAccountPassword) {
+        public Builder clusterOperatorAccountPassword(@Nullable Output<String> clusterOperatorAccountPassword) {
             this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
             return this;
         }
 
         public Builder clusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
-            this.clusterOperatorAccountPassword = Input.ofNullable(clusterOperatorAccountPassword);
+            this.clusterOperatorAccountPassword = Output.ofNullable(clusterOperatorAccountPassword);
             return this;
         }
 
-        public Builder sqlServiceAccountPassword(@Nullable Input<String> sqlServiceAccountPassword) {
+        public Builder sqlServiceAccountPassword(@Nullable Output<String> sqlServiceAccountPassword) {
             this.sqlServiceAccountPassword = sqlServiceAccountPassword;
             return this;
         }
 
         public Builder sqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
-            this.sqlServiceAccountPassword = Input.ofNullable(sqlServiceAccountPassword);
+            this.sqlServiceAccountPassword = Output.ofNullable(sqlServiceAccountPassword);
             return this;
         }
         public WsfcDomainCredentialsArgs build() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.compute.inputs.ImageStorageProfileArgs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -25,10 +25,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hyperVGeneration")
-      private final @Nullable Input<Either<String,HyperVGenerationTypes>> hyperVGeneration;
+      private final @Nullable Output<Either<String,HyperVGenerationTypes>> hyperVGeneration;
 
-    public Input<Either<String,HyperVGenerationTypes>> getHyperVGeneration() {
-        return this.hyperVGeneration == null ? Input.empty() : this.hyperVGeneration;
+    public Output<Either<String,HyperVGenerationTypes>> getHyperVGeneration() {
+        return this.hyperVGeneration == null ? Output.empty() : this.hyperVGeneration;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageName")
-      private final @Nullable Input<String> imageName;
+      private final @Nullable Output<String> imageName;
 
-    public Input<String> getImageName() {
-        return this.imageName == null ? Input.empty() : this.imageName;
+    public Output<String> getImageName() {
+        return this.imageName == null ? Output.empty() : this.imageName;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -69,9 +69,9 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,10 +80,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceVirtualMachine")
-      private final @Nullable Input<SubResourceArgs> sourceVirtualMachine;
+      private final @Nullable Output<SubResourceArgs> sourceVirtualMachine;
 
-    public Input<SubResourceArgs> getSourceVirtualMachine() {
-        return this.sourceVirtualMachine == null ? Input.empty() : this.sourceVirtualMachine;
+    public Output<SubResourceArgs> getSourceVirtualMachine() {
+        return this.sourceVirtualMachine == null ? Output.empty() : this.sourceVirtualMachine;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageProfile")
-      private final @Nullable Input<ImageStorageProfileArgs> storageProfile;
+      private final @Nullable Output<ImageStorageProfileArgs> storageProfile;
 
-    public Input<ImageStorageProfileArgs> getStorageProfile() {
-        return this.storageProfile == null ? Input.empty() : this.storageProfile;
+    public Output<ImageStorageProfileArgs> getStorageProfile() {
+        return this.storageProfile == null ? Output.empty() : this.storageProfile;
     }
 
     /**
@@ -102,21 +102,21 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ImageArgs(
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<Either<String,HyperVGenerationTypes>> hyperVGeneration,
-        @Nullable Input<String> imageName,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<SubResourceArgs> sourceVirtualMachine,
-        @Nullable Input<ImageStorageProfileArgs> storageProfile,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<Either<String,HyperVGenerationTypes>> hyperVGeneration,
+        @Nullable Output<String> imageName,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<SubResourceArgs> sourceVirtualMachine,
+        @Nullable Output<ImageStorageProfileArgs> storageProfile,
+        @Nullable Output<Map<String,String>> tags) {
         this.extendedLocation = extendedLocation;
         this.hyperVGeneration = hyperVGeneration;
         this.imageName = imageName;
@@ -128,14 +128,14 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageArgs() {
-        this.extendedLocation = Input.empty();
-        this.hyperVGeneration = Input.empty();
-        this.imageName = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sourceVirtualMachine = Input.empty();
-        this.storageProfile = Input.empty();
-        this.tags = Input.empty();
+        this.extendedLocation = Output.empty();
+        this.hyperVGeneration = Output.empty();
+        this.imageName = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sourceVirtualMachine = Output.empty();
+        this.storageProfile = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -147,14 +147,14 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<Either<String,HyperVGenerationTypes>> hyperVGeneration;
-        private @Nullable Input<String> imageName;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<SubResourceArgs> sourceVirtualMachine;
-        private @Nullable Input<ImageStorageProfileArgs> storageProfile;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<Either<String,HyperVGenerationTypes>> hyperVGeneration;
+        private @Nullable Output<String> imageName;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<SubResourceArgs> sourceVirtualMachine;
+        private @Nullable Output<ImageStorageProfileArgs> storageProfile;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -172,83 +172,83 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder hyperVGeneration(@Nullable Input<Either<String,HyperVGenerationTypes>> hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGenerationTypes>> hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
 
         public Builder hyperVGeneration(@Nullable Either<String,HyperVGenerationTypes> hyperVGeneration) {
-            this.hyperVGeneration = Input.ofNullable(hyperVGeneration);
+            this.hyperVGeneration = Output.ofNullable(hyperVGeneration);
             return this;
         }
 
-        public Builder imageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Output<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Input.ofNullable(imageName);
+            this.imageName = Output.ofNullable(imageName);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sourceVirtualMachine(@Nullable Input<SubResourceArgs> sourceVirtualMachine) {
+        public Builder sourceVirtualMachine(@Nullable Output<SubResourceArgs> sourceVirtualMachine) {
             this.sourceVirtualMachine = sourceVirtualMachine;
             return this;
         }
 
         public Builder sourceVirtualMachine(@Nullable SubResourceArgs sourceVirtualMachine) {
-            this.sourceVirtualMachine = Input.ofNullable(sourceVirtualMachine);
+            this.sourceVirtualMachine = Output.ofNullable(sourceVirtualMachine);
             return this;
         }
 
-        public Builder storageProfile(@Nullable Input<ImageStorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Output<ImageStorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
         public Builder storageProfile(@Nullable ImageStorageProfileArgs storageProfile) {
-            this.storageProfile = Input.ofNullable(storageProfile);
+            this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ImageArgs build() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.SubscriptionNotificationOperation;
 import io.pulumi.azurenative.providerhub.enums.SubscriptionTransitioningState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -17,29 +17,29 @@ public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resourc
     public static final SubscriptionStateOverrideActionArgs Empty = new SubscriptionStateOverrideActionArgs();
 
     @InputImport(name="action", required=true)
-      private final Input<Either<String,SubscriptionNotificationOperation>> action;
+      private final Output<Either<String,SubscriptionNotificationOperation>> action;
 
-    public Input<Either<String,SubscriptionNotificationOperation>> getAction() {
+    public Output<Either<String,SubscriptionNotificationOperation>> getAction() {
         return this.action;
     }
 
     @InputImport(name="state", required=true)
-      private final Input<Either<String,SubscriptionTransitioningState>> state;
+      private final Output<Either<String,SubscriptionTransitioningState>> state;
 
-    public Input<Either<String,SubscriptionTransitioningState>> getState() {
+    public Output<Either<String,SubscriptionTransitioningState>> getState() {
         return this.state;
     }
 
     public SubscriptionStateOverrideActionArgs(
-        Input<Either<String,SubscriptionNotificationOperation>> action,
-        Input<Either<String,SubscriptionTransitioningState>> state) {
+        Output<Either<String,SubscriptionNotificationOperation>> action,
+        Output<Either<String,SubscriptionTransitioningState>> state) {
         this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
         this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
     }
 
     private SubscriptionStateOverrideActionArgs() {
-        this.action = Input.empty();
-        this.state = Input.empty();
+        this.action = Output.empty();
+        this.state = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Either<String,SubscriptionNotificationOperation>> action;
-        private Input<Either<String,SubscriptionTransitioningState>> state;
+        private Output<Either<String,SubscriptionNotificationOperation>> action;
+        private Output<Either<String,SubscriptionTransitioningState>> state;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class SubscriptionStateOverrideActionArgs extends io.pulumi.resourc
     	      this.state = defaults.state;
         }
 
-        public Builder action(Input<Either<String,SubscriptionNotificationOperation>> action) {
+        public Builder action(Output<Either<String,SubscriptionNotificationOperation>> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
         public Builder action(Either<String,SubscriptionNotificationOperation> action) {
-            this.action = Input.of(Objects.requireNonNull(action));
+            this.action = Output.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder state(Input<Either<String,SubscriptionTransitioningState>> state) {
+        public Builder state(Output<Either<String,SubscriptionTransitioningState>> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
         public Builder state(Either<String,SubscriptionTransitioningState> state) {
-            this.state = Input.of(Objects.requireNonNull(state));
+            this.state = Output.of(Objects.requireNonNull(state));
             return this;
         }
         public SubscriptionStateOverrideActionArgs build() {

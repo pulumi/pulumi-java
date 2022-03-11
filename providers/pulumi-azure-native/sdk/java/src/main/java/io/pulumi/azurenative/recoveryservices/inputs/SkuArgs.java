@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.enums.SkuName;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,9 +25,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<Either<String,SkuName>> name;
+      private final Output<Either<String,SkuName>> name;
 
-    public Input<Either<String,SkuName>> getName() {
+    public Output<Either<String,SkuName>> getName() {
         return this.name;
     }
 
@@ -36,22 +36,22 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<String> tier;
+      private final @Nullable Output<String> tier;
 
-    public Input<String> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<String> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public SkuArgs(
-        Input<Either<String,SkuName>> name,
-        @Nullable Input<String> tier) {
+        Output<Either<String,SkuName>> name,
+        @Nullable Output<String> tier) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.tier = tier;
     }
 
     private SkuArgs() {
-        this.name = Input.empty();
-        this.tier = Input.empty();
+        this.name = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<Either<String,SkuName>> name;
-        private @Nullable Input<String> tier;
+        private Output<Either<String,SkuName>> name;
+        private @Nullable Output<String> tier;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder name(Input<Either<String,SkuName>> name) {
+        public Builder name(Output<Either<String,SkuName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(Either<String,SkuName> name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder tier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Output<String> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable String tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public SkuArgs build() {

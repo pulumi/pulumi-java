@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="memorySizeMB")
-      private final @Nullable Input<Integer> memorySizeMB;
+      private final @Nullable Output<Integer> memorySizeMB;
 
-    public Input<Integer> getMemorySizeMB() {
-        return this.memorySizeMB == null ? Input.empty() : this.memorySizeMB;
+    public Output<Integer> getMemorySizeMB() {
+        return this.memorySizeMB == null ? Output.empty() : this.memorySizeMB;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numCPUs")
-      private final @Nullable Input<Integer> numCPUs;
+      private final @Nullable Output<Integer> numCPUs;
 
-    public Input<Integer> getNumCPUs() {
-        return this.numCPUs == null ? Input.empty() : this.numCPUs;
+    public Output<Integer> getNumCPUs() {
+        return this.numCPUs == null ? Output.empty() : this.numCPUs;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numCoresPerSocket")
-      private final @Nullable Input<Integer> numCoresPerSocket;
+      private final @Nullable Output<Integer> numCoresPerSocket;
 
-    public Input<Integer> getNumCoresPerSocket() {
-        return this.numCoresPerSocket == null ? Input.empty() : this.numCoresPerSocket;
+    public Output<Integer> getNumCoresPerSocket() {
+        return this.numCoresPerSocket == null ? Output.empty() : this.numCoresPerSocket;
     }
 
     public HardwareProfileArgs(
-        @Nullable Input<Integer> memorySizeMB,
-        @Nullable Input<Integer> numCPUs,
-        @Nullable Input<Integer> numCoresPerSocket) {
+        @Nullable Output<Integer> memorySizeMB,
+        @Nullable Output<Integer> numCPUs,
+        @Nullable Output<Integer> numCoresPerSocket) {
         this.memorySizeMB = memorySizeMB;
         this.numCPUs = numCPUs;
         this.numCoresPerSocket = numCoresPerSocket;
     }
 
     private HardwareProfileArgs() {
-        this.memorySizeMB = Input.empty();
-        this.numCPUs = Input.empty();
-        this.numCoresPerSocket = Input.empty();
+        this.memorySizeMB = Output.empty();
+        this.numCPUs = Output.empty();
+        this.numCoresPerSocket = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> memorySizeMB;
-        private @Nullable Input<Integer> numCPUs;
-        private @Nullable Input<Integer> numCoresPerSocket;
+        private @Nullable Output<Integer> memorySizeMB;
+        private @Nullable Output<Integer> numCPUs;
+        private @Nullable Output<Integer> numCoresPerSocket;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
     	      this.numCoresPerSocket = defaults.numCoresPerSocket;
         }
 
-        public Builder memorySizeMB(@Nullable Input<Integer> memorySizeMB) {
+        public Builder memorySizeMB(@Nullable Output<Integer> memorySizeMB) {
             this.memorySizeMB = memorySizeMB;
             return this;
         }
 
         public Builder memorySizeMB(@Nullable Integer memorySizeMB) {
-            this.memorySizeMB = Input.ofNullable(memorySizeMB);
+            this.memorySizeMB = Output.ofNullable(memorySizeMB);
             return this;
         }
 
-        public Builder numCPUs(@Nullable Input<Integer> numCPUs) {
+        public Builder numCPUs(@Nullable Output<Integer> numCPUs) {
             this.numCPUs = numCPUs;
             return this;
         }
 
         public Builder numCPUs(@Nullable Integer numCPUs) {
-            this.numCPUs = Input.ofNullable(numCPUs);
+            this.numCPUs = Output.ofNullable(numCPUs);
             return this;
         }
 
-        public Builder numCoresPerSocket(@Nullable Input<Integer> numCoresPerSocket) {
+        public Builder numCoresPerSocket(@Nullable Output<Integer> numCoresPerSocket) {
             this.numCoresPerSocket = numCoresPerSocket;
             return this;
         }
 
         public Builder numCoresPerSocket(@Nullable Integer numCoresPerSocket) {
-            this.numCoresPerSocket = Input.ofNullable(numCoresPerSocket);
+            this.numCoresPerSocket = Output.ofNullable(numCoresPerSocket);
             return this;
         }
         public HardwareProfileArgs build() {

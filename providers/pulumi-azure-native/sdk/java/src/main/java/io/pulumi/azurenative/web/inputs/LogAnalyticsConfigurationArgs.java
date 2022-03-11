@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,29 +15,29 @@ public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.Res
     public static final LogAnalyticsConfigurationArgs Empty = new LogAnalyticsConfigurationArgs();
 
     @InputImport(name="customerId")
-      private final @Nullable Input<String> customerId;
+      private final @Nullable Output<String> customerId;
 
-    public Input<String> getCustomerId() {
-        return this.customerId == null ? Input.empty() : this.customerId;
+    public Output<String> getCustomerId() {
+        return this.customerId == null ? Output.empty() : this.customerId;
     }
 
     @InputImport(name="sharedKey")
-      private final @Nullable Input<String> sharedKey;
+      private final @Nullable Output<String> sharedKey;
 
-    public Input<String> getSharedKey() {
-        return this.sharedKey == null ? Input.empty() : this.sharedKey;
+    public Output<String> getSharedKey() {
+        return this.sharedKey == null ? Output.empty() : this.sharedKey;
     }
 
     public LogAnalyticsConfigurationArgs(
-        @Nullable Input<String> customerId,
-        @Nullable Input<String> sharedKey) {
+        @Nullable Output<String> customerId,
+        @Nullable Output<String> sharedKey) {
         this.customerId = customerId;
         this.sharedKey = sharedKey;
     }
 
     private LogAnalyticsConfigurationArgs() {
-        this.customerId = Input.empty();
-        this.sharedKey = Input.empty();
+        this.customerId = Output.empty();
+        this.sharedKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,8 +49,8 @@ public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> customerId;
-        private @Nullable Input<String> sharedKey;
+        private @Nullable Output<String> customerId;
+        private @Nullable Output<String> sharedKey;
 
         public Builder() {
     	      // Empty
@@ -62,23 +62,23 @@ public final class LogAnalyticsConfigurationArgs extends io.pulumi.resources.Res
     	      this.sharedKey = defaults.sharedKey;
         }
 
-        public Builder customerId(@Nullable Input<String> customerId) {
+        public Builder customerId(@Nullable Output<String> customerId) {
             this.customerId = customerId;
             return this;
         }
 
         public Builder customerId(@Nullable String customerId) {
-            this.customerId = Input.ofNullable(customerId);
+            this.customerId = Output.ofNullable(customerId);
             return this;
         }
 
-        public Builder sharedKey(@Nullable Input<String> sharedKey) {
+        public Builder sharedKey(@Nullable Output<String> sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
 
         public Builder sharedKey(@Nullable String sharedKey) {
-            this.sharedKey = Input.ofNullable(sharedKey);
+            this.sharedKey = Output.ofNullable(sharedKey);
             return this;
         }
         public LogAnalyticsConfigurationArgs build() {

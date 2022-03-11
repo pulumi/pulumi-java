@@ -6,7 +6,7 @@ package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 import io.pulumi.azurenative.vmwarecloudsimple.enums.NICType;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.GuestOSNICCustomizationArgs;
 import io.pulumi.azurenative.vmwarecloudsimple.inputs.VirtualNetworkArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customization")
-      private final @Nullable Input<GuestOSNICCustomizationArgs> customization;
+      private final @Nullable Output<GuestOSNICCustomizationArgs> customization;
 
-    public Input<GuestOSNICCustomizationArgs> getCustomization() {
-        return this.customization == null ? Input.empty() : this.customization;
+    public Output<GuestOSNICCustomizationArgs> getCustomization() {
+        return this.customization == null ? Output.empty() : this.customization;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddresses")
-      private final @Nullable Input<List<String>> ipAddresses;
+      private final @Nullable Output<List<String>> ipAddresses;
 
-    public Input<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
+    public Output<List<String>> getIpAddresses() {
+        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="macAddress")
-      private final @Nullable Input<String> macAddress;
+      private final @Nullable Output<String> macAddress;
 
-    public Input<String> getMacAddress() {
-        return this.macAddress == null ? Input.empty() : this.macAddress;
+    public Output<String> getMacAddress() {
+        return this.macAddress == null ? Output.empty() : this.macAddress;
     }
 
     /**
@@ -61,9 +61,9 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-      private final Input<VirtualNetworkArgs> network;
+      private final Output<VirtualNetworkArgs> network;
 
-    public Input<VirtualNetworkArgs> getNetwork() {
+    public Output<VirtualNetworkArgs> getNetwork() {
         return this.network;
     }
 
@@ -72,9 +72,9 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nicType", required=true)
-      private final Input<NICType> nicType;
+      private final Output<NICType> nicType;
 
-    public Input<NICType> getNicType() {
+    public Output<NICType> getNicType() {
         return this.nicType;
     }
 
@@ -83,10 +83,10 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="powerOnBoot")
-      private final @Nullable Input<Boolean> powerOnBoot;
+      private final @Nullable Output<Boolean> powerOnBoot;
 
-    public Input<Boolean> getPowerOnBoot() {
-        return this.powerOnBoot == null ? Input.empty() : this.powerOnBoot;
+    public Output<Boolean> getPowerOnBoot() {
+        return this.powerOnBoot == null ? Output.empty() : this.powerOnBoot;
     }
 
     /**
@@ -94,20 +94,20 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNicId")
-      private final @Nullable Input<String> virtualNicId;
+      private final @Nullable Output<String> virtualNicId;
 
-    public Input<String> getVirtualNicId() {
-        return this.virtualNicId == null ? Input.empty() : this.virtualNicId;
+    public Output<String> getVirtualNicId() {
+        return this.virtualNicId == null ? Output.empty() : this.virtualNicId;
     }
 
     public VirtualNicArgs(
-        @Nullable Input<GuestOSNICCustomizationArgs> customization,
-        @Nullable Input<List<String>> ipAddresses,
-        @Nullable Input<String> macAddress,
-        Input<VirtualNetworkArgs> network,
-        Input<NICType> nicType,
-        @Nullable Input<Boolean> powerOnBoot,
-        @Nullable Input<String> virtualNicId) {
+        @Nullable Output<GuestOSNICCustomizationArgs> customization,
+        @Nullable Output<List<String>> ipAddresses,
+        @Nullable Output<String> macAddress,
+        Output<VirtualNetworkArgs> network,
+        Output<NICType> nicType,
+        @Nullable Output<Boolean> powerOnBoot,
+        @Nullable Output<String> virtualNicId) {
         this.customization = customization;
         this.ipAddresses = ipAddresses;
         this.macAddress = macAddress;
@@ -118,13 +118,13 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualNicArgs() {
-        this.customization = Input.empty();
-        this.ipAddresses = Input.empty();
-        this.macAddress = Input.empty();
-        this.network = Input.empty();
-        this.nicType = Input.empty();
-        this.powerOnBoot = Input.empty();
-        this.virtualNicId = Input.empty();
+        this.customization = Output.empty();
+        this.ipAddresses = Output.empty();
+        this.macAddress = Output.empty();
+        this.network = Output.empty();
+        this.nicType = Output.empty();
+        this.powerOnBoot = Output.empty();
+        this.virtualNicId = Output.empty();
     }
 
     public static Builder builder() {
@@ -136,13 +136,13 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<GuestOSNICCustomizationArgs> customization;
-        private @Nullable Input<List<String>> ipAddresses;
-        private @Nullable Input<String> macAddress;
-        private Input<VirtualNetworkArgs> network;
-        private Input<NICType> nicType;
-        private @Nullable Input<Boolean> powerOnBoot;
-        private @Nullable Input<String> virtualNicId;
+        private @Nullable Output<GuestOSNICCustomizationArgs> customization;
+        private @Nullable Output<List<String>> ipAddresses;
+        private @Nullable Output<String> macAddress;
+        private Output<VirtualNetworkArgs> network;
+        private Output<NICType> nicType;
+        private @Nullable Output<Boolean> powerOnBoot;
+        private @Nullable Output<String> virtualNicId;
 
         public Builder() {
     	      // Empty
@@ -159,73 +159,73 @@ public final class VirtualNicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNicId = defaults.virtualNicId;
         }
 
-        public Builder customization(@Nullable Input<GuestOSNICCustomizationArgs> customization) {
+        public Builder customization(@Nullable Output<GuestOSNICCustomizationArgs> customization) {
             this.customization = customization;
             return this;
         }
 
         public Builder customization(@Nullable GuestOSNICCustomizationArgs customization) {
-            this.customization = Input.ofNullable(customization);
+            this.customization = Output.ofNullable(customization);
             return this;
         }
 
-        public Builder ipAddresses(@Nullable Input<List<String>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Input.ofNullable(ipAddresses);
+            this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
 
-        public Builder macAddress(@Nullable Input<String> macAddress) {
+        public Builder macAddress(@Nullable Output<String> macAddress) {
             this.macAddress = macAddress;
             return this;
         }
 
         public Builder macAddress(@Nullable String macAddress) {
-            this.macAddress = Input.ofNullable(macAddress);
+            this.macAddress = Output.ofNullable(macAddress);
             return this;
         }
 
-        public Builder network(Input<VirtualNetworkArgs> network) {
+        public Builder network(Output<VirtualNetworkArgs> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
         public Builder network(VirtualNetworkArgs network) {
-            this.network = Input.of(Objects.requireNonNull(network));
+            this.network = Output.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder nicType(Input<NICType> nicType) {
+        public Builder nicType(Output<NICType> nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
 
         public Builder nicType(NICType nicType) {
-            this.nicType = Input.of(Objects.requireNonNull(nicType));
+            this.nicType = Output.of(Objects.requireNonNull(nicType));
             return this;
         }
 
-        public Builder powerOnBoot(@Nullable Input<Boolean> powerOnBoot) {
+        public Builder powerOnBoot(@Nullable Output<Boolean> powerOnBoot) {
             this.powerOnBoot = powerOnBoot;
             return this;
         }
 
         public Builder powerOnBoot(@Nullable Boolean powerOnBoot) {
-            this.powerOnBoot = Input.ofNullable(powerOnBoot);
+            this.powerOnBoot = Output.ofNullable(powerOnBoot);
             return this;
         }
 
-        public Builder virtualNicId(@Nullable Input<String> virtualNicId) {
+        public Builder virtualNicId(@Nullable Output<String> virtualNicId) {
             this.virtualNicId = virtualNicId;
             return this;
         }
 
         public Builder virtualNicId(@Nullable String virtualNicId) {
-            this.virtualNicId = Input.ofNullable(virtualNicId);
+            this.virtualNicId = Output.ofNullable(virtualNicId);
             return this;
         }
         public VirtualNicArgs build() {

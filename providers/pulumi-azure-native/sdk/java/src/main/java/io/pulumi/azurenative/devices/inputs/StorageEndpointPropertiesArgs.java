@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.enums.AuthenticationType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="authenticationType")
-      private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
+      private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
-    public Input<Either<String,AuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Input.empty() : this.authenticationType;
+    public Output<Either<String,AuthenticationType>> getAuthenticationType() {
+        return this.authenticationType == null ? Output.empty() : this.authenticationType;
     }
 
     /**
@@ -36,9 +36,9 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectionString", required=true)
-      private final Input<String> connectionString;
+      private final Output<String> connectionString;
 
-    public Input<String> getConnectionString() {
+    public Output<String> getConnectionString() {
         return this.connectionString;
     }
 
@@ -47,9 +47,9 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="containerName", required=true)
-      private final Input<String> containerName;
+      private final Output<String> containerName;
 
-    public Input<String> getContainerName() {
+    public Output<String> getContainerName() {
         return this.containerName;
     }
 
@@ -58,17 +58,17 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sasTtlAsIso8601")
-      private final @Nullable Input<String> sasTtlAsIso8601;
+      private final @Nullable Output<String> sasTtlAsIso8601;
 
-    public Input<String> getSasTtlAsIso8601() {
-        return this.sasTtlAsIso8601 == null ? Input.empty() : this.sasTtlAsIso8601;
+    public Output<String> getSasTtlAsIso8601() {
+        return this.sasTtlAsIso8601 == null ? Output.empty() : this.sasTtlAsIso8601;
     }
 
     public StorageEndpointPropertiesArgs(
-        @Nullable Input<Either<String,AuthenticationType>> authenticationType,
-        Input<String> connectionString,
-        Input<String> containerName,
-        @Nullable Input<String> sasTtlAsIso8601) {
+        @Nullable Output<Either<String,AuthenticationType>> authenticationType,
+        Output<String> connectionString,
+        Output<String> containerName,
+        @Nullable Output<String> sasTtlAsIso8601) {
         this.authenticationType = authenticationType;
         this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
         this.containerName = Objects.requireNonNull(containerName, "expected parameter 'containerName' to be non-null");
@@ -76,10 +76,10 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private StorageEndpointPropertiesArgs() {
-        this.authenticationType = Input.empty();
-        this.connectionString = Input.empty();
-        this.containerName = Input.empty();
-        this.sasTtlAsIso8601 = Input.empty();
+        this.authenticationType = Output.empty();
+        this.connectionString = Output.empty();
+        this.containerName = Output.empty();
+        this.sasTtlAsIso8601 = Output.empty();
     }
 
     public static Builder builder() {
@@ -91,10 +91,10 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,AuthenticationType>> authenticationType;
-        private Input<String> connectionString;
-        private Input<String> containerName;
-        private @Nullable Input<String> sasTtlAsIso8601;
+        private @Nullable Output<Either<String,AuthenticationType>> authenticationType;
+        private Output<String> connectionString;
+        private Output<String> containerName;
+        private @Nullable Output<String> sasTtlAsIso8601;
 
         public Builder() {
     	      // Empty
@@ -108,43 +108,43 @@ public final class StorageEndpointPropertiesArgs extends io.pulumi.resources.Res
     	      this.sasTtlAsIso8601 = defaults.sasTtlAsIso8601;
         }
 
-        public Builder authenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Input.ofNullable(authenticationType);
+            this.authenticationType = Output.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder connectionString(Input<String> connectionString) {
+        public Builder connectionString(Output<String> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
         public Builder connectionString(String connectionString) {
-            this.connectionString = Input.of(Objects.requireNonNull(connectionString));
+            this.connectionString = Output.of(Objects.requireNonNull(connectionString));
             return this;
         }
 
-        public Builder containerName(Input<String> containerName) {
+        public Builder containerName(Output<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
         public Builder containerName(String containerName) {
-            this.containerName = Input.of(Objects.requireNonNull(containerName));
+            this.containerName = Output.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder sasTtlAsIso8601(@Nullable Input<String> sasTtlAsIso8601) {
+        public Builder sasTtlAsIso8601(@Nullable Output<String> sasTtlAsIso8601) {
             this.sasTtlAsIso8601 = sasTtlAsIso8601;
             return this;
         }
 
         public Builder sasTtlAsIso8601(@Nullable String sasTtlAsIso8601) {
-            this.sasTtlAsIso8601 = Input.ofNullable(sasTtlAsIso8601);
+            this.sasTtlAsIso8601 = Output.ofNullable(sasTtlAsIso8601);
             return this;
         }
         public StorageEndpointPropertiesArgs build() {

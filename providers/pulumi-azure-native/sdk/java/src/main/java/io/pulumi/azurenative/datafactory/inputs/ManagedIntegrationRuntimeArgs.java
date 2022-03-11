@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeComputePropert
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeCustomerVirtualNetworkArgs;
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeSsisPropertiesArgs;
 import io.pulumi.azurenative.datafactory.inputs.ManagedVirtualNetworkReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,10 +27,10 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="computeProperties")
-      private final @Nullable Input<IntegrationRuntimeComputePropertiesArgs> computeProperties;
+      private final @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
 
-    public Input<IntegrationRuntimeComputePropertiesArgs> getComputeProperties() {
-        return this.computeProperties == null ? Input.empty() : this.computeProperties;
+    public Output<IntegrationRuntimeComputePropertiesArgs> getComputeProperties() {
+        return this.computeProperties == null ? Output.empty() : this.computeProperties;
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="customerVirtualNetwork")
-      private final @Nullable Input<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork;
+      private final @Nullable Output<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork;
 
-    public Input<IntegrationRuntimeCustomerVirtualNetworkArgs> getCustomerVirtualNetwork() {
-        return this.customerVirtualNetwork == null ? Input.empty() : this.customerVirtualNetwork;
+    public Output<IntegrationRuntimeCustomerVirtualNetworkArgs> getCustomerVirtualNetwork() {
+        return this.customerVirtualNetwork == null ? Output.empty() : this.customerVirtualNetwork;
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="managedVirtualNetwork")
-      private final @Nullable Input<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork;
+      private final @Nullable Output<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork;
 
-    public Input<ManagedVirtualNetworkReferenceArgs> getManagedVirtualNetwork() {
-        return this.managedVirtualNetwork == null ? Input.empty() : this.managedVirtualNetwork;
+    public Output<ManagedVirtualNetworkReferenceArgs> getManagedVirtualNetwork() {
+        return this.managedVirtualNetwork == null ? Output.empty() : this.managedVirtualNetwork;
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ssisProperties")
-      private final @Nullable Input<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
+      private final @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
 
-    public Input<IntegrationRuntimeSsisPropertiesArgs> getSsisProperties() {
-        return this.ssisProperties == null ? Input.empty() : this.ssisProperties;
+    public Output<IntegrationRuntimeSsisPropertiesArgs> getSsisProperties() {
+        return this.ssisProperties == null ? Output.empty() : this.ssisProperties;
     }
 
     /**
@@ -83,19 +83,19 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ManagedIntegrationRuntimeArgs(
-        @Nullable Input<IntegrationRuntimeComputePropertiesArgs> computeProperties,
-        @Nullable Input<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork,
-        @Nullable Input<String> description,
-        @Nullable Input<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork,
-        @Nullable Input<IntegrationRuntimeSsisPropertiesArgs> ssisProperties,
-        Input<String> type) {
+        @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties,
+        @Nullable Output<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork,
+        @Nullable Output<String> description,
+        @Nullable Output<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork,
+        @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties,
+        Output<String> type) {
         this.computeProperties = computeProperties;
         this.customerVirtualNetwork = customerVirtualNetwork;
         this.description = description;
@@ -105,12 +105,12 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     }
 
     private ManagedIntegrationRuntimeArgs() {
-        this.computeProperties = Input.empty();
-        this.customerVirtualNetwork = Input.empty();
-        this.description = Input.empty();
-        this.managedVirtualNetwork = Input.empty();
-        this.ssisProperties = Input.empty();
-        this.type = Input.empty();
+        this.computeProperties = Output.empty();
+        this.customerVirtualNetwork = Output.empty();
+        this.description = Output.empty();
+        this.managedVirtualNetwork = Output.empty();
+        this.ssisProperties = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -122,12 +122,12 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<IntegrationRuntimeComputePropertiesArgs> computeProperties;
-        private @Nullable Input<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork;
-        private @Nullable Input<String> description;
-        private @Nullable Input<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork;
-        private @Nullable Input<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
-        private Input<String> type;
+        private @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
+        private @Nullable Output<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork;
+        private @Nullable Output<String> description;
+        private @Nullable Output<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork;
+        private @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -143,63 +143,63 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder computeProperties(@Nullable Input<IntegrationRuntimeComputePropertiesArgs> computeProperties) {
+        public Builder computeProperties(@Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties) {
             this.computeProperties = computeProperties;
             return this;
         }
 
         public Builder computeProperties(@Nullable IntegrationRuntimeComputePropertiesArgs computeProperties) {
-            this.computeProperties = Input.ofNullable(computeProperties);
+            this.computeProperties = Output.ofNullable(computeProperties);
             return this;
         }
 
-        public Builder customerVirtualNetwork(@Nullable Input<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork) {
+        public Builder customerVirtualNetwork(@Nullable Output<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork) {
             this.customerVirtualNetwork = customerVirtualNetwork;
             return this;
         }
 
         public Builder customerVirtualNetwork(@Nullable IntegrationRuntimeCustomerVirtualNetworkArgs customerVirtualNetwork) {
-            this.customerVirtualNetwork = Input.ofNullable(customerVirtualNetwork);
+            this.customerVirtualNetwork = Output.ofNullable(customerVirtualNetwork);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder managedVirtualNetwork(@Nullable Input<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork) {
+        public Builder managedVirtualNetwork(@Nullable Output<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork) {
             this.managedVirtualNetwork = managedVirtualNetwork;
             return this;
         }
 
         public Builder managedVirtualNetwork(@Nullable ManagedVirtualNetworkReferenceArgs managedVirtualNetwork) {
-            this.managedVirtualNetwork = Input.ofNullable(managedVirtualNetwork);
+            this.managedVirtualNetwork = Output.ofNullable(managedVirtualNetwork);
             return this;
         }
 
-        public Builder ssisProperties(@Nullable Input<IntegrationRuntimeSsisPropertiesArgs> ssisProperties) {
+        public Builder ssisProperties(@Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties) {
             this.ssisProperties = ssisProperties;
             return this;
         }
 
         public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesArgs ssisProperties) {
-            this.ssisProperties = Input.ofNullable(ssisProperties);
+            this.ssisProperties = Output.ofNullable(ssisProperties);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ManagedIntegrationRuntimeArgs build() {

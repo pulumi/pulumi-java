@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.enums.OnErrorDeploymentType;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="deploymentName")
-      private final @Nullable Input<String> deploymentName;
+      private final @Nullable Output<String> deploymentName;
 
-    public Input<String> getDeploymentName() {
-        return this.deploymentName == null ? Input.empty() : this.deploymentName;
+    public Output<String> getDeploymentName() {
+        return this.deploymentName == null ? Output.empty() : this.deploymentName;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<OnErrorDeploymentType> type;
+      private final @Nullable Output<OnErrorDeploymentType> type;
 
-    public Input<OnErrorDeploymentType> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<OnErrorDeploymentType> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     public OnErrorDeploymentArgs(
-        @Nullable Input<String> deploymentName,
-        @Nullable Input<OnErrorDeploymentType> type) {
+        @Nullable Output<String> deploymentName,
+        @Nullable Output<OnErrorDeploymentType> type) {
         this.deploymentName = deploymentName;
         this.type = type;
     }
 
     private OnErrorDeploymentArgs() {
-        this.deploymentName = Input.empty();
-        this.type = Input.empty();
+        this.deploymentName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<String> deploymentName;
-        private @Nullable Input<OnErrorDeploymentType> type;
+        private @Nullable Output<String> deploymentName;
+        private @Nullable Output<OnErrorDeploymentType> type;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder deploymentName(@Nullable Input<String> deploymentName) {
+        public Builder deploymentName(@Nullable Output<String> deploymentName) {
             this.deploymentName = deploymentName;
             return this;
         }
 
         public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Input.ofNullable(deploymentName);
+            this.deploymentName = Output.ofNullable(deploymentName);
             return this;
         }
 
-        public Builder type(@Nullable Input<OnErrorDeploymentType> type) {
+        public Builder type(@Nullable Output<OnErrorDeploymentType> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable OnErrorDeploymentType type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
         public OnErrorDeploymentArgs build() {

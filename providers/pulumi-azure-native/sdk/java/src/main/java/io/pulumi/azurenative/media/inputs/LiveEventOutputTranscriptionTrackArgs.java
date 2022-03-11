@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,18 +22,18 @@ public final class LiveEventOutputTranscriptionTrackArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="trackName", required=true)
-      private final Input<String> trackName;
+      private final Output<String> trackName;
 
-    public Input<String> getTrackName() {
+    public Output<String> getTrackName() {
         return this.trackName;
     }
 
-    public LiveEventOutputTranscriptionTrackArgs(Input<String> trackName) {
+    public LiveEventOutputTranscriptionTrackArgs(Output<String> trackName) {
         this.trackName = Objects.requireNonNull(trackName, "expected parameter 'trackName' to be non-null");
     }
 
     private LiveEventOutputTranscriptionTrackArgs() {
-        this.trackName = Input.empty();
+        this.trackName = Output.empty();
     }
 
     public static Builder builder() {
@@ -45,7 +45,7 @@ public final class LiveEventOutputTranscriptionTrackArgs extends io.pulumi.resou
     }
 
     public static final class Builder {
-        private Input<String> trackName;
+        private Output<String> trackName;
 
         public Builder() {
     	      // Empty
@@ -56,13 +56,13 @@ public final class LiveEventOutputTranscriptionTrackArgs extends io.pulumi.resou
     	      this.trackName = defaults.trackName;
         }
 
-        public Builder trackName(Input<String> trackName) {
+        public Builder trackName(Output<String> trackName) {
             this.trackName = Objects.requireNonNull(trackName);
             return this;
         }
 
         public Builder trackName(String trackName) {
-            this.trackName = Input.of(Objects.requireNonNull(trackName));
+            this.trackName = Output.of(Objects.requireNonNull(trackName));
             return this;
         }
         public LiveEventOutputTranscriptionTrackArgs build() {

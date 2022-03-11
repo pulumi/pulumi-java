@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.FirewallPolicySkuTier;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class FirewallPolicySkuArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<Either<String,FirewallPolicySkuTier>> tier;
+      private final @Nullable Output<Either<String,FirewallPolicySkuTier>> tier;
 
-    public Input<Either<String,FirewallPolicySkuTier>> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<Either<String,FirewallPolicySkuTier>> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
-    public FirewallPolicySkuArgs(@Nullable Input<Either<String,FirewallPolicySkuTier>> tier) {
+    public FirewallPolicySkuArgs(@Nullable Output<Either<String,FirewallPolicySkuTier>> tier) {
         this.tier = tier;
     }
 
     private FirewallPolicySkuArgs() {
-        this.tier = Input.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class FirewallPolicySkuArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,FirewallPolicySkuTier>> tier;
+        private @Nullable Output<Either<String,FirewallPolicySkuTier>> tier;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class FirewallPolicySkuArgs extends io.pulumi.resources.ResourceArg
     	      this.tier = defaults.tier;
         }
 
-        public Builder tier(@Nullable Input<Either<String,FirewallPolicySkuTier>> tier) {
+        public Builder tier(@Nullable Output<Either<String,FirewallPolicySkuTier>> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable Either<String,FirewallPolicySkuTier> tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public FirewallPolicySkuArgs build() {

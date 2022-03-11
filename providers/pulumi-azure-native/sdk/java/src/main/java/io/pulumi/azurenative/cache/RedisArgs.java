@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cache.enums.TlsVersion;
 import io.pulumi.azurenative.cache.inputs.RedisCommonPropertiesRedisConfigurationArgs;
 import io.pulumi.azurenative.cache.inputs.SkuArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,10 +28,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableNonSslPort")
-      private final @Nullable Input<Boolean> enableNonSslPort;
+      private final @Nullable Output<Boolean> enableNonSslPort;
 
-    public Input<Boolean> getEnableNonSslPort() {
-        return this.enableNonSslPort == null ? Input.empty() : this.enableNonSslPort;
+    public Output<Boolean> getEnableNonSslPort() {
+        return this.enableNonSslPort == null ? Output.empty() : this.enableNonSslPort;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumTlsVersion")
-      private final @Nullable Input<Either<String,TlsVersion>> minimumTlsVersion;
+      private final @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
 
-    public Input<Either<String,TlsVersion>> getMinimumTlsVersion() {
-        return this.minimumTlsVersion == null ? Input.empty() : this.minimumTlsVersion;
+    public Output<Either<String,TlsVersion>> getMinimumTlsVersion() {
+        return this.minimumTlsVersion == null ? Output.empty() : this.minimumTlsVersion;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-      private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
+    public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
+        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redisConfiguration")
-      private final @Nullable Input<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
+      private final @Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
 
-    public Input<RedisCommonPropertiesRedisConfigurationArgs> getRedisConfiguration() {
-        return this.redisConfiguration == null ? Input.empty() : this.redisConfiguration;
+    public Output<RedisCommonPropertiesRedisConfigurationArgs> getRedisConfiguration() {
+        return this.redisConfiguration == null ? Output.empty() : this.redisConfiguration;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicasPerMaster")
-      private final @Nullable Input<Integer> replicasPerMaster;
+      private final @Nullable Output<Integer> replicasPerMaster;
 
-    public Input<Integer> getReplicasPerMaster() {
-        return this.replicasPerMaster == null ? Input.empty() : this.replicasPerMaster;
+    public Output<Integer> getReplicasPerMaster() {
+        return this.replicasPerMaster == null ? Output.empty() : this.replicasPerMaster;
     }
 
     /**
@@ -105,9 +105,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -116,10 +116,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shardCount")
-      private final @Nullable Input<Integer> shardCount;
+      private final @Nullable Output<Integer> shardCount;
 
-    public Input<Integer> getShardCount() {
-        return this.shardCount == null ? Input.empty() : this.shardCount;
+    public Output<Integer> getShardCount() {
+        return this.shardCount == null ? Output.empty() : this.shardCount;
     }
 
     /**
@@ -127,9 +127,9 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-      private final Input<SkuArgs> sku;
+      private final Output<SkuArgs> sku;
 
-    public Input<SkuArgs> getSku() {
+    public Output<SkuArgs> getSku() {
         return this.sku;
     }
 
@@ -138,10 +138,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticIP")
-      private final @Nullable Input<String> staticIP;
+      private final @Nullable Output<String> staticIP;
 
-    public Input<String> getStaticIP() {
-        return this.staticIP == null ? Input.empty() : this.staticIP;
+    public Output<String> getStaticIP() {
+        return this.staticIP == null ? Output.empty() : this.staticIP;
     }
 
     /**
@@ -149,10 +149,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-      private final @Nullable Input<String> subnetId;
+      private final @Nullable Output<String> subnetId;
 
-    public Input<String> getSubnetId() {
-        return this.subnetId == null ? Input.empty() : this.subnetId;
+    public Output<String> getSubnetId() {
+        return this.subnetId == null ? Output.empty() : this.subnetId;
     }
 
     /**
@@ -160,10 +160,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -171,10 +171,10 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantSettings")
-      private final @Nullable Input<Map<String,String>> tenantSettings;
+      private final @Nullable Output<Map<String,String>> tenantSettings;
 
-    public Input<Map<String,String>> getTenantSettings() {
-        return this.tenantSettings == null ? Input.empty() : this.tenantSettings;
+    public Output<Map<String,String>> getTenantSettings() {
+        return this.tenantSettings == null ? Output.empty() : this.tenantSettings;
     }
 
     /**
@@ -182,33 +182,33 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public RedisArgs(
-        @Nullable Input<Boolean> enableNonSslPort,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,TlsVersion>> minimumTlsVersion,
-        @Nullable Input<String> name,
-        @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess,
-        @Nullable Input<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration,
-        @Nullable Input<Integer> replicasPerMaster,
-        Input<String> resourceGroupName,
-        @Nullable Input<Integer> shardCount,
-        Input<SkuArgs> sku,
-        @Nullable Input<String> staticIP,
-        @Nullable Input<String> subnetId,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<Map<String,String>> tenantSettings,
-        @Nullable Input<List<String>> zones) {
-        this.enableNonSslPort = enableNonSslPort == null ? Input.ofNullable(false) : enableNonSslPort;
+        @Nullable Output<Boolean> enableNonSslPort,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion,
+        @Nullable Output<String> name,
+        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess,
+        @Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration,
+        @Nullable Output<Integer> replicasPerMaster,
+        Output<String> resourceGroupName,
+        @Nullable Output<Integer> shardCount,
+        Output<SkuArgs> sku,
+        @Nullable Output<String> staticIP,
+        @Nullable Output<String> subnetId,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<Map<String,String>> tenantSettings,
+        @Nullable Output<List<String>> zones) {
+        this.enableNonSslPort = enableNonSslPort == null ? Output.ofNullable(false) : enableNonSslPort;
         this.location = location;
         this.minimumTlsVersion = minimumTlsVersion;
         this.name = name;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Input.ofLeft("Enabled") : publicNetworkAccess;
+        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofLeft("Enabled") : publicNetworkAccess;
         this.redisConfiguration = redisConfiguration;
         this.replicasPerMaster = replicasPerMaster;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -222,21 +222,21 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RedisArgs() {
-        this.enableNonSslPort = Input.empty();
-        this.location = Input.empty();
-        this.minimumTlsVersion = Input.empty();
-        this.name = Input.empty();
-        this.publicNetworkAccess = Input.empty();
-        this.redisConfiguration = Input.empty();
-        this.replicasPerMaster = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shardCount = Input.empty();
-        this.sku = Input.empty();
-        this.staticIP = Input.empty();
-        this.subnetId = Input.empty();
-        this.tags = Input.empty();
-        this.tenantSettings = Input.empty();
-        this.zones = Input.empty();
+        this.enableNonSslPort = Output.empty();
+        this.location = Output.empty();
+        this.minimumTlsVersion = Output.empty();
+        this.name = Output.empty();
+        this.publicNetworkAccess = Output.empty();
+        this.redisConfiguration = Output.empty();
+        this.replicasPerMaster = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shardCount = Output.empty();
+        this.sku = Output.empty();
+        this.staticIP = Output.empty();
+        this.subnetId = Output.empty();
+        this.tags = Output.empty();
+        this.tenantSettings = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -248,21 +248,21 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableNonSslPort;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,TlsVersion>> minimumTlsVersion;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
-        private @Nullable Input<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
-        private @Nullable Input<Integer> replicasPerMaster;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Integer> shardCount;
-        private Input<SkuArgs> sku;
-        private @Nullable Input<String> staticIP;
-        private @Nullable Input<String> subnetId;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<Map<String,String>> tenantSettings;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<Boolean> enableNonSslPort;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private @Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
+        private @Nullable Output<Integer> replicasPerMaster;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Integer> shardCount;
+        private Output<SkuArgs> sku;
+        private @Nullable Output<String> staticIP;
+        private @Nullable Output<String> subnetId;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<Map<String,String>> tenantSettings;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -287,153 +287,153 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder enableNonSslPort(@Nullable Input<Boolean> enableNonSslPort) {
+        public Builder enableNonSslPort(@Nullable Output<Boolean> enableNonSslPort) {
             this.enableNonSslPort = enableNonSslPort;
             return this;
         }
 
         public Builder enableNonSslPort(@Nullable Boolean enableNonSslPort) {
-            this.enableNonSslPort = Input.ofNullable(enableNonSslPort);
+            this.enableNonSslPort = Output.ofNullable(enableNonSslPort);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder minimumTlsVersion(@Nullable Input<Either<String,TlsVersion>> minimumTlsVersion) {
+        public Builder minimumTlsVersion(@Nullable Output<Either<String,TlsVersion>> minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
         public Builder minimumTlsVersion(@Nullable Either<String,TlsVersion> minimumTlsVersion) {
-            this.minimumTlsVersion = Input.ofNullable(minimumTlsVersion);
+            this.minimumTlsVersion = Output.ofNullable(minimumTlsVersion);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder redisConfiguration(@Nullable Input<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration) {
+        public Builder redisConfiguration(@Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration) {
             this.redisConfiguration = redisConfiguration;
             return this;
         }
 
         public Builder redisConfiguration(@Nullable RedisCommonPropertiesRedisConfigurationArgs redisConfiguration) {
-            this.redisConfiguration = Input.ofNullable(redisConfiguration);
+            this.redisConfiguration = Output.ofNullable(redisConfiguration);
             return this;
         }
 
-        public Builder replicasPerMaster(@Nullable Input<Integer> replicasPerMaster) {
+        public Builder replicasPerMaster(@Nullable Output<Integer> replicasPerMaster) {
             this.replicasPerMaster = replicasPerMaster;
             return this;
         }
 
         public Builder replicasPerMaster(@Nullable Integer replicasPerMaster) {
-            this.replicasPerMaster = Input.ofNullable(replicasPerMaster);
+            this.replicasPerMaster = Output.ofNullable(replicasPerMaster);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shardCount(@Nullable Input<Integer> shardCount) {
+        public Builder shardCount(@Nullable Output<Integer> shardCount) {
             this.shardCount = shardCount;
             return this;
         }
 
         public Builder shardCount(@Nullable Integer shardCount) {
-            this.shardCount = Input.ofNullable(shardCount);
+            this.shardCount = Output.ofNullable(shardCount);
             return this;
         }
 
-        public Builder sku(Input<SkuArgs> sku) {
+        public Builder sku(Output<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
         public Builder sku(SkuArgs sku) {
-            this.sku = Input.of(Objects.requireNonNull(sku));
+            this.sku = Output.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder staticIP(@Nullable Input<String> staticIP) {
+        public Builder staticIP(@Nullable Output<String> staticIP) {
             this.staticIP = staticIP;
             return this;
         }
 
         public Builder staticIP(@Nullable String staticIP) {
-            this.staticIP = Input.ofNullable(staticIP);
+            this.staticIP = Output.ofNullable(staticIP);
             return this;
         }
 
-        public Builder subnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Output<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Input.ofNullable(subnetId);
+            this.subnetId = Output.ofNullable(subnetId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder tenantSettings(@Nullable Input<Map<String,String>> tenantSettings) {
+        public Builder tenantSettings(@Nullable Output<Map<String,String>> tenantSettings) {
             this.tenantSettings = tenantSettings;
             return this;
         }
 
         public Builder tenantSettings(@Nullable Map<String,String> tenantSettings) {
-            this.tenantSettings = Input.ofNullable(tenantSettings);
+            this.tenantSettings = Output.ofNullable(tenantSettings);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public RedisArgs build() {

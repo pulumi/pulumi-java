@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.enums.PrivateLink;
 import io.pulumi.azurenative.hdinsight.enums.ResourceProviderConnection;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateLink")
-      private final @Nullable Input<Either<String,PrivateLink>> privateLink;
+      private final @Nullable Output<Either<String,PrivateLink>> privateLink;
 
-    public Input<Either<String,PrivateLink>> getPrivateLink() {
-        return this.privateLink == null ? Input.empty() : this.privateLink;
+    public Output<Either<String,PrivateLink>> getPrivateLink() {
+        return this.privateLink == null ? Output.empty() : this.privateLink;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceProviderConnection")
-      private final @Nullable Input<Either<String,ResourceProviderConnection>> resourceProviderConnection;
+      private final @Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection;
 
-    public Input<Either<String,ResourceProviderConnection>> getResourceProviderConnection() {
-        return this.resourceProviderConnection == null ? Input.empty() : this.resourceProviderConnection;
+    public Output<Either<String,ResourceProviderConnection>> getResourceProviderConnection() {
+        return this.resourceProviderConnection == null ? Output.empty() : this.resourceProviderConnection;
     }
 
     public NetworkPropertiesArgs(
-        @Nullable Input<Either<String,PrivateLink>> privateLink,
-        @Nullable Input<Either<String,ResourceProviderConnection>> resourceProviderConnection) {
+        @Nullable Output<Either<String,PrivateLink>> privateLink,
+        @Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection) {
         this.privateLink = privateLink;
         this.resourceProviderConnection = resourceProviderConnection;
     }
 
     private NetworkPropertiesArgs() {
-        this.privateLink = Input.empty();
-        this.resourceProviderConnection = Input.empty();
+        this.privateLink = Output.empty();
+        this.resourceProviderConnection = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,PrivateLink>> privateLink;
-        private @Nullable Input<Either<String,ResourceProviderConnection>> resourceProviderConnection;
+        private @Nullable Output<Either<String,PrivateLink>> privateLink;
+        private @Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
     	      this.resourceProviderConnection = defaults.resourceProviderConnection;
         }
 
-        public Builder privateLink(@Nullable Input<Either<String,PrivateLink>> privateLink) {
+        public Builder privateLink(@Nullable Output<Either<String,PrivateLink>> privateLink) {
             this.privateLink = privateLink;
             return this;
         }
 
         public Builder privateLink(@Nullable Either<String,PrivateLink> privateLink) {
-            this.privateLink = Input.ofNullable(privateLink);
+            this.privateLink = Output.ofNullable(privateLink);
             return this;
         }
 
-        public Builder resourceProviderConnection(@Nullable Input<Either<String,ResourceProviderConnection>> resourceProviderConnection) {
+        public Builder resourceProviderConnection(@Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection) {
             this.resourceProviderConnection = resourceProviderConnection;
             return this;
         }
 
         public Builder resourceProviderConnection(@Nullable Either<String,ResourceProviderConnection> resourceProviderConnection) {
-            this.resourceProviderConnection = Input.ofNullable(resourceProviderConnection);
+            this.resourceProviderConnection = Output.ofNullable(resourceProviderConnection);
             return this;
         }
         public NetworkPropertiesArgs build() {

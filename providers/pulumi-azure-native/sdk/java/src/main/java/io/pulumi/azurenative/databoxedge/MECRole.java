@@ -8,7 +8,6 @@ import io.pulumi.azurenative.databoxedge.MECRoleArgs;
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -158,10 +157,10 @@ public class MECRole extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MECRole(String name, MECRoleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:databoxedge:MECRole", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:databoxedge:MECRole", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private MECRole(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MECRole(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:databoxedge:MECRole", name, null, makeResourceOptions(options, id));
     }
 
@@ -172,21 +171,21 @@ public class MECRole extends io.pulumi.resources.CustomResource {
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190301:MECRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190701:MECRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20190801:MECRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200501preview:MECRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901:MECRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:MECRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20201201:MECRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201:MECRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:MECRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601:MECRole").build()),
-                Input.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:MECRole").build())
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190301:MECRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190701:MECRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20190801:MECRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200501preview:MECRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901:MECRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20200901preview:MECRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20201201:MECRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201:MECRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210201preview:MECRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601:MECRole").build()),
+                Output.of(Alias.builder().setType("azure-native:databoxedge/v20210601preview:MECRole").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -200,7 +199,7 @@ public class MECRole extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MECRole get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MECRole get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MECRole(name, id, options);
     }
 }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.enums.QueryStringBehavior;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
     public static final CacheKeyQueryStringActionParametersArgs Empty = new CacheKeyQueryStringActionParametersArgs();
 
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
@@ -32,10 +32,10 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="queryParameters")
-      private final @Nullable Input<String> queryParameters;
+      private final @Nullable Output<String> queryParameters;
 
-    public Input<String> getQueryParameters() {
-        return this.queryParameters == null ? Input.empty() : this.queryParameters;
+    public Output<String> getQueryParameters() {
+        return this.queryParameters == null ? Output.empty() : this.queryParameters;
     }
 
     /**
@@ -43,25 +43,25 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="queryStringBehavior", required=true)
-      private final Input<Either<String,QueryStringBehavior>> queryStringBehavior;
+      private final Output<Either<String,QueryStringBehavior>> queryStringBehavior;
 
-    public Input<Either<String,QueryStringBehavior>> getQueryStringBehavior() {
+    public Output<Either<String,QueryStringBehavior>> getQueryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     public CacheKeyQueryStringActionParametersArgs(
-        Input<String> odataType,
-        @Nullable Input<String> queryParameters,
-        Input<Either<String,QueryStringBehavior>> queryStringBehavior) {
+        Output<String> odataType,
+        @Nullable Output<String> queryParameters,
+        Output<Either<String,QueryStringBehavior>> queryStringBehavior) {
         this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
         this.queryParameters = queryParameters;
         this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior, "expected parameter 'queryStringBehavior' to be non-null");
     }
 
     private CacheKeyQueryStringActionParametersArgs() {
-        this.odataType = Input.empty();
-        this.queryParameters = Input.empty();
-        this.queryStringBehavior = Input.empty();
+        this.odataType = Output.empty();
+        this.queryParameters = Output.empty();
+        this.queryStringBehavior = Output.empty();
     }
 
     public static Builder builder() {
@@ -73,9 +73,9 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> odataType;
-        private @Nullable Input<String> queryParameters;
-        private Input<Either<String,QueryStringBehavior>> queryStringBehavior;
+        private Output<String> odataType;
+        private @Nullable Output<String> queryParameters;
+        private Output<Either<String,QueryStringBehavior>> queryStringBehavior;
 
         public Builder() {
     	      // Empty
@@ -88,33 +88,33 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
     	      this.queryStringBehavior = defaults.queryStringBehavior;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder queryParameters(@Nullable Input<String> queryParameters) {
+        public Builder queryParameters(@Nullable Output<String> queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }
 
         public Builder queryParameters(@Nullable String queryParameters) {
-            this.queryParameters = Input.ofNullable(queryParameters);
+            this.queryParameters = Output.ofNullable(queryParameters);
             return this;
         }
 
-        public Builder queryStringBehavior(Input<Either<String,QueryStringBehavior>> queryStringBehavior) {
+        public Builder queryStringBehavior(Output<Either<String,QueryStringBehavior>> queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
 
         public Builder queryStringBehavior(Either<String,QueryStringBehavior> queryStringBehavior) {
-            this.queryStringBehavior = Input.of(Objects.requireNonNull(queryStringBehavior));
+            this.queryStringBehavior = Output.of(Objects.requireNonNull(queryStringBehavior));
             return this;
         }
         public CacheKeyQueryStringActionParametersArgs build() {

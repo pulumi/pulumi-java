@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class HourDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minute")
-      private final @Nullable Input<Integer> minute;
+      private final @Nullable Output<Integer> minute;
 
-    public Input<Integer> getMinute() {
-        return this.minute == null ? Input.empty() : this.minute;
+    public Output<Integer> getMinute() {
+        return this.minute == null ? Output.empty() : this.minute;
     }
 
-    public HourDetailsArgs(@Nullable Input<Integer> minute) {
+    public HourDetailsArgs(@Nullable Output<Integer> minute) {
         this.minute = minute;
     }
 
     private HourDetailsArgs() {
-        this.minute = Input.empty();
+        this.minute = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class HourDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> minute;
+        private @Nullable Output<Integer> minute;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class HourDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.minute = defaults.minute;
         }
 
-        public Builder minute(@Nullable Input<Integer> minute) {
+        public Builder minute(@Nullable Output<Integer> minute) {
             this.minute = minute;
             return this;
         }
 
         public Builder minute(@Nullable Integer minute) {
-            this.minute = Input.ofNullable(minute);
+            this.minute = Output.ofNullable(minute);
             return this;
         }
         public HourDetailsArgs build() {

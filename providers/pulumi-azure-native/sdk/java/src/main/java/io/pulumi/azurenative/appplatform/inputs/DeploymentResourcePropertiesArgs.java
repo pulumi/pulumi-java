@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.DeploymentSettingsArgs;
 import io.pulumi.azurenative.appplatform.inputs.UserSourceInfoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deploymentSettings")
-      private final @Nullable Input<DeploymentSettingsArgs> deploymentSettings;
+      private final @Nullable Output<DeploymentSettingsArgs> deploymentSettings;
 
-    public Input<DeploymentSettingsArgs> getDeploymentSettings() {
-        return this.deploymentSettings == null ? Input.empty() : this.deploymentSettings;
+    public Output<DeploymentSettingsArgs> getDeploymentSettings() {
+        return this.deploymentSettings == null ? Output.empty() : this.deploymentSettings;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="source")
-      private final @Nullable Input<UserSourceInfoArgs> source;
+      private final @Nullable Output<UserSourceInfoArgs> source;
 
-    public Input<UserSourceInfoArgs> getSource() {
-        return this.source == null ? Input.empty() : this.source;
+    public Output<UserSourceInfoArgs> getSource() {
+        return this.source == null ? Output.empty() : this.source;
     }
 
     public DeploymentResourcePropertiesArgs(
-        @Nullable Input<DeploymentSettingsArgs> deploymentSettings,
-        @Nullable Input<UserSourceInfoArgs> source) {
+        @Nullable Output<DeploymentSettingsArgs> deploymentSettings,
+        @Nullable Output<UserSourceInfoArgs> source) {
         this.deploymentSettings = deploymentSettings;
         this.source = source;
     }
 
     private DeploymentResourcePropertiesArgs() {
-        this.deploymentSettings = Input.empty();
-        this.source = Input.empty();
+        this.deploymentSettings = Output.empty();
+        this.source = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<DeploymentSettingsArgs> deploymentSettings;
-        private @Nullable Input<UserSourceInfoArgs> source;
+        private @Nullable Output<DeploymentSettingsArgs> deploymentSettings;
+        private @Nullable Output<UserSourceInfoArgs> source;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class DeploymentResourcePropertiesArgs extends io.pulumi.resources.
     	      this.source = defaults.source;
         }
 
-        public Builder deploymentSettings(@Nullable Input<DeploymentSettingsArgs> deploymentSettings) {
+        public Builder deploymentSettings(@Nullable Output<DeploymentSettingsArgs> deploymentSettings) {
             this.deploymentSettings = deploymentSettings;
             return this;
         }
 
         public Builder deploymentSettings(@Nullable DeploymentSettingsArgs deploymentSettings) {
-            this.deploymentSettings = Input.ofNullable(deploymentSettings);
+            this.deploymentSettings = Output.ofNullable(deploymentSettings);
             return this;
         }
 
-        public Builder source(@Nullable Input<UserSourceInfoArgs> source) {
+        public Builder source(@Nullable Output<UserSourceInfoArgs> source) {
             this.source = source;
             return this;
         }
 
         public Builder source(@Nullable UserSourceInfoArgs source) {
-            this.source = Input.ofNullable(source);
+            this.source = Output.ofNullable(source);
             return this;
         }
         public DeploymentResourcePropertiesArgs build() {

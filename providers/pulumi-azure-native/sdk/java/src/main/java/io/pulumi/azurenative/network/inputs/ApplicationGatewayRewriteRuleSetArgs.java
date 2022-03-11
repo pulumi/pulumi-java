@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="rewriteRules")
-      private final @Nullable Input<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;
+      private final @Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;
 
-    public Input<List<ApplicationGatewayRewriteRuleArgs>> getRewriteRules() {
-        return this.rewriteRules == null ? Input.empty() : this.rewriteRules;
+    public Output<List<ApplicationGatewayRewriteRuleArgs>> getRewriteRules() {
+        return this.rewriteRules == null ? Output.empty() : this.rewriteRules;
     }
 
     public ApplicationGatewayRewriteRuleSetArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        @Nullable Input<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        @Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules) {
         this.id = id;
         this.name = name;
         this.rewriteRules = rewriteRules;
     }
 
     private ApplicationGatewayRewriteRuleSetArgs() {
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.rewriteRules = Input.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.rewriteRules = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private @Nullable Input<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private @Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
     	      this.rewriteRules = defaults.rewriteRules;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder rewriteRules(@Nullable Input<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules) {
+        public Builder rewriteRules(@Nullable Output<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules) {
             this.rewriteRules = rewriteRules;
             return this;
         }
 
         public Builder rewriteRules(@Nullable List<ApplicationGatewayRewriteRuleArgs> rewriteRules) {
-            this.rewriteRules = Input.ofNullable(rewriteRules);
+            this.rewriteRules = Output.ofNullable(rewriteRules);
             return this;
         }
         public ApplicationGatewayRewriteRuleSetArgs build() {

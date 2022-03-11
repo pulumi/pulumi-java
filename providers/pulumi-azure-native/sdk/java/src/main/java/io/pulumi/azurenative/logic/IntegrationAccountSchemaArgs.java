@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.logic.enums.SchemaType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -23,10 +23,10 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="content")
-      private final @Nullable Input<String> content;
+      private final @Nullable Output<String> content;
 
-    public Input<String> getContent() {
-        return this.content == null ? Input.empty() : this.content;
+    public Output<String> getContent() {
+        return this.content == null ? Output.empty() : this.content;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="contentType")
-      private final @Nullable Input<String> contentType;
+      private final @Nullable Output<String> contentType;
 
-    public Input<String> getContentType() {
-        return this.contentType == null ? Input.empty() : this.contentType;
+    public Output<String> getContentType() {
+        return this.contentType == null ? Output.empty() : this.contentType;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="documentName")
-      private final @Nullable Input<String> documentName;
+      private final @Nullable Output<String> documentName;
 
-    public Input<String> getDocumentName() {
-        return this.documentName == null ? Input.empty() : this.documentName;
+    public Output<String> getDocumentName() {
+        return this.documentName == null ? Output.empty() : this.documentName;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="fileName")
-      private final @Nullable Input<String> fileName;
+      private final @Nullable Output<String> fileName;
 
-    public Input<String> getFileName() {
-        return this.fileName == null ? Input.empty() : this.fileName;
+    public Output<String> getFileName() {
+        return this.fileName == null ? Output.empty() : this.fileName;
     }
 
     /**
@@ -67,9 +67,9 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-      private final Input<String> integrationAccountName;
+      private final Output<String> integrationAccountName;
 
-    public Input<String> getIntegrationAccountName() {
+    public Output<String> getIntegrationAccountName() {
         return this.integrationAccountName;
     }
 
@@ -78,10 +78,10 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="metadata")
-      private final @Nullable Input<Object> metadata;
+      private final @Nullable Output<Object> metadata;
 
-    public Input<Object> getMetadata() {
-        return this.metadata == null ? Input.empty() : this.metadata;
+    public Output<Object> getMetadata() {
+        return this.metadata == null ? Output.empty() : this.metadata;
     }
 
     /**
@@ -100,9 +100,9 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -111,10 +111,10 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="schemaName")
-      private final @Nullable Input<String> schemaName;
+      private final @Nullable Output<String> schemaName;
 
-    public Input<String> getSchemaName() {
-        return this.schemaName == null ? Input.empty() : this.schemaName;
+    public Output<String> getSchemaName() {
+        return this.schemaName == null ? Output.empty() : this.schemaName;
     }
 
     /**
@@ -122,9 +122,9 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="schemaType", required=true)
-      private final Input<Either<String,SchemaType>> schemaType;
+      private final Output<Either<String,SchemaType>> schemaType;
 
-    public Input<Either<String,SchemaType>> getSchemaType() {
+    public Output<Either<String,SchemaType>> getSchemaType() {
         return this.schemaType;
     }
 
@@ -133,10 +133,10 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -144,25 +144,25 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetNamespace")
-      private final @Nullable Input<String> targetNamespace;
+      private final @Nullable Output<String> targetNamespace;
 
-    public Input<String> getTargetNamespace() {
-        return this.targetNamespace == null ? Input.empty() : this.targetNamespace;
+    public Output<String> getTargetNamespace() {
+        return this.targetNamespace == null ? Output.empty() : this.targetNamespace;
     }
 
     public IntegrationAccountSchemaArgs(
-        @Nullable Input<String> content,
-        @Nullable Input<String> contentType,
-        @Nullable Input<String> documentName,
-        @Nullable Input<String> fileName,
-        Input<String> integrationAccountName,
-        @Nullable Input<String> location,
-        @Nullable Input<Object> metadata,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> schemaName,
-        Input<Either<String,SchemaType>> schemaType,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<String> targetNamespace) {
+        @Nullable Output<String> content,
+        @Nullable Output<String> contentType,
+        @Nullable Output<String> documentName,
+        @Nullable Output<String> fileName,
+        Output<String> integrationAccountName,
+        @Nullable Output<String> location,
+        @Nullable Output<Object> metadata,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> schemaName,
+        Output<Either<String,SchemaType>> schemaType,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<String> targetNamespace) {
         this.content = content;
         this.contentType = contentType;
         this.documentName = documentName;
@@ -178,18 +178,18 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
     }
 
     private IntegrationAccountSchemaArgs() {
-        this.content = Input.empty();
-        this.contentType = Input.empty();
-        this.documentName = Input.empty();
-        this.fileName = Input.empty();
-        this.integrationAccountName = Input.empty();
-        this.location = Input.empty();
-        this.metadata = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.schemaName = Input.empty();
-        this.schemaType = Input.empty();
-        this.tags = Input.empty();
-        this.targetNamespace = Input.empty();
+        this.content = Output.empty();
+        this.contentType = Output.empty();
+        this.documentName = Output.empty();
+        this.fileName = Output.empty();
+        this.integrationAccountName = Output.empty();
+        this.location = Output.empty();
+        this.metadata = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.schemaName = Output.empty();
+        this.schemaType = Output.empty();
+        this.tags = Output.empty();
+        this.targetNamespace = Output.empty();
     }
 
     public static Builder builder() {
@@ -201,18 +201,18 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<String> content;
-        private @Nullable Input<String> contentType;
-        private @Nullable Input<String> documentName;
-        private @Nullable Input<String> fileName;
-        private Input<String> integrationAccountName;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Object> metadata;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> schemaName;
-        private Input<Either<String,SchemaType>> schemaType;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<String> targetNamespace;
+        private @Nullable Output<String> content;
+        private @Nullable Output<String> contentType;
+        private @Nullable Output<String> documentName;
+        private @Nullable Output<String> fileName;
+        private Output<String> integrationAccountName;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Object> metadata;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> schemaName;
+        private Output<Either<String,SchemaType>> schemaType;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<String> targetNamespace;
 
         public Builder() {
     	      // Empty
@@ -234,123 +234,123 @@ public final class IntegrationAccountSchemaArgs extends io.pulumi.resources.Reso
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder content(@Nullable Input<String> content) {
+        public Builder content(@Nullable Output<String> content) {
             this.content = content;
             return this;
         }
 
         public Builder content(@Nullable String content) {
-            this.content = Input.ofNullable(content);
+            this.content = Output.ofNullable(content);
             return this;
         }
 
-        public Builder contentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Output<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Input.ofNullable(contentType);
+            this.contentType = Output.ofNullable(contentType);
             return this;
         }
 
-        public Builder documentName(@Nullable Input<String> documentName) {
+        public Builder documentName(@Nullable Output<String> documentName) {
             this.documentName = documentName;
             return this;
         }
 
         public Builder documentName(@Nullable String documentName) {
-            this.documentName = Input.ofNullable(documentName);
+            this.documentName = Output.ofNullable(documentName);
             return this;
         }
 
-        public Builder fileName(@Nullable Input<String> fileName) {
+        public Builder fileName(@Nullable Output<String> fileName) {
             this.fileName = fileName;
             return this;
         }
 
         public Builder fileName(@Nullable String fileName) {
-            this.fileName = Input.ofNullable(fileName);
+            this.fileName = Output.ofNullable(fileName);
             return this;
         }
 
-        public Builder integrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Output<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
+            this.integrationAccountName = Output.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder metadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Output<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Input.ofNullable(metadata);
+            this.metadata = Output.ofNullable(metadata);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder schemaName(@Nullable Input<String> schemaName) {
+        public Builder schemaName(@Nullable Output<String> schemaName) {
             this.schemaName = schemaName;
             return this;
         }
 
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Input.ofNullable(schemaName);
+            this.schemaName = Output.ofNullable(schemaName);
             return this;
         }
 
-        public Builder schemaType(Input<Either<String,SchemaType>> schemaType) {
+        public Builder schemaType(Output<Either<String,SchemaType>> schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
 
         public Builder schemaType(Either<String,SchemaType> schemaType) {
-            this.schemaType = Input.of(Objects.requireNonNull(schemaType));
+            this.schemaType = Output.of(Objects.requireNonNull(schemaType));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder targetNamespace(@Nullable Input<String> targetNamespace) {
+        public Builder targetNamespace(@Nullable Output<String> targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }
 
         public Builder targetNamespace(@Nullable String targetNamespace) {
-            this.targetNamespace = Input.ofNullable(targetNamespace);
+            this.targetNamespace = Output.ofNullable(targetNamespace);
             return this;
         }
         public IntegrationAccountSchemaArgs build() {

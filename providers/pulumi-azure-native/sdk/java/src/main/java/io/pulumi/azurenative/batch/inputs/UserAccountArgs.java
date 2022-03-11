@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.ElevationLevel;
 import io.pulumi.azurenative.batch.inputs.LinuxUserConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.WindowsUserConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elevationLevel")
-      private final @Nullable Input<ElevationLevel> elevationLevel;
+      private final @Nullable Output<ElevationLevel> elevationLevel;
 
-    public Input<ElevationLevel> getElevationLevel() {
-        return this.elevationLevel == null ? Input.empty() : this.elevationLevel;
+    public Output<ElevationLevel> getElevationLevel() {
+        return this.elevationLevel == null ? Output.empty() : this.elevationLevel;
     }
 
     /**
@@ -33,23 +33,23 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxUserConfiguration")
-      private final @Nullable Input<LinuxUserConfigurationArgs> linuxUserConfiguration;
+      private final @Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration;
 
-    public Input<LinuxUserConfigurationArgs> getLinuxUserConfiguration() {
-        return this.linuxUserConfiguration == null ? Input.empty() : this.linuxUserConfiguration;
+    public Output<LinuxUserConfigurationArgs> getLinuxUserConfiguration() {
+        return this.linuxUserConfiguration == null ? Output.empty() : this.linuxUserConfiguration;
     }
 
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     @InputImport(name="password", required=true)
-      private final Input<String> password;
+      private final Output<String> password;
 
-    public Input<String> getPassword() {
+    public Output<String> getPassword() {
         return this.password;
     }
 
@@ -58,18 +58,18 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsUserConfiguration")
-      private final @Nullable Input<WindowsUserConfigurationArgs> windowsUserConfiguration;
+      private final @Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration;
 
-    public Input<WindowsUserConfigurationArgs> getWindowsUserConfiguration() {
-        return this.windowsUserConfiguration == null ? Input.empty() : this.windowsUserConfiguration;
+    public Output<WindowsUserConfigurationArgs> getWindowsUserConfiguration() {
+        return this.windowsUserConfiguration == null ? Output.empty() : this.windowsUserConfiguration;
     }
 
     public UserAccountArgs(
-        @Nullable Input<ElevationLevel> elevationLevel,
-        @Nullable Input<LinuxUserConfigurationArgs> linuxUserConfiguration,
-        Input<String> name,
-        Input<String> password,
-        @Nullable Input<WindowsUserConfigurationArgs> windowsUserConfiguration) {
+        @Nullable Output<ElevationLevel> elevationLevel,
+        @Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration,
+        Output<String> name,
+        Output<String> password,
+        @Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration) {
         this.elevationLevel = elevationLevel;
         this.linuxUserConfiguration = linuxUserConfiguration;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
@@ -78,11 +78,11 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserAccountArgs() {
-        this.elevationLevel = Input.empty();
-        this.linuxUserConfiguration = Input.empty();
-        this.name = Input.empty();
-        this.password = Input.empty();
-        this.windowsUserConfiguration = Input.empty();
+        this.elevationLevel = Output.empty();
+        this.linuxUserConfiguration = Output.empty();
+        this.name = Output.empty();
+        this.password = Output.empty();
+        this.windowsUserConfiguration = Output.empty();
     }
 
     public static Builder builder() {
@@ -94,11 +94,11 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<ElevationLevel> elevationLevel;
-        private @Nullable Input<LinuxUserConfigurationArgs> linuxUserConfiguration;
-        private Input<String> name;
-        private Input<String> password;
-        private @Nullable Input<WindowsUserConfigurationArgs> windowsUserConfiguration;
+        private @Nullable Output<ElevationLevel> elevationLevel;
+        private @Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration;
+        private Output<String> name;
+        private Output<String> password;
+        private @Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration;
 
         public Builder() {
     	      // Empty
@@ -113,53 +113,53 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowsUserConfiguration = defaults.windowsUserConfiguration;
         }
 
-        public Builder elevationLevel(@Nullable Input<ElevationLevel> elevationLevel) {
+        public Builder elevationLevel(@Nullable Output<ElevationLevel> elevationLevel) {
             this.elevationLevel = elevationLevel;
             return this;
         }
 
         public Builder elevationLevel(@Nullable ElevationLevel elevationLevel) {
-            this.elevationLevel = Input.ofNullable(elevationLevel);
+            this.elevationLevel = Output.ofNullable(elevationLevel);
             return this;
         }
 
-        public Builder linuxUserConfiguration(@Nullable Input<LinuxUserConfigurationArgs> linuxUserConfiguration) {
+        public Builder linuxUserConfiguration(@Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration) {
             this.linuxUserConfiguration = linuxUserConfiguration;
             return this;
         }
 
         public Builder linuxUserConfiguration(@Nullable LinuxUserConfigurationArgs linuxUserConfiguration) {
-            this.linuxUserConfiguration = Input.ofNullable(linuxUserConfiguration);
+            this.linuxUserConfiguration = Output.ofNullable(linuxUserConfiguration);
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder password(Input<String> password) {
+        public Builder password(Output<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
         public Builder password(String password) {
-            this.password = Input.of(Objects.requireNonNull(password));
+            this.password = Output.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder windowsUserConfiguration(@Nullable Input<WindowsUserConfigurationArgs> windowsUserConfiguration) {
+        public Builder windowsUserConfiguration(@Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration) {
             this.windowsUserConfiguration = windowsUserConfiguration;
             return this;
         }
 
         public Builder windowsUserConfiguration(@Nullable WindowsUserConfigurationArgs windowsUserConfiguration) {
-            this.windowsUserConfiguration = Input.ofNullable(windowsUserConfiguration);
+            this.windowsUserConfiguration = Output.ofNullable(windowsUserConfiguration);
             return this;
         }
         public UserAccountArgs build() {

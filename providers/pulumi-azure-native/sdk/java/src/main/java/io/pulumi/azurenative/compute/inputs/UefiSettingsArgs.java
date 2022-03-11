@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class UefiSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secureBootEnabled")
-      private final @Nullable Input<Boolean> secureBootEnabled;
+      private final @Nullable Output<Boolean> secureBootEnabled;
 
-    public Input<Boolean> getSecureBootEnabled() {
-        return this.secureBootEnabled == null ? Input.empty() : this.secureBootEnabled;
+    public Output<Boolean> getSecureBootEnabled() {
+        return this.secureBootEnabled == null ? Output.empty() : this.secureBootEnabled;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class UefiSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vTpmEnabled")
-      private final @Nullable Input<Boolean> vTpmEnabled;
+      private final @Nullable Output<Boolean> vTpmEnabled;
 
-    public Input<Boolean> getVTpmEnabled() {
-        return this.vTpmEnabled == null ? Input.empty() : this.vTpmEnabled;
+    public Output<Boolean> getVTpmEnabled() {
+        return this.vTpmEnabled == null ? Output.empty() : this.vTpmEnabled;
     }
 
     public UefiSettingsArgs(
-        @Nullable Input<Boolean> secureBootEnabled,
-        @Nullable Input<Boolean> vTpmEnabled) {
+        @Nullable Output<Boolean> secureBootEnabled,
+        @Nullable Output<Boolean> vTpmEnabled) {
         this.secureBootEnabled = secureBootEnabled;
         this.vTpmEnabled = vTpmEnabled;
     }
 
     private UefiSettingsArgs() {
-        this.secureBootEnabled = Input.empty();
-        this.vTpmEnabled = Input.empty();
+        this.secureBootEnabled = Output.empty();
+        this.vTpmEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class UefiSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> secureBootEnabled;
-        private @Nullable Input<Boolean> vTpmEnabled;
+        private @Nullable Output<Boolean> secureBootEnabled;
+        private @Nullable Output<Boolean> vTpmEnabled;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class UefiSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vTpmEnabled = defaults.vTpmEnabled;
         }
 
-        public Builder secureBootEnabled(@Nullable Input<Boolean> secureBootEnabled) {
+        public Builder secureBootEnabled(@Nullable Output<Boolean> secureBootEnabled) {
             this.secureBootEnabled = secureBootEnabled;
             return this;
         }
 
         public Builder secureBootEnabled(@Nullable Boolean secureBootEnabled) {
-            this.secureBootEnabled = Input.ofNullable(secureBootEnabled);
+            this.secureBootEnabled = Output.ofNullable(secureBootEnabled);
             return this;
         }
 
-        public Builder vTpmEnabled(@Nullable Input<Boolean> vTpmEnabled) {
+        public Builder vTpmEnabled(@Nullable Output<Boolean> vTpmEnabled) {
             this.vTpmEnabled = vTpmEnabled;
             return this;
         }
 
         public Builder vTpmEnabled(@Nullable Boolean vTpmEnabled) {
-            this.vTpmEnabled = Input.ofNullable(vTpmEnabled);
+            this.vTpmEnabled = Output.ofNullable(vTpmEnabled);
             return this;
         }
         public UefiSettingsArgs build() {

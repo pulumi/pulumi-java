@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="uri")
-      private final @Nullable Input<String> uri;
+      private final @Nullable Output<String> uri;
 
-    public Input<String> getUri() {
-        return this.uri == null ? Input.empty() : this.uri;
+    public Output<String> getUri() {
+        return this.uri == null ? Output.empty() : this.uri;
     }
 
     public GalleryArtifactVersionSourceArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> uri) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> uri) {
         this.id = id;
         this.uri = uri;
     }
 
     private GalleryArtifactVersionSourceArgs() {
-        this.id = Input.empty();
-        this.uri = Input.empty();
+        this.id = Output.empty();
+        this.uri = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> uri;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> uri;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class GalleryArtifactVersionSourceArgs extends io.pulumi.resources.
     	      this.uri = defaults.uri;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder uri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Output<String> uri) {
             this.uri = uri;
             return this;
         }
 
         public Builder uri(@Nullable String uri) {
-            this.uri = Input.ofNullable(uri);
+            this.uri = Output.ofNullable(uri);
             return this;
         }
         public GalleryArtifactVersionSourceArgs build() {

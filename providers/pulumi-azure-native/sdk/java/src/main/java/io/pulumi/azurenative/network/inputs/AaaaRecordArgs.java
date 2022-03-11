@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AaaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6Address")
-      private final @Nullable Input<String> ipv6Address;
+      private final @Nullable Output<String> ipv6Address;
 
-    public Input<String> getIpv6Address() {
-        return this.ipv6Address == null ? Input.empty() : this.ipv6Address;
+    public Output<String> getIpv6Address() {
+        return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
     }
 
-    public AaaaRecordArgs(@Nullable Input<String> ipv6Address) {
+    public AaaaRecordArgs(@Nullable Output<String> ipv6Address) {
         this.ipv6Address = ipv6Address;
     }
 
     private AaaaRecordArgs() {
-        this.ipv6Address = Input.empty();
+        this.ipv6Address = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AaaaRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> ipv6Address;
+        private @Nullable Output<String> ipv6Address;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AaaaRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ipv6Address = defaults.ipv6Address;
         }
 
-        public Builder ipv6Address(@Nullable Input<String> ipv6Address) {
+        public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
 
         public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Input.ofNullable(ipv6Address);
+            this.ipv6Address = Output.ofNullable(ipv6Address);
             return this;
         }
         public AaaaRecordArgs build() {

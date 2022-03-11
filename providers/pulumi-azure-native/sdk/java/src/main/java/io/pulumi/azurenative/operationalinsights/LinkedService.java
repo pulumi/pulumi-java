@@ -6,7 +6,6 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.operationalinsights.LinkedServiceArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,21 +154,21 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LinkedService(String name, LinkedServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:operationalinsights:LinkedService", name, args == null ? LinkedServiceArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:operationalinsights:LinkedService", name, args == null ? LinkedServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private LinkedService(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private LinkedService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:operationalinsights:LinkedService", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:operationalinsights/v20151101preview:LinkedService").build()),
-                Input.of(Alias.builder().setType("azure-native:operationalinsights/v20190801preview:LinkedService").build()),
-                Input.of(Alias.builder().setType("azure-native:operationalinsights/v20200301preview:LinkedService").build()),
-                Input.of(Alias.builder().setType("azure-native:operationalinsights/v20200801:LinkedService").build())
+                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20151101preview:LinkedService").build()),
+                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20190801preview:LinkedService").build()),
+                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20200301preview:LinkedService").build()),
+                Output.of(Alias.builder().setType("azure-native:operationalinsights/v20200801:LinkedService").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -183,7 +182,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LinkedService get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static LinkedService get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new LinkedService(name, id, options);
     }
 }

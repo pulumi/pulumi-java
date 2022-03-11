@@ -5,7 +5,7 @@ package io.pulumi.azurenative.orbital;
 
 import io.pulumi.azurenative.orbital.enums.AutoTrackingConfiguration;
 import io.pulumi.azurenative.orbital.inputs.ContactProfileLinkArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoTrackingConfiguration")
-      private final @Nullable Input<AutoTrackingConfiguration> autoTrackingConfiguration;
+      private final @Nullable Output<AutoTrackingConfiguration> autoTrackingConfiguration;
 
-    public Input<AutoTrackingConfiguration> getAutoTrackingConfiguration() {
-        return this.autoTrackingConfiguration == null ? Input.empty() : this.autoTrackingConfiguration;
+    public Output<AutoTrackingConfiguration> getAutoTrackingConfiguration() {
+        return this.autoTrackingConfiguration == null ? Output.empty() : this.autoTrackingConfiguration;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactProfileName")
-      private final @Nullable Input<String> contactProfileName;
+      private final @Nullable Output<String> contactProfileName;
 
-    public Input<String> getContactProfileName() {
-        return this.contactProfileName == null ? Input.empty() : this.contactProfileName;
+    public Output<String> getContactProfileName() {
+        return this.contactProfileName == null ? Output.empty() : this.contactProfileName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHubUri")
-      private final @Nullable Input<String> eventHubUri;
+      private final @Nullable Output<String> eventHubUri;
 
-    public Input<String> getEventHubUri() {
-        return this.eventHubUri == null ? Input.empty() : this.eventHubUri;
+    public Output<String> getEventHubUri() {
+        return this.eventHubUri == null ? Output.empty() : this.eventHubUri;
     }
 
     /**
@@ -57,9 +57,9 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="links", required=true)
-      private final Input<List<ContactProfileLinkArgs>> links;
+      private final Output<List<ContactProfileLinkArgs>> links;
 
-    public Input<List<ContactProfileLinkArgs>> getLinks() {
+    public Output<List<ContactProfileLinkArgs>> getLinks() {
         return this.links;
     }
 
@@ -68,10 +68,10 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumElevationDegrees")
-      private final @Nullable Input<Double> minimumElevationDegrees;
+      private final @Nullable Output<Double> minimumElevationDegrees;
 
-    public Input<Double> getMinimumElevationDegrees() {
-        return this.minimumElevationDegrees == null ? Input.empty() : this.minimumElevationDegrees;
+    public Output<Double> getMinimumElevationDegrees() {
+        return this.minimumElevationDegrees == null ? Output.empty() : this.minimumElevationDegrees;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumViableContactDuration")
-      private final @Nullable Input<String> minimumViableContactDuration;
+      private final @Nullable Output<String> minimumViableContactDuration;
 
-    public Input<String> getMinimumViableContactDuration() {
-        return this.minimumViableContactDuration == null ? Input.empty() : this.minimumViableContactDuration;
+    public Output<String> getMinimumViableContactDuration() {
+        return this.minimumViableContactDuration == null ? Output.empty() : this.minimumViableContactDuration;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -112,22 +112,22 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ContactProfileArgs(
-        @Nullable Input<AutoTrackingConfiguration> autoTrackingConfiguration,
-        @Nullable Input<String> contactProfileName,
-        @Nullable Input<String> eventHubUri,
-        Input<List<ContactProfileLinkArgs>> links,
-        @Nullable Input<String> location,
-        @Nullable Input<Double> minimumElevationDegrees,
-        @Nullable Input<String> minimumViableContactDuration,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<AutoTrackingConfiguration> autoTrackingConfiguration,
+        @Nullable Output<String> contactProfileName,
+        @Nullable Output<String> eventHubUri,
+        Output<List<ContactProfileLinkArgs>> links,
+        @Nullable Output<String> location,
+        @Nullable Output<Double> minimumElevationDegrees,
+        @Nullable Output<String> minimumViableContactDuration,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.autoTrackingConfiguration = autoTrackingConfiguration;
         this.contactProfileName = contactProfileName;
         this.eventHubUri = eventHubUri;
@@ -140,15 +140,15 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactProfileArgs() {
-        this.autoTrackingConfiguration = Input.empty();
-        this.contactProfileName = Input.empty();
-        this.eventHubUri = Input.empty();
-        this.links = Input.empty();
-        this.location = Input.empty();
-        this.minimumElevationDegrees = Input.empty();
-        this.minimumViableContactDuration = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.autoTrackingConfiguration = Output.empty();
+        this.contactProfileName = Output.empty();
+        this.eventHubUri = Output.empty();
+        this.links = Output.empty();
+        this.location = Output.empty();
+        this.minimumElevationDegrees = Output.empty();
+        this.minimumViableContactDuration = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -160,15 +160,15 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoTrackingConfiguration> autoTrackingConfiguration;
-        private @Nullable Input<String> contactProfileName;
-        private @Nullable Input<String> eventHubUri;
-        private Input<List<ContactProfileLinkArgs>> links;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Double> minimumElevationDegrees;
-        private @Nullable Input<String> minimumViableContactDuration;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<AutoTrackingConfiguration> autoTrackingConfiguration;
+        private @Nullable Output<String> contactProfileName;
+        private @Nullable Output<String> eventHubUri;
+        private Output<List<ContactProfileLinkArgs>> links;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Double> minimumElevationDegrees;
+        private @Nullable Output<String> minimumViableContactDuration;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -187,93 +187,93 @@ public final class ContactProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder autoTrackingConfiguration(@Nullable Input<AutoTrackingConfiguration> autoTrackingConfiguration) {
+        public Builder autoTrackingConfiguration(@Nullable Output<AutoTrackingConfiguration> autoTrackingConfiguration) {
             this.autoTrackingConfiguration = autoTrackingConfiguration;
             return this;
         }
 
         public Builder autoTrackingConfiguration(@Nullable AutoTrackingConfiguration autoTrackingConfiguration) {
-            this.autoTrackingConfiguration = Input.ofNullable(autoTrackingConfiguration);
+            this.autoTrackingConfiguration = Output.ofNullable(autoTrackingConfiguration);
             return this;
         }
 
-        public Builder contactProfileName(@Nullable Input<String> contactProfileName) {
+        public Builder contactProfileName(@Nullable Output<String> contactProfileName) {
             this.contactProfileName = contactProfileName;
             return this;
         }
 
         public Builder contactProfileName(@Nullable String contactProfileName) {
-            this.contactProfileName = Input.ofNullable(contactProfileName);
+            this.contactProfileName = Output.ofNullable(contactProfileName);
             return this;
         }
 
-        public Builder eventHubUri(@Nullable Input<String> eventHubUri) {
+        public Builder eventHubUri(@Nullable Output<String> eventHubUri) {
             this.eventHubUri = eventHubUri;
             return this;
         }
 
         public Builder eventHubUri(@Nullable String eventHubUri) {
-            this.eventHubUri = Input.ofNullable(eventHubUri);
+            this.eventHubUri = Output.ofNullable(eventHubUri);
             return this;
         }
 
-        public Builder links(Input<List<ContactProfileLinkArgs>> links) {
+        public Builder links(Output<List<ContactProfileLinkArgs>> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
 
         public Builder links(List<ContactProfileLinkArgs> links) {
-            this.links = Input.of(Objects.requireNonNull(links));
+            this.links = Output.of(Objects.requireNonNull(links));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder minimumElevationDegrees(@Nullable Input<Double> minimumElevationDegrees) {
+        public Builder minimumElevationDegrees(@Nullable Output<Double> minimumElevationDegrees) {
             this.minimumElevationDegrees = minimumElevationDegrees;
             return this;
         }
 
         public Builder minimumElevationDegrees(@Nullable Double minimumElevationDegrees) {
-            this.minimumElevationDegrees = Input.ofNullable(minimumElevationDegrees);
+            this.minimumElevationDegrees = Output.ofNullable(minimumElevationDegrees);
             return this;
         }
 
-        public Builder minimumViableContactDuration(@Nullable Input<String> minimumViableContactDuration) {
+        public Builder minimumViableContactDuration(@Nullable Output<String> minimumViableContactDuration) {
             this.minimumViableContactDuration = minimumViableContactDuration;
             return this;
         }
 
         public Builder minimumViableContactDuration(@Nullable String minimumViableContactDuration) {
-            this.minimumViableContactDuration = Input.ofNullable(minimumViableContactDuration);
+            this.minimumViableContactDuration = Output.ofNullable(minimumViableContactDuration);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ContactProfileArgs build() {

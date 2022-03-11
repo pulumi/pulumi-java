@@ -7,7 +7,6 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.SubscriptionNetworkManagerConnectionArgs;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -155,18 +154,18 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public SubscriptionNetworkManagerConnection(String name, @Nullable SubscriptionNetworkManagerConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:network:SubscriptionNetworkManagerConnection", name, args == null ? SubscriptionNetworkManagerConnectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:network:SubscriptionNetworkManagerConnection", name, args == null ? SubscriptionNetworkManagerConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SubscriptionNetworkManagerConnection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SubscriptionNetworkManagerConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:network:SubscriptionNetworkManagerConnection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:network/v20210501preview:SubscriptionNetworkManagerConnection").build())
+                Output.of(Alias.builder().setType("azure-native:network/v20210501preview:SubscriptionNetworkManagerConnection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -180,7 +179,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SubscriptionNetworkManagerConnection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SubscriptionNetworkManagerConnection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SubscriptionNetworkManagerConnection(name, id, options);
     }
 }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyDefinitionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,9 +24,9 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="definition", required=true)
-      private final Input<BlobInventoryPolicyDefinitionArgs> definition;
+      private final Output<BlobInventoryPolicyDefinitionArgs> definition;
 
-    public Input<BlobInventoryPolicyDefinitionArgs> getDefinition() {
+    public Output<BlobInventoryPolicyDefinitionArgs> getDefinition() {
         return this.definition;
     }
 
@@ -35,9 +35,9 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
@@ -46,25 +46,25 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
     public BlobInventoryPolicyRuleArgs(
-        Input<BlobInventoryPolicyDefinitionArgs> definition,
-        Input<Boolean> enabled,
-        Input<String> name) {
+        Output<BlobInventoryPolicyDefinitionArgs> definition,
+        Output<Boolean> enabled,
+        Output<String> name) {
         this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
     }
 
     private BlobInventoryPolicyRuleArgs() {
-        this.definition = Input.empty();
-        this.enabled = Input.empty();
-        this.name = Input.empty();
+        this.definition = Output.empty();
+        this.enabled = Output.empty();
+        this.name = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<BlobInventoryPolicyDefinitionArgs> definition;
-        private Input<Boolean> enabled;
-        private Input<String> name;
+        private Output<BlobInventoryPolicyDefinitionArgs> definition;
+        private Output<Boolean> enabled;
+        private Output<String> name;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
     	      this.name = defaults.name;
         }
 
-        public Builder definition(Input<BlobInventoryPolicyDefinitionArgs> definition) {
+        public Builder definition(Output<BlobInventoryPolicyDefinitionArgs> definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
         public Builder definition(BlobInventoryPolicyDefinitionArgs definition) {
-            this.definition = Input.of(Objects.requireNonNull(definition));
+            this.definition = Output.of(Objects.requireNonNull(definition));
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
         public BlobInventoryPolicyRuleArgs build() {

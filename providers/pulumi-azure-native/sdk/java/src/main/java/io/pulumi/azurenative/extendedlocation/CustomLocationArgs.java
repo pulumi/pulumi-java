@@ -6,7 +6,7 @@ package io.pulumi.azurenative.extendedlocation;
 import io.pulumi.azurenative.extendedlocation.enums.HostType;
 import io.pulumi.azurenative.extendedlocation.inputs.CustomLocationPropertiesAuthenticationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authentication")
-      private final @Nullable Input<CustomLocationPropertiesAuthenticationArgs> authentication;
+      private final @Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication;
 
-    public Input<CustomLocationPropertiesAuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Input.empty() : this.authentication;
+    public Output<CustomLocationPropertiesAuthenticationArgs> getAuthentication() {
+        return this.authentication == null ? Output.empty() : this.authentication;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterExtensionIds")
-      private final @Nullable Input<List<String>> clusterExtensionIds;
+      private final @Nullable Output<List<String>> clusterExtensionIds;
 
-    public Input<List<String>> getClusterExtensionIds() {
-        return this.clusterExtensionIds == null ? Input.empty() : this.clusterExtensionIds;
+    public Output<List<String>> getClusterExtensionIds() {
+        return this.clusterExtensionIds == null ? Output.empty() : this.clusterExtensionIds;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostResourceId")
-      private final @Nullable Input<String> hostResourceId;
+      private final @Nullable Output<String> hostResourceId;
 
-    public Input<String> getHostResourceId() {
-        return this.hostResourceId == null ? Input.empty() : this.hostResourceId;
+    public Output<String> getHostResourceId() {
+        return this.hostResourceId == null ? Output.empty() : this.hostResourceId;
     }
 
     /**
@@ -68,10 +68,10 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostType")
-      private final @Nullable Input<Either<String,HostType>> hostType;
+      private final @Nullable Output<Either<String,HostType>> hostType;
 
-    public Input<Either<String,HostType>> getHostType() {
-        return this.hostType == null ? Input.empty() : this.hostType;
+    public Output<Either<String,HostType>> getHostType() {
+        return this.hostType == null ? Output.empty() : this.hostType;
     }
 
     /**
@@ -79,10 +79,10 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespace")
-      private final @Nullable Input<String> namespace;
+      private final @Nullable Output<String> namespace;
 
-    public Input<String> getNamespace() {
-        return this.namespace == null ? Input.empty() : this.namespace;
+    public Output<String> getNamespace() {
+        return this.namespace == null ? Output.empty() : this.namespace;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-      private final @Nullable Input<String> provisioningState;
+      private final @Nullable Output<String> provisioningState;
 
-    public Input<String> getProvisioningState() {
-        return this.provisioningState == null ? Input.empty() : this.provisioningState;
+    public Output<String> getProvisioningState() {
+        return this.provisioningState == null ? Output.empty() : this.provisioningState;
     }
 
     /**
@@ -112,9 +112,9 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -123,10 +123,10 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-      private final @Nullable Input<String> resourceName;
+      private final @Nullable Output<String> resourceName;
 
-    public Input<String> getPropResourceName() {
-        return this.resourceName == null ? Input.empty() : this.resourceName;
+    public Output<String> getPropResourceName() {
+        return this.resourceName == null ? Output.empty() : this.resourceName;
     }
 
     /**
@@ -134,24 +134,24 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public CustomLocationArgs(
-        @Nullable Input<CustomLocationPropertiesAuthenticationArgs> authentication,
-        @Nullable Input<List<String>> clusterExtensionIds,
-        @Nullable Input<String> displayName,
-        @Nullable Input<String> hostResourceId,
-        @Nullable Input<Either<String,HostType>> hostType,
-        @Nullable Input<String> location,
-        @Nullable Input<String> namespace,
-        @Nullable Input<String> provisioningState,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> resourceName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication,
+        @Nullable Output<List<String>> clusterExtensionIds,
+        @Nullable Output<String> displayName,
+        @Nullable Output<String> hostResourceId,
+        @Nullable Output<Either<String,HostType>> hostType,
+        @Nullable Output<String> location,
+        @Nullable Output<String> namespace,
+        @Nullable Output<String> provisioningState,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> resourceName,
+        @Nullable Output<Map<String,String>> tags) {
         this.authentication = authentication;
         this.clusterExtensionIds = clusterExtensionIds;
         this.displayName = displayName;
@@ -166,17 +166,17 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomLocationArgs() {
-        this.authentication = Input.empty();
-        this.clusterExtensionIds = Input.empty();
-        this.displayName = Input.empty();
-        this.hostResourceId = Input.empty();
-        this.hostType = Input.empty();
-        this.location = Input.empty();
-        this.namespace = Input.empty();
-        this.provisioningState = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.resourceName = Input.empty();
-        this.tags = Input.empty();
+        this.authentication = Output.empty();
+        this.clusterExtensionIds = Output.empty();
+        this.displayName = Output.empty();
+        this.hostResourceId = Output.empty();
+        this.hostType = Output.empty();
+        this.location = Output.empty();
+        this.namespace = Output.empty();
+        this.provisioningState = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.resourceName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,17 +188,17 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<CustomLocationPropertiesAuthenticationArgs> authentication;
-        private @Nullable Input<List<String>> clusterExtensionIds;
-        private @Nullable Input<String> displayName;
-        private @Nullable Input<String> hostResourceId;
-        private @Nullable Input<Either<String,HostType>> hostType;
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> namespace;
-        private @Nullable Input<String> provisioningState;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> resourceName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication;
+        private @Nullable Output<List<String>> clusterExtensionIds;
+        private @Nullable Output<String> displayName;
+        private @Nullable Output<String> hostResourceId;
+        private @Nullable Output<Either<String,HostType>> hostType;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> namespace;
+        private @Nullable Output<String> provisioningState;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> resourceName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -219,113 +219,113 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder authentication(@Nullable Input<CustomLocationPropertiesAuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Output<CustomLocationPropertiesAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
         public Builder authentication(@Nullable CustomLocationPropertiesAuthenticationArgs authentication) {
-            this.authentication = Input.ofNullable(authentication);
+            this.authentication = Output.ofNullable(authentication);
             return this;
         }
 
-        public Builder clusterExtensionIds(@Nullable Input<List<String>> clusterExtensionIds) {
+        public Builder clusterExtensionIds(@Nullable Output<List<String>> clusterExtensionIds) {
             this.clusterExtensionIds = clusterExtensionIds;
             return this;
         }
 
         public Builder clusterExtensionIds(@Nullable List<String> clusterExtensionIds) {
-            this.clusterExtensionIds = Input.ofNullable(clusterExtensionIds);
+            this.clusterExtensionIds = Output.ofNullable(clusterExtensionIds);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder hostResourceId(@Nullable Input<String> hostResourceId) {
+        public Builder hostResourceId(@Nullable Output<String> hostResourceId) {
             this.hostResourceId = hostResourceId;
             return this;
         }
 
         public Builder hostResourceId(@Nullable String hostResourceId) {
-            this.hostResourceId = Input.ofNullable(hostResourceId);
+            this.hostResourceId = Output.ofNullable(hostResourceId);
             return this;
         }
 
-        public Builder hostType(@Nullable Input<Either<String,HostType>> hostType) {
+        public Builder hostType(@Nullable Output<Either<String,HostType>> hostType) {
             this.hostType = hostType;
             return this;
         }
 
         public Builder hostType(@Nullable Either<String,HostType> hostType) {
-            this.hostType = Input.ofNullable(hostType);
+            this.hostType = Output.ofNullable(hostType);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder namespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Output<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Input.ofNullable(namespace);
+            this.namespace = Output.ofNullable(namespace);
             return this;
         }
 
-        public Builder provisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Output<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Input.ofNullable(provisioningState);
+            this.provisioningState = Output.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder resourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Output<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Input.ofNullable(resourceName);
+            this.resourceName = Output.ofNullable(resourceName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public CustomLocationArgs build() {

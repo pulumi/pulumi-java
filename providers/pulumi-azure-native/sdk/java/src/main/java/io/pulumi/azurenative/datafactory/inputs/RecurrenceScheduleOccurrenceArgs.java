@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.enums.DayOfWeek;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="day")
-      private final @Nullable Input<DayOfWeek> day;
+      private final @Nullable Output<DayOfWeek> day;
 
-    public Input<DayOfWeek> getDay() {
-        return this.day == null ? Input.empty() : this.day;
+    public Output<DayOfWeek> getDay() {
+        return this.day == null ? Output.empty() : this.day;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="occurrence")
-      private final @Nullable Input<Integer> occurrence;
+      private final @Nullable Output<Integer> occurrence;
 
-    public Input<Integer> getOccurrence() {
-        return this.occurrence == null ? Input.empty() : this.occurrence;
+    public Output<Integer> getOccurrence() {
+        return this.occurrence == null ? Output.empty() : this.occurrence;
     }
 
     public RecurrenceScheduleOccurrenceArgs(
-        @Nullable Input<DayOfWeek> day,
-        @Nullable Input<Integer> occurrence) {
+        @Nullable Output<DayOfWeek> day,
+        @Nullable Output<Integer> occurrence) {
         this.day = day;
         this.occurrence = occurrence;
     }
 
     private RecurrenceScheduleOccurrenceArgs() {
-        this.day = Input.empty();
-        this.occurrence = Input.empty();
+        this.day = Output.empty();
+        this.occurrence = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<DayOfWeek> day;
-        private @Nullable Input<Integer> occurrence;
+        private @Nullable Output<DayOfWeek> day;
+        private @Nullable Output<Integer> occurrence;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
     	      this.occurrence = defaults.occurrence;
         }
 
-        public Builder day(@Nullable Input<DayOfWeek> day) {
+        public Builder day(@Nullable Output<DayOfWeek> day) {
             this.day = day;
             return this;
         }
 
         public Builder day(@Nullable DayOfWeek day) {
-            this.day = Input.ofNullable(day);
+            this.day = Output.ofNullable(day);
             return this;
         }
 
-        public Builder occurrence(@Nullable Input<Integer> occurrence) {
+        public Builder occurrence(@Nullable Output<Integer> occurrence) {
             this.occurrence = occurrence;
             return this;
         }
 
         public Builder occurrence(@Nullable Integer occurrence) {
-            this.occurrence = Input.ofNullable(occurrence);
+            this.occurrence = Output.ofNullable(occurrence);
             return this;
         }
         public RecurrenceScheduleOccurrenceArgs build() {

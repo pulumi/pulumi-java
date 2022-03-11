@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.inputs.AutomationActionLogicAppArgs;
 import io.pulumi.azurenative.security.inputs.AutomationActionWorkspaceArgs;
 import io.pulumi.azurenative.security.inputs.AutomationScopeArgs;
 import io.pulumi.azurenative.security.inputs.AutomationSourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -28,10 +28,10 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-      private final @Nullable Input<List<Object>> actions;
+      private final @Nullable Output<List<Object>> actions;
 
-    public Input<List<Object>> getActions() {
-        return this.actions == null ? Input.empty() : this.actions;
+    public Output<List<Object>> getActions() {
+        return this.actions == null ? Output.empty() : this.actions;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationName")
-      private final @Nullable Input<String> automationName;
+      private final @Nullable Output<String> automationName;
 
-    public Input<String> getAutomationName() {
-        return this.automationName == null ? Input.empty() : this.automationName;
+    public Output<String> getAutomationName() {
+        return this.automationName == null ? Output.empty() : this.automationName;
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled")
-      private final @Nullable Input<Boolean> isEnabled;
+      private final @Nullable Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Input.empty() : this.isEnabled;
+    public Output<Boolean> getIsEnabled() {
+        return this.isEnabled == null ? Output.empty() : this.isEnabled;
     }
 
     /**
@@ -72,10 +72,10 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<String> kind;
+      private final @Nullable Output<String> kind;
 
-    public Input<String> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<String> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -94,9 +94,9 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -105,10 +105,10 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-      private final @Nullable Input<List<AutomationScopeArgs>> scopes;
+      private final @Nullable Output<List<AutomationScopeArgs>> scopes;
 
-    public Input<List<AutomationScopeArgs>> getScopes() {
-        return this.scopes == null ? Input.empty() : this.scopes;
+    public Output<List<AutomationScopeArgs>> getScopes() {
+        return this.scopes == null ? Output.empty() : this.scopes;
     }
 
     /**
@@ -116,10 +116,10 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sources")
-      private final @Nullable Input<List<AutomationSourceArgs>> sources;
+      private final @Nullable Output<List<AutomationSourceArgs>> sources;
 
-    public Input<List<AutomationSourceArgs>> getSources() {
-        return this.sources == null ? Input.empty() : this.sources;
+    public Output<List<AutomationSourceArgs>> getSources() {
+        return this.sources == null ? Output.empty() : this.sources;
     }
 
     /**
@@ -127,23 +127,23 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public AutomationArgs(
-        @Nullable Input<List<Object>> actions,
-        @Nullable Input<String> automationName,
-        @Nullable Input<String> description,
-        @Nullable Input<Boolean> isEnabled,
-        @Nullable Input<String> kind,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<List<AutomationScopeArgs>> scopes,
-        @Nullable Input<List<AutomationSourceArgs>> sources,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<List<Object>> actions,
+        @Nullable Output<String> automationName,
+        @Nullable Output<String> description,
+        @Nullable Output<Boolean> isEnabled,
+        @Nullable Output<String> kind,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<List<AutomationScopeArgs>> scopes,
+        @Nullable Output<List<AutomationSourceArgs>> sources,
+        @Nullable Output<Map<String,String>> tags) {
         this.actions = actions;
         this.automationName = automationName;
         this.description = description;
@@ -157,16 +157,16 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AutomationArgs() {
-        this.actions = Input.empty();
-        this.automationName = Input.empty();
-        this.description = Input.empty();
-        this.isEnabled = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.scopes = Input.empty();
-        this.sources = Input.empty();
-        this.tags = Input.empty();
+        this.actions = Output.empty();
+        this.automationName = Output.empty();
+        this.description = Output.empty();
+        this.isEnabled = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.scopes = Output.empty();
+        this.sources = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -178,16 +178,16 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> actions;
-        private @Nullable Input<String> automationName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Boolean> isEnabled;
-        private @Nullable Input<String> kind;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<List<AutomationScopeArgs>> scopes;
-        private @Nullable Input<List<AutomationSourceArgs>> sources;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<List<Object>> actions;
+        private @Nullable Output<String> automationName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Boolean> isEnabled;
+        private @Nullable Output<String> kind;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<List<AutomationScopeArgs>> scopes;
+        private @Nullable Output<List<AutomationSourceArgs>> sources;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -207,103 +207,103 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder actions(@Nullable Input<List<Object>> actions) {
+        public Builder actions(@Nullable Output<List<Object>> actions) {
             this.actions = actions;
             return this;
         }
 
         public Builder actions(@Nullable List<Object> actions) {
-            this.actions = Input.ofNullable(actions);
+            this.actions = Output.ofNullable(actions);
             return this;
         }
 
-        public Builder automationName(@Nullable Input<String> automationName) {
+        public Builder automationName(@Nullable Output<String> automationName) {
             this.automationName = automationName;
             return this;
         }
 
         public Builder automationName(@Nullable String automationName) {
-            this.automationName = Input.ofNullable(automationName);
+            this.automationName = Output.ofNullable(automationName);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Input.ofNullable(isEnabled);
+            this.isEnabled = Output.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder kind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Output<String> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable String kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder scopes(@Nullable Input<List<AutomationScopeArgs>> scopes) {
+        public Builder scopes(@Nullable Output<List<AutomationScopeArgs>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
         public Builder scopes(@Nullable List<AutomationScopeArgs> scopes) {
-            this.scopes = Input.ofNullable(scopes);
+            this.scopes = Output.ofNullable(scopes);
             return this;
         }
 
-        public Builder sources(@Nullable Input<List<AutomationSourceArgs>> sources) {
+        public Builder sources(@Nullable Output<List<AutomationSourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
         public Builder sources(@Nullable List<AutomationSourceArgs> sources) {
-            this.sources = Input.ofNullable(sources);
+            this.sources = Output.ofNullable(sources);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public AutomationArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class AlexaChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="alexaSkillId", required=true)
-      private final Input<String> alexaSkillId;
+      private final Output<String> alexaSkillId;
 
-    public Input<String> getAlexaSkillId() {
+    public Output<String> getAlexaSkillId() {
         return this.alexaSkillId;
     }
 
@@ -34,22 +34,22 @@ public final class AlexaChannelPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isEnabled", required=true)
-      private final Input<Boolean> isEnabled;
+      private final Output<Boolean> isEnabled;
 
-    public Input<Boolean> getIsEnabled() {
+    public Output<Boolean> getIsEnabled() {
         return this.isEnabled;
     }
 
     public AlexaChannelPropertiesArgs(
-        Input<String> alexaSkillId,
-        Input<Boolean> isEnabled) {
+        Output<String> alexaSkillId,
+        Output<Boolean> isEnabled) {
         this.alexaSkillId = Objects.requireNonNull(alexaSkillId, "expected parameter 'alexaSkillId' to be non-null");
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
     }
 
     private AlexaChannelPropertiesArgs() {
-        this.alexaSkillId = Input.empty();
-        this.isEnabled = Input.empty();
+        this.alexaSkillId = Output.empty();
+        this.isEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class AlexaChannelPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<String> alexaSkillId;
-        private Input<Boolean> isEnabled;
+        private Output<String> alexaSkillId;
+        private Output<Boolean> isEnabled;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class AlexaChannelPropertiesArgs extends io.pulumi.resources.Resour
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder alexaSkillId(Input<String> alexaSkillId) {
+        public Builder alexaSkillId(Output<String> alexaSkillId) {
             this.alexaSkillId = Objects.requireNonNull(alexaSkillId);
             return this;
         }
 
         public Builder alexaSkillId(String alexaSkillId) {
-            this.alexaSkillId = Input.of(Objects.requireNonNull(alexaSkillId));
+            this.alexaSkillId = Output.of(Objects.requireNonNull(alexaSkillId));
             return this;
         }
 
-        public Builder isEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Output<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
+            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
             return this;
         }
         public AlexaChannelPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="administratorType")
-      private final @Nullable Input<String> administratorType;
+      private final @Nullable Output<String> administratorType;
 
-    public Input<String> getAdministratorType() {
-        return this.administratorType == null ? Input.empty() : this.administratorType;
+    public Output<String> getAdministratorType() {
+        return this.administratorType == null ? Output.empty() : this.administratorType;
     }
 
     /**
@@ -30,10 +30,10 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="login")
-      private final @Nullable Input<String> login;
+      private final @Nullable Output<String> login;
 
-    public Input<String> getLogin() {
-        return this.login == null ? Input.empty() : this.login;
+    public Output<String> getLogin() {
+        return this.login == null ? Output.empty() : this.login;
     }
 
     /**
@@ -41,9 +41,9 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,10 +52,10 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sid")
-      private final @Nullable Input<String> sid;
+      private final @Nullable Output<String> sid;
 
-    public Input<String> getSid() {
-        return this.sid == null ? Input.empty() : this.sid;
+    public Output<String> getSid() {
+        return this.sid == null ? Output.empty() : this.sid;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tenantId")
-      private final @Nullable Input<String> tenantId;
+      private final @Nullable Output<String> tenantId;
 
-    public Input<String> getTenantId() {
-        return this.tenantId == null ? Input.empty() : this.tenantId;
+    public Output<String> getTenantId() {
+        return this.tenantId == null ? Output.empty() : this.tenantId;
     }
 
     /**
@@ -74,19 +74,19 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="workspaceName", required=true)
-      private final Input<String> workspaceName;
+      private final Output<String> workspaceName;
 
-    public Input<String> getWorkspaceName() {
+    public Output<String> getWorkspaceName() {
         return this.workspaceName;
     }
 
     public WorkspaceSqlAadAdminArgs(
-        @Nullable Input<String> administratorType,
-        @Nullable Input<String> login,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sid,
-        @Nullable Input<String> tenantId,
-        Input<String> workspaceName) {
+        @Nullable Output<String> administratorType,
+        @Nullable Output<String> login,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sid,
+        @Nullable Output<String> tenantId,
+        Output<String> workspaceName) {
         this.administratorType = administratorType;
         this.login = login;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -96,12 +96,12 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
     }
 
     private WorkspaceSqlAadAdminArgs() {
-        this.administratorType = Input.empty();
-        this.login = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sid = Input.empty();
-        this.tenantId = Input.empty();
-        this.workspaceName = Input.empty();
+        this.administratorType = Output.empty();
+        this.login = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sid = Output.empty();
+        this.tenantId = Output.empty();
+        this.workspaceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -113,12 +113,12 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> administratorType;
-        private @Nullable Input<String> login;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sid;
-        private @Nullable Input<String> tenantId;
-        private Input<String> workspaceName;
+        private @Nullable Output<String> administratorType;
+        private @Nullable Output<String> login;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sid;
+        private @Nullable Output<String> tenantId;
+        private Output<String> workspaceName;
 
         public Builder() {
     	      // Empty
@@ -134,63 +134,63 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder administratorType(@Nullable Input<String> administratorType) {
+        public Builder administratorType(@Nullable Output<String> administratorType) {
             this.administratorType = administratorType;
             return this;
         }
 
         public Builder administratorType(@Nullable String administratorType) {
-            this.administratorType = Input.ofNullable(administratorType);
+            this.administratorType = Output.ofNullable(administratorType);
             return this;
         }
 
-        public Builder login(@Nullable Input<String> login) {
+        public Builder login(@Nullable Output<String> login) {
             this.login = login;
             return this;
         }
 
         public Builder login(@Nullable String login) {
-            this.login = Input.ofNullable(login);
+            this.login = Output.ofNullable(login);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sid(@Nullable Input<String> sid) {
+        public Builder sid(@Nullable Output<String> sid) {
             this.sid = sid;
             return this;
         }
 
         public Builder sid(@Nullable String sid) {
-            this.sid = Input.ofNullable(sid);
+            this.sid = Output.ofNullable(sid);
             return this;
         }
 
-        public Builder tenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Output<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Input.ofNullable(tenantId);
+            this.tenantId = Output.ofNullable(tenantId);
             return this;
         }
 
-        public Builder workspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Output<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
+            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
             return this;
         }
         public WorkspaceSqlAadAdminArgs build() {

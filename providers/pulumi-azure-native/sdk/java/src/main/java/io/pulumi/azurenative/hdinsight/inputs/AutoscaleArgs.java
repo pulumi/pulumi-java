@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleCapacityArgs;
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleRecurrenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,10 +24,10 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-      private final @Nullable Input<AutoscaleCapacityArgs> capacity;
+      private final @Nullable Output<AutoscaleCapacityArgs> capacity;
 
-    public Input<AutoscaleCapacityArgs> getCapacity() {
-        return this.capacity == null ? Input.empty() : this.capacity;
+    public Output<AutoscaleCapacityArgs> getCapacity() {
+        return this.capacity == null ? Output.empty() : this.capacity;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrence")
-      private final @Nullable Input<AutoscaleRecurrenceArgs> recurrence;
+      private final @Nullable Output<AutoscaleRecurrenceArgs> recurrence;
 
-    public Input<AutoscaleRecurrenceArgs> getRecurrence() {
-        return this.recurrence == null ? Input.empty() : this.recurrence;
+    public Output<AutoscaleRecurrenceArgs> getRecurrence() {
+        return this.recurrence == null ? Output.empty() : this.recurrence;
     }
 
     public AutoscaleArgs(
-        @Nullable Input<AutoscaleCapacityArgs> capacity,
-        @Nullable Input<AutoscaleRecurrenceArgs> recurrence) {
+        @Nullable Output<AutoscaleCapacityArgs> capacity,
+        @Nullable Output<AutoscaleRecurrenceArgs> recurrence) {
         this.capacity = capacity;
         this.recurrence = recurrence;
     }
 
     private AutoscaleArgs() {
-        this.capacity = Input.empty();
-        this.recurrence = Input.empty();
+        this.capacity = Output.empty();
+        this.recurrence = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<AutoscaleCapacityArgs> capacity;
-        private @Nullable Input<AutoscaleRecurrenceArgs> recurrence;
+        private @Nullable Output<AutoscaleCapacityArgs> capacity;
+        private @Nullable Output<AutoscaleRecurrenceArgs> recurrence;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.recurrence = defaults.recurrence;
         }
 
-        public Builder capacity(@Nullable Input<AutoscaleCapacityArgs> capacity) {
+        public Builder capacity(@Nullable Output<AutoscaleCapacityArgs> capacity) {
             this.capacity = capacity;
             return this;
         }
 
         public Builder capacity(@Nullable AutoscaleCapacityArgs capacity) {
-            this.capacity = Input.ofNullable(capacity);
+            this.capacity = Output.ofNullable(capacity);
             return this;
         }
 
-        public Builder recurrence(@Nullable Input<AutoscaleRecurrenceArgs> recurrence) {
+        public Builder recurrence(@Nullable Output<AutoscaleRecurrenceArgs> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
         public Builder recurrence(@Nullable AutoscaleRecurrenceArgs recurrence) {
-            this.recurrence = Input.ofNullable(recurrence);
+            this.recurrence = Output.ofNullable(recurrence);
             return this;
         }
         public AutoscaleArgs build() {

@@ -6,7 +6,6 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ExtendedServerBlobAuditingPolicyArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -392,24 +391,24 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public ExtendedServerBlobAuditingPolicy(String name, ExtendedServerBlobAuditingPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:sql:ExtendedServerBlobAuditingPolicy", name, args == null ? ExtendedServerBlobAuditingPolicyArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:sql:ExtendedServerBlobAuditingPolicy", name, args == null ? ExtendedServerBlobAuditingPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private ExtendedServerBlobAuditingPolicy(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private ExtendedServerBlobAuditingPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:sql:ExtendedServerBlobAuditingPolicy", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:sql/v20170301preview:ExtendedServerBlobAuditingPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200202preview:ExtendedServerBlobAuditingPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20200801preview:ExtendedServerBlobAuditingPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20201101preview:ExtendedServerBlobAuditingPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210201preview:ExtendedServerBlobAuditingPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210501preview:ExtendedServerBlobAuditingPolicy").build()),
-                Input.of(Alias.builder().setType("azure-native:sql/v20210801preview:ExtendedServerBlobAuditingPolicy").build())
+                Output.of(Alias.builder().setType("azure-native:sql/v20170301preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200202preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20200801preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20201101preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210201preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210501preview:ExtendedServerBlobAuditingPolicy").build()),
+                Output.of(Alias.builder().setType("azure-native:sql/v20210801preview:ExtendedServerBlobAuditingPolicy").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -423,7 +422,7 @@ public class ExtendedServerBlobAuditingPolicy extends io.pulumi.resources.Custom
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ExtendedServerBlobAuditingPolicy get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static ExtendedServerBlobAuditingPolicy get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new ExtendedServerBlobAuditingPolicy(name, id, options);
     }
 }

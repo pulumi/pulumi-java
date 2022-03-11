@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azuredata;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -20,10 +20,10 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="propertyBag")
-      private final @Nullable Input<String> propertyBag;
+      private final @Nullable Output<String> propertyBag;
 
-    public Input<String> getPropertyBag() {
-        return this.propertyBag == null ? Input.empty() : this.propertyBag;
+    public Output<String> getPropertyBag() {
+        return this.propertyBag == null ? Output.empty() : this.propertyBag;
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroup")
-      private final @Nullable Input<String> resourceGroup;
+      private final @Nullable Output<String> resourceGroup;
 
-    public Input<String> getResourceGroup() {
-        return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
+    public Output<String> getResourceGroup() {
+        return this.resourceGroup == null ? Output.empty() : this.resourceGroup;
     }
 
     /**
@@ -53,9 +53,9 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,10 +64,10 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sqlServerRegistrationName")
-      private final @Nullable Input<String> sqlServerRegistrationName;
+      private final @Nullable Output<String> sqlServerRegistrationName;
 
-    public Input<String> getSqlServerRegistrationName() {
-        return this.sqlServerRegistrationName == null ? Input.empty() : this.sqlServerRegistrationName;
+    public Output<String> getSqlServerRegistrationName() {
+        return this.sqlServerRegistrationName == null ? Output.empty() : this.sqlServerRegistrationName;
     }
 
     /**
@@ -75,10 +75,10 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="subscriptionId")
-      private final @Nullable Input<String> subscriptionId;
+      private final @Nullable Output<String> subscriptionId;
 
-    public Input<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
+    public Output<String> getSubscriptionId() {
+        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
     }
 
     /**
@@ -86,20 +86,20 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public SqlServerRegistrationArgs(
-        @Nullable Input<String> location,
-        @Nullable Input<String> propertyBag,
-        @Nullable Input<String> resourceGroup,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> sqlServerRegistrationName,
-        @Nullable Input<String> subscriptionId,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<String> location,
+        @Nullable Output<String> propertyBag,
+        @Nullable Output<String> resourceGroup,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> sqlServerRegistrationName,
+        @Nullable Output<String> subscriptionId,
+        @Nullable Output<Map<String,String>> tags) {
         this.location = location;
         this.propertyBag = propertyBag;
         this.resourceGroup = resourceGroup;
@@ -110,13 +110,13 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     }
 
     private SqlServerRegistrationArgs() {
-        this.location = Input.empty();
-        this.propertyBag = Input.empty();
-        this.resourceGroup = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.sqlServerRegistrationName = Input.empty();
-        this.subscriptionId = Input.empty();
-        this.tags = Input.empty();
+        this.location = Output.empty();
+        this.propertyBag = Output.empty();
+        this.resourceGroup = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.sqlServerRegistrationName = Output.empty();
+        this.subscriptionId = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -128,13 +128,13 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> location;
-        private @Nullable Input<String> propertyBag;
-        private @Nullable Input<String> resourceGroup;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> sqlServerRegistrationName;
-        private @Nullable Input<String> subscriptionId;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<String> location;
+        private @Nullable Output<String> propertyBag;
+        private @Nullable Output<String> resourceGroup;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> sqlServerRegistrationName;
+        private @Nullable Output<String> subscriptionId;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -151,73 +151,73 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder propertyBag(@Nullable Input<String> propertyBag) {
+        public Builder propertyBag(@Nullable Output<String> propertyBag) {
             this.propertyBag = propertyBag;
             return this;
         }
 
         public Builder propertyBag(@Nullable String propertyBag) {
-            this.propertyBag = Input.ofNullable(propertyBag);
+            this.propertyBag = Output.ofNullable(propertyBag);
             return this;
         }
 
-        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
         public Builder resourceGroup(@Nullable String resourceGroup) {
-            this.resourceGroup = Input.ofNullable(resourceGroup);
+            this.resourceGroup = Output.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder sqlServerRegistrationName(@Nullable Input<String> sqlServerRegistrationName) {
+        public Builder sqlServerRegistrationName(@Nullable Output<String> sqlServerRegistrationName) {
             this.sqlServerRegistrationName = sqlServerRegistrationName;
             return this;
         }
 
         public Builder sqlServerRegistrationName(@Nullable String sqlServerRegistrationName) {
-            this.sqlServerRegistrationName = Input.ofNullable(sqlServerRegistrationName);
+            this.sqlServerRegistrationName = Output.ofNullable(sqlServerRegistrationName);
             return this;
         }
 
-        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Output<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Input.ofNullable(subscriptionId);
+            this.subscriptionId = Output.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public SqlServerRegistrationArgs build() {

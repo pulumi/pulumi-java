@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class TagFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -33,9 +33,9 @@ public final class TagFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="op", required=true)
-      private final Input<String> op;
+      private final Output<String> op;
 
-    public Input<String> getOp() {
+    public Output<String> getOp() {
         return this.op;
     }
 
@@ -44,25 +44,25 @@ public final class TagFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-      private final Input<String> value;
+      private final Output<String> value;
 
-    public Input<String> getValue() {
+    public Output<String> getValue() {
         return this.value;
     }
 
     public TagFilterArgs(
-        Input<String> name,
-        Input<String> op,
-        Input<String> value) {
+        Output<String> name,
+        Output<String> op,
+        Output<String> value) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.op = Objects.requireNonNull(op, "expected parameter 'op' to be non-null");
         this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
     }
 
     private TagFilterArgs() {
-        this.name = Input.empty();
-        this.op = Input.empty();
-        this.value = Input.empty();
+        this.name = Output.empty();
+        this.op = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class TagFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> op;
-        private Input<String> value;
+        private Output<String> name;
+        private Output<String> op;
+        private Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class TagFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder op(Input<String> op) {
+        public Builder op(Output<String> op) {
             this.op = Objects.requireNonNull(op);
             return this;
         }
 
         public Builder op(String op) {
-            this.op = Input.of(Objects.requireNonNull(op));
+            this.op = Output.of(Objects.requireNonNull(op));
             return this;
         }
 
-        public Builder value(Input<String> value) {
+        public Builder value(Output<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
         public Builder value(String value) {
-            this.value = Input.of(Objects.requireNonNull(value));
+            this.value = Output.of(Objects.requireNonNull(value));
             return this;
         }
         public TagFilterArgs build() {

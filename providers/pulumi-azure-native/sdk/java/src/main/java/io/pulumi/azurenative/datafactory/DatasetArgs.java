@@ -98,7 +98,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebTableDatasetArgs;
 import io.pulumi.azurenative.datafactory.inputs.XeroObjectDatasetArgs;
 import io.pulumi.azurenative.datafactory.inputs.XmlDatasetArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoObjectDatasetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -115,10 +115,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetName")
-      private final @Nullable Input<String> datasetName;
+      private final @Nullable Output<String> datasetName;
 
-    public Input<String> getDatasetName() {
-        return this.datasetName == null ? Input.empty() : this.datasetName;
+    public Output<String> getDatasetName() {
+        return this.datasetName == null ? Output.empty() : this.datasetName;
     }
 
     /**
@@ -126,9 +126,9 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factoryName", required=true)
-      private final Input<String> factoryName;
+      private final Output<String> factoryName;
 
-    public Input<String> getFactoryName() {
+    public Output<String> getFactoryName() {
         return this.factoryName;
     }
 
@@ -137,9 +137,9 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<Object> properties;
+      private final Output<Object> properties;
 
-    public Input<Object> getProperties() {
+    public Output<Object> getProperties() {
         return this.properties;
     }
 
@@ -148,17 +148,17 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public DatasetArgs(
-        @Nullable Input<String> datasetName,
-        Input<String> factoryName,
-        Input<Object> properties,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> datasetName,
+        Output<String> factoryName,
+        Output<Object> properties,
+        Output<String> resourceGroupName) {
         this.datasetName = datasetName;
         this.factoryName = Objects.requireNonNull(factoryName, "expected parameter 'factoryName' to be non-null");
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
@@ -166,10 +166,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetArgs() {
-        this.datasetName = Input.empty();
-        this.factoryName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.datasetName = Output.empty();
+        this.factoryName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -181,10 +181,10 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> datasetName;
-        private Input<String> factoryName;
-        private Input<Object> properties;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> datasetName;
+        private Output<String> factoryName;
+        private Output<Object> properties;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -198,43 +198,43 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder datasetName(@Nullable Input<String> datasetName) {
+        public Builder datasetName(@Nullable Output<String> datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
         public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Input.ofNullable(datasetName);
+            this.datasetName = Output.ofNullable(datasetName);
             return this;
         }
 
-        public Builder factoryName(Input<String> factoryName) {
+        public Builder factoryName(Output<String> factoryName) {
             this.factoryName = Objects.requireNonNull(factoryName);
             return this;
         }
 
         public Builder factoryName(String factoryName) {
-            this.factoryName = Input.of(Objects.requireNonNull(factoryName));
+            this.factoryName = Output.of(Objects.requireNonNull(factoryName));
             return this;
         }
 
-        public Builder properties(Input<Object> properties) {
+        public Builder properties(Output<Object> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(Object properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public DatasetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class SecureIotDeviceRemoteTunnelArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="deviceId", required=true)
-      private final Input<String> deviceId;
+      private final Output<String> deviceId;
 
-    public Input<String> getDeviceId() {
+    public Output<String> getDeviceId() {
         return this.deviceId;
     }
 
@@ -33,9 +33,9 @@ public final class SecureIotDeviceRemoteTunnelArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="iotHubName", required=true)
-      private final Input<String> iotHubName;
+      private final Output<String> iotHubName;
 
-    public Input<String> getIotHubName() {
+    public Output<String> getIotHubName() {
         return this.iotHubName;
     }
 
@@ -45,25 +45,25 @@ public final class SecureIotDeviceRemoteTunnelArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public SecureIotDeviceRemoteTunnelArgs(
-        Input<String> deviceId,
-        Input<String> iotHubName,
-        Input<String> type) {
+        Output<String> deviceId,
+        Output<String> iotHubName,
+        Output<String> type) {
         this.deviceId = Objects.requireNonNull(deviceId, "expected parameter 'deviceId' to be non-null");
         this.iotHubName = Objects.requireNonNull(iotHubName, "expected parameter 'iotHubName' to be non-null");
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SecureIotDeviceRemoteTunnelArgs() {
-        this.deviceId = Input.empty();
-        this.iotHubName = Input.empty();
-        this.type = Input.empty();
+        this.deviceId = Output.empty();
+        this.iotHubName = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class SecureIotDeviceRemoteTunnelArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<String> deviceId;
-        private Input<String> iotHubName;
-        private Input<String> type;
+        private Output<String> deviceId;
+        private Output<String> iotHubName;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class SecureIotDeviceRemoteTunnelArgs extends io.pulumi.resources.R
     	      this.type = defaults.type;
         }
 
-        public Builder deviceId(Input<String> deviceId) {
+        public Builder deviceId(Output<String> deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
         public Builder deviceId(String deviceId) {
-            this.deviceId = Input.of(Objects.requireNonNull(deviceId));
+            this.deviceId = Output.of(Objects.requireNonNull(deviceId));
             return this;
         }
 
-        public Builder iotHubName(Input<String> iotHubName) {
+        public Builder iotHubName(Output<String> iotHubName) {
             this.iotHubName = Objects.requireNonNull(iotHubName);
             return this;
         }
 
         public Builder iotHubName(String iotHubName) {
-            this.iotHubName = Input.of(Objects.requireNonNull(iotHubName));
+            this.iotHubName = Output.of(Objects.requireNonNull(iotHubName));
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SecureIotDeviceRemoteTunnelArgs build() {

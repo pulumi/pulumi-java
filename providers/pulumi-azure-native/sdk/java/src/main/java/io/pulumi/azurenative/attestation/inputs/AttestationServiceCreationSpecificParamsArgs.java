@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.attestation.inputs;
 
 import io.pulumi.azurenative.attestation.inputs.JSONWebKeySetArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
      * 
      */
     @InputImport(name="policySigningCertificates")
-      private final @Nullable Input<JSONWebKeySetArgs> policySigningCertificates;
+      private final @Nullable Output<JSONWebKeySetArgs> policySigningCertificates;
 
-    public Input<JSONWebKeySetArgs> getPolicySigningCertificates() {
-        return this.policySigningCertificates == null ? Input.empty() : this.policySigningCertificates;
+    public Output<JSONWebKeySetArgs> getPolicySigningCertificates() {
+        return this.policySigningCertificates == null ? Output.empty() : this.policySigningCertificates;
     }
 
-    public AttestationServiceCreationSpecificParamsArgs(@Nullable Input<JSONWebKeySetArgs> policySigningCertificates) {
+    public AttestationServiceCreationSpecificParamsArgs(@Nullable Output<JSONWebKeySetArgs> policySigningCertificates) {
         this.policySigningCertificates = policySigningCertificates;
     }
 
     private AttestationServiceCreationSpecificParamsArgs() {
-        this.policySigningCertificates = Input.empty();
+        this.policySigningCertificates = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<JSONWebKeySetArgs> policySigningCertificates;
+        private @Nullable Output<JSONWebKeySetArgs> policySigningCertificates;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
     	      this.policySigningCertificates = defaults.policySigningCertificates;
         }
 
-        public Builder policySigningCertificates(@Nullable Input<JSONWebKeySetArgs> policySigningCertificates) {
+        public Builder policySigningCertificates(@Nullable Output<JSONWebKeySetArgs> policySigningCertificates) {
             this.policySigningCertificates = policySigningCertificates;
             return this;
         }
 
         public Builder policySigningCertificates(@Nullable JSONWebKeySetArgs policySigningCertificates) {
-            this.policySigningCertificates = Input.ofNullable(policySigningCertificates);
+            this.policySigningCertificates = Output.ofNullable(policySigningCertificates);
             return this;
         }
         public AttestationServiceCreationSpecificParamsArgs build() {

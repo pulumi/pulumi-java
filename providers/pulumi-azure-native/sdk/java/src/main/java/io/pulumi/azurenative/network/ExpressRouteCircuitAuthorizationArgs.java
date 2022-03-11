@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.enums.AuthorizationUseStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,10 +21,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizationKey")
-      private final @Nullable Input<String> authorizationKey;
+      private final @Nullable Output<String> authorizationKey;
 
-    public Input<String> getAuthorizationKey() {
-        return this.authorizationKey == null ? Input.empty() : this.authorizationKey;
+    public Output<String> getAuthorizationKey() {
+        return this.authorizationKey == null ? Output.empty() : this.authorizationKey;
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizationName")
-      private final @Nullable Input<String> authorizationName;
+      private final @Nullable Output<String> authorizationName;
 
-    public Input<String> getAuthorizationName() {
-        return this.authorizationName == null ? Input.empty() : this.authorizationName;
+    public Output<String> getAuthorizationName() {
+        return this.authorizationName == null ? Output.empty() : this.authorizationName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authorizationUseStatus")
-      private final @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
+      private final @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
-    public Input<Either<String,AuthorizationUseStatus>> getAuthorizationUseStatus() {
-        return this.authorizationUseStatus == null ? Input.empty() : this.authorizationUseStatus;
+    public Output<Either<String,AuthorizationUseStatus>> getAuthorizationUseStatus() {
+        return this.authorizationUseStatus == null ? Output.empty() : this.authorizationUseStatus;
     }
 
     /**
@@ -54,9 +54,9 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="circuitName", required=true)
-      private final Input<String> circuitName;
+      private final Output<String> circuitName;
 
-    public Input<String> getCircuitName() {
+    public Output<String> getCircuitName() {
         return this.circuitName;
     }
 
@@ -65,10 +65,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -87,20 +87,20 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     public ExpressRouteCircuitAuthorizationArgs(
-        @Nullable Input<String> authorizationKey,
-        @Nullable Input<String> authorizationName,
-        @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus,
-        Input<String> circuitName,
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        Input<String> resourceGroupName) {
+        @Nullable Output<String> authorizationKey,
+        @Nullable Output<String> authorizationName,
+        @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus,
+        Output<String> circuitName,
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        Output<String> resourceGroupName) {
         this.authorizationKey = authorizationKey;
         this.authorizationName = authorizationName;
         this.authorizationUseStatus = authorizationUseStatus;
@@ -111,13 +111,13 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     }
 
     private ExpressRouteCircuitAuthorizationArgs() {
-        this.authorizationKey = Input.empty();
-        this.authorizationName = Input.empty();
-        this.authorizationUseStatus = Input.empty();
-        this.circuitName = Input.empty();
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
+        this.authorizationKey = Output.empty();
+        this.authorizationName = Output.empty();
+        this.authorizationUseStatus = Output.empty();
+        this.circuitName = Output.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authorizationKey;
-        private @Nullable Input<String> authorizationName;
-        private @Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
-        private Input<String> circuitName;
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private Input<String> resourceGroupName;
+        private @Nullable Output<String> authorizationKey;
+        private @Nullable Output<String> authorizationName;
+        private @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
+        private Output<String> circuitName;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private Output<String> resourceGroupName;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder authorizationKey(@Nullable Input<String> authorizationKey) {
+        public Builder authorizationKey(@Nullable Output<String> authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
         public Builder authorizationKey(@Nullable String authorizationKey) {
-            this.authorizationKey = Input.ofNullable(authorizationKey);
+            this.authorizationKey = Output.ofNullable(authorizationKey);
             return this;
         }
 
-        public Builder authorizationName(@Nullable Input<String> authorizationName) {
+        public Builder authorizationName(@Nullable Output<String> authorizationName) {
             this.authorizationName = authorizationName;
             return this;
         }
 
         public Builder authorizationName(@Nullable String authorizationName) {
-            this.authorizationName = Input.ofNullable(authorizationName);
+            this.authorizationName = Output.ofNullable(authorizationName);
             return this;
         }
 
-        public Builder authorizationUseStatus(@Nullable Input<Either<String,AuthorizationUseStatus>> authorizationUseStatus) {
+        public Builder authorizationUseStatus(@Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus) {
             this.authorizationUseStatus = authorizationUseStatus;
             return this;
         }
 
         public Builder authorizationUseStatus(@Nullable Either<String,AuthorizationUseStatus> authorizationUseStatus) {
-            this.authorizationUseStatus = Input.ofNullable(authorizationUseStatus);
+            this.authorizationUseStatus = Output.ofNullable(authorizationUseStatus);
             return this;
         }
 
-        public Builder circuitName(Input<String> circuitName) {
+        public Builder circuitName(Output<String> circuitName) {
             this.circuitName = Objects.requireNonNull(circuitName);
             return this;
         }
 
         public Builder circuitName(String circuitName) {
-            this.circuitName = Input.of(Objects.requireNonNull(circuitName));
+            this.circuitName = Output.of(Objects.requireNonNull(circuitName));
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
         public ExpressRouteCircuitAuthorizationArgs build() {

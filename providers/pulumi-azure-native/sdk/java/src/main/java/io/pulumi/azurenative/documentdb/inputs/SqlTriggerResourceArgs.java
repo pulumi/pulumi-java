@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.enums.TriggerOperation;
 import io.pulumi.azurenative.documentdb.enums.TriggerType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="body")
-      private final @Nullable Input<String> body;
+      private final @Nullable Output<String> body;
 
-    public Input<String> getBody() {
-        return this.body == null ? Input.empty() : this.body;
+    public Output<String> getBody() {
+        return this.body == null ? Output.empty() : this.body;
     }
 
     /**
@@ -37,9 +37,9 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -48,10 +48,10 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="triggerOperation")
-      private final @Nullable Input<Either<String,TriggerOperation>> triggerOperation;
+      private final @Nullable Output<Either<String,TriggerOperation>> triggerOperation;
 
-    public Input<Either<String,TriggerOperation>> getTriggerOperation() {
-        return this.triggerOperation == null ? Input.empty() : this.triggerOperation;
+    public Output<Either<String,TriggerOperation>> getTriggerOperation() {
+        return this.triggerOperation == null ? Output.empty() : this.triggerOperation;
     }
 
     /**
@@ -59,17 +59,17 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="triggerType")
-      private final @Nullable Input<Either<String,TriggerType>> triggerType;
+      private final @Nullable Output<Either<String,TriggerType>> triggerType;
 
-    public Input<Either<String,TriggerType>> getTriggerType() {
-        return this.triggerType == null ? Input.empty() : this.triggerType;
+    public Output<Either<String,TriggerType>> getTriggerType() {
+        return this.triggerType == null ? Output.empty() : this.triggerType;
     }
 
     public SqlTriggerResourceArgs(
-        @Nullable Input<String> body,
-        Input<String> id,
-        @Nullable Input<Either<String,TriggerOperation>> triggerOperation,
-        @Nullable Input<Either<String,TriggerType>> triggerType) {
+        @Nullable Output<String> body,
+        Output<String> id,
+        @Nullable Output<Either<String,TriggerOperation>> triggerOperation,
+        @Nullable Output<Either<String,TriggerType>> triggerType) {
         this.body = body;
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.triggerOperation = triggerOperation;
@@ -77,10 +77,10 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SqlTriggerResourceArgs() {
-        this.body = Input.empty();
-        this.id = Input.empty();
-        this.triggerOperation = Input.empty();
-        this.triggerType = Input.empty();
+        this.body = Output.empty();
+        this.id = Output.empty();
+        this.triggerOperation = Output.empty();
+        this.triggerType = Output.empty();
     }
 
     public static Builder builder() {
@@ -92,10 +92,10 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> body;
-        private Input<String> id;
-        private @Nullable Input<Either<String,TriggerOperation>> triggerOperation;
-        private @Nullable Input<Either<String,TriggerType>> triggerType;
+        private @Nullable Output<String> body;
+        private Output<String> id;
+        private @Nullable Output<Either<String,TriggerOperation>> triggerOperation;
+        private @Nullable Output<Either<String,TriggerType>> triggerType;
 
         public Builder() {
     	      // Empty
@@ -109,43 +109,43 @@ public final class SqlTriggerResourceArgs extends io.pulumi.resources.ResourceAr
     	      this.triggerType = defaults.triggerType;
         }
 
-        public Builder body(@Nullable Input<String> body) {
+        public Builder body(@Nullable Output<String> body) {
             this.body = body;
             return this;
         }
 
         public Builder body(@Nullable String body) {
-            this.body = Input.ofNullable(body);
+            this.body = Output.ofNullable(body);
             return this;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder triggerOperation(@Nullable Input<Either<String,TriggerOperation>> triggerOperation) {
+        public Builder triggerOperation(@Nullable Output<Either<String,TriggerOperation>> triggerOperation) {
             this.triggerOperation = triggerOperation;
             return this;
         }
 
         public Builder triggerOperation(@Nullable Either<String,TriggerOperation> triggerOperation) {
-            this.triggerOperation = Input.ofNullable(triggerOperation);
+            this.triggerOperation = Output.ofNullable(triggerOperation);
             return this;
         }
 
-        public Builder triggerType(@Nullable Input<Either<String,TriggerType>> triggerType) {
+        public Builder triggerType(@Nullable Output<Either<String,TriggerType>> triggerType) {
             this.triggerType = triggerType;
             return this;
         }
 
         public Builder triggerType(@Nullable Either<String,TriggerType> triggerType) {
-            this.triggerType = Input.ofNullable(triggerType);
+            this.triggerType = Output.ofNullable(triggerType);
             return this;
         }
         public SqlTriggerResourceArgs build() {

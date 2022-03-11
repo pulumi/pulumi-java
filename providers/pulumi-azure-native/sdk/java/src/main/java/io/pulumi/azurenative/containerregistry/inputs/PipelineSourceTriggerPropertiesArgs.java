@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,18 +20,18 @@ public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="status", required=true)
-      private final Input<Either<String,TriggerStatus>> status;
+      private final Output<Either<String,TriggerStatus>> status;
 
-    public Input<Either<String,TriggerStatus>> getStatus() {
+    public Output<Either<String,TriggerStatus>> getStatus() {
         return this.status;
     }
 
-    public PipelineSourceTriggerPropertiesArgs(Input<Either<String,TriggerStatus>> status) {
-        this.status = status == null ? Input.ofLeft("Enabled") : Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
+    public PipelineSourceTriggerPropertiesArgs(Output<Either<String,TriggerStatus>> status) {
+        this.status = status == null ? Output.ofLeft("Enabled") : Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
     }
 
     private PipelineSourceTriggerPropertiesArgs() {
-        this.status = Input.empty();
+        this.status = Output.empty();
     }
 
     public static Builder builder() {
@@ -43,7 +43,7 @@ public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Either<String,TriggerStatus>> status;
+        private Output<Either<String,TriggerStatus>> status;
 
         public Builder() {
     	      // Empty
@@ -54,13 +54,13 @@ public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resourc
     	      this.status = defaults.status;
         }
 
-        public Builder status(Input<Either<String,TriggerStatus>> status) {
+        public Builder status(Output<Either<String,TriggerStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
         public Builder status(Either<String,TriggerStatus> status) {
-            this.status = Input.of(Objects.requireNonNull(status));
+            this.status = Output.of(Objects.requireNonNull(status));
             return this;
         }
         public PipelineSourceTriggerPropertiesArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class ApiVersionConstraintArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="minApiVersion")
-      private final @Nullable Input<String> minApiVersion;
+      private final @Nullable Output<String> minApiVersion;
 
-    public Input<String> getMinApiVersion() {
-        return this.minApiVersion == null ? Input.empty() : this.minApiVersion;
+    public Output<String> getMinApiVersion() {
+        return this.minApiVersion == null ? Output.empty() : this.minApiVersion;
     }
 
-    public ApiVersionConstraintArgs(@Nullable Input<String> minApiVersion) {
+    public ApiVersionConstraintArgs(@Nullable Output<String> minApiVersion) {
         this.minApiVersion = minApiVersion;
     }
 
     private ApiVersionConstraintArgs() {
-        this.minApiVersion = Input.empty();
+        this.minApiVersion = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class ApiVersionConstraintArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> minApiVersion;
+        private @Nullable Output<String> minApiVersion;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class ApiVersionConstraintArgs extends io.pulumi.resources.Resource
     	      this.minApiVersion = defaults.minApiVersion;
         }
 
-        public Builder minApiVersion(@Nullable Input<String> minApiVersion) {
+        public Builder minApiVersion(@Nullable Output<String> minApiVersion) {
             this.minApiVersion = minApiVersion;
             return this;
         }
 
         public Builder minApiVersion(@Nullable String minApiVersion) {
-            this.minApiVersion = Input.ofNullable(minApiVersion);
+            this.minApiVersion = Output.ofNullable(minApiVersion);
             return this;
         }
         public ApiVersionConstraintArgs build() {

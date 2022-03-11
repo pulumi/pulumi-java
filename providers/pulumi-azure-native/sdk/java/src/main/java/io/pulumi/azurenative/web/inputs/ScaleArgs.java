@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ScaleRuleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
@@ -25,10 +25,10 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxReplicas")
-      private final @Nullable Input<Integer> maxReplicas;
+      private final @Nullable Output<Integer> maxReplicas;
 
-    public Input<Integer> getMaxReplicas() {
-        return this.maxReplicas == null ? Input.empty() : this.maxReplicas;
+    public Output<Integer> getMaxReplicas() {
+        return this.maxReplicas == null ? Output.empty() : this.maxReplicas;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minReplicas")
-      private final @Nullable Input<Integer> minReplicas;
+      private final @Nullable Output<Integer> minReplicas;
 
-    public Input<Integer> getMinReplicas() {
-        return this.minReplicas == null ? Input.empty() : this.minReplicas;
+    public Output<Integer> getMinReplicas() {
+        return this.minReplicas == null ? Output.empty() : this.minReplicas;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<ScaleRuleArgs>> rules;
+      private final @Nullable Output<List<ScaleRuleArgs>> rules;
 
-    public Input<List<ScaleRuleArgs>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<ScaleRuleArgs>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
     public ScaleArgs(
-        @Nullable Input<Integer> maxReplicas,
-        @Nullable Input<Integer> minReplicas,
-        @Nullable Input<List<ScaleRuleArgs>> rules) {
+        @Nullable Output<Integer> maxReplicas,
+        @Nullable Output<Integer> minReplicas,
+        @Nullable Output<List<ScaleRuleArgs>> rules) {
         this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;
         this.rules = rules;
     }
 
     private ScaleArgs() {
-        this.maxReplicas = Input.empty();
-        this.minReplicas = Input.empty();
-        this.rules = Input.empty();
+        this.maxReplicas = Output.empty();
+        this.minReplicas = Output.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> maxReplicas;
-        private @Nullable Input<Integer> minReplicas;
-        private @Nullable Input<List<ScaleRuleArgs>> rules;
+        private @Nullable Output<Integer> maxReplicas;
+        private @Nullable Output<Integer> minReplicas;
+        private @Nullable Output<List<ScaleRuleArgs>> rules;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ScaleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder maxReplicas(@Nullable Input<Integer> maxReplicas) {
+        public Builder maxReplicas(@Nullable Output<Integer> maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
 
         public Builder maxReplicas(@Nullable Integer maxReplicas) {
-            this.maxReplicas = Input.ofNullable(maxReplicas);
+            this.maxReplicas = Output.ofNullable(maxReplicas);
             return this;
         }
 
-        public Builder minReplicas(@Nullable Input<Integer> minReplicas) {
+        public Builder minReplicas(@Nullable Output<Integer> minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
         public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = Input.ofNullable(minReplicas);
+            this.minReplicas = Output.ofNullable(minReplicas);
             return this;
         }
 
-        public Builder rules(@Nullable Input<List<ScaleRuleArgs>> rules) {
+        public Builder rules(@Nullable Output<List<ScaleRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<ScaleRuleArgs> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public ScaleArgs build() {

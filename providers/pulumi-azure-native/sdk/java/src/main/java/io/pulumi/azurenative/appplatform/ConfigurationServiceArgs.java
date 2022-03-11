@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServicePropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="configurationServiceName")
-      private final @Nullable Input<String> configurationServiceName;
+      private final @Nullable Output<String> configurationServiceName;
 
-    public Input<String> getConfigurationServiceName() {
-        return this.configurationServiceName == null ? Input.empty() : this.configurationServiceName;
+    public Output<String> getConfigurationServiceName() {
+        return this.configurationServiceName == null ? Output.empty() : this.configurationServiceName;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="properties")
-      private final @Nullable Input<ConfigurationServicePropertiesArgs> properties;
+      private final @Nullable Output<ConfigurationServicePropertiesArgs> properties;
 
-    public Input<ConfigurationServicePropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ConfigurationServicePropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -53,17 +53,17 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public ConfigurationServiceArgs(
-        @Nullable Input<String> configurationServiceName,
-        @Nullable Input<ConfigurationServicePropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        Input<String> serviceName) {
+        @Nullable Output<String> configurationServiceName,
+        @Nullable Output<ConfigurationServicePropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        Output<String> serviceName) {
         this.configurationServiceName = configurationServiceName;
         this.properties = properties;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -71,10 +71,10 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
     }
 
     private ConfigurationServiceArgs() {
-        this.configurationServiceName = Input.empty();
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
+        this.configurationServiceName = Output.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -86,10 +86,10 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> configurationServiceName;
-        private @Nullable Input<ConfigurationServicePropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
+        private @Nullable Output<String> configurationServiceName;
+        private @Nullable Output<ConfigurationServicePropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -103,43 +103,43 @@ public final class ConfigurationServiceArgs extends io.pulumi.resources.Resource
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder configurationServiceName(@Nullable Input<String> configurationServiceName) {
+        public Builder configurationServiceName(@Nullable Output<String> configurationServiceName) {
             this.configurationServiceName = configurationServiceName;
             return this;
         }
 
         public Builder configurationServiceName(@Nullable String configurationServiceName) {
-            this.configurationServiceName = Input.ofNullable(configurationServiceName);
+            this.configurationServiceName = Output.ofNullable(configurationServiceName);
             return this;
         }
 
-        public Builder properties(@Nullable Input<ConfigurationServicePropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ConfigurationServicePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ConfigurationServicePropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public ConfigurationServiceArgs build() {

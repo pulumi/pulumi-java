@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.VirtualNetworkTapArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -20,10 +20,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -31,10 +31,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -42,9 +42,9 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="networkInterfaceName", required=true)
-      private final Input<String> networkInterfaceName;
+      private final Output<String> networkInterfaceName;
 
-    public Input<String> getNetworkInterfaceName() {
+    public Output<String> getNetworkInterfaceName() {
         return this.networkInterfaceName;
     }
 
@@ -53,9 +53,9 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -64,10 +64,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="tapConfigurationName")
-      private final @Nullable Input<String> tapConfigurationName;
+      private final @Nullable Output<String> tapConfigurationName;
 
-    public Input<String> getTapConfigurationName() {
-        return this.tapConfigurationName == null ? Input.empty() : this.tapConfigurationName;
+    public Output<String> getTapConfigurationName() {
+        return this.tapConfigurationName == null ? Output.empty() : this.tapConfigurationName;
     }
 
     /**
@@ -75,19 +75,19 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="virtualNetworkTap")
-      private final @Nullable Input<VirtualNetworkTapArgs> virtualNetworkTap;
+      private final @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap;
 
-    public Input<VirtualNetworkTapArgs> getVirtualNetworkTap() {
-        return this.virtualNetworkTap == null ? Input.empty() : this.virtualNetworkTap;
+    public Output<VirtualNetworkTapArgs> getVirtualNetworkTap() {
+        return this.virtualNetworkTap == null ? Output.empty() : this.virtualNetworkTap;
     }
 
     public NetworkInterfaceTapConfigurationArgs(
-        @Nullable Input<String> id,
-        @Nullable Input<String> name,
-        Input<String> networkInterfaceName,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> tapConfigurationName,
-        @Nullable Input<VirtualNetworkTapArgs> virtualNetworkTap) {
+        @Nullable Output<String> id,
+        @Nullable Output<String> name,
+        Output<String> networkInterfaceName,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> tapConfigurationName,
+        @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap) {
         this.id = id;
         this.name = name;
         this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName, "expected parameter 'networkInterfaceName' to be non-null");
@@ -97,12 +97,12 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
     }
 
     private NetworkInterfaceTapConfigurationArgs() {
-        this.id = Input.empty();
-        this.name = Input.empty();
-        this.networkInterfaceName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tapConfigurationName = Input.empty();
-        this.virtualNetworkTap = Input.empty();
+        this.id = Output.empty();
+        this.name = Output.empty();
+        this.networkInterfaceName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tapConfigurationName = Output.empty();
+        this.virtualNetworkTap = Output.empty();
     }
 
     public static Builder builder() {
@@ -114,12 +114,12 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
     }
 
     public static final class Builder {
-        private @Nullable Input<String> id;
-        private @Nullable Input<String> name;
-        private Input<String> networkInterfaceName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> tapConfigurationName;
-        private @Nullable Input<VirtualNetworkTapArgs> virtualNetworkTap;
+        private @Nullable Output<String> id;
+        private @Nullable Output<String> name;
+        private Output<String> networkInterfaceName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> tapConfigurationName;
+        private @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap;
 
         public Builder() {
     	      // Empty
@@ -135,63 +135,63 @@ public final class NetworkInterfaceTapConfigurationArgs extends io.pulumi.resour
     	      this.virtualNetworkTap = defaults.virtualNetworkTap;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder networkInterfaceName(Input<String> networkInterfaceName) {
+        public Builder networkInterfaceName(Output<String> networkInterfaceName) {
             this.networkInterfaceName = Objects.requireNonNull(networkInterfaceName);
             return this;
         }
 
         public Builder networkInterfaceName(String networkInterfaceName) {
-            this.networkInterfaceName = Input.of(Objects.requireNonNull(networkInterfaceName));
+            this.networkInterfaceName = Output.of(Objects.requireNonNull(networkInterfaceName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tapConfigurationName(@Nullable Input<String> tapConfigurationName) {
+        public Builder tapConfigurationName(@Nullable Output<String> tapConfigurationName) {
             this.tapConfigurationName = tapConfigurationName;
             return this;
         }
 
         public Builder tapConfigurationName(@Nullable String tapConfigurationName) {
-            this.tapConfigurationName = Input.ofNullable(tapConfigurationName);
+            this.tapConfigurationName = Output.ofNullable(tapConfigurationName);
             return this;
         }
 
-        public Builder virtualNetworkTap(@Nullable Input<VirtualNetworkTapArgs> virtualNetworkTap) {
+        public Builder virtualNetworkTap(@Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap) {
             this.virtualNetworkTap = virtualNetworkTap;
             return this;
         }
 
         public Builder virtualNetworkTap(@Nullable VirtualNetworkTapArgs virtualNetworkTap) {
-            this.virtualNetworkTap = Input.ofNullable(virtualNetworkTap);
+            this.virtualNetworkTap = Output.ofNullable(virtualNetworkTap);
             return this;
         }
         public NetworkInterfaceTapConfigurationArgs build() {

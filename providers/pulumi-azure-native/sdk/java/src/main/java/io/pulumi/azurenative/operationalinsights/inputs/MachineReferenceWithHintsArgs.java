@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class MachineReferenceWithHintsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -34,22 +34,22 @@ public final class MachineReferenceWithHintsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<String> kind;
+      private final Output<String> kind;
 
-    public Input<String> getKind() {
+    public Output<String> getKind() {
         return this.kind;
     }
 
     public MachineReferenceWithHintsArgs(
-        Input<String> id,
-        Input<String> kind) {
+        Output<String> id,
+        Output<String> kind) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
     }
 
     private MachineReferenceWithHintsArgs() {
-        this.id = Input.empty();
-        this.kind = Input.empty();
+        this.id = Output.empty();
+        this.kind = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class MachineReferenceWithHintsArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private Input<String> kind;
+        private Output<String> id;
+        private Output<String> kind;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class MachineReferenceWithHintsArgs extends io.pulumi.resources.Res
     	      this.kind = defaults.kind;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder kind(Input<String> kind) {
+        public Builder kind(Output<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(String kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
         public MachineReferenceWithHintsArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
      * 
      */
     @InputImport(name="publicCertData")
-      private final @Nullable Input<String> publicCertData;
+      private final @Nullable Output<String> publicCertData;
 
-    public Input<String> getPublicCertData() {
-        return this.publicCertData == null ? Input.empty() : this.publicCertData;
+    public Output<String> getPublicCertData() {
+        return this.publicCertData == null ? Output.empty() : this.publicCertData;
     }
 
     public VpnServerConfigVpnClientRootCertificateArgs(
-        @Nullable Input<String> name,
-        @Nullable Input<String> publicCertData) {
+        @Nullable Output<String> name,
+        @Nullable Output<String> publicCertData) {
         this.name = name;
         this.publicCertData = publicCertData;
     }
 
     private VpnServerConfigVpnClientRootCertificateArgs() {
-        this.name = Input.empty();
-        this.publicCertData = Input.empty();
+        this.name = Output.empty();
+        this.publicCertData = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> name;
-        private @Nullable Input<String> publicCertData;
+        private @Nullable Output<String> name;
+        private @Nullable Output<String> publicCertData;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class VpnServerConfigVpnClientRootCertificateArgs extends io.pulumi
     	      this.publicCertData = defaults.publicCertData;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder publicCertData(@Nullable Input<String> publicCertData) {
+        public Builder publicCertData(@Nullable Output<String> publicCertData) {
             this.publicCertData = publicCertData;
             return this;
         }
 
         public Builder publicCertData(@Nullable String publicCertData) {
-            this.publicCertData = Input.ofNullable(publicCertData);
+            this.publicCertData = Output.ofNullable(publicCertData);
             return this;
         }
         public VpnServerConfigVpnClientRootCertificateArgs build() {

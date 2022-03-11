@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurestackhci;
 
 import io.pulumi.azurenative.azurestackhci.enums.CreatedByType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -22,9 +22,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aadClientId", required=true)
-      private final Input<String> aadClientId;
+      private final Output<String> aadClientId;
 
-    public Input<String> getAadClientId() {
+    public Output<String> getAadClientId() {
         return this.aadClientId;
     }
 
@@ -33,9 +33,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aadTenantId", required=true)
-      private final Input<String> aadTenantId;
+      private final Output<String> aadTenantId;
 
-    public Input<String> getAadTenantId() {
+    public Output<String> getAadTenantId() {
         return this.aadTenantId;
     }
 
@@ -44,10 +44,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName")
-      private final @Nullable Input<String> clusterName;
+      private final @Nullable Output<String> clusterName;
 
-    public Input<String> getClusterName() {
-        return this.clusterName == null ? Input.empty() : this.clusterName;
+    public Output<String> getClusterName() {
+        return this.clusterName == null ? Output.empty() : this.clusterName;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-      private final @Nullable Input<String> createdAt;
+      private final @Nullable Output<String> createdAt;
 
-    public Input<String> getCreatedAt() {
-        return this.createdAt == null ? Input.empty() : this.createdAt;
+    public Output<String> getCreatedAt() {
+        return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-      private final @Nullable Input<String> createdBy;
+      private final @Nullable Output<String> createdBy;
 
-    public Input<String> getCreatedBy() {
-        return this.createdBy == null ? Input.empty() : this.createdBy;
+    public Output<String> getCreatedBy() {
+        return this.createdBy == null ? Output.empty() : this.createdBy;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdByType")
-      private final @Nullable Input<Either<String,CreatedByType>> createdByType;
+      private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
-    public Input<Either<String,CreatedByType>> getCreatedByType() {
-        return this.createdByType == null ? Input.empty() : this.createdByType;
+    public Output<Either<String,CreatedByType>> getCreatedByType() {
+        return this.createdByType == null ? Output.empty() : this.createdByType;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-      private final @Nullable Input<String> lastModifiedAt;
+      private final @Nullable Output<String> lastModifiedAt;
 
-    public Input<String> getLastModifiedAt() {
-        return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
+    public Output<String> getLastModifiedAt() {
+        return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedBy")
-      private final @Nullable Input<String> lastModifiedBy;
+      private final @Nullable Output<String> lastModifiedBy;
 
-    public Input<String> getLastModifiedBy() {
-        return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
+    public Output<String> getLastModifiedBy() {
+        return this.lastModifiedBy == null ? Output.empty() : this.lastModifiedBy;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedByType")
-      private final @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
+      private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
-    public Input<Either<String,CreatedByType>> getLastModifiedByType() {
-        return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
+    public Output<Either<String,CreatedByType>> getLastModifiedByType() {
+        return this.lastModifiedByType == null ? Output.empty() : this.lastModifiedByType;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -132,9 +132,9 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -143,25 +143,25 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public ClusterArgs(
-        Input<String> aadClientId,
-        Input<String> aadTenantId,
-        @Nullable Input<String> clusterName,
-        @Nullable Input<String> createdAt,
-        @Nullable Input<String> createdBy,
-        @Nullable Input<Either<String,CreatedByType>> createdByType,
-        @Nullable Input<String> lastModifiedAt,
-        @Nullable Input<String> lastModifiedBy,
-        @Nullable Input<Either<String,CreatedByType>> lastModifiedByType,
-        @Nullable Input<String> location,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> aadClientId,
+        Output<String> aadTenantId,
+        @Nullable Output<String> clusterName,
+        @Nullable Output<String> createdAt,
+        @Nullable Output<String> createdBy,
+        @Nullable Output<Either<String,CreatedByType>> createdByType,
+        @Nullable Output<String> lastModifiedAt,
+        @Nullable Output<String> lastModifiedBy,
+        @Nullable Output<Either<String,CreatedByType>> lastModifiedByType,
+        @Nullable Output<String> location,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.aadClientId = Objects.requireNonNull(aadClientId, "expected parameter 'aadClientId' to be non-null");
         this.aadTenantId = Objects.requireNonNull(aadTenantId, "expected parameter 'aadTenantId' to be non-null");
         this.clusterName = clusterName;
@@ -177,18 +177,18 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.aadClientId = Input.empty();
-        this.aadTenantId = Input.empty();
-        this.clusterName = Input.empty();
-        this.createdAt = Input.empty();
-        this.createdBy = Input.empty();
-        this.createdByType = Input.empty();
-        this.lastModifiedAt = Input.empty();
-        this.lastModifiedBy = Input.empty();
-        this.lastModifiedByType = Input.empty();
-        this.location = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.aadClientId = Output.empty();
+        this.aadTenantId = Output.empty();
+        this.clusterName = Output.empty();
+        this.createdAt = Output.empty();
+        this.createdBy = Output.empty();
+        this.createdByType = Output.empty();
+        this.lastModifiedAt = Output.empty();
+        this.lastModifiedBy = Output.empty();
+        this.lastModifiedByType = Output.empty();
+        this.location = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -200,18 +200,18 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> aadClientId;
-        private Input<String> aadTenantId;
-        private @Nullable Input<String> clusterName;
-        private @Nullable Input<String> createdAt;
-        private @Nullable Input<String> createdBy;
-        private @Nullable Input<Either<String,CreatedByType>> createdByType;
-        private @Nullable Input<String> lastModifiedAt;
-        private @Nullable Input<String> lastModifiedBy;
-        private @Nullable Input<Either<String,CreatedByType>> lastModifiedByType;
-        private @Nullable Input<String> location;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> aadClientId;
+        private Output<String> aadTenantId;
+        private @Nullable Output<String> clusterName;
+        private @Nullable Output<String> createdAt;
+        private @Nullable Output<String> createdBy;
+        private @Nullable Output<Either<String,CreatedByType>> createdByType;
+        private @Nullable Output<String> lastModifiedAt;
+        private @Nullable Output<String> lastModifiedBy;
+        private @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
+        private @Nullable Output<String> location;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -233,123 +233,123 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder aadClientId(Input<String> aadClientId) {
+        public Builder aadClientId(Output<String> aadClientId) {
             this.aadClientId = Objects.requireNonNull(aadClientId);
             return this;
         }
 
         public Builder aadClientId(String aadClientId) {
-            this.aadClientId = Input.of(Objects.requireNonNull(aadClientId));
+            this.aadClientId = Output.of(Objects.requireNonNull(aadClientId));
             return this;
         }
 
-        public Builder aadTenantId(Input<String> aadTenantId) {
+        public Builder aadTenantId(Output<String> aadTenantId) {
             this.aadTenantId = Objects.requireNonNull(aadTenantId);
             return this;
         }
 
         public Builder aadTenantId(String aadTenantId) {
-            this.aadTenantId = Input.of(Objects.requireNonNull(aadTenantId));
+            this.aadTenantId = Output.of(Objects.requireNonNull(aadTenantId));
             return this;
         }
 
-        public Builder clusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Output<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Input.ofNullable(clusterName);
+            this.clusterName = Output.ofNullable(clusterName);
             return this;
         }
 
-        public Builder createdAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Output<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Input.ofNullable(createdAt);
+            this.createdAt = Output.ofNullable(createdAt);
             return this;
         }
 
-        public Builder createdBy(@Nullable Input<String> createdBy) {
+        public Builder createdBy(@Nullable Output<String> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = Input.ofNullable(createdBy);
+            this.createdBy = Output.ofNullable(createdBy);
             return this;
         }
 
-        public Builder createdByType(@Nullable Input<Either<String,CreatedByType>> createdByType) {
+        public Builder createdByType(@Nullable Output<Either<String,CreatedByType>> createdByType) {
             this.createdByType = createdByType;
             return this;
         }
 
         public Builder createdByType(@Nullable Either<String,CreatedByType> createdByType) {
-            this.createdByType = Input.ofNullable(createdByType);
+            this.createdByType = Output.ofNullable(createdByType);
             return this;
         }
 
-        public Builder lastModifiedAt(@Nullable Input<String> lastModifiedAt) {
+        public Builder lastModifiedAt(@Nullable Output<String> lastModifiedAt) {
             this.lastModifiedAt = lastModifiedAt;
             return this;
         }
 
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = Input.ofNullable(lastModifiedAt);
+            this.lastModifiedAt = Output.ofNullable(lastModifiedAt);
             return this;
         }
 
-        public Builder lastModifiedBy(@Nullable Input<String> lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable Output<String> lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = Input.ofNullable(lastModifiedBy);
+            this.lastModifiedBy = Output.ofNullable(lastModifiedBy);
             return this;
         }
 
-        public Builder lastModifiedByType(@Nullable Input<Either<String,CreatedByType>> lastModifiedByType) {
+        public Builder lastModifiedByType(@Nullable Output<Either<String,CreatedByType>> lastModifiedByType) {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
 
         public Builder lastModifiedByType(@Nullable Either<String,CreatedByType> lastModifiedByType) {
-            this.lastModifiedByType = Input.ofNullable(lastModifiedByType);
+            this.lastModifiedByType = Output.ofNullable(lastModifiedByType);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public ClusterArgs build() {

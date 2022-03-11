@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class HttpSettingsRoutesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="apiPrefix")
-      private final @Nullable Input<String> apiPrefix;
+      private final @Nullable Output<String> apiPrefix;
 
-    public Input<String> getApiPrefix() {
-        return this.apiPrefix == null ? Input.empty() : this.apiPrefix;
+    public Output<String> getApiPrefix() {
+        return this.apiPrefix == null ? Output.empty() : this.apiPrefix;
     }
 
-    public HttpSettingsRoutesArgs(@Nullable Input<String> apiPrefix) {
+    public HttpSettingsRoutesArgs(@Nullable Output<String> apiPrefix) {
         this.apiPrefix = apiPrefix;
     }
 
     private HttpSettingsRoutesArgs() {
-        this.apiPrefix = Input.empty();
+        this.apiPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class HttpSettingsRoutesArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<String> apiPrefix;
+        private @Nullable Output<String> apiPrefix;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class HttpSettingsRoutesArgs extends io.pulumi.resources.ResourceAr
     	      this.apiPrefix = defaults.apiPrefix;
         }
 
-        public Builder apiPrefix(@Nullable Input<String> apiPrefix) {
+        public Builder apiPrefix(@Nullable Output<String> apiPrefix) {
             this.apiPrefix = apiPrefix;
             return this;
         }
 
         public Builder apiPrefix(@Nullable String apiPrefix) {
-            this.apiPrefix = Input.ofNullable(apiPrefix);
+            this.apiPrefix = Output.ofNullable(apiPrefix);
             return this;
         }
         public HttpSettingsRoutesArgs build() {

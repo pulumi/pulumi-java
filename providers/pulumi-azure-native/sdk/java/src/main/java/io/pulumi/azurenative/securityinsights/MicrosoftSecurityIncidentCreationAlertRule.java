@@ -6,7 +6,6 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.MicrosoftSecurityIncidentCreationAlertRuleArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -255,10 +254,10 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @param options A bag of options that control this resource's behavior.
      */
     public MicrosoftSecurityIncidentCreationAlertRule(String name, MicrosoftSecurityIncidentCreationAlertRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:securityinsights:MicrosoftSecurityIncidentCreationAlertRule", name, makeArgs(args), makeResourceOptions(options, Input.empty()));
+        super("azure-native:securityinsights:MicrosoftSecurityIncidentCreationAlertRule", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
     }
 
-    private MicrosoftSecurityIncidentCreationAlertRule(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private MicrosoftSecurityIncidentCreationAlertRule(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:securityinsights:MicrosoftSecurityIncidentCreationAlertRule", name, null, makeResourceOptions(options, id));
     }
 
@@ -269,14 +268,14 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
             .build();
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20190101preview:MicrosoftSecurityIncidentCreationAlertRule").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20200101:MicrosoftSecurityIncidentCreationAlertRule").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20210301preview:MicrosoftSecurityIncidentCreationAlertRule").build()),
-                Input.of(Alias.builder().setType("azure-native:securityinsights/v20210901preview:MicrosoftSecurityIncidentCreationAlertRule").build())
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20190101preview:MicrosoftSecurityIncidentCreationAlertRule").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20200101:MicrosoftSecurityIncidentCreationAlertRule").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210301preview:MicrosoftSecurityIncidentCreationAlertRule").build()),
+                Output.of(Alias.builder().setType("azure-native:securityinsights/v20210901preview:MicrosoftSecurityIncidentCreationAlertRule").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -290,7 +289,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MicrosoftSecurityIncidentCreationAlertRule get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static MicrosoftSecurityIncidentCreationAlertRule get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new MicrosoftSecurityIncidentCreationAlertRule(name, id, options);
     }
 }

@@ -14,7 +14,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkProfile
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetOSProfileArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetStorageProfileArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -34,10 +34,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="billingProfile")
-      private final @Nullable Input<BillingProfileArgs> billingProfile;
+      private final @Nullable Output<BillingProfileArgs> billingProfile;
 
-    public Input<BillingProfileArgs> getBillingProfile() {
-        return this.billingProfile == null ? Input.empty() : this.billingProfile;
+    public Output<BillingProfileArgs> getBillingProfile() {
+        return this.billingProfile == null ? Output.empty() : this.billingProfile;
     }
 
     /**
@@ -45,10 +45,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="diagnosticsProfile")
-      private final @Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile;
+      private final @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
 
-    public Input<DiagnosticsProfileArgs> getDiagnosticsProfile() {
-        return this.diagnosticsProfile == null ? Input.empty() : this.diagnosticsProfile;
+    public Output<DiagnosticsProfileArgs> getDiagnosticsProfile() {
+        return this.diagnosticsProfile == null ? Output.empty() : this.diagnosticsProfile;
     }
 
     /**
@@ -56,10 +56,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="evictionPolicy")
-      private final @Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
+      private final @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
 
-    public Input<Either<String,VirtualMachineEvictionPolicyTypes>> getEvictionPolicy() {
-        return this.evictionPolicy == null ? Input.empty() : this.evictionPolicy;
+    public Output<Either<String,VirtualMachineEvictionPolicyTypes>> getEvictionPolicy() {
+        return this.evictionPolicy == null ? Output.empty() : this.evictionPolicy;
     }
 
     /**
@@ -67,10 +67,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="extensionProfile")
-      private final @Nullable Input<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
+      private final @Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
 
-    public Input<VirtualMachineScaleSetExtensionProfileArgs> getExtensionProfile() {
-        return this.extensionProfile == null ? Input.empty() : this.extensionProfile;
+    public Output<VirtualMachineScaleSetExtensionProfileArgs> getExtensionProfile() {
+        return this.extensionProfile == null ? Output.empty() : this.extensionProfile;
     }
 
     /**
@@ -78,10 +78,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="licenseType")
-      private final @Nullable Input<String> licenseType;
+      private final @Nullable Output<String> licenseType;
 
-    public Input<String> getLicenseType() {
-        return this.licenseType == null ? Input.empty() : this.licenseType;
+    public Output<String> getLicenseType() {
+        return this.licenseType == null ? Output.empty() : this.licenseType;
     }
 
     /**
@@ -89,10 +89,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="networkProfile")
-      private final @Nullable Input<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
+      private final @Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
 
-    public Input<VirtualMachineScaleSetNetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Input.empty() : this.networkProfile;
+    public Output<VirtualMachineScaleSetNetworkProfileArgs> getNetworkProfile() {
+        return this.networkProfile == null ? Output.empty() : this.networkProfile;
     }
 
     /**
@@ -100,10 +100,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="osProfile")
-      private final @Nullable Input<VirtualMachineScaleSetOSProfileArgs> osProfile;
+      private final @Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile;
 
-    public Input<VirtualMachineScaleSetOSProfileArgs> getOsProfile() {
-        return this.osProfile == null ? Input.empty() : this.osProfile;
+    public Output<VirtualMachineScaleSetOSProfileArgs> getOsProfile() {
+        return this.osProfile == null ? Output.empty() : this.osProfile;
     }
 
     /**
@@ -111,10 +111,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="priority")
-      private final @Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority;
+      private final @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
 
-    public Input<Either<String,VirtualMachinePriorityTypes>> getPriority() {
-        return this.priority == null ? Input.empty() : this.priority;
+    public Output<Either<String,VirtualMachinePriorityTypes>> getPriority() {
+        return this.priority == null ? Output.empty() : this.priority;
     }
 
     /**
@@ -122,10 +122,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="scheduledEventsProfile")
-      private final @Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile;
+      private final @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
 
-    public Input<ScheduledEventsProfileArgs> getScheduledEventsProfile() {
-        return this.scheduledEventsProfile == null ? Input.empty() : this.scheduledEventsProfile;
+    public Output<ScheduledEventsProfileArgs> getScheduledEventsProfile() {
+        return this.scheduledEventsProfile == null ? Output.empty() : this.scheduledEventsProfile;
     }
 
     /**
@@ -133,10 +133,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="securityProfile")
-      private final @Nullable Input<SecurityProfileArgs> securityProfile;
+      private final @Nullable Output<SecurityProfileArgs> securityProfile;
 
-    public Input<SecurityProfileArgs> getSecurityProfile() {
-        return this.securityProfile == null ? Input.empty() : this.securityProfile;
+    public Output<SecurityProfileArgs> getSecurityProfile() {
+        return this.securityProfile == null ? Output.empty() : this.securityProfile;
     }
 
     /**
@@ -144,10 +144,10 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="storageProfile")
-      private final @Nullable Input<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
+      private final @Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
 
-    public Input<VirtualMachineScaleSetStorageProfileArgs> getStorageProfile() {
-        return this.storageProfile == null ? Input.empty() : this.storageProfile;
+    public Output<VirtualMachineScaleSetStorageProfileArgs> getStorageProfile() {
+        return this.storageProfile == null ? Output.empty() : this.storageProfile;
     }
 
     /**
@@ -155,25 +155,25 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="userData")
-      private final @Nullable Input<String> userData;
+      private final @Nullable Output<String> userData;
 
-    public Input<String> getUserData() {
-        return this.userData == null ? Input.empty() : this.userData;
+    public Output<String> getUserData() {
+        return this.userData == null ? Output.empty() : this.userData;
     }
 
     public VirtualMachineScaleSetVMProfileArgs(
-        @Nullable Input<BillingProfileArgs> billingProfile,
-        @Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile,
-        @Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy,
-        @Nullable Input<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile,
-        @Nullable Input<String> licenseType,
-        @Nullable Input<VirtualMachineScaleSetNetworkProfileArgs> networkProfile,
-        @Nullable Input<VirtualMachineScaleSetOSProfileArgs> osProfile,
-        @Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority,
-        @Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile,
-        @Nullable Input<SecurityProfileArgs> securityProfile,
-        @Nullable Input<VirtualMachineScaleSetStorageProfileArgs> storageProfile,
-        @Nullable Input<String> userData) {
+        @Nullable Output<BillingProfileArgs> billingProfile,
+        @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile,
+        @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy,
+        @Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile,
+        @Nullable Output<String> licenseType,
+        @Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile,
+        @Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile,
+        @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority,
+        @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile,
+        @Nullable Output<SecurityProfileArgs> securityProfile,
+        @Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile,
+        @Nullable Output<String> userData) {
         this.billingProfile = billingProfile;
         this.diagnosticsProfile = diagnosticsProfile;
         this.evictionPolicy = evictionPolicy;
@@ -189,18 +189,18 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     }
 
     private VirtualMachineScaleSetVMProfileArgs() {
-        this.billingProfile = Input.empty();
-        this.diagnosticsProfile = Input.empty();
-        this.evictionPolicy = Input.empty();
-        this.extensionProfile = Input.empty();
-        this.licenseType = Input.empty();
-        this.networkProfile = Input.empty();
-        this.osProfile = Input.empty();
-        this.priority = Input.empty();
-        this.scheduledEventsProfile = Input.empty();
-        this.securityProfile = Input.empty();
-        this.storageProfile = Input.empty();
-        this.userData = Input.empty();
+        this.billingProfile = Output.empty();
+        this.diagnosticsProfile = Output.empty();
+        this.evictionPolicy = Output.empty();
+        this.extensionProfile = Output.empty();
+        this.licenseType = Output.empty();
+        this.networkProfile = Output.empty();
+        this.osProfile = Output.empty();
+        this.priority = Output.empty();
+        this.scheduledEventsProfile = Output.empty();
+        this.securityProfile = Output.empty();
+        this.storageProfile = Output.empty();
+        this.userData = Output.empty();
     }
 
     public static Builder builder() {
@@ -212,18 +212,18 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<BillingProfileArgs> billingProfile;
-        private @Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile;
-        private @Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
-        private @Nullable Input<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
-        private @Nullable Input<String> licenseType;
-        private @Nullable Input<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
-        private @Nullable Input<VirtualMachineScaleSetOSProfileArgs> osProfile;
-        private @Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority;
-        private @Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile;
-        private @Nullable Input<SecurityProfileArgs> securityProfile;
-        private @Nullable Input<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
-        private @Nullable Input<String> userData;
+        private @Nullable Output<BillingProfileArgs> billingProfile;
+        private @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
+        private @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
+        private @Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
+        private @Nullable Output<String> licenseType;
+        private @Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
+        private @Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile;
+        private @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
+        private @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
+        private @Nullable Output<SecurityProfileArgs> securityProfile;
+        private @Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
+        private @Nullable Output<String> userData;
 
         public Builder() {
     	      // Empty
@@ -245,123 +245,123 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     	      this.userData = defaults.userData;
         }
 
-        public Builder billingProfile(@Nullable Input<BillingProfileArgs> billingProfile) {
+        public Builder billingProfile(@Nullable Output<BillingProfileArgs> billingProfile) {
             this.billingProfile = billingProfile;
             return this;
         }
 
         public Builder billingProfile(@Nullable BillingProfileArgs billingProfile) {
-            this.billingProfile = Input.ofNullable(billingProfile);
+            this.billingProfile = Output.ofNullable(billingProfile);
             return this;
         }
 
-        public Builder diagnosticsProfile(@Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile) {
+        public Builder diagnosticsProfile(@Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
 
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
-            this.diagnosticsProfile = Input.ofNullable(diagnosticsProfile);
+            this.diagnosticsProfile = Output.ofNullable(diagnosticsProfile);
             return this;
         }
 
-        public Builder evictionPolicy(@Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy) {
+        public Builder evictionPolicy(@Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
 
         public Builder evictionPolicy(@Nullable Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
-            this.evictionPolicy = Input.ofNullable(evictionPolicy);
+            this.evictionPolicy = Output.ofNullable(evictionPolicy);
             return this;
         }
 
-        public Builder extensionProfile(@Nullable Input<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile) {
+        public Builder extensionProfile(@Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile) {
             this.extensionProfile = extensionProfile;
             return this;
         }
 
         public Builder extensionProfile(@Nullable VirtualMachineScaleSetExtensionProfileArgs extensionProfile) {
-            this.extensionProfile = Input.ofNullable(extensionProfile);
+            this.extensionProfile = Output.ofNullable(extensionProfile);
             return this;
         }
 
-        public Builder licenseType(@Nullable Input<String> licenseType) {
+        public Builder licenseType(@Nullable Output<String> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Input.ofNullable(licenseType);
+            this.licenseType = Output.ofNullable(licenseType);
             return this;
         }
 
-        public Builder networkProfile(@Nullable Input<VirtualMachineScaleSetNetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
         public Builder networkProfile(@Nullable VirtualMachineScaleSetNetworkProfileArgs networkProfile) {
-            this.networkProfile = Input.ofNullable(networkProfile);
+            this.networkProfile = Output.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder osProfile(@Nullable Input<VirtualMachineScaleSetOSProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
         public Builder osProfile(@Nullable VirtualMachineScaleSetOSProfileArgs osProfile) {
-            this.osProfile = Input.ofNullable(osProfile);
+            this.osProfile = Output.ofNullable(osProfile);
             return this;
         }
 
-        public Builder priority(@Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority) {
+        public Builder priority(@Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority) {
             this.priority = priority;
             return this;
         }
 
         public Builder priority(@Nullable Either<String,VirtualMachinePriorityTypes> priority) {
-            this.priority = Input.ofNullable(priority);
+            this.priority = Output.ofNullable(priority);
             return this;
         }
 
-        public Builder scheduledEventsProfile(@Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile) {
+        public Builder scheduledEventsProfile(@Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile) {
             this.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
 
         public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileArgs scheduledEventsProfile) {
-            this.scheduledEventsProfile = Input.ofNullable(scheduledEventsProfile);
+            this.scheduledEventsProfile = Output.ofNullable(scheduledEventsProfile);
             return this;
         }
 
-        public Builder securityProfile(@Nullable Input<SecurityProfileArgs> securityProfile) {
+        public Builder securityProfile(@Nullable Output<SecurityProfileArgs> securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
 
         public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
-            this.securityProfile = Input.ofNullable(securityProfile);
+            this.securityProfile = Output.ofNullable(securityProfile);
             return this;
         }
 
-        public Builder storageProfile(@Nullable Input<VirtualMachineScaleSetStorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
         public Builder storageProfile(@Nullable VirtualMachineScaleSetStorageProfileArgs storageProfile) {
-            this.storageProfile = Input.ofNullable(storageProfile);
+            this.storageProfile = Output.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder userData(@Nullable Input<String> userData) {
+        public Builder userData(@Nullable Output<String> userData) {
             this.userData = userData;
             return this;
         }
 
         public Builder userData(@Nullable String userData) {
-            this.userData = Input.ofNullable(userData);
+            this.userData = Output.ofNullable(userData);
             return this;
         }
         public VirtualMachineScaleSetVMProfileArgs build() {

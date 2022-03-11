@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupId")
-      private final @Nullable Input<String> groupId;
+      private final @Nullable Output<String> groupId;
 
-    public Input<String> getGroupId() {
-        return this.groupId == null ? Input.empty() : this.groupId;
+    public Output<String> getGroupId() {
+        return this.groupId == null ? Output.empty() : this.groupId;
     }
 
     /**
@@ -30,9 +30,9 @@ public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productId", required=true)
-      private final Input<String> productId;
+      private final Output<String> productId;
 
-    public Input<String> getProductId() {
+    public Output<String> getProductId() {
         return this.productId;
     }
 
@@ -41,9 +41,9 @@ public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -52,17 +52,17 @@ public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-      private final Input<String> serviceName;
+      private final Output<String> serviceName;
 
-    public Input<String> getServiceName() {
+    public Output<String> getServiceName() {
         return this.serviceName;
     }
 
     public ProductGroupArgs(
-        @Nullable Input<String> groupId,
-        Input<String> productId,
-        Input<String> resourceGroupName,
-        Input<String> serviceName) {
+        @Nullable Output<String> groupId,
+        Output<String> productId,
+        Output<String> resourceGroupName,
+        Output<String> serviceName) {
         this.groupId = groupId;
         this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
@@ -70,10 +70,10 @@ public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProductGroupArgs() {
-        this.groupId = Input.empty();
-        this.productId = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serviceName = Input.empty();
+        this.groupId = Output.empty();
+        this.productId = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serviceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> groupId;
-        private Input<String> productId;
-        private Input<String> resourceGroupName;
-        private Input<String> serviceName;
+        private @Nullable Output<String> groupId;
+        private Output<String> productId;
+        private Output<String> resourceGroupName;
+        private Output<String> serviceName;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class ProductGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder groupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Output<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Input.ofNullable(groupId);
+            this.groupId = Output.ofNullable(groupId);
             return this;
         }
 
-        public Builder productId(Input<String> productId) {
+        public Builder productId(Output<String> productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
         public Builder productId(String productId) {
-            this.productId = Input.of(Objects.requireNonNull(productId));
+            this.productId = Output.of(Objects.requireNonNull(productId));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serviceName(Input<String> serviceName) {
+        public Builder serviceName(Output<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
         public Builder serviceName(String serviceName) {
-            this.serviceName = Input.of(Objects.requireNonNull(serviceName));
+            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
             return this;
         }
         public ProductGroupArgs build() {

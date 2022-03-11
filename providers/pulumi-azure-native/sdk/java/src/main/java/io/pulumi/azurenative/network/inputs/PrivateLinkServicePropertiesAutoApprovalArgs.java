@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,18 +24,18 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends io.pulum
      * 
      */
     @InputImport(name="subscriptions")
-      private final @Nullable Input<List<String>> subscriptions;
+      private final @Nullable Output<List<String>> subscriptions;
 
-    public Input<List<String>> getSubscriptions() {
-        return this.subscriptions == null ? Input.empty() : this.subscriptions;
+    public Output<List<String>> getSubscriptions() {
+        return this.subscriptions == null ? Output.empty() : this.subscriptions;
     }
 
-    public PrivateLinkServicePropertiesAutoApprovalArgs(@Nullable Input<List<String>> subscriptions) {
+    public PrivateLinkServicePropertiesAutoApprovalArgs(@Nullable Output<List<String>> subscriptions) {
         this.subscriptions = subscriptions;
     }
 
     private PrivateLinkServicePropertiesAutoApprovalArgs() {
-        this.subscriptions = Input.empty();
+        this.subscriptions = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends io.pulum
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> subscriptions;
+        private @Nullable Output<List<String>> subscriptions;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class PrivateLinkServicePropertiesAutoApprovalArgs extends io.pulum
     	      this.subscriptions = defaults.subscriptions;
         }
 
-        public Builder subscriptions(@Nullable Input<List<String>> subscriptions) {
+        public Builder subscriptions(@Nullable Output<List<String>> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
 
         public Builder subscriptions(@Nullable List<String> subscriptions) {
-            this.subscriptions = Input.ofNullable(subscriptions);
+            this.subscriptions = Output.ofNullable(subscriptions);
             return this;
         }
         public PrivateLinkServicePropertiesAutoApprovalArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.NetworkApiVersion;
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfigurationArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -28,10 +28,10 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="healthProbe")
-      private final @Nullable Input<ApiEntityReferenceArgs> healthProbe;
+      private final @Nullable Output<ApiEntityReferenceArgs> healthProbe;
 
-    public Input<ApiEntityReferenceArgs> getHealthProbe() {
-        return this.healthProbe == null ? Input.empty() : this.healthProbe;
+    public Output<ApiEntityReferenceArgs> getHealthProbe() {
+        return this.healthProbe == null ? Output.empty() : this.healthProbe;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="networkApiVersion")
-      private final @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion;
+      private final @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
 
-    public Input<Either<String,NetworkApiVersion>> getNetworkApiVersion() {
-        return this.networkApiVersion == null ? Input.empty() : this.networkApiVersion;
+    public Output<Either<String,NetworkApiVersion>> getNetworkApiVersion() {
+        return this.networkApiVersion == null ? Output.empty() : this.networkApiVersion;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="networkInterfaceConfigurations")
-      private final @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
+      private final @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
-    public Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> getNetworkInterfaceConfigurations() {
-        return this.networkInterfaceConfigurations == null ? Input.empty() : this.networkInterfaceConfigurations;
+    public Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> getNetworkInterfaceConfigurations() {
+        return this.networkInterfaceConfigurations == null ? Output.empty() : this.networkInterfaceConfigurations;
     }
 
     public VirtualMachineScaleSetNetworkProfileArgs(
-        @Nullable Input<ApiEntityReferenceArgs> healthProbe,
-        @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion,
-        @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
+        @Nullable Output<ApiEntityReferenceArgs> healthProbe,
+        @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion,
+        @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
         this.healthProbe = healthProbe;
         this.networkApiVersion = networkApiVersion;
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;
     }
 
     private VirtualMachineScaleSetNetworkProfileArgs() {
-        this.healthProbe = Input.empty();
-        this.networkApiVersion = Input.empty();
-        this.networkInterfaceConfigurations = Input.empty();
+        this.healthProbe = Output.empty();
+        this.networkApiVersion = Output.empty();
+        this.networkInterfaceConfigurations = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
     }
 
     public static final class Builder {
-        private @Nullable Input<ApiEntityReferenceArgs> healthProbe;
-        private @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion;
-        private @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
+        private @Nullable Output<ApiEntityReferenceArgs> healthProbe;
+        private @Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion;
+        private @Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
     	      this.networkInterfaceConfigurations = defaults.networkInterfaceConfigurations;
         }
 
-        public Builder healthProbe(@Nullable Input<ApiEntityReferenceArgs> healthProbe) {
+        public Builder healthProbe(@Nullable Output<ApiEntityReferenceArgs> healthProbe) {
             this.healthProbe = healthProbe;
             return this;
         }
 
         public Builder healthProbe(@Nullable ApiEntityReferenceArgs healthProbe) {
-            this.healthProbe = Input.ofNullable(healthProbe);
+            this.healthProbe = Output.ofNullable(healthProbe);
             return this;
         }
 
-        public Builder networkApiVersion(@Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion) {
+        public Builder networkApiVersion(@Nullable Output<Either<String,NetworkApiVersion>> networkApiVersion) {
             this.networkApiVersion = networkApiVersion;
             return this;
         }
 
         public Builder networkApiVersion(@Nullable Either<String,NetworkApiVersion> networkApiVersion) {
-            this.networkApiVersion = Input.ofNullable(networkApiVersion);
+            this.networkApiVersion = Output.ofNullable(networkApiVersion);
             return this;
         }
 
-        public Builder networkInterfaceConfigurations(@Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
         public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationArgs> networkInterfaceConfigurations) {
-            this.networkInterfaceConfigurations = Input.ofNullable(networkInterfaceConfigurations);
+            this.networkInterfaceConfigurations = Output.ofNullable(networkInterfaceConfigurations);
             return this;
         }
         public VirtualMachineScaleSetNetworkProfileArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="config")
-      private final @Nullable Input<Map<String,String>> config;
+      private final @Nullable Output<Map<String,String>> config;
 
-    public Input<Map<String,String>> getConfig() {
-        return this.config == null ? Input.empty() : this.config;
+    public Output<Map<String,String>> getConfig() {
+        return this.config == null ? Output.empty() : this.config;
     }
 
     /**
@@ -36,22 +36,22 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enabled", required=true)
-      private final Input<Boolean> enabled;
+      private final Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
+    public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
     public ManagedClusterAddonProfileArgs(
-        @Nullable Input<Map<String,String>> config,
-        Input<Boolean> enabled) {
+        @Nullable Output<Map<String,String>> config,
+        Output<Boolean> enabled) {
         this.config = config;
         this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
     }
 
     private ManagedClusterAddonProfileArgs() {
-        this.config = Input.empty();
-        this.enabled = Input.empty();
+        this.config = Output.empty();
+        this.enabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -63,8 +63,8 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> config;
-        private Input<Boolean> enabled;
+        private @Nullable Output<Map<String,String>> config;
+        private Output<Boolean> enabled;
 
         public Builder() {
     	      // Empty
@@ -76,23 +76,23 @@ public final class ManagedClusterAddonProfileArgs extends io.pulumi.resources.Re
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder config(@Nullable Input<Map<String,String>> config) {
+        public Builder config(@Nullable Output<Map<String,String>> config) {
             this.config = config;
             return this;
         }
 
         public Builder config(@Nullable Map<String,String> config) {
-            this.config = Input.ofNullable(config);
+            this.config = Output.ofNullable(config);
             return this;
         }
 
-        public Builder enabled(Input<Boolean> enabled) {
+        public Builder enabled(Output<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Input.of(Objects.requireNonNull(enabled));
+            this.enabled = Output.of(Objects.requireNonNull(enabled));
             return this;
         }
         public ManagedClusterAddonProfileArgs build() {

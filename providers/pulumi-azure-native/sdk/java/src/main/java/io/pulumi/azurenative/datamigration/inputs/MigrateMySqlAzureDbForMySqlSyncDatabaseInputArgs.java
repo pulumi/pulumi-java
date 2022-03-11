@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
      * 
      */
     @InputImport(name="migrationSetting")
-      private final @Nullable Input<Map<String,String>> migrationSetting;
+      private final @Nullable Output<Map<String,String>> migrationSetting;
 
-    public Input<Map<String,String>> getMigrationSetting() {
-        return this.migrationSetting == null ? Input.empty() : this.migrationSetting;
+    public Output<Map<String,String>> getMigrationSetting() {
+        return this.migrationSetting == null ? Output.empty() : this.migrationSetting;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
      * 
      */
     @InputImport(name="sourceSetting")
-      private final @Nullable Input<Map<String,String>> sourceSetting;
+      private final @Nullable Output<Map<String,String>> sourceSetting;
 
-    public Input<Map<String,String>> getSourceSetting() {
-        return this.sourceSetting == null ? Input.empty() : this.sourceSetting;
+    public Output<Map<String,String>> getSourceSetting() {
+        return this.sourceSetting == null ? Output.empty() : this.sourceSetting;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
      * 
      */
     @InputImport(name="targetDatabaseName")
-      private final @Nullable Input<String> targetDatabaseName;
+      private final @Nullable Output<String> targetDatabaseName;
 
-    public Input<String> getTargetDatabaseName() {
-        return this.targetDatabaseName == null ? Input.empty() : this.targetDatabaseName;
+    public Output<String> getTargetDatabaseName() {
+        return this.targetDatabaseName == null ? Output.empty() : this.targetDatabaseName;
     }
 
     /**
@@ -68,18 +68,18 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
      * 
      */
     @InputImport(name="targetSetting")
-      private final @Nullable Input<Map<String,String>> targetSetting;
+      private final @Nullable Output<Map<String,String>> targetSetting;
 
-    public Input<Map<String,String>> getTargetSetting() {
-        return this.targetSetting == null ? Input.empty() : this.targetSetting;
+    public Output<Map<String,String>> getTargetSetting() {
+        return this.targetSetting == null ? Output.empty() : this.targetSetting;
     }
 
     public MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs(
-        @Nullable Input<Map<String,String>> migrationSetting,
-        @Nullable Input<String> name,
-        @Nullable Input<Map<String,String>> sourceSetting,
-        @Nullable Input<String> targetDatabaseName,
-        @Nullable Input<Map<String,String>> targetSetting) {
+        @Nullable Output<Map<String,String>> migrationSetting,
+        @Nullable Output<String> name,
+        @Nullable Output<Map<String,String>> sourceSetting,
+        @Nullable Output<String> targetDatabaseName,
+        @Nullable Output<Map<String,String>> targetSetting) {
         this.migrationSetting = migrationSetting;
         this.name = name;
         this.sourceSetting = sourceSetting;
@@ -88,11 +88,11 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
     }
 
     private MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs() {
-        this.migrationSetting = Input.empty();
-        this.name = Input.empty();
-        this.sourceSetting = Input.empty();
-        this.targetDatabaseName = Input.empty();
-        this.targetSetting = Input.empty();
+        this.migrationSetting = Output.empty();
+        this.name = Output.empty();
+        this.sourceSetting = Output.empty();
+        this.targetDatabaseName = Output.empty();
+        this.targetSetting = Output.empty();
     }
 
     public static Builder builder() {
@@ -104,11 +104,11 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
     }
 
     public static final class Builder {
-        private @Nullable Input<Map<String,String>> migrationSetting;
-        private @Nullable Input<String> name;
-        private @Nullable Input<Map<String,String>> sourceSetting;
-        private @Nullable Input<String> targetDatabaseName;
-        private @Nullable Input<Map<String,String>> targetSetting;
+        private @Nullable Output<Map<String,String>> migrationSetting;
+        private @Nullable Output<String> name;
+        private @Nullable Output<Map<String,String>> sourceSetting;
+        private @Nullable Output<String> targetDatabaseName;
+        private @Nullable Output<Map<String,String>> targetSetting;
 
         public Builder() {
     	      // Empty
@@ -123,53 +123,53 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs extends io.p
     	      this.targetSetting = defaults.targetSetting;
         }
 
-        public Builder migrationSetting(@Nullable Input<Map<String,String>> migrationSetting) {
+        public Builder migrationSetting(@Nullable Output<Map<String,String>> migrationSetting) {
             this.migrationSetting = migrationSetting;
             return this;
         }
 
         public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
-            this.migrationSetting = Input.ofNullable(migrationSetting);
+            this.migrationSetting = Output.ofNullable(migrationSetting);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder sourceSetting(@Nullable Input<Map<String,String>> sourceSetting) {
+        public Builder sourceSetting(@Nullable Output<Map<String,String>> sourceSetting) {
             this.sourceSetting = sourceSetting;
             return this;
         }
 
         public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
-            this.sourceSetting = Input.ofNullable(sourceSetting);
+            this.sourceSetting = Output.ofNullable(sourceSetting);
             return this;
         }
 
-        public Builder targetDatabaseName(@Nullable Input<String> targetDatabaseName) {
+        public Builder targetDatabaseName(@Nullable Output<String> targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
 
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
-            this.targetDatabaseName = Input.ofNullable(targetDatabaseName);
+            this.targetDatabaseName = Output.ofNullable(targetDatabaseName);
             return this;
         }
 
-        public Builder targetSetting(@Nullable Input<Map<String,String>> targetSetting) {
+        public Builder targetSetting(@Nullable Output<Map<String,String>> targetSetting) {
             this.targetSetting = targetSetting;
             return this;
         }
 
         public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
-            this.targetSetting = Input.ofNullable(targetSetting);
+            this.targetSetting = Output.ofNullable(targetSetting);
             return this;
         }
         public MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.enums.TransportProtocol;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendPort")
-      private final @Nullable Input<Integer> backendPort;
+      private final @Nullable Output<Integer> backendPort;
 
-    public Input<Integer> getBackendPort() {
-        return this.backendPort == null ? Input.empty() : this.backendPort;
+    public Output<Integer> getBackendPort() {
+        return this.backendPort == null ? Output.empty() : this.backendPort;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendPort")
-      private final @Nullable Input<Integer> frontendPort;
+      private final @Nullable Output<Integer> frontendPort;
 
-    public Input<Integer> getFrontendPort() {
-        return this.frontendPort == null ? Input.empty() : this.frontendPort;
+    public Output<Integer> getFrontendPort() {
+        return this.frontendPort == null ? Output.empty() : this.frontendPort;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportProtocol")
-      private final @Nullable Input<Either<String,TransportProtocol>> transportProtocol;
+      private final @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
 
-    public Input<Either<String,TransportProtocol>> getTransportProtocol() {
-        return this.transportProtocol == null ? Input.empty() : this.transportProtocol;
+    public Output<Either<String,TransportProtocol>> getTransportProtocol() {
+        return this.transportProtocol == null ? Output.empty() : this.transportProtocol;
     }
 
     public InboundNatRuleArgs(
-        @Nullable Input<Integer> backendPort,
-        @Nullable Input<Integer> frontendPort,
-        @Nullable Input<Either<String,TransportProtocol>> transportProtocol) {
+        @Nullable Output<Integer> backendPort,
+        @Nullable Output<Integer> frontendPort,
+        @Nullable Output<Either<String,TransportProtocol>> transportProtocol) {
         this.backendPort = backendPort;
         this.frontendPort = frontendPort;
         this.transportProtocol = transportProtocol;
     }
 
     private InboundNatRuleArgs() {
-        this.backendPort = Input.empty();
-        this.frontendPort = Input.empty();
-        this.transportProtocol = Input.empty();
+        this.backendPort = Output.empty();
+        this.frontendPort = Output.empty();
+        this.transportProtocol = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Integer> backendPort;
-        private @Nullable Input<Integer> frontendPort;
-        private @Nullable Input<Either<String,TransportProtocol>> transportProtocol;
+        private @Nullable Output<Integer> backendPort;
+        private @Nullable Output<Integer> frontendPort;
+        private @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class InboundNatRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transportProtocol = defaults.transportProtocol;
         }
 
-        public Builder backendPort(@Nullable Input<Integer> backendPort) {
+        public Builder backendPort(@Nullable Output<Integer> backendPort) {
             this.backendPort = backendPort;
             return this;
         }
 
         public Builder backendPort(@Nullable Integer backendPort) {
-            this.backendPort = Input.ofNullable(backendPort);
+            this.backendPort = Output.ofNullable(backendPort);
             return this;
         }
 
-        public Builder frontendPort(@Nullable Input<Integer> frontendPort) {
+        public Builder frontendPort(@Nullable Output<Integer> frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
 
         public Builder frontendPort(@Nullable Integer frontendPort) {
-            this.frontendPort = Input.ofNullable(frontendPort);
+            this.frontendPort = Output.ofNullable(frontendPort);
             return this;
         }
 
-        public Builder transportProtocol(@Nullable Input<Either<String,TransportProtocol>> transportProtocol) {
+        public Builder transportProtocol(@Nullable Output<Either<String,TransportProtocol>> transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }
 
         public Builder transportProtocol(@Nullable Either<String,TransportProtocol> transportProtocol) {
-            this.transportProtocol = Input.ofNullable(transportProtocol);
+            this.transportProtocol = Output.ofNullable(transportProtocol);
             return this;
         }
         public InboundNatRuleArgs build() {

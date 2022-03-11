@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="interactionPropertyName", required=true)
-      private final Input<String> interactionPropertyName;
+      private final Output<String> interactionPropertyName;
 
-    public Input<String> getInteractionPropertyName() {
+    public Output<String> getInteractionPropertyName() {
         return this.interactionPropertyName;
     }
 
@@ -33,22 +33,22 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="profilePropertyName", required=true)
-      private final Input<String> profilePropertyName;
+      private final Output<String> profilePropertyName;
 
-    public Input<String> getProfilePropertyName() {
+    public Output<String> getProfilePropertyName() {
         return this.profilePropertyName;
     }
 
     public ParticipantProfilePropertyReferenceArgs(
-        Input<String> interactionPropertyName,
-        Input<String> profilePropertyName) {
+        Output<String> interactionPropertyName,
+        Output<String> profilePropertyName) {
         this.interactionPropertyName = Objects.requireNonNull(interactionPropertyName, "expected parameter 'interactionPropertyName' to be non-null");
         this.profilePropertyName = Objects.requireNonNull(profilePropertyName, "expected parameter 'profilePropertyName' to be non-null");
     }
 
     private ParticipantProfilePropertyReferenceArgs() {
-        this.interactionPropertyName = Input.empty();
-        this.profilePropertyName = Input.empty();
+        this.interactionPropertyName = Output.empty();
+        this.profilePropertyName = Output.empty();
     }
 
     public static Builder builder() {
@@ -60,8 +60,8 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private Input<String> interactionPropertyName;
-        private Input<String> profilePropertyName;
+        private Output<String> interactionPropertyName;
+        private Output<String> profilePropertyName;
 
         public Builder() {
     	      // Empty
@@ -73,23 +73,23 @@ public final class ParticipantProfilePropertyReferenceArgs extends io.pulumi.res
     	      this.profilePropertyName = defaults.profilePropertyName;
         }
 
-        public Builder interactionPropertyName(Input<String> interactionPropertyName) {
+        public Builder interactionPropertyName(Output<String> interactionPropertyName) {
             this.interactionPropertyName = Objects.requireNonNull(interactionPropertyName);
             return this;
         }
 
         public Builder interactionPropertyName(String interactionPropertyName) {
-            this.interactionPropertyName = Input.of(Objects.requireNonNull(interactionPropertyName));
+            this.interactionPropertyName = Output.of(Objects.requireNonNull(interactionPropertyName));
             return this;
         }
 
-        public Builder profilePropertyName(Input<String> profilePropertyName) {
+        public Builder profilePropertyName(Output<String> profilePropertyName) {
             this.profilePropertyName = Objects.requireNonNull(profilePropertyName);
             return this;
         }
 
         public Builder profilePropertyName(String profilePropertyName) {
-            this.profilePropertyName = Input.of(Objects.requireNonNull(profilePropertyName));
+            this.profilePropertyName = Output.of(Objects.requireNonNull(profilePropertyName));
             return this;
         }
         public ParticipantProfilePropertyReferenceArgs build() {

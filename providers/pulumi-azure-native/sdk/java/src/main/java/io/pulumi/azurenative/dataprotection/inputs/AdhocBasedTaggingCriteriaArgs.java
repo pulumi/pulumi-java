@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.RetentionTagArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class AdhocBasedTaggingCriteriaArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tagInfo")
-      private final @Nullable Input<RetentionTagArgs> tagInfo;
+      private final @Nullable Output<RetentionTagArgs> tagInfo;
 
-    public Input<RetentionTagArgs> getTagInfo() {
-        return this.tagInfo == null ? Input.empty() : this.tagInfo;
+    public Output<RetentionTagArgs> getTagInfo() {
+        return this.tagInfo == null ? Output.empty() : this.tagInfo;
     }
 
-    public AdhocBasedTaggingCriteriaArgs(@Nullable Input<RetentionTagArgs> tagInfo) {
+    public AdhocBasedTaggingCriteriaArgs(@Nullable Output<RetentionTagArgs> tagInfo) {
         this.tagInfo = tagInfo;
     }
 
     private AdhocBasedTaggingCriteriaArgs() {
-        this.tagInfo = Input.empty();
+        this.tagInfo = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AdhocBasedTaggingCriteriaArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private @Nullable Input<RetentionTagArgs> tagInfo;
+        private @Nullable Output<RetentionTagArgs> tagInfo;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AdhocBasedTaggingCriteriaArgs extends io.pulumi.resources.Res
     	      this.tagInfo = defaults.tagInfo;
         }
 
-        public Builder tagInfo(@Nullable Input<RetentionTagArgs> tagInfo) {
+        public Builder tagInfo(@Nullable Output<RetentionTagArgs> tagInfo) {
             this.tagInfo = tagInfo;
             return this;
         }
 
         public Builder tagInfo(@Nullable RetentionTagArgs tagInfo) {
-            this.tagInfo = Input.ofNullable(tagInfo);
+            this.tagInfo = Output.ofNullable(tagInfo);
             return this;
         }
         public AdhocBasedTaggingCriteriaArgs build() {

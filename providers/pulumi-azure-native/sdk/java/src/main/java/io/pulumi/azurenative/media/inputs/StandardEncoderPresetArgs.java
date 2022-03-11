@@ -20,7 +20,7 @@ import io.pulumi.azurenative.media.inputs.PngFormatArgs;
 import io.pulumi.azurenative.media.inputs.PngImageArgs;
 import io.pulumi.azurenative.media.inputs.TransportStreamFormatArgs;
 import io.pulumi.azurenative.media.inputs.VideoArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -42,9 +42,9 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="codecs", required=true)
-      private final Input<List<Object>> codecs;
+      private final Output<List<Object>> codecs;
 
-    public Input<List<Object>> getCodecs() {
+    public Output<List<Object>> getCodecs() {
         return this.codecs;
     }
 
@@ -53,10 +53,10 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filters")
-      private final @Nullable Input<FiltersArgs> filters;
+      private final @Nullable Output<FiltersArgs> filters;
 
-    public Input<FiltersArgs> getFilters() {
-        return this.filters == null ? Input.empty() : this.filters;
+    public Output<FiltersArgs> getFilters() {
+        return this.filters == null ? Output.empty() : this.filters;
     }
 
     /**
@@ -64,9 +64,9 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="formats", required=true)
-      private final Input<List<Object>> formats;
+      private final Output<List<Object>> formats;
 
-    public Input<List<Object>> getFormats() {
+    public Output<List<Object>> getFormats() {
         return this.formats;
     }
 
@@ -76,17 +76,17 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public StandardEncoderPresetArgs(
-        Input<List<Object>> codecs,
-        @Nullable Input<FiltersArgs> filters,
-        Input<List<Object>> formats,
-        Input<String> odataType) {
+        Output<List<Object>> codecs,
+        @Nullable Output<FiltersArgs> filters,
+        Output<List<Object>> formats,
+        Output<String> odataType) {
         this.codecs = Objects.requireNonNull(codecs, "expected parameter 'codecs' to be non-null");
         this.filters = filters;
         this.formats = Objects.requireNonNull(formats, "expected parameter 'formats' to be non-null");
@@ -94,10 +94,10 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
     }
 
     private StandardEncoderPresetArgs() {
-        this.codecs = Input.empty();
-        this.filters = Input.empty();
-        this.formats = Input.empty();
-        this.odataType = Input.empty();
+        this.codecs = Output.empty();
+        this.filters = Output.empty();
+        this.formats = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -109,10 +109,10 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private Input<List<Object>> codecs;
-        private @Nullable Input<FiltersArgs> filters;
-        private Input<List<Object>> formats;
-        private Input<String> odataType;
+        private Output<List<Object>> codecs;
+        private @Nullable Output<FiltersArgs> filters;
+        private Output<List<Object>> formats;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -126,43 +126,43 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder codecs(Input<List<Object>> codecs) {
+        public Builder codecs(Output<List<Object>> codecs) {
             this.codecs = Objects.requireNonNull(codecs);
             return this;
         }
 
         public Builder codecs(List<Object> codecs) {
-            this.codecs = Input.of(Objects.requireNonNull(codecs));
+            this.codecs = Output.of(Objects.requireNonNull(codecs));
             return this;
         }
 
-        public Builder filters(@Nullable Input<FiltersArgs> filters) {
+        public Builder filters(@Nullable Output<FiltersArgs> filters) {
             this.filters = filters;
             return this;
         }
 
         public Builder filters(@Nullable FiltersArgs filters) {
-            this.filters = Input.ofNullable(filters);
+            this.filters = Output.ofNullable(filters);
             return this;
         }
 
-        public Builder formats(Input<List<Object>> formats) {
+        public Builder formats(Output<List<Object>> formats) {
             this.formats = Objects.requireNonNull(formats);
             return this;
         }
 
         public Builder formats(List<Object> formats) {
-            this.formats = Input.of(Objects.requireNonNull(formats));
+            this.formats = Output.of(Objects.requireNonNull(formats));
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public StandardEncoderPresetArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devops.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,9 +24,9 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id", required=true)
-      private final Input<String> id;
+      private final Output<String> id;
 
-    public Input<String> getId() {
+    public Output<String> getId() {
         return this.id;
     }
 
@@ -35,22 +35,22 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Output<Map<String,String>> parameters;
 
-    public Input<Map<String,String>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,String>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     public PipelineTemplateArgs(
-        Input<String> id,
-        @Nullable Input<Map<String,String>> parameters) {
+        Output<String> id,
+        @Nullable Output<Map<String,String>> parameters) {
         this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
         this.parameters = parameters;
     }
 
     private PipelineTemplateArgs() {
-        this.id = Input.empty();
-        this.parameters = Input.empty();
+        this.id = Output.empty();
+        this.parameters = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> id;
-        private @Nullable Input<Map<String,String>> parameters;
+        private Output<String> id;
+        private @Nullable Output<Map<String,String>> parameters;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder id(Input<String> id) {
+        public Builder id(Output<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
         public Builder id(String id) {
-            this.id = Input.of(Objects.requireNonNull(id));
+            this.id = Output.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
         public PipelineTemplateArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="diskSignature")
-      private final @Nullable Input<String> diskSignature;
+      private final @Nullable Output<String> diskSignature;
 
-    public Input<String> getDiskSignature() {
-        return this.diskSignature == null ? Input.empty() : this.diskSignature;
+    public Output<String> getDiskSignature() {
+        return this.diskSignature == null ? Output.empty() : this.diskSignature;
     }
 
-    public InMageDiskSignatureExclusionOptionsArgs(@Nullable Input<String> diskSignature) {
+    public InMageDiskSignatureExclusionOptionsArgs(@Nullable Output<String> diskSignature) {
         this.diskSignature = diskSignature;
     }
 
     private InMageDiskSignatureExclusionOptionsArgs() {
-        this.diskSignature = Input.empty();
+        this.diskSignature = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.res
     }
 
     public static final class Builder {
-        private @Nullable Input<String> diskSignature;
+        private @Nullable Output<String> diskSignature;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.res
     	      this.diskSignature = defaults.diskSignature;
         }
 
-        public Builder diskSignature(@Nullable Input<String> diskSignature) {
+        public Builder diskSignature(@Nullable Output<String> diskSignature) {
             this.diskSignature = diskSignature;
             return this;
         }
 
         public Builder diskSignature(@Nullable String diskSignature) {
-            this.diskSignature = Input.ofNullable(diskSignature);
+            this.diskSignature = Output.ofNullable(diskSignature);
             return this;
         }
         public InMageDiskSignatureExclusionOptionsArgs build() {

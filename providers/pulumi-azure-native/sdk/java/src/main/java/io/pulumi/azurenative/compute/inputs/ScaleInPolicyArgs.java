@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.enums.VirtualMachineScaleSetScaleInRules;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -26,18 +26,18 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-      private final @Nullable Input<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
+      private final @Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
 
-    public Input<List<Either<String,VirtualMachineScaleSetScaleInRules>>> getRules() {
-        return this.rules == null ? Input.empty() : this.rules;
+    public Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> getRules() {
+        return this.rules == null ? Output.empty() : this.rules;
     }
 
-    public ScaleInPolicyArgs(@Nullable Input<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules) {
+    public ScaleInPolicyArgs(@Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules) {
         this.rules = rules;
     }
 
     private ScaleInPolicyArgs() {
-        this.rules = Input.empty();
+        this.rules = Output.empty();
     }
 
     public static Builder builder() {
@@ -49,7 +49,7 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
+        private @Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
 
         public Builder() {
     	      // Empty
@@ -60,13 +60,13 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder rules(@Nullable Input<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules) {
+        public Builder rules(@Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules) {
             this.rules = rules;
             return this;
         }
 
         public Builder rules(@Nullable List<Either<String,VirtualMachineScaleSetScaleInRules>> rules) {
-            this.rules = Input.ofNullable(rules);
+            this.rules = Output.ofNullable(rules);
             return this;
         }
         public ScaleInPolicyArgs build() {

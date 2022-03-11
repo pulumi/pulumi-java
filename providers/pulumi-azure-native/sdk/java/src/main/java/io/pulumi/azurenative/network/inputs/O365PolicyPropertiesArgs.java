@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.O365BreakOutCategoryPoliciesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class O365PolicyPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="breakOutCategories")
-      private final @Nullable Input<O365BreakOutCategoryPoliciesArgs> breakOutCategories;
+      private final @Nullable Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories;
 
-    public Input<O365BreakOutCategoryPoliciesArgs> getBreakOutCategories() {
-        return this.breakOutCategories == null ? Input.empty() : this.breakOutCategories;
+    public Output<O365BreakOutCategoryPoliciesArgs> getBreakOutCategories() {
+        return this.breakOutCategories == null ? Output.empty() : this.breakOutCategories;
     }
 
-    public O365PolicyPropertiesArgs(@Nullable Input<O365BreakOutCategoryPoliciesArgs> breakOutCategories) {
+    public O365PolicyPropertiesArgs(@Nullable Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories) {
         this.breakOutCategories = breakOutCategories;
     }
 
     private O365PolicyPropertiesArgs() {
-        this.breakOutCategories = Input.empty();
+        this.breakOutCategories = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class O365PolicyPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<O365BreakOutCategoryPoliciesArgs> breakOutCategories;
+        private @Nullable Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class O365PolicyPropertiesArgs extends io.pulumi.resources.Resource
     	      this.breakOutCategories = defaults.breakOutCategories;
         }
 
-        public Builder breakOutCategories(@Nullable Input<O365BreakOutCategoryPoliciesArgs> breakOutCategories) {
+        public Builder breakOutCategories(@Nullable Output<O365BreakOutCategoryPoliciesArgs> breakOutCategories) {
             this.breakOutCategories = breakOutCategories;
             return this;
         }
 
         public Builder breakOutCategories(@Nullable O365BreakOutCategoryPoliciesArgs breakOutCategories) {
-            this.breakOutCategories = Input.ofNullable(breakOutCategories);
+            this.breakOutCategories = Output.ofNullable(breakOutCategories);
             return this;
         }
         public O365PolicyPropertiesArgs build() {

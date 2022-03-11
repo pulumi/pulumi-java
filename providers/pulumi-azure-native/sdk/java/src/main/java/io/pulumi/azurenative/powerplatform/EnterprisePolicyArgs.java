@@ -9,7 +9,7 @@ import io.pulumi.azurenative.powerplatform.inputs.PropertiesEncryptionArgs;
 import io.pulumi.azurenative.powerplatform.inputs.PropertiesLockboxArgs;
 import io.pulumi.azurenative.powerplatform.inputs.PropertiesNetworkInjectionArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -26,10 +26,10 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryption")
-      private final @Nullable Input<PropertiesEncryptionArgs> encryption;
+      private final @Nullable Output<PropertiesEncryptionArgs> encryption;
 
-    public Input<PropertiesEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Input.empty() : this.encryption;
+    public Output<PropertiesEncryptionArgs> getEncryption() {
+        return this.encryption == null ? Output.empty() : this.encryption;
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enterprisePolicyName")
-      private final @Nullable Input<String> enterprisePolicyName;
+      private final @Nullable Output<String> enterprisePolicyName;
 
-    public Input<String> getEnterprisePolicyName() {
-        return this.enterprisePolicyName == null ? Input.empty() : this.enterprisePolicyName;
+    public Output<String> getEnterprisePolicyName() {
+        return this.enterprisePolicyName == null ? Output.empty() : this.enterprisePolicyName;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<EnterprisePolicyIdentityArgs> identity;
+      private final @Nullable Output<EnterprisePolicyIdentityArgs> identity;
 
-    public Input<EnterprisePolicyIdentityArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<EnterprisePolicyIdentityArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -59,9 +59,9 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,EnterprisePolicyKind>> kind;
+      private final Output<Either<String,EnterprisePolicyKind>> kind;
 
-    public Input<Either<String,EnterprisePolicyKind>> getKind() {
+    public Output<Either<String,EnterprisePolicyKind>> getKind() {
         return this.kind;
     }
 
@@ -70,10 +70,10 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="lockbox")
-      private final @Nullable Input<PropertiesLockboxArgs> lockbox;
+      private final @Nullable Output<PropertiesLockboxArgs> lockbox;
 
-    public Input<PropertiesLockboxArgs> getLockbox() {
-        return this.lockbox == null ? Input.empty() : this.lockbox;
+    public Output<PropertiesLockboxArgs> getLockbox() {
+        return this.lockbox == null ? Output.empty() : this.lockbox;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkInjection")
-      private final @Nullable Input<PropertiesNetworkInjectionArgs> networkInjection;
+      private final @Nullable Output<PropertiesNetworkInjectionArgs> networkInjection;
 
-    public Input<PropertiesNetworkInjectionArgs> getNetworkInjection() {
-        return this.networkInjection == null ? Input.empty() : this.networkInjection;
+    public Output<PropertiesNetworkInjectionArgs> getNetworkInjection() {
+        return this.networkInjection == null ? Output.empty() : this.networkInjection;
     }
 
     /**
@@ -103,9 +103,9 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -114,22 +114,22 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public EnterprisePolicyArgs(
-        @Nullable Input<PropertiesEncryptionArgs> encryption,
-        @Nullable Input<String> enterprisePolicyName,
-        @Nullable Input<EnterprisePolicyIdentityArgs> identity,
-        Input<Either<String,EnterprisePolicyKind>> kind,
-        @Nullable Input<String> location,
-        @Nullable Input<PropertiesLockboxArgs> lockbox,
-        @Nullable Input<PropertiesNetworkInjectionArgs> networkInjection,
-        Input<String> resourceGroupName,
-        @Nullable Input<Map<String,String>> tags) {
+        @Nullable Output<PropertiesEncryptionArgs> encryption,
+        @Nullable Output<String> enterprisePolicyName,
+        @Nullable Output<EnterprisePolicyIdentityArgs> identity,
+        Output<Either<String,EnterprisePolicyKind>> kind,
+        @Nullable Output<String> location,
+        @Nullable Output<PropertiesLockboxArgs> lockbox,
+        @Nullable Output<PropertiesNetworkInjectionArgs> networkInjection,
+        Output<String> resourceGroupName,
+        @Nullable Output<Map<String,String>> tags) {
         this.encryption = encryption;
         this.enterprisePolicyName = enterprisePolicyName;
         this.identity = identity;
@@ -142,15 +142,15 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EnterprisePolicyArgs() {
-        this.encryption = Input.empty();
-        this.enterprisePolicyName = Input.empty();
-        this.identity = Input.empty();
-        this.kind = Input.empty();
-        this.location = Input.empty();
-        this.lockbox = Input.empty();
-        this.networkInjection = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.tags = Input.empty();
+        this.encryption = Output.empty();
+        this.enterprisePolicyName = Output.empty();
+        this.identity = Output.empty();
+        this.kind = Output.empty();
+        this.location = Output.empty();
+        this.lockbox = Output.empty();
+        this.networkInjection = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -162,15 +162,15 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<PropertiesEncryptionArgs> encryption;
-        private @Nullable Input<String> enterprisePolicyName;
-        private @Nullable Input<EnterprisePolicyIdentityArgs> identity;
-        private Input<Either<String,EnterprisePolicyKind>> kind;
-        private @Nullable Input<String> location;
-        private @Nullable Input<PropertiesLockboxArgs> lockbox;
-        private @Nullable Input<PropertiesNetworkInjectionArgs> networkInjection;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Map<String,String>> tags;
+        private @Nullable Output<PropertiesEncryptionArgs> encryption;
+        private @Nullable Output<String> enterprisePolicyName;
+        private @Nullable Output<EnterprisePolicyIdentityArgs> identity;
+        private Output<Either<String,EnterprisePolicyKind>> kind;
+        private @Nullable Output<String> location;
+        private @Nullable Output<PropertiesLockboxArgs> lockbox;
+        private @Nullable Output<PropertiesNetworkInjectionArgs> networkInjection;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -189,93 +189,93 @@ public final class EnterprisePolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder encryption(@Nullable Input<PropertiesEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Output<PropertiesEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
         public Builder encryption(@Nullable PropertiesEncryptionArgs encryption) {
-            this.encryption = Input.ofNullable(encryption);
+            this.encryption = Output.ofNullable(encryption);
             return this;
         }
 
-        public Builder enterprisePolicyName(@Nullable Input<String> enterprisePolicyName) {
+        public Builder enterprisePolicyName(@Nullable Output<String> enterprisePolicyName) {
             this.enterprisePolicyName = enterprisePolicyName;
             return this;
         }
 
         public Builder enterprisePolicyName(@Nullable String enterprisePolicyName) {
-            this.enterprisePolicyName = Input.ofNullable(enterprisePolicyName);
+            this.enterprisePolicyName = Output.ofNullable(enterprisePolicyName);
             return this;
         }
 
-        public Builder identity(@Nullable Input<EnterprisePolicyIdentityArgs> identity) {
+        public Builder identity(@Nullable Output<EnterprisePolicyIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable EnterprisePolicyIdentityArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder kind(Input<Either<String,EnterprisePolicyKind>> kind) {
+        public Builder kind(Output<Either<String,EnterprisePolicyKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,EnterprisePolicyKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder lockbox(@Nullable Input<PropertiesLockboxArgs> lockbox) {
+        public Builder lockbox(@Nullable Output<PropertiesLockboxArgs> lockbox) {
             this.lockbox = lockbox;
             return this;
         }
 
         public Builder lockbox(@Nullable PropertiesLockboxArgs lockbox) {
-            this.lockbox = Input.ofNullable(lockbox);
+            this.lockbox = Output.ofNullable(lockbox);
             return this;
         }
 
-        public Builder networkInjection(@Nullable Input<PropertiesNetworkInjectionArgs> networkInjection) {
+        public Builder networkInjection(@Nullable Output<PropertiesNetworkInjectionArgs> networkInjection) {
             this.networkInjection = networkInjection;
             return this;
         }
 
         public Builder networkInjection(@Nullable PropertiesNetworkInjectionArgs networkInjection) {
-            this.networkInjection = Input.ofNullable(networkInjection);
+            this.networkInjection = Output.ofNullable(networkInjection);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public EnterprisePolicyArgs build() {

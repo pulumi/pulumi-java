@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class RedirectIncompatibleRowSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-      private final Input<Object> linkedServiceName;
+      private final Output<Object> linkedServiceName;
 
-    public Input<Object> getLinkedServiceName() {
+    public Output<Object> getLinkedServiceName() {
         return this.linkedServiceName;
     }
 
@@ -34,22 +34,22 @@ public final class RedirectIncompatibleRowSettingsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="path")
-      private final @Nullable Input<Object> path;
+      private final @Nullable Output<Object> path;
 
-    public Input<Object> getPath() {
-        return this.path == null ? Input.empty() : this.path;
+    public Output<Object> getPath() {
+        return this.path == null ? Output.empty() : this.path;
     }
 
     public RedirectIncompatibleRowSettingsArgs(
-        Input<Object> linkedServiceName,
-        @Nullable Input<Object> path) {
+        Output<Object> linkedServiceName,
+        @Nullable Output<Object> path) {
         this.linkedServiceName = Objects.requireNonNull(linkedServiceName, "expected parameter 'linkedServiceName' to be non-null");
         this.path = path;
     }
 
     private RedirectIncompatibleRowSettingsArgs() {
-        this.linkedServiceName = Input.empty();
-        this.path = Input.empty();
+        this.linkedServiceName = Output.empty();
+        this.path = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class RedirectIncompatibleRowSettingsArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private Input<Object> linkedServiceName;
-        private @Nullable Input<Object> path;
+        private Output<Object> linkedServiceName;
+        private @Nullable Output<Object> path;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class RedirectIncompatibleRowSettingsArgs extends io.pulumi.resourc
     	      this.path = defaults.path;
         }
 
-        public Builder linkedServiceName(Input<Object> linkedServiceName) {
+        public Builder linkedServiceName(Output<Object> linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
         public Builder linkedServiceName(Object linkedServiceName) {
-            this.linkedServiceName = Input.of(Objects.requireNonNull(linkedServiceName));
+            this.linkedServiceName = Output.of(Objects.requireNonNull(linkedServiceName));
             return this;
         }
 
-        public Builder path(@Nullable Input<Object> path) {
+        public Builder path(@Nullable Output<Object> path) {
             this.path = path;
             return this;
         }
 
         public Builder path(@Nullable Object path) {
-            this.path = Input.ofNullable(path);
+            this.path = Output.ofNullable(path);
             return this;
         }
         public RedirectIncompatibleRowSettingsArgs build() {

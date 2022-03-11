@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
      * 
      */
     @InputImport(name="offset", required=true)
-      private final Input<String> offset;
+      private final Output<String> offset;
 
-    public Input<String> getOffset() {
+    public Output<String> getOffset() {
         return this.offset;
     }
 
@@ -34,10 +34,10 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
      * 
      */
     @InputImport(name="size")
-      private final @Nullable Input<String> size;
+      private final @Nullable Output<String> size;
 
-    public Input<String> getSize() {
-        return this.size == null ? Input.empty() : this.size;
+    public Output<String> getSize() {
+        return this.size == null ? Output.empty() : this.size;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public SelfDependencyTumblingWindowTriggerReferenceArgs(
-        Input<String> offset,
-        @Nullable Input<String> size,
-        Input<String> type) {
+        Output<String> offset,
+        @Nullable Output<String> size,
+        Output<String> type) {
         this.offset = Objects.requireNonNull(offset, "expected parameter 'offset' to be non-null");
         this.size = size;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private SelfDependencyTumblingWindowTriggerReferenceArgs() {
-        this.offset = Input.empty();
-        this.size = Input.empty();
-        this.type = Input.empty();
+        this.offset = Output.empty();
+        this.size = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
     }
 
     public static final class Builder {
-        private Input<String> offset;
-        private @Nullable Input<String> size;
-        private Input<String> type;
+        private Output<String> offset;
+        private @Nullable Output<String> size;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
     	      this.type = defaults.type;
         }
 
-        public Builder offset(Input<String> offset) {
+        public Builder offset(Output<String> offset) {
             this.offset = Objects.requireNonNull(offset);
             return this;
         }
 
         public Builder offset(String offset) {
-            this.offset = Input.of(Objects.requireNonNull(offset));
+            this.offset = Output.of(Objects.requireNonNull(offset));
             return this;
         }
 
-        public Builder size(@Nullable Input<String> size) {
+        public Builder size(@Nullable Output<String> size) {
             this.size = size;
             return this;
         }
 
         public Builder size(@Nullable String size) {
-            this.size = Input.ofNullable(size);
+            this.size = Output.ofNullable(size);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public SelfDependencyTumblingWindowTriggerReferenceArgs build() {

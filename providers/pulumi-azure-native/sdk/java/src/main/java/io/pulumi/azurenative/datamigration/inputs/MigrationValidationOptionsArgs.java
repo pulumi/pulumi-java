@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableDataIntegrityValidation")
-      private final @Nullable Input<Boolean> enableDataIntegrityValidation;
+      private final @Nullable Output<Boolean> enableDataIntegrityValidation;
 
-    public Input<Boolean> getEnableDataIntegrityValidation() {
-        return this.enableDataIntegrityValidation == null ? Input.empty() : this.enableDataIntegrityValidation;
+    public Output<Boolean> getEnableDataIntegrityValidation() {
+        return this.enableDataIntegrityValidation == null ? Output.empty() : this.enableDataIntegrityValidation;
     }
 
     /**
@@ -34,10 +34,10 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableQueryAnalysisValidation")
-      private final @Nullable Input<Boolean> enableQueryAnalysisValidation;
+      private final @Nullable Output<Boolean> enableQueryAnalysisValidation;
 
-    public Input<Boolean> getEnableQueryAnalysisValidation() {
-        return this.enableQueryAnalysisValidation == null ? Input.empty() : this.enableQueryAnalysisValidation;
+    public Output<Boolean> getEnableQueryAnalysisValidation() {
+        return this.enableQueryAnalysisValidation == null ? Output.empty() : this.enableQueryAnalysisValidation;
     }
 
     /**
@@ -45,25 +45,25 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableSchemaValidation")
-      private final @Nullable Input<Boolean> enableSchemaValidation;
+      private final @Nullable Output<Boolean> enableSchemaValidation;
 
-    public Input<Boolean> getEnableSchemaValidation() {
-        return this.enableSchemaValidation == null ? Input.empty() : this.enableSchemaValidation;
+    public Output<Boolean> getEnableSchemaValidation() {
+        return this.enableSchemaValidation == null ? Output.empty() : this.enableSchemaValidation;
     }
 
     public MigrationValidationOptionsArgs(
-        @Nullable Input<Boolean> enableDataIntegrityValidation,
-        @Nullable Input<Boolean> enableQueryAnalysisValidation,
-        @Nullable Input<Boolean> enableSchemaValidation) {
+        @Nullable Output<Boolean> enableDataIntegrityValidation,
+        @Nullable Output<Boolean> enableQueryAnalysisValidation,
+        @Nullable Output<Boolean> enableSchemaValidation) {
         this.enableDataIntegrityValidation = enableDataIntegrityValidation;
         this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
         this.enableSchemaValidation = enableSchemaValidation;
     }
 
     private MigrationValidationOptionsArgs() {
-        this.enableDataIntegrityValidation = Input.empty();
-        this.enableQueryAnalysisValidation = Input.empty();
-        this.enableSchemaValidation = Input.empty();
+        this.enableDataIntegrityValidation = Output.empty();
+        this.enableQueryAnalysisValidation = Output.empty();
+        this.enableSchemaValidation = Output.empty();
     }
 
     public static Builder builder() {
@@ -75,9 +75,9 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> enableDataIntegrityValidation;
-        private @Nullable Input<Boolean> enableQueryAnalysisValidation;
-        private @Nullable Input<Boolean> enableSchemaValidation;
+        private @Nullable Output<Boolean> enableDataIntegrityValidation;
+        private @Nullable Output<Boolean> enableQueryAnalysisValidation;
+        private @Nullable Output<Boolean> enableSchemaValidation;
 
         public Builder() {
     	      // Empty
@@ -90,33 +90,33 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
     	      this.enableSchemaValidation = defaults.enableSchemaValidation;
         }
 
-        public Builder enableDataIntegrityValidation(@Nullable Input<Boolean> enableDataIntegrityValidation) {
+        public Builder enableDataIntegrityValidation(@Nullable Output<Boolean> enableDataIntegrityValidation) {
             this.enableDataIntegrityValidation = enableDataIntegrityValidation;
             return this;
         }
 
         public Builder enableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
-            this.enableDataIntegrityValidation = Input.ofNullable(enableDataIntegrityValidation);
+            this.enableDataIntegrityValidation = Output.ofNullable(enableDataIntegrityValidation);
             return this;
         }
 
-        public Builder enableQueryAnalysisValidation(@Nullable Input<Boolean> enableQueryAnalysisValidation) {
+        public Builder enableQueryAnalysisValidation(@Nullable Output<Boolean> enableQueryAnalysisValidation) {
             this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
             return this;
         }
 
         public Builder enableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
-            this.enableQueryAnalysisValidation = Input.ofNullable(enableQueryAnalysisValidation);
+            this.enableQueryAnalysisValidation = Output.ofNullable(enableQueryAnalysisValidation);
             return this;
         }
 
-        public Builder enableSchemaValidation(@Nullable Input<Boolean> enableSchemaValidation) {
+        public Builder enableSchemaValidation(@Nullable Output<Boolean> enableSchemaValidation) {
             this.enableSchemaValidation = enableSchemaValidation;
             return this;
         }
 
         public Builder enableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
-            this.enableSchemaValidation = Input.ofNullable(enableSchemaValidation);
+            this.enableSchemaValidation = Output.ofNullable(enableSchemaValidation);
             return this;
         }
         public MigrationValidationOptionsArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.AttributeFilter;
 import io.pulumi.azurenative.media.enums.ChannelMapping;
 import io.pulumi.azurenative.media.enums.TrackAttribute;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -27,9 +27,9 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="attribute", required=true)
-      private final Input<Either<String,TrackAttribute>> attribute;
+      private final Output<Either<String,TrackAttribute>> attribute;
 
-    public Input<Either<String,TrackAttribute>> getAttribute() {
+    public Output<Either<String,TrackAttribute>> getAttribute() {
         return this.attribute;
     }
 
@@ -38,10 +38,10 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="channelMapping")
-      private final @Nullable Input<Either<String,ChannelMapping>> channelMapping;
+      private final @Nullable Output<Either<String,ChannelMapping>> channelMapping;
 
-    public Input<Either<String,ChannelMapping>> getChannelMapping() {
-        return this.channelMapping == null ? Input.empty() : this.channelMapping;
+    public Output<Either<String,ChannelMapping>> getChannelMapping() {
+        return this.channelMapping == null ? Output.empty() : this.channelMapping;
     }
 
     /**
@@ -49,9 +49,9 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="filter", required=true)
-      private final Input<Either<String,AttributeFilter>> filter;
+      private final Output<Either<String,AttributeFilter>> filter;
 
-    public Input<Either<String,AttributeFilter>> getFilter() {
+    public Output<Either<String,AttributeFilter>> getFilter() {
         return this.filter;
     }
 
@@ -60,10 +60,10 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="filterValue")
-      private final @Nullable Input<String> filterValue;
+      private final @Nullable Output<String> filterValue;
 
-    public Input<String> getFilterValue() {
-        return this.filterValue == null ? Input.empty() : this.filterValue;
+    public Output<String> getFilterValue() {
+        return this.filterValue == null ? Output.empty() : this.filterValue;
     }
 
     /**
@@ -72,18 +72,18 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="odataType", required=true)
-      private final Input<String> odataType;
+      private final Output<String> odataType;
 
-    public Input<String> getOdataType() {
+    public Output<String> getOdataType() {
         return this.odataType;
     }
 
     public SelectAudioTrackByAttributeArgs(
-        Input<Either<String,TrackAttribute>> attribute,
-        @Nullable Input<Either<String,ChannelMapping>> channelMapping,
-        Input<Either<String,AttributeFilter>> filter,
-        @Nullable Input<String> filterValue,
-        Input<String> odataType) {
+        Output<Either<String,TrackAttribute>> attribute,
+        @Nullable Output<Either<String,ChannelMapping>> channelMapping,
+        Output<Either<String,AttributeFilter>> filter,
+        @Nullable Output<String> filterValue,
+        Output<String> odataType) {
         this.attribute = Objects.requireNonNull(attribute, "expected parameter 'attribute' to be non-null");
         this.channelMapping = channelMapping;
         this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
@@ -92,11 +92,11 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
     }
 
     private SelectAudioTrackByAttributeArgs() {
-        this.attribute = Input.empty();
-        this.channelMapping = Input.empty();
-        this.filter = Input.empty();
-        this.filterValue = Input.empty();
-        this.odataType = Input.empty();
+        this.attribute = Output.empty();
+        this.channelMapping = Output.empty();
+        this.filter = Output.empty();
+        this.filterValue = Output.empty();
+        this.odataType = Output.empty();
     }
 
     public static Builder builder() {
@@ -108,11 +108,11 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private Input<Either<String,TrackAttribute>> attribute;
-        private @Nullable Input<Either<String,ChannelMapping>> channelMapping;
-        private Input<Either<String,AttributeFilter>> filter;
-        private @Nullable Input<String> filterValue;
-        private Input<String> odataType;
+        private Output<Either<String,TrackAttribute>> attribute;
+        private @Nullable Output<Either<String,ChannelMapping>> channelMapping;
+        private Output<Either<String,AttributeFilter>> filter;
+        private @Nullable Output<String> filterValue;
+        private Output<String> odataType;
 
         public Builder() {
     	      // Empty
@@ -127,53 +127,53 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder attribute(Input<Either<String,TrackAttribute>> attribute) {
+        public Builder attribute(Output<Either<String,TrackAttribute>> attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
         public Builder attribute(Either<String,TrackAttribute> attribute) {
-            this.attribute = Input.of(Objects.requireNonNull(attribute));
+            this.attribute = Output.of(Objects.requireNonNull(attribute));
             return this;
         }
 
-        public Builder channelMapping(@Nullable Input<Either<String,ChannelMapping>> channelMapping) {
+        public Builder channelMapping(@Nullable Output<Either<String,ChannelMapping>> channelMapping) {
             this.channelMapping = channelMapping;
             return this;
         }
 
         public Builder channelMapping(@Nullable Either<String,ChannelMapping> channelMapping) {
-            this.channelMapping = Input.ofNullable(channelMapping);
+            this.channelMapping = Output.ofNullable(channelMapping);
             return this;
         }
 
-        public Builder filter(Input<Either<String,AttributeFilter>> filter) {
+        public Builder filter(Output<Either<String,AttributeFilter>> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
         public Builder filter(Either<String,AttributeFilter> filter) {
-            this.filter = Input.of(Objects.requireNonNull(filter));
+            this.filter = Output.of(Objects.requireNonNull(filter));
             return this;
         }
 
-        public Builder filterValue(@Nullable Input<String> filterValue) {
+        public Builder filterValue(@Nullable Output<String> filterValue) {
             this.filterValue = filterValue;
             return this;
         }
 
         public Builder filterValue(@Nullable String filterValue) {
-            this.filterValue = Input.ofNullable(filterValue);
+            this.filterValue = Output.ofNullable(filterValue);
             return this;
         }
 
-        public Builder odataType(Input<String> odataType) {
+        public Builder odataType(Output<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Input.of(Objects.requireNonNull(odataType));
+            this.odataType = Output.of(Objects.requireNonNull(odataType));
             return this;
         }
         public SelectAudioTrackByAttributeArgs build() {

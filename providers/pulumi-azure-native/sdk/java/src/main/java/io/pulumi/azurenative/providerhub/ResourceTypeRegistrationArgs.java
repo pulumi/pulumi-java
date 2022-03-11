@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -16,10 +16,10 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     public static final ResourceTypeRegistrationArgs Empty = new ResourceTypeRegistrationArgs();
 
     @InputImport(name="properties")
-      private final @Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties;
+      private final @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
 
-    public Input<ResourceTypeRegistrationPropertiesArgs> getProperties() {
-        return this.properties == null ? Input.empty() : this.properties;
+    public Output<ResourceTypeRegistrationPropertiesArgs> getProperties() {
+        return this.properties == null ? Output.empty() : this.properties;
     }
 
     /**
@@ -27,9 +27,9 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-      private final Input<String> providerNamespace;
+      private final Output<String> providerNamespace;
 
-    public Input<String> getProviderNamespace() {
+    public Output<String> getProviderNamespace() {
         return this.providerNamespace;
     }
 
@@ -38,25 +38,25 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceType")
-      private final @Nullable Input<String> resourceType;
+      private final @Nullable Output<String> resourceType;
 
-    public Input<String> getPropResourceType() {
-        return this.resourceType == null ? Input.empty() : this.resourceType;
+    public Output<String> getPropResourceType() {
+        return this.resourceType == null ? Output.empty() : this.resourceType;
     }
 
     public ResourceTypeRegistrationArgs(
-        @Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties,
-        Input<String> providerNamespace,
-        @Nullable Input<String> resourceType) {
+        @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties,
+        Output<String> providerNamespace,
+        @Nullable Output<String> resourceType) {
         this.properties = properties;
         this.providerNamespace = Objects.requireNonNull(providerNamespace, "expected parameter 'providerNamespace' to be non-null");
         this.resourceType = resourceType;
     }
 
     private ResourceTypeRegistrationArgs() {
-        this.properties = Input.empty();
-        this.providerNamespace = Input.empty();
-        this.resourceType = Input.empty();
+        this.properties = Output.empty();
+        this.providerNamespace = Output.empty();
+        this.resourceType = Output.empty();
     }
 
     public static Builder builder() {
@@ -68,9 +68,9 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties;
-        private Input<String> providerNamespace;
-        private @Nullable Input<String> resourceType;
+        private @Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties;
+        private Output<String> providerNamespace;
+        private @Nullable Output<String> resourceType;
 
         public Builder() {
     	      // Empty
@@ -83,33 +83,33 @@ public final class ResourceTypeRegistrationArgs extends io.pulumi.resources.Reso
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder properties(@Nullable Input<ResourceTypeRegistrationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Output<ResourceTypeRegistrationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
         public Builder properties(@Nullable ResourceTypeRegistrationPropertiesArgs properties) {
-            this.properties = Input.ofNullable(properties);
+            this.properties = Output.ofNullable(properties);
             return this;
         }
 
-        public Builder providerNamespace(Input<String> providerNamespace) {
+        public Builder providerNamespace(Output<String> providerNamespace) {
             this.providerNamespace = Objects.requireNonNull(providerNamespace);
             return this;
         }
 
         public Builder providerNamespace(String providerNamespace) {
-            this.providerNamespace = Input.of(Objects.requireNonNull(providerNamespace));
+            this.providerNamespace = Output.of(Objects.requireNonNull(providerNamespace));
             return this;
         }
 
-        public Builder resourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Output<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Input.ofNullable(resourceType);
+            this.resourceType = Output.ofNullable(resourceType);
             return this;
         }
         public ResourceTypeRegistrationArgs build() {

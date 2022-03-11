@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.azurenative.datashare.enums.DataSetMappingKind;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -21,9 +21,9 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-      private final Input<String> accountName;
+      private final Output<String> accountName;
 
-    public Input<String> getAccountName() {
+    public Output<String> getAccountName() {
         return this.accountName;
     }
 
@@ -32,10 +32,10 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSetMappingName")
-      private final @Nullable Input<String> dataSetMappingName;
+      private final @Nullable Output<String> dataSetMappingName;
 
-    public Input<String> getDataSetMappingName() {
-        return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
+    public Output<String> getDataSetMappingName() {
+        return this.dataSetMappingName == null ? Output.empty() : this.dataSetMappingName;
     }
 
     /**
@@ -43,9 +43,9 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-      private final Input<Either<String,DataSetMappingKind>> kind;
+      private final Output<Either<String,DataSetMappingKind>> kind;
 
-    public Input<Either<String,DataSetMappingKind>> getKind() {
+    public Output<Either<String,DataSetMappingKind>> getKind() {
         return this.kind;
     }
 
@@ -54,9 +54,9 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -65,18 +65,18 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-      private final Input<String> shareSubscriptionName;
+      private final Output<String> shareSubscriptionName;
 
-    public Input<String> getShareSubscriptionName() {
+    public Output<String> getShareSubscriptionName() {
         return this.shareSubscriptionName;
     }
 
     public DataSetMappingArgs(
-        Input<String> accountName,
-        @Nullable Input<String> dataSetMappingName,
-        Input<Either<String,DataSetMappingKind>> kind,
-        Input<String> resourceGroupName,
-        Input<String> shareSubscriptionName) {
+        Output<String> accountName,
+        @Nullable Output<String> dataSetMappingName,
+        Output<Either<String,DataSetMappingKind>> kind,
+        Output<String> resourceGroupName,
+        Output<String> shareSubscriptionName) {
         this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
         this.dataSetMappingName = dataSetMappingName;
         this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
@@ -85,11 +85,11 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSetMappingArgs() {
-        this.accountName = Input.empty();
-        this.dataSetMappingName = Input.empty();
-        this.kind = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.shareSubscriptionName = Input.empty();
+        this.accountName = Output.empty();
+        this.dataSetMappingName = Output.empty();
+        this.kind = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.shareSubscriptionName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> accountName;
-        private @Nullable Input<String> dataSetMappingName;
-        private Input<Either<String,DataSetMappingKind>> kind;
-        private Input<String> resourceGroupName;
-        private Input<String> shareSubscriptionName;
+        private Output<String> accountName;
+        private @Nullable Output<String> dataSetMappingName;
+        private Output<Either<String,DataSetMappingKind>> kind;
+        private Output<String> resourceGroupName;
+        private Output<String> shareSubscriptionName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shareSubscriptionName = defaults.shareSubscriptionName;
         }
 
-        public Builder accountName(Input<String> accountName) {
+        public Builder accountName(Output<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Input.of(Objects.requireNonNull(accountName));
+            this.accountName = Output.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder dataSetMappingName(@Nullable Input<String> dataSetMappingName) {
+        public Builder dataSetMappingName(@Nullable Output<String> dataSetMappingName) {
             this.dataSetMappingName = dataSetMappingName;
             return this;
         }
 
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Input.ofNullable(dataSetMappingName);
+            this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
             return this;
         }
 
-        public Builder kind(Input<Either<String,DataSetMappingKind>> kind) {
+        public Builder kind(Output<Either<String,DataSetMappingKind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
         public Builder kind(Either<String,DataSetMappingKind> kind) {
-            this.kind = Input.of(Objects.requireNonNull(kind));
+            this.kind = Output.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder shareSubscriptionName(Input<String> shareSubscriptionName) {
+        public Builder shareSubscriptionName(Output<String> shareSubscriptionName) {
             this.shareSubscriptionName = Objects.requireNonNull(shareSubscriptionName);
             return this;
         }
 
         public Builder shareSubscriptionName(String shareSubscriptionName) {
-            this.shareSubscriptionName = Input.of(Objects.requireNonNull(shareSubscriptionName));
+            this.shareSubscriptionName = Output.of(Objects.requireNonNull(shareSubscriptionName));
             return this;
         }
         public DataSetMappingArgs build() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.AgentPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.CredentialsArgs;
 import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -30,10 +30,10 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="agentConfiguration")
-      private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
+      private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
-    public Input<AgentPropertiesArgs> getAgentConfiguration() {
-        return this.agentConfiguration == null ? Input.empty() : this.agentConfiguration;
+    public Output<AgentPropertiesArgs> getAgentConfiguration() {
+        return this.agentConfiguration == null ? Output.empty() : this.agentConfiguration;
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="agentPoolName")
-      private final @Nullable Input<String> agentPoolName;
+      private final @Nullable Output<String> agentPoolName;
 
-    public Input<String> getAgentPoolName() {
-        return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
+    public Output<String> getAgentPoolName() {
+        return this.agentPoolName == null ? Output.empty() : this.agentPoolName;
     }
 
     /**
@@ -52,10 +52,10 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="credentials")
-      private final @Nullable Input<CredentialsArgs> credentials;
+      private final @Nullable Output<CredentialsArgs> credentials;
 
-    public Input<CredentialsArgs> getCredentials() {
-        return this.credentials == null ? Input.empty() : this.credentials;
+    public Output<CredentialsArgs> getCredentials() {
+        return this.credentials == null ? Output.empty() : this.credentials;
     }
 
     /**
@@ -63,10 +63,10 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isArchiveEnabled")
-      private final @Nullable Input<Boolean> isArchiveEnabled;
+      private final @Nullable Output<Boolean> isArchiveEnabled;
 
-    public Input<Boolean> getIsArchiveEnabled() {
-        return this.isArchiveEnabled == null ? Input.empty() : this.isArchiveEnabled;
+    public Output<Boolean> getIsArchiveEnabled() {
+        return this.isArchiveEnabled == null ? Output.empty() : this.isArchiveEnabled;
     }
 
     /**
@@ -74,10 +74,10 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="logTemplate")
-      private final @Nullable Input<String> logTemplate;
+      private final @Nullable Output<String> logTemplate;
 
-    public Input<String> getLogTemplate() {
-        return this.logTemplate == null ? Input.empty() : this.logTemplate;
+    public Output<String> getLogTemplate() {
+        return this.logTemplate == null ? Output.empty() : this.logTemplate;
     }
 
     /**
@@ -85,9 +85,9 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="platform", required=true)
-      private final Input<PlatformPropertiesArgs> platform;
+      private final Output<PlatformPropertiesArgs> platform;
 
-    public Input<PlatformPropertiesArgs> getPlatform() {
+    public Output<PlatformPropertiesArgs> getPlatform() {
         return this.platform;
     }
 
@@ -97,10 +97,10 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sourceLocation")
-      private final @Nullable Input<String> sourceLocation;
+      private final @Nullable Output<String> sourceLocation;
 
-    public Input<String> getSourceLocation() {
-        return this.sourceLocation == null ? Input.empty() : this.sourceLocation;
+    public Output<String> getSourceLocation() {
+        return this.sourceLocation == null ? Output.empty() : this.sourceLocation;
     }
 
     /**
@@ -108,9 +108,9 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="taskFilePath", required=true)
-      private final Input<String> taskFilePath;
+      private final Output<String> taskFilePath;
 
-    public Input<String> getTaskFilePath() {
+    public Output<String> getTaskFilePath() {
         return this.taskFilePath;
     }
 
@@ -119,10 +119,10 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="timeout")
-      private final @Nullable Input<Integer> timeout;
+      private final @Nullable Output<Integer> timeout;
 
-    public Input<Integer> getTimeout() {
-        return this.timeout == null ? Input.empty() : this.timeout;
+    public Output<Integer> getTimeout() {
+        return this.timeout == null ? Output.empty() : this.timeout;
     }
 
     /**
@@ -131,9 +131,9 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
@@ -142,10 +142,10 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="values")
-      private final @Nullable Input<List<SetValueArgs>> values;
+      private final @Nullable Output<List<SetValueArgs>> values;
 
-    public Input<List<SetValueArgs>> getValues() {
-        return this.values == null ? Input.empty() : this.values;
+    public Output<List<SetValueArgs>> getValues() {
+        return this.values == null ? Output.empty() : this.values;
     }
 
     /**
@@ -153,52 +153,52 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="valuesFilePath")
-      private final @Nullable Input<String> valuesFilePath;
+      private final @Nullable Output<String> valuesFilePath;
 
-    public Input<String> getValuesFilePath() {
-        return this.valuesFilePath == null ? Input.empty() : this.valuesFilePath;
+    public Output<String> getValuesFilePath() {
+        return this.valuesFilePath == null ? Output.empty() : this.valuesFilePath;
     }
 
     public FileTaskRunRequestArgs(
-        @Nullable Input<AgentPropertiesArgs> agentConfiguration,
-        @Nullable Input<String> agentPoolName,
-        @Nullable Input<CredentialsArgs> credentials,
-        @Nullable Input<Boolean> isArchiveEnabled,
-        @Nullable Input<String> logTemplate,
-        Input<PlatformPropertiesArgs> platform,
-        @Nullable Input<String> sourceLocation,
-        Input<String> taskFilePath,
-        @Nullable Input<Integer> timeout,
-        Input<String> type,
-        @Nullable Input<List<SetValueArgs>> values,
-        @Nullable Input<String> valuesFilePath) {
+        @Nullable Output<AgentPropertiesArgs> agentConfiguration,
+        @Nullable Output<String> agentPoolName,
+        @Nullable Output<CredentialsArgs> credentials,
+        @Nullable Output<Boolean> isArchiveEnabled,
+        @Nullable Output<String> logTemplate,
+        Output<PlatformPropertiesArgs> platform,
+        @Nullable Output<String> sourceLocation,
+        Output<String> taskFilePath,
+        @Nullable Output<Integer> timeout,
+        Output<String> type,
+        @Nullable Output<List<SetValueArgs>> values,
+        @Nullable Output<String> valuesFilePath) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.credentials = credentials;
-        this.isArchiveEnabled = isArchiveEnabled == null ? Input.ofNullable(false) : isArchiveEnabled;
+        this.isArchiveEnabled = isArchiveEnabled == null ? Output.ofNullable(false) : isArchiveEnabled;
         this.logTemplate = logTemplate;
         this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
         this.sourceLocation = sourceLocation;
         this.taskFilePath = Objects.requireNonNull(taskFilePath, "expected parameter 'taskFilePath' to be non-null");
-        this.timeout = timeout == null ? Input.ofNullable(3600) : timeout;
+        this.timeout = timeout == null ? Output.ofNullable(3600) : timeout;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
         this.values = values;
         this.valuesFilePath = valuesFilePath;
     }
 
     private FileTaskRunRequestArgs() {
-        this.agentConfiguration = Input.empty();
-        this.agentPoolName = Input.empty();
-        this.credentials = Input.empty();
-        this.isArchiveEnabled = Input.empty();
-        this.logTemplate = Input.empty();
-        this.platform = Input.empty();
-        this.sourceLocation = Input.empty();
-        this.taskFilePath = Input.empty();
-        this.timeout = Input.empty();
-        this.type = Input.empty();
-        this.values = Input.empty();
-        this.valuesFilePath = Input.empty();
+        this.agentConfiguration = Output.empty();
+        this.agentPoolName = Output.empty();
+        this.credentials = Output.empty();
+        this.isArchiveEnabled = Output.empty();
+        this.logTemplate = Output.empty();
+        this.platform = Output.empty();
+        this.sourceLocation = Output.empty();
+        this.taskFilePath = Output.empty();
+        this.timeout = Output.empty();
+        this.type = Output.empty();
+        this.values = Output.empty();
+        this.valuesFilePath = Output.empty();
     }
 
     public static Builder builder() {
@@ -210,18 +210,18 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<AgentPropertiesArgs> agentConfiguration;
-        private @Nullable Input<String> agentPoolName;
-        private @Nullable Input<CredentialsArgs> credentials;
-        private @Nullable Input<Boolean> isArchiveEnabled;
-        private @Nullable Input<String> logTemplate;
-        private Input<PlatformPropertiesArgs> platform;
-        private @Nullable Input<String> sourceLocation;
-        private Input<String> taskFilePath;
-        private @Nullable Input<Integer> timeout;
-        private Input<String> type;
-        private @Nullable Input<List<SetValueArgs>> values;
-        private @Nullable Input<String> valuesFilePath;
+        private @Nullable Output<AgentPropertiesArgs> agentConfiguration;
+        private @Nullable Output<String> agentPoolName;
+        private @Nullable Output<CredentialsArgs> credentials;
+        private @Nullable Output<Boolean> isArchiveEnabled;
+        private @Nullable Output<String> logTemplate;
+        private Output<PlatformPropertiesArgs> platform;
+        private @Nullable Output<String> sourceLocation;
+        private Output<String> taskFilePath;
+        private @Nullable Output<Integer> timeout;
+        private Output<String> type;
+        private @Nullable Output<List<SetValueArgs>> values;
+        private @Nullable Output<String> valuesFilePath;
 
         public Builder() {
     	      // Empty
@@ -243,123 +243,123 @@ public final class FileTaskRunRequestArgs extends io.pulumi.resources.ResourceAr
     	      this.valuesFilePath = defaults.valuesFilePath;
         }
 
-        public Builder agentConfiguration(@Nullable Input<AgentPropertiesArgs> agentConfiguration) {
+        public Builder agentConfiguration(@Nullable Output<AgentPropertiesArgs> agentConfiguration) {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
 
         public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
-            this.agentConfiguration = Input.ofNullable(agentConfiguration);
+            this.agentConfiguration = Output.ofNullable(agentConfiguration);
             return this;
         }
 
-        public Builder agentPoolName(@Nullable Input<String> agentPoolName) {
+        public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Input.ofNullable(agentPoolName);
+            this.agentPoolName = Output.ofNullable(agentPoolName);
             return this;
         }
 
-        public Builder credentials(@Nullable Input<CredentialsArgs> credentials) {
+        public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
             this.credentials = credentials;
             return this;
         }
 
         public Builder credentials(@Nullable CredentialsArgs credentials) {
-            this.credentials = Input.ofNullable(credentials);
+            this.credentials = Output.ofNullable(credentials);
             return this;
         }
 
-        public Builder isArchiveEnabled(@Nullable Input<Boolean> isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Output<Boolean> isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
-            this.isArchiveEnabled = Input.ofNullable(isArchiveEnabled);
+            this.isArchiveEnabled = Output.ofNullable(isArchiveEnabled);
             return this;
         }
 
-        public Builder logTemplate(@Nullable Input<String> logTemplate) {
+        public Builder logTemplate(@Nullable Output<String> logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
         public Builder logTemplate(@Nullable String logTemplate) {
-            this.logTemplate = Input.ofNullable(logTemplate);
+            this.logTemplate = Output.ofNullable(logTemplate);
             return this;
         }
 
-        public Builder platform(Input<PlatformPropertiesArgs> platform) {
+        public Builder platform(Output<PlatformPropertiesArgs> platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
         public Builder platform(PlatformPropertiesArgs platform) {
-            this.platform = Input.of(Objects.requireNonNull(platform));
+            this.platform = Output.of(Objects.requireNonNull(platform));
             return this;
         }
 
-        public Builder sourceLocation(@Nullable Input<String> sourceLocation) {
+        public Builder sourceLocation(@Nullable Output<String> sourceLocation) {
             this.sourceLocation = sourceLocation;
             return this;
         }
 
         public Builder sourceLocation(@Nullable String sourceLocation) {
-            this.sourceLocation = Input.ofNullable(sourceLocation);
+            this.sourceLocation = Output.ofNullable(sourceLocation);
             return this;
         }
 
-        public Builder taskFilePath(Input<String> taskFilePath) {
+        public Builder taskFilePath(Output<String> taskFilePath) {
             this.taskFilePath = Objects.requireNonNull(taskFilePath);
             return this;
         }
 
         public Builder taskFilePath(String taskFilePath) {
-            this.taskFilePath = Input.of(Objects.requireNonNull(taskFilePath));
+            this.taskFilePath = Output.of(Objects.requireNonNull(taskFilePath));
             return this;
         }
 
-        public Builder timeout(@Nullable Input<Integer> timeout) {
+        public Builder timeout(@Nullable Output<Integer> timeout) {
             this.timeout = timeout;
             return this;
         }
 
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Input.ofNullable(timeout);
+            this.timeout = Output.ofNullable(timeout);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder values(@Nullable Input<List<SetValueArgs>> values) {
+        public Builder values(@Nullable Output<List<SetValueArgs>> values) {
             this.values = values;
             return this;
         }
 
         public Builder values(@Nullable List<SetValueArgs> values) {
-            this.values = Input.ofNullable(values);
+            this.values = Output.ofNullable(values);
             return this;
         }
 
-        public Builder valuesFilePath(@Nullable Input<String> valuesFilePath) {
+        public Builder valuesFilePath(@Nullable Output<String> valuesFilePath) {
             this.valuesFilePath = valuesFilePath;
             return this;
         }
 
         public Builder valuesFilePath(@Nullable String valuesFilePath) {
-            this.valuesFilePath = Input.ofNullable(valuesFilePath);
+            this.valuesFilePath = Output.ofNullable(valuesFilePath);
             return this;
         }
         public FileTaskRunRequestArgs build() {

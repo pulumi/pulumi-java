@@ -12,7 +12,6 @@ import io.pulumi.azurenative.signalrservice.outputs.SignalRCorsSettingsResponse;
 import io.pulumi.azurenative.signalrservice.outputs.SignalRFeatureResponse;
 import io.pulumi.azurenative.signalrservice.outputs.SignalRNetworkACLsResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -342,25 +341,25 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SignalR(String name, SignalRArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:signalrservice:SignalR", name, args == null ? SignalRArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:signalrservice:SignalR", name, args == null ? SignalRArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private SignalR(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private SignalR(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:signalrservice:SignalR", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20180301preview:SignalR").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20181001:SignalR").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20200501:SignalR").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20200701preview:SignalR").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20210401preview:SignalR").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20210601preview:SignalR").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20210901preview:SignalR").build()),
-                Input.of(Alias.builder().setType("azure-native:signalrservice/v20211001:SignalR").build())
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20180301preview:SignalR").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20181001:SignalR").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20200501:SignalR").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20200701preview:SignalR").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20210401preview:SignalR").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20210601preview:SignalR").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20210901preview:SignalR").build()),
+                Output.of(Alias.builder().setType("azure-native:signalrservice/v20211001:SignalR").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -374,7 +373,7 @@ public class SignalR extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SignalR get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static SignalR get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new SignalR(name, id, options);
     }
 }

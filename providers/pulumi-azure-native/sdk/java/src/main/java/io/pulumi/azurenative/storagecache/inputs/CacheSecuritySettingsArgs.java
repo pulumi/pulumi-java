@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.NfsAccessPolicyArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class CacheSecuritySettingsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="accessPolicies")
-      private final @Nullable Input<List<NfsAccessPolicyArgs>> accessPolicies;
+      private final @Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies;
 
-    public Input<List<NfsAccessPolicyArgs>> getAccessPolicies() {
-        return this.accessPolicies == null ? Input.empty() : this.accessPolicies;
+    public Output<List<NfsAccessPolicyArgs>> getAccessPolicies() {
+        return this.accessPolicies == null ? Output.empty() : this.accessPolicies;
     }
 
-    public CacheSecuritySettingsArgs(@Nullable Input<List<NfsAccessPolicyArgs>> accessPolicies) {
+    public CacheSecuritySettingsArgs(@Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies) {
         this.accessPolicies = accessPolicies;
     }
 
     private CacheSecuritySettingsArgs() {
-        this.accessPolicies = Input.empty();
+        this.accessPolicies = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class CacheSecuritySettingsArgs extends io.pulumi.resources.Resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<NfsAccessPolicyArgs>> accessPolicies;
+        private @Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class CacheSecuritySettingsArgs extends io.pulumi.resources.Resourc
     	      this.accessPolicies = defaults.accessPolicies;
         }
 
-        public Builder accessPolicies(@Nullable Input<List<NfsAccessPolicyArgs>> accessPolicies) {
+        public Builder accessPolicies(@Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
         public Builder accessPolicies(@Nullable List<NfsAccessPolicyArgs> accessPolicies) {
-            this.accessPolicies = Input.ofNullable(accessPolicies);
+            this.accessPolicies = Output.ofNullable(accessPolicies);
             return this;
         }
         public CacheSecuritySettingsArgs build() {

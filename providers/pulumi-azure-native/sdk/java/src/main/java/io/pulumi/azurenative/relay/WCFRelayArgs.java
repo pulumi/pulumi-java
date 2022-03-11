@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.relay;
 
 import io.pulumi.azurenative.relay.enums.Relaytype;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,9 +21,9 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-      private final Input<String> namespaceName;
+      private final Output<String> namespaceName;
 
-    public Input<String> getNamespaceName() {
+    public Output<String> getNamespaceName() {
         return this.namespaceName;
     }
 
@@ -32,10 +32,10 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relayName")
-      private final @Nullable Input<String> relayName;
+      private final @Nullable Output<String> relayName;
 
-    public Input<String> getRelayName() {
-        return this.relayName == null ? Input.empty() : this.relayName;
+    public Output<String> getRelayName() {
+        return this.relayName == null ? Output.empty() : this.relayName;
     }
 
     /**
@@ -43,10 +43,10 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relayType")
-      private final @Nullable Input<Relaytype> relayType;
+      private final @Nullable Output<Relaytype> relayType;
 
-    public Input<Relaytype> getRelayType() {
-        return this.relayType == null ? Input.empty() : this.relayType;
+    public Output<Relaytype> getRelayType() {
+        return this.relayType == null ? Output.empty() : this.relayType;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiresClientAuthorization")
-      private final @Nullable Input<Boolean> requiresClientAuthorization;
+      private final @Nullable Output<Boolean> requiresClientAuthorization;
 
-    public Input<Boolean> getRequiresClientAuthorization() {
-        return this.requiresClientAuthorization == null ? Input.empty() : this.requiresClientAuthorization;
+    public Output<Boolean> getRequiresClientAuthorization() {
+        return this.requiresClientAuthorization == null ? Output.empty() : this.requiresClientAuthorization;
     }
 
     /**
@@ -65,10 +65,10 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requiresTransportSecurity")
-      private final @Nullable Input<Boolean> requiresTransportSecurity;
+      private final @Nullable Output<Boolean> requiresTransportSecurity;
 
-    public Input<Boolean> getRequiresTransportSecurity() {
-        return this.requiresTransportSecurity == null ? Input.empty() : this.requiresTransportSecurity;
+    public Output<Boolean> getRequiresTransportSecurity() {
+        return this.requiresTransportSecurity == null ? Output.empty() : this.requiresTransportSecurity;
     }
 
     /**
@@ -76,9 +76,9 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -87,20 +87,20 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userMetadata")
-      private final @Nullable Input<String> userMetadata;
+      private final @Nullable Output<String> userMetadata;
 
-    public Input<String> getUserMetadata() {
-        return this.userMetadata == null ? Input.empty() : this.userMetadata;
+    public Output<String> getUserMetadata() {
+        return this.userMetadata == null ? Output.empty() : this.userMetadata;
     }
 
     public WCFRelayArgs(
-        Input<String> namespaceName,
-        @Nullable Input<String> relayName,
-        @Nullable Input<Relaytype> relayType,
-        @Nullable Input<Boolean> requiresClientAuthorization,
-        @Nullable Input<Boolean> requiresTransportSecurity,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> userMetadata) {
+        Output<String> namespaceName,
+        @Nullable Output<String> relayName,
+        @Nullable Output<Relaytype> relayType,
+        @Nullable Output<Boolean> requiresClientAuthorization,
+        @Nullable Output<Boolean> requiresTransportSecurity,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> userMetadata) {
         this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
         this.relayName = relayName;
         this.relayType = relayType;
@@ -111,13 +111,13 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WCFRelayArgs() {
-        this.namespaceName = Input.empty();
-        this.relayName = Input.empty();
-        this.relayType = Input.empty();
-        this.requiresClientAuthorization = Input.empty();
-        this.requiresTransportSecurity = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.userMetadata = Input.empty();
+        this.namespaceName = Output.empty();
+        this.relayName = Output.empty();
+        this.relayType = Output.empty();
+        this.requiresClientAuthorization = Output.empty();
+        this.requiresTransportSecurity = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.userMetadata = Output.empty();
     }
 
     public static Builder builder() {
@@ -129,13 +129,13 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> namespaceName;
-        private @Nullable Input<String> relayName;
-        private @Nullable Input<Relaytype> relayType;
-        private @Nullable Input<Boolean> requiresClientAuthorization;
-        private @Nullable Input<Boolean> requiresTransportSecurity;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> userMetadata;
+        private Output<String> namespaceName;
+        private @Nullable Output<String> relayName;
+        private @Nullable Output<Relaytype> relayType;
+        private @Nullable Output<Boolean> requiresClientAuthorization;
+        private @Nullable Output<Boolean> requiresTransportSecurity;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> userMetadata;
 
         public Builder() {
     	      // Empty
@@ -152,73 +152,73 @@ public final class WCFRelayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userMetadata = defaults.userMetadata;
         }
 
-        public Builder namespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Output<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
+            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder relayName(@Nullable Input<String> relayName) {
+        public Builder relayName(@Nullable Output<String> relayName) {
             this.relayName = relayName;
             return this;
         }
 
         public Builder relayName(@Nullable String relayName) {
-            this.relayName = Input.ofNullable(relayName);
+            this.relayName = Output.ofNullable(relayName);
             return this;
         }
 
-        public Builder relayType(@Nullable Input<Relaytype> relayType) {
+        public Builder relayType(@Nullable Output<Relaytype> relayType) {
             this.relayType = relayType;
             return this;
         }
 
         public Builder relayType(@Nullable Relaytype relayType) {
-            this.relayType = Input.ofNullable(relayType);
+            this.relayType = Output.ofNullable(relayType);
             return this;
         }
 
-        public Builder requiresClientAuthorization(@Nullable Input<Boolean> requiresClientAuthorization) {
+        public Builder requiresClientAuthorization(@Nullable Output<Boolean> requiresClientAuthorization) {
             this.requiresClientAuthorization = requiresClientAuthorization;
             return this;
         }
 
         public Builder requiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
-            this.requiresClientAuthorization = Input.ofNullable(requiresClientAuthorization);
+            this.requiresClientAuthorization = Output.ofNullable(requiresClientAuthorization);
             return this;
         }
 
-        public Builder requiresTransportSecurity(@Nullable Input<Boolean> requiresTransportSecurity) {
+        public Builder requiresTransportSecurity(@Nullable Output<Boolean> requiresTransportSecurity) {
             this.requiresTransportSecurity = requiresTransportSecurity;
             return this;
         }
 
         public Builder requiresTransportSecurity(@Nullable Boolean requiresTransportSecurity) {
-            this.requiresTransportSecurity = Input.ofNullable(requiresTransportSecurity);
+            this.requiresTransportSecurity = Output.ofNullable(requiresTransportSecurity);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder userMetadata(@Nullable Input<String> userMetadata) {
+        public Builder userMetadata(@Nullable Output<String> userMetadata) {
             this.userMetadata = userMetadata;
             return this;
         }
 
         public Builder userMetadata(@Nullable String userMetadata) {
-            this.userMetadata = Input.ofNullable(userMetadata);
+            this.userMetadata = Output.ofNullable(userMetadata);
             return this;
         }
         public WCFRelayArgs build() {

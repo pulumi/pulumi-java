@@ -8,7 +8,6 @@ import io.pulumi.azurenative.eventhub.NamespaceNetworkRuleSetArgs;
 import io.pulumi.azurenative.eventhub.outputs.NWRuleSetIpRulesResponse;
 import io.pulumi.azurenative.eventhub.outputs.NWRuleSetVirtualNetworkRulesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -142,22 +141,22 @@ public class NamespaceNetworkRuleSet extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public NamespaceNetworkRuleSet(String name, NamespaceNetworkRuleSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventhub:NamespaceNetworkRuleSet", name, args == null ? NamespaceNetworkRuleSetArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:eventhub:NamespaceNetworkRuleSet", name, args == null ? NamespaceNetworkRuleSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private NamespaceNetworkRuleSet(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private NamespaceNetworkRuleSet(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:eventhub:NamespaceNetworkRuleSet", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20170401:NamespaceNetworkRuleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20180101preview:NamespaceNetworkRuleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20210101preview:NamespaceNetworkRuleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20210601preview:NamespaceNetworkRuleSet").build()),
-                Input.of(Alias.builder().setType("azure-native:eventhub/v20211101:NamespaceNetworkRuleSet").build())
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20170401:NamespaceNetworkRuleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20180101preview:NamespaceNetworkRuleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20210101preview:NamespaceNetworkRuleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20210601preview:NamespaceNetworkRuleSet").build()),
+                Output.of(Alias.builder().setType("azure-native:eventhub/v20211101:NamespaceNetworkRuleSet").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -171,7 +170,7 @@ public class NamespaceNetworkRuleSet extends io.pulumi.resources.CustomResource 
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static NamespaceNetworkRuleSet get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static NamespaceNetworkRuleSet get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new NamespaceNetworkRuleSet(name, id, options);
     }
 }

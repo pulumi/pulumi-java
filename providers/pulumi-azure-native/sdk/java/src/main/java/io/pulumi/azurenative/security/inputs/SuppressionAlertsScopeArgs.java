@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.ScopeElementArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -19,18 +19,18 @@ public final class SuppressionAlertsScopeArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allOf", required=true)
-      private final Input<List<ScopeElementArgs>> allOf;
+      private final Output<List<ScopeElementArgs>> allOf;
 
-    public Input<List<ScopeElementArgs>> getAllOf() {
+    public Output<List<ScopeElementArgs>> getAllOf() {
         return this.allOf;
     }
 
-    public SuppressionAlertsScopeArgs(Input<List<ScopeElementArgs>> allOf) {
+    public SuppressionAlertsScopeArgs(Output<List<ScopeElementArgs>> allOf) {
         this.allOf = Objects.requireNonNull(allOf, "expected parameter 'allOf' to be non-null");
     }
 
     private SuppressionAlertsScopeArgs() {
-        this.allOf = Input.empty();
+        this.allOf = Output.empty();
     }
 
     public static Builder builder() {
@@ -42,7 +42,7 @@ public final class SuppressionAlertsScopeArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private Input<List<ScopeElementArgs>> allOf;
+        private Output<List<ScopeElementArgs>> allOf;
 
         public Builder() {
     	      // Empty
@@ -53,13 +53,13 @@ public final class SuppressionAlertsScopeArgs extends io.pulumi.resources.Resour
     	      this.allOf = defaults.allOf;
         }
 
-        public Builder allOf(Input<List<ScopeElementArgs>> allOf) {
+        public Builder allOf(Output<List<ScopeElementArgs>> allOf) {
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }
 
         public Builder allOf(List<ScopeElementArgs> allOf) {
-            this.allOf = Input.of(Objects.requireNonNull(allOf));
+            this.allOf = Output.of(Objects.requireNonNull(allOf));
             return this;
         }
         public SuppressionAlertsScopeArgs build() {

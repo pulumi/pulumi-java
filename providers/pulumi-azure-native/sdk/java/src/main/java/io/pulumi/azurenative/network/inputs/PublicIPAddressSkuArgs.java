@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.PublicIPAddressSkuName;
 import io.pulumi.azurenative.network.enums.PublicIPAddressSkuTier;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,10 +26,10 @@ public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<Either<String,PublicIPAddressSkuName>> name;
+      private final @Nullable Output<Either<String,PublicIPAddressSkuName>> name;
 
-    public Input<Either<String,PublicIPAddressSkuName>> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<Either<String,PublicIPAddressSkuName>> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<Either<String,PublicIPAddressSkuTier>> tier;
+      private final @Nullable Output<Either<String,PublicIPAddressSkuTier>> tier;
 
-    public Input<Either<String,PublicIPAddressSkuTier>> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<Either<String,PublicIPAddressSkuTier>> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public PublicIPAddressSkuArgs(
-        @Nullable Input<Either<String,PublicIPAddressSkuName>> name,
-        @Nullable Input<Either<String,PublicIPAddressSkuTier>> tier) {
+        @Nullable Output<Either<String,PublicIPAddressSkuName>> name,
+        @Nullable Output<Either<String,PublicIPAddressSkuTier>> tier) {
         this.name = name;
         this.tier = tier;
     }
 
     private PublicIPAddressSkuArgs() {
-        this.name = Input.empty();
-        this.tier = Input.empty();
+        this.name = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,PublicIPAddressSkuName>> name;
-        private @Nullable Input<Either<String,PublicIPAddressSkuTier>> tier;
+        private @Nullable Output<Either<String,PublicIPAddressSkuName>> name;
+        private @Nullable Output<Either<String,PublicIPAddressSkuTier>> tier;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class PublicIPAddressSkuArgs extends io.pulumi.resources.ResourceAr
     	      this.tier = defaults.tier;
         }
 
-        public Builder name(@Nullable Input<Either<String,PublicIPAddressSkuName>> name) {
+        public Builder name(@Nullable Output<Either<String,PublicIPAddressSkuName>> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable Either<String,PublicIPAddressSkuName> name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder tier(@Nullable Input<Either<String,PublicIPAddressSkuTier>> tier) {
+        public Builder tier(@Nullable Output<Either<String,PublicIPAddressSkuTier>> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable Either<String,PublicIPAddressSkuTier> tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public PublicIPAddressSkuArgs build() {

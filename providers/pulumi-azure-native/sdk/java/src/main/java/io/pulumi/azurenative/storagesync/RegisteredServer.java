@@ -6,7 +6,6 @@ package io.pulumi.azurenative.storagesync;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storagesync.RegisteredServerArgs;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -407,27 +406,27 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegisteredServer(String name, RegisteredServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storagesync:RegisteredServer", name, args == null ? RegisteredServerArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:storagesync:RegisteredServer", name, args == null ? RegisteredServerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RegisteredServer(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RegisteredServer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:storagesync:RegisteredServer", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20170605preview:RegisteredServer").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20180402:RegisteredServer").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20180701:RegisteredServer").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20181001:RegisteredServer").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20190201:RegisteredServer").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20190301:RegisteredServer").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20190601:RegisteredServer").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20191001:RegisteredServer").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20200301:RegisteredServer").build()),
-                Input.of(Alias.builder().setType("azure-native:storagesync/v20200901:RegisteredServer").build())
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20170605preview:RegisteredServer").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20180402:RegisteredServer").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20180701:RegisteredServer").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20181001:RegisteredServer").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20190201:RegisteredServer").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20190301:RegisteredServer").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20190601:RegisteredServer").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20191001:RegisteredServer").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20200301:RegisteredServer").build()),
+                Output.of(Alias.builder().setType("azure-native:storagesync/v20200901:RegisteredServer").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -441,7 +440,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RegisteredServer get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RegisteredServer get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RegisteredServer(name, id, options);
     }
 }

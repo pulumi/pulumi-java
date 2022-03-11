@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scope", required=true)
-      private final Input<String> scope;
+      private final Output<String> scope;
 
-    public Input<String> getScope() {
+    public Output<String> getScope() {
         return this.scope;
     }
 
@@ -30,9 +30,9 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workspaceId", required=true)
-      private final Input<String> workspaceId;
+      private final Output<String> workspaceId;
 
-    public Input<String> getWorkspaceId() {
+    public Output<String> getWorkspaceId() {
         return this.workspaceId;
     }
 
@@ -41,25 +41,25 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="workspaceSettingName")
-      private final @Nullable Input<String> workspaceSettingName;
+      private final @Nullable Output<String> workspaceSettingName;
 
-    public Input<String> getWorkspaceSettingName() {
-        return this.workspaceSettingName == null ? Input.empty() : this.workspaceSettingName;
+    public Output<String> getWorkspaceSettingName() {
+        return this.workspaceSettingName == null ? Output.empty() : this.workspaceSettingName;
     }
 
     public WorkspaceSettingArgs(
-        Input<String> scope,
-        Input<String> workspaceId,
-        @Nullable Input<String> workspaceSettingName) {
+        Output<String> scope,
+        Output<String> workspaceId,
+        @Nullable Output<String> workspaceSettingName) {
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
         this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
         this.workspaceSettingName = workspaceSettingName;
     }
 
     private WorkspaceSettingArgs() {
-        this.scope = Input.empty();
-        this.workspaceId = Input.empty();
-        this.workspaceSettingName = Input.empty();
+        this.scope = Output.empty();
+        this.workspaceId = Output.empty();
+        this.workspaceSettingName = Output.empty();
     }
 
     public static Builder builder() {
@@ -71,9 +71,9 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private Input<String> scope;
-        private Input<String> workspaceId;
-        private @Nullable Input<String> workspaceSettingName;
+        private Output<String> scope;
+        private Output<String> workspaceId;
+        private @Nullable Output<String> workspaceSettingName;
 
         public Builder() {
     	      // Empty
@@ -86,33 +86,33 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
     	      this.workspaceSettingName = defaults.workspaceSettingName;
         }
 
-        public Builder scope(Input<String> scope) {
+        public Builder scope(Output<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
         public Builder scope(String scope) {
-            this.scope = Input.of(Objects.requireNonNull(scope));
+            this.scope = Output.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder workspaceId(Input<String> workspaceId) {
+        public Builder workspaceId(Output<String> workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Input.of(Objects.requireNonNull(workspaceId));
+            this.workspaceId = Output.of(Objects.requireNonNull(workspaceId));
             return this;
         }
 
-        public Builder workspaceSettingName(@Nullable Input<String> workspaceSettingName) {
+        public Builder workspaceSettingName(@Nullable Output<String> workspaceSettingName) {
             this.workspaceSettingName = workspaceSettingName;
             return this;
         }
 
         public Builder workspaceSettingName(@Nullable String workspaceSettingName) {
-            this.workspaceSettingName = Input.ofNullable(workspaceSettingName);
+            this.workspaceSettingName = Output.ofNullable(workspaceSettingName);
             return this;
         }
         public WorkspaceSettingArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,10 +19,10 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="consoleName")
-      private final @Nullable Input<String> consoleName;
+      private final @Nullable Output<String> consoleName;
 
-    public Input<String> getConsoleName() {
-        return this.consoleName == null ? Input.empty() : this.consoleName;
+    public Output<String> getConsoleName() {
+        return this.consoleName == null ? Output.empty() : this.consoleName;
     }
 
     /**
@@ -30,22 +30,22 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location", required=true)
-      private final Input<String> location;
+      private final Output<String> location;
 
-    public Input<String> getLocation() {
+    public Output<String> getLocation() {
         return this.location;
     }
 
     public ConsoleWithLocationArgs(
-        @Nullable Input<String> consoleName,
-        Input<String> location) {
+        @Nullable Output<String> consoleName,
+        Output<String> location) {
         this.consoleName = consoleName;
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
     }
 
     private ConsoleWithLocationArgs() {
-        this.consoleName = Input.empty();
-        this.location = Input.empty();
+        this.consoleName = Output.empty();
+        this.location = Output.empty();
     }
 
     public static Builder builder() {
@@ -57,8 +57,8 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private @Nullable Input<String> consoleName;
-        private Input<String> location;
+        private @Nullable Output<String> consoleName;
+        private Output<String> location;
 
         public Builder() {
     	      // Empty
@@ -70,23 +70,23 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
     	      this.location = defaults.location;
         }
 
-        public Builder consoleName(@Nullable Input<String> consoleName) {
+        public Builder consoleName(@Nullable Output<String> consoleName) {
             this.consoleName = consoleName;
             return this;
         }
 
         public Builder consoleName(@Nullable String consoleName) {
-            this.consoleName = Input.ofNullable(consoleName);
+            this.consoleName = Output.ofNullable(consoleName);
             return this;
         }
 
-        public Builder location(Input<String> location) {
+        public Builder location(Output<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
         public Builder location(String location) {
-            this.location = Input.of(Objects.requireNonNull(location));
+            this.location = Output.of(Objects.requireNonNull(location));
             return this;
         }
         public ConsoleWithLocationArgs build() {

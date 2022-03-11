@@ -6,7 +6,7 @@ package io.pulumi.azurenative.testbase.inputs;
 import io.pulumi.azurenative.testbase.enums.TestType;
 import io.pulumi.azurenative.testbase.inputs.CommandArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,9 +28,9 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commands", required=true)
-      private final Input<List<CommandArgs>> commands;
+      private final Output<List<CommandArgs>> commands;
 
-    public Input<List<CommandArgs>> getCommands() {
+    public Output<List<CommandArgs>> getCommands() {
         return this.commands;
     }
 
@@ -39,10 +39,10 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isActive")
-      private final @Nullable Input<Boolean> isActive;
+      private final @Nullable Output<Boolean> isActive;
 
-    public Input<Boolean> getIsActive() {
-        return this.isActive == null ? Input.empty() : this.isActive;
+    public Output<Boolean> getIsActive() {
+        return this.isActive == null ? Output.empty() : this.isActive;
     }
 
     /**
@@ -50,25 +50,25 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="testType", required=true)
-      private final Input<Either<String,TestType>> testType;
+      private final Output<Either<String,TestType>> testType;
 
-    public Input<Either<String,TestType>> getTestType() {
+    public Output<Either<String,TestType>> getTestType() {
         return this.testType;
     }
 
     public TestArgs(
-        Input<List<CommandArgs>> commands,
-        @Nullable Input<Boolean> isActive,
-        Input<Either<String,TestType>> testType) {
+        Output<List<CommandArgs>> commands,
+        @Nullable Output<Boolean> isActive,
+        Output<Either<String,TestType>> testType) {
         this.commands = Objects.requireNonNull(commands, "expected parameter 'commands' to be non-null");
         this.isActive = isActive;
         this.testType = Objects.requireNonNull(testType, "expected parameter 'testType' to be non-null");
     }
 
     private TestArgs() {
-        this.commands = Input.empty();
-        this.isActive = Input.empty();
-        this.testType = Input.empty();
+        this.commands = Output.empty();
+        this.isActive = Output.empty();
+        this.testType = Output.empty();
     }
 
     public static Builder builder() {
@@ -80,9 +80,9 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<List<CommandArgs>> commands;
-        private @Nullable Input<Boolean> isActive;
-        private Input<Either<String,TestType>> testType;
+        private Output<List<CommandArgs>> commands;
+        private @Nullable Output<Boolean> isActive;
+        private Output<Either<String,TestType>> testType;
 
         public Builder() {
     	      // Empty
@@ -95,33 +95,33 @@ public final class TestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testType = defaults.testType;
         }
 
-        public Builder commands(Input<List<CommandArgs>> commands) {
+        public Builder commands(Output<List<CommandArgs>> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
 
         public Builder commands(List<CommandArgs> commands) {
-            this.commands = Input.of(Objects.requireNonNull(commands));
+            this.commands = Output.of(Objects.requireNonNull(commands));
             return this;
         }
 
-        public Builder isActive(@Nullable Input<Boolean> isActive) {
+        public Builder isActive(@Nullable Output<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
 
         public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = Input.ofNullable(isActive);
+            this.isActive = Output.ofNullable(isActive);
             return this;
         }
 
-        public Builder testType(Input<Either<String,TestType>> testType) {
+        public Builder testType(Output<Either<String,TestType>> testType) {
             this.testType = Objects.requireNonNull(testType);
             return this;
         }
 
         public Builder testType(Either<String,TestType> testType) {
-            this.testType = Input.of(Objects.requireNonNull(testType));
+            this.testType = Output.of(Objects.requireNonNull(testType));
             return this;
         }
         public TestArgs build() {

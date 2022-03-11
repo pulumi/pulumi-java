@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.RestHealthCheckStepAttributesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attributes", required=true)
-      private final Input<RestHealthCheckStepAttributesArgs> attributes;
+      private final Output<RestHealthCheckStepAttributesArgs> attributes;
 
-    public Input<RestHealthCheckStepAttributesArgs> getAttributes() {
+    public Output<RestHealthCheckStepAttributesArgs> getAttributes() {
         return this.attributes;
     }
 
@@ -35,22 +35,22 @@ public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="stepType", required=true)
-      private final Input<String> stepType;
+      private final Output<String> stepType;
 
-    public Input<String> getStepType() {
+    public Output<String> getStepType() {
         return this.stepType;
     }
 
     public HealthCheckStepPropertiesArgs(
-        Input<RestHealthCheckStepAttributesArgs> attributes,
-        Input<String> stepType) {
+        Output<RestHealthCheckStepAttributesArgs> attributes,
+        Output<String> stepType) {
         this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
         this.stepType = Objects.requireNonNull(stepType, "expected parameter 'stepType' to be non-null");
     }
 
     private HealthCheckStepPropertiesArgs() {
-        this.attributes = Input.empty();
-        this.stepType = Input.empty();
+        this.attributes = Output.empty();
+        this.stepType = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.Res
     }
 
     public static final class Builder {
-        private Input<RestHealthCheckStepAttributesArgs> attributes;
-        private Input<String> stepType;
+        private Output<RestHealthCheckStepAttributesArgs> attributes;
+        private Output<String> stepType;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class HealthCheckStepPropertiesArgs extends io.pulumi.resources.Res
     	      this.stepType = defaults.stepType;
         }
 
-        public Builder attributes(Input<RestHealthCheckStepAttributesArgs> attributes) {
+        public Builder attributes(Output<RestHealthCheckStepAttributesArgs> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
         public Builder attributes(RestHealthCheckStepAttributesArgs attributes) {
-            this.attributes = Input.of(Objects.requireNonNull(attributes));
+            this.attributes = Output.of(Objects.requireNonNull(attributes));
             return this;
         }
 
-        public Builder stepType(Input<String> stepType) {
+        public Builder stepType(Output<String> stepType) {
             this.stepType = Objects.requireNonNull(stepType);
             return this;
         }
 
         public Builder stepType(String stepType) {
-            this.stepType = Input.of(Objects.requireNonNull(stepType));
+            this.stepType = Output.of(Objects.requireNonNull(stepType));
             return this;
         }
         public HealthCheckStepPropertiesArgs build() {

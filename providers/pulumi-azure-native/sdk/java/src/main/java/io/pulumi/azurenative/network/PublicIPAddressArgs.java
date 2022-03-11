@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.inputs.PublicIPAddressDnsSettingsArgs;
 import io.pulumi.azurenative.network.inputs.PublicIPAddressSkuArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,10 +33,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ddosSettings")
-      private final @Nullable Input<DdosSettingsArgs> ddosSettings;
+      private final @Nullable Output<DdosSettingsArgs> ddosSettings;
 
-    public Input<DdosSettingsArgs> getDdosSettings() {
-        return this.ddosSettings == null ? Input.empty() : this.ddosSettings;
+    public Output<DdosSettingsArgs> getDdosSettings() {
+        return this.ddosSettings == null ? Output.empty() : this.ddosSettings;
     }
 
     /**
@@ -44,10 +44,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dnsSettings")
-      private final @Nullable Input<PublicIPAddressDnsSettingsArgs> dnsSettings;
+      private final @Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings;
 
-    public Input<PublicIPAddressDnsSettingsArgs> getDnsSettings() {
-        return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
+    public Output<PublicIPAddressDnsSettingsArgs> getDnsSettings() {
+        return this.dnsSettings == null ? Output.empty() : this.dnsSettings;
     }
 
     /**
@@ -55,10 +55,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="extendedLocation")
-      private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+      private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
-    public Input<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
+    public Output<ExtendedLocationArgs> getExtendedLocation() {
+        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
     }
 
     /**
@@ -66,10 +66,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="id")
-      private final @Nullable Input<String> id;
+      private final @Nullable Output<String> id;
 
-    public Input<String> getId() {
-        return this.id == null ? Input.empty() : this.id;
+    public Output<String> getId() {
+        return this.id == null ? Output.empty() : this.id;
     }
 
     /**
@@ -77,10 +77,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-      private final @Nullable Input<Integer> idleTimeoutInMinutes;
+      private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
-    public Input<Integer> getIdleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
+    public Output<Integer> getIdleTimeoutInMinutes() {
+        return this.idleTimeoutInMinutes == null ? Output.empty() : this.idleTimeoutInMinutes;
     }
 
     /**
@@ -88,10 +88,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipAddress")
-      private final @Nullable Input<String> ipAddress;
+      private final @Nullable Output<String> ipAddress;
 
-    public Input<String> getIpAddress() {
-        return this.ipAddress == null ? Input.empty() : this.ipAddress;
+    public Output<String> getIpAddress() {
+        return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
     /**
@@ -99,10 +99,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipTags")
-      private final @Nullable Input<List<IpTagArgs>> ipTags;
+      private final @Nullable Output<List<IpTagArgs>> ipTags;
 
-    public Input<List<IpTagArgs>> getIpTags() {
-        return this.ipTags == null ? Input.empty() : this.ipTags;
+    public Output<List<IpTagArgs>> getIpTags() {
+        return this.ipTags == null ? Output.empty() : this.ipTags;
     }
 
     /**
@@ -110,10 +110,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkedPublicIPAddress")
-      private final @Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress;
+      private final @Nullable Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress;
 
-    public Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> getLinkedPublicIPAddress() {
-        return this.linkedPublicIPAddress == null ? Input.empty() : this.linkedPublicIPAddress;
+    public Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> getLinkedPublicIPAddress() {
+        return this.linkedPublicIPAddress == null ? Output.empty() : this.linkedPublicIPAddress;
     }
 
     /**
@@ -121,10 +121,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -132,10 +132,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="migrationPhase")
-      private final @Nullable Input<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
+      private final @Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
 
-    public Input<Either<String,PublicIPAddressMigrationPhase>> getMigrationPhase() {
-        return this.migrationPhase == null ? Input.empty() : this.migrationPhase;
+    public Output<Either<String,PublicIPAddressMigrationPhase>> getMigrationPhase() {
+        return this.migrationPhase == null ? Output.empty() : this.migrationPhase;
     }
 
     /**
@@ -143,10 +143,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="natGateway")
-      private final @Nullable Input<NatGatewayArgs> natGateway;
+      private final @Nullable Output<NatGatewayArgs> natGateway;
 
-    public Input<NatGatewayArgs> getNatGateway() {
-        return this.natGateway == null ? Input.empty() : this.natGateway;
+    public Output<NatGatewayArgs> getNatGateway() {
+        return this.natGateway == null ? Output.empty() : this.natGateway;
     }
 
     /**
@@ -154,10 +154,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicIPAddressVersion")
-      private final @Nullable Input<Either<String,IPVersion>> publicIPAddressVersion;
+      private final @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
 
-    public Input<Either<String,IPVersion>> getPublicIPAddressVersion() {
-        return this.publicIPAddressVersion == null ? Input.empty() : this.publicIPAddressVersion;
+    public Output<Either<String,IPVersion>> getPublicIPAddressVersion() {
+        return this.publicIPAddressVersion == null ? Output.empty() : this.publicIPAddressVersion;
     }
 
     /**
@@ -165,10 +165,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicIPAllocationMethod")
-      private final @Nullable Input<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
+      private final @Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
 
-    public Input<Either<String,IPAllocationMethod>> getPublicIPAllocationMethod() {
-        return this.publicIPAllocationMethod == null ? Input.empty() : this.publicIPAllocationMethod;
+    public Output<Either<String,IPAllocationMethod>> getPublicIPAllocationMethod() {
+        return this.publicIPAllocationMethod == null ? Output.empty() : this.publicIPAllocationMethod;
     }
 
     /**
@@ -176,10 +176,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicIPPrefix")
-      private final @Nullable Input<SubResourceArgs> publicIPPrefix;
+      private final @Nullable Output<SubResourceArgs> publicIPPrefix;
 
-    public Input<SubResourceArgs> getPublicIPPrefix() {
-        return this.publicIPPrefix == null ? Input.empty() : this.publicIPPrefix;
+    public Output<SubResourceArgs> getPublicIPPrefix() {
+        return this.publicIPPrefix == null ? Output.empty() : this.publicIPPrefix;
     }
 
     /**
@@ -187,10 +187,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicIpAddressName")
-      private final @Nullable Input<String> publicIpAddressName;
+      private final @Nullable Output<String> publicIpAddressName;
 
-    public Input<String> getPublicIpAddressName() {
-        return this.publicIpAddressName == null ? Input.empty() : this.publicIpAddressName;
+    public Output<String> getPublicIpAddressName() {
+        return this.publicIpAddressName == null ? Output.empty() : this.publicIpAddressName;
     }
 
     /**
@@ -198,9 +198,9 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -209,10 +209,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="servicePublicIPAddress")
-      private final @Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress;
+      private final @Nullable Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress;
 
-    public Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> getServicePublicIPAddress() {
-        return this.servicePublicIPAddress == null ? Input.empty() : this.servicePublicIPAddress;
+    public Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> getServicePublicIPAddress() {
+        return this.servicePublicIPAddress == null ? Output.empty() : this.servicePublicIPAddress;
     }
 
     /**
@@ -220,10 +220,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku")
-      private final @Nullable Input<PublicIPAddressSkuArgs> sku;
+      private final @Nullable Output<PublicIPAddressSkuArgs> sku;
 
-    public Input<PublicIPAddressSkuArgs> getSku() {
-        return this.sku == null ? Input.empty() : this.sku;
+    public Output<PublicIPAddressSkuArgs> getSku() {
+        return this.sku == null ? Output.empty() : this.sku;
     }
 
     /**
@@ -231,10 +231,10 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -242,33 +242,33 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="zones")
-      private final @Nullable Input<List<String>> zones;
+      private final @Nullable Output<List<String>> zones;
 
-    public Input<List<String>> getZones() {
-        return this.zones == null ? Input.empty() : this.zones;
+    public Output<List<String>> getZones() {
+        return this.zones == null ? Output.empty() : this.zones;
     }
 
     public PublicIPAddressArgs(
-        @Nullable Input<DdosSettingsArgs> ddosSettings,
-        @Nullable Input<PublicIPAddressDnsSettingsArgs> dnsSettings,
-        @Nullable Input<ExtendedLocationArgs> extendedLocation,
-        @Nullable Input<String> id,
-        @Nullable Input<Integer> idleTimeoutInMinutes,
-        @Nullable Input<String> ipAddress,
-        @Nullable Input<List<IpTagArgs>> ipTags,
-        @Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress,
-        @Nullable Input<String> location,
-        @Nullable Input<Either<String,PublicIPAddressMigrationPhase>> migrationPhase,
-        @Nullable Input<NatGatewayArgs> natGateway,
-        @Nullable Input<Either<String,IPVersion>> publicIPAddressVersion,
-        @Nullable Input<Either<String,IPAllocationMethod>> publicIPAllocationMethod,
-        @Nullable Input<SubResourceArgs> publicIPPrefix,
-        @Nullable Input<String> publicIpAddressName,
-        Input<String> resourceGroupName,
-        @Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress,
-        @Nullable Input<PublicIPAddressSkuArgs> sku,
-        @Nullable Input<Map<String,String>> tags,
-        @Nullable Input<List<String>> zones) {
+        @Nullable Output<DdosSettingsArgs> ddosSettings,
+        @Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings,
+        @Nullable Output<ExtendedLocationArgs> extendedLocation,
+        @Nullable Output<String> id,
+        @Nullable Output<Integer> idleTimeoutInMinutes,
+        @Nullable Output<String> ipAddress,
+        @Nullable Output<List<IpTagArgs>> ipTags,
+        @Nullable Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress,
+        @Nullable Output<String> location,
+        @Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase,
+        @Nullable Output<NatGatewayArgs> natGateway,
+        @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion,
+        @Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod,
+        @Nullable Output<SubResourceArgs> publicIPPrefix,
+        @Nullable Output<String> publicIpAddressName,
+        Output<String> resourceGroupName,
+        @Nullable Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress,
+        @Nullable Output<PublicIPAddressSkuArgs> sku,
+        @Nullable Output<Map<String,String>> tags,
+        @Nullable Output<List<String>> zones) {
         this.ddosSettings = ddosSettings;
         this.dnsSettings = dnsSettings;
         this.extendedLocation = extendedLocation;
@@ -292,26 +292,26 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PublicIPAddressArgs() {
-        this.ddosSettings = Input.empty();
-        this.dnsSettings = Input.empty();
-        this.extendedLocation = Input.empty();
-        this.id = Input.empty();
-        this.idleTimeoutInMinutes = Input.empty();
-        this.ipAddress = Input.empty();
-        this.ipTags = Input.empty();
-        this.linkedPublicIPAddress = Input.empty();
-        this.location = Input.empty();
-        this.migrationPhase = Input.empty();
-        this.natGateway = Input.empty();
-        this.publicIPAddressVersion = Input.empty();
-        this.publicIPAllocationMethod = Input.empty();
-        this.publicIPPrefix = Input.empty();
-        this.publicIpAddressName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.servicePublicIPAddress = Input.empty();
-        this.sku = Input.empty();
-        this.tags = Input.empty();
-        this.zones = Input.empty();
+        this.ddosSettings = Output.empty();
+        this.dnsSettings = Output.empty();
+        this.extendedLocation = Output.empty();
+        this.id = Output.empty();
+        this.idleTimeoutInMinutes = Output.empty();
+        this.ipAddress = Output.empty();
+        this.ipTags = Output.empty();
+        this.linkedPublicIPAddress = Output.empty();
+        this.location = Output.empty();
+        this.migrationPhase = Output.empty();
+        this.natGateway = Output.empty();
+        this.publicIPAddressVersion = Output.empty();
+        this.publicIPAllocationMethod = Output.empty();
+        this.publicIPPrefix = Output.empty();
+        this.publicIpAddressName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.servicePublicIPAddress = Output.empty();
+        this.sku = Output.empty();
+        this.tags = Output.empty();
+        this.zones = Output.empty();
     }
 
     public static Builder builder() {
@@ -323,26 +323,26 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     public static final class Builder {
-        private @Nullable Input<DdosSettingsArgs> ddosSettings;
-        private @Nullable Input<PublicIPAddressDnsSettingsArgs> dnsSettings;
-        private @Nullable Input<ExtendedLocationArgs> extendedLocation;
-        private @Nullable Input<String> id;
-        private @Nullable Input<Integer> idleTimeoutInMinutes;
-        private @Nullable Input<String> ipAddress;
-        private @Nullable Input<List<IpTagArgs>> ipTags;
-        private @Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
-        private @Nullable Input<NatGatewayArgs> natGateway;
-        private @Nullable Input<Either<String,IPVersion>> publicIPAddressVersion;
-        private @Nullable Input<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
-        private @Nullable Input<SubResourceArgs> publicIPPrefix;
-        private @Nullable Input<String> publicIpAddressName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress;
-        private @Nullable Input<PublicIPAddressSkuArgs> sku;
-        private @Nullable Input<Map<String,String>> tags;
-        private @Nullable Input<List<String>> zones;
+        private @Nullable Output<DdosSettingsArgs> ddosSettings;
+        private @Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings;
+        private @Nullable Output<ExtendedLocationArgs> extendedLocation;
+        private @Nullable Output<String> id;
+        private @Nullable Output<Integer> idleTimeoutInMinutes;
+        private @Nullable Output<String> ipAddress;
+        private @Nullable Output<List<IpTagArgs>> ipTags;
+        private @Nullable Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase;
+        private @Nullable Output<NatGatewayArgs> natGateway;
+        private @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
+        private @Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod;
+        private @Nullable Output<SubResourceArgs> publicIPPrefix;
+        private @Nullable Output<String> publicIpAddressName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress;
+        private @Nullable Output<PublicIPAddressSkuArgs> sku;
+        private @Nullable Output<Map<String,String>> tags;
+        private @Nullable Output<List<String>> zones;
 
         public Builder() {
     	      // Empty
@@ -372,203 +372,203 @@ public final class PublicIPAddressArgs extends io.pulumi.resources.ResourceArgs 
     	      this.zones = defaults.zones;
         }
 
-        public Builder ddosSettings(@Nullable Input<DdosSettingsArgs> ddosSettings) {
+        public Builder ddosSettings(@Nullable Output<DdosSettingsArgs> ddosSettings) {
             this.ddosSettings = ddosSettings;
             return this;
         }
 
         public Builder ddosSettings(@Nullable DdosSettingsArgs ddosSettings) {
-            this.ddosSettings = Input.ofNullable(ddosSettings);
+            this.ddosSettings = Output.ofNullable(ddosSettings);
             return this;
         }
 
-        public Builder dnsSettings(@Nullable Input<PublicIPAddressDnsSettingsArgs> dnsSettings) {
+        public Builder dnsSettings(@Nullable Output<PublicIPAddressDnsSettingsArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
         public Builder dnsSettings(@Nullable PublicIPAddressDnsSettingsArgs dnsSettings) {
-            this.dnsSettings = Input.ofNullable(dnsSettings);
+            this.dnsSettings = Output.ofNullable(dnsSettings);
             return this;
         }
 
-        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Input.ofNullable(extendedLocation);
+            this.extendedLocation = Output.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder id(@Nullable Input<String> id) {
+        public Builder id(@Nullable Output<String> id) {
             this.id = id;
             return this;
         }
 
         public Builder id(@Nullable String id) {
-            this.id = Input.ofNullable(id);
+            this.id = Output.ofNullable(id);
             return this;
         }
 
-        public Builder idleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Input.ofNullable(idleTimeoutInMinutes);
+            this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
             return this;
         }
 
-        public Builder ipAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Input.ofNullable(ipAddress);
+            this.ipAddress = Output.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder ipTags(@Nullable Input<List<IpTagArgs>> ipTags) {
+        public Builder ipTags(@Nullable Output<List<IpTagArgs>> ipTags) {
             this.ipTags = ipTags;
             return this;
         }
 
         public Builder ipTags(@Nullable List<IpTagArgs> ipTags) {
-            this.ipTags = Input.ofNullable(ipTags);
+            this.ipTags = Output.ofNullable(ipTags);
             return this;
         }
 
-        public Builder linkedPublicIPAddress(@Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress) {
+        public Builder linkedPublicIPAddress(@Nullable Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> linkedPublicIPAddress) {
             this.linkedPublicIPAddress = linkedPublicIPAddress;
             return this;
         }
 
         public Builder linkedPublicIPAddress(@Nullable io.pulumi.azurenative.network.inputs.PublicIPAddressArgs linkedPublicIPAddress) {
-            this.linkedPublicIPAddress = Input.ofNullable(linkedPublicIPAddress);
+            this.linkedPublicIPAddress = Output.ofNullable(linkedPublicIPAddress);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder migrationPhase(@Nullable Input<Either<String,PublicIPAddressMigrationPhase>> migrationPhase) {
+        public Builder migrationPhase(@Nullable Output<Either<String,PublicIPAddressMigrationPhase>> migrationPhase) {
             this.migrationPhase = migrationPhase;
             return this;
         }
 
         public Builder migrationPhase(@Nullable Either<String,PublicIPAddressMigrationPhase> migrationPhase) {
-            this.migrationPhase = Input.ofNullable(migrationPhase);
+            this.migrationPhase = Output.ofNullable(migrationPhase);
             return this;
         }
 
-        public Builder natGateway(@Nullable Input<NatGatewayArgs> natGateway) {
+        public Builder natGateway(@Nullable Output<NatGatewayArgs> natGateway) {
             this.natGateway = natGateway;
             return this;
         }
 
         public Builder natGateway(@Nullable NatGatewayArgs natGateway) {
-            this.natGateway = Input.ofNullable(natGateway);
+            this.natGateway = Output.ofNullable(natGateway);
             return this;
         }
 
-        public Builder publicIPAddressVersion(@Nullable Input<Either<String,IPVersion>> publicIPAddressVersion) {
+        public Builder publicIPAddressVersion(@Nullable Output<Either<String,IPVersion>> publicIPAddressVersion) {
             this.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
 
         public Builder publicIPAddressVersion(@Nullable Either<String,IPVersion> publicIPAddressVersion) {
-            this.publicIPAddressVersion = Input.ofNullable(publicIPAddressVersion);
+            this.publicIPAddressVersion = Output.ofNullable(publicIPAddressVersion);
             return this;
         }
 
-        public Builder publicIPAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> publicIPAllocationMethod) {
+        public Builder publicIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> publicIPAllocationMethod) {
             this.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
         }
 
         public Builder publicIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> publicIPAllocationMethod) {
-            this.publicIPAllocationMethod = Input.ofNullable(publicIPAllocationMethod);
+            this.publicIPAllocationMethod = Output.ofNullable(publicIPAllocationMethod);
             return this;
         }
 
-        public Builder publicIPPrefix(@Nullable Input<SubResourceArgs> publicIPPrefix) {
+        public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {
             this.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
         public Builder publicIPPrefix(@Nullable SubResourceArgs publicIPPrefix) {
-            this.publicIPPrefix = Input.ofNullable(publicIPPrefix);
+            this.publicIPPrefix = Output.ofNullable(publicIPPrefix);
             return this;
         }
 
-        public Builder publicIpAddressName(@Nullable Input<String> publicIpAddressName) {
+        public Builder publicIpAddressName(@Nullable Output<String> publicIpAddressName) {
             this.publicIpAddressName = publicIpAddressName;
             return this;
         }
 
         public Builder publicIpAddressName(@Nullable String publicIpAddressName) {
-            this.publicIpAddressName = Input.ofNullable(publicIpAddressName);
+            this.publicIpAddressName = Output.ofNullable(publicIpAddressName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder servicePublicIPAddress(@Nullable Input<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress) {
+        public Builder servicePublicIPAddress(@Nullable Output<io.pulumi.azurenative.network.inputs.PublicIPAddressArgs> servicePublicIPAddress) {
             this.servicePublicIPAddress = servicePublicIPAddress;
             return this;
         }
 
         public Builder servicePublicIPAddress(@Nullable io.pulumi.azurenative.network.inputs.PublicIPAddressArgs servicePublicIPAddress) {
-            this.servicePublicIPAddress = Input.ofNullable(servicePublicIPAddress);
+            this.servicePublicIPAddress = Output.ofNullable(servicePublicIPAddress);
             return this;
         }
 
-        public Builder sku(@Nullable Input<PublicIPAddressSkuArgs> sku) {
+        public Builder sku(@Nullable Output<PublicIPAddressSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
         public Builder sku(@Nullable PublicIPAddressSkuArgs sku) {
-            this.sku = Input.ofNullable(sku);
+            this.sku = Output.ofNullable(sku);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder zones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Output<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Input.ofNullable(zones);
+            this.zones = Output.ofNullable(zones);
             return this;
         }
         public PublicIPAddressArgs build() {

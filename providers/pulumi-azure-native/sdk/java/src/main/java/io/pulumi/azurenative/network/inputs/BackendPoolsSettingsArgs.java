@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.enums.EnforceCertificateNameCheckEnabledState;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enforceCertificateNameCheck")
-      private final @Nullable Input<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck;
+      private final @Nullable Output<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck;
 
-    public Input<Either<String,EnforceCertificateNameCheckEnabledState>> getEnforceCertificateNameCheck() {
-        return this.enforceCertificateNameCheck == null ? Input.empty() : this.enforceCertificateNameCheck;
+    public Output<Either<String,EnforceCertificateNameCheckEnabledState>> getEnforceCertificateNameCheck() {
+        return this.enforceCertificateNameCheck == null ? Output.empty() : this.enforceCertificateNameCheck;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sendRecvTimeoutSeconds")
-      private final @Nullable Input<Integer> sendRecvTimeoutSeconds;
+      private final @Nullable Output<Integer> sendRecvTimeoutSeconds;
 
-    public Input<Integer> getSendRecvTimeoutSeconds() {
-        return this.sendRecvTimeoutSeconds == null ? Input.empty() : this.sendRecvTimeoutSeconds;
+    public Output<Integer> getSendRecvTimeoutSeconds() {
+        return this.sendRecvTimeoutSeconds == null ? Output.empty() : this.sendRecvTimeoutSeconds;
     }
 
     public BackendPoolsSettingsArgs(
-        @Nullable Input<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck,
-        @Nullable Input<Integer> sendRecvTimeoutSeconds) {
-        this.enforceCertificateNameCheck = enforceCertificateNameCheck == null ? Input.ofLeft("Enabled") : enforceCertificateNameCheck;
+        @Nullable Output<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck,
+        @Nullable Output<Integer> sendRecvTimeoutSeconds) {
+        this.enforceCertificateNameCheck = enforceCertificateNameCheck == null ? Output.ofLeft("Enabled") : enforceCertificateNameCheck;
         this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
     }
 
     private BackendPoolsSettingsArgs() {
-        this.enforceCertificateNameCheck = Input.empty();
-        this.sendRecvTimeoutSeconds = Input.empty();
+        this.enforceCertificateNameCheck = Output.empty();
+        this.sendRecvTimeoutSeconds = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck;
-        private @Nullable Input<Integer> sendRecvTimeoutSeconds;
+        private @Nullable Output<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck;
+        private @Nullable Output<Integer> sendRecvTimeoutSeconds;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
     	      this.sendRecvTimeoutSeconds = defaults.sendRecvTimeoutSeconds;
         }
 
-        public Builder enforceCertificateNameCheck(@Nullable Input<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck) {
+        public Builder enforceCertificateNameCheck(@Nullable Output<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck) {
             this.enforceCertificateNameCheck = enforceCertificateNameCheck;
             return this;
         }
 
         public Builder enforceCertificateNameCheck(@Nullable Either<String,EnforceCertificateNameCheckEnabledState> enforceCertificateNameCheck) {
-            this.enforceCertificateNameCheck = Input.ofNullable(enforceCertificateNameCheck);
+            this.enforceCertificateNameCheck = Output.ofNullable(enforceCertificateNameCheck);
             return this;
         }
 
-        public Builder sendRecvTimeoutSeconds(@Nullable Input<Integer> sendRecvTimeoutSeconds) {
+        public Builder sendRecvTimeoutSeconds(@Nullable Output<Integer> sendRecvTimeoutSeconds) {
             this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
             return this;
         }
 
         public Builder sendRecvTimeoutSeconds(@Nullable Integer sendRecvTimeoutSeconds) {
-            this.sendRecvTimeoutSeconds = Input.ofNullable(sendRecvTimeoutSeconds);
+            this.sendRecvTimeoutSeconds = Output.ofNullable(sendRecvTimeoutSeconds);
             return this;
         }
         public BackendPoolsSettingsArgs build() {

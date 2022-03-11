@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.EnabledProtocolsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledProtocols")
-      private final @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
+      private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
-    public Input<EnabledProtocolsArgs> getEnabledProtocols() {
-        return this.enabledProtocols == null ? Input.empty() : this.enabledProtocols;
+    public Output<EnabledProtocolsArgs> getEnabledProtocols() {
+        return this.enabledProtocols == null ? Output.empty() : this.enabledProtocols;
     }
 
-    public NoEncryptionArgs(@Nullable Input<EnabledProtocolsArgs> enabledProtocols) {
+    public NoEncryptionArgs(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
         this.enabledProtocols = enabledProtocols;
     }
 
     private NoEncryptionArgs() {
-        this.enabledProtocols = Input.empty();
+        this.enabledProtocols = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
+        private @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.enabledProtocols = defaults.enabledProtocols;
         }
 
-        public Builder enabledProtocols(@Nullable Input<EnabledProtocolsArgs> enabledProtocols) {
+        public Builder enabledProtocols(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
 
         public Builder enabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
-            this.enabledProtocols = Input.ofNullable(enabledProtocols);
+            this.enabledProtocols = Output.ofNullable(enabledProtocols);
             return this;
         }
         public NoEncryptionArgs build() {

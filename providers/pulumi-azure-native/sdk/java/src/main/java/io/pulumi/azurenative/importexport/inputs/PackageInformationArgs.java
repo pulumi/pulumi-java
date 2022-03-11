@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
@@ -23,9 +23,9 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="carrierName", required=true)
-      private final Input<String> carrierName;
+      private final Output<String> carrierName;
 
-    public Input<String> getCarrierName() {
+    public Output<String> getCarrierName() {
         return this.carrierName;
     }
 
@@ -34,9 +34,9 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="driveCount", required=true)
-      private final Input<Double> driveCount;
+      private final Output<Double> driveCount;
 
-    public Input<Double> getDriveCount() {
+    public Output<Double> getDriveCount() {
         return this.driveCount;
     }
 
@@ -45,9 +45,9 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="shipDate", required=true)
-      private final Input<String> shipDate;
+      private final Output<String> shipDate;
 
-    public Input<String> getShipDate() {
+    public Output<String> getShipDate() {
         return this.shipDate;
     }
 
@@ -56,17 +56,17 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="trackingNumber", required=true)
-      private final Input<String> trackingNumber;
+      private final Output<String> trackingNumber;
 
-    public Input<String> getTrackingNumber() {
+    public Output<String> getTrackingNumber() {
         return this.trackingNumber;
     }
 
     public PackageInformationArgs(
-        Input<String> carrierName,
-        Input<Double> driveCount,
-        Input<String> shipDate,
-        Input<String> trackingNumber) {
+        Output<String> carrierName,
+        Output<Double> driveCount,
+        Output<String> shipDate,
+        Output<String> trackingNumber) {
         this.carrierName = Objects.requireNonNull(carrierName, "expected parameter 'carrierName' to be non-null");
         this.driveCount = Objects.requireNonNull(driveCount, "expected parameter 'driveCount' to be non-null");
         this.shipDate = Objects.requireNonNull(shipDate, "expected parameter 'shipDate' to be non-null");
@@ -74,10 +74,10 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PackageInformationArgs() {
-        this.carrierName = Input.empty();
-        this.driveCount = Input.empty();
-        this.shipDate = Input.empty();
-        this.trackingNumber = Input.empty();
+        this.carrierName = Output.empty();
+        this.driveCount = Output.empty();
+        this.shipDate = Output.empty();
+        this.trackingNumber = Output.empty();
     }
 
     public static Builder builder() {
@@ -89,10 +89,10 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<String> carrierName;
-        private Input<Double> driveCount;
-        private Input<String> shipDate;
-        private Input<String> trackingNumber;
+        private Output<String> carrierName;
+        private Output<Double> driveCount;
+        private Output<String> shipDate;
+        private Output<String> trackingNumber;
 
         public Builder() {
     	      // Empty
@@ -106,43 +106,43 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     	      this.trackingNumber = defaults.trackingNumber;
         }
 
-        public Builder carrierName(Input<String> carrierName) {
+        public Builder carrierName(Output<String> carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
 
         public Builder carrierName(String carrierName) {
-            this.carrierName = Input.of(Objects.requireNonNull(carrierName));
+            this.carrierName = Output.of(Objects.requireNonNull(carrierName));
             return this;
         }
 
-        public Builder driveCount(Input<Double> driveCount) {
+        public Builder driveCount(Output<Double> driveCount) {
             this.driveCount = Objects.requireNonNull(driveCount);
             return this;
         }
 
         public Builder driveCount(Double driveCount) {
-            this.driveCount = Input.of(Objects.requireNonNull(driveCount));
+            this.driveCount = Output.of(Objects.requireNonNull(driveCount));
             return this;
         }
 
-        public Builder shipDate(Input<String> shipDate) {
+        public Builder shipDate(Output<String> shipDate) {
             this.shipDate = Objects.requireNonNull(shipDate);
             return this;
         }
 
         public Builder shipDate(String shipDate) {
-            this.shipDate = Input.of(Objects.requireNonNull(shipDate));
+            this.shipDate = Output.of(Objects.requireNonNull(shipDate));
             return this;
         }
 
-        public Builder trackingNumber(Input<String> trackingNumber) {
+        public Builder trackingNumber(Output<String> trackingNumber) {
             this.trackingNumber = Objects.requireNonNull(trackingNumber);
             return this;
         }
 
         public Builder trackingNumber(String trackingNumber) {
-            this.trackingNumber = Input.of(Objects.requireNonNull(trackingNumber));
+            this.trackingNumber = Output.of(Objects.requireNonNull(trackingNumber));
             return this;
         }
         public PackageInformationArgs build() {

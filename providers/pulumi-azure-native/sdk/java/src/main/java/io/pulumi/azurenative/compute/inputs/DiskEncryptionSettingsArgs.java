@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.KeyVaultKeyReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.KeyVaultSecretReferenceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -25,10 +25,10 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="diskEncryptionKey")
-      private final @Nullable Input<KeyVaultSecretReferenceArgs> diskEncryptionKey;
+      private final @Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey;
 
-    public Input<KeyVaultSecretReferenceArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
+    public Output<KeyVaultSecretReferenceArgs> getDiskEncryptionKey() {
+        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-      private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Output<Boolean> enabled;
 
-    public Input<Boolean> getEnabled() {
-        return this.enabled == null ? Input.empty() : this.enabled;
+    public Output<Boolean> getEnabled() {
+        return this.enabled == null ? Output.empty() : this.enabled;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="keyEncryptionKey")
-      private final @Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey;
+      private final @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
-    public Input<KeyVaultKeyReferenceArgs> getKeyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Input.empty() : this.keyEncryptionKey;
+    public Output<KeyVaultKeyReferenceArgs> getKeyEncryptionKey() {
+        return this.keyEncryptionKey == null ? Output.empty() : this.keyEncryptionKey;
     }
 
     public DiskEncryptionSettingsArgs(
-        @Nullable Input<KeyVaultSecretReferenceArgs> diskEncryptionKey,
-        @Nullable Input<Boolean> enabled,
-        @Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
+        @Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey,
+        @Nullable Output<Boolean> enabled,
+        @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
         this.diskEncryptionKey = diskEncryptionKey;
         this.enabled = enabled;
         this.keyEncryptionKey = keyEncryptionKey;
     }
 
     private DiskEncryptionSettingsArgs() {
-        this.diskEncryptionKey = Input.empty();
-        this.enabled = Input.empty();
-        this.keyEncryptionKey = Input.empty();
+        this.diskEncryptionKey = Output.empty();
+        this.enabled = Output.empty();
+        this.keyEncryptionKey = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
     }
 
     public static final class Builder {
-        private @Nullable Input<KeyVaultSecretReferenceArgs> diskEncryptionKey;
-        private @Nullable Input<Boolean> enabled;
-        private @Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey;
+        private @Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey;
+        private @Nullable Output<Boolean> enabled;
+        private @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
     	      this.keyEncryptionKey = defaults.keyEncryptionKey;
         }
 
-        public Builder diskEncryptionKey(@Nullable Input<KeyVaultSecretReferenceArgs> diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
         public Builder diskEncryptionKey(@Nullable KeyVaultSecretReferenceArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Input.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
             return this;
         }
 
-        public Builder enabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Output<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Input.ofNullable(enabled);
+            this.enabled = Output.ofNullable(enabled);
             return this;
         }
 
-        public Builder keyEncryptionKey(@Nullable Input<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
         public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceArgs keyEncryptionKey) {
-            this.keyEncryptionKey = Input.ofNullable(keyEncryptionKey);
+            this.keyEncryptionKey = Output.ofNullable(keyEncryptionKey);
             return this;
         }
         public DiskEncryptionSettingsArgs build() {

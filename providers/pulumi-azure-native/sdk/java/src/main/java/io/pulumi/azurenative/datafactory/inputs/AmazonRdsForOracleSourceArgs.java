@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.AmazonRdsForOraclePartitionSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="additionalColumns")
-      private final @Nullable Input<Object> additionalColumns;
+      private final @Nullable Output<Object> additionalColumns;
 
-    public Input<Object> getAdditionalColumns() {
-        return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
+    public Output<Object> getAdditionalColumns() {
+        return this.additionalColumns == null ? Output.empty() : this.additionalColumns;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="disableMetricsCollection")
-      private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Input<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
+    public Output<Object> getDisableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-      private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Input<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
+    public Output<Object> getMaxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="oracleReaderQuery")
-      private final @Nullable Input<Object> oracleReaderQuery;
+      private final @Nullable Output<Object> oracleReaderQuery;
 
-    public Input<Object> getOracleReaderQuery() {
-        return this.oracleReaderQuery == null ? Input.empty() : this.oracleReaderQuery;
+    public Output<Object> getOracleReaderQuery() {
+        return this.oracleReaderQuery == null ? Output.empty() : this.oracleReaderQuery;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="partitionOption")
-      private final @Nullable Input<Object> partitionOption;
+      private final @Nullable Output<Object> partitionOption;
 
-    public Input<Object> getPartitionOption() {
-        return this.partitionOption == null ? Input.empty() : this.partitionOption;
+    public Output<Object> getPartitionOption() {
+        return this.partitionOption == null ? Output.empty() : this.partitionOption;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="partitionSettings")
-      private final @Nullable Input<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings;
+      private final @Nullable Output<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings;
 
-    public Input<AmazonRdsForOraclePartitionSettingsArgs> getPartitionSettings() {
-        return this.partitionSettings == null ? Input.empty() : this.partitionSettings;
+    public Output<AmazonRdsForOraclePartitionSettingsArgs> getPartitionSettings() {
+        return this.partitionSettings == null ? Output.empty() : this.partitionSettings;
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="queryTimeout")
-      private final @Nullable Input<Object> queryTimeout;
+      private final @Nullable Output<Object> queryTimeout;
 
-    public Input<Object> getQueryTimeout() {
-        return this.queryTimeout == null ? Input.empty() : this.queryTimeout;
+    public Output<Object> getQueryTimeout() {
+        return this.queryTimeout == null ? Output.empty() : this.queryTimeout;
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceRetryCount")
-      private final @Nullable Input<Object> sourceRetryCount;
+      private final @Nullable Output<Object> sourceRetryCount;
 
-    public Input<Object> getSourceRetryCount() {
-        return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
+    public Output<Object> getSourceRetryCount() {
+        return this.sourceRetryCount == null ? Output.empty() : this.sourceRetryCount;
     }
 
     /**
@@ -113,10 +113,10 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sourceRetryWait")
-      private final @Nullable Input<Object> sourceRetryWait;
+      private final @Nullable Output<Object> sourceRetryWait;
 
-    public Input<Object> getSourceRetryWait() {
-        return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
+    public Output<Object> getSourceRetryWait() {
+        return this.sourceRetryWait == null ? Output.empty() : this.sourceRetryWait;
     }
 
     /**
@@ -125,23 +125,23 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public AmazonRdsForOracleSourceArgs(
-        @Nullable Input<Object> additionalColumns,
-        @Nullable Input<Object> disableMetricsCollection,
-        @Nullable Input<Object> maxConcurrentConnections,
-        @Nullable Input<Object> oracleReaderQuery,
-        @Nullable Input<Object> partitionOption,
-        @Nullable Input<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings,
-        @Nullable Input<Object> queryTimeout,
-        @Nullable Input<Object> sourceRetryCount,
-        @Nullable Input<Object> sourceRetryWait,
-        Input<String> type) {
+        @Nullable Output<Object> additionalColumns,
+        @Nullable Output<Object> disableMetricsCollection,
+        @Nullable Output<Object> maxConcurrentConnections,
+        @Nullable Output<Object> oracleReaderQuery,
+        @Nullable Output<Object> partitionOption,
+        @Nullable Output<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings,
+        @Nullable Output<Object> queryTimeout,
+        @Nullable Output<Object> sourceRetryCount,
+        @Nullable Output<Object> sourceRetryWait,
+        Output<String> type) {
         this.additionalColumns = additionalColumns;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
@@ -155,16 +155,16 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
     }
 
     private AmazonRdsForOracleSourceArgs() {
-        this.additionalColumns = Input.empty();
-        this.disableMetricsCollection = Input.empty();
-        this.maxConcurrentConnections = Input.empty();
-        this.oracleReaderQuery = Input.empty();
-        this.partitionOption = Input.empty();
-        this.partitionSettings = Input.empty();
-        this.queryTimeout = Input.empty();
-        this.sourceRetryCount = Input.empty();
-        this.sourceRetryWait = Input.empty();
-        this.type = Input.empty();
+        this.additionalColumns = Output.empty();
+        this.disableMetricsCollection = Output.empty();
+        this.maxConcurrentConnections = Output.empty();
+        this.oracleReaderQuery = Output.empty();
+        this.partitionOption = Output.empty();
+        this.partitionSettings = Output.empty();
+        this.queryTimeout = Output.empty();
+        this.sourceRetryCount = Output.empty();
+        this.sourceRetryWait = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -176,16 +176,16 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> additionalColumns;
-        private @Nullable Input<Object> disableMetricsCollection;
-        private @Nullable Input<Object> maxConcurrentConnections;
-        private @Nullable Input<Object> oracleReaderQuery;
-        private @Nullable Input<Object> partitionOption;
-        private @Nullable Input<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings;
-        private @Nullable Input<Object> queryTimeout;
-        private @Nullable Input<Object> sourceRetryCount;
-        private @Nullable Input<Object> sourceRetryWait;
-        private Input<String> type;
+        private @Nullable Output<Object> additionalColumns;
+        private @Nullable Output<Object> disableMetricsCollection;
+        private @Nullable Output<Object> maxConcurrentConnections;
+        private @Nullable Output<Object> oracleReaderQuery;
+        private @Nullable Output<Object> partitionOption;
+        private @Nullable Output<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings;
+        private @Nullable Output<Object> queryTimeout;
+        private @Nullable Output<Object> sourceRetryCount;
+        private @Nullable Output<Object> sourceRetryWait;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -205,103 +205,103 @@ public final class AmazonRdsForOracleSourceArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder additionalColumns(@Nullable Input<Object> additionalColumns) {
+        public Builder additionalColumns(@Nullable Output<Object> additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
         public Builder additionalColumns(@Nullable Object additionalColumns) {
-            this.additionalColumns = Input.ofNullable(additionalColumns);
+            this.additionalColumns = Output.ofNullable(additionalColumns);
             return this;
         }
 
-        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder oracleReaderQuery(@Nullable Input<Object> oracleReaderQuery) {
+        public Builder oracleReaderQuery(@Nullable Output<Object> oracleReaderQuery) {
             this.oracleReaderQuery = oracleReaderQuery;
             return this;
         }
 
         public Builder oracleReaderQuery(@Nullable Object oracleReaderQuery) {
-            this.oracleReaderQuery = Input.ofNullable(oracleReaderQuery);
+            this.oracleReaderQuery = Output.ofNullable(oracleReaderQuery);
             return this;
         }
 
-        public Builder partitionOption(@Nullable Input<Object> partitionOption) {
+        public Builder partitionOption(@Nullable Output<Object> partitionOption) {
             this.partitionOption = partitionOption;
             return this;
         }
 
         public Builder partitionOption(@Nullable Object partitionOption) {
-            this.partitionOption = Input.ofNullable(partitionOption);
+            this.partitionOption = Output.ofNullable(partitionOption);
             return this;
         }
 
-        public Builder partitionSettings(@Nullable Input<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings) {
+        public Builder partitionSettings(@Nullable Output<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings) {
             this.partitionSettings = partitionSettings;
             return this;
         }
 
         public Builder partitionSettings(@Nullable AmazonRdsForOraclePartitionSettingsArgs partitionSettings) {
-            this.partitionSettings = Input.ofNullable(partitionSettings);
+            this.partitionSettings = Output.ofNullable(partitionSettings);
             return this;
         }
 
-        public Builder queryTimeout(@Nullable Input<Object> queryTimeout) {
+        public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
 
         public Builder queryTimeout(@Nullable Object queryTimeout) {
-            this.queryTimeout = Input.ofNullable(queryTimeout);
+            this.queryTimeout = Output.ofNullable(queryTimeout);
             return this;
         }
 
-        public Builder sourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Input.ofNullable(sourceRetryCount);
+            this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
 
-        public Builder sourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Input.ofNullable(sourceRetryWait);
+            this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public AmazonRdsForOracleSourceArgs build() {

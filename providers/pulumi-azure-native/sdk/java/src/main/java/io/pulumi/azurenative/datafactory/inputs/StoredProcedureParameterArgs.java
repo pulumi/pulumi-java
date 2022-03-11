@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.enums.StoredProcedureParameterType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -26,10 +26,10 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type")
-      private final @Nullable Input<Either<String,StoredProcedureParameterType>> type;
+      private final @Nullable Output<Either<String,StoredProcedureParameterType>> type;
 
-    public Input<Either<String,StoredProcedureParameterType>> getType() {
-        return this.type == null ? Input.empty() : this.type;
+    public Output<Either<String,StoredProcedureParameterType>> getType() {
+        return this.type == null ? Output.empty() : this.type;
     }
 
     /**
@@ -37,22 +37,22 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<Object> value;
+      private final @Nullable Output<Object> value;
 
-    public Input<Object> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<Object> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public StoredProcedureParameterArgs(
-        @Nullable Input<Either<String,StoredProcedureParameterType>> type,
-        @Nullable Input<Object> value) {
+        @Nullable Output<Either<String,StoredProcedureParameterType>> type,
+        @Nullable Output<Object> value) {
         this.type = type;
         this.value = value;
     }
 
     private StoredProcedureParameterArgs() {
-        this.type = Input.empty();
-        this.value = Input.empty();
+        this.type = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -64,8 +64,8 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,StoredProcedureParameterType>> type;
-        private @Nullable Input<Object> value;
+        private @Nullable Output<Either<String,StoredProcedureParameterType>> type;
+        private @Nullable Output<Object> value;
 
         public Builder() {
     	      // Empty
@@ -77,23 +77,23 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
     	      this.value = defaults.value;
         }
 
-        public Builder type(@Nullable Input<Either<String,StoredProcedureParameterType>> type) {
+        public Builder type(@Nullable Output<Either<String,StoredProcedureParameterType>> type) {
             this.type = type;
             return this;
         }
 
         public Builder type(@Nullable Either<String,StoredProcedureParameterType> type) {
-            this.type = Input.ofNullable(type);
+            this.type = Output.ofNullable(type);
             return this;
         }
 
-        public Builder value(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Output<Object> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable Object value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public StoredProcedureParameterArgs build() {

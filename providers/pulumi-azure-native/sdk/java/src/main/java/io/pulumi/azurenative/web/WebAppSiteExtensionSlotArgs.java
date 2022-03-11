@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -19,9 +19,9 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<String> name;
+      private final Output<String> name;
 
-    public Input<String> getName() {
+    public Output<String> getName() {
         return this.name;
     }
 
@@ -30,9 +30,9 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -41,10 +41,10 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="siteExtensionId")
-      private final @Nullable Input<String> siteExtensionId;
+      private final @Nullable Output<String> siteExtensionId;
 
-    public Input<String> getSiteExtensionId() {
-        return this.siteExtensionId == null ? Input.empty() : this.siteExtensionId;
+    public Output<String> getSiteExtensionId() {
+        return this.siteExtensionId == null ? Output.empty() : this.siteExtensionId;
     }
 
     /**
@@ -52,17 +52,17 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="slot", required=true)
-      private final Input<String> slot;
+      private final Output<String> slot;
 
-    public Input<String> getSlot() {
+    public Output<String> getSlot() {
         return this.slot;
     }
 
     public WebAppSiteExtensionSlotArgs(
-        Input<String> name,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> siteExtensionId,
-        Input<String> slot) {
+        Output<String> name,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> siteExtensionId,
+        Output<String> slot) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.siteExtensionId = siteExtensionId;
@@ -70,10 +70,10 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
     }
 
     private WebAppSiteExtensionSlotArgs() {
-        this.name = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.siteExtensionId = Input.empty();
-        this.slot = Input.empty();
+        this.name = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.siteExtensionId = Output.empty();
+        this.slot = Output.empty();
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> name;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> siteExtensionId;
-        private Input<String> slot;
+        private Output<String> name;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> siteExtensionId;
+        private Output<String> slot;
 
         public Builder() {
     	      // Empty
@@ -102,43 +102,43 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
     	      this.slot = defaults.slot;
         }
 
-        public Builder name(Input<String> name) {
+        public Builder name(Output<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(String name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder siteExtensionId(@Nullable Input<String> siteExtensionId) {
+        public Builder siteExtensionId(@Nullable Output<String> siteExtensionId) {
             this.siteExtensionId = siteExtensionId;
             return this;
         }
 
         public Builder siteExtensionId(@Nullable String siteExtensionId) {
-            this.siteExtensionId = Input.ofNullable(siteExtensionId);
+            this.siteExtensionId = Output.ofNullable(siteExtensionId);
             return this;
         }
 
-        public Builder slot(Input<String> slot) {
+        public Builder slot(Output<String> slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
 
         public Builder slot(String slot) {
-            this.slot = Input.of(Objects.requireNonNull(slot));
+            this.slot = Output.of(Objects.requireNonNull(slot));
             return this;
         }
         public WebAppSiteExtensionSlotArgs build() {

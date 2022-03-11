@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.keyvault.inputs.SecretPropertiesArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -21,9 +21,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-      private final Input<SecretPropertiesArgs> properties;
+      private final Output<SecretPropertiesArgs> properties;
 
-    public Input<SecretPropertiesArgs> getProperties() {
+    public Output<SecretPropertiesArgs> getProperties() {
         return this.properties;
     }
 
@@ -32,9 +32,9 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -43,10 +43,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretName")
-      private final @Nullable Input<String> secretName;
+      private final @Nullable Output<String> secretName;
 
-    public Input<String> getSecretName() {
-        return this.secretName == null ? Input.empty() : this.secretName;
+    public Output<String> getSecretName() {
+        return this.secretName == null ? Output.empty() : this.secretName;
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     /**
@@ -65,18 +65,18 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vaultName", required=true)
-      private final Input<String> vaultName;
+      private final Output<String> vaultName;
 
-    public Input<String> getVaultName() {
+    public Output<String> getVaultName() {
         return this.vaultName;
     }
 
     public SecretArgs(
-        Input<SecretPropertiesArgs> properties,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> secretName,
-        @Nullable Input<Map<String,String>> tags,
-        Input<String> vaultName) {
+        Output<SecretPropertiesArgs> properties,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> secretName,
+        @Nullable Output<Map<String,String>> tags,
+        Output<String> vaultName) {
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.secretName = secretName;
@@ -85,11 +85,11 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.properties = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.secretName = Input.empty();
-        this.tags = Input.empty();
-        this.vaultName = Input.empty();
+        this.properties = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.secretName = Output.empty();
+        this.tags = Output.empty();
+        this.vaultName = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,11 +101,11 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<SecretPropertiesArgs> properties;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> secretName;
-        private @Nullable Input<Map<String,String>> tags;
-        private Input<String> vaultName;
+        private Output<SecretPropertiesArgs> properties;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> secretName;
+        private @Nullable Output<Map<String,String>> tags;
+        private Output<String> vaultName;
 
         public Builder() {
     	      // Empty
@@ -120,53 +120,53 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder properties(Input<SecretPropertiesArgs> properties) {
+        public Builder properties(Output<SecretPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
         public Builder properties(SecretPropertiesArgs properties) {
-            this.properties = Input.of(Objects.requireNonNull(properties));
+            this.properties = Output.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder secretName(@Nullable Input<String> secretName) {
+        public Builder secretName(@Nullable Output<String> secretName) {
             this.secretName = secretName;
             return this;
         }
 
         public Builder secretName(@Nullable String secretName) {
-            this.secretName = Input.ofNullable(secretName);
+            this.secretName = Output.ofNullable(secretName);
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
 
-        public Builder vaultName(Input<String> vaultName) {
+        public Builder vaultName(Output<String> vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
 
         public Builder vaultName(String vaultName) {
-            this.vaultName = Input.of(Objects.requireNonNull(vaultName));
+            this.vaultName = Output.of(Objects.requireNonNull(vaultName));
             return this;
         }
         public SecretArgs build() {

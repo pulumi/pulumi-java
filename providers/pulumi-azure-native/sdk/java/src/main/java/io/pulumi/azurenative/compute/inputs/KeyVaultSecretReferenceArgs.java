@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,9 +23,9 @@ public final class KeyVaultSecretReferenceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="secretUrl", required=true)
-      private final Input<String> secretUrl;
+      private final Output<String> secretUrl;
 
-    public Input<String> getSecretUrl() {
+    public Output<String> getSecretUrl() {
         return this.secretUrl;
     }
 
@@ -34,22 +34,22 @@ public final class KeyVaultSecretReferenceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceVault", required=true)
-      private final Input<SubResourceArgs> sourceVault;
+      private final Output<SubResourceArgs> sourceVault;
 
-    public Input<SubResourceArgs> getSourceVault() {
+    public Output<SubResourceArgs> getSourceVault() {
         return this.sourceVault;
     }
 
     public KeyVaultSecretReferenceArgs(
-        Input<String> secretUrl,
-        Input<SubResourceArgs> sourceVault) {
+        Output<String> secretUrl,
+        Output<SubResourceArgs> sourceVault) {
         this.secretUrl = Objects.requireNonNull(secretUrl, "expected parameter 'secretUrl' to be non-null");
         this.sourceVault = Objects.requireNonNull(sourceVault, "expected parameter 'sourceVault' to be non-null");
     }
 
     private KeyVaultSecretReferenceArgs() {
-        this.secretUrl = Input.empty();
-        this.sourceVault = Input.empty();
+        this.secretUrl = Output.empty();
+        this.sourceVault = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class KeyVaultSecretReferenceArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private Input<String> secretUrl;
-        private Input<SubResourceArgs> sourceVault;
+        private Output<String> secretUrl;
+        private Output<SubResourceArgs> sourceVault;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class KeyVaultSecretReferenceArgs extends io.pulumi.resources.Resou
     	      this.sourceVault = defaults.sourceVault;
         }
 
-        public Builder secretUrl(Input<String> secretUrl) {
+        public Builder secretUrl(Output<String> secretUrl) {
             this.secretUrl = Objects.requireNonNull(secretUrl);
             return this;
         }
 
         public Builder secretUrl(String secretUrl) {
-            this.secretUrl = Input.of(Objects.requireNonNull(secretUrl));
+            this.secretUrl = Output.of(Objects.requireNonNull(secretUrl));
             return this;
         }
 
-        public Builder sourceVault(Input<SubResourceArgs> sourceVault) {
+        public Builder sourceVault(Output<SubResourceArgs> sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }
 
         public Builder sourceVault(SubResourceArgs sourceVault) {
-            this.sourceVault = Input.of(Objects.requireNonNull(sourceVault));
+            this.sourceVault = Output.of(Objects.requireNonNull(sourceVault));
             return this;
         }
         public KeyVaultSecretReferenceArgs build() {

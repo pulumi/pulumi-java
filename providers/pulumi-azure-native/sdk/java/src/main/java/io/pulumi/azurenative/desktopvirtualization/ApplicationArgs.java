@@ -6,7 +6,7 @@ package io.pulumi.azurenative.desktopvirtualization;
 import io.pulumi.azurenative.desktopvirtualization.enums.CommandLineSetting;
 import io.pulumi.azurenative.desktopvirtualization.enums.RemoteApplicationType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,9 +24,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationGroupName", required=true)
-      private final Input<String> applicationGroupName;
+      private final Output<String> applicationGroupName;
 
-    public Input<String> getApplicationGroupName() {
+    public Output<String> getApplicationGroupName() {
         return this.applicationGroupName;
     }
 
@@ -35,10 +35,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName")
-      private final @Nullable Input<String> applicationName;
+      private final @Nullable Output<String> applicationName;
 
-    public Input<String> getApplicationName() {
-        return this.applicationName == null ? Input.empty() : this.applicationName;
+    public Output<String> getApplicationName() {
+        return this.applicationName == null ? Output.empty() : this.applicationName;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationType")
-      private final @Nullable Input<Either<String,RemoteApplicationType>> applicationType;
+      private final @Nullable Output<Either<String,RemoteApplicationType>> applicationType;
 
-    public Input<Either<String,RemoteApplicationType>> getApplicationType() {
-        return this.applicationType == null ? Input.empty() : this.applicationType;
+    public Output<Either<String,RemoteApplicationType>> getApplicationType() {
+        return this.applicationType == null ? Output.empty() : this.applicationType;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commandLineArguments")
-      private final @Nullable Input<String> commandLineArguments;
+      private final @Nullable Output<String> commandLineArguments;
 
-    public Input<String> getCommandLineArguments() {
-        return this.commandLineArguments == null ? Input.empty() : this.commandLineArguments;
+    public Output<String> getCommandLineArguments() {
+        return this.commandLineArguments == null ? Output.empty() : this.commandLineArguments;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commandLineSetting", required=true)
-      private final Input<Either<String,CommandLineSetting>> commandLineSetting;
+      private final Output<Either<String,CommandLineSetting>> commandLineSetting;
 
-    public Input<Either<String,CommandLineSetting>> getCommandLineSetting() {
+    public Output<Either<String,CommandLineSetting>> getCommandLineSetting() {
         return this.commandLineSetting;
     }
 
@@ -79,10 +79,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filePath")
-      private final @Nullable Input<String> filePath;
+      private final @Nullable Output<String> filePath;
 
-    public Input<String> getFilePath() {
-        return this.filePath == null ? Input.empty() : this.filePath;
+    public Output<String> getFilePath() {
+        return this.filePath == null ? Output.empty() : this.filePath;
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-      private final @Nullable Input<String> friendlyName;
+      private final @Nullable Output<String> friendlyName;
 
-    public Input<String> getFriendlyName() {
-        return this.friendlyName == null ? Input.empty() : this.friendlyName;
+    public Output<String> getFriendlyName() {
+        return this.friendlyName == null ? Output.empty() : this.friendlyName;
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iconIndex")
-      private final @Nullable Input<Integer> iconIndex;
+      private final @Nullable Output<Integer> iconIndex;
 
-    public Input<Integer> getIconIndex() {
-        return this.iconIndex == null ? Input.empty() : this.iconIndex;
+    public Output<Integer> getIconIndex() {
+        return this.iconIndex == null ? Output.empty() : this.iconIndex;
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iconPath")
-      private final @Nullable Input<String> iconPath;
+      private final @Nullable Output<String> iconPath;
 
-    public Input<String> getIconPath() {
-        return this.iconPath == null ? Input.empty() : this.iconPath;
+    public Output<String> getIconPath() {
+        return this.iconPath == null ? Output.empty() : this.iconPath;
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msixPackageApplicationId")
-      private final @Nullable Input<String> msixPackageApplicationId;
+      private final @Nullable Output<String> msixPackageApplicationId;
 
-    public Input<String> getMsixPackageApplicationId() {
-        return this.msixPackageApplicationId == null ? Input.empty() : this.msixPackageApplicationId;
+    public Output<String> getMsixPackageApplicationId() {
+        return this.msixPackageApplicationId == null ? Output.empty() : this.msixPackageApplicationId;
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msixPackageFamilyName")
-      private final @Nullable Input<String> msixPackageFamilyName;
+      private final @Nullable Output<String> msixPackageFamilyName;
 
-    public Input<String> getMsixPackageFamilyName() {
-        return this.msixPackageFamilyName == null ? Input.empty() : this.msixPackageFamilyName;
+    public Output<String> getMsixPackageFamilyName() {
+        return this.msixPackageFamilyName == null ? Output.empty() : this.msixPackageFamilyName;
     }
 
     /**
@@ -156,9 +156,9 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -167,27 +167,27 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="showInPortal")
-      private final @Nullable Input<Boolean> showInPortal;
+      private final @Nullable Output<Boolean> showInPortal;
 
-    public Input<Boolean> getShowInPortal() {
-        return this.showInPortal == null ? Input.empty() : this.showInPortal;
+    public Output<Boolean> getShowInPortal() {
+        return this.showInPortal == null ? Output.empty() : this.showInPortal;
     }
 
     public ApplicationArgs(
-        Input<String> applicationGroupName,
-        @Nullable Input<String> applicationName,
-        @Nullable Input<Either<String,RemoteApplicationType>> applicationType,
-        @Nullable Input<String> commandLineArguments,
-        Input<Either<String,CommandLineSetting>> commandLineSetting,
-        @Nullable Input<String> description,
-        @Nullable Input<String> filePath,
-        @Nullable Input<String> friendlyName,
-        @Nullable Input<Integer> iconIndex,
-        @Nullable Input<String> iconPath,
-        @Nullable Input<String> msixPackageApplicationId,
-        @Nullable Input<String> msixPackageFamilyName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Boolean> showInPortal) {
+        Output<String> applicationGroupName,
+        @Nullable Output<String> applicationName,
+        @Nullable Output<Either<String,RemoteApplicationType>> applicationType,
+        @Nullable Output<String> commandLineArguments,
+        Output<Either<String,CommandLineSetting>> commandLineSetting,
+        @Nullable Output<String> description,
+        @Nullable Output<String> filePath,
+        @Nullable Output<String> friendlyName,
+        @Nullable Output<Integer> iconIndex,
+        @Nullable Output<String> iconPath,
+        @Nullable Output<String> msixPackageApplicationId,
+        @Nullable Output<String> msixPackageFamilyName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Boolean> showInPortal) {
         this.applicationGroupName = Objects.requireNonNull(applicationGroupName, "expected parameter 'applicationGroupName' to be non-null");
         this.applicationName = applicationName;
         this.applicationType = applicationType;
@@ -205,20 +205,20 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.applicationGroupName = Input.empty();
-        this.applicationName = Input.empty();
-        this.applicationType = Input.empty();
-        this.commandLineArguments = Input.empty();
-        this.commandLineSetting = Input.empty();
-        this.description = Input.empty();
-        this.filePath = Input.empty();
-        this.friendlyName = Input.empty();
-        this.iconIndex = Input.empty();
-        this.iconPath = Input.empty();
-        this.msixPackageApplicationId = Input.empty();
-        this.msixPackageFamilyName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.showInPortal = Input.empty();
+        this.applicationGroupName = Output.empty();
+        this.applicationName = Output.empty();
+        this.applicationType = Output.empty();
+        this.commandLineArguments = Output.empty();
+        this.commandLineSetting = Output.empty();
+        this.description = Output.empty();
+        this.filePath = Output.empty();
+        this.friendlyName = Output.empty();
+        this.iconIndex = Output.empty();
+        this.iconPath = Output.empty();
+        this.msixPackageApplicationId = Output.empty();
+        this.msixPackageFamilyName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.showInPortal = Output.empty();
     }
 
     public static Builder builder() {
@@ -230,20 +230,20 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> applicationGroupName;
-        private @Nullable Input<String> applicationName;
-        private @Nullable Input<Either<String,RemoteApplicationType>> applicationType;
-        private @Nullable Input<String> commandLineArguments;
-        private Input<Either<String,CommandLineSetting>> commandLineSetting;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> filePath;
-        private @Nullable Input<String> friendlyName;
-        private @Nullable Input<Integer> iconIndex;
-        private @Nullable Input<String> iconPath;
-        private @Nullable Input<String> msixPackageApplicationId;
-        private @Nullable Input<String> msixPackageFamilyName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Boolean> showInPortal;
+        private Output<String> applicationGroupName;
+        private @Nullable Output<String> applicationName;
+        private @Nullable Output<Either<String,RemoteApplicationType>> applicationType;
+        private @Nullable Output<String> commandLineArguments;
+        private Output<Either<String,CommandLineSetting>> commandLineSetting;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> filePath;
+        private @Nullable Output<String> friendlyName;
+        private @Nullable Output<Integer> iconIndex;
+        private @Nullable Output<String> iconPath;
+        private @Nullable Output<String> msixPackageApplicationId;
+        private @Nullable Output<String> msixPackageFamilyName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Boolean> showInPortal;
 
         public Builder() {
     	      // Empty
@@ -267,143 +267,143 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.showInPortal = defaults.showInPortal;
         }
 
-        public Builder applicationGroupName(Input<String> applicationGroupName) {
+        public Builder applicationGroupName(Output<String> applicationGroupName) {
             this.applicationGroupName = Objects.requireNonNull(applicationGroupName);
             return this;
         }
 
         public Builder applicationGroupName(String applicationGroupName) {
-            this.applicationGroupName = Input.of(Objects.requireNonNull(applicationGroupName));
+            this.applicationGroupName = Output.of(Objects.requireNonNull(applicationGroupName));
             return this;
         }
 
-        public Builder applicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Output<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Input.ofNullable(applicationName);
+            this.applicationName = Output.ofNullable(applicationName);
             return this;
         }
 
-        public Builder applicationType(@Nullable Input<Either<String,RemoteApplicationType>> applicationType) {
+        public Builder applicationType(@Nullable Output<Either<String,RemoteApplicationType>> applicationType) {
             this.applicationType = applicationType;
             return this;
         }
 
         public Builder applicationType(@Nullable Either<String,RemoteApplicationType> applicationType) {
-            this.applicationType = Input.ofNullable(applicationType);
+            this.applicationType = Output.ofNullable(applicationType);
             return this;
         }
 
-        public Builder commandLineArguments(@Nullable Input<String> commandLineArguments) {
+        public Builder commandLineArguments(@Nullable Output<String> commandLineArguments) {
             this.commandLineArguments = commandLineArguments;
             return this;
         }
 
         public Builder commandLineArguments(@Nullable String commandLineArguments) {
-            this.commandLineArguments = Input.ofNullable(commandLineArguments);
+            this.commandLineArguments = Output.ofNullable(commandLineArguments);
             return this;
         }
 
-        public Builder commandLineSetting(Input<Either<String,CommandLineSetting>> commandLineSetting) {
+        public Builder commandLineSetting(Output<Either<String,CommandLineSetting>> commandLineSetting) {
             this.commandLineSetting = Objects.requireNonNull(commandLineSetting);
             return this;
         }
 
         public Builder commandLineSetting(Either<String,CommandLineSetting> commandLineSetting) {
-            this.commandLineSetting = Input.of(Objects.requireNonNull(commandLineSetting));
+            this.commandLineSetting = Output.of(Objects.requireNonNull(commandLineSetting));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder filePath(@Nullable Input<String> filePath) {
+        public Builder filePath(@Nullable Output<String> filePath) {
             this.filePath = filePath;
             return this;
         }
 
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = Input.ofNullable(filePath);
+            this.filePath = Output.ofNullable(filePath);
             return this;
         }
 
-        public Builder friendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Output<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Input.ofNullable(friendlyName);
+            this.friendlyName = Output.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder iconIndex(@Nullable Input<Integer> iconIndex) {
+        public Builder iconIndex(@Nullable Output<Integer> iconIndex) {
             this.iconIndex = iconIndex;
             return this;
         }
 
         public Builder iconIndex(@Nullable Integer iconIndex) {
-            this.iconIndex = Input.ofNullable(iconIndex);
+            this.iconIndex = Output.ofNullable(iconIndex);
             return this;
         }
 
-        public Builder iconPath(@Nullable Input<String> iconPath) {
+        public Builder iconPath(@Nullable Output<String> iconPath) {
             this.iconPath = iconPath;
             return this;
         }
 
         public Builder iconPath(@Nullable String iconPath) {
-            this.iconPath = Input.ofNullable(iconPath);
+            this.iconPath = Output.ofNullable(iconPath);
             return this;
         }
 
-        public Builder msixPackageApplicationId(@Nullable Input<String> msixPackageApplicationId) {
+        public Builder msixPackageApplicationId(@Nullable Output<String> msixPackageApplicationId) {
             this.msixPackageApplicationId = msixPackageApplicationId;
             return this;
         }
 
         public Builder msixPackageApplicationId(@Nullable String msixPackageApplicationId) {
-            this.msixPackageApplicationId = Input.ofNullable(msixPackageApplicationId);
+            this.msixPackageApplicationId = Output.ofNullable(msixPackageApplicationId);
             return this;
         }
 
-        public Builder msixPackageFamilyName(@Nullable Input<String> msixPackageFamilyName) {
+        public Builder msixPackageFamilyName(@Nullable Output<String> msixPackageFamilyName) {
             this.msixPackageFamilyName = msixPackageFamilyName;
             return this;
         }
 
         public Builder msixPackageFamilyName(@Nullable String msixPackageFamilyName) {
-            this.msixPackageFamilyName = Input.ofNullable(msixPackageFamilyName);
+            this.msixPackageFamilyName = Output.ofNullable(msixPackageFamilyName);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder showInPortal(@Nullable Input<Boolean> showInPortal) {
+        public Builder showInPortal(@Nullable Output<Boolean> showInPortal) {
             this.showInPortal = showInPortal;
             return this;
         }
 
         public Builder showInPortal(@Nullable Boolean showInPortal) {
-            this.showInPortal = Input.ofNullable(showInPortal);
+            this.showInPortal = Output.ofNullable(showInPortal);
             return this;
         }
         public ApplicationArgs build() {

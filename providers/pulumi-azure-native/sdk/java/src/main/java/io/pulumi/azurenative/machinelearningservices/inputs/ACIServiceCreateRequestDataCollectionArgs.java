@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubEnabled")
-      private final @Nullable Input<Boolean> eventHubEnabled;
+      private final @Nullable Output<Boolean> eventHubEnabled;
 
-    public Input<Boolean> getEventHubEnabled() {
-        return this.eventHubEnabled == null ? Input.empty() : this.eventHubEnabled;
+    public Output<Boolean> getEventHubEnabled() {
+        return this.eventHubEnabled == null ? Output.empty() : this.eventHubEnabled;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="storageEnabled")
-      private final @Nullable Input<Boolean> storageEnabled;
+      private final @Nullable Output<Boolean> storageEnabled;
 
-    public Input<Boolean> getStorageEnabled() {
-        return this.storageEnabled == null ? Input.empty() : this.storageEnabled;
+    public Output<Boolean> getStorageEnabled() {
+        return this.storageEnabled == null ? Output.empty() : this.storageEnabled;
     }
 
     public ACIServiceCreateRequestDataCollectionArgs(
-        @Nullable Input<Boolean> eventHubEnabled,
-        @Nullable Input<Boolean> storageEnabled) {
+        @Nullable Output<Boolean> eventHubEnabled,
+        @Nullable Output<Boolean> storageEnabled) {
         this.eventHubEnabled = eventHubEnabled;
         this.storageEnabled = storageEnabled;
     }
 
     private ACIServiceCreateRequestDataCollectionArgs() {
-        this.eventHubEnabled = Input.empty();
-        this.storageEnabled = Input.empty();
+        this.eventHubEnabled = Output.empty();
+        this.storageEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends io.pulumi.r
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> eventHubEnabled;
-        private @Nullable Input<Boolean> storageEnabled;
+        private @Nullable Output<Boolean> eventHubEnabled;
+        private @Nullable Output<Boolean> storageEnabled;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends io.pulumi.r
     	      this.storageEnabled = defaults.storageEnabled;
         }
 
-        public Builder eventHubEnabled(@Nullable Input<Boolean> eventHubEnabled) {
+        public Builder eventHubEnabled(@Nullable Output<Boolean> eventHubEnabled) {
             this.eventHubEnabled = eventHubEnabled;
             return this;
         }
 
         public Builder eventHubEnabled(@Nullable Boolean eventHubEnabled) {
-            this.eventHubEnabled = Input.ofNullable(eventHubEnabled);
+            this.eventHubEnabled = Output.ofNullable(eventHubEnabled);
             return this;
         }
 
-        public Builder storageEnabled(@Nullable Input<Boolean> storageEnabled) {
+        public Builder storageEnabled(@Nullable Output<Boolean> storageEnabled) {
             this.storageEnabled = storageEnabled;
             return this;
         }
 
         public Builder storageEnabled(@Nullable Boolean storageEnabled) {
-            this.storageEnabled = Input.ofNullable(storageEnabled);
+            this.storageEnabled = Output.ofNullable(storageEnabled);
             return this;
         }
         public ACIServiceCreateRequestDataCollectionArgs build() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -15,10 +15,10 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     public static final OutboundFirewallRuleArgs Empty = new OutboundFirewallRuleArgs();
 
     @InputImport(name="outboundRuleFqdn")
-      private final @Nullable Input<String> outboundRuleFqdn;
+      private final @Nullable Output<String> outboundRuleFqdn;
 
-    public Input<String> getOutboundRuleFqdn() {
-        return this.outboundRuleFqdn == null ? Input.empty() : this.outboundRuleFqdn;
+    public Output<String> getOutboundRuleFqdn() {
+        return this.outboundRuleFqdn == null ? Output.empty() : this.outboundRuleFqdn;
     }
 
     /**
@@ -26,9 +26,9 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -37,25 +37,25 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="serverName", required=true)
-      private final Input<String> serverName;
+      private final Output<String> serverName;
 
-    public Input<String> getServerName() {
+    public Output<String> getServerName() {
         return this.serverName;
     }
 
     public OutboundFirewallRuleArgs(
-        @Nullable Input<String> outboundRuleFqdn,
-        Input<String> resourceGroupName,
-        Input<String> serverName) {
+        @Nullable Output<String> outboundRuleFqdn,
+        Output<String> resourceGroupName,
+        Output<String> serverName) {
         this.outboundRuleFqdn = outboundRuleFqdn;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
     }
 
     private OutboundFirewallRuleArgs() {
-        this.outboundRuleFqdn = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.serverName = Input.empty();
+        this.outboundRuleFqdn = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.serverName = Output.empty();
     }
 
     public static Builder builder() {
@@ -67,9 +67,9 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     }
 
     public static final class Builder {
-        private @Nullable Input<String> outboundRuleFqdn;
-        private Input<String> resourceGroupName;
-        private Input<String> serverName;
+        private @Nullable Output<String> outboundRuleFqdn;
+        private Output<String> resourceGroupName;
+        private Output<String> serverName;
 
         public Builder() {
     	      // Empty
@@ -82,33 +82,33 @@ public final class OutboundFirewallRuleArgs extends io.pulumi.resources.Resource
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder outboundRuleFqdn(@Nullable Input<String> outboundRuleFqdn) {
+        public Builder outboundRuleFqdn(@Nullable Output<String> outboundRuleFqdn) {
             this.outboundRuleFqdn = outboundRuleFqdn;
             return this;
         }
 
         public Builder outboundRuleFqdn(@Nullable String outboundRuleFqdn) {
-            this.outboundRuleFqdn = Input.ofNullable(outboundRuleFqdn);
+            this.outboundRuleFqdn = Output.ofNullable(outboundRuleFqdn);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder serverName(Input<String> serverName) {
+        public Builder serverName(Output<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
         public Builder serverName(String serverName) {
-            this.serverName = Input.of(Objects.requireNonNull(serverName));
+            this.serverName = Output.of(Objects.requireNonNull(serverName));
             return this;
         }
         public OutboundFirewallRuleArgs build() {

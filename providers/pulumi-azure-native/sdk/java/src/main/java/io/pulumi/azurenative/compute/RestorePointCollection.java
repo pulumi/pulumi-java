@@ -8,7 +8,6 @@ import io.pulumi.azurenative.compute.RestorePointCollectionArgs;
 import io.pulumi.azurenative.compute.outputs.RestorePointCollectionSourcePropertiesResponse;
 import io.pulumi.azurenative.compute.outputs.RestorePointResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -185,21 +184,21 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RestorePointCollection(String name, RestorePointCollectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:compute:RestorePointCollection", name, args == null ? RestorePointCollectionArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:compute:RestorePointCollection", name, args == null ? RestorePointCollectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private RestorePointCollection(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private RestorePointCollection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:compute:RestorePointCollection", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:compute/v20210301:RestorePointCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210401:RestorePointCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20210701:RestorePointCollection").build()),
-                Input.of(Alias.builder().setType("azure-native:compute/v20211101:RestorePointCollection").build())
+                Output.of(Alias.builder().setType("azure-native:compute/v20210301:RestorePointCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210401:RestorePointCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20210701:RestorePointCollection").build()),
+                Output.of(Alias.builder().setType("azure-native:compute/v20211101:RestorePointCollection").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -213,7 +212,7 @@ public class RestorePointCollection extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static RestorePointCollection get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static RestorePointCollection get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new RestorePointCollection(name, id, options);
     }
 }

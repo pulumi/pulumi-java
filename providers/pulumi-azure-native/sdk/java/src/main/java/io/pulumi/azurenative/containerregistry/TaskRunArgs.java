@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.inputs.EncodedTaskRunRequestArgs;
 import io.pulumi.azurenative.containerregistry.inputs.FileTaskRunRequestArgs;
 import io.pulumi.azurenative.containerregistry.inputs.IdentityPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TaskRunRequestArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdateTag")
-      private final @Nullable Input<String> forceUpdateTag;
+      private final @Nullable Output<String> forceUpdateTag;
 
-    public Input<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
+    public Output<String> getForceUpdateTag() {
+        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-      private final @Nullable Input<IdentityPropertiesArgs> identity;
+      private final @Nullable Output<IdentityPropertiesArgs> identity;
 
-    public Input<IdentityPropertiesArgs> getIdentity() {
-        return this.identity == null ? Input.empty() : this.identity;
+    public Output<IdentityPropertiesArgs> getIdentity() {
+        return this.identity == null ? Output.empty() : this.identity;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -58,9 +58,9 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registryName", required=true)
-      private final Input<String> registryName;
+      private final Output<String> registryName;
 
-    public Input<String> getRegistryName() {
+    public Output<String> getRegistryName() {
         return this.registryName;
     }
 
@@ -69,9 +69,9 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -80,10 +80,10 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runRequest")
-      private final @Nullable Input<Object> runRequest;
+      private final @Nullable Output<Object> runRequest;
 
-    public Input<Object> getRunRequest() {
-        return this.runRequest == null ? Input.empty() : this.runRequest;
+    public Output<Object> getRunRequest() {
+        return this.runRequest == null ? Output.empty() : this.runRequest;
     }
 
     /**
@@ -91,20 +91,20 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskRunName")
-      private final @Nullable Input<String> taskRunName;
+      private final @Nullable Output<String> taskRunName;
 
-    public Input<String> getTaskRunName() {
-        return this.taskRunName == null ? Input.empty() : this.taskRunName;
+    public Output<String> getTaskRunName() {
+        return this.taskRunName == null ? Output.empty() : this.taskRunName;
     }
 
     public TaskRunArgs(
-        @Nullable Input<String> forceUpdateTag,
-        @Nullable Input<IdentityPropertiesArgs> identity,
-        @Nullable Input<String> location,
-        Input<String> registryName,
-        Input<String> resourceGroupName,
-        @Nullable Input<Object> runRequest,
-        @Nullable Input<String> taskRunName) {
+        @Nullable Output<String> forceUpdateTag,
+        @Nullable Output<IdentityPropertiesArgs> identity,
+        @Nullable Output<String> location,
+        Output<String> registryName,
+        Output<String> resourceGroupName,
+        @Nullable Output<Object> runRequest,
+        @Nullable Output<String> taskRunName) {
         this.forceUpdateTag = forceUpdateTag;
         this.identity = identity;
         this.location = location;
@@ -115,13 +115,13 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskRunArgs() {
-        this.forceUpdateTag = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.registryName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.runRequest = Input.empty();
-        this.taskRunName = Input.empty();
+        this.forceUpdateTag = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.registryName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.runRequest = Output.empty();
+        this.taskRunName = Output.empty();
     }
 
     public static Builder builder() {
@@ -133,13 +133,13 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> forceUpdateTag;
-        private @Nullable Input<IdentityPropertiesArgs> identity;
-        private @Nullable Input<String> location;
-        private Input<String> registryName;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<Object> runRequest;
-        private @Nullable Input<String> taskRunName;
+        private @Nullable Output<String> forceUpdateTag;
+        private @Nullable Output<IdentityPropertiesArgs> identity;
+        private @Nullable Output<String> location;
+        private Output<String> registryName;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<Object> runRequest;
+        private @Nullable Output<String> taskRunName;
 
         public Builder() {
     	      // Empty
@@ -156,73 +156,73 @@ public final class TaskRunArgs extends io.pulumi.resources.ResourceArgs {
     	      this.taskRunName = defaults.taskRunName;
         }
 
-        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder identity(@Nullable Input<IdentityPropertiesArgs> identity) {
+        public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             this.identity = identity;
             return this;
         }
 
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
-            this.identity = Input.ofNullable(identity);
+            this.identity = Output.ofNullable(identity);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder registryName(Input<String> registryName) {
+        public Builder registryName(Output<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Input.of(Objects.requireNonNull(registryName));
+            this.registryName = Output.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder runRequest(@Nullable Input<Object> runRequest) {
+        public Builder runRequest(@Nullable Output<Object> runRequest) {
             this.runRequest = runRequest;
             return this;
         }
 
         public Builder runRequest(@Nullable Object runRequest) {
-            this.runRequest = Input.ofNullable(runRequest);
+            this.runRequest = Output.ofNullable(runRequest);
             return this;
         }
 
-        public Builder taskRunName(@Nullable Input<String> taskRunName) {
+        public Builder taskRunName(@Nullable Output<String> taskRunName) {
             this.taskRunName = taskRunName;
             return this;
         }
 
         public Builder taskRunName(@Nullable String taskRunName) {
-            this.taskRunName = Input.ofNullable(taskRunName);
+            this.taskRunName = Output.ofNullable(taskRunName);
             return this;
         }
         public TaskRunArgs build() {

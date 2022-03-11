@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="blobPathList")
-      private final @Nullable Input<List<String>> blobPathList;
+      private final @Nullable Output<List<String>> blobPathList;
 
-    public Input<List<String>> getBlobPathList() {
-        return this.blobPathList == null ? Input.empty() : this.blobPathList;
+    public Output<List<String>> getBlobPathList() {
+        return this.blobPathList == null ? Output.empty() : this.blobPathList;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="blobPrefixList")
-      private final @Nullable Input<List<String>> blobPrefixList;
+      private final @Nullable Output<List<String>> blobPrefixList;
 
-    public Input<List<String>> getBlobPrefixList() {
-        return this.blobPrefixList == null ? Input.empty() : this.blobPrefixList;
+    public Output<List<String>> getBlobPrefixList() {
+        return this.blobPrefixList == null ? Output.empty() : this.blobPrefixList;
     }
 
     /**
@@ -46,25 +46,25 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="containerList")
-      private final @Nullable Input<List<String>> containerList;
+      private final @Nullable Output<List<String>> containerList;
 
-    public Input<List<String>> getContainerList() {
-        return this.containerList == null ? Input.empty() : this.containerList;
+    public Output<List<String>> getContainerList() {
+        return this.containerList == null ? Output.empty() : this.containerList;
     }
 
     public BlobFilterDetailsArgs(
-        @Nullable Input<List<String>> blobPathList,
-        @Nullable Input<List<String>> blobPrefixList,
-        @Nullable Input<List<String>> containerList) {
+        @Nullable Output<List<String>> blobPathList,
+        @Nullable Output<List<String>> blobPrefixList,
+        @Nullable Output<List<String>> containerList) {
         this.blobPathList = blobPathList;
         this.blobPrefixList = blobPrefixList;
         this.containerList = containerList;
     }
 
     private BlobFilterDetailsArgs() {
-        this.blobPathList = Input.empty();
-        this.blobPrefixList = Input.empty();
-        this.containerList = Input.empty();
+        this.blobPathList = Output.empty();
+        this.blobPrefixList = Output.empty();
+        this.containerList = Output.empty();
     }
 
     public static Builder builder() {
@@ -76,9 +76,9 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     public static final class Builder {
-        private @Nullable Input<List<String>> blobPathList;
-        private @Nullable Input<List<String>> blobPrefixList;
-        private @Nullable Input<List<String>> containerList;
+        private @Nullable Output<List<String>> blobPathList;
+        private @Nullable Output<List<String>> blobPrefixList;
+        private @Nullable Output<List<String>> containerList;
 
         public Builder() {
     	      // Empty
@@ -91,33 +91,33 @@ public final class BlobFilterDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.containerList = defaults.containerList;
         }
 
-        public Builder blobPathList(@Nullable Input<List<String>> blobPathList) {
+        public Builder blobPathList(@Nullable Output<List<String>> blobPathList) {
             this.blobPathList = blobPathList;
             return this;
         }
 
         public Builder blobPathList(@Nullable List<String> blobPathList) {
-            this.blobPathList = Input.ofNullable(blobPathList);
+            this.blobPathList = Output.ofNullable(blobPathList);
             return this;
         }
 
-        public Builder blobPrefixList(@Nullable Input<List<String>> blobPrefixList) {
+        public Builder blobPrefixList(@Nullable Output<List<String>> blobPrefixList) {
             this.blobPrefixList = blobPrefixList;
             return this;
         }
 
         public Builder blobPrefixList(@Nullable List<String> blobPrefixList) {
-            this.blobPrefixList = Input.ofNullable(blobPrefixList);
+            this.blobPrefixList = Output.ofNullable(blobPrefixList);
             return this;
         }
 
-        public Builder containerList(@Nullable Input<List<String>> containerList) {
+        public Builder containerList(@Nullable Output<List<String>> containerList) {
             this.containerList = containerList;
             return this;
         }
 
         public Builder containerList(@Nullable List<String> containerList) {
-            this.containerList = Input.ofNullable(containerList);
+            this.containerList = Output.ofNullable(containerList);
             return this;
         }
         public BlobFilterDetailsArgs build() {

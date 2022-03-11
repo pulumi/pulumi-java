@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.azurenative.notificationhubs.enums.AccessRights;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -24,18 +24,18 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="rights")
-      private final @Nullable Input<List<AccessRights>> rights;
+      private final @Nullable Output<List<AccessRights>> rights;
 
-    public Input<List<AccessRights>> getRights() {
-        return this.rights == null ? Input.empty() : this.rights;
+    public Output<List<AccessRights>> getRights() {
+        return this.rights == null ? Output.empty() : this.rights;
     }
 
-    public SharedAccessAuthorizationRulePropertiesArgs(@Nullable Input<List<AccessRights>> rights) {
+    public SharedAccessAuthorizationRulePropertiesArgs(@Nullable Output<List<AccessRights>> rights) {
         this.rights = rights;
     }
 
     private SharedAccessAuthorizationRulePropertiesArgs() {
-        this.rights = Input.empty();
+        this.rights = Output.empty();
     }
 
     public static Builder builder() {
@@ -47,7 +47,7 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<List<AccessRights>> rights;
+        private @Nullable Output<List<AccessRights>> rights;
 
         public Builder() {
     	      // Empty
@@ -58,13 +58,13 @@ public final class SharedAccessAuthorizationRulePropertiesArgs extends io.pulumi
     	      this.rights = defaults.rights;
         }
 
-        public Builder rights(@Nullable Input<List<AccessRights>> rights) {
+        public Builder rights(@Nullable Output<List<AccessRights>> rights) {
             this.rights = rights;
             return this;
         }
 
         public Builder rights(@Nullable List<AccessRights> rights) {
-            this.rights = Input.ofNullable(rights);
+            this.rights = Output.ofNullable(rights);
             return this;
         }
         public SharedAccessAuthorizationRulePropertiesArgs build() {

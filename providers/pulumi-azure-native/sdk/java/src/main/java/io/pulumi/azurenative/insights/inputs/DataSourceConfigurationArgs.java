@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.EtwProviderConfigurationArgs;
 import io.pulumi.azurenative.insights.inputs.EventLogConfigurationArgs;
 import io.pulumi.azurenative.insights.inputs.PerformanceCounterConfigurationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
@@ -22,10 +22,10 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="eventLogs")
-      private final @Nullable Input<List<EventLogConfigurationArgs>> eventLogs;
+      private final @Nullable Output<List<EventLogConfigurationArgs>> eventLogs;
 
-    public Input<List<EventLogConfigurationArgs>> getEventLogs() {
-        return this.eventLogs == null ? Input.empty() : this.eventLogs;
+    public Output<List<EventLogConfigurationArgs>> getEventLogs() {
+        return this.eventLogs == null ? Output.empty() : this.eventLogs;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="perfCounters")
-      private final @Nullable Input<List<PerformanceCounterConfigurationArgs>> perfCounters;
+      private final @Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters;
 
-    public Input<List<PerformanceCounterConfigurationArgs>> getPerfCounters() {
-        return this.perfCounters == null ? Input.empty() : this.perfCounters;
+    public Output<List<PerformanceCounterConfigurationArgs>> getPerfCounters() {
+        return this.perfCounters == null ? Output.empty() : this.perfCounters;
     }
 
     /**
@@ -44,25 +44,25 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="providers")
-      private final @Nullable Input<List<EtwProviderConfigurationArgs>> providers;
+      private final @Nullable Output<List<EtwProviderConfigurationArgs>> providers;
 
-    public Input<List<EtwProviderConfigurationArgs>> getProviders() {
-        return this.providers == null ? Input.empty() : this.providers;
+    public Output<List<EtwProviderConfigurationArgs>> getProviders() {
+        return this.providers == null ? Output.empty() : this.providers;
     }
 
     public DataSourceConfigurationArgs(
-        @Nullable Input<List<EventLogConfigurationArgs>> eventLogs,
-        @Nullable Input<List<PerformanceCounterConfigurationArgs>> perfCounters,
-        @Nullable Input<List<EtwProviderConfigurationArgs>> providers) {
+        @Nullable Output<List<EventLogConfigurationArgs>> eventLogs,
+        @Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters,
+        @Nullable Output<List<EtwProviderConfigurationArgs>> providers) {
         this.eventLogs = eventLogs;
         this.perfCounters = perfCounters;
         this.providers = providers;
     }
 
     private DataSourceConfigurationArgs() {
-        this.eventLogs = Input.empty();
-        this.perfCounters = Input.empty();
-        this.providers = Input.empty();
+        this.eventLogs = Output.empty();
+        this.perfCounters = Output.empty();
+        this.providers = Output.empty();
     }
 
     public static Builder builder() {
@@ -74,9 +74,9 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     public static final class Builder {
-        private @Nullable Input<List<EventLogConfigurationArgs>> eventLogs;
-        private @Nullable Input<List<PerformanceCounterConfigurationArgs>> perfCounters;
-        private @Nullable Input<List<EtwProviderConfigurationArgs>> providers;
+        private @Nullable Output<List<EventLogConfigurationArgs>> eventLogs;
+        private @Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters;
+        private @Nullable Output<List<EtwProviderConfigurationArgs>> providers;
 
         public Builder() {
     	      // Empty
@@ -89,33 +89,33 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
     	      this.providers = defaults.providers;
         }
 
-        public Builder eventLogs(@Nullable Input<List<EventLogConfigurationArgs>> eventLogs) {
+        public Builder eventLogs(@Nullable Output<List<EventLogConfigurationArgs>> eventLogs) {
             this.eventLogs = eventLogs;
             return this;
         }
 
         public Builder eventLogs(@Nullable List<EventLogConfigurationArgs> eventLogs) {
-            this.eventLogs = Input.ofNullable(eventLogs);
+            this.eventLogs = Output.ofNullable(eventLogs);
             return this;
         }
 
-        public Builder perfCounters(@Nullable Input<List<PerformanceCounterConfigurationArgs>> perfCounters) {
+        public Builder perfCounters(@Nullable Output<List<PerformanceCounterConfigurationArgs>> perfCounters) {
             this.perfCounters = perfCounters;
             return this;
         }
 
         public Builder perfCounters(@Nullable List<PerformanceCounterConfigurationArgs> perfCounters) {
-            this.perfCounters = Input.ofNullable(perfCounters);
+            this.perfCounters = Output.ofNullable(perfCounters);
             return this;
         }
 
-        public Builder providers(@Nullable Input<List<EtwProviderConfigurationArgs>> providers) {
+        public Builder providers(@Nullable Output<List<EtwProviderConfigurationArgs>> providers) {
             this.providers = providers;
             return this;
         }
 
         public Builder providers(@Nullable List<EtwProviderConfigurationArgs> providers) {
-            this.providers = Input.ofNullable(providers);
+            this.providers = Output.ofNullable(providers);
             return this;
         }
         public DataSourceConfigurationArgs build() {

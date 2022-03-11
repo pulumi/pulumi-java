@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hardwaresecuritymodules.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="privateIpAddress")
-      private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Output<String> privateIpAddress;
 
-    public Input<String> getPrivateIpAddress() {
-        return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
+    public Output<String> getPrivateIpAddress() {
+        return this.privateIpAddress == null ? Output.empty() : this.privateIpAddress;
     }
 
-    public NetworkInterfaceArgs(@Nullable Input<String> privateIpAddress) {
+    public NetworkInterfaceArgs(@Nullable Output<String> privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
     }
 
     private NetworkInterfaceArgs() {
-        this.privateIpAddress = Input.empty();
+        this.privateIpAddress = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> privateIpAddress;
+        private @Nullable Output<String> privateIpAddress;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.privateIpAddress = defaults.privateIpAddress;
         }
 
-        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Output<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
         public Builder privateIpAddress(@Nullable String privateIpAddress) {
-            this.privateIpAddress = Input.ofNullable(privateIpAddress);
+            this.privateIpAddress = Output.ofNullable(privateIpAddress);
             return this;
         }
         public NetworkInterfaceArgs build() {

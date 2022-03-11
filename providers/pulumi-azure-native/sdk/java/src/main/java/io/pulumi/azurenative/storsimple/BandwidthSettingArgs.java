@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.azurenative.storsimple.inputs.BandwidthScheduleArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -22,10 +22,10 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bandwidthSettingName")
-      private final @Nullable Input<String> bandwidthSettingName;
+      private final @Nullable Output<String> bandwidthSettingName;
 
-    public Input<String> getBandwidthSettingName() {
-        return this.bandwidthSettingName == null ? Input.empty() : this.bandwidthSettingName;
+    public Output<String> getBandwidthSettingName() {
+        return this.bandwidthSettingName == null ? Output.empty() : this.bandwidthSettingName;
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind")
-      private final @Nullable Input<Kind> kind;
+      private final @Nullable Output<Kind> kind;
 
-    public Input<Kind> getKind() {
-        return this.kind == null ? Input.empty() : this.kind;
+    public Output<Kind> getKind() {
+        return this.kind == null ? Output.empty() : this.kind;
     }
 
     /**
@@ -44,9 +44,9 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="managerName", required=true)
-      private final Input<String> managerName;
+      private final Output<String> managerName;
 
-    public Input<String> getManagerName() {
+    public Output<String> getManagerName() {
         return this.managerName;
     }
 
@@ -55,9 +55,9 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -66,18 +66,18 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="schedules", required=true)
-      private final Input<List<BandwidthScheduleArgs>> schedules;
+      private final Output<List<BandwidthScheduleArgs>> schedules;
 
-    public Input<List<BandwidthScheduleArgs>> getSchedules() {
+    public Output<List<BandwidthScheduleArgs>> getSchedules() {
         return this.schedules;
     }
 
     public BandwidthSettingArgs(
-        @Nullable Input<String> bandwidthSettingName,
-        @Nullable Input<Kind> kind,
-        Input<String> managerName,
-        Input<String> resourceGroupName,
-        Input<List<BandwidthScheduleArgs>> schedules) {
+        @Nullable Output<String> bandwidthSettingName,
+        @Nullable Output<Kind> kind,
+        Output<String> managerName,
+        Output<String> resourceGroupName,
+        Output<List<BandwidthScheduleArgs>> schedules) {
         this.bandwidthSettingName = bandwidthSettingName;
         this.kind = kind;
         this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
@@ -86,11 +86,11 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BandwidthSettingArgs() {
-        this.bandwidthSettingName = Input.empty();
-        this.kind = Input.empty();
-        this.managerName = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.schedules = Input.empty();
+        this.bandwidthSettingName = Output.empty();
+        this.kind = Output.empty();
+        this.managerName = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.schedules = Output.empty();
     }
 
     public static Builder builder() {
@@ -102,11 +102,11 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     public static final class Builder {
-        private @Nullable Input<String> bandwidthSettingName;
-        private @Nullable Input<Kind> kind;
-        private Input<String> managerName;
-        private Input<String> resourceGroupName;
-        private Input<List<BandwidthScheduleArgs>> schedules;
+        private @Nullable Output<String> bandwidthSettingName;
+        private @Nullable Output<Kind> kind;
+        private Output<String> managerName;
+        private Output<String> resourceGroupName;
+        private Output<List<BandwidthScheduleArgs>> schedules;
 
         public Builder() {
     	      // Empty
@@ -121,53 +121,53 @@ public final class BandwidthSettingArgs extends io.pulumi.resources.ResourceArgs
     	      this.schedules = defaults.schedules;
         }
 
-        public Builder bandwidthSettingName(@Nullable Input<String> bandwidthSettingName) {
+        public Builder bandwidthSettingName(@Nullable Output<String> bandwidthSettingName) {
             this.bandwidthSettingName = bandwidthSettingName;
             return this;
         }
 
         public Builder bandwidthSettingName(@Nullable String bandwidthSettingName) {
-            this.bandwidthSettingName = Input.ofNullable(bandwidthSettingName);
+            this.bandwidthSettingName = Output.ofNullable(bandwidthSettingName);
             return this;
         }
 
-        public Builder kind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Output<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Input.ofNullable(kind);
+            this.kind = Output.ofNullable(kind);
             return this;
         }
 
-        public Builder managerName(Input<String> managerName) {
+        public Builder managerName(Output<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
         public Builder managerName(String managerName) {
-            this.managerName = Input.of(Objects.requireNonNull(managerName));
+            this.managerName = Output.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder schedules(Input<List<BandwidthScheduleArgs>> schedules) {
+        public Builder schedules(Output<List<BandwidthScheduleArgs>> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
 
         public Builder schedules(List<BandwidthScheduleArgs> schedules) {
-            this.schedules = Input.of(Objects.requireNonNull(schedules));
+            this.schedules = Output.of(Objects.requireNonNull(schedules));
             return this;
         }
         public BandwidthSettingArgs build() {

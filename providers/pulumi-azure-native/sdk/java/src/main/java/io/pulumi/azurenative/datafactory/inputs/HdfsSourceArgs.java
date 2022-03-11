@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.DistcpSettingsArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -25,10 +25,10 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-      private final @Nullable Input<Object> disableMetricsCollection;
+      private final @Nullable Output<Object> disableMetricsCollection;
 
-    public Input<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
+    public Output<Object> getDisableMetricsCollection() {
+        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distcpSettings")
-      private final @Nullable Input<DistcpSettingsArgs> distcpSettings;
+      private final @Nullable Output<DistcpSettingsArgs> distcpSettings;
 
-    public Input<DistcpSettingsArgs> getDistcpSettings() {
-        return this.distcpSettings == null ? Input.empty() : this.distcpSettings;
+    public Output<DistcpSettingsArgs> getDistcpSettings() {
+        return this.distcpSettings == null ? Output.empty() : this.distcpSettings;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-      private final @Nullable Input<Object> maxConcurrentConnections;
+      private final @Nullable Output<Object> maxConcurrentConnections;
 
-    public Input<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
+    public Output<Object> getMaxConcurrentConnections() {
+        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recursive")
-      private final @Nullable Input<Object> recursive;
+      private final @Nullable Output<Object> recursive;
 
-    public Input<Object> getRecursive() {
-        return this.recursive == null ? Input.empty() : this.recursive;
+    public Output<Object> getRecursive() {
+        return this.recursive == null ? Output.empty() : this.recursive;
     }
 
     /**
@@ -69,10 +69,10 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryCount")
-      private final @Nullable Input<Object> sourceRetryCount;
+      private final @Nullable Output<Object> sourceRetryCount;
 
-    public Input<Object> getSourceRetryCount() {
-        return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
+    public Output<Object> getSourceRetryCount() {
+        return this.sourceRetryCount == null ? Output.empty() : this.sourceRetryCount;
     }
 
     /**
@@ -80,10 +80,10 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRetryWait")
-      private final @Nullable Input<Object> sourceRetryWait;
+      private final @Nullable Output<Object> sourceRetryWait;
 
-    public Input<Object> getSourceRetryWait() {
-        return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
+    public Output<Object> getSourceRetryWait() {
+        return this.sourceRetryWait == null ? Output.empty() : this.sourceRetryWait;
     }
 
     /**
@@ -92,20 +92,20 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public HdfsSourceArgs(
-        @Nullable Input<Object> disableMetricsCollection,
-        @Nullable Input<DistcpSettingsArgs> distcpSettings,
-        @Nullable Input<Object> maxConcurrentConnections,
-        @Nullable Input<Object> recursive,
-        @Nullable Input<Object> sourceRetryCount,
-        @Nullable Input<Object> sourceRetryWait,
-        Input<String> type) {
+        @Nullable Output<Object> disableMetricsCollection,
+        @Nullable Output<DistcpSettingsArgs> distcpSettings,
+        @Nullable Output<Object> maxConcurrentConnections,
+        @Nullable Output<Object> recursive,
+        @Nullable Output<Object> sourceRetryCount,
+        @Nullable Output<Object> sourceRetryWait,
+        Output<String> type) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.distcpSettings = distcpSettings;
         this.maxConcurrentConnections = maxConcurrentConnections;
@@ -116,13 +116,13 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HdfsSourceArgs() {
-        this.disableMetricsCollection = Input.empty();
-        this.distcpSettings = Input.empty();
-        this.maxConcurrentConnections = Input.empty();
-        this.recursive = Input.empty();
-        this.sourceRetryCount = Input.empty();
-        this.sourceRetryWait = Input.empty();
-        this.type = Input.empty();
+        this.disableMetricsCollection = Output.empty();
+        this.distcpSettings = Output.empty();
+        this.maxConcurrentConnections = Output.empty();
+        this.recursive = Output.empty();
+        this.sourceRetryCount = Output.empty();
+        this.sourceRetryWait = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -134,13 +134,13 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> disableMetricsCollection;
-        private @Nullable Input<DistcpSettingsArgs> distcpSettings;
-        private @Nullable Input<Object> maxConcurrentConnections;
-        private @Nullable Input<Object> recursive;
-        private @Nullable Input<Object> sourceRetryCount;
-        private @Nullable Input<Object> sourceRetryWait;
-        private Input<String> type;
+        private @Nullable Output<Object> disableMetricsCollection;
+        private @Nullable Output<DistcpSettingsArgs> distcpSettings;
+        private @Nullable Output<Object> maxConcurrentConnections;
+        private @Nullable Output<Object> recursive;
+        private @Nullable Output<Object> sourceRetryCount;
+        private @Nullable Output<Object> sourceRetryWait;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -157,73 +157,73 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder distcpSettings(@Nullable Input<DistcpSettingsArgs> distcpSettings) {
+        public Builder distcpSettings(@Nullable Output<DistcpSettingsArgs> distcpSettings) {
             this.distcpSettings = distcpSettings;
             return this;
         }
 
         public Builder distcpSettings(@Nullable DistcpSettingsArgs distcpSettings) {
-            this.distcpSettings = Input.ofNullable(distcpSettings);
+            this.distcpSettings = Output.ofNullable(distcpSettings);
             return this;
         }
 
-        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder recursive(@Nullable Input<Object> recursive) {
+        public Builder recursive(@Nullable Output<Object> recursive) {
             this.recursive = recursive;
             return this;
         }
 
         public Builder recursive(@Nullable Object recursive) {
-            this.recursive = Input.ofNullable(recursive);
+            this.recursive = Output.ofNullable(recursive);
             return this;
         }
 
-        public Builder sourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Input.ofNullable(sourceRetryCount);
+            this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
             return this;
         }
 
-        public Builder sourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Input.ofNullable(sourceRetryWait);
+            this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public HdfsSourceArgs build() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.enums.GallerySharingPermissionTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -25,18 +25,18 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-      private final @Nullable Input<Either<String,GallerySharingPermissionTypes>> permissions;
+      private final @Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions;
 
-    public Input<Either<String,GallerySharingPermissionTypes>> getPermissions() {
-        return this.permissions == null ? Input.empty() : this.permissions;
+    public Output<Either<String,GallerySharingPermissionTypes>> getPermissions() {
+        return this.permissions == null ? Output.empty() : this.permissions;
     }
 
-    public SharingProfileArgs(@Nullable Input<Either<String,GallerySharingPermissionTypes>> permissions) {
+    public SharingProfileArgs(@Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions) {
         this.permissions = permissions;
     }
 
     private SharingProfileArgs() {
-        this.permissions = Input.empty();
+        this.permissions = Output.empty();
     }
 
     public static Builder builder() {
@@ -48,7 +48,7 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Either<String,GallerySharingPermissionTypes>> permissions;
+        private @Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions;
 
         public Builder() {
     	      // Empty
@@ -59,13 +59,13 @@ public final class SharingProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder permissions(@Nullable Input<Either<String,GallerySharingPermissionTypes>> permissions) {
+        public Builder permissions(@Nullable Output<Either<String,GallerySharingPermissionTypes>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         public Builder permissions(@Nullable Either<String,GallerySharingPermissionTypes> permissions) {
-            this.permissions = Input.ofNullable(permissions);
+            this.permissions = Output.ofNullable(permissions);
             return this;
         }
         public SharingProfileArgs build() {

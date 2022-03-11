@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.RunbookTypeEnum;
 import io.pulumi.azurenative.automation.inputs.ContentLinkArgs;
 import io.pulumi.azurenative.automation.inputs.RunbookDraftArgs;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,9 +26,9 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-      private final Input<String> automationAccountName;
+      private final Output<String> automationAccountName;
 
-    public Input<String> getAutomationAccountName() {
+    public Output<String> getAutomationAccountName() {
         return this.automationAccountName;
     }
 
@@ -37,10 +37,10 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -48,10 +48,10 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="draft")
-      private final @Nullable Input<RunbookDraftArgs> draft;
+      private final @Nullable Output<RunbookDraftArgs> draft;
 
-    public Input<RunbookDraftArgs> getDraft() {
-        return this.draft == null ? Input.empty() : this.draft;
+    public Output<RunbookDraftArgs> getDraft() {
+        return this.draft == null ? Output.empty() : this.draft;
     }
 
     /**
@@ -59,10 +59,10 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -70,10 +70,10 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logActivityTrace")
-      private final @Nullable Input<Integer> logActivityTrace;
+      private final @Nullable Output<Integer> logActivityTrace;
 
-    public Input<Integer> getLogActivityTrace() {
-        return this.logActivityTrace == null ? Input.empty() : this.logActivityTrace;
+    public Output<Integer> getLogActivityTrace() {
+        return this.logActivityTrace == null ? Output.empty() : this.logActivityTrace;
     }
 
     /**
@@ -81,10 +81,10 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logProgress")
-      private final @Nullable Input<Boolean> logProgress;
+      private final @Nullable Output<Boolean> logProgress;
 
-    public Input<Boolean> getLogProgress() {
-        return this.logProgress == null ? Input.empty() : this.logProgress;
+    public Output<Boolean> getLogProgress() {
+        return this.logProgress == null ? Output.empty() : this.logProgress;
     }
 
     /**
@@ -92,10 +92,10 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logVerbose")
-      private final @Nullable Input<Boolean> logVerbose;
+      private final @Nullable Output<Boolean> logVerbose;
 
-    public Input<Boolean> getLogVerbose() {
-        return this.logVerbose == null ? Input.empty() : this.logVerbose;
+    public Output<Boolean> getLogVerbose() {
+        return this.logVerbose == null ? Output.empty() : this.logVerbose;
     }
 
     /**
@@ -103,10 +103,10 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-      private final @Nullable Input<String> name;
+      private final @Nullable Output<String> name;
 
-    public Input<String> getName() {
-        return this.name == null ? Input.empty() : this.name;
+    public Output<String> getName() {
+        return this.name == null ? Output.empty() : this.name;
     }
 
     /**
@@ -114,10 +114,10 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishContentLink")
-      private final @Nullable Input<ContentLinkArgs> publishContentLink;
+      private final @Nullable Output<ContentLinkArgs> publishContentLink;
 
-    public Input<ContentLinkArgs> getPublishContentLink() {
-        return this.publishContentLink == null ? Input.empty() : this.publishContentLink;
+    public Output<ContentLinkArgs> getPublishContentLink() {
+        return this.publishContentLink == null ? Output.empty() : this.publishContentLink;
     }
 
     /**
@@ -125,9 +125,9 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-      private final Input<String> resourceGroupName;
+      private final Output<String> resourceGroupName;
 
-    public Input<String> getResourceGroupName() {
+    public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
@@ -136,10 +136,10 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runbookName")
-      private final @Nullable Input<String> runbookName;
+      private final @Nullable Output<String> runbookName;
 
-    public Input<String> getRunbookName() {
-        return this.runbookName == null ? Input.empty() : this.runbookName;
+    public Output<String> getRunbookName() {
+        return this.runbookName == null ? Output.empty() : this.runbookName;
     }
 
     /**
@@ -147,9 +147,9 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runbookType", required=true)
-      private final Input<Either<String,RunbookTypeEnum>> runbookType;
+      private final Output<Either<String,RunbookTypeEnum>> runbookType;
 
-    public Input<Either<String,RunbookTypeEnum>> getRunbookType() {
+    public Output<Either<String,RunbookTypeEnum>> getRunbookType() {
         return this.runbookType;
     }
 
@@ -158,26 +158,26 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-      private final @Nullable Input<Map<String,String>> tags;
+      private final @Nullable Output<Map<String,String>> tags;
 
-    public Input<Map<String,String>> getTags() {
-        return this.tags == null ? Input.empty() : this.tags;
+    public Output<Map<String,String>> getTags() {
+        return this.tags == null ? Output.empty() : this.tags;
     }
 
     public RunbookArgs(
-        Input<String> automationAccountName,
-        @Nullable Input<String> description,
-        @Nullable Input<RunbookDraftArgs> draft,
-        @Nullable Input<String> location,
-        @Nullable Input<Integer> logActivityTrace,
-        @Nullable Input<Boolean> logProgress,
-        @Nullable Input<Boolean> logVerbose,
-        @Nullable Input<String> name,
-        @Nullable Input<ContentLinkArgs> publishContentLink,
-        Input<String> resourceGroupName,
-        @Nullable Input<String> runbookName,
-        Input<Either<String,RunbookTypeEnum>> runbookType,
-        @Nullable Input<Map<String,String>> tags) {
+        Output<String> automationAccountName,
+        @Nullable Output<String> description,
+        @Nullable Output<RunbookDraftArgs> draft,
+        @Nullable Output<String> location,
+        @Nullable Output<Integer> logActivityTrace,
+        @Nullable Output<Boolean> logProgress,
+        @Nullable Output<Boolean> logVerbose,
+        @Nullable Output<String> name,
+        @Nullable Output<ContentLinkArgs> publishContentLink,
+        Output<String> resourceGroupName,
+        @Nullable Output<String> runbookName,
+        Output<Either<String,RunbookTypeEnum>> runbookType,
+        @Nullable Output<Map<String,String>> tags) {
         this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
         this.description = description;
         this.draft = draft;
@@ -194,19 +194,19 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RunbookArgs() {
-        this.automationAccountName = Input.empty();
-        this.description = Input.empty();
-        this.draft = Input.empty();
-        this.location = Input.empty();
-        this.logActivityTrace = Input.empty();
-        this.logProgress = Input.empty();
-        this.logVerbose = Input.empty();
-        this.name = Input.empty();
-        this.publishContentLink = Input.empty();
-        this.resourceGroupName = Input.empty();
-        this.runbookName = Input.empty();
-        this.runbookType = Input.empty();
-        this.tags = Input.empty();
+        this.automationAccountName = Output.empty();
+        this.description = Output.empty();
+        this.draft = Output.empty();
+        this.location = Output.empty();
+        this.logActivityTrace = Output.empty();
+        this.logProgress = Output.empty();
+        this.logVerbose = Output.empty();
+        this.name = Output.empty();
+        this.publishContentLink = Output.empty();
+        this.resourceGroupName = Output.empty();
+        this.runbookName = Output.empty();
+        this.runbookType = Output.empty();
+        this.tags = Output.empty();
     }
 
     public static Builder builder() {
@@ -218,19 +218,19 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<String> automationAccountName;
-        private @Nullable Input<String> description;
-        private @Nullable Input<RunbookDraftArgs> draft;
-        private @Nullable Input<String> location;
-        private @Nullable Input<Integer> logActivityTrace;
-        private @Nullable Input<Boolean> logProgress;
-        private @Nullable Input<Boolean> logVerbose;
-        private @Nullable Input<String> name;
-        private @Nullable Input<ContentLinkArgs> publishContentLink;
-        private Input<String> resourceGroupName;
-        private @Nullable Input<String> runbookName;
-        private Input<Either<String,RunbookTypeEnum>> runbookType;
-        private @Nullable Input<Map<String,String>> tags;
+        private Output<String> automationAccountName;
+        private @Nullable Output<String> description;
+        private @Nullable Output<RunbookDraftArgs> draft;
+        private @Nullable Output<String> location;
+        private @Nullable Output<Integer> logActivityTrace;
+        private @Nullable Output<Boolean> logProgress;
+        private @Nullable Output<Boolean> logVerbose;
+        private @Nullable Output<String> name;
+        private @Nullable Output<ContentLinkArgs> publishContentLink;
+        private Output<String> resourceGroupName;
+        private @Nullable Output<String> runbookName;
+        private Output<Either<String,RunbookTypeEnum>> runbookType;
+        private @Nullable Output<Map<String,String>> tags;
 
         public Builder() {
     	      // Empty
@@ -253,133 +253,133 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder automationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Output<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
+            this.automationAccountName = Output.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder draft(@Nullable Input<RunbookDraftArgs> draft) {
+        public Builder draft(@Nullable Output<RunbookDraftArgs> draft) {
             this.draft = draft;
             return this;
         }
 
         public Builder draft(@Nullable RunbookDraftArgs draft) {
-            this.draft = Input.ofNullable(draft);
+            this.draft = Output.ofNullable(draft);
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder logActivityTrace(@Nullable Input<Integer> logActivityTrace) {
+        public Builder logActivityTrace(@Nullable Output<Integer> logActivityTrace) {
             this.logActivityTrace = logActivityTrace;
             return this;
         }
 
         public Builder logActivityTrace(@Nullable Integer logActivityTrace) {
-            this.logActivityTrace = Input.ofNullable(logActivityTrace);
+            this.logActivityTrace = Output.ofNullable(logActivityTrace);
             return this;
         }
 
-        public Builder logProgress(@Nullable Input<Boolean> logProgress) {
+        public Builder logProgress(@Nullable Output<Boolean> logProgress) {
             this.logProgress = logProgress;
             return this;
         }
 
         public Builder logProgress(@Nullable Boolean logProgress) {
-            this.logProgress = Input.ofNullable(logProgress);
+            this.logProgress = Output.ofNullable(logProgress);
             return this;
         }
 
-        public Builder logVerbose(@Nullable Input<Boolean> logVerbose) {
+        public Builder logVerbose(@Nullable Output<Boolean> logVerbose) {
             this.logVerbose = logVerbose;
             return this;
         }
 
         public Builder logVerbose(@Nullable Boolean logVerbose) {
-            this.logVerbose = Input.ofNullable(logVerbose);
+            this.logVerbose = Output.ofNullable(logVerbose);
             return this;
         }
 
-        public Builder name(@Nullable Input<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             this.name = name;
             return this;
         }
 
         public Builder name(@Nullable String name) {
-            this.name = Input.ofNullable(name);
+            this.name = Output.ofNullable(name);
             return this;
         }
 
-        public Builder publishContentLink(@Nullable Input<ContentLinkArgs> publishContentLink) {
+        public Builder publishContentLink(@Nullable Output<ContentLinkArgs> publishContentLink) {
             this.publishContentLink = publishContentLink;
             return this;
         }
 
         public Builder publishContentLink(@Nullable ContentLinkArgs publishContentLink) {
-            this.publishContentLink = Input.ofNullable(publishContentLink);
+            this.publishContentLink = Output.ofNullable(publishContentLink);
             return this;
         }
 
-        public Builder resourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Output<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
+            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder runbookName(@Nullable Input<String> runbookName) {
+        public Builder runbookName(@Nullable Output<String> runbookName) {
             this.runbookName = runbookName;
             return this;
         }
 
         public Builder runbookName(@Nullable String runbookName) {
-            this.runbookName = Input.ofNullable(runbookName);
+            this.runbookName = Output.ofNullable(runbookName);
             return this;
         }
 
-        public Builder runbookType(Input<Either<String,RunbookTypeEnum>> runbookType) {
+        public Builder runbookType(Output<Either<String,RunbookTypeEnum>> runbookType) {
             this.runbookType = Objects.requireNonNull(runbookType);
             return this;
         }
 
         public Builder runbookType(Either<String,RunbookTypeEnum> runbookType) {
-            this.runbookType = Input.of(Objects.requireNonNull(runbookType));
+            this.runbookType = Output.of(Objects.requireNonNull(runbookType));
             return this;
         }
 
-        public Builder tags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Output<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Input.ofNullable(tags);
+            this.tags = Output.ofNullable(tags);
             return this;
         }
         public RunbookArgs build() {

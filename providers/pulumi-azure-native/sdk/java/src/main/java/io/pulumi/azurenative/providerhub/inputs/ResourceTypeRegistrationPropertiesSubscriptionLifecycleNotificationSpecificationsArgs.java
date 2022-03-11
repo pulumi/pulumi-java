@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.SubscriptionStateOverrideActionArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -17,29 +17,29 @@ public final class ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotifi
     public static final ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs Empty = new ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs();
 
     @InputImport(name="softDeleteTTL")
-      private final @Nullable Input<String> softDeleteTTL;
+      private final @Nullable Output<String> softDeleteTTL;
 
-    public Input<String> getSoftDeleteTTL() {
-        return this.softDeleteTTL == null ? Input.empty() : this.softDeleteTTL;
+    public Output<String> getSoftDeleteTTL() {
+        return this.softDeleteTTL == null ? Output.empty() : this.softDeleteTTL;
     }
 
     @InputImport(name="subscriptionStateOverrideActions")
-      private final @Nullable Input<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
+      private final @Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
 
-    public Input<List<SubscriptionStateOverrideActionArgs>> getSubscriptionStateOverrideActions() {
-        return this.subscriptionStateOverrideActions == null ? Input.empty() : this.subscriptionStateOverrideActions;
+    public Output<List<SubscriptionStateOverrideActionArgs>> getSubscriptionStateOverrideActions() {
+        return this.subscriptionStateOverrideActions == null ? Output.empty() : this.subscriptionStateOverrideActions;
     }
 
     public ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs(
-        @Nullable Input<String> softDeleteTTL,
-        @Nullable Input<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions) {
+        @Nullable Output<String> softDeleteTTL,
+        @Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions) {
         this.softDeleteTTL = softDeleteTTL;
         this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
     }
 
     private ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs() {
-        this.softDeleteTTL = Input.empty();
-        this.subscriptionStateOverrideActions = Input.empty();
+        this.softDeleteTTL = Output.empty();
+        this.subscriptionStateOverrideActions = Output.empty();
     }
 
     public static Builder builder() {
@@ -51,8 +51,8 @@ public final class ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotifi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> softDeleteTTL;
-        private @Nullable Input<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
+        private @Nullable Output<String> softDeleteTTL;
+        private @Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
 
         public Builder() {
     	      // Empty
@@ -64,23 +64,23 @@ public final class ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotifi
     	      this.subscriptionStateOverrideActions = defaults.subscriptionStateOverrideActions;
         }
 
-        public Builder softDeleteTTL(@Nullable Input<String> softDeleteTTL) {
+        public Builder softDeleteTTL(@Nullable Output<String> softDeleteTTL) {
             this.softDeleteTTL = softDeleteTTL;
             return this;
         }
 
         public Builder softDeleteTTL(@Nullable String softDeleteTTL) {
-            this.softDeleteTTL = Input.ofNullable(softDeleteTTL);
+            this.softDeleteTTL = Output.ofNullable(softDeleteTTL);
             return this;
         }
 
-        public Builder subscriptionStateOverrideActions(@Nullable Input<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions) {
+        public Builder subscriptionStateOverrideActions(@Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions) {
             this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
             return this;
         }
 
         public Builder subscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionArgs> subscriptionStateOverrideActions) {
-            this.subscriptionStateOverrideActions = Input.ofNullable(subscriptionStateOverrideActions);
+            this.subscriptionStateOverrideActions = Output.ofNullable(subscriptionStateOverrideActions);
             return this;
         }
         public ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs build() {

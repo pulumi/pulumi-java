@@ -7,7 +7,7 @@ import io.pulumi.azurenative.blueprint.inputs.AssignmentLockSettingsArgs;
 import io.pulumi.azurenative.blueprint.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.blueprint.inputs.ParameterValueArgs;
 import io.pulumi.azurenative.blueprint.inputs.ResourceGroupValueArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
@@ -24,10 +24,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignmentName")
-      private final @Nullable Input<String> assignmentName;
+      private final @Nullable Output<String> assignmentName;
 
-    public Input<String> getAssignmentName() {
-        return this.assignmentName == null ? Input.empty() : this.assignmentName;
+    public Output<String> getAssignmentName() {
+        return this.assignmentName == null ? Output.empty() : this.assignmentName;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blueprintId")
-      private final @Nullable Input<String> blueprintId;
+      private final @Nullable Output<String> blueprintId;
 
-    public Input<String> getBlueprintId() {
-        return this.blueprintId == null ? Input.empty() : this.blueprintId;
+    public Output<String> getBlueprintId() {
+        return this.blueprintId == null ? Output.empty() : this.blueprintId;
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -57,10 +57,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-      private final @Nullable Input<String> displayName;
+      private final @Nullable Output<String> displayName;
 
-    public Input<String> getDisplayName() {
-        return this.displayName == null ? Input.empty() : this.displayName;
+    public Output<String> getDisplayName() {
+        return this.displayName == null ? Output.empty() : this.displayName;
     }
 
     /**
@@ -68,9 +68,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity", required=true)
-      private final Input<ManagedServiceIdentityArgs> identity;
+      private final Output<ManagedServiceIdentityArgs> identity;
 
-    public Input<ManagedServiceIdentityArgs> getIdentity() {
+    public Output<ManagedServiceIdentityArgs> getIdentity() {
         return this.identity;
     }
 
@@ -79,10 +79,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-      private final @Nullable Input<String> location;
+      private final @Nullable Output<String> location;
 
-    public Input<String> getLocation() {
-        return this.location == null ? Input.empty() : this.location;
+    public Output<String> getLocation() {
+        return this.location == null ? Output.empty() : this.location;
     }
 
     /**
@@ -90,10 +90,10 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locks")
-      private final @Nullable Input<AssignmentLockSettingsArgs> locks;
+      private final @Nullable Output<AssignmentLockSettingsArgs> locks;
 
-    public Input<AssignmentLockSettingsArgs> getLocks() {
-        return this.locks == null ? Input.empty() : this.locks;
+    public Output<AssignmentLockSettingsArgs> getLocks() {
+        return this.locks == null ? Output.empty() : this.locks;
     }
 
     /**
@@ -101,9 +101,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters", required=true)
-      private final Input<Map<String,ParameterValueArgs>> parameters;
+      private final Output<Map<String,ParameterValueArgs>> parameters;
 
-    public Input<Map<String,ParameterValueArgs>> getParameters() {
+    public Output<Map<String,ParameterValueArgs>> getParameters() {
         return this.parameters;
     }
 
@@ -112,9 +112,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroups", required=true)
-      private final Input<Map<String,ResourceGroupValueArgs>> resourceGroups;
+      private final Output<Map<String,ResourceGroupValueArgs>> resourceGroups;
 
-    public Input<Map<String,ResourceGroupValueArgs>> getResourceGroups() {
+    public Output<Map<String,ResourceGroupValueArgs>> getResourceGroups() {
         return this.resourceGroups;
     }
 
@@ -123,9 +123,9 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceScope", required=true)
-      private final Input<String> resourceScope;
+      private final Output<String> resourceScope;
 
-    public Input<String> getResourceScope() {
+    public Output<String> getResourceScope() {
         return this.resourceScope;
     }
 
@@ -134,24 +134,24 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-      private final @Nullable Input<String> scope;
+      private final @Nullable Output<String> scope;
 
-    public Input<String> getScope() {
-        return this.scope == null ? Input.empty() : this.scope;
+    public Output<String> getScope() {
+        return this.scope == null ? Output.empty() : this.scope;
     }
 
     public AssignmentArgs(
-        @Nullable Input<String> assignmentName,
-        @Nullable Input<String> blueprintId,
-        @Nullable Input<String> description,
-        @Nullable Input<String> displayName,
-        Input<ManagedServiceIdentityArgs> identity,
-        @Nullable Input<String> location,
-        @Nullable Input<AssignmentLockSettingsArgs> locks,
-        Input<Map<String,ParameterValueArgs>> parameters,
-        Input<Map<String,ResourceGroupValueArgs>> resourceGroups,
-        Input<String> resourceScope,
-        @Nullable Input<String> scope) {
+        @Nullable Output<String> assignmentName,
+        @Nullable Output<String> blueprintId,
+        @Nullable Output<String> description,
+        @Nullable Output<String> displayName,
+        Output<ManagedServiceIdentityArgs> identity,
+        @Nullable Output<String> location,
+        @Nullable Output<AssignmentLockSettingsArgs> locks,
+        Output<Map<String,ParameterValueArgs>> parameters,
+        Output<Map<String,ResourceGroupValueArgs>> resourceGroups,
+        Output<String> resourceScope,
+        @Nullable Output<String> scope) {
         this.assignmentName = assignmentName;
         this.blueprintId = blueprintId;
         this.description = description;
@@ -166,17 +166,17 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssignmentArgs() {
-        this.assignmentName = Input.empty();
-        this.blueprintId = Input.empty();
-        this.description = Input.empty();
-        this.displayName = Input.empty();
-        this.identity = Input.empty();
-        this.location = Input.empty();
-        this.locks = Input.empty();
-        this.parameters = Input.empty();
-        this.resourceGroups = Input.empty();
-        this.resourceScope = Input.empty();
-        this.scope = Input.empty();
+        this.assignmentName = Output.empty();
+        this.blueprintId = Output.empty();
+        this.description = Output.empty();
+        this.displayName = Output.empty();
+        this.identity = Output.empty();
+        this.location = Output.empty();
+        this.locks = Output.empty();
+        this.parameters = Output.empty();
+        this.resourceGroups = Output.empty();
+        this.resourceScope = Output.empty();
+        this.scope = Output.empty();
     }
 
     public static Builder builder() {
@@ -188,17 +188,17 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> assignmentName;
-        private @Nullable Input<String> blueprintId;
-        private @Nullable Input<String> description;
-        private @Nullable Input<String> displayName;
-        private Input<ManagedServiceIdentityArgs> identity;
-        private @Nullable Input<String> location;
-        private @Nullable Input<AssignmentLockSettingsArgs> locks;
-        private Input<Map<String,ParameterValueArgs>> parameters;
-        private Input<Map<String,ResourceGroupValueArgs>> resourceGroups;
-        private Input<String> resourceScope;
-        private @Nullable Input<String> scope;
+        private @Nullable Output<String> assignmentName;
+        private @Nullable Output<String> blueprintId;
+        private @Nullable Output<String> description;
+        private @Nullable Output<String> displayName;
+        private Output<ManagedServiceIdentityArgs> identity;
+        private @Nullable Output<String> location;
+        private @Nullable Output<AssignmentLockSettingsArgs> locks;
+        private Output<Map<String,ParameterValueArgs>> parameters;
+        private Output<Map<String,ResourceGroupValueArgs>> resourceGroups;
+        private Output<String> resourceScope;
+        private @Nullable Output<String> scope;
 
         public Builder() {
     	      // Empty
@@ -219,113 +219,113 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scope = defaults.scope;
         }
 
-        public Builder assignmentName(@Nullable Input<String> assignmentName) {
+        public Builder assignmentName(@Nullable Output<String> assignmentName) {
             this.assignmentName = assignmentName;
             return this;
         }
 
         public Builder assignmentName(@Nullable String assignmentName) {
-            this.assignmentName = Input.ofNullable(assignmentName);
+            this.assignmentName = Output.ofNullable(assignmentName);
             return this;
         }
 
-        public Builder blueprintId(@Nullable Input<String> blueprintId) {
+        public Builder blueprintId(@Nullable Output<String> blueprintId) {
             this.blueprintId = blueprintId;
             return this;
         }
 
         public Builder blueprintId(@Nullable String blueprintId) {
-            this.blueprintId = Input.ofNullable(blueprintId);
+            this.blueprintId = Output.ofNullable(blueprintId);
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder displayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Output<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Input.ofNullable(displayName);
+            this.displayName = Output.ofNullable(displayName);
             return this;
         }
 
-        public Builder identity(Input<ManagedServiceIdentityArgs> identity) {
+        public Builder identity(Output<ManagedServiceIdentityArgs> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
         public Builder identity(ManagedServiceIdentityArgs identity) {
-            this.identity = Input.of(Objects.requireNonNull(identity));
+            this.identity = Output.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder location(@Nullable Input<String> location) {
+        public Builder location(@Nullable Output<String> location) {
             this.location = location;
             return this;
         }
 
         public Builder location(@Nullable String location) {
-            this.location = Input.ofNullable(location);
+            this.location = Output.ofNullable(location);
             return this;
         }
 
-        public Builder locks(@Nullable Input<AssignmentLockSettingsArgs> locks) {
+        public Builder locks(@Nullable Output<AssignmentLockSettingsArgs> locks) {
             this.locks = locks;
             return this;
         }
 
         public Builder locks(@Nullable AssignmentLockSettingsArgs locks) {
-            this.locks = Input.ofNullable(locks);
+            this.locks = Output.ofNullable(locks);
             return this;
         }
 
-        public Builder parameters(Input<Map<String,ParameterValueArgs>> parameters) {
+        public Builder parameters(Output<Map<String,ParameterValueArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
         public Builder parameters(Map<String,ParameterValueArgs> parameters) {
-            this.parameters = Input.of(Objects.requireNonNull(parameters));
+            this.parameters = Output.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder resourceGroups(Input<Map<String,ResourceGroupValueArgs>> resourceGroups) {
+        public Builder resourceGroups(Output<Map<String,ResourceGroupValueArgs>> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
 
         public Builder resourceGroups(Map<String,ResourceGroupValueArgs> resourceGroups) {
-            this.resourceGroups = Input.of(Objects.requireNonNull(resourceGroups));
+            this.resourceGroups = Output.of(Objects.requireNonNull(resourceGroups));
             return this;
         }
 
-        public Builder resourceScope(Input<String> resourceScope) {
+        public Builder resourceScope(Output<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
 
         public Builder resourceScope(String resourceScope) {
-            this.resourceScope = Input.of(Objects.requireNonNull(resourceScope));
+            this.resourceScope = Output.of(Objects.requireNonNull(resourceScope));
             return this;
         }
 
-        public Builder scope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Output<String> scope) {
             this.scope = scope;
             return this;
         }
 
         public Builder scope(@Nullable String scope) {
-            this.scope = Input.ofNullable(scope);
+            this.scope = Output.ofNullable(scope);
             return this;
         }
         public AssignmentArgs build() {

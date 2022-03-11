@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.LogLevel;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,18 +23,18 @@ public final class FileSystemApplicationLogsConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="level")
-      private final @Nullable Input<LogLevel> level;
+      private final @Nullable Output<LogLevel> level;
 
-    public Input<LogLevel> getLevel() {
-        return this.level == null ? Input.empty() : this.level;
+    public Output<LogLevel> getLevel() {
+        return this.level == null ? Output.empty() : this.level;
     }
 
-    public FileSystemApplicationLogsConfigArgs(@Nullable Input<LogLevel> level) {
-        this.level = level == null ? Input.ofNullable(io.pulumi.azurenative.web.enums.LogLevel.Off) : level;
+    public FileSystemApplicationLogsConfigArgs(@Nullable Output<LogLevel> level) {
+        this.level = level == null ? Output.ofNullable(io.pulumi.azurenative.web.enums.LogLevel.Off) : level;
     }
 
     private FileSystemApplicationLogsConfigArgs() {
-        this.level = Input.empty();
+        this.level = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class FileSystemApplicationLogsConfigArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<LogLevel> level;
+        private @Nullable Output<LogLevel> level;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class FileSystemApplicationLogsConfigArgs extends io.pulumi.resourc
     	      this.level = defaults.level;
         }
 
-        public Builder level(@Nullable Input<LogLevel> level) {
+        public Builder level(@Nullable Output<LogLevel> level) {
             this.level = level;
             return this;
         }
 
         public Builder level(@Nullable LogLevel level) {
-            this.level = Input.ofNullable(level);
+            this.level = Output.ofNullable(level);
             return this;
         }
         public FileSystemApplicationLogsConfigArgs build() {

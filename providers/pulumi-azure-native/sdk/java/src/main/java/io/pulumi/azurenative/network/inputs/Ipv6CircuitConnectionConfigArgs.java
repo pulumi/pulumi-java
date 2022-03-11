@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class Ipv6CircuitConnectionConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="addressPrefix")
-      private final @Nullable Input<String> addressPrefix;
+      private final @Nullable Output<String> addressPrefix;
 
-    public Input<String> getAddressPrefix() {
-        return this.addressPrefix == null ? Input.empty() : this.addressPrefix;
+    public Output<String> getAddressPrefix() {
+        return this.addressPrefix == null ? Output.empty() : this.addressPrefix;
     }
 
-    public Ipv6CircuitConnectionConfigArgs(@Nullable Input<String> addressPrefix) {
+    public Ipv6CircuitConnectionConfigArgs(@Nullable Output<String> addressPrefix) {
         this.addressPrefix = addressPrefix;
     }
 
     private Ipv6CircuitConnectionConfigArgs() {
-        this.addressPrefix = Input.empty();
+        this.addressPrefix = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class Ipv6CircuitConnectionConfigArgs extends io.pulumi.resources.R
     }
 
     public static final class Builder {
-        private @Nullable Input<String> addressPrefix;
+        private @Nullable Output<String> addressPrefix;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class Ipv6CircuitConnectionConfigArgs extends io.pulumi.resources.R
     	      this.addressPrefix = defaults.addressPrefix;
         }
 
-        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
         public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Input.ofNullable(addressPrefix);
+            this.addressPrefix = Output.ofNullable(addressPrefix);
             return this;
         }
         public Ipv6CircuitConnectionConfigArgs build() {

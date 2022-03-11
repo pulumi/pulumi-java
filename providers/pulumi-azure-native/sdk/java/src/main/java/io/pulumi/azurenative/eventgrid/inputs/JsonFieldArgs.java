@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class JsonFieldArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceField")
-      private final @Nullable Input<String> sourceField;
+      private final @Nullable Output<String> sourceField;
 
-    public Input<String> getSourceField() {
-        return this.sourceField == null ? Input.empty() : this.sourceField;
+    public Output<String> getSourceField() {
+        return this.sourceField == null ? Output.empty() : this.sourceField;
     }
 
-    public JsonFieldArgs(@Nullable Input<String> sourceField) {
+    public JsonFieldArgs(@Nullable Output<String> sourceField) {
         this.sourceField = sourceField;
     }
 
     private JsonFieldArgs() {
-        this.sourceField = Input.empty();
+        this.sourceField = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class JsonFieldArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<String> sourceField;
+        private @Nullable Output<String> sourceField;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class JsonFieldArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceField = defaults.sourceField;
         }
 
-        public Builder sourceField(@Nullable Input<String> sourceField) {
+        public Builder sourceField(@Nullable Output<String> sourceField) {
             this.sourceField = sourceField;
             return this;
         }
 
         public Builder sourceField(@Nullable String sourceField) {
-            this.sourceField = Input.ofNullable(sourceField);
+            this.sourceField = Output.ofNullable(sourceField);
             return this;
         }
         public JsonFieldArgs build() {

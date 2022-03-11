@@ -41,7 +41,7 @@ import io.pulumi.azurenative.datafactory.inputs.ValidationActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -63,10 +63,10 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activities")
-      private final @Nullable Input<List<Object>> activities;
+      private final @Nullable Output<List<Object>> activities;
 
-    public Input<List<Object>> getActivities() {
-        return this.activities == null ? Input.empty() : this.activities;
+    public Output<List<Object>> getActivities() {
+        return this.activities == null ? Output.empty() : this.activities;
     }
 
     /**
@@ -74,22 +74,22 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-      private final @Nullable Input<String> value;
+      private final @Nullable Output<String> value;
 
-    public Input<String> getValue() {
-        return this.value == null ? Input.empty() : this.value;
+    public Output<String> getValue() {
+        return this.value == null ? Output.empty() : this.value;
     }
 
     public SwitchCaseArgs(
-        @Nullable Input<List<Object>> activities,
-        @Nullable Input<String> value) {
+        @Nullable Output<List<Object>> activities,
+        @Nullable Output<String> value) {
         this.activities = activities;
         this.value = value;
     }
 
     private SwitchCaseArgs() {
-        this.activities = Input.empty();
-        this.value = Input.empty();
+        this.activities = Output.empty();
+        this.value = Output.empty();
     }
 
     public static Builder builder() {
@@ -101,8 +101,8 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> activities;
-        private @Nullable Input<String> value;
+        private @Nullable Output<List<Object>> activities;
+        private @Nullable Output<String> value;
 
         public Builder() {
     	      // Empty
@@ -114,23 +114,23 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder activities(@Nullable Input<List<Object>> activities) {
+        public Builder activities(@Nullable Output<List<Object>> activities) {
             this.activities = activities;
             return this;
         }
 
         public Builder activities(@Nullable List<Object> activities) {
-            this.activities = Input.ofNullable(activities);
+            this.activities = Output.ofNullable(activities);
             return this;
         }
 
-        public Builder value(@Nullable Input<String> value) {
+        public Builder value(@Nullable Output<String> value) {
             this.value = value;
             return this;
         }
 
         public Builder value(@Nullable String value) {
-            this.value = Input.ofNullable(value);
+            this.value = Output.ofNullable(value);
             return this;
         }
         public SwitchCaseArgs build() {

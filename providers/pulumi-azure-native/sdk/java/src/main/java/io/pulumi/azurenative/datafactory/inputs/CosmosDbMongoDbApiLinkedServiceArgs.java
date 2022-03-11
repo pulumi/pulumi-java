@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -28,10 +28,10 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="annotations")
-      private final @Nullable Input<List<Object>> annotations;
+      private final @Nullable Output<List<Object>> annotations;
 
-    public Input<List<Object>> getAnnotations() {
-        return this.annotations == null ? Input.empty() : this.annotations;
+    public Output<List<Object>> getAnnotations() {
+        return this.annotations == null ? Output.empty() : this.annotations;
     }
 
     /**
@@ -39,10 +39,10 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectVia")
-      private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+      private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
-    public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Input.empty() : this.connectVia;
+    public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
+        return this.connectVia == null ? Output.empty() : this.connectVia;
     }
 
     /**
@@ -50,9 +50,9 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectionString", required=true)
-      private final Input<Object> connectionString;
+      private final Output<Object> connectionString;
 
-    public Input<Object> getConnectionString() {
+    public Output<Object> getConnectionString() {
         return this.connectionString;
     }
 
@@ -61,9 +61,9 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="database", required=true)
-      private final Input<Object> database;
+      private final Output<Object> database;
 
-    public Input<Object> getDatabase() {
+    public Output<Object> getDatabase() {
         return this.database;
     }
 
@@ -72,10 +72,10 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-      private final @Nullable Input<String> description;
+      private final @Nullable Output<String> description;
 
-    public Input<String> getDescription() {
-        return this.description == null ? Input.empty() : this.description;
+    public Output<String> getDescription() {
+        return this.description == null ? Output.empty() : this.description;
     }
 
     /**
@@ -83,10 +83,10 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isServerVersionAbove32")
-      private final @Nullable Input<Object> isServerVersionAbove32;
+      private final @Nullable Output<Object> isServerVersionAbove32;
 
-    public Input<Object> getIsServerVersionAbove32() {
-        return this.isServerVersionAbove32 == null ? Input.empty() : this.isServerVersionAbove32;
+    public Output<Object> getIsServerVersionAbove32() {
+        return this.isServerVersionAbove32 == null ? Output.empty() : this.isServerVersionAbove32;
     }
 
     /**
@@ -94,10 +94,10 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameters")
-      private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+      private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
-    public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Input.empty() : this.parameters;
+    public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
+        return this.parameters == null ? Output.empty() : this.parameters;
     }
 
     /**
@@ -106,21 +106,21 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public CosmosDbMongoDbApiLinkedServiceArgs(
-        @Nullable Input<List<Object>> annotations,
-        @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia,
-        Input<Object> connectionString,
-        Input<Object> database,
-        @Nullable Input<String> description,
-        @Nullable Input<Object> isServerVersionAbove32,
-        @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters,
-        Input<String> type) {
+        @Nullable Output<List<Object>> annotations,
+        @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia,
+        Output<Object> connectionString,
+        Output<Object> database,
+        @Nullable Output<String> description,
+        @Nullable Output<Object> isServerVersionAbove32,
+        @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters,
+        Output<String> type) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
@@ -132,14 +132,14 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
     }
 
     private CosmosDbMongoDbApiLinkedServiceArgs() {
-        this.annotations = Input.empty();
-        this.connectVia = Input.empty();
-        this.connectionString = Input.empty();
-        this.database = Input.empty();
-        this.description = Input.empty();
-        this.isServerVersionAbove32 = Input.empty();
-        this.parameters = Input.empty();
-        this.type = Input.empty();
+        this.annotations = Output.empty();
+        this.connectVia = Output.empty();
+        this.connectionString = Output.empty();
+        this.database = Output.empty();
+        this.description = Output.empty();
+        this.isServerVersionAbove32 = Output.empty();
+        this.parameters = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -151,14 +151,14 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<List<Object>> annotations;
-        private @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
-        private Input<Object> connectionString;
-        private Input<Object> database;
-        private @Nullable Input<String> description;
-        private @Nullable Input<Object> isServerVersionAbove32;
-        private @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
-        private Input<String> type;
+        private @Nullable Output<List<Object>> annotations;
+        private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
+        private Output<Object> connectionString;
+        private Output<Object> database;
+        private @Nullable Output<String> description;
+        private @Nullable Output<Object> isServerVersionAbove32;
+        private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -176,83 +176,83 @@ public final class CosmosDbMongoDbApiLinkedServiceArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder annotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Output<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Input.ofNullable(annotations);
+            this.annotations = Output.ofNullable(annotations);
             return this;
         }
 
-        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Input.ofNullable(connectVia);
+            this.connectVia = Output.ofNullable(connectVia);
             return this;
         }
 
-        public Builder connectionString(Input<Object> connectionString) {
+        public Builder connectionString(Output<Object> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
         public Builder connectionString(Object connectionString) {
-            this.connectionString = Input.of(Objects.requireNonNull(connectionString));
+            this.connectionString = Output.of(Objects.requireNonNull(connectionString));
             return this;
         }
 
-        public Builder database(Input<Object> database) {
+        public Builder database(Output<Object> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
         public Builder database(Object database) {
-            this.database = Input.of(Objects.requireNonNull(database));
+            this.database = Output.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder description(@Nullable Input<String> description) {
+        public Builder description(@Nullable Output<String> description) {
             this.description = description;
             return this;
         }
 
         public Builder description(@Nullable String description) {
-            this.description = Input.ofNullable(description);
+            this.description = Output.ofNullable(description);
             return this;
         }
 
-        public Builder isServerVersionAbove32(@Nullable Input<Object> isServerVersionAbove32) {
+        public Builder isServerVersionAbove32(@Nullable Output<Object> isServerVersionAbove32) {
             this.isServerVersionAbove32 = isServerVersionAbove32;
             return this;
         }
 
         public Builder isServerVersionAbove32(@Nullable Object isServerVersionAbove32) {
-            this.isServerVersionAbove32 = Input.ofNullable(isServerVersionAbove32);
+            this.isServerVersionAbove32 = Output.ofNullable(isServerVersionAbove32);
             return this;
         }
 
-        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Input.ofNullable(parameters);
+            this.parameters = Output.ofNullable(parameters);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public CosmosDbMongoDbApiLinkedServiceArgs build() {

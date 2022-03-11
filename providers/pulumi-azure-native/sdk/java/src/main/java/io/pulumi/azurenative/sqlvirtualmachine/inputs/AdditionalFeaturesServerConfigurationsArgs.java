@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,18 +23,18 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="isRServicesEnabled")
-      private final @Nullable Input<Boolean> isRServicesEnabled;
+      private final @Nullable Output<Boolean> isRServicesEnabled;
 
-    public Input<Boolean> getIsRServicesEnabled() {
-        return this.isRServicesEnabled == null ? Input.empty() : this.isRServicesEnabled;
+    public Output<Boolean> getIsRServicesEnabled() {
+        return this.isRServicesEnabled == null ? Output.empty() : this.isRServicesEnabled;
     }
 
-    public AdditionalFeaturesServerConfigurationsArgs(@Nullable Input<Boolean> isRServicesEnabled) {
+    public AdditionalFeaturesServerConfigurationsArgs(@Nullable Output<Boolean> isRServicesEnabled) {
         this.isRServicesEnabled = isRServicesEnabled;
     }
 
     private AdditionalFeaturesServerConfigurationsArgs() {
-        this.isRServicesEnabled = Input.empty();
+        this.isRServicesEnabled = Output.empty();
     }
 
     public static Builder builder() {
@@ -46,7 +46,7 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends io.pulumi.
     }
 
     public static final class Builder {
-        private @Nullable Input<Boolean> isRServicesEnabled;
+        private @Nullable Output<Boolean> isRServicesEnabled;
 
         public Builder() {
     	      // Empty
@@ -57,13 +57,13 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends io.pulumi.
     	      this.isRServicesEnabled = defaults.isRServicesEnabled;
         }
 
-        public Builder isRServicesEnabled(@Nullable Input<Boolean> isRServicesEnabled) {
+        public Builder isRServicesEnabled(@Nullable Output<Boolean> isRServicesEnabled) {
             this.isRServicesEnabled = isRServicesEnabled;
             return this;
         }
 
         public Builder isRServicesEnabled(@Nullable Boolean isRServicesEnabled) {
-            this.isRServicesEnabled = Input.ofNullable(isRServicesEnabled);
+            this.isRServicesEnabled = Output.ofNullable(isRServicesEnabled);
             return this;
         }
         public AdditionalFeaturesServerConfigurationsArgs build() {

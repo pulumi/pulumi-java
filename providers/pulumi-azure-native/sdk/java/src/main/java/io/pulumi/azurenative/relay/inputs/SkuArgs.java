@@ -5,7 +5,7 @@ package io.pulumi.azurenative.relay.inputs;
 
 import io.pulumi.azurenative.relay.enums.SkuName;
 import io.pulumi.azurenative.relay.enums.SkuTier;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,9 +24,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-      private final Input<SkuName> name;
+      private final Output<SkuName> name;
 
-    public Input<SkuName> getName() {
+    public Output<SkuName> getName() {
         return this.name;
     }
 
@@ -35,22 +35,22 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tier")
-      private final @Nullable Input<SkuTier> tier;
+      private final @Nullable Output<SkuTier> tier;
 
-    public Input<SkuTier> getTier() {
-        return this.tier == null ? Input.empty() : this.tier;
+    public Output<SkuTier> getTier() {
+        return this.tier == null ? Output.empty() : this.tier;
     }
 
     public SkuArgs(
-        Input<SkuName> name,
-        @Nullable Input<SkuTier> tier) {
+        Output<SkuName> name,
+        @Nullable Output<SkuTier> tier) {
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.tier = tier;
     }
 
     private SkuArgs() {
-        this.name = Input.empty();
-        this.tier = Input.empty();
+        this.name = Output.empty();
+        this.tier = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private Input<SkuName> name;
-        private @Nullable Input<SkuTier> tier;
+        private Output<SkuName> name;
+        private @Nullable Output<SkuTier> tier;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder name(Input<SkuName> name) {
+        public Builder name(Output<SkuName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
         public Builder name(SkuName name) {
-            this.name = Input.of(Objects.requireNonNull(name));
+            this.name = Output.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder tier(@Nullable Input<SkuTier> tier) {
+        public Builder tier(@Nullable Output<SkuTier> tier) {
             this.tier = tier;
             return this;
         }
 
         public Builder tier(@Nullable SkuTier tier) {
-            this.tier = Input.ofNullable(tier);
+            this.tier = Output.ofNullable(tier);
             return this;
         }
         public SkuArgs build() {

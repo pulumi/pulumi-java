@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -23,10 +23,10 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="wsdlEndpointName")
-      private final @Nullable Input<String> wsdlEndpointName;
+      private final @Nullable Output<String> wsdlEndpointName;
 
-    public Input<String> getWsdlEndpointName() {
-        return this.wsdlEndpointName == null ? Input.empty() : this.wsdlEndpointName;
+    public Output<String> getWsdlEndpointName() {
+        return this.wsdlEndpointName == null ? Output.empty() : this.wsdlEndpointName;
     }
 
     /**
@@ -34,22 +34,22 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
      * 
      */
     @InputImport(name="wsdlServiceName")
-      private final @Nullable Input<String> wsdlServiceName;
+      private final @Nullable Output<String> wsdlServiceName;
 
-    public Input<String> getWsdlServiceName() {
-        return this.wsdlServiceName == null ? Input.empty() : this.wsdlServiceName;
+    public Output<String> getWsdlServiceName() {
+        return this.wsdlServiceName == null ? Output.empty() : this.wsdlServiceName;
     }
 
     public ApiCreateOrUpdatePropertiesWsdlSelectorArgs(
-        @Nullable Input<String> wsdlEndpointName,
-        @Nullable Input<String> wsdlServiceName) {
+        @Nullable Output<String> wsdlEndpointName,
+        @Nullable Output<String> wsdlServiceName) {
         this.wsdlEndpointName = wsdlEndpointName;
         this.wsdlServiceName = wsdlServiceName;
     }
 
     private ApiCreateOrUpdatePropertiesWsdlSelectorArgs() {
-        this.wsdlEndpointName = Input.empty();
-        this.wsdlServiceName = Input.empty();
+        this.wsdlEndpointName = Output.empty();
+        this.wsdlServiceName = Output.empty();
     }
 
     public static Builder builder() {
@@ -61,8 +61,8 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
     }
 
     public static final class Builder {
-        private @Nullable Input<String> wsdlEndpointName;
-        private @Nullable Input<String> wsdlServiceName;
+        private @Nullable Output<String> wsdlEndpointName;
+        private @Nullable Output<String> wsdlServiceName;
 
         public Builder() {
     	      // Empty
@@ -74,23 +74,23 @@ public final class ApiCreateOrUpdatePropertiesWsdlSelectorArgs extends io.pulumi
     	      this.wsdlServiceName = defaults.wsdlServiceName;
         }
 
-        public Builder wsdlEndpointName(@Nullable Input<String> wsdlEndpointName) {
+        public Builder wsdlEndpointName(@Nullable Output<String> wsdlEndpointName) {
             this.wsdlEndpointName = wsdlEndpointName;
             return this;
         }
 
         public Builder wsdlEndpointName(@Nullable String wsdlEndpointName) {
-            this.wsdlEndpointName = Input.ofNullable(wsdlEndpointName);
+            this.wsdlEndpointName = Output.ofNullable(wsdlEndpointName);
             return this;
         }
 
-        public Builder wsdlServiceName(@Nullable Input<String> wsdlServiceName) {
+        public Builder wsdlServiceName(@Nullable Output<String> wsdlServiceName) {
             this.wsdlServiceName = wsdlServiceName;
             return this;
         }
 
         public Builder wsdlServiceName(@Nullable String wsdlServiceName) {
-            this.wsdlServiceName = Input.ofNullable(wsdlServiceName);
+            this.wsdlServiceName = Output.ofNullable(wsdlServiceName);
             return this;
         }
         public ApiCreateOrUpdatePropertiesWsdlSelectorArgs build() {

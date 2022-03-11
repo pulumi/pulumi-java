@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.enums.DataAccountType;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,9 +26,9 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-      private final Input<Either<String,DataAccountType>> dataAccountType;
+      private final Output<Either<String,DataAccountType>> dataAccountType;
 
-    public Input<Either<String,DataAccountType>> getDataAccountType() {
+    public Output<Either<String,DataAccountType>> getDataAccountType() {
         return this.dataAccountType;
     }
 
@@ -37,10 +37,10 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="transferAllBlobs")
-      private final @Nullable Input<Boolean> transferAllBlobs;
+      private final @Nullable Output<Boolean> transferAllBlobs;
 
-    public Input<Boolean> getTransferAllBlobs() {
-        return this.transferAllBlobs == null ? Input.empty() : this.transferAllBlobs;
+    public Output<Boolean> getTransferAllBlobs() {
+        return this.transferAllBlobs == null ? Output.empty() : this.transferAllBlobs;
     }
 
     /**
@@ -48,25 +48,25 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="transferAllFiles")
-      private final @Nullable Input<Boolean> transferAllFiles;
+      private final @Nullable Output<Boolean> transferAllFiles;
 
-    public Input<Boolean> getTransferAllFiles() {
-        return this.transferAllFiles == null ? Input.empty() : this.transferAllFiles;
+    public Output<Boolean> getTransferAllFiles() {
+        return this.transferAllFiles == null ? Output.empty() : this.transferAllFiles;
     }
 
     public TransferAllDetailsArgs(
-        Input<Either<String,DataAccountType>> dataAccountType,
-        @Nullable Input<Boolean> transferAllBlobs,
-        @Nullable Input<Boolean> transferAllFiles) {
-        this.dataAccountType = dataAccountType == null ? Input.ofLeft("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+        Output<Either<String,DataAccountType>> dataAccountType,
+        @Nullable Output<Boolean> transferAllBlobs,
+        @Nullable Output<Boolean> transferAllFiles) {
+        this.dataAccountType = dataAccountType == null ? Output.ofLeft("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
         this.transferAllBlobs = transferAllBlobs;
         this.transferAllFiles = transferAllFiles;
     }
 
     private TransferAllDetailsArgs() {
-        this.dataAccountType = Input.empty();
-        this.transferAllBlobs = Input.empty();
-        this.transferAllFiles = Input.empty();
+        this.dataAccountType = Output.empty();
+        this.transferAllBlobs = Output.empty();
+        this.transferAllFiles = Output.empty();
     }
 
     public static Builder builder() {
@@ -78,9 +78,9 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
     }
 
     public static final class Builder {
-        private Input<Either<String,DataAccountType>> dataAccountType;
-        private @Nullable Input<Boolean> transferAllBlobs;
-        private @Nullable Input<Boolean> transferAllFiles;
+        private Output<Either<String,DataAccountType>> dataAccountType;
+        private @Nullable Output<Boolean> transferAllBlobs;
+        private @Nullable Output<Boolean> transferAllFiles;
 
         public Builder() {
     	      // Empty
@@ -93,33 +93,33 @@ public final class TransferAllDetailsArgs extends io.pulumi.resources.ResourceAr
     	      this.transferAllFiles = defaults.transferAllFiles;
         }
 
-        public Builder dataAccountType(Input<Either<String,DataAccountType>> dataAccountType) {
+        public Builder dataAccountType(Output<Either<String,DataAccountType>> dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
         public Builder dataAccountType(Either<String,DataAccountType> dataAccountType) {
-            this.dataAccountType = Input.of(Objects.requireNonNull(dataAccountType));
+            this.dataAccountType = Output.of(Objects.requireNonNull(dataAccountType));
             return this;
         }
 
-        public Builder transferAllBlobs(@Nullable Input<Boolean> transferAllBlobs) {
+        public Builder transferAllBlobs(@Nullable Output<Boolean> transferAllBlobs) {
             this.transferAllBlobs = transferAllBlobs;
             return this;
         }
 
         public Builder transferAllBlobs(@Nullable Boolean transferAllBlobs) {
-            this.transferAllBlobs = Input.ofNullable(transferAllBlobs);
+            this.transferAllBlobs = Output.ofNullable(transferAllBlobs);
             return this;
         }
 
-        public Builder transferAllFiles(@Nullable Input<Boolean> transferAllFiles) {
+        public Builder transferAllFiles(@Nullable Output<Boolean> transferAllFiles) {
             this.transferAllFiles = transferAllFiles;
             return this;
         }
 
         public Builder transferAllFiles(@Nullable Boolean transferAllFiles) {
-            this.transferAllFiles = Input.ofNullable(transferAllFiles);
+            this.transferAllFiles = Output.ofNullable(transferAllFiles);
             return this;
         }
         public TransferAllDetailsArgs build() {

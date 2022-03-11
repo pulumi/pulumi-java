@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.X12DateFormat;
 import io.pulumi.azurenative.logic.enums.X12TimeFormat;
 import io.pulumi.core.Either;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -26,9 +26,9 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dateFormat", required=true)
-      private final Input<Either<String,X12DateFormat>> dateFormat;
+      private final Output<Either<String,X12DateFormat>> dateFormat;
 
-    public Input<Either<String,X12DateFormat>> getDateFormat() {
+    public Output<Either<String,X12DateFormat>> getDateFormat() {
         return this.dateFormat;
     }
 
@@ -37,10 +37,10 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="functionalIdentifierCode")
-      private final @Nullable Input<String> functionalIdentifierCode;
+      private final @Nullable Output<String> functionalIdentifierCode;
 
-    public Input<String> getFunctionalIdentifierCode() {
-        return this.functionalIdentifierCode == null ? Input.empty() : this.functionalIdentifierCode;
+    public Output<String> getFunctionalIdentifierCode() {
+        return this.functionalIdentifierCode == null ? Output.empty() : this.functionalIdentifierCode;
     }
 
     /**
@@ -48,9 +48,9 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="headerVersion", required=true)
-      private final Input<String> headerVersion;
+      private final Output<String> headerVersion;
 
-    public Input<String> getHeaderVersion() {
+    public Output<String> getHeaderVersion() {
         return this.headerVersion;
     }
 
@@ -59,9 +59,9 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="messageId", required=true)
-      private final Input<String> messageId;
+      private final Output<String> messageId;
 
-    public Input<String> getMessageId() {
+    public Output<String> getMessageId() {
         return this.messageId;
     }
 
@@ -70,9 +70,9 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="protocolVersion", required=true)
-      private final Input<String> protocolVersion;
+      private final Output<String> protocolVersion;
 
-    public Input<String> getProtocolVersion() {
+    public Output<String> getProtocolVersion() {
         return this.protocolVersion;
     }
 
@@ -81,9 +81,9 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="receiverApplicationId", required=true)
-      private final Input<String> receiverApplicationId;
+      private final Output<String> receiverApplicationId;
 
-    public Input<String> getReceiverApplicationId() {
+    public Output<String> getReceiverApplicationId() {
         return this.receiverApplicationId;
     }
 
@@ -92,9 +92,9 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="responsibleAgencyCode", required=true)
-      private final Input<String> responsibleAgencyCode;
+      private final Output<String> responsibleAgencyCode;
 
-    public Input<String> getResponsibleAgencyCode() {
+    public Output<String> getResponsibleAgencyCode() {
         return this.responsibleAgencyCode;
     }
 
@@ -103,9 +103,9 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="senderApplicationId", required=true)
-      private final Input<String> senderApplicationId;
+      private final Output<String> senderApplicationId;
 
-    public Input<String> getSenderApplicationId() {
+    public Output<String> getSenderApplicationId() {
         return this.senderApplicationId;
     }
 
@@ -114,9 +114,9 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targetNamespace", required=true)
-      private final Input<String> targetNamespace;
+      private final Output<String> targetNamespace;
 
-    public Input<String> getTargetNamespace() {
+    public Output<String> getTargetNamespace() {
         return this.targetNamespace;
     }
 
@@ -125,23 +125,23 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timeFormat", required=true)
-      private final Input<Either<String,X12TimeFormat>> timeFormat;
+      private final Output<Either<String,X12TimeFormat>> timeFormat;
 
-    public Input<Either<String,X12TimeFormat>> getTimeFormat() {
+    public Output<Either<String,X12TimeFormat>> getTimeFormat() {
         return this.timeFormat;
     }
 
     public X12EnvelopeOverrideArgs(
-        Input<Either<String,X12DateFormat>> dateFormat,
-        @Nullable Input<String> functionalIdentifierCode,
-        Input<String> headerVersion,
-        Input<String> messageId,
-        Input<String> protocolVersion,
-        Input<String> receiverApplicationId,
-        Input<String> responsibleAgencyCode,
-        Input<String> senderApplicationId,
-        Input<String> targetNamespace,
-        Input<Either<String,X12TimeFormat>> timeFormat) {
+        Output<Either<String,X12DateFormat>> dateFormat,
+        @Nullable Output<String> functionalIdentifierCode,
+        Output<String> headerVersion,
+        Output<String> messageId,
+        Output<String> protocolVersion,
+        Output<String> receiverApplicationId,
+        Output<String> responsibleAgencyCode,
+        Output<String> senderApplicationId,
+        Output<String> targetNamespace,
+        Output<Either<String,X12TimeFormat>> timeFormat) {
         this.dateFormat = Objects.requireNonNull(dateFormat, "expected parameter 'dateFormat' to be non-null");
         this.functionalIdentifierCode = functionalIdentifierCode;
         this.headerVersion = Objects.requireNonNull(headerVersion, "expected parameter 'headerVersion' to be non-null");
@@ -155,16 +155,16 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
     }
 
     private X12EnvelopeOverrideArgs() {
-        this.dateFormat = Input.empty();
-        this.functionalIdentifierCode = Input.empty();
-        this.headerVersion = Input.empty();
-        this.messageId = Input.empty();
-        this.protocolVersion = Input.empty();
-        this.receiverApplicationId = Input.empty();
-        this.responsibleAgencyCode = Input.empty();
-        this.senderApplicationId = Input.empty();
-        this.targetNamespace = Input.empty();
-        this.timeFormat = Input.empty();
+        this.dateFormat = Output.empty();
+        this.functionalIdentifierCode = Output.empty();
+        this.headerVersion = Output.empty();
+        this.messageId = Output.empty();
+        this.protocolVersion = Output.empty();
+        this.receiverApplicationId = Output.empty();
+        this.responsibleAgencyCode = Output.empty();
+        this.senderApplicationId = Output.empty();
+        this.targetNamespace = Output.empty();
+        this.timeFormat = Output.empty();
     }
 
     public static Builder builder() {
@@ -176,16 +176,16 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
     }
 
     public static final class Builder {
-        private Input<Either<String,X12DateFormat>> dateFormat;
-        private @Nullable Input<String> functionalIdentifierCode;
-        private Input<String> headerVersion;
-        private Input<String> messageId;
-        private Input<String> protocolVersion;
-        private Input<String> receiverApplicationId;
-        private Input<String> responsibleAgencyCode;
-        private Input<String> senderApplicationId;
-        private Input<String> targetNamespace;
-        private Input<Either<String,X12TimeFormat>> timeFormat;
+        private Output<Either<String,X12DateFormat>> dateFormat;
+        private @Nullable Output<String> functionalIdentifierCode;
+        private Output<String> headerVersion;
+        private Output<String> messageId;
+        private Output<String> protocolVersion;
+        private Output<String> receiverApplicationId;
+        private Output<String> responsibleAgencyCode;
+        private Output<String> senderApplicationId;
+        private Output<String> targetNamespace;
+        private Output<Either<String,X12TimeFormat>> timeFormat;
 
         public Builder() {
     	      // Empty
@@ -205,103 +205,103 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
     	      this.timeFormat = defaults.timeFormat;
         }
 
-        public Builder dateFormat(Input<Either<String,X12DateFormat>> dateFormat) {
+        public Builder dateFormat(Output<Either<String,X12DateFormat>> dateFormat) {
             this.dateFormat = Objects.requireNonNull(dateFormat);
             return this;
         }
 
         public Builder dateFormat(Either<String,X12DateFormat> dateFormat) {
-            this.dateFormat = Input.of(Objects.requireNonNull(dateFormat));
+            this.dateFormat = Output.of(Objects.requireNonNull(dateFormat));
             return this;
         }
 
-        public Builder functionalIdentifierCode(@Nullable Input<String> functionalIdentifierCode) {
+        public Builder functionalIdentifierCode(@Nullable Output<String> functionalIdentifierCode) {
             this.functionalIdentifierCode = functionalIdentifierCode;
             return this;
         }
 
         public Builder functionalIdentifierCode(@Nullable String functionalIdentifierCode) {
-            this.functionalIdentifierCode = Input.ofNullable(functionalIdentifierCode);
+            this.functionalIdentifierCode = Output.ofNullable(functionalIdentifierCode);
             return this;
         }
 
-        public Builder headerVersion(Input<String> headerVersion) {
+        public Builder headerVersion(Output<String> headerVersion) {
             this.headerVersion = Objects.requireNonNull(headerVersion);
             return this;
         }
 
         public Builder headerVersion(String headerVersion) {
-            this.headerVersion = Input.of(Objects.requireNonNull(headerVersion));
+            this.headerVersion = Output.of(Objects.requireNonNull(headerVersion));
             return this;
         }
 
-        public Builder messageId(Input<String> messageId) {
+        public Builder messageId(Output<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
         public Builder messageId(String messageId) {
-            this.messageId = Input.of(Objects.requireNonNull(messageId));
+            this.messageId = Output.of(Objects.requireNonNull(messageId));
             return this;
         }
 
-        public Builder protocolVersion(Input<String> protocolVersion) {
+        public Builder protocolVersion(Output<String> protocolVersion) {
             this.protocolVersion = Objects.requireNonNull(protocolVersion);
             return this;
         }
 
         public Builder protocolVersion(String protocolVersion) {
-            this.protocolVersion = Input.of(Objects.requireNonNull(protocolVersion));
+            this.protocolVersion = Output.of(Objects.requireNonNull(protocolVersion));
             return this;
         }
 
-        public Builder receiverApplicationId(Input<String> receiverApplicationId) {
+        public Builder receiverApplicationId(Output<String> receiverApplicationId) {
             this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
             return this;
         }
 
         public Builder receiverApplicationId(String receiverApplicationId) {
-            this.receiverApplicationId = Input.of(Objects.requireNonNull(receiverApplicationId));
+            this.receiverApplicationId = Output.of(Objects.requireNonNull(receiverApplicationId));
             return this;
         }
 
-        public Builder responsibleAgencyCode(Input<String> responsibleAgencyCode) {
+        public Builder responsibleAgencyCode(Output<String> responsibleAgencyCode) {
             this.responsibleAgencyCode = Objects.requireNonNull(responsibleAgencyCode);
             return this;
         }
 
         public Builder responsibleAgencyCode(String responsibleAgencyCode) {
-            this.responsibleAgencyCode = Input.of(Objects.requireNonNull(responsibleAgencyCode));
+            this.responsibleAgencyCode = Output.of(Objects.requireNonNull(responsibleAgencyCode));
             return this;
         }
 
-        public Builder senderApplicationId(Input<String> senderApplicationId) {
+        public Builder senderApplicationId(Output<String> senderApplicationId) {
             this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
             return this;
         }
 
         public Builder senderApplicationId(String senderApplicationId) {
-            this.senderApplicationId = Input.of(Objects.requireNonNull(senderApplicationId));
+            this.senderApplicationId = Output.of(Objects.requireNonNull(senderApplicationId));
             return this;
         }
 
-        public Builder targetNamespace(Input<String> targetNamespace) {
+        public Builder targetNamespace(Output<String> targetNamespace) {
             this.targetNamespace = Objects.requireNonNull(targetNamespace);
             return this;
         }
 
         public Builder targetNamespace(String targetNamespace) {
-            this.targetNamespace = Input.of(Objects.requireNonNull(targetNamespace));
+            this.targetNamespace = Output.of(Objects.requireNonNull(targetNamespace));
             return this;
         }
 
-        public Builder timeFormat(Input<Either<String,X12TimeFormat>> timeFormat) {
+        public Builder timeFormat(Output<Either<String,X12TimeFormat>> timeFormat) {
             this.timeFormat = Objects.requireNonNull(timeFormat);
             return this;
         }
 
         public Builder timeFormat(Either<String,X12TimeFormat> timeFormat) {
-            this.timeFormat = Input.of(Objects.requireNonNull(timeFormat));
+            this.timeFormat = Output.of(Objects.requireNonNull(timeFormat));
             return this;
         }
         public X12EnvelopeOverrideArgs build() {

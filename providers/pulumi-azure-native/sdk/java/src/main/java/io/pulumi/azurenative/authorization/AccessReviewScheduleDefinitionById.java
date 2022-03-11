@@ -8,7 +8,6 @@ import io.pulumi.azurenative.authorization.AccessReviewScheduleDefinitionByIdArg
 import io.pulumi.azurenative.authorization.outputs.AccessReviewInstanceResponse;
 import io.pulumi.azurenative.authorization.outputs.AccessReviewReviewerResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -494,21 +493,21 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessReviewScheduleDefinitionById(String name, @Nullable AccessReviewScheduleDefinitionByIdArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:AccessReviewScheduleDefinitionById", name, args == null ? AccessReviewScheduleDefinitionByIdArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:authorization:AccessReviewScheduleDefinitionById", name, args == null ? AccessReviewScheduleDefinitionByIdArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private AccessReviewScheduleDefinitionById(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private AccessReviewScheduleDefinitionById(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:authorization:AccessReviewScheduleDefinitionById", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:authorization/v20180501preview:AccessReviewScheduleDefinitionById").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20210301preview:AccessReviewScheduleDefinitionById").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20210701preview:AccessReviewScheduleDefinitionById").build()),
-                Input.of(Alias.builder().setType("azure-native:authorization/v20211116preview:AccessReviewScheduleDefinitionById").build())
+                Output.of(Alias.builder().setType("azure-native:authorization/v20180501preview:AccessReviewScheduleDefinitionById").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20210301preview:AccessReviewScheduleDefinitionById").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20210701preview:AccessReviewScheduleDefinitionById").build()),
+                Output.of(Alias.builder().setType("azure-native:authorization/v20211116preview:AccessReviewScheduleDefinitionById").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -522,7 +521,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AccessReviewScheduleDefinitionById get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static AccessReviewScheduleDefinitionById get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new AccessReviewScheduleDefinitionById(name, id, options);
     }
 }

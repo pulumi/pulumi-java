@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.IdentityProviderInputArgs;
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
@@ -24,10 +24,10 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="authCertificate")
-      private final @Nullable Input<String> authCertificate;
+      private final @Nullable Output<String> authCertificate;
 
-    public Input<String> getAuthCertificate() {
-        return this.authCertificate == null ? Input.empty() : this.authCertificate;
+    public Output<String> getAuthCertificate() {
+        return this.authCertificate == null ? Output.empty() : this.authCertificate;
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="instanceType")
-      private final @Nullable Input<String> instanceType;
+      private final @Nullable Output<String> instanceType;
 
-    public Input<String> getInstanceType() {
-        return this.instanceType == null ? Input.empty() : this.instanceType;
+    public Output<String> getInstanceType() {
+        return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
     /**
@@ -47,10 +47,10 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="physicalSiteId")
-      private final @Nullable Input<String> physicalSiteId;
+      private final @Nullable Output<String> physicalSiteId;
 
-    public Input<String> getPhysicalSiteId() {
-        return this.physicalSiteId == null ? Input.empty() : this.physicalSiteId;
+    public Output<String> getPhysicalSiteId() {
+        return this.physicalSiteId == null ? Output.empty() : this.physicalSiteId;
     }
 
     /**
@@ -58,10 +58,10 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceAgentIdentity")
-      private final @Nullable Input<IdentityProviderInputArgs> sourceAgentIdentity;
+      private final @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity;
 
-    public Input<IdentityProviderInputArgs> getSourceAgentIdentity() {
-        return this.sourceAgentIdentity == null ? Input.empty() : this.sourceAgentIdentity;
+    public Output<IdentityProviderInputArgs> getSourceAgentIdentity() {
+        return this.sourceAgentIdentity == null ? Output.empty() : this.sourceAgentIdentity;
     }
 
     /**
@@ -69,18 +69,18 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vmwareSiteId")
-      private final @Nullable Input<String> vmwareSiteId;
+      private final @Nullable Output<String> vmwareSiteId;
 
-    public Input<String> getVmwareSiteId() {
-        return this.vmwareSiteId == null ? Input.empty() : this.vmwareSiteId;
+    public Output<String> getVmwareSiteId() {
+        return this.vmwareSiteId == null ? Output.empty() : this.vmwareSiteId;
     }
 
     public InMageRcmFabricCreationInputArgs(
-        @Nullable Input<String> authCertificate,
-        @Nullable Input<String> instanceType,
-        @Nullable Input<String> physicalSiteId,
-        @Nullable Input<IdentityProviderInputArgs> sourceAgentIdentity,
-        @Nullable Input<String> vmwareSiteId) {
+        @Nullable Output<String> authCertificate,
+        @Nullable Output<String> instanceType,
+        @Nullable Output<String> physicalSiteId,
+        @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity,
+        @Nullable Output<String> vmwareSiteId) {
         this.authCertificate = authCertificate;
         this.instanceType = instanceType;
         this.physicalSiteId = physicalSiteId;
@@ -89,11 +89,11 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
     }
 
     private InMageRcmFabricCreationInputArgs() {
-        this.authCertificate = Input.empty();
-        this.instanceType = Input.empty();
-        this.physicalSiteId = Input.empty();
-        this.sourceAgentIdentity = Input.empty();
-        this.vmwareSiteId = Input.empty();
+        this.authCertificate = Output.empty();
+        this.instanceType = Output.empty();
+        this.physicalSiteId = Output.empty();
+        this.sourceAgentIdentity = Output.empty();
+        this.vmwareSiteId = Output.empty();
     }
 
     public static Builder builder() {
@@ -105,11 +105,11 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
     }
 
     public static final class Builder {
-        private @Nullable Input<String> authCertificate;
-        private @Nullable Input<String> instanceType;
-        private @Nullable Input<String> physicalSiteId;
-        private @Nullable Input<IdentityProviderInputArgs> sourceAgentIdentity;
-        private @Nullable Input<String> vmwareSiteId;
+        private @Nullable Output<String> authCertificate;
+        private @Nullable Output<String> instanceType;
+        private @Nullable Output<String> physicalSiteId;
+        private @Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity;
+        private @Nullable Output<String> vmwareSiteId;
 
         public Builder() {
     	      // Empty
@@ -124,53 +124,53 @@ public final class InMageRcmFabricCreationInputArgs extends io.pulumi.resources.
     	      this.vmwareSiteId = defaults.vmwareSiteId;
         }
 
-        public Builder authCertificate(@Nullable Input<String> authCertificate) {
+        public Builder authCertificate(@Nullable Output<String> authCertificate) {
             this.authCertificate = authCertificate;
             return this;
         }
 
         public Builder authCertificate(@Nullable String authCertificate) {
-            this.authCertificate = Input.ofNullable(authCertificate);
+            this.authCertificate = Output.ofNullable(authCertificate);
             return this;
         }
 
-        public Builder instanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Output<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Input.ofNullable(instanceType);
+            this.instanceType = Output.ofNullable(instanceType);
             return this;
         }
 
-        public Builder physicalSiteId(@Nullable Input<String> physicalSiteId) {
+        public Builder physicalSiteId(@Nullable Output<String> physicalSiteId) {
             this.physicalSiteId = physicalSiteId;
             return this;
         }
 
         public Builder physicalSiteId(@Nullable String physicalSiteId) {
-            this.physicalSiteId = Input.ofNullable(physicalSiteId);
+            this.physicalSiteId = Output.ofNullable(physicalSiteId);
             return this;
         }
 
-        public Builder sourceAgentIdentity(@Nullable Input<IdentityProviderInputArgs> sourceAgentIdentity) {
+        public Builder sourceAgentIdentity(@Nullable Output<IdentityProviderInputArgs> sourceAgentIdentity) {
             this.sourceAgentIdentity = sourceAgentIdentity;
             return this;
         }
 
         public Builder sourceAgentIdentity(@Nullable IdentityProviderInputArgs sourceAgentIdentity) {
-            this.sourceAgentIdentity = Input.ofNullable(sourceAgentIdentity);
+            this.sourceAgentIdentity = Output.ofNullable(sourceAgentIdentity);
             return this;
         }
 
-        public Builder vmwareSiteId(@Nullable Input<String> vmwareSiteId) {
+        public Builder vmwareSiteId(@Nullable Output<String> vmwareSiteId) {
             this.vmwareSiteId = vmwareSiteId;
             return this;
         }
 
         public Builder vmwareSiteId(@Nullable String vmwareSiteId) {
-            this.vmwareSiteId = Input.ofNullable(vmwareSiteId);
+            this.vmwareSiteId = Output.ofNullable(vmwareSiteId);
             return this;
         }
         public InMageRcmFabricCreationInputArgs build() {

@@ -10,7 +10,6 @@ import io.pulumi.azurenative.security.outputs.AwsCredsAuthenticationDetailsPrope
 import io.pulumi.azurenative.security.outputs.GcpCredentialsDetailsPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.HybridComputeSettingsPropertiesResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.Input;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
@@ -131,18 +130,18 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Connector(String name, @Nullable ConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:security:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Input.empty()));
+        super("azure-native:security:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
     }
 
-    private Connector(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    private Connector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         super("azure-native:security:Connector", name, null, makeResourceOptions(options, id));
     }
 
-    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Input<String> id) {
+    private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .setVersion(Utilities.getVersion())
             .setAliases(List.of(
-                Input.of(Alias.builder().setType("azure-native:security/v20200101preview:Connector").build())
+                Output.of(Alias.builder().setType("azure-native:security/v20200101preview:Connector").build())
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
@@ -156,7 +155,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @param id The _unique_ provider ID of the resource to lookup.
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Connector get(String name, Input<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
+    public static Connector get(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
         return new Connector(name, id, options);
     }
 }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
@@ -24,10 +24,10 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="fqdn")
-      private final @Nullable Input<String> fqdn;
+      private final @Nullable Output<String> fqdn;
 
-    public Input<String> getFqdn() {
-        return this.fqdn == null ? Input.empty() : this.fqdn;
+    public Output<String> getFqdn() {
+        return this.fqdn == null ? Output.empty() : this.fqdn;
     }
 
     /**
@@ -35,22 +35,22 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ipAddresses")
-      private final @Nullable Input<List<String>> ipAddresses;
+      private final @Nullable Output<List<String>> ipAddresses;
 
-    public Input<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
+    public Output<List<String>> getIpAddresses() {
+        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
     }
 
     public CustomDnsConfigPropertiesFormatArgs(
-        @Nullable Input<String> fqdn,
-        @Nullable Input<List<String>> ipAddresses) {
+        @Nullable Output<String> fqdn,
+        @Nullable Output<List<String>> ipAddresses) {
         this.fqdn = fqdn;
         this.ipAddresses = ipAddresses;
     }
 
     private CustomDnsConfigPropertiesFormatArgs() {
-        this.fqdn = Input.empty();
-        this.ipAddresses = Input.empty();
+        this.fqdn = Output.empty();
+        this.ipAddresses = Output.empty();
     }
 
     public static Builder builder() {
@@ -62,8 +62,8 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
     }
 
     public static final class Builder {
-        private @Nullable Input<String> fqdn;
-        private @Nullable Input<List<String>> ipAddresses;
+        private @Nullable Output<String> fqdn;
+        private @Nullable Output<List<String>> ipAddresses;
 
         public Builder() {
     	      // Empty
@@ -75,23 +75,23 @@ public final class CustomDnsConfigPropertiesFormatArgs extends io.pulumi.resourc
     	      this.ipAddresses = defaults.ipAddresses;
         }
 
-        public Builder fqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Output<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Input.ofNullable(fqdn);
+            this.fqdn = Output.ofNullable(fqdn);
             return this;
         }
 
-        public Builder ipAddresses(@Nullable Input<List<String>> ipAddresses) {
+        public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Input.ofNullable(ipAddresses);
+            this.ipAddresses = Output.ofNullable(ipAddresses);
             return this;
         }
         public CustomDnsConfigPropertiesFormatArgs build() {

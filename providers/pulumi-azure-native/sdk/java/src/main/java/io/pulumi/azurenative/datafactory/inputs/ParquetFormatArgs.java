@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.Input;
+import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
@@ -24,10 +24,10 @@ public final class ParquetFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deserializer")
-      private final @Nullable Input<Object> deserializer;
+      private final @Nullable Output<Object> deserializer;
 
-    public Input<Object> getDeserializer() {
-        return this.deserializer == null ? Input.empty() : this.deserializer;
+    public Output<Object> getDeserializer() {
+        return this.deserializer == null ? Output.empty() : this.deserializer;
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ParquetFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serializer")
-      private final @Nullable Input<Object> serializer;
+      private final @Nullable Output<Object> serializer;
 
-    public Input<Object> getSerializer() {
-        return this.serializer == null ? Input.empty() : this.serializer;
+    public Output<Object> getSerializer() {
+        return this.serializer == null ? Output.empty() : this.serializer;
     }
 
     /**
@@ -47,25 +47,25 @@ public final class ParquetFormatArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-      private final Input<String> type;
+      private final Output<String> type;
 
-    public Input<String> getType() {
+    public Output<String> getType() {
         return this.type;
     }
 
     public ParquetFormatArgs(
-        @Nullable Input<Object> deserializer,
-        @Nullable Input<Object> serializer,
-        Input<String> type) {
+        @Nullable Output<Object> deserializer,
+        @Nullable Output<Object> serializer,
+        Output<String> type) {
         this.deserializer = deserializer;
         this.serializer = serializer;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ParquetFormatArgs() {
-        this.deserializer = Input.empty();
-        this.serializer = Input.empty();
-        this.type = Input.empty();
+        this.deserializer = Output.empty();
+        this.serializer = Output.empty();
+        this.type = Output.empty();
     }
 
     public static Builder builder() {
@@ -77,9 +77,9 @@ public final class ParquetFormatArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     public static final class Builder {
-        private @Nullable Input<Object> deserializer;
-        private @Nullable Input<Object> serializer;
-        private Input<String> type;
+        private @Nullable Output<Object> deserializer;
+        private @Nullable Output<Object> serializer;
+        private Output<String> type;
 
         public Builder() {
     	      // Empty
@@ -92,33 +92,33 @@ public final class ParquetFormatArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder deserializer(@Nullable Input<Object> deserializer) {
+        public Builder deserializer(@Nullable Output<Object> deserializer) {
             this.deserializer = deserializer;
             return this;
         }
 
         public Builder deserializer(@Nullable Object deserializer) {
-            this.deserializer = Input.ofNullable(deserializer);
+            this.deserializer = Output.ofNullable(deserializer);
             return this;
         }
 
-        public Builder serializer(@Nullable Input<Object> serializer) {
+        public Builder serializer(@Nullable Output<Object> serializer) {
             this.serializer = serializer;
             return this;
         }
 
         public Builder serializer(@Nullable Object serializer) {
-            this.serializer = Input.ofNullable(serializer);
+            this.serializer = Output.ofNullable(serializer);
             return this;
         }
 
-        public Builder type(Input<String> type) {
+        public Builder type(Output<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
         public Builder type(String type) {
-            this.type = Input.of(Objects.requireNonNull(type));
+            this.type = Output.of(Objects.requireNonNull(type));
             return this;
         }
         public ParquetFormatArgs build() {
