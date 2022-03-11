@@ -84,12 +84,80 @@ jobs:
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: Run tests
+      - name: ensure pulumi language jvm installed
         run: |
           make bin/pulumi-language-jvm
-          for provider in `ls tests/examples/*/ -d`; do
-            bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" && cd  $provider && pulumi destroy -s dev; pulumi stack rm dev --yes; pulumi stack init dev; pulumi preview; pulumi stack rm dev --yes;";
-          done;
+      - name: run example aws-java-webserver
+        run: |
+          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+            cd tests/examples/aws-java-webserver &&
+            ./gradlew install
+            pulumi destroy -s dev --yes;
+            pulumi stack rm dev --yes;
+            pulumi stack init dev;
+            pulumi preview;
+            pulumi stack rm dev --yes;";
+      - name: run example azure-java-appservice-sql
+        run: |
+          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+            cd tests/examples/azure-java-appservice-sql &&
+            ./gradlew install
+            pulumi destroy -s dev --yes;
+            pulumi stack rm dev --yes;
+            pulumi stack init dev;
+            pulumi preview;
+            pulumi stack rm dev --yes;";
+      - name: run example gcp-java-gke-hello-world
+        run: |
+          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+            cd tests/examples/gcp-java-gke-hello-world &&
+            ./gradlew install
+            pulumi destroy -s dev --yes;
+            pulumi stack rm dev --yes;
+            pulumi stack init dev;
+            pulumi preview;
+            pulumi stack rm dev --yes;";
+      - name: run example minimal
+        run: |
+          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+            cd tests/examples/minimal &&
+            ./gradlew install
+            pulumi config set minimal:name foo
+            pulumi destroy -s dev --yes;
+            pulumi stack rm dev --yes;
+            pulumi stack init dev;
+            pulumi preview;
+            pulumi stack rm dev --yes;";
+      - name: run example aws-native-java-s3-folder
+        run: |
+          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+            cd tests/examples/aws-native-java-s3-folder &&
+            ./gradlew install
+            pulumi destroy -s dev --yes;
+            pulumi stack rm dev --yes;
+            pulumi stack init dev;
+            pulumi preview;
+            pulumi stack rm dev --yes;";
+      - name: run example azure-java-static-website
+        run: |
+          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+            cd tests/examples/azure-java-static-website &&
+            ./gradlew install
+            pulumi destroy -s dev --yes;
+            pulumi stack rm dev --yes;
+            pulumi stack init dev;
+            pulumi preview;
+            pulumi stack rm dev --yes;";
+      - name: run example random
+        run: |
+          bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
+            cd tests/examples/random &&
+            ./gradlew install
+            pulumi destroy -s dev --yes;
+            pulumi stack rm dev --yes;
+            pulumi stack init dev;
+            pulumi preview;
+            pulumi stack rm dev --yes;";
     strategy:
       fail-fast: true
   go-lint:
