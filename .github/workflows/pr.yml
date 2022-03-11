@@ -125,7 +125,7 @@ jobs:
             ./gradlew install &&
             pulumi stack init dev &&
             pulumi preview &&
-            pulumi stack rm dev --ye;
+            pulumi stack rm dev --yes";
   example3:
     runs-on: ubuntu-latest
     steps:
