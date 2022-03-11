@@ -33,12 +33,12 @@ public final class ByteMatchSetByteMatchTuple {
      */
     private final String textTransformation;
 
-    @OutputCustomType.Constructor({"fieldToMatch","positionalConstraint","targetString","textTransformation"})
+    @OutputCustomType.Constructor
     private ByteMatchSetByteMatchTuple(
-        ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch,
-        String positionalConstraint,
-        @Nullable String targetString,
-        String textTransformation) {
+        @OutputCustomType.Parameter("fieldToMatch") ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("positionalConstraint") String positionalConstraint,
+        @OutputCustomType.Parameter("targetString") @Nullable String targetString,
+        @OutputCustomType.Parameter("textTransformation") String textTransformation) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.targetString = targetString;
@@ -100,22 +100,22 @@ public final class ByteMatchSetByteMatchTuple {
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder setFieldToMatch(ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(ByteMatchSetByteMatchTupleFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setPositionalConstraint(String positionalConstraint) {
+        public Builder positionalConstraint(String positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
 
-        public Builder setTargetString(@Nullable String targetString) {
+        public Builder targetString(@Nullable String targetString) {
             this.targetString = targetString;
             return this;
         }
 
-        public Builder setTextTransformation(String textTransformation) {
+        public Builder textTransformation(String textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }

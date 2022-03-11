@@ -137,62 +137,62 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
     	      this.parent = defaults.parent;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setFolderId(@Nullable Input<String> folderId) {
+        public Builder folderId(@Nullable Input<String> folderId) {
             this.folderId = folderId;
             return this;
         }
 
-        public Builder setFolderId(@Nullable String folderId) {
+        public Builder folderId(@Nullable String folderId) {
             this.folderId = Input.ofNullable(folderId);
             return this;
         }
 
-        public Builder setLifecycleState(@Nullable Input<String> lifecycleState) {
+        public Builder lifecycleState(@Nullable Input<String> lifecycleState) {
             this.lifecycleState = lifecycleState;
             return this;
         }
 
-        public Builder setLifecycleState(@Nullable String lifecycleState) {
+        public Builder lifecycleState(@Nullable String lifecycleState) {
             this.lifecycleState = Input.ofNullable(lifecycleState);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }

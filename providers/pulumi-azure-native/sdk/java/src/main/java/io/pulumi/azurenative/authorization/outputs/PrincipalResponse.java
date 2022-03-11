@@ -32,12 +32,12 @@ public final class PrincipalResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"displayName","email","id","type"})
+    @OutputCustomType.Constructor
     private PrincipalResponse(
-        @Nullable String displayName,
-        @Nullable String email,
-        @Nullable String id,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.displayName = displayName;
         this.email = email;
         this.id = id;
@@ -99,22 +99,22 @@ public final class PrincipalResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

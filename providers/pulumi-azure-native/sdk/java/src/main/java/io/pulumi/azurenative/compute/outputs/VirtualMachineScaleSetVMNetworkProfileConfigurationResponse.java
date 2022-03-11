@@ -17,8 +17,8 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse {
      */
     private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
-    @OutputCustomType.Constructor({"networkInterfaceConfigurations"})
-    private VirtualMachineScaleSetVMNetworkProfileConfigurationResponse(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
+    @OutputCustomType.Constructor
+    private VirtualMachineScaleSetVMNetworkProfileConfigurationResponse(@OutputCustomType.Parameter("networkInterfaceConfigurations") @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse {
     	      this.networkInterfaceConfigurations = defaults.networkInterfaceConfigurations;
         }
 
-        public Builder setNetworkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }

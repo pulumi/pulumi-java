@@ -27,11 +27,11 @@ public final class JitApproverDefinitionResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"displayName","id","type"})
+    @OutputCustomType.Constructor
     private JitApproverDefinitionResponse(
-        @Nullable String displayName,
-        String id,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.displayName = displayName;
         this.id = id;
         this.type = type;
@@ -83,17 +83,17 @@ public final class JitApproverDefinitionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

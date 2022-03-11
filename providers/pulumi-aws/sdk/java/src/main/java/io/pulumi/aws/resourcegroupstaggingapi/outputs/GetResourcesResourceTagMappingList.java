@@ -28,11 +28,11 @@ public final class GetResourcesResourceTagMappingList {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"complianceDetails","resourceArn","tags"})
+    @OutputCustomType.Constructor
     private GetResourcesResourceTagMappingList(
-        List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails,
-        String resourceArn,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("complianceDetails") List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails,
+        @OutputCustomType.Parameter("resourceArn") String resourceArn,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.complianceDetails = complianceDetails;
         this.resourceArn = resourceArn;
         this.tags = tags;
@@ -84,17 +84,17 @@ public final class GetResourcesResourceTagMappingList {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setComplianceDetails(List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails) {
+        public Builder complianceDetails(List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails) {
             this.complianceDetails = Objects.requireNonNull(complianceDetails);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

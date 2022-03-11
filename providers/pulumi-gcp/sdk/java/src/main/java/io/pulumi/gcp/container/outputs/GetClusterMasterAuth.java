@@ -16,12 +16,12 @@ public final class GetClusterMasterAuth {
     private final String clientKey;
     private final String clusterCaCertificate;
 
-    @OutputCustomType.Constructor({"clientCertificate","clientCertificateConfigs","clientKey","clusterCaCertificate"})
+    @OutputCustomType.Constructor
     private GetClusterMasterAuth(
-        String clientCertificate,
-        List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs,
-        String clientKey,
-        String clusterCaCertificate) {
+        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
+        @OutputCustomType.Parameter("clientCertificateConfigs") List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs,
+        @OutputCustomType.Parameter("clientKey") String clientKey,
+        @OutputCustomType.Parameter("clusterCaCertificate") String clusterCaCertificate) {
         this.clientCertificate = clientCertificate;
         this.clientCertificateConfigs = clientCertificateConfigs;
         this.clientKey = clientKey;
@@ -67,22 +67,22 @@ public final class GetClusterMasterAuth {
     	      this.clusterCaCertificate = defaults.clusterCaCertificate;
         }
 
-        public Builder setClientCertificate(String clientCertificate) {
+        public Builder clientCertificate(String clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
 
-        public Builder setClientCertificateConfigs(List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs) {
+        public Builder clientCertificateConfigs(List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs) {
             this.clientCertificateConfigs = Objects.requireNonNull(clientCertificateConfigs);
             return this;
         }
 
-        public Builder setClientKey(String clientKey) {
+        public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
 
-        public Builder setClusterCaCertificate(String clusterCaCertificate) {
+        public Builder clusterCaCertificate(String clusterCaCertificate) {
             this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate);
             return this;
         }

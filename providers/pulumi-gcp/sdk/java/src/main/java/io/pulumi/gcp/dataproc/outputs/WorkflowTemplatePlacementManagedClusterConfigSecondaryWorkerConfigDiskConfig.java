@@ -28,11 +28,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      */
     private final @Nullable Integer numLocalSsds;
 
-    @OutputCustomType.Constructor({"bootDiskSizeGb","bootDiskType","numLocalSsds"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig(
-        @Nullable Integer bootDiskSizeGb,
-        @Nullable String bootDiskType,
-        @Nullable Integer numLocalSsds) {
+        @OutputCustomType.Parameter("bootDiskSizeGb") @Nullable Integer bootDiskSizeGb,
+        @OutputCustomType.Parameter("bootDiskType") @Nullable String bootDiskType,
+        @OutputCustomType.Parameter("numLocalSsds") @Nullable Integer numLocalSsds) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
         this.numLocalSsds = numLocalSsds;
@@ -84,17 +84,17 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     	      this.numLocalSsds = defaults.numLocalSsds;
         }
 
-        public Builder setBootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
 
-        public Builder setBootDiskType(@Nullable String bootDiskType) {
+        public Builder bootDiskType(@Nullable String bootDiskType) {
             this.bootDiskType = bootDiskType;
             return this;
         }
 
-        public Builder setNumLocalSsds(@Nullable Integer numLocalSsds) {
+        public Builder numLocalSsds(@Nullable Integer numLocalSsds) {
             this.numLocalSsds = numLocalSsds;
             return this;
         }

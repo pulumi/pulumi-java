@@ -15,8 +15,8 @@ public final class TopicRuleLambda {
      */
     private final String functionArn;
 
-    @OutputCustomType.Constructor({"functionArn"})
-    private TopicRuleLambda(String functionArn) {
+    @OutputCustomType.Constructor
+    private TopicRuleLambda(@OutputCustomType.Parameter("functionArn") String functionArn) {
         this.functionArn = functionArn;
     }
 
@@ -48,7 +48,7 @@ public final class TopicRuleLambda {
     	      this.functionArn = defaults.functionArn;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }

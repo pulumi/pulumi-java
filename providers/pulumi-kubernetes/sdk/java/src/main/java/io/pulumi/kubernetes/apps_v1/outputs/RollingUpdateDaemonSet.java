@@ -24,10 +24,10 @@ public final class RollingUpdateDaemonSet {
      */
     private final @Nullable Either<Integer,String> maxUnavailable;
 
-    @OutputCustomType.Constructor({"maxSurge","maxUnavailable"})
+    @OutputCustomType.Constructor
     private RollingUpdateDaemonSet(
-        @Nullable Either<Integer,String> maxSurge,
-        @Nullable Either<Integer,String> maxUnavailable) {
+        @OutputCustomType.Parameter("maxSurge") @Nullable Either<Integer,String> maxSurge,
+        @OutputCustomType.Parameter("maxUnavailable") @Nullable Either<Integer,String> maxUnavailable) {
         this.maxSurge = maxSurge;
         this.maxUnavailable = maxUnavailable;
     }
@@ -69,12 +69,12 @@ public final class RollingUpdateDaemonSet {
     	      this.maxUnavailable = defaults.maxUnavailable;
         }
 
-        public Builder setMaxSurge(@Nullable Either<Integer,String> maxSurge) {
+        public Builder maxSurge(@Nullable Either<Integer,String> maxSurge) {
             this.maxSurge = maxSurge;
             return this;
         }
 
-        public Builder setMaxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }

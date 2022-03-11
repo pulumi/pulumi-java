@@ -22,10 +22,10 @@ public final class ConfigurationProfileValidator {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"content","type"})
+    @OutputCustomType.Constructor
     private ConfigurationProfileValidator(
-        @Nullable String content,
-        String type) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("type") String type) {
         this.content = content;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class ConfigurationProfileValidator {
     	      this.type = defaults.type;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

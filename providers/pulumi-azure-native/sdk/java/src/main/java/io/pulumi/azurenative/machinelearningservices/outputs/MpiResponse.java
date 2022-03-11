@@ -24,10 +24,10 @@ public final class MpiResponse {
      */
     private final @Nullable Integer processCountPerInstance;
 
-    @OutputCustomType.Constructor({"distributionType","processCountPerInstance"})
+    @OutputCustomType.Constructor
     private MpiResponse(
-        String distributionType,
-        @Nullable Integer processCountPerInstance) {
+        @OutputCustomType.Parameter("distributionType") String distributionType,
+        @OutputCustomType.Parameter("processCountPerInstance") @Nullable Integer processCountPerInstance) {
         this.distributionType = distributionType;
         this.processCountPerInstance = processCountPerInstance;
     }
@@ -70,12 +70,12 @@ public final class MpiResponse {
     	      this.processCountPerInstance = defaults.processCountPerInstance;
         }
 
-        public Builder setDistributionType(String distributionType) {
+        public Builder distributionType(String distributionType) {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
 
-        public Builder setProcessCountPerInstance(@Nullable Integer processCountPerInstance) {
+        public Builder processCountPerInstance(@Nullable Integer processCountPerInstance) {
             this.processCountPerInstance = processCountPerInstance;
             return this;
         }

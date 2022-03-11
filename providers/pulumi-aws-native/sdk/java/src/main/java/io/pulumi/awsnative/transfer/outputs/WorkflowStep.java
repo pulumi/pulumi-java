@@ -37,13 +37,13 @@ public final class WorkflowStep {
     private final @Nullable WorkflowStepTagStepDetailsProperties tagStepDetails;
     private final @Nullable WorkflowStepType type;
 
-    @OutputCustomType.Constructor({"copyStepDetails","customStepDetails","deleteStepDetails","tagStepDetails","type"})
+    @OutputCustomType.Constructor
     private WorkflowStep(
-        @Nullable WorkflowStepCopyStepDetailsProperties copyStepDetails,
-        @Nullable WorkflowStepCustomStepDetailsProperties customStepDetails,
-        @Nullable WorkflowStepDeleteStepDetailsProperties deleteStepDetails,
-        @Nullable WorkflowStepTagStepDetailsProperties tagStepDetails,
-        @Nullable WorkflowStepType type) {
+        @OutputCustomType.Parameter("copyStepDetails") @Nullable WorkflowStepCopyStepDetailsProperties copyStepDetails,
+        @OutputCustomType.Parameter("customStepDetails") @Nullable WorkflowStepCustomStepDetailsProperties customStepDetails,
+        @OutputCustomType.Parameter("deleteStepDetails") @Nullable WorkflowStepDeleteStepDetailsProperties deleteStepDetails,
+        @OutputCustomType.Parameter("tagStepDetails") @Nullable WorkflowStepTagStepDetailsProperties tagStepDetails,
+        @OutputCustomType.Parameter("type") @Nullable WorkflowStepType type) {
         this.copyStepDetails = copyStepDetails;
         this.customStepDetails = customStepDetails;
         this.deleteStepDetails = deleteStepDetails;
@@ -111,27 +111,27 @@ public final class WorkflowStep {
     	      this.type = defaults.type;
         }
 
-        public Builder setCopyStepDetails(@Nullable WorkflowStepCopyStepDetailsProperties copyStepDetails) {
+        public Builder copyStepDetails(@Nullable WorkflowStepCopyStepDetailsProperties copyStepDetails) {
             this.copyStepDetails = copyStepDetails;
             return this;
         }
 
-        public Builder setCustomStepDetails(@Nullable WorkflowStepCustomStepDetailsProperties customStepDetails) {
+        public Builder customStepDetails(@Nullable WorkflowStepCustomStepDetailsProperties customStepDetails) {
             this.customStepDetails = customStepDetails;
             return this;
         }
 
-        public Builder setDeleteStepDetails(@Nullable WorkflowStepDeleteStepDetailsProperties deleteStepDetails) {
+        public Builder deleteStepDetails(@Nullable WorkflowStepDeleteStepDetailsProperties deleteStepDetails) {
             this.deleteStepDetails = deleteStepDetails;
             return this;
         }
 
-        public Builder setTagStepDetails(@Nullable WorkflowStepTagStepDetailsProperties tagStepDetails) {
+        public Builder tagStepDetails(@Nullable WorkflowStepTagStepDetailsProperties tagStepDetails) {
             this.tagStepDetails = tagStepDetails;
             return this;
         }
 
-        public Builder setType(@Nullable WorkflowStepType type) {
+        public Builder type(@Nullable WorkflowStepType type) {
             this.type = type;
             return this;
         }

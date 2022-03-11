@@ -15,8 +15,8 @@ public final class OrganizationPolicyRestorePolicy {
      */
     private final Boolean $default;
 
-    @OutputCustomType.Constructor({"$default"})
-    private OrganizationPolicyRestorePolicy(Boolean $default) {
+    @OutputCustomType.Constructor
+    private OrganizationPolicyRestorePolicy(@OutputCustomType.Parameter("default") Boolean $default) {
         this.$default = $default;
     }
 
@@ -48,7 +48,7 @@ public final class OrganizationPolicyRestorePolicy {
     	      this.$default = defaults.$default;
         }
 
-        public Builder set$default(Boolean $default) {
+        public Builder $default(Boolean $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }

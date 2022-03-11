@@ -27,11 +27,11 @@ public final class InputDataBindingResponse {
      */
     private final @Nullable String pathOnCompute;
 
-    @OutputCustomType.Constructor({"dataId","mode","pathOnCompute"})
+    @OutputCustomType.Constructor
     private InputDataBindingResponse(
-        @Nullable String dataId,
-        @Nullable String mode,
-        @Nullable String pathOnCompute) {
+        @OutputCustomType.Parameter("dataId") @Nullable String dataId,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("pathOnCompute") @Nullable String pathOnCompute) {
         this.dataId = dataId;
         this.mode = mode;
         this.pathOnCompute = pathOnCompute;
@@ -83,17 +83,17 @@ public final class InputDataBindingResponse {
     	      this.pathOnCompute = defaults.pathOnCompute;
         }
 
-        public Builder setDataId(@Nullable String dataId) {
+        public Builder dataId(@Nullable String dataId) {
             this.dataId = dataId;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setPathOnCompute(@Nullable String pathOnCompute) {
+        public Builder pathOnCompute(@Nullable String pathOnCompute) {
             this.pathOnCompute = pathOnCompute;
             return this;
         }

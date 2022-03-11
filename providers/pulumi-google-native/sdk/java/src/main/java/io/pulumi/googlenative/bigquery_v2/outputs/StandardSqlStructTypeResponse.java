@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class StandardSqlStructTypeResponse {
     private final List<StandardSqlFieldResponse> fields;
 
-    @OutputCustomType.Constructor({"fields"})
-    private StandardSqlStructTypeResponse(List<StandardSqlFieldResponse> fields) {
+    @OutputCustomType.Constructor
+    private StandardSqlStructTypeResponse(@OutputCustomType.Parameter("fields") List<StandardSqlFieldResponse> fields) {
         this.fields = fields;
     }
 
@@ -41,7 +41,7 @@ public final class StandardSqlStructTypeResponse {
     	      this.fields = defaults.fields;
         }
 
-        public Builder setFields(List<StandardSqlFieldResponse> fields) {
+        public Builder fields(List<StandardSqlFieldResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }

@@ -23,10 +23,10 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse {
      */
     private final @Nullable String storageAccountType;
 
-    @OutputCustomType.Constructor({"diskEncryptionSet","storageAccountType"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetManagedDiskParametersResponse(
-        @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
-        @Nullable String storageAccountType) {
+        @OutputCustomType.Parameter("diskEncryptionSet") @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
         this.diskEncryptionSet = diskEncryptionSet;
         this.storageAccountType = storageAccountType;
     }
@@ -68,12 +68,12 @@ public final class VirtualMachineScaleSetManagedDiskParametersResponse {
     	      this.storageAccountType = defaults.storageAccountType;
         }
 
-        public Builder setDiskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
+        public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
             this.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable String storageAccountType) {
+        public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }

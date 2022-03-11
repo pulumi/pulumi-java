@@ -21,10 +21,10 @@ public final class AzureMLWebServiceFileResponse {
      */
     private final LinkedServiceReferenceResponse linkedServiceName;
 
-    @OutputCustomType.Constructor({"filePath","linkedServiceName"})
+    @OutputCustomType.Constructor
     private AzureMLWebServiceFileResponse(
-        Object filePath,
-        LinkedServiceReferenceResponse linkedServiceName) {
+        @OutputCustomType.Parameter("filePath") Object filePath,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName) {
         this.filePath = filePath;
         this.linkedServiceName = linkedServiceName;
     }
@@ -66,12 +66,12 @@ public final class AzureMLWebServiceFileResponse {
     	      this.linkedServiceName = defaults.linkedServiceName;
         }
 
-        public Builder setFilePath(Object filePath) {
+        public Builder filePath(Object filePath) {
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }

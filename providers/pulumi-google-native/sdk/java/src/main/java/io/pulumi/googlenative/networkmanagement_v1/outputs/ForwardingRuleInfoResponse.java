@@ -45,15 +45,15 @@ public final class ForwardingRuleInfoResponse {
      */
     private final String vip;
 
-    @OutputCustomType.Constructor({"displayName","matchedPortRange","matchedProtocol","networkUri","target","uri","vip"})
+    @OutputCustomType.Constructor
     private ForwardingRuleInfoResponse(
-        String displayName,
-        String matchedPortRange,
-        String matchedProtocol,
-        String networkUri,
-        String target,
-        String uri,
-        String vip) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("matchedPortRange") String matchedPortRange,
+        @OutputCustomType.Parameter("matchedProtocol") String matchedProtocol,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("vip") String vip) {
         this.displayName = displayName;
         this.matchedPortRange = matchedPortRange;
         this.matchedProtocol = matchedProtocol;
@@ -145,37 +145,37 @@ public final class ForwardingRuleInfoResponse {
     	      this.vip = defaults.vip;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setMatchedPortRange(String matchedPortRange) {
+        public Builder matchedPortRange(String matchedPortRange) {
             this.matchedPortRange = Objects.requireNonNull(matchedPortRange);
             return this;
         }
 
-        public Builder setMatchedProtocol(String matchedProtocol) {
+        public Builder matchedProtocol(String matchedProtocol) {
             this.matchedProtocol = Objects.requireNonNull(matchedProtocol);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setVip(String vip) {
+        public Builder vip(String vip) {
             this.vip = Objects.requireNonNull(vip);
             return this;
         }

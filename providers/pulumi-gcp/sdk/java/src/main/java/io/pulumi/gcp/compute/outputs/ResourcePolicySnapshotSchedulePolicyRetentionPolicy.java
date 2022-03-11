@@ -26,10 +26,10 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
      */
     private final @Nullable String onSourceDiskDelete;
 
-    @OutputCustomType.Constructor({"maxRetentionDays","onSourceDiskDelete"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyRetentionPolicy(
-        Integer maxRetentionDays,
-        @Nullable String onSourceDiskDelete) {
+        @OutputCustomType.Parameter("maxRetentionDays") Integer maxRetentionDays,
+        @OutputCustomType.Parameter("onSourceDiskDelete") @Nullable String onSourceDiskDelete) {
         this.maxRetentionDays = maxRetentionDays;
         this.onSourceDiskDelete = onSourceDiskDelete;
     }
@@ -74,12 +74,12 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
     	      this.onSourceDiskDelete = defaults.onSourceDiskDelete;
         }
 
-        public Builder setMaxRetentionDays(Integer maxRetentionDays) {
+        public Builder maxRetentionDays(Integer maxRetentionDays) {
             this.maxRetentionDays = Objects.requireNonNull(maxRetentionDays);
             return this;
         }
 
-        public Builder setOnSourceDiskDelete(@Nullable String onSourceDiskDelete) {
+        public Builder onSourceDiskDelete(@Nullable String onSourceDiskDelete) {
             this.onSourceDiskDelete = onSourceDiskDelete;
             return this;
         }

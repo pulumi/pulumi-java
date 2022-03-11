@@ -54,16 +54,16 @@ public final class ProbingDetailsResponse {
      */
     private final String verifyTime;
 
-    @OutputCustomType.Constructor({"abortCause","endpointInfo","error","probingLatency","result","sentProbeCount","successfulProbeCount","verifyTime"})
+    @OutputCustomType.Constructor
     private ProbingDetailsResponse(
-        String abortCause,
-        EndpointInfoResponse endpointInfo,
-        StatusResponse error,
-        LatencyDistributionResponse probingLatency,
-        String result,
-        Integer sentProbeCount,
-        Integer successfulProbeCount,
-        String verifyTime) {
+        @OutputCustomType.Parameter("abortCause") String abortCause,
+        @OutputCustomType.Parameter("endpointInfo") EndpointInfoResponse endpointInfo,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("probingLatency") LatencyDistributionResponse probingLatency,
+        @OutputCustomType.Parameter("result") String result,
+        @OutputCustomType.Parameter("sentProbeCount") Integer sentProbeCount,
+        @OutputCustomType.Parameter("successfulProbeCount") Integer successfulProbeCount,
+        @OutputCustomType.Parameter("verifyTime") String verifyTime) {
         this.abortCause = abortCause;
         this.endpointInfo = endpointInfo;
         this.error = error;
@@ -165,42 +165,42 @@ public final class ProbingDetailsResponse {
     	      this.verifyTime = defaults.verifyTime;
         }
 
-        public Builder setAbortCause(String abortCause) {
+        public Builder abortCause(String abortCause) {
             this.abortCause = Objects.requireNonNull(abortCause);
             return this;
         }
 
-        public Builder setEndpointInfo(EndpointInfoResponse endpointInfo) {
+        public Builder endpointInfo(EndpointInfoResponse endpointInfo) {
             this.endpointInfo = Objects.requireNonNull(endpointInfo);
             return this;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setProbingLatency(LatencyDistributionResponse probingLatency) {
+        public Builder probingLatency(LatencyDistributionResponse probingLatency) {
             this.probingLatency = Objects.requireNonNull(probingLatency);
             return this;
         }
 
-        public Builder setResult(String result) {
+        public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setSentProbeCount(Integer sentProbeCount) {
+        public Builder sentProbeCount(Integer sentProbeCount) {
             this.sentProbeCount = Objects.requireNonNull(sentProbeCount);
             return this;
         }
 
-        public Builder setSuccessfulProbeCount(Integer successfulProbeCount) {
+        public Builder successfulProbeCount(Integer successfulProbeCount) {
             this.successfulProbeCount = Objects.requireNonNull(successfulProbeCount);
             return this;
         }
 
-        public Builder setVerifyTime(String verifyTime) {
+        public Builder verifyTime(String verifyTime) {
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
         }

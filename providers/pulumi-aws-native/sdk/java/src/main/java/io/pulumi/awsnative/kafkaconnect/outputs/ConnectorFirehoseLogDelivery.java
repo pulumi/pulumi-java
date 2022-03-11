@@ -23,10 +23,10 @@ public final class ConnectorFirehoseLogDelivery {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"deliveryStream","enabled"})
+    @OutputCustomType.Constructor
     private ConnectorFirehoseLogDelivery(
-        @Nullable String deliveryStream,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("deliveryStream") @Nullable String deliveryStream,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.deliveryStream = deliveryStream;
         this.enabled = enabled;
     }
@@ -68,12 +68,12 @@ public final class ConnectorFirehoseLogDelivery {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDeliveryStream(@Nullable String deliveryStream) {
+        public Builder deliveryStream(@Nullable String deliveryStream) {
             this.deliveryStream = deliveryStream;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

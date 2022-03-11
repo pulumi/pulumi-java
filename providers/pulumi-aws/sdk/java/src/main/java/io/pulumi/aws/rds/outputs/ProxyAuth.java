@@ -32,12 +32,12 @@ public final class ProxyAuth {
      */
     private final @Nullable String secretArn;
 
-    @OutputCustomType.Constructor({"authScheme","description","iamAuth","secretArn"})
+    @OutputCustomType.Constructor
     private ProxyAuth(
-        @Nullable String authScheme,
-        @Nullable String description,
-        @Nullable String iamAuth,
-        @Nullable String secretArn) {
+        @OutputCustomType.Parameter("authScheme") @Nullable String authScheme,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("iamAuth") @Nullable String iamAuth,
+        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn) {
         this.authScheme = authScheme;
         this.description = description;
         this.iamAuth = iamAuth;
@@ -99,22 +99,22 @@ public final class ProxyAuth {
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setAuthScheme(@Nullable String authScheme) {
+        public Builder authScheme(@Nullable String authScheme) {
             this.authScheme = authScheme;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIamAuth(@Nullable String iamAuth) {
+        public Builder iamAuth(@Nullable String iamAuth) {
             this.iamAuth = iamAuth;
             return this;
         }
 
-        public Builder setSecretArn(@Nullable String secretArn) {
+        public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
         }

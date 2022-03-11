@@ -17,10 +17,10 @@ public final class OriginGroupOverrideActionParametersResponse {
      */
     private final ResourceReferenceResponse originGroup;
 
-    @OutputCustomType.Constructor({"odataType","originGroup"})
+    @OutputCustomType.Constructor
     private OriginGroupOverrideActionParametersResponse(
-        String odataType,
-        ResourceReferenceResponse originGroup) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("originGroup") ResourceReferenceResponse originGroup) {
         this.odataType = odataType;
         this.originGroup = originGroup;
     }
@@ -58,12 +58,12 @@ public final class OriginGroupOverrideActionParametersResponse {
     	      this.originGroup = defaults.originGroup;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOriginGroup(ResourceReferenceResponse originGroup) {
+        public Builder originGroup(ResourceReferenceResponse originGroup) {
             this.originGroup = Objects.requireNonNull(originGroup);
             return this;
         }

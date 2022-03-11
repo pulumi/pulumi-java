@@ -14,10 +14,10 @@ public final class TopicRuleIotSiteWiseAction {
     private final List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"putAssetPropertyValueEntries","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleIotSiteWiseAction(
-        List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries,
-        String roleArn) {
+        @OutputCustomType.Parameter("putAssetPropertyValueEntries") List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.putAssetPropertyValueEntries = putAssetPropertyValueEntries;
         this.roleArn = roleArn;
     }
@@ -51,12 +51,12 @@ public final class TopicRuleIotSiteWiseAction {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setPutAssetPropertyValueEntries(List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries) {
+        public Builder putAssetPropertyValueEntries(List<TopicRulePutAssetPropertyValueEntry> putAssetPropertyValueEntries) {
             this.putAssetPropertyValueEntries = Objects.requireNonNull(putAssetPropertyValueEntries);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

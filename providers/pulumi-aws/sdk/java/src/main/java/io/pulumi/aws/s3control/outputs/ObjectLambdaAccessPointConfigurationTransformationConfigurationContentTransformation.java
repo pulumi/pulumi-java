@@ -15,8 +15,8 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      */
     private final ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda;
 
-    @OutputCustomType.Constructor({"awsLambda"})
-    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
+    @OutputCustomType.Constructor
+    private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation(@OutputCustomType.Parameter("awsLambda") ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
         this.awsLambda = awsLambda;
     }
 
@@ -48,7 +48,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     	      this.awsLambda = defaults.awsLambda;
         }
 
-        public Builder setAwsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
+        public Builder awsLambda(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda awsLambda) {
             this.awsLambda = Objects.requireNonNull(awsLambda);
             return this;
         }

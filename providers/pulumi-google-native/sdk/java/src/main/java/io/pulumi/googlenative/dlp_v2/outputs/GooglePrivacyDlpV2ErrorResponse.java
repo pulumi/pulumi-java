@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2ErrorResponse {
      */
     private final List<String> timestamps;
 
-    @OutputCustomType.Constructor({"details","timestamps"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ErrorResponse(
-        GoogleRpcStatusResponse details,
-        List<String> timestamps) {
+        @OutputCustomType.Parameter("details") GoogleRpcStatusResponse details,
+        @OutputCustomType.Parameter("timestamps") List<String> timestamps) {
         this.details = details;
         this.timestamps = timestamps;
     }
@@ -67,12 +67,12 @@ public final class GooglePrivacyDlpV2ErrorResponse {
     	      this.timestamps = defaults.timestamps;
         }
 
-        public Builder setDetails(GoogleRpcStatusResponse details) {
+        public Builder details(GoogleRpcStatusResponse details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setTimestamps(List<String> timestamps) {
+        public Builder timestamps(List<String> timestamps) {
             this.timestamps = Objects.requireNonNull(timestamps);
             return this;
         }

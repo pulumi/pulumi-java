@@ -21,10 +21,10 @@ public final class RuleGroupRuleGroupRuleVariablesIpSet {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"ipSet","key"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRuleVariablesIpSet(
-        RuleGroupRuleGroupRuleVariablesIpSetIpSet ipSet,
-        String key) {
+        @OutputCustomType.Parameter("ipSet") RuleGroupRuleGroupRuleVariablesIpSetIpSet ipSet,
+        @OutputCustomType.Parameter("key") String key) {
         this.ipSet = ipSet;
         this.key = key;
     }
@@ -66,12 +66,12 @@ public final class RuleGroupRuleGroupRuleVariablesIpSet {
     	      this.key = defaults.key;
         }
 
-        public Builder setIpSet(RuleGroupRuleGroupRuleVariablesIpSetIpSet ipSet) {
+        public Builder ipSet(RuleGroupRuleGroupRuleVariablesIpSetIpSet ipSet) {
             this.ipSet = Objects.requireNonNull(ipSet);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }

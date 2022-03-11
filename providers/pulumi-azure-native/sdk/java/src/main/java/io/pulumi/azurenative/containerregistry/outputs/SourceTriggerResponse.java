@@ -34,12 +34,12 @@ public final class SourceTriggerResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"name","sourceRepository","sourceTriggerEvents","status"})
+    @OutputCustomType.Constructor
     private SourceTriggerResponse(
-        String name,
-        SourcePropertiesResponse sourceRepository,
-        List<String> sourceTriggerEvents,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sourceRepository") SourcePropertiesResponse sourceRepository,
+        @OutputCustomType.Parameter("sourceTriggerEvents") List<String> sourceTriggerEvents,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.name = name;
         this.sourceRepository = sourceRepository;
         this.sourceTriggerEvents = sourceTriggerEvents;
@@ -101,22 +101,22 @@ public final class SourceTriggerResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSourceRepository(SourcePropertiesResponse sourceRepository) {
+        public Builder sourceRepository(SourcePropertiesResponse sourceRepository) {
             this.sourceRepository = Objects.requireNonNull(sourceRepository);
             return this;
         }
 
-        public Builder setSourceTriggerEvents(List<String> sourceTriggerEvents) {
+        public Builder sourceTriggerEvents(List<String> sourceTriggerEvents) {
             this.sourceTriggerEvents = Objects.requireNonNull(sourceTriggerEvents);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

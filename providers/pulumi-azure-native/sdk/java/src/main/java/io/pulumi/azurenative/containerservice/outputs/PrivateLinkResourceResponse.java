@@ -43,14 +43,14 @@ public final class PrivateLinkResourceResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"groupId","id","name","privateLinkServiceID","requiredMembers","type"})
+    @OutputCustomType.Constructor
     private PrivateLinkResourceResponse(
-        @Nullable String groupId,
-        @Nullable String id,
-        @Nullable String name,
-        String privateLinkServiceID,
-        @Nullable List<String> requiredMembers,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateLinkServiceID") String privateLinkServiceID,
+        @OutputCustomType.Parameter("requiredMembers") @Nullable List<String> requiredMembers,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.groupId = groupId;
         this.id = id;
         this.name = name;
@@ -132,32 +132,32 @@ public final class PrivateLinkResourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPrivateLinkServiceID(String privateLinkServiceID) {
+        public Builder privateLinkServiceID(String privateLinkServiceID) {
             this.privateLinkServiceID = Objects.requireNonNull(privateLinkServiceID);
             return this;
         }
 
-        public Builder setRequiredMembers(@Nullable List<String> requiredMembers) {
+        public Builder requiredMembers(@Nullable List<String> requiredMembers) {
             this.requiredMembers = requiredMembers;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

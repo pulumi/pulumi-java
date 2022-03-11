@@ -105,42 +105,42 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setResourceSetName(Input<String> resourceSetName) {
+        public Builder resourceSetName(Input<String> resourceSetName) {
             this.resourceSetName = Objects.requireNonNull(resourceSetName);
             return this;
         }
 
-        public Builder setResourceSetName(String resourceSetName) {
+        public Builder resourceSetName(String resourceSetName) {
             this.resourceSetName = Input.of(Objects.requireNonNull(resourceSetName));
             return this;
         }
 
-        public Builder setResourceSetType(Input<String> resourceSetType) {
+        public Builder resourceSetType(Input<String> resourceSetType) {
             this.resourceSetType = Objects.requireNonNull(resourceSetType);
             return this;
         }
 
-        public Builder setResourceSetType(String resourceSetType) {
+        public Builder resourceSetType(String resourceSetType) {
             this.resourceSetType = Input.of(Objects.requireNonNull(resourceSetType));
             return this;
         }
 
-        public Builder setResources(Input<List<ResourceSetResourceArgs>> resources) {
+        public Builder resources(Input<List<ResourceSetResourceArgs>> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setResources(List<ResourceSetResourceArgs> resources) {
+        public Builder resources(List<ResourceSetResourceArgs> resources) {
             this.resources = Input.of(Objects.requireNonNull(resources));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

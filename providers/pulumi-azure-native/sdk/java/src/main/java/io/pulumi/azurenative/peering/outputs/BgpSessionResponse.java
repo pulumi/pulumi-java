@@ -68,19 +68,19 @@ public final class BgpSessionResponse {
      */
     private final String sessionStateV6;
 
-    @OutputCustomType.Constructor({"maxPrefixesAdvertisedV4","maxPrefixesAdvertisedV6","md5AuthenticationKey","microsoftSessionIPv4Address","microsoftSessionIPv6Address","peerSessionIPv4Address","peerSessionIPv6Address","sessionPrefixV4","sessionPrefixV6","sessionStateV4","sessionStateV6"})
+    @OutputCustomType.Constructor
     private BgpSessionResponse(
-        @Nullable Integer maxPrefixesAdvertisedV4,
-        @Nullable Integer maxPrefixesAdvertisedV6,
-        @Nullable String md5AuthenticationKey,
-        @Nullable String microsoftSessionIPv4Address,
-        @Nullable String microsoftSessionIPv6Address,
-        @Nullable String peerSessionIPv4Address,
-        @Nullable String peerSessionIPv6Address,
-        @Nullable String sessionPrefixV4,
-        @Nullable String sessionPrefixV6,
-        String sessionStateV4,
-        String sessionStateV6) {
+        @OutputCustomType.Parameter("maxPrefixesAdvertisedV4") @Nullable Integer maxPrefixesAdvertisedV4,
+        @OutputCustomType.Parameter("maxPrefixesAdvertisedV6") @Nullable Integer maxPrefixesAdvertisedV6,
+        @OutputCustomType.Parameter("md5AuthenticationKey") @Nullable String md5AuthenticationKey,
+        @OutputCustomType.Parameter("microsoftSessionIPv4Address") @Nullable String microsoftSessionIPv4Address,
+        @OutputCustomType.Parameter("microsoftSessionIPv6Address") @Nullable String microsoftSessionIPv6Address,
+        @OutputCustomType.Parameter("peerSessionIPv4Address") @Nullable String peerSessionIPv4Address,
+        @OutputCustomType.Parameter("peerSessionIPv6Address") @Nullable String peerSessionIPv6Address,
+        @OutputCustomType.Parameter("sessionPrefixV4") @Nullable String sessionPrefixV4,
+        @OutputCustomType.Parameter("sessionPrefixV6") @Nullable String sessionPrefixV6,
+        @OutputCustomType.Parameter("sessionStateV4") String sessionStateV4,
+        @OutputCustomType.Parameter("sessionStateV6") String sessionStateV6) {
         this.maxPrefixesAdvertisedV4 = maxPrefixesAdvertisedV4;
         this.maxPrefixesAdvertisedV6 = maxPrefixesAdvertisedV6;
         this.md5AuthenticationKey = md5AuthenticationKey;
@@ -212,57 +212,57 @@ public final class BgpSessionResponse {
     	      this.sessionStateV6 = defaults.sessionStateV6;
         }
 
-        public Builder setMaxPrefixesAdvertisedV4(@Nullable Integer maxPrefixesAdvertisedV4) {
+        public Builder maxPrefixesAdvertisedV4(@Nullable Integer maxPrefixesAdvertisedV4) {
             this.maxPrefixesAdvertisedV4 = maxPrefixesAdvertisedV4;
             return this;
         }
 
-        public Builder setMaxPrefixesAdvertisedV6(@Nullable Integer maxPrefixesAdvertisedV6) {
+        public Builder maxPrefixesAdvertisedV6(@Nullable Integer maxPrefixesAdvertisedV6) {
             this.maxPrefixesAdvertisedV6 = maxPrefixesAdvertisedV6;
             return this;
         }
 
-        public Builder setMd5AuthenticationKey(@Nullable String md5AuthenticationKey) {
+        public Builder md5AuthenticationKey(@Nullable String md5AuthenticationKey) {
             this.md5AuthenticationKey = md5AuthenticationKey;
             return this;
         }
 
-        public Builder setMicrosoftSessionIPv4Address(@Nullable String microsoftSessionIPv4Address) {
+        public Builder microsoftSessionIPv4Address(@Nullable String microsoftSessionIPv4Address) {
             this.microsoftSessionIPv4Address = microsoftSessionIPv4Address;
             return this;
         }
 
-        public Builder setMicrosoftSessionIPv6Address(@Nullable String microsoftSessionIPv6Address) {
+        public Builder microsoftSessionIPv6Address(@Nullable String microsoftSessionIPv6Address) {
             this.microsoftSessionIPv6Address = microsoftSessionIPv6Address;
             return this;
         }
 
-        public Builder setPeerSessionIPv4Address(@Nullable String peerSessionIPv4Address) {
+        public Builder peerSessionIPv4Address(@Nullable String peerSessionIPv4Address) {
             this.peerSessionIPv4Address = peerSessionIPv4Address;
             return this;
         }
 
-        public Builder setPeerSessionIPv6Address(@Nullable String peerSessionIPv6Address) {
+        public Builder peerSessionIPv6Address(@Nullable String peerSessionIPv6Address) {
             this.peerSessionIPv6Address = peerSessionIPv6Address;
             return this;
         }
 
-        public Builder setSessionPrefixV4(@Nullable String sessionPrefixV4) {
+        public Builder sessionPrefixV4(@Nullable String sessionPrefixV4) {
             this.sessionPrefixV4 = sessionPrefixV4;
             return this;
         }
 
-        public Builder setSessionPrefixV6(@Nullable String sessionPrefixV6) {
+        public Builder sessionPrefixV6(@Nullable String sessionPrefixV6) {
             this.sessionPrefixV6 = sessionPrefixV6;
             return this;
         }
 
-        public Builder setSessionStateV4(String sessionStateV4) {
+        public Builder sessionStateV4(String sessionStateV4) {
             this.sessionStateV4 = Objects.requireNonNull(sessionStateV4);
             return this;
         }
 
-        public Builder setSessionStateV6(String sessionStateV6) {
+        public Builder sessionStateV6(String sessionStateV6) {
             this.sessionStateV6 = Objects.requireNonNull(sessionStateV6);
             return this;
         }

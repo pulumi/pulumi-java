@@ -39,14 +39,14 @@ public final class InTotoResponse {
      */
     private final String threshold;
 
-    @OutputCustomType.Constructor({"expectedCommand","expectedMaterials","expectedProducts","signingKeys","stepName","threshold"})
+    @OutputCustomType.Constructor
     private InTotoResponse(
-        List<String> expectedCommand,
-        List<ArtifactRuleResponse> expectedMaterials,
-        List<ArtifactRuleResponse> expectedProducts,
-        List<SigningKeyResponse> signingKeys,
-        String stepName,
-        String threshold) {
+        @OutputCustomType.Parameter("expectedCommand") List<String> expectedCommand,
+        @OutputCustomType.Parameter("expectedMaterials") List<ArtifactRuleResponse> expectedMaterials,
+        @OutputCustomType.Parameter("expectedProducts") List<ArtifactRuleResponse> expectedProducts,
+        @OutputCustomType.Parameter("signingKeys") List<SigningKeyResponse> signingKeys,
+        @OutputCustomType.Parameter("stepName") String stepName,
+        @OutputCustomType.Parameter("threshold") String threshold) {
         this.expectedCommand = expectedCommand;
         this.expectedMaterials = expectedMaterials;
         this.expectedProducts = expectedProducts;
@@ -124,32 +124,32 @@ public final class InTotoResponse {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setExpectedCommand(List<String> expectedCommand) {
+        public Builder expectedCommand(List<String> expectedCommand) {
             this.expectedCommand = Objects.requireNonNull(expectedCommand);
             return this;
         }
 
-        public Builder setExpectedMaterials(List<ArtifactRuleResponse> expectedMaterials) {
+        public Builder expectedMaterials(List<ArtifactRuleResponse> expectedMaterials) {
             this.expectedMaterials = Objects.requireNonNull(expectedMaterials);
             return this;
         }
 
-        public Builder setExpectedProducts(List<ArtifactRuleResponse> expectedProducts) {
+        public Builder expectedProducts(List<ArtifactRuleResponse> expectedProducts) {
             this.expectedProducts = Objects.requireNonNull(expectedProducts);
             return this;
         }
 
-        public Builder setSigningKeys(List<SigningKeyResponse> signingKeys) {
+        public Builder signingKeys(List<SigningKeyResponse> signingKeys) {
             this.signingKeys = Objects.requireNonNull(signingKeys);
             return this;
         }
 
-        public Builder setStepName(String stepName) {
+        public Builder stepName(String stepName) {
             this.stepName = Objects.requireNonNull(stepName);
             return this;
         }
 
-        public Builder setThreshold(String threshold) {
+        public Builder threshold(String threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }

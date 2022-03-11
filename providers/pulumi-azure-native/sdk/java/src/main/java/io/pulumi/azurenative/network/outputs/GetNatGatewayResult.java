@@ -87,22 +87,22 @@ public final class GetNatGatewayResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"etag","id","idleTimeoutInMinutes","location","name","provisioningState","publicIpAddresses","publicIpPrefixes","resourceGuid","sku","subnets","tags","type","zones"})
+    @OutputCustomType.Constructor
     private GetNatGatewayResult(
-        String etag,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable List<SubResourceResponse> publicIpAddresses,
-        @Nullable List<SubResourceResponse> publicIpPrefixes,
-        String resourceGuid,
-        @Nullable NatGatewaySkuResponse sku,
-        List<SubResourceResponse> subnets,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIpAddresses") @Nullable List<SubResourceResponse> publicIpAddresses,
+        @OutputCustomType.Parameter("publicIpPrefixes") @Nullable List<SubResourceResponse> publicIpPrefixes,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("sku") @Nullable NatGatewaySkuResponse sku,
+        @OutputCustomType.Parameter("subnets") List<SubResourceResponse> subnets,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.etag = etag;
         this.id = id;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;
@@ -264,72 +264,72 @@ public final class GetNatGatewayResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicIpAddresses(@Nullable List<SubResourceResponse> publicIpAddresses) {
+        public Builder publicIpAddresses(@Nullable List<SubResourceResponse> publicIpAddresses) {
             this.publicIpAddresses = publicIpAddresses;
             return this;
         }
 
-        public Builder setPublicIpPrefixes(@Nullable List<SubResourceResponse> publicIpPrefixes) {
+        public Builder publicIpPrefixes(@Nullable List<SubResourceResponse> publicIpPrefixes) {
             this.publicIpPrefixes = publicIpPrefixes;
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setSku(@Nullable NatGatewaySkuResponse sku) {
+        public Builder sku(@Nullable NatGatewaySkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSubnets(List<SubResourceResponse> subnets) {
+        public Builder subnets(List<SubResourceResponse> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

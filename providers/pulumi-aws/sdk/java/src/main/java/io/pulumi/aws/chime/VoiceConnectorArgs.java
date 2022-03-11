@@ -87,32 +87,32 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requireEncryption = defaults.requireEncryption;
         }
 
-        public Builder setAwsRegion(@Nullable Input<String> awsRegion) {
+        public Builder awsRegion(@Nullable Input<String> awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
-        public Builder setAwsRegion(@Nullable String awsRegion) {
+        public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = Input.ofNullable(awsRegion);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRequireEncryption(Input<Boolean> requireEncryption) {
+        public Builder requireEncryption(Input<Boolean> requireEncryption) {
             this.requireEncryption = Objects.requireNonNull(requireEncryption);
             return this;
         }
 
-        public Builder setRequireEncryption(Boolean requireEncryption) {
+        public Builder requireEncryption(Boolean requireEncryption) {
             this.requireEncryption = Input.of(Objects.requireNonNull(requireEncryption));
             return this;
         }

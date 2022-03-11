@@ -75,12 +75,12 @@ public final class RobotApplicationRobotSoftwareSuite extends io.pulumi.resource
     	      this.version = defaults.version;
         }
 
-        public Builder setName(RobotApplicationRobotSoftwareSuiteName name) {
+        public Builder name(RobotApplicationRobotSoftwareSuiteName name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVersion(@Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
+        public Builder version(@Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
             this.version = version;
             return this;
         }

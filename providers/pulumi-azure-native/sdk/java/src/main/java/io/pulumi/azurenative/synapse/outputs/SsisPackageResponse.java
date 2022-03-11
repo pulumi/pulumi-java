@@ -56,16 +56,16 @@ public final class SsisPackageResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","folderId","id","name","parameters","projectId","projectVersion","type"})
+    @OutputCustomType.Constructor
     private SsisPackageResponse(
-        @Nullable String description,
-        @Nullable Double folderId,
-        @Nullable Double id,
-        @Nullable String name,
-        @Nullable List<SsisParameterResponse> parameters,
-        @Nullable Double projectId,
-        @Nullable Double projectVersion,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folderId") @Nullable Double folderId,
+        @OutputCustomType.Parameter("id") @Nullable Double id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<SsisParameterResponse> parameters,
+        @OutputCustomType.Parameter("projectId") @Nullable Double projectId,
+        @OutputCustomType.Parameter("projectVersion") @Nullable Double projectVersion,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.folderId = folderId;
         this.id = id;
@@ -168,42 +168,42 @@ public final class SsisPackageResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFolderId(@Nullable Double folderId) {
+        public Builder folderId(@Nullable Double folderId) {
             this.folderId = folderId;
             return this;
         }
 
-        public Builder setId(@Nullable Double id) {
+        public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<SsisParameterResponse> parameters) {
+        public Builder parameters(@Nullable List<SsisParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProjectId(@Nullable Double projectId) {
+        public Builder projectId(@Nullable Double projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectVersion(@Nullable Double projectVersion) {
+        public Builder projectVersion(@Nullable Double projectVersion) {
             this.projectVersion = projectVersion;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

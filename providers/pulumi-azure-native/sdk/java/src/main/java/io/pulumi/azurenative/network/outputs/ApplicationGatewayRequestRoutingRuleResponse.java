@@ -79,21 +79,21 @@ public final class ApplicationGatewayRequestRoutingRuleResponse {
      */
     private final @Nullable SubResourceResponse urlPathMap;
 
-    @OutputCustomType.Constructor({"backendAddressPool","backendHttpSettings","etag","httpListener","id","name","priority","provisioningState","redirectConfiguration","rewriteRuleSet","ruleType","type","urlPathMap"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayRequestRoutingRuleResponse(
-        @Nullable SubResourceResponse backendAddressPool,
-        @Nullable SubResourceResponse backendHttpSettings,
-        String etag,
-        @Nullable SubResourceResponse httpListener,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String provisioningState,
-        @Nullable SubResourceResponse redirectConfiguration,
-        @Nullable SubResourceResponse rewriteRuleSet,
-        @Nullable String ruleType,
-        String type,
-        @Nullable SubResourceResponse urlPathMap) {
+        @OutputCustomType.Parameter("backendAddressPool") @Nullable SubResourceResponse backendAddressPool,
+        @OutputCustomType.Parameter("backendHttpSettings") @Nullable SubResourceResponse backendHttpSettings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("httpListener") @Nullable SubResourceResponse httpListener,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("redirectConfiguration") @Nullable SubResourceResponse redirectConfiguration,
+        @OutputCustomType.Parameter("rewriteRuleSet") @Nullable SubResourceResponse rewriteRuleSet,
+        @OutputCustomType.Parameter("ruleType") @Nullable String ruleType,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("urlPathMap") @Nullable SubResourceResponse urlPathMap) {
         this.backendAddressPool = backendAddressPool;
         this.backendHttpSettings = backendHttpSettings;
         this.etag = etag;
@@ -245,67 +245,67 @@ public final class ApplicationGatewayRequestRoutingRuleResponse {
     	      this.urlPathMap = defaults.urlPathMap;
         }
 
-        public Builder setBackendAddressPool(@Nullable SubResourceResponse backendAddressPool) {
+        public Builder backendAddressPool(@Nullable SubResourceResponse backendAddressPool) {
             this.backendAddressPool = backendAddressPool;
             return this;
         }
 
-        public Builder setBackendHttpSettings(@Nullable SubResourceResponse backendHttpSettings) {
+        public Builder backendHttpSettings(@Nullable SubResourceResponse backendHttpSettings) {
             this.backendHttpSettings = backendHttpSettings;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHttpListener(@Nullable SubResourceResponse httpListener) {
+        public Builder httpListener(@Nullable SubResourceResponse httpListener) {
             this.httpListener = httpListener;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRedirectConfiguration(@Nullable SubResourceResponse redirectConfiguration) {
+        public Builder redirectConfiguration(@Nullable SubResourceResponse redirectConfiguration) {
             this.redirectConfiguration = redirectConfiguration;
             return this;
         }
 
-        public Builder setRewriteRuleSet(@Nullable SubResourceResponse rewriteRuleSet) {
+        public Builder rewriteRuleSet(@Nullable SubResourceResponse rewriteRuleSet) {
             this.rewriteRuleSet = rewriteRuleSet;
             return this;
         }
 
-        public Builder setRuleType(@Nullable String ruleType) {
+        public Builder ruleType(@Nullable String ruleType) {
             this.ruleType = ruleType;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrlPathMap(@Nullable SubResourceResponse urlPathMap) {
+        public Builder urlPathMap(@Nullable SubResourceResponse urlPathMap) {
             this.urlPathMap = urlPathMap;
             return this;
         }

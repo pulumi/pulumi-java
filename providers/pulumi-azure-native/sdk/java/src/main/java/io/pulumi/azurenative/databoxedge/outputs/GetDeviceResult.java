@@ -151,34 +151,34 @@ public final class GetDeviceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"configuredRoleTypes","culture","dataBoxEdgeDeviceStatus","description","deviceHcsVersion","deviceLocalCapacity","deviceModel","deviceSoftwareVersion","deviceType","edgeProfile","etag","friendlyName","id","identity","kind","location","modelDescription","name","nodeCount","resourceMoveDetails","serialNumber","sku","systemData","tags","timeZone","type"})
+    @OutputCustomType.Constructor
     private GetDeviceResult(
-        List<String> configuredRoleTypes,
-        String culture,
-        @Nullable String dataBoxEdgeDeviceStatus,
-        String description,
-        String deviceHcsVersion,
-        Double deviceLocalCapacity,
-        String deviceModel,
-        String deviceSoftwareVersion,
-        String deviceType,
-        EdgeProfileResponse edgeProfile,
-        @Nullable String etag,
-        String friendlyName,
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        String kind,
-        String location,
-        String modelDescription,
-        String name,
-        Integer nodeCount,
-        ResourceMoveDetailsResponse resourceMoveDetails,
-        String serialNumber,
-        @Nullable SkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String timeZone,
-        String type) {
+        @OutputCustomType.Parameter("configuredRoleTypes") List<String> configuredRoleTypes,
+        @OutputCustomType.Parameter("culture") String culture,
+        @OutputCustomType.Parameter("dataBoxEdgeDeviceStatus") @Nullable String dataBoxEdgeDeviceStatus,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("deviceHcsVersion") String deviceHcsVersion,
+        @OutputCustomType.Parameter("deviceLocalCapacity") Double deviceLocalCapacity,
+        @OutputCustomType.Parameter("deviceModel") String deviceModel,
+        @OutputCustomType.Parameter("deviceSoftwareVersion") String deviceSoftwareVersion,
+        @OutputCustomType.Parameter("deviceType") String deviceType,
+        @OutputCustomType.Parameter("edgeProfile") EdgeProfileResponse edgeProfile,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("modelDescription") String modelDescription,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("resourceMoveDetails") ResourceMoveDetailsResponse resourceMoveDetails,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("type") String type) {
         this.configuredRoleTypes = configuredRoleTypes;
         this.culture = culture;
         this.dataBoxEdgeDeviceStatus = dataBoxEdgeDeviceStatus;
@@ -460,132 +460,132 @@ public final class GetDeviceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConfiguredRoleTypes(List<String> configuredRoleTypes) {
+        public Builder configuredRoleTypes(List<String> configuredRoleTypes) {
             this.configuredRoleTypes = Objects.requireNonNull(configuredRoleTypes);
             return this;
         }
 
-        public Builder setCulture(String culture) {
+        public Builder culture(String culture) {
             this.culture = Objects.requireNonNull(culture);
             return this;
         }
 
-        public Builder setDataBoxEdgeDeviceStatus(@Nullable String dataBoxEdgeDeviceStatus) {
+        public Builder dataBoxEdgeDeviceStatus(@Nullable String dataBoxEdgeDeviceStatus) {
             this.dataBoxEdgeDeviceStatus = dataBoxEdgeDeviceStatus;
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDeviceHcsVersion(String deviceHcsVersion) {
+        public Builder deviceHcsVersion(String deviceHcsVersion) {
             this.deviceHcsVersion = Objects.requireNonNull(deviceHcsVersion);
             return this;
         }
 
-        public Builder setDeviceLocalCapacity(Double deviceLocalCapacity) {
+        public Builder deviceLocalCapacity(Double deviceLocalCapacity) {
             this.deviceLocalCapacity = Objects.requireNonNull(deviceLocalCapacity);
             return this;
         }
 
-        public Builder setDeviceModel(String deviceModel) {
+        public Builder deviceModel(String deviceModel) {
             this.deviceModel = Objects.requireNonNull(deviceModel);
             return this;
         }
 
-        public Builder setDeviceSoftwareVersion(String deviceSoftwareVersion) {
+        public Builder deviceSoftwareVersion(String deviceSoftwareVersion) {
             this.deviceSoftwareVersion = Objects.requireNonNull(deviceSoftwareVersion);
             return this;
         }
 
-        public Builder setDeviceType(String deviceType) {
+        public Builder deviceType(String deviceType) {
             this.deviceType = Objects.requireNonNull(deviceType);
             return this;
         }
 
-        public Builder setEdgeProfile(EdgeProfileResponse edgeProfile) {
+        public Builder edgeProfile(EdgeProfileResponse edgeProfile) {
             this.edgeProfile = Objects.requireNonNull(edgeProfile);
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setFriendlyName(String friendlyName) {
+        public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityResponse identity) {
+        public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setModelDescription(String modelDescription) {
+        public Builder modelDescription(String modelDescription) {
             this.modelDescription = Objects.requireNonNull(modelDescription);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodeCount(Integer nodeCount) {
+        public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
 
-        public Builder setResourceMoveDetails(ResourceMoveDetailsResponse resourceMoveDetails) {
+        public Builder resourceMoveDetails(ResourceMoveDetailsResponse resourceMoveDetails) {
             this.resourceMoveDetails = Objects.requireNonNull(resourceMoveDetails);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

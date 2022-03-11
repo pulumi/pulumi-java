@@ -21,10 +21,10 @@ public final class MLTransformParameters {
      */
     private final String transformType;
 
-    @OutputCustomType.Constructor({"findMatchesParameters","transformType"})
+    @OutputCustomType.Constructor
     private MLTransformParameters(
-        MLTransformParametersFindMatchesParameters findMatchesParameters,
-        String transformType) {
+        @OutputCustomType.Parameter("findMatchesParameters") MLTransformParametersFindMatchesParameters findMatchesParameters,
+        @OutputCustomType.Parameter("transformType") String transformType) {
         this.findMatchesParameters = findMatchesParameters;
         this.transformType = transformType;
     }
@@ -66,12 +66,12 @@ public final class MLTransformParameters {
     	      this.transformType = defaults.transformType;
         }
 
-        public Builder setFindMatchesParameters(MLTransformParametersFindMatchesParameters findMatchesParameters) {
+        public Builder findMatchesParameters(MLTransformParametersFindMatchesParameters findMatchesParameters) {
             this.findMatchesParameters = Objects.requireNonNull(findMatchesParameters);
             return this;
         }
 
-        public Builder setTransformType(String transformType) {
+        public Builder transformType(String transformType) {
             this.transformType = Objects.requireNonNull(transformType);
             return this;
         }

@@ -22,10 +22,10 @@ public final class CloudServiceConfigurationResponse {
      */
     private final @Nullable String osVersion;
 
-    @OutputCustomType.Constructor({"osFamily","osVersion"})
+    @OutputCustomType.Constructor
     private CloudServiceConfigurationResponse(
-        String osFamily,
-        @Nullable String osVersion) {
+        @OutputCustomType.Parameter("osFamily") String osFamily,
+        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion) {
         this.osFamily = osFamily;
         this.osVersion = osVersion;
     }
@@ -67,12 +67,12 @@ public final class CloudServiceConfigurationResponse {
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder setOsFamily(String osFamily) {
+        public Builder osFamily(String osFamily) {
             this.osFamily = Objects.requireNonNull(osFamily);
             return this;
         }
 
-        public Builder setOsVersion(@Nullable String osVersion) {
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }

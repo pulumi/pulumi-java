@@ -17,8 +17,8 @@ public final class OrganizationConfigurationDatasources {
      */
     private final @Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs;
 
-    @OutputCustomType.Constructor({"s3Logs"})
-    private OrganizationConfigurationDatasources(@Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs) {
+    @OutputCustomType.Constructor
+    private OrganizationConfigurationDatasources(@OutputCustomType.Parameter("s3Logs") @Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs) {
         this.s3Logs = s3Logs;
     }
 
@@ -50,7 +50,7 @@ public final class OrganizationConfigurationDatasources {
     	      this.s3Logs = defaults.s3Logs;
         }
 
-        public Builder setS3Logs(@Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs) {
+        public Builder s3Logs(@Nullable OrganizationConfigurationDatasourcesS3Logs s3Logs) {
             this.s3Logs = s3Logs;
             return this;
         }

@@ -28,12 +28,12 @@ public final class TokenCertificateResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor({"encodedPemCertificate","expiry","name","thumbprint"})
+    @OutputCustomType.Constructor
     private TokenCertificateResponse(
-        @Nullable String encodedPemCertificate,
-        @Nullable String expiry,
-        @Nullable String name,
-        @Nullable String thumbprint) {
+        @OutputCustomType.Parameter("encodedPemCertificate") @Nullable String encodedPemCertificate,
+        @OutputCustomType.Parameter("expiry") @Nullable String expiry,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.encodedPemCertificate = encodedPemCertificate;
         this.expiry = expiry;
         this.name = name;
@@ -91,22 +91,22 @@ public final class TokenCertificateResponse {
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setEncodedPemCertificate(@Nullable String encodedPemCertificate) {
+        public Builder encodedPemCertificate(@Nullable String encodedPemCertificate) {
             this.encodedPemCertificate = encodedPemCertificate;
             return this;
         }
 
-        public Builder setExpiry(@Nullable String expiry) {
+        public Builder expiry(@Nullable String expiry) {
             this.expiry = expiry;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }

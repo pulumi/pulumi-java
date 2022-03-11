@@ -38,13 +38,13 @@ public final class GetServiceResult {
      */
     private final ServiceStatusResponse status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        String apiVersion,
-        String kind,
-        ObjectMetaResponse metadata,
-        ServiceSpecResponse spec,
-        ServiceStatusResponse status) {
+        @OutputCustomType.Parameter("apiVersion") String apiVersion,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("metadata") ObjectMetaResponse metadata,
+        @OutputCustomType.Parameter("spec") ServiceSpecResponse spec,
+        @OutputCustomType.Parameter("status") ServiceStatusResponse status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
@@ -116,27 +116,27 @@ public final class GetServiceResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiVersion(String apiVersion) {
+        public Builder apiVersion(String apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMetadata(ObjectMetaResponse metadata) {
+        public Builder metadata(ObjectMetaResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setSpec(ServiceSpecResponse spec) {
+        public Builder spec(ServiceSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
-        public Builder setStatus(ServiceStatusResponse status) {
+        public Builder status(ServiceStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

@@ -69,22 +69,22 @@ public final class FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurat
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder setParameterName(Input<String> parameterName) {
+        public Builder parameterName(Input<String> parameterName) {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
 
-        public Builder setParameterName(String parameterName) {
+        public Builder parameterName(String parameterName) {
             this.parameterName = Input.of(Objects.requireNonNull(parameterName));
             return this;
         }
 
-        public Builder setParameterValue(Input<String> parameterValue) {
+        public Builder parameterValue(Input<String> parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
 
-        public Builder setParameterValue(String parameterValue) {
+        public Builder parameterValue(String parameterValue) {
             this.parameterValue = Input.of(Objects.requireNonNull(parameterValue));
             return this;
         }

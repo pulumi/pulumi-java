@@ -15,8 +15,8 @@ public final class ImageRecipeComponent {
      */
     private final String componentArn;
 
-    @OutputCustomType.Constructor({"componentArn"})
-    private ImageRecipeComponent(String componentArn) {
+    @OutputCustomType.Constructor
+    private ImageRecipeComponent(@OutputCustomType.Parameter("componentArn") String componentArn) {
         this.componentArn = componentArn;
     }
 
@@ -48,7 +48,7 @@ public final class ImageRecipeComponent {
     	      this.componentArn = defaults.componentArn;
         }
 
-        public Builder setComponentArn(String componentArn) {
+        public Builder componentArn(String componentArn) {
             this.componentArn = Objects.requireNonNull(componentArn);
             return this;
         }

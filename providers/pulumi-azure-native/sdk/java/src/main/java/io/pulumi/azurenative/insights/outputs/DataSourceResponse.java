@@ -20,11 +20,11 @@ public final class DataSourceResponse {
     private final String kind;
     private final List<SinkConfigurationResponse> sinks;
 
-    @OutputCustomType.Constructor({"configuration","kind","sinks"})
+    @OutputCustomType.Constructor
     private DataSourceResponse(
-        DataSourceConfigurationResponse configuration,
-        String kind,
-        List<SinkConfigurationResponse> sinks) {
+        @OutputCustomType.Parameter("configuration") DataSourceConfigurationResponse configuration,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("sinks") List<SinkConfigurationResponse> sinks) {
         this.configuration = configuration;
         this.kind = kind;
         this.sinks = sinks;
@@ -68,17 +68,17 @@ public final class DataSourceResponse {
     	      this.sinks = defaults.sinks;
         }
 
-        public Builder setConfiguration(DataSourceConfigurationResponse configuration) {
+        public Builder configuration(DataSourceConfigurationResponse configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSinks(List<SinkConfigurationResponse> sinks) {
+        public Builder sinks(List<SinkConfigurationResponse> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }

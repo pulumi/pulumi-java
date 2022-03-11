@@ -26,11 +26,11 @@ public final class ClusterClusterConfigLifecycleConfig {
     private final @Nullable String idleDeleteTtl;
     private final @Nullable String idleStartTime;
 
-    @OutputCustomType.Constructor({"autoDeleteTime","idleDeleteTtl","idleStartTime"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigLifecycleConfig(
-        @Nullable String autoDeleteTime,
-        @Nullable String idleDeleteTtl,
-        @Nullable String idleStartTime) {
+        @OutputCustomType.Parameter("autoDeleteTime") @Nullable String autoDeleteTime,
+        @OutputCustomType.Parameter("idleDeleteTtl") @Nullable String idleDeleteTtl,
+        @OutputCustomType.Parameter("idleStartTime") @Nullable String idleStartTime) {
         this.autoDeleteTime = autoDeleteTime;
         this.idleDeleteTtl = idleDeleteTtl;
         this.idleStartTime = idleStartTime;
@@ -81,17 +81,17 @@ public final class ClusterClusterConfigLifecycleConfig {
     	      this.idleStartTime = defaults.idleStartTime;
         }
 
-        public Builder setAutoDeleteTime(@Nullable String autoDeleteTime) {
+        public Builder autoDeleteTime(@Nullable String autoDeleteTime) {
             this.autoDeleteTime = autoDeleteTime;
             return this;
         }
 
-        public Builder setIdleDeleteTtl(@Nullable String idleDeleteTtl) {
+        public Builder idleDeleteTtl(@Nullable String idleDeleteTtl) {
             this.idleDeleteTtl = idleDeleteTtl;
             return this;
         }
 
-        public Builder setIdleStartTime(@Nullable String idleStartTime) {
+        public Builder idleStartTime(@Nullable String idleStartTime) {
             this.idleStartTime = idleStartTime;
             return this;
         }

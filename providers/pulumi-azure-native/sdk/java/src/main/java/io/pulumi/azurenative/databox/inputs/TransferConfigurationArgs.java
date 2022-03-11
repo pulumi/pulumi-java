@@ -94,32 +94,32 @@ public final class TransferConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.transferFilterDetails = defaults.transferFilterDetails;
         }
 
-        public Builder setTransferAllDetails(@Nullable Input<TransferConfigurationTransferAllDetailsArgs> transferAllDetails) {
+        public Builder transferAllDetails(@Nullable Input<TransferConfigurationTransferAllDetailsArgs> transferAllDetails) {
             this.transferAllDetails = transferAllDetails;
             return this;
         }
 
-        public Builder setTransferAllDetails(@Nullable TransferConfigurationTransferAllDetailsArgs transferAllDetails) {
+        public Builder transferAllDetails(@Nullable TransferConfigurationTransferAllDetailsArgs transferAllDetails) {
             this.transferAllDetails = Input.ofNullable(transferAllDetails);
             return this;
         }
 
-        public Builder setTransferConfigurationType(Input<Either<String,TransferConfigurationType>> transferConfigurationType) {
+        public Builder transferConfigurationType(Input<Either<String,TransferConfigurationType>> transferConfigurationType) {
             this.transferConfigurationType = Objects.requireNonNull(transferConfigurationType);
             return this;
         }
 
-        public Builder setTransferConfigurationType(Either<String,TransferConfigurationType> transferConfigurationType) {
+        public Builder transferConfigurationType(Either<String,TransferConfigurationType> transferConfigurationType) {
             this.transferConfigurationType = Input.of(Objects.requireNonNull(transferConfigurationType));
             return this;
         }
 
-        public Builder setTransferFilterDetails(@Nullable Input<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails) {
+        public Builder transferFilterDetails(@Nullable Input<TransferConfigurationTransferFilterDetailsArgs> transferFilterDetails) {
             this.transferFilterDetails = transferFilterDetails;
             return this;
         }
 
-        public Builder setTransferFilterDetails(@Nullable TransferConfigurationTransferFilterDetailsArgs transferFilterDetails) {
+        public Builder transferFilterDetails(@Nullable TransferConfigurationTransferFilterDetailsArgs transferFilterDetails) {
             this.transferFilterDetails = Input.ofNullable(transferFilterDetails);
             return this;
         }

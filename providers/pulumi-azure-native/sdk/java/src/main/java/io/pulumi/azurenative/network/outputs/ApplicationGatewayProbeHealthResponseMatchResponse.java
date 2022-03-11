@@ -23,10 +23,10 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse {
      */
     private final @Nullable List<String> statusCodes;
 
-    @OutputCustomType.Constructor({"body","statusCodes"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayProbeHealthResponseMatchResponse(
-        @Nullable String body,
-        @Nullable List<String> statusCodes) {
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("statusCodes") @Nullable List<String> statusCodes) {
         this.body = body;
         this.statusCodes = statusCodes;
     }
@@ -68,12 +68,12 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse {
     	      this.statusCodes = defaults.statusCodes;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setStatusCodes(@Nullable List<String> statusCodes) {
+        public Builder statusCodes(@Nullable List<String> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }

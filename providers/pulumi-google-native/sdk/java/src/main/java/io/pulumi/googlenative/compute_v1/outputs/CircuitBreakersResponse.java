@@ -35,13 +35,13 @@ public final class CircuitBreakersResponse {
      */
     private final Integer maxRetries;
 
-    @OutputCustomType.Constructor({"maxConnections","maxPendingRequests","maxRequests","maxRequestsPerConnection","maxRetries"})
+    @OutputCustomType.Constructor
     private CircuitBreakersResponse(
-        Integer maxConnections,
-        Integer maxPendingRequests,
-        Integer maxRequests,
-        Integer maxRequestsPerConnection,
-        Integer maxRetries) {
+        @OutputCustomType.Parameter("maxConnections") Integer maxConnections,
+        @OutputCustomType.Parameter("maxPendingRequests") Integer maxPendingRequests,
+        @OutputCustomType.Parameter("maxRequests") Integer maxRequests,
+        @OutputCustomType.Parameter("maxRequestsPerConnection") Integer maxRequestsPerConnection,
+        @OutputCustomType.Parameter("maxRetries") Integer maxRetries) {
         this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;
         this.maxRequests = maxRequests;
@@ -113,27 +113,27 @@ public final class CircuitBreakersResponse {
     	      this.maxRetries = defaults.maxRetries;
         }
 
-        public Builder setMaxConnections(Integer maxConnections) {
+        public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
 
-        public Builder setMaxPendingRequests(Integer maxPendingRequests) {
+        public Builder maxPendingRequests(Integer maxPendingRequests) {
             this.maxPendingRequests = Objects.requireNonNull(maxPendingRequests);
             return this;
         }
 
-        public Builder setMaxRequests(Integer maxRequests) {
+        public Builder maxRequests(Integer maxRequests) {
             this.maxRequests = Objects.requireNonNull(maxRequests);
             return this;
         }
 
-        public Builder setMaxRequestsPerConnection(Integer maxRequestsPerConnection) {
+        public Builder maxRequestsPerConnection(Integer maxRequestsPerConnection) {
             this.maxRequestsPerConnection = Objects.requireNonNull(maxRequestsPerConnection);
             return this;
         }
 
-        public Builder setMaxRetries(Integer maxRetries) {
+        public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }

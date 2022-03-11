@@ -27,11 +27,11 @@ public final class DeploymentModelResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"format","name","version"})
+    @OutputCustomType.Constructor
     private DeploymentModelResponse(
-        @Nullable String format,
-        @Nullable String name,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.format = format;
         this.name = name;
         this.version = version;
@@ -83,17 +83,17 @@ public final class DeploymentModelResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

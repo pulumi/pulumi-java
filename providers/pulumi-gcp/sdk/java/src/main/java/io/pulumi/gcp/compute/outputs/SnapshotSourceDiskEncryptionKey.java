@@ -25,10 +25,10 @@ public final class SnapshotSourceDiskEncryptionKey {
      */
     private final @Nullable String rawKey;
 
-    @OutputCustomType.Constructor({"kmsKeyServiceAccount","rawKey"})
+    @OutputCustomType.Constructor
     private SnapshotSourceDiskEncryptionKey(
-        @Nullable String kmsKeyServiceAccount,
-        @Nullable String rawKey) {
+        @OutputCustomType.Parameter("kmsKeyServiceAccount") @Nullable String kmsKeyServiceAccount,
+        @OutputCustomType.Parameter("rawKey") @Nullable String rawKey) {
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;
     }
@@ -73,12 +73,12 @@ public final class SnapshotSourceDiskEncryptionKey {
     	      this.rawKey = defaults.rawKey;
         }
 
-        public Builder setKmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
-        public Builder setRawKey(@Nullable String rawKey) {
+        public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = rawKey;
             return this;
         }

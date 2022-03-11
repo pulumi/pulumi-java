@@ -142,32 +142,32 @@ public final class YearlyRetentionScheduleResponse extends io.pulumi.resources.I
     	      this.retentionTimes = defaults.retentionTimes;
         }
 
-        public Builder setMonthsOfYear(@Nullable List<String> monthsOfYear) {
+        public Builder monthsOfYear(@Nullable List<String> monthsOfYear) {
             this.monthsOfYear = monthsOfYear;
             return this;
         }
 
-        public Builder setRetentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
+        public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
             this.retentionDuration = retentionDuration;
             return this;
         }
 
-        public Builder setRetentionScheduleDaily(@Nullable DailyRetentionFormatResponse retentionScheduleDaily) {
+        public Builder retentionScheduleDaily(@Nullable DailyRetentionFormatResponse retentionScheduleDaily) {
             this.retentionScheduleDaily = retentionScheduleDaily;
             return this;
         }
 
-        public Builder setRetentionScheduleFormatType(@Nullable String retentionScheduleFormatType) {
+        public Builder retentionScheduleFormatType(@Nullable String retentionScheduleFormatType) {
             this.retentionScheduleFormatType = retentionScheduleFormatType;
             return this;
         }
 
-        public Builder setRetentionScheduleWeekly(@Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly) {
+        public Builder retentionScheduleWeekly(@Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly) {
             this.retentionScheduleWeekly = retentionScheduleWeekly;
             return this;
         }
 
-        public Builder setRetentionTimes(@Nullable List<String> retentionTimes) {
+        public Builder retentionTimes(@Nullable List<String> retentionTimes) {
             this.retentionTimes = retentionTimes;
             return this;
         }

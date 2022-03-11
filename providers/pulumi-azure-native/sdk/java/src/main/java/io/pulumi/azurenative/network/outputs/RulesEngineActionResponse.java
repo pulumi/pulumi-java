@@ -31,11 +31,11 @@ public final class RulesEngineActionResponse {
      */
     private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride;
 
-    @OutputCustomType.Constructor({"requestHeaderActions","responseHeaderActions","routeConfigurationOverride"})
+    @OutputCustomType.Constructor
     private RulesEngineActionResponse(
-        @Nullable List<HeaderActionResponse> requestHeaderActions,
-        @Nullable List<HeaderActionResponse> responseHeaderActions,
-        @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
+        @OutputCustomType.Parameter("requestHeaderActions") @Nullable List<HeaderActionResponse> requestHeaderActions,
+        @OutputCustomType.Parameter("responseHeaderActions") @Nullable List<HeaderActionResponse> responseHeaderActions,
+        @OutputCustomType.Parameter("routeConfigurationOverride") @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
         this.requestHeaderActions = requestHeaderActions;
         this.responseHeaderActions = responseHeaderActions;
         this.routeConfigurationOverride = routeConfigurationOverride;
@@ -87,17 +87,17 @@ public final class RulesEngineActionResponse {
     	      this.routeConfigurationOverride = defaults.routeConfigurationOverride;
         }
 
-        public Builder setRequestHeaderActions(@Nullable List<HeaderActionResponse> requestHeaderActions) {
+        public Builder requestHeaderActions(@Nullable List<HeaderActionResponse> requestHeaderActions) {
             this.requestHeaderActions = requestHeaderActions;
             return this;
         }
 
-        public Builder setResponseHeaderActions(@Nullable List<HeaderActionResponse> responseHeaderActions) {
+        public Builder responseHeaderActions(@Nullable List<HeaderActionResponse> responseHeaderActions) {
             this.responseHeaderActions = responseHeaderActions;
             return this;
         }
 
-        public Builder setRouteConfigurationOverride(@Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
+        public Builder routeConfigurationOverride(@Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride) {
             this.routeConfigurationOverride = routeConfigurationOverride;
             return this;
         }

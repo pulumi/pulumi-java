@@ -30,16 +30,16 @@ public final class GetOrderableDbInstanceResult {
     private final @Nullable List<String> preferredInstanceClasses;
     private final Boolean vpc;
 
-    @OutputCustomType.Constructor({"availabilityZones","engine","engineVersion","id","instanceClass","licenseModel","preferredInstanceClasses","vpc"})
+    @OutputCustomType.Constructor
     private GetOrderableDbInstanceResult(
-        List<String> availabilityZones,
-        @Nullable String engine,
-        String engineVersion,
-        String id,
-        String instanceClass,
-        @Nullable String licenseModel,
-        @Nullable List<String> preferredInstanceClasses,
-        Boolean vpc) {
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("engine") @Nullable String engine,
+        @OutputCustomType.Parameter("engineVersion") String engineVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceClass") String instanceClass,
+        @OutputCustomType.Parameter("licenseModel") @Nullable String licenseModel,
+        @OutputCustomType.Parameter("preferredInstanceClasses") @Nullable List<String> preferredInstanceClasses,
+        @OutputCustomType.Parameter("vpc") Boolean vpc) {
         this.availabilityZones = availabilityZones;
         this.engine = engine;
         this.engineVersion = engineVersion;
@@ -117,42 +117,42 @@ public final class GetOrderableDbInstanceResult {
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setAvailabilityZones(List<String> availabilityZones) {
+        public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
-        public Builder setEngine(@Nullable String engine) {
+        public Builder engine(@Nullable String engine) {
             this.engine = engine;
             return this;
         }
 
-        public Builder setEngineVersion(String engineVersion) {
+        public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceClass(String instanceClass) {
+        public Builder instanceClass(String instanceClass) {
             this.instanceClass = Objects.requireNonNull(instanceClass);
             return this;
         }
 
-        public Builder setLicenseModel(@Nullable String licenseModel) {
+        public Builder licenseModel(@Nullable String licenseModel) {
             this.licenseModel = licenseModel;
             return this;
         }
 
-        public Builder setPreferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
+        public Builder preferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
             this.preferredInstanceClasses = preferredInstanceClasses;
             return this;
         }
 
-        public Builder setVpc(Boolean vpc) {
+        public Builder vpc(Boolean vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }

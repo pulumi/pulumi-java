@@ -120,52 +120,52 @@ public final class RouteSpecGrpcRouteMatchMetadataMatchArgs extends io.pulumi.re
     	      this.suffix = defaults.suffix;
         }
 
-        public Builder setExact(@Nullable Input<String> exact) {
+        public Builder exact(@Nullable Input<String> exact) {
             this.exact = exact;
             return this;
         }
 
-        public Builder setExact(@Nullable String exact) {
+        public Builder exact(@Nullable String exact) {
             this.exact = Input.ofNullable(exact);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setRange(@Nullable Input<RouteSpecGrpcRouteMatchMetadataMatchRangeArgs> range) {
+        public Builder range(@Nullable Input<RouteSpecGrpcRouteMatchMetadataMatchRangeArgs> range) {
             this.range = range;
             return this;
         }
 
-        public Builder setRange(@Nullable RouteSpecGrpcRouteMatchMetadataMatchRangeArgs range) {
+        public Builder range(@Nullable RouteSpecGrpcRouteMatchMetadataMatchRangeArgs range) {
             this.range = Input.ofNullable(range);
             return this;
         }
 
-        public Builder setRegex(@Nullable Input<String> regex) {
+        public Builder regex(@Nullable Input<String> regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setRegex(@Nullable String regex) {
+        public Builder regex(@Nullable String regex) {
             this.regex = Input.ofNullable(regex);
             return this;
         }
 
-        public Builder setSuffix(@Nullable Input<String> suffix) {
+        public Builder suffix(@Nullable Input<String> suffix) {
             this.suffix = suffix;
             return this;
         }
 
-        public Builder setSuffix(@Nullable String suffix) {
+        public Builder suffix(@Nullable String suffix) {
             this.suffix = Input.ofNullable(suffix);
             return this;
         }

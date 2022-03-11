@@ -81,21 +81,21 @@ public final class GetIntegrationAccountMapResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"changedTime","content","contentLink","contentType","createdTime","id","location","mapType","metadata","name","parametersSchema","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationAccountMapResult(
-        String changedTime,
-        @Nullable String content,
-        ContentLinkResponse contentLink,
-        @Nullable String contentType,
-        String createdTime,
-        String id,
-        @Nullable String location,
-        String mapType,
-        @Nullable Object metadata,
-        String name,
-        @Nullable IntegrationAccountMapPropertiesResponseParametersSchema parametersSchema,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("changedTime") String changedTime,
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("contentLink") ContentLinkResponse contentLink,
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mapType") String mapType,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parametersSchema") @Nullable IntegrationAccountMapPropertiesResponseParametersSchema parametersSchema,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.changedTime = changedTime;
         this.content = content;
         this.contentLink = contentLink;
@@ -247,67 +247,67 @@ public final class GetIntegrationAccountMapResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setChangedTime(String changedTime) {
+        public Builder changedTime(String changedTime) {
             this.changedTime = Objects.requireNonNull(changedTime);
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContentLink(ContentLinkResponse contentLink) {
+        public Builder contentLink(ContentLinkResponse contentLink) {
             this.contentLink = Objects.requireNonNull(contentLink);
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMapType(String mapType) {
+        public Builder mapType(String mapType) {
             this.mapType = Objects.requireNonNull(mapType);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParametersSchema(@Nullable IntegrationAccountMapPropertiesResponseParametersSchema parametersSchema) {
+        public Builder parametersSchema(@Nullable IntegrationAccountMapPropertiesResponseParametersSchema parametersSchema) {
             this.parametersSchema = parametersSchema;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

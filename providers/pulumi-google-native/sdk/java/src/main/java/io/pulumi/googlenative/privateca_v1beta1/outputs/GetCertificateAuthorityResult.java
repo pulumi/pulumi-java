@@ -109,26 +109,26 @@ public final class GetCertificateAuthorityResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"accessUrls","caCertificateDescriptions","certificatePolicy","config","createTime","deleteTime","gcsBucket","issuingOptions","keySpec","labels","lifetime","name","pemCaCertificates","state","subordinateConfig","tier","type","updateTime"})
+    @OutputCustomType.Constructor
     private GetCertificateAuthorityResult(
-        AccessUrlsResponse accessUrls,
-        List<CertificateDescriptionResponse> caCertificateDescriptions,
-        CertificateAuthorityPolicyResponse certificatePolicy,
-        CertificateConfigResponse config,
-        String createTime,
-        String deleteTime,
-        String gcsBucket,
-        IssuingOptionsResponse issuingOptions,
-        KeyVersionSpecResponse keySpec,
-        Map<String,String> labels,
-        String lifetime,
-        String name,
-        List<String> pemCaCertificates,
-        String state,
-        SubordinateConfigResponse subordinateConfig,
-        String tier,
-        String type,
-        String updateTime) {
+        @OutputCustomType.Parameter("accessUrls") AccessUrlsResponse accessUrls,
+        @OutputCustomType.Parameter("caCertificateDescriptions") List<CertificateDescriptionResponse> caCertificateDescriptions,
+        @OutputCustomType.Parameter("certificatePolicy") CertificateAuthorityPolicyResponse certificatePolicy,
+        @OutputCustomType.Parameter("config") CertificateConfigResponse config,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("gcsBucket") String gcsBucket,
+        @OutputCustomType.Parameter("issuingOptions") IssuingOptionsResponse issuingOptions,
+        @OutputCustomType.Parameter("keySpec") KeyVersionSpecResponse keySpec,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lifetime") String lifetime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pemCaCertificates") List<String> pemCaCertificates,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("subordinateConfig") SubordinateConfigResponse subordinateConfig,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.accessUrls = accessUrls;
         this.caCertificateDescriptions = caCertificateDescriptions;
         this.certificatePolicy = certificatePolicy;
@@ -330,92 +330,92 @@ public final class GetCertificateAuthorityResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAccessUrls(AccessUrlsResponse accessUrls) {
+        public Builder accessUrls(AccessUrlsResponse accessUrls) {
             this.accessUrls = Objects.requireNonNull(accessUrls);
             return this;
         }
 
-        public Builder setCaCertificateDescriptions(List<CertificateDescriptionResponse> caCertificateDescriptions) {
+        public Builder caCertificateDescriptions(List<CertificateDescriptionResponse> caCertificateDescriptions) {
             this.caCertificateDescriptions = Objects.requireNonNull(caCertificateDescriptions);
             return this;
         }
 
-        public Builder setCertificatePolicy(CertificateAuthorityPolicyResponse certificatePolicy) {
+        public Builder certificatePolicy(CertificateAuthorityPolicyResponse certificatePolicy) {
             this.certificatePolicy = Objects.requireNonNull(certificatePolicy);
             return this;
         }
 
-        public Builder setConfig(CertificateConfigResponse config) {
+        public Builder config(CertificateConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeleteTime(String deleteTime) {
+        public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
 
-        public Builder setGcsBucket(String gcsBucket) {
+        public Builder gcsBucket(String gcsBucket) {
             this.gcsBucket = Objects.requireNonNull(gcsBucket);
             return this;
         }
 
-        public Builder setIssuingOptions(IssuingOptionsResponse issuingOptions) {
+        public Builder issuingOptions(IssuingOptionsResponse issuingOptions) {
             this.issuingOptions = Objects.requireNonNull(issuingOptions);
             return this;
         }
 
-        public Builder setKeySpec(KeyVersionSpecResponse keySpec) {
+        public Builder keySpec(KeyVersionSpecResponse keySpec) {
             this.keySpec = Objects.requireNonNull(keySpec);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLifetime(String lifetime) {
+        public Builder lifetime(String lifetime) {
             this.lifetime = Objects.requireNonNull(lifetime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPemCaCertificates(List<String> pemCaCertificates) {
+        public Builder pemCaCertificates(List<String> pemCaCertificates) {
             this.pemCaCertificates = Objects.requireNonNull(pemCaCertificates);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSubordinateConfig(SubordinateConfigResponse subordinateConfig) {
+        public Builder subordinateConfig(SubordinateConfigResponse subordinateConfig) {
             this.subordinateConfig = Objects.requireNonNull(subordinateConfig);
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

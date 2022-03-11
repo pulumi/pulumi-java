@@ -44,14 +44,14 @@ public final class BackupScheduleResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"frequencyInterval","frequencyUnit","keepAtLeastOneBackup","lastExecutionTime","retentionPeriodInDays","startTime"})
+    @OutputCustomType.Constructor
     private BackupScheduleResponse(
-        Integer frequencyInterval,
-        String frequencyUnit,
-        Boolean keepAtLeastOneBackup,
-        String lastExecutionTime,
-        Integer retentionPeriodInDays,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("frequencyInterval") Integer frequencyInterval,
+        @OutputCustomType.Parameter("frequencyUnit") String frequencyUnit,
+        @OutputCustomType.Parameter("keepAtLeastOneBackup") Boolean keepAtLeastOneBackup,
+        @OutputCustomType.Parameter("lastExecutionTime") String lastExecutionTime,
+        @OutputCustomType.Parameter("retentionPeriodInDays") Integer retentionPeriodInDays,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.frequencyInterval = frequencyInterval;
         this.frequencyUnit = frequencyUnit;
         this.keepAtLeastOneBackup = keepAtLeastOneBackup;
@@ -133,32 +133,32 @@ public final class BackupScheduleResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setFrequencyInterval(Integer frequencyInterval) {
+        public Builder frequencyInterval(Integer frequencyInterval) {
             this.frequencyInterval = Objects.requireNonNull(frequencyInterval);
             return this;
         }
 
-        public Builder setFrequencyUnit(String frequencyUnit) {
+        public Builder frequencyUnit(String frequencyUnit) {
             this.frequencyUnit = Objects.requireNonNull(frequencyUnit);
             return this;
         }
 
-        public Builder setKeepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
+        public Builder keepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
             this.keepAtLeastOneBackup = Objects.requireNonNull(keepAtLeastOneBackup);
             return this;
         }
 
-        public Builder setLastExecutionTime(String lastExecutionTime) {
+        public Builder lastExecutionTime(String lastExecutionTime) {
             this.lastExecutionTime = Objects.requireNonNull(lastExecutionTime);
             return this;
         }
 
-        public Builder setRetentionPeriodInDays(Integer retentionPeriodInDays) {
+        public Builder retentionPeriodInDays(Integer retentionPeriodInDays) {
             this.retentionPeriodInDays = Objects.requireNonNull(retentionPeriodInDays);
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

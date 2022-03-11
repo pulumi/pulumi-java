@@ -39,13 +39,13 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfig {
      */
     private final @Nullable List<String> sessionPinningFilters;
 
-    @OutputCustomType.Constructor({"connectionBorrowTimeout","initQuery","maxConnectionsPercent","maxIdleConnectionsPercent","sessionPinningFilters"})
+    @OutputCustomType.Constructor
     private ProxyDefaultTargetGroupConnectionPoolConfig(
-        @Nullable Integer connectionBorrowTimeout,
-        @Nullable String initQuery,
-        @Nullable Integer maxConnectionsPercent,
-        @Nullable Integer maxIdleConnectionsPercent,
-        @Nullable List<String> sessionPinningFilters) {
+        @OutputCustomType.Parameter("connectionBorrowTimeout") @Nullable Integer connectionBorrowTimeout,
+        @OutputCustomType.Parameter("initQuery") @Nullable String initQuery,
+        @OutputCustomType.Parameter("maxConnectionsPercent") @Nullable Integer maxConnectionsPercent,
+        @OutputCustomType.Parameter("maxIdleConnectionsPercent") @Nullable Integer maxIdleConnectionsPercent,
+        @OutputCustomType.Parameter("sessionPinningFilters") @Nullable List<String> sessionPinningFilters) {
         this.connectionBorrowTimeout = connectionBorrowTimeout;
         this.initQuery = initQuery;
         this.maxConnectionsPercent = maxConnectionsPercent;
@@ -117,27 +117,27 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfig {
     	      this.sessionPinningFilters = defaults.sessionPinningFilters;
         }
 
-        public Builder setConnectionBorrowTimeout(@Nullable Integer connectionBorrowTimeout) {
+        public Builder connectionBorrowTimeout(@Nullable Integer connectionBorrowTimeout) {
             this.connectionBorrowTimeout = connectionBorrowTimeout;
             return this;
         }
 
-        public Builder setInitQuery(@Nullable String initQuery) {
+        public Builder initQuery(@Nullable String initQuery) {
             this.initQuery = initQuery;
             return this;
         }
 
-        public Builder setMaxConnectionsPercent(@Nullable Integer maxConnectionsPercent) {
+        public Builder maxConnectionsPercent(@Nullable Integer maxConnectionsPercent) {
             this.maxConnectionsPercent = maxConnectionsPercent;
             return this;
         }
 
-        public Builder setMaxIdleConnectionsPercent(@Nullable Integer maxIdleConnectionsPercent) {
+        public Builder maxIdleConnectionsPercent(@Nullable Integer maxIdleConnectionsPercent) {
             this.maxIdleConnectionsPercent = maxIdleConnectionsPercent;
             return this;
         }
 
-        public Builder setSessionPinningFilters(@Nullable List<String> sessionPinningFilters) {
+        public Builder sessionPinningFilters(@Nullable List<String> sessionPinningFilters) {
             this.sessionPinningFilters = sessionPinningFilters;
             return this;
         }

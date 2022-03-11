@@ -24,10 +24,10 @@ public final class KafkaRestPropertiesResponse {
      */
     private final @Nullable Map<String,String> configurationOverride;
 
-    @OutputCustomType.Constructor({"clientGroupInfo","configurationOverride"})
+    @OutputCustomType.Constructor
     private KafkaRestPropertiesResponse(
-        @Nullable ClientGroupInfoResponse clientGroupInfo,
-        @Nullable Map<String,String> configurationOverride) {
+        @OutputCustomType.Parameter("clientGroupInfo") @Nullable ClientGroupInfoResponse clientGroupInfo,
+        @OutputCustomType.Parameter("configurationOverride") @Nullable Map<String,String> configurationOverride) {
         this.clientGroupInfo = clientGroupInfo;
         this.configurationOverride = configurationOverride;
     }
@@ -69,12 +69,12 @@ public final class KafkaRestPropertiesResponse {
     	      this.configurationOverride = defaults.configurationOverride;
         }
 
-        public Builder setClientGroupInfo(@Nullable ClientGroupInfoResponse clientGroupInfo) {
+        public Builder clientGroupInfo(@Nullable ClientGroupInfoResponse clientGroupInfo) {
             this.clientGroupInfo = clientGroupInfo;
             return this;
         }
 
-        public Builder setConfigurationOverride(@Nullable Map<String,String> configurationOverride) {
+        public Builder configurationOverride(@Nullable Map<String,String> configurationOverride) {
             this.configurationOverride = configurationOverride;
             return this;
         }

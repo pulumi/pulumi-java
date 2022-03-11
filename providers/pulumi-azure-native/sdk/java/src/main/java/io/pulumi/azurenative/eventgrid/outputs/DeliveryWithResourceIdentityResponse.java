@@ -31,10 +31,10 @@ public final class DeliveryWithResourceIdentityResponse {
      */
     private final @Nullable EventSubscriptionIdentityResponse identity;
 
-    @OutputCustomType.Constructor({"destination","identity"})
+    @OutputCustomType.Constructor
     private DeliveryWithResourceIdentityResponse(
-        @Nullable Object destination,
-        @Nullable EventSubscriptionIdentityResponse identity) {
+        @OutputCustomType.Parameter("destination") @Nullable Object destination,
+        @OutputCustomType.Parameter("identity") @Nullable EventSubscriptionIdentityResponse identity) {
         this.destination = destination;
         this.identity = identity;
     }
@@ -77,12 +77,12 @@ public final class DeliveryWithResourceIdentityResponse {
     	      this.identity = defaults.identity;
         }
 
-        public Builder setDestination(@Nullable Object destination) {
+        public Builder destination(@Nullable Object destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setIdentity(@Nullable EventSubscriptionIdentityResponse identity) {
+        public Builder identity(@Nullable EventSubscriptionIdentityResponse identity) {
             this.identity = identity;
             return this;
         }

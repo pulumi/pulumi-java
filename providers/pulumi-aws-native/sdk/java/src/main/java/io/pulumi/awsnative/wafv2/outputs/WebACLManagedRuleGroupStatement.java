@@ -20,13 +20,13 @@ public final class WebACLManagedRuleGroupStatement {
     private final String vendorName;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"excludedRules","name","scopeDownStatement","vendorName","version"})
+    @OutputCustomType.Constructor
     private WebACLManagedRuleGroupStatement(
-        @Nullable List<WebACLExcludedRule> excludedRules,
-        String name,
-        @Nullable WebACLStatement scopeDownStatement,
-        String vendorName,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("excludedRules") @Nullable List<WebACLExcludedRule> excludedRules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scopeDownStatement") @Nullable WebACLStatement scopeDownStatement,
+        @OutputCustomType.Parameter("vendorName") String vendorName,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.excludedRules = excludedRules;
         this.name = name;
         this.scopeDownStatement = scopeDownStatement;
@@ -78,27 +78,27 @@ public final class WebACLManagedRuleGroupStatement {
     	      this.version = defaults.version;
         }
 
-        public Builder setExcludedRules(@Nullable List<WebACLExcludedRule> excludedRules) {
+        public Builder excludedRules(@Nullable List<WebACLExcludedRule> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebACLStatement scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebACLStatement scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
-        public Builder setVendorName(String vendorName) {
+        public Builder vendorName(String vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

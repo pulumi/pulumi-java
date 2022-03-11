@@ -46,14 +46,14 @@ public final class GalleryImageVersionPublishingProfileResponse {
      */
     private final @Nullable List<TargetRegionResponse> targetRegions;
 
-    @OutputCustomType.Constructor({"endOfLifeDate","excludeFromLatest","publishedDate","replicaCount","storageAccountType","targetRegions"})
+    @OutputCustomType.Constructor
     private GalleryImageVersionPublishingProfileResponse(
-        @Nullable String endOfLifeDate,
-        @Nullable Boolean excludeFromLatest,
-        String publishedDate,
-        @Nullable Integer replicaCount,
-        @Nullable String storageAccountType,
-        @Nullable List<TargetRegionResponse> targetRegions) {
+        @OutputCustomType.Parameter("endOfLifeDate") @Nullable String endOfLifeDate,
+        @OutputCustomType.Parameter("excludeFromLatest") @Nullable Boolean excludeFromLatest,
+        @OutputCustomType.Parameter("publishedDate") String publishedDate,
+        @OutputCustomType.Parameter("replicaCount") @Nullable Integer replicaCount,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
+        @OutputCustomType.Parameter("targetRegions") @Nullable List<TargetRegionResponse> targetRegions) {
         this.endOfLifeDate = endOfLifeDate;
         this.excludeFromLatest = excludeFromLatest;
         this.publishedDate = publishedDate;
@@ -135,32 +135,32 @@ public final class GalleryImageVersionPublishingProfileResponse {
     	      this.targetRegions = defaults.targetRegions;
         }
 
-        public Builder setEndOfLifeDate(@Nullable String endOfLifeDate) {
+        public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
 
-        public Builder setExcludeFromLatest(@Nullable Boolean excludeFromLatest) {
+        public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
 
-        public Builder setPublishedDate(String publishedDate) {
+        public Builder publishedDate(String publishedDate) {
             this.publishedDate = Objects.requireNonNull(publishedDate);
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Integer replicaCount) {
+        public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable String storageAccountType) {
+        public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
-        public Builder setTargetRegions(@Nullable List<TargetRegionResponse> targetRegions) {
+        public Builder targetRegions(@Nullable List<TargetRegionResponse> targetRegions) {
             this.targetRegions = targetRegions;
             return this;
         }

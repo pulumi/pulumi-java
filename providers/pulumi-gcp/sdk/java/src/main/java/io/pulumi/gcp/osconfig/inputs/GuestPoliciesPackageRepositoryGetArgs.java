@@ -109,42 +109,42 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable Input<GuestPoliciesPackageRepositoryAptGetArgs> apt) {
+        public Builder apt(@Nullable Input<GuestPoliciesPackageRepositoryAptGetArgs> apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setApt(@Nullable GuestPoliciesPackageRepositoryAptGetArgs apt) {
+        public Builder apt(@Nullable GuestPoliciesPackageRepositoryAptGetArgs apt) {
             this.apt = Input.ofNullable(apt);
             return this;
         }
 
-        public Builder setGoo(@Nullable Input<GuestPoliciesPackageRepositoryGooGetArgs> goo) {
+        public Builder goo(@Nullable Input<GuestPoliciesPackageRepositoryGooGetArgs> goo) {
             this.goo = goo;
             return this;
         }
 
-        public Builder setGoo(@Nullable GuestPoliciesPackageRepositoryGooGetArgs goo) {
+        public Builder goo(@Nullable GuestPoliciesPackageRepositoryGooGetArgs goo) {
             this.goo = Input.ofNullable(goo);
             return this;
         }
 
-        public Builder setYum(@Nullable Input<GuestPoliciesPackageRepositoryYumGetArgs> yum) {
+        public Builder yum(@Nullable Input<GuestPoliciesPackageRepositoryYumGetArgs> yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setYum(@Nullable GuestPoliciesPackageRepositoryYumGetArgs yum) {
+        public Builder yum(@Nullable GuestPoliciesPackageRepositoryYumGetArgs yum) {
             this.yum = Input.ofNullable(yum);
             return this;
         }
 
-        public Builder setZypper(@Nullable Input<GuestPoliciesPackageRepositoryZypperGetArgs> zypper) {
+        public Builder zypper(@Nullable Input<GuestPoliciesPackageRepositoryZypperGetArgs> zypper) {
             this.zypper = zypper;
             return this;
         }
 
-        public Builder setZypper(@Nullable GuestPoliciesPackageRepositoryZypperGetArgs zypper) {
+        public Builder zypper(@Nullable GuestPoliciesPackageRepositoryZypperGetArgs zypper) {
             this.zypper = Input.ofNullable(zypper);
             return this;
         }

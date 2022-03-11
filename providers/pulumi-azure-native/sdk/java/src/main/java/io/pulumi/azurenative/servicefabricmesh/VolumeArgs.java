@@ -154,72 +154,72 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeResourceName = defaults.volumeResourceName;
         }
 
-        public Builder setAzureFileParameters(@Nullable Input<VolumeProviderParametersAzureFileArgs> azureFileParameters) {
+        public Builder azureFileParameters(@Nullable Input<VolumeProviderParametersAzureFileArgs> azureFileParameters) {
             this.azureFileParameters = azureFileParameters;
             return this;
         }
 
-        public Builder setAzureFileParameters(@Nullable VolumeProviderParametersAzureFileArgs azureFileParameters) {
+        public Builder azureFileParameters(@Nullable VolumeProviderParametersAzureFileArgs azureFileParameters) {
             this.azureFileParameters = Input.ofNullable(azureFileParameters);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProvider(Input<Either<String,VolumeProvider>> provider) {
+        public Builder provider(Input<Either<String,VolumeProvider>> provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
-        public Builder setProvider(Either<String,VolumeProvider> provider) {
+        public Builder provider(Either<String,VolumeProvider> provider) {
             this.provider = Input.of(Objects.requireNonNull(provider));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVolumeResourceName(@Nullable Input<String> volumeResourceName) {
+        public Builder volumeResourceName(@Nullable Input<String> volumeResourceName) {
             this.volumeResourceName = volumeResourceName;
             return this;
         }
 
-        public Builder setVolumeResourceName(@Nullable String volumeResourceName) {
+        public Builder volumeResourceName(@Nullable String volumeResourceName) {
             this.volumeResourceName = Input.ofNullable(volumeResourceName);
             return this;
         }

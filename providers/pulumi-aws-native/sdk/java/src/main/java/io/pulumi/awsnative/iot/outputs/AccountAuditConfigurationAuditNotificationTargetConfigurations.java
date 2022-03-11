@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class AccountAuditConfigurationAuditNotificationTargetConfigurations {
     private final @Nullable AccountAuditConfigurationAuditNotificationTarget sns;
 
-    @OutputCustomType.Constructor({"sns"})
-    private AccountAuditConfigurationAuditNotificationTargetConfigurations(@Nullable AccountAuditConfigurationAuditNotificationTarget sns) {
+    @OutputCustomType.Constructor
+    private AccountAuditConfigurationAuditNotificationTargetConfigurations(@OutputCustomType.Parameter("sns") @Nullable AccountAuditConfigurationAuditNotificationTarget sns) {
         this.sns = sns;
     }
 
@@ -42,7 +42,7 @@ public final class AccountAuditConfigurationAuditNotificationTargetConfiguration
     	      this.sns = defaults.sns;
         }
 
-        public Builder setSns(@Nullable AccountAuditConfigurationAuditNotificationTarget sns) {
+        public Builder sns(@Nullable AccountAuditConfigurationAuditNotificationTarget sns) {
             this.sns = sns;
             return this;
         }

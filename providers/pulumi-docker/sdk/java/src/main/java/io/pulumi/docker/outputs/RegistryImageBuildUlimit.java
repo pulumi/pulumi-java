@@ -14,11 +14,11 @@ public final class RegistryImageBuildUlimit {
     private final String name;
     private final Integer soft;
 
-    @OutputCustomType.Constructor({"hard","name","soft"})
+    @OutputCustomType.Constructor
     private RegistryImageBuildUlimit(
-        Integer hard,
-        String name,
-        Integer soft) {
+        @OutputCustomType.Parameter("hard") Integer hard,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("soft") Integer soft) {
         this.hard = hard;
         this.name = name;
         this.soft = soft;
@@ -58,17 +58,17 @@ public final class RegistryImageBuildUlimit {
     	      this.soft = defaults.soft;
         }
 
-        public Builder setHard(Integer hard) {
+        public Builder hard(Integer hard) {
             this.hard = Objects.requireNonNull(hard);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSoft(Integer soft) {
+        public Builder soft(Integer soft) {
             this.soft = Objects.requireNonNull(soft);
             return this;
         }

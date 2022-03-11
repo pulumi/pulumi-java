@@ -36,14 +36,14 @@ public final class GetSecurityGroupsResult {
      */
     private final List<String> vpcIds;
 
-    @OutputCustomType.Constructor({"arns","filters","id","ids","tags","vpcIds"})
+    @OutputCustomType.Constructor
     private GetSecurityGroupsResult(
-        List<String> arns,
-        @Nullable List<GetSecurityGroupsFilter> filters,
-        String id,
-        List<String> ids,
-        Map<String,String> tags,
-        List<String> vpcIds) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetSecurityGroupsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcIds") List<String> vpcIds) {
         this.arns = arns;
         this.filters = filters;
         this.id = id;
@@ -117,32 +117,32 @@ public final class GetSecurityGroupsResult {
     	      this.vpcIds = defaults.vpcIds;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetSecurityGroupsFilter> filters) {
+        public Builder filters(@Nullable List<GetSecurityGroupsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcIds(List<String> vpcIds) {
+        public Builder vpcIds(List<String> vpcIds) {
             this.vpcIds = Objects.requireNonNull(vpcIds);
             return this;
         }

@@ -62,18 +62,18 @@ public final class ShippingAddressResponse {
      */
     private final @Nullable String zipExtendedCode;
 
-    @OutputCustomType.Constructor({"addressType","city","companyName","country","postalCode","stateOrProvince","streetAddress1","streetAddress2","streetAddress3","zipExtendedCode"})
+    @OutputCustomType.Constructor
     private ShippingAddressResponse(
-        @Nullable String addressType,
-        @Nullable String city,
-        @Nullable String companyName,
-        String country,
-        @Nullable String postalCode,
-        @Nullable String stateOrProvince,
-        String streetAddress1,
-        @Nullable String streetAddress2,
-        @Nullable String streetAddress3,
-        @Nullable String zipExtendedCode) {
+        @OutputCustomType.Parameter("addressType") @Nullable String addressType,
+        @OutputCustomType.Parameter("city") @Nullable String city,
+        @OutputCustomType.Parameter("companyName") @Nullable String companyName,
+        @OutputCustomType.Parameter("country") String country,
+        @OutputCustomType.Parameter("postalCode") @Nullable String postalCode,
+        @OutputCustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
+        @OutputCustomType.Parameter("streetAddress1") String streetAddress1,
+        @OutputCustomType.Parameter("streetAddress2") @Nullable String streetAddress2,
+        @OutputCustomType.Parameter("streetAddress3") @Nullable String streetAddress3,
+        @OutputCustomType.Parameter("zipExtendedCode") @Nullable String zipExtendedCode) {
         this.addressType = addressType;
         this.city = city;
         this.companyName = companyName;
@@ -195,52 +195,52 @@ public final class ShippingAddressResponse {
     	      this.zipExtendedCode = defaults.zipExtendedCode;
         }
 
-        public Builder setAddressType(@Nullable String addressType) {
+        public Builder addressType(@Nullable String addressType) {
             this.addressType = addressType;
             return this;
         }
 
-        public Builder setCity(@Nullable String city) {
+        public Builder city(@Nullable String city) {
             this.city = city;
             return this;
         }
 
-        public Builder setCompanyName(@Nullable String companyName) {
+        public Builder companyName(@Nullable String companyName) {
             this.companyName = companyName;
             return this;
         }
 
-        public Builder setCountry(String country) {
+        public Builder country(String country) {
             this.country = Objects.requireNonNull(country);
             return this;
         }
 
-        public Builder setPostalCode(@Nullable String postalCode) {
+        public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
-        public Builder setStateOrProvince(@Nullable String stateOrProvince) {
+        public Builder stateOrProvince(@Nullable String stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
 
-        public Builder setStreetAddress1(String streetAddress1) {
+        public Builder streetAddress1(String streetAddress1) {
             this.streetAddress1 = Objects.requireNonNull(streetAddress1);
             return this;
         }
 
-        public Builder setStreetAddress2(@Nullable String streetAddress2) {
+        public Builder streetAddress2(@Nullable String streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
         }
 
-        public Builder setStreetAddress3(@Nullable String streetAddress3) {
+        public Builder streetAddress3(@Nullable String streetAddress3) {
             this.streetAddress3 = streetAddress3;
             return this;
         }
 
-        public Builder setZipExtendedCode(@Nullable String zipExtendedCode) {
+        public Builder zipExtendedCode(@Nullable String zipExtendedCode) {
             this.zipExtendedCode = zipExtendedCode;
             return this;
         }

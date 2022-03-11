@@ -57,12 +57,12 @@ public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.Resou
     	      this.maxPercentUnhealthyServices = defaults.maxPercentUnhealthyServices;
         }
 
-        public Builder setMaxPercentUnhealthyServices(@Nullable Input<Integer> maxPercentUnhealthyServices) {
+        public Builder maxPercentUnhealthyServices(@Nullable Input<Integer> maxPercentUnhealthyServices) {
             this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
+        public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
             this.maxPercentUnhealthyServices = Input.ofNullable(maxPercentUnhealthyServices);
             return this;
         }

@@ -72,12 +72,12 @@ public final class AssetHierarchy extends io.pulumi.resources.InvokeArgs {
     	      this.logicalId = defaults.logicalId;
         }
 
-        public Builder setChildAssetId(String childAssetId) {
+        public Builder childAssetId(String childAssetId) {
             this.childAssetId = Objects.requireNonNull(childAssetId);
             return this;
         }
 
-        public Builder setLogicalId(String logicalId) {
+        public Builder logicalId(String logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }

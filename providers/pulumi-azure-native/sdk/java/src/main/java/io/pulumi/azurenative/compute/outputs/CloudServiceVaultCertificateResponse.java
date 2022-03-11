@@ -17,8 +17,8 @@ public final class CloudServiceVaultCertificateResponse {
      */
     private final @Nullable String certificateUrl;
 
-    @OutputCustomType.Constructor({"certificateUrl"})
-    private CloudServiceVaultCertificateResponse(@Nullable String certificateUrl) {
+    @OutputCustomType.Constructor
+    private CloudServiceVaultCertificateResponse(@OutputCustomType.Parameter("certificateUrl") @Nullable String certificateUrl) {
         this.certificateUrl = certificateUrl;
     }
 
@@ -50,7 +50,7 @@ public final class CloudServiceVaultCertificateResponse {
     	      this.certificateUrl = defaults.certificateUrl;
         }
 
-        public Builder setCertificateUrl(@Nullable String certificateUrl) {
+        public Builder certificateUrl(@Nullable String certificateUrl) {
             this.certificateUrl = certificateUrl;
             return this;
         }

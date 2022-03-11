@@ -58,17 +58,17 @@ public final class SharedAccessAuthorizationRulePropertiesResponse {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor({"claimType","claimValue","createdTime","keyName","modifiedTime","primaryKey","revision","rights","secondaryKey"})
+    @OutputCustomType.Constructor
     private SharedAccessAuthorizationRulePropertiesResponse(
-        String claimType,
-        String claimValue,
-        String createdTime,
-        String keyName,
-        String modifiedTime,
-        String primaryKey,
-        Integer revision,
-        @Nullable List<String> rights,
-        String secondaryKey) {
+        @OutputCustomType.Parameter("claimType") String claimType,
+        @OutputCustomType.Parameter("claimValue") String claimValue,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
+        @OutputCustomType.Parameter("primaryKey") String primaryKey,
+        @OutputCustomType.Parameter("revision") Integer revision,
+        @OutputCustomType.Parameter("rights") @Nullable List<String> rights,
+        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
         this.claimType = claimType;
         this.claimValue = claimValue;
         this.createdTime = createdTime;
@@ -180,47 +180,47 @@ public final class SharedAccessAuthorizationRulePropertiesResponse {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setClaimType(String claimType) {
+        public Builder claimType(String claimType) {
             this.claimType = Objects.requireNonNull(claimType);
             return this;
         }
 
-        public Builder setClaimValue(String claimValue) {
+        public Builder claimValue(String claimValue) {
             this.claimValue = Objects.requireNonNull(claimValue);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setModifiedTime(String modifiedTime) {
+        public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = Objects.requireNonNull(modifiedTime);
             return this;
         }
 
-        public Builder setPrimaryKey(String primaryKey) {
+        public Builder primaryKey(String primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setRights(@Nullable List<String> rights) {
+        public Builder rights(@Nullable List<String> rights) {
             this.rights = rights;
             return this;
         }
 
-        public Builder setSecondaryKey(String secondaryKey) {
+        public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }

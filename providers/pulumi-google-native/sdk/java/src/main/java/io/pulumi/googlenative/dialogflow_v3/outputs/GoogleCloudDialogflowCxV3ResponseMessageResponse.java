@@ -64,17 +64,17 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageResponse {
      */
     private final GoogleCloudDialogflowCxV3ResponseMessageTextResponse text;
 
-    @OutputCustomType.Constructor({"conversationSuccess","endInteraction","liveAgentHandoff","mixedAudio","outputAudioText","payload","playAudio","telephonyTransferCall","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ResponseMessageResponse(
-        GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse conversationSuccess,
-        GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse endInteraction,
-        GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse liveAgentHandoff,
-        GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse mixedAudio,
-        GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse outputAudioText,
-        Map<String,String> payload,
-        GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse playAudio,
-        GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse telephonyTransferCall,
-        GoogleCloudDialogflowCxV3ResponseMessageTextResponse text) {
+        @OutputCustomType.Parameter("conversationSuccess") GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse conversationSuccess,
+        @OutputCustomType.Parameter("endInteraction") GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse endInteraction,
+        @OutputCustomType.Parameter("liveAgentHandoff") GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse liveAgentHandoff,
+        @OutputCustomType.Parameter("mixedAudio") GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse mixedAudio,
+        @OutputCustomType.Parameter("outputAudioText") GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse outputAudioText,
+        @OutputCustomType.Parameter("payload") Map<String,String> payload,
+        @OutputCustomType.Parameter("playAudio") GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse playAudio,
+        @OutputCustomType.Parameter("telephonyTransferCall") GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse telephonyTransferCall,
+        @OutputCustomType.Parameter("text") GoogleCloudDialogflowCxV3ResponseMessageTextResponse text) {
         this.conversationSuccess = conversationSuccess;
         this.endInteraction = endInteraction;
         this.liveAgentHandoff = liveAgentHandoff;
@@ -186,47 +186,47 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setConversationSuccess(GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse conversationSuccess) {
+        public Builder conversationSuccess(GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse conversationSuccess) {
             this.conversationSuccess = Objects.requireNonNull(conversationSuccess);
             return this;
         }
 
-        public Builder setEndInteraction(GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse endInteraction) {
+        public Builder endInteraction(GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse endInteraction) {
             this.endInteraction = Objects.requireNonNull(endInteraction);
             return this;
         }
 
-        public Builder setLiveAgentHandoff(GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse liveAgentHandoff) {
+        public Builder liveAgentHandoff(GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse liveAgentHandoff) {
             this.liveAgentHandoff = Objects.requireNonNull(liveAgentHandoff);
             return this;
         }
 
-        public Builder setMixedAudio(GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse mixedAudio) {
+        public Builder mixedAudio(GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse mixedAudio) {
             this.mixedAudio = Objects.requireNonNull(mixedAudio);
             return this;
         }
 
-        public Builder setOutputAudioText(GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse outputAudioText) {
+        public Builder outputAudioText(GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse outputAudioText) {
             this.outputAudioText = Objects.requireNonNull(outputAudioText);
             return this;
         }
 
-        public Builder setPayload(Map<String,String> payload) {
+        public Builder payload(Map<String,String> payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
 
-        public Builder setPlayAudio(GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse playAudio) {
+        public Builder playAudio(GoogleCloudDialogflowCxV3ResponseMessagePlayAudioResponse playAudio) {
             this.playAudio = Objects.requireNonNull(playAudio);
             return this;
         }
 
-        public Builder setTelephonyTransferCall(GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse telephonyTransferCall) {
+        public Builder telephonyTransferCall(GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse telephonyTransferCall) {
             this.telephonyTransferCall = Objects.requireNonNull(telephonyTransferCall);
             return this;
         }
 
-        public Builder setText(GoogleCloudDialogflowCxV3ResponseMessageTextResponse text) {
+        public Builder text(GoogleCloudDialogflowCxV3ResponseMessageTextResponse text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

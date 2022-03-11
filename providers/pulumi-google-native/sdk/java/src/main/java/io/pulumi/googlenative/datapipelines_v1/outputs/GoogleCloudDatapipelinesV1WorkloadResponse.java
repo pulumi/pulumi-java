@@ -21,10 +21,10 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse {
      */
     private final GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
 
-    @OutputCustomType.Constructor({"dataflowFlexTemplateRequest","dataflowLaunchTemplateRequest"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1WorkloadResponse(
-        GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest,
-        GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
+        @OutputCustomType.Parameter("dataflowFlexTemplateRequest") GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest,
+        @OutputCustomType.Parameter("dataflowLaunchTemplateRequest") GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
         this.dataflowFlexTemplateRequest = dataflowFlexTemplateRequest;
         this.dataflowLaunchTemplateRequest = dataflowLaunchTemplateRequest;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse {
     	      this.dataflowLaunchTemplateRequest = defaults.dataflowLaunchTemplateRequest;
         }
 
-        public Builder setDataflowFlexTemplateRequest(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest) {
+        public Builder dataflowFlexTemplateRequest(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest) {
             this.dataflowFlexTemplateRequest = Objects.requireNonNull(dataflowFlexTemplateRequest);
             return this;
         }
 
-        public Builder setDataflowLaunchTemplateRequest(GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
+        public Builder dataflowLaunchTemplateRequest(GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest) {
             this.dataflowLaunchTemplateRequest = Objects.requireNonNull(dataflowLaunchTemplateRequest);
             return this;
         }

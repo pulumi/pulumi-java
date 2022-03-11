@@ -73,12 +73,12 @@ public final class ImageTemplateSharedImageVersionSourceResponse extends io.pulu
     	      this.type = defaults.type;
         }
 
-        public Builder setImageVersionId(String imageVersionId) {
+        public Builder imageVersionId(String imageVersionId) {
             this.imageVersionId = Objects.requireNonNull(imageVersionId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -15,8 +15,8 @@ public final class TableColumnFamily {
      */
     private final String family;
 
-    @OutputCustomType.Constructor({"family"})
-    private TableColumnFamily(String family) {
+    @OutputCustomType.Constructor
+    private TableColumnFamily(@OutputCustomType.Parameter("family") String family) {
         this.family = family;
     }
 
@@ -48,7 +48,7 @@ public final class TableColumnFamily {
     	      this.family = defaults.family;
         }
 
-        public Builder setFamily(String family) {
+        public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }

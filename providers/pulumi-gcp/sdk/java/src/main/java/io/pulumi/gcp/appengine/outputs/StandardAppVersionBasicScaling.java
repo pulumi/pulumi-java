@@ -24,10 +24,10 @@ public final class StandardAppVersionBasicScaling {
      */
     private final Integer maxInstances;
 
-    @OutputCustomType.Constructor({"idleTimeout","maxInstances"})
+    @OutputCustomType.Constructor
     private StandardAppVersionBasicScaling(
-        @Nullable String idleTimeout,
-        Integer maxInstances) {
+        @OutputCustomType.Parameter("idleTimeout") @Nullable String idleTimeout,
+        @OutputCustomType.Parameter("maxInstances") Integer maxInstances) {
         this.idleTimeout = idleTimeout;
         this.maxInstances = maxInstances;
     }
@@ -70,12 +70,12 @@ public final class StandardAppVersionBasicScaling {
     	      this.maxInstances = defaults.maxInstances;
         }
 
-        public Builder setIdleTimeout(@Nullable String idleTimeout) {
+        public Builder idleTimeout(@Nullable String idleTimeout) {
             this.idleTimeout = idleTimeout;
             return this;
         }
 
-        public Builder setMaxInstances(Integer maxInstances) {
+        public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }

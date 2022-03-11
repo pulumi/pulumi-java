@@ -134,62 +134,62 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setClientVpnEndpointId(@Nullable Input<String> clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(@Nullable Input<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = clientVpnEndpointId;
             return this;
         }
 
-        public Builder setClientVpnEndpointId(@Nullable String clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
             this.clientVpnEndpointId = Input.ofNullable(clientVpnEndpointId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable Input<String> destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
-        public Builder setDestinationCidrBlock(@Nullable String destinationCidrBlock) {
+        public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
             this.destinationCidrBlock = Input.ofNullable(destinationCidrBlock);
             return this;
         }
 
-        public Builder setOrigin(@Nullable Input<String> origin) {
+        public Builder origin(@Nullable Input<String> origin) {
             this.origin = origin;
             return this;
         }
 
-        public Builder setOrigin(@Nullable String origin) {
+        public Builder origin(@Nullable String origin) {
             this.origin = Input.ofNullable(origin);
             return this;
         }
 
-        public Builder setTargetVpcSubnetId(@Nullable Input<String> targetVpcSubnetId) {
+        public Builder targetVpcSubnetId(@Nullable Input<String> targetVpcSubnetId) {
             this.targetVpcSubnetId = targetVpcSubnetId;
             return this;
         }
 
-        public Builder setTargetVpcSubnetId(@Nullable String targetVpcSubnetId) {
+        public Builder targetVpcSubnetId(@Nullable String targetVpcSubnetId) {
             this.targetVpcSubnetId = Input.ofNullable(targetVpcSubnetId);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

@@ -35,12 +35,12 @@ public final class VolumeAttachmentStatus {
      */
     private final @Nullable VolumeError detachError;
 
-    @OutputCustomType.Constructor({"attachError","attached","attachmentMetadata","detachError"})
+    @OutputCustomType.Constructor
     private VolumeAttachmentStatus(
-        @Nullable VolumeError attachError,
-        Boolean attached,
-        @Nullable Map<String,String> attachmentMetadata,
-        @Nullable VolumeError detachError) {
+        @OutputCustomType.Parameter("attachError") @Nullable VolumeError attachError,
+        @OutputCustomType.Parameter("attached") Boolean attached,
+        @OutputCustomType.Parameter("attachmentMetadata") @Nullable Map<String,String> attachmentMetadata,
+        @OutputCustomType.Parameter("detachError") @Nullable VolumeError detachError) {
         this.attachError = attachError;
         this.attached = attached;
         this.attachmentMetadata = attachmentMetadata;
@@ -102,22 +102,22 @@ public final class VolumeAttachmentStatus {
     	      this.detachError = defaults.detachError;
         }
 
-        public Builder setAttachError(@Nullable VolumeError attachError) {
+        public Builder attachError(@Nullable VolumeError attachError) {
             this.attachError = attachError;
             return this;
         }
 
-        public Builder setAttached(Boolean attached) {
+        public Builder attached(Boolean attached) {
             this.attached = Objects.requireNonNull(attached);
             return this;
         }
 
-        public Builder setAttachmentMetadata(@Nullable Map<String,String> attachmentMetadata) {
+        public Builder attachmentMetadata(@Nullable Map<String,String> attachmentMetadata) {
             this.attachmentMetadata = attachmentMetadata;
             return this;
         }
 
-        public Builder setDetachError(@Nullable VolumeError detachError) {
+        public Builder detachError(@Nullable VolumeError detachError) {
             this.detachError = detachError;
             return this;
         }

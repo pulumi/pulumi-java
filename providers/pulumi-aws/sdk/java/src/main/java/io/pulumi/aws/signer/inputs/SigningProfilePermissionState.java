@@ -134,62 +134,62 @@ public final class SigningProfilePermissionState extends io.pulumi.resources.Res
     	      this.statementIdPrefix = defaults.statementIdPrefix;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setPrincipal(@Nullable Input<String> principal) {
+        public Builder principal(@Nullable Input<String> principal) {
             this.principal = principal;
             return this;
         }
 
-        public Builder setPrincipal(@Nullable String principal) {
+        public Builder principal(@Nullable String principal) {
             this.principal = Input.ofNullable(principal);
             return this;
         }
 
-        public Builder setProfileName(@Nullable Input<String> profileName) {
+        public Builder profileName(@Nullable Input<String> profileName) {
             this.profileName = profileName;
             return this;
         }
 
-        public Builder setProfileName(@Nullable String profileName) {
+        public Builder profileName(@Nullable String profileName) {
             this.profileName = Input.ofNullable(profileName);
             return this;
         }
 
-        public Builder setProfileVersion(@Nullable Input<String> profileVersion) {
+        public Builder profileVersion(@Nullable Input<String> profileVersion) {
             this.profileVersion = profileVersion;
             return this;
         }
 
-        public Builder setProfileVersion(@Nullable String profileVersion) {
+        public Builder profileVersion(@Nullable String profileVersion) {
             this.profileVersion = Input.ofNullable(profileVersion);
             return this;
         }
 
-        public Builder setStatementId(@Nullable Input<String> statementId) {
+        public Builder statementId(@Nullable Input<String> statementId) {
             this.statementId = statementId;
             return this;
         }
 
-        public Builder setStatementId(@Nullable String statementId) {
+        public Builder statementId(@Nullable String statementId) {
             this.statementId = Input.ofNullable(statementId);
             return this;
         }
 
-        public Builder setStatementIdPrefix(@Nullable Input<String> statementIdPrefix) {
+        public Builder statementIdPrefix(@Nullable Input<String> statementIdPrefix) {
             this.statementIdPrefix = statementIdPrefix;
             return this;
         }
 
-        public Builder setStatementIdPrefix(@Nullable String statementIdPrefix) {
+        public Builder statementIdPrefix(@Nullable String statementIdPrefix) {
             this.statementIdPrefix = Input.ofNullable(statementIdPrefix);
             return this;
         }

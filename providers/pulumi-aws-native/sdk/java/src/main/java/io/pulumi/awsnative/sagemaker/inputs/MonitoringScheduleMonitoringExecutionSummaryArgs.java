@@ -163,82 +163,82 @@ public final class MonitoringScheduleMonitoringExecutionSummaryArgs extends io.p
     	      this.scheduledTime = defaults.scheduledTime;
         }
 
-        public Builder setCreationTime(Input<String> creationTime) {
+        public Builder creationTime(Input<String> creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Input.of(Objects.requireNonNull(creationTime));
             return this;
         }
 
-        public Builder setEndpointName(@Nullable Input<String> endpointName) {
+        public Builder endpointName(@Nullable Input<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
-        public Builder setEndpointName(@Nullable String endpointName) {
+        public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = Input.ofNullable(endpointName);
             return this;
         }
 
-        public Builder setFailureReason(@Nullable Input<String> failureReason) {
+        public Builder failureReason(@Nullable Input<String> failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
-        public Builder setFailureReason(@Nullable String failureReason) {
+        public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = Input.ofNullable(failureReason);
             return this;
         }
 
-        public Builder setLastModifiedTime(Input<String> lastModifiedTime) {
+        public Builder lastModifiedTime(Input<String> lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Input.of(Objects.requireNonNull(lastModifiedTime));
             return this;
         }
 
-        public Builder setMonitoringExecutionStatus(Input<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus) {
+        public Builder monitoringExecutionStatus(Input<MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus> monitoringExecutionStatus) {
             this.monitoringExecutionStatus = Objects.requireNonNull(monitoringExecutionStatus);
             return this;
         }
 
-        public Builder setMonitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
+        public Builder monitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
             this.monitoringExecutionStatus = Input.of(Objects.requireNonNull(monitoringExecutionStatus));
             return this;
         }
 
-        public Builder setMonitoringScheduleName(Input<String> monitoringScheduleName) {
+        public Builder monitoringScheduleName(Input<String> monitoringScheduleName) {
             this.monitoringScheduleName = Objects.requireNonNull(monitoringScheduleName);
             return this;
         }
 
-        public Builder setMonitoringScheduleName(String monitoringScheduleName) {
+        public Builder monitoringScheduleName(String monitoringScheduleName) {
             this.monitoringScheduleName = Input.of(Objects.requireNonNull(monitoringScheduleName));
             return this;
         }
 
-        public Builder setProcessingJobArn(@Nullable Input<String> processingJobArn) {
+        public Builder processingJobArn(@Nullable Input<String> processingJobArn) {
             this.processingJobArn = processingJobArn;
             return this;
         }
 
-        public Builder setProcessingJobArn(@Nullable String processingJobArn) {
+        public Builder processingJobArn(@Nullable String processingJobArn) {
             this.processingJobArn = Input.ofNullable(processingJobArn);
             return this;
         }
 
-        public Builder setScheduledTime(Input<String> scheduledTime) {
+        public Builder scheduledTime(Input<String> scheduledTime) {
             this.scheduledTime = Objects.requireNonNull(scheduledTime);
             return this;
         }
 
-        public Builder setScheduledTime(String scheduledTime) {
+        public Builder scheduledTime(String scheduledTime) {
             this.scheduledTime = Input.of(Objects.requireNonNull(scheduledTime));
             return this;
         }

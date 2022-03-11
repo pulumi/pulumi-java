@@ -70,19 +70,19 @@ public final class GetAgentPoolResult {
      */
     private final @Nullable String virtualNetworkSubnetResourceId;
 
-    @OutputCustomType.Constructor({"count","id","location","name","os","provisioningState","systemData","tags","tier","type","virtualNetworkSubnetResourceId"})
+    @OutputCustomType.Constructor
     private GetAgentPoolResult(
-        @Nullable Integer count,
-        String id,
-        String location,
-        String name,
-        @Nullable String os,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable String tier,
-        String type,
-        @Nullable String virtualNetworkSubnetResourceId) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("os") @Nullable String os,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tier") @Nullable String tier,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkSubnetResourceId") @Nullable String virtualNetworkSubnetResourceId) {
         this.count = count;
         this.id = id;
         this.location = location;
@@ -214,57 +214,57 @@ public final class GetAgentPoolResult {
     	      this.virtualNetworkSubnetResourceId = defaults.virtualNetworkSubnetResourceId;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOs(@Nullable String os) {
+        public Builder os(@Nullable String os) {
             this.os = os;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetworkSubnetResourceId(@Nullable String virtualNetworkSubnetResourceId) {
+        public Builder virtualNetworkSubnetResourceId(@Nullable String virtualNetworkSubnetResourceId) {
             this.virtualNetworkSubnetResourceId = virtualNetworkSubnetResourceId;
             return this;
         }

@@ -21,10 +21,10 @@ public final class GetDefaultTagsResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"id","tags"})
+    @OutputCustomType.Constructor
     private GetDefaultTagsResult(
-        String id,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.id = id;
         this.tags = tags;
     }
@@ -66,12 +66,12 @@ public final class GetDefaultTagsResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

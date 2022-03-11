@@ -26,11 +26,11 @@ public final class EnvVarResponse {
      */
     private final EnvVarSourceResponse valueFrom;
 
-    @OutputCustomType.Constructor({"name","value","valueFrom"})
+    @OutputCustomType.Constructor
     private EnvVarResponse(
-        String name,
-        String value,
-        EnvVarSourceResponse valueFrom) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("valueFrom") EnvVarSourceResponse valueFrom) {
         this.name = name;
         this.value = value;
         this.valueFrom = valueFrom;
@@ -82,17 +82,17 @@ public final class EnvVarResponse {
     	      this.valueFrom = defaults.valueFrom;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValueFrom(EnvVarSourceResponse valueFrom) {
+        public Builder valueFrom(EnvVarSourceResponse valueFrom) {
             this.valueFrom = Objects.requireNonNull(valueFrom);
             return this;
         }

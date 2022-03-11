@@ -28,11 +28,11 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      */
     private final String sizeDisk;
 
-    @OutputCustomType.Constructor({"description","kind","sizeDisk"})
+    @OutputCustomType.Constructor
     private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse(
-        @Nullable String description,
-        String kind,
-        String sizeDisk) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("sizeDisk") String sizeDisk) {
         this.description = description;
         this.kind = kind;
         this.sizeDisk = sizeDisk;
@@ -85,17 +85,17 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
     	      this.sizeDisk = defaults.sizeDisk;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSizeDisk(String sizeDisk) {
+        public Builder sizeDisk(String sizeDisk) {
             this.sizeDisk = Objects.requireNonNull(sizeDisk);
             return this;
         }

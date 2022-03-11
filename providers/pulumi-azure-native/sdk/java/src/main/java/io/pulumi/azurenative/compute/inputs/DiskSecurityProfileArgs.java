@@ -59,12 +59,12 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
     	      this.securityType = defaults.securityType;
         }
 
-        public Builder setSecurityType(@Nullable Input<Either<String,DiskSecurityTypes>> securityType) {
+        public Builder securityType(@Nullable Input<Either<String,DiskSecurityTypes>> securityType) {
             this.securityType = securityType;
             return this;
         }
 
-        public Builder setSecurityType(@Nullable Either<String,DiskSecurityTypes> securityType) {
+        public Builder securityType(@Nullable Either<String,DiskSecurityTypes> securityType) {
             this.securityType = Input.ofNullable(securityType);
             return this;
         }

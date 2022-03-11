@@ -353,192 +353,192 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     	      this.sourceSnapshotEncryptionKey = defaults.sourceSnapshotEncryptionKey;
         }
 
-        public Builder setArchitecture(@Nullable Input<AttachedDiskInitializeParamsArchitecture> architecture) {
+        public Builder architecture(@Nullable Input<AttachedDiskInitializeParamsArchitecture> architecture) {
             this.architecture = architecture;
             return this;
         }
 
-        public Builder setArchitecture(@Nullable AttachedDiskInitializeParamsArchitecture architecture) {
+        public Builder architecture(@Nullable AttachedDiskInitializeParamsArchitecture architecture) {
             this.architecture = Input.ofNullable(architecture);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDiskName(@Nullable Input<String> diskName) {
+        public Builder diskName(@Nullable Input<String> diskName) {
             this.diskName = diskName;
             return this;
         }
 
-        public Builder setDiskName(@Nullable String diskName) {
+        public Builder diskName(@Nullable String diskName) {
             this.diskName = Input.ofNullable(diskName);
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<String> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable String diskSizeGb) {
+        public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Input<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder setGuestOsFeatures(@Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable Input<List<GuestOsFeatureArgs>> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
-        public Builder setGuestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable List<GuestOsFeatureArgs> guestOsFeatures) {
             this.guestOsFeatures = Input.ofNullable(guestOsFeatures);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLicenseCodes(@Nullable Input<List<String>> licenseCodes) {
+        public Builder licenseCodes(@Nullable Input<List<String>> licenseCodes) {
             this.licenseCodes = licenseCodes;
             return this;
         }
 
-        public Builder setLicenseCodes(@Nullable List<String> licenseCodes) {
+        public Builder licenseCodes(@Nullable List<String> licenseCodes) {
             this.licenseCodes = Input.ofNullable(licenseCodes);
             return this;
         }
 
-        public Builder setLicenses(@Nullable Input<List<String>> licenses) {
+        public Builder licenses(@Nullable Input<List<String>> licenses) {
             this.licenses = licenses;
             return this;
         }
 
-        public Builder setLicenses(@Nullable List<String> licenses) {
+        public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = Input.ofNullable(licenses);
             return this;
         }
 
-        public Builder setMultiWriter(@Nullable Input<Boolean> multiWriter) {
+        public Builder multiWriter(@Nullable Input<Boolean> multiWriter) {
             this.multiWriter = multiWriter;
             return this;
         }
 
-        public Builder setMultiWriter(@Nullable Boolean multiWriter) {
+        public Builder multiWriter(@Nullable Boolean multiWriter) {
             this.multiWriter = Input.ofNullable(multiWriter);
             return this;
         }
 
-        public Builder setOnUpdateAction(@Nullable Input<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction) {
+        public Builder onUpdateAction(@Nullable Input<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction) {
             this.onUpdateAction = onUpdateAction;
             return this;
         }
 
-        public Builder setOnUpdateAction(@Nullable AttachedDiskInitializeParamsOnUpdateAction onUpdateAction) {
+        public Builder onUpdateAction(@Nullable AttachedDiskInitializeParamsOnUpdateAction onUpdateAction) {
             this.onUpdateAction = Input.ofNullable(onUpdateAction);
             return this;
         }
 
-        public Builder setProvisionedIops(@Nullable Input<String> provisionedIops) {
+        public Builder provisionedIops(@Nullable Input<String> provisionedIops) {
             this.provisionedIops = provisionedIops;
             return this;
         }
 
-        public Builder setProvisionedIops(@Nullable String provisionedIops) {
+        public Builder provisionedIops(@Nullable String provisionedIops) {
             this.provisionedIops = Input.ofNullable(provisionedIops);
             return this;
         }
 
-        public Builder setReplicaZones(@Nullable Input<List<String>> replicaZones) {
+        public Builder replicaZones(@Nullable Input<List<String>> replicaZones) {
             this.replicaZones = replicaZones;
             return this;
         }
 
-        public Builder setReplicaZones(@Nullable List<String> replicaZones) {
+        public Builder replicaZones(@Nullable List<String> replicaZones) {
             this.replicaZones = Input.ofNullable(replicaZones);
             return this;
         }
 
-        public Builder setResourcePolicies(@Nullable Input<List<String>> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable Input<List<String>> resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
-        public Builder setResourcePolicies(@Nullable List<String> resourcePolicies) {
+        public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
             this.resourcePolicies = Input.ofNullable(resourcePolicies);
             return this;
         }
 
-        public Builder setSourceImage(@Nullable Input<String> sourceImage) {
+        public Builder sourceImage(@Nullable Input<String> sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
 
-        public Builder setSourceImage(@Nullable String sourceImage) {
+        public Builder sourceImage(@Nullable String sourceImage) {
             this.sourceImage = Input.ofNullable(sourceImage);
             return this;
         }
 
-        public Builder setSourceImageEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
 
-        public Builder setSourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Input.ofNullable(sourceImageEncryptionKey);
             return this;
         }
 
-        public Builder setSourceInstantSnapshot(@Nullable Input<String> sourceInstantSnapshot) {
+        public Builder sourceInstantSnapshot(@Nullable Input<String> sourceInstantSnapshot) {
             this.sourceInstantSnapshot = sourceInstantSnapshot;
             return this;
         }
 
-        public Builder setSourceInstantSnapshot(@Nullable String sourceInstantSnapshot) {
+        public Builder sourceInstantSnapshot(@Nullable String sourceInstantSnapshot) {
             this.sourceInstantSnapshot = Input.ofNullable(sourceInstantSnapshot);
             return this;
         }
 
-        public Builder setSourceSnapshot(@Nullable Input<String> sourceSnapshot) {
+        public Builder sourceSnapshot(@Nullable Input<String> sourceSnapshot) {
             this.sourceSnapshot = sourceSnapshot;
             return this;
         }
 
-        public Builder setSourceSnapshot(@Nullable String sourceSnapshot) {
+        public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
             this.sourceSnapshot = Input.ofNullable(sourceSnapshot);
             return this;
         }
 
-        public Builder setSourceSnapshotEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable Input<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
         }
 
-        public Builder setSourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Input.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }

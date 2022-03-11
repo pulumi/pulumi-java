@@ -23,10 +23,10 @@ public final class DetectorModelOnInput {
      */
     private final @Nullable List<DetectorModelTransitionEvent> transitionEvents;
 
-    @OutputCustomType.Constructor({"events","transitionEvents"})
+    @OutputCustomType.Constructor
     private DetectorModelOnInput(
-        @Nullable List<DetectorModelEvent> events,
-        @Nullable List<DetectorModelTransitionEvent> transitionEvents) {
+        @OutputCustomType.Parameter("events") @Nullable List<DetectorModelEvent> events,
+        @OutputCustomType.Parameter("transitionEvents") @Nullable List<DetectorModelTransitionEvent> transitionEvents) {
         this.events = events;
         this.transitionEvents = transitionEvents;
     }
@@ -68,12 +68,12 @@ public final class DetectorModelOnInput {
     	      this.transitionEvents = defaults.transitionEvents;
         }
 
-        public Builder setEvents(@Nullable List<DetectorModelEvent> events) {
+        public Builder events(@Nullable List<DetectorModelEvent> events) {
             this.events = events;
             return this;
         }
 
-        public Builder setTransitionEvents(@Nullable List<DetectorModelTransitionEvent> transitionEvents) {
+        public Builder transitionEvents(@Nullable List<DetectorModelTransitionEvent> transitionEvents) {
             this.transitionEvents = transitionEvents;
             return this;
         }

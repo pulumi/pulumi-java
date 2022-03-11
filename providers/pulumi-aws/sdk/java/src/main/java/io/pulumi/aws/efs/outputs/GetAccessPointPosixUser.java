@@ -27,11 +27,11 @@ public final class GetAccessPointPosixUser {
      */
     private final Integer uid;
 
-    @OutputCustomType.Constructor({"gid","secondaryGids","uid"})
+    @OutputCustomType.Constructor
     private GetAccessPointPosixUser(
-        Integer gid,
-        List<Integer> secondaryGids,
-        Integer uid) {
+        @OutputCustomType.Parameter("gid") Integer gid,
+        @OutputCustomType.Parameter("secondaryGids") List<Integer> secondaryGids,
+        @OutputCustomType.Parameter("uid") Integer uid) {
         this.gid = gid;
         this.secondaryGids = secondaryGids;
         this.uid = uid;
@@ -84,17 +84,17 @@ public final class GetAccessPointPosixUser {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setGid(Integer gid) {
+        public Builder gid(Integer gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
 
-        public Builder setSecondaryGids(List<Integer> secondaryGids) {
+        public Builder secondaryGids(List<Integer> secondaryGids) {
             this.secondaryGids = Objects.requireNonNull(secondaryGids);
             return this;
         }
 
-        public Builder setUid(Integer uid) {
+        public Builder uid(Integer uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

@@ -281,152 +281,152 @@ public final class OriginEndpointDashPackageArgs extends io.pulumi.resources.Res
     	      this.utcTimingUri = defaults.utcTimingUri;
         }
 
-        public Builder setAdTriggers(@Nullable Input<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers) {
+        public Builder adTriggers(@Nullable Input<List<OriginEndpointDashPackageAdTriggersItem>> adTriggers) {
             this.adTriggers = adTriggers;
             return this;
         }
 
-        public Builder setAdTriggers(@Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers) {
+        public Builder adTriggers(@Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers) {
             this.adTriggers = Input.ofNullable(adTriggers);
             return this;
         }
 
-        public Builder setAdsOnDeliveryRestrictions(@Nullable Input<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions) {
+        public Builder adsOnDeliveryRestrictions(@Nullable Input<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
 
-        public Builder setAdsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
+        public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = Input.ofNullable(adsOnDeliveryRestrictions);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<OriginEndpointDashEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<OriginEndpointDashEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable OriginEndpointDashEncryptionArgs encryption) {
+        public Builder encryption(@Nullable OriginEndpointDashEncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setManifestLayout(@Nullable Input<OriginEndpointDashPackageManifestLayout> manifestLayout) {
+        public Builder manifestLayout(@Nullable Input<OriginEndpointDashPackageManifestLayout> manifestLayout) {
             this.manifestLayout = manifestLayout;
             return this;
         }
 
-        public Builder setManifestLayout(@Nullable OriginEndpointDashPackageManifestLayout manifestLayout) {
+        public Builder manifestLayout(@Nullable OriginEndpointDashPackageManifestLayout manifestLayout) {
             this.manifestLayout = Input.ofNullable(manifestLayout);
             return this;
         }
 
-        public Builder setManifestWindowSeconds(@Nullable Input<Integer> manifestWindowSeconds) {
+        public Builder manifestWindowSeconds(@Nullable Input<Integer> manifestWindowSeconds) {
             this.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
 
-        public Builder setManifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
+        public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
             this.manifestWindowSeconds = Input.ofNullable(manifestWindowSeconds);
             return this;
         }
 
-        public Builder setMinBufferTimeSeconds(@Nullable Input<Integer> minBufferTimeSeconds) {
+        public Builder minBufferTimeSeconds(@Nullable Input<Integer> minBufferTimeSeconds) {
             this.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
 
-        public Builder setMinBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
+        public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
             this.minBufferTimeSeconds = Input.ofNullable(minBufferTimeSeconds);
             return this;
         }
 
-        public Builder setMinUpdatePeriodSeconds(@Nullable Input<Integer> minUpdatePeriodSeconds) {
+        public Builder minUpdatePeriodSeconds(@Nullable Input<Integer> minUpdatePeriodSeconds) {
             this.minUpdatePeriodSeconds = minUpdatePeriodSeconds;
             return this;
         }
 
-        public Builder setMinUpdatePeriodSeconds(@Nullable Integer minUpdatePeriodSeconds) {
+        public Builder minUpdatePeriodSeconds(@Nullable Integer minUpdatePeriodSeconds) {
             this.minUpdatePeriodSeconds = Input.ofNullable(minUpdatePeriodSeconds);
             return this;
         }
 
-        public Builder setPeriodTriggers(@Nullable Input<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers) {
+        public Builder periodTriggers(@Nullable Input<List<OriginEndpointDashPackagePeriodTriggersItem>> periodTriggers) {
             this.periodTriggers = periodTriggers;
             return this;
         }
 
-        public Builder setPeriodTriggers(@Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers) {
+        public Builder periodTriggers(@Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers) {
             this.periodTriggers = Input.ofNullable(periodTriggers);
             return this;
         }
 
-        public Builder setProfile(@Nullable Input<OriginEndpointDashPackageProfile> profile) {
+        public Builder profile(@Nullable Input<OriginEndpointDashPackageProfile> profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setProfile(@Nullable OriginEndpointDashPackageProfile profile) {
+        public Builder profile(@Nullable OriginEndpointDashPackageProfile profile) {
             this.profile = Input.ofNullable(profile);
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
             return this;
         }
 
-        public Builder setSegmentTemplateFormat(@Nullable Input<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat) {
+        public Builder segmentTemplateFormat(@Nullable Input<OriginEndpointDashPackageSegmentTemplateFormat> segmentTemplateFormat) {
             this.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
 
-        public Builder setSegmentTemplateFormat(@Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat) {
+        public Builder segmentTemplateFormat(@Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat) {
             this.segmentTemplateFormat = Input.ofNullable(segmentTemplateFormat);
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection) {
+        public Builder streamSelection(@Nullable Input<OriginEndpointStreamSelectionArgs> streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
+        public Builder streamSelection(@Nullable OriginEndpointStreamSelectionArgs streamSelection) {
             this.streamSelection = Input.ofNullable(streamSelection);
             return this;
         }
 
-        public Builder setSuggestedPresentationDelaySeconds(@Nullable Input<Integer> suggestedPresentationDelaySeconds) {
+        public Builder suggestedPresentationDelaySeconds(@Nullable Input<Integer> suggestedPresentationDelaySeconds) {
             this.suggestedPresentationDelaySeconds = suggestedPresentationDelaySeconds;
             return this;
         }
 
-        public Builder setSuggestedPresentationDelaySeconds(@Nullable Integer suggestedPresentationDelaySeconds) {
+        public Builder suggestedPresentationDelaySeconds(@Nullable Integer suggestedPresentationDelaySeconds) {
             this.suggestedPresentationDelaySeconds = Input.ofNullable(suggestedPresentationDelaySeconds);
             return this;
         }
 
-        public Builder setUtcTiming(@Nullable Input<OriginEndpointDashPackageUtcTiming> utcTiming) {
+        public Builder utcTiming(@Nullable Input<OriginEndpointDashPackageUtcTiming> utcTiming) {
             this.utcTiming = utcTiming;
             return this;
         }
 
-        public Builder setUtcTiming(@Nullable OriginEndpointDashPackageUtcTiming utcTiming) {
+        public Builder utcTiming(@Nullable OriginEndpointDashPackageUtcTiming utcTiming) {
             this.utcTiming = Input.ofNullable(utcTiming);
             return this;
         }
 
-        public Builder setUtcTimingUri(@Nullable Input<String> utcTimingUri) {
+        public Builder utcTimingUri(@Nullable Input<String> utcTimingUri) {
             this.utcTimingUri = utcTimingUri;
             return this;
         }
 
-        public Builder setUtcTimingUri(@Nullable String utcTimingUri) {
+        public Builder utcTimingUri(@Nullable String utcTimingUri) {
             this.utcTimingUri = Input.ofNullable(utcTimingUri);
             return this;
         }

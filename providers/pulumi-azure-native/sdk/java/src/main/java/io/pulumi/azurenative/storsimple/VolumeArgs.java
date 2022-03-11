@@ -220,112 +220,112 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setAccessControlRecordIds(Input<List<String>> accessControlRecordIds) {
+        public Builder accessControlRecordIds(Input<List<String>> accessControlRecordIds) {
             this.accessControlRecordIds = Objects.requireNonNull(accessControlRecordIds);
             return this;
         }
 
-        public Builder setAccessControlRecordIds(List<String> accessControlRecordIds) {
+        public Builder accessControlRecordIds(List<String> accessControlRecordIds) {
             this.accessControlRecordIds = Input.of(Objects.requireNonNull(accessControlRecordIds));
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Input<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Kind kind) {
+        public Builder kind(@Nullable Kind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setManagerName(Input<String> managerName) {
+        public Builder managerName(Input<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Input.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder setMonitoringStatus(Input<MonitoringStatus> monitoringStatus) {
+        public Builder monitoringStatus(Input<MonitoringStatus> monitoringStatus) {
             this.monitoringStatus = Objects.requireNonNull(monitoringStatus);
             return this;
         }
 
-        public Builder setMonitoringStatus(MonitoringStatus monitoringStatus) {
+        public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
             this.monitoringStatus = Input.of(Objects.requireNonNull(monitoringStatus));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSizeInBytes(Input<Double> sizeInBytes) {
+        public Builder sizeInBytes(Input<Double> sizeInBytes) {
             this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
             return this;
         }
 
-        public Builder setSizeInBytes(Double sizeInBytes) {
+        public Builder sizeInBytes(Double sizeInBytes) {
             this.sizeInBytes = Input.of(Objects.requireNonNull(sizeInBytes));
             return this;
         }
 
-        public Builder setVolumeContainerName(Input<String> volumeContainerName) {
+        public Builder volumeContainerName(Input<String> volumeContainerName) {
             this.volumeContainerName = Objects.requireNonNull(volumeContainerName);
             return this;
         }
 
-        public Builder setVolumeContainerName(String volumeContainerName) {
+        public Builder volumeContainerName(String volumeContainerName) {
             this.volumeContainerName = Input.of(Objects.requireNonNull(volumeContainerName));
             return this;
         }
 
-        public Builder setVolumeName(@Nullable Input<String> volumeName) {
+        public Builder volumeName(@Nullable Input<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Input.ofNullable(volumeName);
             return this;
         }
 
-        public Builder setVolumeStatus(Input<VolumeStatus> volumeStatus) {
+        public Builder volumeStatus(Input<VolumeStatus> volumeStatus) {
             this.volumeStatus = Objects.requireNonNull(volumeStatus);
             return this;
         }
 
-        public Builder setVolumeStatus(VolumeStatus volumeStatus) {
+        public Builder volumeStatus(VolumeStatus volumeStatus) {
             this.volumeStatus = Input.of(Objects.requireNonNull(volumeStatus));
             return this;
         }
 
-        public Builder setVolumeType(Input<VolumeType> volumeType) {
+        public Builder volumeType(Input<VolumeType> volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
 
-        public Builder setVolumeType(VolumeType volumeType) {
+        public Builder volumeType(VolumeType volumeType) {
             this.volumeType = Input.of(Objects.requireNonNull(volumeType));
             return this;
         }

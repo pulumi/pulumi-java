@@ -27,11 +27,11 @@ public final class NetworkRuleSetIpRuleResponse {
      */
     private final String ipMask;
 
-    @OutputCustomType.Constructor({"action","filterName","ipMask"})
+    @OutputCustomType.Constructor
     private NetworkRuleSetIpRuleResponse(
-        @Nullable String action,
-        String filterName,
-        String ipMask) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("filterName") String filterName,
+        @OutputCustomType.Parameter("ipMask") String ipMask) {
         this.action = action;
         this.filterName = filterName;
         this.ipMask = ipMask;
@@ -83,17 +83,17 @@ public final class NetworkRuleSetIpRuleResponse {
     	      this.ipMask = defaults.ipMask;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setFilterName(String filterName) {
+        public Builder filterName(String filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
 
-        public Builder setIpMask(String ipMask) {
+        public Builder ipMask(String ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }

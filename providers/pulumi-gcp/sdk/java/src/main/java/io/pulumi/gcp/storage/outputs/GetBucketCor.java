@@ -16,12 +16,12 @@ public final class GetBucketCor {
     private final List<String> origins;
     private final List<String> responseHeaders;
 
-    @OutputCustomType.Constructor({"maxAgeSeconds","methods","origins","responseHeaders"})
+    @OutputCustomType.Constructor
     private GetBucketCor(
-        Integer maxAgeSeconds,
-        List<String> methods,
-        List<String> origins,
-        List<String> responseHeaders) {
+        @OutputCustomType.Parameter("maxAgeSeconds") Integer maxAgeSeconds,
+        @OutputCustomType.Parameter("methods") List<String> methods,
+        @OutputCustomType.Parameter("origins") List<String> origins,
+        @OutputCustomType.Parameter("responseHeaders") List<String> responseHeaders) {
         this.maxAgeSeconds = maxAgeSeconds;
         this.methods = methods;
         this.origins = origins;
@@ -67,22 +67,22 @@ public final class GetBucketCor {
     	      this.responseHeaders = defaults.responseHeaders;
         }
 
-        public Builder setMaxAgeSeconds(Integer maxAgeSeconds) {
+        public Builder maxAgeSeconds(Integer maxAgeSeconds) {
             this.maxAgeSeconds = Objects.requireNonNull(maxAgeSeconds);
             return this;
         }
 
-        public Builder setMethods(List<String> methods) {
+        public Builder methods(List<String> methods) {
             this.methods = Objects.requireNonNull(methods);
             return this;
         }
 
-        public Builder setOrigins(List<String> origins) {
+        public Builder origins(List<String> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
 
-        public Builder setResponseHeaders(List<String> responseHeaders) {
+        public Builder responseHeaders(List<String> responseHeaders) {
             this.responseHeaders = Objects.requireNonNull(responseHeaders);
             return this;
         }

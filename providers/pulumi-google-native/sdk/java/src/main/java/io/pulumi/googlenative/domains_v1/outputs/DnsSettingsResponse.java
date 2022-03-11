@@ -28,11 +28,11 @@ public final class DnsSettingsResponse {
      */
     private final GoogleDomainsDnsResponse googleDomainsDns;
 
-    @OutputCustomType.Constructor({"customDns","glueRecords","googleDomainsDns"})
+    @OutputCustomType.Constructor
     private DnsSettingsResponse(
-        CustomDnsResponse customDns,
-        List<GlueRecordResponse> glueRecords,
-        GoogleDomainsDnsResponse googleDomainsDns) {
+        @OutputCustomType.Parameter("customDns") CustomDnsResponse customDns,
+        @OutputCustomType.Parameter("glueRecords") List<GlueRecordResponse> glueRecords,
+        @OutputCustomType.Parameter("googleDomainsDns") GoogleDomainsDnsResponse googleDomainsDns) {
         this.customDns = customDns;
         this.glueRecords = glueRecords;
         this.googleDomainsDns = googleDomainsDns;
@@ -84,17 +84,17 @@ public final class DnsSettingsResponse {
     	      this.googleDomainsDns = defaults.googleDomainsDns;
         }
 
-        public Builder setCustomDns(CustomDnsResponse customDns) {
+        public Builder customDns(CustomDnsResponse customDns) {
             this.customDns = Objects.requireNonNull(customDns);
             return this;
         }
 
-        public Builder setGlueRecords(List<GlueRecordResponse> glueRecords) {
+        public Builder glueRecords(List<GlueRecordResponse> glueRecords) {
             this.glueRecords = Objects.requireNonNull(glueRecords);
             return this;
         }
 
-        public Builder setGoogleDomainsDns(GoogleDomainsDnsResponse googleDomainsDns) {
+        public Builder googleDomainsDns(GoogleDomainsDnsResponse googleDomainsDns) {
             this.googleDomainsDns = Objects.requireNonNull(googleDomainsDns);
             return this;
         }

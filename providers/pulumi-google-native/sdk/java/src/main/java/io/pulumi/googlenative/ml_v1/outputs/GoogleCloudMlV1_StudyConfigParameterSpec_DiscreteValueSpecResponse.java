@@ -16,8 +16,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecRes
      */
     private final List<Double> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse(List<Double> values) {
+    @OutputCustomType.Constructor
+    private GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse(@OutputCustomType.Parameter("values") List<Double> values) {
         this.values = values;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecRes
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(List<Double> values) {
+        public Builder values(List<Double> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

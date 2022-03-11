@@ -22,10 +22,10 @@ public final class CustomRPValidationsResponse {
      */
     private final @Nullable String validationType;
 
-    @OutputCustomType.Constructor({"specification","validationType"})
+    @OutputCustomType.Constructor
     private CustomRPValidationsResponse(
-        String specification,
-        @Nullable String validationType) {
+        @OutputCustomType.Parameter("specification") String specification,
+        @OutputCustomType.Parameter("validationType") @Nullable String validationType) {
         this.specification = specification;
         this.validationType = validationType;
     }
@@ -67,12 +67,12 @@ public final class CustomRPValidationsResponse {
     	      this.validationType = defaults.validationType;
         }
 
-        public Builder setSpecification(String specification) {
+        public Builder specification(String specification) {
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
 
-        public Builder setValidationType(@Nullable String validationType) {
+        public Builder validationType(@Nullable String validationType) {
             this.validationType = validationType;
             return this;
         }

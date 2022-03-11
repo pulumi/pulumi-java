@@ -174,82 +174,82 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setInboundIpRules(@Nullable Input<List<InboundIpRuleArgs>> inboundIpRules) {
+        public Builder inboundIpRules(@Nullable Input<List<InboundIpRuleArgs>> inboundIpRules) {
             this.inboundIpRules = inboundIpRules;
             return this;
         }
 
-        public Builder setInboundIpRules(@Nullable List<InboundIpRuleArgs> inboundIpRules) {
+        public Builder inboundIpRules(@Nullable List<InboundIpRuleArgs> inboundIpRules) {
             this.inboundIpRules = Input.ofNullable(inboundIpRules);
             return this;
         }
 
-        public Builder setInputSchema(@Nullable Input<Either<String,InputSchema>> inputSchema) {
+        public Builder inputSchema(@Nullable Input<Either<String,InputSchema>> inputSchema) {
             this.inputSchema = inputSchema;
             return this;
         }
 
-        public Builder setInputSchema(@Nullable Either<String,InputSchema> inputSchema) {
+        public Builder inputSchema(@Nullable Either<String,InputSchema> inputSchema) {
             this.inputSchema = Input.ofNullable(inputSchema);
             return this;
         }
 
-        public Builder setInputSchemaMapping(@Nullable Input<JsonInputSchemaMappingArgs> inputSchemaMapping) {
+        public Builder inputSchemaMapping(@Nullable Input<JsonInputSchemaMappingArgs> inputSchemaMapping) {
             this.inputSchemaMapping = inputSchemaMapping;
             return this;
         }
 
-        public Builder setInputSchemaMapping(@Nullable JsonInputSchemaMappingArgs inputSchemaMapping) {
+        public Builder inputSchemaMapping(@Nullable JsonInputSchemaMappingArgs inputSchemaMapping) {
             this.inputSchemaMapping = Input.ofNullable(inputSchemaMapping);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTopicName(@Nullable Input<String> topicName) {
+        public Builder topicName(@Nullable Input<String> topicName) {
             this.topicName = topicName;
             return this;
         }
 
-        public Builder setTopicName(@Nullable String topicName) {
+        public Builder topicName(@Nullable String topicName) {
             this.topicName = Input.ofNullable(topicName);
             return this;
         }

@@ -42,14 +42,14 @@ public final class ZypperSettingsResponse {
      */
     private final Boolean withUpdate;
 
-    @OutputCustomType.Constructor({"categories","excludes","exclusivePatches","severities","withOptional","withUpdate"})
+    @OutputCustomType.Constructor
     private ZypperSettingsResponse(
-        List<String> categories,
-        List<String> excludes,
-        List<String> exclusivePatches,
-        List<String> severities,
-        Boolean withOptional,
-        Boolean withUpdate) {
+        @OutputCustomType.Parameter("categories") List<String> categories,
+        @OutputCustomType.Parameter("excludes") List<String> excludes,
+        @OutputCustomType.Parameter("exclusivePatches") List<String> exclusivePatches,
+        @OutputCustomType.Parameter("severities") List<String> severities,
+        @OutputCustomType.Parameter("withOptional") Boolean withOptional,
+        @OutputCustomType.Parameter("withUpdate") Boolean withUpdate) {
         this.categories = categories;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;
@@ -131,32 +131,32 @@ public final class ZypperSettingsResponse {
     	      this.withUpdate = defaults.withUpdate;
         }
 
-        public Builder setCategories(List<String> categories) {
+        public Builder categories(List<String> categories) {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
 
-        public Builder setExcludes(List<String> excludes) {
+        public Builder excludes(List<String> excludes) {
             this.excludes = Objects.requireNonNull(excludes);
             return this;
         }
 
-        public Builder setExclusivePatches(List<String> exclusivePatches) {
+        public Builder exclusivePatches(List<String> exclusivePatches) {
             this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
             return this;
         }
 
-        public Builder setSeverities(List<String> severities) {
+        public Builder severities(List<String> severities) {
             this.severities = Objects.requireNonNull(severities);
             return this;
         }
 
-        public Builder setWithOptional(Boolean withOptional) {
+        public Builder withOptional(Boolean withOptional) {
             this.withOptional = Objects.requireNonNull(withOptional);
             return this;
         }
 
-        public Builder setWithUpdate(Boolean withUpdate) {
+        public Builder withUpdate(Boolean withUpdate) {
             this.withUpdate = Objects.requireNonNull(withUpdate);
             return this;
         }

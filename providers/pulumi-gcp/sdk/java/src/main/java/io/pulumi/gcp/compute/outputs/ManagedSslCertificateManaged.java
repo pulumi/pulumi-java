@@ -17,8 +17,8 @@ public final class ManagedSslCertificateManaged {
      */
     private final List<String> domains;
 
-    @OutputCustomType.Constructor({"domains"})
-    private ManagedSslCertificateManaged(List<String> domains) {
+    @OutputCustomType.Constructor
+    private ManagedSslCertificateManaged(@OutputCustomType.Parameter("domains") List<String> domains) {
         this.domains = domains;
     }
 
@@ -51,7 +51,7 @@ public final class ManagedSslCertificateManaged {
     	      this.domains = defaults.domains;
         }
 
-        public Builder setDomains(List<String> domains) {
+        public Builder domains(List<String> domains) {
             this.domains = Objects.requireNonNull(domains);
             return this;
         }

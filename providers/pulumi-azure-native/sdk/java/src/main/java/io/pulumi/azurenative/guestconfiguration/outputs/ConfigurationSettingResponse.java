@@ -44,14 +44,14 @@ public final class ConfigurationSettingResponse {
      */
     private final @Nullable Double refreshFrequencyMins;
 
-    @OutputCustomType.Constructor({"actionAfterReboot","allowModuleOverwrite","configurationMode","configurationModeFrequencyMins","rebootIfNeeded","refreshFrequencyMins"})
+    @OutputCustomType.Constructor
     private ConfigurationSettingResponse(
-        @Nullable String actionAfterReboot,
-        @Nullable Boolean allowModuleOverwrite,
-        @Nullable String configurationMode,
-        @Nullable Double configurationModeFrequencyMins,
-        @Nullable Boolean rebootIfNeeded,
-        @Nullable Double refreshFrequencyMins) {
+        @OutputCustomType.Parameter("actionAfterReboot") @Nullable String actionAfterReboot,
+        @OutputCustomType.Parameter("allowModuleOverwrite") @Nullable Boolean allowModuleOverwrite,
+        @OutputCustomType.Parameter("configurationMode") @Nullable String configurationMode,
+        @OutputCustomType.Parameter("configurationModeFrequencyMins") @Nullable Double configurationModeFrequencyMins,
+        @OutputCustomType.Parameter("rebootIfNeeded") @Nullable Boolean rebootIfNeeded,
+        @OutputCustomType.Parameter("refreshFrequencyMins") @Nullable Double refreshFrequencyMins) {
         this.actionAfterReboot = actionAfterReboot;
         this.allowModuleOverwrite = allowModuleOverwrite;
         this.configurationMode = configurationMode;
@@ -133,32 +133,32 @@ public final class ConfigurationSettingResponse {
     	      this.refreshFrequencyMins = defaults.refreshFrequencyMins;
         }
 
-        public Builder setActionAfterReboot(@Nullable String actionAfterReboot) {
+        public Builder actionAfterReboot(@Nullable String actionAfterReboot) {
             this.actionAfterReboot = actionAfterReboot;
             return this;
         }
 
-        public Builder setAllowModuleOverwrite(@Nullable Boolean allowModuleOverwrite) {
+        public Builder allowModuleOverwrite(@Nullable Boolean allowModuleOverwrite) {
             this.allowModuleOverwrite = allowModuleOverwrite;
             return this;
         }
 
-        public Builder setConfigurationMode(@Nullable String configurationMode) {
+        public Builder configurationMode(@Nullable String configurationMode) {
             this.configurationMode = configurationMode;
             return this;
         }
 
-        public Builder setConfigurationModeFrequencyMins(@Nullable Double configurationModeFrequencyMins) {
+        public Builder configurationModeFrequencyMins(@Nullable Double configurationModeFrequencyMins) {
             this.configurationModeFrequencyMins = configurationModeFrequencyMins;
             return this;
         }
 
-        public Builder setRebootIfNeeded(@Nullable Boolean rebootIfNeeded) {
+        public Builder rebootIfNeeded(@Nullable Boolean rebootIfNeeded) {
             this.rebootIfNeeded = rebootIfNeeded;
             return this;
         }
 
-        public Builder setRefreshFrequencyMins(@Nullable Double refreshFrequencyMins) {
+        public Builder refreshFrequencyMins(@Nullable Double refreshFrequencyMins) {
             this.refreshFrequencyMins = refreshFrequencyMins;
             return this;
         }

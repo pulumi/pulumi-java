@@ -20,10 +20,10 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThreshold {
      */
     private final Integer intervalSec;
 
-    @OutputCustomType.Constructor({"count","intervalSec"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleRateLimitOptionsRateLimitThreshold(
-        Integer count,
-        Integer intervalSec) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("intervalSec") Integer intervalSec) {
         this.count = count;
         this.intervalSec = intervalSec;
     }
@@ -65,12 +65,12 @@ public final class SecurityPolicyRuleRateLimitOptionsRateLimitThreshold {
     	      this.intervalSec = defaults.intervalSec;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setIntervalSec(Integer intervalSec) {
+        public Builder intervalSec(Integer intervalSec) {
             this.intervalSec = Objects.requireNonNull(intervalSec);
             return this;
         }

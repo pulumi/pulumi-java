@@ -21,10 +21,10 @@ public final class ScaleRuleResponse {
      */
     private final ScaleActionResponse scaleAction;
 
-    @OutputCustomType.Constructor({"metricTrigger","scaleAction"})
+    @OutputCustomType.Constructor
     private ScaleRuleResponse(
-        MetricTriggerResponse metricTrigger,
-        ScaleActionResponse scaleAction) {
+        @OutputCustomType.Parameter("metricTrigger") MetricTriggerResponse metricTrigger,
+        @OutputCustomType.Parameter("scaleAction") ScaleActionResponse scaleAction) {
         this.metricTrigger = metricTrigger;
         this.scaleAction = scaleAction;
     }
@@ -66,12 +66,12 @@ public final class ScaleRuleResponse {
     	      this.scaleAction = defaults.scaleAction;
         }
 
-        public Builder setMetricTrigger(MetricTriggerResponse metricTrigger) {
+        public Builder metricTrigger(MetricTriggerResponse metricTrigger) {
             this.metricTrigger = Objects.requireNonNull(metricTrigger);
             return this;
         }
 
-        public Builder setScaleAction(ScaleActionResponse scaleAction) {
+        public Builder scaleAction(ScaleActionResponse scaleAction) {
             this.scaleAction = Objects.requireNonNull(scaleAction);
             return this;
         }

@@ -55,7 +55,7 @@ public final class ExportDeliveryInfoResponse extends io.pulumi.resources.Invoke
     	      this.destination = defaults.destination;
         }
 
-        public Builder setDestination(ExportDeliveryDestinationResponse destination) {
+        public Builder destination(ExportDeliveryDestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }

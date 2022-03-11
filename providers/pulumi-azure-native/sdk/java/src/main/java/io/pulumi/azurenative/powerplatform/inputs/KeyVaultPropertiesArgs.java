@@ -75,22 +75,22 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.key = defaults.key;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<KeyPropertiesArgs> key) {
+        public Builder key(@Nullable Input<KeyPropertiesArgs> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable KeyPropertiesArgs key) {
+        public Builder key(@Nullable KeyPropertiesArgs key) {
             this.key = Input.ofNullable(key);
             return this;
         }

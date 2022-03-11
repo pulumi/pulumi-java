@@ -43,14 +43,14 @@ public final class ConfigurationProfileAssignmentPropertiesResponse {
      */
     private final @Nullable String targetId;
 
-    @OutputCustomType.Constructor({"accountId","compliance","configurationProfile","configurationProfilePreferenceId","provisioningState","targetId"})
+    @OutputCustomType.Constructor
     private ConfigurationProfileAssignmentPropertiesResponse(
-        @Nullable String accountId,
-        @Nullable ConfigurationProfileAssignmentComplianceResponse compliance,
-        @Nullable String configurationProfile,
-        @Nullable String configurationProfilePreferenceId,
-        String provisioningState,
-        @Nullable String targetId) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("compliance") @Nullable ConfigurationProfileAssignmentComplianceResponse compliance,
+        @OutputCustomType.Parameter("configurationProfile") @Nullable String configurationProfile,
+        @OutputCustomType.Parameter("configurationProfilePreferenceId") @Nullable String configurationProfilePreferenceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("targetId") @Nullable String targetId) {
         this.accountId = accountId;
         this.compliance = compliance;
         this.configurationProfile = configurationProfile;
@@ -132,32 +132,32 @@ public final class ConfigurationProfileAssignmentPropertiesResponse {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setCompliance(@Nullable ConfigurationProfileAssignmentComplianceResponse compliance) {
+        public Builder compliance(@Nullable ConfigurationProfileAssignmentComplianceResponse compliance) {
             this.compliance = compliance;
             return this;
         }
 
-        public Builder setConfigurationProfile(@Nullable String configurationProfile) {
+        public Builder configurationProfile(@Nullable String configurationProfile) {
             this.configurationProfile = configurationProfile;
             return this;
         }
 
-        public Builder setConfigurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
+        public Builder configurationProfilePreferenceId(@Nullable String configurationProfilePreferenceId) {
             this.configurationProfilePreferenceId = configurationProfilePreferenceId;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = targetId;
             return this;
         }

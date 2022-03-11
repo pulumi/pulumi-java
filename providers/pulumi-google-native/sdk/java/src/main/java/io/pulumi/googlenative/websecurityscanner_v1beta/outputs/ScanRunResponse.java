@@ -70,19 +70,19 @@ public final class ScanRunResponse {
      */
     private final List<ScanRunWarningTraceResponse> warningTraces;
 
-    @OutputCustomType.Constructor({"endTime","errorTrace","executionState","hasVulnerabilities","name","progressPercent","resultState","startTime","urlsCrawledCount","urlsTestedCount","warningTraces"})
+    @OutputCustomType.Constructor
     private ScanRunResponse(
-        String endTime,
-        ScanRunErrorTraceResponse errorTrace,
-        String executionState,
-        Boolean hasVulnerabilities,
-        String name,
-        Integer progressPercent,
-        String resultState,
-        String startTime,
-        String urlsCrawledCount,
-        String urlsTestedCount,
-        List<ScanRunWarningTraceResponse> warningTraces) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("errorTrace") ScanRunErrorTraceResponse errorTrace,
+        @OutputCustomType.Parameter("executionState") String executionState,
+        @OutputCustomType.Parameter("hasVulnerabilities") Boolean hasVulnerabilities,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
+        @OutputCustomType.Parameter("resultState") String resultState,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("urlsCrawledCount") String urlsCrawledCount,
+        @OutputCustomType.Parameter("urlsTestedCount") String urlsTestedCount,
+        @OutputCustomType.Parameter("warningTraces") List<ScanRunWarningTraceResponse> warningTraces) {
         this.endTime = endTime;
         this.errorTrace = errorTrace;
         this.executionState = executionState;
@@ -214,57 +214,57 @@ public final class ScanRunResponse {
     	      this.warningTraces = defaults.warningTraces;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setErrorTrace(ScanRunErrorTraceResponse errorTrace) {
+        public Builder errorTrace(ScanRunErrorTraceResponse errorTrace) {
             this.errorTrace = Objects.requireNonNull(errorTrace);
             return this;
         }
 
-        public Builder setExecutionState(String executionState) {
+        public Builder executionState(String executionState) {
             this.executionState = Objects.requireNonNull(executionState);
             return this;
         }
 
-        public Builder setHasVulnerabilities(Boolean hasVulnerabilities) {
+        public Builder hasVulnerabilities(Boolean hasVulnerabilities) {
             this.hasVulnerabilities = Objects.requireNonNull(hasVulnerabilities);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProgressPercent(Integer progressPercent) {
+        public Builder progressPercent(Integer progressPercent) {
             this.progressPercent = Objects.requireNonNull(progressPercent);
             return this;
         }
 
-        public Builder setResultState(String resultState) {
+        public Builder resultState(String resultState) {
             this.resultState = Objects.requireNonNull(resultState);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setUrlsCrawledCount(String urlsCrawledCount) {
+        public Builder urlsCrawledCount(String urlsCrawledCount) {
             this.urlsCrawledCount = Objects.requireNonNull(urlsCrawledCount);
             return this;
         }
 
-        public Builder setUrlsTestedCount(String urlsTestedCount) {
+        public Builder urlsTestedCount(String urlsTestedCount) {
             this.urlsTestedCount = Objects.requireNonNull(urlsTestedCount);
             return this;
         }
 
-        public Builder setWarningTraces(List<ScanRunWarningTraceResponse> warningTraces) {
+        public Builder warningTraces(List<ScanRunWarningTraceResponse> warningTraces) {
             this.warningTraces = Objects.requireNonNull(warningTraces);
             return this;
         }

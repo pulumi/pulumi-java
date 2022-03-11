@@ -17,8 +17,8 @@ public final class NfsLocationMountOptions {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"version"})
-    private NfsLocationMountOptions(@Nullable String version) {
+    @OutputCustomType.Constructor
+    private NfsLocationMountOptions(@OutputCustomType.Parameter("version") @Nullable String version) {
         this.version = version;
     }
 
@@ -50,7 +50,7 @@ public final class NfsLocationMountOptions {
     	      this.version = defaults.version;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

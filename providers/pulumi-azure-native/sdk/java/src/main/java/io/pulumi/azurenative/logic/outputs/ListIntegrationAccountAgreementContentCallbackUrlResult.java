@@ -44,14 +44,14 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"basePath","method","queries","relativePath","relativePathParameters","value"})
+    @OutputCustomType.Constructor
     private ListIntegrationAccountAgreementContentCallbackUrlResult(
-        String basePath,
-        String method,
-        @Nullable WorkflowTriggerListCallbackUrlQueriesResponse queries,
-        String relativePath,
-        @Nullable List<String> relativePathParameters,
-        String value) {
+        @OutputCustomType.Parameter("basePath") String basePath,
+        @OutputCustomType.Parameter("method") String method,
+        @OutputCustomType.Parameter("queries") @Nullable WorkflowTriggerListCallbackUrlQueriesResponse queries,
+        @OutputCustomType.Parameter("relativePath") String relativePath,
+        @OutputCustomType.Parameter("relativePathParameters") @Nullable List<String> relativePathParameters,
+        @OutputCustomType.Parameter("value") String value) {
         this.basePath = basePath;
         this.method = method;
         this.queries = queries;
@@ -133,32 +133,32 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setBasePath(String basePath) {
+        public Builder basePath(String basePath) {
             this.basePath = Objects.requireNonNull(basePath);
             return this;
         }
 
-        public Builder setMethod(String method) {
+        public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setQueries(@Nullable WorkflowTriggerListCallbackUrlQueriesResponse queries) {
+        public Builder queries(@Nullable WorkflowTriggerListCallbackUrlQueriesResponse queries) {
             this.queries = queries;
             return this;
         }
 
-        public Builder setRelativePath(String relativePath) {
+        public Builder relativePath(String relativePath) {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
 
-        public Builder setRelativePathParameters(@Nullable List<String> relativePathParameters) {
+        public Builder relativePathParameters(@Nullable List<String> relativePathParameters) {
             this.relativePathParameters = relativePathParameters;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -56,16 +56,16 @@ public final class SkuDescriptionResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"capabilities","capacity","family","locations","name","size","skuCapacity","tier"})
+    @OutputCustomType.Constructor
     private SkuDescriptionResponse(
-        @Nullable List<CapabilityResponse> capabilities,
-        @Nullable Integer capacity,
-        @Nullable String family,
-        @Nullable List<String> locations,
-        @Nullable String name,
-        @Nullable String size,
-        @Nullable SkuCapacityResponse skuCapacity,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("capabilities") @Nullable List<CapabilityResponse> capabilities,
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("family") @Nullable String family,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("size") @Nullable String size,
+        @OutputCustomType.Parameter("skuCapacity") @Nullable SkuCapacityResponse skuCapacity,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.capabilities = capabilities;
         this.capacity = capacity;
         this.family = family;
@@ -167,42 +167,42 @@ public final class SkuDescriptionResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCapabilities(@Nullable List<CapabilityResponse> capabilities) {
+        public Builder capabilities(@Nullable List<CapabilityResponse> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setFamily(@Nullable String family) {
+        public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSkuCapacity(@Nullable SkuCapacityResponse skuCapacity) {
+        public Builder skuCapacity(@Nullable SkuCapacityResponse skuCapacity) {
             this.skuCapacity = skuCapacity;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

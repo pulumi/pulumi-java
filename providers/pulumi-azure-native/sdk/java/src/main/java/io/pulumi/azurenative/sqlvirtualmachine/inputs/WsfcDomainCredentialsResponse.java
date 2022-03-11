@@ -90,17 +90,17 @@ public final class WsfcDomainCredentialsResponse extends io.pulumi.resources.Inv
     	      this.sqlServiceAccountPassword = defaults.sqlServiceAccountPassword;
         }
 
-        public Builder setClusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
+        public Builder clusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
             this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
             return this;
         }
 
-        public Builder setClusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
+        public Builder clusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
             this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
             return this;
         }
 
-        public Builder setSqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
+        public Builder sqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
             this.sqlServiceAccountPassword = sqlServiceAccountPassword;
             return this;
         }

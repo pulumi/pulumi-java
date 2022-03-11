@@ -47,14 +47,14 @@ public final class TlsEndpointResponse {
      */
     private final @Nullable TlsValidationOptionsResponse validationOptions;
 
-    @OutputCustomType.Constructor({"credentials","trustedCertificates","tunnel","type","url","validationOptions"})
+    @OutputCustomType.Constructor
     private TlsEndpointResponse(
-        UsernamePasswordCredentialsResponse credentials,
-        @Nullable PemCertificateListResponse trustedCertificates,
-        @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
-        String type,
-        String url,
-        @Nullable TlsValidationOptionsResponse validationOptions) {
+        @OutputCustomType.Parameter("credentials") UsernamePasswordCredentialsResponse credentials,
+        @OutputCustomType.Parameter("trustedCertificates") @Nullable PemCertificateListResponse trustedCertificates,
+        @OutputCustomType.Parameter("tunnel") @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("validationOptions") @Nullable TlsValidationOptionsResponse validationOptions) {
         this.credentials = credentials;
         this.trustedCertificates = trustedCertificates;
         this.tunnel = tunnel;
@@ -137,32 +137,32 @@ public final class TlsEndpointResponse {
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder setCredentials(UsernamePasswordCredentialsResponse credentials) {
+        public Builder credentials(UsernamePasswordCredentialsResponse credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
 
-        public Builder setTrustedCertificates(@Nullable PemCertificateListResponse trustedCertificates) {
+        public Builder trustedCertificates(@Nullable PemCertificateListResponse trustedCertificates) {
             this.trustedCertificates = trustedCertificates;
             return this;
         }
 
-        public Builder setTunnel(@Nullable SecureIotDeviceRemoteTunnelResponse tunnel) {
+        public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelResponse tunnel) {
             this.tunnel = tunnel;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable TlsValidationOptionsResponse validationOptions) {
+        public Builder validationOptions(@Nullable TlsValidationOptionsResponse validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }

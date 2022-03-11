@@ -39,13 +39,13 @@ public final class GetDetectorModelResult {
      */
     private final @Nullable List<DetectorModelTag> tags;
 
-    @OutputCustomType.Constructor({"detectorModelDefinition","detectorModelDescription","evaluationMethod","roleArn","tags"})
+    @OutputCustomType.Constructor
     private GetDetectorModelResult(
-        @Nullable DetectorModelDefinition detectorModelDefinition,
-        @Nullable String detectorModelDescription,
-        @Nullable DetectorModelEvaluationMethod evaluationMethod,
-        @Nullable String roleArn,
-        @Nullable List<DetectorModelTag> tags) {
+        @OutputCustomType.Parameter("detectorModelDefinition") @Nullable DetectorModelDefinition detectorModelDefinition,
+        @OutputCustomType.Parameter("detectorModelDescription") @Nullable String detectorModelDescription,
+        @OutputCustomType.Parameter("evaluationMethod") @Nullable DetectorModelEvaluationMethod evaluationMethod,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<DetectorModelTag> tags) {
         this.detectorModelDefinition = detectorModelDefinition;
         this.detectorModelDescription = detectorModelDescription;
         this.evaluationMethod = evaluationMethod;
@@ -115,27 +115,27 @@ public final class GetDetectorModelResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDetectorModelDefinition(@Nullable DetectorModelDefinition detectorModelDefinition) {
+        public Builder detectorModelDefinition(@Nullable DetectorModelDefinition detectorModelDefinition) {
             this.detectorModelDefinition = detectorModelDefinition;
             return this;
         }
 
-        public Builder setDetectorModelDescription(@Nullable String detectorModelDescription) {
+        public Builder detectorModelDescription(@Nullable String detectorModelDescription) {
             this.detectorModelDescription = detectorModelDescription;
             return this;
         }
 
-        public Builder setEvaluationMethod(@Nullable DetectorModelEvaluationMethod evaluationMethod) {
+        public Builder evaluationMethod(@Nullable DetectorModelEvaluationMethod evaluationMethod) {
             this.evaluationMethod = evaluationMethod;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DetectorModelTag> tags) {
+        public Builder tags(@Nullable List<DetectorModelTag> tags) {
             this.tags = tags;
             return this;
         }

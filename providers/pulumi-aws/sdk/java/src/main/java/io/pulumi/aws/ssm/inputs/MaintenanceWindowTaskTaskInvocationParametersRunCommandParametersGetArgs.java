@@ -219,112 +219,112 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setCloudwatchConfig(@Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs> cloudwatchConfig) {
+        public Builder cloudwatchConfig(@Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs> cloudwatchConfig) {
             this.cloudwatchConfig = cloudwatchConfig;
             return this;
         }
 
-        public Builder setCloudwatchConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs cloudwatchConfig) {
+        public Builder cloudwatchConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs cloudwatchConfig) {
             this.cloudwatchConfig = Input.ofNullable(cloudwatchConfig);
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setDocumentHash(@Nullable Input<String> documentHash) {
+        public Builder documentHash(@Nullable Input<String> documentHash) {
             this.documentHash = documentHash;
             return this;
         }
 
-        public Builder setDocumentHash(@Nullable String documentHash) {
+        public Builder documentHash(@Nullable String documentHash) {
             this.documentHash = Input.ofNullable(documentHash);
             return this;
         }
 
-        public Builder setDocumentHashType(@Nullable Input<String> documentHashType) {
+        public Builder documentHashType(@Nullable Input<String> documentHashType) {
             this.documentHashType = documentHashType;
             return this;
         }
 
-        public Builder setDocumentHashType(@Nullable String documentHashType) {
+        public Builder documentHashType(@Nullable String documentHashType) {
             this.documentHashType = Input.ofNullable(documentHashType);
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable Input<String> documentVersion) {
+        public Builder documentVersion(@Nullable Input<String> documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = Input.ofNullable(documentVersion);
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Input<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs notificationConfig) {
+        public Builder notificationConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs notificationConfig) {
             this.notificationConfig = Input.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder setOutputS3Bucket(@Nullable Input<String> outputS3Bucket) {
+        public Builder outputS3Bucket(@Nullable Input<String> outputS3Bucket) {
             this.outputS3Bucket = outputS3Bucket;
             return this;
         }
 
-        public Builder setOutputS3Bucket(@Nullable String outputS3Bucket) {
+        public Builder outputS3Bucket(@Nullable String outputS3Bucket) {
             this.outputS3Bucket = Input.ofNullable(outputS3Bucket);
             return this;
         }
 
-        public Builder setOutputS3KeyPrefix(@Nullable Input<String> outputS3KeyPrefix) {
+        public Builder outputS3KeyPrefix(@Nullable Input<String> outputS3KeyPrefix) {
             this.outputS3KeyPrefix = outputS3KeyPrefix;
             return this;
         }
 
-        public Builder setOutputS3KeyPrefix(@Nullable String outputS3KeyPrefix) {
+        public Builder outputS3KeyPrefix(@Nullable String outputS3KeyPrefix) {
             this.outputS3KeyPrefix = Input.ofNullable(outputS3KeyPrefix);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs> parameters) {
+        public Builder parameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setServiceRoleArn(@Nullable Input<String> serviceRoleArn) {
+        public Builder serviceRoleArn(@Nullable Input<String> serviceRoleArn) {
             this.serviceRoleArn = serviceRoleArn;
             return this;
         }
 
-        public Builder setServiceRoleArn(@Nullable String serviceRoleArn) {
+        public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
             this.serviceRoleArn = Input.ofNullable(serviceRoleArn);
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }

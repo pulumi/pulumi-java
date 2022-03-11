@@ -52,15 +52,15 @@ public final class ChainingTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","dependsOn","description","pipeline","runDimension","runtimeState","type"})
+    @OutputCustomType.Constructor
     private ChainingTriggerResponse(
-        @Nullable List<Object> annotations,
-        List<PipelineReferenceResponse> dependsOn,
-        @Nullable String description,
-        TriggerPipelineReferenceResponse pipeline,
-        String runDimension,
-        String runtimeState,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("dependsOn") List<PipelineReferenceResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("pipeline") TriggerPipelineReferenceResponse pipeline,
+        @OutputCustomType.Parameter("runDimension") String runDimension,
+        @OutputCustomType.Parameter("runtimeState") String runtimeState,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.dependsOn = dependsOn;
         this.description = description;
@@ -153,37 +153,37 @@ public final class ChainingTriggerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setDependsOn(List<PipelineReferenceResponse> dependsOn) {
+        public Builder dependsOn(List<PipelineReferenceResponse> dependsOn) {
             this.dependsOn = Objects.requireNonNull(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setPipeline(TriggerPipelineReferenceResponse pipeline) {
+        public Builder pipeline(TriggerPipelineReferenceResponse pipeline) {
             this.pipeline = Objects.requireNonNull(pipeline);
             return this;
         }
 
-        public Builder setRunDimension(String runDimension) {
+        public Builder runDimension(String runDimension) {
             this.runDimension = Objects.requireNonNull(runDimension);
             return this;
         }
 
-        public Builder setRuntimeState(String runtimeState) {
+        public Builder runtimeState(String runtimeState) {
             this.runtimeState = Objects.requireNonNull(runtimeState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

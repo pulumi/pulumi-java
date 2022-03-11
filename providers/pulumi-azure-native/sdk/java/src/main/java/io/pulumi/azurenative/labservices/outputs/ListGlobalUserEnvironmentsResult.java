@@ -17,8 +17,8 @@ public final class ListGlobalUserEnvironmentsResult {
      */
     private final @Nullable List<EnvironmentDetailsResponse> environments;
 
-    @OutputCustomType.Constructor({"environments"})
-    private ListGlobalUserEnvironmentsResult(@Nullable List<EnvironmentDetailsResponse> environments) {
+    @OutputCustomType.Constructor
+    private ListGlobalUserEnvironmentsResult(@OutputCustomType.Parameter("environments") @Nullable List<EnvironmentDetailsResponse> environments) {
         this.environments = environments;
     }
 
@@ -50,7 +50,7 @@ public final class ListGlobalUserEnvironmentsResult {
     	      this.environments = defaults.environments;
         }
 
-        public Builder setEnvironments(@Nullable List<EnvironmentDetailsResponse> environments) {
+        public Builder environments(@Nullable List<EnvironmentDetailsResponse> environments) {
             this.environments = environments;
             return this;
         }

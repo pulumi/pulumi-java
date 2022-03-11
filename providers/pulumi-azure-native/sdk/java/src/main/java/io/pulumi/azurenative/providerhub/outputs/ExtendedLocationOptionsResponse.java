@@ -14,10 +14,10 @@ public final class ExtendedLocationOptionsResponse {
     private final @Nullable String supportedPolicy;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"supportedPolicy","type"})
+    @OutputCustomType.Constructor
     private ExtendedLocationOptionsResponse(
-        @Nullable String supportedPolicy,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("supportedPolicy") @Nullable String supportedPolicy,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.supportedPolicy = supportedPolicy;
         this.type = type;
     }
@@ -51,12 +51,12 @@ public final class ExtendedLocationOptionsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setSupportedPolicy(@Nullable String supportedPolicy) {
+        public Builder supportedPolicy(@Nullable String supportedPolicy) {
             this.supportedPolicy = supportedPolicy;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

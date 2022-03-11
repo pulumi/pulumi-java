@@ -28,11 +28,11 @@ public final class ImageRepositoryCredentialResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"imageRepositoryUrl","password","userName"})
+    @OutputCustomType.Constructor
     private ImageRepositoryCredentialResponse(
-        String imageRepositoryUrl,
-        @Nullable AsymmetricEncryptedSecretResponse password,
-        String userName) {
+        @OutputCustomType.Parameter("imageRepositoryUrl") String imageRepositoryUrl,
+        @OutputCustomType.Parameter("password") @Nullable AsymmetricEncryptedSecretResponse password,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.imageRepositoryUrl = imageRepositoryUrl;
         this.password = password;
         this.userName = userName;
@@ -84,17 +84,17 @@ public final class ImageRepositoryCredentialResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setImageRepositoryUrl(String imageRepositoryUrl) {
+        public Builder imageRepositoryUrl(String imageRepositoryUrl) {
             this.imageRepositoryUrl = Objects.requireNonNull(imageRepositoryUrl);
             return this;
         }
 
-        public Builder setPassword(@Nullable AsymmetricEncryptedSecretResponse password) {
+        public Builder password(@Nullable AsymmetricEncryptedSecretResponse password) {
             this.password = password;
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

@@ -91,32 +91,32 @@ public final class ServiceTrafficGetArgs extends io.pulumi.resources.ResourceArg
     	      this.revisionName = defaults.revisionName;
         }
 
-        public Builder setLatestRevision(@Nullable Input<Boolean> latestRevision) {
+        public Builder latestRevision(@Nullable Input<Boolean> latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
-        public Builder setLatestRevision(@Nullable Boolean latestRevision) {
+        public Builder latestRevision(@Nullable Boolean latestRevision) {
             this.latestRevision = Input.ofNullable(latestRevision);
             return this;
         }
 
-        public Builder setPercent(Input<Integer> percent) {
+        public Builder percent(Input<Integer> percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
 
-        public Builder setPercent(Integer percent) {
+        public Builder percent(Integer percent) {
             this.percent = Input.of(Objects.requireNonNull(percent));
             return this;
         }
 
-        public Builder setRevisionName(@Nullable Input<String> revisionName) {
+        public Builder revisionName(@Nullable Input<String> revisionName) {
             this.revisionName = revisionName;
             return this;
         }
 
-        public Builder setRevisionName(@Nullable String revisionName) {
+        public Builder revisionName(@Nullable String revisionName) {
             this.revisionName = Input.ofNullable(revisionName);
             return this;
         }

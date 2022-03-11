@@ -23,10 +23,10 @@ public final class CertificateConfigPublicKey {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"format","key"})
+    @OutputCustomType.Constructor
     private CertificateConfigPublicKey(
-        String format,
-        @Nullable String key) {
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("key") @Nullable String key) {
         this.format = format;
         this.key = key;
     }
@@ -69,12 +69,12 @@ public final class CertificateConfigPublicKey {
     	      this.key = defaults.key;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

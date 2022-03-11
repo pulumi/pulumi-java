@@ -21,11 +21,11 @@ public final class ServiceCodeRepository {
     private final String repositoryUrl;
     private final ServiceSourceCodeVersion sourceCodeVersion;
 
-    @OutputCustomType.Constructor({"codeConfiguration","repositoryUrl","sourceCodeVersion"})
+    @OutputCustomType.Constructor
     private ServiceCodeRepository(
-        @Nullable ServiceCodeConfiguration codeConfiguration,
-        String repositoryUrl,
-        ServiceSourceCodeVersion sourceCodeVersion) {
+        @OutputCustomType.Parameter("codeConfiguration") @Nullable ServiceCodeConfiguration codeConfiguration,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @OutputCustomType.Parameter("sourceCodeVersion") ServiceSourceCodeVersion sourceCodeVersion) {
         this.codeConfiguration = codeConfiguration;
         this.repositoryUrl = repositoryUrl;
         this.sourceCodeVersion = sourceCodeVersion;
@@ -69,17 +69,17 @@ public final class ServiceCodeRepository {
     	      this.sourceCodeVersion = defaults.sourceCodeVersion;
         }
 
-        public Builder setCodeConfiguration(@Nullable ServiceCodeConfiguration codeConfiguration) {
+        public Builder codeConfiguration(@Nullable ServiceCodeConfiguration codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setSourceCodeVersion(ServiceSourceCodeVersion sourceCodeVersion) {
+        public Builder sourceCodeVersion(ServiceSourceCodeVersion sourceCodeVersion) {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
         }

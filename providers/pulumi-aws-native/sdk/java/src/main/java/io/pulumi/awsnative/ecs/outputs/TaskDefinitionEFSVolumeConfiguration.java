@@ -20,13 +20,13 @@ public final class TaskDefinitionEFSVolumeConfiguration {
     private final @Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption;
     private final @Nullable Integer transitEncryptionPort;
 
-    @OutputCustomType.Constructor({"authorizationConfig","filesystemId","rootDirectory","transitEncryption","transitEncryptionPort"})
+    @OutputCustomType.Constructor
     private TaskDefinitionEFSVolumeConfiguration(
-        @Nullable TaskDefinitionAuthorizationConfig authorizationConfig,
-        String filesystemId,
-        @Nullable String rootDirectory,
-        @Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption,
-        @Nullable Integer transitEncryptionPort) {
+        @OutputCustomType.Parameter("authorizationConfig") @Nullable TaskDefinitionAuthorizationConfig authorizationConfig,
+        @OutputCustomType.Parameter("filesystemId") String filesystemId,
+        @OutputCustomType.Parameter("rootDirectory") @Nullable String rootDirectory,
+        @OutputCustomType.Parameter("transitEncryption") @Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption,
+        @OutputCustomType.Parameter("transitEncryptionPort") @Nullable Integer transitEncryptionPort) {
         this.authorizationConfig = authorizationConfig;
         this.filesystemId = filesystemId;
         this.rootDirectory = rootDirectory;
@@ -78,27 +78,27 @@ public final class TaskDefinitionEFSVolumeConfiguration {
     	      this.transitEncryptionPort = defaults.transitEncryptionPort;
         }
 
-        public Builder setAuthorizationConfig(@Nullable TaskDefinitionAuthorizationConfig authorizationConfig) {
+        public Builder authorizationConfig(@Nullable TaskDefinitionAuthorizationConfig authorizationConfig) {
             this.authorizationConfig = authorizationConfig;
             return this;
         }
 
-        public Builder setFilesystemId(String filesystemId) {
+        public Builder filesystemId(String filesystemId) {
             this.filesystemId = Objects.requireNonNull(filesystemId);
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable String rootDirectory) {
+        public Builder rootDirectory(@Nullable String rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
 
-        public Builder setTransitEncryption(@Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption) {
+        public Builder transitEncryption(@Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption) {
             this.transitEncryption = transitEncryption;
             return this;
         }
 
-        public Builder setTransitEncryptionPort(@Nullable Integer transitEncryptionPort) {
+        public Builder transitEncryptionPort(@Nullable Integer transitEncryptionPort) {
             this.transitEncryptionPort = transitEncryptionPort;
             return this;
         }

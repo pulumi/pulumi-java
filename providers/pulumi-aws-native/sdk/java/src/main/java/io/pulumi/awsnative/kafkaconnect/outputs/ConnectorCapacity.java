@@ -15,10 +15,10 @@ public final class ConnectorCapacity {
     private final @Nullable ConnectorAutoScaling autoScaling;
     private final @Nullable ConnectorProvisionedCapacity provisionedCapacity;
 
-    @OutputCustomType.Constructor({"autoScaling","provisionedCapacity"})
+    @OutputCustomType.Constructor
     private ConnectorCapacity(
-        @Nullable ConnectorAutoScaling autoScaling,
-        @Nullable ConnectorProvisionedCapacity provisionedCapacity) {
+        @OutputCustomType.Parameter("autoScaling") @Nullable ConnectorAutoScaling autoScaling,
+        @OutputCustomType.Parameter("provisionedCapacity") @Nullable ConnectorProvisionedCapacity provisionedCapacity) {
         this.autoScaling = autoScaling;
         this.provisionedCapacity = provisionedCapacity;
     }
@@ -52,12 +52,12 @@ public final class ConnectorCapacity {
     	      this.provisionedCapacity = defaults.provisionedCapacity;
         }
 
-        public Builder setAutoScaling(@Nullable ConnectorAutoScaling autoScaling) {
+        public Builder autoScaling(@Nullable ConnectorAutoScaling autoScaling) {
             this.autoScaling = autoScaling;
             return this;
         }
 
-        public Builder setProvisionedCapacity(@Nullable ConnectorProvisionedCapacity provisionedCapacity) {
+        public Builder provisionedCapacity(@Nullable ConnectorProvisionedCapacity provisionedCapacity) {
             this.provisionedCapacity = provisionedCapacity;
             return this;
         }

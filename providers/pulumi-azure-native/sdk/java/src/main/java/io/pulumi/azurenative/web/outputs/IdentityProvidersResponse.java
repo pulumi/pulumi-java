@@ -68,17 +68,17 @@ public final class IdentityProvidersResponse {
      */
     private final @Nullable TwitterResponse twitter;
 
-    @OutputCustomType.Constructor({"apple","azureActiveDirectory","azureStaticWebApps","customOpenIdConnectProviders","facebook","gitHub","google","legacyMicrosoftAccount","twitter"})
+    @OutputCustomType.Constructor
     private IdentityProvidersResponse(
-        @Nullable AppleResponse apple,
-        @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
-        @Nullable AzureStaticWebAppsResponse azureStaticWebApps,
-        @Nullable Map<String,CustomOpenIdConnectProviderResponse> customOpenIdConnectProviders,
-        @Nullable FacebookResponse facebook,
-        @Nullable GitHubResponse gitHub,
-        @Nullable GoogleResponse google,
-        @Nullable LegacyMicrosoftAccountResponse legacyMicrosoftAccount,
-        @Nullable TwitterResponse twitter) {
+        @OutputCustomType.Parameter("apple") @Nullable AppleResponse apple,
+        @OutputCustomType.Parameter("azureActiveDirectory") @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
+        @OutputCustomType.Parameter("azureStaticWebApps") @Nullable AzureStaticWebAppsResponse azureStaticWebApps,
+        @OutputCustomType.Parameter("customOpenIdConnectProviders") @Nullable Map<String,CustomOpenIdConnectProviderResponse> customOpenIdConnectProviders,
+        @OutputCustomType.Parameter("facebook") @Nullable FacebookResponse facebook,
+        @OutputCustomType.Parameter("gitHub") @Nullable GitHubResponse gitHub,
+        @OutputCustomType.Parameter("google") @Nullable GoogleResponse google,
+        @OutputCustomType.Parameter("legacyMicrosoftAccount") @Nullable LegacyMicrosoftAccountResponse legacyMicrosoftAccount,
+        @OutputCustomType.Parameter("twitter") @Nullable TwitterResponse twitter) {
         this.apple = apple;
         this.azureActiveDirectory = azureActiveDirectory;
         this.azureStaticWebApps = azureStaticWebApps;
@@ -191,47 +191,47 @@ public final class IdentityProvidersResponse {
     	      this.twitter = defaults.twitter;
         }
 
-        public Builder setApple(@Nullable AppleResponse apple) {
+        public Builder apple(@Nullable AppleResponse apple) {
             this.apple = apple;
             return this;
         }
 
-        public Builder setAzureActiveDirectory(@Nullable AzureActiveDirectoryResponse azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryResponse azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
 
-        public Builder setAzureStaticWebApps(@Nullable AzureStaticWebAppsResponse azureStaticWebApps) {
+        public Builder azureStaticWebApps(@Nullable AzureStaticWebAppsResponse azureStaticWebApps) {
             this.azureStaticWebApps = azureStaticWebApps;
             return this;
         }
 
-        public Builder setCustomOpenIdConnectProviders(@Nullable Map<String,CustomOpenIdConnectProviderResponse> customOpenIdConnectProviders) {
+        public Builder customOpenIdConnectProviders(@Nullable Map<String,CustomOpenIdConnectProviderResponse> customOpenIdConnectProviders) {
             this.customOpenIdConnectProviders = customOpenIdConnectProviders;
             return this;
         }
 
-        public Builder setFacebook(@Nullable FacebookResponse facebook) {
+        public Builder facebook(@Nullable FacebookResponse facebook) {
             this.facebook = facebook;
             return this;
         }
 
-        public Builder setGitHub(@Nullable GitHubResponse gitHub) {
+        public Builder gitHub(@Nullable GitHubResponse gitHub) {
             this.gitHub = gitHub;
             return this;
         }
 
-        public Builder setGoogle(@Nullable GoogleResponse google) {
+        public Builder google(@Nullable GoogleResponse google) {
             this.google = google;
             return this;
         }
 
-        public Builder setLegacyMicrosoftAccount(@Nullable LegacyMicrosoftAccountResponse legacyMicrosoftAccount) {
+        public Builder legacyMicrosoftAccount(@Nullable LegacyMicrosoftAccountResponse legacyMicrosoftAccount) {
             this.legacyMicrosoftAccount = legacyMicrosoftAccount;
             return this;
         }
 
-        public Builder setTwitter(@Nullable TwitterResponse twitter) {
+        public Builder twitter(@Nullable TwitterResponse twitter) {
             this.twitter = twitter;
             return this;
         }

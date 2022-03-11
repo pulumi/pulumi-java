@@ -21,10 +21,10 @@ public final class TimelineAggregationResponse {
      */
     private final String kind;
 
-    @OutputCustomType.Constructor({"count","kind"})
+    @OutputCustomType.Constructor
     private TimelineAggregationResponse(
-        Integer count,
-        String kind) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.count = count;
         this.kind = kind;
     }
@@ -66,12 +66,12 @@ public final class TimelineAggregationResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

@@ -56,16 +56,16 @@ public final class ApplicationGatewaySslProfileResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"clientAuthConfiguration","etag","id","name","provisioningState","sslPolicy","trustedClientCertificates","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewaySslProfileResponse(
-        @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable ApplicationGatewaySslPolicyResponse sslPolicy,
-        @Nullable List<SubResourceResponse> trustedClientCertificates,
-        String type) {
+        @OutputCustomType.Parameter("clientAuthConfiguration") @Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sslPolicy") @Nullable ApplicationGatewaySslPolicyResponse sslPolicy,
+        @OutputCustomType.Parameter("trustedClientCertificates") @Nullable List<SubResourceResponse> trustedClientCertificates,
+        @OutputCustomType.Parameter("type") String type) {
         this.clientAuthConfiguration = clientAuthConfiguration;
         this.etag = etag;
         this.id = id;
@@ -167,42 +167,42 @@ public final class ApplicationGatewaySslProfileResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setClientAuthConfiguration(@Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration) {
+        public Builder clientAuthConfiguration(@Nullable ApplicationGatewayClientAuthConfigurationResponse clientAuthConfiguration) {
             this.clientAuthConfiguration = clientAuthConfiguration;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable ApplicationGatewaySslPolicyResponse sslPolicy) {
+        public Builder sslPolicy(@Nullable ApplicationGatewaySslPolicyResponse sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }
 
-        public Builder setTrustedClientCertificates(@Nullable List<SubResourceResponse> trustedClientCertificates) {
+        public Builder trustedClientCertificates(@Nullable List<SubResourceResponse> trustedClientCertificates) {
             this.trustedClientCertificates = trustedClientCertificates;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

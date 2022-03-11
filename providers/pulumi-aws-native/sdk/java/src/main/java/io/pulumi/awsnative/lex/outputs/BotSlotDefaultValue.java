@@ -15,8 +15,8 @@ public final class BotSlotDefaultValue {
      */
     private final String defaultValue;
 
-    @OutputCustomType.Constructor({"defaultValue"})
-    private BotSlotDefaultValue(String defaultValue) {
+    @OutputCustomType.Constructor
+    private BotSlotDefaultValue(@OutputCustomType.Parameter("defaultValue") String defaultValue) {
         this.defaultValue = defaultValue;
     }
 
@@ -48,7 +48,7 @@ public final class BotSlotDefaultValue {
     	      this.defaultValue = defaults.defaultValue;
         }
 
-        public Builder setDefaultValue(String defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }

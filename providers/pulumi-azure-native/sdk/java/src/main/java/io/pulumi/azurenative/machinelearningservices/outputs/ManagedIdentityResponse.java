@@ -33,12 +33,12 @@ public final class ManagedIdentityResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"clientId","identityType","objectId","resourceId"})
+    @OutputCustomType.Constructor
     private ManagedIdentityResponse(
-        @Nullable String clientId,
-        String identityType,
-        @Nullable String objectId,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("identityType") String identityType,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.clientId = clientId;
         this.identityType = identityType;
         this.objectId = objectId;
@@ -101,22 +101,22 @@ public final class ManagedIdentityResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setIdentityType(String identityType) {
+        public Builder identityType(String identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

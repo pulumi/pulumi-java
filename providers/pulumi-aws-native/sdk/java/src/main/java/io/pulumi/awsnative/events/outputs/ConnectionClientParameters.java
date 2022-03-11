@@ -12,10 +12,10 @@ public final class ConnectionClientParameters {
     private final String clientID;
     private final String clientSecret;
 
-    @OutputCustomType.Constructor({"clientID","clientSecret"})
+    @OutputCustomType.Constructor
     private ConnectionClientParameters(
-        String clientID,
-        String clientSecret) {
+        @OutputCustomType.Parameter("clientID") String clientID,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret) {
         this.clientID = clientID;
         this.clientSecret = clientSecret;
     }
@@ -49,12 +49,12 @@ public final class ConnectionClientParameters {
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder setClientID(String clientID) {
+        public Builder clientID(String clientID) {
             this.clientID = Objects.requireNonNull(clientID);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }

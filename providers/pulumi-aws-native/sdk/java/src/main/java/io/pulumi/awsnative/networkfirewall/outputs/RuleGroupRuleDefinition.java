@@ -14,10 +14,10 @@ public final class RuleGroupRuleDefinition {
     private final List<String> actions;
     private final RuleGroupMatchAttributes matchAttributes;
 
-    @OutputCustomType.Constructor({"actions","matchAttributes"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleDefinition(
-        List<String> actions,
-        RuleGroupMatchAttributes matchAttributes) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("matchAttributes") RuleGroupMatchAttributes matchAttributes) {
         this.actions = actions;
         this.matchAttributes = matchAttributes;
     }
@@ -51,12 +51,12 @@ public final class RuleGroupRuleDefinition {
     	      this.matchAttributes = defaults.matchAttributes;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setMatchAttributes(RuleGroupMatchAttributes matchAttributes) {
+        public Builder matchAttributes(RuleGroupMatchAttributes matchAttributes) {
             this.matchAttributes = Objects.requireNonNull(matchAttributes);
             return this;
         }

@@ -28,11 +28,11 @@ public final class GetPhraseSetResult {
      */
     private final List<PhraseResponse> phrases;
 
-    @OutputCustomType.Constructor({"boost","name","phrases"})
+    @OutputCustomType.Constructor
     private GetPhraseSetResult(
-        Double boost,
-        String name,
-        List<PhraseResponse> phrases) {
+        @OutputCustomType.Parameter("boost") Double boost,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("phrases") List<PhraseResponse> phrases) {
         this.boost = boost;
         this.name = name;
         this.phrases = phrases;
@@ -84,17 +84,17 @@ public final class GetPhraseSetResult {
     	      this.phrases = defaults.phrases;
         }
 
-        public Builder setBoost(Double boost) {
+        public Builder boost(Double boost) {
             this.boost = Objects.requireNonNull(boost);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPhrases(List<PhraseResponse> phrases) {
+        public Builder phrases(List<PhraseResponse> phrases) {
             this.phrases = Objects.requireNonNull(phrases);
             return this;
         }

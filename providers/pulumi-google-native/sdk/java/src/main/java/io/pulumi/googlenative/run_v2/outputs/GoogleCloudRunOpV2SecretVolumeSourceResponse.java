@@ -28,11 +28,11 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"defaultMode","items","secret"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2SecretVolumeSourceResponse(
-        Integer defaultMode,
-        List<GoogleCloudRunOpV2VersionToPathResponse> items,
-        String secret) {
+        @OutputCustomType.Parameter("defaultMode") Integer defaultMode,
+        @OutputCustomType.Parameter("items") List<GoogleCloudRunOpV2VersionToPathResponse> items,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.secret = secret;
@@ -84,17 +84,17 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setDefaultMode(Integer defaultMode) {
+        public Builder defaultMode(Integer defaultMode) {
             this.defaultMode = Objects.requireNonNull(defaultMode);
             return this;
         }
 
-        public Builder setItems(List<GoogleCloudRunOpV2VersionToPathResponse> items) {
+        public Builder items(List<GoogleCloudRunOpV2VersionToPathResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

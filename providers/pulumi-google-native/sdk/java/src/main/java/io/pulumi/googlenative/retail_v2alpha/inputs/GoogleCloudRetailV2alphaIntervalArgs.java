@@ -106,42 +106,42 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
     	      this.minimum = defaults.minimum;
         }
 
-        public Builder setExclusiveMaximum(@Nullable Input<Double> exclusiveMaximum) {
+        public Builder exclusiveMaximum(@Nullable Input<Double> exclusiveMaximum) {
             this.exclusiveMaximum = exclusiveMaximum;
             return this;
         }
 
-        public Builder setExclusiveMaximum(@Nullable Double exclusiveMaximum) {
+        public Builder exclusiveMaximum(@Nullable Double exclusiveMaximum) {
             this.exclusiveMaximum = Input.ofNullable(exclusiveMaximum);
             return this;
         }
 
-        public Builder setExclusiveMinimum(@Nullable Input<Double> exclusiveMinimum) {
+        public Builder exclusiveMinimum(@Nullable Input<Double> exclusiveMinimum) {
             this.exclusiveMinimum = exclusiveMinimum;
             return this;
         }
 
-        public Builder setExclusiveMinimum(@Nullable Double exclusiveMinimum) {
+        public Builder exclusiveMinimum(@Nullable Double exclusiveMinimum) {
             this.exclusiveMinimum = Input.ofNullable(exclusiveMinimum);
             return this;
         }
 
-        public Builder setMaximum(@Nullable Input<Double> maximum) {
+        public Builder maximum(@Nullable Input<Double> maximum) {
             this.maximum = maximum;
             return this;
         }
 
-        public Builder setMaximum(@Nullable Double maximum) {
+        public Builder maximum(@Nullable Double maximum) {
             this.maximum = Input.ofNullable(maximum);
             return this;
         }
 
-        public Builder setMinimum(@Nullable Input<Double> minimum) {
+        public Builder minimum(@Nullable Input<Double> minimum) {
             this.minimum = minimum;
             return this;
         }
 
-        public Builder setMinimum(@Nullable Double minimum) {
+        public Builder minimum(@Nullable Double minimum) {
             this.minimum = Input.ofNullable(minimum);
             return this;
         }

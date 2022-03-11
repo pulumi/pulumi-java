@@ -22,10 +22,10 @@ public final class RecommendedMachineConfigurationResponse {
      */
     private final @Nullable ResourceRangeResponse vCPUs;
 
-    @OutputCustomType.Constructor({"memory","vCPUs"})
+    @OutputCustomType.Constructor
     private RecommendedMachineConfigurationResponse(
-        @Nullable ResourceRangeResponse memory,
-        @Nullable ResourceRangeResponse vCPUs) {
+        @OutputCustomType.Parameter("memory") @Nullable ResourceRangeResponse memory,
+        @OutputCustomType.Parameter("vCPUs") @Nullable ResourceRangeResponse vCPUs) {
         this.memory = memory;
         this.vCPUs = vCPUs;
     }
@@ -67,12 +67,12 @@ public final class RecommendedMachineConfigurationResponse {
     	      this.vCPUs = defaults.vCPUs;
         }
 
-        public Builder setMemory(@Nullable ResourceRangeResponse memory) {
+        public Builder memory(@Nullable ResourceRangeResponse memory) {
             this.memory = memory;
             return this;
         }
 
-        public Builder setVCPUs(@Nullable ResourceRangeResponse vCPUs) {
+        public Builder vCPUs(@Nullable ResourceRangeResponse vCPUs) {
             this.vCPUs = vCPUs;
             return this;
         }

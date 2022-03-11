@@ -15,11 +15,11 @@ public final class InstanceFromMachineImageNetworkInterfaceAccessConfig {
     private final @Nullable String networkTier;
     private final @Nullable String publicPtrDomainName;
 
-    @OutputCustomType.Constructor({"natIp","networkTier","publicPtrDomainName"})
+    @OutputCustomType.Constructor
     private InstanceFromMachineImageNetworkInterfaceAccessConfig(
-        @Nullable String natIp,
-        @Nullable String networkTier,
-        @Nullable String publicPtrDomainName) {
+        @OutputCustomType.Parameter("natIp") @Nullable String natIp,
+        @OutputCustomType.Parameter("networkTier") @Nullable String networkTier,
+        @OutputCustomType.Parameter("publicPtrDomainName") @Nullable String publicPtrDomainName) {
         this.natIp = natIp;
         this.networkTier = networkTier;
         this.publicPtrDomainName = publicPtrDomainName;
@@ -59,17 +59,17 @@ public final class InstanceFromMachineImageNetworkInterfaceAccessConfig {
     	      this.publicPtrDomainName = defaults.publicPtrDomainName;
         }
 
-        public Builder setNatIp(@Nullable String natIp) {
+        public Builder natIp(@Nullable String natIp) {
             this.natIp = natIp;
             return this;
         }
 
-        public Builder setNetworkTier(@Nullable String networkTier) {
+        public Builder networkTier(@Nullable String networkTier) {
             this.networkTier = networkTier;
             return this;
         }
 
-        public Builder setPublicPtrDomainName(@Nullable String publicPtrDomainName) {
+        public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }

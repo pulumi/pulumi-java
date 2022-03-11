@@ -62,18 +62,18 @@ public final class HttpRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"additionalBindings","body","custom","delete","get","patch","post","put","responseBody","selector"})
+    @OutputCustomType.Constructor
     private HttpRuleResponse(
-        List<HttpRuleResponse> additionalBindings,
-        String body,
-        CustomHttpPatternResponse custom,
-        String delete,
-        String get,
-        String patch,
-        String post,
-        String put,
-        String responseBody,
-        String selector) {
+        @OutputCustomType.Parameter("additionalBindings") List<HttpRuleResponse> additionalBindings,
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("custom") CustomHttpPatternResponse custom,
+        @OutputCustomType.Parameter("delete") String delete,
+        @OutputCustomType.Parameter("get") String get,
+        @OutputCustomType.Parameter("patch") String patch,
+        @OutputCustomType.Parameter("post") String post,
+        @OutputCustomType.Parameter("put") String put,
+        @OutputCustomType.Parameter("responseBody") String responseBody,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.additionalBindings = additionalBindings;
         this.body = body;
         this.custom = custom;
@@ -195,52 +195,52 @@ public final class HttpRuleResponse {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setAdditionalBindings(List<HttpRuleResponse> additionalBindings) {
+        public Builder additionalBindings(List<HttpRuleResponse> additionalBindings) {
             this.additionalBindings = Objects.requireNonNull(additionalBindings);
             return this;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setCustom(CustomHttpPatternResponse custom) {
+        public Builder custom(CustomHttpPatternResponse custom) {
             this.custom = Objects.requireNonNull(custom);
             return this;
         }
 
-        public Builder setDelete(String delete) {
+        public Builder delete(String delete) {
             this.delete = Objects.requireNonNull(delete);
             return this;
         }
 
-        public Builder setGet(String get) {
+        public Builder get(String get) {
             this.get = Objects.requireNonNull(get);
             return this;
         }
 
-        public Builder setPatch(String patch) {
+        public Builder patch(String patch) {
             this.patch = Objects.requireNonNull(patch);
             return this;
         }
 
-        public Builder setPost(String post) {
+        public Builder post(String post) {
             this.post = Objects.requireNonNull(post);
             return this;
         }
 
-        public Builder setPut(String put) {
+        public Builder put(String put) {
             this.put = Objects.requireNonNull(put);
             return this;
         }
 
-        public Builder setResponseBody(String responseBody) {
+        public Builder responseBody(String responseBody) {
             this.responseBody = Objects.requireNonNull(responseBody);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

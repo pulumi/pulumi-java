@@ -20,10 +20,10 @@ public final class GetServiceResult {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor({"producerProjectId","serviceName"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        String producerProjectId,
-        String serviceName) {
+        @OutputCustomType.Parameter("producerProjectId") String producerProjectId,
+        @OutputCustomType.Parameter("serviceName") String serviceName) {
         this.producerProjectId = producerProjectId;
         this.serviceName = serviceName;
     }
@@ -65,12 +65,12 @@ public final class GetServiceResult {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setProducerProjectId(String producerProjectId) {
+        public Builder producerProjectId(String producerProjectId) {
             this.producerProjectId = Objects.requireNonNull(producerProjectId);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

@@ -23,10 +23,10 @@ public final class CacheDirectorySettingsResponse {
      */
     private final @Nullable CacheUsernameDownloadSettingsResponse usernameDownload;
 
-    @OutputCustomType.Constructor({"activeDirectory","usernameDownload"})
+    @OutputCustomType.Constructor
     private CacheDirectorySettingsResponse(
-        @Nullable CacheActiveDirectorySettingsResponse activeDirectory,
-        @Nullable CacheUsernameDownloadSettingsResponse usernameDownload) {
+        @OutputCustomType.Parameter("activeDirectory") @Nullable CacheActiveDirectorySettingsResponse activeDirectory,
+        @OutputCustomType.Parameter("usernameDownload") @Nullable CacheUsernameDownloadSettingsResponse usernameDownload) {
         this.activeDirectory = activeDirectory;
         this.usernameDownload = usernameDownload;
     }
@@ -68,12 +68,12 @@ public final class CacheDirectorySettingsResponse {
     	      this.usernameDownload = defaults.usernameDownload;
         }
 
-        public Builder setActiveDirectory(@Nullable CacheActiveDirectorySettingsResponse activeDirectory) {
+        public Builder activeDirectory(@Nullable CacheActiveDirectorySettingsResponse activeDirectory) {
             this.activeDirectory = activeDirectory;
             return this;
         }
 
-        public Builder setUsernameDownload(@Nullable CacheUsernameDownloadSettingsResponse usernameDownload) {
+        public Builder usernameDownload(@Nullable CacheUsernameDownloadSettingsResponse usernameDownload) {
             this.usernameDownload = usernameDownload;
             return this;
         }

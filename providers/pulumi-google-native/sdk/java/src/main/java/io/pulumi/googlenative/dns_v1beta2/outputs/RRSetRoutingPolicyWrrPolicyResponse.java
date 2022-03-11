@@ -14,10 +14,10 @@ public final class RRSetRoutingPolicyWrrPolicyResponse {
     private final List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items;
     private final String kind;
 
-    @OutputCustomType.Constructor({"items","kind"})
+    @OutputCustomType.Constructor
     private RRSetRoutingPolicyWrrPolicyResponse(
-        List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items,
-        String kind) {
+        @OutputCustomType.Parameter("items") List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.items = items;
         this.kind = kind;
     }
@@ -51,12 +51,12 @@ public final class RRSetRoutingPolicyWrrPolicyResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setItems(List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items) {
+        public Builder items(List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

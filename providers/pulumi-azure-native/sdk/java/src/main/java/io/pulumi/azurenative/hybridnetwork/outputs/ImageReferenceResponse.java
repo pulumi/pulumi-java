@@ -37,13 +37,13 @@ public final class ImageReferenceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"exactVersion","offer","publisher","sku","version"})
+    @OutputCustomType.Constructor
     private ImageReferenceResponse(
-        @Nullable String exactVersion,
-        @Nullable String offer,
-        @Nullable String publisher,
-        @Nullable String sku,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("exactVersion") @Nullable String exactVersion,
+        @OutputCustomType.Parameter("offer") @Nullable String offer,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.exactVersion = exactVersion;
         this.offer = offer;
         this.publisher = publisher;
@@ -115,27 +115,27 @@ public final class ImageReferenceResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setExactVersion(@Nullable String exactVersion) {
+        public Builder exactVersion(@Nullable String exactVersion) {
             this.exactVersion = exactVersion;
             return this;
         }
 
-        public Builder setOffer(@Nullable String offer) {
+        public Builder offer(@Nullable String offer) {
             this.offer = offer;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

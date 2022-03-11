@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class GetResourceDataSyncResult {
     private final @Nullable ResourceDataSyncSyncSource syncSource;
 
-    @OutputCustomType.Constructor({"syncSource"})
-    private GetResourceDataSyncResult(@Nullable ResourceDataSyncSyncSource syncSource) {
+    @OutputCustomType.Constructor
+    private GetResourceDataSyncResult(@OutputCustomType.Parameter("syncSource") @Nullable ResourceDataSyncSyncSource syncSource) {
         this.syncSource = syncSource;
     }
 
@@ -42,7 +42,7 @@ public final class GetResourceDataSyncResult {
     	      this.syncSource = defaults.syncSource;
         }
 
-        public Builder setSyncSource(@Nullable ResourceDataSyncSyncSource syncSource) {
+        public Builder syncSource(@Nullable ResourceDataSyncSyncSource syncSource) {
             this.syncSource = syncSource;
             return this;
         }

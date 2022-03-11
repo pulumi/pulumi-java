@@ -14,10 +14,10 @@ public final class GetSecretReplication {
     private final Boolean automatic;
     private final List<GetSecretReplicationUserManaged> userManageds;
 
-    @OutputCustomType.Constructor({"automatic","userManageds"})
+    @OutputCustomType.Constructor
     private GetSecretReplication(
-        Boolean automatic,
-        List<GetSecretReplicationUserManaged> userManageds) {
+        @OutputCustomType.Parameter("automatic") Boolean automatic,
+        @OutputCustomType.Parameter("userManageds") List<GetSecretReplicationUserManaged> userManageds) {
         this.automatic = automatic;
         this.userManageds = userManageds;
     }
@@ -51,12 +51,12 @@ public final class GetSecretReplication {
     	      this.userManageds = defaults.userManageds;
         }
 
-        public Builder setAutomatic(Boolean automatic) {
+        public Builder automatic(Boolean automatic) {
             this.automatic = Objects.requireNonNull(automatic);
             return this;
         }
 
-        public Builder setUserManageds(List<GetSecretReplicationUserManaged> userManageds) {
+        public Builder userManageds(List<GetSecretReplicationUserManaged> userManageds) {
             this.userManageds = Objects.requireNonNull(userManageds);
             return this;
         }

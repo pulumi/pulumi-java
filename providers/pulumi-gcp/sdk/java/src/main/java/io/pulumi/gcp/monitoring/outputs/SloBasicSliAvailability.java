@@ -17,8 +17,8 @@ public final class SloBasicSliAvailability {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private SloBasicSliAvailability(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private SloBasicSliAvailability(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -50,7 +50,7 @@ public final class SloBasicSliAvailability {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

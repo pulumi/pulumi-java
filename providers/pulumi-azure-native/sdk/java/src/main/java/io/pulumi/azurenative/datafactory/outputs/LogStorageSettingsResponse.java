@@ -33,12 +33,12 @@ public final class LogStorageSettingsResponse {
      */
     private final @Nullable Object path;
 
-    @OutputCustomType.Constructor({"enableReliableLogging","linkedServiceName","logLevel","path"})
+    @OutputCustomType.Constructor
     private LogStorageSettingsResponse(
-        @Nullable Object enableReliableLogging,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object logLevel,
-        @Nullable Object path) {
+        @OutputCustomType.Parameter("enableReliableLogging") @Nullable Object enableReliableLogging,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("logLevel") @Nullable Object logLevel,
+        @OutputCustomType.Parameter("path") @Nullable Object path) {
         this.enableReliableLogging = enableReliableLogging;
         this.linkedServiceName = linkedServiceName;
         this.logLevel = logLevel;
@@ -100,22 +100,22 @@ public final class LogStorageSettingsResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setEnableReliableLogging(@Nullable Object enableReliableLogging) {
+        public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
             this.enableReliableLogging = enableReliableLogging;
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Object logLevel) {
+        public Builder logLevel(@Nullable Object logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setPath(@Nullable Object path) {
+        public Builder path(@Nullable Object path) {
             this.path = path;
             return this;
         }

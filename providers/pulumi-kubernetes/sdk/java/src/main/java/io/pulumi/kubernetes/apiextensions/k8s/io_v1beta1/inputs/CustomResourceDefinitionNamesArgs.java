@@ -139,62 +139,62 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
     	      this.singular = defaults.singular;
         }
 
-        public Builder setCategories(@Nullable Input<List<String>> categories) {
+        public Builder categories(@Nullable Input<List<String>> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setCategories(@Nullable List<String> categories) {
+        public Builder categories(@Nullable List<String> categories) {
             this.categories = Input.ofNullable(categories);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setListKind(@Nullable Input<String> listKind) {
+        public Builder listKind(@Nullable Input<String> listKind) {
             this.listKind = listKind;
             return this;
         }
 
-        public Builder setListKind(@Nullable String listKind) {
+        public Builder listKind(@Nullable String listKind) {
             this.listKind = Input.ofNullable(listKind);
             return this;
         }
 
-        public Builder setPlural(Input<String> plural) {
+        public Builder plural(Input<String> plural) {
             this.plural = Objects.requireNonNull(plural);
             return this;
         }
 
-        public Builder setPlural(String plural) {
+        public Builder plural(String plural) {
             this.plural = Input.of(Objects.requireNonNull(plural));
             return this;
         }
 
-        public Builder setShortNames(@Nullable Input<List<String>> shortNames) {
+        public Builder shortNames(@Nullable Input<List<String>> shortNames) {
             this.shortNames = shortNames;
             return this;
         }
 
-        public Builder setShortNames(@Nullable List<String> shortNames) {
+        public Builder shortNames(@Nullable List<String> shortNames) {
             this.shortNames = Input.ofNullable(shortNames);
             return this;
         }
 
-        public Builder setSingular(@Nullable Input<String> singular) {
+        public Builder singular(@Nullable Input<String> singular) {
             this.singular = singular;
             return this;
         }
 
-        public Builder setSingular(@Nullable String singular) {
+        public Builder singular(@Nullable String singular) {
             this.singular = Input.ofNullable(singular);
             return this;
         }

@@ -17,11 +17,11 @@ public final class ConfigAntennaDownlinkDemodDecodeConfig {
     private final @Nullable ConfigDemodulationConfig demodulationConfig;
     private final @Nullable ConfigSpectrumConfig spectrumConfig;
 
-    @OutputCustomType.Constructor({"decodeConfig","demodulationConfig","spectrumConfig"})
+    @OutputCustomType.Constructor
     private ConfigAntennaDownlinkDemodDecodeConfig(
-        @Nullable ConfigDecodeConfig decodeConfig,
-        @Nullable ConfigDemodulationConfig demodulationConfig,
-        @Nullable ConfigSpectrumConfig spectrumConfig) {
+        @OutputCustomType.Parameter("decodeConfig") @Nullable ConfigDecodeConfig decodeConfig,
+        @OutputCustomType.Parameter("demodulationConfig") @Nullable ConfigDemodulationConfig demodulationConfig,
+        @OutputCustomType.Parameter("spectrumConfig") @Nullable ConfigSpectrumConfig spectrumConfig) {
         this.decodeConfig = decodeConfig;
         this.demodulationConfig = demodulationConfig;
         this.spectrumConfig = spectrumConfig;
@@ -61,17 +61,17 @@ public final class ConfigAntennaDownlinkDemodDecodeConfig {
     	      this.spectrumConfig = defaults.spectrumConfig;
         }
 
-        public Builder setDecodeConfig(@Nullable ConfigDecodeConfig decodeConfig) {
+        public Builder decodeConfig(@Nullable ConfigDecodeConfig decodeConfig) {
             this.decodeConfig = decodeConfig;
             return this;
         }
 
-        public Builder setDemodulationConfig(@Nullable ConfigDemodulationConfig demodulationConfig) {
+        public Builder demodulationConfig(@Nullable ConfigDemodulationConfig demodulationConfig) {
             this.demodulationConfig = demodulationConfig;
             return this;
         }
 
-        public Builder setSpectrumConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
+        public Builder spectrumConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
         }

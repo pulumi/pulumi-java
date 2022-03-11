@@ -16,8 +16,8 @@ public final class GetMeshSpec {
      */
     private final List<GetMeshSpecEgressFilter> egressFilters;
 
-    @OutputCustomType.Constructor({"egressFilters"})
-    private GetMeshSpec(List<GetMeshSpecEgressFilter> egressFilters) {
+    @OutputCustomType.Constructor
+    private GetMeshSpec(@OutputCustomType.Parameter("egressFilters") List<GetMeshSpecEgressFilter> egressFilters) {
         this.egressFilters = egressFilters;
     }
 
@@ -49,7 +49,7 @@ public final class GetMeshSpec {
     	      this.egressFilters = defaults.egressFilters;
         }
 
-        public Builder setEgressFilters(List<GetMeshSpecEgressFilter> egressFilters) {
+        public Builder egressFilters(List<GetMeshSpecEgressFilter> egressFilters) {
             this.egressFilters = Objects.requireNonNull(egressFilters);
             return this;
         }

@@ -27,11 +27,11 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     private final List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor({"destIpRanges","layer4Configs","srcIpRanges"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleMatcherResponse(
-        List<String> destIpRanges,
-        List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
-        List<String> srcIpRanges) {
+        @OutputCustomType.Parameter("destIpRanges") List<String> destIpRanges,
+        @OutputCustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
+        @OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.layer4Configs = layer4Configs;
         this.srcIpRanges = srcIpRanges;
@@ -83,17 +83,17 @@ public final class FirewallPolicyRuleMatcherResponse {
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder setDestIpRanges(List<String> destIpRanges) {
+        public Builder destIpRanges(List<String> destIpRanges) {
             this.destIpRanges = Objects.requireNonNull(destIpRanges);
             return this;
         }
 
-        public Builder setLayer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs) {
+        public Builder layer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
 
-        public Builder setSrcIpRanges(List<String> srcIpRanges) {
+        public Builder srcIpRanges(List<String> srcIpRanges) {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }

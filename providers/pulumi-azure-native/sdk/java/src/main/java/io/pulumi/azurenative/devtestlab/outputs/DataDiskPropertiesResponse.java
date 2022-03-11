@@ -28,11 +28,11 @@ public final class DataDiskPropertiesResponse {
      */
     private final @Nullable String hostCaching;
 
-    @OutputCustomType.Constructor({"attachNewDataDiskOptions","existingLabDiskId","hostCaching"})
+    @OutputCustomType.Constructor
     private DataDiskPropertiesResponse(
-        @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions,
-        @Nullable String existingLabDiskId,
-        @Nullable String hostCaching) {
+        @OutputCustomType.Parameter("attachNewDataDiskOptions") @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions,
+        @OutputCustomType.Parameter("existingLabDiskId") @Nullable String existingLabDiskId,
+        @OutputCustomType.Parameter("hostCaching") @Nullable String hostCaching) {
         this.attachNewDataDiskOptions = attachNewDataDiskOptions;
         this.existingLabDiskId = existingLabDiskId;
         this.hostCaching = hostCaching;
@@ -84,17 +84,17 @@ public final class DataDiskPropertiesResponse {
     	      this.hostCaching = defaults.hostCaching;
         }
 
-        public Builder setAttachNewDataDiskOptions(@Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions) {
+        public Builder attachNewDataDiskOptions(@Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions) {
             this.attachNewDataDiskOptions = attachNewDataDiskOptions;
             return this;
         }
 
-        public Builder setExistingLabDiskId(@Nullable String existingLabDiskId) {
+        public Builder existingLabDiskId(@Nullable String existingLabDiskId) {
             this.existingLabDiskId = existingLabDiskId;
             return this;
         }
 
-        public Builder setHostCaching(@Nullable String hostCaching) {
+        public Builder hostCaching(@Nullable String hostCaching) {
             this.hostCaching = hostCaching;
             return this;
         }

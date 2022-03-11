@@ -32,12 +32,12 @@ public final class AndroidInstrumentationTestResponse {
      */
     private final Boolean useOrchestrator;
 
-    @OutputCustomType.Constructor({"testPackageId","testRunnerClass","testTargets","useOrchestrator"})
+    @OutputCustomType.Constructor
     private AndroidInstrumentationTestResponse(
-        String testPackageId,
-        String testRunnerClass,
-        List<String> testTargets,
-        Boolean useOrchestrator) {
+        @OutputCustomType.Parameter("testPackageId") String testPackageId,
+        @OutputCustomType.Parameter("testRunnerClass") String testRunnerClass,
+        @OutputCustomType.Parameter("testTargets") List<String> testTargets,
+        @OutputCustomType.Parameter("useOrchestrator") Boolean useOrchestrator) {
         this.testPackageId = testPackageId;
         this.testRunnerClass = testRunnerClass;
         this.testTargets = testTargets;
@@ -99,22 +99,22 @@ public final class AndroidInstrumentationTestResponse {
     	      this.useOrchestrator = defaults.useOrchestrator;
         }
 
-        public Builder setTestPackageId(String testPackageId) {
+        public Builder testPackageId(String testPackageId) {
             this.testPackageId = Objects.requireNonNull(testPackageId);
             return this;
         }
 
-        public Builder setTestRunnerClass(String testRunnerClass) {
+        public Builder testRunnerClass(String testRunnerClass) {
             this.testRunnerClass = Objects.requireNonNull(testRunnerClass);
             return this;
         }
 
-        public Builder setTestTargets(List<String> testTargets) {
+        public Builder testTargets(List<String> testTargets) {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }
 
-        public Builder setUseOrchestrator(Boolean useOrchestrator) {
+        public Builder useOrchestrator(Boolean useOrchestrator) {
             this.useOrchestrator = Objects.requireNonNull(useOrchestrator);
             return this;
         }

@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
-    @OutputCustomType.Constructor({"outputSchema","table"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2OutputStorageConfigResponse(
-        String outputSchema,
-        GooglePrivacyDlpV2BigQueryTableResponse table) {
+        @OutputCustomType.Parameter("outputSchema") String outputSchema,
+        @OutputCustomType.Parameter("table") GooglePrivacyDlpV2BigQueryTableResponse table) {
         this.outputSchema = outputSchema;
         this.table = table;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse {
     	      this.table = defaults.table;
         }
 
-        public Builder setOutputSchema(String outputSchema) {
+        public Builder outputSchema(String outputSchema) {
             this.outputSchema = Objects.requireNonNull(outputSchema);
             return this;
         }
 
-        public Builder setTable(GooglePrivacyDlpV2BigQueryTableResponse table) {
+        public Builder table(GooglePrivacyDlpV2BigQueryTableResponse table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }

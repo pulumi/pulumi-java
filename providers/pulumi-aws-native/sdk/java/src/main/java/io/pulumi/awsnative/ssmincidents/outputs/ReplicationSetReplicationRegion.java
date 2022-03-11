@@ -15,10 +15,10 @@ public final class ReplicationSetReplicationRegion {
     private final @Nullable ReplicationSetRegionConfiguration regionConfiguration;
     private final @Nullable String regionName;
 
-    @OutputCustomType.Constructor({"regionConfiguration","regionName"})
+    @OutputCustomType.Constructor
     private ReplicationSetReplicationRegion(
-        @Nullable ReplicationSetRegionConfiguration regionConfiguration,
-        @Nullable String regionName) {
+        @OutputCustomType.Parameter("regionConfiguration") @Nullable ReplicationSetRegionConfiguration regionConfiguration,
+        @OutputCustomType.Parameter("regionName") @Nullable String regionName) {
         this.regionConfiguration = regionConfiguration;
         this.regionName = regionName;
     }
@@ -52,12 +52,12 @@ public final class ReplicationSetReplicationRegion {
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder setRegionConfiguration(@Nullable ReplicationSetRegionConfiguration regionConfiguration) {
+        public Builder regionConfiguration(@Nullable ReplicationSetRegionConfiguration regionConfiguration) {
             this.regionConfiguration = regionConfiguration;
             return this;
         }
 
-        public Builder setRegionName(@Nullable String regionName) {
+        public Builder regionName(@Nullable String regionName) {
             this.regionName = regionName;
             return this;
         }

@@ -20,10 +20,10 @@ public final class GetProductFilter {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"field","value"})
+    @OutputCustomType.Constructor
     private GetProductFilter(
-        String field,
-        String value) {
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("value") String value) {
         this.field = field;
         this.value = value;
     }
@@ -65,12 +65,12 @@ public final class GetProductFilter {
     	      this.value = defaults.value;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -25,11 +25,11 @@ public final class GetNatAddressResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"ipAddress","name","state"})
+    @OutputCustomType.Constructor
     private GetNatAddressResult(
-        String ipAddress,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.ipAddress = ipAddress;
         this.name = name;
         this.state = state;
@@ -81,17 +81,17 @@ public final class GetNatAddressResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -15,11 +15,11 @@ public final class ResourceProviderAuthorizationResponse {
     private final @Nullable String managedByRoleDefinitionId;
     private final @Nullable String roleDefinitionId;
 
-    @OutputCustomType.Constructor({"applicationId","managedByRoleDefinitionId","roleDefinitionId"})
+    @OutputCustomType.Constructor
     private ResourceProviderAuthorizationResponse(
-        @Nullable String applicationId,
-        @Nullable String managedByRoleDefinitionId,
-        @Nullable String roleDefinitionId) {
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("managedByRoleDefinitionId") @Nullable String managedByRoleDefinitionId,
+        @OutputCustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId) {
         this.applicationId = applicationId;
         this.managedByRoleDefinitionId = managedByRoleDefinitionId;
         this.roleDefinitionId = roleDefinitionId;
@@ -59,17 +59,17 @@ public final class ResourceProviderAuthorizationResponse {
     	      this.roleDefinitionId = defaults.roleDefinitionId;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setManagedByRoleDefinitionId(@Nullable String managedByRoleDefinitionId) {
+        public Builder managedByRoleDefinitionId(@Nullable String managedByRoleDefinitionId) {
             this.managedByRoleDefinitionId = managedByRoleDefinitionId;
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable String roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }

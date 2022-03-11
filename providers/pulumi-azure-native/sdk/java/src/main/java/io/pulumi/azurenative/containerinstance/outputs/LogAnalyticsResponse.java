@@ -38,13 +38,13 @@ public final class LogAnalyticsResponse {
      */
     private final @Nullable Map<String,String> workspaceResourceId;
 
-    @OutputCustomType.Constructor({"logType","metadata","workspaceId","workspaceKey","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private LogAnalyticsResponse(
-        @Nullable String logType,
-        @Nullable Map<String,String> metadata,
-        String workspaceId,
-        String workspaceKey,
-        @Nullable Map<String,String> workspaceResourceId) {
+        @OutputCustomType.Parameter("logType") @Nullable String logType,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId,
+        @OutputCustomType.Parameter("workspaceKey") String workspaceKey,
+        @OutputCustomType.Parameter("workspaceResourceId") @Nullable Map<String,String> workspaceResourceId) {
         this.logType = logType;
         this.metadata = metadata;
         this.workspaceId = workspaceId;
@@ -116,27 +116,27 @@ public final class LogAnalyticsResponse {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setLogType(@Nullable String logType) {
+        public Builder logType(@Nullable String logType) {
             this.logType = logType;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceKey(String workspaceKey) {
+        public Builder workspaceKey(String workspaceKey) {
             this.workspaceKey = Objects.requireNonNull(workspaceKey);
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Map<String,String> workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

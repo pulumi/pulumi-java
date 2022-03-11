@@ -36,13 +36,13 @@ public final class LoadBalancerBackendResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"displayName","healthCheckAllowingFirewallRules","healthCheckBlockingFirewallRules","healthCheckFirewallState","uri"})
+    @OutputCustomType.Constructor
     private LoadBalancerBackendResponse(
-        String displayName,
-        List<String> healthCheckAllowingFirewallRules,
-        List<String> healthCheckBlockingFirewallRules,
-        String healthCheckFirewallState,
-        String uri) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("healthCheckAllowingFirewallRules") List<String> healthCheckAllowingFirewallRules,
+        @OutputCustomType.Parameter("healthCheckBlockingFirewallRules") List<String> healthCheckBlockingFirewallRules,
+        @OutputCustomType.Parameter("healthCheckFirewallState") String healthCheckFirewallState,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.healthCheckAllowingFirewallRules = healthCheckAllowingFirewallRules;
         this.healthCheckBlockingFirewallRules = healthCheckBlockingFirewallRules;
@@ -114,27 +114,27 @@ public final class LoadBalancerBackendResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHealthCheckAllowingFirewallRules(List<String> healthCheckAllowingFirewallRules) {
+        public Builder healthCheckAllowingFirewallRules(List<String> healthCheckAllowingFirewallRules) {
             this.healthCheckAllowingFirewallRules = Objects.requireNonNull(healthCheckAllowingFirewallRules);
             return this;
         }
 
-        public Builder setHealthCheckBlockingFirewallRules(List<String> healthCheckBlockingFirewallRules) {
+        public Builder healthCheckBlockingFirewallRules(List<String> healthCheckBlockingFirewallRules) {
             this.healthCheckBlockingFirewallRules = Objects.requireNonNull(healthCheckBlockingFirewallRules);
             return this;
         }
 
-        public Builder setHealthCheckFirewallState(String healthCheckFirewallState) {
+        public Builder healthCheckFirewallState(String healthCheckFirewallState) {
             this.healthCheckFirewallState = Objects.requireNonNull(healthCheckFirewallState);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

@@ -42,14 +42,14 @@ public final class GetBrokerNodesNodeInfoList {
      */
     private final String nodeArn;
 
-    @OutputCustomType.Constructor({"attachedEniId","brokerId","clientSubnet","clientVpcIpAddress","endpoints","nodeArn"})
+    @OutputCustomType.Constructor
     private GetBrokerNodesNodeInfoList(
-        String attachedEniId,
-        Double brokerId,
-        String clientSubnet,
-        String clientVpcIpAddress,
-        List<String> endpoints,
-        String nodeArn) {
+        @OutputCustomType.Parameter("attachedEniId") String attachedEniId,
+        @OutputCustomType.Parameter("brokerId") Double brokerId,
+        @OutputCustomType.Parameter("clientSubnet") String clientSubnet,
+        @OutputCustomType.Parameter("clientVpcIpAddress") String clientVpcIpAddress,
+        @OutputCustomType.Parameter("endpoints") List<String> endpoints,
+        @OutputCustomType.Parameter("nodeArn") String nodeArn) {
         this.attachedEniId = attachedEniId;
         this.brokerId = brokerId;
         this.clientSubnet = clientSubnet;
@@ -131,32 +131,32 @@ public final class GetBrokerNodesNodeInfoList {
     	      this.nodeArn = defaults.nodeArn;
         }
 
-        public Builder setAttachedEniId(String attachedEniId) {
+        public Builder attachedEniId(String attachedEniId) {
             this.attachedEniId = Objects.requireNonNull(attachedEniId);
             return this;
         }
 
-        public Builder setBrokerId(Double brokerId) {
+        public Builder brokerId(Double brokerId) {
             this.brokerId = Objects.requireNonNull(brokerId);
             return this;
         }
 
-        public Builder setClientSubnet(String clientSubnet) {
+        public Builder clientSubnet(String clientSubnet) {
             this.clientSubnet = Objects.requireNonNull(clientSubnet);
             return this;
         }
 
-        public Builder setClientVpcIpAddress(String clientVpcIpAddress) {
+        public Builder clientVpcIpAddress(String clientVpcIpAddress) {
             this.clientVpcIpAddress = Objects.requireNonNull(clientVpcIpAddress);
             return this;
         }
 
-        public Builder setEndpoints(List<String> endpoints) {
+        public Builder endpoints(List<String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setNodeArn(String nodeArn) {
+        public Builder nodeArn(String nodeArn) {
             this.nodeArn = Objects.requireNonNull(nodeArn);
             return this;
         }

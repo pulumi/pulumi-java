@@ -80,21 +80,21 @@ public final class GetAttestationAtResourceGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"comments","complianceState","evidence","expiresOn","id","lastComplianceStateChangeAt","name","owner","policyAssignmentId","policyDefinitionReferenceId","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetAttestationAtResourceGroupResult(
-        @Nullable String comments,
-        @Nullable String complianceState,
-        @Nullable List<AttestationEvidenceResponse> evidence,
-        @Nullable String expiresOn,
-        String id,
-        String lastComplianceStateChangeAt,
-        String name,
-        @Nullable String owner,
-        String policyAssignmentId,
-        @Nullable String policyDefinitionReferenceId,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("comments") @Nullable String comments,
+        @OutputCustomType.Parameter("complianceState") @Nullable String complianceState,
+        @OutputCustomType.Parameter("evidence") @Nullable List<AttestationEvidenceResponse> evidence,
+        @OutputCustomType.Parameter("expiresOn") @Nullable String expiresOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastComplianceStateChangeAt") String lastComplianceStateChangeAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("owner") @Nullable String owner,
+        @OutputCustomType.Parameter("policyAssignmentId") String policyAssignmentId,
+        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.comments = comments;
         this.complianceState = complianceState;
         this.evidence = evidence;
@@ -246,67 +246,67 @@ public final class GetAttestationAtResourceGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setComments(@Nullable String comments) {
+        public Builder comments(@Nullable String comments) {
             this.comments = comments;
             return this;
         }
 
-        public Builder setComplianceState(@Nullable String complianceState) {
+        public Builder complianceState(@Nullable String complianceState) {
             this.complianceState = complianceState;
             return this;
         }
 
-        public Builder setEvidence(@Nullable List<AttestationEvidenceResponse> evidence) {
+        public Builder evidence(@Nullable List<AttestationEvidenceResponse> evidence) {
             this.evidence = evidence;
             return this;
         }
 
-        public Builder setExpiresOn(@Nullable String expiresOn) {
+        public Builder expiresOn(@Nullable String expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastComplianceStateChangeAt(String lastComplianceStateChangeAt) {
+        public Builder lastComplianceStateChangeAt(String lastComplianceStateChangeAt) {
             this.lastComplianceStateChangeAt = Objects.requireNonNull(lastComplianceStateChangeAt);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setPolicyAssignmentId(String policyAssignmentId) {
+        public Builder policyAssignmentId(String policyAssignmentId) {
             this.policyAssignmentId = Objects.requireNonNull(policyAssignmentId);
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

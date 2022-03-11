@@ -93,32 +93,32 @@ public final class ApplicationSubComponentConfigurationDetailsArgs extends io.pu
     	      this.windowsEvents = defaults.windowsEvents;
         }
 
-        public Builder setAlarmMetrics(@Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics) {
+        public Builder alarmMetrics(@Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics) {
             this.alarmMetrics = alarmMetrics;
             return this;
         }
 
-        public Builder setAlarmMetrics(@Nullable List<ApplicationAlarmMetricArgs> alarmMetrics) {
+        public Builder alarmMetrics(@Nullable List<ApplicationAlarmMetricArgs> alarmMetrics) {
             this.alarmMetrics = Input.ofNullable(alarmMetrics);
             return this;
         }
 
-        public Builder setLogs(@Nullable Input<List<ApplicationLogArgs>> logs) {
+        public Builder logs(@Nullable Input<List<ApplicationLogArgs>> logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setLogs(@Nullable List<ApplicationLogArgs> logs) {
+        public Builder logs(@Nullable List<ApplicationLogArgs> logs) {
             this.logs = Input.ofNullable(logs);
             return this;
         }
 
-        public Builder setWindowsEvents(@Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents) {
+        public Builder windowsEvents(@Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents) {
             this.windowsEvents = windowsEvents;
             return this;
         }
 
-        public Builder setWindowsEvents(@Nullable List<ApplicationWindowsEventArgs> windowsEvents) {
+        public Builder windowsEvents(@Nullable List<ApplicationWindowsEventArgs> windowsEvents) {
             this.windowsEvents = Input.ofNullable(windowsEvents);
             return this;
         }

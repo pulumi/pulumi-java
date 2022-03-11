@@ -57,12 +57,12 @@ public final class ChartOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMode(@Nullable Input<ChartOptionsMode> mode) {
+        public Builder mode(@Nullable Input<ChartOptionsMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable ChartOptionsMode mode) {
+        public Builder mode(@Nullable ChartOptionsMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }

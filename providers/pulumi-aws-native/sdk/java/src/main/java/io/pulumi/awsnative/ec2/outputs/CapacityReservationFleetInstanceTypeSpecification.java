@@ -22,15 +22,15 @@ public final class CapacityReservationFleetInstanceTypeSpecification {
     private final @Nullable Integer priority;
     private final @Nullable Double weight;
 
-    @OutputCustomType.Constructor({"availabilityZone","availabilityZoneId","ebsOptimized","instancePlatform","instanceType","priority","weight"})
+    @OutputCustomType.Constructor
     private CapacityReservationFleetInstanceTypeSpecification(
-        @Nullable String availabilityZone,
-        @Nullable String availabilityZoneId,
-        @Nullable Boolean ebsOptimized,
-        @Nullable String instancePlatform,
-        @Nullable String instanceType,
-        @Nullable Integer priority,
-        @Nullable Double weight) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("availabilityZoneId") @Nullable String availabilityZoneId,
+        @OutputCustomType.Parameter("ebsOptimized") @Nullable Boolean ebsOptimized,
+        @OutputCustomType.Parameter("instancePlatform") @Nullable String instancePlatform,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("weight") @Nullable Double weight) {
         this.availabilityZone = availabilityZone;
         this.availabilityZoneId = availabilityZoneId;
         this.ebsOptimized = ebsOptimized;
@@ -94,37 +94,37 @@ public final class CapacityReservationFleetInstanceTypeSpecification {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZoneId(@Nullable String availabilityZoneId) {
+        public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
             this.availabilityZoneId = availabilityZoneId;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Boolean ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setInstancePlatform(@Nullable String instancePlatform) {
+        public Builder instancePlatform(@Nullable String instancePlatform) {
             this.instancePlatform = instancePlatform;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setWeight(@Nullable Double weight) {
+        public Builder weight(@Nullable Double weight) {
             this.weight = weight;
             return this;
         }

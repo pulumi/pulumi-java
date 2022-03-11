@@ -33,12 +33,12 @@ public final class TruncationSelectionPolicyResponse {
      */
     private final @Nullable Integer truncationPercentage;
 
-    @OutputCustomType.Constructor({"delayEvaluation","evaluationInterval","policyType","truncationPercentage"})
+    @OutputCustomType.Constructor
     private TruncationSelectionPolicyResponse(
-        @Nullable Integer delayEvaluation,
-        @Nullable Integer evaluationInterval,
-        String policyType,
-        @Nullable Integer truncationPercentage) {
+        @OutputCustomType.Parameter("delayEvaluation") @Nullable Integer delayEvaluation,
+        @OutputCustomType.Parameter("evaluationInterval") @Nullable Integer evaluationInterval,
+        @OutputCustomType.Parameter("policyType") String policyType,
+        @OutputCustomType.Parameter("truncationPercentage") @Nullable Integer truncationPercentage) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
         this.policyType = policyType;
@@ -100,22 +100,22 @@ public final class TruncationSelectionPolicyResponse {
     	      this.truncationPercentage = defaults.truncationPercentage;
         }
 
-        public Builder setDelayEvaluation(@Nullable Integer delayEvaluation) {
+        public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
             this.delayEvaluation = delayEvaluation;
             return this;
         }
 
-        public Builder setEvaluationInterval(@Nullable Integer evaluationInterval) {
+        public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
 
-        public Builder setPolicyType(String policyType) {
+        public Builder policyType(String policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
 
-        public Builder setTruncationPercentage(@Nullable Integer truncationPercentage) {
+        public Builder truncationPercentage(@Nullable Integer truncationPercentage) {
             this.truncationPercentage = truncationPercentage;
             return this;
         }

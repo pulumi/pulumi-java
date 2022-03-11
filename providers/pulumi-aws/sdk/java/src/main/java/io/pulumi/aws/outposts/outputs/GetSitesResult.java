@@ -21,10 +21,10 @@ public final class GetSitesResult {
      */
     private final List<String> ids;
 
-    @OutputCustomType.Constructor({"id","ids"})
+    @OutputCustomType.Constructor
     private GetSitesResult(
-        String id,
-        List<String> ids) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids) {
         this.id = id;
         this.ids = ids;
     }
@@ -66,12 +66,12 @@ public final class GetSitesResult {
     	      this.ids = defaults.ids;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }

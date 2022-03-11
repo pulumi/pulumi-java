@@ -20,10 +20,10 @@ public final class WorkforceCognitoConfig {
      */
     private final String userPool;
 
-    @OutputCustomType.Constructor({"clientId","userPool"})
+    @OutputCustomType.Constructor
     private WorkforceCognitoConfig(
-        String clientId,
-        String userPool) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("userPool") String userPool) {
         this.clientId = clientId;
         this.userPool = userPool;
     }
@@ -65,12 +65,12 @@ public final class WorkforceCognitoConfig {
     	      this.userPool = defaults.userPool;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setUserPool(String userPool) {
+        public Builder userPool(String userPool) {
             this.userPool = Objects.requireNonNull(userPool);
             return this;
         }

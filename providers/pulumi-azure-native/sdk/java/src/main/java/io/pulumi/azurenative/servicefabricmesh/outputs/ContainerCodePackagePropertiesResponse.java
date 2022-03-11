@@ -99,23 +99,23 @@ public final class ContainerCodePackagePropertiesResponse {
      */
     private final @Nullable List<ApplicationScopedVolumeResponse> volumes;
 
-    @OutputCustomType.Constructor({"commands","diagnostics","endpoints","entrypoint","environmentVariables","image","imageRegistryCredential","instanceView","labels","name","reliableCollectionsRefs","resources","settings","volumeRefs","volumes"})
+    @OutputCustomType.Constructor
     private ContainerCodePackagePropertiesResponse(
-        @Nullable List<String> commands,
-        @Nullable DiagnosticsRefResponse diagnostics,
-        @Nullable List<EndpointPropertiesResponse> endpoints,
-        @Nullable String entrypoint,
-        @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        String image,
-        @Nullable ImageRegistryCredentialResponse imageRegistryCredential,
-        ContainerInstanceViewResponse instanceView,
-        @Nullable List<ContainerLabelResponse> labels,
-        String name,
-        @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs,
-        ResourceRequirementsResponse resources,
-        @Nullable List<SettingResponse> settings,
-        @Nullable List<VolumeReferenceResponse> volumeRefs,
-        @Nullable List<ApplicationScopedVolumeResponse> volumes) {
+        @OutputCustomType.Parameter("commands") @Nullable List<String> commands,
+        @OutputCustomType.Parameter("diagnostics") @Nullable DiagnosticsRefResponse diagnostics,
+        @OutputCustomType.Parameter("endpoints") @Nullable List<EndpointPropertiesResponse> endpoints,
+        @OutputCustomType.Parameter("entrypoint") @Nullable String entrypoint,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imageRegistryCredential") @Nullable ImageRegistryCredentialResponse imageRegistryCredential,
+        @OutputCustomType.Parameter("instanceView") ContainerInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("labels") @Nullable List<ContainerLabelResponse> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("reliableCollectionsRefs") @Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs,
+        @OutputCustomType.Parameter("resources") ResourceRequirementsResponse resources,
+        @OutputCustomType.Parameter("settings") @Nullable List<SettingResponse> settings,
+        @OutputCustomType.Parameter("volumeRefs") @Nullable List<VolumeReferenceResponse> volumeRefs,
+        @OutputCustomType.Parameter("volumes") @Nullable List<ApplicationScopedVolumeResponse> volumes) {
         this.commands = commands;
         this.diagnostics = diagnostics;
         this.endpoints = endpoints;
@@ -287,77 +287,77 @@ public final class ContainerCodePackagePropertiesResponse {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setCommands(@Nullable List<String> commands) {
+        public Builder commands(@Nullable List<String> commands) {
             this.commands = commands;
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable DiagnosticsRefResponse diagnostics) {
+        public Builder diagnostics(@Nullable DiagnosticsRefResponse diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<EndpointPropertiesResponse> endpoints) {
+        public Builder endpoints(@Nullable List<EndpointPropertiesResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable String entrypoint) {
+        public Builder entrypoint(@Nullable String entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImageRegistryCredential(@Nullable ImageRegistryCredentialResponse imageRegistryCredential) {
+        public Builder imageRegistryCredential(@Nullable ImageRegistryCredentialResponse imageRegistryCredential) {
             this.imageRegistryCredential = imageRegistryCredential;
             return this;
         }
 
-        public Builder setInstanceView(ContainerInstanceViewResponse instanceView) {
+        public Builder instanceView(ContainerInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setLabels(@Nullable List<ContainerLabelResponse> labels) {
+        public Builder labels(@Nullable List<ContainerLabelResponse> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReliableCollectionsRefs(@Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs) {
+        public Builder reliableCollectionsRefs(@Nullable List<ReliableCollectionsRefResponse> reliableCollectionsRefs) {
             this.reliableCollectionsRefs = reliableCollectionsRefs;
             return this;
         }
 
-        public Builder setResources(ResourceRequirementsResponse resources) {
+        public Builder resources(ResourceRequirementsResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setSettings(@Nullable List<SettingResponse> settings) {
+        public Builder settings(@Nullable List<SettingResponse> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setVolumeRefs(@Nullable List<VolumeReferenceResponse> volumeRefs) {
+        public Builder volumeRefs(@Nullable List<VolumeReferenceResponse> volumeRefs) {
             this.volumeRefs = volumeRefs;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<ApplicationScopedVolumeResponse> volumes) {
+        public Builder volumes(@Nullable List<ApplicationScopedVolumeResponse> volumes) {
             this.volumes = volumes;
             return this;
         }

@@ -17,8 +17,8 @@ public final class DatadogLogsAgentResponse {
      */
     private final @Nullable String transport;
 
-    @OutputCustomType.Constructor({"transport"})
-    private DatadogLogsAgentResponse(@Nullable String transport) {
+    @OutputCustomType.Constructor
+    private DatadogLogsAgentResponse(@OutputCustomType.Parameter("transport") @Nullable String transport) {
         this.transport = transport;
     }
 
@@ -50,7 +50,7 @@ public final class DatadogLogsAgentResponse {
     	      this.transport = defaults.transport;
         }
 
-        public Builder setTransport(@Nullable String transport) {
+        public Builder transport(@Nullable String transport) {
             this.transport = transport;
             return this;
         }

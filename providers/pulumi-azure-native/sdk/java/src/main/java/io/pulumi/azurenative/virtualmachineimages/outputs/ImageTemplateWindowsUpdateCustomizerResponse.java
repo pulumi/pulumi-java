@@ -40,13 +40,13 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
      */
     private final @Nullable Integer updateLimit;
 
-    @OutputCustomType.Constructor({"filters","name","searchCriteria","type","updateLimit"})
+    @OutputCustomType.Constructor
     private ImageTemplateWindowsUpdateCustomizerResponse(
-        @Nullable List<String> filters,
-        @Nullable String name,
-        @Nullable String searchCriteria,
-        String type,
-        @Nullable Integer updateLimit) {
+        @OutputCustomType.Parameter("filters") @Nullable List<String> filters,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("searchCriteria") @Nullable String searchCriteria,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateLimit") @Nullable Integer updateLimit) {
         this.filters = filters;
         this.name = name;
         this.searchCriteria = searchCriteria;
@@ -119,27 +119,27 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
     	      this.updateLimit = defaults.updateLimit;
         }
 
-        public Builder setFilters(@Nullable List<String> filters) {
+        public Builder filters(@Nullable List<String> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSearchCriteria(@Nullable String searchCriteria) {
+        public Builder searchCriteria(@Nullable String searchCriteria) {
             this.searchCriteria = searchCriteria;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateLimit(@Nullable Integer updateLimit) {
+        public Builder updateLimit(@Nullable Integer updateLimit) {
             this.updateLimit = updateLimit;
             return this;
         }

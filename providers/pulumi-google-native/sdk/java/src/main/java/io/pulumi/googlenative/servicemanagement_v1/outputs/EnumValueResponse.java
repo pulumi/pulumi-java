@@ -28,11 +28,11 @@ public final class EnumValueResponse {
      */
     private final List<OptionResponse> options;
 
-    @OutputCustomType.Constructor({"name","number","options"})
+    @OutputCustomType.Constructor
     private EnumValueResponse(
-        String name,
-        Integer number,
-        List<OptionResponse> options) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("number") Integer number,
+        @OutputCustomType.Parameter("options") List<OptionResponse> options) {
         this.name = name;
         this.number = number;
         this.options = options;
@@ -84,17 +84,17 @@ public final class EnumValueResponse {
     	      this.options = defaults.options;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setOptions(List<OptionResponse> options) {
+        public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }

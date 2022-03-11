@@ -70,22 +70,22 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
     	      this.successTopic = defaults.successTopic;
         }
 
-        public Builder setErrorTopic(@Nullable Input<String> errorTopic) {
+        public Builder errorTopic(@Nullable Input<String> errorTopic) {
             this.errorTopic = errorTopic;
             return this;
         }
 
-        public Builder setErrorTopic(@Nullable String errorTopic) {
+        public Builder errorTopic(@Nullable String errorTopic) {
             this.errorTopic = Input.ofNullable(errorTopic);
             return this;
         }
 
-        public Builder setSuccessTopic(@Nullable Input<String> successTopic) {
+        public Builder successTopic(@Nullable Input<String> successTopic) {
             this.successTopic = successTopic;
             return this;
         }
 
-        public Builder setSuccessTopic(@Nullable String successTopic) {
+        public Builder successTopic(@Nullable String successTopic) {
             this.successTopic = Input.ofNullable(successTopic);
             return this;
         }

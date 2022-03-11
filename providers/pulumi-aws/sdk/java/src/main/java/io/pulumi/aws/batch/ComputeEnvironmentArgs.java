@@ -152,72 +152,72 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder setComputeEnvironmentName(@Nullable Input<String> computeEnvironmentName) {
+        public Builder computeEnvironmentName(@Nullable Input<String> computeEnvironmentName) {
             this.computeEnvironmentName = computeEnvironmentName;
             return this;
         }
 
-        public Builder setComputeEnvironmentName(@Nullable String computeEnvironmentName) {
+        public Builder computeEnvironmentName(@Nullable String computeEnvironmentName) {
             this.computeEnvironmentName = Input.ofNullable(computeEnvironmentName);
             return this;
         }
 
-        public Builder setComputeEnvironmentNamePrefix(@Nullable Input<String> computeEnvironmentNamePrefix) {
+        public Builder computeEnvironmentNamePrefix(@Nullable Input<String> computeEnvironmentNamePrefix) {
             this.computeEnvironmentNamePrefix = computeEnvironmentNamePrefix;
             return this;
         }
 
-        public Builder setComputeEnvironmentNamePrefix(@Nullable String computeEnvironmentNamePrefix) {
+        public Builder computeEnvironmentNamePrefix(@Nullable String computeEnvironmentNamePrefix) {
             this.computeEnvironmentNamePrefix = Input.ofNullable(computeEnvironmentNamePrefix);
             return this;
         }
 
-        public Builder setComputeResources(@Nullable Input<ComputeEnvironmentComputeResourcesArgs> computeResources) {
+        public Builder computeResources(@Nullable Input<ComputeEnvironmentComputeResourcesArgs> computeResources) {
             this.computeResources = computeResources;
             return this;
         }
 
-        public Builder setComputeResources(@Nullable ComputeEnvironmentComputeResourcesArgs computeResources) {
+        public Builder computeResources(@Nullable ComputeEnvironmentComputeResourcesArgs computeResources) {
             this.computeResources = Input.ofNullable(computeResources);
             return this;
         }
 
-        public Builder setServiceRole(@Nullable Input<String> serviceRole) {
+        public Builder serviceRole(@Nullable Input<String> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
 
-        public Builder setServiceRole(@Nullable String serviceRole) {
+        public Builder serviceRole(@Nullable String serviceRole) {
             this.serviceRole = Input.ofNullable(serviceRole);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

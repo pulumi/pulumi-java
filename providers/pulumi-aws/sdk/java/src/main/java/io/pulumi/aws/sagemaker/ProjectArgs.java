@@ -120,52 +120,52 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setProjectDescription(@Nullable Input<String> projectDescription) {
+        public Builder projectDescription(@Nullable Input<String> projectDescription) {
             this.projectDescription = projectDescription;
             return this;
         }
 
-        public Builder setProjectDescription(@Nullable String projectDescription) {
+        public Builder projectDescription(@Nullable String projectDescription) {
             this.projectDescription = Input.ofNullable(projectDescription);
             return this;
         }
 
-        public Builder setProjectName(Input<String> projectName) {
+        public Builder projectName(Input<String> projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Input.of(Objects.requireNonNull(projectName));
             return this;
         }
 
-        public Builder setServiceCatalogProvisioningDetails(Input<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails) {
+        public Builder serviceCatalogProvisioningDetails(Input<ProjectServiceCatalogProvisioningDetailsArgs> serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = Objects.requireNonNull(serviceCatalogProvisioningDetails);
             return this;
         }
 
-        public Builder setServiceCatalogProvisioningDetails(ProjectServiceCatalogProvisioningDetailsArgs serviceCatalogProvisioningDetails) {
+        public Builder serviceCatalogProvisioningDetails(ProjectServiceCatalogProvisioningDetailsArgs serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = Input.of(Objects.requireNonNull(serviceCatalogProvisioningDetails));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

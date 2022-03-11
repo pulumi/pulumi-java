@@ -22,10 +22,10 @@ public final class ApigatewayAuditConfigResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"auditLogConfigs","service"})
+    @OutputCustomType.Constructor
     private ApigatewayAuditConfigResponse(
-        List<ApigatewayAuditLogConfigResponse> auditLogConfigs,
-        String service) {
+        @OutputCustomType.Parameter("auditLogConfigs") List<ApigatewayAuditLogConfigResponse> auditLogConfigs,
+        @OutputCustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
         this.service = service;
     }
@@ -67,12 +67,12 @@ public final class ApigatewayAuditConfigResponse {
     	      this.service = defaults.service;
         }
 
-        public Builder setAuditLogConfigs(List<ApigatewayAuditLogConfigResponse> auditLogConfigs) {
+        public Builder auditLogConfigs(List<ApigatewayAuditLogConfigResponse> auditLogConfigs) {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

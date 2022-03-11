@@ -23,10 +23,10 @@ public final class DataSourceHttpConfig {
      */
     private final String endpoint;
 
-    @OutputCustomType.Constructor({"authorizationConfig","endpoint"})
+    @OutputCustomType.Constructor
     private DataSourceHttpConfig(
-        @Nullable DataSourceHttpConfigAuthorizationConfig authorizationConfig,
-        String endpoint) {
+        @OutputCustomType.Parameter("authorizationConfig") @Nullable DataSourceHttpConfigAuthorizationConfig authorizationConfig,
+        @OutputCustomType.Parameter("endpoint") String endpoint) {
         this.authorizationConfig = authorizationConfig;
         this.endpoint = endpoint;
     }
@@ -68,12 +68,12 @@ public final class DataSourceHttpConfig {
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder setAuthorizationConfig(@Nullable DataSourceHttpConfigAuthorizationConfig authorizationConfig) {
+        public Builder authorizationConfig(@Nullable DataSourceHttpConfigAuthorizationConfig authorizationConfig) {
             this.authorizationConfig = authorizationConfig;
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }

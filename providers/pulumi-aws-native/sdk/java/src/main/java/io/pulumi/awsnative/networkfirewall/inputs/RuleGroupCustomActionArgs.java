@@ -62,22 +62,22 @@ public final class RuleGroupCustomActionArgs extends io.pulumi.resources.Resourc
     	      this.actionName = defaults.actionName;
         }
 
-        public Builder setActionDefinition(Input<RuleGroupActionDefinitionArgs> actionDefinition) {
+        public Builder actionDefinition(Input<RuleGroupActionDefinitionArgs> actionDefinition) {
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
 
-        public Builder setActionDefinition(RuleGroupActionDefinitionArgs actionDefinition) {
+        public Builder actionDefinition(RuleGroupActionDefinitionArgs actionDefinition) {
             this.actionDefinition = Input.of(Objects.requireNonNull(actionDefinition));
             return this;
         }
 
-        public Builder setActionName(Input<String> actionName) {
+        public Builder actionName(Input<String> actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Input.of(Objects.requireNonNull(actionName));
             return this;
         }

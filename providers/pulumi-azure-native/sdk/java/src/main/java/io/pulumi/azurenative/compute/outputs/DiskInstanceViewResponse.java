@@ -30,11 +30,11 @@ public final class DiskInstanceViewResponse {
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    @OutputCustomType.Constructor({"encryptionSettings","name","statuses"})
+    @OutputCustomType.Constructor
     private DiskInstanceViewResponse(
-        @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings,
-        @Nullable String name,
-        @Nullable List<InstanceViewStatusResponse> statuses) {
+        @OutputCustomType.Parameter("encryptionSettings") @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses) {
         this.encryptionSettings = encryptionSettings;
         this.name = name;
         this.statuses = statuses;
@@ -86,17 +86,17 @@ public final class DiskInstanceViewResponse {
     	      this.statuses = defaults.statuses;
         }
 
-        public Builder setEncryptionSettings(@Nullable List<DiskEncryptionSettingsResponse> encryptionSettings) {
+        public Builder encryptionSettings(@Nullable List<DiskEncryptionSettingsResponse> encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<InstanceViewStatusResponse> statuses) {
+        public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }

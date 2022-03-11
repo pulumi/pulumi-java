@@ -21,17 +21,17 @@ public final class CertificateAuthorityKeyUsage {
     private final @Nullable Boolean keyEncipherment;
     private final @Nullable Boolean nonRepudiation;
 
-    @OutputCustomType.Constructor({"cRLSign","dataEncipherment","decipherOnly","digitalSignature","encipherOnly","keyAgreement","keyCertSign","keyEncipherment","nonRepudiation"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityKeyUsage(
-        @Nullable Boolean cRLSign,
-        @Nullable Boolean dataEncipherment,
-        @Nullable Boolean decipherOnly,
-        @Nullable Boolean digitalSignature,
-        @Nullable Boolean encipherOnly,
-        @Nullable Boolean keyAgreement,
-        @Nullable Boolean keyCertSign,
-        @Nullable Boolean keyEncipherment,
-        @Nullable Boolean nonRepudiation) {
+        @OutputCustomType.Parameter("cRLSign") @Nullable Boolean cRLSign,
+        @OutputCustomType.Parameter("dataEncipherment") @Nullable Boolean dataEncipherment,
+        @OutputCustomType.Parameter("decipherOnly") @Nullable Boolean decipherOnly,
+        @OutputCustomType.Parameter("digitalSignature") @Nullable Boolean digitalSignature,
+        @OutputCustomType.Parameter("encipherOnly") @Nullable Boolean encipherOnly,
+        @OutputCustomType.Parameter("keyAgreement") @Nullable Boolean keyAgreement,
+        @OutputCustomType.Parameter("keyCertSign") @Nullable Boolean keyCertSign,
+        @OutputCustomType.Parameter("keyEncipherment") @Nullable Boolean keyEncipherment,
+        @OutputCustomType.Parameter("nonRepudiation") @Nullable Boolean nonRepudiation) {
         this.cRLSign = cRLSign;
         this.dataEncipherment = dataEncipherment;
         this.decipherOnly = decipherOnly;
@@ -107,47 +107,47 @@ public final class CertificateAuthorityKeyUsage {
     	      this.nonRepudiation = defaults.nonRepudiation;
         }
 
-        public Builder setCRLSign(@Nullable Boolean cRLSign) {
+        public Builder cRLSign(@Nullable Boolean cRLSign) {
             this.cRLSign = cRLSign;
             return this;
         }
 
-        public Builder setDataEncipherment(@Nullable Boolean dataEncipherment) {
+        public Builder dataEncipherment(@Nullable Boolean dataEncipherment) {
             this.dataEncipherment = dataEncipherment;
             return this;
         }
 
-        public Builder setDecipherOnly(@Nullable Boolean decipherOnly) {
+        public Builder decipherOnly(@Nullable Boolean decipherOnly) {
             this.decipherOnly = decipherOnly;
             return this;
         }
 
-        public Builder setDigitalSignature(@Nullable Boolean digitalSignature) {
+        public Builder digitalSignature(@Nullable Boolean digitalSignature) {
             this.digitalSignature = digitalSignature;
             return this;
         }
 
-        public Builder setEncipherOnly(@Nullable Boolean encipherOnly) {
+        public Builder encipherOnly(@Nullable Boolean encipherOnly) {
             this.encipherOnly = encipherOnly;
             return this;
         }
 
-        public Builder setKeyAgreement(@Nullable Boolean keyAgreement) {
+        public Builder keyAgreement(@Nullable Boolean keyAgreement) {
             this.keyAgreement = keyAgreement;
             return this;
         }
 
-        public Builder setKeyCertSign(@Nullable Boolean keyCertSign) {
+        public Builder keyCertSign(@Nullable Boolean keyCertSign) {
             this.keyCertSign = keyCertSign;
             return this;
         }
 
-        public Builder setKeyEncipherment(@Nullable Boolean keyEncipherment) {
+        public Builder keyEncipherment(@Nullable Boolean keyEncipherment) {
             this.keyEncipherment = keyEncipherment;
             return this;
         }
 
-        public Builder setNonRepudiation(@Nullable Boolean nonRepudiation) {
+        public Builder nonRepudiation(@Nullable Boolean nonRepudiation) {
             this.nonRepudiation = nonRepudiation;
             return this;
         }

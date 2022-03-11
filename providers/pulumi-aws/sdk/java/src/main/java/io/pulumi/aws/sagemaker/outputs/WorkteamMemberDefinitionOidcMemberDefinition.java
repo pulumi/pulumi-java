@@ -16,8 +16,8 @@ public final class WorkteamMemberDefinitionOidcMemberDefinition {
      */
     private final List<String> groups;
 
-    @OutputCustomType.Constructor({"groups"})
-    private WorkteamMemberDefinitionOidcMemberDefinition(List<String> groups) {
+    @OutputCustomType.Constructor
+    private WorkteamMemberDefinitionOidcMemberDefinition(@OutputCustomType.Parameter("groups") List<String> groups) {
         this.groups = groups;
     }
 
@@ -49,7 +49,7 @@ public final class WorkteamMemberDefinitionOidcMemberDefinition {
     	      this.groups = defaults.groups;
         }
 
-        public Builder setGroups(List<String> groups) {
+        public Builder groups(List<String> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }

@@ -154,72 +154,72 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetPipeline = defaults.targetPipeline;
         }
 
-        public Builder setAuthentication(Input<String> authentication) {
+        public Builder authentication(Input<String> authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
-        public Builder setAuthentication(String authentication) {
+        public Builder authentication(String authentication) {
             this.authentication = Input.of(Objects.requireNonNull(authentication));
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable Input<WebhookAuthenticationConfigurationArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Input<WebhookAuthenticationConfigurationArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable WebhookAuthenticationConfigurationArgs authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable WebhookAuthenticationConfigurationArgs authenticationConfiguration) {
             this.authenticationConfiguration = Input.ofNullable(authenticationConfiguration);
             return this;
         }
 
-        public Builder setFilters(Input<List<WebhookFilterArgs>> filters) {
+        public Builder filters(Input<List<WebhookFilterArgs>> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setFilters(List<WebhookFilterArgs> filters) {
+        public Builder filters(List<WebhookFilterArgs> filters) {
             this.filters = Input.of(Objects.requireNonNull(filters));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetAction(Input<String> targetAction) {
+        public Builder targetAction(Input<String> targetAction) {
             this.targetAction = Objects.requireNonNull(targetAction);
             return this;
         }
 
-        public Builder setTargetAction(String targetAction) {
+        public Builder targetAction(String targetAction) {
             this.targetAction = Input.of(Objects.requireNonNull(targetAction));
             return this;
         }
 
-        public Builder setTargetPipeline(Input<String> targetPipeline) {
+        public Builder targetPipeline(Input<String> targetPipeline) {
             this.targetPipeline = Objects.requireNonNull(targetPipeline);
             return this;
         }
 
-        public Builder setTargetPipeline(String targetPipeline) {
+        public Builder targetPipeline(String targetPipeline) {
             this.targetPipeline = Input.of(Objects.requireNonNull(targetPipeline));
             return this;
         }

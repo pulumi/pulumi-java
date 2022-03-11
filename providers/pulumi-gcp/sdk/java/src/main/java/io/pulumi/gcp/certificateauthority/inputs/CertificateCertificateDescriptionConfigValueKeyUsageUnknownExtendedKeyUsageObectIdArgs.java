@@ -54,12 +54,12 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     	      this.objectIdPaths = defaults.objectIdPaths;
         }
 
-        public Builder setObjectIdPaths(@Nullable Input<List<Integer>> objectIdPaths) {
+        public Builder objectIdPaths(@Nullable Input<List<Integer>> objectIdPaths) {
             this.objectIdPaths = objectIdPaths;
             return this;
         }
 
-        public Builder setObjectIdPaths(@Nullable List<Integer> objectIdPaths) {
+        public Builder objectIdPaths(@Nullable List<Integer> objectIdPaths) {
             this.objectIdPaths = Input.ofNullable(objectIdPaths);
             return this;
         }

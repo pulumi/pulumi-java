@@ -24,10 +24,10 @@ public final class SecretReplicationUserManagedReplica {
      */
     private final String location;
 
-    @OutputCustomType.Constructor({"customerManagedEncryption","location"})
+    @OutputCustomType.Constructor
     private SecretReplicationUserManagedReplica(
-        @Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption,
-        String location) {
+        @OutputCustomType.Parameter("customerManagedEncryption") @Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption,
+        @OutputCustomType.Parameter("location") String location) {
         this.customerManagedEncryption = customerManagedEncryption;
         this.location = location;
     }
@@ -70,12 +70,12 @@ public final class SecretReplicationUserManagedReplica {
     	      this.location = defaults.location;
         }
 
-        public Builder setCustomerManagedEncryption(@Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption) {
+        public Builder customerManagedEncryption(@Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption) {
             this.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

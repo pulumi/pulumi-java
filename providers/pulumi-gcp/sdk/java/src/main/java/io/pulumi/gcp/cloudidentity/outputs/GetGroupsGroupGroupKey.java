@@ -12,10 +12,10 @@ public final class GetGroupsGroupGroupKey {
     private final String id;
     private final String namespace;
 
-    @OutputCustomType.Constructor({"id","namespace"})
+    @OutputCustomType.Constructor
     private GetGroupsGroupGroupKey(
-        String id,
-        String namespace) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("namespace") String namespace) {
         this.id = id;
         this.namespace = namespace;
     }
@@ -49,12 +49,12 @@ public final class GetGroupsGroupGroupKey {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

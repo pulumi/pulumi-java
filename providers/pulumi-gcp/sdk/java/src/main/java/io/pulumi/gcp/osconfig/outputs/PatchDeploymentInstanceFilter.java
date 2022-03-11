@@ -44,13 +44,13 @@ public final class PatchDeploymentInstanceFilter {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"all","groupLabels","instanceNamePrefixes","instances","zones"})
+    @OutputCustomType.Constructor
     private PatchDeploymentInstanceFilter(
-        @Nullable Boolean all,
-        @Nullable List<PatchDeploymentInstanceFilterGroupLabel> groupLabels,
-        @Nullable List<String> instanceNamePrefixes,
-        @Nullable List<String> instances,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("all") @Nullable Boolean all,
+        @OutputCustomType.Parameter("groupLabels") @Nullable List<PatchDeploymentInstanceFilterGroupLabel> groupLabels,
+        @OutputCustomType.Parameter("instanceNamePrefixes") @Nullable List<String> instanceNamePrefixes,
+        @OutputCustomType.Parameter("instances") @Nullable List<String> instances,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.all = all;
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;
@@ -126,27 +126,27 @@ public final class PatchDeploymentInstanceFilter {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAll(@Nullable Boolean all) {
+        public Builder all(@Nullable Boolean all) {
             this.all = all;
             return this;
         }
 
-        public Builder setGroupLabels(@Nullable List<PatchDeploymentInstanceFilterGroupLabel> groupLabels) {
+        public Builder groupLabels(@Nullable List<PatchDeploymentInstanceFilterGroupLabel> groupLabels) {
             this.groupLabels = groupLabels;
             return this;
         }
 
-        public Builder setInstanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
+        public Builder instanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
             this.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<String> instances) {
+        public Builder instances(@Nullable List<String> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

@@ -58,12 +58,12 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(@Nullable Input<List<ColumnArgs>> columns) {
+        public Builder columns(@Nullable Input<List<ColumnArgs>> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setColumns(@Nullable List<ColumnArgs> columns) {
+        public Builder columns(@Nullable List<ColumnArgs> columns) {
             this.columns = Input.ofNullable(columns);
             return this;
         }

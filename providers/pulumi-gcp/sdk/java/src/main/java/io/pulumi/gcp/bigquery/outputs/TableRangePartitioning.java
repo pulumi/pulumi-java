@@ -23,10 +23,10 @@ public final class TableRangePartitioning {
      */
     private final TableRangePartitioningRange range;
 
-    @OutputCustomType.Constructor({"field","range"})
+    @OutputCustomType.Constructor
     private TableRangePartitioning(
-        String field,
-        TableRangePartitioningRange range) {
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("range") TableRangePartitioningRange range) {
         this.field = field;
         this.range = range;
     }
@@ -70,12 +70,12 @@ public final class TableRangePartitioning {
     	      this.range = defaults.range;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setRange(TableRangePartitioningRange range) {
+        public Builder range(TableRangePartitioningRange range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }

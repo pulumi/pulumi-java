@@ -38,13 +38,13 @@ public final class DataBoxSecretResponse {
      */
     private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;
 
-    @OutputCustomType.Constructor({"accountCredentialDetails","devicePassword","deviceSerialNumber","encodedValidationCertPubKey","networkConfigurations"})
+    @OutputCustomType.Constructor
     private DataBoxSecretResponse(
-        List<AccountCredentialDetailsResponse> accountCredentialDetails,
-        String devicePassword,
-        String deviceSerialNumber,
-        String encodedValidationCertPubKey,
-        List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
+        @OutputCustomType.Parameter("accountCredentialDetails") List<AccountCredentialDetailsResponse> accountCredentialDetails,
+        @OutputCustomType.Parameter("devicePassword") String devicePassword,
+        @OutputCustomType.Parameter("deviceSerialNumber") String deviceSerialNumber,
+        @OutputCustomType.Parameter("encodedValidationCertPubKey") String encodedValidationCertPubKey,
+        @OutputCustomType.Parameter("networkConfigurations") List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
         this.accountCredentialDetails = accountCredentialDetails;
         this.devicePassword = devicePassword;
         this.deviceSerialNumber = deviceSerialNumber;
@@ -116,27 +116,27 @@ public final class DataBoxSecretResponse {
     	      this.networkConfigurations = defaults.networkConfigurations;
         }
 
-        public Builder setAccountCredentialDetails(List<AccountCredentialDetailsResponse> accountCredentialDetails) {
+        public Builder accountCredentialDetails(List<AccountCredentialDetailsResponse> accountCredentialDetails) {
             this.accountCredentialDetails = Objects.requireNonNull(accountCredentialDetails);
             return this;
         }
 
-        public Builder setDevicePassword(String devicePassword) {
+        public Builder devicePassword(String devicePassword) {
             this.devicePassword = Objects.requireNonNull(devicePassword);
             return this;
         }
 
-        public Builder setDeviceSerialNumber(String deviceSerialNumber) {
+        public Builder deviceSerialNumber(String deviceSerialNumber) {
             this.deviceSerialNumber = Objects.requireNonNull(deviceSerialNumber);
             return this;
         }
 
-        public Builder setEncodedValidationCertPubKey(String encodedValidationCertPubKey) {
+        public Builder encodedValidationCertPubKey(String encodedValidationCertPubKey) {
             this.encodedValidationCertPubKey = Objects.requireNonNull(encodedValidationCertPubKey);
             return this;
         }
 
-        public Builder setNetworkConfigurations(List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
+        public Builder networkConfigurations(List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
             this.networkConfigurations = Objects.requireNonNull(networkConfigurations);
             return this;
         }

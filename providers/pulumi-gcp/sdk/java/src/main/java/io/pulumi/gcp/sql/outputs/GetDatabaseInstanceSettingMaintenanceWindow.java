@@ -14,11 +14,11 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow {
     private final Integer hour;
     private final String updateTrack;
 
-    @OutputCustomType.Constructor({"day","hour","updateTrack"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceSettingMaintenanceWindow(
-        Integer day,
-        Integer hour,
-        String updateTrack) {
+        @OutputCustomType.Parameter("day") Integer day,
+        @OutputCustomType.Parameter("hour") Integer hour,
+        @OutputCustomType.Parameter("updateTrack") String updateTrack) {
         this.day = day;
         this.hour = hour;
         this.updateTrack = updateTrack;
@@ -58,17 +58,17 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow {
     	      this.updateTrack = defaults.updateTrack;
         }
 
-        public Builder setDay(Integer day) {
+        public Builder day(Integer day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setHour(Integer hour) {
+        public Builder hour(Integer hour) {
             this.hour = Objects.requireNonNull(hour);
             return this;
         }
 
-        public Builder setUpdateTrack(String updateTrack) {
+        public Builder updateTrack(String updateTrack) {
             this.updateTrack = Objects.requireNonNull(updateTrack);
             return this;
         }

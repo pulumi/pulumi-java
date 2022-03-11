@@ -27,11 +27,11 @@ public final class ArtifactObjectsResponse {
      */
     private final TimeSpanResponse timing;
 
-    @OutputCustomType.Constructor({"location","paths","timing"})
+    @OutputCustomType.Constructor
     private ArtifactObjectsResponse(
-        String location,
-        List<String> paths,
-        TimeSpanResponse timing) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("paths") List<String> paths,
+        @OutputCustomType.Parameter("timing") TimeSpanResponse timing) {
         this.location = location;
         this.paths = paths;
         this.timing = timing;
@@ -83,17 +83,17 @@ public final class ArtifactObjectsResponse {
     	      this.timing = defaults.timing;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setPaths(List<String> paths) {
+        public Builder paths(List<String> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
 
-        public Builder setTiming(TimeSpanResponse timing) {
+        public Builder timing(TimeSpanResponse timing) {
             this.timing = Objects.requireNonNull(timing);
             return this;
         }

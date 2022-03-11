@@ -142,32 +142,32 @@ public final class AzureDatabricksLinkedServiceResponse {
      */
     private final @Nullable Object workspaceResourceId;
 
-    @OutputCustomType.Constructor({"accessToken","annotations","authentication","connectVia","credential","description","domain","encryptedCredential","existingClusterId","instancePoolId","newClusterCustomTags","newClusterDriverNodeType","newClusterEnableElasticDisk","newClusterInitScripts","newClusterLogDestination","newClusterNodeType","newClusterNumOfWorker","newClusterSparkConf","newClusterSparkEnvVars","newClusterVersion","parameters","policyId","type","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private AzureDatabricksLinkedServiceResponse(
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
-        @Nullable List<Object> annotations,
-        @Nullable Object authentication,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        Object domain,
-        @Nullable Object encryptedCredential,
-        @Nullable Object existingClusterId,
-        @Nullable Object instancePoolId,
-        @Nullable Map<String,Object> newClusterCustomTags,
-        @Nullable Object newClusterDriverNodeType,
-        @Nullable Object newClusterEnableElasticDisk,
-        @Nullable Object newClusterInitScripts,
-        @Nullable Object newClusterLogDestination,
-        @Nullable Object newClusterNodeType,
-        @Nullable Object newClusterNumOfWorker,
-        @Nullable Map<String,Object> newClusterSparkConf,
-        @Nullable Map<String,Object> newClusterSparkEnvVars,
-        @Nullable Object newClusterVersion,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object policyId,
-        String type,
-        @Nullable Object workspaceResourceId) {
+        @OutputCustomType.Parameter("accessToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authentication") @Nullable Object authentication,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("domain") Object domain,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("existingClusterId") @Nullable Object existingClusterId,
+        @OutputCustomType.Parameter("instancePoolId") @Nullable Object instancePoolId,
+        @OutputCustomType.Parameter("newClusterCustomTags") @Nullable Map<String,Object> newClusterCustomTags,
+        @OutputCustomType.Parameter("newClusterDriverNodeType") @Nullable Object newClusterDriverNodeType,
+        @OutputCustomType.Parameter("newClusterEnableElasticDisk") @Nullable Object newClusterEnableElasticDisk,
+        @OutputCustomType.Parameter("newClusterInitScripts") @Nullable Object newClusterInitScripts,
+        @OutputCustomType.Parameter("newClusterLogDestination") @Nullable Object newClusterLogDestination,
+        @OutputCustomType.Parameter("newClusterNodeType") @Nullable Object newClusterNodeType,
+        @OutputCustomType.Parameter("newClusterNumOfWorker") @Nullable Object newClusterNumOfWorker,
+        @OutputCustomType.Parameter("newClusterSparkConf") @Nullable Map<String,Object> newClusterSparkConf,
+        @OutputCustomType.Parameter("newClusterSparkEnvVars") @Nullable Map<String,Object> newClusterSparkEnvVars,
+        @OutputCustomType.Parameter("newClusterVersion") @Nullable Object newClusterVersion,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("policyId") @Nullable Object policyId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceResourceId") @Nullable Object workspaceResourceId) {
         this.accessToken = accessToken;
         this.annotations = annotations;
         this.authentication = authentication;
@@ -430,122 +430,122 @@ public final class AzureDatabricksLinkedServiceResponse {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setAccessToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken) {
+        public Builder accessToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Object authentication) {
+        public Builder authentication(@Nullable Object authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceResponse credential) {
+        public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDomain(Object domain) {
+        public Builder domain(Object domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setExistingClusterId(@Nullable Object existingClusterId) {
+        public Builder existingClusterId(@Nullable Object existingClusterId) {
             this.existingClusterId = existingClusterId;
             return this;
         }
 
-        public Builder setInstancePoolId(@Nullable Object instancePoolId) {
+        public Builder instancePoolId(@Nullable Object instancePoolId) {
             this.instancePoolId = instancePoolId;
             return this;
         }
 
-        public Builder setNewClusterCustomTags(@Nullable Map<String,Object> newClusterCustomTags) {
+        public Builder newClusterCustomTags(@Nullable Map<String,Object> newClusterCustomTags) {
             this.newClusterCustomTags = newClusterCustomTags;
             return this;
         }
 
-        public Builder setNewClusterDriverNodeType(@Nullable Object newClusterDriverNodeType) {
+        public Builder newClusterDriverNodeType(@Nullable Object newClusterDriverNodeType) {
             this.newClusterDriverNodeType = newClusterDriverNodeType;
             return this;
         }
 
-        public Builder setNewClusterEnableElasticDisk(@Nullable Object newClusterEnableElasticDisk) {
+        public Builder newClusterEnableElasticDisk(@Nullable Object newClusterEnableElasticDisk) {
             this.newClusterEnableElasticDisk = newClusterEnableElasticDisk;
             return this;
         }
 
-        public Builder setNewClusterInitScripts(@Nullable Object newClusterInitScripts) {
+        public Builder newClusterInitScripts(@Nullable Object newClusterInitScripts) {
             this.newClusterInitScripts = newClusterInitScripts;
             return this;
         }
 
-        public Builder setNewClusterLogDestination(@Nullable Object newClusterLogDestination) {
+        public Builder newClusterLogDestination(@Nullable Object newClusterLogDestination) {
             this.newClusterLogDestination = newClusterLogDestination;
             return this;
         }
 
-        public Builder setNewClusterNodeType(@Nullable Object newClusterNodeType) {
+        public Builder newClusterNodeType(@Nullable Object newClusterNodeType) {
             this.newClusterNodeType = newClusterNodeType;
             return this;
         }
 
-        public Builder setNewClusterNumOfWorker(@Nullable Object newClusterNumOfWorker) {
+        public Builder newClusterNumOfWorker(@Nullable Object newClusterNumOfWorker) {
             this.newClusterNumOfWorker = newClusterNumOfWorker;
             return this;
         }
 
-        public Builder setNewClusterSparkConf(@Nullable Map<String,Object> newClusterSparkConf) {
+        public Builder newClusterSparkConf(@Nullable Map<String,Object> newClusterSparkConf) {
             this.newClusterSparkConf = newClusterSparkConf;
             return this;
         }
 
-        public Builder setNewClusterSparkEnvVars(@Nullable Map<String,Object> newClusterSparkEnvVars) {
+        public Builder newClusterSparkEnvVars(@Nullable Map<String,Object> newClusterSparkEnvVars) {
             this.newClusterSparkEnvVars = newClusterSparkEnvVars;
             return this;
         }
 
-        public Builder setNewClusterVersion(@Nullable Object newClusterVersion) {
+        public Builder newClusterVersion(@Nullable Object newClusterVersion) {
             this.newClusterVersion = newClusterVersion;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable Object policyId) {
+        public Builder policyId(@Nullable Object policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable Object workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable Object workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

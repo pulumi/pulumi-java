@@ -23,19 +23,19 @@ public final class GetBrokerLdapServerMetadata {
     private final String userSearchMatching;
     private final Boolean userSearchSubtree;
 
-    @OutputCustomType.Constructor({"hosts","roleBase","roleName","roleSearchMatching","roleSearchSubtree","serviceAccountPassword","serviceAccountUsername","userBase","userRoleName","userSearchMatching","userSearchSubtree"})
+    @OutputCustomType.Constructor
     private GetBrokerLdapServerMetadata(
-        List<String> hosts,
-        String roleBase,
-        String roleName,
-        String roleSearchMatching,
-        Boolean roleSearchSubtree,
-        String serviceAccountPassword,
-        String serviceAccountUsername,
-        String userBase,
-        String userRoleName,
-        String userSearchMatching,
-        Boolean userSearchSubtree) {
+        @OutputCustomType.Parameter("hosts") List<String> hosts,
+        @OutputCustomType.Parameter("roleBase") String roleBase,
+        @OutputCustomType.Parameter("roleName") String roleName,
+        @OutputCustomType.Parameter("roleSearchMatching") String roleSearchMatching,
+        @OutputCustomType.Parameter("roleSearchSubtree") Boolean roleSearchSubtree,
+        @OutputCustomType.Parameter("serviceAccountPassword") String serviceAccountPassword,
+        @OutputCustomType.Parameter("serviceAccountUsername") String serviceAccountUsername,
+        @OutputCustomType.Parameter("userBase") String userBase,
+        @OutputCustomType.Parameter("userRoleName") String userRoleName,
+        @OutputCustomType.Parameter("userSearchMatching") String userSearchMatching,
+        @OutputCustomType.Parameter("userSearchSubtree") Boolean userSearchSubtree) {
         this.hosts = hosts;
         this.roleBase = roleBase;
         this.roleName = roleName;
@@ -123,57 +123,57 @@ public final class GetBrokerLdapServerMetadata {
     	      this.userSearchSubtree = defaults.userSearchSubtree;
         }
 
-        public Builder setHosts(List<String> hosts) {
+        public Builder hosts(List<String> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
-        public Builder setRoleBase(String roleBase) {
+        public Builder roleBase(String roleBase) {
             this.roleBase = Objects.requireNonNull(roleBase);
             return this;
         }
 
-        public Builder setRoleName(String roleName) {
+        public Builder roleName(String roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
 
-        public Builder setRoleSearchMatching(String roleSearchMatching) {
+        public Builder roleSearchMatching(String roleSearchMatching) {
             this.roleSearchMatching = Objects.requireNonNull(roleSearchMatching);
             return this;
         }
 
-        public Builder setRoleSearchSubtree(Boolean roleSearchSubtree) {
+        public Builder roleSearchSubtree(Boolean roleSearchSubtree) {
             this.roleSearchSubtree = Objects.requireNonNull(roleSearchSubtree);
             return this;
         }
 
-        public Builder setServiceAccountPassword(String serviceAccountPassword) {
+        public Builder serviceAccountPassword(String serviceAccountPassword) {
             this.serviceAccountPassword = Objects.requireNonNull(serviceAccountPassword);
             return this;
         }
 
-        public Builder setServiceAccountUsername(String serviceAccountUsername) {
+        public Builder serviceAccountUsername(String serviceAccountUsername) {
             this.serviceAccountUsername = Objects.requireNonNull(serviceAccountUsername);
             return this;
         }
 
-        public Builder setUserBase(String userBase) {
+        public Builder userBase(String userBase) {
             this.userBase = Objects.requireNonNull(userBase);
             return this;
         }
 
-        public Builder setUserRoleName(String userRoleName) {
+        public Builder userRoleName(String userRoleName) {
             this.userRoleName = Objects.requireNonNull(userRoleName);
             return this;
         }
 
-        public Builder setUserSearchMatching(String userSearchMatching) {
+        public Builder userSearchMatching(String userSearchMatching) {
             this.userSearchMatching = Objects.requireNonNull(userSearchMatching);
             return this;
         }
 
-        public Builder setUserSearchSubtree(Boolean userSearchSubtree) {
+        public Builder userSearchSubtree(Boolean userSearchSubtree) {
             this.userSearchSubtree = Objects.requireNonNull(userSearchSubtree);
             return this;
         }

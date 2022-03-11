@@ -46,14 +46,14 @@ public final class GetScheduledAuditResult {
      */
     private final @Nullable List<String> targetCheckNames;
 
-    @OutputCustomType.Constructor({"dayOfMonth","dayOfWeek","frequency","scheduledAuditArn","tags","targetCheckNames"})
+    @OutputCustomType.Constructor
     private GetScheduledAuditResult(
-        @Nullable String dayOfMonth,
-        @Nullable ScheduledAuditDayOfWeek dayOfWeek,
-        @Nullable ScheduledAuditFrequency frequency,
-        @Nullable String scheduledAuditArn,
-        @Nullable List<ScheduledAuditTag> tags,
-        @Nullable List<String> targetCheckNames) {
+        @OutputCustomType.Parameter("dayOfMonth") @Nullable String dayOfMonth,
+        @OutputCustomType.Parameter("dayOfWeek") @Nullable ScheduledAuditDayOfWeek dayOfWeek,
+        @OutputCustomType.Parameter("frequency") @Nullable ScheduledAuditFrequency frequency,
+        @OutputCustomType.Parameter("scheduledAuditArn") @Nullable String scheduledAuditArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ScheduledAuditTag> tags,
+        @OutputCustomType.Parameter("targetCheckNames") @Nullable List<String> targetCheckNames) {
         this.dayOfMonth = dayOfMonth;
         this.dayOfWeek = dayOfWeek;
         this.frequency = frequency;
@@ -135,32 +135,32 @@ public final class GetScheduledAuditResult {
     	      this.targetCheckNames = defaults.targetCheckNames;
         }
 
-        public Builder setDayOfMonth(@Nullable String dayOfMonth) {
+        public Builder dayOfMonth(@Nullable String dayOfMonth) {
             this.dayOfMonth = dayOfMonth;
             return this;
         }
 
-        public Builder setDayOfWeek(@Nullable ScheduledAuditDayOfWeek dayOfWeek) {
+        public Builder dayOfWeek(@Nullable ScheduledAuditDayOfWeek dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
 
-        public Builder setFrequency(@Nullable ScheduledAuditFrequency frequency) {
+        public Builder frequency(@Nullable ScheduledAuditFrequency frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setScheduledAuditArn(@Nullable String scheduledAuditArn) {
+        public Builder scheduledAuditArn(@Nullable String scheduledAuditArn) {
             this.scheduledAuditArn = scheduledAuditArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ScheduledAuditTag> tags) {
+        public Builder tags(@Nullable List<ScheduledAuditTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetCheckNames(@Nullable List<String> targetCheckNames) {
+        public Builder targetCheckNames(@Nullable List<String> targetCheckNames) {
             this.targetCheckNames = targetCheckNames;
             return this;
         }

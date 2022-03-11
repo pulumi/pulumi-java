@@ -26,11 +26,11 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
      */
     private final Integer vmCount;
 
-    @OutputCustomType.Constructor({"availabilityDomainCount","collocation","vmCount"})
+    @OutputCustomType.Constructor
     private ResourcePolicyGroupPlacementPolicyResponse(
-        Integer availabilityDomainCount,
-        String collocation,
-        Integer vmCount) {
+        @OutputCustomType.Parameter("availabilityDomainCount") Integer availabilityDomainCount,
+        @OutputCustomType.Parameter("collocation") String collocation,
+        @OutputCustomType.Parameter("vmCount") Integer vmCount) {
         this.availabilityDomainCount = availabilityDomainCount;
         this.collocation = collocation;
         this.vmCount = vmCount;
@@ -82,17 +82,17 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
     	      this.vmCount = defaults.vmCount;
         }
 
-        public Builder setAvailabilityDomainCount(Integer availabilityDomainCount) {
+        public Builder availabilityDomainCount(Integer availabilityDomainCount) {
             this.availabilityDomainCount = Objects.requireNonNull(availabilityDomainCount);
             return this;
         }
 
-        public Builder setCollocation(String collocation) {
+        public Builder collocation(String collocation) {
             this.collocation = Objects.requireNonNull(collocation);
             return this;
         }
 
-        public Builder setVmCount(Integer vmCount) {
+        public Builder vmCount(Integer vmCount) {
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }

@@ -96,24 +96,24 @@ public final class GetTransferConfigResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"dataRefreshWindowDays","dataSourceId","datasetRegion","destinationDatasetId","disabled","displayName","emailPreferences","name","nextRunTime","notificationPubsubTopic","ownerInfo","params","schedule","scheduleOptions","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetTransferConfigResult(
-        Integer dataRefreshWindowDays,
-        String dataSourceId,
-        String datasetRegion,
-        String destinationDatasetId,
-        Boolean disabled,
-        String displayName,
-        EmailPreferencesResponse emailPreferences,
-        String name,
-        String nextRunTime,
-        String notificationPubsubTopic,
-        UserInfoResponse ownerInfo,
-        Map<String,String> params,
-        String schedule,
-        ScheduleOptionsResponse scheduleOptions,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("dataRefreshWindowDays") Integer dataRefreshWindowDays,
+        @OutputCustomType.Parameter("dataSourceId") String dataSourceId,
+        @OutputCustomType.Parameter("datasetRegion") String datasetRegion,
+        @OutputCustomType.Parameter("destinationDatasetId") String destinationDatasetId,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("emailPreferences") EmailPreferencesResponse emailPreferences,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextRunTime") String nextRunTime,
+        @OutputCustomType.Parameter("notificationPubsubTopic") String notificationPubsubTopic,
+        @OutputCustomType.Parameter("ownerInfo") UserInfoResponse ownerInfo,
+        @OutputCustomType.Parameter("params") Map<String,String> params,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("scheduleOptions") ScheduleOptionsResponse scheduleOptions,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.dataRefreshWindowDays = dataRefreshWindowDays;
         this.dataSourceId = dataSourceId;
         this.datasetRegion = datasetRegion;
@@ -295,82 +295,82 @@ public final class GetTransferConfigResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setDataRefreshWindowDays(Integer dataRefreshWindowDays) {
+        public Builder dataRefreshWindowDays(Integer dataRefreshWindowDays) {
             this.dataRefreshWindowDays = Objects.requireNonNull(dataRefreshWindowDays);
             return this;
         }
 
-        public Builder setDataSourceId(String dataSourceId) {
+        public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
 
-        public Builder setDatasetRegion(String datasetRegion) {
+        public Builder datasetRegion(String datasetRegion) {
             this.datasetRegion = Objects.requireNonNull(datasetRegion);
             return this;
         }
 
-        public Builder setDestinationDatasetId(String destinationDatasetId) {
+        public Builder destinationDatasetId(String destinationDatasetId) {
             this.destinationDatasetId = Objects.requireNonNull(destinationDatasetId);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEmailPreferences(EmailPreferencesResponse emailPreferences) {
+        public Builder emailPreferences(EmailPreferencesResponse emailPreferences) {
             this.emailPreferences = Objects.requireNonNull(emailPreferences);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNextRunTime(String nextRunTime) {
+        public Builder nextRunTime(String nextRunTime) {
             this.nextRunTime = Objects.requireNonNull(nextRunTime);
             return this;
         }
 
-        public Builder setNotificationPubsubTopic(String notificationPubsubTopic) {
+        public Builder notificationPubsubTopic(String notificationPubsubTopic) {
             this.notificationPubsubTopic = Objects.requireNonNull(notificationPubsubTopic);
             return this;
         }
 
-        public Builder setOwnerInfo(UserInfoResponse ownerInfo) {
+        public Builder ownerInfo(UserInfoResponse ownerInfo) {
             this.ownerInfo = Objects.requireNonNull(ownerInfo);
             return this;
         }
 
-        public Builder setParams(Map<String,String> params) {
+        public Builder params(Map<String,String> params) {
             this.params = Objects.requireNonNull(params);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setScheduleOptions(ScheduleOptionsResponse scheduleOptions) {
+        public Builder scheduleOptions(ScheduleOptionsResponse scheduleOptions) {
             this.scheduleOptions = Objects.requireNonNull(scheduleOptions);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

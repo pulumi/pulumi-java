@@ -14,10 +14,10 @@ public final class ProjectS3Destination {
     private final String bucketName;
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucketName","prefix"})
+    @OutputCustomType.Constructor
     private ProjectS3Destination(
-        String bucketName,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucketName = bucketName;
         this.prefix = prefix;
     }
@@ -51,12 +51,12 @@ public final class ProjectS3Destination {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }

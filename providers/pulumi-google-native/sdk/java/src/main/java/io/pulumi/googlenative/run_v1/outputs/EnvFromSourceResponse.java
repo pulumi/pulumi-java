@@ -27,11 +27,11 @@ public final class EnvFromSourceResponse {
      */
     private final SecretEnvSourceResponse secretRef;
 
-    @OutputCustomType.Constructor({"configMapRef","prefix","secretRef"})
+    @OutputCustomType.Constructor
     private EnvFromSourceResponse(
-        ConfigMapEnvSourceResponse configMapRef,
-        String prefix,
-        SecretEnvSourceResponse secretRef) {
+        @OutputCustomType.Parameter("configMapRef") ConfigMapEnvSourceResponse configMapRef,
+        @OutputCustomType.Parameter("prefix") String prefix,
+        @OutputCustomType.Parameter("secretRef") SecretEnvSourceResponse secretRef) {
         this.configMapRef = configMapRef;
         this.prefix = prefix;
         this.secretRef = secretRef;
@@ -83,17 +83,17 @@ public final class EnvFromSourceResponse {
     	      this.secretRef = defaults.secretRef;
         }
 
-        public Builder setConfigMapRef(ConfigMapEnvSourceResponse configMapRef) {
+        public Builder configMapRef(ConfigMapEnvSourceResponse configMapRef) {
             this.configMapRef = Objects.requireNonNull(configMapRef);
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
-        public Builder setSecretRef(SecretEnvSourceResponse secretRef) {
+        public Builder secretRef(SecretEnvSourceResponse secretRef) {
             this.secretRef = Objects.requireNonNull(secretRef);
             return this;
         }

@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
      */
     private final String cardWidth;
 
-    @OutputCustomType.Constructor({"cardContents","cardWidth"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents,
-        String cardWidth) {
+        @OutputCustomType.Parameter("cardContents") List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents,
+        @OutputCustomType.Parameter("cardWidth") String cardWidth) {
         this.cardContents = cardContents;
         this.cardWidth = cardWidth;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
     	      this.cardWidth = defaults.cardWidth;
         }
 
-        public Builder setCardContents(List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents) {
+        public Builder cardContents(List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents) {
             this.cardContents = Objects.requireNonNull(cardContents);
             return this;
         }
 
-        public Builder setCardWidth(String cardWidth) {
+        public Builder cardWidth(String cardWidth) {
             this.cardWidth = Objects.requireNonNull(cardWidth);
             return this;
         }

@@ -104,42 +104,42 @@ public final class RuleGroupsNamespaceArgs extends io.pulumi.resources.ResourceA
     	      this.workspace = defaults.workspace;
         }
 
-        public Builder setData(Input<String> data) {
+        public Builder data(Input<String> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setData(String data) {
+        public Builder data(String data) {
             this.data = Input.of(Objects.requireNonNull(data));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<RuleGroupsNamespaceTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<RuleGroupsNamespaceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RuleGroupsNamespaceTagArgs> tags) {
+        public Builder tags(@Nullable List<RuleGroupsNamespaceTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkspace(Input<String> workspace) {
+        public Builder workspace(Input<String> workspace) {
             this.workspace = Objects.requireNonNull(workspace);
             return this;
         }
 
-        public Builder setWorkspace(String workspace) {
+        public Builder workspace(String workspace) {
             this.workspace = Input.of(Objects.requireNonNull(workspace));
             return this;
         }

@@ -20,10 +20,10 @@ public final class ApiPortalResourceRequestsResponse {
      */
     private final String memory;
 
-    @OutputCustomType.Constructor({"cpu","memory"})
+    @OutputCustomType.Constructor
     private ApiPortalResourceRequestsResponse(
-        String cpu,
-        String memory) {
+        @OutputCustomType.Parameter("cpu") String cpu,
+        @OutputCustomType.Parameter("memory") String memory) {
         this.cpu = cpu;
         this.memory = memory;
     }
@@ -65,12 +65,12 @@ public final class ApiPortalResourceRequestsResponse {
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpu(String cpu) {
+        public Builder cpu(String cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
-        public Builder setMemory(String memory) {
+        public Builder memory(String memory) {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }

@@ -38,13 +38,13 @@ public final class ResourcesResponse {
      */
     private final List<VolumeResponse> volumes;
 
-    @OutputCustomType.Constructor({"cpu","diskGb","kmsKeyReference","memoryGb","volumes"})
+    @OutputCustomType.Constructor
     private ResourcesResponse(
-        Double cpu,
-        Double diskGb,
-        String kmsKeyReference,
-        Double memoryGb,
-        List<VolumeResponse> volumes) {
+        @OutputCustomType.Parameter("cpu") Double cpu,
+        @OutputCustomType.Parameter("diskGb") Double diskGb,
+        @OutputCustomType.Parameter("kmsKeyReference") String kmsKeyReference,
+        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
+        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes) {
         this.cpu = cpu;
         this.diskGb = diskGb;
         this.kmsKeyReference = kmsKeyReference;
@@ -116,27 +116,27 @@ public final class ResourcesResponse {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setCpu(Double cpu) {
+        public Builder cpu(Double cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
-        public Builder setDiskGb(Double diskGb) {
+        public Builder diskGb(Double diskGb) {
             this.diskGb = Objects.requireNonNull(diskGb);
             return this;
         }
 
-        public Builder setKmsKeyReference(String kmsKeyReference) {
+        public Builder kmsKeyReference(String kmsKeyReference) {
             this.kmsKeyReference = Objects.requireNonNull(kmsKeyReference);
             return this;
         }
 
-        public Builder setMemoryGb(Double memoryGb) {
+        public Builder memoryGb(Double memoryGb) {
             this.memoryGb = Objects.requireNonNull(memoryGb);
             return this;
         }
 
-        public Builder setVolumes(List<VolumeResponse> volumes) {
+        public Builder volumes(List<VolumeResponse> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }

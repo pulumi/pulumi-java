@@ -36,12 +36,12 @@ public final class PrivateLinkServiceProxyResponse {
      */
     private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
 
-    @OutputCustomType.Constructor({"groupConnectivityInformation","id","remotePrivateEndpointConnection","remotePrivateLinkServiceConnectionState"})
+    @OutputCustomType.Constructor
     private PrivateLinkServiceProxyResponse(
-        @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation,
-        @Nullable String id,
-        @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection,
-        @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
+        @OutputCustomType.Parameter("groupConnectivityInformation") @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("remotePrivateEndpointConnection") @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection,
+        @OutputCustomType.Parameter("remotePrivateLinkServiceConnectionState") @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
         this.groupConnectivityInformation = groupConnectivityInformation;
         this.id = id;
         this.remotePrivateEndpointConnection = remotePrivateEndpointConnection;
@@ -103,22 +103,22 @@ public final class PrivateLinkServiceProxyResponse {
     	      this.remotePrivateLinkServiceConnectionState = defaults.remotePrivateLinkServiceConnectionState;
         }
 
-        public Builder setGroupConnectivityInformation(@Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation) {
+        public Builder groupConnectivityInformation(@Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation) {
             this.groupConnectivityInformation = groupConnectivityInformation;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRemotePrivateEndpointConnection(@Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection) {
+        public Builder remotePrivateEndpointConnection(@Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection) {
             this.remotePrivateEndpointConnection = remotePrivateEndpointConnection;
             return this;
         }
 
-        public Builder setRemotePrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
+        public Builder remotePrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState) {
             this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
             return this;
         }

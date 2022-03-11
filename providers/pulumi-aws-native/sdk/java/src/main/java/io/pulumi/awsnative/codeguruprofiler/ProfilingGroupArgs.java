@@ -123,52 +123,52 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAgentPermissions(@Nullable Input<AgentPermissionsPropertiesArgs> agentPermissions) {
+        public Builder agentPermissions(@Nullable Input<AgentPermissionsPropertiesArgs> agentPermissions) {
             this.agentPermissions = agentPermissions;
             return this;
         }
 
-        public Builder setAgentPermissions(@Nullable AgentPermissionsPropertiesArgs agentPermissions) {
+        public Builder agentPermissions(@Nullable AgentPermissionsPropertiesArgs agentPermissions) {
             this.agentPermissions = Input.ofNullable(agentPermissions);
             return this;
         }
 
-        public Builder setAnomalyDetectionNotificationConfiguration(@Nullable Input<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration) {
+        public Builder anomalyDetectionNotificationConfiguration(@Nullable Input<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration) {
             this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
             return this;
         }
 
-        public Builder setAnomalyDetectionNotificationConfiguration(@Nullable List<ProfilingGroupChannelArgs> anomalyDetectionNotificationConfiguration) {
+        public Builder anomalyDetectionNotificationConfiguration(@Nullable List<ProfilingGroupChannelArgs> anomalyDetectionNotificationConfiguration) {
             this.anomalyDetectionNotificationConfiguration = Input.ofNullable(anomalyDetectionNotificationConfiguration);
             return this;
         }
 
-        public Builder setComputePlatform(@Nullable Input<ProfilingGroupComputePlatform> computePlatform) {
+        public Builder computePlatform(@Nullable Input<ProfilingGroupComputePlatform> computePlatform) {
             this.computePlatform = computePlatform;
             return this;
         }
 
-        public Builder setComputePlatform(@Nullable ProfilingGroupComputePlatform computePlatform) {
+        public Builder computePlatform(@Nullable ProfilingGroupComputePlatform computePlatform) {
             this.computePlatform = Input.ofNullable(computePlatform);
             return this;
         }
 
-        public Builder setProfilingGroupName(@Nullable Input<String> profilingGroupName) {
+        public Builder profilingGroupName(@Nullable Input<String> profilingGroupName) {
             this.profilingGroupName = profilingGroupName;
             return this;
         }
 
-        public Builder setProfilingGroupName(@Nullable String profilingGroupName) {
+        public Builder profilingGroupName(@Nullable String profilingGroupName) {
             this.profilingGroupName = Input.ofNullable(profilingGroupName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ProfilingGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ProfilingGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProfilingGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<ProfilingGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -62,22 +62,22 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs 
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setCidrBlock(Input<String> cidrBlock) {
+        public Builder cidrBlock(Input<String> cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
 
-        public Builder setCidrBlock(String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Input.of(Objects.requireNonNull(cidrBlock));
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }

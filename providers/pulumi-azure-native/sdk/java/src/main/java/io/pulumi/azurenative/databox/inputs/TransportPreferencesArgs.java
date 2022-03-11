@@ -58,12 +58,12 @@ public final class TransportPreferencesArgs extends io.pulumi.resources.Resource
     	      this.preferredShipmentType = defaults.preferredShipmentType;
         }
 
-        public Builder setPreferredShipmentType(Input<Either<String,TransportShipmentTypes>> preferredShipmentType) {
+        public Builder preferredShipmentType(Input<Either<String,TransportShipmentTypes>> preferredShipmentType) {
             this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType);
             return this;
         }
 
-        public Builder setPreferredShipmentType(Either<String,TransportShipmentTypes> preferredShipmentType) {
+        public Builder preferredShipmentType(Either<String,TransportShipmentTypes> preferredShipmentType) {
             this.preferredShipmentType = Input.of(Objects.requireNonNull(preferredShipmentType));
             return this;
         }

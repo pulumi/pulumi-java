@@ -20,10 +20,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch {
      */
     private final Integer rangeStart;
 
-    @OutputCustomType.Constructor({"rangeEnd","rangeStart"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch(
-        Integer rangeEnd,
-        Integer rangeStart) {
+        @OutputCustomType.Parameter("rangeEnd") Integer rangeEnd,
+        @OutputCustomType.Parameter("rangeStart") Integer rangeStart) {
         this.rangeEnd = rangeEnd;
         this.rangeStart = rangeStart;
     }
@@ -65,12 +65,12 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch {
     	      this.rangeStart = defaults.rangeStart;
         }
 
-        public Builder setRangeEnd(Integer rangeEnd) {
+        public Builder rangeEnd(Integer rangeEnd) {
             this.rangeEnd = Objects.requireNonNull(rangeEnd);
             return this;
         }
 
-        public Builder setRangeStart(Integer rangeStart) {
+        public Builder rangeStart(Integer rangeStart) {
             this.rangeStart = Objects.requireNonNull(rangeStart);
             return this;
         }

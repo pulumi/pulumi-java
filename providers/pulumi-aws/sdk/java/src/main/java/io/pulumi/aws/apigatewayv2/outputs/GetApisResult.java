@@ -27,13 +27,13 @@ public final class GetApisResult {
     private final @Nullable String protocolType;
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"id","ids","name","protocolType","tags"})
+    @OutputCustomType.Constructor
     private GetApisResult(
-        String id,
-        List<String> ids,
-        @Nullable String name,
-        @Nullable String protocolType,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocolType") @Nullable String protocolType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.id = id;
         this.ids = ids;
         this.name = name;
@@ -93,27 +93,27 @@ public final class GetApisResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocolType(@Nullable String protocolType) {
+        public Builder protocolType(@Nullable String protocolType) {
             this.protocolType = protocolType;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

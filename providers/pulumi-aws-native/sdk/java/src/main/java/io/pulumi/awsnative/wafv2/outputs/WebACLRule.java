@@ -32,16 +32,16 @@ public final class WebACLRule {
     private final WebACLStatement statement;
     private final WebACLVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor({"action","captchaConfig","name","overrideAction","priority","ruleLabels","statement","visibilityConfig"})
+    @OutputCustomType.Constructor
     private WebACLRule(
-        @Nullable WebACLRuleAction action,
-        @Nullable WebACLCaptchaConfig captchaConfig,
-        String name,
-        @Nullable WebACLOverrideAction overrideAction,
-        Integer priority,
-        @Nullable List<WebACLLabel> ruleLabels,
-        WebACLStatement statement,
-        WebACLVisibilityConfig visibilityConfig) {
+        @OutputCustomType.Parameter("action") @Nullable WebACLRuleAction action,
+        @OutputCustomType.Parameter("captchaConfig") @Nullable WebACLCaptchaConfig captchaConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("overrideAction") @Nullable WebACLOverrideAction overrideAction,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleLabels") @Nullable List<WebACLLabel> ruleLabels,
+        @OutputCustomType.Parameter("statement") WebACLStatement statement,
+        @OutputCustomType.Parameter("visibilityConfig") WebACLVisibilityConfig visibilityConfig) {
         this.action = action;
         this.captchaConfig = captchaConfig;
         this.name = name;
@@ -115,42 +115,42 @@ public final class WebACLRule {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setAction(@Nullable WebACLRuleAction action) {
+        public Builder action(@Nullable WebACLRuleAction action) {
             this.action = action;
             return this;
         }
 
-        public Builder setCaptchaConfig(@Nullable WebACLCaptchaConfig captchaConfig) {
+        public Builder captchaConfig(@Nullable WebACLCaptchaConfig captchaConfig) {
             this.captchaConfig = captchaConfig;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOverrideAction(@Nullable WebACLOverrideAction overrideAction) {
+        public Builder overrideAction(@Nullable WebACLOverrideAction overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable List<WebACLLabel> ruleLabels) {
+        public Builder ruleLabels(@Nullable List<WebACLLabel> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
 
-        public Builder setStatement(WebACLStatement statement) {
+        public Builder statement(WebACLStatement statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
 
-        public Builder setVisibilityConfig(WebACLVisibilityConfig visibilityConfig) {
+        public Builder visibilityConfig(WebACLVisibilityConfig visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }

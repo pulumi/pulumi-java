@@ -21,10 +21,10 @@ public final class BuildResponse {
      */
     private final BuildSignatureResponse signature;
 
-    @OutputCustomType.Constructor({"builderVersion","signature"})
+    @OutputCustomType.Constructor
     private BuildResponse(
-        String builderVersion,
-        BuildSignatureResponse signature) {
+        @OutputCustomType.Parameter("builderVersion") String builderVersion,
+        @OutputCustomType.Parameter("signature") BuildSignatureResponse signature) {
         this.builderVersion = builderVersion;
         this.signature = signature;
     }
@@ -66,12 +66,12 @@ public final class BuildResponse {
     	      this.signature = defaults.signature;
         }
 
-        public Builder setBuilderVersion(String builderVersion) {
+        public Builder builderVersion(String builderVersion) {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }
 
-        public Builder setSignature(BuildSignatureResponse signature) {
+        public Builder signature(BuildSignatureResponse signature) {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }

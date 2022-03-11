@@ -22,10 +22,10 @@ public final class ProvisioningErrorResponse {
      */
     private final @Nullable String provisioningErrorCode;
 
-    @OutputCustomType.Constructor({"message","provisioningErrorCode"})
+    @OutputCustomType.Constructor
     private ProvisioningErrorResponse(
-        @Nullable String message,
-        @Nullable String provisioningErrorCode) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("provisioningErrorCode") @Nullable String provisioningErrorCode) {
         this.message = message;
         this.provisioningErrorCode = provisioningErrorCode;
     }
@@ -67,12 +67,12 @@ public final class ProvisioningErrorResponse {
     	      this.provisioningErrorCode = defaults.provisioningErrorCode;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setProvisioningErrorCode(@Nullable String provisioningErrorCode) {
+        public Builder provisioningErrorCode(@Nullable String provisioningErrorCode) {
             this.provisioningErrorCode = provisioningErrorCode;
             return this;
         }

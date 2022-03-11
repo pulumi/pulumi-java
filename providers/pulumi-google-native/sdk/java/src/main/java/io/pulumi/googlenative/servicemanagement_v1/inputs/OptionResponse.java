@@ -73,12 +73,12 @@ public final class OptionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(Map<String,String> value) {
+        public Builder value(Map<String,String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

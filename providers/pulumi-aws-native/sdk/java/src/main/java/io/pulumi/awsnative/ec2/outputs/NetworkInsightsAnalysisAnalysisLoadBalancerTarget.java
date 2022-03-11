@@ -18,12 +18,12 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerTarget {
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent instance;
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"address","availabilityZone","instance","port"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAnalysisAnalysisLoadBalancerTarget(
-        @Nullable String address,
-        @Nullable String availabilityZone,
-        @Nullable NetworkInsightsAnalysisAnalysisComponent instance,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("instance") @Nullable NetworkInsightsAnalysisAnalysisComponent instance,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.address = address;
         this.availabilityZone = availabilityZone;
         this.instance = instance;
@@ -69,22 +69,22 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerTarget {
     	      this.port = defaults.port;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setInstance(@Nullable NetworkInsightsAnalysisAnalysisComponent instance) {
+        public Builder instance(@Nullable NetworkInsightsAnalysisAnalysisComponent instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

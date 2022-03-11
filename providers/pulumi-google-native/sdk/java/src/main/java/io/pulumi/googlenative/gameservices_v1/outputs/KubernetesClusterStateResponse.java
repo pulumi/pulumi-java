@@ -40,14 +40,14 @@ public final class KubernetesClusterStateResponse {
      */
     private final String versionInstalledErrorMessage;
 
-    @OutputCustomType.Constructor({"agonesVersionInstalled","agonesVersionTargeted","installationState","kubernetesVersionInstalled","provider","versionInstalledErrorMessage"})
+    @OutputCustomType.Constructor
     private KubernetesClusterStateResponse(
-        String agonesVersionInstalled,
-        String agonesVersionTargeted,
-        String installationState,
-        String kubernetesVersionInstalled,
-        String provider,
-        String versionInstalledErrorMessage) {
+        @OutputCustomType.Parameter("agonesVersionInstalled") String agonesVersionInstalled,
+        @OutputCustomType.Parameter("agonesVersionTargeted") String agonesVersionTargeted,
+        @OutputCustomType.Parameter("installationState") String installationState,
+        @OutputCustomType.Parameter("kubernetesVersionInstalled") String kubernetesVersionInstalled,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("versionInstalledErrorMessage") String versionInstalledErrorMessage) {
         this.agonesVersionInstalled = agonesVersionInstalled;
         this.agonesVersionTargeted = agonesVersionTargeted;
         this.installationState = installationState;
@@ -129,32 +129,32 @@ public final class KubernetesClusterStateResponse {
     	      this.versionInstalledErrorMessage = defaults.versionInstalledErrorMessage;
         }
 
-        public Builder setAgonesVersionInstalled(String agonesVersionInstalled) {
+        public Builder agonesVersionInstalled(String agonesVersionInstalled) {
             this.agonesVersionInstalled = Objects.requireNonNull(agonesVersionInstalled);
             return this;
         }
 
-        public Builder setAgonesVersionTargeted(String agonesVersionTargeted) {
+        public Builder agonesVersionTargeted(String agonesVersionTargeted) {
             this.agonesVersionTargeted = Objects.requireNonNull(agonesVersionTargeted);
             return this;
         }
 
-        public Builder setInstallationState(String installationState) {
+        public Builder installationState(String installationState) {
             this.installationState = Objects.requireNonNull(installationState);
             return this;
         }
 
-        public Builder setKubernetesVersionInstalled(String kubernetesVersionInstalled) {
+        public Builder kubernetesVersionInstalled(String kubernetesVersionInstalled) {
             this.kubernetesVersionInstalled = Objects.requireNonNull(kubernetesVersionInstalled);
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
-        public Builder setVersionInstalledErrorMessage(String versionInstalledErrorMessage) {
+        public Builder versionInstalledErrorMessage(String versionInstalledErrorMessage) {
             this.versionInstalledErrorMessage = Objects.requireNonNull(versionInstalledErrorMessage);
             return this;
         }

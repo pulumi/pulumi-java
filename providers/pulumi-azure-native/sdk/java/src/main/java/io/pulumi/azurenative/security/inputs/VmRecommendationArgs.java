@@ -106,42 +106,42 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setConfigurationStatus(@Nullable Input<String> configurationStatus) {
+        public Builder configurationStatus(@Nullable Input<String> configurationStatus) {
             this.configurationStatus = configurationStatus;
             return this;
         }
 
-        public Builder setConfigurationStatus(@Nullable String configurationStatus) {
+        public Builder configurationStatus(@Nullable String configurationStatus) {
             this.configurationStatus = Input.ofNullable(configurationStatus);
             return this;
         }
 
-        public Builder setEnforcementSupport(@Nullable Input<String> enforcementSupport) {
+        public Builder enforcementSupport(@Nullable Input<String> enforcementSupport) {
             this.enforcementSupport = enforcementSupport;
             return this;
         }
 
-        public Builder setEnforcementSupport(@Nullable String enforcementSupport) {
+        public Builder enforcementSupport(@Nullable String enforcementSupport) {
             this.enforcementSupport = Input.ofNullable(enforcementSupport);
             return this;
         }
 
-        public Builder setRecommendationAction(@Nullable Input<String> recommendationAction) {
+        public Builder recommendationAction(@Nullable Input<String> recommendationAction) {
             this.recommendationAction = recommendationAction;
             return this;
         }
 
-        public Builder setRecommendationAction(@Nullable String recommendationAction) {
+        public Builder recommendationAction(@Nullable String recommendationAction) {
             this.recommendationAction = Input.ofNullable(recommendationAction);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }

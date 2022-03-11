@@ -28,10 +28,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"regexFileSet","url"})
+    @OutputCustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet(
-        @Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet regexFileSet,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("regexFileSet") @Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet regexFileSet,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.regexFileSet = regexFileSet;
         this.url = url;
     }
@@ -78,12 +78,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     	      this.url = defaults.url;
         }
 
-        public Builder setRegexFileSet(@Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet regexFileSet) {
+        public Builder regexFileSet(@Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet regexFileSet) {
             this.regexFileSet = regexFileSet;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

@@ -56,7 +56,7 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     	      this.consumers = defaults.consumers;
         }
 
-        public Builder setConsumers(List<ConsumerResponse> consumers) {
+        public Builder consumers(List<ConsumerResponse> consumers) {
             this.consumers = Objects.requireNonNull(consumers);
             return this;
         }

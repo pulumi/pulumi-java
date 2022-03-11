@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ListenerCertificate {
     private final @Nullable String certificateArn;
 
-    @OutputCustomType.Constructor({"certificateArn"})
-    private ListenerCertificate(@Nullable String certificateArn) {
+    @OutputCustomType.Constructor
+    private ListenerCertificate(@OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn) {
         this.certificateArn = certificateArn;
     }
 
@@ -42,7 +42,7 @@ public final class ListenerCertificate {
     	      this.certificateArn = defaults.certificateArn;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }

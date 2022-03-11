@@ -64,22 +64,22 @@ public final class ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotifi
     	      this.subscriptionStateOverrideActions = defaults.subscriptionStateOverrideActions;
         }
 
-        public Builder setSoftDeleteTTL(@Nullable Input<String> softDeleteTTL) {
+        public Builder softDeleteTTL(@Nullable Input<String> softDeleteTTL) {
             this.softDeleteTTL = softDeleteTTL;
             return this;
         }
 
-        public Builder setSoftDeleteTTL(@Nullable String softDeleteTTL) {
+        public Builder softDeleteTTL(@Nullable String softDeleteTTL) {
             this.softDeleteTTL = Input.ofNullable(softDeleteTTL);
             return this;
         }
 
-        public Builder setSubscriptionStateOverrideActions(@Nullable Input<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions) {
+        public Builder subscriptionStateOverrideActions(@Nullable Input<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions) {
             this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
             return this;
         }
 
-        public Builder setSubscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionArgs> subscriptionStateOverrideActions) {
+        public Builder subscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionArgs> subscriptionStateOverrideActions) {
             this.subscriptionStateOverrideActions = Input.ofNullable(subscriptionStateOverrideActions);
             return this;
         }

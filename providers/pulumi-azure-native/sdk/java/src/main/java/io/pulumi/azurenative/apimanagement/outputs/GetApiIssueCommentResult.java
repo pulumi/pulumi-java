@@ -42,14 +42,14 @@ public final class GetApiIssueCommentResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"createdDate","id","name","text","type","userId"})
+    @OutputCustomType.Constructor
     private GetApiIssueCommentResult(
-        @Nullable String createdDate,
-        String id,
-        String name,
-        String text,
-        String type,
-        String userId) {
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("text") String text,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.createdDate = createdDate;
         this.id = id;
         this.name = name;
@@ -131,32 +131,32 @@ public final class GetApiIssueCommentResult {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

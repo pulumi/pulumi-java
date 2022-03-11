@@ -71,19 +71,19 @@ public final class ISCSIVolumeSource {
      */
     private final String targetPortal;
 
-    @OutputCustomType.Constructor({"chapAuthDiscovery","chapAuthSession","fsType","initiatorName","iqn","iscsiInterface","lun","portals","readOnly","secretRef","targetPortal"})
+    @OutputCustomType.Constructor
     private ISCSIVolumeSource(
-        @Nullable Boolean chapAuthDiscovery,
-        @Nullable Boolean chapAuthSession,
-        @Nullable String fsType,
-        @Nullable String initiatorName,
-        String iqn,
-        @Nullable String iscsiInterface,
-        Integer lun,
-        @Nullable List<String> portals,
-        @Nullable Boolean readOnly,
-        @Nullable LocalObjectReference secretRef,
-        String targetPortal) {
+        @OutputCustomType.Parameter("chapAuthDiscovery") @Nullable Boolean chapAuthDiscovery,
+        @OutputCustomType.Parameter("chapAuthSession") @Nullable Boolean chapAuthSession,
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("initiatorName") @Nullable String initiatorName,
+        @OutputCustomType.Parameter("iqn") String iqn,
+        @OutputCustomType.Parameter("iscsiInterface") @Nullable String iscsiInterface,
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("portals") @Nullable List<String> portals,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") @Nullable LocalObjectReference secretRef,
+        @OutputCustomType.Parameter("targetPortal") String targetPortal) {
         this.chapAuthDiscovery = chapAuthDiscovery;
         this.chapAuthSession = chapAuthSession;
         this.fsType = fsType;
@@ -215,57 +215,57 @@ public final class ISCSIVolumeSource {
     	      this.targetPortal = defaults.targetPortal;
         }
 
-        public Builder setChapAuthDiscovery(@Nullable Boolean chapAuthDiscovery) {
+        public Builder chapAuthDiscovery(@Nullable Boolean chapAuthDiscovery) {
             this.chapAuthDiscovery = chapAuthDiscovery;
             return this;
         }
 
-        public Builder setChapAuthSession(@Nullable Boolean chapAuthSession) {
+        public Builder chapAuthSession(@Nullable Boolean chapAuthSession) {
             this.chapAuthSession = chapAuthSession;
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setInitiatorName(@Nullable String initiatorName) {
+        public Builder initiatorName(@Nullable String initiatorName) {
             this.initiatorName = initiatorName;
             return this;
         }
 
-        public Builder setIqn(String iqn) {
+        public Builder iqn(String iqn) {
             this.iqn = Objects.requireNonNull(iqn);
             return this;
         }
 
-        public Builder setIscsiInterface(@Nullable String iscsiInterface) {
+        public Builder iscsiInterface(@Nullable String iscsiInterface) {
             this.iscsiInterface = iscsiInterface;
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setPortals(@Nullable List<String> portals) {
+        public Builder portals(@Nullable List<String> portals) {
             this.portals = portals;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable LocalObjectReference secretRef) {
+        public Builder secretRef(@Nullable LocalObjectReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setTargetPortal(String targetPortal) {
+        public Builder targetPortal(String targetPortal) {
             this.targetPortal = Objects.requireNonNull(targetPortal);
             return this;
         }

@@ -30,12 +30,12 @@ public final class CircuitResponse {
      */
     private final String secondarySubnet;
 
-    @OutputCustomType.Constructor({"expressRouteID","expressRoutePrivatePeeringID","primarySubnet","secondarySubnet"})
+    @OutputCustomType.Constructor
     private CircuitResponse(
-        String expressRouteID,
-        String expressRoutePrivatePeeringID,
-        String primarySubnet,
-        String secondarySubnet) {
+        @OutputCustomType.Parameter("expressRouteID") String expressRouteID,
+        @OutputCustomType.Parameter("expressRoutePrivatePeeringID") String expressRoutePrivatePeeringID,
+        @OutputCustomType.Parameter("primarySubnet") String primarySubnet,
+        @OutputCustomType.Parameter("secondarySubnet") String secondarySubnet) {
         this.expressRouteID = expressRouteID;
         this.expressRoutePrivatePeeringID = expressRoutePrivatePeeringID;
         this.primarySubnet = primarySubnet;
@@ -97,22 +97,22 @@ public final class CircuitResponse {
     	      this.secondarySubnet = defaults.secondarySubnet;
         }
 
-        public Builder setExpressRouteID(String expressRouteID) {
+        public Builder expressRouteID(String expressRouteID) {
             this.expressRouteID = Objects.requireNonNull(expressRouteID);
             return this;
         }
 
-        public Builder setExpressRoutePrivatePeeringID(String expressRoutePrivatePeeringID) {
+        public Builder expressRoutePrivatePeeringID(String expressRoutePrivatePeeringID) {
             this.expressRoutePrivatePeeringID = Objects.requireNonNull(expressRoutePrivatePeeringID);
             return this;
         }
 
-        public Builder setPrimarySubnet(String primarySubnet) {
+        public Builder primarySubnet(String primarySubnet) {
             this.primarySubnet = Objects.requireNonNull(primarySubnet);
             return this;
         }
 
-        public Builder setSecondarySubnet(String secondarySubnet) {
+        public Builder secondarySubnet(String secondarySubnet) {
             this.secondarySubnet = Objects.requireNonNull(secondarySubnet);
             return this;
         }

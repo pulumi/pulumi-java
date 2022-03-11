@@ -74,12 +74,12 @@ public final class AutomaticOSUpgradePolicyResponse extends io.pulumi.resources.
     	      this.enableAutomaticOSUpgrade = defaults.enableAutomaticOSUpgrade;
         }
 
-        public Builder setDisableAutomaticRollback(@Nullable Boolean disableAutomaticRollback) {
+        public Builder disableAutomaticRollback(@Nullable Boolean disableAutomaticRollback) {
             this.disableAutomaticRollback = disableAutomaticRollback;
             return this;
         }
 
-        public Builder setEnableAutomaticOSUpgrade(@Nullable Boolean enableAutomaticOSUpgrade) {
+        public Builder enableAutomaticOSUpgrade(@Nullable Boolean enableAutomaticOSUpgrade) {
             this.enableAutomaticOSUpgrade = enableAutomaticOSUpgrade;
             return this;
         }

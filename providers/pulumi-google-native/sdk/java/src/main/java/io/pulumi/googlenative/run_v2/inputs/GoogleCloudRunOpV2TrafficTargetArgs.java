@@ -108,42 +108,42 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setPercent(@Nullable Input<Integer> percent) {
+        public Builder percent(@Nullable Input<Integer> percent) {
             this.percent = percent;
             return this;
         }
 
-        public Builder setPercent(@Nullable Integer percent) {
+        public Builder percent(@Nullable Integer percent) {
             this.percent = Input.ofNullable(percent);
             return this;
         }
 
-        public Builder setRevision(@Nullable Input<String> revision) {
+        public Builder revision(@Nullable Input<String> revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setRevision(@Nullable String revision) {
+        public Builder revision(@Nullable String revision) {
             this.revision = Input.ofNullable(revision);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Input<String> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }
 
-        public Builder setType(@Nullable Input<GoogleCloudRunOpV2TrafficTargetType> type) {
+        public Builder type(@Nullable Input<GoogleCloudRunOpV2TrafficTargetType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable GoogleCloudRunOpV2TrafficTargetType type) {
+        public Builder type(@Nullable GoogleCloudRunOpV2TrafficTargetType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

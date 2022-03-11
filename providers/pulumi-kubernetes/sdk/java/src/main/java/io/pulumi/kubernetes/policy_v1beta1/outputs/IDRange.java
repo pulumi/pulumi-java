@@ -20,10 +20,10 @@ public final class IDRange {
      */
     private final Integer min;
 
-    @OutputCustomType.Constructor({"max","min"})
+    @OutputCustomType.Constructor
     private IDRange(
-        Integer max,
-        Integer min) {
+        @OutputCustomType.Parameter("max") Integer max,
+        @OutputCustomType.Parameter("min") Integer min) {
         this.max = max;
         this.min = min;
     }
@@ -65,12 +65,12 @@ public final class IDRange {
     	      this.min = defaults.min;
         }
 
-        public Builder setMax(Integer max) {
+        public Builder max(Integer max) {
             this.max = Objects.requireNonNull(max);
             return this;
         }
 
-        public Builder setMin(Integer min) {
+        public Builder min(Integer min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }

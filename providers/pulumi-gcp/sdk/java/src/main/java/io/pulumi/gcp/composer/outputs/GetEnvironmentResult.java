@@ -29,14 +29,14 @@ public final class GetEnvironmentResult {
     private final @Nullable String project;
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"configs","id","labels","name","project","region"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        List<GetEnvironmentConfig> configs,
-        String id,
-        Map<String,String> labels,
-        String name,
-        @Nullable String project,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("configs") List<GetEnvironmentConfig> configs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.configs = configs;
         this.id = id;
         this.labels = labels;
@@ -102,32 +102,32 @@ public final class GetEnvironmentResult {
     	      this.region = defaults.region;
         }
 
-        public Builder setConfigs(List<GetEnvironmentConfig> configs) {
+        public Builder configs(List<GetEnvironmentConfig> configs) {
             this.configs = Objects.requireNonNull(configs);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }

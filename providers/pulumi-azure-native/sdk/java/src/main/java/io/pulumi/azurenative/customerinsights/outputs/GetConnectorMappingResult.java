@@ -103,26 +103,26 @@ public final class GetConnectorMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"connectorMappingName","connectorName","connectorType","created","dataFormatId","description","displayName","entityType","entityTypeName","id","lastModified","mappingProperties","name","nextRunTime","runId","state","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetConnectorMappingResult(
-        String connectorMappingName,
-        String connectorName,
-        @Nullable String connectorType,
-        String created,
-        String dataFormatId,
-        @Nullable String description,
-        @Nullable String displayName,
-        String entityType,
-        String entityTypeName,
-        String id,
-        String lastModified,
-        ConnectorMappingPropertiesResponse mappingProperties,
-        String name,
-        String nextRunTime,
-        String runId,
-        String state,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("connectorMappingName") String connectorMappingName,
+        @OutputCustomType.Parameter("connectorName") String connectorName,
+        @OutputCustomType.Parameter("connectorType") @Nullable String connectorType,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("dataFormatId") String dataFormatId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("entityType") String entityType,
+        @OutputCustomType.Parameter("entityTypeName") String entityTypeName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("mappingProperties") ConnectorMappingPropertiesResponse mappingProperties,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextRunTime") String nextRunTime,
+        @OutputCustomType.Parameter("runId") String runId,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.connectorMappingName = connectorMappingName;
         this.connectorName = connectorName;
         this.connectorType = connectorType;
@@ -324,92 +324,92 @@ public final class GetConnectorMappingResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConnectorMappingName(String connectorMappingName) {
+        public Builder connectorMappingName(String connectorMappingName) {
             this.connectorMappingName = Objects.requireNonNull(connectorMappingName);
             return this;
         }
 
-        public Builder setConnectorName(String connectorName) {
+        public Builder connectorName(String connectorName) {
             this.connectorName = Objects.requireNonNull(connectorName);
             return this;
         }
 
-        public Builder setConnectorType(@Nullable String connectorType) {
+        public Builder connectorType(@Nullable String connectorType) {
             this.connectorType = connectorType;
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDataFormatId(String dataFormatId) {
+        public Builder dataFormatId(String dataFormatId) {
             this.dataFormatId = Objects.requireNonNull(dataFormatId);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEntityType(String entityType) {
+        public Builder entityType(String entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
-        public Builder setEntityTypeName(String entityTypeName) {
+        public Builder entityTypeName(String entityTypeName) {
             this.entityTypeName = Objects.requireNonNull(entityTypeName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setMappingProperties(ConnectorMappingPropertiesResponse mappingProperties) {
+        public Builder mappingProperties(ConnectorMappingPropertiesResponse mappingProperties) {
             this.mappingProperties = Objects.requireNonNull(mappingProperties);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNextRunTime(String nextRunTime) {
+        public Builder nextRunTime(String nextRunTime) {
             this.nextRunTime = Objects.requireNonNull(nextRunTime);
             return this;
         }
 
-        public Builder setRunId(String runId) {
+        public Builder runId(String runId) {
             this.runId = Objects.requireNonNull(runId);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

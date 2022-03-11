@@ -25,15 +25,15 @@ public final class GetBudgetsActionResult {
     private final @Nullable BudgetsActionNotificationType notificationType;
     private final @Nullable List<BudgetsActionSubscriber> subscribers;
 
-    @OutputCustomType.Constructor({"actionId","actionThreshold","approvalModel","definition","executionRoleArn","notificationType","subscribers"})
+    @OutputCustomType.Constructor
     private GetBudgetsActionResult(
-        @Nullable String actionId,
-        @Nullable BudgetsActionActionThreshold actionThreshold,
-        @Nullable BudgetsActionApprovalModel approvalModel,
-        @Nullable BudgetsActionDefinition definition,
-        @Nullable String executionRoleArn,
-        @Nullable BudgetsActionNotificationType notificationType,
-        @Nullable List<BudgetsActionSubscriber> subscribers) {
+        @OutputCustomType.Parameter("actionId") @Nullable String actionId,
+        @OutputCustomType.Parameter("actionThreshold") @Nullable BudgetsActionActionThreshold actionThreshold,
+        @OutputCustomType.Parameter("approvalModel") @Nullable BudgetsActionApprovalModel approvalModel,
+        @OutputCustomType.Parameter("definition") @Nullable BudgetsActionDefinition definition,
+        @OutputCustomType.Parameter("executionRoleArn") @Nullable String executionRoleArn,
+        @OutputCustomType.Parameter("notificationType") @Nullable BudgetsActionNotificationType notificationType,
+        @OutputCustomType.Parameter("subscribers") @Nullable List<BudgetsActionSubscriber> subscribers) {
         this.actionId = actionId;
         this.actionThreshold = actionThreshold;
         this.approvalModel = approvalModel;
@@ -97,37 +97,37 @@ public final class GetBudgetsActionResult {
     	      this.subscribers = defaults.subscribers;
         }
 
-        public Builder setActionId(@Nullable String actionId) {
+        public Builder actionId(@Nullable String actionId) {
             this.actionId = actionId;
             return this;
         }
 
-        public Builder setActionThreshold(@Nullable BudgetsActionActionThreshold actionThreshold) {
+        public Builder actionThreshold(@Nullable BudgetsActionActionThreshold actionThreshold) {
             this.actionThreshold = actionThreshold;
             return this;
         }
 
-        public Builder setApprovalModel(@Nullable BudgetsActionApprovalModel approvalModel) {
+        public Builder approvalModel(@Nullable BudgetsActionApprovalModel approvalModel) {
             this.approvalModel = approvalModel;
             return this;
         }
 
-        public Builder setDefinition(@Nullable BudgetsActionDefinition definition) {
+        public Builder definition(@Nullable BudgetsActionDefinition definition) {
             this.definition = definition;
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable String executionRoleArn) {
+        public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
-        public Builder setNotificationType(@Nullable BudgetsActionNotificationType notificationType) {
+        public Builder notificationType(@Nullable BudgetsActionNotificationType notificationType) {
             this.notificationType = notificationType;
             return this;
         }
 
-        public Builder setSubscribers(@Nullable List<BudgetsActionSubscriber> subscribers) {
+        public Builder subscribers(@Nullable List<BudgetsActionSubscriber> subscribers) {
             this.subscribers = subscribers;
             return this;
         }

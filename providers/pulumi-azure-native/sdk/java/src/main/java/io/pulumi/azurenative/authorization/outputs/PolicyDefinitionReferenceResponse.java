@@ -35,12 +35,12 @@ public final class PolicyDefinitionReferenceResponse {
      */
     private final @Nullable String policyDefinitionReferenceId;
 
-    @OutputCustomType.Constructor({"groupNames","parameters","policyDefinitionId","policyDefinitionReferenceId"})
+    @OutputCustomType.Constructor
     private PolicyDefinitionReferenceResponse(
-        @Nullable List<String> groupNames,
-        @Nullable Map<String,ParameterValuesValueResponse> parameters,
-        String policyDefinitionId,
-        @Nullable String policyDefinitionReferenceId) {
+        @OutputCustomType.Parameter("groupNames") @Nullable List<String> groupNames,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterValuesValueResponse> parameters,
+        @OutputCustomType.Parameter("policyDefinitionId") String policyDefinitionId,
+        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId) {
         this.groupNames = groupNames;
         this.parameters = parameters;
         this.policyDefinitionId = policyDefinitionId;
@@ -102,22 +102,22 @@ public final class PolicyDefinitionReferenceResponse {
     	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
         }
 
-        public Builder setGroupNames(@Nullable List<String> groupNames) {
+        public Builder groupNames(@Nullable List<String> groupNames) {
             this.groupNames = groupNames;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterValuesValueResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterValuesValueResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPolicyDefinitionId(String policyDefinitionId) {
+        public Builder policyDefinitionId(String policyDefinitionId) {
             this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }

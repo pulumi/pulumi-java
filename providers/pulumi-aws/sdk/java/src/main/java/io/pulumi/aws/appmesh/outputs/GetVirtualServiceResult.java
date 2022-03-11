@@ -52,18 +52,18 @@ public final class GetVirtualServiceResult {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","createdDate","id","lastUpdatedDate","meshName","meshOwner","name","resourceOwner","specs","tags"})
+    @OutputCustomType.Constructor
     private GetVirtualServiceResult(
-        String arn,
-        String createdDate,
-        String id,
-        String lastUpdatedDate,
-        String meshName,
-        String meshOwner,
-        String name,
-        String resourceOwner,
-        List<GetVirtualServiceSpec> specs,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @OutputCustomType.Parameter("meshName") String meshName,
+        @OutputCustomType.Parameter("meshOwner") String meshOwner,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceOwner") String resourceOwner,
+        @OutputCustomType.Parameter("specs") List<GetVirtualServiceSpec> specs,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.arn = arn;
         this.createdDate = createdDate;
         this.id = id;
@@ -173,52 +173,52 @@ public final class GetVirtualServiceResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastUpdatedDate(String lastUpdatedDate) {
+        public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
 
-        public Builder setMeshName(String meshName) {
+        public Builder meshName(String meshName) {
             this.meshName = Objects.requireNonNull(meshName);
             return this;
         }
 
-        public Builder setMeshOwner(String meshOwner) {
+        public Builder meshOwner(String meshOwner) {
             this.meshOwner = Objects.requireNonNull(meshOwner);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceOwner(String resourceOwner) {
+        public Builder resourceOwner(String resourceOwner) {
             this.resourceOwner = Objects.requireNonNull(resourceOwner);
             return this;
         }
 
-        public Builder setSpecs(List<GetVirtualServiceSpec> specs) {
+        public Builder specs(List<GetVirtualServiceSpec> specs) {
             this.specs = Objects.requireNonNull(specs);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

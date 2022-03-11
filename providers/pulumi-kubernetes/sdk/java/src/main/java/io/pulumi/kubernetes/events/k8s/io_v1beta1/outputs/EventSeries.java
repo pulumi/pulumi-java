@@ -28,11 +28,11 @@ public final class EventSeries {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"count","lastObservedTime","state"})
+    @OutputCustomType.Constructor
     private EventSeries(
-        Integer count,
-        String lastObservedTime,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("lastObservedTime") String lastObservedTime,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.count = count;
         this.lastObservedTime = lastObservedTime;
         this.state = state;
@@ -84,17 +84,17 @@ public final class EventSeries {
     	      this.state = defaults.state;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setLastObservedTime(String lastObservedTime) {
+        public Builder lastObservedTime(String lastObservedTime) {
             this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

@@ -17,8 +17,8 @@ public final class AccessPolicyIamRole {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private AccessPolicyIamRole(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private AccessPolicyIamRole(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 
@@ -50,7 +50,7 @@ public final class AccessPolicyIamRole {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

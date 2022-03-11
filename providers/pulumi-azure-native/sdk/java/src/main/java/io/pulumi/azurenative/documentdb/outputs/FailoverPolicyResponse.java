@@ -28,11 +28,11 @@ public final class FailoverPolicyResponse {
      */
     private final @Nullable String locationName;
 
-    @OutputCustomType.Constructor({"failoverPriority","id","locationName"})
+    @OutputCustomType.Constructor
     private FailoverPolicyResponse(
-        @Nullable Integer failoverPriority,
-        String id,
-        @Nullable String locationName) {
+        @OutputCustomType.Parameter("failoverPriority") @Nullable Integer failoverPriority,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("locationName") @Nullable String locationName) {
         this.failoverPriority = failoverPriority;
         this.id = id;
         this.locationName = locationName;
@@ -84,17 +84,17 @@ public final class FailoverPolicyResponse {
     	      this.locationName = defaults.locationName;
         }
 
-        public Builder setFailoverPriority(@Nullable Integer failoverPriority) {
+        public Builder failoverPriority(@Nullable Integer failoverPriority) {
             this.failoverPriority = failoverPriority;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocationName(@Nullable String locationName) {
+        public Builder locationName(@Nullable String locationName) {
             this.locationName = locationName;
             return this;
         }

@@ -15,8 +15,8 @@ public final class BucketEncryptionResponse {
      */
     private final String defaultKmsKeyName;
 
-    @OutputCustomType.Constructor({"defaultKmsKeyName"})
-    private BucketEncryptionResponse(String defaultKmsKeyName) {
+    @OutputCustomType.Constructor
+    private BucketEncryptionResponse(@OutputCustomType.Parameter("defaultKmsKeyName") String defaultKmsKeyName) {
         this.defaultKmsKeyName = defaultKmsKeyName;
     }
 
@@ -48,7 +48,7 @@ public final class BucketEncryptionResponse {
     	      this.defaultKmsKeyName = defaults.defaultKmsKeyName;
         }
 
-        public Builder setDefaultKmsKeyName(String defaultKmsKeyName) {
+        public Builder defaultKmsKeyName(String defaultKmsKeyName) {
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
         }

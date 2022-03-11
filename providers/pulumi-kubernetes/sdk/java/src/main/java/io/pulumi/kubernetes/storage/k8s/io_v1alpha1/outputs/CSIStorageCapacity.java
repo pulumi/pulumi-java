@@ -57,15 +57,15 @@ public final class CSIStorageCapacity {
      */
     private final String storageClassName;
 
-    @OutputCustomType.Constructor({"apiVersion","capacity","kind","maximumVolumeSize","metadata","nodeTopology","storageClassName"})
+    @OutputCustomType.Constructor
     private CSIStorageCapacity(
-        @Nullable String apiVersion,
-        @Nullable String capacity,
-        @Nullable String kind,
-        @Nullable String maximumVolumeSize,
-        @Nullable ObjectMeta metadata,
-        @Nullable LabelSelector nodeTopology,
-        String storageClassName) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("capacity") @Nullable String capacity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("maximumVolumeSize") @Nullable String maximumVolumeSize,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("nodeTopology") @Nullable LabelSelector nodeTopology,
+        @OutputCustomType.Parameter("storageClassName") String storageClassName) {
         this.apiVersion = apiVersion;
         this.capacity = capacity;
         this.kind = kind;
@@ -165,37 +165,37 @@ public final class CSIStorageCapacity {
     	      this.storageClassName = defaults.storageClassName;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setCapacity(@Nullable String capacity) {
+        public Builder capacity(@Nullable String capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMaximumVolumeSize(@Nullable String maximumVolumeSize) {
+        public Builder maximumVolumeSize(@Nullable String maximumVolumeSize) {
             this.maximumVolumeSize = maximumVolumeSize;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setNodeTopology(@Nullable LabelSelector nodeTopology) {
+        public Builder nodeTopology(@Nullable LabelSelector nodeTopology) {
             this.nodeTopology = nodeTopology;
             return this;
         }
 
-        public Builder setStorageClassName(String storageClassName) {
+        public Builder storageClassName(String storageClassName) {
             this.storageClassName = Objects.requireNonNull(storageClassName);
             return this;
         }

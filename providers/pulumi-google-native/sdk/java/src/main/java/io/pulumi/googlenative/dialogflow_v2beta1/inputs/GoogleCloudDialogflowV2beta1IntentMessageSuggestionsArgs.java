@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsArgs exte
     	      this.suggestions = defaults.suggestions;
         }
 
-        public Builder setSuggestions(Input<List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs>> suggestions) {
+        public Builder suggestions(Input<List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs>> suggestions) {
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
 
-        public Builder setSuggestions(List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs> suggestions) {
+        public Builder suggestions(List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionArgs> suggestions) {
             this.suggestions = Input.of(Objects.requireNonNull(suggestions));
             return this;
         }

@@ -35,12 +35,12 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
      */
     private final String resultType;
 
-    @OutputCustomType.Constructor({"errorMessage","events","id","resultType"})
+    @OutputCustomType.Constructor
     private MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorResponse(
-        @Nullable String errorMessage,
-        @Nullable List<SyncMigrationDatabaseErrorEventResponse> events,
-        String id,
-        String resultType) {
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("events") @Nullable List<SyncMigrationDatabaseErrorEventResponse> events,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("resultType") String resultType) {
         this.errorMessage = errorMessage;
         this.events = events;
         this.id = id;
@@ -103,22 +103,22 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputDatabaseErrorRespons
     	      this.resultType = defaults.resultType;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setEvents(@Nullable List<SyncMigrationDatabaseErrorEventResponse> events) {
+        public Builder events(@Nullable List<SyncMigrationDatabaseErrorEventResponse> events) {
             this.events = events;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class TaskSchedulingPolicyResponse {
     private final String nodeFillType;
 
-    @OutputCustomType.Constructor({"nodeFillType"})
-    private TaskSchedulingPolicyResponse(String nodeFillType) {
+    @OutputCustomType.Constructor
+    private TaskSchedulingPolicyResponse(@OutputCustomType.Parameter("nodeFillType") String nodeFillType) {
         this.nodeFillType = nodeFillType;
     }
 
@@ -40,7 +40,7 @@ public final class TaskSchedulingPolicyResponse {
     	      this.nodeFillType = defaults.nodeFillType;
         }
 
-        public Builder setNodeFillType(String nodeFillType) {
+        public Builder nodeFillType(String nodeFillType) {
             this.nodeFillType = Objects.requireNonNull(nodeFillType);
             return this;
         }

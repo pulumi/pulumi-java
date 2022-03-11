@@ -13,10 +13,10 @@ public final class GetInstanceAdvancedMachineFeature {
     private final Boolean enableNestedVirtualization;
     private final Integer threadsPerCore;
 
-    @OutputCustomType.Constructor({"enableNestedVirtualization","threadsPerCore"})
+    @OutputCustomType.Constructor
     private GetInstanceAdvancedMachineFeature(
-        Boolean enableNestedVirtualization,
-        Integer threadsPerCore) {
+        @OutputCustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
+        @OutputCustomType.Parameter("threadsPerCore") Integer threadsPerCore) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.threadsPerCore = threadsPerCore;
     }
@@ -50,12 +50,12 @@ public final class GetInstanceAdvancedMachineFeature {
     	      this.threadsPerCore = defaults.threadsPerCore;
         }
 
-        public Builder setEnableNestedVirtualization(Boolean enableNestedVirtualization) {
+        public Builder enableNestedVirtualization(Boolean enableNestedVirtualization) {
             this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
             return this;
         }
 
-        public Builder setThreadsPerCore(Integer threadsPerCore) {
+        public Builder threadsPerCore(Integer threadsPerCore) {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
         }

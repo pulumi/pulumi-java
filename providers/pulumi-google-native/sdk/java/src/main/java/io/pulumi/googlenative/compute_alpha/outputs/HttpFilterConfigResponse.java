@@ -25,11 +25,11 @@ public final class HttpFilterConfigResponse {
      */
     private final String filterName;
 
-    @OutputCustomType.Constructor({"config","configTypeUrl","filterName"})
+    @OutputCustomType.Constructor
     private HttpFilterConfigResponse(
-        String config,
-        String configTypeUrl,
-        String filterName) {
+        @OutputCustomType.Parameter("config") String config,
+        @OutputCustomType.Parameter("configTypeUrl") String configTypeUrl,
+        @OutputCustomType.Parameter("filterName") String filterName) {
         this.config = config;
         this.configTypeUrl = configTypeUrl;
         this.filterName = filterName;
@@ -81,17 +81,17 @@ public final class HttpFilterConfigResponse {
     	      this.filterName = defaults.filterName;
         }
 
-        public Builder setConfig(String config) {
+        public Builder config(String config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setConfigTypeUrl(String configTypeUrl) {
+        public Builder configTypeUrl(String configTypeUrl) {
             this.configTypeUrl = Objects.requireNonNull(configTypeUrl);
             return this;
         }
 
-        public Builder setFilterName(String filterName) {
+        public Builder filterName(String filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }

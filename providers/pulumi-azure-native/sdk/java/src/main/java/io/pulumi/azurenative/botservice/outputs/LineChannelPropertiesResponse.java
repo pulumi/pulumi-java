@@ -28,11 +28,11 @@ public final class LineChannelPropertiesResponse {
      */
     private final List<LineRegistrationResponse> lineRegistrations;
 
-    @OutputCustomType.Constructor({"callbackUrl","isValidated","lineRegistrations"})
+    @OutputCustomType.Constructor
     private LineChannelPropertiesResponse(
-        String callbackUrl,
-        Boolean isValidated,
-        List<LineRegistrationResponse> lineRegistrations) {
+        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
+        @OutputCustomType.Parameter("isValidated") Boolean isValidated,
+        @OutputCustomType.Parameter("lineRegistrations") List<LineRegistrationResponse> lineRegistrations) {
         this.callbackUrl = callbackUrl;
         this.isValidated = isValidated;
         this.lineRegistrations = lineRegistrations;
@@ -84,17 +84,17 @@ public final class LineChannelPropertiesResponse {
     	      this.lineRegistrations = defaults.lineRegistrations;
         }
 
-        public Builder setCallbackUrl(String callbackUrl) {
+        public Builder callbackUrl(String callbackUrl) {
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
 
-        public Builder setIsValidated(Boolean isValidated) {
+        public Builder isValidated(Boolean isValidated) {
             this.isValidated = Objects.requireNonNull(isValidated);
             return this;
         }
 
-        public Builder setLineRegistrations(List<LineRegistrationResponse> lineRegistrations) {
+        public Builder lineRegistrations(List<LineRegistrationResponse> lineRegistrations) {
             this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
             return this;
         }

@@ -23,11 +23,11 @@ public final class GetDelegatedServicesResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"accountId","delegatedServices","id"})
+    @OutputCustomType.Constructor
     private GetDelegatedServicesResult(
-        String accountId,
-        List<GetDelegatedServicesDelegatedService> delegatedServices,
-        String id) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("delegatedServices") List<GetDelegatedServicesDelegatedService> delegatedServices,
+        @OutputCustomType.Parameter("id") String id) {
         this.accountId = accountId;
         this.delegatedServices = delegatedServices;
         this.id = id;
@@ -75,17 +75,17 @@ public final class GetDelegatedServicesResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setDelegatedServices(List<GetDelegatedServicesDelegatedService> delegatedServices) {
+        public Builder delegatedServices(List<GetDelegatedServicesDelegatedService> delegatedServices) {
             this.delegatedServices = Objects.requireNonNull(delegatedServices);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

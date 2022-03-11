@@ -197,92 +197,92 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
     	      this.twitter = defaults.twitter;
         }
 
-        public Builder setApple(@Nullable Input<AppleArgs> apple) {
+        public Builder apple(@Nullable Input<AppleArgs> apple) {
             this.apple = apple;
             return this;
         }
 
-        public Builder setApple(@Nullable AppleArgs apple) {
+        public Builder apple(@Nullable AppleArgs apple) {
             this.apple = Input.ofNullable(apple);
             return this;
         }
 
-        public Builder setAzureActiveDirectory(@Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
 
-        public Builder setAzureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
             this.azureActiveDirectory = Input.ofNullable(azureActiveDirectory);
             return this;
         }
 
-        public Builder setAzureStaticWebApps(@Nullable Input<AzureStaticWebAppsArgs> azureStaticWebApps) {
+        public Builder azureStaticWebApps(@Nullable Input<AzureStaticWebAppsArgs> azureStaticWebApps) {
             this.azureStaticWebApps = azureStaticWebApps;
             return this;
         }
 
-        public Builder setAzureStaticWebApps(@Nullable AzureStaticWebAppsArgs azureStaticWebApps) {
+        public Builder azureStaticWebApps(@Nullable AzureStaticWebAppsArgs azureStaticWebApps) {
             this.azureStaticWebApps = Input.ofNullable(azureStaticWebApps);
             return this;
         }
 
-        public Builder setCustomOpenIdConnectProviders(@Nullable Input<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders) {
+        public Builder customOpenIdConnectProviders(@Nullable Input<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders) {
             this.customOpenIdConnectProviders = customOpenIdConnectProviders;
             return this;
         }
 
-        public Builder setCustomOpenIdConnectProviders(@Nullable Map<String,CustomOpenIdConnectProviderArgs> customOpenIdConnectProviders) {
+        public Builder customOpenIdConnectProviders(@Nullable Map<String,CustomOpenIdConnectProviderArgs> customOpenIdConnectProviders) {
             this.customOpenIdConnectProviders = Input.ofNullable(customOpenIdConnectProviders);
             return this;
         }
 
-        public Builder setFacebook(@Nullable Input<FacebookArgs> facebook) {
+        public Builder facebook(@Nullable Input<FacebookArgs> facebook) {
             this.facebook = facebook;
             return this;
         }
 
-        public Builder setFacebook(@Nullable FacebookArgs facebook) {
+        public Builder facebook(@Nullable FacebookArgs facebook) {
             this.facebook = Input.ofNullable(facebook);
             return this;
         }
 
-        public Builder setGitHub(@Nullable Input<GitHubArgs> gitHub) {
+        public Builder gitHub(@Nullable Input<GitHubArgs> gitHub) {
             this.gitHub = gitHub;
             return this;
         }
 
-        public Builder setGitHub(@Nullable GitHubArgs gitHub) {
+        public Builder gitHub(@Nullable GitHubArgs gitHub) {
             this.gitHub = Input.ofNullable(gitHub);
             return this;
         }
 
-        public Builder setGoogle(@Nullable Input<GoogleArgs> google) {
+        public Builder google(@Nullable Input<GoogleArgs> google) {
             this.google = google;
             return this;
         }
 
-        public Builder setGoogle(@Nullable GoogleArgs google) {
+        public Builder google(@Nullable GoogleArgs google) {
             this.google = Input.ofNullable(google);
             return this;
         }
 
-        public Builder setLegacyMicrosoftAccount(@Nullable Input<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount) {
+        public Builder legacyMicrosoftAccount(@Nullable Input<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount) {
             this.legacyMicrosoftAccount = legacyMicrosoftAccount;
             return this;
         }
 
-        public Builder setLegacyMicrosoftAccount(@Nullable LegacyMicrosoftAccountArgs legacyMicrosoftAccount) {
+        public Builder legacyMicrosoftAccount(@Nullable LegacyMicrosoftAccountArgs legacyMicrosoftAccount) {
             this.legacyMicrosoftAccount = Input.ofNullable(legacyMicrosoftAccount);
             return this;
         }
 
-        public Builder setTwitter(@Nullable Input<TwitterArgs> twitter) {
+        public Builder twitter(@Nullable Input<TwitterArgs> twitter) {
             this.twitter = twitter;
             return this;
         }
 
-        public Builder setTwitter(@Nullable TwitterArgs twitter) {
+        public Builder twitter(@Nullable TwitterArgs twitter) {
             this.twitter = Input.ofNullable(twitter);
             return this;
         }

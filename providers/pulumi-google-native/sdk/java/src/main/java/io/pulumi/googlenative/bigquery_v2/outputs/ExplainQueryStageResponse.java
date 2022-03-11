@@ -158,37 +158,37 @@ public final class ExplainQueryStageResponse {
      */
     private final Double writeRatioMax;
 
-    @OutputCustomType.Constructor({"completedParallelInputs","computeMsAvg","computeMsMax","computeRatioAvg","computeRatioMax","endMs","inputStages","name","parallelInputs","readMsAvg","readMsMax","readRatioAvg","readRatioMax","recordsRead","recordsWritten","shuffleOutputBytes","shuffleOutputBytesSpilled","slotMs","startMs","status","steps","waitMsAvg","waitMsMax","waitRatioAvg","waitRatioMax","writeMsAvg","writeMsMax","writeRatioAvg","writeRatioMax"})
+    @OutputCustomType.Constructor
     private ExplainQueryStageResponse(
-        String completedParallelInputs,
-        String computeMsAvg,
-        String computeMsMax,
-        Double computeRatioAvg,
-        Double computeRatioMax,
-        String endMs,
-        List<String> inputStages,
-        String name,
-        String parallelInputs,
-        String readMsAvg,
-        String readMsMax,
-        Double readRatioAvg,
-        Double readRatioMax,
-        String recordsRead,
-        String recordsWritten,
-        String shuffleOutputBytes,
-        String shuffleOutputBytesSpilled,
-        String slotMs,
-        String startMs,
-        String status,
-        List<ExplainQueryStepResponse> steps,
-        String waitMsAvg,
-        String waitMsMax,
-        Double waitRatioAvg,
-        Double waitRatioMax,
-        String writeMsAvg,
-        String writeMsMax,
-        Double writeRatioAvg,
-        Double writeRatioMax) {
+        @OutputCustomType.Parameter("completedParallelInputs") String completedParallelInputs,
+        @OutputCustomType.Parameter("computeMsAvg") String computeMsAvg,
+        @OutputCustomType.Parameter("computeMsMax") String computeMsMax,
+        @OutputCustomType.Parameter("computeRatioAvg") Double computeRatioAvg,
+        @OutputCustomType.Parameter("computeRatioMax") Double computeRatioMax,
+        @OutputCustomType.Parameter("endMs") String endMs,
+        @OutputCustomType.Parameter("inputStages") List<String> inputStages,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parallelInputs") String parallelInputs,
+        @OutputCustomType.Parameter("readMsAvg") String readMsAvg,
+        @OutputCustomType.Parameter("readMsMax") String readMsMax,
+        @OutputCustomType.Parameter("readRatioAvg") Double readRatioAvg,
+        @OutputCustomType.Parameter("readRatioMax") Double readRatioMax,
+        @OutputCustomType.Parameter("recordsRead") String recordsRead,
+        @OutputCustomType.Parameter("recordsWritten") String recordsWritten,
+        @OutputCustomType.Parameter("shuffleOutputBytes") String shuffleOutputBytes,
+        @OutputCustomType.Parameter("shuffleOutputBytesSpilled") String shuffleOutputBytesSpilled,
+        @OutputCustomType.Parameter("slotMs") String slotMs,
+        @OutputCustomType.Parameter("startMs") String startMs,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("steps") List<ExplainQueryStepResponse> steps,
+        @OutputCustomType.Parameter("waitMsAvg") String waitMsAvg,
+        @OutputCustomType.Parameter("waitMsMax") String waitMsMax,
+        @OutputCustomType.Parameter("waitRatioAvg") Double waitRatioAvg,
+        @OutputCustomType.Parameter("waitRatioMax") Double waitRatioMax,
+        @OutputCustomType.Parameter("writeMsAvg") String writeMsAvg,
+        @OutputCustomType.Parameter("writeMsMax") String writeMsMax,
+        @OutputCustomType.Parameter("writeRatioAvg") Double writeRatioAvg,
+        @OutputCustomType.Parameter("writeRatioMax") Double writeRatioMax) {
         this.completedParallelInputs = completedParallelInputs;
         this.computeMsAvg = computeMsAvg;
         this.computeMsMax = computeMsMax;
@@ -500,147 +500,147 @@ public final class ExplainQueryStageResponse {
     	      this.writeRatioMax = defaults.writeRatioMax;
         }
 
-        public Builder setCompletedParallelInputs(String completedParallelInputs) {
+        public Builder completedParallelInputs(String completedParallelInputs) {
             this.completedParallelInputs = Objects.requireNonNull(completedParallelInputs);
             return this;
         }
 
-        public Builder setComputeMsAvg(String computeMsAvg) {
+        public Builder computeMsAvg(String computeMsAvg) {
             this.computeMsAvg = Objects.requireNonNull(computeMsAvg);
             return this;
         }
 
-        public Builder setComputeMsMax(String computeMsMax) {
+        public Builder computeMsMax(String computeMsMax) {
             this.computeMsMax = Objects.requireNonNull(computeMsMax);
             return this;
         }
 
-        public Builder setComputeRatioAvg(Double computeRatioAvg) {
+        public Builder computeRatioAvg(Double computeRatioAvg) {
             this.computeRatioAvg = Objects.requireNonNull(computeRatioAvg);
             return this;
         }
 
-        public Builder setComputeRatioMax(Double computeRatioMax) {
+        public Builder computeRatioMax(Double computeRatioMax) {
             this.computeRatioMax = Objects.requireNonNull(computeRatioMax);
             return this;
         }
 
-        public Builder setEndMs(String endMs) {
+        public Builder endMs(String endMs) {
             this.endMs = Objects.requireNonNull(endMs);
             return this;
         }
 
-        public Builder setInputStages(List<String> inputStages) {
+        public Builder inputStages(List<String> inputStages) {
             this.inputStages = Objects.requireNonNull(inputStages);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParallelInputs(String parallelInputs) {
+        public Builder parallelInputs(String parallelInputs) {
             this.parallelInputs = Objects.requireNonNull(parallelInputs);
             return this;
         }
 
-        public Builder setReadMsAvg(String readMsAvg) {
+        public Builder readMsAvg(String readMsAvg) {
             this.readMsAvg = Objects.requireNonNull(readMsAvg);
             return this;
         }
 
-        public Builder setReadMsMax(String readMsMax) {
+        public Builder readMsMax(String readMsMax) {
             this.readMsMax = Objects.requireNonNull(readMsMax);
             return this;
         }
 
-        public Builder setReadRatioAvg(Double readRatioAvg) {
+        public Builder readRatioAvg(Double readRatioAvg) {
             this.readRatioAvg = Objects.requireNonNull(readRatioAvg);
             return this;
         }
 
-        public Builder setReadRatioMax(Double readRatioMax) {
+        public Builder readRatioMax(Double readRatioMax) {
             this.readRatioMax = Objects.requireNonNull(readRatioMax);
             return this;
         }
 
-        public Builder setRecordsRead(String recordsRead) {
+        public Builder recordsRead(String recordsRead) {
             this.recordsRead = Objects.requireNonNull(recordsRead);
             return this;
         }
 
-        public Builder setRecordsWritten(String recordsWritten) {
+        public Builder recordsWritten(String recordsWritten) {
             this.recordsWritten = Objects.requireNonNull(recordsWritten);
             return this;
         }
 
-        public Builder setShuffleOutputBytes(String shuffleOutputBytes) {
+        public Builder shuffleOutputBytes(String shuffleOutputBytes) {
             this.shuffleOutputBytes = Objects.requireNonNull(shuffleOutputBytes);
             return this;
         }
 
-        public Builder setShuffleOutputBytesSpilled(String shuffleOutputBytesSpilled) {
+        public Builder shuffleOutputBytesSpilled(String shuffleOutputBytesSpilled) {
             this.shuffleOutputBytesSpilled = Objects.requireNonNull(shuffleOutputBytesSpilled);
             return this;
         }
 
-        public Builder setSlotMs(String slotMs) {
+        public Builder slotMs(String slotMs) {
             this.slotMs = Objects.requireNonNull(slotMs);
             return this;
         }
 
-        public Builder setStartMs(String startMs) {
+        public Builder startMs(String startMs) {
             this.startMs = Objects.requireNonNull(startMs);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSteps(List<ExplainQueryStepResponse> steps) {
+        public Builder steps(List<ExplainQueryStepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
 
-        public Builder setWaitMsAvg(String waitMsAvg) {
+        public Builder waitMsAvg(String waitMsAvg) {
             this.waitMsAvg = Objects.requireNonNull(waitMsAvg);
             return this;
         }
 
-        public Builder setWaitMsMax(String waitMsMax) {
+        public Builder waitMsMax(String waitMsMax) {
             this.waitMsMax = Objects.requireNonNull(waitMsMax);
             return this;
         }
 
-        public Builder setWaitRatioAvg(Double waitRatioAvg) {
+        public Builder waitRatioAvg(Double waitRatioAvg) {
             this.waitRatioAvg = Objects.requireNonNull(waitRatioAvg);
             return this;
         }
 
-        public Builder setWaitRatioMax(Double waitRatioMax) {
+        public Builder waitRatioMax(Double waitRatioMax) {
             this.waitRatioMax = Objects.requireNonNull(waitRatioMax);
             return this;
         }
 
-        public Builder setWriteMsAvg(String writeMsAvg) {
+        public Builder writeMsAvg(String writeMsAvg) {
             this.writeMsAvg = Objects.requireNonNull(writeMsAvg);
             return this;
         }
 
-        public Builder setWriteMsMax(String writeMsMax) {
+        public Builder writeMsMax(String writeMsMax) {
             this.writeMsMax = Objects.requireNonNull(writeMsMax);
             return this;
         }
 
-        public Builder setWriteRatioAvg(Double writeRatioAvg) {
+        public Builder writeRatioAvg(Double writeRatioAvg) {
             this.writeRatioAvg = Objects.requireNonNull(writeRatioAvg);
             return this;
         }
 
-        public Builder setWriteRatioMax(Double writeRatioMax) {
+        public Builder writeRatioMax(Double writeRatioMax) {
             this.writeRatioMax = Objects.requireNonNull(writeRatioMax);
             return this;
         }

@@ -13,10 +13,10 @@ public final class JobStatisticOverride {
     private final JobParameterMap parameters;
     private final String statistic;
 
-    @OutputCustomType.Constructor({"parameters","statistic"})
+    @OutputCustomType.Constructor
     private JobStatisticOverride(
-        JobParameterMap parameters,
-        String statistic) {
+        @OutputCustomType.Parameter("parameters") JobParameterMap parameters,
+        @OutputCustomType.Parameter("statistic") String statistic) {
         this.parameters = parameters;
         this.statistic = statistic;
     }
@@ -50,12 +50,12 @@ public final class JobStatisticOverride {
     	      this.statistic = defaults.statistic;
         }
 
-        public Builder setParameters(JobParameterMap parameters) {
+        public Builder parameters(JobParameterMap parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setStatistic(String statistic) {
+        public Builder statistic(String statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }

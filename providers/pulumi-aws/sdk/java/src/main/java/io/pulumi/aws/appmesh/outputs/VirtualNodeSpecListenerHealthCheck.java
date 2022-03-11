@@ -48,15 +48,15 @@ public final class VirtualNodeSpecListenerHealthCheck {
      */
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"healthyThreshold","intervalMillis","path","port","protocol","timeoutMillis","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerHealthCheck(
-        Integer healthyThreshold,
-        Integer intervalMillis,
-        @Nullable String path,
-        @Nullable Integer port,
-        String protocol,
-        Integer timeoutMillis,
-        Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @OutputCustomType.Parameter("intervalMillis") Integer intervalMillis,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("timeoutMillis") Integer timeoutMillis,
+        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.intervalMillis = intervalMillis;
         this.path = path;
@@ -148,37 +148,37 @@ public final class VirtualNodeSpecListenerHealthCheck {
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setHealthyThreshold(Integer healthyThreshold) {
+        public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
 
-        public Builder setIntervalMillis(Integer intervalMillis) {
+        public Builder intervalMillis(Integer intervalMillis) {
             this.intervalMillis = Objects.requireNonNull(intervalMillis);
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setTimeoutMillis(Integer timeoutMillis) {
+        public Builder timeoutMillis(Integer timeoutMillis) {
             this.timeoutMillis = Objects.requireNonNull(timeoutMillis);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }

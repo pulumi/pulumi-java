@@ -34,12 +34,12 @@ public final class ClusterStepHadoopJarStep {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"args","jar","mainClass","properties"})
+    @OutputCustomType.Constructor
     private ClusterStepHadoopJarStep(
-        @Nullable List<String> args,
-        String jar,
-        @Nullable String mainClass,
-        @Nullable Map<String,String> properties) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("jar") String jar,
+        @OutputCustomType.Parameter("mainClass") @Nullable String mainClass,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.args = args;
         this.jar = jar;
         this.mainClass = mainClass;
@@ -101,22 +101,22 @@ public final class ClusterStepHadoopJarStep {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setJar(String jar) {
+        public Builder jar(String jar) {
             this.jar = Objects.requireNonNull(jar);
             return this;
         }
 
-        public Builder setMainClass(@Nullable String mainClass) {
+        public Builder mainClass(@Nullable String mainClass) {
             this.mainClass = mainClass;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }

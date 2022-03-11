@@ -25,10 +25,10 @@ public final class SecurityScanConfigSchedule {
      */
     private final @Nullable String scheduleTime;
 
-    @OutputCustomType.Constructor({"intervalDurationDays","scheduleTime"})
+    @OutputCustomType.Constructor
     private SecurityScanConfigSchedule(
-        Integer intervalDurationDays,
-        @Nullable String scheduleTime) {
+        @OutputCustomType.Parameter("intervalDurationDays") Integer intervalDurationDays,
+        @OutputCustomType.Parameter("scheduleTime") @Nullable String scheduleTime) {
         this.intervalDurationDays = intervalDurationDays;
         this.scheduleTime = scheduleTime;
     }
@@ -72,12 +72,12 @@ public final class SecurityScanConfigSchedule {
     	      this.scheduleTime = defaults.scheduleTime;
         }
 
-        public Builder setIntervalDurationDays(Integer intervalDurationDays) {
+        public Builder intervalDurationDays(Integer intervalDurationDays) {
             this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
             return this;
         }
 
-        public Builder setScheduleTime(@Nullable String scheduleTime) {
+        public Builder scheduleTime(@Nullable String scheduleTime) {
             this.scheduleTime = scheduleTime;
             return this;
         }

@@ -36,16 +36,16 @@ public final class GetSdkResult {
     private final String sdkType;
     private final String stageName;
 
-    @OutputCustomType.Constructor({"body","contentDisposition","contentType","id","parameters","restApiId","sdkType","stageName"})
+    @OutputCustomType.Constructor
     private GetSdkResult(
-        String body,
-        String contentDisposition,
-        String contentType,
-        String id,
-        @Nullable Map<String,String> parameters,
-        String restApiId,
-        String sdkType,
-        String stageName) {
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("contentDisposition") String contentDisposition,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("restApiId") String restApiId,
+        @OutputCustomType.Parameter("sdkType") String sdkType,
+        @OutputCustomType.Parameter("stageName") String stageName) {
         this.body = body;
         this.contentDisposition = contentDisposition;
         this.contentType = contentType;
@@ -131,42 +131,42 @@ public final class GetSdkResult {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setContentDisposition(String contentDisposition) {
+        public Builder contentDisposition(String contentDisposition) {
             this.contentDisposition = Objects.requireNonNull(contentDisposition);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setSdkType(String sdkType) {
+        public Builder sdkType(String sdkType) {
             this.sdkType = Objects.requireNonNull(sdkType);
             return this;
         }
 
-        public Builder setStageName(String stageName) {
+        public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }

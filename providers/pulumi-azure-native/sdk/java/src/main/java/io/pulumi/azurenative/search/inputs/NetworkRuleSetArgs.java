@@ -58,12 +58,12 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ipRules = defaults.ipRules;
         }
 
-        public Builder setIpRules(@Nullable Input<List<IpRuleArgs>> ipRules) {
+        public Builder ipRules(@Nullable Input<List<IpRuleArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<IpRuleArgs> ipRules) {
+        public Builder ipRules(@Nullable List<IpRuleArgs> ipRules) {
             this.ipRules = Input.ofNullable(ipRules);
             return this;
         }

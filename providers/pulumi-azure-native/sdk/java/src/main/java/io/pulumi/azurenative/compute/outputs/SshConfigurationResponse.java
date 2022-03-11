@@ -17,8 +17,8 @@ public final class SshConfigurationResponse {
      */
     private final @Nullable List<SshPublicKeyResponse> publicKeys;
 
-    @OutputCustomType.Constructor({"publicKeys"})
-    private SshConfigurationResponse(@Nullable List<SshPublicKeyResponse> publicKeys) {
+    @OutputCustomType.Constructor
+    private SshConfigurationResponse(@OutputCustomType.Parameter("publicKeys") @Nullable List<SshPublicKeyResponse> publicKeys) {
         this.publicKeys = publicKeys;
     }
 
@@ -50,7 +50,7 @@ public final class SshConfigurationResponse {
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder setPublicKeys(@Nullable List<SshPublicKeyResponse> publicKeys) {
+        public Builder publicKeys(@Nullable List<SshPublicKeyResponse> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }

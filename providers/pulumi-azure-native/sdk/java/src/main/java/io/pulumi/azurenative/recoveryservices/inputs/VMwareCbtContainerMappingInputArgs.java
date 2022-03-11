@@ -155,72 +155,72 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
     	      this.targetLocation = defaults.targetLocation;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setKeyVaultId(Input<String> keyVaultId) {
+        public Builder keyVaultId(Input<String> keyVaultId) {
             this.keyVaultId = Objects.requireNonNull(keyVaultId);
             return this;
         }
 
-        public Builder setKeyVaultId(String keyVaultId) {
+        public Builder keyVaultId(String keyVaultId) {
             this.keyVaultId = Input.of(Objects.requireNonNull(keyVaultId));
             return this;
         }
 
-        public Builder setKeyVaultUri(Input<String> keyVaultUri) {
+        public Builder keyVaultUri(Input<String> keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
 
-        public Builder setKeyVaultUri(String keyVaultUri) {
+        public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Input.of(Objects.requireNonNull(keyVaultUri));
             return this;
         }
 
-        public Builder setServiceBusConnectionStringSecretName(Input<String> serviceBusConnectionStringSecretName) {
+        public Builder serviceBusConnectionStringSecretName(Input<String> serviceBusConnectionStringSecretName) {
             this.serviceBusConnectionStringSecretName = Objects.requireNonNull(serviceBusConnectionStringSecretName);
             return this;
         }
 
-        public Builder setServiceBusConnectionStringSecretName(String serviceBusConnectionStringSecretName) {
+        public Builder serviceBusConnectionStringSecretName(String serviceBusConnectionStringSecretName) {
             this.serviceBusConnectionStringSecretName = Input.of(Objects.requireNonNull(serviceBusConnectionStringSecretName));
             return this;
         }
 
-        public Builder setStorageAccountId(Input<String> storageAccountId) {
+        public Builder storageAccountId(Input<String> storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Input.of(Objects.requireNonNull(storageAccountId));
             return this;
         }
 
-        public Builder setStorageAccountSasSecretName(Input<String> storageAccountSasSecretName) {
+        public Builder storageAccountSasSecretName(Input<String> storageAccountSasSecretName) {
             this.storageAccountSasSecretName = Objects.requireNonNull(storageAccountSasSecretName);
             return this;
         }
 
-        public Builder setStorageAccountSasSecretName(String storageAccountSasSecretName) {
+        public Builder storageAccountSasSecretName(String storageAccountSasSecretName) {
             this.storageAccountSasSecretName = Input.of(Objects.requireNonNull(storageAccountSasSecretName));
             return this;
         }
 
-        public Builder setTargetLocation(Input<String> targetLocation) {
+        public Builder targetLocation(Input<String> targetLocation) {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }
 
-        public Builder setTargetLocation(String targetLocation) {
+        public Builder targetLocation(String targetLocation) {
             this.targetLocation = Input.of(Objects.requireNonNull(targetLocation));
             return this;
         }

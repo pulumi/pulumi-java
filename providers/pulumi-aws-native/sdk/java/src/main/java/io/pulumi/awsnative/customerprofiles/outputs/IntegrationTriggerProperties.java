@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class IntegrationTriggerProperties {
     private final @Nullable IntegrationScheduledTriggerProperties scheduled;
 
-    @OutputCustomType.Constructor({"scheduled"})
-    private IntegrationTriggerProperties(@Nullable IntegrationScheduledTriggerProperties scheduled) {
+    @OutputCustomType.Constructor
+    private IntegrationTriggerProperties(@OutputCustomType.Parameter("scheduled") @Nullable IntegrationScheduledTriggerProperties scheduled) {
         this.scheduled = scheduled;
     }
 
@@ -42,7 +42,7 @@ public final class IntegrationTriggerProperties {
     	      this.scheduled = defaults.scheduled;
         }
 
-        public Builder setScheduled(@Nullable IntegrationScheduledTriggerProperties scheduled) {
+        public Builder scheduled(@Nullable IntegrationScheduledTriggerProperties scheduled) {
             this.scheduled = scheduled;
             return this;
         }

@@ -15,10 +15,10 @@ public final class GroupConfigurationParameter {
     private final @Nullable String name;
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"name","values"})
+    @OutputCustomType.Constructor
     private GroupConfigurationParameter(
-        @Nullable String name,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.name = name;
         this.values = values;
     }
@@ -52,12 +52,12 @@ public final class GroupConfigurationParameter {
     	      this.values = defaults.values;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

@@ -16,8 +16,8 @@ public final class ApplicationFeatureSettings {
      */
     private final Boolean splitHealthChecks;
 
-    @OutputCustomType.Constructor({"splitHealthChecks"})
-    private ApplicationFeatureSettings(Boolean splitHealthChecks) {
+    @OutputCustomType.Constructor
+    private ApplicationFeatureSettings(@OutputCustomType.Parameter("splitHealthChecks") Boolean splitHealthChecks) {
         this.splitHealthChecks = splitHealthChecks;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationFeatureSettings {
     	      this.splitHealthChecks = defaults.splitHealthChecks;
         }
 
-        public Builder setSplitHealthChecks(Boolean splitHealthChecks) {
+        public Builder splitHealthChecks(Boolean splitHealthChecks) {
             this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
             return this;
         }

@@ -20,10 +20,10 @@ public final class OracleSourceConfigResponse {
      */
     private final OracleRdbmsResponse rejectlist;
 
-    @OutputCustomType.Constructor({"allowlist","rejectlist"})
+    @OutputCustomType.Constructor
     private OracleSourceConfigResponse(
-        OracleRdbmsResponse allowlist,
-        OracleRdbmsResponse rejectlist) {
+        @OutputCustomType.Parameter("allowlist") OracleRdbmsResponse allowlist,
+        @OutputCustomType.Parameter("rejectlist") OracleRdbmsResponse rejectlist) {
         this.allowlist = allowlist;
         this.rejectlist = rejectlist;
     }
@@ -65,12 +65,12 @@ public final class OracleSourceConfigResponse {
     	      this.rejectlist = defaults.rejectlist;
         }
 
-        public Builder setAllowlist(OracleRdbmsResponse allowlist) {
+        public Builder allowlist(OracleRdbmsResponse allowlist) {
             this.allowlist = Objects.requireNonNull(allowlist);
             return this;
         }
 
-        public Builder setRejectlist(OracleRdbmsResponse rejectlist) {
+        public Builder rejectlist(OracleRdbmsResponse rejectlist) {
             this.rejectlist = Objects.requireNonNull(rejectlist);
             return this;
         }

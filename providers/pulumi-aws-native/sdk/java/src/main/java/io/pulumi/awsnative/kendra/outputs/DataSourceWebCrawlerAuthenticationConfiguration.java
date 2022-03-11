@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DataSourceWebCrawlerAuthenticationConfiguration {
     private final @Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication;
 
-    @OutputCustomType.Constructor({"basicAuthentication"})
-    private DataSourceWebCrawlerAuthenticationConfiguration(@Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication) {
+    @OutputCustomType.Constructor
+    private DataSourceWebCrawlerAuthenticationConfiguration(@OutputCustomType.Parameter("basicAuthentication") @Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication) {
         this.basicAuthentication = basicAuthentication;
     }
 
@@ -42,7 +42,7 @@ public final class DataSourceWebCrawlerAuthenticationConfiguration {
     	      this.basicAuthentication = defaults.basicAuthentication;
         }
 
-        public Builder setBasicAuthentication(@Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication) {
+        public Builder basicAuthentication(@Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication) {
             this.basicAuthentication = basicAuthentication;
             return this;
         }

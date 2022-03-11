@@ -22,10 +22,10 @@ public final class IpGroupRule {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"description","source"})
+    @OutputCustomType.Constructor
     private IpGroupRule(
-        @Nullable String description,
-        String source) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("source") String source) {
         this.description = description;
         this.source = source;
     }
@@ -67,12 +67,12 @@ public final class IpGroupRule {
     	      this.source = defaults.source;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

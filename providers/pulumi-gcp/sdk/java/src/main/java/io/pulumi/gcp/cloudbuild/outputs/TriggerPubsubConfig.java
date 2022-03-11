@@ -35,12 +35,12 @@ public final class TriggerPubsubConfig {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"serviceAccountEmail","state","subscription","topic"})
+    @OutputCustomType.Constructor
     private TriggerPubsubConfig(
-        @Nullable String serviceAccountEmail,
-        @Nullable String state,
-        @Nullable String subscription,
-        String topic) {
+        @OutputCustomType.Parameter("serviceAccountEmail") @Nullable String serviceAccountEmail,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("subscription") @Nullable String subscription,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.serviceAccountEmail = serviceAccountEmail;
         this.state = state;
         this.subscription = subscription;
@@ -105,22 +105,22 @@ public final class TriggerPubsubConfig {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setServiceAccountEmail(@Nullable String serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setSubscription(@Nullable String subscription) {
+        public Builder subscription(@Nullable String subscription) {
             this.subscription = subscription;
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

@@ -107,22 +107,22 @@ public final class PermissionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.notDataActions = defaults.notDataActions;
         }
 
-        public Builder setActions(@Nullable List<String> actions) {
+        public Builder actions(@Nullable List<String> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setDataActions(@Nullable List<String> dataActions) {
+        public Builder dataActions(@Nullable List<String> dataActions) {
             this.dataActions = dataActions;
             return this;
         }
 
-        public Builder setNotActions(@Nullable List<String> notActions) {
+        public Builder notActions(@Nullable List<String> notActions) {
             this.notActions = notActions;
             return this;
         }
 
-        public Builder setNotDataActions(@Nullable List<String> notDataActions) {
+        public Builder notDataActions(@Nullable List<String> notDataActions) {
             this.notDataActions = notDataActions;
             return this;
         }

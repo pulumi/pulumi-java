@@ -22,10 +22,10 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      */
     private final ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation;
 
-    @OutputCustomType.Constructor({"actions","contentTransformation"})
+    @OutputCustomType.Constructor
     private ObjectLambdaAccessPointConfigurationTransformationConfiguration(
-        List<String> actions,
-        ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("contentTransformation") ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
         this.actions = actions;
         this.contentTransformation = contentTransformation;
     }
@@ -67,12 +67,12 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     	      this.contentTransformation = defaults.contentTransformation;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setContentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
+        public Builder contentTransformation(ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
             this.contentTransformation = Objects.requireNonNull(contentTransformation);
             return this;
         }

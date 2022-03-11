@@ -85,23 +85,23 @@ public final class GetDomainNameResult {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","certificateArn","certificateName","certificateUploadDate","cloudfrontDomainName","cloudfrontZoneId","domainName","endpointConfigurations","id","regionalCertificateArn","regionalCertificateName","regionalDomainName","regionalZoneId","securityPolicy","tags"})
+    @OutputCustomType.Constructor
     private GetDomainNameResult(
-        String arn,
-        String certificateArn,
-        String certificateName,
-        String certificateUploadDate,
-        String cloudfrontDomainName,
-        String cloudfrontZoneId,
-        String domainName,
-        List<GetDomainNameEndpointConfiguration> endpointConfigurations,
-        String id,
-        String regionalCertificateArn,
-        String regionalCertificateName,
-        String regionalDomainName,
-        String regionalZoneId,
-        String securityPolicy,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("certificateArn") String certificateArn,
+        @OutputCustomType.Parameter("certificateName") String certificateName,
+        @OutputCustomType.Parameter("certificateUploadDate") String certificateUploadDate,
+        @OutputCustomType.Parameter("cloudfrontDomainName") String cloudfrontDomainName,
+        @OutputCustomType.Parameter("cloudfrontZoneId") String cloudfrontZoneId,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("endpointConfigurations") List<GetDomainNameEndpointConfiguration> endpointConfigurations,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("regionalCertificateArn") String regionalCertificateArn,
+        @OutputCustomType.Parameter("regionalCertificateName") String regionalCertificateName,
+        @OutputCustomType.Parameter("regionalDomainName") String regionalDomainName,
+        @OutputCustomType.Parameter("regionalZoneId") String regionalZoneId,
+        @OutputCustomType.Parameter("securityPolicy") String securityPolicy,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.arn = arn;
         this.certificateArn = certificateArn;
         this.certificateName = certificateName;
@@ -269,77 +269,77 @@ public final class GetDomainNameResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCertificateArn(String certificateArn) {
+        public Builder certificateArn(String certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
 
-        public Builder setCertificateName(String certificateName) {
+        public Builder certificateName(String certificateName) {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
 
-        public Builder setCertificateUploadDate(String certificateUploadDate) {
+        public Builder certificateUploadDate(String certificateUploadDate) {
             this.certificateUploadDate = Objects.requireNonNull(certificateUploadDate);
             return this;
         }
 
-        public Builder setCloudfrontDomainName(String cloudfrontDomainName) {
+        public Builder cloudfrontDomainName(String cloudfrontDomainName) {
             this.cloudfrontDomainName = Objects.requireNonNull(cloudfrontDomainName);
             return this;
         }
 
-        public Builder setCloudfrontZoneId(String cloudfrontZoneId) {
+        public Builder cloudfrontZoneId(String cloudfrontZoneId) {
             this.cloudfrontZoneId = Objects.requireNonNull(cloudfrontZoneId);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setEndpointConfigurations(List<GetDomainNameEndpointConfiguration> endpointConfigurations) {
+        public Builder endpointConfigurations(List<GetDomainNameEndpointConfiguration> endpointConfigurations) {
             this.endpointConfigurations = Objects.requireNonNull(endpointConfigurations);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRegionalCertificateArn(String regionalCertificateArn) {
+        public Builder regionalCertificateArn(String regionalCertificateArn) {
             this.regionalCertificateArn = Objects.requireNonNull(regionalCertificateArn);
             return this;
         }
 
-        public Builder setRegionalCertificateName(String regionalCertificateName) {
+        public Builder regionalCertificateName(String regionalCertificateName) {
             this.regionalCertificateName = Objects.requireNonNull(regionalCertificateName);
             return this;
         }
 
-        public Builder setRegionalDomainName(String regionalDomainName) {
+        public Builder regionalDomainName(String regionalDomainName) {
             this.regionalDomainName = Objects.requireNonNull(regionalDomainName);
             return this;
         }
 
-        public Builder setRegionalZoneId(String regionalZoneId) {
+        public Builder regionalZoneId(String regionalZoneId) {
             this.regionalZoneId = Objects.requireNonNull(regionalZoneId);
             return this;
         }
 
-        public Builder setSecurityPolicy(String securityPolicy) {
+        public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

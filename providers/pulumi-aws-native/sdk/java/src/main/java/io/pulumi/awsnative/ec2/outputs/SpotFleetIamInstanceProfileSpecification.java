@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class SpotFleetIamInstanceProfileSpecification {
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private SpotFleetIamInstanceProfileSpecification(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private SpotFleetIamInstanceProfileSpecification(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 
@@ -42,7 +42,7 @@ public final class SpotFleetIamInstanceProfileSpecification {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

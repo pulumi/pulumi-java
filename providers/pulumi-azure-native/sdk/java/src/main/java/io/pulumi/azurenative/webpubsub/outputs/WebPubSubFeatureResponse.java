@@ -30,11 +30,11 @@ public final class WebPubSubFeatureResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"flag","properties","value"})
+    @OutputCustomType.Constructor
     private WebPubSubFeatureResponse(
-        String flag,
-        @Nullable Map<String,String> properties,
-        String value) {
+        @OutputCustomType.Parameter("flag") String flag,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("value") String value) {
         this.flag = flag;
         this.properties = properties;
         this.value = value;
@@ -89,17 +89,17 @@ public final class WebPubSubFeatureResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setFlag(String flag) {
+        public Builder flag(String flag) {
             this.flag = Objects.requireNonNull(flag);
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -25,11 +25,11 @@ public final class DataTransferRegionalServiceResourceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"location","name","status"})
+    @OutputCustomType.Constructor
     private DataTransferRegionalServiceResourceResponse(
-        String location,
-        String name,
-        String status) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status) {
         this.location = location;
         this.name = name;
         this.status = status;
@@ -81,17 +81,17 @@ public final class DataTransferRegionalServiceResourceResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

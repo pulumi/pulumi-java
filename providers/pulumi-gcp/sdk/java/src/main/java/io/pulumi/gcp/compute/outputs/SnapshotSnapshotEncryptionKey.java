@@ -37,12 +37,12 @@ public final class SnapshotSnapshotEncryptionKey {
      */
     private final @Nullable String sha256;
 
-    @OutputCustomType.Constructor({"kmsKeySelfLink","kmsKeyServiceAccount","rawKey","sha256"})
+    @OutputCustomType.Constructor
     private SnapshotSnapshotEncryptionKey(
-        @Nullable String kmsKeySelfLink,
-        @Nullable String kmsKeyServiceAccount,
-        @Nullable String rawKey,
-        @Nullable String sha256) {
+        @OutputCustomType.Parameter("kmsKeySelfLink") @Nullable String kmsKeySelfLink,
+        @OutputCustomType.Parameter("kmsKeyServiceAccount") @Nullable String kmsKeyServiceAccount,
+        @OutputCustomType.Parameter("rawKey") @Nullable String rawKey,
+        @OutputCustomType.Parameter("sha256") @Nullable String sha256) {
         this.kmsKeySelfLink = kmsKeySelfLink;
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;
@@ -109,22 +109,22 @@ public final class SnapshotSnapshotEncryptionKey {
     	      this.sha256 = defaults.sha256;
         }
 
-        public Builder setKmsKeySelfLink(@Nullable String kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
 
-        public Builder setKmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
-        public Builder setRawKey(@Nullable String rawKey) {
+        public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = rawKey;
             return this;
         }
 
-        public Builder setSha256(@Nullable String sha256) {
+        public Builder sha256(@Nullable String sha256) {
             this.sha256 = sha256;
             return this;
         }

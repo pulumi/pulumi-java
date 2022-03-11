@@ -35,12 +35,12 @@ public final class WebBasicAuthenticationResponse {
      */
     private final Object username;
 
-    @OutputCustomType.Constructor({"authenticationType","password","url","username"})
+    @OutputCustomType.Constructor
     private WebBasicAuthenticationResponse(
-        String authenticationType,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Object url,
-        Object username) {
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("url") Object url,
+        @OutputCustomType.Parameter("username") Object username) {
         this.authenticationType = authenticationType;
         this.password = password;
         this.url = url;
@@ -103,22 +103,22 @@ public final class WebBasicAuthenticationResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setPassword(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUrl(Object url) {
+        public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUsername(Object username) {
+        public Builder username(Object username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

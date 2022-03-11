@@ -29,11 +29,11 @@ public final class MoveResourcePropertiesResponseMoveStatus {
      */
     private final String moveState;
 
-    @OutputCustomType.Constructor({"errors","jobStatus","moveState"})
+    @OutputCustomType.Constructor
     private MoveResourcePropertiesResponseMoveStatus(
-        @Nullable MoveResourceErrorResponse errors,
-        @Nullable JobStatusResponse jobStatus,
-        String moveState) {
+        @OutputCustomType.Parameter("errors") @Nullable MoveResourceErrorResponse errors,
+        @OutputCustomType.Parameter("jobStatus") @Nullable JobStatusResponse jobStatus,
+        @OutputCustomType.Parameter("moveState") String moveState) {
         this.errors = errors;
         this.jobStatus = jobStatus;
         this.moveState = moveState;
@@ -85,17 +85,17 @@ public final class MoveResourcePropertiesResponseMoveStatus {
     	      this.moveState = defaults.moveState;
         }
 
-        public Builder setErrors(@Nullable MoveResourceErrorResponse errors) {
+        public Builder errors(@Nullable MoveResourceErrorResponse errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setJobStatus(@Nullable JobStatusResponse jobStatus) {
+        public Builder jobStatus(@Nullable JobStatusResponse jobStatus) {
             this.jobStatus = jobStatus;
             return this;
         }
 
-        public Builder setMoveState(String moveState) {
+        public Builder moveState(String moveState) {
             this.moveState = Objects.requireNonNull(moveState);
             return this;
         }

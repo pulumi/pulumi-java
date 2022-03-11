@@ -38,13 +38,13 @@ public final class ContinuousActionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"duration","name","parameters","selectorId","type"})
+    @OutputCustomType.Constructor
     private ContinuousActionResponse(
-        String duration,
-        String name,
-        List<KeyValuePairResponse> parameters,
-        String selectorId,
-        String type) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<KeyValuePairResponse> parameters,
+        @OutputCustomType.Parameter("selectorId") String selectorId,
+        @OutputCustomType.Parameter("type") String type) {
         this.duration = duration;
         this.name = name;
         this.parameters = parameters;
@@ -117,27 +117,27 @@ public final class ContinuousActionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(List<KeyValuePairResponse> parameters) {
+        public Builder parameters(List<KeyValuePairResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setSelectorId(String selectorId) {
+        public Builder selectorId(String selectorId) {
             this.selectorId = Objects.requireNonNull(selectorId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

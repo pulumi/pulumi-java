@@ -121,27 +121,27 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder setIam(String iam) {
+        public Builder iam(String iam) {
             this.iam = Objects.requireNonNull(iam);
             return this;
         }
 
-        public Builder setOp(String op) {
+        public Builder op(String op) {
             this.op = Objects.requireNonNull(op);
             return this;
         }
 
-        public Builder setSvc(String svc) {
+        public Builder svc(String svc) {
             this.svc = Objects.requireNonNull(svc);
             return this;
         }
 
-        public Builder setSys(String sys) {
+        public Builder sys(String sys) {
             this.sys = Objects.requireNonNull(sys);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

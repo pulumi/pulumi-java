@@ -20,10 +20,10 @@ public final class RecommendedActionImplementationInfoResponse {
      */
     private final String script;
 
-    @OutputCustomType.Constructor({"method","script"})
+    @OutputCustomType.Constructor
     private RecommendedActionImplementationInfoResponse(
-        String method,
-        String script) {
+        @OutputCustomType.Parameter("method") String method,
+        @OutputCustomType.Parameter("script") String script) {
         this.method = method;
         this.script = script;
     }
@@ -65,12 +65,12 @@ public final class RecommendedActionImplementationInfoResponse {
     	      this.script = defaults.script;
         }
 
-        public Builder setMethod(String method) {
+        public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }

@@ -34,12 +34,12 @@ public final class AnalyticsApplicationReferenceDataSources {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"id","s3","schema","tableName"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationReferenceDataSources(
-        @Nullable String id,
-        AnalyticsApplicationReferenceDataSourcesS3 s3,
-        AnalyticsApplicationReferenceDataSourcesSchema schema,
-        String tableName) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("s3") AnalyticsApplicationReferenceDataSourcesS3 s3,
+        @OutputCustomType.Parameter("schema") AnalyticsApplicationReferenceDataSourcesSchema schema,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.id = id;
         this.s3 = s3;
         this.schema = schema;
@@ -101,22 +101,22 @@ public final class AnalyticsApplicationReferenceDataSources {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setS3(AnalyticsApplicationReferenceDataSourcesS3 s3) {
+        public Builder s3(AnalyticsApplicationReferenceDataSourcesS3 s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
 
-        public Builder setSchema(AnalyticsApplicationReferenceDataSourcesSchema schema) {
+        public Builder schema(AnalyticsApplicationReferenceDataSourcesSchema schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

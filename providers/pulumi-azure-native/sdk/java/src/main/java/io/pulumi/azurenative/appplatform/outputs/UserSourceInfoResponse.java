@@ -33,12 +33,12 @@ public final class UserSourceInfoResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"artifactSelector","relativePath","type","version"})
+    @OutputCustomType.Constructor
     private UserSourceInfoResponse(
-        @Nullable String artifactSelector,
-        @Nullable String relativePath,
-        @Nullable String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("artifactSelector") @Nullable String artifactSelector,
+        @OutputCustomType.Parameter("relativePath") @Nullable String relativePath,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.artifactSelector = artifactSelector;
         this.relativePath = relativePath;
         this.type = type;
@@ -101,22 +101,22 @@ public final class UserSourceInfoResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setArtifactSelector(@Nullable String artifactSelector) {
+        public Builder artifactSelector(@Nullable String artifactSelector) {
             this.artifactSelector = artifactSelector;
             return this;
         }
 
-        public Builder setRelativePath(@Nullable String relativePath) {
+        public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = relativePath;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

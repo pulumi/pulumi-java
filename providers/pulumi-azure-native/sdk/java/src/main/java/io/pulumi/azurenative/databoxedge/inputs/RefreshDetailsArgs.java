@@ -106,42 +106,42 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.lastJob = defaults.lastJob;
         }
 
-        public Builder setErrorManifestFile(@Nullable Input<String> errorManifestFile) {
+        public Builder errorManifestFile(@Nullable Input<String> errorManifestFile) {
             this.errorManifestFile = errorManifestFile;
             return this;
         }
 
-        public Builder setErrorManifestFile(@Nullable String errorManifestFile) {
+        public Builder errorManifestFile(@Nullable String errorManifestFile) {
             this.errorManifestFile = Input.ofNullable(errorManifestFile);
             return this;
         }
 
-        public Builder setInProgressRefreshJobId(@Nullable Input<String> inProgressRefreshJobId) {
+        public Builder inProgressRefreshJobId(@Nullable Input<String> inProgressRefreshJobId) {
             this.inProgressRefreshJobId = inProgressRefreshJobId;
             return this;
         }
 
-        public Builder setInProgressRefreshJobId(@Nullable String inProgressRefreshJobId) {
+        public Builder inProgressRefreshJobId(@Nullable String inProgressRefreshJobId) {
             this.inProgressRefreshJobId = Input.ofNullable(inProgressRefreshJobId);
             return this;
         }
 
-        public Builder setLastCompletedRefreshJobTimeInUTC(@Nullable Input<String> lastCompletedRefreshJobTimeInUTC) {
+        public Builder lastCompletedRefreshJobTimeInUTC(@Nullable Input<String> lastCompletedRefreshJobTimeInUTC) {
             this.lastCompletedRefreshJobTimeInUTC = lastCompletedRefreshJobTimeInUTC;
             return this;
         }
 
-        public Builder setLastCompletedRefreshJobTimeInUTC(@Nullable String lastCompletedRefreshJobTimeInUTC) {
+        public Builder lastCompletedRefreshJobTimeInUTC(@Nullable String lastCompletedRefreshJobTimeInUTC) {
             this.lastCompletedRefreshJobTimeInUTC = Input.ofNullable(lastCompletedRefreshJobTimeInUTC);
             return this;
         }
 
-        public Builder setLastJob(@Nullable Input<String> lastJob) {
+        public Builder lastJob(@Nullable Input<String> lastJob) {
             this.lastJob = lastJob;
             return this;
         }
 
-        public Builder setLastJob(@Nullable String lastJob) {
+        public Builder lastJob(@Nullable String lastJob) {
             this.lastJob = Input.ofNullable(lastJob);
             return this;
         }

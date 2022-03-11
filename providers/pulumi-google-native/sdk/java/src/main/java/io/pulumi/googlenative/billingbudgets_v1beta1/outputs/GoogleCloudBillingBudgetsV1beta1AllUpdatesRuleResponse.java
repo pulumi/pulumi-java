@@ -32,12 +32,12 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse {
      */
     private final String schemaVersion;
 
-    @OutputCustomType.Constructor({"disableDefaultIamRecipients","monitoringNotificationChannels","pubsubTopic","schemaVersion"})
+    @OutputCustomType.Constructor
     private GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse(
-        Boolean disableDefaultIamRecipients,
-        List<String> monitoringNotificationChannels,
-        String pubsubTopic,
-        String schemaVersion) {
+        @OutputCustomType.Parameter("disableDefaultIamRecipients") Boolean disableDefaultIamRecipients,
+        @OutputCustomType.Parameter("monitoringNotificationChannels") List<String> monitoringNotificationChannels,
+        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic,
+        @OutputCustomType.Parameter("schemaVersion") String schemaVersion) {
         this.disableDefaultIamRecipients = disableDefaultIamRecipients;
         this.monitoringNotificationChannels = monitoringNotificationChannels;
         this.pubsubTopic = pubsubTopic;
@@ -99,22 +99,22 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse {
     	      this.schemaVersion = defaults.schemaVersion;
         }
 
-        public Builder setDisableDefaultIamRecipients(Boolean disableDefaultIamRecipients) {
+        public Builder disableDefaultIamRecipients(Boolean disableDefaultIamRecipients) {
             this.disableDefaultIamRecipients = Objects.requireNonNull(disableDefaultIamRecipients);
             return this;
         }
 
-        public Builder setMonitoringNotificationChannels(List<String> monitoringNotificationChannels) {
+        public Builder monitoringNotificationChannels(List<String> monitoringNotificationChannels) {
             this.monitoringNotificationChannels = Objects.requireNonNull(monitoringNotificationChannels);
             return this;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
 
-        public Builder setSchemaVersion(String schemaVersion) {
+        public Builder schemaVersion(String schemaVersion) {
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
         }

@@ -89,17 +89,17 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
     	      this.googlePartitionCerts = defaults.googlePartitionCerts;
         }
 
-        public Builder setCaviumCerts(List<String> caviumCerts) {
+        public Builder caviumCerts(List<String> caviumCerts) {
             this.caviumCerts = Objects.requireNonNull(caviumCerts);
             return this;
         }
 
-        public Builder setGoogleCardCerts(List<String> googleCardCerts) {
+        public Builder googleCardCerts(List<String> googleCardCerts) {
             this.googleCardCerts = Objects.requireNonNull(googleCardCerts);
             return this;
         }
 
-        public Builder setGooglePartitionCerts(List<String> googlePartitionCerts) {
+        public Builder googlePartitionCerts(List<String> googlePartitionCerts) {
             this.googlePartitionCerts = Objects.requireNonNull(googlePartitionCerts);
             return this;
         }

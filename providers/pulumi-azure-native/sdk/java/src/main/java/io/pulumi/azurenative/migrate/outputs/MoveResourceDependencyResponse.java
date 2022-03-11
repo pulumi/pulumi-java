@@ -49,15 +49,15 @@ public final class MoveResourceDependencyResponse {
      */
     private final @Nullable String resolutionType;
 
-    @OutputCustomType.Constructor({"automaticResolution","dependencyType","id","isOptional","manualResolution","resolutionStatus","resolutionType"})
+    @OutputCustomType.Constructor
     private MoveResourceDependencyResponse(
-        @Nullable AutomaticResolutionPropertiesResponse automaticResolution,
-        @Nullable String dependencyType,
-        @Nullable String id,
-        @Nullable String isOptional,
-        @Nullable ManualResolutionPropertiesResponse manualResolution,
-        @Nullable String resolutionStatus,
-        @Nullable String resolutionType) {
+        @OutputCustomType.Parameter("automaticResolution") @Nullable AutomaticResolutionPropertiesResponse automaticResolution,
+        @OutputCustomType.Parameter("dependencyType") @Nullable String dependencyType,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("isOptional") @Nullable String isOptional,
+        @OutputCustomType.Parameter("manualResolution") @Nullable ManualResolutionPropertiesResponse manualResolution,
+        @OutputCustomType.Parameter("resolutionStatus") @Nullable String resolutionStatus,
+        @OutputCustomType.Parameter("resolutionType") @Nullable String resolutionType) {
         this.automaticResolution = automaticResolution;
         this.dependencyType = dependencyType;
         this.id = id;
@@ -149,37 +149,37 @@ public final class MoveResourceDependencyResponse {
     	      this.resolutionType = defaults.resolutionType;
         }
 
-        public Builder setAutomaticResolution(@Nullable AutomaticResolutionPropertiesResponse automaticResolution) {
+        public Builder automaticResolution(@Nullable AutomaticResolutionPropertiesResponse automaticResolution) {
             this.automaticResolution = automaticResolution;
             return this;
         }
 
-        public Builder setDependencyType(@Nullable String dependencyType) {
+        public Builder dependencyType(@Nullable String dependencyType) {
             this.dependencyType = dependencyType;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIsOptional(@Nullable String isOptional) {
+        public Builder isOptional(@Nullable String isOptional) {
             this.isOptional = isOptional;
             return this;
         }
 
-        public Builder setManualResolution(@Nullable ManualResolutionPropertiesResponse manualResolution) {
+        public Builder manualResolution(@Nullable ManualResolutionPropertiesResponse manualResolution) {
             this.manualResolution = manualResolution;
             return this;
         }
 
-        public Builder setResolutionStatus(@Nullable String resolutionStatus) {
+        public Builder resolutionStatus(@Nullable String resolutionStatus) {
             this.resolutionStatus = resolutionStatus;
             return this;
         }
 
-        public Builder setResolutionType(@Nullable String resolutionType) {
+        public Builder resolutionType(@Nullable String resolutionType) {
             this.resolutionType = resolutionType;
             return this;
         }

@@ -141,62 +141,62 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setMountPoint(@Nullable Input<String> mountPoint) {
+        public Builder mountPoint(@Nullable Input<String> mountPoint) {
             this.mountPoint = mountPoint;
             return this;
         }
 
-        public Builder setMountPoint(@Nullable String mountPoint) {
+        public Builder mountPoint(@Nullable String mountPoint) {
             this.mountPoint = Input.ofNullable(mountPoint);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setSizeGb(@Nullable Input<Integer> sizeGb) {
+        public Builder sizeGb(@Nullable Input<Integer> sizeGb) {
             this.sizeGb = sizeGb;
             return this;
         }
 
-        public Builder setSizeGb(@Nullable Integer sizeGb) {
+        public Builder sizeGb(@Nullable Integer sizeGb) {
             this.sizeGb = Input.ofNullable(sizeGb);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setType(Input<DiskType> type) {
+        public Builder type(Input<DiskType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(DiskType type) {
+        public Builder type(DiskType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

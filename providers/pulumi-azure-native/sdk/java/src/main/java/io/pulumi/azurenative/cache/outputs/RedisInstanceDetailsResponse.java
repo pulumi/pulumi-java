@@ -37,13 +37,13 @@ public final class RedisInstanceDetailsResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"isMaster","nonSslPort","shardId","sslPort","zone"})
+    @OutputCustomType.Constructor
     private RedisInstanceDetailsResponse(
-        Boolean isMaster,
-        Integer nonSslPort,
-        Integer shardId,
-        Integer sslPort,
-        String zone) {
+        @OutputCustomType.Parameter("isMaster") Boolean isMaster,
+        @OutputCustomType.Parameter("nonSslPort") Integer nonSslPort,
+        @OutputCustomType.Parameter("shardId") Integer shardId,
+        @OutputCustomType.Parameter("sslPort") Integer sslPort,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.isMaster = isMaster;
         this.nonSslPort = nonSslPort;
         this.shardId = shardId;
@@ -115,27 +115,27 @@ public final class RedisInstanceDetailsResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setIsMaster(Boolean isMaster) {
+        public Builder isMaster(Boolean isMaster) {
             this.isMaster = Objects.requireNonNull(isMaster);
             return this;
         }
 
-        public Builder setNonSslPort(Integer nonSslPort) {
+        public Builder nonSslPort(Integer nonSslPort) {
             this.nonSslPort = Objects.requireNonNull(nonSslPort);
             return this;
         }
 
-        public Builder setShardId(Integer shardId) {
+        public Builder shardId(Integer shardId) {
             this.shardId = Objects.requireNonNull(shardId);
             return this;
         }
 
-        public Builder setSslPort(Integer sslPort) {
+        public Builder sslPort(Integer sslPort) {
             this.sslPort = Objects.requireNonNull(sslPort);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

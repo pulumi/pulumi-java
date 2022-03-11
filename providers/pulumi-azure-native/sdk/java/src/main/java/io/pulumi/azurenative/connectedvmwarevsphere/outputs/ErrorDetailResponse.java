@@ -33,12 +33,12 @@ public final class ErrorDetailResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"code","details","message","target"})
+    @OutputCustomType.Constructor
     private ErrorDetailResponse(
-        String code,
-        @Nullable List<ErrorDetailResponse> details,
-        String message,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("details") @Nullable List<ErrorDetailResponse> details,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.details = details;
         this.message = message;
@@ -100,22 +100,22 @@ public final class ErrorDetailResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setDetails(@Nullable List<ErrorDetailResponse> details) {
+        public Builder details(@Nullable List<ErrorDetailResponse> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

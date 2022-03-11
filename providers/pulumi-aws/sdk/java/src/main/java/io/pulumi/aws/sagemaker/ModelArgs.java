@@ -173,82 +173,82 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setContainers(@Nullable Input<List<ModelContainerArgs>> containers) {
+        public Builder containers(@Nullable Input<List<ModelContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setContainers(@Nullable List<ModelContainerArgs> containers) {
+        public Builder containers(@Nullable List<ModelContainerArgs> containers) {
             this.containers = Input.ofNullable(containers);
             return this;
         }
 
-        public Builder setEnableNetworkIsolation(@Nullable Input<Boolean> enableNetworkIsolation) {
+        public Builder enableNetworkIsolation(@Nullable Input<Boolean> enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
 
-        public Builder setEnableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
+        public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = Input.ofNullable(enableNetworkIsolation);
             return this;
         }
 
-        public Builder setExecutionRoleArn(Input<String> executionRoleArn) {
+        public Builder executionRoleArn(Input<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
 
-        public Builder setExecutionRoleArn(String executionRoleArn) {
+        public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Input.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
 
-        public Builder setInferenceExecutionConfig(@Nullable Input<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig) {
+        public Builder inferenceExecutionConfig(@Nullable Input<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig) {
             this.inferenceExecutionConfig = inferenceExecutionConfig;
             return this;
         }
 
-        public Builder setInferenceExecutionConfig(@Nullable ModelInferenceExecutionConfigArgs inferenceExecutionConfig) {
+        public Builder inferenceExecutionConfig(@Nullable ModelInferenceExecutionConfigArgs inferenceExecutionConfig) {
             this.inferenceExecutionConfig = Input.ofNullable(inferenceExecutionConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrimaryContainer(@Nullable Input<ModelPrimaryContainerArgs> primaryContainer) {
+        public Builder primaryContainer(@Nullable Input<ModelPrimaryContainerArgs> primaryContainer) {
             this.primaryContainer = primaryContainer;
             return this;
         }
 
-        public Builder setPrimaryContainer(@Nullable ModelPrimaryContainerArgs primaryContainer) {
+        public Builder primaryContainer(@Nullable ModelPrimaryContainerArgs primaryContainer) {
             this.primaryContainer = Input.ofNullable(primaryContainer);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable Input<ModelVpcConfigArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Input<ModelVpcConfigArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable ModelVpcConfigArgs vpcConfig) {
+        public Builder vpcConfig(@Nullable ModelVpcConfigArgs vpcConfig) {
             this.vpcConfig = Input.ofNullable(vpcConfig);
             return this;
         }

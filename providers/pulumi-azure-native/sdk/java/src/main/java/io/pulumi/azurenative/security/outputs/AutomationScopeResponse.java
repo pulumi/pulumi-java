@@ -22,10 +22,10 @@ public final class AutomationScopeResponse {
      */
     private final @Nullable String scopePath;
 
-    @OutputCustomType.Constructor({"description","scopePath"})
+    @OutputCustomType.Constructor
     private AutomationScopeResponse(
-        @Nullable String description,
-        @Nullable String scopePath) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("scopePath") @Nullable String scopePath) {
         this.description = description;
         this.scopePath = scopePath;
     }
@@ -67,12 +67,12 @@ public final class AutomationScopeResponse {
     	      this.scopePath = defaults.scopePath;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setScopePath(@Nullable String scopePath) {
+        public Builder scopePath(@Nullable String scopePath) {
             this.scopePath = scopePath;
             return this;
         }

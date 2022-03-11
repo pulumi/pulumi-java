@@ -22,10 +22,10 @@ public final class RepositoryEncryptionConfiguration {
      */
     private final @Nullable String kmsKey;
 
-    @OutputCustomType.Constructor({"encryptionType","kmsKey"})
+    @OutputCustomType.Constructor
     private RepositoryEncryptionConfiguration(
-        @Nullable String encryptionType,
-        @Nullable String kmsKey) {
+        @OutputCustomType.Parameter("encryptionType") @Nullable String encryptionType,
+        @OutputCustomType.Parameter("kmsKey") @Nullable String kmsKey) {
         this.encryptionType = encryptionType;
         this.kmsKey = kmsKey;
     }
@@ -67,12 +67,12 @@ public final class RepositoryEncryptionConfiguration {
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder setEncryptionType(@Nullable String encryptionType) {
+        public Builder encryptionType(@Nullable String encryptionType) {
             this.encryptionType = encryptionType;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }

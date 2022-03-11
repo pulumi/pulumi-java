@@ -185,82 +185,82 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
     	      this.folder = defaults.folder;
         }
 
-        public Builder setAssetNames(@Nullable Input<List<String>> assetNames) {
+        public Builder assetNames(@Nullable Input<List<String>> assetNames) {
             this.assetNames = assetNames;
             return this;
         }
 
-        public Builder setAssetNames(@Nullable List<String> assetNames) {
+        public Builder assetNames(@Nullable List<String> assetNames) {
             this.assetNames = Input.ofNullable(assetNames);
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable Input<List<String>> assetTypes) {
+        public Builder assetTypes(@Nullable Input<List<String>> assetTypes) {
             this.assetTypes = assetTypes;
             return this;
         }
 
-        public Builder setAssetTypes(@Nullable List<String> assetTypes) {
+        public Builder assetTypes(@Nullable List<String> assetTypes) {
             this.assetTypes = Input.ofNullable(assetTypes);
             return this;
         }
 
-        public Builder setBillingProject(Input<String> billingProject) {
+        public Builder billingProject(Input<String> billingProject) {
             this.billingProject = Objects.requireNonNull(billingProject);
             return this;
         }
 
-        public Builder setBillingProject(String billingProject) {
+        public Builder billingProject(String billingProject) {
             this.billingProject = Input.of(Objects.requireNonNull(billingProject));
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<FolderFeedConditionArgs> condition) {
+        public Builder condition(@Nullable Input<FolderFeedConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable FolderFeedConditionArgs condition) {
+        public Builder condition(@Nullable FolderFeedConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setFeedId(Input<String> feedId) {
+        public Builder feedId(Input<String> feedId) {
             this.feedId = Objects.requireNonNull(feedId);
             return this;
         }
 
-        public Builder setFeedId(String feedId) {
+        public Builder feedId(String feedId) {
             this.feedId = Input.of(Objects.requireNonNull(feedId));
             return this;
         }
 
-        public Builder setFeedOutputConfig(Input<FolderFeedFeedOutputConfigArgs> feedOutputConfig) {
+        public Builder feedOutputConfig(Input<FolderFeedFeedOutputConfigArgs> feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
 
-        public Builder setFeedOutputConfig(FolderFeedFeedOutputConfigArgs feedOutputConfig) {
+        public Builder feedOutputConfig(FolderFeedFeedOutputConfigArgs feedOutputConfig) {
             this.feedOutputConfig = Input.of(Objects.requireNonNull(feedOutputConfig));
             return this;
         }
 
-        public Builder setFolder(Input<String> folder) {
+        public Builder folder(Input<String> folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }
 
-        public Builder setFolder(String folder) {
+        public Builder folder(String folder) {
             this.folder = Input.of(Objects.requireNonNull(folder));
             return this;
         }

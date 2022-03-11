@@ -73,19 +73,19 @@ public final class GetInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountName","diagnosticStorageProperties","enableDiagnostics","id","iotHubs","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String accountName,
-        @Nullable DiagnosticStoragePropertiesResponse diagnosticStorageProperties,
-        @Nullable Boolean enableDiagnostics,
-        String id,
-        @Nullable List<IotHubSettingsResponse> iotHubs,
-        String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("diagnosticStorageProperties") @Nullable DiagnosticStoragePropertiesResponse diagnosticStorageProperties,
+        @OutputCustomType.Parameter("enableDiagnostics") @Nullable Boolean enableDiagnostics,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("iotHubs") @Nullable List<IotHubSettingsResponse> iotHubs,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.diagnosticStorageProperties = diagnosticStorageProperties;
         this.enableDiagnostics = enableDiagnostics;
@@ -217,57 +217,57 @@ public final class GetInstanceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setDiagnosticStorageProperties(@Nullable DiagnosticStoragePropertiesResponse diagnosticStorageProperties) {
+        public Builder diagnosticStorageProperties(@Nullable DiagnosticStoragePropertiesResponse diagnosticStorageProperties) {
             this.diagnosticStorageProperties = diagnosticStorageProperties;
             return this;
         }
 
-        public Builder setEnableDiagnostics(@Nullable Boolean enableDiagnostics) {
+        public Builder enableDiagnostics(@Nullable Boolean enableDiagnostics) {
             this.enableDiagnostics = enableDiagnostics;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIotHubs(@Nullable List<IotHubSettingsResponse> iotHubs) {
+        public Builder iotHubs(@Nullable List<IotHubSettingsResponse> iotHubs) {
             this.iotHubs = iotHubs;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -20,10 +20,10 @@ public final class ValidationErrorResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"severity","text"})
+    @OutputCustomType.Constructor
     private ValidationErrorResponse(
-        String severity,
-        String text) {
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("text") String text) {
         this.severity = severity;
         this.text = text;
     }
@@ -65,12 +65,12 @@ public final class ValidationErrorResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

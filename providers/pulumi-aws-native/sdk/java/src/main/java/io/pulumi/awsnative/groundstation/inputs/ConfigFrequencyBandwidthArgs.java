@@ -63,22 +63,22 @@ public final class ConfigFrequencyBandwidthArgs extends io.pulumi.resources.Reso
     	      this.value = defaults.value;
         }
 
-        public Builder setUnits(@Nullable Input<ConfigBandwidthUnits> units) {
+        public Builder units(@Nullable Input<ConfigBandwidthUnits> units) {
             this.units = units;
             return this;
         }
 
-        public Builder setUnits(@Nullable ConfigBandwidthUnits units) {
+        public Builder units(@Nullable ConfigBandwidthUnits units) {
             this.units = Input.ofNullable(units);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<Double> value) {
+        public Builder value(@Nullable Input<Double> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Double value) {
+        public Builder value(@Nullable Double value) {
             this.value = Input.ofNullable(value);
             return this;
         }

@@ -21,10 +21,10 @@ public final class MaintenanceWindowResponse {
      */
     private final Integer hourOfDay;
 
-    @OutputCustomType.Constructor({"dayOfWeek","hourOfDay"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowResponse(
-        String dayOfWeek,
-        Integer hourOfDay) {
+        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @OutputCustomType.Parameter("hourOfDay") Integer hourOfDay) {
         this.dayOfWeek = dayOfWeek;
         this.hourOfDay = hourOfDay;
     }
@@ -66,12 +66,12 @@ public final class MaintenanceWindowResponse {
     	      this.hourOfDay = defaults.hourOfDay;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setHourOfDay(Integer hourOfDay) {
+        public Builder hourOfDay(Integer hourOfDay) {
             this.hourOfDay = Objects.requireNonNull(hourOfDay);
             return this;
         }

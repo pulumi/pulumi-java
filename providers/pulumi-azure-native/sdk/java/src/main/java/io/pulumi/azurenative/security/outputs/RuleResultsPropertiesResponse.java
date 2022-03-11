@@ -17,8 +17,8 @@ public final class RuleResultsPropertiesResponse {
      */
     private final @Nullable List<List<String>> results;
 
-    @OutputCustomType.Constructor({"results"})
-    private RuleResultsPropertiesResponse(@Nullable List<List<String>> results) {
+    @OutputCustomType.Constructor
+    private RuleResultsPropertiesResponse(@OutputCustomType.Parameter("results") @Nullable List<List<String>> results) {
         this.results = results;
     }
 
@@ -50,7 +50,7 @@ public final class RuleResultsPropertiesResponse {
     	      this.results = defaults.results;
         }
 
-        public Builder setResults(@Nullable List<List<String>> results) {
+        public Builder results(@Nullable List<List<String>> results) {
             this.results = results;
             return this;
         }

@@ -16,11 +16,11 @@ public final class FlowS3SourceProperties {
     private final String bucketPrefix;
     private final @Nullable FlowS3InputFormatConfig s3InputFormatConfig;
 
-    @OutputCustomType.Constructor({"bucketName","bucketPrefix","s3InputFormatConfig"})
+    @OutputCustomType.Constructor
     private FlowS3SourceProperties(
-        String bucketName,
-        String bucketPrefix,
-        @Nullable FlowS3InputFormatConfig s3InputFormatConfig) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("bucketPrefix") String bucketPrefix,
+        @OutputCustomType.Parameter("s3InputFormatConfig") @Nullable FlowS3InputFormatConfig s3InputFormatConfig) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.s3InputFormatConfig = s3InputFormatConfig;
@@ -60,17 +60,17 @@ public final class FlowS3SourceProperties {
     	      this.s3InputFormatConfig = defaults.s3InputFormatConfig;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketPrefix(String bucketPrefix) {
+        public Builder bucketPrefix(String bucketPrefix) {
             this.bucketPrefix = Objects.requireNonNull(bucketPrefix);
             return this;
         }
 
-        public Builder setS3InputFormatConfig(@Nullable FlowS3InputFormatConfig s3InputFormatConfig) {
+        public Builder s3InputFormatConfig(@Nullable FlowS3InputFormatConfig s3InputFormatConfig) {
             this.s3InputFormatConfig = s3InputFormatConfig;
             return this;
         }

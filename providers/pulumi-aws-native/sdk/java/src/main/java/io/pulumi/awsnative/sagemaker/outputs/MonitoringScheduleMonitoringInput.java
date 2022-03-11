@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MonitoringScheduleMonitoringInput {
     private final MonitoringScheduleEndpointInput endpointInput;
 
-    @OutputCustomType.Constructor({"endpointInput"})
-    private MonitoringScheduleMonitoringInput(MonitoringScheduleEndpointInput endpointInput) {
+    @OutputCustomType.Constructor
+    private MonitoringScheduleMonitoringInput(@OutputCustomType.Parameter("endpointInput") MonitoringScheduleEndpointInput endpointInput) {
         this.endpointInput = endpointInput;
     }
 
@@ -40,7 +40,7 @@ public final class MonitoringScheduleMonitoringInput {
     	      this.endpointInput = defaults.endpointInput;
         }
 
-        public Builder setEndpointInput(MonitoringScheduleEndpointInput endpointInput) {
+        public Builder endpointInput(MonitoringScheduleEndpointInput endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }

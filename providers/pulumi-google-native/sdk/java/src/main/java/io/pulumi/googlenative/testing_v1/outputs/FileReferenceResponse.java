@@ -15,8 +15,8 @@ public final class FileReferenceResponse {
      */
     private final String gcsPath;
 
-    @OutputCustomType.Constructor({"gcsPath"})
-    private FileReferenceResponse(String gcsPath) {
+    @OutputCustomType.Constructor
+    private FileReferenceResponse(@OutputCustomType.Parameter("gcsPath") String gcsPath) {
         this.gcsPath = gcsPath;
     }
 
@@ -48,7 +48,7 @@ public final class FileReferenceResponse {
     	      this.gcsPath = defaults.gcsPath;
         }
 
-        public Builder setGcsPath(String gcsPath) {
+        public Builder gcsPath(String gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }

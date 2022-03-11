@@ -259,122 +259,122 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
     	      this.workerPool = defaults.workerPool;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder setDynamicSubstitutions(@Nullable Input<Boolean> dynamicSubstitutions) {
+        public Builder dynamicSubstitutions(@Nullable Input<Boolean> dynamicSubstitutions) {
             this.dynamicSubstitutions = dynamicSubstitutions;
             return this;
         }
 
-        public Builder setDynamicSubstitutions(@Nullable Boolean dynamicSubstitutions) {
+        public Builder dynamicSubstitutions(@Nullable Boolean dynamicSubstitutions) {
             this.dynamicSubstitutions = Input.ofNullable(dynamicSubstitutions);
             return this;
         }
 
-        public Builder setEnvs(@Nullable Input<List<String>> envs) {
+        public Builder envs(@Nullable Input<List<String>> envs) {
             this.envs = envs;
             return this;
         }
 
-        public Builder setEnvs(@Nullable List<String> envs) {
+        public Builder envs(@Nullable List<String> envs) {
             this.envs = Input.ofNullable(envs);
             return this;
         }
 
-        public Builder setLogStreamingOption(@Nullable Input<String> logStreamingOption) {
+        public Builder logStreamingOption(@Nullable Input<String> logStreamingOption) {
             this.logStreamingOption = logStreamingOption;
             return this;
         }
 
-        public Builder setLogStreamingOption(@Nullable String logStreamingOption) {
+        public Builder logStreamingOption(@Nullable String logStreamingOption) {
             this.logStreamingOption = Input.ofNullable(logStreamingOption);
             return this;
         }
 
-        public Builder setLogging(@Nullable Input<String> logging) {
+        public Builder logging(@Nullable Input<String> logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLogging(@Nullable String logging) {
+        public Builder logging(@Nullable String logging) {
             this.logging = Input.ofNullable(logging);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setRequestedVerifyOption(@Nullable Input<String> requestedVerifyOption) {
+        public Builder requestedVerifyOption(@Nullable Input<String> requestedVerifyOption) {
             this.requestedVerifyOption = requestedVerifyOption;
             return this;
         }
 
-        public Builder setRequestedVerifyOption(@Nullable String requestedVerifyOption) {
+        public Builder requestedVerifyOption(@Nullable String requestedVerifyOption) {
             this.requestedVerifyOption = Input.ofNullable(requestedVerifyOption);
             return this;
         }
 
-        public Builder setSecretEnvs(@Nullable Input<List<String>> secretEnvs) {
+        public Builder secretEnvs(@Nullable Input<List<String>> secretEnvs) {
             this.secretEnvs = secretEnvs;
             return this;
         }
 
-        public Builder setSecretEnvs(@Nullable List<String> secretEnvs) {
+        public Builder secretEnvs(@Nullable List<String> secretEnvs) {
             this.secretEnvs = Input.ofNullable(secretEnvs);
             return this;
         }
 
-        public Builder setSourceProvenanceHashes(@Nullable Input<List<String>> sourceProvenanceHashes) {
+        public Builder sourceProvenanceHashes(@Nullable Input<List<String>> sourceProvenanceHashes) {
             this.sourceProvenanceHashes = sourceProvenanceHashes;
             return this;
         }
 
-        public Builder setSourceProvenanceHashes(@Nullable List<String> sourceProvenanceHashes) {
+        public Builder sourceProvenanceHashes(@Nullable List<String> sourceProvenanceHashes) {
             this.sourceProvenanceHashes = Input.ofNullable(sourceProvenanceHashes);
             return this;
         }
 
-        public Builder setSubstitutionOption(@Nullable Input<String> substitutionOption) {
+        public Builder substitutionOption(@Nullable Input<String> substitutionOption) {
             this.substitutionOption = substitutionOption;
             return this;
         }
 
-        public Builder setSubstitutionOption(@Nullable String substitutionOption) {
+        public Builder substitutionOption(@Nullable String substitutionOption) {
             this.substitutionOption = Input.ofNullable(substitutionOption);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<TriggerBuildOptionsVolumeGetArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<TriggerBuildOptionsVolumeGetArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<TriggerBuildOptionsVolumeGetArgs> volumes) {
+        public Builder volumes(@Nullable List<TriggerBuildOptionsVolumeGetArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
 
-        public Builder setWorkerPool(@Nullable Input<String> workerPool) {
+        public Builder workerPool(@Nullable Input<String> workerPool) {
             this.workerPool = workerPool;
             return this;
         }
 
-        public Builder setWorkerPool(@Nullable String workerPool) {
+        public Builder workerPool(@Nullable String workerPool) {
             this.workerPool = Input.ofNullable(workerPool);
             return this;
         }

@@ -14,11 +14,11 @@ public final class WebACLVisibilityConfig {
     private final String metricName;
     private final Boolean sampledRequestsEnabled;
 
-    @OutputCustomType.Constructor({"cloudWatchMetricsEnabled","metricName","sampledRequestsEnabled"})
+    @OutputCustomType.Constructor
     private WebACLVisibilityConfig(
-        Boolean cloudWatchMetricsEnabled,
-        String metricName,
-        Boolean sampledRequestsEnabled) {
+        @OutputCustomType.Parameter("cloudWatchMetricsEnabled") Boolean cloudWatchMetricsEnabled,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("sampledRequestsEnabled") Boolean sampledRequestsEnabled) {
         this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
         this.metricName = metricName;
         this.sampledRequestsEnabled = sampledRequestsEnabled;
@@ -58,17 +58,17 @@ public final class WebACLVisibilityConfig {
     	      this.sampledRequestsEnabled = defaults.sampledRequestsEnabled;
         }
 
-        public Builder setCloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
+        public Builder cloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = Objects.requireNonNull(cloudWatchMetricsEnabled);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setSampledRequestsEnabled(Boolean sampledRequestsEnabled) {
+        public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
         }

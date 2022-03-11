@@ -41,13 +41,13 @@ public final class ClusterRoleBinding {
      */
     private final @Nullable List<Subject> subjects;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","roleRef","subjects"})
+    @OutputCustomType.Constructor
     private ClusterRoleBinding(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        RoleRef roleRef,
-        @Nullable List<Subject> subjects) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("roleRef") RoleRef roleRef,
+        @OutputCustomType.Parameter("subjects") @Nullable List<Subject> subjects) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
@@ -119,27 +119,27 @@ public final class ClusterRoleBinding {
     	      this.subjects = defaults.subjects;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setRoleRef(RoleRef roleRef) {
+        public Builder roleRef(RoleRef roleRef) {
             this.roleRef = Objects.requireNonNull(roleRef);
             return this;
         }
 
-        public Builder setSubjects(@Nullable List<Subject> subjects) {
+        public Builder subjects(@Nullable List<Subject> subjects) {
             this.subjects = subjects;
             return this;
         }

@@ -178,42 +178,42 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCodeId(@Nullable String codeId) {
+        public Builder codeId(@Nullable String codeId) {
             this.codeId = codeId;
             return this;
         }
 
-        public Builder setCommand(String command) {
+        public Builder command(String command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setDistribution(@Nullable Object distribution) {
+        public Builder distribution(@Nullable Object distribution) {
             this.distribution = distribution;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setInputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
+        public Builder inputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
             this.inputDataBindings = inputDataBindings;
             return this;
         }
 
-        public Builder setOutputDataBindings(@Nullable Map<String,OutputDataBindingResponse> outputDataBindings) {
+        public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingResponse> outputDataBindings) {
             this.outputDataBindings = outputDataBindings;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

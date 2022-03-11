@@ -43,14 +43,14 @@ public final class GetDomainResult {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"defaultUserSettings","domainArn","domainId","homeEfsFileSystemId","singleSignOnManagedApplicationInstanceId","url"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        @Nullable DomainUserSettings defaultUserSettings,
-        @Nullable String domainArn,
-        @Nullable String domainId,
-        @Nullable String homeEfsFileSystemId,
-        @Nullable String singleSignOnManagedApplicationInstanceId,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("defaultUserSettings") @Nullable DomainUserSettings defaultUserSettings,
+        @OutputCustomType.Parameter("domainArn") @Nullable String domainArn,
+        @OutputCustomType.Parameter("domainId") @Nullable String domainId,
+        @OutputCustomType.Parameter("homeEfsFileSystemId") @Nullable String homeEfsFileSystemId,
+        @OutputCustomType.Parameter("singleSignOnManagedApplicationInstanceId") @Nullable String singleSignOnManagedApplicationInstanceId,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.defaultUserSettings = defaultUserSettings;
         this.domainArn = domainArn;
         this.domainId = domainId;
@@ -132,32 +132,32 @@ public final class GetDomainResult {
     	      this.url = defaults.url;
         }
 
-        public Builder setDefaultUserSettings(@Nullable DomainUserSettings defaultUserSettings) {
+        public Builder defaultUserSettings(@Nullable DomainUserSettings defaultUserSettings) {
             this.defaultUserSettings = defaultUserSettings;
             return this;
         }
 
-        public Builder setDomainArn(@Nullable String domainArn) {
+        public Builder domainArn(@Nullable String domainArn) {
             this.domainArn = domainArn;
             return this;
         }
 
-        public Builder setDomainId(@Nullable String domainId) {
+        public Builder domainId(@Nullable String domainId) {
             this.domainId = domainId;
             return this;
         }
 
-        public Builder setHomeEfsFileSystemId(@Nullable String homeEfsFileSystemId) {
+        public Builder homeEfsFileSystemId(@Nullable String homeEfsFileSystemId) {
             this.homeEfsFileSystemId = homeEfsFileSystemId;
             return this;
         }
 
-        public Builder setSingleSignOnManagedApplicationInstanceId(@Nullable String singleSignOnManagedApplicationInstanceId) {
+        public Builder singleSignOnManagedApplicationInstanceId(@Nullable String singleSignOnManagedApplicationInstanceId) {
             this.singleSignOnManagedApplicationInstanceId = singleSignOnManagedApplicationInstanceId;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

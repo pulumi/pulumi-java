@@ -55,16 +55,16 @@ public final class GetLoggerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"credentials","description","id","isBuffered","loggerType","name","resourceId","type"})
+    @OutputCustomType.Constructor
     private GetLoggerResult(
-        @Nullable Map<String,String> credentials,
-        @Nullable String description,
-        String id,
-        @Nullable Boolean isBuffered,
-        String loggerType,
-        String name,
-        @Nullable String resourceId,
-        String type) {
+        @OutputCustomType.Parameter("credentials") @Nullable Map<String,String> credentials,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isBuffered") @Nullable Boolean isBuffered,
+        @OutputCustomType.Parameter("loggerType") String loggerType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.credentials = credentials;
         this.description = description;
         this.id = id;
@@ -167,42 +167,42 @@ public final class GetLoggerResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCredentials(@Nullable Map<String,String> credentials) {
+        public Builder credentials(@Nullable Map<String,String> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsBuffered(@Nullable Boolean isBuffered) {
+        public Builder isBuffered(@Nullable Boolean isBuffered) {
             this.isBuffered = isBuffered;
             return this;
         }
 
-        public Builder setLoggerType(String loggerType) {
+        public Builder loggerType(String loggerType) {
             this.loggerType = Objects.requireNonNull(loggerType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

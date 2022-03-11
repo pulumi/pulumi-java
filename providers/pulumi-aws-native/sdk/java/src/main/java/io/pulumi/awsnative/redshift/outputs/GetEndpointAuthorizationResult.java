@@ -60,17 +60,17 @@ public final class GetEndpointAuthorizationResult {
      */
     private final @Nullable List<String> vpcIds;
 
-    @OutputCustomType.Constructor({"allowedAllVPCs","allowedVPCs","authorizeTime","clusterStatus","endpointCount","grantee","grantor","status","vpcIds"})
+    @OutputCustomType.Constructor
     private GetEndpointAuthorizationResult(
-        @Nullable Boolean allowedAllVPCs,
-        @Nullable List<String> allowedVPCs,
-        @Nullable String authorizeTime,
-        @Nullable String clusterStatus,
-        @Nullable Integer endpointCount,
-        @Nullable String grantee,
-        @Nullable String grantor,
-        @Nullable String status,
-        @Nullable List<String> vpcIds) {
+        @OutputCustomType.Parameter("allowedAllVPCs") @Nullable Boolean allowedAllVPCs,
+        @OutputCustomType.Parameter("allowedVPCs") @Nullable List<String> allowedVPCs,
+        @OutputCustomType.Parameter("authorizeTime") @Nullable String authorizeTime,
+        @OutputCustomType.Parameter("clusterStatus") @Nullable String clusterStatus,
+        @OutputCustomType.Parameter("endpointCount") @Nullable Integer endpointCount,
+        @OutputCustomType.Parameter("grantee") @Nullable String grantee,
+        @OutputCustomType.Parameter("grantor") @Nullable String grantor,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("vpcIds") @Nullable List<String> vpcIds) {
         this.allowedAllVPCs = allowedAllVPCs;
         this.allowedVPCs = allowedVPCs;
         this.authorizeTime = authorizeTime;
@@ -182,47 +182,47 @@ public final class GetEndpointAuthorizationResult {
     	      this.vpcIds = defaults.vpcIds;
         }
 
-        public Builder setAllowedAllVPCs(@Nullable Boolean allowedAllVPCs) {
+        public Builder allowedAllVPCs(@Nullable Boolean allowedAllVPCs) {
             this.allowedAllVPCs = allowedAllVPCs;
             return this;
         }
 
-        public Builder setAllowedVPCs(@Nullable List<String> allowedVPCs) {
+        public Builder allowedVPCs(@Nullable List<String> allowedVPCs) {
             this.allowedVPCs = allowedVPCs;
             return this;
         }
 
-        public Builder setAuthorizeTime(@Nullable String authorizeTime) {
+        public Builder authorizeTime(@Nullable String authorizeTime) {
             this.authorizeTime = authorizeTime;
             return this;
         }
 
-        public Builder setClusterStatus(@Nullable String clusterStatus) {
+        public Builder clusterStatus(@Nullable String clusterStatus) {
             this.clusterStatus = clusterStatus;
             return this;
         }
 
-        public Builder setEndpointCount(@Nullable Integer endpointCount) {
+        public Builder endpointCount(@Nullable Integer endpointCount) {
             this.endpointCount = endpointCount;
             return this;
         }
 
-        public Builder setGrantee(@Nullable String grantee) {
+        public Builder grantee(@Nullable String grantee) {
             this.grantee = grantee;
             return this;
         }
 
-        public Builder setGrantor(@Nullable String grantor) {
+        public Builder grantor(@Nullable String grantor) {
             this.grantor = grantor;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setVpcIds(@Nullable List<String> vpcIds) {
+        public Builder vpcIds(@Nullable List<String> vpcIds) {
             this.vpcIds = vpcIds;
             return this;
         }

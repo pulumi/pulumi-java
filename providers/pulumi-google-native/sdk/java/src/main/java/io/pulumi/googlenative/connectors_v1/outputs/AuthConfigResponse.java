@@ -40,13 +40,13 @@ public final class AuthConfigResponse {
      */
     private final UserPasswordResponse userPassword;
 
-    @OutputCustomType.Constructor({"additionalVariables","authType","oauth2ClientCredentials","oauth2JwtBearer","userPassword"})
+    @OutputCustomType.Constructor
     private AuthConfigResponse(
-        List<ConfigVariableResponse> additionalVariables,
-        String authType,
-        Oauth2ClientCredentialsResponse oauth2ClientCredentials,
-        Oauth2JwtBearerResponse oauth2JwtBearer,
-        UserPasswordResponse userPassword) {
+        @OutputCustomType.Parameter("additionalVariables") List<ConfigVariableResponse> additionalVariables,
+        @OutputCustomType.Parameter("authType") String authType,
+        @OutputCustomType.Parameter("oauth2ClientCredentials") Oauth2ClientCredentialsResponse oauth2ClientCredentials,
+        @OutputCustomType.Parameter("oauth2JwtBearer") Oauth2JwtBearerResponse oauth2JwtBearer,
+        @OutputCustomType.Parameter("userPassword") UserPasswordResponse userPassword) {
         this.additionalVariables = additionalVariables;
         this.authType = authType;
         this.oauth2ClientCredentials = oauth2ClientCredentials;
@@ -118,27 +118,27 @@ public final class AuthConfigResponse {
     	      this.userPassword = defaults.userPassword;
         }
 
-        public Builder setAdditionalVariables(List<ConfigVariableResponse> additionalVariables) {
+        public Builder additionalVariables(List<ConfigVariableResponse> additionalVariables) {
             this.additionalVariables = Objects.requireNonNull(additionalVariables);
             return this;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
-        public Builder setOauth2ClientCredentials(Oauth2ClientCredentialsResponse oauth2ClientCredentials) {
+        public Builder oauth2ClientCredentials(Oauth2ClientCredentialsResponse oauth2ClientCredentials) {
             this.oauth2ClientCredentials = Objects.requireNonNull(oauth2ClientCredentials);
             return this;
         }
 
-        public Builder setOauth2JwtBearer(Oauth2JwtBearerResponse oauth2JwtBearer) {
+        public Builder oauth2JwtBearer(Oauth2JwtBearerResponse oauth2JwtBearer) {
             this.oauth2JwtBearer = Objects.requireNonNull(oauth2JwtBearer);
             return this;
         }
 
-        public Builder setUserPassword(UserPasswordResponse userPassword) {
+        public Builder userPassword(UserPasswordResponse userPassword) {
             this.userPassword = Objects.requireNonNull(userPassword);
             return this;
         }

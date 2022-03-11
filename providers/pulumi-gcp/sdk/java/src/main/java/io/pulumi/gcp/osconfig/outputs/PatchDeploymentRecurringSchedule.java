@@ -67,16 +67,16 @@ public final class PatchDeploymentRecurringSchedule {
      */
     private final @Nullable PatchDeploymentRecurringScheduleWeekly weekly;
 
-    @OutputCustomType.Constructor({"endTime","lastExecuteTime","monthly","nextExecuteTime","startTime","timeOfDay","timeZone","weekly"})
+    @OutputCustomType.Constructor
     private PatchDeploymentRecurringSchedule(
-        @Nullable String endTime,
-        @Nullable String lastExecuteTime,
-        @Nullable PatchDeploymentRecurringScheduleMonthly monthly,
-        @Nullable String nextExecuteTime,
-        @Nullable String startTime,
-        PatchDeploymentRecurringScheduleTimeOfDay timeOfDay,
-        PatchDeploymentRecurringScheduleTimeZone timeZone,
-        @Nullable PatchDeploymentRecurringScheduleWeekly weekly) {
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("lastExecuteTime") @Nullable String lastExecuteTime,
+        @OutputCustomType.Parameter("monthly") @Nullable PatchDeploymentRecurringScheduleMonthly monthly,
+        @OutputCustomType.Parameter("nextExecuteTime") @Nullable String nextExecuteTime,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("timeOfDay") PatchDeploymentRecurringScheduleTimeOfDay timeOfDay,
+        @OutputCustomType.Parameter("timeZone") PatchDeploymentRecurringScheduleTimeZone timeZone,
+        @OutputCustomType.Parameter("weekly") @Nullable PatchDeploymentRecurringScheduleWeekly weekly) {
         this.endTime = endTime;
         this.lastExecuteTime = lastExecuteTime;
         this.monthly = monthly;
@@ -189,42 +189,42 @@ public final class PatchDeploymentRecurringSchedule {
     	      this.weekly = defaults.weekly;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setLastExecuteTime(@Nullable String lastExecuteTime) {
+        public Builder lastExecuteTime(@Nullable String lastExecuteTime) {
             this.lastExecuteTime = lastExecuteTime;
             return this;
         }
 
-        public Builder setMonthly(@Nullable PatchDeploymentRecurringScheduleMonthly monthly) {
+        public Builder monthly(@Nullable PatchDeploymentRecurringScheduleMonthly monthly) {
             this.monthly = monthly;
             return this;
         }
 
-        public Builder setNextExecuteTime(@Nullable String nextExecuteTime) {
+        public Builder nextExecuteTime(@Nullable String nextExecuteTime) {
             this.nextExecuteTime = nextExecuteTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setTimeOfDay(PatchDeploymentRecurringScheduleTimeOfDay timeOfDay) {
+        public Builder timeOfDay(PatchDeploymentRecurringScheduleTimeOfDay timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
 
-        public Builder setTimeZone(PatchDeploymentRecurringScheduleTimeZone timeZone) {
+        public Builder timeZone(PatchDeploymentRecurringScheduleTimeZone timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setWeekly(@Nullable PatchDeploymentRecurringScheduleWeekly weekly) {
+        public Builder weekly(@Nullable PatchDeploymentRecurringScheduleWeekly weekly) {
             this.weekly = weekly;
             return this;
         }

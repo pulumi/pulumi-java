@@ -74,22 +74,22 @@ public final class DefaultPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceAccount = defaults.serviceAccount;
         }
 
-        public Builder setArtifactStorage(@Nullable Input<String> artifactStorage) {
+        public Builder artifactStorage(@Nullable Input<String> artifactStorage) {
             this.artifactStorage = artifactStorage;
             return this;
         }
 
-        public Builder setArtifactStorage(@Nullable String artifactStorage) {
+        public Builder artifactStorage(@Nullable String artifactStorage) {
             this.artifactStorage = Input.ofNullable(artifactStorage);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }

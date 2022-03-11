@@ -29,11 +29,11 @@ public final class EndpointGroupEndpointConfiguration {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"clientIPPreservationEnabled","endpointId","weight"})
+    @OutputCustomType.Constructor
     private EndpointGroupEndpointConfiguration(
-        @Nullable Boolean clientIPPreservationEnabled,
-        String endpointId,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("clientIPPreservationEnabled") @Nullable Boolean clientIPPreservationEnabled,
+        @OutputCustomType.Parameter("endpointId") String endpointId,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.clientIPPreservationEnabled = clientIPPreservationEnabled;
         this.endpointId = endpointId;
         this.weight = weight;
@@ -85,17 +85,17 @@ public final class EndpointGroupEndpointConfiguration {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setClientIPPreservationEnabled(@Nullable Boolean clientIPPreservationEnabled) {
+        public Builder clientIPPreservationEnabled(@Nullable Boolean clientIPPreservationEnabled) {
             this.clientIPPreservationEnabled = clientIPPreservationEnabled;
             return this;
         }
 
-        public Builder setEndpointId(String endpointId) {
+        public Builder endpointId(String endpointId) {
             this.endpointId = Objects.requireNonNull(endpointId);
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DistributionOriginGroupMember {
     private final String originId;
 
-    @OutputCustomType.Constructor({"originId"})
-    private DistributionOriginGroupMember(String originId) {
+    @OutputCustomType.Constructor
+    private DistributionOriginGroupMember(@OutputCustomType.Parameter("originId") String originId) {
         this.originId = originId;
     }
 
@@ -40,7 +40,7 @@ public final class DistributionOriginGroupMember {
     	      this.originId = defaults.originId;
         }
 
-        public Builder setOriginId(String originId) {
+        public Builder originId(String originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }

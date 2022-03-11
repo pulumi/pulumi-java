@@ -47,14 +47,14 @@ public final class VideoSinkResponse {
      */
     private final @Nullable VideoPublishingOptionsResponse videoPublishingOptions;
 
-    @OutputCustomType.Constructor({"inputs","name","type","videoCreationProperties","videoName","videoPublishingOptions"})
+    @OutputCustomType.Constructor
     private VideoSinkResponse(
-        List<NodeInputResponse> inputs,
-        String name,
-        String type,
-        @Nullable VideoCreationPropertiesResponse videoCreationProperties,
-        String videoName,
-        @Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
+        @OutputCustomType.Parameter("inputs") List<NodeInputResponse> inputs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("videoCreationProperties") @Nullable VideoCreationPropertiesResponse videoCreationProperties,
+        @OutputCustomType.Parameter("videoName") String videoName,
+        @OutputCustomType.Parameter("videoPublishingOptions") @Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
         this.inputs = inputs;
         this.name = name;
         this.type = type;
@@ -137,32 +137,32 @@ public final class VideoSinkResponse {
     	      this.videoPublishingOptions = defaults.videoPublishingOptions;
         }
 
-        public Builder setInputs(List<NodeInputResponse> inputs) {
+        public Builder inputs(List<NodeInputResponse> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVideoCreationProperties(@Nullable VideoCreationPropertiesResponse videoCreationProperties) {
+        public Builder videoCreationProperties(@Nullable VideoCreationPropertiesResponse videoCreationProperties) {
             this.videoCreationProperties = videoCreationProperties;
             return this;
         }
 
-        public Builder setVideoName(String videoName) {
+        public Builder videoName(String videoName) {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
         }
 
-        public Builder setVideoPublishingOptions(@Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
+        public Builder videoPublishingOptions(@Nullable VideoPublishingOptionsResponse videoPublishingOptions) {
             this.videoPublishingOptions = videoPublishingOptions;
             return this;
         }

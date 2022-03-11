@@ -43,14 +43,14 @@ public final class QuobyteVolumeSource {
      */
     private final String volume;
 
-    @OutputCustomType.Constructor({"group","readOnly","registry","tenant","user","volume"})
+    @OutputCustomType.Constructor
     private QuobyteVolumeSource(
-        @Nullable String group,
-        @Nullable Boolean readOnly,
-        String registry,
-        @Nullable String tenant,
-        @Nullable String user,
-        String volume) {
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("registry") String registry,
+        @OutputCustomType.Parameter("tenant") @Nullable String tenant,
+        @OutputCustomType.Parameter("user") @Nullable String user,
+        @OutputCustomType.Parameter("volume") String volume) {
         this.group = group;
         this.readOnly = readOnly;
         this.registry = registry;
@@ -132,32 +132,32 @@ public final class QuobyteVolumeSource {
     	      this.volume = defaults.volume;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setRegistry(String registry) {
+        public Builder registry(String registry) {
             this.registry = Objects.requireNonNull(registry);
             return this;
         }
 
-        public Builder setTenant(@Nullable String tenant) {
+        public Builder tenant(@Nullable String tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }
 
-        public Builder setVolume(String volume) {
+        public Builder volume(String volume) {
             this.volume = Objects.requireNonNull(volume);
             return this;
         }

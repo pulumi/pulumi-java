@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DatastoreParquetConfiguration {
     private final @Nullable DatastoreSchemaDefinition schemaDefinition;
 
-    @OutputCustomType.Constructor({"schemaDefinition"})
-    private DatastoreParquetConfiguration(@Nullable DatastoreSchemaDefinition schemaDefinition) {
+    @OutputCustomType.Constructor
+    private DatastoreParquetConfiguration(@OutputCustomType.Parameter("schemaDefinition") @Nullable DatastoreSchemaDefinition schemaDefinition) {
         this.schemaDefinition = schemaDefinition;
     }
 
@@ -42,7 +42,7 @@ public final class DatastoreParquetConfiguration {
     	      this.schemaDefinition = defaults.schemaDefinition;
         }
 
-        public Builder setSchemaDefinition(@Nullable DatastoreSchemaDefinition schemaDefinition) {
+        public Builder schemaDefinition(@Nullable DatastoreSchemaDefinition schemaDefinition) {
             this.schemaDefinition = schemaDefinition;
             return this;
         }

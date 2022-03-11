@@ -26,11 +26,11 @@ public final class QueueReservationPlanSettings {
      */
     private final Integer reservedSlots;
 
-    @OutputCustomType.Constructor({"commitment","renewalType","reservedSlots"})
+    @OutputCustomType.Constructor
     private QueueReservationPlanSettings(
-        String commitment,
-        String renewalType,
-        Integer reservedSlots) {
+        @OutputCustomType.Parameter("commitment") String commitment,
+        @OutputCustomType.Parameter("renewalType") String renewalType,
+        @OutputCustomType.Parameter("reservedSlots") Integer reservedSlots) {
         this.commitment = commitment;
         this.renewalType = renewalType;
         this.reservedSlots = reservedSlots;
@@ -82,17 +82,17 @@ public final class QueueReservationPlanSettings {
     	      this.reservedSlots = defaults.reservedSlots;
         }
 
-        public Builder setCommitment(String commitment) {
+        public Builder commitment(String commitment) {
             this.commitment = Objects.requireNonNull(commitment);
             return this;
         }
 
-        public Builder setRenewalType(String renewalType) {
+        public Builder renewalType(String renewalType) {
             this.renewalType = Objects.requireNonNull(renewalType);
             return this;
         }
 
-        public Builder setReservedSlots(Integer reservedSlots) {
+        public Builder reservedSlots(Integer reservedSlots) {
             this.reservedSlots = Objects.requireNonNull(reservedSlots);
             return this;
         }

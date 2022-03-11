@@ -36,13 +36,13 @@ public final class GetPipelineDefinitionResult {
      */
     private final List<GetPipelineDefinitionPipelineObject> pipelineObjects;
 
-    @OutputCustomType.Constructor({"id","parameterObjects","parameterValues","pipelineId","pipelineObjects"})
+    @OutputCustomType.Constructor
     private GetPipelineDefinitionResult(
-        String id,
-        List<GetPipelineDefinitionParameterObject> parameterObjects,
-        @Nullable List<GetPipelineDefinitionParameterValue> parameterValues,
-        String pipelineId,
-        List<GetPipelineDefinitionPipelineObject> pipelineObjects) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parameterObjects") List<GetPipelineDefinitionParameterObject> parameterObjects,
+        @OutputCustomType.Parameter("parameterValues") @Nullable List<GetPipelineDefinitionParameterValue> parameterValues,
+        @OutputCustomType.Parameter("pipelineId") String pipelineId,
+        @OutputCustomType.Parameter("pipelineObjects") List<GetPipelineDefinitionPipelineObject> pipelineObjects) {
         this.id = id;
         this.parameterObjects = parameterObjects;
         this.parameterValues = parameterValues;
@@ -110,27 +110,27 @@ public final class GetPipelineDefinitionResult {
     	      this.pipelineObjects = defaults.pipelineObjects;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParameterObjects(List<GetPipelineDefinitionParameterObject> parameterObjects) {
+        public Builder parameterObjects(List<GetPipelineDefinitionParameterObject> parameterObjects) {
             this.parameterObjects = Objects.requireNonNull(parameterObjects);
             return this;
         }
 
-        public Builder setParameterValues(@Nullable List<GetPipelineDefinitionParameterValue> parameterValues) {
+        public Builder parameterValues(@Nullable List<GetPipelineDefinitionParameterValue> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }
 
-        public Builder setPipelineId(String pipelineId) {
+        public Builder pipelineId(String pipelineId) {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
         }
 
-        public Builder setPipelineObjects(List<GetPipelineDefinitionPipelineObject> pipelineObjects) {
+        public Builder pipelineObjects(List<GetPipelineDefinitionPipelineObject> pipelineObjects) {
             this.pipelineObjects = Objects.requireNonNull(pipelineObjects);
             return this;
         }

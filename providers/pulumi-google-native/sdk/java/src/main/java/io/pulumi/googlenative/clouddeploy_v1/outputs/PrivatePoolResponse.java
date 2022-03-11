@@ -25,11 +25,11 @@ public final class PrivatePoolResponse {
      */
     private final String workerPool;
 
-    @OutputCustomType.Constructor({"artifactStorage","serviceAccount","workerPool"})
+    @OutputCustomType.Constructor
     private PrivatePoolResponse(
-        String artifactStorage,
-        String serviceAccount,
-        String workerPool) {
+        @OutputCustomType.Parameter("artifactStorage") String artifactStorage,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("workerPool") String workerPool) {
         this.artifactStorage = artifactStorage;
         this.serviceAccount = serviceAccount;
         this.workerPool = workerPool;
@@ -81,17 +81,17 @@ public final class PrivatePoolResponse {
     	      this.workerPool = defaults.workerPool;
         }
 
-        public Builder setArtifactStorage(String artifactStorage) {
+        public Builder artifactStorage(String artifactStorage) {
             this.artifactStorage = Objects.requireNonNull(artifactStorage);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setWorkerPool(String workerPool) {
+        public Builder workerPool(String workerPool) {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }

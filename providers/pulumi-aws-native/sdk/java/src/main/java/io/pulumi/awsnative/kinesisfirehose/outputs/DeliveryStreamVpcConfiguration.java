@@ -14,11 +14,11 @@ public final class DeliveryStreamVpcConfiguration {
     private final List<String> securityGroupIds;
     private final List<String> subnetIds;
 
-    @OutputCustomType.Constructor({"roleARN","securityGroupIds","subnetIds"})
+    @OutputCustomType.Constructor
     private DeliveryStreamVpcConfiguration(
-        String roleARN,
-        List<String> securityGroupIds,
-        List<String> subnetIds) {
+        @OutputCustomType.Parameter("roleARN") String roleARN,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds) {
         this.roleARN = roleARN;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
@@ -58,17 +58,17 @@ public final class DeliveryStreamVpcConfiguration {
     	      this.subnetIds = defaults.subnetIds;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }

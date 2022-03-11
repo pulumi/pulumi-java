@@ -34,12 +34,12 @@ public final class LinuxConfigurationResponse {
      */
     private final @Nullable SshConfigurationResponse ssh;
 
-    @OutputCustomType.Constructor({"disablePasswordAuthentication","patchSettings","provisionVMAgent","ssh"})
+    @OutputCustomType.Constructor
     private LinuxConfigurationResponse(
-        @Nullable Boolean disablePasswordAuthentication,
-        @Nullable LinuxPatchSettingsResponse patchSettings,
-        @Nullable Boolean provisionVMAgent,
-        @Nullable SshConfigurationResponse ssh) {
+        @OutputCustomType.Parameter("disablePasswordAuthentication") @Nullable Boolean disablePasswordAuthentication,
+        @OutputCustomType.Parameter("patchSettings") @Nullable LinuxPatchSettingsResponse patchSettings,
+        @OutputCustomType.Parameter("provisionVMAgent") @Nullable Boolean provisionVMAgent,
+        @OutputCustomType.Parameter("ssh") @Nullable SshConfigurationResponse ssh) {
         this.disablePasswordAuthentication = disablePasswordAuthentication;
         this.patchSettings = patchSettings;
         this.provisionVMAgent = provisionVMAgent;
@@ -101,22 +101,22 @@ public final class LinuxConfigurationResponse {
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder setDisablePasswordAuthentication(@Nullable Boolean disablePasswordAuthentication) {
+        public Builder disablePasswordAuthentication(@Nullable Boolean disablePasswordAuthentication) {
             this.disablePasswordAuthentication = disablePasswordAuthentication;
             return this;
         }
 
-        public Builder setPatchSettings(@Nullable LinuxPatchSettingsResponse patchSettings) {
+        public Builder patchSettings(@Nullable LinuxPatchSettingsResponse patchSettings) {
             this.patchSettings = patchSettings;
             return this;
         }
 
-        public Builder setProvisionVMAgent(@Nullable Boolean provisionVMAgent) {
+        public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
             this.provisionVMAgent = provisionVMAgent;
             return this;
         }
 
-        public Builder setSsh(@Nullable SshConfigurationResponse ssh) {
+        public Builder ssh(@Nullable SshConfigurationResponse ssh) {
             this.ssh = ssh;
             return this;
         }

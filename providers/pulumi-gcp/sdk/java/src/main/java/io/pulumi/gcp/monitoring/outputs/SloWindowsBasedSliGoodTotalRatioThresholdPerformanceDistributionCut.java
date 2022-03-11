@@ -30,10 +30,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      */
     private final SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range;
 
-    @OutputCustomType.Constructor({"distributionFilter","range"})
+    @OutputCustomType.Constructor
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut(
-        String distributionFilter,
-        SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
+        @OutputCustomType.Parameter("distributionFilter") String distributionFilter,
+        @OutputCustomType.Parameter("range") SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
         this.distributionFilter = distributionFilter;
         this.range = range;
     }
@@ -84,12 +84,12 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
     	      this.range = defaults.range;
         }
 
-        public Builder setDistributionFilter(String distributionFilter) {
+        public Builder distributionFilter(String distributionFilter) {
             this.distributionFilter = Objects.requireNonNull(distributionFilter);
             return this;
         }
 
-        public Builder setRange(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
+        public Builder range(SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }

@@ -15,8 +15,8 @@ public final class ReleaseChannelResponse {
      */
     private final String channel;
 
-    @OutputCustomType.Constructor({"channel"})
-    private ReleaseChannelResponse(String channel) {
+    @OutputCustomType.Constructor
+    private ReleaseChannelResponse(@OutputCustomType.Parameter("channel") String channel) {
         this.channel = channel;
     }
 
@@ -48,7 +48,7 @@ public final class ReleaseChannelResponse {
     	      this.channel = defaults.channel;
         }
 
-        public Builder setChannel(String channel) {
+        public Builder channel(String channel) {
             this.channel = Objects.requireNonNull(channel);
             return this;
         }

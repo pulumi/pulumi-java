@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"key"})
-    private GooglePrivacyDlpV2UnwrappedCryptoKeyResponse(String key) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2UnwrappedCryptoKeyResponse(@OutputCustomType.Parameter("key") String key) {
         this.key = key;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2UnwrappedCryptoKeyResponse {
     	      this.key = defaults.key;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }

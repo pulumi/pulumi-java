@@ -15,8 +15,8 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyResponse {
      */
     private final InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal;
 
-    @OutputCustomType.Constructor({"metadataBasedReadinessSignal"})
-    private InstanceGroupManagerInstanceLifecyclePolicyResponse(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal) {
+    @OutputCustomType.Constructor
+    private InstanceGroupManagerInstanceLifecyclePolicyResponse(@OutputCustomType.Parameter("metadataBasedReadinessSignal") InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal) {
         this.metadataBasedReadinessSignal = metadataBasedReadinessSignal;
     }
 
@@ -48,7 +48,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyResponse {
     	      this.metadataBasedReadinessSignal = defaults.metadataBasedReadinessSignal;
         }
 
-        public Builder setMetadataBasedReadinessSignal(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal) {
+        public Builder metadataBasedReadinessSignal(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse metadataBasedReadinessSignal) {
             this.metadataBasedReadinessSignal = Objects.requireNonNull(metadataBasedReadinessSignal);
             return this;
         }

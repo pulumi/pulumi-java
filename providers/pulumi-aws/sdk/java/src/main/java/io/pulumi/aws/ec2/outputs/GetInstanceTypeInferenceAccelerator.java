@@ -14,11 +14,11 @@ public final class GetInstanceTypeInferenceAccelerator {
     private final String manufacturer;
     private final String name;
 
-    @OutputCustomType.Constructor({"count","manufacturer","name"})
+    @OutputCustomType.Constructor
     private GetInstanceTypeInferenceAccelerator(
-        Integer count,
-        String manufacturer,
-        String name) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("manufacturer") String manufacturer,
+        @OutputCustomType.Parameter("name") String name) {
         this.count = count;
         this.manufacturer = manufacturer;
         this.name = name;
@@ -58,17 +58,17 @@ public final class GetInstanceTypeInferenceAccelerator {
     	      this.name = defaults.name;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setManufacturer(String manufacturer) {
+        public Builder manufacturer(String manufacturer) {
             this.manufacturer = Objects.requireNonNull(manufacturer);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

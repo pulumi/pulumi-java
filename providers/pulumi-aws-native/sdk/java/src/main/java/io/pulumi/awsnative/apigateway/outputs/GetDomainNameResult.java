@@ -27,19 +27,19 @@ public final class GetDomainNameResult {
     private final @Nullable String securityPolicy;
     private final @Nullable List<DomainNameTag> tags;
 
-    @OutputCustomType.Constructor({"certificateArn","distributionDomainName","distributionHostedZoneId","endpointConfiguration","mutualTlsAuthentication","ownershipVerificationCertificateArn","regionalCertificateArn","regionalDomainName","regionalHostedZoneId","securityPolicy","tags"})
+    @OutputCustomType.Constructor
     private GetDomainNameResult(
-        @Nullable String certificateArn,
-        @Nullable String distributionDomainName,
-        @Nullable String distributionHostedZoneId,
-        @Nullable DomainNameEndpointConfiguration endpointConfiguration,
-        @Nullable DomainNameMutualTlsAuthentication mutualTlsAuthentication,
-        @Nullable String ownershipVerificationCertificateArn,
-        @Nullable String regionalCertificateArn,
-        @Nullable String regionalDomainName,
-        @Nullable String regionalHostedZoneId,
-        @Nullable String securityPolicy,
-        @Nullable List<DomainNameTag> tags) {
+        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @OutputCustomType.Parameter("distributionDomainName") @Nullable String distributionDomainName,
+        @OutputCustomType.Parameter("distributionHostedZoneId") @Nullable String distributionHostedZoneId,
+        @OutputCustomType.Parameter("endpointConfiguration") @Nullable DomainNameEndpointConfiguration endpointConfiguration,
+        @OutputCustomType.Parameter("mutualTlsAuthentication") @Nullable DomainNameMutualTlsAuthentication mutualTlsAuthentication,
+        @OutputCustomType.Parameter("ownershipVerificationCertificateArn") @Nullable String ownershipVerificationCertificateArn,
+        @OutputCustomType.Parameter("regionalCertificateArn") @Nullable String regionalCertificateArn,
+        @OutputCustomType.Parameter("regionalDomainName") @Nullable String regionalDomainName,
+        @OutputCustomType.Parameter("regionalHostedZoneId") @Nullable String regionalHostedZoneId,
+        @OutputCustomType.Parameter("securityPolicy") @Nullable String securityPolicy,
+        @OutputCustomType.Parameter("tags") @Nullable List<DomainNameTag> tags) {
         this.certificateArn = certificateArn;
         this.distributionDomainName = distributionDomainName;
         this.distributionHostedZoneId = distributionHostedZoneId;
@@ -127,57 +127,57 @@ public final class GetDomainNameResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setDistributionDomainName(@Nullable String distributionDomainName) {
+        public Builder distributionDomainName(@Nullable String distributionDomainName) {
             this.distributionDomainName = distributionDomainName;
             return this;
         }
 
-        public Builder setDistributionHostedZoneId(@Nullable String distributionHostedZoneId) {
+        public Builder distributionHostedZoneId(@Nullable String distributionHostedZoneId) {
             this.distributionHostedZoneId = distributionHostedZoneId;
             return this;
         }
 
-        public Builder setEndpointConfiguration(@Nullable DomainNameEndpointConfiguration endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable DomainNameEndpointConfiguration endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
-        public Builder setMutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthentication mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthentication mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
 
-        public Builder setOwnershipVerificationCertificateArn(@Nullable String ownershipVerificationCertificateArn) {
+        public Builder ownershipVerificationCertificateArn(@Nullable String ownershipVerificationCertificateArn) {
             this.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
             return this;
         }
 
-        public Builder setRegionalCertificateArn(@Nullable String regionalCertificateArn) {
+        public Builder regionalCertificateArn(@Nullable String regionalCertificateArn) {
             this.regionalCertificateArn = regionalCertificateArn;
             return this;
         }
 
-        public Builder setRegionalDomainName(@Nullable String regionalDomainName) {
+        public Builder regionalDomainName(@Nullable String regionalDomainName) {
             this.regionalDomainName = regionalDomainName;
             return this;
         }
 
-        public Builder setRegionalHostedZoneId(@Nullable String regionalHostedZoneId) {
+        public Builder regionalHostedZoneId(@Nullable String regionalHostedZoneId) {
             this.regionalHostedZoneId = regionalHostedZoneId;
             return this;
         }
 
-        public Builder setSecurityPolicy(@Nullable String securityPolicy) {
+        public Builder securityPolicy(@Nullable String securityPolicy) {
             this.securityPolicy = securityPolicy;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainNameTag> tags) {
+        public Builder tags(@Nullable List<DomainNameTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -251,132 +251,132 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     	      this.workflowName = defaults.workflowName;
         }
 
-        public Builder setActions(@Nullable Input<List<TriggerActionGetArgs>> actions) {
+        public Builder actions(@Nullable Input<List<TriggerActionGetArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<TriggerActionGetArgs> actions) {
+        public Builder actions(@Nullable List<TriggerActionGetArgs> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPredicate(@Nullable Input<TriggerPredicateGetArgs> predicate) {
+        public Builder predicate(@Nullable Input<TriggerPredicateGetArgs> predicate) {
             this.predicate = predicate;
             return this;
         }
 
-        public Builder setPredicate(@Nullable TriggerPredicateGetArgs predicate) {
+        public Builder predicate(@Nullable TriggerPredicateGetArgs predicate) {
             this.predicate = Input.ofNullable(predicate);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setStartOnCreation(@Nullable Input<Boolean> startOnCreation) {
+        public Builder startOnCreation(@Nullable Input<Boolean> startOnCreation) {
             this.startOnCreation = startOnCreation;
             return this;
         }
 
-        public Builder setStartOnCreation(@Nullable Boolean startOnCreation) {
+        public Builder startOnCreation(@Nullable Boolean startOnCreation) {
             this.startOnCreation = Input.ofNullable(startOnCreation);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setWorkflowName(@Nullable Input<String> workflowName) {
+        public Builder workflowName(@Nullable Input<String> workflowName) {
             this.workflowName = workflowName;
             return this;
         }
 
-        public Builder setWorkflowName(@Nullable String workflowName) {
+        public Builder workflowName(@Nullable String workflowName) {
             this.workflowName = Input.ofNullable(workflowName);
             return this;
         }

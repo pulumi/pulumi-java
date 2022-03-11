@@ -35,12 +35,12 @@ public final class RouteSpecGrpcRouteMatch {
      */
     private final @Nullable String serviceName;
 
-    @OutputCustomType.Constructor({"metadatas","methodName","prefix","serviceName"})
+    @OutputCustomType.Constructor
     private RouteSpecGrpcRouteMatch(
-        @Nullable List<RouteSpecGrpcRouteMatchMetadata> metadatas,
-        @Nullable String methodName,
-        @Nullable String prefix,
-        @Nullable String serviceName) {
+        @OutputCustomType.Parameter("metadatas") @Nullable List<RouteSpecGrpcRouteMatchMetadata> metadatas,
+        @OutputCustomType.Parameter("methodName") @Nullable String methodName,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("serviceName") @Nullable String serviceName) {
         this.metadatas = metadatas;
         this.methodName = methodName;
         this.prefix = prefix;
@@ -103,22 +103,22 @@ public final class RouteSpecGrpcRouteMatch {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setMetadatas(@Nullable List<RouteSpecGrpcRouteMatchMetadata> metadatas) {
+        public Builder metadatas(@Nullable List<RouteSpecGrpcRouteMatchMetadata> metadatas) {
             this.metadatas = metadatas;
             return this;
         }
 
-        public Builder setMethodName(@Nullable String methodName) {
+        public Builder methodName(@Nullable String methodName) {
             this.methodName = methodName;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = serviceName;
             return this;
         }

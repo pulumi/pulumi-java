@@ -17,8 +17,8 @@ public final class NetworkManagerSecurityGroupItemResponse {
      */
     private final @Nullable String networkGroupId;
 
-    @OutputCustomType.Constructor({"networkGroupId"})
-    private NetworkManagerSecurityGroupItemResponse(@Nullable String networkGroupId) {
+    @OutputCustomType.Constructor
+    private NetworkManagerSecurityGroupItemResponse(@OutputCustomType.Parameter("networkGroupId") @Nullable String networkGroupId) {
         this.networkGroupId = networkGroupId;
     }
 
@@ -50,7 +50,7 @@ public final class NetworkManagerSecurityGroupItemResponse {
     	      this.networkGroupId = defaults.networkGroupId;
         }
 
-        public Builder setNetworkGroupId(@Nullable String networkGroupId) {
+        public Builder networkGroupId(@Nullable String networkGroupId) {
             this.networkGroupId = networkGroupId;
             return this;
         }

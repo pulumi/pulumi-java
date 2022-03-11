@@ -16,8 +16,8 @@ public final class ListStorageAccountKeysResult {
      */
     private final List<StorageAccountKeyResponse> keys;
 
-    @OutputCustomType.Constructor({"keys"})
-    private ListStorageAccountKeysResult(List<StorageAccountKeyResponse> keys) {
+    @OutputCustomType.Constructor
+    private ListStorageAccountKeysResult(@OutputCustomType.Parameter("keys") List<StorageAccountKeyResponse> keys) {
         this.keys = keys;
     }
 
@@ -49,7 +49,7 @@ public final class ListStorageAccountKeysResult {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setKeys(List<StorageAccountKeyResponse> keys) {
+        public Builder keys(List<StorageAccountKeyResponse> keys) {
             this.keys = Objects.requireNonNull(keys);
             return this;
         }

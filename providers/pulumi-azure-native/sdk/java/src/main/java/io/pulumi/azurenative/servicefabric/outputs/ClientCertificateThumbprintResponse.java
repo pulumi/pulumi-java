@@ -21,10 +21,10 @@ public final class ClientCertificateThumbprintResponse {
      */
     private final Boolean isAdmin;
 
-    @OutputCustomType.Constructor({"certificateThumbprint","isAdmin"})
+    @OutputCustomType.Constructor
     private ClientCertificateThumbprintResponse(
-        String certificateThumbprint,
-        Boolean isAdmin) {
+        @OutputCustomType.Parameter("certificateThumbprint") String certificateThumbprint,
+        @OutputCustomType.Parameter("isAdmin") Boolean isAdmin) {
         this.certificateThumbprint = certificateThumbprint;
         this.isAdmin = isAdmin;
     }
@@ -66,12 +66,12 @@ public final class ClientCertificateThumbprintResponse {
     	      this.isAdmin = defaults.isAdmin;
         }
 
-        public Builder setCertificateThumbprint(String certificateThumbprint) {
+        public Builder certificateThumbprint(String certificateThumbprint) {
             this.certificateThumbprint = Objects.requireNonNull(certificateThumbprint);
             return this;
         }
 
-        public Builder setIsAdmin(Boolean isAdmin) {
+        public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }

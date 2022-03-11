@@ -84,17 +84,17 @@ public final class GetBackupInstanceArgs extends io.pulumi.resources.InvokeArgs 
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setBackupInstanceName(String backupInstanceName) {
+        public Builder backupInstanceName(String backupInstanceName) {
             this.backupInstanceName = Objects.requireNonNull(backupInstanceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }

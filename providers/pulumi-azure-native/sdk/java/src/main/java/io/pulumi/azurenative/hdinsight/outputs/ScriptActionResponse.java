@@ -25,11 +25,11 @@ public final class ScriptActionResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"name","parameters","uri"})
+    @OutputCustomType.Constructor
     private ScriptActionResponse(
-        String name,
-        String parameters,
-        String uri) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") String parameters,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.name = name;
         this.parameters = parameters;
         this.uri = uri;
@@ -81,17 +81,17 @@ public final class ScriptActionResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(String parameters) {
+        public Builder parameters(String parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

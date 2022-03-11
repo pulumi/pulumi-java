@@ -14,10 +14,10 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerListener {
     private final @Nullable Integer instancePort;
     private final @Nullable Integer loadBalancerPort;
 
-    @OutputCustomType.Constructor({"instancePort","loadBalancerPort"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAnalysisAnalysisLoadBalancerListener(
-        @Nullable Integer instancePort,
-        @Nullable Integer loadBalancerPort) {
+        @OutputCustomType.Parameter("instancePort") @Nullable Integer instancePort,
+        @OutputCustomType.Parameter("loadBalancerPort") @Nullable Integer loadBalancerPort) {
         this.instancePort = instancePort;
         this.loadBalancerPort = loadBalancerPort;
     }
@@ -51,12 +51,12 @@ public final class NetworkInsightsAnalysisAnalysisLoadBalancerListener {
     	      this.loadBalancerPort = defaults.loadBalancerPort;
         }
 
-        public Builder setInstancePort(@Nullable Integer instancePort) {
+        public Builder instancePort(@Nullable Integer instancePort) {
             this.instancePort = instancePort;
             return this;
         }
 
-        public Builder setLoadBalancerPort(@Nullable Integer loadBalancerPort) {
+        public Builder loadBalancerPort(@Nullable Integer loadBalancerPort) {
             this.loadBalancerPort = loadBalancerPort;
             return this;
         }

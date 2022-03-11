@@ -116,62 +116,62 @@ public final class JobOutputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.partitionColumns = defaults.partitionColumns;
         }
 
-        public Builder setCompressionFormat(@Nullable Input<JobOutputCompressionFormat> compressionFormat) {
+        public Builder compressionFormat(@Nullable Input<JobOutputCompressionFormat> compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable JobOutputCompressionFormat compressionFormat) {
+        public Builder compressionFormat(@Nullable JobOutputCompressionFormat compressionFormat) {
             this.compressionFormat = Input.ofNullable(compressionFormat);
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<JobOutputFormat> format) {
+        public Builder format(@Nullable Input<JobOutputFormat> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable JobOutputFormat format) {
+        public Builder format(@Nullable JobOutputFormat format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setFormatOptions(@Nullable Input<JobOutputFormatOptionsArgs> formatOptions) {
+        public Builder formatOptions(@Nullable Input<JobOutputFormatOptionsArgs> formatOptions) {
             this.formatOptions = formatOptions;
             return this;
         }
 
-        public Builder setFormatOptions(@Nullable JobOutputFormatOptionsArgs formatOptions) {
+        public Builder formatOptions(@Nullable JobOutputFormatOptionsArgs formatOptions) {
             this.formatOptions = Input.ofNullable(formatOptions);
             return this;
         }
 
-        public Builder setLocation(Input<JobS3LocationArgs> location) {
+        public Builder location(Input<JobS3LocationArgs> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(JobS3LocationArgs location) {
+        public Builder location(JobS3LocationArgs location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Input<Boolean> overwrite) {
+        public Builder overwrite(@Nullable Input<Boolean> overwrite) {
             this.overwrite = overwrite;
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Boolean overwrite) {
+        public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = Input.ofNullable(overwrite);
             return this;
         }
 
-        public Builder setPartitionColumns(@Nullable Input<List<String>> partitionColumns) {
+        public Builder partitionColumns(@Nullable Input<List<String>> partitionColumns) {
             this.partitionColumns = partitionColumns;
             return this;
         }
 
-        public Builder setPartitionColumns(@Nullable List<String> partitionColumns) {
+        public Builder partitionColumns(@Nullable List<String> partitionColumns) {
             this.partitionColumns = Input.ofNullable(partitionColumns);
             return this;
         }

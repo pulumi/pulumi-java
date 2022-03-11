@@ -321,172 +321,172 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBatchTarget(@Nullable Input<EventTargetBatchTargetGetArgs> batchTarget) {
+        public Builder batchTarget(@Nullable Input<EventTargetBatchTargetGetArgs> batchTarget) {
             this.batchTarget = batchTarget;
             return this;
         }
 
-        public Builder setBatchTarget(@Nullable EventTargetBatchTargetGetArgs batchTarget) {
+        public Builder batchTarget(@Nullable EventTargetBatchTargetGetArgs batchTarget) {
             this.batchTarget = Input.ofNullable(batchTarget);
             return this;
         }
 
-        public Builder setDeadLetterConfig(@Nullable Input<EventTargetDeadLetterConfigGetArgs> deadLetterConfig) {
+        public Builder deadLetterConfig(@Nullable Input<EventTargetDeadLetterConfigGetArgs> deadLetterConfig) {
             this.deadLetterConfig = deadLetterConfig;
             return this;
         }
 
-        public Builder setDeadLetterConfig(@Nullable EventTargetDeadLetterConfigGetArgs deadLetterConfig) {
+        public Builder deadLetterConfig(@Nullable EventTargetDeadLetterConfigGetArgs deadLetterConfig) {
             this.deadLetterConfig = Input.ofNullable(deadLetterConfig);
             return this;
         }
 
-        public Builder setEcsTarget(@Nullable Input<EventTargetEcsTargetGetArgs> ecsTarget) {
+        public Builder ecsTarget(@Nullable Input<EventTargetEcsTargetGetArgs> ecsTarget) {
             this.ecsTarget = ecsTarget;
             return this;
         }
 
-        public Builder setEcsTarget(@Nullable EventTargetEcsTargetGetArgs ecsTarget) {
+        public Builder ecsTarget(@Nullable EventTargetEcsTargetGetArgs ecsTarget) {
             this.ecsTarget = Input.ofNullable(ecsTarget);
             return this;
         }
 
-        public Builder setEventBusName(@Nullable Input<String> eventBusName) {
+        public Builder eventBusName(@Nullable Input<String> eventBusName) {
             this.eventBusName = eventBusName;
             return this;
         }
 
-        public Builder setEventBusName(@Nullable String eventBusName) {
+        public Builder eventBusName(@Nullable String eventBusName) {
             this.eventBusName = Input.ofNullable(eventBusName);
             return this;
         }
 
-        public Builder setHttpTarget(@Nullable Input<EventTargetHttpTargetGetArgs> httpTarget) {
+        public Builder httpTarget(@Nullable Input<EventTargetHttpTargetGetArgs> httpTarget) {
             this.httpTarget = httpTarget;
             return this;
         }
 
-        public Builder setHttpTarget(@Nullable EventTargetHttpTargetGetArgs httpTarget) {
+        public Builder httpTarget(@Nullable EventTargetHttpTargetGetArgs httpTarget) {
             this.httpTarget = Input.ofNullable(httpTarget);
             return this;
         }
 
-        public Builder setInput(@Nullable Input<String> input) {
+        public Builder input(@Nullable Input<String> input) {
             this.input = input;
             return this;
         }
 
-        public Builder setInput(@Nullable String input) {
+        public Builder input(@Nullable String input) {
             this.input = Input.ofNullable(input);
             return this;
         }
 
-        public Builder setInputPath(@Nullable Input<String> inputPath) {
+        public Builder inputPath(@Nullable Input<String> inputPath) {
             this.inputPath = inputPath;
             return this;
         }
 
-        public Builder setInputPath(@Nullable String inputPath) {
+        public Builder inputPath(@Nullable String inputPath) {
             this.inputPath = Input.ofNullable(inputPath);
             return this;
         }
 
-        public Builder setInputTransformer(@Nullable Input<EventTargetInputTransformerGetArgs> inputTransformer) {
+        public Builder inputTransformer(@Nullable Input<EventTargetInputTransformerGetArgs> inputTransformer) {
             this.inputTransformer = inputTransformer;
             return this;
         }
 
-        public Builder setInputTransformer(@Nullable EventTargetInputTransformerGetArgs inputTransformer) {
+        public Builder inputTransformer(@Nullable EventTargetInputTransformerGetArgs inputTransformer) {
             this.inputTransformer = Input.ofNullable(inputTransformer);
             return this;
         }
 
-        public Builder setKinesisTarget(@Nullable Input<EventTargetKinesisTargetGetArgs> kinesisTarget) {
+        public Builder kinesisTarget(@Nullable Input<EventTargetKinesisTargetGetArgs> kinesisTarget) {
             this.kinesisTarget = kinesisTarget;
             return this;
         }
 
-        public Builder setKinesisTarget(@Nullable EventTargetKinesisTargetGetArgs kinesisTarget) {
+        public Builder kinesisTarget(@Nullable EventTargetKinesisTargetGetArgs kinesisTarget) {
             this.kinesisTarget = Input.ofNullable(kinesisTarget);
             return this;
         }
 
-        public Builder setRedshiftTarget(@Nullable Input<EventTargetRedshiftTargetGetArgs> redshiftTarget) {
+        public Builder redshiftTarget(@Nullable Input<EventTargetRedshiftTargetGetArgs> redshiftTarget) {
             this.redshiftTarget = redshiftTarget;
             return this;
         }
 
-        public Builder setRedshiftTarget(@Nullable EventTargetRedshiftTargetGetArgs redshiftTarget) {
+        public Builder redshiftTarget(@Nullable EventTargetRedshiftTargetGetArgs redshiftTarget) {
             this.redshiftTarget = Input.ofNullable(redshiftTarget);
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable Input<EventTargetRetryPolicyGetArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Input<EventTargetRetryPolicyGetArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable EventTargetRetryPolicyGetArgs retryPolicy) {
+        public Builder retryPolicy(@Nullable EventTargetRetryPolicyGetArgs retryPolicy) {
             this.retryPolicy = Input.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setRule(@Nullable Input<String> rule) {
+        public Builder rule(@Nullable Input<String> rule) {
             this.rule = rule;
             return this;
         }
 
-        public Builder setRule(@Nullable String rule) {
+        public Builder rule(@Nullable String rule) {
             this.rule = Input.ofNullable(rule);
             return this;
         }
 
-        public Builder setRunCommandTargets(@Nullable Input<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets) {
+        public Builder runCommandTargets(@Nullable Input<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets) {
             this.runCommandTargets = runCommandTargets;
             return this;
         }
 
-        public Builder setRunCommandTargets(@Nullable List<EventTargetRunCommandTargetGetArgs> runCommandTargets) {
+        public Builder runCommandTargets(@Nullable List<EventTargetRunCommandTargetGetArgs> runCommandTargets) {
             this.runCommandTargets = Input.ofNullable(runCommandTargets);
             return this;
         }
 
-        public Builder setSqsTarget(@Nullable Input<EventTargetSqsTargetGetArgs> sqsTarget) {
+        public Builder sqsTarget(@Nullable Input<EventTargetSqsTargetGetArgs> sqsTarget) {
             this.sqsTarget = sqsTarget;
             return this;
         }
 
-        public Builder setSqsTarget(@Nullable EventTargetSqsTargetGetArgs sqsTarget) {
+        public Builder sqsTarget(@Nullable EventTargetSqsTargetGetArgs sqsTarget) {
             this.sqsTarget = Input.ofNullable(sqsTarget);
             return this;
         }
 
-        public Builder setTargetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Input<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = Input.ofNullable(targetId);
             return this;
         }

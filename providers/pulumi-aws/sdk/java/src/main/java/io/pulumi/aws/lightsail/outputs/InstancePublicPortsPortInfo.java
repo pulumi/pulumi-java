@@ -33,12 +33,12 @@ public final class InstancePublicPortsPortInfo {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor({"cidrs","fromPort","protocol","toPort"})
+    @OutputCustomType.Constructor
     private InstancePublicPortsPortInfo(
-        @Nullable List<String> cidrs,
-        Integer fromPort,
-        String protocol,
-        Integer toPort) {
+        @OutputCustomType.Parameter("cidrs") @Nullable List<String> cidrs,
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("toPort") Integer toPort) {
         this.cidrs = cidrs;
         this.fromPort = fromPort;
         this.protocol = protocol;
@@ -100,22 +100,22 @@ public final class InstancePublicPortsPortInfo {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setCidrs(@Nullable List<String> cidrs) {
+        public Builder cidrs(@Nullable List<String> cidrs) {
             this.cidrs = cidrs;
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }

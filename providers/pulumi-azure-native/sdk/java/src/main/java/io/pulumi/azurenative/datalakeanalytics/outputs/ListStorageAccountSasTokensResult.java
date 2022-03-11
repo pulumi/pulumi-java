@@ -22,10 +22,10 @@ public final class ListStorageAccountSasTokensResult {
      */
     private final List<SasTokenInformationResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListStorageAccountSasTokensResult(
-        String nextLink,
-        List<SasTokenInformationResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<SasTokenInformationResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class ListStorageAccountSasTokensResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<SasTokenInformationResponse> value) {
+        public Builder value(List<SasTokenInformationResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

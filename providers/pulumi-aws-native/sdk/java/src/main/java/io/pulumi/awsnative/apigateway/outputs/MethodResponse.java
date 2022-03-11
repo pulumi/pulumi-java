@@ -28,11 +28,11 @@ public final class MethodResponse {
      */
     private final String statusCode;
 
-    @OutputCustomType.Constructor({"responseModels","responseParameters","statusCode"})
+    @OutputCustomType.Constructor
     private MethodResponse(
-        @Nullable Object responseModels,
-        @Nullable Object responseParameters,
-        String statusCode) {
+        @OutputCustomType.Parameter("responseModels") @Nullable Object responseModels,
+        @OutputCustomType.Parameter("responseParameters") @Nullable Object responseParameters,
+        @OutputCustomType.Parameter("statusCode") String statusCode) {
         this.responseModels = responseModels;
         this.responseParameters = responseParameters;
         this.statusCode = statusCode;
@@ -84,17 +84,17 @@ public final class MethodResponse {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setResponseModels(@Nullable Object responseModels) {
+        public Builder responseModels(@Nullable Object responseModels) {
             this.responseModels = responseModels;
             return this;
         }
 
-        public Builder setResponseParameters(@Nullable Object responseParameters) {
+        public Builder responseParameters(@Nullable Object responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

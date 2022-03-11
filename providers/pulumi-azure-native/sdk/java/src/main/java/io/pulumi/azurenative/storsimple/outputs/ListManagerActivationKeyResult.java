@@ -15,8 +15,8 @@ public final class ListManagerActivationKeyResult {
      */
     private final String activationKey;
 
-    @OutputCustomType.Constructor({"activationKey"})
-    private ListManagerActivationKeyResult(String activationKey) {
+    @OutputCustomType.Constructor
+    private ListManagerActivationKeyResult(@OutputCustomType.Parameter("activationKey") String activationKey) {
         this.activationKey = activationKey;
     }
 
@@ -48,7 +48,7 @@ public final class ListManagerActivationKeyResult {
     	      this.activationKey = defaults.activationKey;
         }
 
-        public Builder setActivationKey(String activationKey) {
+        public Builder activationKey(String activationKey) {
             this.activationKey = Objects.requireNonNull(activationKey);
             return this;
         }

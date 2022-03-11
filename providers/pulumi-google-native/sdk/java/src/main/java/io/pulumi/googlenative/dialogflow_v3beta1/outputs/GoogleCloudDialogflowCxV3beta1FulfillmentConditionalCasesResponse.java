@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResp
      */
     private final List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> cases;
 
-    @OutputCustomType.Constructor({"cases"})
-    private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse(List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> cases) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse(@OutputCustomType.Parameter("cases") List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> cases) {
         this.cases = cases;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResp
     	      this.cases = defaults.cases;
         }
 
-        public Builder setCases(List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> cases) {
+        public Builder cases(List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse> cases) {
             this.cases = Objects.requireNonNull(cases);
             return this;
         }

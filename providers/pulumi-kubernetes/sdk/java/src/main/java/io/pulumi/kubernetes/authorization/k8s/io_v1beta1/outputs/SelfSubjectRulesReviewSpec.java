@@ -17,8 +17,8 @@ public final class SelfSubjectRulesReviewSpec {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor({"namespace"})
-    private SelfSubjectRulesReviewSpec(@Nullable String namespace) {
+    @OutputCustomType.Constructor
+    private SelfSubjectRulesReviewSpec(@OutputCustomType.Parameter("namespace") @Nullable String namespace) {
         this.namespace = namespace;
     }
 
@@ -50,7 +50,7 @@ public final class SelfSubjectRulesReviewSpec {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }

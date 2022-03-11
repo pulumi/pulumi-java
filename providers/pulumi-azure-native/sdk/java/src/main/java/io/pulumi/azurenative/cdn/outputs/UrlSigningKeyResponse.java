@@ -21,10 +21,10 @@ public final class UrlSigningKeyResponse {
      */
     private final KeyVaultSigningKeyParametersResponse keySourceParameters;
 
-    @OutputCustomType.Constructor({"keyId","keySourceParameters"})
+    @OutputCustomType.Constructor
     private UrlSigningKeyResponse(
-        String keyId,
-        KeyVaultSigningKeyParametersResponse keySourceParameters) {
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("keySourceParameters") KeyVaultSigningKeyParametersResponse keySourceParameters) {
         this.keyId = keyId;
         this.keySourceParameters = keySourceParameters;
     }
@@ -66,12 +66,12 @@ public final class UrlSigningKeyResponse {
     	      this.keySourceParameters = defaults.keySourceParameters;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setKeySourceParameters(KeyVaultSigningKeyParametersResponse keySourceParameters) {
+        public Builder keySourceParameters(KeyVaultSigningKeyParametersResponse keySourceParameters) {
             this.keySourceParameters = Objects.requireNonNull(keySourceParameters);
             return this;
         }

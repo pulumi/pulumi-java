@@ -16,10 +16,10 @@ public final class ExperimentOnlineAbConfigObject {
     private final @Nullable String controlTreatmentName;
     private final @Nullable List<ExperimentTreatmentToWeight> treatmentWeights;
 
-    @OutputCustomType.Constructor({"controlTreatmentName","treatmentWeights"})
+    @OutputCustomType.Constructor
     private ExperimentOnlineAbConfigObject(
-        @Nullable String controlTreatmentName,
-        @Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
+        @OutputCustomType.Parameter("controlTreatmentName") @Nullable String controlTreatmentName,
+        @OutputCustomType.Parameter("treatmentWeights") @Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
         this.controlTreatmentName = controlTreatmentName;
         this.treatmentWeights = treatmentWeights;
     }
@@ -53,12 +53,12 @@ public final class ExperimentOnlineAbConfigObject {
     	      this.treatmentWeights = defaults.treatmentWeights;
         }
 
-        public Builder setControlTreatmentName(@Nullable String controlTreatmentName) {
+        public Builder controlTreatmentName(@Nullable String controlTreatmentName) {
             this.controlTreatmentName = controlTreatmentName;
             return this;
         }
 
-        public Builder setTreatmentWeights(@Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
+        public Builder treatmentWeights(@Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
             this.treatmentWeights = treatmentWeights;
             return this;
         }

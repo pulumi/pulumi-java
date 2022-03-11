@@ -71,19 +71,19 @@ public final class GetPublishedBlueprintResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"blueprintName","changeNotes","description","displayName","id","name","parameters","resourceGroups","status","targetScope","type"})
+    @OutputCustomType.Constructor
     private GetPublishedBlueprintResult(
-        @Nullable String blueprintName,
-        @Nullable String changeNotes,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        String name,
-        @Nullable Map<String,ParameterDefinitionResponse> parameters,
-        @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups,
-        BlueprintStatusResponse status,
-        @Nullable String targetScope,
-        String type) {
+        @OutputCustomType.Parameter("blueprintName") @Nullable String blueprintName,
+        @OutputCustomType.Parameter("changeNotes") @Nullable String changeNotes,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterDefinitionResponse> parameters,
+        @OutputCustomType.Parameter("resourceGroups") @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups,
+        @OutputCustomType.Parameter("status") BlueprintStatusResponse status,
+        @OutputCustomType.Parameter("targetScope") @Nullable String targetScope,
+        @OutputCustomType.Parameter("type") String type) {
         this.blueprintName = blueprintName;
         this.changeNotes = changeNotes;
         this.description = description;
@@ -215,57 +215,57 @@ public final class GetPublishedBlueprintResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBlueprintName(@Nullable String blueprintName) {
+        public Builder blueprintName(@Nullable String blueprintName) {
             this.blueprintName = blueprintName;
             return this;
         }
 
-        public Builder setChangeNotes(@Nullable String changeNotes) {
+        public Builder changeNotes(@Nullable String changeNotes) {
             this.changeNotes = changeNotes;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterDefinitionResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterDefinitionResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setResourceGroups(@Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups) {
+        public Builder resourceGroups(@Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups) {
             this.resourceGroups = resourceGroups;
             return this;
         }
 
-        public Builder setStatus(BlueprintStatusResponse status) {
+        public Builder status(BlueprintStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTargetScope(@Nullable String targetScope) {
+        public Builder targetScope(@Nullable String targetScope) {
             this.targetScope = targetScope;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

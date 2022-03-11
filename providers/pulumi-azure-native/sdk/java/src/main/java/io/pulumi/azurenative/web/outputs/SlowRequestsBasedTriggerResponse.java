@@ -33,12 +33,12 @@ public final class SlowRequestsBasedTriggerResponse {
      */
     private final @Nullable String timeTaken;
 
-    @OutputCustomType.Constructor({"count","path","timeInterval","timeTaken"})
+    @OutputCustomType.Constructor
     private SlowRequestsBasedTriggerResponse(
-        @Nullable Integer count,
-        @Nullable String path,
-        @Nullable String timeInterval,
-        @Nullable String timeTaken) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("timeInterval") @Nullable String timeInterval,
+        @OutputCustomType.Parameter("timeTaken") @Nullable String timeTaken) {
         this.count = count;
         this.path = path;
         this.timeInterval = timeInterval;
@@ -100,22 +100,22 @@ public final class SlowRequestsBasedTriggerResponse {
     	      this.timeTaken = defaults.timeTaken;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setTimeInterval(@Nullable String timeInterval) {
+        public Builder timeInterval(@Nullable String timeInterval) {
             this.timeInterval = timeInterval;
             return this;
         }
 
-        public Builder setTimeTaken(@Nullable String timeTaken) {
+        public Builder timeTaken(@Nullable String timeTaken) {
             this.timeTaken = timeTaken;
             return this;
         }

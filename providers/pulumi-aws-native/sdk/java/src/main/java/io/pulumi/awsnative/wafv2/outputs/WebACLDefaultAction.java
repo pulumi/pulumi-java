@@ -15,10 +15,10 @@ public final class WebACLDefaultAction {
     private final @Nullable WebACLAllowAction allow;
     private final @Nullable WebACLBlockAction block;
 
-    @OutputCustomType.Constructor({"allow","block"})
+    @OutputCustomType.Constructor
     private WebACLDefaultAction(
-        @Nullable WebACLAllowAction allow,
-        @Nullable WebACLBlockAction block) {
+        @OutputCustomType.Parameter("allow") @Nullable WebACLAllowAction allow,
+        @OutputCustomType.Parameter("block") @Nullable WebACLBlockAction block) {
         this.allow = allow;
         this.block = block;
     }
@@ -52,12 +52,12 @@ public final class WebACLDefaultAction {
     	      this.block = defaults.block;
         }
 
-        public Builder setAllow(@Nullable WebACLAllowAction allow) {
+        public Builder allow(@Nullable WebACLAllowAction allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setBlock(@Nullable WebACLBlockAction block) {
+        public Builder block(@Nullable WebACLBlockAction block) {
             this.block = block;
             return this;
         }

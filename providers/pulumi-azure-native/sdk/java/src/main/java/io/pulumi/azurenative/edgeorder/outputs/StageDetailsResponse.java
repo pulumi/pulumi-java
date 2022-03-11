@@ -30,12 +30,12 @@ public final class StageDetailsResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"displayName","stageName","stageStatus","startTime"})
+    @OutputCustomType.Constructor
     private StageDetailsResponse(
-        String displayName,
-        String stageName,
-        String stageStatus,
-        String startTime) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("stageName") String stageName,
+        @OutputCustomType.Parameter("stageStatus") String stageStatus,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.displayName = displayName;
         this.stageName = stageName;
         this.stageStatus = stageStatus;
@@ -97,22 +97,22 @@ public final class StageDetailsResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setStageName(String stageName) {
+        public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
 
-        public Builder setStageStatus(String stageStatus) {
+        public Builder stageStatus(String stageStatus) {
             this.stageStatus = Objects.requireNonNull(stageStatus);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

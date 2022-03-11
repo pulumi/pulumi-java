@@ -40,16 +40,16 @@ public final class MonitorPropertiesResponse {
     private final String provisioningState;
     private final @Nullable UserInfoResponse userInfo;
 
-    @OutputCustomType.Constructor({"liftrResourceCategory","liftrResourcePreference","logzOrganizationProperties","marketplaceSubscriptionStatus","monitoringStatus","planData","provisioningState","userInfo"})
+    @OutputCustomType.Constructor
     private MonitorPropertiesResponse(
-        String liftrResourceCategory,
-        Integer liftrResourcePreference,
-        @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties,
-        @Nullable String marketplaceSubscriptionStatus,
-        @Nullable String monitoringStatus,
-        @Nullable PlanDataResponse planData,
-        String provisioningState,
-        @Nullable UserInfoResponse userInfo) {
+        @OutputCustomType.Parameter("liftrResourceCategory") String liftrResourceCategory,
+        @OutputCustomType.Parameter("liftrResourcePreference") Integer liftrResourcePreference,
+        @OutputCustomType.Parameter("logzOrganizationProperties") @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties,
+        @OutputCustomType.Parameter("marketplaceSubscriptionStatus") @Nullable String marketplaceSubscriptionStatus,
+        @OutputCustomType.Parameter("monitoringStatus") @Nullable String monitoringStatus,
+        @OutputCustomType.Parameter("planData") @Nullable PlanDataResponse planData,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("userInfo") @Nullable UserInfoResponse userInfo) {
         this.liftrResourceCategory = liftrResourceCategory;
         this.liftrResourcePreference = liftrResourcePreference;
         this.logzOrganizationProperties = logzOrganizationProperties;
@@ -135,42 +135,42 @@ public final class MonitorPropertiesResponse {
     	      this.userInfo = defaults.userInfo;
         }
 
-        public Builder setLiftrResourceCategory(String liftrResourceCategory) {
+        public Builder liftrResourceCategory(String liftrResourceCategory) {
             this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
             return this;
         }
 
-        public Builder setLiftrResourcePreference(Integer liftrResourcePreference) {
+        public Builder liftrResourcePreference(Integer liftrResourcePreference) {
             this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
             return this;
         }
 
-        public Builder setLogzOrganizationProperties(@Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties) {
+        public Builder logzOrganizationProperties(@Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties) {
             this.logzOrganizationProperties = logzOrganizationProperties;
             return this;
         }
 
-        public Builder setMarketplaceSubscriptionStatus(@Nullable String marketplaceSubscriptionStatus) {
+        public Builder marketplaceSubscriptionStatus(@Nullable String marketplaceSubscriptionStatus) {
             this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
             return this;
         }
 
-        public Builder setMonitoringStatus(@Nullable String monitoringStatus) {
+        public Builder monitoringStatus(@Nullable String monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
 
-        public Builder setPlanData(@Nullable PlanDataResponse planData) {
+        public Builder planData(@Nullable PlanDataResponse planData) {
             this.planData = planData;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setUserInfo(@Nullable UserInfoResponse userInfo) {
+        public Builder userInfo(@Nullable UserInfoResponse userInfo) {
             this.userInfo = userInfo;
             return this;
         }

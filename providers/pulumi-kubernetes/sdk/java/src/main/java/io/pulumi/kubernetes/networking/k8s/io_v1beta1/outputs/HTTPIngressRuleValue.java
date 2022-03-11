@@ -16,8 +16,8 @@ public final class HTTPIngressRuleValue {
      */
     private final List<HTTPIngressPath> paths;
 
-    @OutputCustomType.Constructor({"paths"})
-    private HTTPIngressRuleValue(List<HTTPIngressPath> paths) {
+    @OutputCustomType.Constructor
+    private HTTPIngressRuleValue(@OutputCustomType.Parameter("paths") List<HTTPIngressPath> paths) {
         this.paths = paths;
     }
 
@@ -49,7 +49,7 @@ public final class HTTPIngressRuleValue {
     	      this.paths = defaults.paths;
         }
 
-        public Builder setPaths(List<HTTPIngressPath> paths) {
+        public Builder paths(List<HTTPIngressPath> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }

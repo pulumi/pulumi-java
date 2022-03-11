@@ -267,142 +267,142 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAdditionalData(@Nullable Input<AssignmentPropertiesAdditionalDataArgs> additionalData) {
+        public Builder additionalData(@Nullable Input<AssignmentPropertiesAdditionalDataArgs> additionalData) {
             this.additionalData = additionalData;
             return this;
         }
 
-        public Builder setAdditionalData(@Nullable AssignmentPropertiesAdditionalDataArgs additionalData) {
+        public Builder additionalData(@Nullable AssignmentPropertiesAdditionalDataArgs additionalData) {
             this.additionalData = Input.ofNullable(additionalData);
             return this;
         }
 
-        public Builder setAssignedComponent(@Nullable Input<AssignedComponentItemArgs> assignedComponent) {
+        public Builder assignedComponent(@Nullable Input<AssignedComponentItemArgs> assignedComponent) {
             this.assignedComponent = assignedComponent;
             return this;
         }
 
-        public Builder setAssignedComponent(@Nullable AssignedComponentItemArgs assignedComponent) {
+        public Builder assignedComponent(@Nullable AssignedComponentItemArgs assignedComponent) {
             this.assignedComponent = Input.ofNullable(assignedComponent);
             return this;
         }
 
-        public Builder setAssignedStandard(@Nullable Input<AssignedStandardItemArgs> assignedStandard) {
+        public Builder assignedStandard(@Nullable Input<AssignedStandardItemArgs> assignedStandard) {
             this.assignedStandard = assignedStandard;
             return this;
         }
 
-        public Builder setAssignedStandard(@Nullable AssignedStandardItemArgs assignedStandard) {
+        public Builder assignedStandard(@Nullable AssignedStandardItemArgs assignedStandard) {
             this.assignedStandard = Input.ofNullable(assignedStandard);
             return this;
         }
 
-        public Builder setAssignmentId(@Nullable Input<String> assignmentId) {
+        public Builder assignmentId(@Nullable Input<String> assignmentId) {
             this.assignmentId = assignmentId;
             return this;
         }
 
-        public Builder setAssignmentId(@Nullable String assignmentId) {
+        public Builder assignmentId(@Nullable String assignmentId) {
             this.assignmentId = Input.ofNullable(assignmentId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEffect(@Nullable Input<String> effect) {
+        public Builder effect(@Nullable Input<String> effect) {
             this.effect = effect;
             return this;
         }
 
-        public Builder setEffect(@Nullable String effect) {
+        public Builder effect(@Nullable String effect) {
             this.effect = Input.ofNullable(effect);
             return this;
         }
 
-        public Builder setExpiresOn(@Nullable Input<String> expiresOn) {
+        public Builder expiresOn(@Nullable Input<String> expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
 
-        public Builder setExpiresOn(@Nullable String expiresOn) {
+        public Builder expiresOn(@Nullable String expiresOn) {
             this.expiresOn = Input.ofNullable(expiresOn);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -118,27 +118,27 @@ public final class GetPartnerRegistrationResult {
      */
     private final @Nullable String visibilityState;
 
-    @OutputCustomType.Constructor({"authorizedAzureSubscriptionIds","customerServiceUri","id","location","logoUri","longDescription","name","partnerCustomerServiceExtension","partnerCustomerServiceNumber","partnerName","partnerResourceTypeDescription","partnerResourceTypeDisplayName","partnerResourceTypeName","provisioningState","setupUri","systemData","tags","type","visibilityState"})
+    @OutputCustomType.Constructor
     private GetPartnerRegistrationResult(
-        @Nullable List<String> authorizedAzureSubscriptionIds,
-        @Nullable String customerServiceUri,
-        String id,
-        String location,
-        @Nullable String logoUri,
-        @Nullable String longDescription,
-        String name,
-        @Nullable String partnerCustomerServiceExtension,
-        @Nullable String partnerCustomerServiceNumber,
-        @Nullable String partnerName,
-        @Nullable String partnerResourceTypeDescription,
-        @Nullable String partnerResourceTypeDisplayName,
-        @Nullable String partnerResourceTypeName,
-        String provisioningState,
-        @Nullable String setupUri,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String visibilityState) {
+        @OutputCustomType.Parameter("authorizedAzureSubscriptionIds") @Nullable List<String> authorizedAzureSubscriptionIds,
+        @OutputCustomType.Parameter("customerServiceUri") @Nullable String customerServiceUri,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("logoUri") @Nullable String logoUri,
+        @OutputCustomType.Parameter("longDescription") @Nullable String longDescription,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerCustomerServiceExtension") @Nullable String partnerCustomerServiceExtension,
+        @OutputCustomType.Parameter("partnerCustomerServiceNumber") @Nullable String partnerCustomerServiceNumber,
+        @OutputCustomType.Parameter("partnerName") @Nullable String partnerName,
+        @OutputCustomType.Parameter("partnerResourceTypeDescription") @Nullable String partnerResourceTypeDescription,
+        @OutputCustomType.Parameter("partnerResourceTypeDisplayName") @Nullable String partnerResourceTypeDisplayName,
+        @OutputCustomType.Parameter("partnerResourceTypeName") @Nullable String partnerResourceTypeName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("setupUri") @Nullable String setupUri,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("visibilityState") @Nullable String visibilityState) {
         this.authorizedAzureSubscriptionIds = authorizedAzureSubscriptionIds;
         this.customerServiceUri = customerServiceUri;
         this.id = id;
@@ -358,97 +358,97 @@ public final class GetPartnerRegistrationResult {
     	      this.visibilityState = defaults.visibilityState;
         }
 
-        public Builder setAuthorizedAzureSubscriptionIds(@Nullable List<String> authorizedAzureSubscriptionIds) {
+        public Builder authorizedAzureSubscriptionIds(@Nullable List<String> authorizedAzureSubscriptionIds) {
             this.authorizedAzureSubscriptionIds = authorizedAzureSubscriptionIds;
             return this;
         }
 
-        public Builder setCustomerServiceUri(@Nullable String customerServiceUri) {
+        public Builder customerServiceUri(@Nullable String customerServiceUri) {
             this.customerServiceUri = customerServiceUri;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLogoUri(@Nullable String logoUri) {
+        public Builder logoUri(@Nullable String logoUri) {
             this.logoUri = logoUri;
             return this;
         }
 
-        public Builder setLongDescription(@Nullable String longDescription) {
+        public Builder longDescription(@Nullable String longDescription) {
             this.longDescription = longDescription;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnerCustomerServiceExtension(@Nullable String partnerCustomerServiceExtension) {
+        public Builder partnerCustomerServiceExtension(@Nullable String partnerCustomerServiceExtension) {
             this.partnerCustomerServiceExtension = partnerCustomerServiceExtension;
             return this;
         }
 
-        public Builder setPartnerCustomerServiceNumber(@Nullable String partnerCustomerServiceNumber) {
+        public Builder partnerCustomerServiceNumber(@Nullable String partnerCustomerServiceNumber) {
             this.partnerCustomerServiceNumber = partnerCustomerServiceNumber;
             return this;
         }
 
-        public Builder setPartnerName(@Nullable String partnerName) {
+        public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = partnerName;
             return this;
         }
 
-        public Builder setPartnerResourceTypeDescription(@Nullable String partnerResourceTypeDescription) {
+        public Builder partnerResourceTypeDescription(@Nullable String partnerResourceTypeDescription) {
             this.partnerResourceTypeDescription = partnerResourceTypeDescription;
             return this;
         }
 
-        public Builder setPartnerResourceTypeDisplayName(@Nullable String partnerResourceTypeDisplayName) {
+        public Builder partnerResourceTypeDisplayName(@Nullable String partnerResourceTypeDisplayName) {
             this.partnerResourceTypeDisplayName = partnerResourceTypeDisplayName;
             return this;
         }
 
-        public Builder setPartnerResourceTypeName(@Nullable String partnerResourceTypeName) {
+        public Builder partnerResourceTypeName(@Nullable String partnerResourceTypeName) {
             this.partnerResourceTypeName = partnerResourceTypeName;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSetupUri(@Nullable String setupUri) {
+        public Builder setupUri(@Nullable String setupUri) {
             this.setupUri = setupUri;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVisibilityState(@Nullable String visibilityState) {
+        public Builder visibilityState(@Nullable String visibilityState) {
             this.visibilityState = visibilityState;
             return this;
         }

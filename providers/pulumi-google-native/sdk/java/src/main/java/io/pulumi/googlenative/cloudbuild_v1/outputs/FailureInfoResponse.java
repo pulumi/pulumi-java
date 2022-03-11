@@ -20,10 +20,10 @@ public final class FailureInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"detail","type"})
+    @OutputCustomType.Constructor
     private FailureInfoResponse(
-        String detail,
-        String type) {
+        @OutputCustomType.Parameter("detail") String detail,
+        @OutputCustomType.Parameter("type") String type) {
         this.detail = detail;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class FailureInfoResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDetail(String detail) {
+        public Builder detail(String detail) {
             this.detail = Objects.requireNonNull(detail);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

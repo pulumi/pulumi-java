@@ -29,15 +29,15 @@ public final class GetBotResult {
     private final @Nullable String name;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"arn","dataPrivacy","description","id","idleSessionTTLInSeconds","name","roleArn"})
+    @OutputCustomType.Constructor
     private GetBotResult(
-        @Nullable String arn,
-        @Nullable DataPrivacyProperties dataPrivacy,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable Integer idleSessionTTLInSeconds,
-        @Nullable String name,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("dataPrivacy") @Nullable DataPrivacyProperties dataPrivacy,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("idleSessionTTLInSeconds") @Nullable Integer idleSessionTTLInSeconds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.arn = arn;
         this.dataPrivacy = dataPrivacy;
         this.description = description;
@@ -109,37 +109,37 @@ public final class GetBotResult {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDataPrivacy(@Nullable DataPrivacyProperties dataPrivacy) {
+        public Builder dataPrivacy(@Nullable DataPrivacyProperties dataPrivacy) {
             this.dataPrivacy = dataPrivacy;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdleSessionTTLInSeconds(@Nullable Integer idleSessionTTLInSeconds) {
+        public Builder idleSessionTTLInSeconds(@Nullable Integer idleSessionTTLInSeconds) {
             this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }

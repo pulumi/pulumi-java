@@ -105,42 +105,42 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends io.pulumi.r
     	      this.scopeDownStatement = defaults.scopeDownStatement;
         }
 
-        public Builder setAggregateKeyType(@Nullable Input<String> aggregateKeyType) {
+        public Builder aggregateKeyType(@Nullable Input<String> aggregateKeyType) {
             this.aggregateKeyType = aggregateKeyType;
             return this;
         }
 
-        public Builder setAggregateKeyType(@Nullable String aggregateKeyType) {
+        public Builder aggregateKeyType(@Nullable String aggregateKeyType) {
             this.aggregateKeyType = Input.ofNullable(aggregateKeyType);
             return this;
         }
 
-        public Builder setForwardedIpConfig(@Nullable Input<WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs> forwardedIpConfig) {
+        public Builder forwardedIpConfig(@Nullable Input<WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs> forwardedIpConfig) {
             this.forwardedIpConfig = forwardedIpConfig;
             return this;
         }
 
-        public Builder setForwardedIpConfig(@Nullable WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs forwardedIpConfig) {
+        public Builder forwardedIpConfig(@Nullable WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs forwardedIpConfig) {
             this.forwardedIpConfig = Input.ofNullable(forwardedIpConfig);
             return this;
         }
 
-        public Builder setLimit(Input<Integer> limit) {
+        public Builder limit(Input<Integer> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setLimit(Integer limit) {
+        public Builder limit(Integer limit) {
             this.limit = Input.of(Objects.requireNonNull(limit));
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementArgs> scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable Input<WebAclRuleStatementRateBasedStatementScopeDownStatementArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementArgs scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementArgs scopeDownStatement) {
             this.scopeDownStatement = Input.ofNullable(scopeDownStatement);
             return this;
         }

@@ -15,8 +15,8 @@ public final class EphemeralStorageConfigResponse {
      */
     private final Integer localSsdCount;
 
-    @OutputCustomType.Constructor({"localSsdCount"})
-    private EphemeralStorageConfigResponse(Integer localSsdCount) {
+    @OutputCustomType.Constructor
+    private EphemeralStorageConfigResponse(@OutputCustomType.Parameter("localSsdCount") Integer localSsdCount) {
         this.localSsdCount = localSsdCount;
     }
 
@@ -48,7 +48,7 @@ public final class EphemeralStorageConfigResponse {
     	      this.localSsdCount = defaults.localSsdCount;
         }
 
-        public Builder setLocalSsdCount(Integer localSsdCount) {
+        public Builder localSsdCount(Integer localSsdCount) {
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }

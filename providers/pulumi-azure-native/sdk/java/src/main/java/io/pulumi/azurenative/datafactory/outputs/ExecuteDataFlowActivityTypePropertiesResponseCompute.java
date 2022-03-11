@@ -22,10 +22,10 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
      */
     private final @Nullable Object coreCount;
 
-    @OutputCustomType.Constructor({"computeType","coreCount"})
+    @OutputCustomType.Constructor
     private ExecuteDataFlowActivityTypePropertiesResponseCompute(
-        @Nullable Object computeType,
-        @Nullable Object coreCount) {
+        @OutputCustomType.Parameter("computeType") @Nullable Object computeType,
+        @OutputCustomType.Parameter("coreCount") @Nullable Object coreCount) {
         this.computeType = computeType;
         this.coreCount = coreCount;
     }
@@ -67,12 +67,12 @@ public final class ExecuteDataFlowActivityTypePropertiesResponseCompute {
     	      this.coreCount = defaults.coreCount;
         }
 
-        public Builder setComputeType(@Nullable Object computeType) {
+        public Builder computeType(@Nullable Object computeType) {
             this.computeType = computeType;
             return this;
         }
 
-        public Builder setCoreCount(@Nullable Object coreCount) {
+        public Builder coreCount(@Nullable Object coreCount) {
             this.coreCount = coreCount;
             return this;
         }

@@ -31,12 +31,12 @@ public final class AggregationResponse {
      */
     private final String perSeriesAligner;
 
-    @OutputCustomType.Constructor({"alignmentPeriod","crossSeriesReducer","groupByFields","perSeriesAligner"})
+    @OutputCustomType.Constructor
     private AggregationResponse(
-        String alignmentPeriod,
-        String crossSeriesReducer,
-        List<String> groupByFields,
-        String perSeriesAligner) {
+        @OutputCustomType.Parameter("alignmentPeriod") String alignmentPeriod,
+        @OutputCustomType.Parameter("crossSeriesReducer") String crossSeriesReducer,
+        @OutputCustomType.Parameter("groupByFields") List<String> groupByFields,
+        @OutputCustomType.Parameter("perSeriesAligner") String perSeriesAligner) {
         this.alignmentPeriod = alignmentPeriod;
         this.crossSeriesReducer = crossSeriesReducer;
         this.groupByFields = groupByFields;
@@ -98,22 +98,22 @@ public final class AggregationResponse {
     	      this.perSeriesAligner = defaults.perSeriesAligner;
         }
 
-        public Builder setAlignmentPeriod(String alignmentPeriod) {
+        public Builder alignmentPeriod(String alignmentPeriod) {
             this.alignmentPeriod = Objects.requireNonNull(alignmentPeriod);
             return this;
         }
 
-        public Builder setCrossSeriesReducer(String crossSeriesReducer) {
+        public Builder crossSeriesReducer(String crossSeriesReducer) {
             this.crossSeriesReducer = Objects.requireNonNull(crossSeriesReducer);
             return this;
         }
 
-        public Builder setGroupByFields(List<String> groupByFields) {
+        public Builder groupByFields(List<String> groupByFields) {
             this.groupByFields = Objects.requireNonNull(groupByFields);
             return this;
         }
 
-        public Builder setPerSeriesAligner(String perSeriesAligner) {
+        public Builder perSeriesAligner(String perSeriesAligner) {
             this.perSeriesAligner = Objects.requireNonNull(perSeriesAligner);
             return this;
         }

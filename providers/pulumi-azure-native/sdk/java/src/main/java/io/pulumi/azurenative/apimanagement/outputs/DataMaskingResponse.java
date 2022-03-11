@@ -22,10 +22,10 @@ public final class DataMaskingResponse {
      */
     private final @Nullable List<DataMaskingEntityResponse> queryParams;
 
-    @OutputCustomType.Constructor({"headers","queryParams"})
+    @OutputCustomType.Constructor
     private DataMaskingResponse(
-        @Nullable List<DataMaskingEntityResponse> headers,
-        @Nullable List<DataMaskingEntityResponse> queryParams) {
+        @OutputCustomType.Parameter("headers") @Nullable List<DataMaskingEntityResponse> headers,
+        @OutputCustomType.Parameter("queryParams") @Nullable List<DataMaskingEntityResponse> queryParams) {
         this.headers = headers;
         this.queryParams = queryParams;
     }
@@ -67,12 +67,12 @@ public final class DataMaskingResponse {
     	      this.queryParams = defaults.queryParams;
         }
 
-        public Builder setHeaders(@Nullable List<DataMaskingEntityResponse> headers) {
+        public Builder headers(@Nullable List<DataMaskingEntityResponse> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setQueryParams(@Nullable List<DataMaskingEntityResponse> queryParams) {
+        public Builder queryParams(@Nullable List<DataMaskingEntityResponse> queryParams) {
             this.queryParams = queryParams;
             return this;
         }

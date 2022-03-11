@@ -24,10 +24,10 @@ public final class RestResponseResponse {
      */
     private final @Nullable List<String> successStatusCodes;
 
-    @OutputCustomType.Constructor({"regex","successStatusCodes"})
+    @OutputCustomType.Constructor
     private RestResponseResponse(
-        @Nullable RestResponseResponseRegex regex,
-        @Nullable List<String> successStatusCodes) {
+        @OutputCustomType.Parameter("regex") @Nullable RestResponseResponseRegex regex,
+        @OutputCustomType.Parameter("successStatusCodes") @Nullable List<String> successStatusCodes) {
         this.regex = regex;
         this.successStatusCodes = successStatusCodes;
     }
@@ -69,12 +69,12 @@ public final class RestResponseResponse {
     	      this.successStatusCodes = defaults.successStatusCodes;
         }
 
-        public Builder setRegex(@Nullable RestResponseResponseRegex regex) {
+        public Builder regex(@Nullable RestResponseResponseRegex regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setSuccessStatusCodes(@Nullable List<String> successStatusCodes) {
+        public Builder successStatusCodes(@Nullable List<String> successStatusCodes) {
             this.successStatusCodes = successStatusCodes;
             return this;
         }

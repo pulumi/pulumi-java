@@ -67,18 +67,18 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
      */
     private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
 
-    @OutputCustomType.Constructor({"annotationId","answerFeedback","articleSuggestion","createTime","dialogflowInteraction","endBoundary","faqAnswer","smartComposeSuggestion","smartReply","startBoundary"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse(
-        String annotationId,
-        GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback,
-        GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion,
-        String createTime,
-        GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction,
-        GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary,
-        GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer,
-        GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion,
-        GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply,
-        GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
+        @OutputCustomType.Parameter("annotationId") String annotationId,
+        @OutputCustomType.Parameter("answerFeedback") GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback,
+        @OutputCustomType.Parameter("articleSuggestion") GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dialogflowInteraction") GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction,
+        @OutputCustomType.Parameter("endBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary,
+        @OutputCustomType.Parameter("faqAnswer") GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer,
+        @OutputCustomType.Parameter("smartComposeSuggestion") GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion,
+        @OutputCustomType.Parameter("smartReply") GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply,
+        @OutputCustomType.Parameter("startBoundary") GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
         this.annotationId = annotationId;
         this.answerFeedback = answerFeedback;
         this.articleSuggestion = articleSuggestion;
@@ -200,52 +200,52 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse {
     	      this.startBoundary = defaults.startBoundary;
         }
 
-        public Builder setAnnotationId(String annotationId) {
+        public Builder annotationId(String annotationId) {
             this.annotationId = Objects.requireNonNull(annotationId);
             return this;
         }
 
-        public Builder setAnswerFeedback(GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback) {
+        public Builder answerFeedback(GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback) {
             this.answerFeedback = Objects.requireNonNull(answerFeedback);
             return this;
         }
 
-        public Builder setArticleSuggestion(GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion) {
+        public Builder articleSuggestion(GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion) {
             this.articleSuggestion = Objects.requireNonNull(articleSuggestion);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDialogflowInteraction(GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction) {
+        public Builder dialogflowInteraction(GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction) {
             this.dialogflowInteraction = Objects.requireNonNull(dialogflowInteraction);
             return this;
         }
 
-        public Builder setEndBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary) {
+        public Builder endBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary) {
             this.endBoundary = Objects.requireNonNull(endBoundary);
             return this;
         }
 
-        public Builder setFaqAnswer(GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer) {
+        public Builder faqAnswer(GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer) {
             this.faqAnswer = Objects.requireNonNull(faqAnswer);
             return this;
         }
 
-        public Builder setSmartComposeSuggestion(GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion) {
+        public Builder smartComposeSuggestion(GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion) {
             this.smartComposeSuggestion = Objects.requireNonNull(smartComposeSuggestion);
             return this;
         }
 
-        public Builder setSmartReply(GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply) {
+        public Builder smartReply(GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply) {
             this.smartReply = Objects.requireNonNull(smartReply);
             return this;
         }
 
-        public Builder setStartBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
+        public Builder startBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
             this.startBoundary = Objects.requireNonNull(startBoundary);
             return this;
         }

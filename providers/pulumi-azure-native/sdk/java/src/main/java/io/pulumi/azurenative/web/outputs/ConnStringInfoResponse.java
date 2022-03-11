@@ -27,11 +27,11 @@ public final class ConnStringInfoResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"connectionString","name","type"})
+    @OutputCustomType.Constructor
     private ConnStringInfoResponse(
-        @Nullable String connectionString,
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.connectionString = connectionString;
         this.name = name;
         this.type = type;
@@ -83,17 +83,17 @@ public final class ConnStringInfoResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

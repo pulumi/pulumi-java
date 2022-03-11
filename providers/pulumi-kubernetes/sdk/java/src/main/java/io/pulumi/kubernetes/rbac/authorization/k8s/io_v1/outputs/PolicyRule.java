@@ -37,13 +37,13 @@ public final class PolicyRule {
      */
     private final List<String> verbs;
 
-    @OutputCustomType.Constructor({"apiGroups","nonResourceURLs","resourceNames","resources","verbs"})
+    @OutputCustomType.Constructor
     private PolicyRule(
-        @Nullable List<String> apiGroups,
-        @Nullable List<String> nonResourceURLs,
-        @Nullable List<String> resourceNames,
-        @Nullable List<String> resources,
-        List<String> verbs) {
+        @OutputCustomType.Parameter("apiGroups") @Nullable List<String> apiGroups,
+        @OutputCustomType.Parameter("nonResourceURLs") @Nullable List<String> nonResourceURLs,
+        @OutputCustomType.Parameter("resourceNames") @Nullable List<String> resourceNames,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
+        @OutputCustomType.Parameter("verbs") List<String> verbs) {
         this.apiGroups = apiGroups;
         this.nonResourceURLs = nonResourceURLs;
         this.resourceNames = resourceNames;
@@ -115,27 +115,27 @@ public final class PolicyRule {
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder setApiGroups(@Nullable List<String> apiGroups) {
+        public Builder apiGroups(@Nullable List<String> apiGroups) {
             this.apiGroups = apiGroups;
             return this;
         }
 
-        public Builder setNonResourceURLs(@Nullable List<String> nonResourceURLs) {
+        public Builder nonResourceURLs(@Nullable List<String> nonResourceURLs) {
             this.nonResourceURLs = nonResourceURLs;
             return this;
         }
 
-        public Builder setResourceNames(@Nullable List<String> resourceNames) {
+        public Builder resourceNames(@Nullable List<String> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setVerbs(List<String> verbs) {
+        public Builder verbs(List<String> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }

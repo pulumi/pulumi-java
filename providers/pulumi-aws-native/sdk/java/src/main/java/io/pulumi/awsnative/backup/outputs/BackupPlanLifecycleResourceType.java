@@ -14,10 +14,10 @@ public final class BackupPlanLifecycleResourceType {
     private final @Nullable Double deleteAfterDays;
     private final @Nullable Double moveToColdStorageAfterDays;
 
-    @OutputCustomType.Constructor({"deleteAfterDays","moveToColdStorageAfterDays"})
+    @OutputCustomType.Constructor
     private BackupPlanLifecycleResourceType(
-        @Nullable Double deleteAfterDays,
-        @Nullable Double moveToColdStorageAfterDays) {
+        @OutputCustomType.Parameter("deleteAfterDays") @Nullable Double deleteAfterDays,
+        @OutputCustomType.Parameter("moveToColdStorageAfterDays") @Nullable Double moveToColdStorageAfterDays) {
         this.deleteAfterDays = deleteAfterDays;
         this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
     }
@@ -51,12 +51,12 @@ public final class BackupPlanLifecycleResourceType {
     	      this.moveToColdStorageAfterDays = defaults.moveToColdStorageAfterDays;
         }
 
-        public Builder setDeleteAfterDays(@Nullable Double deleteAfterDays) {
+        public Builder deleteAfterDays(@Nullable Double deleteAfterDays) {
             this.deleteAfterDays = deleteAfterDays;
             return this;
         }
 
-        public Builder setMoveToColdStorageAfterDays(@Nullable Double moveToColdStorageAfterDays) {
+        public Builder moveToColdStorageAfterDays(@Nullable Double moveToColdStorageAfterDays) {
             this.moveToColdStorageAfterDays = moveToColdStorageAfterDays;
             return this;
         }

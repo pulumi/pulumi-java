@@ -28,11 +28,11 @@ public final class ScaleSettingsResponse {
      */
     private final @Nullable String nodeIdleTimeBeforeScaleDown;
 
-    @OutputCustomType.Constructor({"maxNodeCount","minNodeCount","nodeIdleTimeBeforeScaleDown"})
+    @OutputCustomType.Constructor
     private ScaleSettingsResponse(
-        Integer maxNodeCount,
-        @Nullable Integer minNodeCount,
-        @Nullable String nodeIdleTimeBeforeScaleDown) {
+        @OutputCustomType.Parameter("maxNodeCount") Integer maxNodeCount,
+        @OutputCustomType.Parameter("minNodeCount") @Nullable Integer minNodeCount,
+        @OutputCustomType.Parameter("nodeIdleTimeBeforeScaleDown") @Nullable String nodeIdleTimeBeforeScaleDown) {
         this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;
         this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
@@ -84,17 +84,17 @@ public final class ScaleSettingsResponse {
     	      this.nodeIdleTimeBeforeScaleDown = defaults.nodeIdleTimeBeforeScaleDown;
         }
 
-        public Builder setMaxNodeCount(Integer maxNodeCount) {
+        public Builder maxNodeCount(Integer maxNodeCount) {
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
 
-        public Builder setMinNodeCount(@Nullable Integer minNodeCount) {
+        public Builder minNodeCount(@Nullable Integer minNodeCount) {
             this.minNodeCount = minNodeCount;
             return this;
         }
 
-        public Builder setNodeIdleTimeBeforeScaleDown(@Nullable String nodeIdleTimeBeforeScaleDown) {
+        public Builder nodeIdleTimeBeforeScaleDown(@Nullable String nodeIdleTimeBeforeScaleDown) {
             this.nodeIdleTimeBeforeScaleDown = nodeIdleTimeBeforeScaleDown;
             return this;
         }

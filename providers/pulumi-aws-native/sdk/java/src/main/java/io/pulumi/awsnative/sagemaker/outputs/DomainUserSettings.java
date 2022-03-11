@@ -41,13 +41,13 @@ public final class DomainUserSettings {
      */
     private final @Nullable DomainSharingSettings sharingSettings;
 
-    @OutputCustomType.Constructor({"executionRole","jupyterServerAppSettings","kernelGatewayAppSettings","securityGroups","sharingSettings"})
+    @OutputCustomType.Constructor
     private DomainUserSettings(
-        @Nullable String executionRole,
-        @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings,
-        @Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings,
-        @Nullable List<String> securityGroups,
-        @Nullable DomainSharingSettings sharingSettings) {
+        @OutputCustomType.Parameter("executionRole") @Nullable String executionRole,
+        @OutputCustomType.Parameter("jupyterServerAppSettings") @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings,
+        @OutputCustomType.Parameter("kernelGatewayAppSettings") @Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("sharingSettings") @Nullable DomainSharingSettings sharingSettings) {
         this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
@@ -119,27 +119,27 @@ public final class DomainUserSettings {
     	      this.sharingSettings = defaults.sharingSettings;
         }
 
-        public Builder setExecutionRole(@Nullable String executionRole) {
+        public Builder executionRole(@Nullable String executionRole) {
             this.executionRole = executionRole;
             return this;
         }
 
-        public Builder setJupyterServerAppSettings(@Nullable DomainJupyterServerAppSettings jupyterServerAppSettings) {
+        public Builder jupyterServerAppSettings(@Nullable DomainJupyterServerAppSettings jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
-        public Builder setKernelGatewayAppSettings(@Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings) {
+        public Builder kernelGatewayAppSettings(@Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSharingSettings(@Nullable DomainSharingSettings sharingSettings) {
+        public Builder sharingSettings(@Nullable DomainSharingSettings sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }

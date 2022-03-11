@@ -16,8 +16,8 @@ public final class AwsClusterAuthorization {
      */
     private final List<AwsClusterAuthorizationAdminUser> adminUsers;
 
-    @OutputCustomType.Constructor({"adminUsers"})
-    private AwsClusterAuthorization(List<AwsClusterAuthorizationAdminUser> adminUsers) {
+    @OutputCustomType.Constructor
+    private AwsClusterAuthorization(@OutputCustomType.Parameter("adminUsers") List<AwsClusterAuthorizationAdminUser> adminUsers) {
         this.adminUsers = adminUsers;
     }
 
@@ -49,7 +49,7 @@ public final class AwsClusterAuthorization {
     	      this.adminUsers = defaults.adminUsers;
         }
 
-        public Builder setAdminUsers(List<AwsClusterAuthorizationAdminUser> adminUsers) {
+        public Builder adminUsers(List<AwsClusterAuthorizationAdminUser> adminUsers) {
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }

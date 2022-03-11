@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DatastoreIotSiteWiseMultiLayerStorage {
     private final @Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage;
 
-    @OutputCustomType.Constructor({"customerManagedS3Storage"})
-    private DatastoreIotSiteWiseMultiLayerStorage(@Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage) {
+    @OutputCustomType.Constructor
+    private DatastoreIotSiteWiseMultiLayerStorage(@OutputCustomType.Parameter("customerManagedS3Storage") @Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage) {
         this.customerManagedS3Storage = customerManagedS3Storage;
     }
 
@@ -42,7 +42,7 @@ public final class DatastoreIotSiteWiseMultiLayerStorage {
     	      this.customerManagedS3Storage = defaults.customerManagedS3Storage;
         }
 
-        public Builder setCustomerManagedS3Storage(@Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage) {
+        public Builder customerManagedS3Storage(@Nullable DatastoreCustomerManagedS3Storage customerManagedS3Storage) {
             this.customerManagedS3Storage = customerManagedS3Storage;
             return this;
         }

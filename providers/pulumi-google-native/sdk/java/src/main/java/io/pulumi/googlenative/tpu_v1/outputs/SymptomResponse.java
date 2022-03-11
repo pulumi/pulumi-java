@@ -30,12 +30,12 @@ public final class SymptomResponse {
      */
     private final String workerId;
 
-    @OutputCustomType.Constructor({"createTime","details","symptomType","workerId"})
+    @OutputCustomType.Constructor
     private SymptomResponse(
-        String createTime,
-        String details,
-        String symptomType,
-        String workerId) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("details") String details,
+        @OutputCustomType.Parameter("symptomType") String symptomType,
+        @OutputCustomType.Parameter("workerId") String workerId) {
         this.createTime = createTime;
         this.details = details;
         this.symptomType = symptomType;
@@ -97,22 +97,22 @@ public final class SymptomResponse {
     	      this.workerId = defaults.workerId;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDetails(String details) {
+        public Builder details(String details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setSymptomType(String symptomType) {
+        public Builder symptomType(String symptomType) {
             this.symptomType = Objects.requireNonNull(symptomType);
             return this;
         }
 
-        public Builder setWorkerId(String workerId) {
+        public Builder workerId(String workerId) {
             this.workerId = Objects.requireNonNull(workerId);
             return this;
         }

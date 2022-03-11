@@ -22,10 +22,10 @@ public final class TimerTriggerDescriptorResponse {
      */
     private final @Nullable String timerTriggerName;
 
-    @OutputCustomType.Constructor({"scheduleOccurrence","timerTriggerName"})
+    @OutputCustomType.Constructor
     private TimerTriggerDescriptorResponse(
-        @Nullable String scheduleOccurrence,
-        @Nullable String timerTriggerName) {
+        @OutputCustomType.Parameter("scheduleOccurrence") @Nullable String scheduleOccurrence,
+        @OutputCustomType.Parameter("timerTriggerName") @Nullable String timerTriggerName) {
         this.scheduleOccurrence = scheduleOccurrence;
         this.timerTriggerName = timerTriggerName;
     }
@@ -67,12 +67,12 @@ public final class TimerTriggerDescriptorResponse {
     	      this.timerTriggerName = defaults.timerTriggerName;
         }
 
-        public Builder setScheduleOccurrence(@Nullable String scheduleOccurrence) {
+        public Builder scheduleOccurrence(@Nullable String scheduleOccurrence) {
             this.scheduleOccurrence = scheduleOccurrence;
             return this;
         }
 
-        public Builder setTimerTriggerName(@Nullable String timerTriggerName) {
+        public Builder timerTriggerName(@Nullable String timerTriggerName) {
             this.timerTriggerName = timerTriggerName;
             return this;
         }

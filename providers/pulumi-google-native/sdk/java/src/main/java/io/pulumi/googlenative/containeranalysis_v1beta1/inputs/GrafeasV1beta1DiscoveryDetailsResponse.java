@@ -55,7 +55,7 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse extends io.pulumi.reso
     	      this.discovered = defaults.discovered;
         }
 
-        public Builder setDiscovered(DiscoveredResponse discovered) {
+        public Builder discovered(DiscoveredResponse discovered) {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }

@@ -19,11 +19,11 @@ public final class JobStatusError {
     private final @Nullable String message;
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor({"location","message","reason"})
+    @OutputCustomType.Constructor
     private JobStatusError(
-        @Nullable String location,
-        @Nullable String message,
-        @Nullable String reason) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason) {
         this.location = location;
         this.message = message;
         this.reason = reason;
@@ -67,17 +67,17 @@ public final class JobStatusError {
     	      this.reason = defaults.reason;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }

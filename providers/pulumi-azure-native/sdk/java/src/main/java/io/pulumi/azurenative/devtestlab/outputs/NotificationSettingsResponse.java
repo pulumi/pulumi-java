@@ -38,13 +38,13 @@ public final class NotificationSettingsResponse {
      */
     private final @Nullable String webhookUrl;
 
-    @OutputCustomType.Constructor({"emailRecipient","notificationLocale","status","timeInMinutes","webhookUrl"})
+    @OutputCustomType.Constructor
     private NotificationSettingsResponse(
-        @Nullable String emailRecipient,
-        @Nullable String notificationLocale,
-        @Nullable String status,
-        @Nullable Integer timeInMinutes,
-        @Nullable String webhookUrl) {
+        @OutputCustomType.Parameter("emailRecipient") @Nullable String emailRecipient,
+        @OutputCustomType.Parameter("notificationLocale") @Nullable String notificationLocale,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("timeInMinutes") @Nullable Integer timeInMinutes,
+        @OutputCustomType.Parameter("webhookUrl") @Nullable String webhookUrl) {
         this.emailRecipient = emailRecipient;
         this.notificationLocale = notificationLocale;
         this.status = status;
@@ -116,27 +116,27 @@ public final class NotificationSettingsResponse {
     	      this.webhookUrl = defaults.webhookUrl;
         }
 
-        public Builder setEmailRecipient(@Nullable String emailRecipient) {
+        public Builder emailRecipient(@Nullable String emailRecipient) {
             this.emailRecipient = emailRecipient;
             return this;
         }
 
-        public Builder setNotificationLocale(@Nullable String notificationLocale) {
+        public Builder notificationLocale(@Nullable String notificationLocale) {
             this.notificationLocale = notificationLocale;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTimeInMinutes(@Nullable Integer timeInMinutes) {
+        public Builder timeInMinutes(@Nullable Integer timeInMinutes) {
             this.timeInMinutes = timeInMinutes;
             return this;
         }
 
-        public Builder setWebhookUrl(@Nullable String webhookUrl) {
+        public Builder webhookUrl(@Nullable String webhookUrl) {
             this.webhookUrl = webhookUrl;
             return this;
         }

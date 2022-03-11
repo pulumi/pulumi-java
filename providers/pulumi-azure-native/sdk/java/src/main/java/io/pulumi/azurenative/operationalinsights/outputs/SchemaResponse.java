@@ -81,21 +81,21 @@ public final class SchemaResponse {
      */
     private final String tableType;
 
-    @OutputCustomType.Constructor({"categories","columns","description","displayName","labels","name","restoredLogs","searchResults","solutions","source","standardColumns","tableSubType","tableType"})
+    @OutputCustomType.Constructor
     private SchemaResponse(
-        List<String> categories,
-        @Nullable List<ColumnResponse> columns,
-        @Nullable String description,
-        @Nullable String displayName,
-        List<String> labels,
-        @Nullable String name,
-        RestoredLogsResponse restoredLogs,
-        SearchResultsResponse searchResults,
-        List<String> solutions,
-        String source,
-        List<ColumnResponse> standardColumns,
-        String tableSubType,
-        String tableType) {
+        @OutputCustomType.Parameter("categories") List<String> categories,
+        @OutputCustomType.Parameter("columns") @Nullable List<ColumnResponse> columns,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("labels") List<String> labels,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("restoredLogs") RestoredLogsResponse restoredLogs,
+        @OutputCustomType.Parameter("searchResults") SearchResultsResponse searchResults,
+        @OutputCustomType.Parameter("solutions") List<String> solutions,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("standardColumns") List<ColumnResponse> standardColumns,
+        @OutputCustomType.Parameter("tableSubType") String tableSubType,
+        @OutputCustomType.Parameter("tableType") String tableType) {
         this.categories = categories;
         this.columns = columns;
         this.description = description;
@@ -247,67 +247,67 @@ public final class SchemaResponse {
     	      this.tableType = defaults.tableType;
         }
 
-        public Builder setCategories(List<String> categories) {
+        public Builder categories(List<String> categories) {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
 
-        public Builder setColumns(@Nullable List<ColumnResponse> columns) {
+        public Builder columns(@Nullable List<ColumnResponse> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setLabels(List<String> labels) {
+        public Builder labels(List<String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRestoredLogs(RestoredLogsResponse restoredLogs) {
+        public Builder restoredLogs(RestoredLogsResponse restoredLogs) {
             this.restoredLogs = Objects.requireNonNull(restoredLogs);
             return this;
         }
 
-        public Builder setSearchResults(SearchResultsResponse searchResults) {
+        public Builder searchResults(SearchResultsResponse searchResults) {
             this.searchResults = Objects.requireNonNull(searchResults);
             return this;
         }
 
-        public Builder setSolutions(List<String> solutions) {
+        public Builder solutions(List<String> solutions) {
             this.solutions = Objects.requireNonNull(solutions);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setStandardColumns(List<ColumnResponse> standardColumns) {
+        public Builder standardColumns(List<ColumnResponse> standardColumns) {
             this.standardColumns = Objects.requireNonNull(standardColumns);
             return this;
         }
 
-        public Builder setTableSubType(String tableSubType) {
+        public Builder tableSubType(String tableSubType) {
             this.tableSubType = Objects.requireNonNull(tableSubType);
             return this;
         }
 
-        public Builder setTableType(String tableType) {
+        public Builder tableType(String tableType) {
             this.tableType = Objects.requireNonNull(tableType);
             return this;
         }

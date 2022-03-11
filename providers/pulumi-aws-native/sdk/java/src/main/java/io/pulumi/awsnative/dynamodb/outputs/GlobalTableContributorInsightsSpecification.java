@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GlobalTableContributorInsightsSpecification {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GlobalTableContributorInsightsSpecification(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GlobalTableContributorInsightsSpecification(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -40,7 +40,7 @@ public final class GlobalTableContributorInsightsSpecification {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

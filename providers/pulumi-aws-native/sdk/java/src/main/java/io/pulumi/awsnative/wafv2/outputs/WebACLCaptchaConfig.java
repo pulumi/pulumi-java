@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class WebACLCaptchaConfig {
     private final @Nullable WebACLImmunityTimeProperty immunityTimeProperty;
 
-    @OutputCustomType.Constructor({"immunityTimeProperty"})
-    private WebACLCaptchaConfig(@Nullable WebACLImmunityTimeProperty immunityTimeProperty) {
+    @OutputCustomType.Constructor
+    private WebACLCaptchaConfig(@OutputCustomType.Parameter("immunityTimeProperty") @Nullable WebACLImmunityTimeProperty immunityTimeProperty) {
         this.immunityTimeProperty = immunityTimeProperty;
     }
 
@@ -42,7 +42,7 @@ public final class WebACLCaptchaConfig {
     	      this.immunityTimeProperty = defaults.immunityTimeProperty;
         }
 
-        public Builder setImmunityTimeProperty(@Nullable WebACLImmunityTimeProperty immunityTimeProperty) {
+        public Builder immunityTimeProperty(@Nullable WebACLImmunityTimeProperty immunityTimeProperty) {
             this.immunityTimeProperty = immunityTimeProperty;
             return this;
         }

@@ -13,10 +13,10 @@ public final class ResponseHeadersPolicyReferrerPolicy {
     private final Boolean override;
     private final String referrerPolicy;
 
-    @OutputCustomType.Constructor({"override","referrerPolicy"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicyReferrerPolicy(
-        Boolean override,
-        String referrerPolicy) {
+        @OutputCustomType.Parameter("override") Boolean override,
+        @OutputCustomType.Parameter("referrerPolicy") String referrerPolicy) {
         this.override = override;
         this.referrerPolicy = referrerPolicy;
     }
@@ -50,12 +50,12 @@ public final class ResponseHeadersPolicyReferrerPolicy {
     	      this.referrerPolicy = defaults.referrerPolicy;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setReferrerPolicy(String referrerPolicy) {
+        public Builder referrerPolicy(String referrerPolicy) {
             this.referrerPolicy = Objects.requireNonNull(referrerPolicy);
             return this;
         }

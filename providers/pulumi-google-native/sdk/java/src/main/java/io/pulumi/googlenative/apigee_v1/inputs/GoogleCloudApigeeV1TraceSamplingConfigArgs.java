@@ -75,22 +75,22 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder setSampler(@Nullable Input<GoogleCloudApigeeV1TraceSamplingConfigSampler> sampler) {
+        public Builder sampler(@Nullable Input<GoogleCloudApigeeV1TraceSamplingConfigSampler> sampler) {
             this.sampler = sampler;
             return this;
         }
 
-        public Builder setSampler(@Nullable GoogleCloudApigeeV1TraceSamplingConfigSampler sampler) {
+        public Builder sampler(@Nullable GoogleCloudApigeeV1TraceSamplingConfigSampler sampler) {
             this.sampler = Input.ofNullable(sampler);
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Input<Double> samplingRate) {
+        public Builder samplingRate(@Nullable Input<Double> samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Double samplingRate) {
+        public Builder samplingRate(@Nullable Double samplingRate) {
             this.samplingRate = Input.ofNullable(samplingRate);
             return this;
         }

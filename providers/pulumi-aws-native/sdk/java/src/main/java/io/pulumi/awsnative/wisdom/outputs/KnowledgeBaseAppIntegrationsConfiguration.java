@@ -13,10 +13,10 @@ public final class KnowledgeBaseAppIntegrationsConfiguration {
     private final String appIntegrationArn;
     private final List<String> objectFields;
 
-    @OutputCustomType.Constructor({"appIntegrationArn","objectFields"})
+    @OutputCustomType.Constructor
     private KnowledgeBaseAppIntegrationsConfiguration(
-        String appIntegrationArn,
-        List<String> objectFields) {
+        @OutputCustomType.Parameter("appIntegrationArn") String appIntegrationArn,
+        @OutputCustomType.Parameter("objectFields") List<String> objectFields) {
         this.appIntegrationArn = appIntegrationArn;
         this.objectFields = objectFields;
     }
@@ -50,12 +50,12 @@ public final class KnowledgeBaseAppIntegrationsConfiguration {
     	      this.objectFields = defaults.objectFields;
         }
 
-        public Builder setAppIntegrationArn(String appIntegrationArn) {
+        public Builder appIntegrationArn(String appIntegrationArn) {
             this.appIntegrationArn = Objects.requireNonNull(appIntegrationArn);
             return this;
         }
 
-        public Builder setObjectFields(List<String> objectFields) {
+        public Builder objectFields(List<String> objectFields) {
             this.objectFields = Objects.requireNonNull(objectFields);
             return this;
         }

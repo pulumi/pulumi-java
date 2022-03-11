@@ -99,25 +99,25 @@ public final class GetApplicationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"applicationType","commandLineArguments","commandLineSetting","description","filePath","friendlyName","iconContent","iconHash","iconIndex","iconPath","id","msixPackageApplicationId","msixPackageFamilyName","name","objectId","showInPortal","type"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String applicationType,
-        @Nullable String commandLineArguments,
-        String commandLineSetting,
-        @Nullable String description,
-        @Nullable String filePath,
-        @Nullable String friendlyName,
-        String iconContent,
-        String iconHash,
-        @Nullable Integer iconIndex,
-        @Nullable String iconPath,
-        String id,
-        @Nullable String msixPackageApplicationId,
-        @Nullable String msixPackageFamilyName,
-        String name,
-        String objectId,
-        @Nullable Boolean showInPortal,
-        String type) {
+        @OutputCustomType.Parameter("applicationType") @Nullable String applicationType,
+        @OutputCustomType.Parameter("commandLineArguments") @Nullable String commandLineArguments,
+        @OutputCustomType.Parameter("commandLineSetting") String commandLineSetting,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("iconContent") String iconContent,
+        @OutputCustomType.Parameter("iconHash") String iconHash,
+        @OutputCustomType.Parameter("iconIndex") @Nullable Integer iconIndex,
+        @OutputCustomType.Parameter("iconPath") @Nullable String iconPath,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("msixPackageApplicationId") @Nullable String msixPackageApplicationId,
+        @OutputCustomType.Parameter("msixPackageFamilyName") @Nullable String msixPackageFamilyName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("showInPortal") @Nullable Boolean showInPortal,
+        @OutputCustomType.Parameter("type") String type) {
         this.applicationType = applicationType;
         this.commandLineArguments = commandLineArguments;
         this.commandLineSetting = commandLineSetting;
@@ -309,87 +309,87 @@ public final class GetApplicationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setApplicationType(@Nullable String applicationType) {
+        public Builder applicationType(@Nullable String applicationType) {
             this.applicationType = applicationType;
             return this;
         }
 
-        public Builder setCommandLineArguments(@Nullable String commandLineArguments) {
+        public Builder commandLineArguments(@Nullable String commandLineArguments) {
             this.commandLineArguments = commandLineArguments;
             return this;
         }
 
-        public Builder setCommandLineSetting(String commandLineSetting) {
+        public Builder commandLineSetting(String commandLineSetting) {
             this.commandLineSetting = Objects.requireNonNull(commandLineSetting);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFilePath(@Nullable String filePath) {
+        public Builder filePath(@Nullable String filePath) {
             this.filePath = filePath;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setIconContent(String iconContent) {
+        public Builder iconContent(String iconContent) {
             this.iconContent = Objects.requireNonNull(iconContent);
             return this;
         }
 
-        public Builder setIconHash(String iconHash) {
+        public Builder iconHash(String iconHash) {
             this.iconHash = Objects.requireNonNull(iconHash);
             return this;
         }
 
-        public Builder setIconIndex(@Nullable Integer iconIndex) {
+        public Builder iconIndex(@Nullable Integer iconIndex) {
             this.iconIndex = iconIndex;
             return this;
         }
 
-        public Builder setIconPath(@Nullable String iconPath) {
+        public Builder iconPath(@Nullable String iconPath) {
             this.iconPath = iconPath;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMsixPackageApplicationId(@Nullable String msixPackageApplicationId) {
+        public Builder msixPackageApplicationId(@Nullable String msixPackageApplicationId) {
             this.msixPackageApplicationId = msixPackageApplicationId;
             return this;
         }
 
-        public Builder setMsixPackageFamilyName(@Nullable String msixPackageFamilyName) {
+        public Builder msixPackageFamilyName(@Nullable String msixPackageFamilyName) {
             this.msixPackageFamilyName = msixPackageFamilyName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setShowInPortal(@Nullable Boolean showInPortal) {
+        public Builder showInPortal(@Nullable Boolean showInPortal) {
             this.showInPortal = showInPortal;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

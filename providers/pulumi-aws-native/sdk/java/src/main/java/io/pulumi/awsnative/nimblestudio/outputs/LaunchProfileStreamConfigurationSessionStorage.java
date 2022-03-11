@@ -21,10 +21,10 @@ public final class LaunchProfileStreamConfigurationSessionStorage {
     private final @Nullable List<LaunchProfileStreamingSessionStorageMode> mode;
     private final @Nullable LaunchProfileStreamingSessionStorageRoot root;
 
-    @OutputCustomType.Constructor({"mode","root"})
+    @OutputCustomType.Constructor
     private LaunchProfileStreamConfigurationSessionStorage(
-        @Nullable List<LaunchProfileStreamingSessionStorageMode> mode,
-        @Nullable LaunchProfileStreamingSessionStorageRoot root) {
+        @OutputCustomType.Parameter("mode") @Nullable List<LaunchProfileStreamingSessionStorageMode> mode,
+        @OutputCustomType.Parameter("root") @Nullable LaunchProfileStreamingSessionStorageRoot root) {
         this.mode = mode;
         this.root = root;
     }
@@ -63,12 +63,12 @@ public final class LaunchProfileStreamConfigurationSessionStorage {
     	      this.root = defaults.root;
         }
 
-        public Builder setMode(@Nullable List<LaunchProfileStreamingSessionStorageMode> mode) {
+        public Builder mode(@Nullable List<LaunchProfileStreamingSessionStorageMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setRoot(@Nullable LaunchProfileStreamingSessionStorageRoot root) {
+        public Builder root(@Nullable LaunchProfileStreamingSessionStorageRoot root) {
             this.root = root;
             return this;
         }

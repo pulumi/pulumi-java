@@ -37,13 +37,13 @@ public final class EndpointAuthenticationOption {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"activeDirectoryId","rootCertificateChainArn","samlProviderArn","selfServiceSamlProviderArn","type"})
+    @OutputCustomType.Constructor
     private EndpointAuthenticationOption(
-        @Nullable String activeDirectoryId,
-        @Nullable String rootCertificateChainArn,
-        @Nullable String samlProviderArn,
-        @Nullable String selfServiceSamlProviderArn,
-        String type) {
+        @OutputCustomType.Parameter("activeDirectoryId") @Nullable String activeDirectoryId,
+        @OutputCustomType.Parameter("rootCertificateChainArn") @Nullable String rootCertificateChainArn,
+        @OutputCustomType.Parameter("samlProviderArn") @Nullable String samlProviderArn,
+        @OutputCustomType.Parameter("selfServiceSamlProviderArn") @Nullable String selfServiceSamlProviderArn,
+        @OutputCustomType.Parameter("type") String type) {
         this.activeDirectoryId = activeDirectoryId;
         this.rootCertificateChainArn = rootCertificateChainArn;
         this.samlProviderArn = samlProviderArn;
@@ -115,27 +115,27 @@ public final class EndpointAuthenticationOption {
     	      this.type = defaults.type;
         }
 
-        public Builder setActiveDirectoryId(@Nullable String activeDirectoryId) {
+        public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
             this.activeDirectoryId = activeDirectoryId;
             return this;
         }
 
-        public Builder setRootCertificateChainArn(@Nullable String rootCertificateChainArn) {
+        public Builder rootCertificateChainArn(@Nullable String rootCertificateChainArn) {
             this.rootCertificateChainArn = rootCertificateChainArn;
             return this;
         }
 
-        public Builder setSamlProviderArn(@Nullable String samlProviderArn) {
+        public Builder samlProviderArn(@Nullable String samlProviderArn) {
             this.samlProviderArn = samlProviderArn;
             return this;
         }
 
-        public Builder setSelfServiceSamlProviderArn(@Nullable String selfServiceSamlProviderArn) {
+        public Builder selfServiceSamlProviderArn(@Nullable String selfServiceSamlProviderArn) {
             this.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

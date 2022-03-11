@@ -176,47 +176,47 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
     	      this.timezone = defaults.timezone;
         }
 
-        public Builder setDimensionList(@Nullable List<String> dimensionList) {
+        public Builder dimensionList(@Nullable List<String> dimensionList) {
             this.dimensionList = dimensionList;
             return this;
         }
 
-        public Builder setMetricList(List<AnomalyDetectorMetric> metricList) {
+        public Builder metricList(List<AnomalyDetectorMetric> metricList) {
             this.metricList = Objects.requireNonNull(metricList);
             return this;
         }
 
-        public Builder setMetricSetDescription(@Nullable String metricSetDescription) {
+        public Builder metricSetDescription(@Nullable String metricSetDescription) {
             this.metricSetDescription = metricSetDescription;
             return this;
         }
 
-        public Builder setMetricSetFrequency(@Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
+        public Builder metricSetFrequency(@Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
             this.metricSetFrequency = metricSetFrequency;
             return this;
         }
 
-        public Builder setMetricSetName(String metricSetName) {
+        public Builder metricSetName(String metricSetName) {
             this.metricSetName = Objects.requireNonNull(metricSetName);
             return this;
         }
 
-        public Builder setMetricSource(AnomalyDetectorMetricSource metricSource) {
+        public Builder metricSource(AnomalyDetectorMetricSource metricSource) {
             this.metricSource = Objects.requireNonNull(metricSource);
             return this;
         }
 
-        public Builder setOffset(@Nullable Integer offset) {
+        public Builder offset(@Nullable Integer offset) {
             this.offset = offset;
             return this;
         }
 
-        public Builder setTimestampColumn(@Nullable AnomalyDetectorTimestampColumn timestampColumn) {
+        public Builder timestampColumn(@Nullable AnomalyDetectorTimestampColumn timestampColumn) {
             this.timestampColumn = timestampColumn;
             return this;
         }
 
-        public Builder setTimezone(@Nullable String timezone) {
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }

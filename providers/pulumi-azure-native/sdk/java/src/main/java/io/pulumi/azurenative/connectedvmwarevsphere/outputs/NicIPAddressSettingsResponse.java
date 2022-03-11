@@ -25,11 +25,11 @@ public final class NicIPAddressSettingsResponse {
      */
     private final String subnetMask;
 
-    @OutputCustomType.Constructor({"allocationMethod","ipAddress","subnetMask"})
+    @OutputCustomType.Constructor
     private NicIPAddressSettingsResponse(
-        String allocationMethod,
-        String ipAddress,
-        String subnetMask) {
+        @OutputCustomType.Parameter("allocationMethod") String allocationMethod,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("subnetMask") String subnetMask) {
         this.allocationMethod = allocationMethod;
         this.ipAddress = ipAddress;
         this.subnetMask = subnetMask;
@@ -81,17 +81,17 @@ public final class NicIPAddressSettingsResponse {
     	      this.subnetMask = defaults.subnetMask;
         }
 
-        public Builder setAllocationMethod(String allocationMethod) {
+        public Builder allocationMethod(String allocationMethod) {
             this.allocationMethod = Objects.requireNonNull(allocationMethod);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setSubnetMask(String subnetMask) {
+        public Builder subnetMask(String subnetMask) {
             this.subnetMask = Objects.requireNonNull(subnetMask);
             return this;
         }

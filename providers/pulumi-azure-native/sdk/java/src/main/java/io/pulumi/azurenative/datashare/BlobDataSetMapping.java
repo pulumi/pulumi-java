@@ -265,7 +265,7 @@ public class BlobDataSetMapping extends io.pulumi.resources.CustomResource {
     private static BlobDataSetMappingArgs makeArgs(BlobDataSetMappingArgs args) {
         var builder = args == null ? BlobDataSetMappingArgs.builder() : BlobDataSetMappingArgs.builder(args);
         return builder
-            .setKind("Blob")
+            .kind("Blob")
             .build();
     }
 

@@ -15,8 +15,8 @@ public final class MonitoringSubscriptionMonitoringSubscription {
      */
     private final MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig realtimeMetricsSubscriptionConfig;
 
-    @OutputCustomType.Constructor({"realtimeMetricsSubscriptionConfig"})
-    private MonitoringSubscriptionMonitoringSubscription(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig realtimeMetricsSubscriptionConfig) {
+    @OutputCustomType.Constructor
+    private MonitoringSubscriptionMonitoringSubscription(@OutputCustomType.Parameter("realtimeMetricsSubscriptionConfig") MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig realtimeMetricsSubscriptionConfig) {
         this.realtimeMetricsSubscriptionConfig = realtimeMetricsSubscriptionConfig;
     }
 
@@ -48,7 +48,7 @@ public final class MonitoringSubscriptionMonitoringSubscription {
     	      this.realtimeMetricsSubscriptionConfig = defaults.realtimeMetricsSubscriptionConfig;
         }
 
-        public Builder setRealtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig realtimeMetricsSubscriptionConfig) {
+        public Builder realtimeMetricsSubscriptionConfig(MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig realtimeMetricsSubscriptionConfig) {
             this.realtimeMetricsSubscriptionConfig = Objects.requireNonNull(realtimeMetricsSubscriptionConfig);
             return this;
         }

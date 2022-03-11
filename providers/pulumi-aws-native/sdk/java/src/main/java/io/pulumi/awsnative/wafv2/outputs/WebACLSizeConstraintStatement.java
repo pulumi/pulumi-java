@@ -18,12 +18,12 @@ public final class WebACLSizeConstraintStatement {
     private final Double size;
     private final List<WebACLTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"comparisonOperator","fieldToMatch","size","textTransformations"})
+    @OutputCustomType.Constructor
     private WebACLSizeConstraintStatement(
-        WebACLSizeConstraintStatementComparisonOperator comparisonOperator,
-        WebACLFieldToMatch fieldToMatch,
-        Double size,
-        List<WebACLTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("comparisonOperator") WebACLSizeConstraintStatementComparisonOperator comparisonOperator,
+        @OutputCustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("size") Double size,
+        @OutputCustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
         this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
         this.size = size;
@@ -69,22 +69,22 @@ public final class WebACLSizeConstraintStatement {
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setComparisonOperator(WebACLSizeConstraintStatementComparisonOperator comparisonOperator) {
+        public Builder comparisonOperator(WebACLSizeConstraintStatementComparisonOperator comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
-        public Builder setFieldToMatch(WebACLFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(WebACLFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setSize(Double size) {
+        public Builder size(Double size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setTextTransformations(List<WebACLTextTransformation> textTransformations) {
+        public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }

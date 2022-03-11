@@ -15,11 +15,11 @@ public final class JobOutputLocation {
     private final @Nullable String bucketOwner;
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"bucket","bucketOwner","key"})
+    @OutputCustomType.Constructor
     private JobOutputLocation(
-        String bucket,
-        @Nullable String bucketOwner,
-        @Nullable String key) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("bucketOwner") @Nullable String bucketOwner,
+        @OutputCustomType.Parameter("key") @Nullable String key) {
         this.bucket = bucket;
         this.bucketOwner = bucketOwner;
         this.key = key;
@@ -59,17 +59,17 @@ public final class JobOutputLocation {
     	      this.key = defaults.key;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucketOwner(@Nullable String bucketOwner) {
+        public Builder bucketOwner(@Nullable String bucketOwner) {
             this.bucketOwner = bucketOwner;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

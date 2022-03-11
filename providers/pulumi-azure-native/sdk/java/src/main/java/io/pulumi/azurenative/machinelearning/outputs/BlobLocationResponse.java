@@ -22,10 +22,10 @@ public final class BlobLocationResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"credentials","uri"})
+    @OutputCustomType.Constructor
     private BlobLocationResponse(
-        @Nullable String credentials,
-        String uri) {
+        @OutputCustomType.Parameter("credentials") @Nullable String credentials,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.credentials = credentials;
         this.uri = uri;
     }
@@ -67,12 +67,12 @@ public final class BlobLocationResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setCredentials(@Nullable String credentials) {
+        public Builder credentials(@Nullable String credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

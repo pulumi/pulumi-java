@@ -53,16 +53,16 @@ public final class CutoverJobResponse {
      */
     private final String stateTime;
 
-    @OutputCustomType.Constructor({"computeEngineTargetDetails","createTime","error","name","progressPercent","state","stateMessage","stateTime"})
+    @OutputCustomType.Constructor
     private CutoverJobResponse(
-        ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
-        String createTime,
-        StatusResponse error,
-        String name,
-        Integer progressPercent,
-        String state,
-        String stateMessage,
-        String stateTime) {
+        @OutputCustomType.Parameter("computeEngineTargetDetails") ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateMessage") String stateMessage,
+        @OutputCustomType.Parameter("stateTime") String stateTime) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
         this.createTime = createTime;
         this.error = error;
@@ -164,42 +164,42 @@ public final class CutoverJobResponse {
     	      this.stateTime = defaults.stateTime;
         }
 
-        public Builder setComputeEngineTargetDetails(ComputeEngineTargetDetailsResponse computeEngineTargetDetails) {
+        public Builder computeEngineTargetDetails(ComputeEngineTargetDetailsResponse computeEngineTargetDetails) {
             this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProgressPercent(Integer progressPercent) {
+        public Builder progressPercent(Integer progressPercent) {
             this.progressPercent = Objects.requireNonNull(progressPercent);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateMessage(String stateMessage) {
+        public Builder stateMessage(String stateMessage) {
             this.stateMessage = Objects.requireNonNull(stateMessage);
             return this;
         }
 
-        public Builder setStateTime(String stateTime) {
+        public Builder stateTime(String stateTime) {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }

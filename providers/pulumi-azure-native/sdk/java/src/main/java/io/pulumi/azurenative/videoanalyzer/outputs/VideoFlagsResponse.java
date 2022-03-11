@@ -25,11 +25,11 @@ public final class VideoFlagsResponse {
      */
     private final Boolean isRecording;
 
-    @OutputCustomType.Constructor({"canStream","hasData","isRecording"})
+    @OutputCustomType.Constructor
     private VideoFlagsResponse(
-        Boolean canStream,
-        Boolean hasData,
-        Boolean isRecording) {
+        @OutputCustomType.Parameter("canStream") Boolean canStream,
+        @OutputCustomType.Parameter("hasData") Boolean hasData,
+        @OutputCustomType.Parameter("isRecording") Boolean isRecording) {
         this.canStream = canStream;
         this.hasData = hasData;
         this.isRecording = isRecording;
@@ -81,17 +81,17 @@ public final class VideoFlagsResponse {
     	      this.isRecording = defaults.isRecording;
         }
 
-        public Builder setCanStream(Boolean canStream) {
+        public Builder canStream(Boolean canStream) {
             this.canStream = Objects.requireNonNull(canStream);
             return this;
         }
 
-        public Builder setHasData(Boolean hasData) {
+        public Builder hasData(Boolean hasData) {
             this.hasData = Objects.requireNonNull(hasData);
             return this;
         }
 
-        public Builder setIsRecording(Boolean isRecording) {
+        public Builder isRecording(Boolean isRecording) {
             this.isRecording = Objects.requireNonNull(isRecording);
             return this;
         }

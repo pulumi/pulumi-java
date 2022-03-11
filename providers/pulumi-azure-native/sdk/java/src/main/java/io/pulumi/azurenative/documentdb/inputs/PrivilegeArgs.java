@@ -76,22 +76,22 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setActions(@Nullable Input<List<String>> actions) {
+        public Builder actions(@Nullable Input<List<String>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<String> actions) {
+        public Builder actions(@Nullable List<String> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setResource(@Nullable Input<PrivilegeResourceArgs> resource) {
+        public Builder resource(@Nullable Input<PrivilegeResourceArgs> resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResource(@Nullable PrivilegeResourceArgs resource) {
+        public Builder resource(@Nullable PrivilegeResourceArgs resource) {
             this.resource = Input.ofNullable(resource);
             return this;
         }

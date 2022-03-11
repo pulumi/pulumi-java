@@ -25,11 +25,11 @@ public final class RoleRef {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"apiGroup","kind","name"})
+    @OutputCustomType.Constructor
     private RoleRef(
-        String apiGroup,
-        String kind,
-        String name) {
+        @OutputCustomType.Parameter("apiGroup") String apiGroup,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name) {
         this.apiGroup = apiGroup;
         this.kind = kind;
         this.name = name;
@@ -81,17 +81,17 @@ public final class RoleRef {
     	      this.name = defaults.name;
         }
 
-        public Builder setApiGroup(String apiGroup) {
+        public Builder apiGroup(String apiGroup) {
             this.apiGroup = Objects.requireNonNull(apiGroup);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

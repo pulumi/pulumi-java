@@ -42,14 +42,14 @@ public final class CloudTieringSpaceSavingsResponse {
      */
     private final Double volumeSizeBytes;
 
-    @OutputCustomType.Constructor({"cachedSizeBytes","lastUpdatedTimestamp","spaceSavingsBytes","spaceSavingsPercent","totalSizeCloudBytes","volumeSizeBytes"})
+    @OutputCustomType.Constructor
     private CloudTieringSpaceSavingsResponse(
-        Double cachedSizeBytes,
-        String lastUpdatedTimestamp,
-        Double spaceSavingsBytes,
-        Integer spaceSavingsPercent,
-        Double totalSizeCloudBytes,
-        Double volumeSizeBytes) {
+        @OutputCustomType.Parameter("cachedSizeBytes") Double cachedSizeBytes,
+        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @OutputCustomType.Parameter("spaceSavingsBytes") Double spaceSavingsBytes,
+        @OutputCustomType.Parameter("spaceSavingsPercent") Integer spaceSavingsPercent,
+        @OutputCustomType.Parameter("totalSizeCloudBytes") Double totalSizeCloudBytes,
+        @OutputCustomType.Parameter("volumeSizeBytes") Double volumeSizeBytes) {
         this.cachedSizeBytes = cachedSizeBytes;
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         this.spaceSavingsBytes = spaceSavingsBytes;
@@ -131,32 +131,32 @@ public final class CloudTieringSpaceSavingsResponse {
     	      this.volumeSizeBytes = defaults.volumeSizeBytes;
         }
 
-        public Builder setCachedSizeBytes(Double cachedSizeBytes) {
+        public Builder cachedSizeBytes(Double cachedSizeBytes) {
             this.cachedSizeBytes = Objects.requireNonNull(cachedSizeBytes);
             return this;
         }
 
-        public Builder setLastUpdatedTimestamp(String lastUpdatedTimestamp) {
+        public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
 
-        public Builder setSpaceSavingsBytes(Double spaceSavingsBytes) {
+        public Builder spaceSavingsBytes(Double spaceSavingsBytes) {
             this.spaceSavingsBytes = Objects.requireNonNull(spaceSavingsBytes);
             return this;
         }
 
-        public Builder setSpaceSavingsPercent(Integer spaceSavingsPercent) {
+        public Builder spaceSavingsPercent(Integer spaceSavingsPercent) {
             this.spaceSavingsPercent = Objects.requireNonNull(spaceSavingsPercent);
             return this;
         }
 
-        public Builder setTotalSizeCloudBytes(Double totalSizeCloudBytes) {
+        public Builder totalSizeCloudBytes(Double totalSizeCloudBytes) {
             this.totalSizeCloudBytes = Objects.requireNonNull(totalSizeCloudBytes);
             return this;
         }
 
-        public Builder setVolumeSizeBytes(Double volumeSizeBytes) {
+        public Builder volumeSizeBytes(Double volumeSizeBytes) {
             this.volumeSizeBytes = Objects.requireNonNull(volumeSizeBytes);
             return this;
         }

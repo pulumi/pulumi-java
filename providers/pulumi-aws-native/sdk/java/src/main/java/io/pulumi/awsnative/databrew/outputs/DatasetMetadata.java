@@ -17,8 +17,8 @@ public final class DatasetMetadata {
      */
     private final @Nullable String sourceArn;
 
-    @OutputCustomType.Constructor({"sourceArn"})
-    private DatasetMetadata(@Nullable String sourceArn) {
+    @OutputCustomType.Constructor
+    private DatasetMetadata(@OutputCustomType.Parameter("sourceArn") @Nullable String sourceArn) {
         this.sourceArn = sourceArn;
     }
 
@@ -50,7 +50,7 @@ public final class DatasetMetadata {
     	      this.sourceArn = defaults.sourceArn;
         }
 
-        public Builder setSourceArn(@Nullable String sourceArn) {
+        public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }

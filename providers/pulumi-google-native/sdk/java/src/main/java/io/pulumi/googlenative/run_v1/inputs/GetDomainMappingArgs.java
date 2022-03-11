@@ -74,17 +74,17 @@ public final class GetDomainMappingArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDomainmappingId(String domainmappingId) {
+        public Builder domainmappingId(String domainmappingId) {
             this.domainmappingId = Objects.requireNonNull(domainmappingId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

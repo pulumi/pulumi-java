@@ -23,10 +23,10 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermission {
      */
     private final @Nullable String principal;
 
-    @OutputCustomType.Constructor({"permissions","principal"})
+    @OutputCustomType.Constructor
     private DataLakeSettingsCreateDatabaseDefaultPermission(
-        @Nullable List<String> permissions,
-        @Nullable String principal) {
+        @OutputCustomType.Parameter("permissions") @Nullable List<String> permissions,
+        @OutputCustomType.Parameter("principal") @Nullable String principal) {
         this.permissions = permissions;
         this.principal = principal;
     }
@@ -68,12 +68,12 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermission {
     	      this.principal = defaults.principal;
         }
 
-        public Builder setPermissions(@Nullable List<String> permissions) {
+        public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPrincipal(@Nullable String principal) {
+        public Builder principal(@Nullable String principal) {
             this.principal = principal;
             return this;
         }

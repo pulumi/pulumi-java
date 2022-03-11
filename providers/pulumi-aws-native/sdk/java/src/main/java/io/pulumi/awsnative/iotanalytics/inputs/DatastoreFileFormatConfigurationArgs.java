@@ -63,22 +63,22 @@ public final class DatastoreFileFormatConfigurationArgs extends io.pulumi.resour
     	      this.parquetConfiguration = defaults.parquetConfiguration;
         }
 
-        public Builder setJsonConfiguration(@Nullable Input<DatastoreJsonConfigurationArgs> jsonConfiguration) {
+        public Builder jsonConfiguration(@Nullable Input<DatastoreJsonConfigurationArgs> jsonConfiguration) {
             this.jsonConfiguration = jsonConfiguration;
             return this;
         }
 
-        public Builder setJsonConfiguration(@Nullable DatastoreJsonConfigurationArgs jsonConfiguration) {
+        public Builder jsonConfiguration(@Nullable DatastoreJsonConfigurationArgs jsonConfiguration) {
             this.jsonConfiguration = Input.ofNullable(jsonConfiguration);
             return this;
         }
 
-        public Builder setParquetConfiguration(@Nullable Input<DatastoreParquetConfigurationArgs> parquetConfiguration) {
+        public Builder parquetConfiguration(@Nullable Input<DatastoreParquetConfigurationArgs> parquetConfiguration) {
             this.parquetConfiguration = parquetConfiguration;
             return this;
         }
 
-        public Builder setParquetConfiguration(@Nullable DatastoreParquetConfigurationArgs parquetConfiguration) {
+        public Builder parquetConfiguration(@Nullable DatastoreParquetConfigurationArgs parquetConfiguration) {
             this.parquetConfiguration = Input.ofNullable(parquetConfiguration);
             return this;
         }

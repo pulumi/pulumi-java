@@ -20,10 +20,10 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
      */
     private final String resourceLabel;
 
-    @OutputCustomType.Constructor({"predefinedMetricType","resourceLabel"})
+    @OutputCustomType.Constructor
     private PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification(
-        String predefinedMetricType,
-        String resourceLabel) {
+        @OutputCustomType.Parameter("predefinedMetricType") String predefinedMetricType,
+        @OutputCustomType.Parameter("resourceLabel") String resourceLabel) {
         this.predefinedMetricType = predefinedMetricType;
         this.resourceLabel = resourceLabel;
     }
@@ -65,12 +65,12 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationPredef
     	      this.resourceLabel = defaults.resourceLabel;
         }
 
-        public Builder setPredefinedMetricType(String predefinedMetricType) {
+        public Builder predefinedMetricType(String predefinedMetricType) {
             this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType);
             return this;
         }
 
-        public Builder setResourceLabel(String resourceLabel) {
+        public Builder resourceLabel(String resourceLabel) {
             this.resourceLabel = Objects.requireNonNull(resourceLabel);
             return this;
         }

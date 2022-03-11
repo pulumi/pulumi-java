@@ -106,25 +106,25 @@ public final class GetServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"correlationScheme","defaultMoveCost","etag","id","location","name","partitionDescription","placementConstraints","provisioningState","serviceDnsName","serviceKind","serviceLoadMetrics","servicePackageActivationMode","servicePlacementPolicies","serviceTypeName","tags","type"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable List<ServiceCorrelationDescriptionResponse> correlationScheme,
-        @Nullable String defaultMoveCost,
-        String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable Object partitionDescription,
-        @Nullable String placementConstraints,
-        String provisioningState,
-        @Nullable String serviceDnsName,
-        String serviceKind,
-        @Nullable List<ServiceLoadMetricDescriptionResponse> serviceLoadMetrics,
-        @Nullable String servicePackageActivationMode,
-        @Nullable List<ServicePlacementPolicyDescriptionResponse> servicePlacementPolicies,
-        @Nullable String serviceTypeName,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("correlationScheme") @Nullable List<ServiceCorrelationDescriptionResponse> correlationScheme,
+        @OutputCustomType.Parameter("defaultMoveCost") @Nullable String defaultMoveCost,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partitionDescription") @Nullable Object partitionDescription,
+        @OutputCustomType.Parameter("placementConstraints") @Nullable String placementConstraints,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceDnsName") @Nullable String serviceDnsName,
+        @OutputCustomType.Parameter("serviceKind") String serviceKind,
+        @OutputCustomType.Parameter("serviceLoadMetrics") @Nullable List<ServiceLoadMetricDescriptionResponse> serviceLoadMetrics,
+        @OutputCustomType.Parameter("servicePackageActivationMode") @Nullable String servicePackageActivationMode,
+        @OutputCustomType.Parameter("servicePlacementPolicies") @Nullable List<ServicePlacementPolicyDescriptionResponse> servicePlacementPolicies,
+        @OutputCustomType.Parameter("serviceTypeName") @Nullable String serviceTypeName,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.correlationScheme = correlationScheme;
         this.defaultMoveCost = defaultMoveCost;
         this.etag = etag;
@@ -316,87 +316,87 @@ public final class GetServiceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCorrelationScheme(@Nullable List<ServiceCorrelationDescriptionResponse> correlationScheme) {
+        public Builder correlationScheme(@Nullable List<ServiceCorrelationDescriptionResponse> correlationScheme) {
             this.correlationScheme = correlationScheme;
             return this;
         }
 
-        public Builder setDefaultMoveCost(@Nullable String defaultMoveCost) {
+        public Builder defaultMoveCost(@Nullable String defaultMoveCost) {
             this.defaultMoveCost = defaultMoveCost;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartitionDescription(@Nullable Object partitionDescription) {
+        public Builder partitionDescription(@Nullable Object partitionDescription) {
             this.partitionDescription = partitionDescription;
             return this;
         }
 
-        public Builder setPlacementConstraints(@Nullable String placementConstraints) {
+        public Builder placementConstraints(@Nullable String placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServiceDnsName(@Nullable String serviceDnsName) {
+        public Builder serviceDnsName(@Nullable String serviceDnsName) {
             this.serviceDnsName = serviceDnsName;
             return this;
         }
 
-        public Builder setServiceKind(String serviceKind) {
+        public Builder serviceKind(String serviceKind) {
             this.serviceKind = Objects.requireNonNull(serviceKind);
             return this;
         }
 
-        public Builder setServiceLoadMetrics(@Nullable List<ServiceLoadMetricDescriptionResponse> serviceLoadMetrics) {
+        public Builder serviceLoadMetrics(@Nullable List<ServiceLoadMetricDescriptionResponse> serviceLoadMetrics) {
             this.serviceLoadMetrics = serviceLoadMetrics;
             return this;
         }
 
-        public Builder setServicePackageActivationMode(@Nullable String servicePackageActivationMode) {
+        public Builder servicePackageActivationMode(@Nullable String servicePackageActivationMode) {
             this.servicePackageActivationMode = servicePackageActivationMode;
             return this;
         }
 
-        public Builder setServicePlacementPolicies(@Nullable List<ServicePlacementPolicyDescriptionResponse> servicePlacementPolicies) {
+        public Builder servicePlacementPolicies(@Nullable List<ServicePlacementPolicyDescriptionResponse> servicePlacementPolicies) {
             this.servicePlacementPolicies = servicePlacementPolicies;
             return this;
         }
 
-        public Builder setServiceTypeName(@Nullable String serviceTypeName) {
+        public Builder serviceTypeName(@Nullable String serviceTypeName) {
             this.serviceTypeName = serviceTypeName;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

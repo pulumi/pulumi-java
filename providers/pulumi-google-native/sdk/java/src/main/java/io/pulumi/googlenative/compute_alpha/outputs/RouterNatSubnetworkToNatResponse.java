@@ -26,11 +26,11 @@ public final class RouterNatSubnetworkToNatResponse {
      */
     private final List<String> sourceIpRangesToNat;
 
-    @OutputCustomType.Constructor({"name","secondaryIpRangeNames","sourceIpRangesToNat"})
+    @OutputCustomType.Constructor
     private RouterNatSubnetworkToNatResponse(
-        String name,
-        List<String> secondaryIpRangeNames,
-        List<String> sourceIpRangesToNat) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secondaryIpRangeNames") List<String> secondaryIpRangeNames,
+        @OutputCustomType.Parameter("sourceIpRangesToNat") List<String> sourceIpRangesToNat) {
         this.name = name;
         this.secondaryIpRangeNames = secondaryIpRangeNames;
         this.sourceIpRangesToNat = sourceIpRangesToNat;
@@ -82,17 +82,17 @@ public final class RouterNatSubnetworkToNatResponse {
     	      this.sourceIpRangesToNat = defaults.sourceIpRangesToNat;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecondaryIpRangeNames(List<String> secondaryIpRangeNames) {
+        public Builder secondaryIpRangeNames(List<String> secondaryIpRangeNames) {
             this.secondaryIpRangeNames = Objects.requireNonNull(secondaryIpRangeNames);
             return this;
         }
 
-        public Builder setSourceIpRangesToNat(List<String> sourceIpRangesToNat) {
+        public Builder sourceIpRangesToNat(List<String> sourceIpRangesToNat) {
             this.sourceIpRangesToNat = Objects.requireNonNull(sourceIpRangesToNat);
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ScheduledActionResumeClusterMessage {
     private final String clusterIdentifier;
 
-    @OutputCustomType.Constructor({"clusterIdentifier"})
-    private ScheduledActionResumeClusterMessage(String clusterIdentifier) {
+    @OutputCustomType.Constructor
+    private ScheduledActionResumeClusterMessage(@OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
     }
 
@@ -40,7 +40,7 @@ public final class ScheduledActionResumeClusterMessage {
     	      this.clusterIdentifier = defaults.clusterIdentifier;
         }
 
-        public Builder setClusterIdentifier(String clusterIdentifier) {
+        public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }

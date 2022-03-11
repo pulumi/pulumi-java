@@ -17,8 +17,8 @@ public final class TransitGatewayPeeringAttachmentOptions {
      */
     private final @Nullable String dynamicRouting;
 
-    @OutputCustomType.Constructor({"dynamicRouting"})
-    private TransitGatewayPeeringAttachmentOptions(@Nullable String dynamicRouting) {
+    @OutputCustomType.Constructor
+    private TransitGatewayPeeringAttachmentOptions(@OutputCustomType.Parameter("dynamicRouting") @Nullable String dynamicRouting) {
         this.dynamicRouting = dynamicRouting;
     }
 
@@ -50,7 +50,7 @@ public final class TransitGatewayPeeringAttachmentOptions {
     	      this.dynamicRouting = defaults.dynamicRouting;
         }
 
-        public Builder setDynamicRouting(@Nullable String dynamicRouting) {
+        public Builder dynamicRouting(@Nullable String dynamicRouting) {
             this.dynamicRouting = dynamicRouting;
             return this;
         }

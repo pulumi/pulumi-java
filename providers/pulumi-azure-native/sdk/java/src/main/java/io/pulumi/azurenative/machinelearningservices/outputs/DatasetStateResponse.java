@@ -28,11 +28,11 @@ public final class DatasetStateResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"deprecatedBy","etag","state"})
+    @OutputCustomType.Constructor
     private DatasetStateResponse(
-        @Nullable DatasetStateResponseDeprecatedBy deprecatedBy,
-        String etag,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("deprecatedBy") @Nullable DatasetStateResponseDeprecatedBy deprecatedBy,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.deprecatedBy = deprecatedBy;
         this.etag = etag;
         this.state = state;
@@ -84,17 +84,17 @@ public final class DatasetStateResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setDeprecatedBy(@Nullable DatasetStateResponseDeprecatedBy deprecatedBy) {
+        public Builder deprecatedBy(@Nullable DatasetStateResponseDeprecatedBy deprecatedBy) {
             this.deprecatedBy = deprecatedBy;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

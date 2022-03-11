@@ -26,11 +26,11 @@ public final class MonitoringQueryLanguageConditionResponse {
      */
     private final TriggerResponse trigger;
 
-    @OutputCustomType.Constructor({"duration","query","trigger"})
+    @OutputCustomType.Constructor
     private MonitoringQueryLanguageConditionResponse(
-        String duration,
-        String query,
-        TriggerResponse trigger) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("trigger") TriggerResponse trigger) {
         this.duration = duration;
         this.query = query;
         this.trigger = trigger;
@@ -82,17 +82,17 @@ public final class MonitoringQueryLanguageConditionResponse {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setTrigger(TriggerResponse trigger) {
+        public Builder trigger(TriggerResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }

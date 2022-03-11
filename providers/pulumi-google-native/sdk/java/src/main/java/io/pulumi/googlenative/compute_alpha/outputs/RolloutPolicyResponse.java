@@ -21,10 +21,10 @@ public final class RolloutPolicyResponse {
      */
     private final Map<String,String> locationRolloutPolicies;
 
-    @OutputCustomType.Constructor({"defaultRolloutTime","locationRolloutPolicies"})
+    @OutputCustomType.Constructor
     private RolloutPolicyResponse(
-        String defaultRolloutTime,
-        Map<String,String> locationRolloutPolicies) {
+        @OutputCustomType.Parameter("defaultRolloutTime") String defaultRolloutTime,
+        @OutputCustomType.Parameter("locationRolloutPolicies") Map<String,String> locationRolloutPolicies) {
         this.defaultRolloutTime = defaultRolloutTime;
         this.locationRolloutPolicies = locationRolloutPolicies;
     }
@@ -66,12 +66,12 @@ public final class RolloutPolicyResponse {
     	      this.locationRolloutPolicies = defaults.locationRolloutPolicies;
         }
 
-        public Builder setDefaultRolloutTime(String defaultRolloutTime) {
+        public Builder defaultRolloutTime(String defaultRolloutTime) {
             this.defaultRolloutTime = Objects.requireNonNull(defaultRolloutTime);
             return this;
         }
 
-        public Builder setLocationRolloutPolicies(Map<String,String> locationRolloutPolicies) {
+        public Builder locationRolloutPolicies(Map<String,String> locationRolloutPolicies) {
             this.locationRolloutPolicies = Objects.requireNonNull(locationRolloutPolicies);
             return this;
         }

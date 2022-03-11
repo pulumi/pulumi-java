@@ -105,22 +105,22 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
     	      this.userDefined = defaults.userDefined;
         }
 
-        public Builder setAlias(String alias) {
+        public Builder alias(String alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
 
-        public Builder setEntityType(String entityType) {
+        public Builder entityType(String entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
-        public Builder setUserDefined(Boolean userDefined) {
+        public Builder userDefined(Boolean userDefined) {
             this.userDefined = Objects.requireNonNull(userDefined);
             return this;
         }

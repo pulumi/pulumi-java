@@ -15,8 +15,8 @@ public final class OrganizationPolicyBooleanPolicy {
      */
     private final Boolean enforced;
 
-    @OutputCustomType.Constructor({"enforced"})
-    private OrganizationPolicyBooleanPolicy(Boolean enforced) {
+    @OutputCustomType.Constructor
+    private OrganizationPolicyBooleanPolicy(@OutputCustomType.Parameter("enforced") Boolean enforced) {
         this.enforced = enforced;
     }
 
@@ -48,7 +48,7 @@ public final class OrganizationPolicyBooleanPolicy {
     	      this.enforced = defaults.enforced;
         }
 
-        public Builder setEnforced(Boolean enforced) {
+        public Builder enforced(Boolean enforced) {
             this.enforced = Objects.requireNonNull(enforced);
             return this;
         }

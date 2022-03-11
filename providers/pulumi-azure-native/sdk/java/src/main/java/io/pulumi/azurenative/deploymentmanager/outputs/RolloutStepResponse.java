@@ -46,14 +46,14 @@ public final class RolloutStepResponse {
      */
     private final @Nullable String stepGroup;
 
-    @OutputCustomType.Constructor({"messages","name","operationInfo","resourceOperations","status","stepGroup"})
+    @OutputCustomType.Constructor
     private RolloutStepResponse(
-        List<MessageResponse> messages,
-        String name,
-        StepOperationInfoResponse operationInfo,
-        List<ResourceOperationResponse> resourceOperations,
-        String status,
-        @Nullable String stepGroup) {
+        @OutputCustomType.Parameter("messages") List<MessageResponse> messages,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationInfo") StepOperationInfoResponse operationInfo,
+        @OutputCustomType.Parameter("resourceOperations") List<ResourceOperationResponse> resourceOperations,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("stepGroup") @Nullable String stepGroup) {
         this.messages = messages;
         this.name = name;
         this.operationInfo = operationInfo;
@@ -135,32 +135,32 @@ public final class RolloutStepResponse {
     	      this.stepGroup = defaults.stepGroup;
         }
 
-        public Builder setMessages(List<MessageResponse> messages) {
+        public Builder messages(List<MessageResponse> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperationInfo(StepOperationInfoResponse operationInfo) {
+        public Builder operationInfo(StepOperationInfoResponse operationInfo) {
             this.operationInfo = Objects.requireNonNull(operationInfo);
             return this;
         }
 
-        public Builder setResourceOperations(List<ResourceOperationResponse> resourceOperations) {
+        public Builder resourceOperations(List<ResourceOperationResponse> resourceOperations) {
             this.resourceOperations = Objects.requireNonNull(resourceOperations);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStepGroup(@Nullable String stepGroup) {
+        public Builder stepGroup(@Nullable String stepGroup) {
             this.stepGroup = stepGroup;
             return this;
         }

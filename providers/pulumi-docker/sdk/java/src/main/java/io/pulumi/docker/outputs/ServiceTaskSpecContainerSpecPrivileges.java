@@ -15,10 +15,10 @@ public final class ServiceTaskSpecContainerSpecPrivileges {
     private final @Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpec credentialSpec;
     private final @Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext;
 
-    @OutputCustomType.Constructor({"credentialSpec","seLinuxContext"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecPrivileges(
-        @Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpec credentialSpec,
-        @Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext) {
+        @OutputCustomType.Parameter("credentialSpec") @Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpec credentialSpec,
+        @OutputCustomType.Parameter("seLinuxContext") @Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext) {
         this.credentialSpec = credentialSpec;
         this.seLinuxContext = seLinuxContext;
     }
@@ -52,12 +52,12 @@ public final class ServiceTaskSpecContainerSpecPrivileges {
     	      this.seLinuxContext = defaults.seLinuxContext;
         }
 
-        public Builder setCredentialSpec(@Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpec credentialSpec) {
+        public Builder credentialSpec(@Nullable ServiceTaskSpecContainerSpecPrivilegesCredentialSpec credentialSpec) {
             this.credentialSpec = credentialSpec;
             return this;
         }
 
-        public Builder setSeLinuxContext(@Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext) {
+        public Builder seLinuxContext(@Nullable ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext seLinuxContext) {
             this.seLinuxContext = seLinuxContext;
             return this;
         }

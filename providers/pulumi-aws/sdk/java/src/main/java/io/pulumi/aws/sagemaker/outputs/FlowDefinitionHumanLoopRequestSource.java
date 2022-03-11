@@ -15,8 +15,8 @@ public final class FlowDefinitionHumanLoopRequestSource {
      */
     private final String awsManagedHumanLoopRequestSource;
 
-    @OutputCustomType.Constructor({"awsManagedHumanLoopRequestSource"})
-    private FlowDefinitionHumanLoopRequestSource(String awsManagedHumanLoopRequestSource) {
+    @OutputCustomType.Constructor
+    private FlowDefinitionHumanLoopRequestSource(@OutputCustomType.Parameter("awsManagedHumanLoopRequestSource") String awsManagedHumanLoopRequestSource) {
         this.awsManagedHumanLoopRequestSource = awsManagedHumanLoopRequestSource;
     }
 
@@ -48,7 +48,7 @@ public final class FlowDefinitionHumanLoopRequestSource {
     	      this.awsManagedHumanLoopRequestSource = defaults.awsManagedHumanLoopRequestSource;
         }
 
-        public Builder setAwsManagedHumanLoopRequestSource(String awsManagedHumanLoopRequestSource) {
+        public Builder awsManagedHumanLoopRequestSource(String awsManagedHumanLoopRequestSource) {
             this.awsManagedHumanLoopRequestSource = Objects.requireNonNull(awsManagedHumanLoopRequestSource);
             return this;
         }

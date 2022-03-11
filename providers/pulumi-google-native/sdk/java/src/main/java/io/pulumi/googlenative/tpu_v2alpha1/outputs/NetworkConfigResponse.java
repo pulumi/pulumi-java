@@ -31,12 +31,12 @@ public final class NetworkConfigResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"canIpForward","enableExternalIps","network","subnetwork"})
+    @OutputCustomType.Constructor
     private NetworkConfigResponse(
-        Boolean canIpForward,
-        Boolean enableExternalIps,
-        String network,
-        String subnetwork) {
+        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
+        @OutputCustomType.Parameter("enableExternalIps") Boolean enableExternalIps,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.canIpForward = canIpForward;
         this.enableExternalIps = enableExternalIps;
         this.network = network;
@@ -98,22 +98,22 @@ public final class NetworkConfigResponse {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setCanIpForward(Boolean canIpForward) {
+        public Builder canIpForward(Boolean canIpForward) {
             this.canIpForward = Objects.requireNonNull(canIpForward);
             return this;
         }
 
-        public Builder setEnableExternalIps(Boolean enableExternalIps) {
+        public Builder enableExternalIps(Boolean enableExternalIps) {
             this.enableExternalIps = Objects.requireNonNull(enableExternalIps);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }

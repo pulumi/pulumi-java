@@ -15,8 +15,8 @@ public final class IapTestServiceAccountInfoResponse {
      */
     private final String targetAudienceClientId;
 
-    @OutputCustomType.Constructor({"targetAudienceClientId"})
-    private IapTestServiceAccountInfoResponse(String targetAudienceClientId) {
+    @OutputCustomType.Constructor
+    private IapTestServiceAccountInfoResponse(@OutputCustomType.Parameter("targetAudienceClientId") String targetAudienceClientId) {
         this.targetAudienceClientId = targetAudienceClientId;
     }
 
@@ -48,7 +48,7 @@ public final class IapTestServiceAccountInfoResponse {
     	      this.targetAudienceClientId = defaults.targetAudienceClientId;
         }
 
-        public Builder setTargetAudienceClientId(String targetAudienceClientId) {
+        public Builder targetAudienceClientId(String targetAudienceClientId) {
             this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId);
             return this;
         }

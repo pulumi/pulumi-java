@@ -120,27 +120,27 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
     	      this.privateIpAddress = defaults.privateIpAddress;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinkIdentifier(String linkIdentifier) {
+        public Builder linkIdentifier(String linkIdentifier) {
             this.linkIdentifier = Objects.requireNonNull(linkIdentifier);
             return this;
         }
 
-        public Builder setMemberName(String memberName) {
+        public Builder memberName(String memberName) {
             this.memberName = Objects.requireNonNull(memberName);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }

@@ -38,11 +38,11 @@ public final class URLMapDefaultRouteActionWeightedBackendService {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"backendService","headerAction","weight"})
+    @OutputCustomType.Constructor
     private URLMapDefaultRouteActionWeightedBackendService(
-        @Nullable String backendService,
-        @Nullable URLMapDefaultRouteActionWeightedBackendServiceHeaderAction headerAction,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("backendService") @Nullable String backendService,
+        @OutputCustomType.Parameter("headerAction") @Nullable URLMapDefaultRouteActionWeightedBackendServiceHeaderAction headerAction,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.backendService = backendService;
         this.headerAction = headerAction;
         this.weight = weight;
@@ -103,17 +103,17 @@ public final class URLMapDefaultRouteActionWeightedBackendService {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setBackendService(@Nullable String backendService) {
+        public Builder backendService(@Nullable String backendService) {
             this.backendService = backendService;
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable URLMapDefaultRouteActionWeightedBackendServiceHeaderAction headerAction) {
+        public Builder headerAction(@Nullable URLMapDefaultRouteActionWeightedBackendServiceHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DatasetTriggeringDataset {
     private final String datasetName;
 
-    @OutputCustomType.Constructor({"datasetName"})
-    private DatasetTriggeringDataset(String datasetName) {
+    @OutputCustomType.Constructor
+    private DatasetTriggeringDataset(@OutputCustomType.Parameter("datasetName") String datasetName) {
         this.datasetName = datasetName;
     }
 
@@ -40,7 +40,7 @@ public final class DatasetTriggeringDataset {
     	      this.datasetName = defaults.datasetName;
         }
 
-        public Builder setDatasetName(String datasetName) {
+        public Builder datasetName(String datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }

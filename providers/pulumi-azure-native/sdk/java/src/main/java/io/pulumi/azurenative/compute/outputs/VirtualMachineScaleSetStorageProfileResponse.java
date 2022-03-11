@@ -30,11 +30,11 @@ public final class VirtualMachineScaleSetStorageProfileResponse {
      */
     private final @Nullable VirtualMachineScaleSetOSDiskResponse osDisk;
 
-    @OutputCustomType.Constructor({"dataDisks","imageReference","osDisk"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetStorageProfileResponse(
-        @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks,
-        @Nullable ImageReferenceResponse imageReference,
-        @Nullable VirtualMachineScaleSetOSDiskResponse osDisk) {
+        @OutputCustomType.Parameter("dataDisks") @Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks,
+        @OutputCustomType.Parameter("imageReference") @Nullable ImageReferenceResponse imageReference,
+        @OutputCustomType.Parameter("osDisk") @Nullable VirtualMachineScaleSetOSDiskResponse osDisk) {
         this.dataDisks = dataDisks;
         this.imageReference = imageReference;
         this.osDisk = osDisk;
@@ -86,17 +86,17 @@ public final class VirtualMachineScaleSetStorageProfileResponse {
     	      this.osDisk = defaults.osDisk;
         }
 
-        public Builder setDataDisks(@Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks) {
+        public Builder dataDisks(@Nullable List<VirtualMachineScaleSetDataDiskResponse> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setImageReference(@Nullable ImageReferenceResponse imageReference) {
+        public Builder imageReference(@Nullable ImageReferenceResponse imageReference) {
             this.imageReference = imageReference;
             return this;
         }
 
-        public Builder setOsDisk(@Nullable VirtualMachineScaleSetOSDiskResponse osDisk) {
+        public Builder osDisk(@Nullable VirtualMachineScaleSetOSDiskResponse osDisk) {
             this.osDisk = osDisk;
             return this;
         }

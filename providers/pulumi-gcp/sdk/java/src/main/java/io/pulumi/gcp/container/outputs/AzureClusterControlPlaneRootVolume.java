@@ -17,8 +17,8 @@ public final class AzureClusterControlPlaneRootVolume {
      */
     private final @Nullable Integer sizeGib;
 
-    @OutputCustomType.Constructor({"sizeGib"})
-    private AzureClusterControlPlaneRootVolume(@Nullable Integer sizeGib) {
+    @OutputCustomType.Constructor
+    private AzureClusterControlPlaneRootVolume(@OutputCustomType.Parameter("sizeGib") @Nullable Integer sizeGib) {
         this.sizeGib = sizeGib;
     }
 
@@ -50,7 +50,7 @@ public final class AzureClusterControlPlaneRootVolume {
     	      this.sizeGib = defaults.sizeGib;
         }
 
-        public Builder setSizeGib(@Nullable Integer sizeGib) {
+        public Builder sizeGib(@Nullable Integer sizeGib) {
             this.sizeGib = sizeGib;
             return this;
         }

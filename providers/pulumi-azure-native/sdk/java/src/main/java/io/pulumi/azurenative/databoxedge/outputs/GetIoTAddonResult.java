@@ -68,19 +68,19 @@ public final class GetIoTAddonResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"hostPlatform","hostPlatformType","id","ioTDeviceDetails","ioTEdgeDeviceDetails","kind","name","provisioningState","systemData","type","version"})
+    @OutputCustomType.Constructor
     private GetIoTAddonResult(
-        String hostPlatform,
-        String hostPlatformType,
-        String id,
-        IoTDeviceInfoResponse ioTDeviceDetails,
-        IoTDeviceInfoResponse ioTEdgeDeviceDetails,
-        String kind,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("hostPlatform") String hostPlatform,
+        @OutputCustomType.Parameter("hostPlatformType") String hostPlatformType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ioTDeviceDetails") IoTDeviceInfoResponse ioTDeviceDetails,
+        @OutputCustomType.Parameter("ioTEdgeDeviceDetails") IoTDeviceInfoResponse ioTEdgeDeviceDetails,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.hostPlatform = hostPlatform;
         this.hostPlatformType = hostPlatformType;
         this.id = id;
@@ -213,57 +213,57 @@ public final class GetIoTAddonResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setHostPlatform(String hostPlatform) {
+        public Builder hostPlatform(String hostPlatform) {
             this.hostPlatform = Objects.requireNonNull(hostPlatform);
             return this;
         }
 
-        public Builder setHostPlatformType(String hostPlatformType) {
+        public Builder hostPlatformType(String hostPlatformType) {
             this.hostPlatformType = Objects.requireNonNull(hostPlatformType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIoTDeviceDetails(IoTDeviceInfoResponse ioTDeviceDetails) {
+        public Builder ioTDeviceDetails(IoTDeviceInfoResponse ioTDeviceDetails) {
             this.ioTDeviceDetails = Objects.requireNonNull(ioTDeviceDetails);
             return this;
         }
 
-        public Builder setIoTEdgeDeviceDetails(IoTDeviceInfoResponse ioTEdgeDeviceDetails) {
+        public Builder ioTEdgeDeviceDetails(IoTDeviceInfoResponse ioTEdgeDeviceDetails) {
             this.ioTEdgeDeviceDetails = Objects.requireNonNull(ioTEdgeDeviceDetails);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

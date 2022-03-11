@@ -21,10 +21,10 @@ public final class ResourceManifestResponse {
      */
     private final String manifest;
 
-    @OutputCustomType.Constructor({"clusterScoped","manifest"})
+    @OutputCustomType.Constructor
     private ResourceManifestResponse(
-        Boolean clusterScoped,
-        String manifest) {
+        @OutputCustomType.Parameter("clusterScoped") Boolean clusterScoped,
+        @OutputCustomType.Parameter("manifest") String manifest) {
         this.clusterScoped = clusterScoped;
         this.manifest = manifest;
     }
@@ -66,12 +66,12 @@ public final class ResourceManifestResponse {
     	      this.manifest = defaults.manifest;
         }
 
-        public Builder setClusterScoped(Boolean clusterScoped) {
+        public Builder clusterScoped(Boolean clusterScoped) {
             this.clusterScoped = Objects.requireNonNull(clusterScoped);
             return this;
         }
 
-        public Builder setManifest(String manifest) {
+        public Builder manifest(String manifest) {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }

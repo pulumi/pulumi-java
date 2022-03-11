@@ -237,7 +237,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
     private static ScheduledTriggerArgs makeArgs(ScheduledTriggerArgs args) {
         var builder = args == null ? ScheduledTriggerArgs.builder() : ScheduledTriggerArgs.builder(args);
         return builder
-            .setKind("ScheduleBased")
+            .kind("ScheduleBased")
             .build();
     }
 

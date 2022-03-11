@@ -19,10 +19,10 @@ public final class DetectorModelSns {
      */
     private final String targetArn;
 
-    @OutputCustomType.Constructor({"payload","targetArn"})
+    @OutputCustomType.Constructor
     private DetectorModelSns(
-        @Nullable DetectorModelPayload payload,
-        String targetArn) {
+        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
+        @OutputCustomType.Parameter("targetArn") String targetArn) {
         this.payload = payload;
         this.targetArn = targetArn;
     }
@@ -60,12 +60,12 @@ public final class DetectorModelSns {
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayload payload) {
+        public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setTargetArn(String targetArn) {
+        public Builder targetArn(String targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }

@@ -31,11 +31,11 @@ public final class AzureBlobStorageHttpLogsConfigResponse {
      */
     private final @Nullable String sasUrl;
 
-    @OutputCustomType.Constructor({"enabled","retentionInDays","sasUrl"})
+    @OutputCustomType.Constructor
     private AzureBlobStorageHttpLogsConfigResponse(
-        @Nullable Boolean enabled,
-        @Nullable Integer retentionInDays,
-        @Nullable String sasUrl) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @OutputCustomType.Parameter("sasUrl") @Nullable String sasUrl) {
         this.enabled = enabled;
         this.retentionInDays = retentionInDays;
         this.sasUrl = sasUrl;
@@ -89,17 +89,17 @@ public final class AzureBlobStorageHttpLogsConfigResponse {
     	      this.sasUrl = defaults.sasUrl;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setSasUrl(@Nullable String sasUrl) {
+        public Builder sasUrl(@Nullable String sasUrl) {
             this.sasUrl = sasUrl;
             return this;
         }

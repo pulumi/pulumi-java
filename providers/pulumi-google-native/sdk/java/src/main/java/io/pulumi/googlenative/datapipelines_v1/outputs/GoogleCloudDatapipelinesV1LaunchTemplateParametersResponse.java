@@ -38,13 +38,13 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
      */
     private final Boolean update;
 
-    @OutputCustomType.Constructor({"environment","jobName","parameters","transformNameMapping","update"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(
-        GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment,
-        String jobName,
-        Map<String,String> parameters,
-        Map<String,String> transformNameMapping,
-        Boolean update) {
+        @OutputCustomType.Parameter("environment") GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment,
+        @OutputCustomType.Parameter("jobName") String jobName,
+        @OutputCustomType.Parameter("parameters") Map<String,String> parameters,
+        @OutputCustomType.Parameter("transformNameMapping") Map<String,String> transformNameMapping,
+        @OutputCustomType.Parameter("update") Boolean update) {
         this.environment = environment;
         this.jobName = jobName;
         this.parameters = parameters;
@@ -116,27 +116,27 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
     	      this.update = defaults.update;
         }
 
-        public Builder setEnvironment(GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment) {
+        public Builder environment(GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setParameters(Map<String,String> parameters) {
+        public Builder parameters(Map<String,String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setTransformNameMapping(Map<String,String> transformNameMapping) {
+        public Builder transformNameMapping(Map<String,String> transformNameMapping) {
             this.transformNameMapping = Objects.requireNonNull(transformNameMapping);
             return this;
         }
 
-        public Builder setUpdate(Boolean update) {
+        public Builder update(Boolean update) {
             this.update = Objects.requireNonNull(update);
             return this;
         }

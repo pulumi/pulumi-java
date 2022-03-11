@@ -16,11 +16,11 @@ public final class RuleGroupRegexMatchStatement {
     private final String regexString;
     private final List<RuleGroupTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","regexString","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupRegexMatchStatement(
-        RuleGroupFieldToMatch fieldToMatch,
-        String regexString,
-        List<RuleGroupTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("regexString") String regexString,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.regexString = regexString;
         this.textTransformations = textTransformations;
@@ -60,17 +60,17 @@ public final class RuleGroupRegexMatchStatement {
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setFieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setRegexString(String regexString) {
+        public Builder regexString(String regexString) {
             this.regexString = Objects.requireNonNull(regexString);
             return this;
         }
 
-        public Builder setTextTransformations(List<RuleGroupTextTransformation> textTransformations) {
+        public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }

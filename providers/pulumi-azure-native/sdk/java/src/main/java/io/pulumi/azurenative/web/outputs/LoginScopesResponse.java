@@ -17,8 +17,8 @@ public final class LoginScopesResponse {
      */
     private final @Nullable List<String> scopes;
 
-    @OutputCustomType.Constructor({"scopes"})
-    private LoginScopesResponse(@Nullable List<String> scopes) {
+    @OutputCustomType.Constructor
+    private LoginScopesResponse(@OutputCustomType.Parameter("scopes") @Nullable List<String> scopes) {
         this.scopes = scopes;
     }
 
@@ -50,7 +50,7 @@ public final class LoginScopesResponse {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setScopes(@Nullable List<String> scopes) {
+        public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = scopes;
             return this;
         }

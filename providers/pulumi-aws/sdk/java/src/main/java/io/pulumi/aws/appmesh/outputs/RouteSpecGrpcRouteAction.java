@@ -17,8 +17,8 @@ public final class RouteSpecGrpcRouteAction {
      */
     private final List<RouteSpecGrpcRouteActionWeightedTarget> weightedTargets;
 
-    @OutputCustomType.Constructor({"weightedTargets"})
-    private RouteSpecGrpcRouteAction(List<RouteSpecGrpcRouteActionWeightedTarget> weightedTargets) {
+    @OutputCustomType.Constructor
+    private RouteSpecGrpcRouteAction(@OutputCustomType.Parameter("weightedTargets") List<RouteSpecGrpcRouteActionWeightedTarget> weightedTargets) {
         this.weightedTargets = weightedTargets;
     }
 
@@ -51,7 +51,7 @@ public final class RouteSpecGrpcRouteAction {
     	      this.weightedTargets = defaults.weightedTargets;
         }
 
-        public Builder setWeightedTargets(List<RouteSpecGrpcRouteActionWeightedTarget> weightedTargets) {
+        public Builder weightedTargets(List<RouteSpecGrpcRouteActionWeightedTarget> weightedTargets) {
             this.weightedTargets = Objects.requireNonNull(weightedTargets);
             return this;
         }

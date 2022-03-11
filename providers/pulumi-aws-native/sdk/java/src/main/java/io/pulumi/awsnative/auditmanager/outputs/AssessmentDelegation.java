@@ -26,19 +26,19 @@ public final class AssessmentDelegation {
     private final @Nullable AssessmentRoleType roleType;
     private final @Nullable AssessmentDelegationStatus status;
 
-    @OutputCustomType.Constructor({"assessmentId","assessmentName","comment","controlSetId","createdBy","creationTime","id","lastUpdated","roleArn","roleType","status"})
+    @OutputCustomType.Constructor
     private AssessmentDelegation(
-        @Nullable String assessmentId,
-        @Nullable String assessmentName,
-        @Nullable String comment,
-        @Nullable String controlSetId,
-        @Nullable String createdBy,
-        @Nullable Double creationTime,
-        @Nullable String id,
-        @Nullable Double lastUpdated,
-        @Nullable String roleArn,
-        @Nullable AssessmentRoleType roleType,
-        @Nullable AssessmentDelegationStatus status) {
+        @OutputCustomType.Parameter("assessmentId") @Nullable String assessmentId,
+        @OutputCustomType.Parameter("assessmentName") @Nullable String assessmentName,
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("controlSetId") @Nullable String controlSetId,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("creationTime") @Nullable Double creationTime,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastUpdated") @Nullable Double lastUpdated,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("roleType") @Nullable AssessmentRoleType roleType,
+        @OutputCustomType.Parameter("status") @Nullable AssessmentDelegationStatus status) {
         this.assessmentId = assessmentId;
         this.assessmentName = assessmentName;
         this.comment = comment;
@@ -126,57 +126,57 @@ public final class AssessmentDelegation {
     	      this.status = defaults.status;
         }
 
-        public Builder setAssessmentId(@Nullable String assessmentId) {
+        public Builder assessmentId(@Nullable String assessmentId) {
             this.assessmentId = assessmentId;
             return this;
         }
 
-        public Builder setAssessmentName(@Nullable String assessmentName) {
+        public Builder assessmentName(@Nullable String assessmentName) {
             this.assessmentName = assessmentName;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setControlSetId(@Nullable String controlSetId) {
+        public Builder controlSetId(@Nullable String controlSetId) {
             this.controlSetId = controlSetId;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Double creationTime) {
+        public Builder creationTime(@Nullable Double creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLastUpdated(@Nullable Double lastUpdated) {
+        public Builder lastUpdated(@Nullable Double lastUpdated) {
             this.lastUpdated = lastUpdated;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleType(@Nullable AssessmentRoleType roleType) {
+        public Builder roleType(@Nullable AssessmentRoleType roleType) {
             this.roleType = roleType;
             return this;
         }
 
-        public Builder setStatus(@Nullable AssessmentDelegationStatus status) {
+        public Builder status(@Nullable AssessmentDelegationStatus status) {
             this.status = status;
             return this;
         }

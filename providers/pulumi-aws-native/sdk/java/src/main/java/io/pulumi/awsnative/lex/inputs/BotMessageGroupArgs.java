@@ -71,22 +71,22 @@ public final class BotMessageGroupArgs extends io.pulumi.resources.ResourceArgs 
     	      this.variations = defaults.variations;
         }
 
-        public Builder setMessage(Input<BotMessageArgs> message) {
+        public Builder message(Input<BotMessageArgs> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setMessage(BotMessageArgs message) {
+        public Builder message(BotMessageArgs message) {
             this.message = Input.of(Objects.requireNonNull(message));
             return this;
         }
 
-        public Builder setVariations(@Nullable Input<List<BotMessageArgs>> variations) {
+        public Builder variations(@Nullable Input<List<BotMessageArgs>> variations) {
             this.variations = variations;
             return this;
         }
 
-        public Builder setVariations(@Nullable List<BotMessageArgs> variations) {
+        public Builder variations(@Nullable List<BotMessageArgs> variations) {
             this.variations = Input.ofNullable(variations);
             return this;
         }

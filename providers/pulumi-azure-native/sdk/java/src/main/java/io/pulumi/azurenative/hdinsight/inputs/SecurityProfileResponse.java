@@ -187,47 +187,47 @@ public final class SecurityProfileResponse extends io.pulumi.resources.InvokeArg
     	      this.organizationalUnitDN = defaults.organizationalUnitDN;
         }
 
-        public Builder setAaddsResourceId(@Nullable String aaddsResourceId) {
+        public Builder aaddsResourceId(@Nullable String aaddsResourceId) {
             this.aaddsResourceId = aaddsResourceId;
             return this;
         }
 
-        public Builder setClusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
+        public Builder clusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
             this.clusterUsersGroupDNs = clusterUsersGroupDNs;
             return this;
         }
 
-        public Builder setDirectoryType(@Nullable String directoryType) {
+        public Builder directoryType(@Nullable String directoryType) {
             this.directoryType = directoryType;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomainUserPassword(@Nullable String domainUserPassword) {
+        public Builder domainUserPassword(@Nullable String domainUserPassword) {
             this.domainUserPassword = domainUserPassword;
             return this;
         }
 
-        public Builder setDomainUsername(@Nullable String domainUsername) {
+        public Builder domainUsername(@Nullable String domainUsername) {
             this.domainUsername = domainUsername;
             return this;
         }
 
-        public Builder setLdapsUrls(@Nullable List<String> ldapsUrls) {
+        public Builder ldapsUrls(@Nullable List<String> ldapsUrls) {
             this.ldapsUrls = ldapsUrls;
             return this;
         }
 
-        public Builder setMsiResourceId(@Nullable String msiResourceId) {
+        public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
 
-        public Builder setOrganizationalUnitDN(@Nullable String organizationalUnitDN) {
+        public Builder organizationalUnitDN(@Nullable String organizationalUnitDN) {
             this.organizationalUnitDN = organizationalUnitDN;
             return this;
         }

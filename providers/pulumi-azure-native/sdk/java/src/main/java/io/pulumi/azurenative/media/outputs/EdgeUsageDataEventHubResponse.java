@@ -27,11 +27,11 @@ public final class EdgeUsageDataEventHubResponse {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor({"name","namespace","token"})
+    @OutputCustomType.Constructor
     private EdgeUsageDataEventHubResponse(
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable String token) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("token") @Nullable String token) {
         this.name = name;
         this.namespace = namespace;
         this.token = token;
@@ -83,17 +83,17 @@ public final class EdgeUsageDataEventHubResponse {
     	      this.token = defaults.token;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = token;
             return this;
         }

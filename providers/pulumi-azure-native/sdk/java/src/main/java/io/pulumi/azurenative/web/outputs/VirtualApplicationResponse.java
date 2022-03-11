@@ -35,12 +35,12 @@ public final class VirtualApplicationResponse {
      */
     private final @Nullable String virtualPath;
 
-    @OutputCustomType.Constructor({"physicalPath","preloadEnabled","virtualDirectories","virtualPath"})
+    @OutputCustomType.Constructor
     private VirtualApplicationResponse(
-        @Nullable String physicalPath,
-        @Nullable Boolean preloadEnabled,
-        @Nullable List<VirtualDirectoryResponse> virtualDirectories,
-        @Nullable String virtualPath) {
+        @OutputCustomType.Parameter("physicalPath") @Nullable String physicalPath,
+        @OutputCustomType.Parameter("preloadEnabled") @Nullable Boolean preloadEnabled,
+        @OutputCustomType.Parameter("virtualDirectories") @Nullable List<VirtualDirectoryResponse> virtualDirectories,
+        @OutputCustomType.Parameter("virtualPath") @Nullable String virtualPath) {
         this.physicalPath = physicalPath;
         this.preloadEnabled = preloadEnabled;
         this.virtualDirectories = virtualDirectories;
@@ -102,22 +102,22 @@ public final class VirtualApplicationResponse {
     	      this.virtualPath = defaults.virtualPath;
         }
 
-        public Builder setPhysicalPath(@Nullable String physicalPath) {
+        public Builder physicalPath(@Nullable String physicalPath) {
             this.physicalPath = physicalPath;
             return this;
         }
 
-        public Builder setPreloadEnabled(@Nullable Boolean preloadEnabled) {
+        public Builder preloadEnabled(@Nullable Boolean preloadEnabled) {
             this.preloadEnabled = preloadEnabled;
             return this;
         }
 
-        public Builder setVirtualDirectories(@Nullable List<VirtualDirectoryResponse> virtualDirectories) {
+        public Builder virtualDirectories(@Nullable List<VirtualDirectoryResponse> virtualDirectories) {
             this.virtualDirectories = virtualDirectories;
             return this;
         }
 
-        public Builder setVirtualPath(@Nullable String virtualPath) {
+        public Builder virtualPath(@Nullable String virtualPath) {
             this.virtualPath = virtualPath;
             return this;
         }

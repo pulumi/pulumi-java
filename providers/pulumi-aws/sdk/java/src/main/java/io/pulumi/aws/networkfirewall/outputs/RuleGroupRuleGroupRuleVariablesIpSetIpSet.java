@@ -16,8 +16,8 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSet {
      */
     private final List<String> definitions;
 
-    @OutputCustomType.Constructor({"definitions"})
-    private RuleGroupRuleGroupRuleVariablesIpSetIpSet(List<String> definitions) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleGroupRuleVariablesIpSetIpSet(@OutputCustomType.Parameter("definitions") List<String> definitions) {
         this.definitions = definitions;
     }
 
@@ -49,7 +49,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSet {
     	      this.definitions = defaults.definitions;
         }
 
-        public Builder setDefinitions(List<String> definitions) {
+        public Builder definitions(List<String> definitions) {
             this.definitions = Objects.requireNonNull(definitions);
             return this;
         }

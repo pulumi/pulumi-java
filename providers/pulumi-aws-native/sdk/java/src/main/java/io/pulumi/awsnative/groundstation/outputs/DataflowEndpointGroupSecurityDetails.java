@@ -16,11 +16,11 @@ public final class DataflowEndpointGroupSecurityDetails {
     private final @Nullable List<String> securityGroupIds;
     private final @Nullable List<String> subnetIds;
 
-    @OutputCustomType.Constructor({"roleArn","securityGroupIds","subnetIds"})
+    @OutputCustomType.Constructor
     private DataflowEndpointGroupSecurityDetails(
-        @Nullable String roleArn,
-        @Nullable List<String> securityGroupIds,
-        @Nullable List<String> subnetIds) {
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds) {
         this.roleArn = roleArn;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
@@ -60,17 +60,17 @@ public final class DataflowEndpointGroupSecurityDetails {
     	      this.subnetIds = defaults.subnetIds;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }

@@ -29,11 +29,11 @@ public final class EventResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"eventRequestMessage","eventResponseMessage","id"})
+    @OutputCustomType.Constructor
     private EventResponse(
-        @Nullable EventRequestMessageResponse eventRequestMessage,
-        @Nullable EventResponseMessageResponse eventResponseMessage,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("eventRequestMessage") @Nullable EventRequestMessageResponse eventRequestMessage,
+        @OutputCustomType.Parameter("eventResponseMessage") @Nullable EventResponseMessageResponse eventResponseMessage,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.eventRequestMessage = eventRequestMessage;
         this.eventResponseMessage = eventResponseMessage;
         this.id = id;
@@ -85,17 +85,17 @@ public final class EventResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setEventRequestMessage(@Nullable EventRequestMessageResponse eventRequestMessage) {
+        public Builder eventRequestMessage(@Nullable EventRequestMessageResponse eventRequestMessage) {
             this.eventRequestMessage = eventRequestMessage;
             return this;
         }
 
-        public Builder setEventResponseMessage(@Nullable EventResponseMessageResponse eventResponseMessage) {
+        public Builder eventResponseMessage(@Nullable EventResponseMessageResponse eventResponseMessage) {
             this.eventResponseMessage = eventResponseMessage;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

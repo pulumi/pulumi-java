@@ -22,10 +22,10 @@ public final class NetworkPropertiesResponse {
      */
     private final @Nullable String resourceProviderConnection;
 
-    @OutputCustomType.Constructor({"privateLink","resourceProviderConnection"})
+    @OutputCustomType.Constructor
     private NetworkPropertiesResponse(
-        @Nullable String privateLink,
-        @Nullable String resourceProviderConnection) {
+        @OutputCustomType.Parameter("privateLink") @Nullable String privateLink,
+        @OutputCustomType.Parameter("resourceProviderConnection") @Nullable String resourceProviderConnection) {
         this.privateLink = privateLink;
         this.resourceProviderConnection = resourceProviderConnection;
     }
@@ -67,12 +67,12 @@ public final class NetworkPropertiesResponse {
     	      this.resourceProviderConnection = defaults.resourceProviderConnection;
         }
 
-        public Builder setPrivateLink(@Nullable String privateLink) {
+        public Builder privateLink(@Nullable String privateLink) {
             this.privateLink = privateLink;
             return this;
         }
 
-        public Builder setResourceProviderConnection(@Nullable String resourceProviderConnection) {
+        public Builder resourceProviderConnection(@Nullable String resourceProviderConnection) {
             this.resourceProviderConnection = resourceProviderConnection;
             return this;
         }

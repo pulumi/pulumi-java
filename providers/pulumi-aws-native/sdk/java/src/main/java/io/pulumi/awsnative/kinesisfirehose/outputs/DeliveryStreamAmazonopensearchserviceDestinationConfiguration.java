@@ -33,21 +33,21 @@ public final class DeliveryStreamAmazonopensearchserviceDestinationConfiguration
     private final @Nullable String typeName;
     private final @Nullable DeliveryStreamVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor({"bufferingHints","cloudWatchLoggingOptions","clusterEndpoint","domainARN","indexName","indexRotationPeriod","processingConfiguration","retryOptions","roleARN","s3BackupMode","s3Configuration","typeName","vpcConfiguration"})
+    @OutputCustomType.Constructor
     private DeliveryStreamAmazonopensearchserviceDestinationConfiguration(
-        @Nullable DeliveryStreamAmazonopensearchserviceBufferingHints bufferingHints,
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @Nullable String clusterEndpoint,
-        @Nullable String domainARN,
-        String indexName,
-        @Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationIndexRotationPeriod indexRotationPeriod,
-        @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @Nullable DeliveryStreamAmazonopensearchserviceRetryOptions retryOptions,
-        String roleARN,
-        @Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationS3BackupMode s3BackupMode,
-        DeliveryStreamS3DestinationConfiguration s3Configuration,
-        @Nullable String typeName,
-        @Nullable DeliveryStreamVpcConfiguration vpcConfiguration) {
+        @OutputCustomType.Parameter("bufferingHints") @Nullable DeliveryStreamAmazonopensearchserviceBufferingHints bufferingHints,
+        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @OutputCustomType.Parameter("clusterEndpoint") @Nullable String clusterEndpoint,
+        @OutputCustomType.Parameter("domainARN") @Nullable String domainARN,
+        @OutputCustomType.Parameter("indexName") String indexName,
+        @OutputCustomType.Parameter("indexRotationPeriod") @Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationIndexRotationPeriod indexRotationPeriod,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamAmazonopensearchserviceRetryOptions retryOptions,
+        @OutputCustomType.Parameter("roleARN") String roleARN,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationS3BackupMode s3BackupMode,
+        @OutputCustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration,
+        @OutputCustomType.Parameter("typeName") @Nullable String typeName,
+        @OutputCustomType.Parameter("vpcConfiguration") @Nullable DeliveryStreamVpcConfiguration vpcConfiguration) {
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.clusterEndpoint = clusterEndpoint;
@@ -147,67 +147,67 @@ public final class DeliveryStreamAmazonopensearchserviceDestinationConfiguration
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setBufferingHints(@Nullable DeliveryStreamAmazonopensearchserviceBufferingHints bufferingHints) {
+        public Builder bufferingHints(@Nullable DeliveryStreamAmazonopensearchserviceBufferingHints bufferingHints) {
             this.bufferingHints = bufferingHints;
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setClusterEndpoint(@Nullable String clusterEndpoint) {
+        public Builder clusterEndpoint(@Nullable String clusterEndpoint) {
             this.clusterEndpoint = clusterEndpoint;
             return this;
         }
 
-        public Builder setDomainARN(@Nullable String domainARN) {
+        public Builder domainARN(@Nullable String domainARN) {
             this.domainARN = domainARN;
             return this;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setIndexRotationPeriod(@Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationIndexRotationPeriod indexRotationPeriod) {
+        public Builder indexRotationPeriod(@Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationIndexRotationPeriod indexRotationPeriod) {
             this.indexRotationPeriod = indexRotationPeriod;
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setRetryOptions(@Nullable DeliveryStreamAmazonopensearchserviceRetryOptions retryOptions) {
+        public Builder retryOptions(@Nullable DeliveryStreamAmazonopensearchserviceRetryOptions retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationS3BackupMode s3BackupMode) {
+        public Builder s3BackupMode(@Nullable DeliveryStreamAmazonopensearchserviceDestinationConfigurationS3BackupMode s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setS3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
+        public Builder s3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable DeliveryStreamVpcConfiguration vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable DeliveryStreamVpcConfiguration vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }

@@ -17,13 +17,13 @@ public final class ProviderRegistryAuthArgs {
     private final @Nullable Input<String> password;
     private final @Nullable Input<String> username;
 
-    @OutputCustomType.Constructor({"address","configFile","configFileContent","password","username"})
+    @OutputCustomType.Constructor
     private ProviderRegistryAuthArgs(
-        Input<String> address,
-        @Nullable Input<String> configFile,
-        @Nullable Input<String> configFileContent,
-        @Nullable Input<String> password,
-        @Nullable Input<String> username) {
+        @OutputCustomType.Parameter("address") Input<String> address,
+        @OutputCustomType.Parameter("configFile") @Nullable Input<String> configFile,
+        @OutputCustomType.Parameter("configFileContent") @Nullable Input<String> configFileContent,
+        @OutputCustomType.Parameter("password") @Nullable Input<String> password,
+        @OutputCustomType.Parameter("username") @Nullable Input<String> username) {
         this.address = address;
         this.configFile = configFile;
         this.configFileContent = configFileContent;
@@ -75,27 +75,27 @@ public final class ProviderRegistryAuthArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setAddress(Input<String> address) {
+        public Builder address(Input<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setConfigFile(@Nullable Input<String> configFile) {
+        public Builder configFile(@Nullable Input<String> configFile) {
             this.configFile = configFile;
             return this;
         }
 
-        public Builder setConfigFileContent(@Nullable Input<String> configFileContent) {
+        public Builder configFileContent(@Nullable Input<String> configFileContent) {
             this.configFileContent = configFileContent;
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }

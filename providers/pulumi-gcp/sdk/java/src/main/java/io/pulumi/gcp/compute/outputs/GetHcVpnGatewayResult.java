@@ -26,16 +26,16 @@ public final class GetHcVpnGatewayResult {
     private final String selfLink;
     private final List<GetHcVpnGatewayVpnInterface> vpnInterfaces;
 
-    @OutputCustomType.Constructor({"description","id","name","network","project","region","selfLink","vpnInterfaces"})
+    @OutputCustomType.Constructor
     private GetHcVpnGatewayResult(
-        String description,
-        String id,
-        String name,
-        String network,
-        @Nullable String project,
-        @Nullable String region,
-        String selfLink,
-        List<GetHcVpnGatewayVpnInterface> vpnInterfaces) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("vpnInterfaces") List<GetHcVpnGatewayVpnInterface> vpnInterfaces) {
         this.description = description;
         this.id = id;
         this.name = name;
@@ -109,42 +109,42 @@ public final class GetHcVpnGatewayResult {
     	      this.vpnInterfaces = defaults.vpnInterfaces;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setVpnInterfaces(List<GetHcVpnGatewayVpnInterface> vpnInterfaces) {
+        public Builder vpnInterfaces(List<GetHcVpnGatewayVpnInterface> vpnInterfaces) {
             this.vpnInterfaces = Objects.requireNonNull(vpnInterfaces);
             return this;
         }

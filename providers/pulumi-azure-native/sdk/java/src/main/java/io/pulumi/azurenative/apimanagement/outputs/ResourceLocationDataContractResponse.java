@@ -32,12 +32,12 @@ public final class ResourceLocationDataContractResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"city","countryOrRegion","district","name"})
+    @OutputCustomType.Constructor
     private ResourceLocationDataContractResponse(
-        @Nullable String city,
-        @Nullable String countryOrRegion,
-        @Nullable String district,
-        String name) {
+        @OutputCustomType.Parameter("city") @Nullable String city,
+        @OutputCustomType.Parameter("countryOrRegion") @Nullable String countryOrRegion,
+        @OutputCustomType.Parameter("district") @Nullable String district,
+        @OutputCustomType.Parameter("name") String name) {
         this.city = city;
         this.countryOrRegion = countryOrRegion;
         this.district = district;
@@ -99,22 +99,22 @@ public final class ResourceLocationDataContractResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCity(@Nullable String city) {
+        public Builder city(@Nullable String city) {
             this.city = city;
             return this;
         }
 
-        public Builder setCountryOrRegion(@Nullable String countryOrRegion) {
+        public Builder countryOrRegion(@Nullable String countryOrRegion) {
             this.countryOrRegion = countryOrRegion;
             return this;
         }
 
-        public Builder setDistrict(@Nullable String district) {
+        public Builder district(@Nullable String district) {
             this.district = district;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

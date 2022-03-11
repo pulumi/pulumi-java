@@ -20,10 +20,10 @@ public final class ClassifierXmlClassifier {
      */
     private final String rowTag;
 
-    @OutputCustomType.Constructor({"classification","rowTag"})
+    @OutputCustomType.Constructor
     private ClassifierXmlClassifier(
-        String classification,
-        String rowTag) {
+        @OutputCustomType.Parameter("classification") String classification,
+        @OutputCustomType.Parameter("rowTag") String rowTag) {
         this.classification = classification;
         this.rowTag = rowTag;
     }
@@ -65,12 +65,12 @@ public final class ClassifierXmlClassifier {
     	      this.rowTag = defaults.rowTag;
         }
 
-        public Builder setClassification(String classification) {
+        public Builder classification(String classification) {
             this.classification = Objects.requireNonNull(classification);
             return this;
         }
 
-        public Builder setRowTag(String rowTag) {
+        public Builder rowTag(String rowTag) {
             this.rowTag = Objects.requireNonNull(rowTag);
             return this;
         }

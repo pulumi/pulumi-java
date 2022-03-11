@@ -73,12 +73,12 @@ public final class ApplicationCustomComponent extends io.pulumi.resources.Invoke
     	      this.resourceList = defaults.resourceList;
         }
 
-        public Builder setComponentName(String componentName) {
+        public Builder componentName(String componentName) {
             this.componentName = Objects.requireNonNull(componentName);
             return this;
         }
 
-        public Builder setResourceList(List<String> resourceList) {
+        public Builder resourceList(List<String> resourceList) {
             this.resourceList = Objects.requireNonNull(resourceList);
             return this;
         }

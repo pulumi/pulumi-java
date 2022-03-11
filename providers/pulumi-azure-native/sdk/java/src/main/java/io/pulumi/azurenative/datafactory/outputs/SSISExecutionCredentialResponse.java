@@ -26,11 +26,11 @@ public final class SSISExecutionCredentialResponse {
      */
     private final Object userName;
 
-    @OutputCustomType.Constructor({"domain","password","userName"})
+    @OutputCustomType.Constructor
     private SSISExecutionCredentialResponse(
-        Object domain,
-        SecureStringResponse password,
-        Object userName) {
+        @OutputCustomType.Parameter("domain") Object domain,
+        @OutputCustomType.Parameter("password") SecureStringResponse password,
+        @OutputCustomType.Parameter("userName") Object userName) {
         this.domain = domain;
         this.password = password;
         this.userName = userName;
@@ -82,17 +82,17 @@ public final class SSISExecutionCredentialResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setDomain(Object domain) {
+        public Builder domain(Object domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setPassword(SecureStringResponse password) {
+        public Builder password(SecureStringResponse password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUserName(Object userName) {
+        public Builder userName(Object userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

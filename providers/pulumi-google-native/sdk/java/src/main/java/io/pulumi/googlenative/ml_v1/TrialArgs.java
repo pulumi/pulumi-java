@@ -142,72 +142,72 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.studyId = defaults.studyId;
         }
 
-        public Builder setFinalMeasurement(@Nullable Input<GoogleCloudMlV1__MeasurementArgs> finalMeasurement) {
+        public Builder finalMeasurement(@Nullable Input<GoogleCloudMlV1__MeasurementArgs> finalMeasurement) {
             this.finalMeasurement = finalMeasurement;
             return this;
         }
 
-        public Builder setFinalMeasurement(@Nullable GoogleCloudMlV1__MeasurementArgs finalMeasurement) {
+        public Builder finalMeasurement(@Nullable GoogleCloudMlV1__MeasurementArgs finalMeasurement) {
             this.finalMeasurement = Input.ofNullable(finalMeasurement);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMeasurements(@Nullable Input<List<GoogleCloudMlV1__MeasurementArgs>> measurements) {
+        public Builder measurements(@Nullable Input<List<GoogleCloudMlV1__MeasurementArgs>> measurements) {
             this.measurements = measurements;
             return this;
         }
 
-        public Builder setMeasurements(@Nullable List<GoogleCloudMlV1__MeasurementArgs> measurements) {
+        public Builder measurements(@Nullable List<GoogleCloudMlV1__MeasurementArgs> measurements) {
             this.measurements = Input.ofNullable(measurements);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<GoogleCloudMlV1_Trial_ParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<GoogleCloudMlV1_Trial_ParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setState(@Nullable Input<TrialState> state) {
+        public Builder state(@Nullable Input<TrialState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable TrialState state) {
+        public Builder state(@Nullable TrialState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setStudyId(Input<String> studyId) {
+        public Builder studyId(Input<String> studyId) {
             this.studyId = Objects.requireNonNull(studyId);
             return this;
         }
 
-        public Builder setStudyId(String studyId) {
+        public Builder studyId(String studyId) {
             this.studyId = Input.of(Objects.requireNonNull(studyId));
             return this;
         }

@@ -97,24 +97,24 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor({"databaseSummary","databases","durationInSeconds","endedOn","exceptionsAndWarnings","id","message","migrationReport","resultType","sourceServerBrandVersion","sourceServerVersion","startedOn","status","statusMessage","targetServerBrandVersion","targetServerVersion"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(
-        Map<String,DatabaseSummaryResultResponse> databaseSummary,
-        Map<String,String> databases,
-        Double durationInSeconds,
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        String message,
-        MigrationReportResultResponse migrationReport,
-        String resultType,
-        String sourceServerBrandVersion,
-        String sourceServerVersion,
-        String startedOn,
-        String status,
-        String statusMessage,
-        String targetServerBrandVersion,
-        String targetServerVersion) {
+        @OutputCustomType.Parameter("databaseSummary") Map<String,DatabaseSummaryResultResponse> databaseSummary,
+        @OutputCustomType.Parameter("databases") Map<String,String> databases,
+        @OutputCustomType.Parameter("durationInSeconds") Double durationInSeconds,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("migrationReport") MigrationReportResultResponse migrationReport,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.databaseSummary = databaseSummary;
         this.databases = databases;
         this.durationInSeconds = durationInSeconds;
@@ -297,82 +297,82 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
     	      this.targetServerVersion = defaults.targetServerVersion;
         }
 
-        public Builder setDatabaseSummary(Map<String,DatabaseSummaryResultResponse> databaseSummary) {
+        public Builder databaseSummary(Map<String,DatabaseSummaryResultResponse> databaseSummary) {
             this.databaseSummary = Objects.requireNonNull(databaseSummary);
             return this;
         }
 
-        public Builder setDatabases(Map<String,String> databases) {
+        public Builder databases(Map<String,String> databases) {
             this.databases = Objects.requireNonNull(databases);
             return this;
         }
 
-        public Builder setDurationInSeconds(Double durationInSeconds) {
+        public Builder durationInSeconds(Double durationInSeconds) {
             this.durationInSeconds = Objects.requireNonNull(durationInSeconds);
             return this;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setExceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
+        public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setMigrationReport(MigrationReportResultResponse migrationReport) {
+        public Builder migrationReport(MigrationReportResultResponse migrationReport) {
             this.migrationReport = Objects.requireNonNull(migrationReport);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setSourceServerBrandVersion(String sourceServerBrandVersion) {
+        public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
             this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
             return this;
         }
 
-        public Builder setSourceServerVersion(String sourceServerVersion) {
+        public Builder sourceServerVersion(String sourceServerVersion) {
             this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
 
-        public Builder setTargetServerBrandVersion(String targetServerBrandVersion) {
+        public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
 
-        public Builder setTargetServerVersion(String targetServerVersion) {
+        public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }

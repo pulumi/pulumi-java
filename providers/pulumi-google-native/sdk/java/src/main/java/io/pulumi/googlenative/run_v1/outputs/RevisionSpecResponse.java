@@ -47,15 +47,15 @@ public final class RevisionSpecResponse {
     private final Integer timeoutSeconds;
     private final List<VolumeResponse> volumes;
 
-    @OutputCustomType.Constructor({"containerConcurrency","containers","enableServiceLinks","imagePullSecrets","serviceAccountName","timeoutSeconds","volumes"})
+    @OutputCustomType.Constructor
     private RevisionSpecResponse(
-        Integer containerConcurrency,
-        List<ContainerResponse> containers,
-        Boolean enableServiceLinks,
-        List<LocalObjectReferenceResponse> imagePullSecrets,
-        String serviceAccountName,
-        Integer timeoutSeconds,
-        List<VolumeResponse> volumes) {
+        @OutputCustomType.Parameter("containerConcurrency") Integer containerConcurrency,
+        @OutputCustomType.Parameter("containers") List<ContainerResponse> containers,
+        @OutputCustomType.Parameter("enableServiceLinks") Boolean enableServiceLinks,
+        @OutputCustomType.Parameter("imagePullSecrets") List<LocalObjectReferenceResponse> imagePullSecrets,
+        @OutputCustomType.Parameter("serviceAccountName") String serviceAccountName,
+        @OutputCustomType.Parameter("timeoutSeconds") Integer timeoutSeconds,
+        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes) {
         this.containerConcurrency = containerConcurrency;
         this.containers = containers;
         this.enableServiceLinks = enableServiceLinks;
@@ -143,37 +143,37 @@ public final class RevisionSpecResponse {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setContainerConcurrency(Integer containerConcurrency) {
+        public Builder containerConcurrency(Integer containerConcurrency) {
             this.containerConcurrency = Objects.requireNonNull(containerConcurrency);
             return this;
         }
 
-        public Builder setContainers(List<ContainerResponse> containers) {
+        public Builder containers(List<ContainerResponse> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
 
-        public Builder setEnableServiceLinks(Boolean enableServiceLinks) {
+        public Builder enableServiceLinks(Boolean enableServiceLinks) {
             this.enableServiceLinks = Objects.requireNonNull(enableServiceLinks);
             return this;
         }
 
-        public Builder setImagePullSecrets(List<LocalObjectReferenceResponse> imagePullSecrets) {
+        public Builder imagePullSecrets(List<LocalObjectReferenceResponse> imagePullSecrets) {
             this.imagePullSecrets = Objects.requireNonNull(imagePullSecrets);
             return this;
         }
 
-        public Builder setServiceAccountName(String serviceAccountName) {
+        public Builder serviceAccountName(String serviceAccountName) {
             this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
             return this;
         }
 
-        public Builder setTimeoutSeconds(Integer timeoutSeconds) {
+        public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
             return this;
         }
 
-        public Builder setVolumes(List<VolumeResponse> volumes) {
+        public Builder volumes(List<VolumeResponse> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }

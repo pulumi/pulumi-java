@@ -19,12 +19,12 @@ public final class InstanceFromMachineImageBootDiskInitializeParams {
     private final @Nullable Integer size;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"image","labels","size","type"})
+    @OutputCustomType.Constructor
     private InstanceFromMachineImageBootDiskInitializeParams(
-        @Nullable String image,
-        @Nullable Map<String,Object> labels,
-        @Nullable Integer size,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,Object> labels,
+        @OutputCustomType.Parameter("size") @Nullable Integer size,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.image = image;
         this.labels = labels;
         this.size = size;
@@ -70,22 +70,22 @@ public final class InstanceFromMachineImageBootDiskInitializeParams {
     	      this.type = defaults.type;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,Object> labels) {
+        public Builder labels(@Nullable Map<String,Object> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setSize(@Nullable Integer size) {
+        public Builder size(@Nullable Integer size) {
             this.size = size;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

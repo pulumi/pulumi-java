@@ -29,11 +29,11 @@ public final class ClusterLogging {
      */
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor({"bucketName","enable","s3KeyPrefix"})
+    @OutputCustomType.Constructor
     private ClusterLogging(
-        @Nullable String bucketName,
-        Boolean enable,
-        @Nullable String s3KeyPrefix) {
+        @OutputCustomType.Parameter("bucketName") @Nullable String bucketName,
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.bucketName = bucketName;
         this.enable = enable;
         this.s3KeyPrefix = s3KeyPrefix;
@@ -86,17 +86,17 @@ public final class ClusterLogging {
     	      this.s3KeyPrefix = defaults.s3KeyPrefix;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setS3KeyPrefix(@Nullable String s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }

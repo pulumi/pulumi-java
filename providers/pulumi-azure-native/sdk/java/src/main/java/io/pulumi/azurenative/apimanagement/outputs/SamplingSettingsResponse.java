@@ -23,10 +23,10 @@ public final class SamplingSettingsResponse {
      */
     private final @Nullable String samplingType;
 
-    @OutputCustomType.Constructor({"percentage","samplingType"})
+    @OutputCustomType.Constructor
     private SamplingSettingsResponse(
-        @Nullable Double percentage,
-        @Nullable String samplingType) {
+        @OutputCustomType.Parameter("percentage") @Nullable Double percentage,
+        @OutputCustomType.Parameter("samplingType") @Nullable String samplingType) {
         this.percentage = percentage;
         this.samplingType = samplingType;
     }
@@ -68,12 +68,12 @@ public final class SamplingSettingsResponse {
     	      this.samplingType = defaults.samplingType;
         }
 
-        public Builder setPercentage(@Nullable Double percentage) {
+        public Builder percentage(@Nullable Double percentage) {
             this.percentage = percentage;
             return this;
         }
 
-        public Builder setSamplingType(@Nullable String samplingType) {
+        public Builder samplingType(@Nullable String samplingType) {
             this.samplingType = samplingType;
             return this;
         }

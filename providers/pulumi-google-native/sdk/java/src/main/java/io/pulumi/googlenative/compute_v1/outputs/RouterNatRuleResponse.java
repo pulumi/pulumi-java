@@ -32,12 +32,12 @@ public final class RouterNatRuleResponse {
      */
     private final Integer ruleNumber;
 
-    @OutputCustomType.Constructor({"action","description","match","ruleNumber"})
+    @OutputCustomType.Constructor
     private RouterNatRuleResponse(
-        RouterNatRuleActionResponse action,
-        String description,
-        String match,
-        Integer ruleNumber) {
+        @OutputCustomType.Parameter("action") RouterNatRuleActionResponse action,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("match") String match,
+        @OutputCustomType.Parameter("ruleNumber") Integer ruleNumber) {
         this.action = action;
         this.description = description;
         this.match = match;
@@ -99,22 +99,22 @@ public final class RouterNatRuleResponse {
     	      this.ruleNumber = defaults.ruleNumber;
         }
 
-        public Builder setAction(RouterNatRuleActionResponse action) {
+        public Builder action(RouterNatRuleActionResponse action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setMatch(String match) {
+        public Builder match(String match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setRuleNumber(Integer ruleNumber) {
+        public Builder ruleNumber(Integer ruleNumber) {
             this.ruleNumber = Objects.requireNonNull(ruleNumber);
             return this;
         }

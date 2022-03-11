@@ -86,32 +86,32 @@ public final class ProjectLogsConfigCloudwatchLogsGetArgs extends io.pulumi.reso
     	      this.streamName = defaults.streamName;
         }
 
-        public Builder setGroupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Input<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = Input.ofNullable(groupName);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setStreamName(@Nullable Input<String> streamName) {
+        public Builder streamName(@Nullable Input<String> streamName) {
             this.streamName = streamName;
             return this;
         }
 
-        public Builder setStreamName(@Nullable String streamName) {
+        public Builder streamName(@Nullable String streamName) {
             this.streamName = Input.ofNullable(streamName);
             return this;
         }

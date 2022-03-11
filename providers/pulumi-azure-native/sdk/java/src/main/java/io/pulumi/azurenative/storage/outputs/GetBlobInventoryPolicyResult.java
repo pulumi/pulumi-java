@@ -42,14 +42,14 @@ public final class GetBlobInventoryPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","lastModifiedTime","name","policy","systemData","type"})
+    @OutputCustomType.Constructor
     private GetBlobInventoryPolicyResult(
-        String id,
-        String lastModifiedTime,
-        String name,
-        BlobInventoryPolicySchemaResponse policy,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") BlobInventoryPolicySchemaResponse policy,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;
         this.name = name;
@@ -131,32 +131,32 @@ public final class GetBlobInventoryPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(BlobInventoryPolicySchemaResponse policy) {
+        public Builder policy(BlobInventoryPolicySchemaResponse policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

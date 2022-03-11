@@ -17,8 +17,8 @@ public final class ApiPropertiesResponse {
      */
     private final @Nullable String serverVersion;
 
-    @OutputCustomType.Constructor({"serverVersion"})
-    private ApiPropertiesResponse(@Nullable String serverVersion) {
+    @OutputCustomType.Constructor
+    private ApiPropertiesResponse(@OutputCustomType.Parameter("serverVersion") @Nullable String serverVersion) {
         this.serverVersion = serverVersion;
     }
 
@@ -50,7 +50,7 @@ public final class ApiPropertiesResponse {
     	      this.serverVersion = defaults.serverVersion;
         }
 
-        public Builder setServerVersion(@Nullable String serverVersion) {
+        public Builder serverVersion(@Nullable String serverVersion) {
             this.serverVersion = serverVersion;
             return this;
         }

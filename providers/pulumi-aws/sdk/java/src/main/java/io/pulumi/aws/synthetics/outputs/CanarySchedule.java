@@ -23,10 +23,10 @@ public final class CanarySchedule {
      */
     private final String expression;
 
-    @OutputCustomType.Constructor({"durationInSeconds","expression"})
+    @OutputCustomType.Constructor
     private CanarySchedule(
-        @Nullable Integer durationInSeconds,
-        String expression) {
+        @OutputCustomType.Parameter("durationInSeconds") @Nullable Integer durationInSeconds,
+        @OutputCustomType.Parameter("expression") String expression) {
         this.durationInSeconds = durationInSeconds;
         this.expression = expression;
     }
@@ -68,12 +68,12 @@ public final class CanarySchedule {
     	      this.expression = defaults.expression;
         }
 
-        public Builder setDurationInSeconds(@Nullable Integer durationInSeconds) {
+        public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
             this.durationInSeconds = durationInSeconds;
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }

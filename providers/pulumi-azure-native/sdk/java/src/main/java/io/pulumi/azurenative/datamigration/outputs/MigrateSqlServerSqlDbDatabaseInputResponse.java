@@ -34,12 +34,12 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse {
      */
     private final @Nullable String targetDatabaseName;
 
-    @OutputCustomType.Constructor({"makeSourceDbReadOnly","name","tableMap","targetDatabaseName"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbDatabaseInputResponse(
-        @Nullable Boolean makeSourceDbReadOnly,
-        @Nullable String name,
-        @Nullable Map<String,String> tableMap,
-        @Nullable String targetDatabaseName) {
+        @OutputCustomType.Parameter("makeSourceDbReadOnly") @Nullable Boolean makeSourceDbReadOnly,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tableMap") @Nullable Map<String,String> tableMap,
+        @OutputCustomType.Parameter("targetDatabaseName") @Nullable String targetDatabaseName) {
         this.makeSourceDbReadOnly = makeSourceDbReadOnly;
         this.name = name;
         this.tableMap = tableMap;
@@ -101,22 +101,22 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse {
     	      this.targetDatabaseName = defaults.targetDatabaseName;
         }
 
-        public Builder setMakeSourceDbReadOnly(@Nullable Boolean makeSourceDbReadOnly) {
+        public Builder makeSourceDbReadOnly(@Nullable Boolean makeSourceDbReadOnly) {
             this.makeSourceDbReadOnly = makeSourceDbReadOnly;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTableMap(@Nullable Map<String,String> tableMap) {
+        public Builder tableMap(@Nullable Map<String,String> tableMap) {
             this.tableMap = tableMap;
             return this;
         }
 
-        public Builder setTargetDatabaseName(@Nullable String targetDatabaseName) {
+        public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }

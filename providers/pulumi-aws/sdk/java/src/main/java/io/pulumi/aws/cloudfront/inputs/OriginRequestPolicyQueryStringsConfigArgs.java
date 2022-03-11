@@ -63,22 +63,22 @@ public final class OriginRequestPolicyQueryStringsConfigArgs extends io.pulumi.r
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder setQueryStringBehavior(Input<String> queryStringBehavior) {
+        public Builder queryStringBehavior(Input<String> queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
 
-        public Builder setQueryStringBehavior(String queryStringBehavior) {
+        public Builder queryStringBehavior(String queryStringBehavior) {
             this.queryStringBehavior = Input.of(Objects.requireNonNull(queryStringBehavior));
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable Input<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings) {
+        public Builder queryStrings(@Nullable Input<OriginRequestPolicyQueryStringsConfigQueryStringsArgs> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable OriginRequestPolicyQueryStringsConfigQueryStringsArgs queryStrings) {
+        public Builder queryStrings(@Nullable OriginRequestPolicyQueryStringsConfigQueryStringsArgs queryStrings) {
             this.queryStrings = Input.ofNullable(queryStrings);
             return this;
         }

@@ -17,8 +17,8 @@ public final class MapsAccountPropertiesResponse {
      */
     private final @Nullable String xMsClientId;
 
-    @OutputCustomType.Constructor({"xMsClientId"})
-    private MapsAccountPropertiesResponse(@Nullable String xMsClientId) {
+    @OutputCustomType.Constructor
+    private MapsAccountPropertiesResponse(@OutputCustomType.Parameter("xMsClientId") @Nullable String xMsClientId) {
         this.xMsClientId = xMsClientId;
     }
 
@@ -50,7 +50,7 @@ public final class MapsAccountPropertiesResponse {
     	      this.xMsClientId = defaults.xMsClientId;
         }
 
-        public Builder setXMsClientId(@Nullable String xMsClientId) {
+        public Builder xMsClientId(@Nullable String xMsClientId) {
             this.xMsClientId = xMsClientId;
             return this;
         }

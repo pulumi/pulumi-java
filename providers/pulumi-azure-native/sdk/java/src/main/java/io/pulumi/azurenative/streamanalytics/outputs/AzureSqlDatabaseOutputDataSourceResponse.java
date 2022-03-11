@@ -43,14 +43,14 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"database","password","server","table","type","user"})
+    @OutputCustomType.Constructor
     private AzureSqlDatabaseOutputDataSourceResponse(
-        @Nullable String database,
-        @Nullable String password,
-        @Nullable String server,
-        @Nullable String table,
-        String type,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("database") @Nullable String database,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("server") @Nullable String server,
+        @OutputCustomType.Parameter("table") @Nullable String table,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.database = database;
         this.password = password;
         this.server = server;
@@ -133,32 +133,32 @@ public final class AzureSqlDatabaseOutputDataSourceResponse {
     	      this.user = defaults.user;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = database;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setServer(@Nullable String server) {
+        public Builder server(@Nullable String server) {
             this.server = server;
             return this;
         }
 
-        public Builder setTable(@Nullable String table) {
+        public Builder table(@Nullable String table) {
             this.table = table;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }

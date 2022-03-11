@@ -73,22 +73,22 @@ public final class URLMapPathMatcherDefaultRouteActionTimeoutGetArgs extends io.
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setNanos(@Nullable Input<Integer> nanos) {
+        public Builder nanos(@Nullable Input<Integer> nanos) {
             this.nanos = nanos;
             return this;
         }
 
-        public Builder setNanos(@Nullable Integer nanos) {
+        public Builder nanos(@Nullable Integer nanos) {
             this.nanos = Input.ofNullable(nanos);
             return this;
         }
 
-        public Builder setSeconds(@Nullable Input<String> seconds) {
+        public Builder seconds(@Nullable Input<String> seconds) {
             this.seconds = seconds;
             return this;
         }
 
-        public Builder setSeconds(@Nullable String seconds) {
+        public Builder seconds(@Nullable String seconds) {
             this.seconds = Input.ofNullable(seconds);
             return this;
         }

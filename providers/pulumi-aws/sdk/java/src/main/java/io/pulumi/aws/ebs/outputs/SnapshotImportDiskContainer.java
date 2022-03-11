@@ -33,12 +33,12 @@ public final class SnapshotImportDiskContainer {
      */
     private final @Nullable SnapshotImportDiskContainerUserBucket userBucket;
 
-    @OutputCustomType.Constructor({"description","format","url","userBucket"})
+    @OutputCustomType.Constructor
     private SnapshotImportDiskContainer(
-        @Nullable String description,
-        String format,
-        @Nullable String url,
-        @Nullable SnapshotImportDiskContainerUserBucket userBucket) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("url") @Nullable String url,
+        @OutputCustomType.Parameter("userBucket") @Nullable SnapshotImportDiskContainerUserBucket userBucket) {
         this.description = description;
         this.format = format;
         this.url = url;
@@ -100,22 +100,22 @@ public final class SnapshotImportDiskContainer {
     	      this.userBucket = defaults.userBucket;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUserBucket(@Nullable SnapshotImportDiskContainerUserBucket userBucket) {
+        public Builder userBucket(@Nullable SnapshotImportDiskContainerUserBucket userBucket) {
             this.userBucket = userBucket;
             return this;
         }

@@ -20,10 +20,10 @@ public final class AlertSNSConfiguration {
      */
     private final String snsTopicArn;
 
-    @OutputCustomType.Constructor({"roleArn","snsTopicArn"})
+    @OutputCustomType.Constructor
     private AlertSNSConfiguration(
-        String roleArn,
-        String snsTopicArn) {
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("snsTopicArn") String snsTopicArn) {
         this.roleArn = roleArn;
         this.snsTopicArn = snsTopicArn;
     }
@@ -65,12 +65,12 @@ public final class AlertSNSConfiguration {
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setSnsTopicArn(String snsTopicArn) {
+        public Builder snsTopicArn(String snsTopicArn) {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }

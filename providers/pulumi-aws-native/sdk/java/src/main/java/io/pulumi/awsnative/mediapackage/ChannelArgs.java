@@ -105,42 +105,42 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEgressAccessLogs(@Nullable Input<ChannelLogConfigurationArgs> egressAccessLogs) {
+        public Builder egressAccessLogs(@Nullable Input<ChannelLogConfigurationArgs> egressAccessLogs) {
             this.egressAccessLogs = egressAccessLogs;
             return this;
         }
 
-        public Builder setEgressAccessLogs(@Nullable ChannelLogConfigurationArgs egressAccessLogs) {
+        public Builder egressAccessLogs(@Nullable ChannelLogConfigurationArgs egressAccessLogs) {
             this.egressAccessLogs = Input.ofNullable(egressAccessLogs);
             return this;
         }
 
-        public Builder setIngressAccessLogs(@Nullable Input<ChannelLogConfigurationArgs> ingressAccessLogs) {
+        public Builder ingressAccessLogs(@Nullable Input<ChannelLogConfigurationArgs> ingressAccessLogs) {
             this.ingressAccessLogs = ingressAccessLogs;
             return this;
         }
 
-        public Builder setIngressAccessLogs(@Nullable ChannelLogConfigurationArgs ingressAccessLogs) {
+        public Builder ingressAccessLogs(@Nullable ChannelLogConfigurationArgs ingressAccessLogs) {
             this.ingressAccessLogs = Input.ofNullable(ingressAccessLogs);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ChannelTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ChannelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ChannelTagArgs> tags) {
+        public Builder tags(@Nullable List<ChannelTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

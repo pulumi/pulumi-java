@@ -21,10 +21,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
      */
     private final Boolean override;
 
-    @OutputCustomType.Constructor({"contentSecurityPolicy","override"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy(
-        String contentSecurityPolicy,
-        Boolean override) {
+        @OutputCustomType.Parameter("contentSecurityPolicy") String contentSecurityPolicy,
+        @OutputCustomType.Parameter("override") Boolean override) {
         this.contentSecurityPolicy = contentSecurityPolicy;
         this.override = override;
     }
@@ -66,12 +66,12 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
     	      this.override = defaults.override;
         }
 
-        public Builder setContentSecurityPolicy(String contentSecurityPolicy) {
+        public Builder contentSecurityPolicy(String contentSecurityPolicy) {
             this.contentSecurityPolicy = Objects.requireNonNull(contentSecurityPolicy);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }

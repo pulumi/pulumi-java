@@ -22,10 +22,10 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor({"name","thumbprint"})
+    @OutputCustomType.Constructor
     private VpnServerConfigRadiusClientRootCertificateResponse(
-        @Nullable String name,
-        @Nullable String thumbprint) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.name = name;
         this.thumbprint = thumbprint;
     }
@@ -67,12 +67,12 @@ public final class VpnServerConfigRadiusClientRootCertificateResponse {
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }

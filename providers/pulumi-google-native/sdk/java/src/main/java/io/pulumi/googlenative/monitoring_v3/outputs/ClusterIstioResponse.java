@@ -30,12 +30,12 @@ public final class ClusterIstioResponse {
      */
     private final String serviceNamespace;
 
-    @OutputCustomType.Constructor({"clusterName","location","serviceName","serviceNamespace"})
+    @OutputCustomType.Constructor
     private ClusterIstioResponse(
-        String clusterName,
-        String location,
-        String serviceName,
-        String serviceNamespace) {
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("serviceNamespace") String serviceNamespace) {
         this.clusterName = clusterName;
         this.location = location;
         this.serviceName = serviceName;
@@ -97,22 +97,22 @@ public final class ClusterIstioResponse {
     	      this.serviceNamespace = defaults.serviceNamespace;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceNamespace(String serviceNamespace) {
+        public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }

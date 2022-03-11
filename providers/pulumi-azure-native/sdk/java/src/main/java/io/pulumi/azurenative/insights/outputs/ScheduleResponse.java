@@ -20,10 +20,10 @@ public final class ScheduleResponse {
      */
     private final Integer timeWindowInMinutes;
 
-    @OutputCustomType.Constructor({"frequencyInMinutes","timeWindowInMinutes"})
+    @OutputCustomType.Constructor
     private ScheduleResponse(
-        Integer frequencyInMinutes,
-        Integer timeWindowInMinutes) {
+        @OutputCustomType.Parameter("frequencyInMinutes") Integer frequencyInMinutes,
+        @OutputCustomType.Parameter("timeWindowInMinutes") Integer timeWindowInMinutes) {
         this.frequencyInMinutes = frequencyInMinutes;
         this.timeWindowInMinutes = timeWindowInMinutes;
     }
@@ -65,12 +65,12 @@ public final class ScheduleResponse {
     	      this.timeWindowInMinutes = defaults.timeWindowInMinutes;
         }
 
-        public Builder setFrequencyInMinutes(Integer frequencyInMinutes) {
+        public Builder frequencyInMinutes(Integer frequencyInMinutes) {
             this.frequencyInMinutes = Objects.requireNonNull(frequencyInMinutes);
             return this;
         }
 
-        public Builder setTimeWindowInMinutes(Integer timeWindowInMinutes) {
+        public Builder timeWindowInMinutes(Integer timeWindowInMinutes) {
             this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes);
             return this;
         }

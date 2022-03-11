@@ -33,12 +33,12 @@ public final class IoTDeviceInfoResponse {
      */
     private final @Nullable String ioTHostHubId;
 
-    @OutputCustomType.Constructor({"authentication","deviceId","ioTHostHub","ioTHostHubId"})
+    @OutputCustomType.Constructor
     private IoTDeviceInfoResponse(
-        @Nullable AuthenticationResponse authentication,
-        String deviceId,
-        String ioTHostHub,
-        @Nullable String ioTHostHubId) {
+        @OutputCustomType.Parameter("authentication") @Nullable AuthenticationResponse authentication,
+        @OutputCustomType.Parameter("deviceId") String deviceId,
+        @OutputCustomType.Parameter("ioTHostHub") String ioTHostHub,
+        @OutputCustomType.Parameter("ioTHostHubId") @Nullable String ioTHostHubId) {
         this.authentication = authentication;
         this.deviceId = deviceId;
         this.ioTHostHub = ioTHostHub;
@@ -100,22 +100,22 @@ public final class IoTDeviceInfoResponse {
     	      this.ioTHostHubId = defaults.ioTHostHubId;
         }
 
-        public Builder setAuthentication(@Nullable AuthenticationResponse authentication) {
+        public Builder authentication(@Nullable AuthenticationResponse authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setDeviceId(String deviceId) {
+        public Builder deviceId(String deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
-        public Builder setIoTHostHub(String ioTHostHub) {
+        public Builder ioTHostHub(String ioTHostHub) {
             this.ioTHostHub = Objects.requireNonNull(ioTHostHub);
             return this;
         }
 
-        public Builder setIoTHostHubId(@Nullable String ioTHostHubId) {
+        public Builder ioTHostHubId(@Nullable String ioTHostHubId) {
             this.ioTHostHubId = ioTHostHubId;
             return this;
         }

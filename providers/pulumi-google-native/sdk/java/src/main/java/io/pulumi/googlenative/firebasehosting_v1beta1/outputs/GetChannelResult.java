@@ -58,17 +58,17 @@ public final class GetChannelResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"createTime","expireTime","labels","name","release","retainedReleaseCount","ttl","updateTime","url"})
+    @OutputCustomType.Constructor
     private GetChannelResult(
-        String createTime,
-        String expireTime,
-        Map<String,String> labels,
-        String name,
-        ReleaseResponse release,
-        Integer retainedReleaseCount,
-        String ttl,
-        String updateTime,
-        String url) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("release") ReleaseResponse release,
+        @OutputCustomType.Parameter("retainedReleaseCount") Integer retainedReleaseCount,
+        @OutputCustomType.Parameter("ttl") String ttl,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("url") String url) {
         this.createTime = createTime;
         this.expireTime = expireTime;
         this.labels = labels;
@@ -180,47 +180,47 @@ public final class GetChannelResult {
     	      this.url = defaults.url;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRelease(ReleaseResponse release) {
+        public Builder release(ReleaseResponse release) {
             this.release = Objects.requireNonNull(release);
             return this;
         }
 
-        public Builder setRetainedReleaseCount(Integer retainedReleaseCount) {
+        public Builder retainedReleaseCount(Integer retainedReleaseCount) {
             this.retainedReleaseCount = Objects.requireNonNull(retainedReleaseCount);
             return this;
         }
 
-        public Builder setTtl(String ttl) {
+        public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

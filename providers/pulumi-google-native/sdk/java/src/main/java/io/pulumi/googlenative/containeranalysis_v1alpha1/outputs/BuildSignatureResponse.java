@@ -30,12 +30,12 @@ public final class BuildSignatureResponse {
      */
     private final String signature;
 
-    @OutputCustomType.Constructor({"keyId","keyType","publicKey","signature"})
+    @OutputCustomType.Constructor
     private BuildSignatureResponse(
-        String keyId,
-        String keyType,
-        String publicKey,
-        String signature) {
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("keyType") String keyType,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("signature") String signature) {
         this.keyId = keyId;
         this.keyType = keyType;
         this.publicKey = publicKey;
@@ -97,22 +97,22 @@ public final class BuildSignatureResponse {
     	      this.signature = defaults.signature;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setKeyType(String keyType) {
+        public Builder keyType(String keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setSignature(String signature) {
+        public Builder signature(String signature) {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }

@@ -30,12 +30,12 @@ public final class ErrorProtoResponse {
      */
     private final String reason;
 
-    @OutputCustomType.Constructor({"debugInfo","location","message","reason"})
+    @OutputCustomType.Constructor
     private ErrorProtoResponse(
-        String debugInfo,
-        String location,
-        String message,
-        String reason) {
+        @OutputCustomType.Parameter("debugInfo") String debugInfo,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("reason") String reason) {
         this.debugInfo = debugInfo;
         this.location = location;
         this.message = message;
@@ -97,22 +97,22 @@ public final class ErrorProtoResponse {
     	      this.reason = defaults.reason;
         }
 
-        public Builder setDebugInfo(String debugInfo) {
+        public Builder debugInfo(String debugInfo) {
             this.debugInfo = Objects.requireNonNull(debugInfo);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }

@@ -41,13 +41,13 @@ public final class WebAclRule {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"action","overrideAction","priority","ruleId","type"})
+    @OutputCustomType.Constructor
     private WebAclRule(
-        @Nullable WebAclRuleAction action,
-        @Nullable WebAclRuleOverrideAction overrideAction,
-        Integer priority,
-        String ruleId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("action") @Nullable WebAclRuleAction action,
+        @OutputCustomType.Parameter("overrideAction") @Nullable WebAclRuleOverrideAction overrideAction,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleId") String ruleId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.action = action;
         this.overrideAction = overrideAction;
         this.priority = priority;
@@ -120,27 +120,27 @@ public final class WebAclRule {
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(@Nullable WebAclRuleAction action) {
+        public Builder action(@Nullable WebAclRuleAction action) {
             this.action = action;
             return this;
         }
 
-        public Builder setOverrideAction(@Nullable WebAclRuleOverrideAction overrideAction) {
+        public Builder overrideAction(@Nullable WebAclRuleOverrideAction overrideAction) {
             this.overrideAction = overrideAction;
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRuleId(String ruleId) {
+        public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

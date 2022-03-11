@@ -15,10 +15,10 @@ public final class TableEncryptionSpecification {
     private final TableEncryptionType encryptionType;
     private final @Nullable String kmsKeyIdentifier;
 
-    @OutputCustomType.Constructor({"encryptionType","kmsKeyIdentifier"})
+    @OutputCustomType.Constructor
     private TableEncryptionSpecification(
-        TableEncryptionType encryptionType,
-        @Nullable String kmsKeyIdentifier) {
+        @OutputCustomType.Parameter("encryptionType") TableEncryptionType encryptionType,
+        @OutputCustomType.Parameter("kmsKeyIdentifier") @Nullable String kmsKeyIdentifier) {
         this.encryptionType = encryptionType;
         this.kmsKeyIdentifier = kmsKeyIdentifier;
     }
@@ -52,12 +52,12 @@ public final class TableEncryptionSpecification {
     	      this.kmsKeyIdentifier = defaults.kmsKeyIdentifier;
         }
 
-        public Builder setEncryptionType(TableEncryptionType encryptionType) {
+        public Builder encryptionType(TableEncryptionType encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
 
-        public Builder setKmsKeyIdentifier(@Nullable String kmsKeyIdentifier) {
+        public Builder kmsKeyIdentifier(@Nullable String kmsKeyIdentifier) {
             this.kmsKeyIdentifier = kmsKeyIdentifier;
             return this;
         }

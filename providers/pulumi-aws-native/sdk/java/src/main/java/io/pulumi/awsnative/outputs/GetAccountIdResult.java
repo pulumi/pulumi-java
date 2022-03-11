@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetAccountIdResult {
     private final String accountId;
 
-    @OutputCustomType.Constructor({"accountId"})
-    private GetAccountIdResult(String accountId) {
+    @OutputCustomType.Constructor
+    private GetAccountIdResult(@OutputCustomType.Parameter("accountId") String accountId) {
         this.accountId = accountId;
     }
 
@@ -40,7 +40,7 @@ public final class GetAccountIdResult {
     	      this.accountId = defaults.accountId;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }

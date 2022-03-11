@@ -122,52 +122,52 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.update = defaults.update;
         }
 
-        public Builder setCreate(@Nullable Input<String> create) {
+        public Builder create(@Nullable Input<String> create) {
             this.create = create;
             return this;
         }
 
-        public Builder setCreate(@Nullable String create) {
+        public Builder create(@Nullable String create) {
             this.create = Input.ofNullable(create);
             return this;
         }
 
-        public Builder setDelete(@Nullable Input<String> delete) {
+        public Builder delete(@Nullable Input<String> delete) {
             this.delete = delete;
             return this;
         }
 
-        public Builder setDelete(@Nullable String delete) {
+        public Builder delete(@Nullable String delete) {
             this.delete = Input.ofNullable(delete);
             return this;
         }
 
-        public Builder setGet(@Nullable Input<String> get) {
+        public Builder get(@Nullable Input<String> get) {
             this.get = get;
             return this;
         }
 
-        public Builder setGet(@Nullable String get) {
+        public Builder get(@Nullable String get) {
             this.get = Input.ofNullable(get);
             return this;
         }
 
-        public Builder setSetIamPolicy(@Nullable Input<String> setIamPolicy) {
+        public Builder setIamPolicy(@Nullable Input<String> setIamPolicy) {
             this.setIamPolicy = setIamPolicy;
             return this;
         }
 
-        public Builder setSetIamPolicy(@Nullable String setIamPolicy) {
+        public Builder setIamPolicy(@Nullable String setIamPolicy) {
             this.setIamPolicy = Input.ofNullable(setIamPolicy);
             return this;
         }
 
-        public Builder setUpdate(@Nullable Input<String> update) {
+        public Builder update(@Nullable Input<String> update) {
             this.update = update;
             return this;
         }
 
-        public Builder setUpdate(@Nullable String update) {
+        public Builder update(@Nullable String update) {
             this.update = Input.ofNullable(update);
             return this;
         }

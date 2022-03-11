@@ -33,12 +33,12 @@ public final class KikChannelPropertiesResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"apiKey","isEnabled","isValidated","userName"})
+    @OutputCustomType.Constructor
     private KikChannelPropertiesResponse(
-        @Nullable String apiKey,
-        Boolean isEnabled,
-        @Nullable Boolean isValidated,
-        String userName) {
+        @OutputCustomType.Parameter("apiKey") @Nullable String apiKey,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("isValidated") @Nullable Boolean isValidated,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.apiKey = apiKey;
         this.isEnabled = isEnabled;
         this.isValidated = isValidated;
@@ -100,22 +100,22 @@ public final class KikChannelPropertiesResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setApiKey(@Nullable String apiKey) {
+        public Builder apiKey(@Nullable String apiKey) {
             this.apiKey = apiKey;
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsValidated(@Nullable Boolean isValidated) {
+        public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = isValidated;
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

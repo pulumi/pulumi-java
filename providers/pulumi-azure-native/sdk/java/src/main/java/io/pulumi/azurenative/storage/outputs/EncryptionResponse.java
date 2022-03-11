@@ -41,13 +41,13 @@ public final class EncryptionResponse {
      */
     private final @Nullable EncryptionServicesResponse services;
 
-    @OutputCustomType.Constructor({"encryptionIdentity","keySource","keyVaultProperties","requireInfrastructureEncryption","services"})
+    @OutputCustomType.Constructor
     private EncryptionResponse(
-        @Nullable EncryptionIdentityResponse encryptionIdentity,
-        String keySource,
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        @Nullable Boolean requireInfrastructureEncryption,
-        @Nullable EncryptionServicesResponse services) {
+        @OutputCustomType.Parameter("encryptionIdentity") @Nullable EncryptionIdentityResponse encryptionIdentity,
+        @OutputCustomType.Parameter("keySource") String keySource,
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @OutputCustomType.Parameter("requireInfrastructureEncryption") @Nullable Boolean requireInfrastructureEncryption,
+        @OutputCustomType.Parameter("services") @Nullable EncryptionServicesResponse services) {
         this.encryptionIdentity = encryptionIdentity;
         this.keySource = keySource;
         this.keyVaultProperties = keyVaultProperties;
@@ -119,27 +119,27 @@ public final class EncryptionResponse {
     	      this.services = defaults.services;
         }
 
-        public Builder setEncryptionIdentity(@Nullable EncryptionIdentityResponse encryptionIdentity) {
+        public Builder encryptionIdentity(@Nullable EncryptionIdentityResponse encryptionIdentity) {
             this.encryptionIdentity = encryptionIdentity;
             return this;
         }
 
-        public Builder setKeySource(String keySource) {
+        public Builder keySource(String keySource) {
             this.keySource = Objects.requireNonNull(keySource);
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setRequireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
+        public Builder requireInfrastructureEncryption(@Nullable Boolean requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
 
-        public Builder setServices(@Nullable EncryptionServicesResponse services) {
+        public Builder services(@Nullable EncryptionServicesResponse services) {
             this.services = services;
             return this;
         }

@@ -44,14 +44,14 @@ public final class CodeVersionResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"datastoreId","description","isAnonymous","path","properties","tags"})
+    @OutputCustomType.Constructor
     private CodeVersionResponse(
-        @Nullable String datastoreId,
-        @Nullable String description,
-        @Nullable Boolean isAnonymous,
-        String path,
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isAnonymous") @Nullable Boolean isAnonymous,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.datastoreId = datastoreId;
         this.description = description;
         this.isAnonymous = isAnonymous;
@@ -133,32 +133,32 @@ public final class CodeVersionResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatastoreId(@Nullable String datastoreId) {
+        public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIsAnonymous(@Nullable Boolean isAnonymous) {
+        public Builder isAnonymous(@Nullable Boolean isAnonymous) {
             this.isAnonymous = isAnonymous;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

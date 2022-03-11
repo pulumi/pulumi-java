@@ -16,11 +16,11 @@ public final class DistributionLogging {
     private final @Nullable Boolean includeCookies;
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucket","includeCookies","prefix"})
+    @OutputCustomType.Constructor
     private DistributionLogging(
-        String bucket,
-        @Nullable Boolean includeCookies,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("includeCookies") @Nullable Boolean includeCookies,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucket = bucket;
         this.includeCookies = includeCookies;
         this.prefix = prefix;
@@ -60,17 +60,17 @@ public final class DistributionLogging {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setIncludeCookies(@Nullable Boolean includeCookies) {
+        public Builder includeCookies(@Nullable Boolean includeCookies) {
             this.includeCookies = includeCookies;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }

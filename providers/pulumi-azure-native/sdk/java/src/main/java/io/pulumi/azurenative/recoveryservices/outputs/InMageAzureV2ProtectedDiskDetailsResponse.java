@@ -89,23 +89,23 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse {
      */
     private final @Nullable Double targetDataInMegaBytes;
 
-    @OutputCustomType.Constructor({"diskCapacityInBytes","diskId","diskName","diskResized","fileSystemCapacityInBytes","healthErrorCode","lastRpoCalculatedTime","protectionStage","psDataInMegaBytes","resyncDurationInSeconds","resyncProgressPercentage","resyncRequired","rpoInSeconds","sourceDataInMegaBytes","targetDataInMegaBytes"})
+    @OutputCustomType.Constructor
     private InMageAzureV2ProtectedDiskDetailsResponse(
-        @Nullable Double diskCapacityInBytes,
-        @Nullable String diskId,
-        @Nullable String diskName,
-        @Nullable String diskResized,
-        @Nullable Double fileSystemCapacityInBytes,
-        @Nullable String healthErrorCode,
-        @Nullable String lastRpoCalculatedTime,
-        @Nullable String protectionStage,
-        @Nullable Double psDataInMegaBytes,
-        @Nullable Double resyncDurationInSeconds,
-        @Nullable Integer resyncProgressPercentage,
-        @Nullable String resyncRequired,
-        @Nullable Double rpoInSeconds,
-        @Nullable Double sourceDataInMegaBytes,
-        @Nullable Double targetDataInMegaBytes) {
+        @OutputCustomType.Parameter("diskCapacityInBytes") @Nullable Double diskCapacityInBytes,
+        @OutputCustomType.Parameter("diskId") @Nullable String diskId,
+        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
+        @OutputCustomType.Parameter("diskResized") @Nullable String diskResized,
+        @OutputCustomType.Parameter("fileSystemCapacityInBytes") @Nullable Double fileSystemCapacityInBytes,
+        @OutputCustomType.Parameter("healthErrorCode") @Nullable String healthErrorCode,
+        @OutputCustomType.Parameter("lastRpoCalculatedTime") @Nullable String lastRpoCalculatedTime,
+        @OutputCustomType.Parameter("protectionStage") @Nullable String protectionStage,
+        @OutputCustomType.Parameter("psDataInMegaBytes") @Nullable Double psDataInMegaBytes,
+        @OutputCustomType.Parameter("resyncDurationInSeconds") @Nullable Double resyncDurationInSeconds,
+        @OutputCustomType.Parameter("resyncProgressPercentage") @Nullable Integer resyncProgressPercentage,
+        @OutputCustomType.Parameter("resyncRequired") @Nullable String resyncRequired,
+        @OutputCustomType.Parameter("rpoInSeconds") @Nullable Double rpoInSeconds,
+        @OutputCustomType.Parameter("sourceDataInMegaBytes") @Nullable Double sourceDataInMegaBytes,
+        @OutputCustomType.Parameter("targetDataInMegaBytes") @Nullable Double targetDataInMegaBytes) {
         this.diskCapacityInBytes = diskCapacityInBytes;
         this.diskId = diskId;
         this.diskName = diskName;
@@ -277,77 +277,77 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse {
     	      this.targetDataInMegaBytes = defaults.targetDataInMegaBytes;
         }
 
-        public Builder setDiskCapacityInBytes(@Nullable Double diskCapacityInBytes) {
+        public Builder diskCapacityInBytes(@Nullable Double diskCapacityInBytes) {
             this.diskCapacityInBytes = diskCapacityInBytes;
             return this;
         }
 
-        public Builder setDiskId(@Nullable String diskId) {
+        public Builder diskId(@Nullable String diskId) {
             this.diskId = diskId;
             return this;
         }
 
-        public Builder setDiskName(@Nullable String diskName) {
+        public Builder diskName(@Nullable String diskName) {
             this.diskName = diskName;
             return this;
         }
 
-        public Builder setDiskResized(@Nullable String diskResized) {
+        public Builder diskResized(@Nullable String diskResized) {
             this.diskResized = diskResized;
             return this;
         }
 
-        public Builder setFileSystemCapacityInBytes(@Nullable Double fileSystemCapacityInBytes) {
+        public Builder fileSystemCapacityInBytes(@Nullable Double fileSystemCapacityInBytes) {
             this.fileSystemCapacityInBytes = fileSystemCapacityInBytes;
             return this;
         }
 
-        public Builder setHealthErrorCode(@Nullable String healthErrorCode) {
+        public Builder healthErrorCode(@Nullable String healthErrorCode) {
             this.healthErrorCode = healthErrorCode;
             return this;
         }
 
-        public Builder setLastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
+        public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             this.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
 
-        public Builder setProtectionStage(@Nullable String protectionStage) {
+        public Builder protectionStage(@Nullable String protectionStage) {
             this.protectionStage = protectionStage;
             return this;
         }
 
-        public Builder setPsDataInMegaBytes(@Nullable Double psDataInMegaBytes) {
+        public Builder psDataInMegaBytes(@Nullable Double psDataInMegaBytes) {
             this.psDataInMegaBytes = psDataInMegaBytes;
             return this;
         }
 
-        public Builder setResyncDurationInSeconds(@Nullable Double resyncDurationInSeconds) {
+        public Builder resyncDurationInSeconds(@Nullable Double resyncDurationInSeconds) {
             this.resyncDurationInSeconds = resyncDurationInSeconds;
             return this;
         }
 
-        public Builder setResyncProgressPercentage(@Nullable Integer resyncProgressPercentage) {
+        public Builder resyncProgressPercentage(@Nullable Integer resyncProgressPercentage) {
             this.resyncProgressPercentage = resyncProgressPercentage;
             return this;
         }
 
-        public Builder setResyncRequired(@Nullable String resyncRequired) {
+        public Builder resyncRequired(@Nullable String resyncRequired) {
             this.resyncRequired = resyncRequired;
             return this;
         }
 
-        public Builder setRpoInSeconds(@Nullable Double rpoInSeconds) {
+        public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             this.rpoInSeconds = rpoInSeconds;
             return this;
         }
 
-        public Builder setSourceDataInMegaBytes(@Nullable Double sourceDataInMegaBytes) {
+        public Builder sourceDataInMegaBytes(@Nullable Double sourceDataInMegaBytes) {
             this.sourceDataInMegaBytes = sourceDataInMegaBytes;
             return this;
         }
 
-        public Builder setTargetDataInMegaBytes(@Nullable Double targetDataInMegaBytes) {
+        public Builder targetDataInMegaBytes(@Nullable Double targetDataInMegaBytes) {
             this.targetDataInMegaBytes = targetDataInMegaBytes;
             return this;
         }

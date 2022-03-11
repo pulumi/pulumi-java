@@ -124,52 +124,52 @@ public final class EccTokenKeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.y = defaults.y;
         }
 
-        public Builder setAlg(Input<Either<String,AccessPolicyEccAlgo>> alg) {
+        public Builder alg(Input<Either<String,AccessPolicyEccAlgo>> alg) {
             this.alg = Objects.requireNonNull(alg);
             return this;
         }
 
-        public Builder setAlg(Either<String,AccessPolicyEccAlgo> alg) {
+        public Builder alg(Either<String,AccessPolicyEccAlgo> alg) {
             this.alg = Input.of(Objects.requireNonNull(alg));
             return this;
         }
 
-        public Builder setKid(Input<String> kid) {
+        public Builder kid(Input<String> kid) {
             this.kid = Objects.requireNonNull(kid);
             return this;
         }
 
-        public Builder setKid(String kid) {
+        public Builder kid(String kid) {
             this.kid = Input.of(Objects.requireNonNull(kid));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setX(Input<String> x) {
+        public Builder x(Input<String> x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
 
-        public Builder setX(String x) {
+        public Builder x(String x) {
             this.x = Input.of(Objects.requireNonNull(x));
             return this;
         }
 
-        public Builder setY(Input<String> y) {
+        public Builder y(Input<String> y) {
             this.y = Objects.requireNonNull(y);
             return this;
         }
 
-        public Builder setY(String y) {
+        public Builder y(String y) {
             this.y = Input.of(Objects.requireNonNull(y));
             return this;
         }

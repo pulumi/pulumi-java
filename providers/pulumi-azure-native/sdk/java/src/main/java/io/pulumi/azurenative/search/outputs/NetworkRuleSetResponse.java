@@ -17,8 +17,8 @@ public final class NetworkRuleSetResponse {
      */
     private final @Nullable List<IpRuleResponse> ipRules;
 
-    @OutputCustomType.Constructor({"ipRules"})
-    private NetworkRuleSetResponse(@Nullable List<IpRuleResponse> ipRules) {
+    @OutputCustomType.Constructor
+    private NetworkRuleSetResponse(@OutputCustomType.Parameter("ipRules") @Nullable List<IpRuleResponse> ipRules) {
         this.ipRules = ipRules;
     }
 
@@ -50,7 +50,7 @@ public final class NetworkRuleSetResponse {
     	      this.ipRules = defaults.ipRules;
         }
 
-        public Builder setIpRules(@Nullable List<IpRuleResponse> ipRules) {
+        public Builder ipRules(@Nullable List<IpRuleResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }

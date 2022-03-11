@@ -274,142 +274,142 @@ public final class CxAgentState extends io.pulumi.resources.ResourceArgs {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setAvatarUri(@Nullable Input<String> avatarUri) {
+        public Builder avatarUri(@Nullable Input<String> avatarUri) {
             this.avatarUri = avatarUri;
             return this;
         }
 
-        public Builder setAvatarUri(@Nullable String avatarUri) {
+        public Builder avatarUri(@Nullable String avatarUri) {
             this.avatarUri = Input.ofNullable(avatarUri);
             return this;
         }
 
-        public Builder setDefaultLanguageCode(@Nullable Input<String> defaultLanguageCode) {
+        public Builder defaultLanguageCode(@Nullable Input<String> defaultLanguageCode) {
             this.defaultLanguageCode = defaultLanguageCode;
             return this;
         }
 
-        public Builder setDefaultLanguageCode(@Nullable String defaultLanguageCode) {
+        public Builder defaultLanguageCode(@Nullable String defaultLanguageCode) {
             this.defaultLanguageCode = Input.ofNullable(defaultLanguageCode);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEnableSpellCorrection(@Nullable Input<Boolean> enableSpellCorrection) {
+        public Builder enableSpellCorrection(@Nullable Input<Boolean> enableSpellCorrection) {
             this.enableSpellCorrection = enableSpellCorrection;
             return this;
         }
 
-        public Builder setEnableSpellCorrection(@Nullable Boolean enableSpellCorrection) {
+        public Builder enableSpellCorrection(@Nullable Boolean enableSpellCorrection) {
             this.enableSpellCorrection = Input.ofNullable(enableSpellCorrection);
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Input<Boolean> enableStackdriverLogging) {
             this.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Input.ofNullable(enableStackdriverLogging);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSecuritySettings(@Nullable Input<String> securitySettings) {
+        public Builder securitySettings(@Nullable Input<String> securitySettings) {
             this.securitySettings = securitySettings;
             return this;
         }
 
-        public Builder setSecuritySettings(@Nullable String securitySettings) {
+        public Builder securitySettings(@Nullable String securitySettings) {
             this.securitySettings = Input.ofNullable(securitySettings);
             return this;
         }
 
-        public Builder setSpeechToTextSettings(@Nullable Input<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings) {
+        public Builder speechToTextSettings(@Nullable Input<CxAgentSpeechToTextSettingsGetArgs> speechToTextSettings) {
             this.speechToTextSettings = speechToTextSettings;
             return this;
         }
 
-        public Builder setSpeechToTextSettings(@Nullable CxAgentSpeechToTextSettingsGetArgs speechToTextSettings) {
+        public Builder speechToTextSettings(@Nullable CxAgentSpeechToTextSettingsGetArgs speechToTextSettings) {
             this.speechToTextSettings = Input.ofNullable(speechToTextSettings);
             return this;
         }
 
-        public Builder setStartFlow(@Nullable Input<String> startFlow) {
+        public Builder startFlow(@Nullable Input<String> startFlow) {
             this.startFlow = startFlow;
             return this;
         }
 
-        public Builder setStartFlow(@Nullable String startFlow) {
+        public Builder startFlow(@Nullable String startFlow) {
             this.startFlow = Input.ofNullable(startFlow);
             return this;
         }
 
-        public Builder setSupportedLanguageCodes(@Nullable Input<List<String>> supportedLanguageCodes) {
+        public Builder supportedLanguageCodes(@Nullable Input<List<String>> supportedLanguageCodes) {
             this.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
 
-        public Builder setSupportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
+        public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
             this.supportedLanguageCodes = Input.ofNullable(supportedLanguageCodes);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

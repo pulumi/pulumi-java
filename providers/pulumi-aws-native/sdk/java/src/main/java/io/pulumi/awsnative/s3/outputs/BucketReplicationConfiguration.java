@@ -22,10 +22,10 @@ public final class BucketReplicationConfiguration {
      */
     private final List<BucketReplicationRule> rules;
 
-    @OutputCustomType.Constructor({"role","rules"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfiguration(
-        String role,
-        List<BucketReplicationRule> rules) {
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("rules") List<BucketReplicationRule> rules) {
         this.role = role;
         this.rules = rules;
     }
@@ -67,12 +67,12 @@ public final class BucketReplicationConfiguration {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRules(List<BucketReplicationRule> rules) {
+        public Builder rules(List<BucketReplicationRule> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

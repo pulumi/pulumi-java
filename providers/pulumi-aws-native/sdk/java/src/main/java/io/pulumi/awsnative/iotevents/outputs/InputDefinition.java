@@ -16,8 +16,8 @@ public final class InputDefinition {
      */
     private final List<InputAttribute> attributes;
 
-    @OutputCustomType.Constructor({"attributes"})
-    private InputDefinition(List<InputAttribute> attributes) {
+    @OutputCustomType.Constructor
+    private InputDefinition(@OutputCustomType.Parameter("attributes") List<InputAttribute> attributes) {
         this.attributes = attributes;
     }
 
@@ -49,7 +49,7 @@ public final class InputDefinition {
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder setAttributes(List<InputAttribute> attributes) {
+        public Builder attributes(List<InputAttribute> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }

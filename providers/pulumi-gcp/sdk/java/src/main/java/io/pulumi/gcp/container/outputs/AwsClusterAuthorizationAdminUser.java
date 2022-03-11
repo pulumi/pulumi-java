@@ -15,8 +15,8 @@ public final class AwsClusterAuthorizationAdminUser {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"username"})
-    private AwsClusterAuthorizationAdminUser(String username) {
+    @OutputCustomType.Constructor
+    private AwsClusterAuthorizationAdminUser(@OutputCustomType.Parameter("username") String username) {
         this.username = username;
     }
 
@@ -48,7 +48,7 @@ public final class AwsClusterAuthorizationAdminUser {
     	      this.username = defaults.username;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

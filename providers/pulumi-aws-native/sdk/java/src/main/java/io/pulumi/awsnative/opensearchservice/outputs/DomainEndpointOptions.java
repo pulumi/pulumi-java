@@ -18,13 +18,13 @@ public final class DomainEndpointOptions {
     private final @Nullable Boolean enforceHTTPS;
     private final @Nullable String tLSSecurityPolicy;
 
-    @OutputCustomType.Constructor({"customEndpoint","customEndpointCertificateArn","customEndpointEnabled","enforceHTTPS","tLSSecurityPolicy"})
+    @OutputCustomType.Constructor
     private DomainEndpointOptions(
-        @Nullable String customEndpoint,
-        @Nullable String customEndpointCertificateArn,
-        @Nullable Boolean customEndpointEnabled,
-        @Nullable Boolean enforceHTTPS,
-        @Nullable String tLSSecurityPolicy) {
+        @OutputCustomType.Parameter("customEndpoint") @Nullable String customEndpoint,
+        @OutputCustomType.Parameter("customEndpointCertificateArn") @Nullable String customEndpointCertificateArn,
+        @OutputCustomType.Parameter("customEndpointEnabled") @Nullable Boolean customEndpointEnabled,
+        @OutputCustomType.Parameter("enforceHTTPS") @Nullable Boolean enforceHTTPS,
+        @OutputCustomType.Parameter("tLSSecurityPolicy") @Nullable String tLSSecurityPolicy) {
         this.customEndpoint = customEndpoint;
         this.customEndpointCertificateArn = customEndpointCertificateArn;
         this.customEndpointEnabled = customEndpointEnabled;
@@ -76,27 +76,27 @@ public final class DomainEndpointOptions {
     	      this.tLSSecurityPolicy = defaults.tLSSecurityPolicy;
         }
 
-        public Builder setCustomEndpoint(@Nullable String customEndpoint) {
+        public Builder customEndpoint(@Nullable String customEndpoint) {
             this.customEndpoint = customEndpoint;
             return this;
         }
 
-        public Builder setCustomEndpointCertificateArn(@Nullable String customEndpointCertificateArn) {
+        public Builder customEndpointCertificateArn(@Nullable String customEndpointCertificateArn) {
             this.customEndpointCertificateArn = customEndpointCertificateArn;
             return this;
         }
 
-        public Builder setCustomEndpointEnabled(@Nullable Boolean customEndpointEnabled) {
+        public Builder customEndpointEnabled(@Nullable Boolean customEndpointEnabled) {
             this.customEndpointEnabled = customEndpointEnabled;
             return this;
         }
 
-        public Builder setEnforceHTTPS(@Nullable Boolean enforceHTTPS) {
+        public Builder enforceHTTPS(@Nullable Boolean enforceHTTPS) {
             this.enforceHTTPS = enforceHTTPS;
             return this;
         }
 
-        public Builder setTLSSecurityPolicy(@Nullable String tLSSecurityPolicy) {
+        public Builder tLSSecurityPolicy(@Nullable String tLSSecurityPolicy) {
             this.tLSSecurityPolicy = tLSSecurityPolicy;
             return this;
         }

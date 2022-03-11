@@ -91,24 +91,24 @@ public final class GetManagedZoneResult {
      */
     private final String visibility;
 
-    @OutputCustomType.Constructor({"cloudLoggingConfig","creationTime","description","dnsName","dnssecConfig","forwardingConfig","kind","labels","name","nameServerSet","nameServers","peeringConfig","privateVisibilityConfig","reverseLookupConfig","serviceDirectoryConfig","visibility"})
+    @OutputCustomType.Constructor
     private GetManagedZoneResult(
-        ManagedZoneCloudLoggingConfigResponse cloudLoggingConfig,
-        String creationTime,
-        String description,
-        String dnsName,
-        ManagedZoneDnsSecConfigResponse dnssecConfig,
-        ManagedZoneForwardingConfigResponse forwardingConfig,
-        String kind,
-        Map<String,String> labels,
-        String name,
-        String nameServerSet,
-        List<String> nameServers,
-        ManagedZonePeeringConfigResponse peeringConfig,
-        ManagedZonePrivateVisibilityConfigResponse privateVisibilityConfig,
-        ManagedZoneReverseLookupConfigResponse reverseLookupConfig,
-        ManagedZoneServiceDirectoryConfigResponse serviceDirectoryConfig,
-        String visibility) {
+        @OutputCustomType.Parameter("cloudLoggingConfig") ManagedZoneCloudLoggingConfigResponse cloudLoggingConfig,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("dnssecConfig") ManagedZoneDnsSecConfigResponse dnssecConfig,
+        @OutputCustomType.Parameter("forwardingConfig") ManagedZoneForwardingConfigResponse forwardingConfig,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nameServerSet") String nameServerSet,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
+        @OutputCustomType.Parameter("peeringConfig") ManagedZonePeeringConfigResponse peeringConfig,
+        @OutputCustomType.Parameter("privateVisibilityConfig") ManagedZonePrivateVisibilityConfigResponse privateVisibilityConfig,
+        @OutputCustomType.Parameter("reverseLookupConfig") ManagedZoneReverseLookupConfigResponse reverseLookupConfig,
+        @OutputCustomType.Parameter("serviceDirectoryConfig") ManagedZoneServiceDirectoryConfigResponse serviceDirectoryConfig,
+        @OutputCustomType.Parameter("visibility") String visibility) {
         this.cloudLoggingConfig = cloudLoggingConfig;
         this.creationTime = creationTime;
         this.description = description;
@@ -282,82 +282,82 @@ public final class GetManagedZoneResult {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setCloudLoggingConfig(ManagedZoneCloudLoggingConfigResponse cloudLoggingConfig) {
+        public Builder cloudLoggingConfig(ManagedZoneCloudLoggingConfigResponse cloudLoggingConfig) {
             this.cloudLoggingConfig = Objects.requireNonNull(cloudLoggingConfig);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setDnssecConfig(ManagedZoneDnsSecConfigResponse dnssecConfig) {
+        public Builder dnssecConfig(ManagedZoneDnsSecConfigResponse dnssecConfig) {
             this.dnssecConfig = Objects.requireNonNull(dnssecConfig);
             return this;
         }
 
-        public Builder setForwardingConfig(ManagedZoneForwardingConfigResponse forwardingConfig) {
+        public Builder forwardingConfig(ManagedZoneForwardingConfigResponse forwardingConfig) {
             this.forwardingConfig = Objects.requireNonNull(forwardingConfig);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNameServerSet(String nameServerSet) {
+        public Builder nameServerSet(String nameServerSet) {
             this.nameServerSet = Objects.requireNonNull(nameServerSet);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
 
-        public Builder setPeeringConfig(ManagedZonePeeringConfigResponse peeringConfig) {
+        public Builder peeringConfig(ManagedZonePeeringConfigResponse peeringConfig) {
             this.peeringConfig = Objects.requireNonNull(peeringConfig);
             return this;
         }
 
-        public Builder setPrivateVisibilityConfig(ManagedZonePrivateVisibilityConfigResponse privateVisibilityConfig) {
+        public Builder privateVisibilityConfig(ManagedZonePrivateVisibilityConfigResponse privateVisibilityConfig) {
             this.privateVisibilityConfig = Objects.requireNonNull(privateVisibilityConfig);
             return this;
         }
 
-        public Builder setReverseLookupConfig(ManagedZoneReverseLookupConfigResponse reverseLookupConfig) {
+        public Builder reverseLookupConfig(ManagedZoneReverseLookupConfigResponse reverseLookupConfig) {
             this.reverseLookupConfig = Objects.requireNonNull(reverseLookupConfig);
             return this;
         }
 
-        public Builder setServiceDirectoryConfig(ManagedZoneServiceDirectoryConfigResponse serviceDirectoryConfig) {
+        public Builder serviceDirectoryConfig(ManagedZoneServiceDirectoryConfigResponse serviceDirectoryConfig) {
             this.serviceDirectoryConfig = Objects.requireNonNull(serviceDirectoryConfig);
             return this;
         }
 
-        public Builder setVisibility(String visibility) {
+        public Builder visibility(String visibility) {
             this.visibility = Objects.requireNonNull(visibility);
             return this;
         }

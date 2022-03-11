@@ -41,14 +41,14 @@ public final class GetSnapshotResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"createTime","description","filesystemUsedBytes","labels","name","state"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        String createTime,
-        String description,
-        String filesystemUsedBytes,
-        Map<String,String> labels,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("filesystemUsedBytes") String filesystemUsedBytes,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.createTime = createTime;
         this.description = description;
         this.filesystemUsedBytes = filesystemUsedBytes;
@@ -130,32 +130,32 @@ public final class GetSnapshotResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFilesystemUsedBytes(String filesystemUsedBytes) {
+        public Builder filesystemUsedBytes(String filesystemUsedBytes) {
             this.filesystemUsedBytes = Objects.requireNonNull(filesystemUsedBytes);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

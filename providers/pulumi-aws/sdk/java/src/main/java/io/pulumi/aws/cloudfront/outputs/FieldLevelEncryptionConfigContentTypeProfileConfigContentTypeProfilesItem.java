@@ -27,11 +27,11 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      */
     private final @Nullable String profileId;
 
-    @OutputCustomType.Constructor({"contentType","format","profileId"})
+    @OutputCustomType.Constructor
     private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem(
-        String contentType,
-        String format,
-        @Nullable String profileId) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("profileId") @Nullable String profileId) {
         this.contentType = contentType;
         this.format = format;
         this.profileId = profileId;
@@ -83,17 +83,17 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     	      this.profileId = defaults.profileId;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setProfileId(@Nullable String profileId) {
+        public Builder profileId(@Nullable String profileId) {
             this.profileId = profileId;
             return this;
         }

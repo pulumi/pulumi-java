@@ -41,13 +41,13 @@ public final class EnvironmentLoggingConfiguration {
      */
     private final @Nullable EnvironmentLoggingConfigurationWorkerLogs workerLogs;
 
-    @OutputCustomType.Constructor({"dagProcessingLogs","schedulerLogs","taskLogs","webserverLogs","workerLogs"})
+    @OutputCustomType.Constructor
     private EnvironmentLoggingConfiguration(
-        @Nullable EnvironmentLoggingConfigurationDagProcessingLogs dagProcessingLogs,
-        @Nullable EnvironmentLoggingConfigurationSchedulerLogs schedulerLogs,
-        @Nullable EnvironmentLoggingConfigurationTaskLogs taskLogs,
-        @Nullable EnvironmentLoggingConfigurationWebserverLogs webserverLogs,
-        @Nullable EnvironmentLoggingConfigurationWorkerLogs workerLogs) {
+        @OutputCustomType.Parameter("dagProcessingLogs") @Nullable EnvironmentLoggingConfigurationDagProcessingLogs dagProcessingLogs,
+        @OutputCustomType.Parameter("schedulerLogs") @Nullable EnvironmentLoggingConfigurationSchedulerLogs schedulerLogs,
+        @OutputCustomType.Parameter("taskLogs") @Nullable EnvironmentLoggingConfigurationTaskLogs taskLogs,
+        @OutputCustomType.Parameter("webserverLogs") @Nullable EnvironmentLoggingConfigurationWebserverLogs webserverLogs,
+        @OutputCustomType.Parameter("workerLogs") @Nullable EnvironmentLoggingConfigurationWorkerLogs workerLogs) {
         this.dagProcessingLogs = dagProcessingLogs;
         this.schedulerLogs = schedulerLogs;
         this.taskLogs = taskLogs;
@@ -119,27 +119,27 @@ public final class EnvironmentLoggingConfiguration {
     	      this.workerLogs = defaults.workerLogs;
         }
 
-        public Builder setDagProcessingLogs(@Nullable EnvironmentLoggingConfigurationDagProcessingLogs dagProcessingLogs) {
+        public Builder dagProcessingLogs(@Nullable EnvironmentLoggingConfigurationDagProcessingLogs dagProcessingLogs) {
             this.dagProcessingLogs = dagProcessingLogs;
             return this;
         }
 
-        public Builder setSchedulerLogs(@Nullable EnvironmentLoggingConfigurationSchedulerLogs schedulerLogs) {
+        public Builder schedulerLogs(@Nullable EnvironmentLoggingConfigurationSchedulerLogs schedulerLogs) {
             this.schedulerLogs = schedulerLogs;
             return this;
         }
 
-        public Builder setTaskLogs(@Nullable EnvironmentLoggingConfigurationTaskLogs taskLogs) {
+        public Builder taskLogs(@Nullable EnvironmentLoggingConfigurationTaskLogs taskLogs) {
             this.taskLogs = taskLogs;
             return this;
         }
 
-        public Builder setWebserverLogs(@Nullable EnvironmentLoggingConfigurationWebserverLogs webserverLogs) {
+        public Builder webserverLogs(@Nullable EnvironmentLoggingConfigurationWebserverLogs webserverLogs) {
             this.webserverLogs = webserverLogs;
             return this;
         }
 
-        public Builder setWorkerLogs(@Nullable EnvironmentLoggingConfigurationWorkerLogs workerLogs) {
+        public Builder workerLogs(@Nullable EnvironmentLoggingConfigurationWorkerLogs workerLogs) {
             this.workerLogs = workerLogs;
             return this;
         }

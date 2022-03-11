@@ -35,12 +35,12 @@ public final class ApplicationJitAccessPolicyResponse {
      */
     private final @Nullable String maximumJitAccessDuration;
 
-    @OutputCustomType.Constructor({"jitAccessEnabled","jitApprovalMode","jitApprovers","maximumJitAccessDuration"})
+    @OutputCustomType.Constructor
     private ApplicationJitAccessPolicyResponse(
-        Boolean jitAccessEnabled,
-        @Nullable String jitApprovalMode,
-        @Nullable List<JitApproverDefinitionResponse> jitApprovers,
-        @Nullable String maximumJitAccessDuration) {
+        @OutputCustomType.Parameter("jitAccessEnabled") Boolean jitAccessEnabled,
+        @OutputCustomType.Parameter("jitApprovalMode") @Nullable String jitApprovalMode,
+        @OutputCustomType.Parameter("jitApprovers") @Nullable List<JitApproverDefinitionResponse> jitApprovers,
+        @OutputCustomType.Parameter("maximumJitAccessDuration") @Nullable String maximumJitAccessDuration) {
         this.jitAccessEnabled = jitAccessEnabled;
         this.jitApprovalMode = jitApprovalMode;
         this.jitApprovers = jitApprovers;
@@ -102,22 +102,22 @@ public final class ApplicationJitAccessPolicyResponse {
     	      this.maximumJitAccessDuration = defaults.maximumJitAccessDuration;
         }
 
-        public Builder setJitAccessEnabled(Boolean jitAccessEnabled) {
+        public Builder jitAccessEnabled(Boolean jitAccessEnabled) {
             this.jitAccessEnabled = Objects.requireNonNull(jitAccessEnabled);
             return this;
         }
 
-        public Builder setJitApprovalMode(@Nullable String jitApprovalMode) {
+        public Builder jitApprovalMode(@Nullable String jitApprovalMode) {
             this.jitApprovalMode = jitApprovalMode;
             return this;
         }
 
-        public Builder setJitApprovers(@Nullable List<JitApproverDefinitionResponse> jitApprovers) {
+        public Builder jitApprovers(@Nullable List<JitApproverDefinitionResponse> jitApprovers) {
             this.jitApprovers = jitApprovers;
             return this;
         }
 
-        public Builder setMaximumJitAccessDuration(@Nullable String maximumJitAccessDuration) {
+        public Builder maximumJitAccessDuration(@Nullable String maximumJitAccessDuration) {
             this.maximumJitAccessDuration = maximumJitAccessDuration;
             return this;
         }

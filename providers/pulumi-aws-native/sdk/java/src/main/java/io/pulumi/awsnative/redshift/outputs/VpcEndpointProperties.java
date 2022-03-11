@@ -29,11 +29,11 @@ public final class VpcEndpointProperties {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"networkInterfaces","vpcEndpointId","vpcId"})
+    @OutputCustomType.Constructor
     private VpcEndpointProperties(
-        @Nullable List<EndpointAccessNetworkInterface> networkInterfaces,
-        @Nullable String vpcEndpointId,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<EndpointAccessNetworkInterface> networkInterfaces,
+        @OutputCustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.networkInterfaces = networkInterfaces;
         this.vpcEndpointId = vpcEndpointId;
         this.vpcId = vpcId;
@@ -85,17 +85,17 @@ public final class VpcEndpointProperties {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<EndpointAccessNetworkInterface> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<EndpointAccessNetworkInterface> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable String vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

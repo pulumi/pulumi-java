@@ -33,12 +33,12 @@ public final class ExternalMetricSource {
      */
     private final @Nullable String targetValue;
 
-    @OutputCustomType.Constructor({"metricName","metricSelector","targetAverageValue","targetValue"})
+    @OutputCustomType.Constructor
     private ExternalMetricSource(
-        String metricName,
-        @Nullable LabelSelector metricSelector,
-        @Nullable String targetAverageValue,
-        @Nullable String targetValue) {
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("metricSelector") @Nullable LabelSelector metricSelector,
+        @OutputCustomType.Parameter("targetAverageValue") @Nullable String targetAverageValue,
+        @OutputCustomType.Parameter("targetValue") @Nullable String targetValue) {
         this.metricName = metricName;
         this.metricSelector = metricSelector;
         this.targetAverageValue = targetAverageValue;
@@ -100,22 +100,22 @@ public final class ExternalMetricSource {
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricSelector(@Nullable LabelSelector metricSelector) {
+        public Builder metricSelector(@Nullable LabelSelector metricSelector) {
             this.metricSelector = metricSelector;
             return this;
         }
 
-        public Builder setTargetAverageValue(@Nullable String targetAverageValue) {
+        public Builder targetAverageValue(@Nullable String targetAverageValue) {
             this.targetAverageValue = targetAverageValue;
             return this;
         }
 
-        public Builder setTargetValue(@Nullable String targetValue) {
+        public Builder targetValue(@Nullable String targetValue) {
             this.targetValue = targetValue;
             return this;
         }

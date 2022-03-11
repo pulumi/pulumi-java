@@ -351,192 +351,192 @@ public final class EventSourceMappingArgs extends io.pulumi.resources.ResourceAr
     	      this.tumblingWindowInSeconds = defaults.tumblingWindowInSeconds;
         }
 
-        public Builder setBatchSize(@Nullable Input<Integer> batchSize) {
+        public Builder batchSize(@Nullable Input<Integer> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Integer batchSize) {
+        public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = Input.ofNullable(batchSize);
             return this;
         }
 
-        public Builder setBisectBatchOnFunctionError(@Nullable Input<Boolean> bisectBatchOnFunctionError) {
+        public Builder bisectBatchOnFunctionError(@Nullable Input<Boolean> bisectBatchOnFunctionError) {
             this.bisectBatchOnFunctionError = bisectBatchOnFunctionError;
             return this;
         }
 
-        public Builder setBisectBatchOnFunctionError(@Nullable Boolean bisectBatchOnFunctionError) {
+        public Builder bisectBatchOnFunctionError(@Nullable Boolean bisectBatchOnFunctionError) {
             this.bisectBatchOnFunctionError = Input.ofNullable(bisectBatchOnFunctionError);
             return this;
         }
 
-        public Builder setDestinationConfig(@Nullable Input<EventSourceMappingDestinationConfigArgs> destinationConfig) {
+        public Builder destinationConfig(@Nullable Input<EventSourceMappingDestinationConfigArgs> destinationConfig) {
             this.destinationConfig = destinationConfig;
             return this;
         }
 
-        public Builder setDestinationConfig(@Nullable EventSourceMappingDestinationConfigArgs destinationConfig) {
+        public Builder destinationConfig(@Nullable EventSourceMappingDestinationConfigArgs destinationConfig) {
             this.destinationConfig = Input.ofNullable(destinationConfig);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setEventSourceArn(@Nullable Input<String> eventSourceArn) {
+        public Builder eventSourceArn(@Nullable Input<String> eventSourceArn) {
             this.eventSourceArn = eventSourceArn;
             return this;
         }
 
-        public Builder setEventSourceArn(@Nullable String eventSourceArn) {
+        public Builder eventSourceArn(@Nullable String eventSourceArn) {
             this.eventSourceArn = Input.ofNullable(eventSourceArn);
             return this;
         }
 
-        public Builder setFilterCriteria(@Nullable Input<FilterCriteriaPropertiesArgs> filterCriteria) {
+        public Builder filterCriteria(@Nullable Input<FilterCriteriaPropertiesArgs> filterCriteria) {
             this.filterCriteria = filterCriteria;
             return this;
         }
 
-        public Builder setFilterCriteria(@Nullable FilterCriteriaPropertiesArgs filterCriteria) {
+        public Builder filterCriteria(@Nullable FilterCriteriaPropertiesArgs filterCriteria) {
             this.filterCriteria = Input.ofNullable(filterCriteria);
             return this;
         }
 
-        public Builder setFunctionName(Input<String> functionName) {
+        public Builder functionName(Input<String> functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
 
-        public Builder setFunctionName(String functionName) {
+        public Builder functionName(String functionName) {
             this.functionName = Input.of(Objects.requireNonNull(functionName));
             return this;
         }
 
-        public Builder setFunctionResponseTypes(@Nullable Input<List<EventSourceMappingFunctionResponseTypesItem>> functionResponseTypes) {
+        public Builder functionResponseTypes(@Nullable Input<List<EventSourceMappingFunctionResponseTypesItem>> functionResponseTypes) {
             this.functionResponseTypes = functionResponseTypes;
             return this;
         }
 
-        public Builder setFunctionResponseTypes(@Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes) {
+        public Builder functionResponseTypes(@Nullable List<EventSourceMappingFunctionResponseTypesItem> functionResponseTypes) {
             this.functionResponseTypes = Input.ofNullable(functionResponseTypes);
             return this;
         }
 
-        public Builder setMaximumBatchingWindowInSeconds(@Nullable Input<Integer> maximumBatchingWindowInSeconds) {
+        public Builder maximumBatchingWindowInSeconds(@Nullable Input<Integer> maximumBatchingWindowInSeconds) {
             this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
             return this;
         }
 
-        public Builder setMaximumBatchingWindowInSeconds(@Nullable Integer maximumBatchingWindowInSeconds) {
+        public Builder maximumBatchingWindowInSeconds(@Nullable Integer maximumBatchingWindowInSeconds) {
             this.maximumBatchingWindowInSeconds = Input.ofNullable(maximumBatchingWindowInSeconds);
             return this;
         }
 
-        public Builder setMaximumRecordAgeInSeconds(@Nullable Input<Integer> maximumRecordAgeInSeconds) {
+        public Builder maximumRecordAgeInSeconds(@Nullable Input<Integer> maximumRecordAgeInSeconds) {
             this.maximumRecordAgeInSeconds = maximumRecordAgeInSeconds;
             return this;
         }
 
-        public Builder setMaximumRecordAgeInSeconds(@Nullable Integer maximumRecordAgeInSeconds) {
+        public Builder maximumRecordAgeInSeconds(@Nullable Integer maximumRecordAgeInSeconds) {
             this.maximumRecordAgeInSeconds = Input.ofNullable(maximumRecordAgeInSeconds);
             return this;
         }
 
-        public Builder setMaximumRetryAttempts(@Nullable Input<Integer> maximumRetryAttempts) {
+        public Builder maximumRetryAttempts(@Nullable Input<Integer> maximumRetryAttempts) {
             this.maximumRetryAttempts = maximumRetryAttempts;
             return this;
         }
 
-        public Builder setMaximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
+        public Builder maximumRetryAttempts(@Nullable Integer maximumRetryAttempts) {
             this.maximumRetryAttempts = Input.ofNullable(maximumRetryAttempts);
             return this;
         }
 
-        public Builder setParallelizationFactor(@Nullable Input<Integer> parallelizationFactor) {
+        public Builder parallelizationFactor(@Nullable Input<Integer> parallelizationFactor) {
             this.parallelizationFactor = parallelizationFactor;
             return this;
         }
 
-        public Builder setParallelizationFactor(@Nullable Integer parallelizationFactor) {
+        public Builder parallelizationFactor(@Nullable Integer parallelizationFactor) {
             this.parallelizationFactor = Input.ofNullable(parallelizationFactor);
             return this;
         }
 
-        public Builder setQueues(@Nullable Input<List<String>> queues) {
+        public Builder queues(@Nullable Input<List<String>> queues) {
             this.queues = queues;
             return this;
         }
 
-        public Builder setQueues(@Nullable List<String> queues) {
+        public Builder queues(@Nullable List<String> queues) {
             this.queues = Input.ofNullable(queues);
             return this;
         }
 
-        public Builder setSelfManagedEventSource(@Nullable Input<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource) {
+        public Builder selfManagedEventSource(@Nullable Input<EventSourceMappingSelfManagedEventSourceArgs> selfManagedEventSource) {
             this.selfManagedEventSource = selfManagedEventSource;
             return this;
         }
 
-        public Builder setSelfManagedEventSource(@Nullable EventSourceMappingSelfManagedEventSourceArgs selfManagedEventSource) {
+        public Builder selfManagedEventSource(@Nullable EventSourceMappingSelfManagedEventSourceArgs selfManagedEventSource) {
             this.selfManagedEventSource = Input.ofNullable(selfManagedEventSource);
             return this;
         }
 
-        public Builder setSourceAccessConfigurations(@Nullable Input<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations) {
+        public Builder sourceAccessConfigurations(@Nullable Input<List<EventSourceMappingSourceAccessConfigurationArgs>> sourceAccessConfigurations) {
             this.sourceAccessConfigurations = sourceAccessConfigurations;
             return this;
         }
 
-        public Builder setSourceAccessConfigurations(@Nullable List<EventSourceMappingSourceAccessConfigurationArgs> sourceAccessConfigurations) {
+        public Builder sourceAccessConfigurations(@Nullable List<EventSourceMappingSourceAccessConfigurationArgs> sourceAccessConfigurations) {
             this.sourceAccessConfigurations = Input.ofNullable(sourceAccessConfigurations);
             return this;
         }
 
-        public Builder setStartingPosition(@Nullable Input<String> startingPosition) {
+        public Builder startingPosition(@Nullable Input<String> startingPosition) {
             this.startingPosition = startingPosition;
             return this;
         }
 
-        public Builder setStartingPosition(@Nullable String startingPosition) {
+        public Builder startingPosition(@Nullable String startingPosition) {
             this.startingPosition = Input.ofNullable(startingPosition);
             return this;
         }
 
-        public Builder setStartingPositionTimestamp(@Nullable Input<Double> startingPositionTimestamp) {
+        public Builder startingPositionTimestamp(@Nullable Input<Double> startingPositionTimestamp) {
             this.startingPositionTimestamp = startingPositionTimestamp;
             return this;
         }
 
-        public Builder setStartingPositionTimestamp(@Nullable Double startingPositionTimestamp) {
+        public Builder startingPositionTimestamp(@Nullable Double startingPositionTimestamp) {
             this.startingPositionTimestamp = Input.ofNullable(startingPositionTimestamp);
             return this;
         }
 
-        public Builder setTopics(@Nullable Input<List<String>> topics) {
+        public Builder topics(@Nullable Input<List<String>> topics) {
             this.topics = topics;
             return this;
         }
 
-        public Builder setTopics(@Nullable List<String> topics) {
+        public Builder topics(@Nullable List<String> topics) {
             this.topics = Input.ofNullable(topics);
             return this;
         }
 
-        public Builder setTumblingWindowInSeconds(@Nullable Input<Integer> tumblingWindowInSeconds) {
+        public Builder tumblingWindowInSeconds(@Nullable Input<Integer> tumblingWindowInSeconds) {
             this.tumblingWindowInSeconds = tumblingWindowInSeconds;
             return this;
         }
 
-        public Builder setTumblingWindowInSeconds(@Nullable Integer tumblingWindowInSeconds) {
+        public Builder tumblingWindowInSeconds(@Nullable Integer tumblingWindowInSeconds) {
             this.tumblingWindowInSeconds = Input.ofNullable(tumblingWindowInSeconds);
             return this;
         }

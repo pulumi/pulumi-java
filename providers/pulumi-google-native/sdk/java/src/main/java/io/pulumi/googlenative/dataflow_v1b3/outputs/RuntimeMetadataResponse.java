@@ -22,10 +22,10 @@ public final class RuntimeMetadataResponse {
      */
     private final SDKInfoResponse sdkInfo;
 
-    @OutputCustomType.Constructor({"parameters","sdkInfo"})
+    @OutputCustomType.Constructor
     private RuntimeMetadataResponse(
-        List<ParameterMetadataResponse> parameters,
-        SDKInfoResponse sdkInfo) {
+        @OutputCustomType.Parameter("parameters") List<ParameterMetadataResponse> parameters,
+        @OutputCustomType.Parameter("sdkInfo") SDKInfoResponse sdkInfo) {
         this.parameters = parameters;
         this.sdkInfo = sdkInfo;
     }
@@ -67,12 +67,12 @@ public final class RuntimeMetadataResponse {
     	      this.sdkInfo = defaults.sdkInfo;
         }
 
-        public Builder setParameters(List<ParameterMetadataResponse> parameters) {
+        public Builder parameters(List<ParameterMetadataResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setSdkInfo(SDKInfoResponse sdkInfo) {
+        public Builder sdkInfo(SDKInfoResponse sdkInfo) {
             this.sdkInfo = Objects.requireNonNull(sdkInfo);
             return this;
         }

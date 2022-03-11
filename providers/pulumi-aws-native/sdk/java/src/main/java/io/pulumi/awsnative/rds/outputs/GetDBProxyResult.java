@@ -62,17 +62,17 @@ public final class GetDBProxyResult {
      */
     private final @Nullable List<String> vpcSecurityGroupIds;
 
-    @OutputCustomType.Constructor({"auth","dBProxyArn","debugLogging","endpoint","idleClientTimeout","requireTLS","roleArn","tags","vpcSecurityGroupIds"})
+    @OutputCustomType.Constructor
     private GetDBProxyResult(
-        @Nullable List<DBProxyAuthFormat> auth,
-        @Nullable String dBProxyArn,
-        @Nullable Boolean debugLogging,
-        @Nullable String endpoint,
-        @Nullable Integer idleClientTimeout,
-        @Nullable Boolean requireTLS,
-        @Nullable String roleArn,
-        @Nullable List<DBProxyTagFormat> tags,
-        @Nullable List<String> vpcSecurityGroupIds) {
+        @OutputCustomType.Parameter("auth") @Nullable List<DBProxyAuthFormat> auth,
+        @OutputCustomType.Parameter("dBProxyArn") @Nullable String dBProxyArn,
+        @OutputCustomType.Parameter("debugLogging") @Nullable Boolean debugLogging,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("idleClientTimeout") @Nullable Integer idleClientTimeout,
+        @OutputCustomType.Parameter("requireTLS") @Nullable Boolean requireTLS,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<DBProxyTagFormat> tags,
+        @OutputCustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds) {
         this.auth = auth;
         this.dBProxyArn = dBProxyArn;
         this.debugLogging = debugLogging;
@@ -184,47 +184,47 @@ public final class GetDBProxyResult {
     	      this.vpcSecurityGroupIds = defaults.vpcSecurityGroupIds;
         }
 
-        public Builder setAuth(@Nullable List<DBProxyAuthFormat> auth) {
+        public Builder auth(@Nullable List<DBProxyAuthFormat> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setDBProxyArn(@Nullable String dBProxyArn) {
+        public Builder dBProxyArn(@Nullable String dBProxyArn) {
             this.dBProxyArn = dBProxyArn;
             return this;
         }
 
-        public Builder setDebugLogging(@Nullable Boolean debugLogging) {
+        public Builder debugLogging(@Nullable Boolean debugLogging) {
             this.debugLogging = debugLogging;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setIdleClientTimeout(@Nullable Integer idleClientTimeout) {
+        public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
             this.idleClientTimeout = idleClientTimeout;
             return this;
         }
 
-        public Builder setRequireTLS(@Nullable Boolean requireTLS) {
+        public Builder requireTLS(@Nullable Boolean requireTLS) {
             this.requireTLS = requireTLS;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DBProxyTagFormat> tags) {
+        public Builder tags(@Nullable List<DBProxyTagFormat> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }

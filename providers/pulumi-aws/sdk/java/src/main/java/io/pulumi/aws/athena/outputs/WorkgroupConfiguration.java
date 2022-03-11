@@ -45,14 +45,14 @@ public final class WorkgroupConfiguration {
      */
     private final @Nullable WorkgroupConfigurationResultConfiguration resultConfiguration;
 
-    @OutputCustomType.Constructor({"bytesScannedCutoffPerQuery","enforceWorkgroupConfiguration","engineVersion","publishCloudwatchMetricsEnabled","requesterPaysEnabled","resultConfiguration"})
+    @OutputCustomType.Constructor
     private WorkgroupConfiguration(
-        @Nullable Integer bytesScannedCutoffPerQuery,
-        @Nullable Boolean enforceWorkgroupConfiguration,
-        @Nullable WorkgroupConfigurationEngineVersion engineVersion,
-        @Nullable Boolean publishCloudwatchMetricsEnabled,
-        @Nullable Boolean requesterPaysEnabled,
-        @Nullable WorkgroupConfigurationResultConfiguration resultConfiguration) {
+        @OutputCustomType.Parameter("bytesScannedCutoffPerQuery") @Nullable Integer bytesScannedCutoffPerQuery,
+        @OutputCustomType.Parameter("enforceWorkgroupConfiguration") @Nullable Boolean enforceWorkgroupConfiguration,
+        @OutputCustomType.Parameter("engineVersion") @Nullable WorkgroupConfigurationEngineVersion engineVersion,
+        @OutputCustomType.Parameter("publishCloudwatchMetricsEnabled") @Nullable Boolean publishCloudwatchMetricsEnabled,
+        @OutputCustomType.Parameter("requesterPaysEnabled") @Nullable Boolean requesterPaysEnabled,
+        @OutputCustomType.Parameter("resultConfiguration") @Nullable WorkgroupConfigurationResultConfiguration resultConfiguration) {
         this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
         this.enforceWorkgroupConfiguration = enforceWorkgroupConfiguration;
         this.engineVersion = engineVersion;
@@ -134,32 +134,32 @@ public final class WorkgroupConfiguration {
     	      this.resultConfiguration = defaults.resultConfiguration;
         }
 
-        public Builder setBytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
+        public Builder bytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
             this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
 
-        public Builder setEnforceWorkgroupConfiguration(@Nullable Boolean enforceWorkgroupConfiguration) {
+        public Builder enforceWorkgroupConfiguration(@Nullable Boolean enforceWorkgroupConfiguration) {
             this.enforceWorkgroupConfiguration = enforceWorkgroupConfiguration;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable WorkgroupConfigurationEngineVersion engineVersion) {
+        public Builder engineVersion(@Nullable WorkgroupConfigurationEngineVersion engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setPublishCloudwatchMetricsEnabled(@Nullable Boolean publishCloudwatchMetricsEnabled) {
+        public Builder publishCloudwatchMetricsEnabled(@Nullable Boolean publishCloudwatchMetricsEnabled) {
             this.publishCloudwatchMetricsEnabled = publishCloudwatchMetricsEnabled;
             return this;
         }
 
-        public Builder setRequesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
+        public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
             this.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
 
-        public Builder setResultConfiguration(@Nullable WorkgroupConfigurationResultConfiguration resultConfiguration) {
+        public Builder resultConfiguration(@Nullable WorkgroupConfigurationResultConfiguration resultConfiguration) {
             this.resultConfiguration = resultConfiguration;
             return this;
         }

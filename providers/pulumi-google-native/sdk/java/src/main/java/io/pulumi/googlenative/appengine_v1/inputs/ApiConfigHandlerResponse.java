@@ -120,27 +120,27 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
     	      this.url = defaults.url;
         }
 
-        public Builder setAuthFailAction(String authFailAction) {
+        public Builder authFailAction(String authFailAction) {
             this.authFailAction = Objects.requireNonNull(authFailAction);
             return this;
         }
 
-        public Builder setLogin(String login) {
+        public Builder login(String login) {
             this.login = Objects.requireNonNull(login);
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
 
-        public Builder setSecurityLevel(String securityLevel) {
+        public Builder securityLevel(String securityLevel) {
             this.securityLevel = Objects.requireNonNull(securityLevel);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

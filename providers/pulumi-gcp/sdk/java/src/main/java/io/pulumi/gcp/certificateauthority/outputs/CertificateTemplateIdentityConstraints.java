@@ -28,11 +28,11 @@ public final class CertificateTemplateIdentityConstraints {
      */
     private final @Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression;
 
-    @OutputCustomType.Constructor({"allowSubjectAltNamesPassthrough","allowSubjectPassthrough","celExpression"})
+    @OutputCustomType.Constructor
     private CertificateTemplateIdentityConstraints(
-        Boolean allowSubjectAltNamesPassthrough,
-        Boolean allowSubjectPassthrough,
-        @Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression) {
+        @OutputCustomType.Parameter("allowSubjectAltNamesPassthrough") Boolean allowSubjectAltNamesPassthrough,
+        @OutputCustomType.Parameter("allowSubjectPassthrough") Boolean allowSubjectPassthrough,
+        @OutputCustomType.Parameter("celExpression") @Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression) {
         this.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
         this.allowSubjectPassthrough = allowSubjectPassthrough;
         this.celExpression = celExpression;
@@ -84,17 +84,17 @@ public final class CertificateTemplateIdentityConstraints {
     	      this.celExpression = defaults.celExpression;
         }
 
-        public Builder setAllowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
+        public Builder allowSubjectAltNamesPassthrough(Boolean allowSubjectAltNamesPassthrough) {
             this.allowSubjectAltNamesPassthrough = Objects.requireNonNull(allowSubjectAltNamesPassthrough);
             return this;
         }
 
-        public Builder setAllowSubjectPassthrough(Boolean allowSubjectPassthrough) {
+        public Builder allowSubjectPassthrough(Boolean allowSubjectPassthrough) {
             this.allowSubjectPassthrough = Objects.requireNonNull(allowSubjectPassthrough);
             return this;
         }
 
-        public Builder setCelExpression(@Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression) {
+        public Builder celExpression(@Nullable CertificateTemplateIdentityConstraintsCelExpression celExpression) {
             this.celExpression = celExpression;
             return this;
         }

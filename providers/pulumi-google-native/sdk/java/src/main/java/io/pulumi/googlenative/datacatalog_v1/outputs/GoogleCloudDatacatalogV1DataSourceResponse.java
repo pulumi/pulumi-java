@@ -20,10 +20,10 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"resource","service"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1DataSourceResponse(
-        String resource,
-        String service) {
+        @OutputCustomType.Parameter("resource") String resource,
+        @OutputCustomType.Parameter("service") String service) {
         this.resource = resource;
         this.service = service;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse {
     	      this.service = defaults.service;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

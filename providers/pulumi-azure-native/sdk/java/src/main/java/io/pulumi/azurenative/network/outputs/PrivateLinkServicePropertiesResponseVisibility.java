@@ -17,8 +17,8 @@ public final class PrivateLinkServicePropertiesResponseVisibility {
      */
     private final @Nullable List<String> subscriptions;
 
-    @OutputCustomType.Constructor({"subscriptions"})
-    private PrivateLinkServicePropertiesResponseVisibility(@Nullable List<String> subscriptions) {
+    @OutputCustomType.Constructor
+    private PrivateLinkServicePropertiesResponseVisibility(@OutputCustomType.Parameter("subscriptions") @Nullable List<String> subscriptions) {
         this.subscriptions = subscriptions;
     }
 
@@ -50,7 +50,7 @@ public final class PrivateLinkServicePropertiesResponseVisibility {
     	      this.subscriptions = defaults.subscriptions;
         }
 
-        public Builder setSubscriptions(@Nullable List<String> subscriptions) {
+        public Builder subscriptions(@Nullable List<String> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }

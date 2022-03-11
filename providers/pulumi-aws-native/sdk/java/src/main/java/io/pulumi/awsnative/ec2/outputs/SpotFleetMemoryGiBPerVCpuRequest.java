@@ -14,10 +14,10 @@ public final class SpotFleetMemoryGiBPerVCpuRequest {
     private final @Nullable Double max;
     private final @Nullable Double min;
 
-    @OutputCustomType.Constructor({"max","min"})
+    @OutputCustomType.Constructor
     private SpotFleetMemoryGiBPerVCpuRequest(
-        @Nullable Double max,
-        @Nullable Double min) {
+        @OutputCustomType.Parameter("max") @Nullable Double max,
+        @OutputCustomType.Parameter("min") @Nullable Double min) {
         this.max = max;
         this.min = min;
     }
@@ -51,12 +51,12 @@ public final class SpotFleetMemoryGiBPerVCpuRequest {
     	      this.min = defaults.min;
         }
 
-        public Builder setMax(@Nullable Double max) {
+        public Builder max(@Nullable Double max) {
             this.max = max;
             return this;
         }
 
-        public Builder setMin(@Nullable Double min) {
+        public Builder min(@Nullable Double min) {
             this.min = min;
             return this;
         }

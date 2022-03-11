@@ -33,13 +33,13 @@ public final class LoadBalancerSubnetMapping {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"allocationId","ipv6Address","outpostId","privateIpv4Address","subnetId"})
+    @OutputCustomType.Constructor
     private LoadBalancerSubnetMapping(
-        @Nullable String allocationId,
-        @Nullable String ipv6Address,
-        @Nullable String outpostId,
-        @Nullable String privateIpv4Address,
-        String subnetId) {
+        @OutputCustomType.Parameter("allocationId") @Nullable String allocationId,
+        @OutputCustomType.Parameter("ipv6Address") @Nullable String ipv6Address,
+        @OutputCustomType.Parameter("outpostId") @Nullable String outpostId,
+        @OutputCustomType.Parameter("privateIpv4Address") @Nullable String privateIpv4Address,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.allocationId = allocationId;
         this.ipv6Address = ipv6Address;
         this.outpostId = outpostId;
@@ -107,27 +107,27 @@ public final class LoadBalancerSubnetMapping {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAllocationId(@Nullable String allocationId) {
+        public Builder allocationId(@Nullable String allocationId) {
             this.allocationId = allocationId;
             return this;
         }
 
-        public Builder setIpv6Address(@Nullable String ipv6Address) {
+        public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
 
-        public Builder setOutpostId(@Nullable String outpostId) {
+        public Builder outpostId(@Nullable String outpostId) {
             this.outpostId = outpostId;
             return this;
         }
 
-        public Builder setPrivateIpv4Address(@Nullable String privateIpv4Address) {
+        public Builder privateIpv4Address(@Nullable String privateIpv4Address) {
             this.privateIpv4Address = privateIpv4Address;
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

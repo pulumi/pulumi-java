@@ -140,62 +140,62 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
     	      this.required = defaults.required;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEntityType(@Nullable Input<String> entityType) {
+        public Builder entityType(@Nullable Input<String> entityType) {
             this.entityType = entityType;
             return this;
         }
 
-        public Builder setEntityType(@Nullable String entityType) {
+        public Builder entityType(@Nullable String entityType) {
             this.entityType = Input.ofNullable(entityType);
             return this;
         }
 
-        public Builder setFillBehavior(@Nullable Input<CxPageFormParameterFillBehaviorArgs> fillBehavior) {
+        public Builder fillBehavior(@Nullable Input<CxPageFormParameterFillBehaviorArgs> fillBehavior) {
             this.fillBehavior = fillBehavior;
             return this;
         }
 
-        public Builder setFillBehavior(@Nullable CxPageFormParameterFillBehaviorArgs fillBehavior) {
+        public Builder fillBehavior(@Nullable CxPageFormParameterFillBehaviorArgs fillBehavior) {
             this.fillBehavior = Input.ofNullable(fillBehavior);
             return this;
         }
 
-        public Builder setIsList(@Nullable Input<Boolean> isList) {
+        public Builder isList(@Nullable Input<Boolean> isList) {
             this.isList = isList;
             return this;
         }
 
-        public Builder setIsList(@Nullable Boolean isList) {
+        public Builder isList(@Nullable Boolean isList) {
             this.isList = Input.ofNullable(isList);
             return this;
         }
 
-        public Builder setRedact(@Nullable Input<Boolean> redact) {
+        public Builder redact(@Nullable Input<Boolean> redact) {
             this.redact = redact;
             return this;
         }
 
-        public Builder setRedact(@Nullable Boolean redact) {
+        public Builder redact(@Nullable Boolean redact) {
             this.redact = Input.ofNullable(redact);
             return this;
         }
 
-        public Builder setRequired(@Nullable Input<Boolean> required) {
+        public Builder required(@Nullable Input<Boolean> required) {
             this.required = required;
             return this;
         }
 
-        public Builder setRequired(@Nullable Boolean required) {
+        public Builder required(@Nullable Boolean required) {
             this.required = Input.ofNullable(required);
             return this;
         }

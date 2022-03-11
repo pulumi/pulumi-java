@@ -125,52 +125,52 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
     	      this.trainingComputeBinding = defaults.trainingComputeBinding;
         }
 
-        public Builder setInferencingComputeBinding(Input<ComputeBindingArgs> inferencingComputeBinding) {
+        public Builder inferencingComputeBinding(Input<ComputeBindingArgs> inferencingComputeBinding) {
             this.inferencingComputeBinding = Objects.requireNonNull(inferencingComputeBinding);
             return this;
         }
 
-        public Builder setInferencingComputeBinding(ComputeBindingArgs inferencingComputeBinding) {
+        public Builder inferencingComputeBinding(ComputeBindingArgs inferencingComputeBinding) {
             this.inferencingComputeBinding = Input.of(Objects.requireNonNull(inferencingComputeBinding));
             return this;
         }
 
-        public Builder setMlAssistEnabled(@Nullable Input<Boolean> mlAssistEnabled) {
+        public Builder mlAssistEnabled(@Nullable Input<Boolean> mlAssistEnabled) {
             this.mlAssistEnabled = mlAssistEnabled;
             return this;
         }
 
-        public Builder setMlAssistEnabled(@Nullable Boolean mlAssistEnabled) {
+        public Builder mlAssistEnabled(@Nullable Boolean mlAssistEnabled) {
             this.mlAssistEnabled = Input.ofNullable(mlAssistEnabled);
             return this;
         }
 
-        public Builder setModelNamePrefix(Input<String> modelNamePrefix) {
+        public Builder modelNamePrefix(Input<String> modelNamePrefix) {
             this.modelNamePrefix = Objects.requireNonNull(modelNamePrefix);
             return this;
         }
 
-        public Builder setModelNamePrefix(String modelNamePrefix) {
+        public Builder modelNamePrefix(String modelNamePrefix) {
             this.modelNamePrefix = Input.of(Objects.requireNonNull(modelNamePrefix));
             return this;
         }
 
-        public Builder setPrelabelAccuracyThreshold(@Nullable Input<Double> prelabelAccuracyThreshold) {
+        public Builder prelabelAccuracyThreshold(@Nullable Input<Double> prelabelAccuracyThreshold) {
             this.prelabelAccuracyThreshold = prelabelAccuracyThreshold;
             return this;
         }
 
-        public Builder setPrelabelAccuracyThreshold(@Nullable Double prelabelAccuracyThreshold) {
+        public Builder prelabelAccuracyThreshold(@Nullable Double prelabelAccuracyThreshold) {
             this.prelabelAccuracyThreshold = Input.ofNullable(prelabelAccuracyThreshold);
             return this;
         }
 
-        public Builder setTrainingComputeBinding(Input<ComputeBindingArgs> trainingComputeBinding) {
+        public Builder trainingComputeBinding(Input<ComputeBindingArgs> trainingComputeBinding) {
             this.trainingComputeBinding = Objects.requireNonNull(trainingComputeBinding);
             return this;
         }
 
-        public Builder setTrainingComputeBinding(ComputeBindingArgs trainingComputeBinding) {
+        public Builder trainingComputeBinding(ComputeBindingArgs trainingComputeBinding) {
             this.trainingComputeBinding = Input.of(Objects.requireNonNull(trainingComputeBinding));
             return this;
         }

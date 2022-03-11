@@ -104,28 +104,28 @@ public final class GetNetworkInterfaceResult {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"arn","associations","attachments","availabilityZone","description","filters","id","interfaceType","ipv6Addresses","macAddress","outpostArn","ownerId","privateDnsName","privateIp","privateIps","requesterId","securityGroups","subnetId","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetNetworkInterfaceResult(
-        String arn,
-        List<GetNetworkInterfaceAssociation> associations,
-        List<GetNetworkInterfaceAttachment> attachments,
-        String availabilityZone,
-        String description,
-        @Nullable List<GetNetworkInterfaceFilter> filters,
-        String id,
-        String interfaceType,
-        List<String> ipv6Addresses,
-        String macAddress,
-        String outpostArn,
-        String ownerId,
-        String privateDnsName,
-        String privateIp,
-        List<String> privateIps,
-        String requesterId,
-        List<String> securityGroups,
-        String subnetId,
-        Map<String,String> tags,
-        String vpcId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("associations") List<GetNetworkInterfaceAssociation> associations,
+        @OutputCustomType.Parameter("attachments") List<GetNetworkInterfaceAttachment> attachments,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetNetworkInterfaceFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("interfaceType") String interfaceType,
+        @OutputCustomType.Parameter("ipv6Addresses") List<String> ipv6Addresses,
+        @OutputCustomType.Parameter("macAddress") String macAddress,
+        @OutputCustomType.Parameter("outpostArn") String outpostArn,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("privateDnsName") String privateDnsName,
+        @OutputCustomType.Parameter("privateIp") String privateIp,
+        @OutputCustomType.Parameter("privateIps") List<String> privateIps,
+        @OutputCustomType.Parameter("requesterId") String requesterId,
+        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.associations = associations;
         this.attachments = attachments;
@@ -335,102 +335,102 @@ public final class GetNetworkInterfaceResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAssociations(List<GetNetworkInterfaceAssociation> associations) {
+        public Builder associations(List<GetNetworkInterfaceAssociation> associations) {
             this.associations = Objects.requireNonNull(associations);
             return this;
         }
 
-        public Builder setAttachments(List<GetNetworkInterfaceAttachment> attachments) {
+        public Builder attachments(List<GetNetworkInterfaceAttachment> attachments) {
             this.attachments = Objects.requireNonNull(attachments);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetNetworkInterfaceFilter> filters) {
+        public Builder filters(@Nullable List<GetNetworkInterfaceFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInterfaceType(String interfaceType) {
+        public Builder interfaceType(String interfaceType) {
             this.interfaceType = Objects.requireNonNull(interfaceType);
             return this;
         }
 
-        public Builder setIpv6Addresses(List<String> ipv6Addresses) {
+        public Builder ipv6Addresses(List<String> ipv6Addresses) {
             this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
             return this;
         }
 
-        public Builder setMacAddress(String macAddress) {
+        public Builder macAddress(String macAddress) {
             this.macAddress = Objects.requireNonNull(macAddress);
             return this;
         }
 
-        public Builder setOutpostArn(String outpostArn) {
+        public Builder outpostArn(String outpostArn) {
             this.outpostArn = Objects.requireNonNull(outpostArn);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setPrivateDnsName(String privateDnsName) {
+        public Builder privateDnsName(String privateDnsName) {
             this.privateDnsName = Objects.requireNonNull(privateDnsName);
             return this;
         }
 
-        public Builder setPrivateIp(String privateIp) {
+        public Builder privateIp(String privateIp) {
             this.privateIp = Objects.requireNonNull(privateIp);
             return this;
         }
 
-        public Builder setPrivateIps(List<String> privateIps) {
+        public Builder privateIps(List<String> privateIps) {
             this.privateIps = Objects.requireNonNull(privateIps);
             return this;
         }
 
-        public Builder setRequesterId(String requesterId) {
+        public Builder requesterId(String requesterId) {
             this.requesterId = Objects.requireNonNull(requesterId);
             return this;
         }
 
-        public Builder setSecurityGroups(List<String> securityGroups) {
+        public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

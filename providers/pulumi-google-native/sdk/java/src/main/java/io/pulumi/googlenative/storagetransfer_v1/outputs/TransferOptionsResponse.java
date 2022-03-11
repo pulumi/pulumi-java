@@ -31,12 +31,12 @@ public final class TransferOptionsResponse {
      */
     private final Boolean overwriteObjectsAlreadyExistingInSink;
 
-    @OutputCustomType.Constructor({"deleteObjectsFromSourceAfterTransfer","deleteObjectsUniqueInSink","metadataOptions","overwriteObjectsAlreadyExistingInSink"})
+    @OutputCustomType.Constructor
     private TransferOptionsResponse(
-        Boolean deleteObjectsFromSourceAfterTransfer,
-        Boolean deleteObjectsUniqueInSink,
-        MetadataOptionsResponse metadataOptions,
-        Boolean overwriteObjectsAlreadyExistingInSink) {
+        @OutputCustomType.Parameter("deleteObjectsFromSourceAfterTransfer") Boolean deleteObjectsFromSourceAfterTransfer,
+        @OutputCustomType.Parameter("deleteObjectsUniqueInSink") Boolean deleteObjectsUniqueInSink,
+        @OutputCustomType.Parameter("metadataOptions") MetadataOptionsResponse metadataOptions,
+        @OutputCustomType.Parameter("overwriteObjectsAlreadyExistingInSink") Boolean overwriteObjectsAlreadyExistingInSink) {
         this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
         this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
         this.metadataOptions = metadataOptions;
@@ -98,22 +98,22 @@ public final class TransferOptionsResponse {
     	      this.overwriteObjectsAlreadyExistingInSink = defaults.overwriteObjectsAlreadyExistingInSink;
         }
 
-        public Builder setDeleteObjectsFromSourceAfterTransfer(Boolean deleteObjectsFromSourceAfterTransfer) {
+        public Builder deleteObjectsFromSourceAfterTransfer(Boolean deleteObjectsFromSourceAfterTransfer) {
             this.deleteObjectsFromSourceAfterTransfer = Objects.requireNonNull(deleteObjectsFromSourceAfterTransfer);
             return this;
         }
 
-        public Builder setDeleteObjectsUniqueInSink(Boolean deleteObjectsUniqueInSink) {
+        public Builder deleteObjectsUniqueInSink(Boolean deleteObjectsUniqueInSink) {
             this.deleteObjectsUniqueInSink = Objects.requireNonNull(deleteObjectsUniqueInSink);
             return this;
         }
 
-        public Builder setMetadataOptions(MetadataOptionsResponse metadataOptions) {
+        public Builder metadataOptions(MetadataOptionsResponse metadataOptions) {
             this.metadataOptions = Objects.requireNonNull(metadataOptions);
             return this;
         }
 
-        public Builder setOverwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
+        public Builder overwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
             this.overwriteObjectsAlreadyExistingInSink = Objects.requireNonNull(overwriteObjectsAlreadyExistingInSink);
             return this;
         }

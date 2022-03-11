@@ -28,11 +28,11 @@ public final class SecretAuthInfoResponse {
      */
     private final @Nullable String secret;
 
-    @OutputCustomType.Constructor({"authType","name","secret"})
+    @OutputCustomType.Constructor
     private SecretAuthInfoResponse(
-        String authType,
-        @Nullable String name,
-        @Nullable String secret) {
+        @OutputCustomType.Parameter("authType") String authType,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("secret") @Nullable String secret) {
         this.authType = authType;
         this.name = name;
         this.secret = secret;
@@ -85,17 +85,17 @@ public final class SecretAuthInfoResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
         }

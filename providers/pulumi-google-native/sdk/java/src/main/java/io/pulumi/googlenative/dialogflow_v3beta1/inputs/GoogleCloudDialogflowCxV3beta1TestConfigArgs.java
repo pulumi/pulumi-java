@@ -75,22 +75,22 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends io.pulum
     	      this.trackingParameters = defaults.trackingParameters;
         }
 
-        public Builder setFlow(@Nullable Input<String> flow) {
+        public Builder flow(@Nullable Input<String> flow) {
             this.flow = flow;
             return this;
         }
 
-        public Builder setFlow(@Nullable String flow) {
+        public Builder flow(@Nullable String flow) {
             this.flow = Input.ofNullable(flow);
             return this;
         }
 
-        public Builder setTrackingParameters(@Nullable Input<List<String>> trackingParameters) {
+        public Builder trackingParameters(@Nullable Input<List<String>> trackingParameters) {
             this.trackingParameters = trackingParameters;
             return this;
         }
 
-        public Builder setTrackingParameters(@Nullable List<String> trackingParameters) {
+        public Builder trackingParameters(@Nullable List<String> trackingParameters) {
             this.trackingParameters = Input.ofNullable(trackingParameters);
             return this;
         }

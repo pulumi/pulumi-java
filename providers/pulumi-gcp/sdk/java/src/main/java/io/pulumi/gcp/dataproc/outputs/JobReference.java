@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class JobReference {
     private final @Nullable String jobId;
 
-    @OutputCustomType.Constructor({"jobId"})
-    private JobReference(@Nullable String jobId) {
+    @OutputCustomType.Constructor
+    private JobReference(@OutputCustomType.Parameter("jobId") @Nullable String jobId) {
         this.jobId = jobId;
     }
 
@@ -42,7 +42,7 @@ public final class JobReference {
     	      this.jobId = defaults.jobId;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;
         }

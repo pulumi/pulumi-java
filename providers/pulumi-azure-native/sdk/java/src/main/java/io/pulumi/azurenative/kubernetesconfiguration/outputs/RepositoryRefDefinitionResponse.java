@@ -32,12 +32,12 @@ public final class RepositoryRefDefinitionResponse {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor({"branch","commit","semver","tag"})
+    @OutputCustomType.Constructor
     private RepositoryRefDefinitionResponse(
-        @Nullable String branch,
-        @Nullable String commit,
-        @Nullable String semver,
-        @Nullable String tag) {
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("commit") @Nullable String commit,
+        @OutputCustomType.Parameter("semver") @Nullable String semver,
+        @OutputCustomType.Parameter("tag") @Nullable String tag) {
         this.branch = branch;
         this.commit = commit;
         this.semver = semver;
@@ -99,22 +99,22 @@ public final class RepositoryRefDefinitionResponse {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setCommit(@Nullable String commit) {
+        public Builder commit(@Nullable String commit) {
             this.commit = commit;
             return this;
         }
 
-        public Builder setSemver(@Nullable String semver) {
+        public Builder semver(@Nullable String semver) {
             this.semver = semver;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }

@@ -100,25 +100,25 @@ public final class GetBookmarkResult {
      */
     private final @Nullable UserInfoResponse updatedBy;
 
-    @OutputCustomType.Constructor({"created","createdBy","displayName","etag","eventTime","id","incidentInfo","labels","name","notes","query","queryEndTime","queryResult","queryStartTime","type","updated","updatedBy"})
+    @OutputCustomType.Constructor
     private GetBookmarkResult(
-        @Nullable String created,
-        @Nullable UserInfoResponse createdBy,
-        String displayName,
-        @Nullable String etag,
-        @Nullable String eventTime,
-        String id,
-        @Nullable IncidentInfoResponse incidentInfo,
-        @Nullable List<String> labels,
-        String name,
-        @Nullable String notes,
-        String query,
-        @Nullable String queryEndTime,
-        @Nullable String queryResult,
-        @Nullable String queryStartTime,
-        String type,
-        @Nullable String updated,
-        @Nullable UserInfoResponse updatedBy) {
+        @OutputCustomType.Parameter("created") @Nullable String created,
+        @OutputCustomType.Parameter("createdBy") @Nullable UserInfoResponse createdBy,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("eventTime") @Nullable String eventTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("incidentInfo") @Nullable IncidentInfoResponse incidentInfo,
+        @OutputCustomType.Parameter("labels") @Nullable List<String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("queryEndTime") @Nullable String queryEndTime,
+        @OutputCustomType.Parameter("queryResult") @Nullable String queryResult,
+        @OutputCustomType.Parameter("queryStartTime") @Nullable String queryStartTime,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updated") @Nullable String updated,
+        @OutputCustomType.Parameter("updatedBy") @Nullable UserInfoResponse updatedBy) {
         this.created = created;
         this.createdBy = createdBy;
         this.displayName = displayName;
@@ -310,87 +310,87 @@ public final class GetBookmarkResult {
     	      this.updatedBy = defaults.updatedBy;
         }
 
-        public Builder setCreated(@Nullable String created) {
+        public Builder created(@Nullable String created) {
             this.created = created;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable UserInfoResponse createdBy) {
+        public Builder createdBy(@Nullable UserInfoResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEventTime(@Nullable String eventTime) {
+        public Builder eventTime(@Nullable String eventTime) {
             this.eventTime = eventTime;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIncidentInfo(@Nullable IncidentInfoResponse incidentInfo) {
+        public Builder incidentInfo(@Nullable IncidentInfoResponse incidentInfo) {
             this.incidentInfo = incidentInfo;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<String> labels) {
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQueryEndTime(@Nullable String queryEndTime) {
+        public Builder queryEndTime(@Nullable String queryEndTime) {
             this.queryEndTime = queryEndTime;
             return this;
         }
 
-        public Builder setQueryResult(@Nullable String queryResult) {
+        public Builder queryResult(@Nullable String queryResult) {
             this.queryResult = queryResult;
             return this;
         }
 
-        public Builder setQueryStartTime(@Nullable String queryStartTime) {
+        public Builder queryStartTime(@Nullable String queryStartTime) {
             this.queryStartTime = queryStartTime;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdated(@Nullable String updated) {
+        public Builder updated(@Nullable String updated) {
             this.updated = updated;
             return this;
         }
 
-        public Builder setUpdatedBy(@Nullable UserInfoResponse updatedBy) {
+        public Builder updatedBy(@Nullable UserInfoResponse updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }

@@ -25,11 +25,11 @@ public final class InterconnectCircuitInfoResponse {
      */
     private final String googleDemarcId;
 
-    @OutputCustomType.Constructor({"customerDemarcId","googleCircuitId","googleDemarcId"})
+    @OutputCustomType.Constructor
     private InterconnectCircuitInfoResponse(
-        String customerDemarcId,
-        String googleCircuitId,
-        String googleDemarcId) {
+        @OutputCustomType.Parameter("customerDemarcId") String customerDemarcId,
+        @OutputCustomType.Parameter("googleCircuitId") String googleCircuitId,
+        @OutputCustomType.Parameter("googleDemarcId") String googleDemarcId) {
         this.customerDemarcId = customerDemarcId;
         this.googleCircuitId = googleCircuitId;
         this.googleDemarcId = googleDemarcId;
@@ -81,17 +81,17 @@ public final class InterconnectCircuitInfoResponse {
     	      this.googleDemarcId = defaults.googleDemarcId;
         }
 
-        public Builder setCustomerDemarcId(String customerDemarcId) {
+        public Builder customerDemarcId(String customerDemarcId) {
             this.customerDemarcId = Objects.requireNonNull(customerDemarcId);
             return this;
         }
 
-        public Builder setGoogleCircuitId(String googleCircuitId) {
+        public Builder googleCircuitId(String googleCircuitId) {
             this.googleCircuitId = Objects.requireNonNull(googleCircuitId);
             return this;
         }
 
-        public Builder setGoogleDemarcId(String googleDemarcId) {
+        public Builder googleDemarcId(String googleDemarcId) {
             this.googleDemarcId = Objects.requireNonNull(googleDemarcId);
             return this;
         }

@@ -15,8 +15,8 @@ public final class EndpointMatcherResponse {
      */
     private final EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher;
 
-    @OutputCustomType.Constructor({"metadataLabelMatcher"})
-    private EndpointMatcherResponse(EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher) {
+    @OutputCustomType.Constructor
+    private EndpointMatcherResponse(@OutputCustomType.Parameter("metadataLabelMatcher") EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher) {
         this.metadataLabelMatcher = metadataLabelMatcher;
     }
 
@@ -48,7 +48,7 @@ public final class EndpointMatcherResponse {
     	      this.metadataLabelMatcher = defaults.metadataLabelMatcher;
         }
 
-        public Builder setMetadataLabelMatcher(EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher) {
+        public Builder metadataLabelMatcher(EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher) {
             this.metadataLabelMatcher = Objects.requireNonNull(metadataLabelMatcher);
             return this;
         }

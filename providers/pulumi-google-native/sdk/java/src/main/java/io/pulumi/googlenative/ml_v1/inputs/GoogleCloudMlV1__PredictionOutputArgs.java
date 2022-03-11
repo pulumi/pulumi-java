@@ -107,42 +107,42 @@ public final class GoogleCloudMlV1__PredictionOutputArgs extends io.pulumi.resou
     	      this.predictionCount = defaults.predictionCount;
         }
 
-        public Builder setErrorCount(@Nullable Input<String> errorCount) {
+        public Builder errorCount(@Nullable Input<String> errorCount) {
             this.errorCount = errorCount;
             return this;
         }
 
-        public Builder setErrorCount(@Nullable String errorCount) {
+        public Builder errorCount(@Nullable String errorCount) {
             this.errorCount = Input.ofNullable(errorCount);
             return this;
         }
 
-        public Builder setNodeHours(@Nullable Input<Double> nodeHours) {
+        public Builder nodeHours(@Nullable Input<Double> nodeHours) {
             this.nodeHours = nodeHours;
             return this;
         }
 
-        public Builder setNodeHours(@Nullable Double nodeHours) {
+        public Builder nodeHours(@Nullable Double nodeHours) {
             this.nodeHours = Input.ofNullable(nodeHours);
             return this;
         }
 
-        public Builder setOutputPath(@Nullable Input<String> outputPath) {
+        public Builder outputPath(@Nullable Input<String> outputPath) {
             this.outputPath = outputPath;
             return this;
         }
 
-        public Builder setOutputPath(@Nullable String outputPath) {
+        public Builder outputPath(@Nullable String outputPath) {
             this.outputPath = Input.ofNullable(outputPath);
             return this;
         }
 
-        public Builder setPredictionCount(@Nullable Input<String> predictionCount) {
+        public Builder predictionCount(@Nullable Input<String> predictionCount) {
             this.predictionCount = predictionCount;
             return this;
         }
 
-        public Builder setPredictionCount(@Nullable String predictionCount) {
+        public Builder predictionCount(@Nullable String predictionCount) {
             this.predictionCount = Input.ofNullable(predictionCount);
             return this;
         }

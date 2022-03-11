@@ -27,11 +27,11 @@ public final class GoogleCloudRetailV2alphaRatingResponse {
      */
     private final List<Integer> ratingHistogram;
 
-    @OutputCustomType.Constructor({"averageRating","ratingCount","ratingHistogram"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaRatingResponse(
-        Double averageRating,
-        Integer ratingCount,
-        List<Integer> ratingHistogram) {
+        @OutputCustomType.Parameter("averageRating") Double averageRating,
+        @OutputCustomType.Parameter("ratingCount") Integer ratingCount,
+        @OutputCustomType.Parameter("ratingHistogram") List<Integer> ratingHistogram) {
         this.averageRating = averageRating;
         this.ratingCount = ratingCount;
         this.ratingHistogram = ratingHistogram;
@@ -83,17 +83,17 @@ public final class GoogleCloudRetailV2alphaRatingResponse {
     	      this.ratingHistogram = defaults.ratingHistogram;
         }
 
-        public Builder setAverageRating(Double averageRating) {
+        public Builder averageRating(Double averageRating) {
             this.averageRating = Objects.requireNonNull(averageRating);
             return this;
         }
 
-        public Builder setRatingCount(Integer ratingCount) {
+        public Builder ratingCount(Integer ratingCount) {
             this.ratingCount = Objects.requireNonNull(ratingCount);
             return this;
         }
 
-        public Builder setRatingHistogram(List<Integer> ratingHistogram) {
+        public Builder ratingHistogram(List<Integer> ratingHistogram) {
             this.ratingHistogram = Objects.requireNonNull(ratingHistogram);
             return this;
         }

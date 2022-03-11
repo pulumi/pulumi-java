@@ -75,22 +75,22 @@ public final class SingleClusterRoutingArgs extends io.pulumi.resources.Resource
     	      this.clusterId = defaults.clusterId;
         }
 
-        public Builder setAllowTransactionalWrites(@Nullable Input<Boolean> allowTransactionalWrites) {
+        public Builder allowTransactionalWrites(@Nullable Input<Boolean> allowTransactionalWrites) {
             this.allowTransactionalWrites = allowTransactionalWrites;
             return this;
         }
 
-        public Builder setAllowTransactionalWrites(@Nullable Boolean allowTransactionalWrites) {
+        public Builder allowTransactionalWrites(@Nullable Boolean allowTransactionalWrites) {
             this.allowTransactionalWrites = Input.ofNullable(allowTransactionalWrites);
             return this;
         }
 
-        public Builder setClusterId(@Nullable Input<String> clusterId) {
+        public Builder clusterId(@Nullable Input<String> clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
-        public Builder setClusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = Input.ofNullable(clusterId);
             return this;
         }

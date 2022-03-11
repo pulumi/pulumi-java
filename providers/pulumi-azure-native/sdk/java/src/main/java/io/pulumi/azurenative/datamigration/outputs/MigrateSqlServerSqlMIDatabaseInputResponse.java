@@ -34,12 +34,12 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse {
      */
     private final String restoreDatabaseName;
 
-    @OutputCustomType.Constructor({"backupFilePaths","backupFileShare","name","restoreDatabaseName"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMIDatabaseInputResponse(
-        @Nullable List<String> backupFilePaths,
-        @Nullable FileShareResponse backupFileShare,
-        String name,
-        String restoreDatabaseName) {
+        @OutputCustomType.Parameter("backupFilePaths") @Nullable List<String> backupFilePaths,
+        @OutputCustomType.Parameter("backupFileShare") @Nullable FileShareResponse backupFileShare,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restoreDatabaseName") String restoreDatabaseName) {
         this.backupFilePaths = backupFilePaths;
         this.backupFileShare = backupFileShare;
         this.name = name;
@@ -101,22 +101,22 @@ public final class MigrateSqlServerSqlMIDatabaseInputResponse {
     	      this.restoreDatabaseName = defaults.restoreDatabaseName;
         }
 
-        public Builder setBackupFilePaths(@Nullable List<String> backupFilePaths) {
+        public Builder backupFilePaths(@Nullable List<String> backupFilePaths) {
             this.backupFilePaths = backupFilePaths;
             return this;
         }
 
-        public Builder setBackupFileShare(@Nullable FileShareResponse backupFileShare) {
+        public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRestoreDatabaseName(String restoreDatabaseName) {
+        public Builder restoreDatabaseName(String restoreDatabaseName) {
             this.restoreDatabaseName = Objects.requireNonNull(restoreDatabaseName);
             return this;
         }

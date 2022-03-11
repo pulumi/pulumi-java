@@ -16,11 +16,11 @@ public final class EtwEventConfigurationResponse {
     private final Integer id;
     private final String name;
 
-    @OutputCustomType.Constructor({"filter","id","name"})
+    @OutputCustomType.Constructor
     private EtwEventConfigurationResponse(
-        @Nullable String filter,
-        Integer id,
-        String name) {
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("id") Integer id,
+        @OutputCustomType.Parameter("name") String name) {
         this.filter = filter;
         this.id = id;
         this.name = name;
@@ -60,17 +60,17 @@ public final class EtwEventConfigurationResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(Integer id) {
+        public Builder id(Integer id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

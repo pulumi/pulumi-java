@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class LicenseProvisionalConfiguration {
     private final Integer maxTimeToLiveInMinutes;
 
-    @OutputCustomType.Constructor({"maxTimeToLiveInMinutes"})
-    private LicenseProvisionalConfiguration(Integer maxTimeToLiveInMinutes) {
+    @OutputCustomType.Constructor
+    private LicenseProvisionalConfiguration(@OutputCustomType.Parameter("maxTimeToLiveInMinutes") Integer maxTimeToLiveInMinutes) {
         this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
     }
 
@@ -40,7 +40,7 @@ public final class LicenseProvisionalConfiguration {
     	      this.maxTimeToLiveInMinutes = defaults.maxTimeToLiveInMinutes;
         }
 
-        public Builder setMaxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
+        public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
             this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
             return this;
         }

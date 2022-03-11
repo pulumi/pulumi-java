@@ -15,8 +15,8 @@ public final class ResourceAnnotationResponse {
      */
     private final String label;
 
-    @OutputCustomType.Constructor({"label"})
-    private ResourceAnnotationResponse(String label) {
+    @OutputCustomType.Constructor
+    private ResourceAnnotationResponse(@OutputCustomType.Parameter("label") String label) {
         this.label = label;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceAnnotationResponse {
     	      this.label = defaults.label;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }

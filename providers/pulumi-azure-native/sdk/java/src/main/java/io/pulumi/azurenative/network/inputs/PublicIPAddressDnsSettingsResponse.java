@@ -90,17 +90,17 @@ public final class PublicIPAddressDnsSettingsResponse extends io.pulumi.resource
     	      this.reverseFqdn = defaults.reverseFqdn;
         }
 
-        public Builder setDomainNameLabel(@Nullable String domainNameLabel) {
+        public Builder domainNameLabel(@Nullable String domainNameLabel) {
             this.domainNameLabel = domainNameLabel;
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setReverseFqdn(@Nullable String reverseFqdn) {
+        public Builder reverseFqdn(@Nullable String reverseFqdn) {
             this.reverseFqdn = reverseFqdn;
             return this;
         }

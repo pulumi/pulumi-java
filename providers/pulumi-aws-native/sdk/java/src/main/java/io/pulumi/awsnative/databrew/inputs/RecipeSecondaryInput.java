@@ -67,12 +67,12 @@ public final class RecipeSecondaryInput extends io.pulumi.resources.InvokeArgs {
     	      this.s3InputDefinition = defaults.s3InputDefinition;
         }
 
-        public Builder setDataCatalogInputDefinition(@Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition) {
+        public Builder dataCatalogInputDefinition(@Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition) {
             this.dataCatalogInputDefinition = dataCatalogInputDefinition;
             return this;
         }
 
-        public Builder setS3InputDefinition(@Nullable RecipeS3Location s3InputDefinition) {
+        public Builder s3InputDefinition(@Nullable RecipeS3Location s3InputDefinition) {
             this.s3InputDefinition = s3InputDefinition;
             return this;
         }

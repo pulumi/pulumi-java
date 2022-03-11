@@ -111,42 +111,42 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
     	      this.windowsEventLogs = defaults.windowsEventLogs;
         }
 
-        public Builder setExtensions(@Nullable Input<List<ExtensionDataSourceArgs>> extensions) {
+        public Builder extensions(@Nullable Input<List<ExtensionDataSourceArgs>> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setExtensions(@Nullable List<ExtensionDataSourceArgs> extensions) {
+        public Builder extensions(@Nullable List<ExtensionDataSourceArgs> extensions) {
             this.extensions = Input.ofNullable(extensions);
             return this;
         }
 
-        public Builder setPerformanceCounters(@Nullable Input<List<PerfCounterDataSourceArgs>> performanceCounters) {
+        public Builder performanceCounters(@Nullable Input<List<PerfCounterDataSourceArgs>> performanceCounters) {
             this.performanceCounters = performanceCounters;
             return this;
         }
 
-        public Builder setPerformanceCounters(@Nullable List<PerfCounterDataSourceArgs> performanceCounters) {
+        public Builder performanceCounters(@Nullable List<PerfCounterDataSourceArgs> performanceCounters) {
             this.performanceCounters = Input.ofNullable(performanceCounters);
             return this;
         }
 
-        public Builder setSyslog(@Nullable Input<List<SyslogDataSourceArgs>> syslog) {
+        public Builder syslog(@Nullable Input<List<SyslogDataSourceArgs>> syslog) {
             this.syslog = syslog;
             return this;
         }
 
-        public Builder setSyslog(@Nullable List<SyslogDataSourceArgs> syslog) {
+        public Builder syslog(@Nullable List<SyslogDataSourceArgs> syslog) {
             this.syslog = Input.ofNullable(syslog);
             return this;
         }
 
-        public Builder setWindowsEventLogs(@Nullable Input<List<WindowsEventLogDataSourceArgs>> windowsEventLogs) {
+        public Builder windowsEventLogs(@Nullable Input<List<WindowsEventLogDataSourceArgs>> windowsEventLogs) {
             this.windowsEventLogs = windowsEventLogs;
             return this;
         }
 
-        public Builder setWindowsEventLogs(@Nullable List<WindowsEventLogDataSourceArgs> windowsEventLogs) {
+        public Builder windowsEventLogs(@Nullable List<WindowsEventLogDataSourceArgs> windowsEventLogs) {
             this.windowsEventLogs = Input.ofNullable(windowsEventLogs);
             return this;
         }

@@ -12,10 +12,10 @@ public final class GetDatabaseInstanceSettingLocationPreference {
     private final String followGaeApplication;
     private final String zone;
 
-    @OutputCustomType.Constructor({"followGaeApplication","zone"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceSettingLocationPreference(
-        String followGaeApplication,
-        String zone) {
+        @OutputCustomType.Parameter("followGaeApplication") String followGaeApplication,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.followGaeApplication = followGaeApplication;
         this.zone = zone;
     }
@@ -49,12 +49,12 @@ public final class GetDatabaseInstanceSettingLocationPreference {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setFollowGaeApplication(String followGaeApplication) {
+        public Builder followGaeApplication(String followGaeApplication) {
             this.followGaeApplication = Objects.requireNonNull(followGaeApplication);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

@@ -63,12 +63,12 @@ public final class CachePolicyQueryStringsConfig extends io.pulumi.resources.Inv
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder setQueryStringBehavior(String queryStringBehavior) {
+        public Builder queryStringBehavior(String queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable List<String> queryStrings) {
+        public Builder queryStrings(@Nullable List<String> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }

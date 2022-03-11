@@ -36,13 +36,13 @@ public final class GetServicePerimeterResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","name","perimeterType","status","title"})
+    @OutputCustomType.Constructor
     private GetServicePerimeterResult(
-        String description,
-        String name,
-        String perimeterType,
-        ServicePerimeterConfigResponse status,
-        String title) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("perimeterType") String perimeterType,
+        @OutputCustomType.Parameter("status") ServicePerimeterConfigResponse status,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.name = name;
         this.perimeterType = perimeterType;
@@ -114,27 +114,27 @@ public final class GetServicePerimeterResult {
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPerimeterType(String perimeterType) {
+        public Builder perimeterType(String perimeterType) {
             this.perimeterType = Objects.requireNonNull(perimeterType);
             return this;
         }
 
-        public Builder setStatus(ServicePerimeterConfigResponse status) {
+        public Builder status(ServicePerimeterConfigResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

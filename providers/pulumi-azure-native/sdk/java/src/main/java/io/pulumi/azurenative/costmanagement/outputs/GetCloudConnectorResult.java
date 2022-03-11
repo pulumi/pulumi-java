@@ -104,26 +104,26 @@ public final class GetCloudConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"billingModel","collectionInfo","createdOn","credentialsKey","daysTrialRemaining","defaultManagementGroupId","displayName","externalBillingAccountId","id","kind","modifiedOn","name","providerBillingAccountDisplayName","providerBillingAccountId","reportId","status","subscriptionId","type"})
+    @OutputCustomType.Constructor
     private GetCloudConnectorResult(
-        @Nullable String billingModel,
-        ConnectorCollectionInfoResponse collectionInfo,
-        String createdOn,
-        @Nullable String credentialsKey,
-        Integer daysTrialRemaining,
-        @Nullable String defaultManagementGroupId,
-        @Nullable String displayName,
-        String externalBillingAccountId,
-        String id,
-        @Nullable String kind,
-        String modifiedOn,
-        String name,
-        String providerBillingAccountDisplayName,
-        String providerBillingAccountId,
-        @Nullable String reportId,
-        String status,
-        @Nullable String subscriptionId,
-        String type) {
+        @OutputCustomType.Parameter("billingModel") @Nullable String billingModel,
+        @OutputCustomType.Parameter("collectionInfo") ConnectorCollectionInfoResponse collectionInfo,
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("credentialsKey") @Nullable String credentialsKey,
+        @OutputCustomType.Parameter("daysTrialRemaining") Integer daysTrialRemaining,
+        @OutputCustomType.Parameter("defaultManagementGroupId") @Nullable String defaultManagementGroupId,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("externalBillingAccountId") String externalBillingAccountId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("modifiedOn") String modifiedOn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("providerBillingAccountDisplayName") String providerBillingAccountDisplayName,
+        @OutputCustomType.Parameter("providerBillingAccountId") String providerBillingAccountId,
+        @OutputCustomType.Parameter("reportId") @Nullable String reportId,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("type") String type) {
         this.billingModel = billingModel;
         this.collectionInfo = collectionInfo;
         this.createdOn = createdOn;
@@ -325,92 +325,92 @@ public final class GetCloudConnectorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBillingModel(@Nullable String billingModel) {
+        public Builder billingModel(@Nullable String billingModel) {
             this.billingModel = billingModel;
             return this;
         }
 
-        public Builder setCollectionInfo(ConnectorCollectionInfoResponse collectionInfo) {
+        public Builder collectionInfo(ConnectorCollectionInfoResponse collectionInfo) {
             this.collectionInfo = Objects.requireNonNull(collectionInfo);
             return this;
         }
 
-        public Builder setCreatedOn(String createdOn) {
+        public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
 
-        public Builder setCredentialsKey(@Nullable String credentialsKey) {
+        public Builder credentialsKey(@Nullable String credentialsKey) {
             this.credentialsKey = credentialsKey;
             return this;
         }
 
-        public Builder setDaysTrialRemaining(Integer daysTrialRemaining) {
+        public Builder daysTrialRemaining(Integer daysTrialRemaining) {
             this.daysTrialRemaining = Objects.requireNonNull(daysTrialRemaining);
             return this;
         }
 
-        public Builder setDefaultManagementGroupId(@Nullable String defaultManagementGroupId) {
+        public Builder defaultManagementGroupId(@Nullable String defaultManagementGroupId) {
             this.defaultManagementGroupId = defaultManagementGroupId;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setExternalBillingAccountId(String externalBillingAccountId) {
+        public Builder externalBillingAccountId(String externalBillingAccountId) {
             this.externalBillingAccountId = Objects.requireNonNull(externalBillingAccountId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setModifiedOn(String modifiedOn) {
+        public Builder modifiedOn(String modifiedOn) {
             this.modifiedOn = Objects.requireNonNull(modifiedOn);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProviderBillingAccountDisplayName(String providerBillingAccountDisplayName) {
+        public Builder providerBillingAccountDisplayName(String providerBillingAccountDisplayName) {
             this.providerBillingAccountDisplayName = Objects.requireNonNull(providerBillingAccountDisplayName);
             return this;
         }
 
-        public Builder setProviderBillingAccountId(String providerBillingAccountId) {
+        public Builder providerBillingAccountId(String providerBillingAccountId) {
             this.providerBillingAccountId = Objects.requireNonNull(providerBillingAccountId);
             return this;
         }
 
-        public Builder setReportId(@Nullable String reportId) {
+        public Builder reportId(@Nullable String reportId) {
             this.reportId = reportId;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

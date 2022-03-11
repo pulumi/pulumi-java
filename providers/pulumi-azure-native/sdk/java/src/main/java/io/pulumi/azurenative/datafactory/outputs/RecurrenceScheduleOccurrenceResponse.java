@@ -23,10 +23,10 @@ public final class RecurrenceScheduleOccurrenceResponse {
      */
     private final @Nullable Integer occurrence;
 
-    @OutputCustomType.Constructor({"day","occurrence"})
+    @OutputCustomType.Constructor
     private RecurrenceScheduleOccurrenceResponse(
-        @Nullable String day,
-        @Nullable Integer occurrence) {
+        @OutputCustomType.Parameter("day") @Nullable String day,
+        @OutputCustomType.Parameter("occurrence") @Nullable Integer occurrence) {
         this.day = day;
         this.occurrence = occurrence;
     }
@@ -68,12 +68,12 @@ public final class RecurrenceScheduleOccurrenceResponse {
     	      this.occurrence = defaults.occurrence;
         }
 
-        public Builder setDay(@Nullable String day) {
+        public Builder day(@Nullable String day) {
             this.day = day;
             return this;
         }
 
-        public Builder setOccurrence(@Nullable Integer occurrence) {
+        public Builder occurrence(@Nullable Integer occurrence) {
             this.occurrence = occurrence;
             return this;
         }

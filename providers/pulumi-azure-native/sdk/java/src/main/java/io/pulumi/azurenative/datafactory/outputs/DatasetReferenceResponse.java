@@ -28,11 +28,11 @@ public final class DatasetReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"parameters","referenceName","type"})
+    @OutputCustomType.Constructor
     private DatasetReferenceResponse(
-        @Nullable Map<String,Object> parameters,
-        String referenceName,
-        String type) {
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @OutputCustomType.Parameter("referenceName") String referenceName,
+        @OutputCustomType.Parameter("type") String type) {
         this.parameters = parameters;
         this.referenceName = referenceName;
         this.type = type;
@@ -84,17 +84,17 @@ public final class DatasetReferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setReferenceName(String referenceName) {
+        public Builder referenceName(String referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

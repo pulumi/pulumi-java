@@ -25,11 +25,11 @@ public final class SchedulingPolicyFairSharePolicy {
      */
     private final @Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions;
 
-    @OutputCustomType.Constructor({"computeReservation","shareDecaySeconds","shareDistributions"})
+    @OutputCustomType.Constructor
     private SchedulingPolicyFairSharePolicy(
-        @Nullable Integer computeReservation,
-        @Nullable Integer shareDecaySeconds,
-        @Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
+        @OutputCustomType.Parameter("computeReservation") @Nullable Integer computeReservation,
+        @OutputCustomType.Parameter("shareDecaySeconds") @Nullable Integer shareDecaySeconds,
+        @OutputCustomType.Parameter("shareDistributions") @Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
         this.computeReservation = computeReservation;
         this.shareDecaySeconds = shareDecaySeconds;
         this.shareDistributions = shareDistributions;
@@ -77,17 +77,17 @@ public final class SchedulingPolicyFairSharePolicy {
     	      this.shareDistributions = defaults.shareDistributions;
         }
 
-        public Builder setComputeReservation(@Nullable Integer computeReservation) {
+        public Builder computeReservation(@Nullable Integer computeReservation) {
             this.computeReservation = computeReservation;
             return this;
         }
 
-        public Builder setShareDecaySeconds(@Nullable Integer shareDecaySeconds) {
+        public Builder shareDecaySeconds(@Nullable Integer shareDecaySeconds) {
             this.shareDecaySeconds = shareDecaySeconds;
             return this;
         }
 
-        public Builder setShareDistributions(@Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
+        public Builder shareDistributions(@Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
             this.shareDistributions = shareDistributions;
             return this;
         }

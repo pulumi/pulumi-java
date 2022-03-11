@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DeliveryStreamRetryOptions {
     private final @Nullable Integer durationInSeconds;
 
-    @OutputCustomType.Constructor({"durationInSeconds"})
-    private DeliveryStreamRetryOptions(@Nullable Integer durationInSeconds) {
+    @OutputCustomType.Constructor
+    private DeliveryStreamRetryOptions(@OutputCustomType.Parameter("durationInSeconds") @Nullable Integer durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
     }
 
@@ -42,7 +42,7 @@ public final class DeliveryStreamRetryOptions {
     	      this.durationInSeconds = defaults.durationInSeconds;
         }
 
-        public Builder setDurationInSeconds(@Nullable Integer durationInSeconds) {
+        public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
             this.durationInSeconds = durationInSeconds;
             return this;
         }

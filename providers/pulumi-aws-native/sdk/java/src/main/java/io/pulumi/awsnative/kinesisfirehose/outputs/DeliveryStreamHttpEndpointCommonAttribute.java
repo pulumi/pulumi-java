@@ -12,10 +12,10 @@ public final class DeliveryStreamHttpEndpointCommonAttribute {
     private final String attributeName;
     private final String attributeValue;
 
-    @OutputCustomType.Constructor({"attributeName","attributeValue"})
+    @OutputCustomType.Constructor
     private DeliveryStreamHttpEndpointCommonAttribute(
-        String attributeName,
-        String attributeValue) {
+        @OutputCustomType.Parameter("attributeName") String attributeName,
+        @OutputCustomType.Parameter("attributeValue") String attributeValue) {
         this.attributeName = attributeName;
         this.attributeValue = attributeValue;
     }
@@ -49,12 +49,12 @@ public final class DeliveryStreamHttpEndpointCommonAttribute {
     	      this.attributeValue = defaults.attributeValue;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setAttributeValue(String attributeValue) {
+        public Builder attributeValue(String attributeValue) {
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
         }

@@ -153,72 +153,72 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAccessString(@Nullable Input<String> accessString) {
+        public Builder accessString(@Nullable Input<String> accessString) {
             this.accessString = accessString;
             return this;
         }
 
-        public Builder setAccessString(@Nullable String accessString) {
+        public Builder accessString(@Nullable String accessString) {
             this.accessString = Input.ofNullable(accessString);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAuthenticationMode(@Nullable Input<UserAuthenticationModeGetArgs> authenticationMode) {
+        public Builder authenticationMode(@Nullable Input<UserAuthenticationModeGetArgs> authenticationMode) {
             this.authenticationMode = authenticationMode;
             return this;
         }
 
-        public Builder setAuthenticationMode(@Nullable UserAuthenticationModeGetArgs authenticationMode) {
+        public Builder authenticationMode(@Nullable UserAuthenticationModeGetArgs authenticationMode) {
             this.authenticationMode = Input.ofNullable(authenticationMode);
             return this;
         }
 
-        public Builder setMinimumEngineVersion(@Nullable Input<String> minimumEngineVersion) {
+        public Builder minimumEngineVersion(@Nullable Input<String> minimumEngineVersion) {
             this.minimumEngineVersion = minimumEngineVersion;
             return this;
         }
 
-        public Builder setMinimumEngineVersion(@Nullable String minimumEngineVersion) {
+        public Builder minimumEngineVersion(@Nullable String minimumEngineVersion) {
             this.minimumEngineVersion = Input.ofNullable(minimumEngineVersion);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

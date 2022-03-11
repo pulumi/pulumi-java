@@ -44,14 +44,14 @@ public final class LocationResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"documentEndpoint","failoverPriority","id","isZoneRedundant","locationName","provisioningState"})
+    @OutputCustomType.Constructor
     private LocationResponse(
-        String documentEndpoint,
-        @Nullable Integer failoverPriority,
-        String id,
-        @Nullable Boolean isZoneRedundant,
-        @Nullable String locationName,
-        String provisioningState) {
+        @OutputCustomType.Parameter("documentEndpoint") String documentEndpoint,
+        @OutputCustomType.Parameter("failoverPriority") @Nullable Integer failoverPriority,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isZoneRedundant") @Nullable Boolean isZoneRedundant,
+        @OutputCustomType.Parameter("locationName") @Nullable String locationName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.documentEndpoint = documentEndpoint;
         this.failoverPriority = failoverPriority;
         this.id = id;
@@ -133,32 +133,32 @@ public final class LocationResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setDocumentEndpoint(String documentEndpoint) {
+        public Builder documentEndpoint(String documentEndpoint) {
             this.documentEndpoint = Objects.requireNonNull(documentEndpoint);
             return this;
         }
 
-        public Builder setFailoverPriority(@Nullable Integer failoverPriority) {
+        public Builder failoverPriority(@Nullable Integer failoverPriority) {
             this.failoverPriority = failoverPriority;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsZoneRedundant(@Nullable Boolean isZoneRedundant) {
+        public Builder isZoneRedundant(@Nullable Boolean isZoneRedundant) {
             this.isZoneRedundant = isZoneRedundant;
             return this;
         }
 
-        public Builder setLocationName(@Nullable String locationName) {
+        public Builder locationName(@Nullable String locationName) {
             this.locationName = locationName;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

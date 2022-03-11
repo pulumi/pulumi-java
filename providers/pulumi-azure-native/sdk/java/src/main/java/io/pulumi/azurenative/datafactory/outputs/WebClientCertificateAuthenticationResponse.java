@@ -35,12 +35,12 @@ public final class WebClientCertificateAuthenticationResponse {
      */
     private final Object url;
 
-    @OutputCustomType.Constructor({"authenticationType","password","pfx","url"})
+    @OutputCustomType.Constructor
     private WebClientCertificateAuthenticationResponse(
-        String authenticationType,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
-        Object url) {
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("pfx") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
+        @OutputCustomType.Parameter("url") Object url) {
         this.authenticationType = authenticationType;
         this.password = password;
         this.pfx = pfx;
@@ -103,22 +103,22 @@ public final class WebClientCertificateAuthenticationResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setPassword(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPfx(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx) {
+        public Builder pfx(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx) {
             this.pfx = Objects.requireNonNull(pfx);
             return this;
         }
 
-        public Builder setUrl(Object url) {
+        public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

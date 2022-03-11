@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class AutomationRuleSetResponse {
     private final @Nullable List<AutomationTriggeringRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private AutomationRuleSetResponse(@Nullable List<AutomationTriggeringRuleResponse> rules) {
+    @OutputCustomType.Constructor
+    private AutomationRuleSetResponse(@OutputCustomType.Parameter("rules") @Nullable List<AutomationTriggeringRuleResponse> rules) {
         this.rules = rules;
     }
 
@@ -42,7 +42,7 @@ public final class AutomationRuleSetResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable List<AutomationTriggeringRuleResponse> rules) {
+        public Builder rules(@Nullable List<AutomationTriggeringRuleResponse> rules) {
             this.rules = rules;
             return this;
         }

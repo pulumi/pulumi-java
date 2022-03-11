@@ -58,17 +58,17 @@ public final class GetHoursOfOperationResult {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor({"configs","description","hoursOfOperationArn","hoursOfOperationId","id","instanceId","name","tags","timeZone"})
+    @OutputCustomType.Constructor
     private GetHoursOfOperationResult(
-        List<GetHoursOfOperationConfig> configs,
-        String description,
-        String hoursOfOperationArn,
-        String hoursOfOperationId,
-        String id,
-        String instanceId,
-        String name,
-        Map<String,String> tags,
-        String timeZone) {
+        @OutputCustomType.Parameter("configs") List<GetHoursOfOperationConfig> configs,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("hoursOfOperationArn") String hoursOfOperationArn,
+        @OutputCustomType.Parameter("hoursOfOperationId") String hoursOfOperationId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("timeZone") String timeZone) {
         this.configs = configs;
         this.description = description;
         this.hoursOfOperationArn = hoursOfOperationArn;
@@ -180,47 +180,47 @@ public final class GetHoursOfOperationResult {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setConfigs(List<GetHoursOfOperationConfig> configs) {
+        public Builder configs(List<GetHoursOfOperationConfig> configs) {
             this.configs = Objects.requireNonNull(configs);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHoursOfOperationArn(String hoursOfOperationArn) {
+        public Builder hoursOfOperationArn(String hoursOfOperationArn) {
             this.hoursOfOperationArn = Objects.requireNonNull(hoursOfOperationArn);
             return this;
         }
 
-        public Builder setHoursOfOperationId(String hoursOfOperationId) {
+        public Builder hoursOfOperationId(String hoursOfOperationId) {
             this.hoursOfOperationId = Objects.requireNonNull(hoursOfOperationId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }

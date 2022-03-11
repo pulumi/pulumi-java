@@ -15,8 +15,8 @@ public final class GoogleCloudMlV1__XraiAttributionResponse {
      */
     private final Integer numIntegralSteps;
 
-    @OutputCustomType.Constructor({"numIntegralSteps"})
-    private GoogleCloudMlV1__XraiAttributionResponse(Integer numIntegralSteps) {
+    @OutputCustomType.Constructor
+    private GoogleCloudMlV1__XraiAttributionResponse(@OutputCustomType.Parameter("numIntegralSteps") Integer numIntegralSteps) {
         this.numIntegralSteps = numIntegralSteps;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__XraiAttributionResponse {
     	      this.numIntegralSteps = defaults.numIntegralSteps;
         }
 
-        public Builder setNumIntegralSteps(Integer numIntegralSteps) {
+        public Builder numIntegralSteps(Integer numIntegralSteps) {
             this.numIntegralSteps = Objects.requireNonNull(numIntegralSteps);
             return this;
         }

@@ -22,10 +22,10 @@ public final class LabelingJobImagePropertiesResponse {
      */
     private final String mediaType;
 
-    @OutputCustomType.Constructor({"annotationType","mediaType"})
+    @OutputCustomType.Constructor
     private LabelingJobImagePropertiesResponse(
-        @Nullable String annotationType,
-        String mediaType) {
+        @OutputCustomType.Parameter("annotationType") @Nullable String annotationType,
+        @OutputCustomType.Parameter("mediaType") String mediaType) {
         this.annotationType = annotationType;
         this.mediaType = mediaType;
     }
@@ -67,12 +67,12 @@ public final class LabelingJobImagePropertiesResponse {
     	      this.mediaType = defaults.mediaType;
         }
 
-        public Builder setAnnotationType(@Nullable String annotationType) {
+        public Builder annotationType(@Nullable String annotationType) {
             this.annotationType = annotationType;
             return this;
         }
 
-        public Builder setMediaType(String mediaType) {
+        public Builder mediaType(String mediaType) {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }

@@ -20,10 +20,10 @@ public final class EventSourceMappingSourceAccessConfiguration {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"type","uri"})
+    @OutputCustomType.Constructor
     private EventSourceMappingSourceAccessConfiguration(
-        String type,
-        String uri) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.type = type;
         this.uri = uri;
     }
@@ -65,12 +65,12 @@ public final class EventSourceMappingSourceAccessConfiguration {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

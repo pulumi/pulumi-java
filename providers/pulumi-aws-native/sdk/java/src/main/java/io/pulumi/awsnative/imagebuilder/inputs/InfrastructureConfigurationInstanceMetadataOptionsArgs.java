@@ -75,22 +75,22 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
     	      this.httpTokens = defaults.httpTokens;
         }
 
-        public Builder setHttpPutResponseHopLimit(@Nullable Input<Integer> httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(@Nullable Input<Integer> httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
 
-        public Builder setHttpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = Input.ofNullable(httpPutResponseHopLimit);
             return this;
         }
 
-        public Builder setHttpTokens(@Nullable Input<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens) {
+        public Builder httpTokens(@Nullable Input<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }
 
-        public Builder setHttpTokens(@Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
+        public Builder httpTokens(@Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
             this.httpTokens = Input.ofNullable(httpTokens);
             return this;
         }

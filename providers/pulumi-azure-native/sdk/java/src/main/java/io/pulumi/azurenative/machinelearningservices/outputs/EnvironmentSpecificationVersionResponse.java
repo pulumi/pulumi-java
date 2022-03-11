@@ -60,16 +60,16 @@ public final class EnvironmentSpecificationVersionResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"condaFile","description","docker","environmentSpecificationType","inferenceContainerProperties","isAnonymous","properties","tags"})
+    @OutputCustomType.Constructor
     private EnvironmentSpecificationVersionResponse(
-        @Nullable String condaFile,
-        @Nullable String description,
-        @Nullable Either<DockerBuildResponse,DockerImageResponse> docker,
-        String environmentSpecificationType,
-        @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties,
-        @Nullable Boolean isAnonymous,
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("condaFile") @Nullable String condaFile,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("docker") @Nullable Either<DockerBuildResponse,DockerImageResponse> docker,
+        @OutputCustomType.Parameter("environmentSpecificationType") String environmentSpecificationType,
+        @OutputCustomType.Parameter("inferenceContainerProperties") @Nullable InferenceContainerPropertiesResponse inferenceContainerProperties,
+        @OutputCustomType.Parameter("isAnonymous") @Nullable Boolean isAnonymous,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.condaFile = condaFile;
         this.description = description;
         this.docker = docker;
@@ -173,42 +173,42 @@ public final class EnvironmentSpecificationVersionResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCondaFile(@Nullable String condaFile) {
+        public Builder condaFile(@Nullable String condaFile) {
             this.condaFile = condaFile;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDocker(@Nullable Either<DockerBuildResponse,DockerImageResponse> docker) {
+        public Builder docker(@Nullable Either<DockerBuildResponse,DockerImageResponse> docker) {
             this.docker = docker;
             return this;
         }
 
-        public Builder setEnvironmentSpecificationType(String environmentSpecificationType) {
+        public Builder environmentSpecificationType(String environmentSpecificationType) {
             this.environmentSpecificationType = Objects.requireNonNull(environmentSpecificationType);
             return this;
         }
 
-        public Builder setInferenceContainerProperties(@Nullable InferenceContainerPropertiesResponse inferenceContainerProperties) {
+        public Builder inferenceContainerProperties(@Nullable InferenceContainerPropertiesResponse inferenceContainerProperties) {
             this.inferenceContainerProperties = inferenceContainerProperties;
             return this;
         }
 
-        public Builder setIsAnonymous(@Nullable Boolean isAnonymous) {
+        public Builder isAnonymous(@Nullable Boolean isAnonymous) {
             this.isAnonymous = isAnonymous;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

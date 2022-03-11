@@ -16,8 +16,8 @@ public final class MessageStoragePolicyResponse {
      */
     private final List<String> allowedPersistenceRegions;
 
-    @OutputCustomType.Constructor({"allowedPersistenceRegions"})
-    private MessageStoragePolicyResponse(List<String> allowedPersistenceRegions) {
+    @OutputCustomType.Constructor
+    private MessageStoragePolicyResponse(@OutputCustomType.Parameter("allowedPersistenceRegions") List<String> allowedPersistenceRegions) {
         this.allowedPersistenceRegions = allowedPersistenceRegions;
     }
 
@@ -49,7 +49,7 @@ public final class MessageStoragePolicyResponse {
     	      this.allowedPersistenceRegions = defaults.allowedPersistenceRegions;
         }
 
-        public Builder setAllowedPersistenceRegions(List<String> allowedPersistenceRegions) {
+        public Builder allowedPersistenceRegions(List<String> allowedPersistenceRegions) {
             this.allowedPersistenceRegions = Objects.requireNonNull(allowedPersistenceRegions);
             return this;
         }

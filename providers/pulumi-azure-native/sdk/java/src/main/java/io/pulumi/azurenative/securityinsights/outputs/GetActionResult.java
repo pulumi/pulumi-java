@@ -42,14 +42,14 @@ public final class GetActionResult {
      */
     private final @Nullable String workflowId;
 
-    @OutputCustomType.Constructor({"etag","id","logicAppResourceId","name","type","workflowId"})
+    @OutputCustomType.Constructor
     private GetActionResult(
-        @Nullable String etag,
-        String id,
-        String logicAppResourceId,
-        String name,
-        String type,
-        @Nullable String workflowId) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logicAppResourceId") String logicAppResourceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workflowId") @Nullable String workflowId) {
         this.etag = etag;
         this.id = id;
         this.logicAppResourceId = logicAppResourceId;
@@ -131,32 +131,32 @@ public final class GetActionResult {
     	      this.workflowId = defaults.workflowId;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLogicAppResourceId(String logicAppResourceId) {
+        public Builder logicAppResourceId(String logicAppResourceId) {
             this.logicAppResourceId = Objects.requireNonNull(logicAppResourceId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkflowId(@Nullable String workflowId) {
+        public Builder workflowId(@Nullable String workflowId) {
             this.workflowId = workflowId;
             return this;
         }

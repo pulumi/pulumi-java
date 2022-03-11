@@ -24,10 +24,10 @@ public final class StreamingPolicyContentKeysResponse {
      */
     private final @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings;
 
-    @OutputCustomType.Constructor({"defaultKey","keyToTrackMappings"})
+    @OutputCustomType.Constructor
     private StreamingPolicyContentKeysResponse(
-        @Nullable DefaultKeyResponse defaultKey,
-        @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings) {
+        @OutputCustomType.Parameter("defaultKey") @Nullable DefaultKeyResponse defaultKey,
+        @OutputCustomType.Parameter("keyToTrackMappings") @Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings) {
         this.defaultKey = defaultKey;
         this.keyToTrackMappings = keyToTrackMappings;
     }
@@ -69,12 +69,12 @@ public final class StreamingPolicyContentKeysResponse {
     	      this.keyToTrackMappings = defaults.keyToTrackMappings;
         }
 
-        public Builder setDefaultKey(@Nullable DefaultKeyResponse defaultKey) {
+        public Builder defaultKey(@Nullable DefaultKeyResponse defaultKey) {
             this.defaultKey = defaultKey;
             return this;
         }
 
-        public Builder setKeyToTrackMappings(@Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings) {
+        public Builder keyToTrackMappings(@Nullable List<StreamingPolicyContentKeyResponse> keyToTrackMappings) {
             this.keyToTrackMappings = keyToTrackMappings;
             return this;
         }

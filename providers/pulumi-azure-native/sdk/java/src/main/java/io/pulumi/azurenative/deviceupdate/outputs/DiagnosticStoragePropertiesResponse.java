@@ -27,11 +27,11 @@ public final class DiagnosticStoragePropertiesResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor({"authenticationType","connectionString","resourceId"})
+    @OutputCustomType.Constructor
     private DiagnosticStoragePropertiesResponse(
-        String authenticationType,
-        @Nullable String connectionString,
-        String resourceId) {
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("resourceId") String resourceId) {
         this.authenticationType = authenticationType;
         this.connectionString = connectionString;
         this.resourceId = resourceId;
@@ -83,17 +83,17 @@ public final class DiagnosticStoragePropertiesResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }

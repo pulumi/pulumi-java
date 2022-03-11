@@ -15,8 +15,8 @@ public final class FeatureSpecMulticlusteringress {
      */
     private final String configMembership;
 
-    @OutputCustomType.Constructor({"configMembership"})
-    private FeatureSpecMulticlusteringress(String configMembership) {
+    @OutputCustomType.Constructor
+    private FeatureSpecMulticlusteringress(@OutputCustomType.Parameter("configMembership") String configMembership) {
         this.configMembership = configMembership;
     }
 
@@ -48,7 +48,7 @@ public final class FeatureSpecMulticlusteringress {
     	      this.configMembership = defaults.configMembership;
         }
 
-        public Builder setConfigMembership(String configMembership) {
+        public Builder configMembership(String configMembership) {
             this.configMembership = Objects.requireNonNull(configMembership);
             return this;
         }

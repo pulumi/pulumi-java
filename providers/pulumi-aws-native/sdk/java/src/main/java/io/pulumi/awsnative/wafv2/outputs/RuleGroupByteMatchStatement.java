@@ -21,13 +21,13 @@ public final class RuleGroupByteMatchStatement {
     private final @Nullable String searchStringBase64;
     private final List<RuleGroupTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","positionalConstraint","searchString","searchStringBase64","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupByteMatchStatement(
-        RuleGroupFieldToMatch fieldToMatch,
-        RuleGroupPositionalConstraint positionalConstraint,
-        @Nullable String searchString,
-        @Nullable String searchStringBase64,
-        List<RuleGroupTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("positionalConstraint") RuleGroupPositionalConstraint positionalConstraint,
+        @OutputCustomType.Parameter("searchString") @Nullable String searchString,
+        @OutputCustomType.Parameter("searchStringBase64") @Nullable String searchStringBase64,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.searchString = searchString;
@@ -79,27 +79,27 @@ public final class RuleGroupByteMatchStatement {
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setFieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setPositionalConstraint(RuleGroupPositionalConstraint positionalConstraint) {
+        public Builder positionalConstraint(RuleGroupPositionalConstraint positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
 
-        public Builder setSearchString(@Nullable String searchString) {
+        public Builder searchString(@Nullable String searchString) {
             this.searchString = searchString;
             return this;
         }
 
-        public Builder setSearchStringBase64(@Nullable String searchStringBase64) {
+        public Builder searchStringBase64(@Nullable String searchStringBase64) {
             this.searchStringBase64 = searchStringBase64;
             return this;
         }
 
-        public Builder setTextTransformations(List<RuleGroupTextTransformation> textTransformations) {
+        public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }

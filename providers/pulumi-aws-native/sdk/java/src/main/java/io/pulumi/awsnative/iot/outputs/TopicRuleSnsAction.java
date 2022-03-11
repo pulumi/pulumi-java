@@ -15,11 +15,11 @@ public final class TopicRuleSnsAction {
     private final String roleArn;
     private final String targetArn;
 
-    @OutputCustomType.Constructor({"messageFormat","roleArn","targetArn"})
+    @OutputCustomType.Constructor
     private TopicRuleSnsAction(
-        @Nullable String messageFormat,
-        String roleArn,
-        String targetArn) {
+        @OutputCustomType.Parameter("messageFormat") @Nullable String messageFormat,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("targetArn") String targetArn) {
         this.messageFormat = messageFormat;
         this.roleArn = roleArn;
         this.targetArn = targetArn;
@@ -59,17 +59,17 @@ public final class TopicRuleSnsAction {
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setMessageFormat(@Nullable String messageFormat) {
+        public Builder messageFormat(@Nullable String messageFormat) {
             this.messageFormat = messageFormat;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setTargetArn(String targetArn) {
+        public Builder targetArn(String targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }

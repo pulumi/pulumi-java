@@ -52,15 +52,15 @@ public final class GenericContainerResponse {
      */
     private final @Nullable String registrationStatus;
 
-    @OutputCustomType.Constructor({"backupManagementType","containerType","extendedInformation","fabricName","friendlyName","healthStatus","registrationStatus"})
+    @OutputCustomType.Constructor
     private GenericContainerResponse(
-        @Nullable String backupManagementType,
-        String containerType,
-        @Nullable GenericContainerExtendedInfoResponse extendedInformation,
-        @Nullable String fabricName,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable String registrationStatus) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("extendedInformation") @Nullable GenericContainerExtendedInfoResponse extendedInformation,
+        @OutputCustomType.Parameter("fabricName") @Nullable String fabricName,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus) {
         this.backupManagementType = backupManagementType;
         this.containerType = containerType;
         this.extendedInformation = extendedInformation;
@@ -156,37 +156,37 @@ public final class GenericContainerResponse {
     	      this.registrationStatus = defaults.registrationStatus;
         }
 
-        public Builder setBackupManagementType(@Nullable String backupManagementType) {
+        public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setContainerType(String containerType) {
+        public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
-        public Builder setExtendedInformation(@Nullable GenericContainerExtendedInfoResponse extendedInformation) {
+        public Builder extendedInformation(@Nullable GenericContainerExtendedInfoResponse extendedInformation) {
             this.extendedInformation = extendedInformation;
             return this;
         }
 
-        public Builder setFabricName(@Nullable String fabricName) {
+        public Builder fabricName(@Nullable String fabricName) {
             this.fabricName = fabricName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable String healthStatus) {
+        public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
-        public Builder setRegistrationStatus(@Nullable String registrationStatus) {
+        public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }

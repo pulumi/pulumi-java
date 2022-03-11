@@ -61,17 +61,17 @@ public final class GetJobStepResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"action","credential","executionOptions","id","name","output","stepId","targetGroup","type"})
+    @OutputCustomType.Constructor
     private GetJobStepResult(
-        JobStepActionResponse action,
-        String credential,
-        @Nullable JobStepExecutionOptionsResponse executionOptions,
-        String id,
-        String name,
-        @Nullable JobStepOutputResponse output,
-        @Nullable Integer stepId,
-        String targetGroup,
-        String type) {
+        @OutputCustomType.Parameter("action") JobStepActionResponse action,
+        @OutputCustomType.Parameter("credential") String credential,
+        @OutputCustomType.Parameter("executionOptions") @Nullable JobStepExecutionOptionsResponse executionOptions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("output") @Nullable JobStepOutputResponse output,
+        @OutputCustomType.Parameter("stepId") @Nullable Integer stepId,
+        @OutputCustomType.Parameter("targetGroup") String targetGroup,
+        @OutputCustomType.Parameter("type") String type) {
         this.action = action;
         this.credential = credential;
         this.executionOptions = executionOptions;
@@ -183,47 +183,47 @@ public final class GetJobStepResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(JobStepActionResponse action) {
+        public Builder action(JobStepActionResponse action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setCredential(String credential) {
+        public Builder credential(String credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
-        public Builder setExecutionOptions(@Nullable JobStepExecutionOptionsResponse executionOptions) {
+        public Builder executionOptions(@Nullable JobStepExecutionOptionsResponse executionOptions) {
             this.executionOptions = executionOptions;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutput(@Nullable JobStepOutputResponse output) {
+        public Builder output(@Nullable JobStepOutputResponse output) {
             this.output = output;
             return this;
         }
 
-        public Builder setStepId(@Nullable Integer stepId) {
+        public Builder stepId(@Nullable Integer stepId) {
             this.stepId = stepId;
             return this;
         }
 
-        public Builder setTargetGroup(String targetGroup) {
+        public Builder targetGroup(String targetGroup) {
             this.targetGroup = Objects.requireNonNull(targetGroup);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

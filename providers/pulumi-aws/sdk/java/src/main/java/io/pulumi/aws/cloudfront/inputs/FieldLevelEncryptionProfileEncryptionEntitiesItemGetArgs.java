@@ -86,32 +86,32 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs exte
     	      this.publicKeyId = defaults.publicKeyId;
         }
 
-        public Builder setFieldPatterns(Input<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsGetArgs> fieldPatterns) {
+        public Builder fieldPatterns(Input<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsGetArgs> fieldPatterns) {
             this.fieldPatterns = Objects.requireNonNull(fieldPatterns);
             return this;
         }
 
-        public Builder setFieldPatterns(FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsGetArgs fieldPatterns) {
+        public Builder fieldPatterns(FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsGetArgs fieldPatterns) {
             this.fieldPatterns = Input.of(Objects.requireNonNull(fieldPatterns));
             return this;
         }
 
-        public Builder setProviderId(Input<String> providerId) {
+        public Builder providerId(Input<String> providerId) {
             this.providerId = Objects.requireNonNull(providerId);
             return this;
         }
 
-        public Builder setProviderId(String providerId) {
+        public Builder providerId(String providerId) {
             this.providerId = Input.of(Objects.requireNonNull(providerId));
             return this;
         }
 
-        public Builder setPublicKeyId(Input<String> publicKeyId) {
+        public Builder publicKeyId(Input<String> publicKeyId) {
             this.publicKeyId = Objects.requireNonNull(publicKeyId);
             return this;
         }
 
-        public Builder setPublicKeyId(String publicKeyId) {
+        public Builder publicKeyId(String publicKeyId) {
             this.publicKeyId = Input.of(Objects.requireNonNull(publicKeyId));
             return this;
         }

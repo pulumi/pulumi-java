@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"topic"})
-    private GooglePrivacyDlpV2PublishToPubSubResponse(String topic) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2PublishToPubSubResponse(@OutputCustomType.Parameter("topic") String topic) {
         this.topic = topic;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2PublishToPubSubResponse {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

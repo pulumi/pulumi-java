@@ -35,13 +35,13 @@ public final class GetDirectorySelfServicePermission {
      */
     private final Boolean switchRunningMode;
 
-    @OutputCustomType.Constructor({"changeComputeType","increaseVolumeSize","rebuildWorkspace","restartWorkspace","switchRunningMode"})
+    @OutputCustomType.Constructor
     private GetDirectorySelfServicePermission(
-        Boolean changeComputeType,
-        Boolean increaseVolumeSize,
-        Boolean rebuildWorkspace,
-        Boolean restartWorkspace,
-        Boolean switchRunningMode) {
+        @OutputCustomType.Parameter("changeComputeType") Boolean changeComputeType,
+        @OutputCustomType.Parameter("increaseVolumeSize") Boolean increaseVolumeSize,
+        @OutputCustomType.Parameter("rebuildWorkspace") Boolean rebuildWorkspace,
+        @OutputCustomType.Parameter("restartWorkspace") Boolean restartWorkspace,
+        @OutputCustomType.Parameter("switchRunningMode") Boolean switchRunningMode) {
         this.changeComputeType = changeComputeType;
         this.increaseVolumeSize = increaseVolumeSize;
         this.rebuildWorkspace = rebuildWorkspace;
@@ -113,27 +113,27 @@ public final class GetDirectorySelfServicePermission {
     	      this.switchRunningMode = defaults.switchRunningMode;
         }
 
-        public Builder setChangeComputeType(Boolean changeComputeType) {
+        public Builder changeComputeType(Boolean changeComputeType) {
             this.changeComputeType = Objects.requireNonNull(changeComputeType);
             return this;
         }
 
-        public Builder setIncreaseVolumeSize(Boolean increaseVolumeSize) {
+        public Builder increaseVolumeSize(Boolean increaseVolumeSize) {
             this.increaseVolumeSize = Objects.requireNonNull(increaseVolumeSize);
             return this;
         }
 
-        public Builder setRebuildWorkspace(Boolean rebuildWorkspace) {
+        public Builder rebuildWorkspace(Boolean rebuildWorkspace) {
             this.rebuildWorkspace = Objects.requireNonNull(rebuildWorkspace);
             return this;
         }
 
-        public Builder setRestartWorkspace(Boolean restartWorkspace) {
+        public Builder restartWorkspace(Boolean restartWorkspace) {
             this.restartWorkspace = Objects.requireNonNull(restartWorkspace);
             return this;
         }
 
-        public Builder setSwitchRunningMode(Boolean switchRunningMode) {
+        public Builder switchRunningMode(Boolean switchRunningMode) {
             this.switchRunningMode = Objects.requireNonNull(switchRunningMode);
             return this;
         }

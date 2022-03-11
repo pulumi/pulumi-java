@@ -27,11 +27,11 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
      */
     private final MySqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"selectedDatabases","sourceConnectionInfo","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private MigrateMySqlAzureDbForMySqlSyncTaskInputResponse(
-        List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases,
-        MySqlConnectionInfoResponse sourceConnectionInfo,
-        MySqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("selectedDatabases") List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases,
+        @OutputCustomType.Parameter("sourceConnectionInfo") MySqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("targetConnectionInfo") MySqlConnectionInfoResponse targetConnectionInfo) {
         this.selectedDatabases = selectedDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;
@@ -83,17 +83,17 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse {
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setSelectedDatabases(List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases) {
+        public Builder selectedDatabases(List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(MySqlConnectionInfoResponse sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(MySqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(MySqlConnectionInfoResponse targetConnectionInfo) {
+        public Builder targetConnectionInfo(MySqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }

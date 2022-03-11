@@ -31,13 +31,13 @@ public final class GetPrefixListResult {
     private final String name;
     private final @Nullable String prefixListId;
 
-    @OutputCustomType.Constructor({"cidrBlocks","filters","id","name","prefixListId"})
+    @OutputCustomType.Constructor
     private GetPrefixListResult(
-        List<String> cidrBlocks,
-        @Nullable List<GetPrefixListFilter> filters,
-        String id,
-        String name,
-        @Nullable String prefixListId) {
+        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetPrefixListFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("prefixListId") @Nullable String prefixListId) {
         this.cidrBlocks = cidrBlocks;
         this.filters = filters;
         this.id = id;
@@ -101,27 +101,27 @@ public final class GetPrefixListResult {
     	      this.prefixListId = defaults.prefixListId;
         }
 
-        public Builder setCidrBlocks(List<String> cidrBlocks) {
+        public Builder cidrBlocks(List<String> cidrBlocks) {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetPrefixListFilter> filters) {
+        public Builder filters(@Nullable List<GetPrefixListFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrefixListId(@Nullable String prefixListId) {
+        public Builder prefixListId(@Nullable String prefixListId) {
             this.prefixListId = prefixListId;
             return this;
         }

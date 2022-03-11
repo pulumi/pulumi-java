@@ -40,14 +40,14 @@ public final class ResourcePoolResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fullName","id","location","name","privateCloudId","type"})
+    @OutputCustomType.Constructor
     private ResourcePoolResponse(
-        String fullName,
-        String id,
-        String location,
-        String name,
-        String privateCloudId,
-        String type) {
+        @OutputCustomType.Parameter("fullName") String fullName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateCloudId") String privateCloudId,
+        @OutputCustomType.Parameter("type") String type) {
         this.fullName = fullName;
         this.id = id;
         this.location = location;
@@ -129,32 +129,32 @@ public final class ResourcePoolResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setFullName(String fullName) {
+        public Builder fullName(String fullName) {
             this.fullName = Objects.requireNonNull(fullName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateCloudId(String privateCloudId) {
+        public Builder privateCloudId(String privateCloudId) {
             this.privateCloudId = Objects.requireNonNull(privateCloudId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

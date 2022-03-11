@@ -21,14 +21,14 @@ public final class JobDataCatalogOutput {
     private final @Nullable JobS3TableOutputOptions s3Options;
     private final String tableName;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","databaseOptions","overwrite","s3Options","tableName"})
+    @OutputCustomType.Constructor
     private JobDataCatalogOutput(
-        @Nullable String catalogId,
-        String databaseName,
-        @Nullable JobDatabaseTableOutputOptions databaseOptions,
-        @Nullable Boolean overwrite,
-        @Nullable JobS3TableOutputOptions s3Options,
-        String tableName) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("databaseOptions") @Nullable JobDatabaseTableOutputOptions databaseOptions,
+        @OutputCustomType.Parameter("overwrite") @Nullable Boolean overwrite,
+        @OutputCustomType.Parameter("s3Options") @Nullable JobS3TableOutputOptions s3Options,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.databaseOptions = databaseOptions;
@@ -86,32 +86,32 @@ public final class JobDataCatalogOutput {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseOptions(@Nullable JobDatabaseTableOutputOptions databaseOptions) {
+        public Builder databaseOptions(@Nullable JobDatabaseTableOutputOptions databaseOptions) {
             this.databaseOptions = databaseOptions;
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Boolean overwrite) {
+        public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = overwrite;
             return this;
         }
 
-        public Builder setS3Options(@Nullable JobS3TableOutputOptions s3Options) {
+        public Builder s3Options(@Nullable JobS3TableOutputOptions s3Options) {
             this.s3Options = s3Options;
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

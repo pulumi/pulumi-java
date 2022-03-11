@@ -35,12 +35,12 @@ public final class AzureKeyVaultSecretReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"secretName","secretVersion","store","type"})
+    @OutputCustomType.Constructor
     private AzureKeyVaultSecretReferenceResponse(
-        Object secretName,
-        @Nullable Object secretVersion,
-        LinkedServiceReferenceResponse store,
-        String type) {
+        @OutputCustomType.Parameter("secretName") Object secretName,
+        @OutputCustomType.Parameter("secretVersion") @Nullable Object secretVersion,
+        @OutputCustomType.Parameter("store") LinkedServiceReferenceResponse store,
+        @OutputCustomType.Parameter("type") String type) {
         this.secretName = secretName;
         this.secretVersion = secretVersion;
         this.store = store;
@@ -103,22 +103,22 @@ public final class AzureKeyVaultSecretReferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setSecretName(Object secretName) {
+        public Builder secretName(Object secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable Object secretVersion) {
+        public Builder secretVersion(@Nullable Object secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
-        public Builder setStore(LinkedServiceReferenceResponse store) {
+        public Builder store(LinkedServiceReferenceResponse store) {
             this.store = Objects.requireNonNull(store);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

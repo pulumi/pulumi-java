@@ -229,112 +229,112 @@ public final class SecurityScanConfigState extends io.pulumi.resources.ResourceA
     	      this.userAgent = defaults.userAgent;
         }
 
-        public Builder setAuthentication(@Nullable Input<SecurityScanConfigAuthenticationGetArgs> authentication) {
+        public Builder authentication(@Nullable Input<SecurityScanConfigAuthenticationGetArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable SecurityScanConfigAuthenticationGetArgs authentication) {
+        public Builder authentication(@Nullable SecurityScanConfigAuthenticationGetArgs authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setBlacklistPatterns(@Nullable Input<List<String>> blacklistPatterns) {
+        public Builder blacklistPatterns(@Nullable Input<List<String>> blacklistPatterns) {
             this.blacklistPatterns = blacklistPatterns;
             return this;
         }
 
-        public Builder setBlacklistPatterns(@Nullable List<String> blacklistPatterns) {
+        public Builder blacklistPatterns(@Nullable List<String> blacklistPatterns) {
             this.blacklistPatterns = Input.ofNullable(blacklistPatterns);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setExportToSecurityCommandCenter(@Nullable Input<String> exportToSecurityCommandCenter) {
+        public Builder exportToSecurityCommandCenter(@Nullable Input<String> exportToSecurityCommandCenter) {
             this.exportToSecurityCommandCenter = exportToSecurityCommandCenter;
             return this;
         }
 
-        public Builder setExportToSecurityCommandCenter(@Nullable String exportToSecurityCommandCenter) {
+        public Builder exportToSecurityCommandCenter(@Nullable String exportToSecurityCommandCenter) {
             this.exportToSecurityCommandCenter = Input.ofNullable(exportToSecurityCommandCenter);
             return this;
         }
 
-        public Builder setMaxQps(@Nullable Input<Integer> maxQps) {
+        public Builder maxQps(@Nullable Input<Integer> maxQps) {
             this.maxQps = maxQps;
             return this;
         }
 
-        public Builder setMaxQps(@Nullable Integer maxQps) {
+        public Builder maxQps(@Nullable Integer maxQps) {
             this.maxQps = Input.ofNullable(maxQps);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<SecurityScanConfigScheduleGetArgs> schedule) {
+        public Builder schedule(@Nullable Input<SecurityScanConfigScheduleGetArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable SecurityScanConfigScheduleGetArgs schedule) {
+        public Builder schedule(@Nullable SecurityScanConfigScheduleGetArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setStartingUrls(@Nullable Input<List<String>> startingUrls) {
+        public Builder startingUrls(@Nullable Input<List<String>> startingUrls) {
             this.startingUrls = startingUrls;
             return this;
         }
 
-        public Builder setStartingUrls(@Nullable List<String> startingUrls) {
+        public Builder startingUrls(@Nullable List<String> startingUrls) {
             this.startingUrls = Input.ofNullable(startingUrls);
             return this;
         }
 
-        public Builder setTargetPlatforms(@Nullable Input<List<String>> targetPlatforms) {
+        public Builder targetPlatforms(@Nullable Input<List<String>> targetPlatforms) {
             this.targetPlatforms = targetPlatforms;
             return this;
         }
 
-        public Builder setTargetPlatforms(@Nullable List<String> targetPlatforms) {
+        public Builder targetPlatforms(@Nullable List<String> targetPlatforms) {
             this.targetPlatforms = Input.ofNullable(targetPlatforms);
             return this;
         }
 
-        public Builder setUserAgent(@Nullable Input<String> userAgent) {
+        public Builder userAgent(@Nullable Input<String> userAgent) {
             this.userAgent = userAgent;
             return this;
         }
 
-        public Builder setUserAgent(@Nullable String userAgent) {
+        public Builder userAgent(@Nullable String userAgent) {
             this.userAgent = Input.ofNullable(userAgent);
             return this;
         }

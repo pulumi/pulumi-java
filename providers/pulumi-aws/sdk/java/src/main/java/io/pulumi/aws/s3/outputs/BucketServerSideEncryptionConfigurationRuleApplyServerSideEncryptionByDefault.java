@@ -22,10 +22,10 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
      */
     private final String sseAlgorithm;
 
-    @OutputCustomType.Constructor({"kmsMasterKeyId","sseAlgorithm"})
+    @OutputCustomType.Constructor
     private BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault(
-        @Nullable String kmsMasterKeyId,
-        String sseAlgorithm) {
+        @OutputCustomType.Parameter("kmsMasterKeyId") @Nullable String kmsMasterKeyId,
+        @OutputCustomType.Parameter("sseAlgorithm") String sseAlgorithm) {
         this.kmsMasterKeyId = kmsMasterKeyId;
         this.sseAlgorithm = sseAlgorithm;
     }
@@ -67,12 +67,12 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
     	      this.sseAlgorithm = defaults.sseAlgorithm;
         }
 
-        public Builder setKmsMasterKeyId(@Nullable String kmsMasterKeyId) {
+        public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
             this.kmsMasterKeyId = kmsMasterKeyId;
             return this;
         }
 
-        public Builder setSseAlgorithm(String sseAlgorithm) {
+        public Builder sseAlgorithm(String sseAlgorithm) {
             this.sseAlgorithm = Objects.requireNonNull(sseAlgorithm);
             return this;
         }

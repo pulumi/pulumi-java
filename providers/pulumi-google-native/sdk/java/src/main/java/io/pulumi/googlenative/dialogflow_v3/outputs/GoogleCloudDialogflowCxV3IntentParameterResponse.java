@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3IntentParameterResponse {
      */
     private final Boolean redact;
 
-    @OutputCustomType.Constructor({"entityType","isList","redact"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3IntentParameterResponse(
-        String entityType,
-        Boolean isList,
-        Boolean redact) {
+        @OutputCustomType.Parameter("entityType") String entityType,
+        @OutputCustomType.Parameter("isList") Boolean isList,
+        @OutputCustomType.Parameter("redact") Boolean redact) {
         this.entityType = entityType;
         this.isList = isList;
         this.redact = redact;
@@ -82,17 +82,17 @@ public final class GoogleCloudDialogflowCxV3IntentParameterResponse {
     	      this.redact = defaults.redact;
         }
 
-        public Builder setEntityType(String entityType) {
+        public Builder entityType(String entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
-        public Builder setIsList(Boolean isList) {
+        public Builder isList(Boolean isList) {
             this.isList = Objects.requireNonNull(isList);
             return this;
         }
 
-        public Builder setRedact(Boolean redact) {
+        public Builder redact(Boolean redact) {
             this.redact = Objects.requireNonNull(redact);
             return this;
         }

@@ -267,142 +267,142 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeFreeSpacePercent = defaults.volumeFreeSpacePercent;
         }
 
-        public Builder setCloudTiering(@Nullable Input<Either<String,FeatureStatus>> cloudTiering) {
+        public Builder cloudTiering(@Nullable Input<Either<String,FeatureStatus>> cloudTiering) {
             this.cloudTiering = cloudTiering;
             return this;
         }
 
-        public Builder setCloudTiering(@Nullable Either<String,FeatureStatus> cloudTiering) {
+        public Builder cloudTiering(@Nullable Either<String,FeatureStatus> cloudTiering) {
             this.cloudTiering = Input.ofNullable(cloudTiering);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setInitialDownloadPolicy(@Nullable Input<Either<String,InitialDownloadPolicy>> initialDownloadPolicy) {
+        public Builder initialDownloadPolicy(@Nullable Input<Either<String,InitialDownloadPolicy>> initialDownloadPolicy) {
             this.initialDownloadPolicy = initialDownloadPolicy;
             return this;
         }
 
-        public Builder setInitialDownloadPolicy(@Nullable Either<String,InitialDownloadPolicy> initialDownloadPolicy) {
+        public Builder initialDownloadPolicy(@Nullable Either<String,InitialDownloadPolicy> initialDownloadPolicy) {
             this.initialDownloadPolicy = Input.ofNullable(initialDownloadPolicy);
             return this;
         }
 
-        public Builder setLocalCacheMode(@Nullable Input<Either<String,LocalCacheMode>> localCacheMode) {
+        public Builder localCacheMode(@Nullable Input<Either<String,LocalCacheMode>> localCacheMode) {
             this.localCacheMode = localCacheMode;
             return this;
         }
 
-        public Builder setLocalCacheMode(@Nullable Either<String,LocalCacheMode> localCacheMode) {
+        public Builder localCacheMode(@Nullable Either<String,LocalCacheMode> localCacheMode) {
             this.localCacheMode = Input.ofNullable(localCacheMode);
             return this;
         }
 
-        public Builder setOfflineDataTransfer(@Nullable Input<Either<String,FeatureStatus>> offlineDataTransfer) {
+        public Builder offlineDataTransfer(@Nullable Input<Either<String,FeatureStatus>> offlineDataTransfer) {
             this.offlineDataTransfer = offlineDataTransfer;
             return this;
         }
 
-        public Builder setOfflineDataTransfer(@Nullable Either<String,FeatureStatus> offlineDataTransfer) {
+        public Builder offlineDataTransfer(@Nullable Either<String,FeatureStatus> offlineDataTransfer) {
             this.offlineDataTransfer = Input.ofNullable(offlineDataTransfer);
             return this;
         }
 
-        public Builder setOfflineDataTransferShareName(@Nullable Input<String> offlineDataTransferShareName) {
+        public Builder offlineDataTransferShareName(@Nullable Input<String> offlineDataTransferShareName) {
             this.offlineDataTransferShareName = offlineDataTransferShareName;
             return this;
         }
 
-        public Builder setOfflineDataTransferShareName(@Nullable String offlineDataTransferShareName) {
+        public Builder offlineDataTransferShareName(@Nullable String offlineDataTransferShareName) {
             this.offlineDataTransferShareName = Input.ofNullable(offlineDataTransferShareName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerEndpointName(@Nullable Input<String> serverEndpointName) {
+        public Builder serverEndpointName(@Nullable Input<String> serverEndpointName) {
             this.serverEndpointName = serverEndpointName;
             return this;
         }
 
-        public Builder setServerEndpointName(@Nullable String serverEndpointName) {
+        public Builder serverEndpointName(@Nullable String serverEndpointName) {
             this.serverEndpointName = Input.ofNullable(serverEndpointName);
             return this;
         }
 
-        public Builder setServerLocalPath(@Nullable Input<String> serverLocalPath) {
+        public Builder serverLocalPath(@Nullable Input<String> serverLocalPath) {
             this.serverLocalPath = serverLocalPath;
             return this;
         }
 
-        public Builder setServerLocalPath(@Nullable String serverLocalPath) {
+        public Builder serverLocalPath(@Nullable String serverLocalPath) {
             this.serverLocalPath = Input.ofNullable(serverLocalPath);
             return this;
         }
 
-        public Builder setServerResourceId(@Nullable Input<String> serverResourceId) {
+        public Builder serverResourceId(@Nullable Input<String> serverResourceId) {
             this.serverResourceId = serverResourceId;
             return this;
         }
 
-        public Builder setServerResourceId(@Nullable String serverResourceId) {
+        public Builder serverResourceId(@Nullable String serverResourceId) {
             this.serverResourceId = Input.ofNullable(serverResourceId);
             return this;
         }
 
-        public Builder setStorageSyncServiceName(Input<String> storageSyncServiceName) {
+        public Builder storageSyncServiceName(Input<String> storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
 
-        public Builder setStorageSyncServiceName(String storageSyncServiceName) {
+        public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Input.of(Objects.requireNonNull(storageSyncServiceName));
             return this;
         }
 
-        public Builder setSyncGroupName(Input<String> syncGroupName) {
+        public Builder syncGroupName(Input<String> syncGroupName) {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
         }
 
-        public Builder setSyncGroupName(String syncGroupName) {
+        public Builder syncGroupName(String syncGroupName) {
             this.syncGroupName = Input.of(Objects.requireNonNull(syncGroupName));
             return this;
         }
 
-        public Builder setTierFilesOlderThanDays(@Nullable Input<Integer> tierFilesOlderThanDays) {
+        public Builder tierFilesOlderThanDays(@Nullable Input<Integer> tierFilesOlderThanDays) {
             this.tierFilesOlderThanDays = tierFilesOlderThanDays;
             return this;
         }
 
-        public Builder setTierFilesOlderThanDays(@Nullable Integer tierFilesOlderThanDays) {
+        public Builder tierFilesOlderThanDays(@Nullable Integer tierFilesOlderThanDays) {
             this.tierFilesOlderThanDays = Input.ofNullable(tierFilesOlderThanDays);
             return this;
         }
 
-        public Builder setVolumeFreeSpacePercent(@Nullable Input<Integer> volumeFreeSpacePercent) {
+        public Builder volumeFreeSpacePercent(@Nullable Input<Integer> volumeFreeSpacePercent) {
             this.volumeFreeSpacePercent = volumeFreeSpacePercent;
             return this;
         }
 
-        public Builder setVolumeFreeSpacePercent(@Nullable Integer volumeFreeSpacePercent) {
+        public Builder volumeFreeSpacePercent(@Nullable Integer volumeFreeSpacePercent) {
             this.volumeFreeSpacePercent = Input.ofNullable(volumeFreeSpacePercent);
             return this;
         }

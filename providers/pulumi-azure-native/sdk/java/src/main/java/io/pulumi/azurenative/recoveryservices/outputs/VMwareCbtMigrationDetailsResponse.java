@@ -101,25 +101,25 @@ public final class VMwareCbtMigrationDetailsResponse {
      */
     private final String vmwareMachineId;
 
-    @OutputCustomType.Constructor({"dataMoverRunAsAccountId","instanceType","lastRecoveryPointReceived","licenseType","migrationRecoveryPointId","osType","protectedDisks","snapshotRunAsAccountId","targetAvailabilitySetId","targetBootDiagnosticsStorageAccountId","targetLocation","targetNetworkId","targetResourceGroupId","targetVmName","targetVmSize","vmNics","vmwareMachineId"})
+    @OutputCustomType.Constructor
     private VMwareCbtMigrationDetailsResponse(
-        String dataMoverRunAsAccountId,
-        String instanceType,
-        String lastRecoveryPointReceived,
-        @Nullable String licenseType,
-        String migrationRecoveryPointId,
-        String osType,
-        @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks,
-        String snapshotRunAsAccountId,
-        @Nullable String targetAvailabilitySetId,
-        @Nullable String targetBootDiagnosticsStorageAccountId,
-        String targetLocation,
-        @Nullable String targetNetworkId,
-        @Nullable String targetResourceGroupId,
-        @Nullable String targetVmName,
-        @Nullable String targetVmSize,
-        @Nullable List<VMwareCbtNicDetailsResponse> vmNics,
-        String vmwareMachineId) {
+        @OutputCustomType.Parameter("dataMoverRunAsAccountId") String dataMoverRunAsAccountId,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("lastRecoveryPointReceived") String lastRecoveryPointReceived,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("migrationRecoveryPointId") String migrationRecoveryPointId,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("protectedDisks") @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks,
+        @OutputCustomType.Parameter("snapshotRunAsAccountId") String snapshotRunAsAccountId,
+        @OutputCustomType.Parameter("targetAvailabilitySetId") @Nullable String targetAvailabilitySetId,
+        @OutputCustomType.Parameter("targetBootDiagnosticsStorageAccountId") @Nullable String targetBootDiagnosticsStorageAccountId,
+        @OutputCustomType.Parameter("targetLocation") String targetLocation,
+        @OutputCustomType.Parameter("targetNetworkId") @Nullable String targetNetworkId,
+        @OutputCustomType.Parameter("targetResourceGroupId") @Nullable String targetResourceGroupId,
+        @OutputCustomType.Parameter("targetVmName") @Nullable String targetVmName,
+        @OutputCustomType.Parameter("targetVmSize") @Nullable String targetVmSize,
+        @OutputCustomType.Parameter("vmNics") @Nullable List<VMwareCbtNicDetailsResponse> vmNics,
+        @OutputCustomType.Parameter("vmwareMachineId") String vmwareMachineId) {
         this.dataMoverRunAsAccountId = dataMoverRunAsAccountId;
         this.instanceType = instanceType;
         this.lastRecoveryPointReceived = lastRecoveryPointReceived;
@@ -312,87 +312,87 @@ public final class VMwareCbtMigrationDetailsResponse {
     	      this.vmwareMachineId = defaults.vmwareMachineId;
         }
 
-        public Builder setDataMoverRunAsAccountId(String dataMoverRunAsAccountId) {
+        public Builder dataMoverRunAsAccountId(String dataMoverRunAsAccountId) {
             this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setLastRecoveryPointReceived(String lastRecoveryPointReceived) {
+        public Builder lastRecoveryPointReceived(String lastRecoveryPointReceived) {
             this.lastRecoveryPointReceived = Objects.requireNonNull(lastRecoveryPointReceived);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setMigrationRecoveryPointId(String migrationRecoveryPointId) {
+        public Builder migrationRecoveryPointId(String migrationRecoveryPointId) {
             this.migrationRecoveryPointId = Objects.requireNonNull(migrationRecoveryPointId);
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setProtectedDisks(@Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks) {
+        public Builder protectedDisks(@Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks) {
             this.protectedDisks = protectedDisks;
             return this;
         }
 
-        public Builder setSnapshotRunAsAccountId(String snapshotRunAsAccountId) {
+        public Builder snapshotRunAsAccountId(String snapshotRunAsAccountId) {
             this.snapshotRunAsAccountId = Objects.requireNonNull(snapshotRunAsAccountId);
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
-        public Builder setTargetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
+        public Builder targetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
             this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
 
-        public Builder setTargetLocation(String targetLocation) {
+        public Builder targetLocation(String targetLocation) {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }
 
-        public Builder setTargetNetworkId(@Nullable String targetNetworkId) {
+        public Builder targetNetworkId(@Nullable String targetNetworkId) {
             this.targetNetworkId = targetNetworkId;
             return this;
         }
 
-        public Builder setTargetResourceGroupId(@Nullable String targetResourceGroupId) {
+        public Builder targetResourceGroupId(@Nullable String targetResourceGroupId) {
             this.targetResourceGroupId = targetResourceGroupId;
             return this;
         }
 
-        public Builder setTargetVmName(@Nullable String targetVmName) {
+        public Builder targetVmName(@Nullable String targetVmName) {
             this.targetVmName = targetVmName;
             return this;
         }
 
-        public Builder setTargetVmSize(@Nullable String targetVmSize) {
+        public Builder targetVmSize(@Nullable String targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }
 
-        public Builder setVmNics(@Nullable List<VMwareCbtNicDetailsResponse> vmNics) {
+        public Builder vmNics(@Nullable List<VMwareCbtNicDetailsResponse> vmNics) {
             this.vmNics = vmNics;
             return this;
         }
 
-        public Builder setVmwareMachineId(String vmwareMachineId) {
+        public Builder vmwareMachineId(String vmwareMachineId) {
             this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId);
             return this;
         }

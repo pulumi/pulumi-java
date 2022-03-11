@@ -16,8 +16,8 @@ public final class ColumnLayoutResponse {
      */
     private final List<ColumnResponse> columns;
 
-    @OutputCustomType.Constructor({"columns"})
-    private ColumnLayoutResponse(List<ColumnResponse> columns) {
+    @OutputCustomType.Constructor
+    private ColumnLayoutResponse(@OutputCustomType.Parameter("columns") List<ColumnResponse> columns) {
         this.columns = columns;
     }
 
@@ -49,7 +49,7 @@ public final class ColumnLayoutResponse {
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(List<ColumnResponse> columns) {
+        public Builder columns(List<ColumnResponse> columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }

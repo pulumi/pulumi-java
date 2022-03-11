@@ -42,14 +42,14 @@ public final class GetSchemaResult {
      */
     private final @Nullable List<SchemaTag> tags;
 
-    @OutputCustomType.Constructor({"arn","checkpointVersion","compatibility","description","initialSchemaVersionId","tags"})
+    @OutputCustomType.Constructor
     private GetSchemaResult(
-        @Nullable String arn,
-        @Nullable SchemaVersion checkpointVersion,
-        @Nullable SchemaCompatibility compatibility,
-        @Nullable String description,
-        @Nullable String initialSchemaVersionId,
-        @Nullable List<SchemaTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("checkpointVersion") @Nullable SchemaVersion checkpointVersion,
+        @OutputCustomType.Parameter("compatibility") @Nullable SchemaCompatibility compatibility,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("initialSchemaVersionId") @Nullable String initialSchemaVersionId,
+        @OutputCustomType.Parameter("tags") @Nullable List<SchemaTag> tags) {
         this.arn = arn;
         this.checkpointVersion = checkpointVersion;
         this.compatibility = compatibility;
@@ -127,32 +127,32 @@ public final class GetSchemaResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCheckpointVersion(@Nullable SchemaVersion checkpointVersion) {
+        public Builder checkpointVersion(@Nullable SchemaVersion checkpointVersion) {
             this.checkpointVersion = checkpointVersion;
             return this;
         }
 
-        public Builder setCompatibility(@Nullable SchemaCompatibility compatibility) {
+        public Builder compatibility(@Nullable SchemaCompatibility compatibility) {
             this.compatibility = compatibility;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setInitialSchemaVersionId(@Nullable String initialSchemaVersionId) {
+        public Builder initialSchemaVersionId(@Nullable String initialSchemaVersionId) {
             this.initialSchemaVersionId = initialSchemaVersionId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SchemaTag> tags) {
+        public Builder tags(@Nullable List<SchemaTag> tags) {
             this.tags = tags;
             return this;
         }

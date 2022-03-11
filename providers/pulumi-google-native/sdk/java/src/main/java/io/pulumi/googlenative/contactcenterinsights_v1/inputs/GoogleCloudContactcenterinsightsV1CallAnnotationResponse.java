@@ -208,52 +208,52 @@ public final class GoogleCloudContactcenterinsightsV1CallAnnotationResponse exte
     	      this.silenceData = defaults.silenceData;
         }
 
-        public Builder setAnnotationEndBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary) {
+        public Builder annotationEndBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationEndBoundary) {
             this.annotationEndBoundary = Objects.requireNonNull(annotationEndBoundary);
             return this;
         }
 
-        public Builder setAnnotationStartBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary) {
+        public Builder annotationStartBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse annotationStartBoundary) {
             this.annotationStartBoundary = Objects.requireNonNull(annotationStartBoundary);
             return this;
         }
 
-        public Builder setChannelTag(Integer channelTag) {
+        public Builder channelTag(Integer channelTag) {
             this.channelTag = Objects.requireNonNull(channelTag);
             return this;
         }
 
-        public Builder setEntityMentionData(GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData) {
+        public Builder entityMentionData(GoogleCloudContactcenterinsightsV1EntityMentionDataResponse entityMentionData) {
             this.entityMentionData = Objects.requireNonNull(entityMentionData);
             return this;
         }
 
-        public Builder setHoldData(GoogleCloudContactcenterinsightsV1HoldDataResponse holdData) {
+        public Builder holdData(GoogleCloudContactcenterinsightsV1HoldDataResponse holdData) {
             this.holdData = Objects.requireNonNull(holdData);
             return this;
         }
 
-        public Builder setIntentMatchData(GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData) {
+        public Builder intentMatchData(GoogleCloudContactcenterinsightsV1IntentMatchDataResponse intentMatchData) {
             this.intentMatchData = Objects.requireNonNull(intentMatchData);
             return this;
         }
 
-        public Builder setInterruptionData(GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData) {
+        public Builder interruptionData(GoogleCloudContactcenterinsightsV1InterruptionDataResponse interruptionData) {
             this.interruptionData = Objects.requireNonNull(interruptionData);
             return this;
         }
 
-        public Builder setPhraseMatchData(GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData) {
+        public Builder phraseMatchData(GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse phraseMatchData) {
             this.phraseMatchData = Objects.requireNonNull(phraseMatchData);
             return this;
         }
 
-        public Builder setSentimentData(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
+        public Builder sentimentData(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
             this.sentimentData = Objects.requireNonNull(sentimentData);
             return this;
         }
 
-        public Builder setSilenceData(GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData) {
+        public Builder silenceData(GoogleCloudContactcenterinsightsV1SilenceDataResponse silenceData) {
             this.silenceData = Objects.requireNonNull(silenceData);
             return this;
         }

@@ -43,14 +43,14 @@ public final class ProductProvisioningArtifactParameters {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"description","disableTemplateValidation","name","templatePhysicalId","templateUrl","type"})
+    @OutputCustomType.Constructor
     private ProductProvisioningArtifactParameters(
-        @Nullable String description,
-        @Nullable Boolean disableTemplateValidation,
-        @Nullable String name,
-        @Nullable String templatePhysicalId,
-        @Nullable String templateUrl,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disableTemplateValidation") @Nullable Boolean disableTemplateValidation,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("templatePhysicalId") @Nullable String templatePhysicalId,
+        @OutputCustomType.Parameter("templateUrl") @Nullable String templateUrl,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.description = description;
         this.disableTemplateValidation = disableTemplateValidation;
         this.name = name;
@@ -132,32 +132,32 @@ public final class ProductProvisioningArtifactParameters {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisableTemplateValidation(@Nullable Boolean disableTemplateValidation) {
+        public Builder disableTemplateValidation(@Nullable Boolean disableTemplateValidation) {
             this.disableTemplateValidation = disableTemplateValidation;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTemplatePhysicalId(@Nullable String templatePhysicalId) {
+        public Builder templatePhysicalId(@Nullable String templatePhysicalId) {
             this.templatePhysicalId = templatePhysicalId;
             return this;
         }
 
-        public Builder setTemplateUrl(@Nullable String templateUrl) {
+        public Builder templateUrl(@Nullable String templateUrl) {
             this.templateUrl = templateUrl;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

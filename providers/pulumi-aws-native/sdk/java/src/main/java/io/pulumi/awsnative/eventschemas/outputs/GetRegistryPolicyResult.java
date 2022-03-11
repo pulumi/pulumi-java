@@ -17,12 +17,12 @@ public final class GetRegistryPolicyResult {
     private final @Nullable String registryName;
     private final @Nullable String revisionId;
 
-    @OutputCustomType.Constructor({"id","policy","registryName","revisionId"})
+    @OutputCustomType.Constructor
     private GetRegistryPolicyResult(
-        @Nullable String id,
-        @Nullable Object policy,
-        @Nullable String registryName,
-        @Nullable String revisionId) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("policy") @Nullable Object policy,
+        @OutputCustomType.Parameter("registryName") @Nullable String registryName,
+        @OutputCustomType.Parameter("revisionId") @Nullable String revisionId) {
         this.id = id;
         this.policy = policy;
         this.registryName = registryName;
@@ -68,22 +68,22 @@ public final class GetRegistryPolicyResult {
     	      this.revisionId = defaults.revisionId;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPolicy(@Nullable Object policy) {
+        public Builder policy(@Nullable Object policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setRegistryName(@Nullable String registryName) {
+        public Builder registryName(@Nullable String registryName) {
             this.registryName = registryName;
             return this;
         }
 
-        public Builder setRevisionId(@Nullable String revisionId) {
+        public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = revisionId;
             return this;
         }

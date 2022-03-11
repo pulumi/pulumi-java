@@ -23,10 +23,10 @@ public final class FailoverSetEligibilityResultResponse {
      */
     private final @Nullable Boolean isEligibleForFailover;
 
-    @OutputCustomType.Constructor({"errorMessage","isEligibleForFailover"})
+    @OutputCustomType.Constructor
     private FailoverSetEligibilityResultResponse(
-        @Nullable String errorMessage,
-        @Nullable Boolean isEligibleForFailover) {
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("isEligibleForFailover") @Nullable Boolean isEligibleForFailover) {
         this.errorMessage = errorMessage;
         this.isEligibleForFailover = isEligibleForFailover;
     }
@@ -68,12 +68,12 @@ public final class FailoverSetEligibilityResultResponse {
     	      this.isEligibleForFailover = defaults.isEligibleForFailover;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setIsEligibleForFailover(@Nullable Boolean isEligibleForFailover) {
+        public Builder isEligibleForFailover(@Nullable Boolean isEligibleForFailover) {
             this.isEligibleForFailover = isEligibleForFailover;
             return this;
         }

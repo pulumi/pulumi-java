@@ -89,23 +89,23 @@ public final class GetWatcherResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","description","etag","executionFrequencyInSeconds","id","lastModifiedBy","lastModifiedTime","location","name","scriptName","scriptParameters","scriptRunOn","status","tags","type"})
+    @OutputCustomType.Constructor
     private GetWatcherResult(
-        String creationTime,
-        @Nullable String description,
-        @Nullable String etag,
-        @Nullable Double executionFrequencyInSeconds,
-        String id,
-        String lastModifiedBy,
-        String lastModifiedTime,
-        @Nullable String location,
-        String name,
-        @Nullable String scriptName,
-        @Nullable Map<String,String> scriptParameters,
-        @Nullable String scriptRunOn,
-        String status,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("executionFrequencyInSeconds") @Nullable Double executionFrequencyInSeconds,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scriptName") @Nullable String scriptName,
+        @OutputCustomType.Parameter("scriptParameters") @Nullable Map<String,String> scriptParameters,
+        @OutputCustomType.Parameter("scriptRunOn") @Nullable String scriptRunOn,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.description = description;
         this.etag = etag;
@@ -277,77 +277,77 @@ public final class GetWatcherResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setExecutionFrequencyInSeconds(@Nullable Double executionFrequencyInSeconds) {
+        public Builder executionFrequencyInSeconds(@Nullable Double executionFrequencyInSeconds) {
             this.executionFrequencyInSeconds = executionFrequencyInSeconds;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedBy(String lastModifiedBy) {
+        public Builder lastModifiedBy(String lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScriptName(@Nullable String scriptName) {
+        public Builder scriptName(@Nullable String scriptName) {
             this.scriptName = scriptName;
             return this;
         }
 
-        public Builder setScriptParameters(@Nullable Map<String,String> scriptParameters) {
+        public Builder scriptParameters(@Nullable Map<String,String> scriptParameters) {
             this.scriptParameters = scriptParameters;
             return this;
         }
 
-        public Builder setScriptRunOn(@Nullable String scriptRunOn) {
+        public Builder scriptRunOn(@Nullable String scriptRunOn) {
             this.scriptRunOn = scriptRunOn;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

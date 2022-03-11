@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
      */
     private final Boolean enableInsightsExport;
 
-    @OutputCustomType.Constructor({"enableInsightsExport"})
-    private GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse(Boolean enableInsightsExport) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse(@OutputCustomType.Parameter("enableInsightsExport") Boolean enableInsightsExport) {
         this.enableInsightsExport = enableInsightsExport;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
     	      this.enableInsightsExport = defaults.enableInsightsExport;
         }
 
-        public Builder setEnableInsightsExport(Boolean enableInsightsExport) {
+        public Builder enableInsightsExport(Boolean enableInsightsExport) {
             this.enableInsightsExport = Objects.requireNonNull(enableInsightsExport);
             return this;
         }

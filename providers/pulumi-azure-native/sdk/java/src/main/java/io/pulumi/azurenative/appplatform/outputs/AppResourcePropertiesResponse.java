@@ -60,17 +60,17 @@ public final class AppResourcePropertiesResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"activeDeploymentName","createdTime","fqdn","httpsOnly","persistentDisk","provisioningState","$public","temporaryDisk","url"})
+    @OutputCustomType.Constructor
     private AppResourcePropertiesResponse(
-        @Nullable String activeDeploymentName,
-        String createdTime,
-        @Nullable String fqdn,
-        @Nullable Boolean httpsOnly,
-        @Nullable PersistentDiskResponse persistentDisk,
-        String provisioningState,
-        @Nullable Boolean $public,
-        @Nullable TemporaryDiskResponse temporaryDisk,
-        String url) {
+        @OutputCustomType.Parameter("activeDeploymentName") @Nullable String activeDeploymentName,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
+        @OutputCustomType.Parameter("persistentDisk") @Nullable PersistentDiskResponse persistentDisk,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("public") @Nullable Boolean $public,
+        @OutputCustomType.Parameter("temporaryDisk") @Nullable TemporaryDiskResponse temporaryDisk,
+        @OutputCustomType.Parameter("url") String url) {
         this.activeDeploymentName = activeDeploymentName;
         this.createdTime = createdTime;
         this.fqdn = fqdn;
@@ -182,47 +182,47 @@ public final class AppResourcePropertiesResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setActiveDeploymentName(@Nullable String activeDeploymentName) {
+        public Builder activeDeploymentName(@Nullable String activeDeploymentName) {
             this.activeDeploymentName = activeDeploymentName;
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setHttpsOnly(@Nullable Boolean httpsOnly) {
+        public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
 
-        public Builder setPersistentDisk(@Nullable PersistentDiskResponse persistentDisk) {
+        public Builder persistentDisk(@Nullable PersistentDiskResponse persistentDisk) {
             this.persistentDisk = persistentDisk;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder set$public(@Nullable Boolean $public) {
+        public Builder $public(@Nullable Boolean $public) {
             this.$public = $public;
             return this;
         }
 
-        public Builder setTemporaryDisk(@Nullable TemporaryDiskResponse temporaryDisk) {
+        public Builder temporaryDisk(@Nullable TemporaryDiskResponse temporaryDisk) {
             this.temporaryDisk = temporaryDisk;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

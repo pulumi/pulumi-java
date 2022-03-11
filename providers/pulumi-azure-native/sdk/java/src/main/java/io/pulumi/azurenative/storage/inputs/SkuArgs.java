@@ -58,12 +58,12 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(Input<Either<String,SkuName>> name) {
+        public Builder name(Input<Either<String,SkuName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(Either<String,SkuName> name) {
+        public Builder name(Either<String,SkuName> name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

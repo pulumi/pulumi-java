@@ -68,18 +68,18 @@ public final class GetWorkbookTemplateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"author","galleries","id","localized","location","name","priority","tags","templateData","type"})
+    @OutputCustomType.Constructor
     private GetWorkbookTemplateResult(
-        @Nullable String author,
-        List<WorkbookTemplateGalleryResponse> galleries,
-        String id,
-        @Nullable Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized,
-        String location,
-        String name,
-        @Nullable Integer priority,
-        @Nullable Map<String,String> tags,
-        Object templateData,
-        String type) {
+        @OutputCustomType.Parameter("author") @Nullable String author,
+        @OutputCustomType.Parameter("galleries") List<WorkbookTemplateGalleryResponse> galleries,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("localized") @Nullable Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("templateData") Object templateData,
+        @OutputCustomType.Parameter("type") String type) {
         this.author = author;
         this.galleries = galleries;
         this.id = id;
@@ -201,52 +201,52 @@ public final class GetWorkbookTemplateResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthor(@Nullable String author) {
+        public Builder author(@Nullable String author) {
             this.author = author;
             return this;
         }
 
-        public Builder setGalleries(List<WorkbookTemplateGalleryResponse> galleries) {
+        public Builder galleries(List<WorkbookTemplateGalleryResponse> galleries) {
             this.galleries = Objects.requireNonNull(galleries);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocalized(@Nullable Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized) {
+        public Builder localized(@Nullable Map<String,List<WorkbookTemplateLocalizedGalleryResponse>> localized) {
             this.localized = localized;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTemplateData(Object templateData) {
+        public Builder templateData(Object templateData) {
             this.templateData = Objects.requireNonNull(templateData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

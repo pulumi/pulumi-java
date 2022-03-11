@@ -15,11 +15,11 @@ public final class GetAssistantAssociationResult {
     private final @Nullable String assistantAssociationArn;
     private final @Nullable String assistantAssociationId;
 
-    @OutputCustomType.Constructor({"assistantArn","assistantAssociationArn","assistantAssociationId"})
+    @OutputCustomType.Constructor
     private GetAssistantAssociationResult(
-        @Nullable String assistantArn,
-        @Nullable String assistantAssociationArn,
-        @Nullable String assistantAssociationId) {
+        @OutputCustomType.Parameter("assistantArn") @Nullable String assistantArn,
+        @OutputCustomType.Parameter("assistantAssociationArn") @Nullable String assistantAssociationArn,
+        @OutputCustomType.Parameter("assistantAssociationId") @Nullable String assistantAssociationId) {
         this.assistantArn = assistantArn;
         this.assistantAssociationArn = assistantAssociationArn;
         this.assistantAssociationId = assistantAssociationId;
@@ -59,17 +59,17 @@ public final class GetAssistantAssociationResult {
     	      this.assistantAssociationId = defaults.assistantAssociationId;
         }
 
-        public Builder setAssistantArn(@Nullable String assistantArn) {
+        public Builder assistantArn(@Nullable String assistantArn) {
             this.assistantArn = assistantArn;
             return this;
         }
 
-        public Builder setAssistantAssociationArn(@Nullable String assistantAssociationArn) {
+        public Builder assistantAssociationArn(@Nullable String assistantAssociationArn) {
             this.assistantAssociationArn = assistantAssociationArn;
             return this;
         }
 
-        public Builder setAssistantAssociationId(@Nullable String assistantAssociationId) {
+        public Builder assistantAssociationId(@Nullable String assistantAssociationId) {
             this.assistantAssociationId = assistantAssociationId;
             return this;
         }

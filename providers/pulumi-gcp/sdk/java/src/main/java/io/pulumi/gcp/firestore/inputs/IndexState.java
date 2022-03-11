@@ -146,62 +146,62 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
     	      this.queryScope = defaults.queryScope;
         }
 
-        public Builder setCollection(@Nullable Input<String> collection) {
+        public Builder collection(@Nullable Input<String> collection) {
             this.collection = collection;
             return this;
         }
 
-        public Builder setCollection(@Nullable String collection) {
+        public Builder collection(@Nullable String collection) {
             this.collection = Input.ofNullable(collection);
             return this;
         }
 
-        public Builder setDatabase(@Nullable Input<String> database) {
+        public Builder database(@Nullable Input<String> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setFields(@Nullable Input<List<IndexFieldGetArgs>> fields) {
+        public Builder fields(@Nullable Input<List<IndexFieldGetArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<IndexFieldGetArgs> fields) {
+        public Builder fields(@Nullable List<IndexFieldGetArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setQueryScope(@Nullable Input<String> queryScope) {
+        public Builder queryScope(@Nullable Input<String> queryScope) {
             this.queryScope = queryScope;
             return this;
         }
 
-        public Builder setQueryScope(@Nullable String queryScope) {
+        public Builder queryScope(@Nullable String queryScope) {
             this.queryScope = Input.ofNullable(queryScope);
             return this;
         }

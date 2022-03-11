@@ -16,8 +16,8 @@ public final class BackendResponse {
      */
     private final List<BackendRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private BackendResponse(List<BackendRuleResponse> rules) {
+    @OutputCustomType.Constructor
+    private BackendResponse(@OutputCustomType.Parameter("rules") List<BackendRuleResponse> rules) {
         this.rules = rules;
     }
 
@@ -49,7 +49,7 @@ public final class BackendResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<BackendRuleResponse> rules) {
+        public Builder rules(List<BackendRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

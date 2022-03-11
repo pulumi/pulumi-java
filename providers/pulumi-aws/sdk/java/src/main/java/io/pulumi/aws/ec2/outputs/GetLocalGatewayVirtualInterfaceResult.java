@@ -49,18 +49,18 @@ public final class GetLocalGatewayVirtualInterfaceResult {
      */
     private final Integer vlan;
 
-    @OutputCustomType.Constructor({"filters","id","localAddress","localBgpAsn","localGatewayId","localGatewayVirtualInterfaceIds","peerAddress","peerBgpAsn","tags","vlan"})
+    @OutputCustomType.Constructor
     private GetLocalGatewayVirtualInterfaceResult(
-        @Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters,
-        String id,
-        String localAddress,
-        Integer localBgpAsn,
-        String localGatewayId,
-        List<String> localGatewayVirtualInterfaceIds,
-        String peerAddress,
-        Integer peerBgpAsn,
-        Map<String,String> tags,
-        Integer vlan) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("localAddress") String localAddress,
+        @OutputCustomType.Parameter("localBgpAsn") Integer localBgpAsn,
+        @OutputCustomType.Parameter("localGatewayId") String localGatewayId,
+        @OutputCustomType.Parameter("localGatewayVirtualInterfaceIds") List<String> localGatewayVirtualInterfaceIds,
+        @OutputCustomType.Parameter("peerAddress") String peerAddress,
+        @OutputCustomType.Parameter("peerBgpAsn") Integer peerBgpAsn,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vlan") Integer vlan) {
         this.filters = filters;
         this.id = id;
         this.localAddress = localAddress;
@@ -166,52 +166,52 @@ public final class GetLocalGatewayVirtualInterfaceResult {
     	      this.vlan = defaults.vlan;
         }
 
-        public Builder setFilters(@Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters) {
+        public Builder filters(@Nullable List<GetLocalGatewayVirtualInterfaceFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocalAddress(String localAddress) {
+        public Builder localAddress(String localAddress) {
             this.localAddress = Objects.requireNonNull(localAddress);
             return this;
         }
 
-        public Builder setLocalBgpAsn(Integer localBgpAsn) {
+        public Builder localBgpAsn(Integer localBgpAsn) {
             this.localBgpAsn = Objects.requireNonNull(localBgpAsn);
             return this;
         }
 
-        public Builder setLocalGatewayId(String localGatewayId) {
+        public Builder localGatewayId(String localGatewayId) {
             this.localGatewayId = Objects.requireNonNull(localGatewayId);
             return this;
         }
 
-        public Builder setLocalGatewayVirtualInterfaceIds(List<String> localGatewayVirtualInterfaceIds) {
+        public Builder localGatewayVirtualInterfaceIds(List<String> localGatewayVirtualInterfaceIds) {
             this.localGatewayVirtualInterfaceIds = Objects.requireNonNull(localGatewayVirtualInterfaceIds);
             return this;
         }
 
-        public Builder setPeerAddress(String peerAddress) {
+        public Builder peerAddress(String peerAddress) {
             this.peerAddress = Objects.requireNonNull(peerAddress);
             return this;
         }
 
-        public Builder setPeerBgpAsn(Integer peerBgpAsn) {
+        public Builder peerBgpAsn(Integer peerBgpAsn) {
             this.peerBgpAsn = Objects.requireNonNull(peerBgpAsn);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVlan(Integer vlan) {
+        public Builder vlan(Integer vlan) {
             this.vlan = Objects.requireNonNull(vlan);
             return this;
         }

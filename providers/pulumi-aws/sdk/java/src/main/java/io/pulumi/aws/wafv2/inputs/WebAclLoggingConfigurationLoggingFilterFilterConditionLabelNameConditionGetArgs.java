@@ -52,12 +52,12 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNa
     	      this.labelName = defaults.labelName;
         }
 
-        public Builder setLabelName(Input<String> labelName) {
+        public Builder labelName(Input<String> labelName) {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
 
-        public Builder setLabelName(String labelName) {
+        public Builder labelName(String labelName) {
             this.labelName = Input.of(Objects.requireNonNull(labelName));
             return this;
         }

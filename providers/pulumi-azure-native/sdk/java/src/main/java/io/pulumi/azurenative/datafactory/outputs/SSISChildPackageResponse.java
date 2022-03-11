@@ -33,12 +33,12 @@ public final class SSISChildPackageResponse {
      */
     private final Object packagePath;
 
-    @OutputCustomType.Constructor({"packageContent","packageLastModifiedDate","packageName","packagePath"})
+    @OutputCustomType.Constructor
     private SSISChildPackageResponse(
-        Object packageContent,
-        @Nullable String packageLastModifiedDate,
-        @Nullable String packageName,
-        Object packagePath) {
+        @OutputCustomType.Parameter("packageContent") Object packageContent,
+        @OutputCustomType.Parameter("packageLastModifiedDate") @Nullable String packageLastModifiedDate,
+        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
+        @OutputCustomType.Parameter("packagePath") Object packagePath) {
         this.packageContent = packageContent;
         this.packageLastModifiedDate = packageLastModifiedDate;
         this.packageName = packageName;
@@ -100,22 +100,22 @@ public final class SSISChildPackageResponse {
     	      this.packagePath = defaults.packagePath;
         }
 
-        public Builder setPackageContent(Object packageContent) {
+        public Builder packageContent(Object packageContent) {
             this.packageContent = Objects.requireNonNull(packageContent);
             return this;
         }
 
-        public Builder setPackageLastModifiedDate(@Nullable String packageLastModifiedDate) {
+        public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
             this.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setPackagePath(Object packagePath) {
+        public Builder packagePath(Object packagePath) {
             this.packagePath = Objects.requireNonNull(packagePath);
             return this;
         }

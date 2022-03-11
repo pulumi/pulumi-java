@@ -90,42 +90,42 @@ public final class AssistantAssociationArgs extends io.pulumi.resources.Resource
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssistantId(Input<String> assistantId) {
+        public Builder assistantId(Input<String> assistantId) {
             this.assistantId = Objects.requireNonNull(assistantId);
             return this;
         }
 
-        public Builder setAssistantId(String assistantId) {
+        public Builder assistantId(String assistantId) {
             this.assistantId = Input.of(Objects.requireNonNull(assistantId));
             return this;
         }
 
-        public Builder setAssociation(Input<AssistantAssociationAssociationDataArgs> association) {
+        public Builder association(Input<AssistantAssociationAssociationDataArgs> association) {
             this.association = Objects.requireNonNull(association);
             return this;
         }
 
-        public Builder setAssociation(AssistantAssociationAssociationDataArgs association) {
+        public Builder association(AssistantAssociationAssociationDataArgs association) {
             this.association = Input.of(Objects.requireNonNull(association));
             return this;
         }
 
-        public Builder setAssociationType(Input<AssistantAssociationAssociationType> associationType) {
+        public Builder associationType(Input<AssistantAssociationAssociationType> associationType) {
             this.associationType = Objects.requireNonNull(associationType);
             return this;
         }
 
-        public Builder setAssociationType(AssistantAssociationAssociationType associationType) {
+        public Builder associationType(AssistantAssociationAssociationType associationType) {
             this.associationType = Input.of(Objects.requireNonNull(associationType));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AssistantAssociationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AssistantAssociationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssistantAssociationTagArgs> tags) {
+        public Builder tags(@Nullable List<AssistantAssociationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -34,12 +34,12 @@ public final class UserInfo {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"extra","groups","uid","username"})
+    @OutputCustomType.Constructor
     private UserInfo(
-        @Nullable Map<String,List<String>> extra,
-        @Nullable List<String> groups,
-        @Nullable String uid,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
+        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
+        @OutputCustomType.Parameter("uid") @Nullable String uid,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.extra = extra;
         this.groups = groups;
         this.uid = uid;
@@ -101,22 +101,22 @@ public final class UserInfo {
     	      this.username = defaults.username;
         }
 
-        public Builder setExtra(@Nullable Map<String,List<String>> extra) {
+        public Builder extra(@Nullable Map<String,List<String>> extra) {
             this.extra = extra;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

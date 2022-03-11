@@ -17,8 +17,8 @@ public final class MarkdownPartMetadataResponseSettings {
      */
     private final @Nullable MarkdownPartMetadataResponseContent content;
 
-    @OutputCustomType.Constructor({"content"})
-    private MarkdownPartMetadataResponseSettings(@Nullable MarkdownPartMetadataResponseContent content) {
+    @OutputCustomType.Constructor
+    private MarkdownPartMetadataResponseSettings(@OutputCustomType.Parameter("content") @Nullable MarkdownPartMetadataResponseContent content) {
         this.content = content;
     }
 
@@ -50,7 +50,7 @@ public final class MarkdownPartMetadataResponseSettings {
     	      this.content = defaults.content;
         }
 
-        public Builder setContent(@Nullable MarkdownPartMetadataResponseContent content) {
+        public Builder content(@Nullable MarkdownPartMetadataResponseContent content) {
             this.content = content;
             return this;
         }

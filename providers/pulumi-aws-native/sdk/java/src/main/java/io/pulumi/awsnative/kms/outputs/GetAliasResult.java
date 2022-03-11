@@ -17,8 +17,8 @@ public final class GetAliasResult {
      */
     private final @Nullable String targetKeyId;
 
-    @OutputCustomType.Constructor({"targetKeyId"})
-    private GetAliasResult(@Nullable String targetKeyId) {
+    @OutputCustomType.Constructor
+    private GetAliasResult(@OutputCustomType.Parameter("targetKeyId") @Nullable String targetKeyId) {
         this.targetKeyId = targetKeyId;
     }
 
@@ -50,7 +50,7 @@ public final class GetAliasResult {
     	      this.targetKeyId = defaults.targetKeyId;
         }
 
-        public Builder setTargetKeyId(@Nullable String targetKeyId) {
+        public Builder targetKeyId(@Nullable String targetKeyId) {
             this.targetKeyId = targetKeyId;
             return this;
         }

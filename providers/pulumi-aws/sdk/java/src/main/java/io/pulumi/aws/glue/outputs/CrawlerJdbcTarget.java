@@ -27,11 +27,11 @@ public final class CrawlerJdbcTarget {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"connectionName","exclusions","path"})
+    @OutputCustomType.Constructor
     private CrawlerJdbcTarget(
-        String connectionName,
-        @Nullable List<String> exclusions,
-        String path) {
+        @OutputCustomType.Parameter("connectionName") String connectionName,
+        @OutputCustomType.Parameter("exclusions") @Nullable List<String> exclusions,
+        @OutputCustomType.Parameter("path") String path) {
         this.connectionName = connectionName;
         this.exclusions = exclusions;
         this.path = path;
@@ -83,17 +83,17 @@ public final class CrawlerJdbcTarget {
     	      this.path = defaults.path;
         }
 
-        public Builder setConnectionName(String connectionName) {
+        public Builder connectionName(String connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
-        public Builder setExclusions(@Nullable List<String> exclusions) {
+        public Builder exclusions(@Nullable List<String> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

@@ -91,21 +91,21 @@ public final class K8sOnlineDeploymentResponse {
      */
     private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
 
-    @OutputCustomType.Constructor({"appInsightsEnabled","codeConfiguration","containerResourceRequirements","description","endpointComputeType","environmentId","environmentVariables","livenessProbe","model","properties","provisioningState","requestSettings","scaleSettings"})
+    @OutputCustomType.Constructor
     private K8sOnlineDeploymentResponse(
-        @Nullable Boolean appInsightsEnabled,
-        @Nullable CodeConfigurationResponse codeConfiguration,
-        @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
-        @Nullable String description,
-        String endpointComputeType,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable ProbeSettingsResponse livenessProbe,
-        @Nullable Object model,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        @Nullable OnlineRequestSettingsResponse requestSettings,
-        @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
+        @OutputCustomType.Parameter("appInsightsEnabled") @Nullable Boolean appInsightsEnabled,
+        @OutputCustomType.Parameter("codeConfiguration") @Nullable CodeConfigurationResponse codeConfiguration,
+        @OutputCustomType.Parameter("containerResourceRequirements") @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("endpointComputeType") String endpointComputeType,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("livenessProbe") @Nullable ProbeSettingsResponse livenessProbe,
+        @OutputCustomType.Parameter("model") @Nullable Object model,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requestSettings") @Nullable OnlineRequestSettingsResponse requestSettings,
+        @OutputCustomType.Parameter("scaleSettings") @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
         this.appInsightsEnabled = appInsightsEnabled;
         this.codeConfiguration = codeConfiguration;
         this.containerResourceRequirements = containerResourceRequirements;
@@ -258,67 +258,67 @@ public final class K8sOnlineDeploymentResponse {
     	      this.scaleSettings = defaults.scaleSettings;
         }
 
-        public Builder setAppInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
+        public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
-        public Builder setCodeConfiguration(@Nullable CodeConfigurationResponse codeConfiguration) {
+        public Builder codeConfiguration(@Nullable CodeConfigurationResponse codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setContainerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
+        public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
             this.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEndpointComputeType(String endpointComputeType) {
+        public Builder endpointComputeType(String endpointComputeType) {
             this.endpointComputeType = Objects.requireNonNull(endpointComputeType);
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setLivenessProbe(@Nullable ProbeSettingsResponse livenessProbe) {
+        public Builder livenessProbe(@Nullable ProbeSettingsResponse livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
 
-        public Builder setModel(@Nullable Object model) {
+        public Builder model(@Nullable Object model) {
             this.model = model;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRequestSettings(@Nullable OnlineRequestSettingsResponse requestSettings) {
+        public Builder requestSettings(@Nullable OnlineRequestSettingsResponse requestSettings) {
             this.requestSettings = requestSettings;
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
+        public Builder scaleSettings(@Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }

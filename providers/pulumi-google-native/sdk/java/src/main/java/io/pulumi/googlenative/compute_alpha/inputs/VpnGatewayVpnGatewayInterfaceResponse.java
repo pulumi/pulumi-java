@@ -72,12 +72,12 @@ public final class VpnGatewayVpnGatewayInterfaceResponse extends io.pulumi.resou
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setInterconnectAttachment(String interconnectAttachment) {
+        public Builder interconnectAttachment(String interconnectAttachment) {
             this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }

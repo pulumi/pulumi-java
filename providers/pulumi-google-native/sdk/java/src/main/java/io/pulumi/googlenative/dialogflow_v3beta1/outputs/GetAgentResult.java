@@ -79,21 +79,21 @@ public final class GetAgentResult {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor({"advancedSettings","avatarUri","defaultLanguageCode","description","displayName","enableSpellCorrection","enableStackdriverLogging","name","securitySettings","speechToTextSettings","startFlow","supportedLanguageCodes","timeZone"})
+    @OutputCustomType.Constructor
     private GetAgentResult(
-        GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse advancedSettings,
-        String avatarUri,
-        String defaultLanguageCode,
-        String description,
-        String displayName,
-        Boolean enableSpellCorrection,
-        Boolean enableStackdriverLogging,
-        String name,
-        String securitySettings,
-        GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse speechToTextSettings,
-        String startFlow,
-        List<String> supportedLanguageCodes,
-        String timeZone) {
+        @OutputCustomType.Parameter("advancedSettings") GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse advancedSettings,
+        @OutputCustomType.Parameter("avatarUri") String avatarUri,
+        @OutputCustomType.Parameter("defaultLanguageCode") String defaultLanguageCode,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enableSpellCorrection") Boolean enableSpellCorrection,
+        @OutputCustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("securitySettings") String securitySettings,
+        @OutputCustomType.Parameter("speechToTextSettings") GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse speechToTextSettings,
+        @OutputCustomType.Parameter("startFlow") String startFlow,
+        @OutputCustomType.Parameter("supportedLanguageCodes") List<String> supportedLanguageCodes,
+        @OutputCustomType.Parameter("timeZone") String timeZone) {
         this.advancedSettings = advancedSettings;
         this.avatarUri = avatarUri;
         this.defaultLanguageCode = defaultLanguageCode;
@@ -245,67 +245,67 @@ public final class GetAgentResult {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setAdvancedSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse advancedSettings) {
+        public Builder advancedSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse advancedSettings) {
             this.advancedSettings = Objects.requireNonNull(advancedSettings);
             return this;
         }
 
-        public Builder setAvatarUri(String avatarUri) {
+        public Builder avatarUri(String avatarUri) {
             this.avatarUri = Objects.requireNonNull(avatarUri);
             return this;
         }
 
-        public Builder setDefaultLanguageCode(String defaultLanguageCode) {
+        public Builder defaultLanguageCode(String defaultLanguageCode) {
             this.defaultLanguageCode = Objects.requireNonNull(defaultLanguageCode);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnableSpellCorrection(Boolean enableSpellCorrection) {
+        public Builder enableSpellCorrection(Boolean enableSpellCorrection) {
             this.enableSpellCorrection = Objects.requireNonNull(enableSpellCorrection);
             return this;
         }
 
-        public Builder setEnableStackdriverLogging(Boolean enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecuritySettings(String securitySettings) {
+        public Builder securitySettings(String securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
 
-        public Builder setSpeechToTextSettings(GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse speechToTextSettings) {
+        public Builder speechToTextSettings(GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse speechToTextSettings) {
             this.speechToTextSettings = Objects.requireNonNull(speechToTextSettings);
             return this;
         }
 
-        public Builder setStartFlow(String startFlow) {
+        public Builder startFlow(String startFlow) {
             this.startFlow = Objects.requireNonNull(startFlow);
             return this;
         }
 
-        public Builder setSupportedLanguageCodes(List<String> supportedLanguageCodes) {
+        public Builder supportedLanguageCodes(List<String> supportedLanguageCodes) {
             this.supportedLanguageCodes = Objects.requireNonNull(supportedLanguageCodes);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }

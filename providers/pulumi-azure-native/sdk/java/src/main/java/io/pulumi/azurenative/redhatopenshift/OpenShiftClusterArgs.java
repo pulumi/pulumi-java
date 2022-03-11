@@ -256,132 +256,132 @@ public final class OpenShiftClusterArgs extends io.pulumi.resources.ResourceArgs
     	      this.workerProfiles = defaults.workerProfiles;
         }
 
-        public Builder setApiserverProfile(@Nullable Input<APIServerProfileArgs> apiserverProfile) {
+        public Builder apiserverProfile(@Nullable Input<APIServerProfileArgs> apiserverProfile) {
             this.apiserverProfile = apiserverProfile;
             return this;
         }
 
-        public Builder setApiserverProfile(@Nullable APIServerProfileArgs apiserverProfile) {
+        public Builder apiserverProfile(@Nullable APIServerProfileArgs apiserverProfile) {
             this.apiserverProfile = Input.ofNullable(apiserverProfile);
             return this;
         }
 
-        public Builder setClusterProfile(@Nullable Input<ClusterProfileArgs> clusterProfile) {
+        public Builder clusterProfile(@Nullable Input<ClusterProfileArgs> clusterProfile) {
             this.clusterProfile = clusterProfile;
             return this;
         }
 
-        public Builder setClusterProfile(@Nullable ClusterProfileArgs clusterProfile) {
+        public Builder clusterProfile(@Nullable ClusterProfileArgs clusterProfile) {
             this.clusterProfile = Input.ofNullable(clusterProfile);
             return this;
         }
 
-        public Builder setConsoleProfile(@Nullable Input<ConsoleProfileArgs> consoleProfile) {
+        public Builder consoleProfile(@Nullable Input<ConsoleProfileArgs> consoleProfile) {
             this.consoleProfile = consoleProfile;
             return this;
         }
 
-        public Builder setConsoleProfile(@Nullable ConsoleProfileArgs consoleProfile) {
+        public Builder consoleProfile(@Nullable ConsoleProfileArgs consoleProfile) {
             this.consoleProfile = Input.ofNullable(consoleProfile);
             return this;
         }
 
-        public Builder setIngressProfiles(@Nullable Input<List<IngressProfileArgs>> ingressProfiles) {
+        public Builder ingressProfiles(@Nullable Input<List<IngressProfileArgs>> ingressProfiles) {
             this.ingressProfiles = ingressProfiles;
             return this;
         }
 
-        public Builder setIngressProfiles(@Nullable List<IngressProfileArgs> ingressProfiles) {
+        public Builder ingressProfiles(@Nullable List<IngressProfileArgs> ingressProfiles) {
             this.ingressProfiles = Input.ofNullable(ingressProfiles);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMasterProfile(@Nullable Input<MasterProfileArgs> masterProfile) {
+        public Builder masterProfile(@Nullable Input<MasterProfileArgs> masterProfile) {
             this.masterProfile = masterProfile;
             return this;
         }
 
-        public Builder setMasterProfile(@Nullable MasterProfileArgs masterProfile) {
+        public Builder masterProfile(@Nullable MasterProfileArgs masterProfile) {
             this.masterProfile = Input.ofNullable(masterProfile);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileArgs networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setServicePrincipalProfile(@Nullable Input<ServicePrincipalProfileArgs> servicePrincipalProfile) {
+        public Builder servicePrincipalProfile(@Nullable Input<ServicePrincipalProfileArgs> servicePrincipalProfile) {
             this.servicePrincipalProfile = servicePrincipalProfile;
             return this;
         }
 
-        public Builder setServicePrincipalProfile(@Nullable ServicePrincipalProfileArgs servicePrincipalProfile) {
+        public Builder servicePrincipalProfile(@Nullable ServicePrincipalProfileArgs servicePrincipalProfile) {
             this.servicePrincipalProfile = Input.ofNullable(servicePrincipalProfile);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkerProfiles(@Nullable Input<List<WorkerProfileArgs>> workerProfiles) {
+        public Builder workerProfiles(@Nullable Input<List<WorkerProfileArgs>> workerProfiles) {
             this.workerProfiles = workerProfiles;
             return this;
         }
 
-        public Builder setWorkerProfiles(@Nullable List<WorkerProfileArgs> workerProfiles) {
+        public Builder workerProfiles(@Nullable List<WorkerProfileArgs> workerProfiles) {
             this.workerProfiles = Input.ofNullable(workerProfiles);
             return this;
         }

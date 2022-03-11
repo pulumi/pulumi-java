@@ -100,24 +100,24 @@ public final class GetOpenShiftManagedClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agentPoolProfiles","authProfile","clusterVersion","fqdn","id","location","masterPoolProfile","name","networkProfile","openShiftVersion","plan","provisioningState","publicHostname","routerProfiles","tags","type"})
+    @OutputCustomType.Constructor
     private GetOpenShiftManagedClusterResult(
-        @Nullable List<OpenShiftManagedClusterAgentPoolProfileResponse> agentPoolProfiles,
-        @Nullable OpenShiftManagedClusterAuthProfileResponse authProfile,
-        String clusterVersion,
-        String fqdn,
-        String id,
-        String location,
-        @Nullable OpenShiftManagedClusterMasterPoolProfileResponse masterPoolProfile,
-        String name,
-        @Nullable NetworkProfileResponse networkProfile,
-        String openShiftVersion,
-        @Nullable PurchasePlanResponse plan,
-        String provisioningState,
-        String publicHostname,
-        @Nullable List<OpenShiftRouterProfileResponse> routerProfiles,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("agentPoolProfiles") @Nullable List<OpenShiftManagedClusterAgentPoolProfileResponse> agentPoolProfiles,
+        @OutputCustomType.Parameter("authProfile") @Nullable OpenShiftManagedClusterAuthProfileResponse authProfile,
+        @OutputCustomType.Parameter("clusterVersion") String clusterVersion,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("masterPoolProfile") @Nullable OpenShiftManagedClusterMasterPoolProfileResponse masterPoolProfile,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("openShiftVersion") String openShiftVersion,
+        @OutputCustomType.Parameter("plan") @Nullable PurchasePlanResponse plan,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicHostname") String publicHostname,
+        @OutputCustomType.Parameter("routerProfiles") @Nullable List<OpenShiftRouterProfileResponse> routerProfiles,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.agentPoolProfiles = agentPoolProfiles;
         this.authProfile = authProfile;
         this.clusterVersion = clusterVersion;
@@ -299,82 +299,82 @@ public final class GetOpenShiftManagedClusterResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAgentPoolProfiles(@Nullable List<OpenShiftManagedClusterAgentPoolProfileResponse> agentPoolProfiles) {
+        public Builder agentPoolProfiles(@Nullable List<OpenShiftManagedClusterAgentPoolProfileResponse> agentPoolProfiles) {
             this.agentPoolProfiles = agentPoolProfiles;
             return this;
         }
 
-        public Builder setAuthProfile(@Nullable OpenShiftManagedClusterAuthProfileResponse authProfile) {
+        public Builder authProfile(@Nullable OpenShiftManagedClusterAuthProfileResponse authProfile) {
             this.authProfile = authProfile;
             return this;
         }
 
-        public Builder setClusterVersion(String clusterVersion) {
+        public Builder clusterVersion(String clusterVersion) {
             this.clusterVersion = Objects.requireNonNull(clusterVersion);
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMasterPoolProfile(@Nullable OpenShiftManagedClusterMasterPoolProfileResponse masterPoolProfile) {
+        public Builder masterPoolProfile(@Nullable OpenShiftManagedClusterMasterPoolProfileResponse masterPoolProfile) {
             this.masterPoolProfile = masterPoolProfile;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setOpenShiftVersion(String openShiftVersion) {
+        public Builder openShiftVersion(String openShiftVersion) {
             this.openShiftVersion = Objects.requireNonNull(openShiftVersion);
             return this;
         }
 
-        public Builder setPlan(@Nullable PurchasePlanResponse plan) {
+        public Builder plan(@Nullable PurchasePlanResponse plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicHostname(String publicHostname) {
+        public Builder publicHostname(String publicHostname) {
             this.publicHostname = Objects.requireNonNull(publicHostname);
             return this;
         }
 
-        public Builder setRouterProfiles(@Nullable List<OpenShiftRouterProfileResponse> routerProfiles) {
+        public Builder routerProfiles(@Nullable List<OpenShiftRouterProfileResponse> routerProfiles) {
             this.routerProfiles = routerProfiles;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

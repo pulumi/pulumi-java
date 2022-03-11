@@ -57,12 +57,12 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends io.pulumi.resource
     	      this.nodes = defaults.nodes;
         }
 
-        public Builder setNodes(@Nullable Input<Integer> nodes) {
+        public Builder nodes(@Nullable Input<Integer> nodes) {
             this.nodes = nodes;
             return this;
         }
 
-        public Builder setNodes(@Nullable Integer nodes) {
+        public Builder nodes(@Nullable Integer nodes) {
             this.nodes = Input.ofNullable(nodes);
             return this;
         }

@@ -20,10 +20,10 @@ public final class AddressDetailsResponse {
      */
     private final AddressPropertiesResponse returnAddress;
 
-    @OutputCustomType.Constructor({"forwardAddress","returnAddress"})
+    @OutputCustomType.Constructor
     private AddressDetailsResponse(
-        AddressPropertiesResponse forwardAddress,
-        AddressPropertiesResponse returnAddress) {
+        @OutputCustomType.Parameter("forwardAddress") AddressPropertiesResponse forwardAddress,
+        @OutputCustomType.Parameter("returnAddress") AddressPropertiesResponse returnAddress) {
         this.forwardAddress = forwardAddress;
         this.returnAddress = returnAddress;
     }
@@ -65,12 +65,12 @@ public final class AddressDetailsResponse {
     	      this.returnAddress = defaults.returnAddress;
         }
 
-        public Builder setForwardAddress(AddressPropertiesResponse forwardAddress) {
+        public Builder forwardAddress(AddressPropertiesResponse forwardAddress) {
             this.forwardAddress = Objects.requireNonNull(forwardAddress);
             return this;
         }
 
-        public Builder setReturnAddress(AddressPropertiesResponse returnAddress) {
+        public Builder returnAddress(AddressPropertiesResponse returnAddress) {
             this.returnAddress = Objects.requireNonNull(returnAddress);
             return this;
         }

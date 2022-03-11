@@ -27,20 +27,20 @@ public final class GetNetworkProfileResult {
     private final @Nullable Integer uplinkJitterMs;
     private final @Nullable Integer uplinkLossPercent;
 
-    @OutputCustomType.Constructor({"arn","description","downlinkBandwidthBits","downlinkDelayMs","downlinkJitterMs","downlinkLossPercent","name","tags","uplinkBandwidthBits","uplinkDelayMs","uplinkJitterMs","uplinkLossPercent"})
+    @OutputCustomType.Constructor
     private GetNetworkProfileResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable Integer downlinkBandwidthBits,
-        @Nullable Integer downlinkDelayMs,
-        @Nullable Integer downlinkJitterMs,
-        @Nullable Integer downlinkLossPercent,
-        @Nullable String name,
-        @Nullable List<NetworkProfileTag> tags,
-        @Nullable Integer uplinkBandwidthBits,
-        @Nullable Integer uplinkDelayMs,
-        @Nullable Integer uplinkJitterMs,
-        @Nullable Integer uplinkLossPercent) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("downlinkBandwidthBits") @Nullable Integer downlinkBandwidthBits,
+        @OutputCustomType.Parameter("downlinkDelayMs") @Nullable Integer downlinkDelayMs,
+        @OutputCustomType.Parameter("downlinkJitterMs") @Nullable Integer downlinkJitterMs,
+        @OutputCustomType.Parameter("downlinkLossPercent") @Nullable Integer downlinkLossPercent,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkProfileTag> tags,
+        @OutputCustomType.Parameter("uplinkBandwidthBits") @Nullable Integer uplinkBandwidthBits,
+        @OutputCustomType.Parameter("uplinkDelayMs") @Nullable Integer uplinkDelayMs,
+        @OutputCustomType.Parameter("uplinkJitterMs") @Nullable Integer uplinkJitterMs,
+        @OutputCustomType.Parameter("uplinkLossPercent") @Nullable Integer uplinkLossPercent) {
         this.arn = arn;
         this.description = description;
         this.downlinkBandwidthBits = downlinkBandwidthBits;
@@ -134,62 +134,62 @@ public final class GetNetworkProfileResult {
     	      this.uplinkLossPercent = defaults.uplinkLossPercent;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDownlinkBandwidthBits(@Nullable Integer downlinkBandwidthBits) {
+        public Builder downlinkBandwidthBits(@Nullable Integer downlinkBandwidthBits) {
             this.downlinkBandwidthBits = downlinkBandwidthBits;
             return this;
         }
 
-        public Builder setDownlinkDelayMs(@Nullable Integer downlinkDelayMs) {
+        public Builder downlinkDelayMs(@Nullable Integer downlinkDelayMs) {
             this.downlinkDelayMs = downlinkDelayMs;
             return this;
         }
 
-        public Builder setDownlinkJitterMs(@Nullable Integer downlinkJitterMs) {
+        public Builder downlinkJitterMs(@Nullable Integer downlinkJitterMs) {
             this.downlinkJitterMs = downlinkJitterMs;
             return this;
         }
 
-        public Builder setDownlinkLossPercent(@Nullable Integer downlinkLossPercent) {
+        public Builder downlinkLossPercent(@Nullable Integer downlinkLossPercent) {
             this.downlinkLossPercent = downlinkLossPercent;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkProfileTag> tags) {
+        public Builder tags(@Nullable List<NetworkProfileTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUplinkBandwidthBits(@Nullable Integer uplinkBandwidthBits) {
+        public Builder uplinkBandwidthBits(@Nullable Integer uplinkBandwidthBits) {
             this.uplinkBandwidthBits = uplinkBandwidthBits;
             return this;
         }
 
-        public Builder setUplinkDelayMs(@Nullable Integer uplinkDelayMs) {
+        public Builder uplinkDelayMs(@Nullable Integer uplinkDelayMs) {
             this.uplinkDelayMs = uplinkDelayMs;
             return this;
         }
 
-        public Builder setUplinkJitterMs(@Nullable Integer uplinkJitterMs) {
+        public Builder uplinkJitterMs(@Nullable Integer uplinkJitterMs) {
             this.uplinkJitterMs = uplinkJitterMs;
             return this;
         }
 
-        public Builder setUplinkLossPercent(@Nullable Integer uplinkLossPercent) {
+        public Builder uplinkLossPercent(@Nullable Integer uplinkLossPercent) {
             this.uplinkLossPercent = uplinkLossPercent;
             return this;
         }

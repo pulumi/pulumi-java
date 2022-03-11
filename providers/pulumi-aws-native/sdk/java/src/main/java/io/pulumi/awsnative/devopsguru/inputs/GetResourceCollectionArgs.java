@@ -51,7 +51,7 @@ public final class GetResourceCollectionArgs extends io.pulumi.resources.InvokeA
     	      this.resourceCollectionType = defaults.resourceCollectionType;
         }
 
-        public Builder setResourceCollectionType(ResourceCollectionType resourceCollectionType) {
+        public Builder resourceCollectionType(ResourceCollectionType resourceCollectionType) {
             this.resourceCollectionType = Objects.requireNonNull(resourceCollectionType);
             return this;
         }

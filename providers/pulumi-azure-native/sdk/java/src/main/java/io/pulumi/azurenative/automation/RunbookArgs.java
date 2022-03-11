@@ -253,132 +253,132 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDraft(@Nullable Input<RunbookDraftArgs> draft) {
+        public Builder draft(@Nullable Input<RunbookDraftArgs> draft) {
             this.draft = draft;
             return this;
         }
 
-        public Builder setDraft(@Nullable RunbookDraftArgs draft) {
+        public Builder draft(@Nullable RunbookDraftArgs draft) {
             this.draft = Input.ofNullable(draft);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLogActivityTrace(@Nullable Input<Integer> logActivityTrace) {
+        public Builder logActivityTrace(@Nullable Input<Integer> logActivityTrace) {
             this.logActivityTrace = logActivityTrace;
             return this;
         }
 
-        public Builder setLogActivityTrace(@Nullable Integer logActivityTrace) {
+        public Builder logActivityTrace(@Nullable Integer logActivityTrace) {
             this.logActivityTrace = Input.ofNullable(logActivityTrace);
             return this;
         }
 
-        public Builder setLogProgress(@Nullable Input<Boolean> logProgress) {
+        public Builder logProgress(@Nullable Input<Boolean> logProgress) {
             this.logProgress = logProgress;
             return this;
         }
 
-        public Builder setLogProgress(@Nullable Boolean logProgress) {
+        public Builder logProgress(@Nullable Boolean logProgress) {
             this.logProgress = Input.ofNullable(logProgress);
             return this;
         }
 
-        public Builder setLogVerbose(@Nullable Input<Boolean> logVerbose) {
+        public Builder logVerbose(@Nullable Input<Boolean> logVerbose) {
             this.logVerbose = logVerbose;
             return this;
         }
 
-        public Builder setLogVerbose(@Nullable Boolean logVerbose) {
+        public Builder logVerbose(@Nullable Boolean logVerbose) {
             this.logVerbose = Input.ofNullable(logVerbose);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPublishContentLink(@Nullable Input<ContentLinkArgs> publishContentLink) {
+        public Builder publishContentLink(@Nullable Input<ContentLinkArgs> publishContentLink) {
             this.publishContentLink = publishContentLink;
             return this;
         }
 
-        public Builder setPublishContentLink(@Nullable ContentLinkArgs publishContentLink) {
+        public Builder publishContentLink(@Nullable ContentLinkArgs publishContentLink) {
             this.publishContentLink = Input.ofNullable(publishContentLink);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRunbookName(@Nullable Input<String> runbookName) {
+        public Builder runbookName(@Nullable Input<String> runbookName) {
             this.runbookName = runbookName;
             return this;
         }
 
-        public Builder setRunbookName(@Nullable String runbookName) {
+        public Builder runbookName(@Nullable String runbookName) {
             this.runbookName = Input.ofNullable(runbookName);
             return this;
         }
 
-        public Builder setRunbookType(Input<Either<String,RunbookTypeEnum>> runbookType) {
+        public Builder runbookType(Input<Either<String,RunbookTypeEnum>> runbookType) {
             this.runbookType = Objects.requireNonNull(runbookType);
             return this;
         }
 
-        public Builder setRunbookType(Either<String,RunbookTypeEnum> runbookType) {
+        public Builder runbookType(Either<String,RunbookTypeEnum> runbookType) {
             this.runbookType = Input.of(Objects.requireNonNull(runbookType));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

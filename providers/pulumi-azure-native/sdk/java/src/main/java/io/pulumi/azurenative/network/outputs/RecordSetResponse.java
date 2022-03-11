@@ -44,14 +44,14 @@ public final class RecordSetResponse {
      */
     private final @Nullable Integer ttl;
 
-    @OutputCustomType.Constructor({"fqdn","ipAddresses","provisioningState","recordSetName","recordType","ttl"})
+    @OutputCustomType.Constructor
     private RecordSetResponse(
-        @Nullable String fqdn,
-        @Nullable List<String> ipAddresses,
-        String provisioningState,
-        @Nullable String recordSetName,
-        @Nullable String recordType,
-        @Nullable Integer ttl) {
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("recordSetName") @Nullable String recordSetName,
+        @OutputCustomType.Parameter("recordType") @Nullable String recordType,
+        @OutputCustomType.Parameter("ttl") @Nullable Integer ttl) {
         this.fqdn = fqdn;
         this.ipAddresses = ipAddresses;
         this.provisioningState = provisioningState;
@@ -133,32 +133,32 @@ public final class RecordSetResponse {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRecordSetName(@Nullable String recordSetName) {
+        public Builder recordSetName(@Nullable String recordSetName) {
             this.recordSetName = recordSetName;
             return this;
         }
 
-        public Builder setRecordType(@Nullable String recordType) {
+        public Builder recordType(@Nullable String recordType) {
             this.recordType = recordType;
             return this;
         }
 
-        public Builder setTtl(@Nullable Integer ttl) {
+        public Builder ttl(@Nullable Integer ttl) {
             this.ttl = ttl;
             return this;
         }

@@ -22,10 +22,10 @@ public final class GetDeploymentResult {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"deploymentId","description"})
+    @OutputCustomType.Constructor
     private GetDeploymentResult(
-        @Nullable String deploymentId,
-        @Nullable String description) {
+        @OutputCustomType.Parameter("deploymentId") @Nullable String deploymentId,
+        @OutputCustomType.Parameter("description") @Nullable String description) {
         this.deploymentId = deploymentId;
         this.description = description;
     }
@@ -67,12 +67,12 @@ public final class GetDeploymentResult {
     	      this.description = defaults.description;
         }
 
-        public Builder setDeploymentId(@Nullable String deploymentId) {
+        public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }

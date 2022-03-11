@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage {
     private final @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption> keyUsageOptions;
 
-    @OutputCustomType.Constructor({"keyUsageOptions"})
-    private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption> keyUsageOptions) {
+    @OutputCustomType.Constructor
+    private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage(@OutputCustomType.Parameter("keyUsageOptions") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption> keyUsageOptions) {
         this.keyUsageOptions = keyUsageOptions;
     }
 
@@ -42,7 +42,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUs
     	      this.keyUsageOptions = defaults.keyUsageOptions;
         }
 
-        public Builder setKeyUsageOptions(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption> keyUsageOptions) {
+        public Builder keyUsageOptions(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption> keyUsageOptions) {
             this.keyUsageOptions = keyUsageOptions;
             return this;
         }

@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsResponse {
      */
     private final List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants;
 
-    @OutputCustomType.Constructor({"variants"})
-    private GoogleCloudDialogflowCxV3VersionVariantsResponse(List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3VersionVariantsResponse(@OutputCustomType.Parameter("variants") List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants) {
         this.variants = variants;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsResponse {
     	      this.variants = defaults.variants;
         }
 
-        public Builder setVariants(List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants) {
+        public Builder variants(List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants) {
             this.variants = Objects.requireNonNull(variants);
             return this;
         }

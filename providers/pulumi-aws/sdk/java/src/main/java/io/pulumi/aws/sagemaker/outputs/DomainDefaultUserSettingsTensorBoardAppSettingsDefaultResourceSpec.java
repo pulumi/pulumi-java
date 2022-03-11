@@ -32,12 +32,12 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
      */
     private final @Nullable String sagemakerImageVersionArn;
 
-    @OutputCustomType.Constructor({"instanceType","lifecycleConfigArn","sagemakerImageArn","sagemakerImageVersionArn"})
+    @OutputCustomType.Constructor
     private DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec(
-        @Nullable String instanceType,
-        @Nullable String lifecycleConfigArn,
-        @Nullable String sagemakerImageArn,
-        @Nullable String sagemakerImageVersionArn) {
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("lifecycleConfigArn") @Nullable String lifecycleConfigArn,
+        @OutputCustomType.Parameter("sagemakerImageArn") @Nullable String sagemakerImageArn,
+        @OutputCustomType.Parameter("sagemakerImageVersionArn") @Nullable String sagemakerImageVersionArn) {
         this.instanceType = instanceType;
         this.lifecycleConfigArn = lifecycleConfigArn;
         this.sagemakerImageArn = sagemakerImageArn;
@@ -99,22 +99,22 @@ public final class DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourc
     	      this.sagemakerImageVersionArn = defaults.sagemakerImageVersionArn;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setLifecycleConfigArn(@Nullable String lifecycleConfigArn) {
+        public Builder lifecycleConfigArn(@Nullable String lifecycleConfigArn) {
             this.lifecycleConfigArn = lifecycleConfigArn;
             return this;
         }
 
-        public Builder setSagemakerImageArn(@Nullable String sagemakerImageArn) {
+        public Builder sagemakerImageArn(@Nullable String sagemakerImageArn) {
             this.sagemakerImageArn = sagemakerImageArn;
             return this;
         }
 
-        public Builder setSagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
+        public Builder sagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
             this.sagemakerImageVersionArn = sagemakerImageVersionArn;
             return this;
         }

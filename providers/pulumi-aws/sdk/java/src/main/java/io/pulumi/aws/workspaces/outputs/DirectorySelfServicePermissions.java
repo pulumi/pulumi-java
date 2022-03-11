@@ -37,13 +37,13 @@ public final class DirectorySelfServicePermissions {
      */
     private final @Nullable Boolean switchRunningMode;
 
-    @OutputCustomType.Constructor({"changeComputeType","increaseVolumeSize","rebuildWorkspace","restartWorkspace","switchRunningMode"})
+    @OutputCustomType.Constructor
     private DirectorySelfServicePermissions(
-        @Nullable Boolean changeComputeType,
-        @Nullable Boolean increaseVolumeSize,
-        @Nullable Boolean rebuildWorkspace,
-        @Nullable Boolean restartWorkspace,
-        @Nullable Boolean switchRunningMode) {
+        @OutputCustomType.Parameter("changeComputeType") @Nullable Boolean changeComputeType,
+        @OutputCustomType.Parameter("increaseVolumeSize") @Nullable Boolean increaseVolumeSize,
+        @OutputCustomType.Parameter("rebuildWorkspace") @Nullable Boolean rebuildWorkspace,
+        @OutputCustomType.Parameter("restartWorkspace") @Nullable Boolean restartWorkspace,
+        @OutputCustomType.Parameter("switchRunningMode") @Nullable Boolean switchRunningMode) {
         this.changeComputeType = changeComputeType;
         this.increaseVolumeSize = increaseVolumeSize;
         this.rebuildWorkspace = rebuildWorkspace;
@@ -115,27 +115,27 @@ public final class DirectorySelfServicePermissions {
     	      this.switchRunningMode = defaults.switchRunningMode;
         }
 
-        public Builder setChangeComputeType(@Nullable Boolean changeComputeType) {
+        public Builder changeComputeType(@Nullable Boolean changeComputeType) {
             this.changeComputeType = changeComputeType;
             return this;
         }
 
-        public Builder setIncreaseVolumeSize(@Nullable Boolean increaseVolumeSize) {
+        public Builder increaseVolumeSize(@Nullable Boolean increaseVolumeSize) {
             this.increaseVolumeSize = increaseVolumeSize;
             return this;
         }
 
-        public Builder setRebuildWorkspace(@Nullable Boolean rebuildWorkspace) {
+        public Builder rebuildWorkspace(@Nullable Boolean rebuildWorkspace) {
             this.rebuildWorkspace = rebuildWorkspace;
             return this;
         }
 
-        public Builder setRestartWorkspace(@Nullable Boolean restartWorkspace) {
+        public Builder restartWorkspace(@Nullable Boolean restartWorkspace) {
             this.restartWorkspace = restartWorkspace;
             return this;
         }
 
-        public Builder setSwitchRunningMode(@Nullable Boolean switchRunningMode) {
+        public Builder switchRunningMode(@Nullable Boolean switchRunningMode) {
             this.switchRunningMode = switchRunningMode;
             return this;
         }

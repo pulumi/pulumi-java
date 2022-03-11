@@ -72,12 +72,12 @@ public final class EventNotificationConfigResponse extends io.pulumi.resources.I
     	      this.subfolderMatches = defaults.subfolderMatches;
         }
 
-        public Builder setPubsubTopicName(String pubsubTopicName) {
+        public Builder pubsubTopicName(String pubsubTopicName) {
             this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
             return this;
         }
 
-        public Builder setSubfolderMatches(String subfolderMatches) {
+        public Builder subfolderMatches(String subfolderMatches) {
             this.subfolderMatches = Objects.requireNonNull(subfolderMatches);
             return this;
         }

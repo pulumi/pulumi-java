@@ -20,10 +20,10 @@ public final class ShareAccessRightResponse {
      */
     private final String shareId;
 
-    @OutputCustomType.Constructor({"accessType","shareId"})
+    @OutputCustomType.Constructor
     private ShareAccessRightResponse(
-        String accessType,
-        String shareId) {
+        @OutputCustomType.Parameter("accessType") String accessType,
+        @OutputCustomType.Parameter("shareId") String shareId) {
         this.accessType = accessType;
         this.shareId = shareId;
     }
@@ -65,12 +65,12 @@ public final class ShareAccessRightResponse {
     	      this.shareId = defaults.shareId;
         }
 
-        public Builder setAccessType(String accessType) {
+        public Builder accessType(String accessType) {
             this.accessType = Objects.requireNonNull(accessType);
             return this;
         }
 
-        public Builder setShareId(String shareId) {
+        public Builder shareId(String shareId) {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }

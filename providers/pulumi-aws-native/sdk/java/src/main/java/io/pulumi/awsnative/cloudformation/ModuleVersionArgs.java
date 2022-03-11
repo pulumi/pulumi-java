@@ -71,22 +71,22 @@ public final class ModuleVersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.modulePackage = defaults.modulePackage;
         }
 
-        public Builder setModuleName(Input<String> moduleName) {
+        public Builder moduleName(Input<String> moduleName) {
             this.moduleName = Objects.requireNonNull(moduleName);
             return this;
         }
 
-        public Builder setModuleName(String moduleName) {
+        public Builder moduleName(String moduleName) {
             this.moduleName = Input.of(Objects.requireNonNull(moduleName));
             return this;
         }
 
-        public Builder setModulePackage(Input<String> modulePackage) {
+        public Builder modulePackage(Input<String> modulePackage) {
             this.modulePackage = Objects.requireNonNull(modulePackage);
             return this;
         }
 
-        public Builder setModulePackage(String modulePackage) {
+        public Builder modulePackage(String modulePackage) {
             this.modulePackage = Input.of(Objects.requireNonNull(modulePackage));
             return this;
         }

@@ -29,10 +29,10 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressTo {
      */
     private final @Nullable List<String> resources;
 
-    @OutputCustomType.Constructor({"operations","resources"})
+    @OutputCustomType.Constructor
     private ServicePerimetersServicePerimeterSpecEgressPolicyEgressTo(
-        @Nullable List<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperation> operations,
-        @Nullable List<String> resources) {
+        @OutputCustomType.Parameter("operations") @Nullable List<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperation> operations,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources) {
         this.operations = operations;
         this.resources = resources;
     }
@@ -80,12 +80,12 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressTo {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setOperations(@Nullable List<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperation> operations) {
+        public Builder operations(@Nullable List<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperation> operations) {
             this.operations = operations;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }

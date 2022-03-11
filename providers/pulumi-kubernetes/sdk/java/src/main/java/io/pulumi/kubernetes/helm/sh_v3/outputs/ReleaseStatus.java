@@ -48,15 +48,15 @@ public final class ReleaseStatus {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"appVersion","chart","name","namespace","revision","status","version"})
+    @OutputCustomType.Constructor
     private ReleaseStatus(
-        @Nullable String appVersion,
-        @Nullable String chart,
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable Integer revision,
-        String status,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("appVersion") @Nullable String appVersion,
+        @OutputCustomType.Parameter("chart") @Nullable String chart,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("revision") @Nullable Integer revision,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.appVersion = appVersion;
         this.chart = chart;
         this.name = name;
@@ -148,37 +148,37 @@ public final class ReleaseStatus {
     	      this.version = defaults.version;
         }
 
-        public Builder setAppVersion(@Nullable String appVersion) {
+        public Builder appVersion(@Nullable String appVersion) {
             this.appVersion = appVersion;
             return this;
         }
 
-        public Builder setChart(@Nullable String chart) {
+        public Builder chart(@Nullable String chart) {
             this.chart = chart;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setRevision(@Nullable Integer revision) {
+        public Builder revision(@Nullable Integer revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

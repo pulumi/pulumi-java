@@ -38,13 +38,13 @@ public final class WorkerProfileResponse {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"count","diskSizeGB","name","subnetId","vmSize"})
+    @OutputCustomType.Constructor
     private WorkerProfileResponse(
-        @Nullable Integer count,
-        @Nullable Integer diskSizeGB,
-        @Nullable String name,
-        @Nullable String subnetId,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.count = count;
         this.diskSizeGB = diskSizeGB;
         this.name = name;
@@ -116,27 +116,27 @@ public final class WorkerProfileResponse {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

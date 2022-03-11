@@ -20,10 +20,10 @@ public final class SearchParameterResponse {
      */
     private final String parameter;
 
-    @OutputCustomType.Constructor({"canonicalUrl","parameter"})
+    @OutputCustomType.Constructor
     private SearchParameterResponse(
-        String canonicalUrl,
-        String parameter) {
+        @OutputCustomType.Parameter("canonicalUrl") String canonicalUrl,
+        @OutputCustomType.Parameter("parameter") String parameter) {
         this.canonicalUrl = canonicalUrl;
         this.parameter = parameter;
     }
@@ -65,12 +65,12 @@ public final class SearchParameterResponse {
     	      this.parameter = defaults.parameter;
         }
 
-        public Builder setCanonicalUrl(String canonicalUrl) {
+        public Builder canonicalUrl(String canonicalUrl) {
             this.canonicalUrl = Objects.requireNonNull(canonicalUrl);
             return this;
         }
 
-        public Builder setParameter(String parameter) {
+        public Builder parameter(String parameter) {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }

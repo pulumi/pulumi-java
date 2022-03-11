@@ -42,14 +42,14 @@ public final class SyncPropertiesResponse {
      */
     private final String tokenId;
 
-    @OutputCustomType.Constructor({"gatewayEndpoint","lastSyncTime","messageTtl","schedule","syncWindow","tokenId"})
+    @OutputCustomType.Constructor
     private SyncPropertiesResponse(
-        String gatewayEndpoint,
-        String lastSyncTime,
-        String messageTtl,
-        @Nullable String schedule,
-        @Nullable String syncWindow,
-        String tokenId) {
+        @OutputCustomType.Parameter("gatewayEndpoint") String gatewayEndpoint,
+        @OutputCustomType.Parameter("lastSyncTime") String lastSyncTime,
+        @OutputCustomType.Parameter("messageTtl") String messageTtl,
+        @OutputCustomType.Parameter("schedule") @Nullable String schedule,
+        @OutputCustomType.Parameter("syncWindow") @Nullable String syncWindow,
+        @OutputCustomType.Parameter("tokenId") String tokenId) {
         this.gatewayEndpoint = gatewayEndpoint;
         this.lastSyncTime = lastSyncTime;
         this.messageTtl = messageTtl;
@@ -131,32 +131,32 @@ public final class SyncPropertiesResponse {
     	      this.tokenId = defaults.tokenId;
         }
 
-        public Builder setGatewayEndpoint(String gatewayEndpoint) {
+        public Builder gatewayEndpoint(String gatewayEndpoint) {
             this.gatewayEndpoint = Objects.requireNonNull(gatewayEndpoint);
             return this;
         }
 
-        public Builder setLastSyncTime(String lastSyncTime) {
+        public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
 
-        public Builder setMessageTtl(String messageTtl) {
+        public Builder messageTtl(String messageTtl) {
             this.messageTtl = Objects.requireNonNull(messageTtl);
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSyncWindow(@Nullable String syncWindow) {
+        public Builder syncWindow(@Nullable String syncWindow) {
             this.syncWindow = syncWindow;
             return this;
         }
 
-        public Builder setTokenId(String tokenId) {
+        public Builder tokenId(String tokenId) {
             this.tokenId = Objects.requireNonNull(tokenId);
             return this;
         }

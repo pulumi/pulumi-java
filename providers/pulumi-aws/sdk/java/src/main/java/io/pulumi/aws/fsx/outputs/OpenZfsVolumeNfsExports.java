@@ -16,8 +16,8 @@ public final class OpenZfsVolumeNfsExports {
      */
     private final List<OpenZfsVolumeNfsExportsClientConfiguration> clientConfigurations;
 
-    @OutputCustomType.Constructor({"clientConfigurations"})
-    private OpenZfsVolumeNfsExports(List<OpenZfsVolumeNfsExportsClientConfiguration> clientConfigurations) {
+    @OutputCustomType.Constructor
+    private OpenZfsVolumeNfsExports(@OutputCustomType.Parameter("clientConfigurations") List<OpenZfsVolumeNfsExportsClientConfiguration> clientConfigurations) {
         this.clientConfigurations = clientConfigurations;
     }
 
@@ -49,7 +49,7 @@ public final class OpenZfsVolumeNfsExports {
     	      this.clientConfigurations = defaults.clientConfigurations;
         }
 
-        public Builder setClientConfigurations(List<OpenZfsVolumeNfsExportsClientConfiguration> clientConfigurations) {
+        public Builder clientConfigurations(List<OpenZfsVolumeNfsExportsClientConfiguration> clientConfigurations) {
             this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
             return this;
         }

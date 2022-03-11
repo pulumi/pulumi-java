@@ -43,14 +43,14 @@ public final class RepositoryCatalogData {
      */
     private final @Nullable String usageText;
 
-    @OutputCustomType.Constructor({"aboutText","architectures","description","logoImageBlob","operatingSystems","usageText"})
+    @OutputCustomType.Constructor
     private RepositoryCatalogData(
-        @Nullable String aboutText,
-        @Nullable List<String> architectures,
-        @Nullable String description,
-        @Nullable String logoImageBlob,
-        @Nullable List<String> operatingSystems,
-        @Nullable String usageText) {
+        @OutputCustomType.Parameter("aboutText") @Nullable String aboutText,
+        @OutputCustomType.Parameter("architectures") @Nullable List<String> architectures,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("logoImageBlob") @Nullable String logoImageBlob,
+        @OutputCustomType.Parameter("operatingSystems") @Nullable List<String> operatingSystems,
+        @OutputCustomType.Parameter("usageText") @Nullable String usageText) {
         this.aboutText = aboutText;
         this.architectures = architectures;
         this.description = description;
@@ -132,32 +132,32 @@ public final class RepositoryCatalogData {
     	      this.usageText = defaults.usageText;
         }
 
-        public Builder setAboutText(@Nullable String aboutText) {
+        public Builder aboutText(@Nullable String aboutText) {
             this.aboutText = aboutText;
             return this;
         }
 
-        public Builder setArchitectures(@Nullable List<String> architectures) {
+        public Builder architectures(@Nullable List<String> architectures) {
             this.architectures = architectures;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLogoImageBlob(@Nullable String logoImageBlob) {
+        public Builder logoImageBlob(@Nullable String logoImageBlob) {
             this.logoImageBlob = logoImageBlob;
             return this;
         }
 
-        public Builder setOperatingSystems(@Nullable List<String> operatingSystems) {
+        public Builder operatingSystems(@Nullable List<String> operatingSystems) {
             this.operatingSystems = operatingSystems;
             return this;
         }
 
-        public Builder setUsageText(@Nullable String usageText) {
+        public Builder usageText(@Nullable String usageText) {
             this.usageText = usageText;
             return this;
         }

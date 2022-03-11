@@ -42,14 +42,14 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"agentJobs","id","logins","targetServerBrandVersion","targetServerVersion","validationErrors"})
+    @OutputCustomType.Constructor
     private ConnectToTargetSqlMITaskOutputResponse(
-        List<String> agentJobs,
-        String id,
-        List<String> logins,
-        String targetServerBrandVersion,
-        String targetServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("agentJobs") List<String> agentJobs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logins") List<String> logins,
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.agentJobs = agentJobs;
         this.id = id;
         this.logins = logins;
@@ -131,32 +131,32 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setAgentJobs(List<String> agentJobs) {
+        public Builder agentJobs(List<String> agentJobs) {
             this.agentJobs = Objects.requireNonNull(agentJobs);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLogins(List<String> logins) {
+        public Builder logins(List<String> logins) {
             this.logins = Objects.requireNonNull(logins);
             return this;
         }
 
-        public Builder setTargetServerBrandVersion(String targetServerBrandVersion) {
+        public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
 
-        public Builder setTargetServerVersion(String targetServerVersion) {
+        public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
 
-        public Builder setValidationErrors(List<ReportableExceptionResponse> validationErrors) {
+        public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

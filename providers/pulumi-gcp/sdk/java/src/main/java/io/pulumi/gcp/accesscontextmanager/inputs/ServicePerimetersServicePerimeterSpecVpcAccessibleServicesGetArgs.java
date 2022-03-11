@@ -74,22 +74,22 @@ public final class ServicePerimetersServicePerimeterSpecVpcAccessibleServicesGet
     	      this.enableRestriction = defaults.enableRestriction;
         }
 
-        public Builder setAllowedServices(@Nullable Input<List<String>> allowedServices) {
+        public Builder allowedServices(@Nullable Input<List<String>> allowedServices) {
             this.allowedServices = allowedServices;
             return this;
         }
 
-        public Builder setAllowedServices(@Nullable List<String> allowedServices) {
+        public Builder allowedServices(@Nullable List<String> allowedServices) {
             this.allowedServices = Input.ofNullable(allowedServices);
             return this;
         }
 
-        public Builder setEnableRestriction(@Nullable Input<Boolean> enableRestriction) {
+        public Builder enableRestriction(@Nullable Input<Boolean> enableRestriction) {
             this.enableRestriction = enableRestriction;
             return this;
         }
 
-        public Builder setEnableRestriction(@Nullable Boolean enableRestriction) {
+        public Builder enableRestriction(@Nullable Boolean enableRestriction) {
             this.enableRestriction = Input.ofNullable(enableRestriction);
             return this;
         }

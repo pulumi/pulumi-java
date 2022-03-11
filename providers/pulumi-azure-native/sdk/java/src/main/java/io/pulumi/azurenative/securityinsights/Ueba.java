@@ -167,7 +167,7 @@ public class Ueba extends io.pulumi.resources.CustomResource {
     private static UebaArgs makeArgs(UebaArgs args) {
         var builder = args == null ? UebaArgs.builder() : UebaArgs.builder(args);
         return builder
-            .setKind("Ueba")
+            .kind("Ueba")
             .build();
     }
 

@@ -403,192 +403,192 @@ public final class JobLoadGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setAllowJaggedRows(@Nullable Input<Boolean> allowJaggedRows) {
+        public Builder allowJaggedRows(@Nullable Input<Boolean> allowJaggedRows) {
             this.allowJaggedRows = allowJaggedRows;
             return this;
         }
 
-        public Builder setAllowJaggedRows(@Nullable Boolean allowJaggedRows) {
+        public Builder allowJaggedRows(@Nullable Boolean allowJaggedRows) {
             this.allowJaggedRows = Input.ofNullable(allowJaggedRows);
             return this;
         }
 
-        public Builder setAllowQuotedNewlines(@Nullable Input<Boolean> allowQuotedNewlines) {
+        public Builder allowQuotedNewlines(@Nullable Input<Boolean> allowQuotedNewlines) {
             this.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
 
-        public Builder setAllowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
+        public Builder allowQuotedNewlines(@Nullable Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = Input.ofNullable(allowQuotedNewlines);
             return this;
         }
 
-        public Builder setAutodetect(@Nullable Input<Boolean> autodetect) {
+        public Builder autodetect(@Nullable Input<Boolean> autodetect) {
             this.autodetect = autodetect;
             return this;
         }
 
-        public Builder setAutodetect(@Nullable Boolean autodetect) {
+        public Builder autodetect(@Nullable Boolean autodetect) {
             this.autodetect = Input.ofNullable(autodetect);
             return this;
         }
 
-        public Builder setCreateDisposition(@Nullable Input<String> createDisposition) {
+        public Builder createDisposition(@Nullable Input<String> createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
 
-        public Builder setCreateDisposition(@Nullable String createDisposition) {
+        public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = Input.ofNullable(createDisposition);
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable Input<JobLoadDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable Input<JobLoadDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable JobLoadDestinationEncryptionConfigurationGetArgs destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable JobLoadDestinationEncryptionConfigurationGetArgs destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Input.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDestinationTable(Input<JobLoadDestinationTableGetArgs> destinationTable) {
+        public Builder destinationTable(Input<JobLoadDestinationTableGetArgs> destinationTable) {
             this.destinationTable = Objects.requireNonNull(destinationTable);
             return this;
         }
 
-        public Builder setDestinationTable(JobLoadDestinationTableGetArgs destinationTable) {
+        public Builder destinationTable(JobLoadDestinationTableGetArgs destinationTable) {
             this.destinationTable = Input.of(Objects.requireNonNull(destinationTable));
             return this;
         }
 
-        public Builder setEncoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Input<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setFieldDelimiter(@Nullable Input<String> fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable Input<String> fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
-        public Builder setFieldDelimiter(@Nullable String fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = Input.ofNullable(fieldDelimiter);
             return this;
         }
 
-        public Builder setIgnoreUnknownValues(@Nullable Input<Boolean> ignoreUnknownValues) {
+        public Builder ignoreUnknownValues(@Nullable Input<Boolean> ignoreUnknownValues) {
             this.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
 
-        public Builder setIgnoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
+        public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = Input.ofNullable(ignoreUnknownValues);
             return this;
         }
 
-        public Builder setMaxBadRecords(@Nullable Input<Integer> maxBadRecords) {
+        public Builder maxBadRecords(@Nullable Input<Integer> maxBadRecords) {
             this.maxBadRecords = maxBadRecords;
             return this;
         }
 
-        public Builder setMaxBadRecords(@Nullable Integer maxBadRecords) {
+        public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
             this.maxBadRecords = Input.ofNullable(maxBadRecords);
             return this;
         }
 
-        public Builder setNullMarker(@Nullable Input<String> nullMarker) {
+        public Builder nullMarker(@Nullable Input<String> nullMarker) {
             this.nullMarker = nullMarker;
             return this;
         }
 
-        public Builder setNullMarker(@Nullable String nullMarker) {
+        public Builder nullMarker(@Nullable String nullMarker) {
             this.nullMarker = Input.ofNullable(nullMarker);
             return this;
         }
 
-        public Builder setProjectionFields(@Nullable Input<List<String>> projectionFields) {
+        public Builder projectionFields(@Nullable Input<List<String>> projectionFields) {
             this.projectionFields = projectionFields;
             return this;
         }
 
-        public Builder setProjectionFields(@Nullable List<String> projectionFields) {
+        public Builder projectionFields(@Nullable List<String> projectionFields) {
             this.projectionFields = Input.ofNullable(projectionFields);
             return this;
         }
 
-        public Builder setQuote(@Nullable Input<String> quote) {
+        public Builder quote(@Nullable Input<String> quote) {
             this.quote = quote;
             return this;
         }
 
-        public Builder setQuote(@Nullable String quote) {
+        public Builder quote(@Nullable String quote) {
             this.quote = Input.ofNullable(quote);
             return this;
         }
 
-        public Builder setSchemaUpdateOptions(@Nullable Input<List<String>> schemaUpdateOptions) {
+        public Builder schemaUpdateOptions(@Nullable Input<List<String>> schemaUpdateOptions) {
             this.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
 
-        public Builder setSchemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
+        public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = Input.ofNullable(schemaUpdateOptions);
             return this;
         }
 
-        public Builder setSkipLeadingRows(@Nullable Input<Integer> skipLeadingRows) {
+        public Builder skipLeadingRows(@Nullable Input<Integer> skipLeadingRows) {
             this.skipLeadingRows = skipLeadingRows;
             return this;
         }
 
-        public Builder setSkipLeadingRows(@Nullable Integer skipLeadingRows) {
+        public Builder skipLeadingRows(@Nullable Integer skipLeadingRows) {
             this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
             return this;
         }
 
-        public Builder setSourceFormat(@Nullable Input<String> sourceFormat) {
+        public Builder sourceFormat(@Nullable Input<String> sourceFormat) {
             this.sourceFormat = sourceFormat;
             return this;
         }
 
-        public Builder setSourceFormat(@Nullable String sourceFormat) {
+        public Builder sourceFormat(@Nullable String sourceFormat) {
             this.sourceFormat = Input.ofNullable(sourceFormat);
             return this;
         }
 
-        public Builder setSourceUris(Input<List<String>> sourceUris) {
+        public Builder sourceUris(Input<List<String>> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
 
-        public Builder setSourceUris(List<String> sourceUris) {
+        public Builder sourceUris(List<String> sourceUris) {
             this.sourceUris = Input.of(Objects.requireNonNull(sourceUris));
             return this;
         }
 
-        public Builder setTimePartitioning(@Nullable Input<JobLoadTimePartitioningGetArgs> timePartitioning) {
+        public Builder timePartitioning(@Nullable Input<JobLoadTimePartitioningGetArgs> timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
 
-        public Builder setTimePartitioning(@Nullable JobLoadTimePartitioningGetArgs timePartitioning) {
+        public Builder timePartitioning(@Nullable JobLoadTimePartitioningGetArgs timePartitioning) {
             this.timePartitioning = Input.ofNullable(timePartitioning);
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable Input<String> writeDisposition) {
+        public Builder writeDisposition(@Nullable Input<String> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable String writeDisposition) {
+        public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }

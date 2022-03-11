@@ -16,8 +16,8 @@ public final class ExportExecutionListResultResponse {
      */
     private final List<ExportExecutionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ExportExecutionListResultResponse(List<ExportExecutionResponse> value) {
+    @OutputCustomType.Constructor
+    private ExportExecutionListResultResponse(@OutputCustomType.Parameter("value") List<ExportExecutionResponse> value) {
         this.value = value;
     }
 
@@ -49,7 +49,7 @@ public final class ExportExecutionListResultResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(List<ExportExecutionResponse> value) {
+        public Builder value(List<ExportExecutionResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

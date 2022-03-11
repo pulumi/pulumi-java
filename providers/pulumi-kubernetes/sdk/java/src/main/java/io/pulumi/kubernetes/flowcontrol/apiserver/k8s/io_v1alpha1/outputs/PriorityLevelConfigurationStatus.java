@@ -17,8 +17,8 @@ public final class PriorityLevelConfigurationStatus {
      */
     private final @Nullable List<PriorityLevelConfigurationCondition> conditions;
 
-    @OutputCustomType.Constructor({"conditions"})
-    private PriorityLevelConfigurationStatus(@Nullable List<PriorityLevelConfigurationCondition> conditions) {
+    @OutputCustomType.Constructor
+    private PriorityLevelConfigurationStatus(@OutputCustomType.Parameter("conditions") @Nullable List<PriorityLevelConfigurationCondition> conditions) {
         this.conditions = conditions;
     }
 
@@ -50,7 +50,7 @@ public final class PriorityLevelConfigurationStatus {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(@Nullable List<PriorityLevelConfigurationCondition> conditions) {
+        public Builder conditions(@Nullable List<PriorityLevelConfigurationCondition> conditions) {
             this.conditions = conditions;
             return this;
         }

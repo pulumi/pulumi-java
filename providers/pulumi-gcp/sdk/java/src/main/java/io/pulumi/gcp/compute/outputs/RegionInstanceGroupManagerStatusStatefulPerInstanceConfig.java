@@ -17,8 +17,8 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfig {
      */
     private final @Nullable Boolean allEffective;
 
-    @OutputCustomType.Constructor({"allEffective"})
-    private RegionInstanceGroupManagerStatusStatefulPerInstanceConfig(@Nullable Boolean allEffective) {
+    @OutputCustomType.Constructor
+    private RegionInstanceGroupManagerStatusStatefulPerInstanceConfig(@OutputCustomType.Parameter("allEffective") @Nullable Boolean allEffective) {
         this.allEffective = allEffective;
     }
 
@@ -50,7 +50,7 @@ public final class RegionInstanceGroupManagerStatusStatefulPerInstanceConfig {
     	      this.allEffective = defaults.allEffective;
         }
 
-        public Builder setAllEffective(@Nullable Boolean allEffective) {
+        public Builder allEffective(@Nullable Boolean allEffective) {
             this.allEffective = allEffective;
             return this;
         }

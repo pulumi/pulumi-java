@@ -74,22 +74,22 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
     	      this.subnetResourceId = defaults.subnetResourceId;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setSubnetResourceId(@Nullable Input<String> subnetResourceId) {
+        public Builder subnetResourceId(@Nullable Input<String> subnetResourceId) {
             this.subnetResourceId = subnetResourceId;
             return this;
         }
 
-        public Builder setSubnetResourceId(@Nullable String subnetResourceId) {
+        public Builder subnetResourceId(@Nullable String subnetResourceId) {
             this.subnetResourceId = Input.ofNullable(subnetResourceId);
             return this;
         }

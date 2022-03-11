@@ -28,11 +28,11 @@ public final class AutomationActionLogicAppResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"actionType","logicAppResourceId","uri"})
+    @OutputCustomType.Constructor
     private AutomationActionLogicAppResponse(
-        String actionType,
-        @Nullable String logicAppResourceId,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("actionType") String actionType,
+        @OutputCustomType.Parameter("logicAppResourceId") @Nullable String logicAppResourceId,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.actionType = actionType;
         this.logicAppResourceId = logicAppResourceId;
         this.uri = uri;
@@ -85,17 +85,17 @@ public final class AutomationActionLogicAppResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setActionType(String actionType) {
+        public Builder actionType(String actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
-        public Builder setLogicAppResourceId(@Nullable String logicAppResourceId) {
+        public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
             this.logicAppResourceId = logicAppResourceId;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }
