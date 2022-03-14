@@ -177,7 +177,10 @@ jobs:
           creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
       - env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-          ARM_CLIENT_SECRET: ${{ secrets.AZURE_IAM_SP_CLIENT_SECRET }}
+          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         name: run example azure-java-appservice-sql
         run: |
           make install_sdk
@@ -415,7 +418,10 @@ jobs:
           creds: ${{ secrets.AZURE_IAM_SP_CREDS }}
       - env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-          ARM_CLIENT_SECRET: ${{ secrets.AZURE_IAM_SP_CLIENT_SECRET }}
+          ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+          ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+          ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
         name: run example azure-java-static-website
         run: |
           make install_sdk
