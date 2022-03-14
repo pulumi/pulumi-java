@@ -115,13 +115,15 @@ jobs:
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: run example aws-java-webserver
+      - name: Install Pulumi Resource Plugins
         run: |
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
           pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
+      - name: run example aws-java-webserver
+        run: |
           make install_sdk
           make provider.aws.build provider.aws.install
           make bin/pulumi-language-jvm
@@ -170,18 +172,17 @@ jobs:
           build-root-directory: sdk/jvm
       - name: Publish Pulumi Java SDK to a local Maven repo
         run: make install_sdk
-      - name: Build Pulumi JVM Language Provider and Codegen
-        run: make build_go
-      ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: run example azure-java-appservice-sql
+      - name: Install Pulumi Resource Plugins
         run: |
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
           pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
+      - name: run example azure-java-appservice-sql
+        run: |
           make install_sdk
           make provider.azure-native.build
           make provider.azure-native.install
@@ -230,18 +231,18 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Build Pulumi JVM Language Provider and Codegen
-        run: make build_go
       ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: run example gcp-java-gke-hello-world
+      - name: Install Pulumi Resource Plugins
         run: |
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
           pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
+      - name: run example gcp-java-gke-hello-world
+        run: |
           make install_sdk
           make provider.gcp.build provider.gcp.install
           make provider.kubernetes.build make provider.kubernetes.install
@@ -289,18 +290,18 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Build Pulumi JVM Language Provider and Codegen
-        run: make build_go
       ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: run example minimal
+      - name: Install Pulumi Resource Plugins
         run: |
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
           pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
+      - name: run example minimal
+        run: |
           make install_sdk
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
@@ -348,8 +349,6 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Build Pulumi JVM Language Provider and Codegen
-        run: make build_go
       ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
@@ -362,13 +361,15 @@ jobs:
           role-duration-seconds: 3600
           role-session-name: ${{ env.PROVIDER }}@githubActions
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
-      - name: run example aws-native-java-s3-folder
+      - name: Install Pulumi Resource Plugins
         run: |
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
           pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
+      - name: run example aws-native-java-s3-folder
+        run: |
           make install_sdk
           make provider.aws.build provider.aws.install
           make provider.aws-native.build provider.aws-native.install
@@ -416,18 +417,18 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Build Pulumi JVM Language Provider and Codegen
-        run: make build_go
       ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: run example azure-java-static-website
+      - name: Install Pulumi Resource Plugins
         run: |
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
           pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
+      - name: run example azure-java-static-website
+        run: |
           make install_sdk
           make provider.azure-native.build provider.azure-native.install
           make bin/pulumi-language-jvm
@@ -474,18 +475,18 @@ jobs:
         with:
           arguments: build
           build-root-directory: sdk/jvm
-      - name: Build Pulumi JVM Language Provider and Codegen
-        run: make build_go
       ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      - name: run example random
+      - name: Install Pulumi Resource Plugins
         run: |
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
           pulumi plugin install resource gcp v6.11.0;
           pulumi plugin install resource random v4.3.1;
+      - name: run example random
+        run: |
           make install_sdk
           make provider.random.build provider.random.install
           make bin/pulumi-language-jvm
