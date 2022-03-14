@@ -13,21 +13,21 @@ import io.pulumi.awsnative.s3.Bucket;
 import io.pulumi.awsnative.s3.inputs.BucketWebsiteConfigurationArgs;
 import io.pulumi.core.Asset.FileAsset;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.resources.CustomResourceOptions;
 
 public final class MyStack extends Stack {
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private Output<String> websiteUrl;
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private Output<String> bucketName;
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private Output<String> staticEndpoint;
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private Output<String> cdnEndpoint;
 
     public MyStack() throws IOException {
