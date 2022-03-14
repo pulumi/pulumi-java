@@ -5,7 +5,8 @@ package io.pulumi.random;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.ResourceType;
-
+import io.pulumi.random.ProviderArgs;
+import io.pulumi.random.Utilities;
 import javax.annotation.Nullable;
 
 /**

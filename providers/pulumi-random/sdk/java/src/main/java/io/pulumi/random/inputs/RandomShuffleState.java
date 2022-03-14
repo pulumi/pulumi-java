@@ -5,11 +5,13 @@ package io.pulumi.random.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.InputImport;
-
-import javax.annotation.Nullable;
+import java.lang.Integer;
+import java.lang.Object;
+import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import javax.annotation.Nullable;
 
 
 public final class RandomShuffleState extends io.pulumi.resources.ResourceArgs {

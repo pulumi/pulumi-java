@@ -6,10 +6,15 @@ package io.pulumi.random;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.random.RandomPasswordArgs;
+import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomPasswordState;
-
-import javax.annotation.Nullable;
+import java.lang.Boolean;
+import java.lang.Integer;
+import java.lang.Object;
+import java.lang.String;
 import java.util.Map;
+import javax.annotation.Nullable;
 
 /**
  * Identical to random.RandomString with the exception that the result is treated as sensitive and, thus, _not_ displayed in console output.
