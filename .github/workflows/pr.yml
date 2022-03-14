@@ -192,6 +192,7 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
+            pulumi config set azure-native:location westus
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
             pulumi plugin install &&
             pulumi preview"
@@ -252,6 +253,7 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
+            pulumi config set gcp:zone us-west1-a
             pulumi plugin install &&
             pulumi preview"
   example5:
@@ -367,6 +369,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-native-java-s3-folder &&
             ./gradlew install &&
+            pulumi destroy -s dev --yes || true
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi plugin install &&
@@ -432,6 +435,7 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes || true
             pulumi stack init dev;
+            pulumi config set azure-native:location westus
             pulumi plugin install &&
             pulumi preview"
   example8:
