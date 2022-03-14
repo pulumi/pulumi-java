@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PersistentVolumeStatus {
     /**
      * A human-readable message indicating details about why the volume is in this state.
@@ -34,11 +34,11 @@ public final class PersistentVolumeStatus {
      */
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PersistentVolumeStatus(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("phase") @Nullable String phase,
-        @OutputCustomType.Parameter("reason") @Nullable String reason) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("phase") @Nullable String phase,
+        @CustomType.Parameter("reason") @Nullable String reason) {
         this.message = message;
         this.phase = phase;
         this.reason = reason;

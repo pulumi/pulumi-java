@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelectorRequirement;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LabelSelector {
     /**
      * matchExpressions is a list of label selector requirements. The requirements are ANDed.
@@ -24,10 +24,10 @@ public final class LabelSelector {
      */
     private final @Nullable Map<String,String> matchLabels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LabelSelector(
-        @OutputCustomType.Parameter("matchExpressions") @Nullable List<LabelSelectorRequirement> matchExpressions,
-        @OutputCustomType.Parameter("matchLabels") @Nullable Map<String,String> matchLabels) {
+        @CustomType.Parameter("matchExpressions") @Nullable List<LabelSelectorRequirement> matchExpressions,
+        @CustomType.Parameter("matchLabels") @Nullable Map<String,String> matchLabels) {
         this.matchExpressions = matchExpressions;
         this.matchLabels = matchLabels;
     }

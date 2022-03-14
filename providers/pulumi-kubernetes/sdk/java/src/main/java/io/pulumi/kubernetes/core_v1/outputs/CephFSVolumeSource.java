@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CephFSVolumeSource {
     /**
      * Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
@@ -45,14 +45,14 @@ public final class CephFSVolumeSource {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CephFSVolumeSource(
-        @OutputCustomType.Parameter("monitors") List<String> monitors,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("secretFile") @Nullable String secretFile,
-        @OutputCustomType.Parameter("secretRef") @Nullable LocalObjectReference secretRef,
-        @OutputCustomType.Parameter("user") @Nullable String user) {
+        @CustomType.Parameter("monitors") List<String> monitors,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("secretFile") @Nullable String secretFile,
+        @CustomType.Parameter("secretRef") @Nullable LocalObjectReference secretRef,
+        @CustomType.Parameter("user") @Nullable String user) {
         this.monitors = monitors;
         this.path = path;
         this.readOnly = readOnly;

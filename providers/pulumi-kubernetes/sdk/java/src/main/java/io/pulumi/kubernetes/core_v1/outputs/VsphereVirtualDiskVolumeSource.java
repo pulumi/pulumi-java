@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VsphereVirtualDiskVolumeSource {
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
@@ -32,12 +32,12 @@ public final class VsphereVirtualDiskVolumeSource {
      */
     private final String volumePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VsphereVirtualDiskVolumeSource(
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("storagePolicyID") @Nullable String storagePolicyID,
-        @OutputCustomType.Parameter("storagePolicyName") @Nullable String storagePolicyName,
-        @OutputCustomType.Parameter("volumePath") String volumePath) {
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("storagePolicyID") @Nullable String storagePolicyID,
+        @CustomType.Parameter("storagePolicyName") @Nullable String storagePolicyName,
+        @CustomType.Parameter("volumePath") String volumePath) {
         this.fsType = fsType;
         this.storagePolicyID = storagePolicyID;
         this.storagePolicyName = storagePolicyName;

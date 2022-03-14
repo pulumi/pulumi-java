@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.NodeAffinityArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodAffinityArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodAntiAffinityArgs;
@@ -24,7 +24,7 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
      * Describes node affinity scheduling rules for the pod.
      * 
      */
-    @InputImport(name="nodeAffinity")
+    @Import(name="nodeAffinity")
       private final @Nullable Output<NodeAffinityArgs> nodeAffinity;
 
     public Output<NodeAffinityArgs> getNodeAffinity() {
@@ -35,7 +35,7 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
      * Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).
      * 
      */
-    @InputImport(name="podAffinity")
+    @Import(name="podAffinity")
       private final @Nullable Output<PodAffinityArgs> podAffinity;
 
     public Output<PodAffinityArgs> getPodAffinity() {
@@ -46,7 +46,7 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
      * Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
      * 
      */
-    @InputImport(name="podAntiAffinity")
+    @Import(name="podAntiAffinity")
       private final @Nullable Output<PodAntiAffinityArgs> podAntiAffinity;
 
     public Output<PodAntiAffinityArgs> getPodAntiAffinity() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs.IngressBackend;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs.IngressRule;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs.IngressTLS;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressSpec {
     /**
      * A default backend capable of servicing requests that don't match any rule. At least one of 'backend' or 'rules' must be specified. This field is optional to allow the loadbalancer controller or defaulting logic to specify a global default.
@@ -36,12 +36,12 @@ public final class IngressSpec {
      */
     private final @Nullable List<IngressTLS> tls;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressSpec(
-        @OutputCustomType.Parameter("backend") @Nullable IngressBackend backend,
-        @OutputCustomType.Parameter("ingressClassName") @Nullable String ingressClassName,
-        @OutputCustomType.Parameter("rules") @Nullable List<IngressRule> rules,
-        @OutputCustomType.Parameter("tls") @Nullable List<IngressTLS> tls) {
+        @CustomType.Parameter("backend") @Nullable IngressBackend backend,
+        @CustomType.Parameter("ingressClassName") @Nullable String ingressClassName,
+        @CustomType.Parameter("rules") @Nullable List<IngressRule> rules,
+        @CustomType.Parameter("tls") @Nullable List<IngressTLS> tls) {
         this.backend = backend;
         this.ingressClassName = ingressClassName;
         this.rules = rules;

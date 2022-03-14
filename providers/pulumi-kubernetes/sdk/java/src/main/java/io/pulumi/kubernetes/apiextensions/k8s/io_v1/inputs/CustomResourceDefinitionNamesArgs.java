@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
      * 
      */
-    @InputImport(name="categories")
+    @Import(name="categories")
       private final @Nullable Output<List<String>> categories;
 
     public Output<List<String>> getCategories() {
@@ -34,7 +34,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * kind is the serialized kind of the resource. It is normally CamelCase and singular. Custom resource instances will use this value as the `kind` attribute in API calls.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -45,7 +45,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * listKind is the serialized kind of the list for this resource. Defaults to "`kind`List".
      * 
      */
-    @InputImport(name="listKind")
+    @Import(name="listKind")
       private final @Nullable Output<String> listKind;
 
     public Output<String> getListKind() {
@@ -56,7 +56,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * plural is the plural name of the resource to serve. The custom resources are served under `/apis/<group>/<version>/.../<plural>`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`). Must be all lowercase.
      * 
      */
-    @InputImport(name="plural", required=true)
+    @Import(name="plural", required=true)
       private final Output<String> plural;
 
     public Output<String> getPlural() {
@@ -67,7 +67,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.
      * 
      */
-    @InputImport(name="shortNames")
+    @Import(name="shortNames")
       private final @Nullable Output<List<String>> shortNames;
 
     public Output<List<String>> getShortNames() {
@@ -78,7 +78,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.
      * 
      */
-    @InputImport(name="singular")
+    @Import(name="singular")
       private final @Nullable Output<String> singular;
 
     public Output<String> getSingular() {

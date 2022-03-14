@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TypedLocalObjectReference {
     /**
      * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
@@ -27,11 +27,11 @@ public final class TypedLocalObjectReference {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TypedLocalObjectReference(
-        @OutputCustomType.Parameter("apiGroup") @Nullable String apiGroup,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("apiGroup") @Nullable String apiGroup,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name) {
         this.apiGroup = apiGroup;
         this.kind = kind;
         this.name = name;

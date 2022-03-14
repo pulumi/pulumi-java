@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is "failed rule: {Rule}". e.g. "must be a URL with the host matching spec.host"
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -57,7 +57,7 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
      *     non-intersecting keys are appended, retaining their partial order.
      * 
      */
-    @InputImport(name="rule", required=true)
+    @Import(name="rule", required=true)
       private final Output<String> rule;
 
     public Output<String> getRule() {

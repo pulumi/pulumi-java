@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectFieldSelectorArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ResourceFieldSelectorArgs;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.
      * 
      */
-    @InputImport(name="fieldRef")
+    @Import(name="fieldRef")
       private final @Nullable Output<ObjectFieldSelectorArgs> fieldRef;
 
     public Output<ObjectFieldSelectorArgs> getFieldRef() {
@@ -36,7 +36,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * Optional: mode bits used to set permissions on this file, must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. If not specified, the volume defaultMode will be used. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Integer> mode;
 
     public Output<Integer> getMode() {
@@ -47,7 +47,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * Required: Path is  the relative path name of the file to be created. Must not be absolute or contain the '..' path. Must be utf-8 encoded. The first item of the relative path must not start with '..'
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -58,7 +58,7 @@ public final class DownwardAPIVolumeFileArgs extends io.pulumi.resources.Resourc
      * Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.
      * 
      */
-    @InputImport(name="resourceFieldRef")
+    @Import(name="resourceFieldRef")
       private final @Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef;
 
     public Output<ResourceFieldSelectorArgs> getResourceFieldRef() {

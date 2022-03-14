@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.autoscaling_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HorizontalPodAutoscalerStatus {
     /**
      * current average CPU utilization over all pods, represented as a percentage of requested CPU, e.g. 70 means that an average pod is using now 70% of its requested CPU.
@@ -38,13 +38,13 @@ public final class HorizontalPodAutoscalerStatus {
      */
     private final @Nullable Integer observedGeneration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HorizontalPodAutoscalerStatus(
-        @OutputCustomType.Parameter("currentCPUUtilizationPercentage") @Nullable Integer currentCPUUtilizationPercentage,
-        @OutputCustomType.Parameter("currentReplicas") Integer currentReplicas,
-        @OutputCustomType.Parameter("desiredReplicas") Integer desiredReplicas,
-        @OutputCustomType.Parameter("lastScaleTime") @Nullable String lastScaleTime,
-        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration) {
+        @CustomType.Parameter("currentCPUUtilizationPercentage") @Nullable Integer currentCPUUtilizationPercentage,
+        @CustomType.Parameter("currentReplicas") Integer currentReplicas,
+        @CustomType.Parameter("desiredReplicas") Integer desiredReplicas,
+        @CustomType.Parameter("lastScaleTime") @Nullable String lastScaleTime,
+        @CustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration) {
         this.currentCPUUtilizationPercentage = currentCPUUtilizationPercentage;
         this.currentReplicas = currentReplicas;
         this.desiredReplicas = desiredReplicas;

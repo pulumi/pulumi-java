@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.PortStatusArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
      * Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -35,7 +35,7 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
      * IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
      * 
      */
-    @InputImport(name="ip")
+    @Import(name="ip")
       private final @Nullable Output<String> ip;
 
     public Output<String> getIp() {
@@ -46,7 +46,7 @@ public final class LoadBalancerIngressArgs extends io.pulumi.resources.ResourceA
      * Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<PortStatusArgs>> ports;
 
     public Output<List<PortStatusArgs>> getPorts() {

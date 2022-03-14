@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigMapEnvSource {
     /**
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
@@ -23,10 +23,10 @@ public final class ConfigMapEnvSource {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigMapEnvSource(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("optional") @Nullable Boolean optional) {
         this.name = name;
         this.optional = optional;
     }

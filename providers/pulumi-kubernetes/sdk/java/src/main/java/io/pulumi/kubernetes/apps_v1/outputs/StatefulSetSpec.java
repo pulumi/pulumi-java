@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apps_v1.outputs.StatefulSetPersistentVolumeClaimRetentionPolicy;
 import io.pulumi.kubernetes.apps_v1.outputs.StatefulSetUpdateStrategy;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaim;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StatefulSetSpec {
     /**
      * Minimum number of seconds for which a newly created pod should be ready without any of its container crashing for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready) This is an alpha field and requires enabling StatefulSetMinReadySeconds feature gate.
@@ -73,18 +73,18 @@ public final class StatefulSetSpec {
      */
     private final @Nullable List<PersistentVolumeClaim> volumeClaimTemplates;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatefulSetSpec(
-        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
-        @OutputCustomType.Parameter("persistentVolumeClaimRetentionPolicy") @Nullable StatefulSetPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy,
-        @OutputCustomType.Parameter("podManagementPolicy") @Nullable String podManagementPolicy,
-        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
-        @OutputCustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
-        @OutputCustomType.Parameter("selector") LabelSelector selector,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("template") PodTemplateSpec template,
-        @OutputCustomType.Parameter("updateStrategy") @Nullable StatefulSetUpdateStrategy updateStrategy,
-        @OutputCustomType.Parameter("volumeClaimTemplates") @Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
+        @CustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @CustomType.Parameter("persistentVolumeClaimRetentionPolicy") @Nullable StatefulSetPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy,
+        @CustomType.Parameter("podManagementPolicy") @Nullable String podManagementPolicy,
+        @CustomType.Parameter("replicas") @Nullable Integer replicas,
+        @CustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
+        @CustomType.Parameter("selector") LabelSelector selector,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("template") PodTemplateSpec template,
+        @CustomType.Parameter("updateStrategy") @Nullable StatefulSetUpdateStrategy updateStrategy,
+        @CustomType.Parameter("volumeClaimTemplates") @Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
         this.minReadySeconds = minReadySeconds;
         this.persistentVolumeClaimRetentionPolicy = persistentVolumeClaimRetentionPolicy;
         this.podManagementPolicy = podManagementPolicy;

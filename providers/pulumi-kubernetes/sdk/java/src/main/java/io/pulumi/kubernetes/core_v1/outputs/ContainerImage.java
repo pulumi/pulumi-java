@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerImage {
     /**
      * Names by which this image is known. e.g. ["k8s.gcr.io/hyperkube:v1.0.7", "dockerhub.io/google_containers/hyperkube:v1.0.7"]
@@ -24,10 +24,10 @@ public final class ContainerImage {
      */
     private final @Nullable Integer sizeBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerImage(
-        @OutputCustomType.Parameter("names") List<String> names,
-        @OutputCustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
+        @CustomType.Parameter("names") List<String> names,
+        @CustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
         this.names = names;
         this.sizeBytes = sizeBytes;
     }

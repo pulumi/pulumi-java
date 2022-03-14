@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
      * The key to select.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -34,7 +34,7 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
      * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class ConfigMapKeySelectorArgs extends io.pulumi.resources.Resource
      * Specify whether the ConfigMap or its key must be defined
      * 
      */
-    @InputImport(name="optional")
+    @Import(name="optional")
       private final @Nullable Output<Boolean> optional;
 
     public Output<Boolean> getOptional() {

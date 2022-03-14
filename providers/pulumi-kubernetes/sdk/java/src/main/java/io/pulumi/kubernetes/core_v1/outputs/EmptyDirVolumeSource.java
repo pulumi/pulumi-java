@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EmptyDirVolumeSource {
     /**
      * What type of storage medium should back this directory. The default is "" which means to use the node's default medium. Must be an empty string (default) or Memory. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
@@ -22,10 +22,10 @@ public final class EmptyDirVolumeSource {
      */
     private final @Nullable String sizeLimit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EmptyDirVolumeSource(
-        @OutputCustomType.Parameter("medium") @Nullable String medium,
-        @OutputCustomType.Parameter("sizeLimit") @Nullable String sizeLimit) {
+        @CustomType.Parameter("medium") @Nullable String medium,
+        @CustomType.Parameter("sizeLimit") @Nullable String sizeLimit) {
         this.medium = medium;
         this.sizeLimit = sizeLimit;
     }

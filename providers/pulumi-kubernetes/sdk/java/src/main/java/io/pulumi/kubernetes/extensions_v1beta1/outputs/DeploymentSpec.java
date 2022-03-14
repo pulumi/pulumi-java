@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodTemplateSpec;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.DeploymentStrategy;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.RollbackConfig;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentSpec {
     /**
      * Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
@@ -62,17 +62,17 @@ public final class DeploymentSpec {
      */
     private final PodTemplateSpec template;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentSpec(
-        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
-        @OutputCustomType.Parameter("paused") @Nullable Boolean paused,
-        @OutputCustomType.Parameter("progressDeadlineSeconds") @Nullable Integer progressDeadlineSeconds,
-        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
-        @OutputCustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
-        @OutputCustomType.Parameter("rollbackTo") @Nullable RollbackConfig rollbackTo,
-        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
-        @OutputCustomType.Parameter("strategy") @Nullable DeploymentStrategy strategy,
-        @OutputCustomType.Parameter("template") PodTemplateSpec template) {
+        @CustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @CustomType.Parameter("paused") @Nullable Boolean paused,
+        @CustomType.Parameter("progressDeadlineSeconds") @Nullable Integer progressDeadlineSeconds,
+        @CustomType.Parameter("replicas") @Nullable Integer replicas,
+        @CustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
+        @CustomType.Parameter("rollbackTo") @Nullable RollbackConfig rollbackTo,
+        @CustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @CustomType.Parameter("strategy") @Nullable DeploymentStrategy strategy,
+        @CustomType.Parameter("template") PodTemplateSpec template) {
         this.minReadySeconds = minReadySeconds;
         this.paused = paused;
         this.progressDeadlineSeconds = progressDeadlineSeconds;

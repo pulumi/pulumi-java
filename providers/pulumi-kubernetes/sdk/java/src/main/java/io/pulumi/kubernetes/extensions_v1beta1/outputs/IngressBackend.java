@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.TypedLocalObjectReference;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressBackend {
     /**
      * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
@@ -30,11 +30,11 @@ public final class IngressBackend {
      */
     private final Either<Integer,String> servicePort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressBackend(
-        @OutputCustomType.Parameter("resource") @Nullable TypedLocalObjectReference resource,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("servicePort") Either<Integer,String> servicePort) {
+        @CustomType.Parameter("resource") @Nullable TypedLocalObjectReference resource,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("servicePort") Either<Integer,String> servicePort) {
         this.resource = resource;
         this.serviceName = serviceName;
         this.servicePort = servicePort;

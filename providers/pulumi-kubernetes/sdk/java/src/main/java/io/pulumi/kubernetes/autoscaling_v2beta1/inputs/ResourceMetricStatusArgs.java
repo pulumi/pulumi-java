@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
      * currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.
      * 
      */
-    @InputImport(name="currentAverageUtilization")
+    @Import(name="currentAverageUtilization")
       private final @Nullable Output<Integer> currentAverageUtilization;
 
     public Output<Integer> getCurrentAverageUtilization() {
@@ -34,7 +34,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
      * currentAverageValue is the current value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type. It will always be set, regardless of the corresponding metric specification.
      * 
      */
-    @InputImport(name="currentAverageValue", required=true)
+    @Import(name="currentAverageValue", required=true)
       private final Output<String> currentAverageValue;
 
     public Output<String> getCurrentAverageValue() {
@@ -45,7 +45,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
      * name is the name of the resource in question.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

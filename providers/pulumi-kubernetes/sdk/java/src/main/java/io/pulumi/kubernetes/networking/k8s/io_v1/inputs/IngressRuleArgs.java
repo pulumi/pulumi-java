@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.HTTPIngressRuleValueArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -30,14 +30,14 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Host can be "precise" which is a domain name without the terminating dot of a network host (e.g. "foo.bar.com") or "wildcard", which is a domain name prefixed with a single wildcard label (e.g. "*.foo.com"). The wildcard character '*' must appear by itself as the first DNS label and matches only a single label. You cannot have a wildcard label by itself (e.g. Host == "*"). Requests will be matched against the Host field in the following way: 1. If Host is precise, the request matches this rule if the http host header is equal to Host. 2. If Host is a wildcard, then the request matches this rule if the http host header is to equal to the suffix (removing the first label) of the wildcard rule.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
         return this.host == null ? Output.empty() : this.host;
     }
 
-    @InputImport(name="http")
+    @Import(name="http")
       private final @Nullable Output<HTTPIngressRuleValueArgs> http;
 
     public Output<HTTPIngressRuleValueArgs> getHttp() {

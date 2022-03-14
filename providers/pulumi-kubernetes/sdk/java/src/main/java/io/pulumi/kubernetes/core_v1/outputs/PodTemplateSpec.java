@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PodTemplateSpec {
     /**
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -23,10 +23,10 @@ public final class PodTemplateSpec {
      */
     private final @Nullable PodSpec spec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PodTemplateSpec(
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("spec") @Nullable PodSpec spec) {
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("spec") @Nullable PodSpec spec) {
         this.metadata = metadata;
         this.spec = spec;
     }

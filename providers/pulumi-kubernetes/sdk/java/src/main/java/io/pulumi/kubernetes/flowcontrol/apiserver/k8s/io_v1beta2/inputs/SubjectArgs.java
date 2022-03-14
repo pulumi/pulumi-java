@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.GroupSubjectArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.ServiceAccountSubjectArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.UserSubjectArgs;
@@ -25,7 +25,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * `group` matches based on user group name.
      * 
      */
-    @InputImport(name="group")
+    @Import(name="group")
       private final @Nullable Output<GroupSubjectArgs> group;
 
     public Output<GroupSubjectArgs> getGroup() {
@@ -36,7 +36,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * `kind` indicates which one of the other fields is non-empty. Required
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -47,7 +47,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * `serviceAccount` matches ServiceAccounts.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<ServiceAccountSubjectArgs> serviceAccount;
 
     public Output<ServiceAccountSubjectArgs> getServiceAccount() {
@@ -58,7 +58,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * `user` matches based on username.
      * 
      */
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<UserSubjectArgs> user;
 
     public Output<UserSubjectArgs> getUser() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeSelectorTerm;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeSelector {
     /**
      * Required. A list of node selector terms. The terms are ORed.
@@ -16,8 +16,8 @@ public final class NodeSelector {
      */
     private final List<NodeSelectorTerm> nodeSelectorTerms;
 
-    @OutputCustomType.Constructor
-    private NodeSelector(@OutputCustomType.Parameter("nodeSelectorTerms") List<NodeSelectorTerm> nodeSelectorTerms) {
+    @CustomType.Constructor
+    private NodeSelector(@CustomType.Parameter("nodeSelectorTerms") List<NodeSelectorTerm> nodeSelectorTerms) {
         this.nodeSelectorTerms = nodeSelectorTerms;
     }
 

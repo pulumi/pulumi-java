@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
      * May contain labels and annotations that will be copied into the PVC when creating it. No other fields are allowed and will be rejected during validation.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -34,7 +34,7 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
      * The specification for the PersistentVolumeClaim. The entire content is copied unchanged into the PVC that gets created from this template. The same fields as in a PersistentVolumeClaim are also valid here.
      * 
      */
-    @InputImport(name="spec", required=true)
+    @Import(name="spec", required=true)
       private final Output<PersistentVolumeClaimSpecArgs> spec;
 
     public Output<PersistentVolumeClaimSpecArgs> getSpec() {

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apps_v1.inputs.RollingUpdateDeploymentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
      * 
      */
-    @InputImport(name="rollingUpdate")
+    @Import(name="rollingUpdate")
       private final @Nullable Output<RollingUpdateDeploymentArgs> rollingUpdate;
 
     public Output<RollingUpdateDeploymentArgs> getRollingUpdate() {
@@ -38,7 +38,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      *  - `"RollingUpdate"` Replace the old ReplicaSets by new one using rolling update i.e gradually scale down the old ReplicaSets and scale up the new one.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

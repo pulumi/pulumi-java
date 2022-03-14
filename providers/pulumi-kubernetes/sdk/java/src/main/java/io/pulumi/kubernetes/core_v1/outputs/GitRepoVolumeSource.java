@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GitRepoVolumeSource {
     /**
      * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
@@ -27,11 +27,11 @@ public final class GitRepoVolumeSource {
      */
     private final @Nullable String revision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitRepoVolumeSource(
-        @OutputCustomType.Parameter("directory") @Nullable String directory,
-        @OutputCustomType.Parameter("repository") String repository,
-        @OutputCustomType.Parameter("revision") @Nullable String revision) {
+        @CustomType.Parameter("directory") @Nullable String directory,
+        @CustomType.Parameter("repository") String repository,
+        @CustomType.Parameter("revision") @Nullable String revision) {
         this.directory = directory;
         this.repository = repository;
         this.revision = revision;

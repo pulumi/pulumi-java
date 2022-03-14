@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LoadBalancerStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.Condition;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceStatus {
     /**
      * Current service state
@@ -24,10 +24,10 @@ public final class ServiceStatus {
      */
     private final @Nullable LoadBalancerStatus loadBalancer;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceStatus(
-        @OutputCustomType.Parameter("conditions") @Nullable List<Condition> conditions,
-        @OutputCustomType.Parameter("loadBalancer") @Nullable LoadBalancerStatus loadBalancer) {
+        @CustomType.Parameter("conditions") @Nullable List<Condition> conditions,
+        @CustomType.Parameter("loadBalancer") @Nullable LoadBalancerStatus loadBalancer) {
         this.conditions = conditions;
         this.loadBalancer = loadBalancer;
     }

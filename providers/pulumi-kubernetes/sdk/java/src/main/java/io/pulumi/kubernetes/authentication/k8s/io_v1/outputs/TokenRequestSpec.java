@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.authentication.k8s.io_v1.outputs.BoundObjectReference;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TokenRequestSpec {
     /**
      * Audiences are the intendend audiences of the token. A recipient of a token must identitfy themself with an identifier in the list of audiences of the token, and otherwise should reject the token. A token issued for multiple audiences may be used to authenticate against any of the audiences listed but implies a high degree of trust between the target audiences.
@@ -30,11 +30,11 @@ public final class TokenRequestSpec {
      */
     private final @Nullable Integer expirationSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TokenRequestSpec(
-        @OutputCustomType.Parameter("audiences") List<String> audiences,
-        @OutputCustomType.Parameter("boundObjectRef") @Nullable BoundObjectReference boundObjectRef,
-        @OutputCustomType.Parameter("expirationSeconds") @Nullable Integer expirationSeconds) {
+        @CustomType.Parameter("audiences") List<String> audiences,
+        @CustomType.Parameter("boundObjectRef") @Nullable BoundObjectReference boundObjectRef,
+        @CustomType.Parameter("expirationSeconds") @Nullable Integer expirationSeconds) {
         this.audiences = audiences;
         this.boundObjectRef = boundObjectRef;
         this.expirationSeconds = expirationSeconds;

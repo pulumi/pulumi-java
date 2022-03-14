@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.ReplicationControllerArgs;
@@ -24,7 +24,7 @@ public class ReplicationController extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -38,7 +38,7 @@ public class ReplicationController extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -52,7 +52,7 @@ public class ReplicationController extends io.pulumi.resources.CustomResource {
      * If the Labels of a ReplicationController are empty, they are defaulted to be the same as the Pod(s) that the replication controller manages. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
@@ -66,7 +66,7 @@ public class ReplicationController extends io.pulumi.resources.CustomResource {
      * Spec defines the specification of the desired behavior of the replication controller. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    @OutputExport(name="spec", type=ReplicationControllerSpec.class, parameters={})
+    @Export(name="spec", type=ReplicationControllerSpec.class, parameters={})
     private Output</* @Nullable */ ReplicationControllerSpec> spec;
 
     /**
@@ -80,7 +80,7 @@ public class ReplicationController extends io.pulumi.resources.CustomResource {
      * Status is the most recently observed status of the replication controller. This data may be out of date by some window of time. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
      * 
      */
-    @OutputExport(name="status", type=ReplicationControllerStatus.class, parameters={})
+    @Export(name="status", type=ReplicationControllerStatus.class, parameters={})
     private Output</* @Nullable */ ReplicationControllerStatus> status;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.authentication.k8s.io_v1beta1;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.authentication.k8s.io_v1beta1.TokenReviewArgs;
@@ -26,7 +26,7 @@ public class TokenReview extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -40,7 +40,7 @@ public class TokenReview extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -50,7 +50,7 @@ public class TokenReview extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     public Output</* @Nullable */ ObjectMeta> getMetadata() {
@@ -60,7 +60,7 @@ public class TokenReview extends io.pulumi.resources.CustomResource {
      * Spec holds information about the request being evaluated
      * 
      */
-    @OutputExport(name="spec", type=TokenReviewSpec.class, parameters={})
+    @Export(name="spec", type=TokenReviewSpec.class, parameters={})
     private Output<TokenReviewSpec> spec;
 
     /**
@@ -74,7 +74,7 @@ public class TokenReview extends io.pulumi.resources.CustomResource {
      * Status is filled in by the server and indicates whether the request can be authenticated.
      * 
      */
-    @OutputExport(name="status", type=TokenReviewStatus.class, parameters={})
+    @Export(name="status", type=TokenReviewStatus.class, parameters={})
     private Output</* @Nullable */ TokenReviewStatus> status;
 
     /**

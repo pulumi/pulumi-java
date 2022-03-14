@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apps_v1beta1.inputs.StatefulSetConditionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * collisionCount is the count of hash collisions for the StatefulSet. The StatefulSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
      * 
      */
-    @InputImport(name="collisionCount")
+    @Import(name="collisionCount")
       private final @Nullable Output<Integer> collisionCount;
 
     public Output<Integer> getCollisionCount() {
@@ -36,7 +36,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * Represents the latest available observations of a statefulset's current state.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<StatefulSetConditionArgs>> conditions;
 
     public Output<List<StatefulSetConditionArgs>> getConditions() {
@@ -47,7 +47,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * currentReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by currentRevision.
      * 
      */
-    @InputImport(name="currentReplicas")
+    @Import(name="currentReplicas")
       private final @Nullable Output<Integer> currentReplicas;
 
     public Output<Integer> getCurrentReplicas() {
@@ -58,7 +58,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * currentRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [0,currentReplicas).
      * 
      */
-    @InputImport(name="currentRevision")
+    @Import(name="currentRevision")
       private final @Nullable Output<String> currentRevision;
 
     public Output<String> getCurrentRevision() {
@@ -69,7 +69,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * observedGeneration is the most recent generation observed for this StatefulSet. It corresponds to the StatefulSet's generation, which is updated on mutation by the API Server.
      * 
      */
-    @InputImport(name="observedGeneration")
+    @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
@@ -80,7 +80,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * readyReplicas is the number of Pods created by the StatefulSet controller that have a Ready Condition.
      * 
      */
-    @InputImport(name="readyReplicas")
+    @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
 
     public Output<Integer> getReadyReplicas() {
@@ -91,7 +91,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * replicas is the number of Pods created by the StatefulSet controller.
      * 
      */
-    @InputImport(name="replicas", required=true)
+    @Import(name="replicas", required=true)
       private final Output<Integer> replicas;
 
     public Output<Integer> getReplicas() {
@@ -102,7 +102,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * updateRevision, if not empty, indicates the version of the StatefulSet used to generate Pods in the sequence [replicas-updatedReplicas,replicas)
      * 
      */
-    @InputImport(name="updateRevision")
+    @Import(name="updateRevision")
       private final @Nullable Output<String> updateRevision;
 
     public Output<String> getUpdateRevision() {
@@ -113,7 +113,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
      * updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.
      * 
      */
-    @InputImport(name="updatedReplicas")
+    @Import(name="updatedReplicas")
       private final @Nullable Output<Integer> updatedReplicas;
 
     public Output<Integer> getUpdatedReplicas() {

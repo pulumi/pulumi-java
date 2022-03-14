@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.IDRangeArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class RunAsUserStrategyOptionsArgs extends io.pulumi.resources.Reso
      * ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.
      * 
      */
-    @InputImport(name="ranges")
+    @Import(name="ranges")
       private final @Nullable Output<List<IDRangeArgs>> ranges;
 
     public Output<List<IDRangeArgs>> getRanges() {
@@ -35,7 +35,7 @@ public final class RunAsUserStrategyOptionsArgs extends io.pulumi.resources.Reso
      * rule is the strategy that will dictate the allowable RunAsUser values that may be set.
      * 
      */
-    @InputImport(name="rule", required=true)
+    @Import(name="rule", required=true)
       private final Output<String> rule;
 
     public Output<String> getRule() {

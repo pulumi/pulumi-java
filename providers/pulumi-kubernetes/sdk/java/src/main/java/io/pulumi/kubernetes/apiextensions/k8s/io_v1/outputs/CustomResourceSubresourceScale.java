@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomResourceSubresourceScale {
     /**
      * labelSelectorPath defines the JSON path inside of a custom resource that corresponds to Scale `status.selector`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.status` or `.spec`. Must be set to work with HorizontalPodAutoscaler. The field pointed by this JSON path must be a string field (not a complex selector struct) which contains a serialized label selector in string form. More info: https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions#scale-subresource If there is no value under the given path in the custom resource, the `status.selector` value in the `/scale` subresource will default to the empty string.
@@ -27,11 +27,11 @@ public final class CustomResourceSubresourceScale {
      */
     private final String statusReplicasPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomResourceSubresourceScale(
-        @OutputCustomType.Parameter("labelSelectorPath") @Nullable String labelSelectorPath,
-        @OutputCustomType.Parameter("specReplicasPath") String specReplicasPath,
-        @OutputCustomType.Parameter("statusReplicasPath") String statusReplicasPath) {
+        @CustomType.Parameter("labelSelectorPath") @Nullable String labelSelectorPath,
+        @CustomType.Parameter("specReplicasPath") String specReplicasPath,
+        @CustomType.Parameter("statusReplicasPath") String statusReplicasPath) {
         this.labelSelectorPath = labelSelectorPath;
         this.specReplicasPath = specReplicasPath;
         this.statusReplicasPath = statusReplicasPath;

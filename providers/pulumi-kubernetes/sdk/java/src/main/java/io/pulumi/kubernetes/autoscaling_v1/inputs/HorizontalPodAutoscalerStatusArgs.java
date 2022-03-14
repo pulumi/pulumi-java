@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * current average CPU utilization over all pods, represented as a percentage of requested CPU, e.g. 70 means that an average pod is using now 70% of its requested CPU.
      * 
      */
-    @InputImport(name="currentCPUUtilizationPercentage")
+    @Import(name="currentCPUUtilizationPercentage")
       private final @Nullable Output<Integer> currentCPUUtilizationPercentage;
 
     public Output<Integer> getCurrentCPUUtilizationPercentage() {
@@ -34,7 +34,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * current number of replicas of pods managed by this autoscaler.
      * 
      */
-    @InputImport(name="currentReplicas", required=true)
+    @Import(name="currentReplicas", required=true)
       private final Output<Integer> currentReplicas;
 
     public Output<Integer> getCurrentReplicas() {
@@ -45,7 +45,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * desired number of replicas of pods managed by this autoscaler.
      * 
      */
-    @InputImport(name="desiredReplicas", required=true)
+    @Import(name="desiredReplicas", required=true)
       private final Output<Integer> desiredReplicas;
 
     public Output<Integer> getDesiredReplicas() {
@@ -56,7 +56,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * last time the HorizontalPodAutoscaler scaled the number of pods; used by the autoscaler to control how often the number of pods is changed.
      * 
      */
-    @InputImport(name="lastScaleTime")
+    @Import(name="lastScaleTime")
       private final @Nullable Output<String> lastScaleTime;
 
     public Output<String> getLastScaleTime() {
@@ -67,7 +67,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
      * most recent generation observed by this autoscaler.
      * 
      */
-    @InputImport(name="observedGeneration")
+    @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {

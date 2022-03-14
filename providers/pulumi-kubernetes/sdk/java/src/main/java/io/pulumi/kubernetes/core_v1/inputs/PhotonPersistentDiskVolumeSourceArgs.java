@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      * 
      */
-    @InputImport(name="fsType")
+    @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
@@ -33,7 +33,7 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends io.pulumi.resour
      * ID that identifies Photon Controller persistent disk
      * 
      */
-    @InputImport(name="pdID", required=true)
+    @Import(name="pdID", required=true)
       private final Output<String> pdID;
 
     public Output<String> getPdID() {

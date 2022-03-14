@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerStateTerminated {
     /**
      * Container's ID in the format 'docker://<container_id>'
@@ -48,15 +48,15 @@ public final class ContainerStateTerminated {
      */
     private final @Nullable String startedAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerStateTerminated(
-        @OutputCustomType.Parameter("containerID") @Nullable String containerID,
-        @OutputCustomType.Parameter("exitCode") Integer exitCode,
-        @OutputCustomType.Parameter("finishedAt") @Nullable String finishedAt,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("reason") @Nullable String reason,
-        @OutputCustomType.Parameter("signal") @Nullable Integer signal,
-        @OutputCustomType.Parameter("startedAt") @Nullable String startedAt) {
+        @CustomType.Parameter("containerID") @Nullable String containerID,
+        @CustomType.Parameter("exitCode") Integer exitCode,
+        @CustomType.Parameter("finishedAt") @Nullable String finishedAt,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("reason") @Nullable String reason,
+        @CustomType.Parameter("signal") @Nullable Integer signal,
+        @CustomType.Parameter("startedAt") @Nullable String startedAt) {
         this.containerID = containerID;
         this.exitCode = exitCode;
         this.finishedAt = finishedAt;

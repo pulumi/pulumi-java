@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.ServiceBackendPort;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressServiceBackend {
     /**
      * Name is the referenced service. The service must exist in the same namespace as the Ingress object.
@@ -23,10 +23,10 @@ public final class IngressServiceBackend {
      */
     private final @Nullable ServiceBackendPort port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressServiceBackend(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") @Nullable ServiceBackendPort port) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") @Nullable ServiceBackendPort port) {
         this.name = name;
         this.port = port;
     }

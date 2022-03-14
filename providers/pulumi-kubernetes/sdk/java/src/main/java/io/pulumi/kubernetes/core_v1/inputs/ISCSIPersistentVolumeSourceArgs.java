@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
      * whether support iSCSI Discovery CHAP authentication
      * 
      */
-    @InputImport(name="chapAuthDiscovery")
+    @Import(name="chapAuthDiscovery")
       private final @Nullable Output<Boolean> chapAuthDiscovery;
 
     public Output<Boolean> getChapAuthDiscovery() {
@@ -37,7 +37,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
      * whether support iSCSI Session CHAP authentication
      * 
      */
-    @InputImport(name="chapAuthSession")
+    @Import(name="chapAuthSession")
       private final @Nullable Output<Boolean> chapAuthSession;
 
     public Output<Boolean> getChapAuthSession() {
@@ -48,7 +48,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
      * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#iscsi
      * 
      */
-    @InputImport(name="fsType")
+    @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
@@ -59,7 +59,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
      * Custom iSCSI Initiator Name. If initiatorName is specified with iscsiInterface simultaneously, new iSCSI interface <target portal>:<volume name> will be created for the connection.
      * 
      */
-    @InputImport(name="initiatorName")
+    @Import(name="initiatorName")
       private final @Nullable Output<String> initiatorName;
 
     public Output<String> getInitiatorName() {
@@ -70,7 +70,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
      * Target iSCSI Qualified Name.
      * 
      */
-    @InputImport(name="iqn", required=true)
+    @Import(name="iqn", required=true)
       private final Output<String> iqn;
 
     public Output<String> getIqn() {
@@ -81,7 +81,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
      * iSCSI Interface Name that uses an iSCSI transport. Defaults to 'default' (tcp).
      * 
      */
-    @InputImport(name="iscsiInterface")
+    @Import(name="iscsiInterface")
       private final @Nullable Output<String> iscsiInterface;
 
     public Output<String> getIscsiInterface() {
@@ -92,7 +92,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
      * iSCSI Target Lun number.
      * 
      */
-    @InputImport(name="lun", required=true)
+    @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
     public Output<Integer> getLun() {
@@ -103,7 +103,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
      * iSCSI Target Portal List. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
      * 
      */
-    @InputImport(name="portals")
+    @Import(name="portals")
       private final @Nullable Output<List<String>> portals;
 
     public Output<List<String>> getPortals() {
@@ -114,7 +114,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
      * ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -125,7 +125,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
      * CHAP Secret for iSCSI target and initiator authentication
      * 
      */
-    @InputImport(name="secretRef")
+    @Import(name="secretRef")
       private final @Nullable Output<SecretReferenceArgs> secretRef;
 
     public Output<SecretReferenceArgs> getSecretRef() {
@@ -136,7 +136,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
      * iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).
      * 
      */
-    @InputImport(name="targetPortal", required=true)
+    @Import(name="targetPortal", required=true)
       private final Output<String> targetPortal;
 
     public Output<String> getTargetPortal() {

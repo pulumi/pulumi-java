@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ConfigMapNodeConfigSourceArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NodeConfigSourceArgs extends io.pulumi.resources.ResourceArgs
      * ConfigMap is a reference to a Node's ConfigMap
      * 
      */
-    @InputImport(name="configMap")
+    @Import(name="configMap")
       private final @Nullable Output<ConfigMapNodeConfigSourceArgs> configMap;
 
     public Output<ConfigMapNodeConfigSourceArgs> getConfigMap() {

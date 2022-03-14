@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authentication.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
      * Audiences is a list of the identifiers that the resource server presented with the token identifies as. Audience-aware token authenticators will verify that the token was intended for at least one of the audiences in this list. If no audiences are provided, the audience will default to the audience of the Kubernetes apiserver.
      * 
      */
-    @InputImport(name="audiences")
+    @Import(name="audiences")
       private final @Nullable Output<List<String>> audiences;
 
     public Output<List<String>> getAudiences() {
@@ -34,7 +34,7 @@ public final class TokenReviewSpecArgs extends io.pulumi.resources.ResourceArgs 
      * Token is the opaque bearer token.
      * 
      */
-    @InputImport(name="token")
+    @Import(name="token")
       private final @Nullable Output<String> token;
 
     public Output<String> getToken() {

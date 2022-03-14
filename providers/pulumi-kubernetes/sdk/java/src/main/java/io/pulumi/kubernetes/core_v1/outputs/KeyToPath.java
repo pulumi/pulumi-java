@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyToPath {
     /**
      * The key to project.
@@ -28,11 +28,11 @@ public final class KeyToPath {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyToPath(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("mode") @Nullable Integer mode,
+        @CustomType.Parameter("path") String path) {
         this.key = key;
         this.mode = mode;
         this.path = path;

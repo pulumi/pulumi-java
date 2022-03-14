@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.enums.ServiceSpecType;
 import io.pulumi.kubernetes.core_v1.inputs.ServicePortArgs;
 import io.pulumi.kubernetes.core_v1.inputs.SessionAffinityConfigArgs;
@@ -30,7 +30,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * allocateLoadBalancerNodePorts defines if NodePorts will be automatically allocated for services with type LoadBalancer.  Default is "true". It may be set to "false" if the cluster load-balancer does not rely on NodePorts.  If the caller requests specific NodePorts (by specifying a value), those requests will be respected, regardless of this field. This field may only be set for services with type LoadBalancer and will be cleared if the type is changed to any other type. This field is beta-level and is only honored by servers that enable the ServiceLBNodePortControl feature.
      * 
      */
-    @InputImport(name="allocateLoadBalancerNodePorts")
+    @Import(name="allocateLoadBalancerNodePorts")
       private final @Nullable Output<Boolean> allocateLoadBalancerNodePorts;
 
     public Output<Boolean> getAllocateLoadBalancerNodePorts() {
@@ -41,7 +41,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * clusterIP is the IP address of the service and is usually assigned randomly. If an address is specified manually, is in-range (as per system configuration), and is not in use, it will be allocated to the service; otherwise creation of the service will fail. This field may not be changed through updates unless the type field is also being changed to ExternalName (which requires this field to be blank) or the type field is being changed from ExternalName (in which case this field may optionally be specified, as describe above).  Valid values are "None", empty string (""), or a valid IP address. Setting this to "None" makes a "headless service" (no virtual IP), which is useful when direct endpoint connections are preferred and proxying is not required.  Only applies to types ClusterIP, NodePort, and LoadBalancer. If this field is specified when creating a Service of type ExternalName, creation will fail. This field will be wiped when updating a Service to type ExternalName. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
      * 
      */
-    @InputImport(name="clusterIP")
+    @Import(name="clusterIP")
       private final @Nullable Output<String> clusterIP;
 
     public Output<String> getClusterIP() {
@@ -54,7 +54,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This field may hold a maximum of two entries (dual-stack IPs, in either order). These IPs must correspond to the values of the ipFamilies field. Both clusterIPs and ipFamilies are governed by the ipFamilyPolicy field. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
      * 
      */
-    @InputImport(name="clusterIPs")
+    @Import(name="clusterIPs")
       private final @Nullable Output<List<String>> clusterIPs;
 
     public Output<List<String>> getClusterIPs() {
@@ -65,7 +65,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * externalIPs is a list of IP addresses for which nodes in the cluster will also accept traffic for this service.  These IPs are not managed by Kubernetes.  The user is responsible for ensuring that traffic arrives at a node with this IP.  A common example is external load-balancers that are not part of the Kubernetes system.
      * 
      */
-    @InputImport(name="externalIPs")
+    @Import(name="externalIPs")
       private final @Nullable Output<List<String>> externalIPs;
 
     public Output<List<String>> getExternalIPs() {
@@ -76,7 +76,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * externalName is the external reference that discovery mechanisms will return as an alias for this service (e.g. a DNS CNAME record). No proxying will be involved.  Must be a lowercase RFC-1123 hostname (https://tools.ietf.org/html/rfc1123) and requires `type` to be "ExternalName".
      * 
      */
-    @InputImport(name="externalName")
+    @Import(name="externalName")
       private final @Nullable Output<String> externalName;
 
     public Output<String> getExternalName() {
@@ -91,7 +91,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Local"` specifies node-local endpoints behavior.
      * 
      */
-    @InputImport(name="externalTrafficPolicy")
+    @Import(name="externalTrafficPolicy")
       private final @Nullable Output<String> externalTrafficPolicy;
 
     public Output<String> getExternalTrafficPolicy() {
@@ -102,7 +102,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * healthCheckNodePort specifies the healthcheck nodePort for the service. This only applies when type is set to LoadBalancer and externalTrafficPolicy is set to Local. If a value is specified, is in-range, and is not in use, it will be used.  If not specified, a value will be automatically allocated.  External systems (e.g. load-balancers) can use this port to determine if a given node holds endpoints for this service or not.  If this field is specified when creating a Service which does not need it, creation will fail. This field will be wiped when updating a Service to no longer need it (e.g. changing type).
      * 
      */
-    @InputImport(name="healthCheckNodePort")
+    @Import(name="healthCheckNodePort")
       private final @Nullable Output<Integer> healthCheckNodePort;
 
     public Output<Integer> getHealthCheckNodePort() {
@@ -113,7 +113,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * InternalTrafficPolicy specifies if the cluster internal traffic should be routed to all endpoints or node-local endpoints only. "Cluster" routes internal traffic to a Service to all endpoints. "Local" routes traffic to node-local endpoints only, traffic is dropped if no node-local endpoints are ready. The default value is "Cluster".
      * 
      */
-    @InputImport(name="internalTrafficPolicy")
+    @Import(name="internalTrafficPolicy")
       private final @Nullable Output<String> internalTrafficPolicy;
 
     public Output<String> getInternalTrafficPolicy() {
@@ -126,7 +126,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This field may hold a maximum of two entries (dual-stack families, in either order).  These families must correspond to the values of the clusterIPs field, if specified. Both clusterIPs and ipFamilies are governed by the ipFamilyPolicy field.
      * 
      */
-    @InputImport(name="ipFamilies")
+    @Import(name="ipFamilies")
       private final @Nullable Output<List<String>> ipFamilies;
 
     public Output<List<String>> getIpFamilies() {
@@ -137,7 +137,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * ipFamily specifies whether this Service has a preference for a particular IP family (e.g. IPv4 vs. IPv6).  If a specific IP family is requested, the clusterIP field will be allocated from that family, if it is available in the cluster.  If no IP family is requested, the cluster's primary IP family will be used. Other IP fields (loadBalancerIP, loadBalancerSourceRanges, externalIPs) and controllers which allocate external load-balancers should use the same IP family.  Endpoints for this Service will be of this family.  This field is immutable after creation. Assigning a ServiceIPFamily not available in the cluster (e.g. IPv6 in IPv4 only cluster) is an error condition and will fail during clusterIP assignment.
      * 
      */
-    @InputImport(name="ipFamily")
+    @Import(name="ipFamily")
       private final @Nullable Output<String> ipFamily;
 
     public Output<String> getIpFamily() {
@@ -148,7 +148,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * IPFamilyPolicy represents the dual-stack-ness requested or required by this Service. If there is no value provided, then this field will be set to SingleStack. Services can be "SingleStack" (a single IP family), "PreferDualStack" (two IP families on dual-stack configured clusters or a single IP family on single-stack clusters), or "RequireDualStack" (two IP families on dual-stack configured clusters, otherwise fail). The ipFamilies and clusterIPs fields depend on the value of this field. This field will be wiped when updating a service to type ExternalName.
      * 
      */
-    @InputImport(name="ipFamilyPolicy")
+    @Import(name="ipFamilyPolicy")
       private final @Nullable Output<String> ipFamilyPolicy;
 
     public Output<String> getIpFamilyPolicy() {
@@ -159,7 +159,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * loadBalancerClass is the class of the load balancer implementation this Service belongs to. If specified, the value of this field must be a label-style identifier, with an optional prefix, e.g. "internal-vip" or "example.com/internal-vip". Unprefixed names are reserved for end-users. This field can only be set when the Service type is 'LoadBalancer'. If not set, the default load balancer implementation is used, today this is typically done through the cloud provider integration, but should apply for any default implementation. If set, it is assumed that a load balancer implementation is watching for Services with a matching class. Any default load balancer implementation (e.g. cloud providers) should ignore Services that set this field. This field can only be set when creating or updating a Service to type 'LoadBalancer'. Once set, it can not be changed. This field will be wiped when a service is updated to a non 'LoadBalancer' type.
      * 
      */
-    @InputImport(name="loadBalancerClass")
+    @Import(name="loadBalancerClass")
       private final @Nullable Output<String> loadBalancerClass;
 
     public Output<String> getLoadBalancerClass() {
@@ -170,7 +170,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Only applies to Service Type: LoadBalancer LoadBalancer will get created with the IP specified in this field. This feature depends on whether the underlying cloud-provider supports specifying the loadBalancerIP when a load balancer is created. This field will be ignored if the cloud-provider does not support the feature.
      * 
      */
-    @InputImport(name="loadBalancerIP")
+    @Import(name="loadBalancerIP")
       private final @Nullable Output<String> loadBalancerIP;
 
     public Output<String> getLoadBalancerIP() {
@@ -181,7 +181,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * If specified and supported by the platform, this will restrict traffic through the cloud-provider load-balancer will be restricted to the specified client IPs. This field will be ignored if the cloud-provider does not support the feature." More info: https://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/
      * 
      */
-    @InputImport(name="loadBalancerSourceRanges")
+    @Import(name="loadBalancerSourceRanges")
       private final @Nullable Output<List<String>> loadBalancerSourceRanges;
 
     public Output<List<String>> getLoadBalancerSourceRanges() {
@@ -192,7 +192,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The list of ports that are exposed by this service. More info: https://kubernetes.io/docs/concepts/services-networking/service/#virtual-ips-and-service-proxies
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<ServicePortArgs>> ports;
 
     public Output<List<ServicePortArgs>> getPorts() {
@@ -203,7 +203,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * publishNotReadyAddresses indicates that any agent which deals with endpoints for this Service should disregard any indications of ready/not-ready. The primary use case for setting this field is for a StatefulSet's Headless Service to propagate SRV DNS records for its Pods for the purpose of peer discovery. The Kubernetes controllers that generate Endpoints and EndpointSlice resources for Services interpret this to mean that all endpoints are considered "ready" even if the Pods themselves are not. Agents which consume only Kubernetes generated endpoints through the Endpoints or EndpointSlice resources can safely assume this behavior.
      * 
      */
-    @InputImport(name="publishNotReadyAddresses")
+    @Import(name="publishNotReadyAddresses")
       private final @Nullable Output<Boolean> publishNotReadyAddresses;
 
     public Output<Boolean> getPublishNotReadyAddresses() {
@@ -214,7 +214,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Route service traffic to pods with label keys and values matching this selector. If empty or not present, the service is assumed to have an external process managing its endpoints, which Kubernetes will not modify. Only applies to types ClusterIP, NodePort, and LoadBalancer. Ignored if type is ExternalName. More info: https://kubernetes.io/docs/concepts/services-networking/service/
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<Map<String,String>> selector;
 
     public Output<Map<String,String>> getSelector() {
@@ -229,7 +229,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"None"` - no session affinity.
      * 
      */
-    @InputImport(name="sessionAffinity")
+    @Import(name="sessionAffinity")
       private final @Nullable Output<String> sessionAffinity;
 
     public Output<String> getSessionAffinity() {
@@ -240,7 +240,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * sessionAffinityConfig contains the configurations of session affinity.
      * 
      */
-    @InputImport(name="sessionAffinityConfig")
+    @Import(name="sessionAffinityConfig")
       private final @Nullable Output<SessionAffinityConfigArgs> sessionAffinityConfig;
 
     public Output<SessionAffinityConfigArgs> getSessionAffinityConfig() {
@@ -251,7 +251,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * topologyKeys is a preference-order list of topology keys which implementations of services should use to preferentially sort endpoints when accessing this Service, it can not be used at the same time as externalTrafficPolicy=Local. Topology keys must be valid label keys and at most 16 keys may be specified. Endpoints are chosen based on the first topology key with available backends. If this field is specified and all entries have no backends that match the topology of the client, the service has no backends for that client and connections should fail. The special value "*" may be used to mean "any topology". This catch-all value, if used, only makes sense as the last value in the list. If this is not specified or empty, no topology constraints will be applied.
      * 
      */
-    @InputImport(name="topologyKeys")
+    @Import(name="topologyKeys")
       private final @Nullable Output<List<String>> topologyKeys;
 
     public Output<List<String>> getTopologyKeys() {
@@ -268,7 +268,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"NodePort"` means a service will be exposed on one port of every node, in addition to 'ClusterIP' type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ServiceSpecType>> type;
 
     public Output<Either<String,ServiceSpecType>> getType() {

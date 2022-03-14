@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.JSONSchemaPropsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CustomResourceValidationArgs extends io.pulumi.resources.Reso
      * openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.
      * 
      */
-    @InputImport(name="openAPIV3Schema")
+    @Import(name="openAPIV3Schema")
       private final @Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema;
 
     public Output<JSONSchemaPropsArgs> getOpenAPIV3Schema() {

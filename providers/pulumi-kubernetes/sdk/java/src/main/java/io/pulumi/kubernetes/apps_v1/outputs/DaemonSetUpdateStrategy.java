@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.apps_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apps_v1.outputs.RollingUpdateDaemonSet;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DaemonSetUpdateStrategy {
     /**
      * Rolling update config params. Present only if type = "RollingUpdate".
@@ -27,10 +27,10 @@ public final class DaemonSetUpdateStrategy {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DaemonSetUpdateStrategy(
-        @OutputCustomType.Parameter("rollingUpdate") @Nullable RollingUpdateDaemonSet rollingUpdate,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("rollingUpdate") @Nullable RollingUpdateDaemonSet rollingUpdate,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.rollingUpdate = rollingUpdate;
         this.type = type;
     }

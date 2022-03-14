@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CSIVolumeSource {
     /**
      * Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.
@@ -40,13 +40,13 @@ public final class CSIVolumeSource {
      */
     private final @Nullable Map<String,String> volumeAttributes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CSIVolumeSource(
-        @OutputCustomType.Parameter("driver") String driver,
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("nodePublishSecretRef") @Nullable LocalObjectReference nodePublishSecretRef,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("volumeAttributes") @Nullable Map<String,String> volumeAttributes) {
+        @CustomType.Parameter("driver") String driver,
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("nodePublishSecretRef") @Nullable LocalObjectReference nodePublishSecretRef,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("volumeAttributes") @Nullable Map<String,String> volumeAttributes) {
         this.driver = driver;
         this.fsType = fsType;
         this.nodePublishSecretRef = nodePublishSecretRef;

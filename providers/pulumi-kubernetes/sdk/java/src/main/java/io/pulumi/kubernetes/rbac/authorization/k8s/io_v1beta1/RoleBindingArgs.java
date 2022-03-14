@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs.RoleRefArgs;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs.SubjectArgs;
@@ -22,7 +22,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -33,7 +33,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -44,7 +44,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
      * Standard object's metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -55,7 +55,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
      * RoleRef can reference a Role in the current namespace or a ClusterRole in the global namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.
      * 
      */
-    @InputImport(name="roleRef", required=true)
+    @Import(name="roleRef", required=true)
       private final Output<RoleRefArgs> roleRef;
 
     public Output<RoleRefArgs> getRoleRef() {
@@ -66,7 +66,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
      * Subjects holds references to the objects the role applies to.
      * 
      */
-    @InputImport(name="subjects")
+    @Import(name="subjects")
       private final @Nullable Output<List<SubjectArgs>> subjects;
 
     public Output<List<SubjectArgs>> getSubjects() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ScopedResourceSelectorRequirement;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScopeSelector {
     /**
      * A list of scope selector requirements by scope of the resources.
@@ -17,8 +17,8 @@ public final class ScopeSelector {
      */
     private final @Nullable List<ScopedResourceSelectorRequirement> matchExpressions;
 
-    @OutputCustomType.Constructor
-    private ScopeSelector(@OutputCustomType.Parameter("matchExpressions") @Nullable List<ScopedResourceSelectorRequirement> matchExpressions) {
+    @CustomType.Constructor
+    private ScopeSelector(@CustomType.Parameter("matchExpressions") @Nullable List<ScopedResourceSelectorRequirement> matchExpressions) {
         this.matchExpressions = matchExpressions;
     }
 

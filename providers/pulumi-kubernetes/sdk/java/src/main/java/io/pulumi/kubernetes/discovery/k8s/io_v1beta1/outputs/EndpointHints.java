@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs.ForZone;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointHints {
     /**
      * forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.
@@ -17,8 +17,8 @@ public final class EndpointHints {
      */
     private final @Nullable List<ForZone> forZones;
 
-    @OutputCustomType.Constructor
-    private EndpointHints(@OutputCustomType.Parameter("forZones") @Nullable List<ForZone> forZones) {
+    @CustomType.Constructor
+    private EndpointHints(@CustomType.Parameter("forZones") @Nullable List<ForZone> forZones) {
         this.forZones = forZones;
     }
 

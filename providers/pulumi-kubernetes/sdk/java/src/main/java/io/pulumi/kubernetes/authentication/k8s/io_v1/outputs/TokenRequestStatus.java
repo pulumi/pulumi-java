@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TokenRequestStatus {
     /**
      * ExpirationTimestamp is the time of expiration of the returned token.
@@ -20,10 +20,10 @@ public final class TokenRequestStatus {
      */
     private final String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TokenRequestStatus(
-        @OutputCustomType.Parameter("expirationTimestamp") String expirationTimestamp,
-        @OutputCustomType.Parameter("token") String token) {
+        @CustomType.Parameter("expirationTimestamp") String expirationTimestamp,
+        @CustomType.Parameter("token") String token) {
         this.expirationTimestamp = expirationTimestamp;
         this.token = token;
     }

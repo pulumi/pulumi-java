@@ -3,12 +3,12 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LimitRangeItem;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LimitRangeSpec {
     /**
      * Limits is the list of LimitRangeItem objects that are enforced.
@@ -16,8 +16,8 @@ public final class LimitRangeSpec {
      */
     private final List<LimitRangeItem> limits;
 
-    @OutputCustomType.Constructor
-    private LimitRangeSpec(@OutputCustomType.Parameter("limits") List<LimitRangeItem> limits) {
+    @CustomType.Constructor
+    private LimitRangeSpec(@CustomType.Parameter("limits") List<LimitRangeItem> limits) {
         this.limits = limits;
     }
 

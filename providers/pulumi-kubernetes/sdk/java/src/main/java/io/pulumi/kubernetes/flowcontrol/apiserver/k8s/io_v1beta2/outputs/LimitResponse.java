@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.QueuingConfiguration;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LimitResponse {
     /**
      * `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `"Queue"`.
@@ -23,10 +23,10 @@ public final class LimitResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LimitResponse(
-        @OutputCustomType.Parameter("queuing") @Nullable QueuingConfiguration queuing,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("queuing") @Nullable QueuingConfiguration queuing,
+        @CustomType.Parameter("type") String type) {
         this.queuing = queuing;
         this.type = type;
     }

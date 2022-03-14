@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.SecretReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RBDPersistentVolumeSource {
     /**
      * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd
@@ -55,16 +55,16 @@ public final class RBDPersistentVolumeSource {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RBDPersistentVolumeSource(
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("keyring") @Nullable String keyring,
-        @OutputCustomType.Parameter("monitors") List<String> monitors,
-        @OutputCustomType.Parameter("pool") @Nullable String pool,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("secretRef") @Nullable SecretReference secretRef,
-        @OutputCustomType.Parameter("user") @Nullable String user) {
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("keyring") @Nullable String keyring,
+        @CustomType.Parameter("monitors") List<String> monitors,
+        @CustomType.Parameter("pool") @Nullable String pool,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("secretRef") @Nullable SecretReference secretRef,
+        @CustomType.Parameter("user") @Nullable String user) {
         this.fsType = fsType;
         this.image = image;
         this.keyring = keyring;

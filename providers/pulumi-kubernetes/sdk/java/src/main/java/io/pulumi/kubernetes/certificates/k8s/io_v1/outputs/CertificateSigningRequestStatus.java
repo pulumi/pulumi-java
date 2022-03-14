@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.outputs.CertificateSigningRequestCondition;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateSigningRequestStatus {
     /**
      * certificate is populated with an issued certificate by the signer after an Approved condition is present. This field is set via the /status subresource. Once populated, this field is immutable.
@@ -45,10 +45,10 @@ public final class CertificateSigningRequestStatus {
      */
     private final @Nullable List<CertificateSigningRequestCondition> conditions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateSigningRequestStatus(
-        @OutputCustomType.Parameter("certificate") @Nullable String certificate,
-        @OutputCustomType.Parameter("conditions") @Nullable List<CertificateSigningRequestCondition> conditions) {
+        @CustomType.Parameter("certificate") @Nullable String certificate,
+        @CustomType.Parameter("conditions") @Nullable List<CertificateSigningRequestCondition> conditions) {
         this.certificate = certificate;
         this.conditions = conditions;
     }

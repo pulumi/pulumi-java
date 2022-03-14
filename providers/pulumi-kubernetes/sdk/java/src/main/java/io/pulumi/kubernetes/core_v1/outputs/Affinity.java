@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeAffinity;
 import io.pulumi.kubernetes.core_v1.outputs.PodAffinity;
 import io.pulumi.kubernetes.core_v1.outputs.PodAntiAffinity;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Affinity {
     /**
      * Describes node affinity scheduling rules for the pod.
@@ -29,11 +29,11 @@ public final class Affinity {
      */
     private final @Nullable PodAntiAffinity podAntiAffinity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Affinity(
-        @OutputCustomType.Parameter("nodeAffinity") @Nullable NodeAffinity nodeAffinity,
-        @OutputCustomType.Parameter("podAffinity") @Nullable PodAffinity podAffinity,
-        @OutputCustomType.Parameter("podAntiAffinity") @Nullable PodAntiAffinity podAntiAffinity) {
+        @CustomType.Parameter("nodeAffinity") @Nullable NodeAffinity nodeAffinity,
+        @CustomType.Parameter("podAffinity") @Nullable PodAffinity podAffinity,
+        @CustomType.Parameter("podAntiAffinity") @Nullable PodAntiAffinity podAntiAffinity) {
         this.nodeAffinity = nodeAffinity;
         this.podAffinity = podAffinity;
         this.podAntiAffinity = podAntiAffinity;

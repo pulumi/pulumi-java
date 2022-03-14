@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.WebhookClientConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      * conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail. Defaults to `["v1beta1"]`.
      * 
      */
-    @InputImport(name="conversionReviewVersions")
+    @Import(name="conversionReviewVersions")
       private final @Nullable Output<List<String>> conversionReviewVersions;
 
     public Output<List<String>> getConversionReviewVersions() {
@@ -36,7 +36,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      *   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhookClientConfig to be set.
      * 
      */
-    @InputImport(name="strategy", required=true)
+    @Import(name="strategy", required=true)
       private final Output<String> strategy;
 
     public Output<String> getStrategy() {
@@ -47,7 +47,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      * webhookClientConfig is the instructions for how to call the webhook if strategy is `Webhook`. Required when `strategy` is set to `Webhook`.
      * 
      */
-    @InputImport(name="webhookClientConfig")
+    @Import(name="webhookClientConfig")
       private final @Nullable Output<WebhookClientConfigArgs> webhookClientConfig;
 
     public Output<WebhookClientConfigArgs> getWebhookClientConfig() {

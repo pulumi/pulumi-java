@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
      * Path is the URL path of the request
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -33,7 +33,7 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
      * Verb is the standard HTTP verb
      * 
      */
-    @InputImport(name="verb")
+    @Import(name="verb")
       private final @Nullable Output<String> verb;
 
     public Output<String> getVerb() {

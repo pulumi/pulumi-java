@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.batch_v1beta1.outputs.JobTemplateSpec;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CronJobSpec {
     /**
      * Specifies how to treat concurrent executions of a Job. Valid values are: - "Allow" (default): allows CronJobs to run concurrently; - "Forbid": forbids concurrent runs, skipping next run if previous run hasn't finished yet; - "Replace": cancels currently running job and replaces it with a new one
@@ -50,15 +50,15 @@ public final class CronJobSpec {
      */
     private final @Nullable Boolean suspend;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CronJobSpec(
-        @OutputCustomType.Parameter("concurrencyPolicy") @Nullable String concurrencyPolicy,
-        @OutputCustomType.Parameter("failedJobsHistoryLimit") @Nullable Integer failedJobsHistoryLimit,
-        @OutputCustomType.Parameter("jobTemplate") JobTemplateSpec jobTemplate,
-        @OutputCustomType.Parameter("schedule") String schedule,
-        @OutputCustomType.Parameter("startingDeadlineSeconds") @Nullable Integer startingDeadlineSeconds,
-        @OutputCustomType.Parameter("successfulJobsHistoryLimit") @Nullable Integer successfulJobsHistoryLimit,
-        @OutputCustomType.Parameter("suspend") @Nullable Boolean suspend) {
+        @CustomType.Parameter("concurrencyPolicy") @Nullable String concurrencyPolicy,
+        @CustomType.Parameter("failedJobsHistoryLimit") @Nullable Integer failedJobsHistoryLimit,
+        @CustomType.Parameter("jobTemplate") JobTemplateSpec jobTemplate,
+        @CustomType.Parameter("schedule") String schedule,
+        @CustomType.Parameter("startingDeadlineSeconds") @Nullable Integer startingDeadlineSeconds,
+        @CustomType.Parameter("successfulJobsHistoryLimit") @Nullable Integer successfulJobsHistoryLimit,
+        @CustomType.Parameter("suspend") @Nullable Boolean suspend) {
         this.concurrencyPolicy = concurrencyPolicy;
         this.failedJobsHistoryLimit = failedJobsHistoryLimit;
         this.jobTemplate = jobTemplate;

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
      * Version of the schema the FieldPath is written in terms of, defaults to "v1".
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -33,7 +33,7 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
      * Path of the field to select in the specified API version.
      * 
      */
-    @InputImport(name="fieldPath", required=true)
+    @Import(name="fieldPath", required=true)
       private final Output<String> fieldPath;
 
     public Output<String> getFieldPath() {

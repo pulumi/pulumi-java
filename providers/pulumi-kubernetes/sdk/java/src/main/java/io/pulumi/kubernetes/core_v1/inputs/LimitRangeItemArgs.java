@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * Default resource requirement limit value by resource name if resource limit is omitted.
      * 
      */
-    @InputImport(name="default")
+    @Import(name="default")
       private final @Nullable Output<Map<String,String>> $default;
 
     public Output<Map<String,String>> get$default() {
@@ -34,7 +34,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * DefaultRequest is the default resource requirement request value by resource name if resource request is omitted.
      * 
      */
-    @InputImport(name="defaultRequest")
+    @Import(name="defaultRequest")
       private final @Nullable Output<Map<String,String>> defaultRequest;
 
     public Output<Map<String,String>> getDefaultRequest() {
@@ -45,7 +45,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * Max usage constraints on this kind by resource name.
      * 
      */
-    @InputImport(name="max")
+    @Import(name="max")
       private final @Nullable Output<Map<String,String>> max;
 
     public Output<Map<String,String>> getMax() {
@@ -56,7 +56,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * MaxLimitRequestRatio if specified, the named resource must have a request and limit that are both non-zero where limit divided by request is less than or equal to the enumerated value; this represents the max burst for the named resource.
      * 
      */
-    @InputImport(name="maxLimitRequestRatio")
+    @Import(name="maxLimitRequestRatio")
       private final @Nullable Output<Map<String,String>> maxLimitRequestRatio;
 
     public Output<Map<String,String>> getMaxLimitRequestRatio() {
@@ -67,7 +67,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      * Min usage constraints on this kind by resource name.
      * 
      */
-    @InputImport(name="min")
+    @Import(name="min")
       private final @Nullable Output<Map<String,String>> min;
 
     public Output<Map<String,String>> getMin() {
@@ -83,7 +83,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Pod"` Limit that applies to all pods in a namespace
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

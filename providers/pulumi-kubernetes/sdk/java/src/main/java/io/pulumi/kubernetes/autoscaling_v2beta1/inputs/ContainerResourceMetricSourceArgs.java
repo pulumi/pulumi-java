@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * container is the name of the container in the pods of the scaling target
      * 
      */
-    @InputImport(name="container", required=true)
+    @Import(name="container", required=true)
       private final Output<String> container;
 
     public Output<String> getContainer() {
@@ -34,7 +34,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * name is the name of the resource in question.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
      * 
      */
-    @InputImport(name="targetAverageUtilization")
+    @Import(name="targetAverageUtilization")
       private final @Nullable Output<Integer> targetAverageUtilization;
 
     public Output<Integer> getTargetAverageUtilization() {
@@ -56,7 +56,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the "pods" metric source type.
      * 
      */
-    @InputImport(name="targetAverageValue")
+    @Import(name="targetAverageValue")
       private final @Nullable Output<String> targetAverageValue;
 
     public Output<String> getTargetAverageValue() {

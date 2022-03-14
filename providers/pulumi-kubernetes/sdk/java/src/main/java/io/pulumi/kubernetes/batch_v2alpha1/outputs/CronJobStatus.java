@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v2alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CronJobStatus {
     /**
      * A list of pointers to currently running jobs.
@@ -24,10 +24,10 @@ public final class CronJobStatus {
      */
     private final @Nullable String lastScheduleTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CronJobStatus(
-        @OutputCustomType.Parameter("active") @Nullable List<ObjectReference> active,
-        @OutputCustomType.Parameter("lastScheduleTime") @Nullable String lastScheduleTime) {
+        @CustomType.Parameter("active") @Nullable List<ObjectReference> active,
+        @CustomType.Parameter("lastScheduleTime") @Nullable String lastScheduleTime) {
         this.active = active;
         this.lastScheduleTime = lastScheduleTime;
     }

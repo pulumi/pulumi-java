@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.ContainerResourceMetricStatus;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.ExternalMetricStatus;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.ObjectMetricStatus;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricStatus {
     /**
      * container resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.
@@ -47,14 +47,14 @@ public final class MetricStatus {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricStatus(
-        @OutputCustomType.Parameter("containerResource") @Nullable ContainerResourceMetricStatus containerResource,
-        @OutputCustomType.Parameter("external") @Nullable ExternalMetricStatus external,
-        @OutputCustomType.Parameter("object") @Nullable ObjectMetricStatus object,
-        @OutputCustomType.Parameter("pods") @Nullable PodsMetricStatus pods,
-        @OutputCustomType.Parameter("resource") @Nullable ResourceMetricStatus resource,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("containerResource") @Nullable ContainerResourceMetricStatus containerResource,
+        @CustomType.Parameter("external") @Nullable ExternalMetricStatus external,
+        @CustomType.Parameter("object") @Nullable ObjectMetricStatus object,
+        @CustomType.Parameter("pods") @Nullable PodsMetricStatus pods,
+        @CustomType.Parameter("resource") @Nullable ResourceMetricStatus resource,
+        @CustomType.Parameter("type") String type) {
         this.containerResource = containerResource;
         this.external = external;
         this.object = object;

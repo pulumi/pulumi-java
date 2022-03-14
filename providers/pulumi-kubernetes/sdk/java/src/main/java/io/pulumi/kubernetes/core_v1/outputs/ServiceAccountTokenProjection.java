@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAccountTokenProjection {
     /**
      * Audience is the intended audience of the token. A recipient of a token must identify itself with an identifier specified in the audience of the token, and otherwise should reject the token. The audience defaults to the identifier of the apiserver.
@@ -28,11 +28,11 @@ public final class ServiceAccountTokenProjection {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAccountTokenProjection(
-        @OutputCustomType.Parameter("audience") @Nullable String audience,
-        @OutputCustomType.Parameter("expirationSeconds") @Nullable Integer expirationSeconds,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("audience") @Nullable String audience,
+        @CustomType.Parameter("expirationSeconds") @Nullable Integer expirationSeconds,
+        @CustomType.Parameter("path") String path) {
         this.audience = audience;
         this.expirationSeconds = expirationSeconds;
         this.path = path;

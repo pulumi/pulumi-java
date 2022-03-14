@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.discovery.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.inputs.ForZoneArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EndpointHintsArgs extends io.pulumi.resources.ResourceArgs {
      * forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing.
      * 
      */
-    @InputImport(name="forZones")
+    @Import(name="forZones")
       private final @Nullable Output<List<ForZoneArgs>> forZones;
 
     public Output<List<ForZoneArgs>> getForZones() {

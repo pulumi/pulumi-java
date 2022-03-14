@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.authentication.k8s.io_v1.outputs.UserInfo;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TokenReviewStatus {
     /**
      * Audiences are audience identifiers chosen by the authenticator that are compatible with both the TokenReview and token. An identifier is any identifier in the intersection of the TokenReviewSpec audiences and the token's audiences. A client of the TokenReview API that sets the spec.audiences field should validate that a compatible audience identifier is returned in the status.audiences field to ensure that the TokenReview server is audience aware. If a TokenReview returns an empty status.audience field where status.authenticated is "true", the token is valid against the audience of the Kubernetes API server.
@@ -35,12 +35,12 @@ public final class TokenReviewStatus {
      */
     private final @Nullable UserInfo user;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TokenReviewStatus(
-        @OutputCustomType.Parameter("audiences") @Nullable List<String> audiences,
-        @OutputCustomType.Parameter("authenticated") @Nullable Boolean authenticated,
-        @OutputCustomType.Parameter("error") @Nullable String error,
-        @OutputCustomType.Parameter("user") @Nullable UserInfo user) {
+        @CustomType.Parameter("audiences") @Nullable List<String> audiences,
+        @CustomType.Parameter("authenticated") @Nullable Boolean authenticated,
+        @CustomType.Parameter("error") @Nullable String error,
+        @CustomType.Parameter("user") @Nullable UserInfo user) {
         this.audiences = audiences;
         this.authenticated = authenticated;
         this.error = error;

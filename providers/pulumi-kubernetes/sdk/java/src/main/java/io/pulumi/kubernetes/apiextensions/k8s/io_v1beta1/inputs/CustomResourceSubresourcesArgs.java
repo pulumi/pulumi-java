@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import com.google.gson.JsonElement;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceSubresourceScaleArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
      * scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.
      * 
      */
-    @InputImport(name="scale")
+    @Import(name="scale")
       private final @Nullable Output<CustomResourceSubresourceScaleArgs> scale;
 
     public Output<CustomResourceSubresourceScaleArgs> getScale() {
@@ -34,7 +34,7 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
      * status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<JsonElement> status;
 
     public Output<JsonElement> getStatus() {

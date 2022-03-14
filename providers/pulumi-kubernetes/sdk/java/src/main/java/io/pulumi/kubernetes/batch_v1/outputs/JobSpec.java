@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodTemplateSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobSpec {
     /**
      * Specifies the duration in seconds relative to the startTime that the job may be continuously active before the system tries to terminate it; value must be positive integer. If a Job is suspended (at creation or through an update), this timer will effectively be stopped and reset when the Job is resumed again.
@@ -74,18 +74,18 @@ public final class JobSpec {
      */
     private final @Nullable Integer ttlSecondsAfterFinished;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobSpec(
-        @OutputCustomType.Parameter("activeDeadlineSeconds") @Nullable Integer activeDeadlineSeconds,
-        @OutputCustomType.Parameter("backoffLimit") @Nullable Integer backoffLimit,
-        @OutputCustomType.Parameter("completionMode") @Nullable String completionMode,
-        @OutputCustomType.Parameter("completions") @Nullable Integer completions,
-        @OutputCustomType.Parameter("manualSelector") @Nullable Boolean manualSelector,
-        @OutputCustomType.Parameter("parallelism") @Nullable Integer parallelism,
-        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
-        @OutputCustomType.Parameter("suspend") @Nullable Boolean suspend,
-        @OutputCustomType.Parameter("template") PodTemplateSpec template,
-        @OutputCustomType.Parameter("ttlSecondsAfterFinished") @Nullable Integer ttlSecondsAfterFinished) {
+        @CustomType.Parameter("activeDeadlineSeconds") @Nullable Integer activeDeadlineSeconds,
+        @CustomType.Parameter("backoffLimit") @Nullable Integer backoffLimit,
+        @CustomType.Parameter("completionMode") @Nullable String completionMode,
+        @CustomType.Parameter("completions") @Nullable Integer completions,
+        @CustomType.Parameter("manualSelector") @Nullable Boolean manualSelector,
+        @CustomType.Parameter("parallelism") @Nullable Integer parallelism,
+        @CustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @CustomType.Parameter("suspend") @Nullable Boolean suspend,
+        @CustomType.Parameter("template") PodTemplateSpec template,
+        @CustomType.Parameter("ttlSecondsAfterFinished") @Nullable Integer ttlSecondsAfterFinished) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.backoffLimit = backoffLimit;
         this.completionMode = completionMode;

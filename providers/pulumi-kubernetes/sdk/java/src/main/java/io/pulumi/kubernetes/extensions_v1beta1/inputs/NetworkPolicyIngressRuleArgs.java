@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyPeerArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyPortArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class NetworkPolicyIngressRuleArgs extends io.pulumi.resources.Reso
      * List of sources which should be able to access the pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all sources (traffic not restricted by source). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the from list.
      * 
      */
-    @InputImport(name="from")
+    @Import(name="from")
       private final @Nullable Output<List<NetworkPolicyPeerArgs>> from;
 
     public Output<List<NetworkPolicyPeerArgs>> getFrom() {
@@ -35,7 +35,7 @@ public final class NetworkPolicyIngressRuleArgs extends io.pulumi.resources.Reso
      * List of ports which should be made accessible on the pods selected for this rule. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<NetworkPolicyPortArgs>> ports;
 
     public Output<List<NetworkPolicyPortArgs>> getPorts() {

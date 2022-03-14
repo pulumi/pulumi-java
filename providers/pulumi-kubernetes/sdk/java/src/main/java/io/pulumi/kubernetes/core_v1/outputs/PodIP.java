@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PodIP {
     /**
      * ip is an IP address (IPv4 or IPv6) assigned to the pod
@@ -17,8 +17,8 @@ public final class PodIP {
      */
     private final @Nullable String ip;
 
-    @OutputCustomType.Constructor
-    private PodIP(@OutputCustomType.Parameter("ip") @Nullable String ip) {
+    @CustomType.Constructor
+    private PodIP(@CustomType.Parameter("ip") @Nullable String ip) {
         this.ip = ip;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
 import com.google.gson.JsonElement;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.ExternalDocumentation;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JSONSchemaProps {
     private final @Nullable String $ref;
     private final @Nullable String $schema;
@@ -128,51 +128,51 @@ public final class JSONSchemaProps {
      */
     private final @Nullable Boolean x_kubernetes_preserve_unknown_fields;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JSONSchemaProps(
-        @OutputCustomType.Parameter("$ref") @Nullable String $ref,
-        @OutputCustomType.Parameter("$schema") @Nullable String $schema,
-        @OutputCustomType.Parameter("additionalItems") @Nullable Either<JSONSchemaProps,Boolean> additionalItems,
-        @OutputCustomType.Parameter("additionalProperties") @Nullable Either<JSONSchemaProps,Boolean> additionalProperties,
-        @OutputCustomType.Parameter("allOf") @Nullable List<JSONSchemaProps> allOf,
-        @OutputCustomType.Parameter("anyOf") @Nullable List<JSONSchemaProps> anyOf,
-        @OutputCustomType.Parameter("default") @Nullable JsonElement $default,
-        @OutputCustomType.Parameter("definitions") @Nullable Map<String,JSONSchemaProps> definitions,
-        @OutputCustomType.Parameter("dependencies") @Nullable Map<String,Either<JSONSchemaProps,List<String>>> dependencies,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enum") @Nullable List<JsonElement> $enum,
-        @OutputCustomType.Parameter("example") @Nullable JsonElement example,
-        @OutputCustomType.Parameter("exclusiveMaximum") @Nullable Boolean exclusiveMaximum,
-        @OutputCustomType.Parameter("exclusiveMinimum") @Nullable Boolean exclusiveMinimum,
-        @OutputCustomType.Parameter("externalDocs") @Nullable ExternalDocumentation externalDocs,
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("items") @Nullable Either<JSONSchemaProps,List<JsonElement>> items,
-        @OutputCustomType.Parameter("maxItems") @Nullable Integer maxItems,
-        @OutputCustomType.Parameter("maxLength") @Nullable Integer maxLength,
-        @OutputCustomType.Parameter("maxProperties") @Nullable Integer maxProperties,
-        @OutputCustomType.Parameter("maximum") @Nullable Double maximum,
-        @OutputCustomType.Parameter("minItems") @Nullable Integer minItems,
-        @OutputCustomType.Parameter("minLength") @Nullable Integer minLength,
-        @OutputCustomType.Parameter("minProperties") @Nullable Integer minProperties,
-        @OutputCustomType.Parameter("minimum") @Nullable Double minimum,
-        @OutputCustomType.Parameter("multipleOf") @Nullable Double multipleOf,
-        @OutputCustomType.Parameter("not") @Nullable JSONSchemaProps not,
-        @OutputCustomType.Parameter("nullable") @Nullable Boolean nullable,
-        @OutputCustomType.Parameter("oneOf") @Nullable List<JSONSchemaProps> oneOf,
-        @OutputCustomType.Parameter("pattern") @Nullable String pattern,
-        @OutputCustomType.Parameter("patternProperties") @Nullable Map<String,JSONSchemaProps> patternProperties,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,JSONSchemaProps> properties,
-        @OutputCustomType.Parameter("required") @Nullable List<String> required,
-        @OutputCustomType.Parameter("title") @Nullable String title,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("uniqueItems") @Nullable Boolean uniqueItems,
-        @OutputCustomType.Parameter("x_kubernetes_embedded_resource") @Nullable Boolean x_kubernetes_embedded_resource,
-        @OutputCustomType.Parameter("x_kubernetes_int_or_string") @Nullable Boolean x_kubernetes_int_or_string,
-        @OutputCustomType.Parameter("x_kubernetes_list_map_keys") @Nullable List<String> x_kubernetes_list_map_keys,
-        @OutputCustomType.Parameter("x_kubernetes_list_type") @Nullable String x_kubernetes_list_type,
-        @OutputCustomType.Parameter("x_kubernetes_map_type") @Nullable String x_kubernetes_map_type,
-        @OutputCustomType.Parameter("x_kubernetes_preserve_unknown_fields") @Nullable Boolean x_kubernetes_preserve_unknown_fields) {
+        @CustomType.Parameter("$ref") @Nullable String $ref,
+        @CustomType.Parameter("$schema") @Nullable String $schema,
+        @CustomType.Parameter("additionalItems") @Nullable Either<JSONSchemaProps,Boolean> additionalItems,
+        @CustomType.Parameter("additionalProperties") @Nullable Either<JSONSchemaProps,Boolean> additionalProperties,
+        @CustomType.Parameter("allOf") @Nullable List<JSONSchemaProps> allOf,
+        @CustomType.Parameter("anyOf") @Nullable List<JSONSchemaProps> anyOf,
+        @CustomType.Parameter("default") @Nullable JsonElement $default,
+        @CustomType.Parameter("definitions") @Nullable Map<String,JSONSchemaProps> definitions,
+        @CustomType.Parameter("dependencies") @Nullable Map<String,Either<JSONSchemaProps,List<String>>> dependencies,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enum") @Nullable List<JsonElement> $enum,
+        @CustomType.Parameter("example") @Nullable JsonElement example,
+        @CustomType.Parameter("exclusiveMaximum") @Nullable Boolean exclusiveMaximum,
+        @CustomType.Parameter("exclusiveMinimum") @Nullable Boolean exclusiveMinimum,
+        @CustomType.Parameter("externalDocs") @Nullable ExternalDocumentation externalDocs,
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("items") @Nullable Either<JSONSchemaProps,List<JsonElement>> items,
+        @CustomType.Parameter("maxItems") @Nullable Integer maxItems,
+        @CustomType.Parameter("maxLength") @Nullable Integer maxLength,
+        @CustomType.Parameter("maxProperties") @Nullable Integer maxProperties,
+        @CustomType.Parameter("maximum") @Nullable Double maximum,
+        @CustomType.Parameter("minItems") @Nullable Integer minItems,
+        @CustomType.Parameter("minLength") @Nullable Integer minLength,
+        @CustomType.Parameter("minProperties") @Nullable Integer minProperties,
+        @CustomType.Parameter("minimum") @Nullable Double minimum,
+        @CustomType.Parameter("multipleOf") @Nullable Double multipleOf,
+        @CustomType.Parameter("not") @Nullable JSONSchemaProps not,
+        @CustomType.Parameter("nullable") @Nullable Boolean nullable,
+        @CustomType.Parameter("oneOf") @Nullable List<JSONSchemaProps> oneOf,
+        @CustomType.Parameter("pattern") @Nullable String pattern,
+        @CustomType.Parameter("patternProperties") @Nullable Map<String,JSONSchemaProps> patternProperties,
+        @CustomType.Parameter("properties") @Nullable Map<String,JSONSchemaProps> properties,
+        @CustomType.Parameter("required") @Nullable List<String> required,
+        @CustomType.Parameter("title") @Nullable String title,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("uniqueItems") @Nullable Boolean uniqueItems,
+        @CustomType.Parameter("x_kubernetes_embedded_resource") @Nullable Boolean x_kubernetes_embedded_resource,
+        @CustomType.Parameter("x_kubernetes_int_or_string") @Nullable Boolean x_kubernetes_int_or_string,
+        @CustomType.Parameter("x_kubernetes_list_map_keys") @Nullable List<String> x_kubernetes_list_map_keys,
+        @CustomType.Parameter("x_kubernetes_list_type") @Nullable String x_kubernetes_list_type,
+        @CustomType.Parameter("x_kubernetes_map_type") @Nullable String x_kubernetes_map_type,
+        @CustomType.Parameter("x_kubernetes_preserve_unknown_fields") @Nullable Boolean x_kubernetes_preserve_unknown_fields) {
         this.$ref = $ref;
         this.$schema = $schema;
         this.additionalItems = additionalItems;

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.AttachedVolumeArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerImageArgs;
 import io.pulumi.kubernetes.core_v1.inputs.NodeAddressArgs;
@@ -31,7 +31,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.
      * 
      */
-    @InputImport(name="addresses")
+    @Import(name="addresses")
       private final @Nullable Output<List<NodeAddressArgs>> addresses;
 
     public Output<List<NodeAddressArgs>> getAddresses() {
@@ -42,7 +42,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * Allocatable represents the resources of a node that are available for scheduling. Defaults to Capacity.
      * 
      */
-    @InputImport(name="allocatable")
+    @Import(name="allocatable")
       private final @Nullable Output<Map<String,String>> allocatable;
 
     public Output<Map<String,String>> getAllocatable() {
@@ -53,7 +53,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * Capacity represents the total resources of a node. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Map<String,String>> capacity;
 
     public Output<Map<String,String>> getCapacity() {
@@ -64,7 +64,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * Conditions is an array of current observed node conditions. More info: https://kubernetes.io/docs/concepts/nodes/node/#condition
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<NodeConditionArgs>> conditions;
 
     public Output<List<NodeConditionArgs>> getConditions() {
@@ -75,7 +75,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * Status of the config assigned to the node via the dynamic Kubelet config feature.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<NodeConfigStatusArgs> config;
 
     public Output<NodeConfigStatusArgs> getConfig() {
@@ -86,7 +86,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * Endpoints of daemons running on the Node.
      * 
      */
-    @InputImport(name="daemonEndpoints")
+    @Import(name="daemonEndpoints")
       private final @Nullable Output<NodeDaemonEndpointsArgs> daemonEndpoints;
 
     public Output<NodeDaemonEndpointsArgs> getDaemonEndpoints() {
@@ -97,7 +97,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * List of container images on this node
      * 
      */
-    @InputImport(name="images")
+    @Import(name="images")
       private final @Nullable Output<List<ContainerImageArgs>> images;
 
     public Output<List<ContainerImageArgs>> getImages() {
@@ -108,7 +108,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * Set of ids/uuids to uniquely identify the node. More info: https://kubernetes.io/docs/concepts/nodes/node/#info
      * 
      */
-    @InputImport(name="nodeInfo")
+    @Import(name="nodeInfo")
       private final @Nullable Output<NodeSystemInfoArgs> nodeInfo;
 
     public Output<NodeSystemInfoArgs> getNodeInfo() {
@@ -124,7 +124,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Terminated"` means the node has been removed from the cluster.
      * 
      */
-    @InputImport(name="phase")
+    @Import(name="phase")
       private final @Nullable Output<String> phase;
 
     public Output<String> getPhase() {
@@ -135,7 +135,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * List of volumes that are attached to the node.
      * 
      */
-    @InputImport(name="volumesAttached")
+    @Import(name="volumesAttached")
       private final @Nullable Output<List<AttachedVolumeArgs>> volumesAttached;
 
     public Output<List<AttachedVolumeArgs>> getVolumesAttached() {
@@ -146,7 +146,7 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
      * List of attachable volumes in use (mounted) by the node.
      * 
      */
-    @InputImport(name="volumesInUse")
+    @Import(name="volumesInUse")
       private final @Nullable Output<List<String>> volumesInUse;
 
     public Output<List<String>> getVolumesInUse() {

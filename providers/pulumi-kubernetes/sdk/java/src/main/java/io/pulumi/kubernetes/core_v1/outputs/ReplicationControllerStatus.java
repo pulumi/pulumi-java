@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ReplicationControllerCondition;
 import java.lang.Integer;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationControllerStatus {
     /**
      * The number of available replicas (ready for at least minReadySeconds) for this replication controller.
@@ -44,14 +44,14 @@ public final class ReplicationControllerStatus {
      */
     private final Integer replicas;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationControllerStatus(
-        @OutputCustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
-        @OutputCustomType.Parameter("conditions") @Nullable List<ReplicationControllerCondition> conditions,
-        @OutputCustomType.Parameter("fullyLabeledReplicas") @Nullable Integer fullyLabeledReplicas,
-        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
-        @OutputCustomType.Parameter("readyReplicas") @Nullable Integer readyReplicas,
-        @OutputCustomType.Parameter("replicas") Integer replicas) {
+        @CustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
+        @CustomType.Parameter("conditions") @Nullable List<ReplicationControllerCondition> conditions,
+        @CustomType.Parameter("fullyLabeledReplicas") @Nullable Integer fullyLabeledReplicas,
+        @CustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @CustomType.Parameter("readyReplicas") @Nullable Integer readyReplicas,
+        @CustomType.Parameter("replicas") Integer replicas) {
         this.availableReplicas = availableReplicas;
         this.conditions = conditions;
         this.fullyLabeledReplicas = fullyLabeledReplicas;

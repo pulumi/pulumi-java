@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs.NonResourceAttributes;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs.ResourceAttributes;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubjectAccessReviewSpec {
     /**
      * Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.
@@ -46,14 +46,14 @@ public final class SubjectAccessReviewSpec {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubjectAccessReviewSpec(
-        @OutputCustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
-        @OutputCustomType.Parameter("group") @Nullable List<String> group,
-        @OutputCustomType.Parameter("nonResourceAttributes") @Nullable NonResourceAttributes nonResourceAttributes,
-        @OutputCustomType.Parameter("resourceAttributes") @Nullable ResourceAttributes resourceAttributes,
-        @OutputCustomType.Parameter("uid") @Nullable String uid,
-        @OutputCustomType.Parameter("user") @Nullable String user) {
+        @CustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
+        @CustomType.Parameter("group") @Nullable List<String> group,
+        @CustomType.Parameter("nonResourceAttributes") @Nullable NonResourceAttributes nonResourceAttributes,
+        @CustomType.Parameter("resourceAttributes") @Nullable ResourceAttributes resourceAttributes,
+        @CustomType.Parameter("uid") @Nullable String uid,
+        @CustomType.Parameter("user") @Nullable String user) {
         this.extra = extra;
         this.group = group;
         this.nonResourceAttributes = nonResourceAttributes;

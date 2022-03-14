@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authentication.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.authentication.k8s.io_v1.inputs.BoundObjectReferenceArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * Audiences are the intendend audiences of the token. A recipient of a token must identitfy themself with an identifier in the list of audiences of the token, and otherwise should reject the token. A token issued for multiple audiences may be used to authenticate against any of the audiences listed but implies a high degree of trust between the target audiences.
      * 
      */
-    @InputImport(name="audiences", required=true)
+    @Import(name="audiences", required=true)
       private final Output<List<String>> audiences;
 
     public Output<List<String>> getAudiences() {
@@ -36,7 +36,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * BoundObjectRef is a reference to an object that the token will be bound to. The token will only be valid for as long as the bound object exists. NOTE: The API server's TokenReview endpoint will validate the BoundObjectRef, but other audiences may not. Keep ExpirationSeconds small if you want prompt revocation.
      * 
      */
-    @InputImport(name="boundObjectRef")
+    @Import(name="boundObjectRef")
       private final @Nullable Output<BoundObjectReferenceArgs> boundObjectRef;
 
     public Output<BoundObjectReferenceArgs> getBoundObjectRef() {
@@ -47,7 +47,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * ExpirationSeconds is the requested duration of validity of the request. The token issuer may return a token with a different validity duration so a client needs to check the 'expiration' field in a response.
      * 
      */
-    @InputImport(name="expirationSeconds")
+    @Import(name="expirationSeconds")
       private final @Nullable Output<Integer> expirationSeconds;
 
     public Output<Integer> getExpirationSeconds() {

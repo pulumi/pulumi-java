@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ExecAction;
 import io.pulumi.kubernetes.core_v1.outputs.HTTPGetAction;
 import io.pulumi.kubernetes.core_v1.outputs.TCPSocketAction;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LifecycleHandler {
     /**
      * Exec specifies the action to take.
@@ -29,11 +29,11 @@ public final class LifecycleHandler {
      */
     private final @Nullable TCPSocketAction tcpSocket;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LifecycleHandler(
-        @OutputCustomType.Parameter("exec") @Nullable ExecAction exec,
-        @OutputCustomType.Parameter("httpGet") @Nullable HTTPGetAction httpGet,
-        @OutputCustomType.Parameter("tcpSocket") @Nullable TCPSocketAction tcpSocket) {
+        @CustomType.Parameter("exec") @Nullable ExecAction exec,
+        @CustomType.Parameter("httpGet") @Nullable HTTPGetAction httpGet,
+        @CustomType.Parameter("tcpSocket") @Nullable TCPSocketAction tcpSocket) {
         this.exec = exec;
         this.httpGet = httpGet;
         this.tcpSocket = tcpSocket;

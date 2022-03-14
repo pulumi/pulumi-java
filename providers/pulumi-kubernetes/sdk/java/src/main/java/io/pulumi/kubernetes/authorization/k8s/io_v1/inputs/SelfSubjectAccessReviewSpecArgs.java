@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.inputs.NonResourceAttributesArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.inputs.ResourceAttributesArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
      * NonResourceAttributes describes information for a non-resource access request
      * 
      */
-    @InputImport(name="nonResourceAttributes")
+    @Import(name="nonResourceAttributes")
       private final @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
     public Output<NonResourceAttributesArgs> getNonResourceAttributes() {
@@ -34,7 +34,7 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
      * ResourceAuthorizationAttributes describes information for a resource access request
      * 
      */
-    @InputImport(name="resourceAttributes")
+    @Import(name="resourceAttributes")
       private final @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
     public Output<ResourceAttributesArgs> getResourceAttributes() {

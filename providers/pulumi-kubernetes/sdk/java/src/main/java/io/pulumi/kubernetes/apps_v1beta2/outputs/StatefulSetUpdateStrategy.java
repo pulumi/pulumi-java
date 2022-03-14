@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.RollingUpdateStatefulSetStrategy;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StatefulSetUpdateStrategy {
     /**
      * RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
@@ -23,10 +23,10 @@ public final class StatefulSetUpdateStrategy {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatefulSetUpdateStrategy(
-        @OutputCustomType.Parameter("rollingUpdate") @Nullable RollingUpdateStatefulSetStrategy rollingUpdate,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("rollingUpdate") @Nullable RollingUpdateStatefulSetStrategy rollingUpdate,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.rollingUpdate = rollingUpdate;
         this.type = type;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
      * Driver is the name of the driver to use for this volume.
      * 
      */
-    @InputImport(name="driver", required=true)
+    @Import(name="driver", required=true)
       private final Output<String> driver;
 
     public Output<String> getDriver() {
@@ -36,7 +36,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default filesystem depends on FlexVolume script.
      * 
      */
-    @InputImport(name="fsType")
+    @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
@@ -47,7 +47,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
      * Optional: Extra command options if any.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<Map<String,String>> options;
 
     public Output<Map<String,String>> getOptions() {
@@ -58,7 +58,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
      * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -69,7 +69,7 @@ public final class FlexPersistentVolumeSourceArgs extends io.pulumi.resources.Re
      * Optional: SecretRef is reference to the secret object containing sensitive information to pass to the plugin scripts. This may be empty if no secret object is specified. If the secret object contains more than one secret, all secrets are passed to the plugin scripts.
      * 
      */
-    @InputImport(name="secretRef")
+    @Import(name="secretRef")
       private final @Nullable Output<SecretReferenceArgs> secretRef;
 
     public Output<SecretReferenceArgs> getSecretRef() {

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
      * APIGroup is the group for the resource being referenced
      * 
      */
-    @InputImport(name="apiGroup", required=true)
+    @Import(name="apiGroup", required=true)
       private final Output<String> apiGroup;
 
     public Output<String> getApiGroup() {
@@ -32,7 +32,7 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
      * Kind is the type of resource being referenced
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -43,7 +43,7 @@ public final class RoleRefArgs extends io.pulumi.resources.ResourceArgs {
      * Name is the name of resource being referenced
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

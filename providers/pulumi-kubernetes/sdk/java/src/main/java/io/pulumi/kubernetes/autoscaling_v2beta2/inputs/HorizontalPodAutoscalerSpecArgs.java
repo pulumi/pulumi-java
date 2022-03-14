@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.CrossVersionObjectReferenceArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.HorizontalPodAutoscalerBehaviorArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricSpecArgs;
@@ -26,7 +26,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * behavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively). If not set, the default HPAScalingRules for scale up and scale down are used.
      * 
      */
-    @InputImport(name="behavior")
+    @Import(name="behavior")
       private final @Nullable Output<HorizontalPodAutoscalerBehaviorArgs> behavior;
 
     public Output<HorizontalPodAutoscalerBehaviorArgs> getBehavior() {
@@ -37,7 +37,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * maxReplicas is the upper limit for the number of replicas to which the autoscaler can scale up. It cannot be less that minReplicas.
      * 
      */
-    @InputImport(name="maxReplicas", required=true)
+    @Import(name="maxReplicas", required=true)
       private final Output<Integer> maxReplicas;
 
     public Output<Integer> getMaxReplicas() {
@@ -48,7 +48,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * metrics contains the specifications for which to use to calculate the desired replica count (the maximum replica count across all metrics will be used).  The desired replica count is calculated multiplying the ratio between the target value and the current value by the current number of pods.  Ergo, metrics used must decrease as the pod count is increased, and vice-versa.  See the individual metric source types for more information about how each type of metric must respond. If not set, the default metric will be set to 80% average CPU utilization.
      * 
      */
-    @InputImport(name="metrics")
+    @Import(name="metrics")
       private final @Nullable Output<List<MetricSpecArgs>> metrics;
 
     public Output<List<MetricSpecArgs>> getMetrics() {
@@ -59,7 +59,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.
      * 
      */
-    @InputImport(name="minReplicas")
+    @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
 
     public Output<Integer> getMinReplicas() {
@@ -70,7 +70,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * scaleTargetRef points to the target resource to scale, and is used to the pods for which metrics should be collected, as well as to actually change the replica count.
      * 
      */
-    @InputImport(name="scaleTargetRef", required=true)
+    @Import(name="scaleTargetRef", required=true)
       private final Output<CrossVersionObjectReferenceArgs> scaleTargetRef;
 
     public Output<CrossVersionObjectReferenceArgs> getScaleTargetRef() {

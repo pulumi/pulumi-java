@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.HTTPHeaderArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
      * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -37,7 +37,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
      * Custom headers to set in the request. HTTP allows repeated headers.
      * 
      */
-    @InputImport(name="httpHeaders")
+    @Import(name="httpHeaders")
       private final @Nullable Output<List<HTTPHeaderArgs>> httpHeaders;
 
     public Output<List<HTTPHeaderArgs>> getHttpHeaders() {
@@ -48,7 +48,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
      * Path to access on the HTTP server.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -59,7 +59,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
      * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<Either<Integer,String>> port;
 
     public Output<Either<Integer,String>> getPort() {
@@ -74,7 +74,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"HTTPS"` means that the scheme used will be https://
      * 
      */
-    @InputImport(name="scheme")
+    @Import(name="scheme")
       private final @Nullable Output<String> scheme;
 
     public Output<String> getScheme() {

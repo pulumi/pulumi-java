@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScaleIOVolumeSource {
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs".
@@ -64,18 +64,18 @@ public final class ScaleIOVolumeSource {
      */
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScaleIOVolumeSource(
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("gateway") String gateway,
-        @OutputCustomType.Parameter("protectionDomain") @Nullable String protectionDomain,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("secretRef") LocalObjectReference secretRef,
-        @OutputCustomType.Parameter("sslEnabled") @Nullable Boolean sslEnabled,
-        @OutputCustomType.Parameter("storageMode") @Nullable String storageMode,
-        @OutputCustomType.Parameter("storagePool") @Nullable String storagePool,
-        @OutputCustomType.Parameter("system") String system,
-        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("gateway") String gateway,
+        @CustomType.Parameter("protectionDomain") @Nullable String protectionDomain,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("secretRef") LocalObjectReference secretRef,
+        @CustomType.Parameter("sslEnabled") @Nullable Boolean sslEnabled,
+        @CustomType.Parameter("storageMode") @Nullable String storageMode,
+        @CustomType.Parameter("storagePool") @Nullable String storagePool,
+        @CustomType.Parameter("system") String system,
+        @CustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.fsType = fsType;
         this.gateway = gateway;
         this.protectionDomain = protectionDomain;

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs.CertificateSigningRequestSpec;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs.CertificateSigningRequestStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateSigningRequest {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -36,13 +36,13 @@ public final class CertificateSigningRequest {
      */
     private final @Nullable CertificateSigningRequestStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateSigningRequest(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("spec") @Nullable CertificateSigningRequestSpec spec,
-        @OutputCustomType.Parameter("status") @Nullable CertificateSigningRequestStatus status) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("spec") @Nullable CertificateSigningRequestSpec spec,
+        @CustomType.Parameter("status") @Nullable CertificateSigningRequestStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;

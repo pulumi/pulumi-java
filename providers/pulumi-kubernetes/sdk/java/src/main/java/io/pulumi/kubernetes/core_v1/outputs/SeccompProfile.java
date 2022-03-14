@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SeccompProfile {
     /**
      * localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet's configured seccomp profile location. Must only be set if type is "Localhost".
@@ -29,10 +29,10 @@ public final class SeccompProfile {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SeccompProfile(
-        @OutputCustomType.Parameter("localhostProfile") @Nullable String localhostProfile,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("localhostProfile") @Nullable String localhostProfile,
+        @CustomType.Parameter("type") String type) {
         this.localhostProfile = localhostProfile;
         this.type = type;
     }

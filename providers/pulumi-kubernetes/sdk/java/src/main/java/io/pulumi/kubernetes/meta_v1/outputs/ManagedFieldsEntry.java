@@ -4,13 +4,13 @@
 package io.pulumi.kubernetes.meta_v1.outputs;
 
 import com.google.gson.JsonElement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedFieldsEntry {
     /**
      * APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.
@@ -48,15 +48,15 @@ public final class ManagedFieldsEntry {
      */
     private final @Nullable String time;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedFieldsEntry(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("fieldsType") @Nullable String fieldsType,
-        @OutputCustomType.Parameter("fieldsV1") @Nullable JsonElement fieldsV1,
-        @OutputCustomType.Parameter("manager") @Nullable String manager,
-        @OutputCustomType.Parameter("operation") @Nullable String operation,
-        @OutputCustomType.Parameter("subresource") @Nullable String subresource,
-        @OutputCustomType.Parameter("time") @Nullable String time) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("fieldsType") @Nullable String fieldsType,
+        @CustomType.Parameter("fieldsV1") @Nullable JsonElement fieldsV1,
+        @CustomType.Parameter("manager") @Nullable String manager,
+        @CustomType.Parameter("operation") @Nullable String operation,
+        @CustomType.Parameter("subresource") @Nullable String subresource,
+        @CustomType.Parameter("time") @Nullable String time) {
         this.apiVersion = apiVersion;
         this.fieldsType = fieldsType;
         this.fieldsV1 = fieldsV1;

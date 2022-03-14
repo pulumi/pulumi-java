@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.Affinity;
 import io.pulumi.kubernetes.core_v1.outputs.Container;
 import io.pulumi.kubernetes.core_v1.outputs.EphemeralContainer;
@@ -25,7 +25,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PodSpec {
     /**
      * Optional duration in seconds the pod may be active on the node relative to StartTime before the system will actively try to mark it failed and kill associated containers. Value must be a positive integer.
@@ -223,44 +223,44 @@ public final class PodSpec {
      */
     private final @Nullable List<Volume> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PodSpec(
-        @OutputCustomType.Parameter("activeDeadlineSeconds") @Nullable Integer activeDeadlineSeconds,
-        @OutputCustomType.Parameter("affinity") @Nullable Affinity affinity,
-        @OutputCustomType.Parameter("automountServiceAccountToken") @Nullable Boolean automountServiceAccountToken,
-        @OutputCustomType.Parameter("containers") List<Container> containers,
-        @OutputCustomType.Parameter("dnsConfig") @Nullable PodDNSConfig dnsConfig,
-        @OutputCustomType.Parameter("dnsPolicy") @Nullable String dnsPolicy,
-        @OutputCustomType.Parameter("enableServiceLinks") @Nullable Boolean enableServiceLinks,
-        @OutputCustomType.Parameter("ephemeralContainers") @Nullable List<EphemeralContainer> ephemeralContainers,
-        @OutputCustomType.Parameter("hostAliases") @Nullable List<HostAlias> hostAliases,
-        @OutputCustomType.Parameter("hostIPC") @Nullable Boolean hostIPC,
-        @OutputCustomType.Parameter("hostNetwork") @Nullable Boolean hostNetwork,
-        @OutputCustomType.Parameter("hostPID") @Nullable Boolean hostPID,
-        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
-        @OutputCustomType.Parameter("imagePullSecrets") @Nullable List<LocalObjectReference> imagePullSecrets,
-        @OutputCustomType.Parameter("initContainers") @Nullable List<Container> initContainers,
-        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
-        @OutputCustomType.Parameter("nodeSelector") @Nullable Map<String,String> nodeSelector,
-        @OutputCustomType.Parameter("os") @Nullable PodOS os,
-        @OutputCustomType.Parameter("overhead") @Nullable Map<String,String> overhead,
-        @OutputCustomType.Parameter("preemptionPolicy") @Nullable String preemptionPolicy,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("priorityClassName") @Nullable String priorityClassName,
-        @OutputCustomType.Parameter("readinessGates") @Nullable List<PodReadinessGate> readinessGates,
-        @OutputCustomType.Parameter("restartPolicy") @Nullable String restartPolicy,
-        @OutputCustomType.Parameter("runtimeClassName") @Nullable String runtimeClassName,
-        @OutputCustomType.Parameter("schedulerName") @Nullable String schedulerName,
-        @OutputCustomType.Parameter("securityContext") @Nullable PodSecurityContext securityContext,
-        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
-        @OutputCustomType.Parameter("serviceAccountName") @Nullable String serviceAccountName,
-        @OutputCustomType.Parameter("setHostnameAsFQDN") @Nullable Boolean setHostnameAsFQDN,
-        @OutputCustomType.Parameter("shareProcessNamespace") @Nullable Boolean shareProcessNamespace,
-        @OutputCustomType.Parameter("subdomain") @Nullable String subdomain,
-        @OutputCustomType.Parameter("terminationGracePeriodSeconds") @Nullable Integer terminationGracePeriodSeconds,
-        @OutputCustomType.Parameter("tolerations") @Nullable List<Toleration> tolerations,
-        @OutputCustomType.Parameter("topologySpreadConstraints") @Nullable List<TopologySpreadConstraint> topologySpreadConstraints,
-        @OutputCustomType.Parameter("volumes") @Nullable List<Volume> volumes) {
+        @CustomType.Parameter("activeDeadlineSeconds") @Nullable Integer activeDeadlineSeconds,
+        @CustomType.Parameter("affinity") @Nullable Affinity affinity,
+        @CustomType.Parameter("automountServiceAccountToken") @Nullable Boolean automountServiceAccountToken,
+        @CustomType.Parameter("containers") List<Container> containers,
+        @CustomType.Parameter("dnsConfig") @Nullable PodDNSConfig dnsConfig,
+        @CustomType.Parameter("dnsPolicy") @Nullable String dnsPolicy,
+        @CustomType.Parameter("enableServiceLinks") @Nullable Boolean enableServiceLinks,
+        @CustomType.Parameter("ephemeralContainers") @Nullable List<EphemeralContainer> ephemeralContainers,
+        @CustomType.Parameter("hostAliases") @Nullable List<HostAlias> hostAliases,
+        @CustomType.Parameter("hostIPC") @Nullable Boolean hostIPC,
+        @CustomType.Parameter("hostNetwork") @Nullable Boolean hostNetwork,
+        @CustomType.Parameter("hostPID") @Nullable Boolean hostPID,
+        @CustomType.Parameter("hostname") @Nullable String hostname,
+        @CustomType.Parameter("imagePullSecrets") @Nullable List<LocalObjectReference> imagePullSecrets,
+        @CustomType.Parameter("initContainers") @Nullable List<Container> initContainers,
+        @CustomType.Parameter("nodeName") @Nullable String nodeName,
+        @CustomType.Parameter("nodeSelector") @Nullable Map<String,String> nodeSelector,
+        @CustomType.Parameter("os") @Nullable PodOS os,
+        @CustomType.Parameter("overhead") @Nullable Map<String,String> overhead,
+        @CustomType.Parameter("preemptionPolicy") @Nullable String preemptionPolicy,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("priorityClassName") @Nullable String priorityClassName,
+        @CustomType.Parameter("readinessGates") @Nullable List<PodReadinessGate> readinessGates,
+        @CustomType.Parameter("restartPolicy") @Nullable String restartPolicy,
+        @CustomType.Parameter("runtimeClassName") @Nullable String runtimeClassName,
+        @CustomType.Parameter("schedulerName") @Nullable String schedulerName,
+        @CustomType.Parameter("securityContext") @Nullable PodSecurityContext securityContext,
+        @CustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @CustomType.Parameter("serviceAccountName") @Nullable String serviceAccountName,
+        @CustomType.Parameter("setHostnameAsFQDN") @Nullable Boolean setHostnameAsFQDN,
+        @CustomType.Parameter("shareProcessNamespace") @Nullable Boolean shareProcessNamespace,
+        @CustomType.Parameter("subdomain") @Nullable String subdomain,
+        @CustomType.Parameter("terminationGracePeriodSeconds") @Nullable Integer terminationGracePeriodSeconds,
+        @CustomType.Parameter("tolerations") @Nullable List<Toleration> tolerations,
+        @CustomType.Parameter("topologySpreadConstraints") @Nullable List<TopologySpreadConstraint> topologySpreadConstraints,
+        @CustomType.Parameter("volumes") @Nullable List<Volume> volumes) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.affinity = affinity;
         this.automountServiceAccountToken = automountServiceAccountToken;

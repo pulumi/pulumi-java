@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GRPCAction {
     /**
      * Port number of the gRPC service. Number must be in the range 1 to 65535.
@@ -25,10 +25,10 @@ public final class GRPCAction {
      */
     private final @Nullable String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GRPCAction(
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("service") @Nullable String service) {
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("service") @Nullable String service) {
         this.port = port;
         this.service = service;
     }

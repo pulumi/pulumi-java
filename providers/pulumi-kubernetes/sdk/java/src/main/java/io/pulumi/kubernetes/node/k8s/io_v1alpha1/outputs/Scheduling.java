@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.node.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.Toleration;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Scheduling {
     /**
      * nodeSelector lists labels that must be present on nodes that support this RuntimeClass. Pods using this RuntimeClass can only be scheduled to a node matched by this selector. The RuntimeClass nodeSelector is merged with a pod's existing nodeSelector. Any conflicts will cause the pod to be rejected in admission.
@@ -24,10 +24,10 @@ public final class Scheduling {
      */
     private final @Nullable List<Toleration> tolerations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Scheduling(
-        @OutputCustomType.Parameter("nodeSelector") @Nullable Map<String,String> nodeSelector,
-        @OutputCustomType.Parameter("tolerations") @Nullable List<Toleration> tolerations) {
+        @CustomType.Parameter("nodeSelector") @Nullable Map<String,String> nodeSelector,
+        @CustomType.Parameter("tolerations") @Nullable List<Toleration> tolerations) {
         this.nodeSelector = nodeSelector;
         this.tolerations = tolerations;
     }

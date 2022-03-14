@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NamespaceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
      * 
      */
-    @InputImport(name="finalizers")
+    @Import(name="finalizers")
       private final @Nullable Output<List<String>> finalizers;
 
     public Output<List<String>> getFinalizers() {

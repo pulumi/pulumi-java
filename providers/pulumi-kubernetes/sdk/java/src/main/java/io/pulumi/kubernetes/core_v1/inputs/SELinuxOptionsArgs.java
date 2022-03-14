@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Level is SELinux level label that applies to the container.
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable Output<String> level;
 
     public Output<String> getLevel() {
@@ -33,7 +33,7 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Role is a SELinux role label that applies to the container.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -44,7 +44,7 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Type is a SELinux type label that applies to the container.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -55,7 +55,7 @@ public final class SELinuxOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * User is a SELinux user label that applies to the container.
      * 
      */
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.inputs.HelmReleaseSettingsArgs;
 import io.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
@@ -22,7 +22,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * If present, the name of the kubeconfig cluster to use.
      * 
      */
-    @InputImport(name="cluster")
+    @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
     public Output<String> getCluster() {
@@ -33,7 +33,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * If present, the name of the kubeconfig context to use.
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
@@ -45,7 +45,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * This feature is in developer preview, and is disabled by default.
      * 
      */
-    @InputImport(name="enableDryRun", json=true)
+    @Import(name="enableDryRun", json=true)
       private final @Nullable Output<Boolean> enableDryRun;
 
     public Output<Boolean> getEnableDryRun() {
@@ -57,7 +57,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * This feature is in developer preview, and is disabled by default.
      * 
      */
-    @InputImport(name="enableReplaceCRD", json=true)
+    @Import(name="enableReplaceCRD", json=true)
       private final @Nullable Output<Boolean> enableReplaceCRD;
 
     public Output<Boolean> getEnableReplaceCRD() {
@@ -68,7 +68,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Options to configure the Helm Release resource.
      * 
      */
-    @InputImport(name="helmReleaseSettings", json=true)
+    @Import(name="helmReleaseSettings", json=true)
       private final @Nullable Output<HelmReleaseSettingsArgs> helmReleaseSettings;
 
     public Output<HelmReleaseSettingsArgs> getHelmReleaseSettings() {
@@ -79,7 +79,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Options for tuning the Kubernetes client used by a Provider.
      * 
      */
-    @InputImport(name="kubeClientSettings", json=true)
+    @Import(name="kubeClientSettings", json=true)
       private final @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
     public Output<KubeClientSettingsArgs> getKubeClientSettings() {
@@ -90,7 +90,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The contents of a kubeconfig file or the path to a kubeconfig file.
      * 
      */
-    @InputImport(name="kubeconfig")
+    @Import(name="kubeconfig")
       private final @Nullable Output<String> kubeconfig;
 
     public Output<String> getKubeconfig() {
@@ -106,7 +106,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 3. `namespace` set for the active context in the kubeconfig.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -124,7 +124,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * used in these resources will be rendered in plaintext to the resulting YAML.
      * 
      */
-    @InputImport(name="renderYamlToDirectory")
+    @Import(name="renderYamlToDirectory")
       private final @Nullable Output<String> renderYamlToDirectory;
 
     public Output<String> getRenderYamlToDirectory() {
@@ -135,7 +135,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * If present and set to true, suppress apiVersion deprecation warnings from the CLI.
      * 
      */
-    @InputImport(name="suppressDeprecationWarnings", json=true)
+    @Import(name="suppressDeprecationWarnings", json=true)
       private final @Nullable Output<Boolean> suppressDeprecationWarnings;
 
     public Output<Boolean> getSuppressDeprecationWarnings() {
@@ -146,7 +146,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * If present and set to true, suppress unsupported Helm hook warnings from the CLI.
      * 
      */
-    @InputImport(name="suppressHelmHookWarnings", json=true)
+    @Import(name="suppressHelmHookWarnings", json=true)
       private final @Nullable Output<Boolean> suppressHelmHookWarnings;
 
     public Output<Boolean> getSuppressHelmHookWarnings() {

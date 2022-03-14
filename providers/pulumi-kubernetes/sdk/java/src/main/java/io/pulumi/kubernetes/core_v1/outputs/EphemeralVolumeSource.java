@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaimTemplate;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EphemeralVolumeSource {
     /**
      * Specifies a read-only configuration for the volume. Defaults to false (read/write).
@@ -29,10 +29,10 @@ public final class EphemeralVolumeSource {
      */
     private final @Nullable PersistentVolumeClaimTemplate volumeClaimTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EphemeralVolumeSource(
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("volumeClaimTemplate") @Nullable PersistentVolumeClaimTemplate volumeClaimTemplate) {
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("volumeClaimTemplate") @Nullable PersistentVolumeClaimTemplate volumeClaimTemplate) {
         this.readOnly = readOnly;
         this.volumeClaimTemplate = volumeClaimTemplate;
     }

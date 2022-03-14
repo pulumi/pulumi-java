@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.settings.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.EnvFromSourceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EnvVarArgs;
 import io.pulumi.kubernetes.core_v1.inputs.VolumeArgs;
@@ -27,7 +27,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Env defines the collection of EnvVar to inject into containers.
      * 
      */
-    @InputImport(name="env")
+    @Import(name="env")
       private final @Nullable Output<List<EnvVarArgs>> env;
 
     public Output<List<EnvVarArgs>> getEnv() {
@@ -38,7 +38,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * EnvFrom defines the collection of EnvFromSource to inject into containers.
      * 
      */
-    @InputImport(name="envFrom")
+    @Import(name="envFrom")
       private final @Nullable Output<List<EnvFromSourceArgs>> envFrom;
 
     public Output<List<EnvFromSourceArgs>> getEnvFrom() {
@@ -49,7 +49,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Selector is a label query over a set of resources, in this case pods. Required.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
     public Output<LabelSelectorArgs> getSelector() {
@@ -60,7 +60,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * VolumeMounts defines the collection of VolumeMount to inject into containers.
      * 
      */
-    @InputImport(name="volumeMounts")
+    @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
     public Output<List<VolumeMountArgs>> getVolumeMounts() {
@@ -71,7 +71,7 @@ public final class PodPresetSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Volumes defines the collection of Volume to inject into the pod.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
     public Output<List<VolumeArgs>> getVolumes() {

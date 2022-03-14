@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FlowDistinguisherMethod {
     /**
      * `type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.
@@ -15,8 +15,8 @@ public final class FlowDistinguisherMethod {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private FlowDistinguisherMethod(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private FlowDistinguisherMethod(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

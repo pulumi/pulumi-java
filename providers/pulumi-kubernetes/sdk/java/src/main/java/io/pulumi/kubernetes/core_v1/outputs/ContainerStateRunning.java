@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerStateRunning {
     /**
      * Time at which the container was last (re-)started
@@ -17,8 +17,8 @@ public final class ContainerStateRunning {
      */
     private final @Nullable String startedAt;
 
-    @OutputCustomType.Constructor
-    private ContainerStateRunning(@OutputCustomType.Parameter("startedAt") @Nullable String startedAt) {
+    @CustomType.Constructor
+    private ContainerStateRunning(@CustomType.Parameter("startedAt") @Nullable String startedAt) {
         this.startedAt = startedAt;
     }
 

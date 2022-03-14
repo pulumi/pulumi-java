@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.GroupSubject;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.ServiceAccountSubject;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.UserSubject;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Subject {
     /**
      * `group` matches based on user group name.
@@ -35,12 +35,12 @@ public final class Subject {
      */
     private final @Nullable UserSubject user;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Subject(
-        @OutputCustomType.Parameter("group") @Nullable GroupSubject group,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("serviceAccount") @Nullable ServiceAccountSubject serviceAccount,
-        @OutputCustomType.Parameter("user") @Nullable UserSubject user) {
+        @CustomType.Parameter("group") @Nullable GroupSubject group,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("serviceAccount") @Nullable ServiceAccountSubject serviceAccount,
+        @CustomType.Parameter("user") @Nullable UserSubject user) {
         this.group = group;
         this.kind = kind;
         this.serviceAccount = serviceAccount;

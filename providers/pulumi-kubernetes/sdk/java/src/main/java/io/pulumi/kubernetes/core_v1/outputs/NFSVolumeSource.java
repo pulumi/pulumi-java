@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NFSVolumeSource {
     /**
      * Path that is exported by the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
@@ -28,11 +28,11 @@ public final class NFSVolumeSource {
      */
     private final String server;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NFSVolumeSource(
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("server") String server) {
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("server") String server) {
         this.path = path;
         this.readOnly = readOnly;
         this.server = server;

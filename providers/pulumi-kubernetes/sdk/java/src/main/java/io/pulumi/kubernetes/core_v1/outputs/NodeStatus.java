@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.AttachedVolume;
 import io.pulumi.kubernetes.core_v1.outputs.ContainerImage;
 import io.pulumi.kubernetes.core_v1.outputs.NodeAddress;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeStatus {
     /**
      * List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses Note: This field is declared as mergeable, but the merge key is not sufficiently unique, which can cause data corruption when it is merged. Callers should instead use a full-replacement patch. See http://pr.k8s.io/79391 for an example.
@@ -81,19 +81,19 @@ public final class NodeStatus {
      */
     private final @Nullable List<String> volumesInUse;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeStatus(
-        @OutputCustomType.Parameter("addresses") @Nullable List<NodeAddress> addresses,
-        @OutputCustomType.Parameter("allocatable") @Nullable Map<String,String> allocatable,
-        @OutputCustomType.Parameter("capacity") @Nullable Map<String,String> capacity,
-        @OutputCustomType.Parameter("conditions") @Nullable List<NodeCondition> conditions,
-        @OutputCustomType.Parameter("config") @Nullable NodeConfigStatus config,
-        @OutputCustomType.Parameter("daemonEndpoints") @Nullable NodeDaemonEndpoints daemonEndpoints,
-        @OutputCustomType.Parameter("images") @Nullable List<ContainerImage> images,
-        @OutputCustomType.Parameter("nodeInfo") @Nullable NodeSystemInfo nodeInfo,
-        @OutputCustomType.Parameter("phase") @Nullable String phase,
-        @OutputCustomType.Parameter("volumesAttached") @Nullable List<AttachedVolume> volumesAttached,
-        @OutputCustomType.Parameter("volumesInUse") @Nullable List<String> volumesInUse) {
+        @CustomType.Parameter("addresses") @Nullable List<NodeAddress> addresses,
+        @CustomType.Parameter("allocatable") @Nullable Map<String,String> allocatable,
+        @CustomType.Parameter("capacity") @Nullable Map<String,String> capacity,
+        @CustomType.Parameter("conditions") @Nullable List<NodeCondition> conditions,
+        @CustomType.Parameter("config") @Nullable NodeConfigStatus config,
+        @CustomType.Parameter("daemonEndpoints") @Nullable NodeDaemonEndpoints daemonEndpoints,
+        @CustomType.Parameter("images") @Nullable List<ContainerImage> images,
+        @CustomType.Parameter("nodeInfo") @Nullable NodeSystemInfo nodeInfo,
+        @CustomType.Parameter("phase") @Nullable String phase,
+        @CustomType.Parameter("volumesAttached") @Nullable List<AttachedVolume> volumesAttached,
+        @CustomType.Parameter("volumesInUse") @Nullable List<String> volumesInUse) {
         this.addresses = addresses;
         this.allocatable = allocatable;
         this.capacity = capacity;

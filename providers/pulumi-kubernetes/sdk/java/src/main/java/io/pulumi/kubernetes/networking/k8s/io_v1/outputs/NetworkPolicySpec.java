@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicyEgressRule;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicyIngressRule;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkPolicySpec {
     /**
      * List of egress rules to be applied to the selected pods. Outgoing traffic is allowed if there are no NetworkPolicies selecting the pod (and cluster policy otherwise allows the traffic), OR if the traffic matches at least one egress rule across all of the NetworkPolicy objects whose podSelector matches the pod. If this field is empty then this NetworkPolicy limits all outgoing traffic (and serves solely to ensure that the pods it selects are isolated by default). This field is beta-level in 1.8
@@ -35,12 +35,12 @@ public final class NetworkPolicySpec {
      */
     private final @Nullable List<String> policyTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkPolicySpec(
-        @OutputCustomType.Parameter("egress") @Nullable List<NetworkPolicyEgressRule> egress,
-        @OutputCustomType.Parameter("ingress") @Nullable List<NetworkPolicyIngressRule> ingress,
-        @OutputCustomType.Parameter("podSelector") LabelSelector podSelector,
-        @OutputCustomType.Parameter("policyTypes") @Nullable List<String> policyTypes) {
+        @CustomType.Parameter("egress") @Nullable List<NetworkPolicyEgressRule> egress,
+        @CustomType.Parameter("ingress") @Nullable List<NetworkPolicyIngressRule> ingress,
+        @CustomType.Parameter("podSelector") LabelSelector podSelector,
+        @CustomType.Parameter("policyTypes") @Nullable List<String> policyTypes) {
         this.egress = egress;
         this.ingress = ingress;
         this.podSelector = podSelector;

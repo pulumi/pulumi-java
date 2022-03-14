@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
      * 
      */
-    @InputImport(name="level", required=true)
+    @Import(name="level", required=true)
       private final Output<String> level;
 
     public Output<String> getLevel() {
@@ -34,7 +34,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Stages is a list of stages for which events are created.
      * 
      */
-    @InputImport(name="stages")
+    @Import(name="stages")
       private final @Nullable Output<List<String>> stages;
 
     public Output<List<String>> getStages() {

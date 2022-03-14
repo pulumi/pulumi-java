@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.discovery.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.inputs.EndpointArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.inputs.EndpointPortArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -31,7 +31,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"IPv6"` represents an IPv6 Address.
      * 
      */
-    @InputImport(name="addressType", required=true)
+    @Import(name="addressType", required=true)
       private final Output<String> addressType;
 
     public Output<String> getAddressType() {
@@ -42,7 +42,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -53,7 +53,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.
      * 
      */
-    @InputImport(name="endpoints", required=true)
+    @Import(name="endpoints", required=true)
       private final Output<List<EndpointArgs>> endpoints;
 
     public Output<List<EndpointArgs>> getEndpoints() {
@@ -64,7 +64,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -75,7 +75,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * Standard object's metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -86,7 +86,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
      * ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates "all ports". Each slice may include a maximum of 100 ports.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<EndpointPortArgs>> ports;
 
     public Output<List<EndpointPortArgs>> getPorts() {

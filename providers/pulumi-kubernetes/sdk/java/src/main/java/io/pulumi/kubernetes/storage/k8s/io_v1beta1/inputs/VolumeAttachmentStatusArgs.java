@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs.VolumeErrorArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
      * The last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
      * 
      */
-    @InputImport(name="attachError")
+    @Import(name="attachError")
       private final @Nullable Output<VolumeErrorArgs> attachError;
 
     public Output<VolumeErrorArgs> getAttachError() {
@@ -36,7 +36,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
      * Indicates the volume is successfully attached. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
      * 
      */
-    @InputImport(name="attached", required=true)
+    @Import(name="attached", required=true)
       private final Output<Boolean> attached;
 
     public Output<Boolean> getAttached() {
@@ -47,7 +47,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
      * Upon successful attach, this field is populated with any information returned by the attach operation that must be passed into subsequent WaitForAttach or Mount calls. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
      * 
      */
-    @InputImport(name="attachmentMetadata")
+    @Import(name="attachmentMetadata")
       private final @Nullable Output<Map<String,String>> attachmentMetadata;
 
     public Output<Map<String,String>> getAttachmentMetadata() {
@@ -58,7 +58,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
      * The last error encountered during detach operation, if any. This field must only be set by the entity completing the detach operation, i.e. the external-attacher.
      * 
      */
-    @InputImport(name="detachError")
+    @Import(name="detachError")
       private final @Nullable Output<VolumeErrorArgs> detachError;
 
     public Output<VolumeErrorArgs> getDetachError() {

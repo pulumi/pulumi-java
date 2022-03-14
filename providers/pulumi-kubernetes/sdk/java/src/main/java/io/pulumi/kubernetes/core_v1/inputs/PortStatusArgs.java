@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
      *   format foo.example.com/CamelCase.
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable Output<String> error;
 
     public Output<String> getError() {
@@ -33,7 +33,7 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
      * Port is the port number of the service port of which status is recorded here
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -49,7 +49,7 @@ public final class PortStatusArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"UDP"` is the UDP protocol.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
     public Output<String> getProtocol() {

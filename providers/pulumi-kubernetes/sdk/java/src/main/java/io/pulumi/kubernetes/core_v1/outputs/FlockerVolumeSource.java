@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlockerVolumeSource {
     /**
      * Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated
@@ -22,10 +22,10 @@ public final class FlockerVolumeSource {
      */
     private final @Nullable String datasetUUID;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlockerVolumeSource(
-        @OutputCustomType.Parameter("datasetName") @Nullable String datasetName,
-        @OutputCustomType.Parameter("datasetUUID") @Nullable String datasetUUID) {
+        @CustomType.Parameter("datasetName") @Nullable String datasetName,
+        @CustomType.Parameter("datasetUUID") @Nullable String datasetUUID) {
         this.datasetName = datasetName;
         this.datasetUUID = datasetUUID;
     }

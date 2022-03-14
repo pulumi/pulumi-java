@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomResourceDefinitionNames {
     /**
      * categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.
@@ -43,14 +43,14 @@ public final class CustomResourceDefinitionNames {
      */
     private final @Nullable String singular;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomResourceDefinitionNames(
-        @OutputCustomType.Parameter("categories") @Nullable List<String> categories,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("listKind") @Nullable String listKind,
-        @OutputCustomType.Parameter("plural") String plural,
-        @OutputCustomType.Parameter("shortNames") @Nullable List<String> shortNames,
-        @OutputCustomType.Parameter("singular") @Nullable String singular) {
+        @CustomType.Parameter("categories") @Nullable List<String> categories,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("listKind") @Nullable String listKind,
+        @CustomType.Parameter("plural") String plural,
+        @CustomType.Parameter("shortNames") @Nullable List<String> shortNames,
+        @CustomType.Parameter("singular") @Nullable String singular) {
         this.categories = categories;
         this.kind = kind;
         this.listKind = listKind;

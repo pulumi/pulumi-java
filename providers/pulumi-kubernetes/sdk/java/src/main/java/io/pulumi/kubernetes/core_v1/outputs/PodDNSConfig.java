@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodDNSConfigOption;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PodDNSConfig {
     /**
      * A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
@@ -28,11 +28,11 @@ public final class PodDNSConfig {
      */
     private final @Nullable List<String> searches;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PodDNSConfig(
-        @OutputCustomType.Parameter("nameservers") @Nullable List<String> nameservers,
-        @OutputCustomType.Parameter("options") @Nullable List<PodDNSConfigOption> options,
-        @OutputCustomType.Parameter("searches") @Nullable List<String> searches) {
+        @CustomType.Parameter("nameservers") @Nullable List<String> nameservers,
+        @CustomType.Parameter("options") @Nullable List<PodDNSConfigOption> options,
+        @CustomType.Parameter("searches") @Nullable List<String> searches) {
         this.nameservers = nameservers;
         this.options = options;
         this.searches = searches;

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apps_v1.outputs.StatefulSetCondition;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StatefulSetStatus {
     /**
      * Total number of available pods (ready for at least minReadySeconds) targeted by this statefulset. This is a beta field and enabled/disabled by StatefulSetMinReadySeconds feature gate.
@@ -65,18 +65,18 @@ public final class StatefulSetStatus {
      */
     private final @Nullable Integer updatedReplicas;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatefulSetStatus(
-        @OutputCustomType.Parameter("availableReplicas") Integer availableReplicas,
-        @OutputCustomType.Parameter("collisionCount") @Nullable Integer collisionCount,
-        @OutputCustomType.Parameter("conditions") @Nullable List<StatefulSetCondition> conditions,
-        @OutputCustomType.Parameter("currentReplicas") @Nullable Integer currentReplicas,
-        @OutputCustomType.Parameter("currentRevision") @Nullable String currentRevision,
-        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
-        @OutputCustomType.Parameter("readyReplicas") @Nullable Integer readyReplicas,
-        @OutputCustomType.Parameter("replicas") Integer replicas,
-        @OutputCustomType.Parameter("updateRevision") @Nullable String updateRevision,
-        @OutputCustomType.Parameter("updatedReplicas") @Nullable Integer updatedReplicas) {
+        @CustomType.Parameter("availableReplicas") Integer availableReplicas,
+        @CustomType.Parameter("collisionCount") @Nullable Integer collisionCount,
+        @CustomType.Parameter("conditions") @Nullable List<StatefulSetCondition> conditions,
+        @CustomType.Parameter("currentReplicas") @Nullable Integer currentReplicas,
+        @CustomType.Parameter("currentRevision") @Nullable String currentRevision,
+        @CustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @CustomType.Parameter("readyReplicas") @Nullable Integer readyReplicas,
+        @CustomType.Parameter("replicas") Integer replicas,
+        @CustomType.Parameter("updateRevision") @Nullable String updateRevision,
+        @CustomType.Parameter("updatedReplicas") @Nullable Integer updatedReplicas) {
         this.availableReplicas = availableReplicas;
         this.collisionCount = collisionCount;
         this.conditions = conditions;

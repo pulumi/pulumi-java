@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.IngressBackend;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HTTPIngressPath {
     /**
      * Backend defines the referenced service endpoint to which the traffic will be forwarded to.
@@ -38,11 +38,11 @@ public final class HTTPIngressPath {
      */
     private final @Nullable String pathType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HTTPIngressPath(
-        @OutputCustomType.Parameter("backend") IngressBackend backend,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("pathType") @Nullable String pathType) {
+        @CustomType.Parameter("backend") IngressBackend backend,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("pathType") @Nullable String pathType) {
         this.backend = backend;
         this.path = path;
         this.pathType = pathType;

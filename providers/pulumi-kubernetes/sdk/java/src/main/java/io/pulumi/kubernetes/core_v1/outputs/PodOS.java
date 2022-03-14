@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PodOS {
     /**
      * Name is the name of the operating system. The currently supported values are linux and windows. Additional value may be defined in future and can be one of: https://github.com/opencontainers/runtime-spec/blob/master/config.md#platform-specific-configuration Clients should expect to handle additional values and treat unrecognized values in this field as os: null
@@ -15,8 +15,8 @@ public final class PodOS {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private PodOS(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private PodOS(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

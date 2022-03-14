@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.SecretArgs;
@@ -35,7 +35,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -49,7 +49,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Data contains the secret data. Each key must consist of alphanumeric characters, '-', '_' or '.'. The serialized form of the secret data is a base64 encoded string, representing the arbitrary (possibly non-string) data value here. Described in https://tools.ietf.org/html/rfc4648#section-4
      * 
      */
-    @OutputExport(name="data", type=Map.class, parameters={String.class, String.class})
+    @Export(name="data", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> data;
 
     /**
@@ -63,7 +63,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Immutable, if set to true, ensures that data stored in the Secret cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil.
      * 
      */
-    @OutputExport(name="immutable", type=Boolean.class, parameters={})
+    @Export(name="immutable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> immutable;
 
     /**
@@ -77,7 +77,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -91,7 +91,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
@@ -105,7 +105,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * stringData allows specifying non-binary secret data in string form. It is provided as a write-only input field for convenience. All keys and values are merged into the data field on write, overwriting any existing values. The stringData field is never output when reading from the API.
      * 
      */
-    @OutputExport(name="stringData", type=Map.class, parameters={String.class, String.class})
+    @Export(name="stringData", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> stringData;
 
     /**
@@ -119,7 +119,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Used to facilitate programmatic handling of secret data. More info: https://kubernetes.io/docs/concepts/configuration/secret/#secret-types
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

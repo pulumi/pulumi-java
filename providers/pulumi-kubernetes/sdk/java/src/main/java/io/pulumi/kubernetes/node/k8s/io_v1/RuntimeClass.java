@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.node.k8s.io_v1;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -26,7 +26,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -40,7 +40,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * Handler specifies the underlying runtime and configuration that the CRI implementation will use to handle pods of this class. The possible values are specific to the node & CRI configuration.  It is assumed that all handlers are available on every node, and handlers of the same name are equivalent on every node. For example, a handler called "runc" might specify that the runc OCI runtime (using native Linux containers) will be used to run the containers in a pod. The Handler must be lowercase, conform to the DNS Label (RFC 1123) requirements, and is immutable.
      * 
      */
-    @OutputExport(name="handler", type=String.class, parameters={})
+    @Export(name="handler", type=String.class, parameters={})
     private Output<String> handler;
 
     /**
@@ -54,7 +54,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -68,7 +68,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
@@ -84,7 +84,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * This field is in beta starting v1.18 and is only honored by servers that enable the PodOverhead feature.
      * 
      */
-    @OutputExport(name="overhead", type=Overhead.class, parameters={})
+    @Export(name="overhead", type=Overhead.class, parameters={})
     private Output</* @Nullable */ Overhead> overhead;
 
     /**
@@ -100,7 +100,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * Scheduling holds the scheduling constraints to ensure that pods running with this RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this RuntimeClass is assumed to be supported by all nodes.
      * 
      */
-    @OutputExport(name="scheduling", type=Scheduling.class, parameters={})
+    @Export(name="scheduling", type=Scheduling.class, parameters={})
     private Output</* @Nullable */ Scheduling> scheduling;
 
     /**

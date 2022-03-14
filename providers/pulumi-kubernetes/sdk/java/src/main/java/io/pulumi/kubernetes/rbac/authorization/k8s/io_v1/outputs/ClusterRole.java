@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.outputs.AggregationRule;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.outputs.PolicyRule;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterRole {
     /**
      * AggregationRule is an optional field that describes how to build the Rules for this ClusterRole. If AggregationRule is set, then the Rules are controller managed and direct changes to Rules will be stomped by the controller.
@@ -41,13 +41,13 @@ public final class ClusterRole {
      */
     private final @Nullable List<PolicyRule> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterRole(
-        @OutputCustomType.Parameter("aggregationRule") @Nullable AggregationRule aggregationRule,
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("rules") @Nullable List<PolicyRule> rules) {
+        @CustomType.Parameter("aggregationRule") @Nullable AggregationRule aggregationRule,
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("rules") @Nullable List<PolicyRule> rules) {
         this.aggregationRule = aggregationRule;
         this.apiVersion = apiVersion;
         this.kind = kind;

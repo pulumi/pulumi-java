@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFilePersistentVolumeSource {
     /**
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
@@ -33,12 +33,12 @@ public final class AzureFilePersistentVolumeSource {
      */
     private final String shareName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFilePersistentVolumeSource(
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("secretName") String secretName,
-        @OutputCustomType.Parameter("secretNamespace") @Nullable String secretNamespace,
-        @OutputCustomType.Parameter("shareName") String shareName) {
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("secretName") String secretName,
+        @CustomType.Parameter("secretNamespace") @Nullable String secretNamespace,
+        @CustomType.Parameter("shareName") String shareName) {
         this.readOnly = readOnly;
         this.secretName = secretName;
         this.secretNamespace = secretNamespace;

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FCVolumeSource {
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
@@ -40,13 +40,13 @@ public final class FCVolumeSource {
      */
     private final @Nullable List<String> wwids;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FCVolumeSource(
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("lun") @Nullable Integer lun,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("targetWWNs") @Nullable List<String> targetWWNs,
-        @OutputCustomType.Parameter("wwids") @Nullable List<String> wwids) {
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("lun") @Nullable Integer lun,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("targetWWNs") @Nullable List<String> targetWWNs,
+        @CustomType.Parameter("wwids") @Nullable List<String> wwids) {
         this.fsType = fsType;
         this.lun = lun;
         this.readOnly = readOnly;

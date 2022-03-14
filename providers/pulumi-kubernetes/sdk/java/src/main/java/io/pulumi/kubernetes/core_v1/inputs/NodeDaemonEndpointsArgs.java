@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.DaemonEndpointArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NodeDaemonEndpointsArgs extends io.pulumi.resources.ResourceA
      * Endpoint on which Kubelet is listening.
      * 
      */
-    @InputImport(name="kubeletEndpoint")
+    @Import(name="kubeletEndpoint")
       private final @Nullable Output<DaemonEndpointArgs> kubeletEndpoint;
 
     public Output<DaemonEndpointArgs> getKubeletEndpoint() {

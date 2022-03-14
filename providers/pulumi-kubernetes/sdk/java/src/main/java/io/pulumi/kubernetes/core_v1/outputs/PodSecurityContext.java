@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.SELinuxOptions;
 import io.pulumi.kubernetes.core_v1.outputs.SeccompProfile;
 import io.pulumi.kubernetes.core_v1.outputs.Sysctl;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PodSecurityContext {
     /**
      * A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod:
@@ -73,18 +73,18 @@ public final class PodSecurityContext {
      */
     private final @Nullable WindowsSecurityContextOptions windowsOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PodSecurityContext(
-        @OutputCustomType.Parameter("fsGroup") @Nullable Integer fsGroup,
-        @OutputCustomType.Parameter("fsGroupChangePolicy") @Nullable String fsGroupChangePolicy,
-        @OutputCustomType.Parameter("runAsGroup") @Nullable Integer runAsGroup,
-        @OutputCustomType.Parameter("runAsNonRoot") @Nullable Boolean runAsNonRoot,
-        @OutputCustomType.Parameter("runAsUser") @Nullable Integer runAsUser,
-        @OutputCustomType.Parameter("seLinuxOptions") @Nullable SELinuxOptions seLinuxOptions,
-        @OutputCustomType.Parameter("seccompProfile") @Nullable SeccompProfile seccompProfile,
-        @OutputCustomType.Parameter("supplementalGroups") @Nullable List<Integer> supplementalGroups,
-        @OutputCustomType.Parameter("sysctls") @Nullable List<Sysctl> sysctls,
-        @OutputCustomType.Parameter("windowsOptions") @Nullable WindowsSecurityContextOptions windowsOptions) {
+        @CustomType.Parameter("fsGroup") @Nullable Integer fsGroup,
+        @CustomType.Parameter("fsGroupChangePolicy") @Nullable String fsGroupChangePolicy,
+        @CustomType.Parameter("runAsGroup") @Nullable Integer runAsGroup,
+        @CustomType.Parameter("runAsNonRoot") @Nullable Boolean runAsNonRoot,
+        @CustomType.Parameter("runAsUser") @Nullable Integer runAsUser,
+        @CustomType.Parameter("seLinuxOptions") @Nullable SELinuxOptions seLinuxOptions,
+        @CustomType.Parameter("seccompProfile") @Nullable SeccompProfile seccompProfile,
+        @CustomType.Parameter("supplementalGroups") @Nullable List<Integer> supplementalGroups,
+        @CustomType.Parameter("sysctls") @Nullable List<Sysctl> sysctls,
+        @CustomType.Parameter("windowsOptions") @Nullable WindowsSecurityContextOptions windowsOptions) {
         this.fsGroup = fsGroup;
         this.fsGroupChangePolicy = fsGroupChangePolicy;
         this.runAsGroup = runAsGroup;

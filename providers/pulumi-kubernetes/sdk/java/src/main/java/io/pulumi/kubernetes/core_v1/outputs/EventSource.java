@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventSource {
     /**
      * Component from which the event is generated.
@@ -22,10 +22,10 @@ public final class EventSource {
      */
     private final @Nullable String host;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventSource(
-        @OutputCustomType.Parameter("component") @Nullable String component,
-        @OutputCustomType.Parameter("host") @Nullable String host) {
+        @CustomType.Parameter("component") @Nullable String component,
+        @CustomType.Parameter("host") @Nullable String host) {
         this.component = component;
         this.host = host;
     }

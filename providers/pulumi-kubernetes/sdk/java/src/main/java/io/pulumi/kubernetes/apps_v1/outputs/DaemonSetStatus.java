@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apps_v1.outputs.DaemonSetCondition;
 import java.lang.Integer;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DaemonSetStatus {
     /**
      * Count of hash collisions for the DaemonSet. The DaemonSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
@@ -64,18 +64,18 @@ public final class DaemonSetStatus {
      */
     private final @Nullable Integer updatedNumberScheduled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DaemonSetStatus(
-        @OutputCustomType.Parameter("collisionCount") @Nullable Integer collisionCount,
-        @OutputCustomType.Parameter("conditions") @Nullable List<DaemonSetCondition> conditions,
-        @OutputCustomType.Parameter("currentNumberScheduled") Integer currentNumberScheduled,
-        @OutputCustomType.Parameter("desiredNumberScheduled") Integer desiredNumberScheduled,
-        @OutputCustomType.Parameter("numberAvailable") @Nullable Integer numberAvailable,
-        @OutputCustomType.Parameter("numberMisscheduled") Integer numberMisscheduled,
-        @OutputCustomType.Parameter("numberReady") Integer numberReady,
-        @OutputCustomType.Parameter("numberUnavailable") @Nullable Integer numberUnavailable,
-        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
-        @OutputCustomType.Parameter("updatedNumberScheduled") @Nullable Integer updatedNumberScheduled) {
+        @CustomType.Parameter("collisionCount") @Nullable Integer collisionCount,
+        @CustomType.Parameter("conditions") @Nullable List<DaemonSetCondition> conditions,
+        @CustomType.Parameter("currentNumberScheduled") Integer currentNumberScheduled,
+        @CustomType.Parameter("desiredNumberScheduled") Integer desiredNumberScheduled,
+        @CustomType.Parameter("numberAvailable") @Nullable Integer numberAvailable,
+        @CustomType.Parameter("numberMisscheduled") Integer numberMisscheduled,
+        @CustomType.Parameter("numberReady") Integer numberReady,
+        @CustomType.Parameter("numberUnavailable") @Nullable Integer numberUnavailable,
+        @CustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @CustomType.Parameter("updatedNumberScheduled") @Nullable Integer updatedNumberScheduled) {
         this.collisionCount = collisionCount;
         this.conditions = conditions;
         this.currentNumberScheduled = currentNumberScheduled;

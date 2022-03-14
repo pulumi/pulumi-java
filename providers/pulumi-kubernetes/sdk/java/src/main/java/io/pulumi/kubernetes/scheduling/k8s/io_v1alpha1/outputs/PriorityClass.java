@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.scheduling.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PriorityClass {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -50,15 +50,15 @@ public final class PriorityClass {
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PriorityClass(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("globalDefault") @Nullable Boolean globalDefault,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("preemptionPolicy") @Nullable String preemptionPolicy,
-        @OutputCustomType.Parameter("value") Integer value) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("globalDefault") @Nullable Boolean globalDefault,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("preemptionPolicy") @Nullable String preemptionPolicy,
+        @CustomType.Parameter("value") Integer value) {
         this.apiVersion = apiVersion;
         this.description = description;
         this.globalDefault = globalDefault;

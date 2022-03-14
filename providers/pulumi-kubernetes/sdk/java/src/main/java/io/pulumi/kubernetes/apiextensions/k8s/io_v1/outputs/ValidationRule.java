@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ValidationRule {
     /**
      * Message represents the message displayed when validation fails. The message is required if the Rule contains line breaks. The message must not contain line breaks. If unset, the message is "failed rule: {Rule}". e.g. "must be a URL with the host matching spec.host"
@@ -46,10 +46,10 @@ public final class ValidationRule {
      */
     private final String rule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidationRule(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("rule") String rule) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("rule") String rule) {
         this.message = message;
         this.rule = rule;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricTarget {
     /**
      * averageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods. Currently only valid for Resource metric source type
@@ -33,12 +33,12 @@ public final class MetricTarget {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricTarget(
-        @OutputCustomType.Parameter("averageUtilization") @Nullable Integer averageUtilization,
-        @OutputCustomType.Parameter("averageValue") @Nullable String averageValue,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("averageUtilization") @Nullable Integer averageUtilization,
+        @CustomType.Parameter("averageValue") @Nullable String averageValue,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.averageUtilization = averageUtilization;
         this.averageValue = averageValue;
         this.type = type;

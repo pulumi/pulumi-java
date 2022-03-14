@@ -4,13 +4,13 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
 import com.google.gson.JsonElement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceSubresourceScale;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomResourceSubresources {
     /**
      * scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.
@@ -23,10 +23,10 @@ public final class CustomResourceSubresources {
      */
     private final @Nullable JsonElement status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomResourceSubresources(
-        @OutputCustomType.Parameter("scale") @Nullable CustomResourceSubresourceScale scale,
-        @OutputCustomType.Parameter("status") @Nullable JsonElement status) {
+        @CustomType.Parameter("scale") @Nullable CustomResourceSubresourceScale scale,
+        @CustomType.Parameter("status") @Nullable JsonElement status) {
         this.scale = scale;
         this.status = status;
     }

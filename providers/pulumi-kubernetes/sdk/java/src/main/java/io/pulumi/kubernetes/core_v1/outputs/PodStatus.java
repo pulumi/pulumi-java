@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ContainerStatus;
 import io.pulumi.kubernetes.core_v1.outputs.PodCondition;
 import io.pulumi.kubernetes.core_v1.outputs.PodIP;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PodStatus {
     /**
      * Current service state of pod. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
@@ -97,21 +97,21 @@ public final class PodStatus {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PodStatus(
-        @OutputCustomType.Parameter("conditions") @Nullable List<PodCondition> conditions,
-        @OutputCustomType.Parameter("containerStatuses") @Nullable List<ContainerStatus> containerStatuses,
-        @OutputCustomType.Parameter("ephemeralContainerStatuses") @Nullable List<ContainerStatus> ephemeralContainerStatuses,
-        @OutputCustomType.Parameter("hostIP") @Nullable String hostIP,
-        @OutputCustomType.Parameter("initContainerStatuses") @Nullable List<ContainerStatus> initContainerStatuses,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("nominatedNodeName") @Nullable String nominatedNodeName,
-        @OutputCustomType.Parameter("phase") @Nullable String phase,
-        @OutputCustomType.Parameter("podIP") @Nullable String podIP,
-        @OutputCustomType.Parameter("podIPs") @Nullable List<PodIP> podIPs,
-        @OutputCustomType.Parameter("qosClass") @Nullable String qosClass,
-        @OutputCustomType.Parameter("reason") @Nullable String reason,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("conditions") @Nullable List<PodCondition> conditions,
+        @CustomType.Parameter("containerStatuses") @Nullable List<ContainerStatus> containerStatuses,
+        @CustomType.Parameter("ephemeralContainerStatuses") @Nullable List<ContainerStatus> ephemeralContainerStatuses,
+        @CustomType.Parameter("hostIP") @Nullable String hostIP,
+        @CustomType.Parameter("initContainerStatuses") @Nullable List<ContainerStatus> initContainerStatuses,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("nominatedNodeName") @Nullable String nominatedNodeName,
+        @CustomType.Parameter("phase") @Nullable String phase,
+        @CustomType.Parameter("podIP") @Nullable String podIP,
+        @CustomType.Parameter("podIPs") @Nullable List<PodIP> podIPs,
+        @CustomType.Parameter("qosClass") @Nullable String qosClass,
+        @CustomType.Parameter("reason") @Nullable String reason,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.conditions = conditions;
         this.containerStatuses = containerStatuses;
         this.ephemeralContainerStatuses = ephemeralContainerStatuses;

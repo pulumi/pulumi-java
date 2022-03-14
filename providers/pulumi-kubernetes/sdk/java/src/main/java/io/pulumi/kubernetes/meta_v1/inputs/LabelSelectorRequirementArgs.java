@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.meta_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LabelSelectorRequirementArgs extends io.pulumi.resources.Reso
      * key is the label key that the selector applies to.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -34,7 +34,7 @@ public final class LabelSelectorRequirementArgs extends io.pulumi.resources.Reso
      * operator represents a key's relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<String> operator;
 
     public Output<String> getOperator() {
@@ -45,7 +45,7 @@ public final class LabelSelectorRequirementArgs extends io.pulumi.resources.Reso
      * values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

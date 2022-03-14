@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.CrossVersionObjectReference;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricIdentifier;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricTarget;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ObjectMetricSource {
     /**
      * describedObject specifies the descriptions of a object,such as kind,name apiVersion
@@ -27,11 +27,11 @@ public final class ObjectMetricSource {
      */
     private final MetricTarget target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectMetricSource(
-        @OutputCustomType.Parameter("describedObject") CrossVersionObjectReference describedObject,
-        @OutputCustomType.Parameter("metric") MetricIdentifier metric,
-        @OutputCustomType.Parameter("target") MetricTarget target) {
+        @CustomType.Parameter("describedObject") CrossVersionObjectReference describedObject,
+        @CustomType.Parameter("metric") MetricIdentifier metric,
+        @CustomType.Parameter("target") MetricTarget target) {
         this.describedObject = describedObject;
         this.metric = metric;
         this.target = target;

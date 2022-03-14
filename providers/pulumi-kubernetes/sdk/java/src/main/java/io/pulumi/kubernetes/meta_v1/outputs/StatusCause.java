@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StatusCause {
     /**
      * The field of the resource that has caused this error, as named by its JSON serialization. May include dot and postfix notation for nested attributes. Arrays are zero-indexed.  Fields may appear more than once in an array of causes due to fields having multiple errors. Optional.
@@ -31,11 +31,11 @@ public final class StatusCause {
      */
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatusCause(
-        @OutputCustomType.Parameter("field") @Nullable String field,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("reason") @Nullable String reason) {
+        @CustomType.Parameter("field") @Nullable String field,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("reason") @Nullable String reason) {
         this.field = field;
         this.message = message;
         this.reason = reason;

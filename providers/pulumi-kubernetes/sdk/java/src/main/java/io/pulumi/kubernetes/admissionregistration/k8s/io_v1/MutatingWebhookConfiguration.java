@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.admissionregistration.k8s.io_v1;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.MutatingWebhookConfigurationArgs;
@@ -25,7 +25,7 @@ public class MutatingWebhookConfiguration extends io.pulumi.resources.CustomReso
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -39,7 +39,7 @@ public class MutatingWebhookConfiguration extends io.pulumi.resources.CustomReso
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -53,7 +53,7 @@ public class MutatingWebhookConfiguration extends io.pulumi.resources.CustomReso
      * Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
@@ -67,7 +67,7 @@ public class MutatingWebhookConfiguration extends io.pulumi.resources.CustomReso
      * Webhooks is a list of webhooks and the affected resources and operations.
      * 
      */
-    @OutputExport(name="webhooks", type=List.class, parameters={MutatingWebhook.class})
+    @Export(name="webhooks", type=List.class, parameters={MutatingWebhook.class})
     private Output</* @Nullable */ List<MutatingWebhook>> webhooks;
 
     /**

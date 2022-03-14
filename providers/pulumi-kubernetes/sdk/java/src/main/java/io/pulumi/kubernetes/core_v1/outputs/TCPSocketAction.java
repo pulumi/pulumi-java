@@ -4,14 +4,14 @@
 package io.pulumi.kubernetes.core_v1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TCPSocketAction {
     /**
      * Optional: Host name to connect to, defaults to the pod IP.
@@ -24,10 +24,10 @@ public final class TCPSocketAction {
      */
     private final Either<Integer,String> port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TCPSocketAction(
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("port") Either<Integer,String> port) {
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("port") Either<Integer,String> port) {
         this.host = host;
         this.port = port;
     }

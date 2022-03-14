@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceFieldSelector {
     /**
      * Container name: required for volumes, optional for env vars
@@ -27,11 +27,11 @@ public final class ResourceFieldSelector {
      */
     private final String resource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceFieldSelector(
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("divisor") @Nullable String divisor,
-        @OutputCustomType.Parameter("resource") String resource) {
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("divisor") @Nullable String divisor,
+        @CustomType.Parameter("resource") String resource) {
         this.containerName = containerName;
         this.divisor = divisor;
         this.resource = resource;

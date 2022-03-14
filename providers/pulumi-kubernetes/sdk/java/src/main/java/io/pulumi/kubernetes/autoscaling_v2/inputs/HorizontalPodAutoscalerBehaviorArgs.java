@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.HPAScalingRulesArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
      * scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).
      * 
      */
-    @InputImport(name="scaleDown")
+    @Import(name="scaleDown")
       private final @Nullable Output<HPAScalingRulesArgs> scaleDown;
 
     public Output<HPAScalingRulesArgs> getScaleDown() {
@@ -36,7 +36,7 @@ public final class HorizontalPodAutoscalerBehaviorArgs extends io.pulumi.resourc
      *     No stabilization is used.
      * 
      */
-    @InputImport(name="scaleUp")
+    @Import(name="scaleUp")
       private final @Nullable Output<HPAScalingRulesArgs> scaleUp;
 
     public Output<HPAScalingRulesArgs> getScaleUp() {

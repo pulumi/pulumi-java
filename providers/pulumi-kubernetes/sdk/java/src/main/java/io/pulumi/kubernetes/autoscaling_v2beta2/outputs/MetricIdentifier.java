@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricIdentifier {
     /**
      * name is the name of the given metric
@@ -23,10 +23,10 @@ public final class MetricIdentifier {
      */
     private final @Nullable LabelSelector selector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricIdentifier(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("selector") @Nullable LabelSelector selector) {
         this.name = name;
         this.selector = selector;
     }

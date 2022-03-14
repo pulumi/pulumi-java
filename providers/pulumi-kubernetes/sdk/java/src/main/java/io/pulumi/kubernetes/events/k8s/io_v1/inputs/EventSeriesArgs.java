@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.events.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * count is the number of occurrences in this series up to the last heartbeat time.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -33,7 +33,7 @@ public final class EventSeriesArgs extends io.pulumi.resources.ResourceArgs {
      * lastObservedTime is the time when last Event from the series was seen before last heartbeat.
      * 
      */
-    @InputImport(name="lastObservedTime", required=true)
+    @Import(name="lastObservedTime", required=true)
       private final Output<String> lastObservedTime;
 
     public Output<String> getLastObservedTime() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeNodeResources {
     /**
      * Maximum number of unique volumes managed by the CSI driver that can be used on a node. A volume that is both attached and mounted on a node is considered to be used once, not twice. The same rule applies for a unique volume that is shared among multiple pods on the same node. If this field is nil, then the supported number of volumes on this node is unbounded.
@@ -17,8 +17,8 @@ public final class VolumeNodeResources {
      */
     private final @Nullable Integer count;
 
-    @OutputCustomType.Constructor
-    private VolumeNodeResources(@OutputCustomType.Parameter("count") @Nullable Integer count) {
+    @CustomType.Constructor
+    private VolumeNodeResources(@CustomType.Parameter("count") @Nullable Integer count) {
         this.count = count;
     }
 

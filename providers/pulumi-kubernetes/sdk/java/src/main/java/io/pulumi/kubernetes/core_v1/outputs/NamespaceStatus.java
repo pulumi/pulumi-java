@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NamespaceCondition;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NamespaceStatus {
     /**
      * Represents the latest available observations of a namespace's current state.
@@ -28,10 +28,10 @@ public final class NamespaceStatus {
      */
     private final @Nullable String phase;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NamespaceStatus(
-        @OutputCustomType.Parameter("conditions") @Nullable List<NamespaceCondition> conditions,
-        @OutputCustomType.Parameter("phase") @Nullable String phase) {
+        @CustomType.Parameter("conditions") @Nullable List<NamespaceCondition> conditions,
+        @CustomType.Parameter("phase") @Nullable String phase) {
         this.conditions = conditions;
         this.phase = phase;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.autoscaling_v1.inputs.CrossVersionObjectReferenceArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * upper limit for the number of pods that can be set by the autoscaler; cannot be smaller than MinReplicas.
      * 
      */
-    @InputImport(name="maxReplicas", required=true)
+    @Import(name="maxReplicas", required=true)
       private final Output<Integer> maxReplicas;
 
     public Output<Integer> getMaxReplicas() {
@@ -34,7 +34,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * minReplicas is the lower limit for the number of replicas to which the autoscaler can scale down.  It defaults to 1 pod.  minReplicas is allowed to be 0 if the alpha feature gate HPAScaleToZero is enabled and at least one Object or External metric is configured.  Scaling is active as long as at least one metric value is available.
      * 
      */
-    @InputImport(name="minReplicas")
+    @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
 
     public Output<Integer> getMinReplicas() {
@@ -45,7 +45,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * reference to scaled resource; horizontal pod autoscaler will learn the current resource consumption and will set the desired number of pods by using its Scale subresource.
      * 
      */
-    @InputImport(name="scaleTargetRef", required=true)
+    @Import(name="scaleTargetRef", required=true)
       private final Output<CrossVersionObjectReferenceArgs> scaleTargetRef;
 
     public Output<CrossVersionObjectReferenceArgs> getScaleTargetRef() {
@@ -56,7 +56,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
      * target average CPU utilization (represented as a percentage of requested CPU) over all the pods; if not specified the default autoscaling policy will be used.
      * 
      */
-    @InputImport(name="targetCPUUtilizationPercentage")
+    @Import(name="targetCPUUtilizationPercentage")
       private final @Nullable Output<Integer> targetCPUUtilizationPercentage;
 
     public Output<Integer> getTargetCPUUtilizationPercentage() {

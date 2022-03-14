@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceMetricSource {
     /**
      * name is the name of the resource in question.
@@ -28,11 +28,11 @@ public final class ResourceMetricSource {
      */
     private final @Nullable String targetAverageValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceMetricSource(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("targetAverageUtilization") @Nullable Integer targetAverageUtilization,
-        @OutputCustomType.Parameter("targetAverageValue") @Nullable String targetAverageValue) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("targetAverageUtilization") @Nullable Integer targetAverageUtilization,
+        @CustomType.Parameter("targetAverageValue") @Nullable String targetAverageValue) {
         this.name = name;
         this.targetAverageUtilization = targetAverageUtilization;
         this.targetAverageValue = targetAverageValue;

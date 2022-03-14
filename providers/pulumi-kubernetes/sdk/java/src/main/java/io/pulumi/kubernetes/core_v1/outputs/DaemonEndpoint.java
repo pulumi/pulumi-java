@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DaemonEndpoint {
     /**
      * Port number of the given endpoint.
@@ -15,8 +15,8 @@ public final class DaemonEndpoint {
      */
     private final Integer Port;
 
-    @OutputCustomType.Constructor
-    private DaemonEndpoint(@OutputCustomType.Parameter("Port") Integer Port) {
+    @CustomType.Constructor
+    private DaemonEndpoint(@CustomType.Parameter("Port") Integer Port) {
         this.Port = Port;
     }
 

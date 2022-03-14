@@ -3,12 +3,12 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HPAScalingPolicy {
     /**
      * PeriodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min).
@@ -26,11 +26,11 @@ public final class HPAScalingPolicy {
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HPAScalingPolicy(
-        @OutputCustomType.Parameter("periodSeconds") Integer periodSeconds,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") Integer value) {
+        @CustomType.Parameter("periodSeconds") Integer periodSeconds,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") Integer value) {
         this.periodSeconds = periodSeconds;
         this.type = type;
         this.value = value;

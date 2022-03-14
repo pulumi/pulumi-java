@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceConversion;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceDefinitionNames;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceDefinitionVersion;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomResourceDefinitionSpec {
     /**
      * conversion defines conversion settings for the CRD.
@@ -47,14 +47,14 @@ public final class CustomResourceDefinitionSpec {
      */
     private final List<CustomResourceDefinitionVersion> versions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomResourceDefinitionSpec(
-        @OutputCustomType.Parameter("conversion") @Nullable CustomResourceConversion conversion,
-        @OutputCustomType.Parameter("group") String group,
-        @OutputCustomType.Parameter("names") CustomResourceDefinitionNames names,
-        @OutputCustomType.Parameter("preserveUnknownFields") @Nullable Boolean preserveUnknownFields,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("versions") List<CustomResourceDefinitionVersion> versions) {
+        @CustomType.Parameter("conversion") @Nullable CustomResourceConversion conversion,
+        @CustomType.Parameter("group") String group,
+        @CustomType.Parameter("names") CustomResourceDefinitionNames names,
+        @CustomType.Parameter("preserveUnknownFields") @Nullable Boolean preserveUnknownFields,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("versions") List<CustomResourceDefinitionVersion> versions) {
         this.conversion = conversion;
         this.group = group;
         this.names = names;

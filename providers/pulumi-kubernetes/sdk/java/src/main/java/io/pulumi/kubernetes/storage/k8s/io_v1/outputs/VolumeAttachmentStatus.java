@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.storage.k8s.io_v1.outputs.VolumeError;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeAttachmentStatus {
     /**
      * The last error encountered during attach operation, if any. This field must only be set by the entity completing the attach operation, i.e. the external-attacher.
@@ -35,12 +35,12 @@ public final class VolumeAttachmentStatus {
      */
     private final @Nullable VolumeError detachError;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeAttachmentStatus(
-        @OutputCustomType.Parameter("attachError") @Nullable VolumeError attachError,
-        @OutputCustomType.Parameter("attached") Boolean attached,
-        @OutputCustomType.Parameter("attachmentMetadata") @Nullable Map<String,String> attachmentMetadata,
-        @OutputCustomType.Parameter("detachError") @Nullable VolumeError detachError) {
+        @CustomType.Parameter("attachError") @Nullable VolumeError attachError,
+        @CustomType.Parameter("attached") Boolean attached,
+        @CustomType.Parameter("attachmentMetadata") @Nullable Map<String,String> attachmentMetadata,
+        @CustomType.Parameter("detachError") @Nullable VolumeError detachError) {
         this.attachError = attachError;
         this.attached = attached;
         this.attachmentMetadata = attachmentMetadata;

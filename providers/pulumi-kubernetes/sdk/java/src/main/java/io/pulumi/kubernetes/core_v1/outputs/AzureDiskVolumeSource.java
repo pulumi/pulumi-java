@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureDiskVolumeSource {
     /**
      * Host Caching mode: None, Read Only, Read Write.
@@ -43,14 +43,14 @@ public final class AzureDiskVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureDiskVolumeSource(
-        @OutputCustomType.Parameter("cachingMode") @Nullable String cachingMode,
-        @OutputCustomType.Parameter("diskName") String diskName,
-        @OutputCustomType.Parameter("diskURI") String diskURI,
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
+        @CustomType.Parameter("cachingMode") @Nullable String cachingMode,
+        @CustomType.Parameter("diskName") String diskName,
+        @CustomType.Parameter("diskURI") String diskURI,
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.cachingMode = cachingMode;
         this.diskName = diskName;
         this.diskURI = diskURI;

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
      * AccessModes contains the actual access modes the volume backing the PVC has. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1
      * 
      */
-    @InputImport(name="accessModes")
+    @Import(name="accessModes")
       private final @Nullable Output<List<String>> accessModes;
 
     public Output<List<String>> getAccessModes() {
@@ -36,7 +36,7 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
      * The storage resource within AllocatedResources tracks the capacity allocated to a PVC. It may be larger than the actual capacity when a volume expansion operation is requested. For storage quota, the larger value from allocatedResources and PVC.spec.resources is used. If allocatedResources is not set, PVC.spec.resources alone is used for quota calculation. If a volume expansion capacity request is lowered, allocatedResources is only lowered if there are no expansion operations in progress and if the actual volume capacity is equal or lower than the requested capacity. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
      * 
      */
-    @InputImport(name="allocatedResources")
+    @Import(name="allocatedResources")
       private final @Nullable Output<Map<String,String>> allocatedResources;
 
     public Output<Map<String,String>> getAllocatedResources() {
@@ -47,7 +47,7 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
      * Represents the actual resources of the underlying volume.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Map<String,String>> capacity;
 
     public Output<Map<String,String>> getCapacity() {
@@ -58,7 +58,7 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
      * Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<PersistentVolumeClaimConditionArgs>> conditions;
 
     public Output<List<PersistentVolumeClaimConditionArgs>> getConditions() {
@@ -74,7 +74,7 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
      *  - `"Pending"` used for PersistentVolumeClaims that are not yet bound
      * 
      */
-    @InputImport(name="phase")
+    @Import(name="phase")
       private final @Nullable Output<String> phase;
 
     public Output<String> getPhase() {
@@ -85,7 +85,7 @@ public final class PersistentVolumeClaimStatusArgs extends io.pulumi.resources.R
      * ResizeStatus stores status of resize operation. ResizeStatus is not set by default but when expansion is complete resizeStatus is set to empty string by resize controller or kubelet. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
      * 
      */
-    @InputImport(name="resizeStatus")
+    @Import(name="resizeStatus")
       private final @Nullable Output<String> resizeStatus;
 
     public Output<String> getResizeStatus() {

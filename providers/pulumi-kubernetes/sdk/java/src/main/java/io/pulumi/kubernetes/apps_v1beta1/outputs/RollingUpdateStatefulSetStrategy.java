@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.apps_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RollingUpdateStatefulSetStrategy {
     /**
      * Partition indicates the ordinal at which the StatefulSet should be partitioned.
@@ -17,8 +17,8 @@ public final class RollingUpdateStatefulSetStrategy {
      */
     private final @Nullable Integer partition;
 
-    @OutputCustomType.Constructor
-    private RollingUpdateStatefulSetStrategy(@OutputCustomType.Parameter("partition") @Nullable Integer partition) {
+    @CustomType.Constructor
+    private RollingUpdateStatefulSetStrategy(@CustomType.Parameter("partition") @Nullable Integer partition) {
         this.partition = partition;
     }
 

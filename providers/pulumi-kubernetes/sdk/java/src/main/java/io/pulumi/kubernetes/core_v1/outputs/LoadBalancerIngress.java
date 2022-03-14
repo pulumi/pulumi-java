@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PortStatus;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerIngress {
     /**
      * Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
@@ -29,11 +29,11 @@ public final class LoadBalancerIngress {
      */
     private final @Nullable List<PortStatus> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerIngress(
-        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
-        @OutputCustomType.Parameter("ip") @Nullable String ip,
-        @OutputCustomType.Parameter("ports") @Nullable List<PortStatus> ports) {
+        @CustomType.Parameter("hostname") @Nullable String hostname,
+        @CustomType.Parameter("ip") @Nullable String ip,
+        @CustomType.Parameter("ports") @Nullable List<PortStatus> ports) {
         this.hostname = hostname;
         this.ip = ip;
         this.ports = ports;

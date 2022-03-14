@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.PodDNSConfigOptionArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.
      * 
      */
-    @InputImport(name="nameservers")
+    @Import(name="nameservers")
       private final @Nullable Output<List<String>> nameservers;
 
     public Output<List<String>> getNameservers() {
@@ -35,7 +35,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A list of DNS resolver options. This will be merged with the base options generated from DNSPolicy. Duplicated entries will be removed. Resolution options given in Options will override those that appear in the base DNSPolicy.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<List<PodDNSConfigOptionArgs>> options;
 
     public Output<List<PodDNSConfigOptionArgs>> getOptions() {
@@ -46,7 +46,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.
      * 
      */
-    @InputImport(name="searches")
+    @Import(name="searches")
       private final @Nullable Output<List<String>> searches;
 
     public Output<List<String>> getSearches() {

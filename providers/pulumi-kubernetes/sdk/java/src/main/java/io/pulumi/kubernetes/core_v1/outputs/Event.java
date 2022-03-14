@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.EventSeries;
 import io.pulumi.kubernetes.core_v1.outputs.EventSource;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Event {
     /**
      * What action was taken/failed regarding to the Regarding object.
@@ -102,25 +102,25 @@ public final class Event {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Event(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("eventTime") @Nullable String eventTime,
-        @OutputCustomType.Parameter("firstTimestamp") @Nullable String firstTimestamp,
-        @OutputCustomType.Parameter("involvedObject") ObjectReference involvedObject,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("lastTimestamp") @Nullable String lastTimestamp,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("metadata") ObjectMeta metadata,
-        @OutputCustomType.Parameter("reason") @Nullable String reason,
-        @OutputCustomType.Parameter("related") @Nullable ObjectReference related,
-        @OutputCustomType.Parameter("reportingComponent") @Nullable String reportingComponent,
-        @OutputCustomType.Parameter("reportingInstance") @Nullable String reportingInstance,
-        @OutputCustomType.Parameter("series") @Nullable EventSeries series,
-        @OutputCustomType.Parameter("source") @Nullable EventSource source,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("eventTime") @Nullable String eventTime,
+        @CustomType.Parameter("firstTimestamp") @Nullable String firstTimestamp,
+        @CustomType.Parameter("involvedObject") ObjectReference involvedObject,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("lastTimestamp") @Nullable String lastTimestamp,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("metadata") ObjectMeta metadata,
+        @CustomType.Parameter("reason") @Nullable String reason,
+        @CustomType.Parameter("related") @Nullable ObjectReference related,
+        @CustomType.Parameter("reportingComponent") @Nullable String reportingComponent,
+        @CustomType.Parameter("reportingInstance") @Nullable String reportingInstance,
+        @CustomType.Parameter("series") @Nullable EventSeries series,
+        @CustomType.Parameter("source") @Nullable EventSource source,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.action = action;
         this.apiVersion = apiVersion;
         this.count = count;

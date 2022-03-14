@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PodReadinessGate {
     /**
      * ConditionType refers to a condition in the pod's condition list with matching type.
@@ -21,8 +21,8 @@ public final class PodReadinessGate {
      */
     private final String conditionType;
 
-    @OutputCustomType.Constructor
-    private PodReadinessGate(@OutputCustomType.Parameter("conditionType") String conditionType) {
+    @CustomType.Constructor
+    private PodReadinessGate(@CustomType.Parameter("conditionType") String conditionType) {
         this.conditionType = conditionType;
     }
 

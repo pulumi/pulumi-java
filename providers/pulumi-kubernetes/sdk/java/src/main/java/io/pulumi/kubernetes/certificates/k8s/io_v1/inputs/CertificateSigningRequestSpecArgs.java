@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.certificates.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * As of v1.22, this field is beta and is controlled via the CSRDuration feature gate.
      * 
      */
-    @InputImport(name="expirationSeconds")
+    @Import(name="expirationSeconds")
       private final @Nullable Output<Integer> expirationSeconds;
 
     public Output<Integer> getExpirationSeconds() {
@@ -49,7 +49,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * extra contains extra attributes of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
      */
-    @InputImport(name="extra")
+    @Import(name="extra")
       private final @Nullable Output<Map<String,List<String>>> extra;
 
     public Output<Map<String,List<String>>> getExtra() {
@@ -60,7 +60,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * groups contains group membership of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
      */
-    @InputImport(name="groups")
+    @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {
@@ -71,7 +71,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * request contains an x509 certificate signing request encoded in a "CERTIFICATE REQUEST" PEM block. When serialized as JSON or YAML, the data is additionally base64-encoded.
      * 
      */
-    @InputImport(name="request", required=true)
+    @Import(name="request", required=true)
       private final Output<String> request;
 
     public Output<String> getRequest() {
@@ -102,7 +102,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      *  6. Whether or not requests for CA certificates are allowed.
      * 
      */
-    @InputImport(name="signerName", required=true)
+    @Import(name="signerName", required=true)
       private final Output<String> signerName;
 
     public Output<String> getSignerName() {
@@ -113,7 +113,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * uid contains the uid of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
@@ -137,7 +137,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      *  "timestamping", "ocsp signing", "microsoft sgc", "netscape sgc"
      * 
      */
-    @InputImport(name="usages")
+    @Import(name="usages")
       private final @Nullable Output<List<String>> usages;
 
     public Output<List<String>> getUsages() {
@@ -148,7 +148,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
      * username contains the name of the user that created the CertificateSigningRequest. Populated by the API server on creation and immutable.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

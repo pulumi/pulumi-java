@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authentication.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
      * API version of the referent.
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -33,7 +33,7 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
      * Kind of the referent. Valid kinds are 'Pod' and 'Secret'.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -44,7 +44,7 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
      * Name of the referent.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class BoundObjectReferenceArgs extends io.pulumi.resources.Resource
      * UID of the referent.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {

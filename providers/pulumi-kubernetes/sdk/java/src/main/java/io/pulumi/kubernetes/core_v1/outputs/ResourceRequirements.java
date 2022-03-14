@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceRequirements {
     /**
      * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
@@ -22,10 +22,10 @@ public final class ResourceRequirements {
      */
     private final @Nullable Map<String,String> requests;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceRequirements(
-        @OutputCustomType.Parameter("limits") @Nullable Map<String,String> limits,
-        @OutputCustomType.Parameter("requests") @Nullable Map<String,String> requests) {
+        @CustomType.Parameter("limits") @Nullable Map<String,String> limits,
+        @CustomType.Parameter("requests") @Nullable Map<String,String> requests) {
         this.limits = limits;
         this.requests = requests;
     }

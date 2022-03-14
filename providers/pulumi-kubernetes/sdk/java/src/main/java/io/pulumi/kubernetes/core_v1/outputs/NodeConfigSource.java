@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ConfigMapNodeConfigSource;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeConfigSource {
     /**
      * ConfigMap is a reference to a Node's ConfigMap
@@ -17,8 +17,8 @@ public final class NodeConfigSource {
      */
     private final @Nullable ConfigMapNodeConfigSource configMap;
 
-    @OutputCustomType.Constructor
-    private NodeConfigSource(@OutputCustomType.Parameter("configMap") @Nullable ConfigMapNodeConfigSource configMap) {
+    @CustomType.Constructor
+    private NodeConfigSource(@CustomType.Parameter("configMap") @Nullable ConfigMapNodeConfigSource configMap) {
         this.configMap = configMap;
     }
 

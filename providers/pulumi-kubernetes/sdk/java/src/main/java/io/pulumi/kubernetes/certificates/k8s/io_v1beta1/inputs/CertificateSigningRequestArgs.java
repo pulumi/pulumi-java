@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs.CertificateSigningRequestSpecArgs;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs.CertificateSigningRequestStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -25,7 +25,7 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -36,14 +36,14 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind == null ? Output.empty() : this.kind;
     }
 
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -54,7 +54,7 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * The certificate request itself and any additional information.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<CertificateSigningRequestSpecArgs> spec;
 
     public Output<CertificateSigningRequestSpecArgs> getSpec() {
@@ -65,7 +65,7 @@ public final class CertificateSigningRequestArgs extends io.pulumi.resources.Res
      * Derived information about the request.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<CertificateSigningRequestStatusArgs> status;
 
     public Output<CertificateSigningRequestStatusArgs> getStatus() {

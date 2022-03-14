@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs.NonResourceAttributes;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs.ResourceAttributes;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SelfSubjectAccessReviewSpec {
     /**
      * NonResourceAttributes describes information for a non-resource access request
@@ -23,10 +23,10 @@ public final class SelfSubjectAccessReviewSpec {
      */
     private final @Nullable ResourceAttributes resourceAttributes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SelfSubjectAccessReviewSpec(
-        @OutputCustomType.Parameter("nonResourceAttributes") @Nullable NonResourceAttributes nonResourceAttributes,
-        @OutputCustomType.Parameter("resourceAttributes") @Nullable ResourceAttributes resourceAttributes) {
+        @CustomType.Parameter("nonResourceAttributes") @Nullable NonResourceAttributes nonResourceAttributes,
+        @CustomType.Parameter("resourceAttributes") @Nullable ResourceAttributes resourceAttributes) {
         this.nonResourceAttributes = nonResourceAttributes;
         this.resourceAttributes = resourceAttributes;
     }

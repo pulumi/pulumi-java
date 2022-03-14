@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apps_v1beta1.outputs.DeploymentCondition;
 import java.lang.Integer;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentStatus {
     /**
      * Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.
@@ -54,16 +54,16 @@ public final class DeploymentStatus {
      */
     private final @Nullable Integer updatedReplicas;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentStatus(
-        @OutputCustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
-        @OutputCustomType.Parameter("collisionCount") @Nullable Integer collisionCount,
-        @OutputCustomType.Parameter("conditions") @Nullable List<DeploymentCondition> conditions,
-        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
-        @OutputCustomType.Parameter("readyReplicas") @Nullable Integer readyReplicas,
-        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
-        @OutputCustomType.Parameter("unavailableReplicas") @Nullable Integer unavailableReplicas,
-        @OutputCustomType.Parameter("updatedReplicas") @Nullable Integer updatedReplicas) {
+        @CustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
+        @CustomType.Parameter("collisionCount") @Nullable Integer collisionCount,
+        @CustomType.Parameter("conditions") @Nullable List<DeploymentCondition> conditions,
+        @CustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @CustomType.Parameter("readyReplicas") @Nullable Integer readyReplicas,
+        @CustomType.Parameter("replicas") @Nullable Integer replicas,
+        @CustomType.Parameter("unavailableReplicas") @Nullable Integer unavailableReplicas,
+        @CustomType.Parameter("updatedReplicas") @Nullable Integer updatedReplicas) {
         this.availableReplicas = availableReplicas;
         this.collisionCount = collisionCount;
         this.conditions = conditions;

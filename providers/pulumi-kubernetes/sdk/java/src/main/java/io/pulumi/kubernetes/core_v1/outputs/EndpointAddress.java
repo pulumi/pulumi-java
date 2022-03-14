@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointAddress {
     /**
      * The Hostname of this endpoint
@@ -33,12 +33,12 @@ public final class EndpointAddress {
      */
     private final @Nullable ObjectReference targetRef;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointAddress(
-        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
-        @OutputCustomType.Parameter("ip") String ip,
-        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
-        @OutputCustomType.Parameter("targetRef") @Nullable ObjectReference targetRef) {
+        @CustomType.Parameter("hostname") @Nullable String hostname,
+        @CustomType.Parameter("ip") String ip,
+        @CustomType.Parameter("nodeName") @Nullable String nodeName,
+        @CustomType.Parameter("targetRef") @Nullable ObjectReference targetRef) {
         this.hostname = hostname;
         this.ip = ip;
         this.nodeName = nodeName;

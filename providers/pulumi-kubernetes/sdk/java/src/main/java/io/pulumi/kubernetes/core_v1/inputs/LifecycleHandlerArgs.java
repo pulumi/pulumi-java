@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ExecActionArgs;
 import io.pulumi.kubernetes.core_v1.inputs.HTTPGetActionArgs;
 import io.pulumi.kubernetes.core_v1.inputs.TCPSocketActionArgs;
@@ -24,7 +24,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
      * Exec specifies the action to take.
      * 
      */
-    @InputImport(name="exec")
+    @Import(name="exec")
       private final @Nullable Output<ExecActionArgs> exec;
 
     public Output<ExecActionArgs> getExec() {
@@ -35,7 +35,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
      * HTTPGet specifies the http request to perform.
      * 
      */
-    @InputImport(name="httpGet")
+    @Import(name="httpGet")
       private final @Nullable Output<HTTPGetActionArgs> httpGet;
 
     public Output<HTTPGetActionArgs> getHttpGet() {
@@ -46,7 +46,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
      * Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.
      * 
      */
-    @InputImport(name="tcpSocket")
+    @Import(name="tcpSocket")
       private final @Nullable Output<TCPSocketActionArgs> tcpSocket;
 
     public Output<TCPSocketActionArgs> getTcpSocket() {

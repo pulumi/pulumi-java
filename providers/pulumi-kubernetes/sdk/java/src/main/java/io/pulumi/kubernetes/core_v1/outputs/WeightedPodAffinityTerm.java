@@ -3,12 +3,12 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodAffinityTerm;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WeightedPodAffinityTerm {
     /**
      * Required. A pod affinity term, associated with the corresponding weight.
@@ -21,10 +21,10 @@ public final class WeightedPodAffinityTerm {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WeightedPodAffinityTerm(
-        @OutputCustomType.Parameter("podAffinityTerm") PodAffinityTerm podAffinityTerm,
-        @OutputCustomType.Parameter("weight") Integer weight) {
+        @CustomType.Parameter("podAffinityTerm") PodAffinityTerm podAffinityTerm,
+        @CustomType.Parameter("weight") Integer weight) {
         this.podAffinityTerm = podAffinityTerm;
         this.weight = weight;
     }

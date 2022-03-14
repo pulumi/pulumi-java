@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PersistentVolumeClaimCondition {
     /**
      * Last time we probed the condition.
@@ -40,14 +40,14 @@ public final class PersistentVolumeClaimCondition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PersistentVolumeClaimCondition(
-        @OutputCustomType.Parameter("lastProbeTime") @Nullable String lastProbeTime,
-        @OutputCustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("reason") @Nullable String reason,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("lastProbeTime") @Nullable String lastProbeTime,
+        @CustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("reason") @Nullable String reason,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.lastProbeTime = lastProbeTime;
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;

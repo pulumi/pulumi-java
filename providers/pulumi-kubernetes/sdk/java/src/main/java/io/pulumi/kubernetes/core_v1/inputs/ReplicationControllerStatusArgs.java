@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ReplicationControllerConditionArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * The number of available replicas (ready for at least minReadySeconds) for this replication controller.
      * 
      */
-    @InputImport(name="availableReplicas")
+    @Import(name="availableReplicas")
       private final @Nullable Output<Integer> availableReplicas;
 
     public Output<Integer> getAvailableReplicas() {
@@ -35,7 +35,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * Represents the latest available observations of a replication controller's current state.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<ReplicationControllerConditionArgs>> conditions;
 
     public Output<List<ReplicationControllerConditionArgs>> getConditions() {
@@ -46,7 +46,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * The number of pods that have labels matching the labels of the pod template of the replication controller.
      * 
      */
-    @InputImport(name="fullyLabeledReplicas")
+    @Import(name="fullyLabeledReplicas")
       private final @Nullable Output<Integer> fullyLabeledReplicas;
 
     public Output<Integer> getFullyLabeledReplicas() {
@@ -57,7 +57,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * ObservedGeneration reflects the generation of the most recently observed replication controller.
      * 
      */
-    @InputImport(name="observedGeneration")
+    @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
@@ -68,7 +68,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * The number of ready replicas for this replication controller.
      * 
      */
-    @InputImport(name="readyReplicas")
+    @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
 
     public Output<Integer> getReadyReplicas() {
@@ -79,7 +79,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller
      * 
      */
-    @InputImport(name="replicas", required=true)
+    @Import(name="replicas", required=true)
       private final Output<Integer> replicas;
 
     public Output<Integer> getReplicas() {

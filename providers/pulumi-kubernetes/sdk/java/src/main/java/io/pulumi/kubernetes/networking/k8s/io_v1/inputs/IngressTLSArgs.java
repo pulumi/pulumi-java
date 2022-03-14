@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
      * Hosts are a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.
      * 
      */
-    @InputImport(name="hosts")
+    @Import(name="hosts")
       private final @Nullable Output<List<String>> hosts;
 
     public Output<List<String>> getHosts() {
@@ -34,7 +34,7 @@ public final class IngressTLSArgs extends io.pulumi.resources.ResourceArgs {
      * SecretName is the name of the secret used to terminate TLS traffic on port 443. Field is left optional to allow TLS routing based on SNI hostname alone. If the SNI host in a listener conflicts with the "Host" header field used by an IngressRule, the SNI host is used for termination and value of the Host header is used for routing.
      * 
      */
-    @InputImport(name="secretName")
+    @Import(name="secretName")
       private final @Nullable Output<String> secretName;
 
     public Output<String> getSecretName() {

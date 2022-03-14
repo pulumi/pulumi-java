@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceMetricStatus {
     /**
      * currentAverageUtilization is the current value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.  It will only be present if `targetAverageValue` was set in the corresponding metric specification.
@@ -28,11 +28,11 @@ public final class ResourceMetricStatus {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceMetricStatus(
-        @OutputCustomType.Parameter("currentAverageUtilization") @Nullable Integer currentAverageUtilization,
-        @OutputCustomType.Parameter("currentAverageValue") String currentAverageValue,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("currentAverageUtilization") @Nullable Integer currentAverageUtilization,
+        @CustomType.Parameter("currentAverageValue") String currentAverageValue,
+        @CustomType.Parameter("name") String name) {
         this.currentAverageUtilization = currentAverageUtilization;
         this.currentAverageValue = currentAverageValue;
         this.name = name;

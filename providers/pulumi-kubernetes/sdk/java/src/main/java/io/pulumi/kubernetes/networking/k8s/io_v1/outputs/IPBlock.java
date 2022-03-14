@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IPBlock {
     /**
      * CIDR is a string representing the IP Block Valid examples are "192.168.1.1/24" or "2001:db9::/64"
@@ -22,10 +22,10 @@ public final class IPBlock {
      */
     private final @Nullable List<String> except;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IPBlock(
-        @OutputCustomType.Parameter("cidr") String cidr,
-        @OutputCustomType.Parameter("except") @Nullable List<String> except) {
+        @CustomType.Parameter("cidr") String cidr,
+        @CustomType.Parameter("except") @Nullable List<String> except) {
         this.cidr = cidr;
         this.except = except;
     }

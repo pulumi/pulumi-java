@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.ContainerResourceMetricSourceArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.ExternalMetricSourceArgs;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.ObjectMetricSourceArgs;
@@ -27,7 +27,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * containerResource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing a single container in each pod of the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source. This is an alpha feature and can be enabled by the HPAContainerMetrics feature flag.
      * 
      */
-    @InputImport(name="containerResource")
+    @Import(name="containerResource")
       private final @Nullable Output<ContainerResourceMetricSourceArgs> containerResource;
 
     public Output<ContainerResourceMetricSourceArgs> getContainerResource() {
@@ -38,7 +38,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * external refers to a global metric that is not associated with any Kubernetes object. It allows autoscaling based on information coming from components running outside of cluster (for example length of queue in cloud messaging service, or QPS from loadbalancer running outside of cluster).
      * 
      */
-    @InputImport(name="external")
+    @Import(name="external")
       private final @Nullable Output<ExternalMetricSourceArgs> external;
 
     public Output<ExternalMetricSourceArgs> getExternal() {
@@ -49,7 +49,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * object refers to a metric describing a single kubernetes object (for example, hits-per-second on an Ingress object).
      * 
      */
-    @InputImport(name="object")
+    @Import(name="object")
       private final @Nullable Output<ObjectMetricSourceArgs> object;
 
     public Output<ObjectMetricSourceArgs> getObject() {
@@ -60,7 +60,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * pods refers to a metric describing each pod in the current scale target (for example, transactions-processed-per-second).  The values will be averaged together before being compared to the target value.
      * 
      */
-    @InputImport(name="pods")
+    @Import(name="pods")
       private final @Nullable Output<PodsMetricSourceArgs> pods;
 
     public Output<PodsMetricSourceArgs> getPods() {
@@ -71,7 +71,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * resource refers to a resource metric (such as those specified in requests and limits) known to Kubernetes describing each pod in the current scale target (e.g. CPU or memory). Such metrics are built in to Kubernetes, and have special scaling options on top of those available to normal per-pod metrics using the "pods" source.
      * 
      */
-    @InputImport(name="resource")
+    @Import(name="resource")
       private final @Nullable Output<ResourceMetricSourceArgs> resource;
 
     public Output<ResourceMetricSourceArgs> getResource() {
@@ -82,7 +82,7 @@ public final class MetricSpecArgs extends io.pulumi.resources.ResourceArgs {
      * type is the type of metric source.  It should be one of "ContainerResource", "External", "Object", "Pods" or "Resource", each mapping to a matching field in the object. Note: "ContainerResource" type is available on when the feature-gate HPAContainerMetrics is enabled
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, serviceName and servicePort must not be specified.
      * 
      */
-    @InputImport(name="resource")
+    @Import(name="resource")
       private final @Nullable Output<TypedLocalObjectReferenceArgs> resource;
 
     public Output<TypedLocalObjectReferenceArgs> getResource() {
@@ -36,7 +36,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the name of the referenced service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -47,7 +47,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the port of the referenced service.
      * 
      */
-    @InputImport(name="servicePort", required=true)
+    @Import(name="servicePort", required=true)
       private final Output<Either<Integer,String>> servicePort;
 
     public Output<Either<Integer,String>> getServicePort() {

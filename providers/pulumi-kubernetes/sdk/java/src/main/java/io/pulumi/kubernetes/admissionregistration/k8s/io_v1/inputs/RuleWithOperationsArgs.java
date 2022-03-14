@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * APIGroups is the API groups the resources belong to. '*' is all groups. If '*' is present, the length of the slice must be one. Required.
      * 
      */
-    @InputImport(name="apiGroups")
+    @Import(name="apiGroups")
       private final @Nullable Output<List<String>> apiGroups;
 
     public Output<List<String>> getApiGroups() {
@@ -34,7 +34,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * APIVersions is the API versions the resources belong to. '*' is all versions. If '*' is present, the length of the slice must be one. Required.
      * 
      */
-    @InputImport(name="apiVersions")
+    @Import(name="apiVersions")
       private final @Nullable Output<List<String>> apiVersions;
 
     public Output<List<String>> getApiVersions() {
@@ -45,7 +45,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * Operations is the operations the admission hook cares about - CREATE, UPDATE, DELETE, CONNECT or * for all of those operations and any future admission operations that are added. If '*' is present, the length of the slice must be one. Required.
      * 
      */
-    @InputImport(name="operations")
+    @Import(name="operations")
       private final @Nullable Output<List<String>> operations;
 
     public Output<List<String>> getOperations() {
@@ -62,7 +62,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * Depending on the enclosing object, subresources might not be allowed. Required.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
@@ -73,7 +73,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
      * scope specifies the scope of this rule. Valid values are "Cluster", "Namespaced", and "*" "Cluster" means that only cluster-scoped resources will match this rule. Namespace API objects are cluster-scoped. "Namespaced" means that only namespaced resources will match this rule. "*" means that there are no scope restrictions. Subresources match the scope of their parent resource. Default is "*".
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {

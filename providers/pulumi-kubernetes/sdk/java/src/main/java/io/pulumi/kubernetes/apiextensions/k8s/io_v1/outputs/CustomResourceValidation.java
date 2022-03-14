@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.JSONSchemaProps;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomResourceValidation {
     /**
      * openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.
@@ -17,8 +17,8 @@ public final class CustomResourceValidation {
      */
     private final @Nullable JSONSchemaProps openAPIV3Schema;
 
-    @OutputCustomType.Constructor
-    private CustomResourceValidation(@OutputCustomType.Parameter("openAPIV3Schema") @Nullable JSONSchemaProps openAPIV3Schema) {
+    @CustomType.Constructor
+    private CustomResourceValidation(@CustomType.Parameter("openAPIV3Schema") @Nullable JSONSchemaProps openAPIV3Schema) {
         this.openAPIV3Schema = openAPIV3Schema;
     }
 

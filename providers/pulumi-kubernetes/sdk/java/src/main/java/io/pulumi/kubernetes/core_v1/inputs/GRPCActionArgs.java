@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
      * Port number of the gRPC service. Number must be in the range 1 to 65535.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -32,7 +32,7 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
      * If this is not specified, the default behavior is defined by gRPC.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {

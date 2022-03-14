@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated
      * 
      */
-    @InputImport(name="datasetName")
+    @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
     public Output<String> getDatasetName() {
@@ -33,7 +33,7 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * UUID of the dataset. This is unique identifier of a Flocker dataset
      * 
      */
-    @InputImport(name="datasetUUID")
+    @Import(name="datasetUUID")
       private final @Nullable Output<String> datasetUUID;
 
     public Output<String> getDatasetUUID() {

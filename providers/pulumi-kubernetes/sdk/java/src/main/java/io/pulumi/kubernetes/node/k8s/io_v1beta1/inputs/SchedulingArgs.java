@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.node.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.TolerationArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * nodeSelector lists labels that must be present on nodes that support this RuntimeClass. Pods using this RuntimeClass can only be scheduled to a node matched by this selector. The RuntimeClass nodeSelector is merged with a pod's existing nodeSelector. Any conflicts will cause the pod to be rejected in admission.
      * 
      */
-    @InputImport(name="nodeSelector")
+    @Import(name="nodeSelector")
       private final @Nullable Output<Map<String,String>> nodeSelector;
 
     public Output<Map<String,String>> getNodeSelector() {
@@ -36,7 +36,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
      * tolerations are appended (excluding duplicates) to pods running with this RuntimeClass during admission, effectively unioning the set of nodes tolerated by the pod and the RuntimeClass.
      * 
      */
-    @InputImport(name="tolerations")
+    @Import(name="tolerations")
       private final @Nullable Output<List<TolerationArgs>> tolerations;
 
     public Output<List<TolerationArgs>> getTolerations() {

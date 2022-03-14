@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserSubject {
     /**
      * `name` is the username that matches, or "*" to match all usernames. Required.
@@ -15,8 +15,8 @@ public final class UserSubject {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private UserSubject(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private UserSubject(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

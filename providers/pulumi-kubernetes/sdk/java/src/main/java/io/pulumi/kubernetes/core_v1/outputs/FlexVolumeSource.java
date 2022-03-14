@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexVolumeSource {
     /**
      * Driver is the name of the driver to use for this volume.
@@ -40,13 +40,13 @@ public final class FlexVolumeSource {
      */
     private final @Nullable LocalObjectReference secretRef;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexVolumeSource(
-        @OutputCustomType.Parameter("driver") String driver,
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("options") @Nullable Map<String,String> options,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("secretRef") @Nullable LocalObjectReference secretRef) {
+        @CustomType.Parameter("driver") String driver,
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("options") @Nullable Map<String,String> options,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("secretRef") @Nullable LocalObjectReference secretRef) {
         this.driver = driver;
         this.fsType = fsType;
         this.options = options;

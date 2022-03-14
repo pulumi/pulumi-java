@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DaemonEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Port number of the given endpoint.
      * 
      */
-    @InputImport(name="Port", required=true)
+    @Import(name="Port", required=true)
       private final Output<Integer> Port;
 
     public Output<Integer> getPort() {

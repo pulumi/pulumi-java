@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resour
      * Partition indicates the ordinal at which the StatefulSet should be partitioned. Default value is 0.
      * 
      */
-    @InputImport(name="partition")
+    @Import(name="partition")
       private final @Nullable Output<Integer> partition;
 
     public Output<Integer> getPartition() {

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ConfigMapKeySelectorArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectFieldSelectorArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ResourceFieldSelectorArgs;
@@ -25,7 +25,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Selects a key of a ConfigMap.
      * 
      */
-    @InputImport(name="configMapKeyRef")
+    @Import(name="configMapKeyRef")
       private final @Nullable Output<ConfigMapKeySelectorArgs> configMapKeyRef;
 
     public Output<ConfigMapKeySelectorArgs> getConfigMapKeyRef() {
@@ -36,7 +36,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
      * 
      */
-    @InputImport(name="fieldRef")
+    @Import(name="fieldRef")
       private final @Nullable Output<ObjectFieldSelectorArgs> fieldRef;
 
     public Output<ObjectFieldSelectorArgs> getFieldRef() {
@@ -47,7 +47,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Selects a resource of the container: only resources limits and requests (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.
      * 
      */
-    @InputImport(name="resourceFieldRef")
+    @Import(name="resourceFieldRef")
       private final @Nullable Output<ResourceFieldSelectorArgs> resourceFieldRef;
 
     public Output<ResourceFieldSelectorArgs> getResourceFieldRef() {
@@ -58,7 +58,7 @@ public final class EnvVarSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Selects a key of a secret in the pod's namespace
      * 
      */
-    @InputImport(name="secretKeyRef")
+    @Import(name="secretKeyRef")
       private final @Nullable Output<SecretKeySelectorArgs> secretKeyRef;
 
     public Output<SecretKeySelectorArgs> getSecretKeyRef() {

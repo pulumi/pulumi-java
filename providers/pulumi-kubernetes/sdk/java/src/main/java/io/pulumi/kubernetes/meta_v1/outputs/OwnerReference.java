@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OwnerReference {
     /**
      * API version of the referent.
@@ -43,14 +43,14 @@ public final class OwnerReference {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OwnerReference(
-        @OutputCustomType.Parameter("apiVersion") String apiVersion,
-        @OutputCustomType.Parameter("blockOwnerDeletion") @Nullable Boolean blockOwnerDeletion,
-        @OutputCustomType.Parameter("controller") @Nullable Boolean controller,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("uid") String uid) {
+        @CustomType.Parameter("apiVersion") String apiVersion,
+        @CustomType.Parameter("blockOwnerDeletion") @Nullable Boolean blockOwnerDeletion,
+        @CustomType.Parameter("controller") @Nullable Boolean controller,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("uid") String uid) {
         this.apiVersion = apiVersion;
         this.blockOwnerDeletion = blockOwnerDeletion;
         this.controller = controller;

@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.authorization.k8s.io_v1;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.SelfSubjectAccessReviewArgs;
@@ -26,7 +26,7 @@ public class SelfSubjectAccessReview extends io.pulumi.resources.CustomResource 
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -40,7 +40,7 @@ public class SelfSubjectAccessReview extends io.pulumi.resources.CustomResource 
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -54,7 +54,7 @@ public class SelfSubjectAccessReview extends io.pulumi.resources.CustomResource 
      * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
@@ -68,7 +68,7 @@ public class SelfSubjectAccessReview extends io.pulumi.resources.CustomResource 
      * Spec holds information about the request being evaluated.  user and groups must be empty
      * 
      */
-    @OutputExport(name="spec", type=SelfSubjectAccessReviewSpec.class, parameters={})
+    @Export(name="spec", type=SelfSubjectAccessReviewSpec.class, parameters={})
     private Output<SelfSubjectAccessReviewSpec> spec;
 
     /**
@@ -82,7 +82,7 @@ public class SelfSubjectAccessReview extends io.pulumi.resources.CustomResource 
      * Status is filled in by the server and indicates whether the request is allowed or not
      * 
      */
-    @OutputExport(name="status", type=SubjectAccessReviewStatus.class, parameters={})
+    @Export(name="status", type=SubjectAccessReviewStatus.class, parameters={})
     private Output</* @Nullable */ SubjectAccessReviewStatus> status;
 
     /**

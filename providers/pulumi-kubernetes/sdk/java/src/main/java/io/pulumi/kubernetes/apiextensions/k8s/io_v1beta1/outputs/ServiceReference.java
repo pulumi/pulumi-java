@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceReference {
     /**
      * name is the name of the service. Required
@@ -33,12 +33,12 @@ public final class ServiceReference {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceReference(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("port") @Nullable Integer port) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("port") @Nullable Integer port) {
         this.name = name;
         this.namespace = namespace;
         this.path = path;

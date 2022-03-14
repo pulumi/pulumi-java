@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.CrossVersionObjectReferenceArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricIdentifierArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricTargetArgs;
@@ -19,7 +19,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
 
     public static final ObjectMetricSourceArgs Empty = new ObjectMetricSourceArgs();
 
-    @InputImport(name="describedObject", required=true)
+    @Import(name="describedObject", required=true)
       private final Output<CrossVersionObjectReferenceArgs> describedObject;
 
     public Output<CrossVersionObjectReferenceArgs> getDescribedObject() {
@@ -30,7 +30,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * metric identifies the target metric by name and selector
      * 
      */
-    @InputImport(name="metric", required=true)
+    @Import(name="metric", required=true)
       private final Output<MetricIdentifierArgs> metric;
 
     public Output<MetricIdentifierArgs> getMetric() {
@@ -41,7 +41,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * target specifies the target value for the given metric
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<MetricTargetArgs> target;
 
     public Output<MetricTargetArgs> getTarget() {
