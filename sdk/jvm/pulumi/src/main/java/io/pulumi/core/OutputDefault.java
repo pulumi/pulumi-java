@@ -1,9 +1,9 @@
 package io.pulumi.core;
 
 import com.google.common.collect.ImmutableSet;
-import io.pulumi.core.internal.InputOutputInternal;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.OutputData;
+import io.pulumi.core.internal.OutputInternal;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.Resource;
 
@@ -15,7 +15,7 @@ import java.util.function.Function;
 
 @InternalUse
 @ParametersAreNonnullByDefault
-public final class OutputDefault<T> extends InputOutputInternal<T> implements Output<T> {
+public final class OutputDefault<T> extends OutputInternal<T> implements Output<T> {
 
     OutputDefault(T value) {
         super(value);

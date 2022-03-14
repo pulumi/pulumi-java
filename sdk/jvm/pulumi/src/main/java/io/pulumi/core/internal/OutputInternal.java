@@ -15,31 +15,30 @@ import java.util.concurrent.CompletableFuture;
 
 @ParametersAreNonnullByDefault
 @InternalUse
-public abstract class InputOutputInternal<T>
-        implements Copyable<Output<T>> {
+public abstract class OutputInternal<T> implements Copyable<Output<T>> {
 
     @InternalUse
     public static final Output<Tuples.Tuple0> TupleZeroOut = Output.of(Tuples.Tuple0.Empty);
 
     protected final CompletableFuture<OutputData<T>> dataFuture;
 
-    protected InputOutputInternal(T value) {
+    protected OutputInternal(T value) {
         this(value, false);
     }
 
-    protected InputOutputInternal(T value, boolean isSecret) {
+    protected OutputInternal(T value, boolean isSecret) {
         this(CompletableFuture.completedFuture(Objects.requireNonNull(value)), isSecret);
     }
 
-    protected InputOutputInternal(CompletableFuture<T> value, boolean isSecret) {
+    protected OutputInternal(CompletableFuture<T> value, boolean isSecret) {
         this(OutputData.ofAsync(Objects.requireNonNull(value), isSecret));
     }
 
-    protected InputOutputInternal(OutputData<T> dataFuture) {
+    protected OutputInternal(OutputData<T> dataFuture) {
         this(CompletableFuture.completedFuture(Objects.requireNonNull(dataFuture)));
     }
 
-    protected InputOutputInternal(CompletableFuture<OutputData<T>> dataFuture) {
+    protected OutputInternal(CompletableFuture<OutputData<T>> dataFuture) {
         this.dataFuture = Objects.requireNonNull(dataFuture);
 
         var deployment = DeploymentInternal.getInstanceOptional();
@@ -119,16 +118,16 @@ public abstract class InputOutputInternal<T>
         return this.dataFuture.thenApply(OutputData::isPresent);
     }
 
-    static <T> InputOutputInternal<T> cast(
+    static <T> OutputInternal<T> cast(
             Output<T> output
     ) {
         Objects.requireNonNull(output);
-        if (output instanceof InputOutputInternal) {
+        if (output instanceof OutputInternal) {
             //noinspection unchecked
-            return (InputOutputInternal<T>) output;
+            return (OutputInternal<T>) output;
         } else {
             throw new IllegalArgumentException(String.format(
-                    "Expected a 'InputOutputInternal<T>' instance, got: %s",
+                    "Expected a 'OutputInternal<T>' instance, got: %s",
                     output.getClass().getSimpleName()
             ));
         }
