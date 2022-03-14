@@ -9,7 +9,9 @@ set -euo pipefail
 add_example()
 {
     example="$1"
+    echo "systemProp.maven.repo.local=../../../.m2/repository" > "tests/examples/$example/gradle.properties"
     (cd tests && zip "$zip" -r "examples/$example")
+    rm "tests/examples/$example/gradle.properties"
 }
 
 add_template()
