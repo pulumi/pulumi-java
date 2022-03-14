@@ -117,7 +117,6 @@ jobs:
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: run example aws-java-webserver
         run: |
-          pulumi plugin install resource pulumi v1.0.0;
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
@@ -178,7 +177,6 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example azure-java-appservice-sql
         run: |
-          pulumi plugin install resource pulumi v1.0.0;
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
@@ -239,7 +237,6 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example gcp-java-gke-hello-world
         run: |
-          pulumi plugin install resource pulumi v1.0.0;
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
@@ -299,7 +296,6 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example minimal
         run: |
-          pulumi plugin install resource pulumi v1.0.0;
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
@@ -368,7 +364,6 @@ jobs:
           role-to-assume: ${{ secrets.AWS_CI_ROLE_ARN }}
       - name: run example aws-native-java-s3-folder
         run: |
-          pulumi plugin install resource pulumi v1.0.0;
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
@@ -428,7 +423,6 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example azure-java-static-website
         run: |
-          pulumi plugin install resource pulumi v1.0.0;
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
@@ -487,7 +481,6 @@ jobs:
         uses: pulumi/action-install-pulumi-cli@v2
       - name: run example random
         run: |
-          pulumi plugin install resource pulumi v1.0.0;
           pulumi plugin install resource aws v4.37.3;
           pulumi plugin install resource azure-native v1.56.0;
           pulumi plugin install resource kubernetes v3.15.1;
