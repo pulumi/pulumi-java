@@ -42,6 +42,70 @@ generated code size, but leaning to keep using them:
 Should we have builders for output types? We currently do. It is less
 clear. Perhaps useful for mock testing. Skipping conserves code size.
 
+### Lambda Buidlers
+
+Could add overloads accepting `Function<XBuilder,XBuilder>` where `X`
+was expected, resolving to `f.apply(new XBuilder()).build()`.
+
+Before:
+
+    ServiceArgs.builder()
+        .setMetadata(ObjectMetaArgs.builder()
+            .clusterName("clusterName")
+            .build())
+
+After:
+
+    ServiceArgs.builder()
+        .setMetadata($ -> $.clusterName("clusterName"))
+
+### Accept Builder to avoid build() call
+
+Could add overloads to methods accepting `Foo` to also accept
+`FooBuilder`, avoiding the `build()` method call at the end.
+
+Before:
+
+    ServiceArgs.builder()
+        .setMetadata(ObjectMetaArgs.builder()
+            .clusterName("clusterName")
+            .build())
+
+After:
+
+    ServiceArgs.builder()
+        .setMetadata(ObjectMetaArgs.builder()
+            .clusterName("clusterName"))
+
+The gain is somewhat redundant if Lambda Builders are accepted.
+
+### Use varargs where List is expected
+
+Before:
+
+    ServiceSpecArgs.builder()
+        .setPorts(List.of(ServicePortArgs.builder()
+            .setPort(80)
+            .setTargetPort(Either.ofRight("http"))
+            .build()))
+        .build()
+
+After:
+
+    ServiceSpecArgs.builder()
+        .setPorts(ServicePortArgs.builder()
+            .setPort(80)
+            .setTargetPort(Either.ofRight("http"))
+            .build())
+        .build()
+
+### Accept String overloads where string-y enum is expected
+
+    ServicePortArgs.builder()
+        .setPort(80)
+        .setTargetPort("http")
+        .build()
+
 ## Input
 
 We should remove `Input<T>` and leave `Output<T>`. TBD - expand the
@@ -184,3 +248,12 @@ https://github.com/pulumi/pulumi-java/issues/226
 
 
 Are there builders for Resource options?
+
+## Naming
+
+
+### Rename annotations
+
+    @OutputCustomType -> @CustomType
+    @InputImport -> @Import
+    @OutputExport -> @Export
