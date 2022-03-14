@@ -125,7 +125,8 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes;
             pulumi stack init dev;
-            pulumi preview &&
+            pulumi plugin install &&
+            pulumi preview
             pulumi stack rm dev --yes"
   example3:
     runs-on: ubuntu-latest
@@ -182,6 +183,7 @@ jobs:
             pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
+            pulumi plugin install &&
             pulumi preview &&
             pulumi stack rm dev --yes"
   example4:
@@ -236,6 +238,7 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes;
             pulumi stack init dev;
+            pulumi plugin install &&
             pulumi preview &&
             pulumi stack rm dev --yes"
   example5:
@@ -290,6 +293,7 @@ jobs:
             pulumi stack init dev;
             pulumi config set minimal:name foo &&
             pulumi config set minimal:secret bar &&
+            pulumi plugin install &&
             pulumi preview &&
             pulumi stack rm dev --yes"
   example6:
@@ -353,6 +357,7 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes;
             pulumi stack init dev;
+            pulumi plugin install &&
             pulumi preview &&
             pulumi stack rm dev --yes"
   example7:
@@ -406,6 +411,7 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes;
             pulumi stack init dev;
+            pulumi plugin install &&
             pulumi preview &&
             pulumi stack rm dev --yes"
   example8:
@@ -459,6 +465,7 @@ jobs:
             ./gradlew install &&
             pulumi stack rm dev --yes;
             pulumi stack init dev;
+            pulumi plugin install &&
             pulumi preview &&
             pulumi stack rm dev --yes"
       - name: Integration tests
