@@ -6,7 +6,7 @@ package io.pulumi.aws.macie2;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobScheduleFrequencyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * The custom data identifiers to use for data analysis and classification.
      * 
      */
-    @InputImport(name="customDataIdentifierIds")
+    @Import(name="customDataIdentifierIds")
       private final @Nullable Output<List<String>> customDataIdentifierIds;
 
     public Output<List<String>> getCustomDataIdentifierIds() {
@@ -35,7 +35,7 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * A custom description of the job. The description can contain as many as 200 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether to analyze all existing, eligible objects immediately after the job is created.
      * 
      */
-    @InputImport(name="initialRun")
+    @Import(name="initialRun")
       private final @Nullable Output<Boolean> initialRun;
 
     public Output<Boolean> getInitialRun() {
@@ -57,7 +57,7 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * The status for the job. Valid values are: `CANCELLED`, `RUNNING` and `USER_PAUSED`
      * 
      */
-    @InputImport(name="jobStatus")
+    @Import(name="jobStatus")
       private final @Nullable Output<String> jobStatus;
 
     public Output<String> getJobStatus() {
@@ -68,14 +68,14 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don't specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
      * 
      */
-    @InputImport(name="jobType", required=true)
+    @Import(name="jobType", required=true)
       private final Output<String> jobType;
 
     public Output<String> getJobType() {
         return this.jobType;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -97,7 +97,7 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
      * 
      */
-    @InputImport(name="s3JobDefinition", required=true)
+    @Import(name="s3JobDefinition", required=true)
       private final Output<ClassificationJobS3JobDefinitionArgs> s3JobDefinition;
 
     public Output<ClassificationJobS3JobDefinitionArgs> getS3JobDefinition() {
@@ -108,7 +108,7 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * The sampling depth, as a percentage, to apply when processing objects. This value determines the percentage of eligible objects that the job analyzes. If this value is less than 100, Amazon Macie selects the objects to analyze at random, up to the specified percentage, and analyzes all the data in those objects.
      * 
      */
-    @InputImport(name="samplingPercentage")
+    @Import(name="samplingPercentage")
       private final @Nullable Output<Integer> samplingPercentage;
 
     public Output<Integer> getSamplingPercentage() {
@@ -119,7 +119,7 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * The recurrence pattern for running the job. To run the job only once, don't specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
      * 
      */
-    @InputImport(name="scheduleFrequency")
+    @Import(name="scheduleFrequency")
       private final @Nullable Output<ClassificationJobScheduleFrequencyArgs> scheduleFrequency;
 
     public Output<ClassificationJobScheduleFrequencyArgs> getScheduleFrequency() {
@@ -130,7 +130,7 @@ public final class ClassificationJobArgs extends io.pulumi.resources.ResourceArg
      * A map of key-value pairs that specifies the tags to associate with the job. A job can have a maximum of 50 tags. Each tag consists of a tag key and an associated tag value. The maximum length of a tag key is 128 characters. The maximum length of a tag value is 256 characters.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

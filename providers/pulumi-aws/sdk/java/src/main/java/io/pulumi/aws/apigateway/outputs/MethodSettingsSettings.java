@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MethodSettingsSettings {
     /**
      * Specifies whether the cached responses are encrypted.
@@ -65,18 +65,18 @@ public final class MethodSettingsSettings {
      */
     private final @Nullable String unauthorizedCacheControlHeaderStrategy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MethodSettingsSettings(
-        @OutputCustomType.Parameter("cacheDataEncrypted") @Nullable Boolean cacheDataEncrypted,
-        @OutputCustomType.Parameter("cacheTtlInSeconds") @Nullable Integer cacheTtlInSeconds,
-        @OutputCustomType.Parameter("cachingEnabled") @Nullable Boolean cachingEnabled,
-        @OutputCustomType.Parameter("dataTraceEnabled") @Nullable Boolean dataTraceEnabled,
-        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
-        @OutputCustomType.Parameter("metricsEnabled") @Nullable Boolean metricsEnabled,
-        @OutputCustomType.Parameter("requireAuthorizationForCacheControl") @Nullable Boolean requireAuthorizationForCacheControl,
-        @OutputCustomType.Parameter("throttlingBurstLimit") @Nullable Integer throttlingBurstLimit,
-        @OutputCustomType.Parameter("throttlingRateLimit") @Nullable Double throttlingRateLimit,
-        @OutputCustomType.Parameter("unauthorizedCacheControlHeaderStrategy") @Nullable String unauthorizedCacheControlHeaderStrategy) {
+        @CustomType.Parameter("cacheDataEncrypted") @Nullable Boolean cacheDataEncrypted,
+        @CustomType.Parameter("cacheTtlInSeconds") @Nullable Integer cacheTtlInSeconds,
+        @CustomType.Parameter("cachingEnabled") @Nullable Boolean cachingEnabled,
+        @CustomType.Parameter("dataTraceEnabled") @Nullable Boolean dataTraceEnabled,
+        @CustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @CustomType.Parameter("metricsEnabled") @Nullable Boolean metricsEnabled,
+        @CustomType.Parameter("requireAuthorizationForCacheControl") @Nullable Boolean requireAuthorizationForCacheControl,
+        @CustomType.Parameter("throttlingBurstLimit") @Nullable Integer throttlingBurstLimit,
+        @CustomType.Parameter("throttlingRateLimit") @Nullable Double throttlingRateLimit,
+        @CustomType.Parameter("unauthorizedCacheControlHeaderStrategy") @Nullable String unauthorizedCacheControlHeaderStrategy) {
         this.cacheDataEncrypted = cacheDataEncrypted;
         this.cacheTtlInSeconds = cacheTtlInSeconds;
         this.cachingEnabled = cachingEnabled;

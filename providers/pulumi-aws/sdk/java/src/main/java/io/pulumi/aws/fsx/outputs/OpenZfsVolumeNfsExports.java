@@ -4,11 +4,11 @@
 package io.pulumi.aws.fsx.outputs;
 
 import io.pulumi.aws.fsx.outputs.OpenZfsVolumeNfsExportsClientConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OpenZfsVolumeNfsExports {
     /**
      * - A list of configuration objects that contain the client and options for mounting the OpenZFS file system. Maximum of 25 items. See Client Configurations Below.
@@ -16,8 +16,8 @@ public final class OpenZfsVolumeNfsExports {
      */
     private final List<OpenZfsVolumeNfsExportsClientConfiguration> clientConfigurations;
 
-    @OutputCustomType.Constructor
-    private OpenZfsVolumeNfsExports(@OutputCustomType.Parameter("clientConfigurations") List<OpenZfsVolumeNfsExportsClientConfiguration> clientConfigurations) {
+    @CustomType.Constructor
+    private OpenZfsVolumeNfsExports(@CustomType.Parameter("clientConfigurations") List<OpenZfsVolumeNfsExportsClientConfiguration> clientConfigurations) {
         this.clientConfigurations = clientConfigurations;
     }
 

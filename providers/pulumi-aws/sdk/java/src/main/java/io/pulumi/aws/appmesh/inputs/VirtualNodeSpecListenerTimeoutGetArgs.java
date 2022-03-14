@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttp2GetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttpGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutTcpGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerTimeoutGetArgs extends io.pulumi.resou
      * Timeouts for gRPC listeners.
      * 
      */
-    @InputImport(name="grpc")
+    @Import(name="grpc")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutGrpcGetArgs> grpc;
 
     public Output<VirtualNodeSpecListenerTimeoutGrpcGetArgs> getGrpc() {
@@ -32,7 +32,7 @@ public final class VirtualNodeSpecListenerTimeoutGetArgs extends io.pulumi.resou
      * Timeouts for HTTP listeners.
      * 
      */
-    @InputImport(name="http")
+    @Import(name="http")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttpGetArgs> http;
 
     public Output<VirtualNodeSpecListenerTimeoutHttpGetArgs> getHttp() {
@@ -43,7 +43,7 @@ public final class VirtualNodeSpecListenerTimeoutGetArgs extends io.pulumi.resou
      * Timeouts for HTTP2 listeners.
      * 
      */
-    @InputImport(name="http2")
+    @Import(name="http2")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttp2GetArgs> http2;
 
     public Output<VirtualNodeSpecListenerTimeoutHttp2GetArgs> getHttp2() {
@@ -54,7 +54,7 @@ public final class VirtualNodeSpecListenerTimeoutGetArgs extends io.pulumi.resou
      * Timeouts for TCP listeners.
      * 
      */
-    @InputImport(name="tcp")
+    @Import(name="tcp")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutTcpGetArgs> tcp;
 
     public Output<VirtualNodeSpecListenerTimeoutTcpGetArgs> getTcp() {

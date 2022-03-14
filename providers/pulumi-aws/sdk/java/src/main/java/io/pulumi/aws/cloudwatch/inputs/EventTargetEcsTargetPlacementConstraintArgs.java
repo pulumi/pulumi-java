@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EventTargetEcsTargetPlacementConstraintArgs extends io.pulumi
      * Cluster Query Language expression to apply to the constraint. Does not need to be specified for the `distinctInstance` type. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
      * 
      */
-    @InputImport(name="expression")
+    @Import(name="expression")
       private final @Nullable Output<String> expression;
 
     public Output<String> getExpression() {
@@ -29,7 +29,7 @@ public final class EventTargetEcsTargetPlacementConstraintArgs extends io.pulumi
      * Type of constraint. The only valid values at this time are `memberOf` and `distinctInstance`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudtrail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TrailInsightSelectorGetArgs extends io.pulumi.resources.Resou
      * Type of insights to log on a trail. The valid value is `ApiCallRateInsight`.
      * 
      */
-    @InputImport(name="insightType", required=true)
+    @Import(name="insightType", required=true)
       private final Output<String> insightType;
 
     public Output<String> getInsightType() {

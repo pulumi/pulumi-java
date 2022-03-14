@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.opsworks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationAppSource {
     /**
      * Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
@@ -42,14 +42,14 @@ public final class ApplicationAppSource {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationAppSource(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("revision") @Nullable String revision,
-        @OutputCustomType.Parameter("sshKey") @Nullable String sshKey,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("url") @Nullable String url,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("revision") @Nullable String revision,
+        @CustomType.Parameter("sshKey") @Nullable String sshKey,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("url") @Nullable String url,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.revision = revision;
         this.sshKey = sshKey;

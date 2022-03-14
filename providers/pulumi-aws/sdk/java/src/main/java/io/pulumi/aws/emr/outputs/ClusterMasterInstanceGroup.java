@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.outputs;
 
 import io.pulumi.aws.emr.outputs.ClusterMasterInstanceGroupEbsConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterMasterInstanceGroup {
     /**
      * Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
@@ -45,14 +45,14 @@ public final class ClusterMasterInstanceGroup {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterMasterInstanceGroup(
-        @OutputCustomType.Parameter("bidPrice") @Nullable String bidPrice,
-        @OutputCustomType.Parameter("ebsConfigs") @Nullable List<ClusterMasterInstanceGroupEbsConfig> ebsConfigs,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("bidPrice") @Nullable String bidPrice,
+        @CustomType.Parameter("ebsConfigs") @Nullable List<ClusterMasterInstanceGroupEbsConfig> ebsConfigs,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.bidPrice = bidPrice;
         this.ebsConfigs = ebsConfigs;
         this.id = id;

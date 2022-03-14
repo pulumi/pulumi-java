@@ -5,14 +5,14 @@ package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatch;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementByteMatchStatementTextTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementByteMatchStatement {
     /**
      * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
@@ -35,12 +35,12 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementN
      */
     private final List<WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementByteMatchStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementByteMatchStatement(
-        @OutputCustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("positionalConstraint") String positionalConstraint,
-        @OutputCustomType.Parameter("searchString") String searchString,
-        @OutputCustomType.Parameter("textTransformations") List<WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementByteMatchStatementTextTransformation> textTransformations) {
+        @CustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementByteMatchStatementFieldToMatch fieldToMatch,
+        @CustomType.Parameter("positionalConstraint") String positionalConstraint,
+        @CustomType.Parameter("searchString") String searchString,
+        @CustomType.Parameter("textTransformations") List<WebAclRuleStatementAndStatementStatementOrStatementStatementNotStatementStatementByteMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.searchString = searchString;

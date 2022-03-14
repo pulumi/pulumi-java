@@ -10,7 +10,7 @@ import io.pulumi.aws.ec2.outputs.SpotFleetRequestLaunchSpecification;
 import io.pulumi.aws.ec2.outputs.SpotFleetRequestLaunchTemplateConfig;
 import io.pulumi.aws.ec2.outputs.SpotFleetRequestSpotMaintenanceStrategies;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * `lowestPrice`.
      * 
      */
-    @OutputExport(name="allocationStrategy", type=String.class, parameters={})
+    @Export(name="allocationStrategy", type=String.class, parameters={})
     private Output</* @Nullable */ String> allocationStrategy;
 
     /**
@@ -49,7 +49,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getAllocationStrategy() {
         return this.allocationStrategy;
     }
-    @OutputExport(name="clientToken", type=String.class, parameters={})
+    @Export(name="clientToken", type=String.class, parameters={})
     private Output<String> clientToken;
 
     public Output<String> getClientToken() {
@@ -61,7 +61,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * request is decreased below the current size of the Spot fleet.
      * 
      */
-    @OutputExport(name="excessCapacityTerminationPolicy", type=String.class, parameters={})
+    @Export(name="excessCapacityTerminationPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> excessCapacityTerminationPolicy;
 
     /**
@@ -78,7 +78,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * capacity or also attempts to maintain it. Default is `maintain`.
      * 
      */
-    @OutputExport(name="fleetType", type=String.class, parameters={})
+    @Export(name="fleetType", type=String.class, parameters={})
     private Output</* @Nullable */ String> fleetType;
 
     /**
@@ -96,7 +96,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * terminateInstancesWithExpiration.
      * 
      */
-    @OutputExport(name="iamFleetRole", type=String.class, parameters={})
+    @Export(name="iamFleetRole", type=String.class, parameters={})
     private Output<String> iamFleetRole;
 
     /**
@@ -115,7 +115,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * `terminate`.
      * 
      */
-    @OutputExport(name="instanceInterruptionBehaviour", type=String.class, parameters={})
+    @Export(name="instanceInterruptionBehaviour", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceInterruptionBehaviour;
 
     /**
@@ -134,7 +134,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * the number of Spot pools that you specify.
      * 
      */
-    @OutputExport(name="instancePoolsToUseCount", type=Integer.class, parameters={})
+    @Export(name="instancePoolsToUseCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> instancePoolsToUseCount;
 
     /**
@@ -153,7 +153,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
      * 
      */
-    @OutputExport(name="launchSpecifications", type=List.class, parameters={SpotFleetRequestLaunchSpecification.class})
+    @Export(name="launchSpecifications", type=List.class, parameters={SpotFleetRequestLaunchSpecification.class})
     private Output</* @Nullable */ List<SpotFleetRequestLaunchSpecification>> launchSpecifications;
 
     /**
@@ -169,7 +169,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
      * 
      */
-    @OutputExport(name="launchTemplateConfigs", type=List.class, parameters={SpotFleetRequestLaunchTemplateConfig.class})
+    @Export(name="launchTemplateConfigs", type=List.class, parameters={SpotFleetRequestLaunchTemplateConfig.class})
     private Output</* @Nullable */ List<SpotFleetRequestLaunchTemplateConfig>> launchTemplateConfigs;
 
     /**
@@ -183,7 +183,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * A list of elastic load balancer names to add to the Spot fleet.
      * 
      */
-    @OutputExport(name="loadBalancers", type=List.class, parameters={String.class})
+    @Export(name="loadBalancers", type=List.class, parameters={String.class})
     private Output<List<String>> loadBalancers;
 
     /**
@@ -197,7 +197,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: `lowestPrice` and `prioritized`. the default is `lowestPrice`.
      * 
      */
-    @OutputExport(name="onDemandAllocationStrategy", type=String.class, parameters={})
+    @Export(name="onDemandAllocationStrategy", type=String.class, parameters={})
     private Output</* @Nullable */ String> onDemandAllocationStrategy;
 
     /**
@@ -211,7 +211,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
      * 
      */
-    @OutputExport(name="onDemandMaxTotalPrice", type=String.class, parameters={})
+    @Export(name="onDemandMaxTotalPrice", type=String.class, parameters={})
     private Output</* @Nullable */ String> onDemandMaxTotalPrice;
 
     /**
@@ -225,7 +225,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * The number of On-Demand units to request. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later.
      * 
      */
-    @OutputExport(name="onDemandTargetCapacity", type=Integer.class, parameters={})
+    @Export(name="onDemandTargetCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> onDemandTargetCapacity;
 
     /**
@@ -239,7 +239,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
      * 
      */
-    @OutputExport(name="replaceUnhealthyInstances", type=Boolean.class, parameters={})
+    @Export(name="replaceUnhealthyInstances", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> replaceUnhealthyInstances;
 
     /**
@@ -253,7 +253,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
      * 
      */
-    @OutputExport(name="spotMaintenanceStrategies", type=SpotFleetRequestSpotMaintenanceStrategies.class, parameters={})
+    @Export(name="spotMaintenanceStrategies", type=SpotFleetRequestSpotMaintenanceStrategies.class, parameters={})
     private Output</* @Nullable */ SpotFleetRequestSpotMaintenanceStrategies> spotMaintenanceStrategies;
 
     /**
@@ -267,7 +267,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * The maximum spot bid for this override request.
      * 
      */
-    @OutputExport(name="spotPrice", type=String.class, parameters={})
+    @Export(name="spotPrice", type=String.class, parameters={})
     private Output</* @Nullable */ String> spotPrice;
 
     /**
@@ -281,7 +281,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * The state of the Spot fleet request.
      * 
      */
-    @OutputExport(name="spotRequestState", type=String.class, parameters={})
+    @Export(name="spotRequestState", type=String.class, parameters={})
     private Output<String> spotRequestState;
 
     /**
@@ -295,7 +295,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -309,7 +309,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -325,7 +325,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * important to your application workload, such as vCPUs, memory, or I/O.
      * 
      */
-    @OutputExport(name="targetCapacity", type=Integer.class, parameters={})
+    @Export(name="targetCapacity", type=Integer.class, parameters={})
     private Output<Integer> targetCapacity;
 
     /**
@@ -341,7 +341,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
      * 
      */
-    @OutputExport(name="targetGroupArns", type=List.class, parameters={String.class})
+    @Export(name="targetGroupArns", type=List.class, parameters={String.class})
     private Output<List<String>> targetGroupArns;
 
     /**
@@ -356,7 +356,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * instances should be terminated when the Spot fleet request expires.
      * 
      */
-    @OutputExport(name="terminateInstancesWithExpiration", type=Boolean.class, parameters={})
+    @Export(name="terminateInstancesWithExpiration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> terminateInstancesWithExpiration;
 
     /**
@@ -371,7 +371,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
      * 
      */
-    @OutputExport(name="validFrom", type=String.class, parameters={})
+    @Export(name="validFrom", type=String.class, parameters={})
     private Output</* @Nullable */ String> validFrom;
 
     /**
@@ -385,7 +385,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
      * 
      */
-    @OutputExport(name="validUntil", type=String.class, parameters={})
+    @Export(name="validUntil", type=String.class, parameters={})
     private Output</* @Nullable */ String> validUntil;
 
     /**
@@ -401,7 +401,7 @@ public class SpotFleetRequest extends io.pulumi.resources.CustomResource {
      * timeout of 10m is reached.
      * 
      */
-    @OutputExport(name="waitForFulfillment", type=Boolean.class, parameters={})
+    @Export(name="waitForFulfillment", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> waitForFulfillment;
 
     /**

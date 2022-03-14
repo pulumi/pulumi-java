@@ -6,12 +6,12 @@ package io.pulumi.aws.codedeploy.outputs;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupBlueGreenDeploymentConfig {
     /**
      * Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
@@ -29,11 +29,11 @@ public final class DeploymentGroupBlueGreenDeploymentConfig {
      */
     private final @Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess terminateBlueInstancesOnDeploymentSuccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentGroupBlueGreenDeploymentConfig(
-        @OutputCustomType.Parameter("deploymentReadyOption") @Nullable DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption deploymentReadyOption,
-        @OutputCustomType.Parameter("greenFleetProvisioningOption") @Nullable DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption greenFleetProvisioningOption,
-        @OutputCustomType.Parameter("terminateBlueInstancesOnDeploymentSuccess") @Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess terminateBlueInstancesOnDeploymentSuccess) {
+        @CustomType.Parameter("deploymentReadyOption") @Nullable DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption deploymentReadyOption,
+        @CustomType.Parameter("greenFleetProvisioningOption") @Nullable DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption greenFleetProvisioningOption,
+        @CustomType.Parameter("terminateBlueInstancesOnDeploymentSuccess") @Nullable DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess terminateBlueInstancesOnDeploymentSuccess) {
         this.deploymentReadyOption = deploymentReadyOption;
         this.greenFleetProvisioningOption = greenFleetProvisioningOption;
         this.terminateBlueInstancesOnDeploymentSuccess = terminateBlueInstancesOnDeploymentSuccess;

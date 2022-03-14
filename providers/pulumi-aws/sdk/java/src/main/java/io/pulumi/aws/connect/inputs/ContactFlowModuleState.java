@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) of the Contact Flow Module.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * The identifier of the Contact Flow Module.
      * 
      */
-    @InputImport(name="contactFlowModuleId")
+    @Import(name="contactFlowModuleId")
       private final @Nullable Output<String> contactFlowModuleId;
 
     public Output<String> getContactFlowModuleId() {
@@ -41,14 +41,14 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * Specifies the content of the Contact Flow Module, provided as a JSON string, written in Amazon Connect Contact Flow Language. If defined, the `filename` argument cannot be used.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
         return this.content == null ? Output.empty() : this.content;
     }
 
-    @InputImport(name="contentHash")
+    @Import(name="contentHash")
       private final @Nullable Output<String> contentHash;
 
     public Output<String> getContentHash() {
@@ -59,7 +59,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * Specifies the description of the Contact Flow Module.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -70,7 +70,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * The path to the Contact Flow Module source within the local filesystem. Conflicts with `content`.
      * 
      */
-    @InputImport(name="filename")
+    @Import(name="filename")
       private final @Nullable Output<String> filename;
 
     public Output<String> getFilename() {
@@ -81,7 +81,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -92,7 +92,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * Specifies the name of the Contact Flow Module.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -103,7 +103,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * Tags to apply to the Contact Flow Module. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -114,7 +114,7 @@ public final class ContactFlowModuleState extends io.pulumi.resources.ResourceAr
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

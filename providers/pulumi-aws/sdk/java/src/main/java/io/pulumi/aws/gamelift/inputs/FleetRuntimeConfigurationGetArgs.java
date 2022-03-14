@@ -5,7 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationServerProcessGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FleetRuntimeConfigurationGetArgs extends io.pulumi.resources.
      * Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
      * 
      */
-    @InputImport(name="gameSessionActivationTimeoutSeconds")
+    @Import(name="gameSessionActivationTimeoutSeconds")
       private final @Nullable Output<Integer> gameSessionActivationTimeoutSeconds;
 
     public Output<Integer> getGameSessionActivationTimeoutSeconds() {
@@ -31,7 +31,7 @@ public final class FleetRuntimeConfigurationGetArgs extends io.pulumi.resources.
      * Maximum number of game sessions with status `ACTIVATING` to allow on an instance simultaneously.
      * 
      */
-    @InputImport(name="maxConcurrentGameSessionActivations")
+    @Import(name="maxConcurrentGameSessionActivations")
       private final @Nullable Output<Integer> maxConcurrentGameSessionActivations;
 
     public Output<Integer> getMaxConcurrentGameSessionActivations() {
@@ -42,7 +42,7 @@ public final class FleetRuntimeConfigurationGetArgs extends io.pulumi.resources.
      * Collection of server process configurations that describe which server processes to run on each instance in a fleet. See below.
      * 
      */
-    @InputImport(name="serverProcesses")
+    @Import(name="serverProcesses")
       private final @Nullable Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> serverProcesses;
 
     public Output<List<FleetRuntimeConfigurationServerProcessGetArgs>> getServerProcesses() {

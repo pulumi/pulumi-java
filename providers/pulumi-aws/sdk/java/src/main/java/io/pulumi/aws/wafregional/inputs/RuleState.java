@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.RulePredicateGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the WAF Regional Rule.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * The name or description for the Amazon CloudWatch metric of this rule.
      * 
      */
-    @InputImport(name="metricName")
+    @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -43,7 +43,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * The name or description of the rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * The objects to include in a rule (documented below).
      * 
      */
-    @InputImport(name="predicates")
+    @Import(name="predicates")
       private final @Nullable Output<List<RulePredicateGetArgs>> predicates;
 
     public Output<List<RulePredicateGetArgs>> getPredicates() {
@@ -65,7 +65,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

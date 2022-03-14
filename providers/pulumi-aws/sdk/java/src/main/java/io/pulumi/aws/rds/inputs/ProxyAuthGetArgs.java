@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ProxyAuthGetArgs extends io.pulumi.resources.ResourceArgs {
      * The type of authentication that the proxy uses for connections from the proxy to the underlying database. One of `SECRETS`.
      * 
      */
-    @InputImport(name="authScheme")
+    @Import(name="authScheme")
       private final @Nullable Output<String> authScheme;
 
     public Output<String> getAuthScheme() {
@@ -29,7 +29,7 @@ public final class ProxyAuthGetArgs extends io.pulumi.resources.ResourceArgs {
      * A user-specified description about the authentication used by a proxy to log in as a specific database user.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class ProxyAuthGetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy. One of `DISABLED`, `REQUIRED`.
      * 
      */
-    @InputImport(name="iamAuth")
+    @Import(name="iamAuth")
       private final @Nullable Output<String> iamAuth;
 
     public Output<String> getIamAuth() {
@@ -51,7 +51,7 @@ public final class ProxyAuthGetArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
      * 
      */
-    @InputImport(name="secretArn")
+    @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
     public Output<String> getSecretArn() {

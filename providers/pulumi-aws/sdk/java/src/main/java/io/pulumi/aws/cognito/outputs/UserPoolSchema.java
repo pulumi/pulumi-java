@@ -5,14 +5,14 @@ package io.pulumi.aws.cognito.outputs;
 
 import io.pulumi.aws.cognito.outputs.UserPoolSchemaNumberAttributeConstraints;
 import io.pulumi.aws.cognito.outputs.UserPoolSchemaStringAttributeConstraints;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolSchema {
     /**
      * Attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
@@ -50,15 +50,15 @@ public final class UserPoolSchema {
      */
     private final @Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolSchema(
-        @OutputCustomType.Parameter("attributeDataType") String attributeDataType,
-        @OutputCustomType.Parameter("developerOnlyAttribute") @Nullable Boolean developerOnlyAttribute,
-        @OutputCustomType.Parameter("mutable") @Nullable Boolean mutable,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numberAttributeConstraints") @Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints,
-        @OutputCustomType.Parameter("required") @Nullable Boolean required,
-        @OutputCustomType.Parameter("stringAttributeConstraints") @Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
+        @CustomType.Parameter("attributeDataType") String attributeDataType,
+        @CustomType.Parameter("developerOnlyAttribute") @Nullable Boolean developerOnlyAttribute,
+        @CustomType.Parameter("mutable") @Nullable Boolean mutable,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numberAttributeConstraints") @Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints,
+        @CustomType.Parameter("required") @Nullable Boolean required,
+        @CustomType.Parameter("stringAttributeConstraints") @Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
         this.attributeDataType = attributeDataType;
         this.developerOnlyAttribute = developerOnlyAttribute;
         this.mutable = mutable;

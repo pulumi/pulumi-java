@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudcontrol.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -26,14 +26,14 @@ public final class GetResourceResult {
     private final String typeName;
     private final @Nullable String typeVersionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourceResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identifier") String identifier,
-        @OutputCustomType.Parameter("properties") String properties,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("typeName") String typeName,
-        @OutputCustomType.Parameter("typeVersionId") @Nullable String typeVersionId) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identifier") String identifier,
+        @CustomType.Parameter("properties") String properties,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("typeName") String typeName,
+        @CustomType.Parameter("typeVersionId") @Nullable String typeVersionId) {
         this.id = id;
         this.identifier = identifier;
         this.properties = properties;

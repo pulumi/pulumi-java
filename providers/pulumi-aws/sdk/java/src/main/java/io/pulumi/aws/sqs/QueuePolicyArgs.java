@@ -4,7 +4,7 @@
 package io.pulumi.aws.sqs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class QueuePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The JSON policy for the SQS queue.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -28,7 +28,7 @@ public final class QueuePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The URL of the SQS Queue to which to attach the policy
      * 
      */
-    @InputImport(name="queueUrl", required=true)
+    @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
 
     public Output<String> getQueueUrl() {

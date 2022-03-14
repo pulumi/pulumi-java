@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appconfig.DeploymentArgs;
 import io.pulumi.aws.appconfig.inputs.DeploymentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The application ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -48,7 +48,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the AppConfig Deployment.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -62,7 +62,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The configuration profile ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @OutputExport(name="configurationProfileId", type=String.class, parameters={})
+    @Export(name="configurationProfileId", type=String.class, parameters={})
     private Output<String> configurationProfileId;
 
     /**
@@ -76,7 +76,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The configuration version to deploy. Can be at most 1024 characters.
      * 
      */
-    @OutputExport(name="configurationVersion", type=String.class, parameters={})
+    @Export(name="configurationVersion", type=String.class, parameters={})
     private Output<String> configurationVersion;
 
     /**
@@ -90,7 +90,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The deployment number.
      * 
      */
-    @OutputExport(name="deploymentNumber", type=Integer.class, parameters={})
+    @Export(name="deploymentNumber", type=Integer.class, parameters={})
     private Output<Integer> deploymentNumber;
 
     /**
@@ -104,7 +104,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The deployment strategy ID or name of a predefined deployment strategy. See [Predefined Deployment Strategies](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html#appconfig-creating-deployment-strategy-predefined) for more details.
      * 
      */
-    @OutputExport(name="deploymentStrategyId", type=String.class, parameters={})
+    @Export(name="deploymentStrategyId", type=String.class, parameters={})
     private Output<String> deploymentStrategyId;
 
     /**
@@ -118,7 +118,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The description of the deployment. Can be at most 1024 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -132,7 +132,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The environment ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @OutputExport(name="environmentId", type=String.class, parameters={})
+    @Export(name="environmentId", type=String.class, parameters={})
     private Output<String> environmentId;
 
     /**
@@ -146,7 +146,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The state of the deployment.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -160,7 +160,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -174,7 +174,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

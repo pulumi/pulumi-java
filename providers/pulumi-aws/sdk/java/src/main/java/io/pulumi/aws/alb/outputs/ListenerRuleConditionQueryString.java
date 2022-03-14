@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.alb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleConditionQueryString {
     /**
      * Query string key pattern to match.
@@ -22,10 +22,10 @@ public final class ListenerRuleConditionQueryString {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerRuleConditionQueryString(
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

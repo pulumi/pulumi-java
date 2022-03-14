@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketServerSideEncryptionConfigurationRuleArgs extends io.pu
      * A single object for setting server-side encryption by default. (documented below)
      * 
      */
-    @InputImport(name="applyServerSideEncryptionByDefault", required=true)
+    @Import(name="applyServerSideEncryptionByDefault", required=true)
       private final Output<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs> applyServerSideEncryptionByDefault;
 
     public Output<BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs> getApplyServerSideEncryptionByDefault() {
@@ -30,7 +30,7 @@ public final class BucketServerSideEncryptionConfigurationRuleArgs extends io.pu
      * Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
      * 
      */
-    @InputImport(name="bucketKeyEnabled")
+    @Import(name="bucketKeyEnabled")
       private final @Nullable Output<Boolean> bucketKeyEnabled;
 
     public Output<Boolean> getBucketKeyEnabled() {

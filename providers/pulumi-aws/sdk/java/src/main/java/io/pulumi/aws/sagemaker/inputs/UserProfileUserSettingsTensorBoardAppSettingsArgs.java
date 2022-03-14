@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class UserProfileUserSettingsTensorBoardAppSettingsArgs extends io.
      * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
      * 
      */
-    @InputImport(name="defaultResourceSpec", required=true)
+    @Import(name="defaultResourceSpec", required=true)
       private final Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> defaultResourceSpec;
 
     public Output<UserProfileUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs> getDefaultResourceSpec() {

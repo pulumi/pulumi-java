@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class StackAccessEndpointArgs extends io.pulumi.resources.ResourceA
 
     public static final StackAccessEndpointArgs Empty = new StackAccessEndpointArgs();
 
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
     public Output<String> getEndpointType() {
         return this.endpointType;
     }
 
-    @InputImport(name="vpceId")
+    @Import(name="vpceId")
       private final @Nullable Output<String> vpceId;
 
     public Output<String> getVpceId() {

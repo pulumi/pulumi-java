@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.pinpoint.ApnsSandboxChannelArgs;
 import io.pulumi.aws.pinpoint.inputs.ApnsSandboxChannelState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class ApnsSandboxChannel extends io.pulumi.resources.CustomResource {
      * The application ID.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -47,7 +47,7 @@ public class ApnsSandboxChannel extends io.pulumi.resources.CustomResource {
      * The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
      * 
      */
-    @OutputExport(name="bundleId", type=String.class, parameters={})
+    @Export(name="bundleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> bundleId;
 
     /**
@@ -61,7 +61,7 @@ public class ApnsSandboxChannel extends io.pulumi.resources.CustomResource {
      * The pem encoded TLS Certificate from Apple.
      * 
      */
-    @OutputExport(name="certificate", type=String.class, parameters={})
+    @Export(name="certificate", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificate;
 
     /**
@@ -78,7 +78,7 @@ public class ApnsSandboxChannel extends io.pulumi.resources.CustomResource {
      * If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
      * 
      */
-    @OutputExport(name="defaultAuthenticationMethod", type=String.class, parameters={})
+    @Export(name="defaultAuthenticationMethod", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultAuthenticationMethod;
 
     /**
@@ -95,7 +95,7 @@ public class ApnsSandboxChannel extends io.pulumi.resources.CustomResource {
      * Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -109,7 +109,7 @@ public class ApnsSandboxChannel extends io.pulumi.resources.CustomResource {
      * The Certificate Private Key file (ie. `.key` file).
      * 
      */
-    @OutputExport(name="privateKey", type=String.class, parameters={})
+    @Export(name="privateKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateKey;
 
     /**
@@ -123,7 +123,7 @@ public class ApnsSandboxChannel extends io.pulumi.resources.CustomResource {
      * The ID assigned to your Apple developer account team. This value is provided on the Membership page.
      * 
      */
-    @OutputExport(name="teamId", type=String.class, parameters={})
+    @Export(name="teamId", type=String.class, parameters={})
     private Output</* @Nullable */ String> teamId;
 
     /**
@@ -137,7 +137,7 @@ public class ApnsSandboxChannel extends io.pulumi.resources.CustomResource {
      * The `.p8` file that you download from your Apple developer account when you create an authentication key.
      * 
      */
-    @OutputExport(name="tokenKey", type=String.class, parameters={})
+    @Export(name="tokenKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> tokenKey;
 
     /**
@@ -151,7 +151,7 @@ public class ApnsSandboxChannel extends io.pulumi.resources.CustomResource {
      * The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
      * 
      */
-    @OutputExport(name="tokenKeyId", type=String.class, parameters={})
+    @Export(name="tokenKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tokenKeyId;
 
     /**

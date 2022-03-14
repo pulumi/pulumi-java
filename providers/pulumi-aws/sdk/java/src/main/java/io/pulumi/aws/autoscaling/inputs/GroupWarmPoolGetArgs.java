@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the total maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
      * 
      */
-    @InputImport(name="maxGroupPreparedCapacity")
+    @Import(name="maxGroupPreparedCapacity")
       private final @Nullable Output<Integer> maxGroupPreparedCapacity;
 
     public Output<Integer> getMaxGroupPreparedCapacity() {
@@ -30,7 +30,7 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
      * 
      */
-    @InputImport(name="minSize")
+    @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
     public Output<Integer> getMinSize() {
@@ -41,7 +41,7 @@ public final class GroupWarmPoolGetArgs extends io.pulumi.resources.ResourceArgs
      * Sets the instance state to transition to after the lifecycle hooks finish. Valid values are: Stopped (default) or Running.
      * 
      */
-    @InputImport(name="poolState")
+    @Import(name="poolState")
       private final @Nullable Output<String> poolState;
 
     public Output<String> getPoolState() {

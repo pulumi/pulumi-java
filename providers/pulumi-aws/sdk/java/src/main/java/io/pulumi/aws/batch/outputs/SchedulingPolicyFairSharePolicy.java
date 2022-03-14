@@ -4,14 +4,14 @@
 package io.pulumi.aws.batch.outputs;
 
 import io.pulumi.aws.batch.outputs.SchedulingPolicyFairSharePolicyShareDistribution;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SchedulingPolicyFairSharePolicy {
     /**
      * A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html).
@@ -25,11 +25,11 @@ public final class SchedulingPolicyFairSharePolicy {
      */
     private final @Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchedulingPolicyFairSharePolicy(
-        @OutputCustomType.Parameter("computeReservation") @Nullable Integer computeReservation,
-        @OutputCustomType.Parameter("shareDecaySeconds") @Nullable Integer shareDecaySeconds,
-        @OutputCustomType.Parameter("shareDistributions") @Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
+        @CustomType.Parameter("computeReservation") @Nullable Integer computeReservation,
+        @CustomType.Parameter("shareDecaySeconds") @Nullable Integer shareDecaySeconds,
+        @CustomType.Parameter("shareDistributions") @Nullable List<SchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
         this.computeReservation = computeReservation;
         this.shareDecaySeconds = shareDecaySeconds;
         this.shareDistributions = shareDistributions;

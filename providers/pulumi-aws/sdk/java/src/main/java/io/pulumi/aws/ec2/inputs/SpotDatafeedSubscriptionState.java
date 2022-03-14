@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SpotDatafeedSubscriptionState extends io.pulumi.resources.Res
      * The Amazon S3 bucket in which to store the Spot instance data feed.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -29,7 +29,7 @@ public final class SpotDatafeedSubscriptionState extends io.pulumi.resources.Res
      * Path of folder inside bucket to place spot pricing data.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

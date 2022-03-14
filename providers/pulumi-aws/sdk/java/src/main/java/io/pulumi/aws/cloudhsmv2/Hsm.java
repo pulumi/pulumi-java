@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudhsmv2.HsmArgs;
 import io.pulumi.aws.cloudhsmv2.inputs.HsmState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class Hsm extends io.pulumi.resources.CustomResource {
      * The IDs of AZ in which HSM module will be located. Do not use together with subnet_id.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output<String> availabilityZone;
 
     /**
@@ -46,7 +46,7 @@ public class Hsm extends io.pulumi.resources.CustomResource {
      * The ID of Cloud HSM v2 cluster to which HSM will be added.
      * 
      */
-    @OutputExport(name="clusterId", type=String.class, parameters={})
+    @Export(name="clusterId", type=String.class, parameters={})
     private Output<String> clusterId;
 
     /**
@@ -60,7 +60,7 @@ public class Hsm extends io.pulumi.resources.CustomResource {
      * The id of the ENI interface allocated for HSM module.
      * 
      */
-    @OutputExport(name="hsmEniId", type=String.class, parameters={})
+    @Export(name="hsmEniId", type=String.class, parameters={})
     private Output<String> hsmEniId;
 
     /**
@@ -74,7 +74,7 @@ public class Hsm extends io.pulumi.resources.CustomResource {
      * The id of the HSM module.
      * 
      */
-    @OutputExport(name="hsmId", type=String.class, parameters={})
+    @Export(name="hsmId", type=String.class, parameters={})
     private Output<String> hsmId;
 
     /**
@@ -88,7 +88,7 @@ public class Hsm extends io.pulumi.resources.CustomResource {
      * The state of the HSM module.
      * 
      */
-    @OutputExport(name="hsmState", type=String.class, parameters={})
+    @Export(name="hsmState", type=String.class, parameters={})
     private Output<String> hsmState;
 
     /**
@@ -102,7 +102,7 @@ public class Hsm extends io.pulumi.resources.CustomResource {
      * The IP address of HSM module. Must be within the CIDR of selected subnet.
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
@@ -116,7 +116,7 @@ public class Hsm extends io.pulumi.resources.CustomResource {
      * The ID of subnet in which HSM module will be located.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**

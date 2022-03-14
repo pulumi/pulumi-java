@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DistributionRestrictionsGeoRestrictionGetArgs extends io.pulu
      * distribute your content (`blacklist`).
      * 
      */
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
@@ -34,7 +34,7 @@ public final class DistributionRestrictionsGeoRestrictionGetArgs extends io.pulu
      * `blacklist`.
      * 
      */
-    @InputImport(name="restrictionType", required=true)
+    @Import(name="restrictionType", required=true)
       private final Output<String> restrictionType;
 
     public Output<String> getRestrictionType() {

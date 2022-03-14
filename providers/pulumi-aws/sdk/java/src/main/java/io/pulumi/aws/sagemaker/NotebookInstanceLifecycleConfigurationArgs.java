@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends io.pulumi.
      * The name of the lifecycle configuration (must be unique). If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends io.pulumi.
      * A shell script (base64-encoded) that runs only once when the SageMaker Notebook Instance is created.
      * 
      */
-    @InputImport(name="onCreate")
+    @Import(name="onCreate")
       private final @Nullable Output<String> onCreate;
 
     public Output<String> getOnCreate() {
@@ -40,7 +40,7 @@ public final class NotebookInstanceLifecycleConfigurationArgs extends io.pulumi.
      * A shell script (base64-encoded) that runs every time the SageMaker Notebook Instance is started including the time it's created.
      * 
      */
-    @InputImport(name="onStart")
+    @Import(name="onStart")
       private final @Nullable Output<String> onStart;
 
     public Output<String> getOnStart() {

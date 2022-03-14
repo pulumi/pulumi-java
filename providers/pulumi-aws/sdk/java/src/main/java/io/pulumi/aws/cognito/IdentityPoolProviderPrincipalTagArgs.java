@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
      * An identity pool ID in the format REGION:GUID.
      * 
      */
-    @InputImport(name="identityPoolId", required=true)
+    @Import(name="identityPoolId", required=true)
       private final Output<String> identityPoolId;
 
     public Output<String> getIdentityPoolId() {
@@ -33,21 +33,21 @@ public final class IdentityPoolProviderPrincipalTagArgs extends io.pulumi.resour
      * * `use_defaults`: (Optional: true) use default (username and clientID) attribute mappings.
      * 
      */
-    @InputImport(name="identityProviderName", required=true)
+    @Import(name="identityProviderName", required=true)
       private final Output<String> identityProviderName;
 
     public Output<String> getIdentityProviderName() {
         return this.identityProviderName;
     }
 
-    @InputImport(name="principalTags")
+    @Import(name="principalTags")
       private final @Nullable Output<Map<String,String>> principalTags;
 
     public Output<Map<String,String>> getPrincipalTags() {
         return this.principalTags == null ? Output.empty() : this.principalTags;
     }
 
-    @InputImport(name="useDefaults")
+    @Import(name="useDefaults")
       private final @Nullable Output<Boolean> useDefaults;
 
     public Output<Boolean> getUseDefaults() {

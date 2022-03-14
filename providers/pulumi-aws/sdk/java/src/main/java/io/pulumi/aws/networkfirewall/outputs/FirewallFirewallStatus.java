@@ -4,12 +4,12 @@
 package io.pulumi.aws.networkfirewall.outputs;
 
 import io.pulumi.aws.networkfirewall.outputs.FirewallFirewallStatusSyncState;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallFirewallStatus {
     /**
      * Set of subnets configured for use by the firewall.
@@ -17,8 +17,8 @@ public final class FirewallFirewallStatus {
      */
     private final @Nullable List<FirewallFirewallStatusSyncState> syncStates;
 
-    @OutputCustomType.Constructor
-    private FirewallFirewallStatus(@OutputCustomType.Parameter("syncStates") @Nullable List<FirewallFirewallStatusSyncState> syncStates) {
+    @CustomType.Constructor
+    private FirewallFirewallStatus(@CustomType.Parameter("syncStates") @Nullable List<FirewallFirewallStatusSyncState> syncStates) {
         this.syncStates = syncStates;
     }
 

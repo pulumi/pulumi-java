@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DomainIdentityVerificationState extends io.pulumi.resources.R
      * The ARN of the domain identity.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class DomainIdentityVerificationState extends io.pulumi.resources.R
      * The domain name of the SES domain identity to verify.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {

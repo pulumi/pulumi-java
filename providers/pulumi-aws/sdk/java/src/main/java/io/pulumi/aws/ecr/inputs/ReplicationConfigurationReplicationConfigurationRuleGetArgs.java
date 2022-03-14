@@ -6,7 +6,7 @@ package io.pulumi.aws.ecr.inputs;
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs;
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleGetArgs e
      * the details of a replication destination. A maximum of 25 are allowed per `rule`. See Destination.
      * 
      */
-    @InputImport(name="destinations", required=true)
+    @Import(name="destinations", required=true)
       private final Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> destinations;
 
     public Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> getDestinations() {
@@ -31,7 +31,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleGetArgs e
      * filters for a replication rule. See Repository Filter.
      * 
      */
-    @InputImport(name="repositoryFilters")
+    @Import(name="repositoryFilters")
       private final @Nullable Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters;
 
     public Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> getRepositoryFilters() {

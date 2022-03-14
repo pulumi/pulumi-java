@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
      * Type of storage connector. Valid values are: `HOMEFOLDERS`, `GOOGLE_DRIVE`, `ONE_DRIVE`.
      * 
      */
-    @InputImport(name="connectorType", required=true)
+    @Import(name="connectorType", required=true)
       private final Output<String> connectorType;
 
     public Output<String> getConnectorType() {
@@ -30,7 +30,7 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
      * Names of the domains for the account.
      * 
      */
-    @InputImport(name="domains")
+    @Import(name="domains")
       private final @Nullable Output<List<String>> domains;
 
     public Output<List<String>> getDomains() {
@@ -41,7 +41,7 @@ public final class StackStorageConnectorGetArgs extends io.pulumi.resources.Reso
      * ARN of the storage connector.
      * 
      */
-    @InputImport(name="resourceIdentifier")
+    @Import(name="resourceIdentifier")
       private final @Nullable Output<String> resourceIdentifier;
 
     public Output<String> getResourceIdentifier() {

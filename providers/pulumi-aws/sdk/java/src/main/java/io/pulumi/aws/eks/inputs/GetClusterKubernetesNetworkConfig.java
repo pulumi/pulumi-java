@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetClusterKubernetesNetworkConfig extends io.pulumi.resources
 
     public static final GetClusterKubernetesNetworkConfig Empty = new GetClusterKubernetesNetworkConfig();
 
-    @InputImport(name="ipFamily", required=true)
+    @Import(name="ipFamily", required=true)
       private final String ipFamily;
 
     public String getIpFamily() {
@@ -23,7 +23,7 @@ public final class GetClusterKubernetesNetworkConfig extends io.pulumi.resources
      * The CIDR block to assign Kubernetes service IP addresses from.
      * 
      */
-    @InputImport(name="serviceIpv4Cidr", required=true)
+    @Import(name="serviceIpv4Cidr", required=true)
       private final String serviceIpv4Cidr;
 
     public String getServiceIpv4Cidr() {

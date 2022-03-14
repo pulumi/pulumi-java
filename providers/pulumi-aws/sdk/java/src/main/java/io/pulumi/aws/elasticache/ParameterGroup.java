@@ -8,7 +8,7 @@ import io.pulumi.aws.elasticache.ParameterGroupArgs;
 import io.pulumi.aws.elasticache.inputs.ParameterGroupState;
 import io.pulumi.aws.elasticache.outputs.ParameterGroupParameter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The AWS ARN associated with the parameter group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The description of the ElastiCache parameter group. Defaults to "Managed by Pulumi".
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -65,7 +65,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The family of the ElastiCache parameter group.
      * 
      */
-    @OutputExport(name="family", type=String.class, parameters={})
+    @Export(name="family", type=String.class, parameters={})
     private Output<String> family;
 
     /**
@@ -79,7 +79,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The name of the ElastiCache parameter.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * A list of ElastiCache parameters to apply.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={ParameterGroupParameter.class})
+    @Export(name="parameters", type=List.class, parameters={ParameterGroupParameter.class})
     private Output</* @Nullable */ List<ParameterGroupParameter>> parameters;
 
     /**
@@ -107,7 +107,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

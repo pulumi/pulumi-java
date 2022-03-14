@@ -8,7 +8,7 @@ import io.pulumi.aws.route53recoverycontrol.ClusterArgs;
 import io.pulumi.aws.route53recoverycontrol.inputs.ClusterState;
 import io.pulumi.aws.route53recoverycontrol.outputs.ClusterClusterEndpoint;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * ARN of the cluster
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * List of 5 endpoints in 5 regions that can be used to talk to the cluster. See below.
      * 
      */
-    @OutputExport(name="clusterEndpoints", type=List.class, parameters={ClusterClusterEndpoint.class})
+    @Export(name="clusterEndpoints", type=List.class, parameters={ClusterClusterEndpoint.class})
     private Output<List<ClusterClusterEndpoint>> clusterEndpoints;
 
     /**
@@ -62,7 +62,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Unique name describing the cluster.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Status of cluster. `PENDING` when it is being created, `PENDING_DELETION` when it is being deleted and `DEPLOYED` otherwise.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

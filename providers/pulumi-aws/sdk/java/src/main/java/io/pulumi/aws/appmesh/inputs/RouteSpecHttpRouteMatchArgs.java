@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttpRouteMatchHeaderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * The client request headers to match on.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<List<RouteSpecHttpRouteMatchHeaderArgs>> headers;
 
     public Output<List<RouteSpecHttpRouteMatchHeaderArgs>> getHeaders() {
@@ -31,7 +31,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<String> method;
 
     public Output<String> getMethod() {
@@ -43,7 +43,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * This parameter must always start with /, which by itself matches all requests to the virtual router service name.
      * 
      */
-    @InputImport(name="prefix", required=true)
+    @Import(name="prefix", required=true)
       private final Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -54,7 +54,7 @@ public final class RouteSpecHttpRouteMatchArgs extends io.pulumi.resources.Resou
      * The client request header scheme to match on. Valid values: `http`, `https`.
      * 
      */
-    @InputImport(name="scheme")
+    @Import(name="scheme")
       private final @Nullable Output<String> scheme;
 
     public Output<String> getScheme() {

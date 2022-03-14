@@ -4,14 +4,14 @@
 package io.pulumi.aws.macie2.outputs;
 
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm {
     /**
      * The operator to use in the condition.
@@ -34,12 +34,12 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTer
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTerm(
-        @OutputCustomType.Parameter("comparator") @Nullable String comparator,
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("tagValues") @Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue> tagValues,
-        @OutputCustomType.Parameter("target") @Nullable String target) {
+        @CustomType.Parameter("comparator") @Nullable String comparator,
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("tagValues") @Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndTagScopeTermTagValue> tagValues,
+        @CustomType.Parameter("target") @Nullable String target) {
         this.comparator = comparator;
         this.key = key;
         this.tagValues = tagValues;

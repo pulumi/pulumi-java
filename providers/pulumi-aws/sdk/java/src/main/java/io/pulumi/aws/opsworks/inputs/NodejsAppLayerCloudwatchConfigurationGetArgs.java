@@ -5,7 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.aws.opsworks.inputs.NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class NodejsAppLayerCloudwatchConfigurationGetArgs extends io.pulum
 
     public static final NodejsAppLayerCloudwatchConfigurationGetArgs Empty = new NodejsAppLayerCloudwatchConfigurationGetArgs();
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled == null ? Output.empty() : this.enabled;
     }
 
-    @InputImport(name="logStreams")
+    @Import(name="logStreams")
       private final @Nullable Output<List<NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs>> logStreams;
 
     public Output<List<NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs>> getLogStreams() {

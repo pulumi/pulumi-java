@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs;
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * Configuration block that Amazon FSx uses to join the FSx ONTAP Storage Virtual Machine(SVM) to your Microsoft Active Directory (AD) directory. Detailed below.
      * 
      */
-    @InputImport(name="activeDirectoryConfiguration")
+    @Import(name="activeDirectoryConfiguration")
       private final @Nullable Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> activeDirectoryConfiguration;
 
     public Output<OntapStorageVirtualMachineActiveDirectoryConfigurationGetArgs> getActiveDirectoryConfiguration() {
@@ -33,7 +33,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * Amazon Resource Name of the storage virtual machine.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * The endpoints that are used to access data or to manage the storage virtual machine using the NetApp ONTAP CLI, REST API, or NetApp SnapMirror. See Endpoints below.
      * 
      */
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable Output<List<OntapStorageVirtualMachineEndpointGetArgs>> endpoints;
 
     public Output<List<OntapStorageVirtualMachineEndpointGetArgs>> getEndpoints() {
@@ -55,7 +55,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * The ID of the Amazon FSx ONTAP File System that this SVM will be created on.
      * 
      */
-    @InputImport(name="fileSystemId")
+    @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
@@ -66,7 +66,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * The name of the SVM. You can use a maximum of 47 alphanumeric characters, plus the underscore (_) special character.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * Specifies the root volume security style, Valid values are `UNIX`, `NTFS`, and `MIXED`. All volumes created under this SVM will inherit the root security style unless the security style is specified on the volume. Default value is `UNIX`.
      * 
      */
-    @InputImport(name="rootVolumeSecurityStyle")
+    @Import(name="rootVolumeSecurityStyle")
       private final @Nullable Output<String> rootVolumeSecurityStyle;
 
     public Output<String> getRootVolumeSecurityStyle() {
@@ -88,14 +88,14 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * Describes the SVM's subtype, e.g. `DEFAULT`
      * 
      */
-    @InputImport(name="subtype")
+    @Import(name="subtype")
       private final @Nullable Output<String> subtype;
 
     public Output<String> getSubtype() {
         return this.subtype == null ? Output.empty() : this.subtype;
     }
 
-    @InputImport(name="svmAdminPassword")
+    @Import(name="svmAdminPassword")
       private final @Nullable Output<String> svmAdminPassword;
 
     public Output<String> getSvmAdminPassword() {
@@ -106,7 +106,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * A map of tags to assign to the storage virtual machine. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -117,7 +117,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -128,7 +128,7 @@ public final class OntapStorageVirtualMachineState extends io.pulumi.resources.R
      * The SVM's UUID (universally unique identifier).
      * 
      */
-    @InputImport(name="uuid")
+    @Import(name="uuid")
       private final @Nullable Output<String> uuid;
 
     public Output<String> getUuid() {

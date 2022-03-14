@@ -4,13 +4,13 @@
 package io.pulumi.aws.securityhub.outputs;
 
 import io.pulumi.aws.securityhub.outputs.InsightFiltersCreatedAtDateRange;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InsightFiltersCreatedAt {
     /**
      * A configuration block of the date range for the date filter. See date_range below for more details.
@@ -28,11 +28,11 @@ public final class InsightFiltersCreatedAt {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InsightFiltersCreatedAt(
-        @OutputCustomType.Parameter("dateRange") @Nullable InsightFiltersCreatedAtDateRange dateRange,
-        @OutputCustomType.Parameter("end") @Nullable String end,
-        @OutputCustomType.Parameter("start") @Nullable String start) {
+        @CustomType.Parameter("dateRange") @Nullable InsightFiltersCreatedAtDateRange dateRange,
+        @CustomType.Parameter("end") @Nullable String end,
+        @CustomType.Parameter("start") @Nullable String start) {
         this.dateRange = dateRange;
         this.end = end;
         this.start = start;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
      * Whether tag option is active. Default is `true`.
      * 
      */
-    @InputImport(name="active")
+    @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
     public Output<Boolean> getActive() {
@@ -30,7 +30,7 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
      * Tag option key.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -41,7 +41,7 @@ public final class TagOptionArgs extends io.pulumi.resources.ResourceArgs {
      * Tag option value.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.apigateway.inputs.UsagePlanApiStageArgs;
 import io.pulumi.aws.apigateway.inputs.UsagePlanQuotaSettingsArgs;
 import io.pulumi.aws.apigateway.inputs.UsagePlanThrottleSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The associated API stages of the usage plan.
      * 
      */
-    @InputImport(name="apiStages")
+    @Import(name="apiStages")
       private final @Nullable Output<List<UsagePlanApiStageArgs>> apiStages;
 
     public Output<List<UsagePlanApiStageArgs>> getApiStages() {
@@ -34,7 +34,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The description of a usage plan.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the usage plan.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
      * 
      */
-    @InputImport(name="productCode")
+    @Import(name="productCode")
       private final @Nullable Output<String> productCode;
 
     public Output<String> getProductCode() {
@@ -67,7 +67,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The quota settings of the usage plan.
      * 
      */
-    @InputImport(name="quotaSettings")
+    @Import(name="quotaSettings")
       private final @Nullable Output<UsagePlanQuotaSettingsArgs> quotaSettings;
 
     public Output<UsagePlanQuotaSettingsArgs> getQuotaSettings() {
@@ -78,7 +78,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -89,7 +89,7 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
      * The throttling limits of the usage plan.
      * 
      */
-    @InputImport(name="throttleSettings")
+    @Import(name="throttleSettings")
       private final @Nullable Output<UsagePlanThrottleSettingsArgs> throttleSettings;
 
     public Output<UsagePlanThrottleSettingsArgs> getThrottleSettings() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudfront.RealtimeLogConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.RealtimeLogConfigState;
 import io.pulumi.aws.cloudfront.outputs.RealtimeLogConfigEndpoint;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * The ARN (Amazon Resource Name) of the CloudFront real-time log configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * The Amazon Kinesis data streams where real-time log data is sent.
      * 
      */
-    @OutputExport(name="endpoint", type=RealtimeLogConfigEndpoint.class, parameters={})
+    @Export(name="endpoint", type=RealtimeLogConfigEndpoint.class, parameters={})
     private Output<RealtimeLogConfigEndpoint> endpoint;
 
     /**
@@ -63,7 +63,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * The fields that are included in each real-time log record. See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields) for supported values.
      * 
      */
-    @OutputExport(name="fields", type=List.class, parameters={String.class})
+    @Export(name="fields", type=List.class, parameters={String.class})
     private Output<List<String>> fields;
 
     /**
@@ -77,7 +77,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * The unique name to identify this real-time log configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
      * The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between `1` and `100`, inclusive.
      * 
      */
-    @OutputExport(name="samplingRate", type=Integer.class, parameters={})
+    @Export(name="samplingRate", type=Integer.class, parameters={})
     private Output<Integer> samplingRate;
 
     /**

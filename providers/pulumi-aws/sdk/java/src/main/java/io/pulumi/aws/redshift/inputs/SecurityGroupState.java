@@ -5,7 +5,7 @@ package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.aws.redshift.inputs.SecurityGroupIngressGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * The description of the Redshift security group. Defaults to "Managed by Pulumi".
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * A list of ingress rules.
      * 
      */
-    @InputImport(name="ingress")
+    @Import(name="ingress")
       private final @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress;
 
     public Output<List<SecurityGroupIngressGetArgs>> getIngress() {
@@ -42,7 +42,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
      * The name of the Redshift security group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

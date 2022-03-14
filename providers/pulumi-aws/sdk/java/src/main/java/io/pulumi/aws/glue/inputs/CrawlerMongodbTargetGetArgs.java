@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CrawlerMongodbTargetGetArgs extends io.pulumi.resources.Resou
      * The name of the connection to use to connect to the Delta table target.
      * 
      */
-    @InputImport(name="connectionName", required=true)
+    @Import(name="connectionName", required=true)
       private final Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -30,7 +30,7 @@ public final class CrawlerMongodbTargetGetArgs extends io.pulumi.resources.Resou
      * The path of the Amazon DocumentDB or MongoDB target (database/collection).
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -41,7 +41,7 @@ public final class CrawlerMongodbTargetGetArgs extends io.pulumi.resources.Resou
      * Indicates whether to scan all the records, or to sample rows from the table. Scanning all the records can take a long time when the table is not a high throughput table. Default value is `true`.
      * 
      */
-    @InputImport(name="scanAll")
+    @Import(name="scanAll")
       private final @Nullable Output<Boolean> scanAll;
 
     public Output<Boolean> getScanAll() {

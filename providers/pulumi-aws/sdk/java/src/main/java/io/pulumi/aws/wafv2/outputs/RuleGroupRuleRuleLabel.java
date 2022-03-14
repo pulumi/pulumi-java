@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleRuleLabel {
     /**
      * The label string.
@@ -15,8 +15,8 @@ public final class RuleGroupRuleRuleLabel {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleRuleLabel(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private RuleGroupRuleRuleLabel(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      * The command App Runner runs to build your application.
      * 
      */
-    @InputImport(name="buildCommand")
+    @Import(name="buildCommand")
       private final @Nullable Output<String> buildCommand;
 
     public Output<String> getBuildCommand() {
@@ -30,7 +30,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      * The port that your application listens to in the container. Defaults to `"8080"`.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<String> port;
 
     public Output<String> getPort() {
@@ -41,7 +41,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      * A runtime environment type for building and running an App Runner service. Represents a programming language runtime. Valid values: `PYTHON_3`, `NODEJS_12`.
      * 
      */
-    @InputImport(name="runtime", required=true)
+    @Import(name="runtime", required=true)
       private final Output<String> runtime;
 
     public Output<String> getRuntime() {
@@ -52,7 +52,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      * Environment variables available to your running App Runner service. A map of key/value pairs. Keys with a prefix of `AWSAPPRUNNER` are reserved for system use and aren't valid.
      * 
      */
-    @InputImport(name="runtimeEnvironmentVariables")
+    @Import(name="runtimeEnvironmentVariables")
       private final @Nullable Output<Map<String,String>> runtimeEnvironmentVariables;
 
     public Output<Map<String,String>> getRuntimeEnvironmentVariables() {
@@ -63,7 +63,7 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      * The command App Runner runs to start your application.
      * 
      */
-    @InputImport(name="startCommand")
+    @Import(name="startCommand")
       private final @Nullable Output<String> startCommand;
 
     public Output<String> getStartCommand() {

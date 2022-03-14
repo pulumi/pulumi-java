@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.HumanTaskUIUiTemplateGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) assigned by AWS to this Human Task UI.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
      * The name of the Human Task UI.
      * 
      */
-    @InputImport(name="humanTaskUiName")
+    @Import(name="humanTaskUiName")
       private final @Nullable Output<String> humanTaskUiName;
 
     public Output<String> getHumanTaskUiName() {
@@ -42,7 +42,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -53,7 +53,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -64,7 +64,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
      * The Liquid template for the worker user interface. See UI Template below.
      * 
      */
-    @InputImport(name="uiTemplate")
+    @Import(name="uiTemplate")
       private final @Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate;
 
     public Output<HumanTaskUIUiTemplateGetArgs> getUiTemplate() {

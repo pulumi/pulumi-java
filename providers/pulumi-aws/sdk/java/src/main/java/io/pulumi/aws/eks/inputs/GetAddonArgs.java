@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
      * the names returned by [list-addon](https://docs.aws.amazon.com/cli/latest/reference/eks/list-addons.html).
      * 
      */
-    @InputImport(name="addonName", required=true)
+    @Import(name="addonName", required=true)
       private final String addonName;
 
     public String getAddonName() {
@@ -31,14 +31,14 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

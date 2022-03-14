@@ -9,7 +9,7 @@ import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationState;
 import io.pulumi.aws.s3.outputs.BucketIntelligentTieringConfigurationFilter;
 import io.pulumi.aws.s3.outputs.BucketIntelligentTieringConfigurationTiering;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.C
      * The name of the bucket this intelligent tiering configuration is associated with.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -49,7 +49,7 @@ public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.C
      * A bucket filter. The configuration only includes objects that meet the filter's criteria (documented below).
      * 
      */
-    @OutputExport(name="filter", type=BucketIntelligentTieringConfigurationFilter.class, parameters={})
+    @Export(name="filter", type=BucketIntelligentTieringConfigurationFilter.class, parameters={})
     private Output</* @Nullable */ BucketIntelligentTieringConfigurationFilter> filter;
 
     /**
@@ -63,7 +63,7 @@ public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.C
      * The unique name used to identify the S3 Intelligent-Tiering configuration for the bucket.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.C
      * Specifies the status of the configuration. Valid values: `Enabled`, `Disabled`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -91,7 +91,7 @@ public class BucketIntelligentTieringConfiguration extends io.pulumi.resources.C
      * The S3 Intelligent-Tiering storage class tiers of the configuration (documented below).
      * 
      */
-    @OutputExport(name="tierings", type=List.class, parameters={BucketIntelligentTieringConfigurationTiering.class})
+    @Export(name="tierings", type=List.class, parameters={BucketIntelligentTieringConfigurationTiering.class})
     private Output<List<BucketIntelligentTieringConfigurationTiering>> tierings;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTaskDefinitionArgs extends io.pulumi.resources.InvokeArgs 
      * The family for the latest ACTIVE revision, family and revision (family:revision) for a specific revision in the family, the ARN of the task definition to access to.
      * 
      */
-    @InputImport(name="taskDefinition", required=true)
+    @Import(name="taskDefinition", required=true)
       private final String taskDefinition;
 
     public String getTaskDefinition() {

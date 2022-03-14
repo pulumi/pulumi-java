@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StackSetAutoDeployment {
     /**
      * Whether or not auto-deployment is enabled.
@@ -22,10 +22,10 @@ public final class StackSetAutoDeployment {
      */
     private final @Nullable Boolean retainStacksOnAccountRemoval;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StackSetAutoDeployment(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("retainStacksOnAccountRemoval") @Nullable Boolean retainStacksOnAccountRemoval) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("retainStacksOnAccountRemoval") @Nullable Boolean retainStacksOnAccountRemoval) {
         this.enabled = enabled;
         this.retainStacksOnAccountRemoval = retainStacksOnAccountRemoval;
     }

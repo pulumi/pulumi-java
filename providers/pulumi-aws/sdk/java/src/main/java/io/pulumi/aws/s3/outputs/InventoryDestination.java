@@ -4,10 +4,10 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.InventoryDestinationBucket;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InventoryDestination {
     /**
      * The S3 bucket configuration where inventory results are published (documented below).
@@ -15,8 +15,8 @@ public final class InventoryDestination {
      */
     private final InventoryDestinationBucket bucket;
 
-    @OutputCustomType.Constructor
-    private InventoryDestination(@OutputCustomType.Parameter("bucket") InventoryDestinationBucket bucket) {
+    @CustomType.Constructor
+    private InventoryDestination(@CustomType.Parameter("bucket") InventoryDestinationBucket bucket) {
         this.bucket = bucket;
     }
 

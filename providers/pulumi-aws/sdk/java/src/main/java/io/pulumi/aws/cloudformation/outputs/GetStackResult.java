@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetStackResult {
     /**
      * A list of capabilities
@@ -70,20 +70,20 @@ public final class GetStackResult {
      */
     private final Integer timeoutInMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStackResult(
-        @OutputCustomType.Parameter("capabilities") List<String> capabilities,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disableRollback") Boolean disableRollback,
-        @OutputCustomType.Parameter("iamRoleArn") String iamRoleArn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationArns") List<String> notificationArns,
-        @OutputCustomType.Parameter("outputs") Map<String,String> outputs,
-        @OutputCustomType.Parameter("parameters") Map<String,String> parameters,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("templateBody") String templateBody,
-        @OutputCustomType.Parameter("timeoutInMinutes") Integer timeoutInMinutes) {
+        @CustomType.Parameter("capabilities") List<String> capabilities,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disableRollback") Boolean disableRollback,
+        @CustomType.Parameter("iamRoleArn") String iamRoleArn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationArns") List<String> notificationArns,
+        @CustomType.Parameter("outputs") Map<String,String> outputs,
+        @CustomType.Parameter("parameters") Map<String,String> parameters,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("templateBody") String templateBody,
+        @CustomType.Parameter("timeoutInMinutes") Integer timeoutInMinutes) {
         this.capabilities = capabilities;
         this.description = description;
         this.disableRollback = disableRollback;

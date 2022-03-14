@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether GuardDuty is to start using the uploaded IPSet.
      * 
      */
-    @InputImport(name="activate", required=true)
+    @Import(name="activate", required=true)
       private final Output<Boolean> activate;
 
     public Output<Boolean> getActivate() {
@@ -31,7 +31,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * The detector ID of the GuardDuty.
      * 
      */
-    @InputImport(name="detectorId", required=true)
+    @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
     public Output<String> getDetectorId() {
@@ -42,7 +42,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<String> format;
 
     public Output<String> getFormat() {
@@ -53,7 +53,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of the file that contains the IPSet.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,7 +64,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * The friendly name to identify the IPSet.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

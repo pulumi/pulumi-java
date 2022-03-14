@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatement {
     /**
      * The operator to use to compare the request part to the size setting. Valid values include: `EQ`, `NE`, `LE`, `LT`, `GE`, or `GT`.
@@ -36,12 +36,12 @@ public final class WebAclRuleStatementNotStatementStatementNotStatementStatement
      */
     private final List<WebAclRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatement(
-        @OutputCustomType.Parameter("comparisonOperator") String comparisonOperator,
-        @OutputCustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("textTransformations") List<WebAclRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation> textTransformations) {
+        @CustomType.Parameter("comparisonOperator") String comparisonOperator,
+        @CustomType.Parameter("fieldToMatch") @Nullable WebAclRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementFieldToMatch fieldToMatch,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("textTransformations") List<WebAclRuleStatementNotStatementStatementNotStatementStatementSizeConstraintStatementTextTransformation> textTransformations) {
         this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
         this.size = size;

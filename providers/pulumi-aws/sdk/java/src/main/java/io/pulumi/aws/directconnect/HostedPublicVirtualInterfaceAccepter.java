@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.HostedPublicVirtualInterfaceAccepterArgs;
 import io.pulumi.aws.directconnect.inputs.HostedPublicVirtualInterfaceAccepterState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * The ARN of the virtual interface.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -62,7 +62,7 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -76,7 +76,7 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * The ID of the Direct Connect virtual interface to accept.
      * 
      */
-    @OutputExport(name="virtualInterfaceId", type=String.class, parameters={})
+    @Export(name="virtualInterfaceId", type=String.class, parameters={})
     private Output<String> virtualInterfaceId;
 
     /**

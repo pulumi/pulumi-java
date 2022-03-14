@@ -9,7 +9,7 @@ import io.pulumi.aws.backup.inputs.PlanState;
 import io.pulumi.aws.backup.outputs.PlanAdvancedBackupSetting;
 import io.pulumi.aws.backup.outputs.PlanRule;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * An object that specifies backup options for each resource type.
      * 
      */
-    @OutputExport(name="advancedBackupSettings", type=List.class, parameters={PlanAdvancedBackupSetting.class})
+    @Export(name="advancedBackupSettings", type=List.class, parameters={PlanAdvancedBackupSetting.class})
     private Output</* @Nullable */ List<PlanAdvancedBackupSetting>> advancedBackupSettings;
 
     /**
@@ -50,7 +50,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * The ARN of the backup plan.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -64,7 +64,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * The display name of a backup plan.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * A rule object that specifies a scheduled task that is used to back up a selection of resources.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={PlanRule.class})
+    @Export(name="rules", type=List.class, parameters={PlanRule.class})
     private Output<List<PlanRule>> rules;
 
     /**
@@ -92,7 +92,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * Metadata that you can assign to help organize the plans you create. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -106,7 +106,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -120,7 +120,7 @@ public class Plan extends io.pulumi.resources.CustomResource {
      * Unique, randomly generated, Unicode, UTF-8 encoded string that serves as the version ID of the backup plan.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

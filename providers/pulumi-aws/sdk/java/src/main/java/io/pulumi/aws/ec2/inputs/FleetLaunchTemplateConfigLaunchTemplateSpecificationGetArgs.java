@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs e
      * ID of the launch template.
      * 
      */
-    @InputImport(name="launchTemplateId")
+    @Import(name="launchTemplateId")
       private final @Nullable Output<String> launchTemplateId;
 
     public Output<String> getLaunchTemplateId() {
@@ -29,7 +29,7 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs e
      * Name of the launch template.
      * 
      */
-    @InputImport(name="launchTemplateName")
+    @Import(name="launchTemplateName")
       private final @Nullable Output<String> launchTemplateName;
 
     public Output<String> getLaunchTemplateName() {
@@ -40,7 +40,7 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecificationGetArgs e
      * Version number of the launch template.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<String> version;
 
     public Output<String> getVersion() {

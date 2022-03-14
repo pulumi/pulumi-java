@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecordLatencyRoutingPolicy {
     /**
      * An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency
@@ -15,8 +15,8 @@ public final class RecordLatencyRoutingPolicy {
      */
     private final String region;
 
-    @OutputCustomType.Constructor
-    private RecordLatencyRoutingPolicy(@OutputCustomType.Parameter("region") String region) {
+    @CustomType.Constructor
+    private RecordLatencyRoutingPolicy(@CustomType.Parameter("region") String region) {
         this.region = region;
     }
 

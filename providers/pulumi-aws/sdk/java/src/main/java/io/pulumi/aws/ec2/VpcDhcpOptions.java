@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpcDhcpOptionsArgs;
 import io.pulumi.aws.ec2.inputs.VpcDhcpOptionsState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +41,7 @@ public class VpcDhcpOptions extends io.pulumi.resources.CustomResource {
      * The ARN of the DHCP Options Set.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -55,7 +55,7 @@ public class VpcDhcpOptions extends io.pulumi.resources.CustomResource {
      * the suffix domain name to use by default when resolving non Fully Qualified Domain Names. In other words, this is what ends up being the `search` value in the `/etc/resolv.conf` file.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainName;
 
     /**
@@ -69,7 +69,7 @@ public class VpcDhcpOptions extends io.pulumi.resources.CustomResource {
      * List of name servers to configure in `/etc/resolv.conf`. If you want to use the default AWS nameservers you should set this to `AmazonProvidedDNS`.
      * 
      */
-    @OutputExport(name="domainNameServers", type=List.class, parameters={String.class})
+    @Export(name="domainNameServers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> domainNameServers;
 
     /**
@@ -83,7 +83,7 @@ public class VpcDhcpOptions extends io.pulumi.resources.CustomResource {
      * List of NETBIOS name servers.
      * 
      */
-    @OutputExport(name="netbiosNameServers", type=List.class, parameters={String.class})
+    @Export(name="netbiosNameServers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> netbiosNameServers;
 
     /**
@@ -97,7 +97,7 @@ public class VpcDhcpOptions extends io.pulumi.resources.CustomResource {
      * The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
      * 
      */
-    @OutputExport(name="netbiosNodeType", type=String.class, parameters={})
+    @Export(name="netbiosNodeType", type=String.class, parameters={})
     private Output</* @Nullable */ String> netbiosNodeType;
 
     /**
@@ -111,7 +111,7 @@ public class VpcDhcpOptions extends io.pulumi.resources.CustomResource {
      * List of NTP servers to configure.
      * 
      */
-    @OutputExport(name="ntpServers", type=List.class, parameters={String.class})
+    @Export(name="ntpServers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ntpServers;
 
     /**
@@ -125,7 +125,7 @@ public class VpcDhcpOptions extends io.pulumi.resources.CustomResource {
      * The ID of the AWS account that owns the DHCP options set.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -139,7 +139,7 @@ public class VpcDhcpOptions extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -153,7 +153,7 @@ public class VpcDhcpOptions extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

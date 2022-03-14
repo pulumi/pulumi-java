@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetComputeEnvironmentArgs extends io.pulumi.resources.InvokeA
      * The name of the Batch Compute Environment
      * 
      */
-    @InputImport(name="computeEnvironmentName", required=true)
+    @Import(name="computeEnvironmentName", required=true)
       private final String computeEnvironmentName;
 
     public String getComputeEnvironmentName() {
@@ -30,7 +30,7 @@ public final class GetComputeEnvironmentArgs extends io.pulumi.resources.InvokeA
      * Key-value map of resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

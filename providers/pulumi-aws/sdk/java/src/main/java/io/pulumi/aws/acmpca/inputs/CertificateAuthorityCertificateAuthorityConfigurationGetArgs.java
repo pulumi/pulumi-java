@@ -5,7 +5,7 @@ package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
      * Type of the public key algorithm and size, in bits, of the key pair that your key pair creates when it issues a certificate. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
      * 
      */
-    @InputImport(name="keyAlgorithm", required=true)
+    @Import(name="keyAlgorithm", required=true)
       private final Output<String> keyAlgorithm;
 
     public Output<String> getKeyAlgorithm() {
@@ -29,7 +29,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
      * Name of the algorithm your private CA uses to sign certificate requests. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
      * 
      */
-    @InputImport(name="signingAlgorithm", required=true)
+    @Import(name="signingAlgorithm", required=true)
       private final Output<String> signingAlgorithm;
 
     public Output<String> getSigningAlgorithm() {
@@ -40,7 +40,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
      * Nested argument that contains X.500 distinguished name information. At least one nested attribute must be specified.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject;
 
     public Output<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> getSubject() {

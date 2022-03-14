@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class GetDistributionArgs extends io.pulumi.resources.InvokeArgs {
      * The identifier for the distribution. For example: `EDFDVBD632BHDS5`.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
         return this.id;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

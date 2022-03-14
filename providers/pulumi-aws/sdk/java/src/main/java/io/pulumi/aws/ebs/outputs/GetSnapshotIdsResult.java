@@ -4,13 +4,13 @@
 package io.pulumi.aws.ebs.outputs;
 
 import io.pulumi.aws.ebs.outputs.GetSnapshotIdsFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSnapshotIdsResult {
     private final @Nullable List<GetSnapshotIdsFilter> filters;
     /**
@@ -26,13 +26,13 @@ public final class GetSnapshotIdsResult {
     private final @Nullable List<String> owners;
     private final @Nullable List<String> restorableByUserIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSnapshotIdsResult(
-        @OutputCustomType.Parameter("filters") @Nullable List<GetSnapshotIdsFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ids") List<String> ids,
-        @OutputCustomType.Parameter("owners") @Nullable List<String> owners,
-        @OutputCustomType.Parameter("restorableByUserIds") @Nullable List<String> restorableByUserIds) {
+        @CustomType.Parameter("filters") @Nullable List<GetSnapshotIdsFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ids") List<String> ids,
+        @CustomType.Parameter("owners") @Nullable List<String> owners,
+        @CustomType.Parameter("restorableByUserIds") @Nullable List<String> restorableByUserIds) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

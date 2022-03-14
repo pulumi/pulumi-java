@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
      * A regular expression for validating the incoming Amazon Cognito User Pool app client ID.
      * 
      */
-    @InputImport(name="appIdClientRegex")
+    @Import(name="appIdClientRegex")
       private final @Nullable Output<String> appIdClientRegex;
 
     public Output<String> getAppIdClientRegex() {
@@ -29,7 +29,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
      * The AWS region in which the user pool was created.
      * 
      */
-    @InputImport(name="awsRegion")
+    @Import(name="awsRegion")
       private final @Nullable Output<String> awsRegion;
 
     public Output<String> getAwsRegion() {
@@ -40,7 +40,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
      * The action that you want your GraphQL API to take when a request that uses Amazon Cognito User Pool authentication doesn't match the Amazon Cognito User Pool configuration. Valid: `ALLOW` and `DENY`
      * 
      */
-    @InputImport(name="defaultAction", required=true)
+    @Import(name="defaultAction", required=true)
       private final Output<String> defaultAction;
 
     public Output<String> getDefaultAction() {
@@ -51,7 +51,7 @@ public final class GraphQLApiUserPoolConfigGetArgs extends io.pulumi.resources.R
      * The user pool ID.
      * 
      */
-    @InputImport(name="userPoolId", required=true)
+    @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.applicationloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerDefaultActionForwardStickiness {
     /**
      * Time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).
@@ -23,10 +23,10 @@ public final class ListenerDefaultActionForwardStickiness {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerDefaultActionForwardStickiness(
-        @OutputCustomType.Parameter("duration") Integer duration,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+        @CustomType.Parameter("duration") Integer duration,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.duration = duration;
         this.enabled = enabled;
     }

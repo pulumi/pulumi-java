@@ -14,12 +14,12 @@ import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementRateBasedStatementScopeDow
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatement;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatement;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatement {
     /**
      * A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
@@ -77,19 +77,19 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementOrStat
      */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatement xssMatchStatement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatement(
-        @OutputCustomType.Parameter("andStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatement andStatement,
-        @OutputCustomType.Parameter("byteMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatement byteMatchStatement,
-        @OutputCustomType.Parameter("geoMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatement geoMatchStatement,
-        @OutputCustomType.Parameter("ipSetReferenceStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatement ipSetReferenceStatement,
-        @OutputCustomType.Parameter("labelMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatement labelMatchStatement,
-        @OutputCustomType.Parameter("notStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatement notStatement,
-        @OutputCustomType.Parameter("orStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatement orStatement,
-        @OutputCustomType.Parameter("regexPatternSetReferenceStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
-        @OutputCustomType.Parameter("sizeConstraintStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatement sizeConstraintStatement,
-        @OutputCustomType.Parameter("sqliMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatement sqliMatchStatement,
-        @OutputCustomType.Parameter("xssMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatement xssMatchStatement) {
+        @CustomType.Parameter("andStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementAndStatement andStatement,
+        @CustomType.Parameter("byteMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementByteMatchStatement byteMatchStatement,
+        @CustomType.Parameter("geoMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementGeoMatchStatement geoMatchStatement,
+        @CustomType.Parameter("ipSetReferenceStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementIpSetReferenceStatement ipSetReferenceStatement,
+        @CustomType.Parameter("labelMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementLabelMatchStatement labelMatchStatement,
+        @CustomType.Parameter("notStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementNotStatement notStatement,
+        @CustomType.Parameter("orStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementOrStatement orStatement,
+        @CustomType.Parameter("regexPatternSetReferenceStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
+        @CustomType.Parameter("sizeConstraintStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSizeConstraintStatement sizeConstraintStatement,
+        @CustomType.Parameter("sqliMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementSqliMatchStatement sqliMatchStatement,
+        @CustomType.Parameter("xssMatchStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementOrStatementStatementXssMatchStatement xssMatchStatement) {
         this.andStatement = andStatement;
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;

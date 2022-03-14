@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.acm.CertificateValidationArgs;
 import io.pulumi.aws.acm.inputs.CertificateValidationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public class CertificateValidation extends io.pulumi.resources.CustomResource {
      * The ARN of the certificate that is being validated.
      * 
      */
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output<String> certificateArn;
 
     /**
@@ -46,7 +46,7 @@ public class CertificateValidation extends io.pulumi.resources.CustomResource {
      * List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation
      * 
      */
-    @OutputExport(name="validationRecordFqdns", type=List.class, parameters={String.class})
+    @Export(name="validationRecordFqdns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> validationRecordFqdns;
 
     /**

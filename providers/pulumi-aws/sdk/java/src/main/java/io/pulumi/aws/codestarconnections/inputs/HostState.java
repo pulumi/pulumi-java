@@ -5,7 +5,7 @@ package io.pulumi.aws.codestarconnections.inputs;
 
 import io.pulumi.aws.codestarconnections.inputs.HostVpcConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
      * The CodeStar Host ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
      * The name of the host to be created. The name must be unique in the calling AWS account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
      * The endpoint of the infrastructure to be represented by the host after it is created.
      * 
      */
-    @InputImport(name="providerEndpoint")
+    @Import(name="providerEndpoint")
       private final @Nullable Output<String> providerEndpoint;
 
     public Output<String> getProviderEndpoint() {
@@ -52,7 +52,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
      * The name of the external provider where your third-party code repository is configured.
      * 
      */
-    @InputImport(name="providerType")
+    @Import(name="providerType")
       private final @Nullable Output<String> providerType;
 
     public Output<String> getProviderType() {
@@ -63,7 +63,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
      * The CodeStar Host status. Possible values are `PENDING`, `AVAILABLE`, `VPC_CONFIG_DELETING`, `VPC_CONFIG_INITIALIZING`, and `VPC_CONFIG_FAILED_INITIALIZATION`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -74,7 +74,7 @@ public final class HostState extends io.pulumi.resources.ResourceArgs {
      * The VPC configuration to be provisioned for the host. A VPC must be configured, and the infrastructure to be represented by the host must already be connected to the VPC.
      * 
      */
-    @InputImport(name="vpcConfiguration")
+    @Import(name="vpcConfiguration")
       private final @Nullable Output<HostVpcConfigurationGetArgs> vpcConfiguration;
 
     public Output<HostVpcConfigurationGetArgs> getVpcConfiguration() {

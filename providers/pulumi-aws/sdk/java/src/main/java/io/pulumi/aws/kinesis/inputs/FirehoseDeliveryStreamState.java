@@ -12,7 +12,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamS3ConfigurationGetArgs
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamServerSideEncryptionGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * The Amazon Resource Name (ARN) specifying the Stream
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -38,14 +38,14 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
         return this.destination == null ? Output.empty() : this.destination;
     }
 
-    @InputImport(name="destinationId")
+    @Import(name="destinationId")
       private final @Nullable Output<String> destinationId;
 
     public Output<String> getDestinationId() {
@@ -56,7 +56,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * Configuration options if elasticsearch is the destination. More details are given below.
      * 
      */
-    @InputImport(name="elasticsearchConfiguration")
+    @Import(name="elasticsearchConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> elasticsearchConfiguration;
 
     public Output<FirehoseDeliveryStreamElasticsearchConfigurationGetArgs> getElasticsearchConfiguration() {
@@ -67,7 +67,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * Enhanced configuration options for the s3 destination. More details are given below.
      * 
      */
-    @InputImport(name="extendedS3Configuration")
+    @Import(name="extendedS3Configuration")
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> extendedS3Configuration;
 
     public Output<FirehoseDeliveryStreamExtendedS3ConfigurationGetArgs> getExtendedS3Configuration() {
@@ -78,7 +78,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
      * 
      */
-    @InputImport(name="httpEndpointConfiguration")
+    @Import(name="httpEndpointConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> httpEndpointConfiguration;
 
     public Output<FirehoseDeliveryStreamHttpEndpointConfigurationGetArgs> getHttpEndpointConfiguration() {
@@ -89,7 +89,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
      * 
      */
-    @InputImport(name="kinesisSourceConfiguration")
+    @Import(name="kinesisSourceConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> kinesisSourceConfiguration;
 
     public Output<FirehoseDeliveryStreamKinesisSourceConfigurationGetArgs> getKinesisSourceConfiguration() {
@@ -101,7 +101,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * AWS account and region the Stream is created in.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -114,7 +114,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * `s3_configuration` block. More details are given below.
      * 
      */
-    @InputImport(name="redshiftConfiguration")
+    @Import(name="redshiftConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> redshiftConfiguration;
 
     public Output<FirehoseDeliveryStreamRedshiftConfigurationGetArgs> getRedshiftConfiguration() {
@@ -126,7 +126,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * is redshift). More details are given below.
      * 
      */
-    @InputImport(name="s3Configuration")
+    @Import(name="s3Configuration")
       private final @Nullable Output<FirehoseDeliveryStreamS3ConfigurationGetArgs> s3Configuration;
 
     public Output<FirehoseDeliveryStreamS3ConfigurationGetArgs> getS3Configuration() {
@@ -138,7 +138,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
      * 
      */
-    @InputImport(name="serverSideEncryption")
+    @Import(name="serverSideEncryption")
       private final @Nullable Output<FirehoseDeliveryStreamServerSideEncryptionGetArgs> serverSideEncryption;
 
     public Output<FirehoseDeliveryStreamServerSideEncryptionGetArgs> getServerSideEncryption() {
@@ -149,7 +149,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * Configuration options if splunk is the destination. More details are given below.
      * 
      */
-    @InputImport(name="splunkConfiguration")
+    @Import(name="splunkConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationGetArgs> splunkConfiguration;
 
     public Output<FirehoseDeliveryStreamSplunkConfigurationGetArgs> getSplunkConfiguration() {
@@ -160,7 +160,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -171,7 +171,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -182,7 +182,7 @@ public final class FirehoseDeliveryStreamState extends io.pulumi.resources.Resou
      * Specifies the table version for the output data schema. Defaults to `LATEST`.
      * 
      */
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
     public Output<String> getVersionId() {

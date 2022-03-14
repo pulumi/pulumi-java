@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetInternetGatewayFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetInternetGatewayArgs extends io.pulumi.resources.InvokeArgs
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetInternetGatewayFilter> filters;
 
     public List<GetInternetGatewayFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetInternetGatewayArgs extends io.pulumi.resources.InvokeArgs
      * The id of the specific Internet Gateway to retrieve.
      * 
      */
-    @InputImport(name="internetGatewayId")
+    @Import(name="internetGatewayId")
       private final @Nullable String internetGatewayId;
 
     public Optional<String> getInternetGatewayId() {
@@ -44,7 +44,7 @@ public final class GetInternetGatewayArgs extends io.pulumi.resources.InvokeArgs
      * a pair on the desired Internet Gateway.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

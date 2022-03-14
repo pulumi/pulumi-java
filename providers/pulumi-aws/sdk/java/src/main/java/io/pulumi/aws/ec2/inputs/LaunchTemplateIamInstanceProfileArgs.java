@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LaunchTemplateIamInstanceProfileArgs extends io.pulumi.resour
      * The Amazon Resource Name (ARN) of the instance profile.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class LaunchTemplateIamInstanceProfileArgs extends io.pulumi.resour
      * The name of the instance profile.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

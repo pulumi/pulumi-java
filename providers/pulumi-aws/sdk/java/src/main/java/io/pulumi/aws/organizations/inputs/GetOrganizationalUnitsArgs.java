@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetOrganizationalUnitsArgs extends io.pulumi.resources.Invoke
      * The parent ID of the organizational unit.
      * 
      */
-    @InputImport(name="parentId", required=true)
+    @Import(name="parentId", required=true)
       private final String parentId;
 
     public String getParentId() {

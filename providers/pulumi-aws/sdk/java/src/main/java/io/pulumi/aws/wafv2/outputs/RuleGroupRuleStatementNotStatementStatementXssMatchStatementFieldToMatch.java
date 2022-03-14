@@ -10,12 +10,12 @@ import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementNotStatementStatementXs
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader;
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument;
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchUriPath;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatch {
     /**
      * Inspect all query arguments.
@@ -53,15 +53,15 @@ public final class RuleGroupRuleStatementNotStatementStatementXssMatchStatementF
      */
     private final @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchUriPath uriPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatch(
-        @OutputCustomType.Parameter("allQueryArguments") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchAllQueryArguments allQueryArguments,
-        @OutputCustomType.Parameter("body") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchBody body,
-        @OutputCustomType.Parameter("method") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchMethod method,
-        @OutputCustomType.Parameter("queryString") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchQueryString queryString,
-        @OutputCustomType.Parameter("singleHeader") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader singleHeader,
-        @OutputCustomType.Parameter("singleQueryArgument") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument singleQueryArgument,
-        @OutputCustomType.Parameter("uriPath") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchUriPath uriPath) {
+        @CustomType.Parameter("allQueryArguments") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchAllQueryArguments allQueryArguments,
+        @CustomType.Parameter("body") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchBody body,
+        @CustomType.Parameter("method") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchMethod method,
+        @CustomType.Parameter("queryString") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchQueryString queryString,
+        @CustomType.Parameter("singleHeader") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleHeader singleHeader,
+        @CustomType.Parameter("singleQueryArgument") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument singleQueryArgument,
+        @CustomType.Parameter("uriPath") @Nullable RuleGroupRuleStatementNotStatementStatementXssMatchStatementFieldToMatchUriPath uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.method = method;

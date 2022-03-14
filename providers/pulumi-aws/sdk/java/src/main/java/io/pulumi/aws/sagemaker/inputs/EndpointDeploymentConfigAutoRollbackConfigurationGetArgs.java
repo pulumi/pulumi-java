@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationGetArgs exte
      * List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.
      * 
      */
-    @InputImport(name="alarms")
+    @Import(name="alarms")
       private final @Nullable Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs>> alarms;
 
     public Output<List<EndpointDeploymentConfigAutoRollbackConfigurationAlarmGetArgs>> getAlarms() {

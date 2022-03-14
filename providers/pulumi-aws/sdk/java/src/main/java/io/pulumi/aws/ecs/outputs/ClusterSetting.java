@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterSetting {
     /**
      * Name of the setting to manage. Valid values: `containerInsights`.
@@ -20,10 +20,10 @@ public final class ClusterSetting {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterSetting(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") String value) {
         this.name = name;
         this.value = value;
     }

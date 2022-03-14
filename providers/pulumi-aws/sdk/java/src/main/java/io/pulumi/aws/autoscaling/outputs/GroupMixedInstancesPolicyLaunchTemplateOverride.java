@@ -4,13 +4,13 @@
 package io.pulumi.aws.autoscaling.outputs;
 
 import io.pulumi.aws.autoscaling.outputs.GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupMixedInstancesPolicyLaunchTemplateOverride {
     /**
      * Override the instance type in the Launch Template.
@@ -28,11 +28,11 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverride {
      */
     private final @Nullable String weightedCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupMixedInstancesPolicyLaunchTemplateOverride(
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("launchTemplateSpecification") @Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification launchTemplateSpecification,
-        @OutputCustomType.Parameter("weightedCapacity") @Nullable String weightedCapacity) {
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("launchTemplateSpecification") @Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification launchTemplateSpecification,
+        @CustomType.Parameter("weightedCapacity") @Nullable String weightedCapacity) {
         this.instanceType = instanceType;
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.weightedCapacity = weightedCapacity;

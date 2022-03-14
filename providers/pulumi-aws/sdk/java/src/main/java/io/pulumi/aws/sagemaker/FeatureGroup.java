@@ -10,7 +10,7 @@ import io.pulumi.aws.sagemaker.outputs.FeatureGroupFeatureDefinition;
 import io.pulumi.aws.sagemaker.outputs.FeatureGroupOfflineStoreConfig;
 import io.pulumi.aws.sagemaker.outputs.FeatureGroupOnlineStoreConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this feature_group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * A free-form description of a Feature Group.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -65,7 +65,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * The name of the feature that stores the EventTime of a Record in a Feature Group.
      * 
      */
-    @OutputExport(name="eventTimeFeatureName", type=String.class, parameters={})
+    @Export(name="eventTimeFeatureName", type=String.class, parameters={})
     private Output<String> eventTimeFeatureName;
 
     /**
@@ -79,7 +79,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * A list of Feature names and types. See Feature Definition Below.
      * 
      */
-    @OutputExport(name="featureDefinitions", type=List.class, parameters={FeatureGroupFeatureDefinition.class})
+    @Export(name="featureDefinitions", type=List.class, parameters={FeatureGroupFeatureDefinition.class})
     private Output<List<FeatureGroupFeatureDefinition>> featureDefinitions;
 
     /**
@@ -93,7 +93,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * The name of the Feature Group. The name must be unique within an AWS Region in an AWS account.
      * 
      */
-    @OutputExport(name="featureGroupName", type=String.class, parameters={})
+    @Export(name="featureGroupName", type=String.class, parameters={})
     private Output<String> featureGroupName;
 
     /**
@@ -107,7 +107,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * The Offline Feature Store Configuration. See Offline Store Config Below.
      * 
      */
-    @OutputExport(name="offlineStoreConfig", type=FeatureGroupOfflineStoreConfig.class, parameters={})
+    @Export(name="offlineStoreConfig", type=FeatureGroupOfflineStoreConfig.class, parameters={})
     private Output</* @Nullable */ FeatureGroupOfflineStoreConfig> offlineStoreConfig;
 
     /**
@@ -121,7 +121,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * The Online Feature Store Configuration. See Online Store Config Below.
      * 
      */
-    @OutputExport(name="onlineStoreConfig", type=FeatureGroupOnlineStoreConfig.class, parameters={})
+    @Export(name="onlineStoreConfig", type=FeatureGroupOnlineStoreConfig.class, parameters={})
     private Output</* @Nullable */ FeatureGroupOnlineStoreConfig> onlineStoreConfig;
 
     /**
@@ -135,7 +135,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
      * 
      */
-    @OutputExport(name="recordIdentifierFeatureName", type=String.class, parameters={})
+    @Export(name="recordIdentifierFeatureName", type=String.class, parameters={})
     private Output<String> recordIdentifierFeatureName;
 
     /**
@@ -149,7 +149,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an `offline_store_config` is provided.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -163,7 +163,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * Map of resource tags for the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -177,7 +177,7 @@ public class FeatureGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

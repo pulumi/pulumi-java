@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.autoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupInstanceRefreshPreferences {
     /**
      * The number of seconds to wait after a checkpoint. Defaults to `3600`.
@@ -34,12 +34,12 @@ public final class GroupInstanceRefreshPreferences {
      */
     private final @Nullable Integer minHealthyPercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupInstanceRefreshPreferences(
-        @OutputCustomType.Parameter("checkpointDelay") @Nullable String checkpointDelay,
-        @OutputCustomType.Parameter("checkpointPercentages") @Nullable List<Integer> checkpointPercentages,
-        @OutputCustomType.Parameter("instanceWarmup") @Nullable String instanceWarmup,
-        @OutputCustomType.Parameter("minHealthyPercentage") @Nullable Integer minHealthyPercentage) {
+        @CustomType.Parameter("checkpointDelay") @Nullable String checkpointDelay,
+        @CustomType.Parameter("checkpointPercentages") @Nullable List<Integer> checkpointPercentages,
+        @CustomType.Parameter("instanceWarmup") @Nullable String instanceWarmup,
+        @CustomType.Parameter("minHealthyPercentage") @Nullable Integer minHealthyPercentage) {
         this.checkpointDelay = checkpointDelay;
         this.checkpointPercentages = checkpointPercentages;
         this.instanceWarmup = instanceWarmup;

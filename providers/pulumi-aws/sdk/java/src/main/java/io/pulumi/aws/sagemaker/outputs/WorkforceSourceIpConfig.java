@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkforceSourceIpConfig {
     /**
      * A list of up to 10 CIDR values.
@@ -16,8 +16,8 @@ public final class WorkforceSourceIpConfig {
      */
     private final List<String> cidrs;
 
-    @OutputCustomType.Constructor
-    private WorkforceSourceIpConfig(@OutputCustomType.Parameter("cidrs") List<String> cidrs) {
+    @CustomType.Constructor
+    private WorkforceSourceIpConfig(@CustomType.Parameter("cidrs") List<String> cidrs) {
         this.cidrs = cidrs;
     }
 

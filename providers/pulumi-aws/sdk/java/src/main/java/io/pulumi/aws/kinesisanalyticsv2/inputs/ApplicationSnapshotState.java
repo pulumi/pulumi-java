@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * The name of an existing  Kinesis Analytics v2 Application. Note that the application must be running for a snapshot to be created.
      * 
      */
-    @InputImport(name="applicationName")
+    @Import(name="applicationName")
       private final @Nullable Output<String> applicationName;
 
     public Output<String> getApplicationName() {
@@ -30,7 +30,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * The current application version ID when the snapshot was created.
      * 
      */
-    @InputImport(name="applicationVersionId")
+    @Import(name="applicationVersionId")
       private final @Nullable Output<Integer> applicationVersionId;
 
     public Output<Integer> getApplicationVersionId() {
@@ -41,7 +41,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * The timestamp of the application snapshot.
      * 
      */
-    @InputImport(name="snapshotCreationTimestamp")
+    @Import(name="snapshotCreationTimestamp")
       private final @Nullable Output<String> snapshotCreationTimestamp;
 
     public Output<String> getSnapshotCreationTimestamp() {
@@ -52,7 +52,7 @@ public final class ApplicationSnapshotState extends io.pulumi.resources.Resource
      * The name of the application snapshot.
      * 
      */
-    @InputImport(name="snapshotName")
+    @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
     public Output<String> getSnapshotName() {

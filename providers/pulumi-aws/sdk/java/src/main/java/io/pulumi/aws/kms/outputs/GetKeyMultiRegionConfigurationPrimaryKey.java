@@ -3,19 +3,19 @@
 
 package io.pulumi.aws.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyMultiRegionConfigurationPrimaryKey {
     private final String arn;
     private final String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyMultiRegionConfigurationPrimaryKey(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("region") String region) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("region") String region) {
         this.arn = arn;
         this.region = region;
     }

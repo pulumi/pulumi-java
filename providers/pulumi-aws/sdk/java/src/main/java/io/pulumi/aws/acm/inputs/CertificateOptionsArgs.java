@@ -4,7 +4,7 @@
 package io.pulumi.aws.acm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CertificateOptionsArgs extends io.pulumi.resources.ResourceAr
      * Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
      * 
      */
-    @InputImport(name="certificateTransparencyLoggingPreference")
+    @Import(name="certificateTransparencyLoggingPreference")
       private final @Nullable Output<String> certificateTransparencyLoggingPreference;
 
     public Output<String> getCertificateTransparencyLoggingPreference() {

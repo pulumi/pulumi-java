@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ProjectSecondarySourceVersion {
     /**
      * An identifier for a source in the build project.
@@ -20,10 +20,10 @@ public final class ProjectSecondarySourceVersion {
      */
     private final String sourceVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectSecondarySourceVersion(
-        @OutputCustomType.Parameter("sourceIdentifier") String sourceIdentifier,
-        @OutputCustomType.Parameter("sourceVersion") String sourceVersion) {
+        @CustomType.Parameter("sourceIdentifier") String sourceIdentifier,
+        @CustomType.Parameter("sourceVersion") String sourceVersion) {
         this.sourceIdentifier = sourceIdentifier;
         this.sourceVersion = sourceVersion;
     }

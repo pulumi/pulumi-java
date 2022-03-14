@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsGetArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaGetArgs ext
      * A configuration block that you can specify for selections for modifications on replicas. Amazon S3 doesn't replicate replica modifications by default. In the latest version of replication configuration (when `filter` is specified), you can specify this element and set the status to `Enabled` to replicate modifications on replicas.
      * 
      */
-    @InputImport(name="replicaModifications")
+    @Import(name="replicaModifications")
       private final @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsGetArgs> replicaModifications;
 
     public Output<BucketReplicationConfigRuleSourceSelectionCriteriaReplicaModificationsGetArgs> getReplicaModifications() {
@@ -30,7 +30,7 @@ public final class BucketReplicationConfigRuleSourceSelectionCriteriaGetArgs ext
      * A configuration block for filter information for the selection of Amazon S3 objects encrypted with AWS KMS. If specified, `replica_kms_key_id` in `destination` `encryption_configuration` must be specified as well.
      * 
      */
-    @InputImport(name="sseKmsEncryptedObjects")
+    @Import(name="sseKmsEncryptedObjects")
       private final @Nullable Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs> sseKmsEncryptedObjects;
 
     public Output<BucketReplicationConfigRuleSourceSelectionCriteriaSseKmsEncryptedObjectsGetArgs> getSseKmsEncryptedObjects() {

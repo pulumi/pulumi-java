@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the lambda function.
      * 
      */
-    @InputImport(name="functionName", required=true)
+    @Import(name="functionName", required=true)
       private final Output<String> functionName;
 
     public Output<String> getFunctionName() {
@@ -30,7 +30,7 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
      * JSON payload to the lambda function.
      * 
      */
-    @InputImport(name="input", required=true)
+    @Import(name="input", required=true)
       private final Output<String> input;
 
     public Output<String> getInput() {
@@ -41,14 +41,14 @@ public final class InvocationArgs extends io.pulumi.resources.ResourceArgs {
      * Qualifier (i.e., version) of the lambda function. Defaults to `$LATEST`.
      * 
      */
-    @InputImport(name="qualifier")
+    @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
     public Output<String> getQualifier() {
         return this.qualifier == null ? Output.empty() : this.qualifier;
     }
 
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
     public Output<Map<String,String>> getTriggers() {

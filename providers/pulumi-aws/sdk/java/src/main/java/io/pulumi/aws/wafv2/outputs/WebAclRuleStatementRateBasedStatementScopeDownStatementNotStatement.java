@@ -4,11 +4,11 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatement {
     /**
      * The statement to negate. You can use any statement that can be nested. See Statement above for details.
@@ -16,8 +16,8 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
      */
     private final List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatement> statements;
 
-    @OutputCustomType.Constructor
-    private WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatement(@OutputCustomType.Parameter("statements") List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatement> statements) {
+    @CustomType.Constructor
+    private WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatement(@CustomType.Parameter("statements") List<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatement> statements) {
         this.statements = statements;
     }
 

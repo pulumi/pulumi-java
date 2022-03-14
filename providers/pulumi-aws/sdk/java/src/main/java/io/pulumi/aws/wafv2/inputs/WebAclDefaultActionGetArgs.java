@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionAllowGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionBlockGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class WebAclDefaultActionGetArgs extends io.pulumi.resources.Resour
      * Specifies that AWS WAF should allow requests by default. See Allow below for details.
      * 
      */
-    @InputImport(name="allow")
+    @Import(name="allow")
       private final @Nullable Output<WebAclDefaultActionAllowGetArgs> allow;
 
     public Output<WebAclDefaultActionAllowGetArgs> getAllow() {
@@ -30,7 +30,7 @@ public final class WebAclDefaultActionGetArgs extends io.pulumi.resources.Resour
      * Specifies that AWS WAF should block requests by default. See Block below for details.
      * 
      */
-    @InputImport(name="block")
+    @Import(name="block")
       private final @Nullable Output<WebAclDefaultActionBlockGetArgs> block;
 
     public Output<WebAclDefaultActionBlockGetArgs> getBlock() {

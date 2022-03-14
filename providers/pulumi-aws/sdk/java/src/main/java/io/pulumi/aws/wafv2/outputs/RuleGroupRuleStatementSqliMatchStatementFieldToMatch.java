@@ -10,12 +10,12 @@ import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementSqliMatchStatementField
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeader;
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgument;
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementSqliMatchStatementFieldToMatchUriPath;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatch {
     /**
      * Inspect all query arguments.
@@ -53,15 +53,15 @@ public final class RuleGroupRuleStatementSqliMatchStatementFieldToMatch {
      */
     private final @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchUriPath uriPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleStatementSqliMatchStatementFieldToMatch(
-        @OutputCustomType.Parameter("allQueryArguments") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchAllQueryArguments allQueryArguments,
-        @OutputCustomType.Parameter("body") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchBody body,
-        @OutputCustomType.Parameter("method") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchMethod method,
-        @OutputCustomType.Parameter("queryString") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchQueryString queryString,
-        @OutputCustomType.Parameter("singleHeader") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeader singleHeader,
-        @OutputCustomType.Parameter("singleQueryArgument") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgument singleQueryArgument,
-        @OutputCustomType.Parameter("uriPath") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchUriPath uriPath) {
+        @CustomType.Parameter("allQueryArguments") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchAllQueryArguments allQueryArguments,
+        @CustomType.Parameter("body") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchBody body,
+        @CustomType.Parameter("method") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchMethod method,
+        @CustomType.Parameter("queryString") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchQueryString queryString,
+        @CustomType.Parameter("singleHeader") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleHeader singleHeader,
+        @CustomType.Parameter("singleQueryArgument") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchSingleQueryArgument singleQueryArgument,
+        @CustomType.Parameter("uriPath") @Nullable RuleGroupRuleStatementSqliMatchStatementFieldToMatchUriPath uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.method = method;

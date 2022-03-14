@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPo
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      * The TLS validation context trust for an AWS Certificate Manager (ACM) certificate.
      * 
      */
-    @InputImport(name="acm")
+    @Import(name="acm")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmArgs> acm;
 
     public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcmArgs> getAcm() {
@@ -31,7 +31,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      * The TLS validation context trust for a local file certificate.
      * 
      */
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs> file;
 
     public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustFileArgs> getFile() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      * The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
      */
-    @InputImport(name="sds")
+    @Import(name="sds")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs> sds;
 
     public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidationTrustSdsArgs> getSds() {

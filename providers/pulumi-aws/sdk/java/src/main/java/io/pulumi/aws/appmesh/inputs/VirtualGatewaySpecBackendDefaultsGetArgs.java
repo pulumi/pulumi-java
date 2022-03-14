@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class VirtualGatewaySpecBackendDefaultsGetArgs extends io.pulumi.re
      * The default client policy for virtual gateway backends.
      * 
      */
-    @InputImport(name="clientPolicy")
+    @Import(name="clientPolicy")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
 
     public Output<VirtualGatewaySpecBackendDefaultsClientPolicyGetArgs> getClientPolicy() {

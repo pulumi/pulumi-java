@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.ByteMatchSetByteMatchTupleFieldToMatchArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
      * Settings for the ByteMatchTuple. FieldToMatch documented below.
      * 
      */
-    @InputImport(name="fieldToMatch", required=true)
+    @Import(name="fieldToMatch", required=true)
       private final Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> fieldToMatch;
 
     public Output<ByteMatchSetByteMatchTupleFieldToMatchArgs> getFieldToMatch() {
@@ -30,7 +30,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
      * Within the portion of a web request that you want to search.
      * 
      */
-    @InputImport(name="positionalConstraint", required=true)
+    @Import(name="positionalConstraint", required=true)
       private final Output<String> positionalConstraint;
 
     public Output<String> getPositionalConstraint() {
@@ -41,7 +41,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
      * The value that you want AWS WAF to search for. The maximum length of the value is 50 bytes.
      * 
      */
-    @InputImport(name="targetString")
+    @Import(name="targetString")
       private final @Nullable Output<String> targetString;
 
     public Output<String> getTargetString() {
@@ -52,7 +52,7 @@ public final class ByteMatchSetByteMatchTupleArgs extends io.pulumi.resources.Re
      * The formatting way for web request.
      * 
      */
-    @InputImport(name="textTransformation", required=true)
+    @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
     public Output<String> getTextTransformation() {

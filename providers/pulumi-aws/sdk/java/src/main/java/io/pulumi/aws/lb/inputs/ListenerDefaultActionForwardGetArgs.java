@@ -6,7 +6,7 @@ package io.pulumi.aws.lb.inputs;
 import io.pulumi.aws.lb.inputs.ListenerDefaultActionForwardStickinessGetArgs;
 import io.pulumi.aws.lb.inputs.ListenerDefaultActionForwardTargetGroupGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ListenerDefaultActionForwardGetArgs extends io.pulumi.resourc
      * Configuration block for target group stickiness for the rule. Detailed below.
      * 
      */
-    @InputImport(name="stickiness")
+    @Import(name="stickiness")
       private final @Nullable Output<ListenerDefaultActionForwardStickinessGetArgs> stickiness;
 
     public Output<ListenerDefaultActionForwardStickinessGetArgs> getStickiness() {
@@ -31,7 +31,7 @@ public final class ListenerDefaultActionForwardGetArgs extends io.pulumi.resourc
      * Set of 1-5 target group blocks. Detailed below.
      * 
      */
-    @InputImport(name="targetGroups", required=true)
+    @Import(name="targetGroups", required=true)
       private final Output<List<ListenerDefaultActionForwardTargetGroupGetArgs>> targetGroups;
 
     public Output<List<ListenerDefaultActionForwardTargetGroupGetArgs>> getTargetGroups() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.CatalogDatabaseTargetDatabaseGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * ARN of the Glue Catalog Database.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * ID of the Data Catalog in which the database resides.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -42,7 +42,7 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * Description of the database.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * Location of the database (for example, an HDFS path).
      * 
      */
-    @InputImport(name="locationUri")
+    @Import(name="locationUri")
       private final @Nullable Output<String> locationUri;
 
     public Output<String> getLocationUri() {
@@ -64,7 +64,7 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * List of key-value pairs that define parameters and properties of the database.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -86,7 +86,7 @@ public final class CatalogDatabaseState extends io.pulumi.resources.ResourceArgs
      * Configuration block for a target database for resource linking. See `target_database` below.
      * 
      */
-    @InputImport(name="targetDatabase")
+    @Import(name="targetDatabase")
       private final @Nullable Output<CatalogDatabaseTargetDatabaseGetArgs> targetDatabase;
 
     public Output<CatalogDatabaseTargetDatabaseGetArgs> getTargetDatabase() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.iam.inputs;
 import io.pulumi.aws.iam.inputs.GetPolicyDocumentStatementCondition;
 import io.pulumi.aws.iam.inputs.GetPolicyDocumentStatementNotPrincipal;
 import io.pulumi.aws.iam.inputs.GetPolicyDocumentStatementPrincipal;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * List of actions that this statement either allows or denies. For example, `["ec2:RunInstances", "s3:*"]`.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable List<String> actions;
 
     public List<String> getActions() {
@@ -33,7 +33,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * Configuration block for a condition. Detailed below.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable List<GetPolicyDocumentStatementCondition> conditions;
 
     public List<GetPolicyDocumentStatementCondition> getConditions() {
@@ -44,7 +44,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * Whether this statement allows or denies the given actions. Valid values are `Allow` and `Deny`. Defaults to `Allow`.
      * 
      */
-    @InputImport(name="effect")
+    @Import(name="effect")
       private final @Nullable String effect;
 
     public Optional<String> getEffect() {
@@ -55,7 +55,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * List of actions that this statement does *not* apply to. Use to apply a policy statement to all actions *except* those listed.
      * 
      */
-    @InputImport(name="notActions")
+    @Import(name="notActions")
       private final @Nullable List<String> notActions;
 
     public List<String> getNotActions() {
@@ -66,7 +66,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * Like `principals` except these are principals that the statement does *not* apply to.
      * 
      */
-    @InputImport(name="notPrincipals")
+    @Import(name="notPrincipals")
       private final @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals;
 
     public List<GetPolicyDocumentStatementNotPrincipal> getNotPrincipals() {
@@ -77,7 +77,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * List of resource ARNs that this statement does *not* apply to. Use to apply a policy statement to all resources *except* those listed. Conflicts with `resources`.
      * 
      */
-    @InputImport(name="notResources")
+    @Import(name="notResources")
       private final @Nullable List<String> notResources;
 
     public List<String> getNotResources() {
@@ -88,7 +88,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * Configuration block for principals. Detailed below.
      * 
      */
-    @InputImport(name="principals")
+    @Import(name="principals")
       private final @Nullable List<GetPolicyDocumentStatementPrincipal> principals;
 
     public List<GetPolicyDocumentStatementPrincipal> getPrincipals() {
@@ -99,7 +99,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * List of resource ARNs that this statement applies to. This is required by AWS if used for an IAM policy. Conflicts with `not_resources`.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable List<String> resources;
 
     public List<String> getResources() {
@@ -110,7 +110,7 @@ public final class GetPolicyDocumentStatement extends io.pulumi.resources.Invoke
      * Sid (statement ID) is an identifier for a policy statement.
      * 
      */
-    @InputImport(name="sid")
+    @Import(name="sid")
       private final @Nullable String sid;
 
     public Optional<String> getSid() {

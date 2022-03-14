@@ -3,19 +3,19 @@
 
 package io.pulumi.aws.mq.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBrokerLogs {
     private final Boolean audit;
     private final Boolean general;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBrokerLogs(
-        @OutputCustomType.Parameter("audit") Boolean audit,
-        @OutputCustomType.Parameter("general") Boolean general) {
+        @CustomType.Parameter("audit") Boolean audit,
+        @CustomType.Parameter("general") Boolean general) {
         this.audit = audit;
         this.general = general;
     }

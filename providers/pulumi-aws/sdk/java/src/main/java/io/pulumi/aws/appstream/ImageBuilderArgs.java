@@ -7,7 +7,7 @@ import io.pulumi.aws.appstream.inputs.ImageBuilderAccessEndpointArgs;
 import io.pulumi.aws.appstream.inputs.ImageBuilderDomainJoinInfoArgs;
 import io.pulumi.aws.appstream.inputs.ImageBuilderVpcConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.
      * 
      */
-    @InputImport(name="accessEndpoints")
+    @Import(name="accessEndpoints")
       private final @Nullable Output<List<ImageBuilderAccessEndpointArgs>> accessEndpoints;
 
     public Output<List<ImageBuilderAccessEndpointArgs>> getAccessEndpoints() {
@@ -35,7 +35,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the AppStream 2.0 agent to use for this image builder.
      * 
      */
-    @InputImport(name="appstreamAgentVersion")
+    @Import(name="appstreamAgentVersion")
       private final @Nullable Output<String> appstreamAgentVersion;
 
     public Output<String> getAppstreamAgentVersion() {
@@ -46,7 +46,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * Description to display.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * Human-readable friendly name for the AppStream image builder.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -68,7 +68,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the name of the directory and organizational unit (OU) to use to join the image builder to a Microsoft Active Directory domain. See below.
      * 
      */
-    @InputImport(name="domainJoinInfo")
+    @Import(name="domainJoinInfo")
       private final @Nullable Output<ImageBuilderDomainJoinInfoArgs> domainJoinInfo;
 
     public Output<ImageBuilderDomainJoinInfoArgs> getDomainJoinInfo() {
@@ -79,7 +79,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * Enables or disables default internet access for the image builder.
      * 
      */
-    @InputImport(name="enableDefaultInternetAccess")
+    @Import(name="enableDefaultInternetAccess")
       private final @Nullable Output<Boolean> enableDefaultInternetAccess;
 
     public Output<Boolean> getEnableDefaultInternetAccess() {
@@ -90,7 +90,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the IAM role to apply to the image builder.
      * 
      */
-    @InputImport(name="iamRoleArn")
+    @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
@@ -101,7 +101,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the public, private, or shared image to use.
      * 
      */
-    @InputImport(name="imageArn")
+    @Import(name="imageArn")
       private final @Nullable Output<String> imageArn;
 
     public Output<String> getImageArn() {
@@ -112,7 +112,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the image used to create the image builder.
      * 
      */
-    @InputImport(name="imageName")
+    @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
@@ -123,7 +123,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * The instance type to use when launching the image builder.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -134,7 +134,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name for the image builder.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -145,7 +145,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the instance. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -156,7 +156,7 @@ public final class ImageBuilderArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the VPC configuration for the image builder. See below.
      * 
      */
-    @InputImport(name="vpcConfig")
+    @Import(name="vpcConfig")
       private final @Nullable Output<ImageBuilderVpcConfigArgs> vpcConfig;
 
     public Output<ImageBuilderVpcConfigArgs> getVpcConfig() {

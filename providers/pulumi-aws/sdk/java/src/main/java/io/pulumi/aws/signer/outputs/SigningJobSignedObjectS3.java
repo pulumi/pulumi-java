@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.signer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SigningJobSignedObjectS3 {
     /**
      * Name of the S3 bucket.
@@ -22,10 +22,10 @@ public final class SigningJobSignedObjectS3 {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SigningJobSignedObjectS3(
-        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
-        @OutputCustomType.Parameter("key") @Nullable String key) {
+        @CustomType.Parameter("bucket") @Nullable String bucket,
+        @CustomType.Parameter("key") @Nullable String key) {
         this.bucket = bucket;
         this.key = key;
     }

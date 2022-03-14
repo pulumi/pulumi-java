@@ -6,14 +6,14 @@ package io.pulumi.aws.kinesis.outputs;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamHttpEndpointConfiguration {
     /**
      * The access key required for Kinesis Firehose to authenticate with the HTTP endpoint selected as the destination.
@@ -71,19 +71,19 @@ public final class FirehoseDeliveryStreamHttpEndpointConfiguration {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamHttpEndpointConfiguration(
-        @OutputCustomType.Parameter("accessKey") @Nullable String accessKey,
-        @OutputCustomType.Parameter("bufferingInterval") @Nullable Integer bufferingInterval,
-        @OutputCustomType.Parameter("bufferingSize") @Nullable Integer bufferingSize,
-        @OutputCustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("processingConfiguration") @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration processingConfiguration,
-        @OutputCustomType.Parameter("requestConfiguration") @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration requestConfiguration,
-        @OutputCustomType.Parameter("retryDuration") @Nullable Integer retryDuration,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("accessKey") @Nullable String accessKey,
+        @CustomType.Parameter("bufferingInterval") @Nullable Integer bufferingInterval,
+        @CustomType.Parameter("bufferingSize") @Nullable Integer bufferingSize,
+        @CustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("processingConfiguration") @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationProcessingConfiguration processingConfiguration,
+        @CustomType.Parameter("requestConfiguration") @Nullable FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration requestConfiguration,
+        @CustomType.Parameter("retryDuration") @Nullable Integer retryDuration,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
+        @CustomType.Parameter("url") String url) {
         this.accessKey = accessKey;
         this.bufferingInterval = bufferingInterval;
         this.bufferingSize = bufferingSize;

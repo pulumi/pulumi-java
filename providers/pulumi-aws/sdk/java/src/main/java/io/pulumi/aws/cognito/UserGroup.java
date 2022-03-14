@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cognito.UserGroupArgs;
 import io.pulumi.aws.cognito.inputs.UserGroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * The description of the user group.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -47,7 +47,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * The name of the user group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -61,7 +61,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * The precedence of the user group.
      * 
      */
-    @OutputExport(name="precedence", type=Integer.class, parameters={})
+    @Export(name="precedence", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> precedence;
 
     /**
@@ -75,7 +75,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * The ARN of the IAM role to be associated with the user group.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleArn;
 
     /**
@@ -89,7 +89,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * The user pool ID.
      * 
      */
-    @OutputExport(name="userPoolId", type=String.class, parameters={})
+    @Export(name="userPoolId", type=String.class, parameters={})
     private Output<String> userPoolId;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.amp;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AlertManagerDefinitionArgs extends io.pulumi.resources.Resour
      * the alert manager definition that you want to be applied. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-alert-manager.html).
      * 
      */
-    @InputImport(name="definition", required=true)
+    @Import(name="definition", required=true)
       private final Output<String> definition;
 
     public Output<String> getDefinition() {
@@ -28,7 +28,7 @@ public final class AlertManagerDefinitionArgs extends io.pulumi.resources.Resour
      * The id of the prometheus workspace the alert manager definition should be linked to
      * 
      */
-    @InputImport(name="workspaceId", required=true)
+    @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {

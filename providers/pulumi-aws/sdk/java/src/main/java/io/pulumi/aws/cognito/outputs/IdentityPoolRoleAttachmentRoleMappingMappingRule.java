@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
     /**
      * The claim name that must be present in the token, for example, "isAdmin" or "paid".
@@ -30,12 +30,12 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRule {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentityPoolRoleAttachmentRoleMappingMappingRule(
-        @OutputCustomType.Parameter("claim") String claim,
-        @OutputCustomType.Parameter("matchType") String matchType,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("claim") String claim,
+        @CustomType.Parameter("matchType") String matchType,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("value") String value) {
         this.claim = claim;
         this.matchType = matchType;
         this.roleArn = roleArn;

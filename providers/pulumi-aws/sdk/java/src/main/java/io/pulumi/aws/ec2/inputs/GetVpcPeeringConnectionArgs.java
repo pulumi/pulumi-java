@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetVpcPeeringConnectionFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    @InputImport(name="cidrBlock")
+    @Import(name="cidrBlock")
       private final @Nullable String cidrBlock;
 
     public Optional<String> getCidrBlock() {
@@ -32,7 +32,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetVpcPeeringConnectionFilter> filters;
 
     public List<GetVpcPeeringConnectionFilter> getFilters() {
@@ -43,7 +43,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * The ID of the specific VPC Peering Connection to retrieve.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -54,7 +54,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * The AWS account ID of the owner of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable String ownerId;
 
     public Optional<String> getOwnerId() {
@@ -65,7 +65,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * The primary CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    @InputImport(name="peerCidrBlock")
+    @Import(name="peerCidrBlock")
       private final @Nullable String peerCidrBlock;
 
     public Optional<String> getPeerCidrBlock() {
@@ -76,7 +76,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * The AWS account ID of the owner of the accepter VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    @InputImport(name="peerOwnerId")
+    @Import(name="peerOwnerId")
       private final @Nullable String peerOwnerId;
 
     public Optional<String> getPeerOwnerId() {
@@ -87,7 +87,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * The region of the accepter VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    @InputImport(name="peerRegion")
+    @Import(name="peerRegion")
       private final @Nullable String peerRegion;
 
     public Optional<String> getPeerRegion() {
@@ -98,7 +98,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    @InputImport(name="peerVpcId")
+    @Import(name="peerVpcId")
       private final @Nullable String peerVpcId;
 
     public Optional<String> getPeerVpcId() {
@@ -109,7 +109,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * The region of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable String region;
 
     public Optional<String> getRegion() {
@@ -120,7 +120,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * The status of the specific VPC Peering Connection to retrieve.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -132,7 +132,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * a pair on the desired VPC Peering Connection.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -143,7 +143,7 @@ public final class GetVpcPeeringConnectionArgs extends io.pulumi.resources.Invok
      * The ID of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {

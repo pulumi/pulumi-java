@@ -15,7 +15,7 @@ import io.pulumi.aws.s3.inputs.BucketVersioningGetArgs;
 import io.pulumi.aws.s3.inputs.BucketWebsiteGetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Sets the accelerate configuration of an existing bucket. Can be `Enabled` or `Suspended`.
      * 
      */
-    @InputImport(name="accelerationStatus")
+    @Import(name="accelerationStatus")
       private final @Nullable Output<String> accelerationStatus;
 
     public Output<String> getAccelerationStatus() {
@@ -43,7 +43,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. Defaults to `private`.  Conflicts with `grant`.
      * 
      */
-    @InputImport(name="acl")
+    @Import(name="acl")
       private final @Nullable Output<Either<String,CannedAcl>> acl;
 
     public Output<Either<String,CannedAcl>> getAcl() {
@@ -54,7 +54,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -65,7 +65,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The name of the bucket. If omitted, this provider will assign a random, unique name. Must be lowercase and less than or equal to 63 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -76,7 +76,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The bucket domain name. Will be of format `bucketname.s3.amazonaws.com`.
      * 
      */
-    @InputImport(name="bucketDomainName")
+    @Import(name="bucketDomainName")
       private final @Nullable Output<String> bucketDomainName;
 
     public Output<String> getBucketDomainName() {
@@ -87,7 +87,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique bucket name beginning with the specified prefix. Conflicts with `bucket`. Must be lowercase and less than or equal to 37 characters in length. A full list of bucket naming rules [may be found here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
      * 
      */
-    @InputImport(name="bucketPrefix")
+    @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
@@ -98,7 +98,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The bucket region-specific domain name. The bucket domain name including the region name, please refer [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent [redirect issues](https://forums.aws.amazon.com/thread.jspa?threadID=216814) from CloudFront to S3 Origin URL.
      * 
      */
-    @InputImport(name="bucketRegionalDomainName")
+    @Import(name="bucketRegionalDomainName")
       private final @Nullable Output<String> bucketRegionalDomainName;
 
     public Output<String> getBucketRegionalDomainName() {
@@ -109,7 +109,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A rule of [Cross-Origin Resource Sharing](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html) (documented below).
      * 
      */
-    @InputImport(name="corsRules")
+    @Import(name="corsRules")
       private final @Nullable Output<List<BucketCorsRuleGetArgs>> corsRules;
 
     public Output<List<BucketCorsRuleGetArgs>> getCorsRules() {
@@ -120,7 +120,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A boolean that indicates all objects (including any [locked objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html)) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are *not* recoverable.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -131,7 +131,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * An [ACL policy grant](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl) (documented below). Conflicts with `acl`.
      * 
      */
-    @InputImport(name="grants")
+    @Import(name="grants")
       private final @Nullable Output<List<BucketGrantGetArgs>> grants;
 
     public Output<List<BucketGrantGetArgs>> getGrants() {
@@ -142,7 +142,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The [Route 53 Hosted Zone ID](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_website_region_endpoints) for this bucket's region.
      * 
      */
-    @InputImport(name="hostedZoneId")
+    @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
@@ -153,7 +153,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A configuration of [object lifecycle management](http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html) (documented below).
      * 
      */
-    @InputImport(name="lifecycleRules")
+    @Import(name="lifecycleRules")
       private final @Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules;
 
     public Output<List<BucketLifecycleRuleGetArgs>> getLifecycleRules() {
@@ -164,7 +164,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A settings of [bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/UG/ManagingBucketLogging.html) (documented below).
      * 
      */
-    @InputImport(name="loggings")
+    @Import(name="loggings")
       private final @Nullable Output<List<BucketLoggingGetArgs>> loggings;
 
     public Output<List<BucketLoggingGetArgs>> getLoggings() {
@@ -175,7 +175,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A configuration of [S3 object locking](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) (documented below)
      * 
      */
-    @InputImport(name="objectLockConfiguration")
+    @Import(name="objectLockConfiguration")
       private final @Nullable Output<BucketObjectLockConfigurationGetArgs> objectLockConfiguration;
 
     public Output<BucketObjectLockConfigurationGetArgs> getObjectLockConfiguration() {
@@ -186,7 +186,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A valid [bucket policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies.html) JSON document. Note that if the policy document is not specific enough (but still valid), the provider may view the policy as constantly changing in a `pulumi up / preview / update`. In this case, please make sure you use the verbose/specific version of the policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -197,7 +197,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The AWS region this bucket resides in.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -208,7 +208,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A configuration of [replication configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html) (documented below).
      * 
      */
-    @InputImport(name="replicationConfiguration")
+    @Import(name="replicationConfiguration")
       private final @Nullable Output<BucketReplicationConfigurationGetArgs> replicationConfiguration;
 
     public Output<BucketReplicationConfigurationGetArgs> getReplicationConfiguration() {
@@ -222,7 +222,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * developer guide for more information.
      * 
      */
-    @InputImport(name="requestPayer")
+    @Import(name="requestPayer")
       private final @Nullable Output<String> requestPayer;
 
     public Output<String> getRequestPayer() {
@@ -233,7 +233,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A configuration of [server-side encryption configuration](http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) (documented below)
      * 
      */
-    @InputImport(name="serverSideEncryptionConfiguration")
+    @Import(name="serverSideEncryptionConfiguration")
       private final @Nullable Output<BucketServerSideEncryptionConfigurationGetArgs> serverSideEncryptionConfiguration;
 
     public Output<BucketServerSideEncryptionConfigurationGetArgs> getServerSideEncryptionConfiguration() {
@@ -244,7 +244,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A mapping of tags to assign to the bucket.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -255,7 +255,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -266,7 +266,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A state of [versioning](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html) (documented below)
      * 
      */
-    @InputImport(name="versioning")
+    @Import(name="versioning")
       private final @Nullable Output<BucketVersioningGetArgs> versioning;
 
     public Output<BucketVersioningGetArgs> getVersioning() {
@@ -277,7 +277,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A website object (documented below).
      * 
      */
-    @InputImport(name="website")
+    @Import(name="website")
       private final @Nullable Output<BucketWebsiteGetArgs> website;
 
     public Output<BucketWebsiteGetArgs> getWebsite() {
@@ -288,7 +288,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.
      * 
      */
-    @InputImport(name="websiteDomain")
+    @Import(name="websiteDomain")
       private final @Nullable Output<String> websiteDomain;
 
     public Output<String> getWebsiteDomain() {
@@ -299,7 +299,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The website endpoint, if the bucket is configured with a website. If not, this will be an empty string.
      * 
      */
-    @InputImport(name="websiteEndpoint")
+    @Import(name="websiteEndpoint")
       private final @Nullable Output<String> websiteEndpoint;
 
     public Output<String> getWebsiteEndpoint() {

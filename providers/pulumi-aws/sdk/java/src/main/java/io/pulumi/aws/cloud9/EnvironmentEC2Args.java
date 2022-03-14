@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloud9;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * The number of minutes until the running instance is shut down after the environment has last been used.
      * 
      */
-    @InputImport(name="automaticStopTimeMinutes")
+    @Import(name="automaticStopTimeMinutes")
       private final @Nullable Output<Integer> automaticStopTimeMinutes;
 
     public Output<Integer> getAutomaticStopTimeMinutes() {
@@ -31,7 +31,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * The description of the environment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * The type of instance to connect to the environment, e.g., `t2.micro`.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -53,7 +53,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * The name of the environment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
      * 
      */
-    @InputImport(name="ownerArn")
+    @Import(name="ownerArn")
       private final @Nullable Output<String> ownerArn;
 
     public Output<String> getOwnerArn() {
@@ -75,7 +75,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -86,7 +86,7 @@ public final class EnvironmentEC2Args extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

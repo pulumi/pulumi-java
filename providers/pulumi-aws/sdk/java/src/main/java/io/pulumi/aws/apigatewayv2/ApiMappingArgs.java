@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The API identifier.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -29,7 +29,7 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html).
      * 
      */
-    @InputImport(name="apiMappingKey")
+    @Import(name="apiMappingKey")
       private final @Nullable Output<String> apiMappingKey;
 
     public Output<String> getApiMappingKey() {
@@ -40,7 +40,7 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a domain name.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -51,7 +51,7 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The API stage. Use the `aws.apigatewayv2.Stage` resource to configure an API stage.
      * 
      */
-    @InputImport(name="stage", required=true)
+    @Import(name="stage", required=true)
       private final Output<String> stage;
 
     public Output<String> getStage() {

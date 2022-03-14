@@ -6,14 +6,14 @@ package io.pulumi.aws.workspaces.outputs;
 import io.pulumi.aws.workspaces.outputs.GetBundleComputeType;
 import io.pulumi.aws.workspaces.outputs.GetBundleRootStorage;
 import io.pulumi.aws.workspaces.outputs.GetBundleUserStorage;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBundleResult {
     /**
      * The ID of the bundle.
@@ -56,16 +56,16 @@ public final class GetBundleResult {
      */
     private final List<GetBundleUserStorage> userStorages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBundleResult(
-        @OutputCustomType.Parameter("bundleId") @Nullable String bundleId,
-        @OutputCustomType.Parameter("computeTypes") List<GetBundleComputeType> computeTypes,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("owner") @Nullable String owner,
-        @OutputCustomType.Parameter("rootStorages") List<GetBundleRootStorage> rootStorages,
-        @OutputCustomType.Parameter("userStorages") List<GetBundleUserStorage> userStorages) {
+        @CustomType.Parameter("bundleId") @Nullable String bundleId,
+        @CustomType.Parameter("computeTypes") List<GetBundleComputeType> computeTypes,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("owner") @Nullable String owner,
+        @CustomType.Parameter("rootStorages") List<GetBundleRootStorage> rootStorages,
+        @CustomType.Parameter("userStorages") List<GetBundleUserStorage> userStorages) {
         this.bundleId = bundleId;
         this.computeTypes = computeTypes;
         this.description = description;

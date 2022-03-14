@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends io.pulu
      * A list of groups to be attached. There must be at least one group.
      * 
      */
-    @InputImport(name="groups")
+    @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {
@@ -30,7 +30,7 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends io.pulu
      * The Amazon Resource Name (ARN) of the policy to be attached.
      * 
      */
-    @InputImport(name="policyArn", required=true)
+    @Import(name="policyArn", required=true)
       private final Output<String> policyArn;
 
     public Output<String> getPolicyArn() {
@@ -41,7 +41,7 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends io.pulu
      * A list of roles to be attached. There must be at least one role.
      * 
      */
-    @InputImport(name="roles")
+    @Import(name="roles")
       private final @Nullable Output<List<String>> roles;
 
     public Output<List<String>> getRoles() {
@@ -52,7 +52,7 @@ public final class BudgetActionDefinitionIamActionDefinitionArgs extends io.pulu
      * A list of users to be attached. There must be at least one user.
      * 
      */
-    @InputImport(name="users")
+    @Import(name="users")
       private final @Nullable Output<List<String>> users;
 
     public Output<List<String>> getUsers() {

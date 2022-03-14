@@ -10,7 +10,7 @@ import io.pulumi.aws.rds.outputs.ClusterRestoreToPointInTime;
 import io.pulumi.aws.rds.outputs.ClusterS3Import;
 import io.pulumi.aws.rds.outputs.ClusterScalingConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -54,7 +54,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Enable to allow major engine version upgrades when changing engine versions. Defaults to `false`.
      * 
      */
-    @OutputExport(name="allowMajorVersionUpgrade", type=Boolean.class, parameters={})
+    @Export(name="allowMajorVersionUpgrade", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowMajorVersionUpgrade;
 
     /**
@@ -68,7 +68,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
      * 
      */
-    @OutputExport(name="applyImmediately", type=Boolean.class, parameters={})
+    @Export(name="applyImmediately", type=Boolean.class, parameters={})
     private Output<Boolean> applyImmediately;
 
     /**
@@ -82,7 +82,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of cluster
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -96,7 +96,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A list of EC2 Availability Zones for the DB cluster storage where DB cluster instances can be created. RDS automatically assigns 3 AZs if less than 3 AZs are configured, which will show as a difference requiring resource recreation next apply. It is recommended to specify 3 AZs.
      * 
      */
-    @OutputExport(name="availabilityZones", type=List.class, parameters={String.class})
+    @Export(name="availabilityZones", type=List.class, parameters={String.class})
     private Output<List<String>> availabilityZones;
 
     /**
@@ -110,7 +110,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The target backtrack window, in seconds. Only available for `aurora` and `aurora-mysql` engines currently. To disable backtracking, set this value to `0`. Defaults to `0`. Must be between `0` and `259200` (72 hours)
      * 
      */
-    @OutputExport(name="backtrackWindow", type=Integer.class, parameters={})
+    @Export(name="backtrackWindow", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> backtrackWindow;
 
     /**
@@ -124,7 +124,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The days to retain backups for. Default `1`
      * 
      */
-    @OutputExport(name="backupRetentionPeriod", type=Integer.class, parameters={})
+    @Export(name="backupRetentionPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> backupRetentionPeriod;
 
     /**
@@ -138,7 +138,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The cluster identifier. If omitted, this provider will assign a random, unique identifier.
      * 
      */
-    @OutputExport(name="clusterIdentifier", type=String.class, parameters={})
+    @Export(name="clusterIdentifier", type=String.class, parameters={})
     private Output<String> clusterIdentifier;
 
     /**
@@ -152,7 +152,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifier`.
      * 
      */
-    @OutputExport(name="clusterIdentifierPrefix", type=String.class, parameters={})
+    @Export(name="clusterIdentifierPrefix", type=String.class, parameters={})
     private Output<String> clusterIdentifierPrefix;
 
     /**
@@ -166,7 +166,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * List of RDS Instances that are a part of this cluster
      * 
      */
-    @OutputExport(name="clusterMembers", type=List.class, parameters={String.class})
+    @Export(name="clusterMembers", type=List.class, parameters={String.class})
     private Output<List<String>> clusterMembers;
 
     /**
@@ -180,7 +180,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The RDS Cluster Resource ID
      * 
      */
-    @OutputExport(name="clusterResourceId", type=String.class, parameters={})
+    @Export(name="clusterResourceId", type=String.class, parameters={})
     private Output<String> clusterResourceId;
 
     /**
@@ -194,7 +194,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Copy all Cluster `tags` to snapshots. Default is `false`.
      * 
      */
-    @OutputExport(name="copyTagsToSnapshot", type=Boolean.class, parameters={})
+    @Export(name="copyTagsToSnapshot", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> copyTagsToSnapshot;
 
     /**
@@ -208,7 +208,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
     /**
@@ -222,7 +222,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A cluster parameter group to associate with the cluster.
      * 
      */
-    @OutputExport(name="dbClusterParameterGroupName", type=String.class, parameters={})
+    @Export(name="dbClusterParameterGroupName", type=String.class, parameters={})
     private Output<String> dbClusterParameterGroupName;
 
     /**
@@ -236,7 +236,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
      * 
      */
-    @OutputExport(name="dbInstanceParameterGroupName", type=String.class, parameters={})
+    @Export(name="dbInstanceParameterGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> dbInstanceParameterGroupName;
 
     /**
@@ -250,7 +250,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` specified on every `aws.rds.ClusterInstance` in the cluster.
      * 
      */
-    @OutputExport(name="dbSubnetGroupName", type=String.class, parameters={})
+    @Export(name="dbSubnetGroupName", type=String.class, parameters={})
     private Output<String> dbSubnetGroupName;
 
     /**
@@ -264,7 +264,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
      * 
      */
-    @OutputExport(name="deletionProtection", type=Boolean.class, parameters={})
+    @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
     /**
@@ -278,7 +278,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`'s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
      * 
      */
-    @OutputExport(name="enableGlobalWriteForwarding", type=Boolean.class, parameters={})
+    @Export(name="enableGlobalWriteForwarding", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableGlobalWriteForwarding;
 
     /**
@@ -292,7 +292,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Enable HTTP endpoint (data API). Only valid when `engine_mode` is set to `serverless`.
      * 
      */
-    @OutputExport(name="enableHttpEndpoint", type=Boolean.class, parameters={})
+    @Export(name="enableHttpEndpoint", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableHttpEndpoint;
 
     /**
@@ -306,7 +306,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
      * 
      */
-    @OutputExport(name="enabledCloudwatchLogsExports", type=List.class, parameters={String.class})
+    @Export(name="enabledCloudwatchLogsExports", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> enabledCloudwatchLogsExports;
 
     /**
@@ -320,7 +320,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The DNS address of the RDS instance
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -334,7 +334,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
      * 
      */
-    @OutputExport(name="engine", type=String.class, parameters={})
+    @Export(name="engine", type=String.class, parameters={})
     private Output</* @Nullable */ String> engine;
 
     /**
@@ -348,7 +348,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The database engine mode. Valid values: `global` (only valid for Aurora MySQL 1.21 and earlier), `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
      * 
      */
-    @OutputExport(name="engineMode", type=String.class, parameters={})
+    @Export(name="engineMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineMode;
 
     /**
@@ -362,7 +362,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
      * 
      */
-    @OutputExport(name="engineVersion", type=String.class, parameters={})
+    @Export(name="engineVersion", type=String.class, parameters={})
     private Output<String> engineVersion;
 
     /**
@@ -376,7 +376,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The running version of the database.
      * 
      */
-    @OutputExport(name="engineVersionActual", type=String.class, parameters={})
+    @Export(name="engineVersionActual", type=String.class, parameters={})
     private Output<String> engineVersionActual;
 
     /**
@@ -390,7 +390,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
      * 
      */
-    @OutputExport(name="finalSnapshotIdentifier", type=String.class, parameters={})
+    @Export(name="finalSnapshotIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> finalSnapshotIdentifier;
 
     /**
@@ -404,7 +404,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The global cluster identifier specified on `aws.rds.GlobalCluster`.
      * 
      */
-    @OutputExport(name="globalClusterIdentifier", type=String.class, parameters={})
+    @Export(name="globalClusterIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> globalClusterIdentifier;
 
     /**
@@ -418,7 +418,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The Route53 Hosted Zone ID of the endpoint
      * 
      */
-    @OutputExport(name="hostedZoneId", type=String.class, parameters={})
+    @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
     /**
@@ -432,7 +432,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) for availability and limitations.
      * 
      */
-    @OutputExport(name="iamDatabaseAuthenticationEnabled", type=Boolean.class, parameters={})
+    @Export(name="iamDatabaseAuthenticationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> iamDatabaseAuthenticationEnabled;
 
     /**
@@ -446,7 +446,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A List of ARNs for the IAM roles to associate to the RDS Cluster.
      * 
      */
-    @OutputExport(name="iamRoles", type=List.class, parameters={String.class})
+    @Export(name="iamRoles", type=List.class, parameters={String.class})
     private Output<List<String>> iamRoles;
 
     /**
@@ -460,7 +460,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
     /**
@@ -474,7 +474,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
      * 
      */
-    @OutputExport(name="masterPassword", type=String.class, parameters={})
+    @Export(name="masterPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> masterPassword;
 
     /**
@@ -488,7 +488,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Username for the master DB user. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints). This argument does not support in-place updates and cannot be changed during a restore from snapshot.
      * 
      */
-    @OutputExport(name="masterUsername", type=String.class, parameters={})
+    @Export(name="masterUsername", type=String.class, parameters={})
     private Output<String> masterUsername;
 
     /**
@@ -502,7 +502,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The port on which the DB accepts connections
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -516,7 +516,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
      * 
      */
-    @OutputExport(name="preferredBackupWindow", type=String.class, parameters={})
+    @Export(name="preferredBackupWindow", type=String.class, parameters={})
     private Output<String> preferredBackupWindow;
 
     /**
@@ -530,7 +530,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The weekly time range during which system maintenance can occur, in (UTC) e.g. wed:04:00-wed:04:30
      * 
      */
-    @OutputExport(name="preferredMaintenanceWindow", type=String.class, parameters={})
+    @Export(name="preferredMaintenanceWindow", type=String.class, parameters={})
     private Output<String> preferredMaintenanceWindow;
 
     /**
@@ -545,7 +545,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * load-balanced across replicas
      * 
      */
-    @OutputExport(name="readerEndpoint", type=String.class, parameters={})
+    @Export(name="readerEndpoint", type=String.class, parameters={})
     private Output<String> readerEndpoint;
 
     /**
@@ -560,7 +560,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica. If DB Cluster is part of a Global Cluster, use `ignore_changes`.
      * 
      */
-    @OutputExport(name="replicationSourceIdentifier", type=String.class, parameters={})
+    @Export(name="replicationSourceIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> replicationSourceIdentifier;
 
     /**
@@ -574,7 +574,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Nested attribute for [point in time restore](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PIT.html). More details below.
      * 
      */
-    @OutputExport(name="restoreToPointInTime", type=ClusterRestoreToPointInTime.class, parameters={})
+    @Export(name="restoreToPointInTime", type=ClusterRestoreToPointInTime.class, parameters={})
     private Output</* @Nullable */ ClusterRestoreToPointInTime> restoreToPointInTime;
 
     /**
@@ -584,7 +584,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ClusterRestoreToPointInTime> getRestoreToPointInTime() {
         return this.restoreToPointInTime;
     }
-    @OutputExport(name="s3Import", type=ClusterS3Import.class, parameters={})
+    @Export(name="s3Import", type=ClusterS3Import.class, parameters={})
     private Output</* @Nullable */ ClusterS3Import> s3Import;
 
     public Output</* @Nullable */ ClusterS3Import> getS3Import() {
@@ -594,7 +594,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
      * 
      */
-    @OutputExport(name="scalingConfiguration", type=ClusterScalingConfiguration.class, parameters={})
+    @Export(name="scalingConfiguration", type=ClusterScalingConfiguration.class, parameters={})
     private Output</* @Nullable */ ClusterScalingConfiguration> scalingConfiguration;
 
     /**
@@ -608,7 +608,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
      * 
      */
-    @OutputExport(name="skipFinalSnapshot", type=Boolean.class, parameters={})
+    @Export(name="skipFinalSnapshot", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> skipFinalSnapshot;
 
     /**
@@ -622,7 +622,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
      * 
      */
-    @OutputExport(name="snapshotIdentifier", type=String.class, parameters={})
+    @Export(name="snapshotIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> snapshotIdentifier;
 
     /**
@@ -636,7 +636,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The source region for an encrypted replica DB cluster.
      * 
      */
-    @OutputExport(name="sourceRegion", type=String.class, parameters={})
+    @Export(name="sourceRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceRegion;
 
     /**
@@ -650,7 +650,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engine_mode` and `true` for `serverless` `engine_mode`. When restoring an unencrypted `snapshot_identifier`, the `kms_key_id` argument must be provided to encrypt the restored cluster. The provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    @OutputExport(name="storageEncrypted", type=Boolean.class, parameters={})
+    @Export(name="storageEncrypted", type=Boolean.class, parameters={})
     private Output<Boolean> storageEncrypted;
 
     /**
@@ -664,7 +664,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the DB cluster.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -678,7 +678,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -692,7 +692,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * List of VPC security groups to associate with the Cluster
      * 
      */
-    @OutputExport(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSecurityGroupIds;
 
     /**

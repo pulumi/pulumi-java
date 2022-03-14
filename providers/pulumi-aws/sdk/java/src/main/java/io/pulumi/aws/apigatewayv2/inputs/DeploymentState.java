@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The API identifier.
      * 
      */
-    @InputImport(name="apiId")
+    @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -31,7 +31,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Whether the deployment was automatically released.
      * 
      */
-    @InputImport(name="autoDeployed")
+    @Import(name="autoDeployed")
       private final @Nullable Output<Boolean> autoDeployed;
 
     public Output<Boolean> getAutoDeployed() {
@@ -42,7 +42,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The description for the deployment resource. Must be less than or equal to 1024 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * A map of arbitrary keys and values that, when changed, will trigger a redeployment.
      * 
      */
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
     public Output<Map<String,String>> getTriggers() {

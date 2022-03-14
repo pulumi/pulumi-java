@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticache;
 
 import io.pulumi.aws.elasticache.inputs.ReplicationGroupClusterModeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
      * 
      */
-    @InputImport(name="applyImmediately")
+    @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
     public Output<Boolean> getApplyImmediately() {
@@ -34,7 +34,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Whether to enable encryption at rest.
      * 
      */
-    @InputImport(name="atRestEncryptionEnabled")
+    @Import(name="atRestEncryptionEnabled")
       private final @Nullable Output<Boolean> atRestEncryptionEnabled;
 
     public Output<Boolean> getAtRestEncryptionEnabled() {
@@ -45,7 +45,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Password used to access a password protected server. Can be specified only if `transit_encryption_enabled = true`.
      * 
      */
-    @InputImport(name="authToken")
+    @Import(name="authToken")
       private final @Nullable Output<String> authToken;
 
     public Output<String> getAuthToken() {
@@ -56,7 +56,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
      * 
      */
-    @InputImport(name="autoMinorVersionUpgrade")
+    @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
     public Output<Boolean> getAutoMinorVersionUpgrade() {
@@ -67,7 +67,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Specifies whether a read-only replica will be automatically promoted to read/write primary if the existing primary fails. If enabled, `number_cache_clusters` must be greater than 1. Must be enabled for Redis (cluster mode enabled) replication groups. Defaults to `false`.
      * 
      */
-    @InputImport(name="automaticFailoverEnabled")
+    @Import(name="automaticFailoverEnabled")
       private final @Nullable Output<Boolean> automaticFailoverEnabled;
 
     public Output<Boolean> getAutomaticFailoverEnabled() {
@@ -78,7 +78,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * List of EC2 availability zones in which the replication group's cache clusters will be created. The order of the availability zones in the list is not important.
      * 
      */
-    @InputImport(name="availabilityZones")
+    @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
@@ -89,7 +89,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Create a native Redis cluster. `automatic_failover_enabled` must be set to true. Cluster Mode documented below. Only 1 `cluster_mode` block is allowed. Note that configuring this block does not enable cluster mode, i.e., data sharding, this requires using a parameter group that has the parameter `cluster-enabled` set to true.
      * 
      */
-    @InputImport(name="clusterMode")
+    @Import(name="clusterMode")
       private final @Nullable Output<ReplicationGroupClusterModeArgs> clusterMode;
 
     public Output<ReplicationGroupClusterModeArgs> getClusterMode() {
@@ -100,7 +100,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This parameter must be set to `true` when using r6gd nodes.
      * 
      */
-    @InputImport(name="dataTieringEnabled")
+    @Import(name="dataTieringEnabled")
       private final @Nullable Output<Boolean> dataTieringEnabled;
 
     public Output<Boolean> getDataTieringEnabled() {
@@ -111,7 +111,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Name of the cache engine to be used for the clusters in this replication group. The only valid value is `redis`.
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -122,7 +122,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Version number of the cache engine to be used for the cache clusters in this replication group. If the version is 6 or higher, only the major version can be set, e.g., `6.x`, otherwise, specify the full version desired, e.g., `5.0.6`. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -133,7 +133,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * The name of your final node group (shard) snapshot. ElastiCache creates the snapshot from the primary node in the cluster. If omitted, no final snapshot will be made.
      * 
      */
-    @InputImport(name="finalSnapshotIdentifier")
+    @Import(name="finalSnapshotIdentifier")
       private final @Nullable Output<String> finalSnapshotIdentifier;
 
     public Output<String> getFinalSnapshotIdentifier() {
@@ -144,7 +144,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * The ID of the global replication group to which this replication group should belong. If this parameter is specified, the replication group is added to the specified global replication group as a secondary replication group; otherwise, the replication group is not part of any global replication group. If `global_replication_group_id` is set, the `num_node_groups` parameter of the `cluster_mode` block cannot be set.
      * 
      */
-    @InputImport(name="globalReplicationGroupId")
+    @Import(name="globalReplicationGroupId")
       private final @Nullable Output<String> globalReplicationGroupId;
 
     public Output<String> getGlobalReplicationGroupId() {
@@ -155,7 +155,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * The ARN of the key that you wish to use if encrypting at rest. If not supplied, uses service managed encryption. Can be specified only if `at_rest_encryption_enabled = true`.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -166,7 +166,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:05:00-sun:09:00`
      * 
      */
-    @InputImport(name="maintenanceWindow")
+    @Import(name="maintenanceWindow")
       private final @Nullable Output<String> maintenanceWindow;
 
     public Output<String> getMaintenanceWindow() {
@@ -177,7 +177,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Specifies whether to enable Multi-AZ Support for the replication group. If `true`, `automatic_failover_enabled` must also be enabled. Defaults to `false`.
      * 
      */
-    @InputImport(name="multiAzEnabled")
+    @Import(name="multiAzEnabled")
       private final @Nullable Output<Boolean> multiAzEnabled;
 
     public Output<Boolean> getMultiAzEnabled() {
@@ -188,7 +188,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Instance class to be used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html). Required unless `global_replication_group_id` is set. Cannot be set if `global_replication_group_id` is set.
      * 
      */
-    @InputImport(name="nodeType")
+    @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
     public Output<String> getNodeType() {
@@ -199,7 +199,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * ARN of an SNS topic to send ElastiCache notifications to. Example: `arn:aws:sns:us-east-1:012345678999:my_sns_topic`
      * 
      */
-    @InputImport(name="notificationTopicArn")
+    @Import(name="notificationTopicArn")
       private final @Nullable Output<String> notificationTopicArn;
 
     public Output<String> getNotificationTopicArn() {
@@ -210,7 +210,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Number of cache clusters (primary and replicas) this replication group will have. If Multi-AZ is enabled, the value of this parameter must be at least 2. Updates will occur before other modifications. One of `number_cache_clusters` or `cluster_mode` is required.
      * 
      */
-    @InputImport(name="numberCacheClusters")
+    @Import(name="numberCacheClusters")
       private final @Nullable Output<Integer> numberCacheClusters;
 
     public Output<Integer> getNumberCacheClusters() {
@@ -221,7 +221,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Name of the parameter group to associate with this replication group. If this argument is omitted, the default cache parameter group for the specified engine is used. To enable "cluster mode", i.e., data sharding, use a parameter group that has the parameter `cluster-enabled` set to true.
      * 
      */
-    @InputImport(name="parameterGroupName")
+    @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
 
     public Output<String> getParameterGroupName() {
@@ -232,7 +232,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -243,7 +243,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * User-created description for the replication group.
      * 
      */
-    @InputImport(name="replicationGroupDescription", required=true)
+    @Import(name="replicationGroupDescription", required=true)
       private final Output<String> replicationGroupDescription;
 
     public Output<String> getReplicationGroupDescription() {
@@ -254,7 +254,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Replication group identifier. This parameter is stored as a lowercase string.
      * 
      */
-    @InputImport(name="replicationGroupId")
+    @Import(name="replicationGroupId")
       private final @Nullable Output<String> replicationGroupId;
 
     public Output<String> getReplicationGroupId() {
@@ -265,7 +265,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * One or more Amazon VPC security groups associated with this replication group. Use this parameter only when you are creating a replication group in an Amazon Virtual Private Cloud
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -276,7 +276,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * List of cache security group names to associate with this replication group.
      * 
      */
-    @InputImport(name="securityGroupNames")
+    @Import(name="securityGroupNames")
       private final @Nullable Output<List<String>> securityGroupNames;
 
     public Output<List<String>> getSecurityGroupNames() {
@@ -287,7 +287,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
      * 
      */
-    @InputImport(name="snapshotArns")
+    @Import(name="snapshotArns")
       private final @Nullable Output<List<String>> snapshotArns;
 
     public Output<List<String>> getSnapshotArns() {
@@ -298,7 +298,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Name of a snapshot from which to restore data into the new node group. Changing the `snapshot_name` forces a new resource.
      * 
      */
-    @InputImport(name="snapshotName")
+    @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
     public Output<String> getSnapshotName() {
@@ -309,7 +309,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Number of days for which ElastiCache will retain automatic cache cluster snapshots before deleting them. For example, if you set SnapshotRetentionLimit to 5, then a snapshot that was taken today will be retained for 5 days before being deleted. If the value of `snapshot_retention_limit` is set to zero (0), backups are turned off. Please note that setting a `snapshot_retention_limit` is not supported on cache.t1.micro cache nodes
      * 
      */
-    @InputImport(name="snapshotRetentionLimit")
+    @Import(name="snapshotRetentionLimit")
       private final @Nullable Output<Integer> snapshotRetentionLimit;
 
     public Output<Integer> getSnapshotRetentionLimit() {
@@ -320,7 +320,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. The minimum snapshot window is a 60 minute period. Example: `05:00-09:00`
      * 
      */
-    @InputImport(name="snapshotWindow")
+    @Import(name="snapshotWindow")
       private final @Nullable Output<String> snapshotWindow;
 
     public Output<String> getSnapshotWindow() {
@@ -331,14 +331,14 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Name of the cache subnet group to be used for the replication group.
      * 
      */
-    @InputImport(name="subnetGroupName")
+    @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
     public Output<String> getSubnetGroupName() {
         return this.subnetGroupName == null ? Output.empty() : this.subnetGroupName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -349,7 +349,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * Whether to enable encryption in transit.
      * 
      */
-    @InputImport(name="transitEncryptionEnabled")
+    @Import(name="transitEncryptionEnabled")
       private final @Nullable Output<Boolean> transitEncryptionEnabled;
 
     public Output<Boolean> getTransitEncryptionEnabled() {
@@ -360,7 +360,7 @@ public final class ReplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * User Group ID to associate with the replication group. Only a maximum of one (1) user group ID is valid. **NOTE:** This argument _is_ a set because the AWS specification allows for multiple IDs. However, in practice, AWS only allows a maximum size of one.
      * 
      */
-    @InputImport(name="userGroupIds")
+    @Import(name="userGroupIds")
       private final @Nullable Output<List<String>> userGroupIds;
 
     public Output<List<String>> getUserGroupIds() {

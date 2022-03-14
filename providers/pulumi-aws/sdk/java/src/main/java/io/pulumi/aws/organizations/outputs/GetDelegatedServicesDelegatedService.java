@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDelegatedServicesDelegatedService {
     /**
      * The date that the account became a delegated administrator for this service.
@@ -20,10 +20,10 @@ public final class GetDelegatedServicesDelegatedService {
      */
     private final String servicePrincipal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDelegatedServicesDelegatedService(
-        @OutputCustomType.Parameter("delegationEnabledDate") String delegationEnabledDate,
-        @OutputCustomType.Parameter("servicePrincipal") String servicePrincipal) {
+        @CustomType.Parameter("delegationEnabledDate") String delegationEnabledDate,
+        @CustomType.Parameter("servicePrincipal") String servicePrincipal) {
         this.delegationEnabledDate = delegationEnabledDate;
         this.servicePrincipal = servicePrincipal;
     }

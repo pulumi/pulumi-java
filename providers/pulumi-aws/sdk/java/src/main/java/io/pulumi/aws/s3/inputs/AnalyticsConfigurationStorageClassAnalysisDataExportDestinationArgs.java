@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * Analytics data export currently only supports an S3 bucket destination (documented below).
      * 
      */
-    @InputImport(name="s3BucketDestination", required=true)
+    @Import(name="s3BucketDestination", required=true)
       private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs> s3BucketDestination;
 
     public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestinationArgs> getS3BucketDestination() {

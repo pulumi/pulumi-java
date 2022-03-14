@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetComponentsFilter {
     /**
      * The name of the filter field. Valid values can be found in the [Image Builder ListComponents API Reference](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_ListComponents.html).
@@ -21,10 +21,10 @@ public final class GetComponentsFilter {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetComponentsFilter(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.values = values;
     }

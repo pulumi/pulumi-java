@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * The CloudWatch Logging Options for the delivery stream. More details are given below.
      * 
      */
-    @InputImport(name="cloudwatchLoggingOptions")
+    @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
     public Output<FirehoseDeliveryStreamSplunkConfigurationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
@@ -32,7 +32,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
      * 
      */
-    @InputImport(name="hecAcknowledgmentTimeout")
+    @Import(name="hecAcknowledgmentTimeout")
       private final @Nullable Output<Integer> hecAcknowledgmentTimeout;
 
     public Output<Integer> getHecAcknowledgmentTimeout() {
@@ -43,7 +43,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
      * 
      */
-    @InputImport(name="hecEndpoint", required=true)
+    @Import(name="hecEndpoint", required=true)
       private final Output<String> hecEndpoint;
 
     public Output<String> getHecEndpoint() {
@@ -54,7 +54,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
      * 
      */
-    @InputImport(name="hecEndpointType")
+    @Import(name="hecEndpointType")
       private final @Nullable Output<String> hecEndpointType;
 
     public Output<String> getHecEndpointType() {
@@ -65,7 +65,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
      * 
      */
-    @InputImport(name="hecToken", required=true)
+    @Import(name="hecToken", required=true)
       private final Output<String> hecToken;
 
     public Output<String> getHecToken() {
@@ -76,7 +76,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * The data processing configuration.  More details are given below.
      * 
      */
-    @InputImport(name="processingConfiguration")
+    @Import(name="processingConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> processingConfiguration;
 
     public Output<FirehoseDeliveryStreamSplunkConfigurationProcessingConfigurationArgs> getProcessingConfiguration() {
@@ -87,7 +87,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
      * 
      */
-    @InputImport(name="retryDuration")
+    @Import(name="retryDuration")
       private final @Nullable Output<Integer> retryDuration;
 
     public Output<Integer> getRetryDuration() {
@@ -98,7 +98,7 @@ public final class FirehoseDeliveryStreamSplunkConfigurationArgs extends io.pulu
      * Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
      * 
      */
-    @InputImport(name="s3BackupMode")
+    @Import(name="s3BackupMode")
       private final @Nullable Output<String> s3BackupMode;
 
     public Output<String> getS3BackupMode() {

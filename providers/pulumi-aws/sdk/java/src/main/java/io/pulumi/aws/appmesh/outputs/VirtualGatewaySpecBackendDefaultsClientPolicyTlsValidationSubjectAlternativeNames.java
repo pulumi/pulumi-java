@@ -4,10 +4,10 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames {
     /**
      * The criteria for determining a SAN's match.
@@ -15,8 +15,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSub
      */
     private final VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch match;
 
-    @OutputCustomType.Constructor
-    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames(@OutputCustomType.Parameter("match") VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch match) {
+    @CustomType.Constructor
+    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames(@CustomType.Parameter("match") VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch match) {
         this.match = match;
     }
 

@@ -4,13 +4,13 @@
 package io.pulumi.aws.appsync.outputs;
 
 import io.pulumi.aws.appsync.outputs.DataSourceHttpConfigAuthorizationConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceHttpConfig {
     /**
      * The authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.
@@ -23,10 +23,10 @@ public final class DataSourceHttpConfig {
      */
     private final String endpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceHttpConfig(
-        @OutputCustomType.Parameter("authorizationConfig") @Nullable DataSourceHttpConfigAuthorizationConfig authorizationConfig,
-        @OutputCustomType.Parameter("endpoint") String endpoint) {
+        @CustomType.Parameter("authorizationConfig") @Nullable DataSourceHttpConfigAuthorizationConfig authorizationConfig,
+        @CustomType.Parameter("endpoint") String endpoint) {
         this.authorizationConfig = authorizationConfig;
         this.endpoint = endpoint;
     }

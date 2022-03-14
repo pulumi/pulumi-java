@@ -8,7 +8,7 @@ import io.pulumi.aws.waf.ByteMatchSetArgs;
 import io.pulumi.aws.waf.inputs.ByteMatchSetState;
 import io.pulumi.aws.waf.outputs.ByteMatchSetByteMatchTuple;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ByteMatchSet extends io.pulumi.resources.CustomResource {
      * the location in requests that you want to search, and other settings.
      * 
      */
-    @OutputExport(name="byteMatchTuples", type=List.class, parameters={ByteMatchSetByteMatchTuple.class})
+    @Export(name="byteMatchTuples", type=List.class, parameters={ByteMatchSetByteMatchTuple.class})
     private Output</* @Nullable */ List<ByteMatchSetByteMatchTuple>> byteMatchTuples;
 
     /**
@@ -52,7 +52,7 @@ public class ByteMatchSet extends io.pulumi.resources.CustomResource {
      * The name or description of the Byte Match Set.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

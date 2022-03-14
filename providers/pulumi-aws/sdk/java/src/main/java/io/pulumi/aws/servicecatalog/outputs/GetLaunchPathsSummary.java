@@ -4,13 +4,13 @@
 package io.pulumi.aws.servicecatalog.outputs;
 
 import io.pulumi.aws.servicecatalog.outputs.GetLaunchPathsSummaryConstraintSummary;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchPathsSummary {
     /**
      * Block for constraints on the portfolio-product relationship. See details below.
@@ -33,12 +33,12 @@ public final class GetLaunchPathsSummary {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchPathsSummary(
-        @OutputCustomType.Parameter("constraintSummaries") List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pathId") String pathId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("constraintSummaries") List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pathId") String pathId,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.constraintSummaries = constraintSummaries;
         this.name = name;
         this.pathId = pathId;

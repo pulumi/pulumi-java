@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.organizations.PolicyArgs;
 import io.pulumi.aws.organizations.inputs.PolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the policy.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The policy content to add to the new policy. For example, if you create a [service control policy (SCP)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html), this string must be JSON text that specifies the permissions that admins in attached accounts can delegate to their users, groups, and roles. For more information about the SCP syntax, see the [Service Control Policy Syntax documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_scp-syntax.html) and for more information on the Tag Policy syntax, see the [Tag Policy Syntax documentation](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_example-tag-policies.html).
      * 
      */
-    @OutputExport(name="content", type=String.class, parameters={})
+    @Export(name="content", type=String.class, parameters={})
     private Output<String> content;
 
     /**
@@ -61,7 +61,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * A description to assign to the policy.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -75,7 +75,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The friendly name to assign to the policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -89,7 +89,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -103,7 +103,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -117,7 +117,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The type of policy to create. Valid values are `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY` (SCP), and `TAG_POLICY`. Defaults to `SERVICE_CONTROL_POLICY`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

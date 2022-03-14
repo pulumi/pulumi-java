@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NodeGroupResourceAutoscalingGroupGetArgs extends io.pulumi.re
      * Name of the EC2 Launch Template. Conflicts with `id`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

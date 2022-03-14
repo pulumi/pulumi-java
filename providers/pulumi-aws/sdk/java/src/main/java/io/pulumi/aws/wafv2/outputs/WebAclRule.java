@@ -8,7 +8,7 @@ import io.pulumi.aws.wafv2.outputs.WebAclRuleOverrideAction;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleRuleLabel;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatement;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleVisibilityConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRule {
     /**
      * The action that AWS WAF should take on a web request when it matches the rule's statement. This is used only for rules whose **statements do not reference a rule group**. See Action below for details.
@@ -54,15 +54,15 @@ public final class WebAclRule {
      */
     private final WebAclRuleVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRule(
-        @OutputCustomType.Parameter("action") @Nullable WebAclRuleAction action,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("overrideAction") @Nullable WebAclRuleOverrideAction overrideAction,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("ruleLabels") @Nullable List<WebAclRuleRuleLabel> ruleLabels,
-        @OutputCustomType.Parameter("statement") WebAclRuleStatement statement,
-        @OutputCustomType.Parameter("visibilityConfig") WebAclRuleVisibilityConfig visibilityConfig) {
+        @CustomType.Parameter("action") @Nullable WebAclRuleAction action,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("overrideAction") @Nullable WebAclRuleOverrideAction overrideAction,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleLabels") @Nullable List<WebAclRuleRuleLabel> ruleLabels,
+        @CustomType.Parameter("statement") WebAclRuleStatement statement,
+        @CustomType.Parameter("visibilityConfig") WebAclRuleVisibilityConfig visibilityConfig) {
         this.action = action;
         this.name = name;
         this.overrideAction = overrideAction;

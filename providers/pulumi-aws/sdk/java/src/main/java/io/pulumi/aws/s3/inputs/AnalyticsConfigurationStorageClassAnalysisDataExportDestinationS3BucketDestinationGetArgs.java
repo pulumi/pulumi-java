@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * The account ID that owns the destination bucket.
      * 
      */
-    @InputImport(name="bucketAccountId")
+    @Import(name="bucketAccountId")
       private final @Nullable Output<String> bucketAccountId;
 
     public Output<String> getBucketAccountId() {
@@ -29,7 +29,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * The ARN of the destination bucket.
      * 
      */
-    @InputImport(name="bucketArn", required=true)
+    @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
     public Output<String> getBucketArn() {
@@ -40,7 +40,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<String> format;
 
     public Output<String> getFormat() {
@@ -51,7 +51,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      * Object prefix for filtering.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

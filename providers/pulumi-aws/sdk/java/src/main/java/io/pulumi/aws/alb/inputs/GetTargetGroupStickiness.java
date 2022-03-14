@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.alb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,28 +14,28 @@ public final class GetTargetGroupStickiness extends io.pulumi.resources.InvokeAr
 
     public static final GetTargetGroupStickiness Empty = new GetTargetGroupStickiness();
 
-    @InputImport(name="cookieDuration", required=true)
+    @Import(name="cookieDuration", required=true)
       private final Integer cookieDuration;
 
     public Integer getCookieDuration() {
         return this.cookieDuration;
     }
 
-    @InputImport(name="cookieName", required=true)
+    @Import(name="cookieName", required=true)
       private final String cookieName;
 
     public String getCookieName() {
         return this.cookieName;
     }
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudhsmv2.inputs;
 
 import io.pulumi.aws.cloudhsmv2.inputs.ClusterClusterCertificateGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
      * 
      */
-    @InputImport(name="clusterCertificates")
+    @Import(name="clusterCertificates")
       private final @Nullable Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates;
 
     public Output<List<ClusterClusterCertificateGetArgs>> getClusterCertificates() {
@@ -37,7 +37,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The id of the CloudHSM cluster.
      * 
      */
-    @InputImport(name="clusterId")
+    @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
@@ -48,7 +48,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The state of the CloudHSM cluster.
      * 
      */
-    @InputImport(name="clusterState")
+    @Import(name="clusterState")
       private final @Nullable Output<String> clusterState;
 
     public Output<String> getClusterState() {
@@ -59,7 +59,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
      * 
      */
-    @InputImport(name="hsmType")
+    @Import(name="hsmType")
       private final @Nullable Output<String> hsmType;
 
     public Output<String> getHsmType() {
@@ -70,7 +70,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The ID of the security group associated with the CloudHSM cluster.
      * 
      */
-    @InputImport(name="securityGroupId")
+    @Import(name="securityGroupId")
       private final @Nullable Output<String> securityGroupId;
 
     public Output<String> getSecurityGroupId() {
@@ -81,7 +81,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The id of Cloud HSM v2 cluster backup to be restored.
      * 
      */
-    @InputImport(name="sourceBackupIdentifier")
+    @Import(name="sourceBackupIdentifier")
       private final @Nullable Output<String> sourceBackupIdentifier;
 
     public Output<String> getSourceBackupIdentifier() {
@@ -92,7 +92,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The IDs of subnets in which cluster will operate.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -103,7 +103,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -114,7 +114,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -125,7 +125,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The id of the VPC that the CloudHSM cluster resides in.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

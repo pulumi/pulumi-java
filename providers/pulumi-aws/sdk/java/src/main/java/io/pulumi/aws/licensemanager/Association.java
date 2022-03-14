@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.licensemanager.AssociationArgs;
 import io.pulumi.aws.licensemanager.inputs.AssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * ARN of the license configuration.
      * 
      */
-    @OutputExport(name="licenseConfigurationArn", type=String.class, parameters={})
+    @Export(name="licenseConfigurationArn", type=String.class, parameters={})
     private Output<String> licenseConfigurationArn;
 
     /**
@@ -48,7 +48,7 @@ public class Association extends io.pulumi.resources.CustomResource {
      * ARN of the resource associated with the license configuration.
      * 
      */
-    @OutputExport(name="resourceArn", type=String.class, parameters={})
+    @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
     /**

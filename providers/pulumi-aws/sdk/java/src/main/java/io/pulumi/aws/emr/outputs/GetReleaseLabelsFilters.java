@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetReleaseLabelsFilters {
     /**
      * Optional release label application filter. For example, `Spark@2.1.0` or `Spark`.
@@ -22,10 +22,10 @@ public final class GetReleaseLabelsFilters {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReleaseLabelsFilters(
-        @OutputCustomType.Parameter("application") @Nullable String application,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
+        @CustomType.Parameter("application") @Nullable String application,
+        @CustomType.Parameter("prefix") @Nullable String prefix) {
         this.application = application;
         this.prefix = prefix;
     }

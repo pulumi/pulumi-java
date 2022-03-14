@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.workspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDirectoryWorkspaceAccessProperty {
     /**
      * (Optional) Indicates whether users can use Android devices to access their WorkSpaces.
@@ -50,16 +50,16 @@ public final class GetDirectoryWorkspaceAccessProperty {
      */
     private final String deviceTypeZeroclient;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDirectoryWorkspaceAccessProperty(
-        @OutputCustomType.Parameter("deviceTypeAndroid") String deviceTypeAndroid,
-        @OutputCustomType.Parameter("deviceTypeChromeos") String deviceTypeChromeos,
-        @OutputCustomType.Parameter("deviceTypeIos") String deviceTypeIos,
-        @OutputCustomType.Parameter("deviceTypeLinux") String deviceTypeLinux,
-        @OutputCustomType.Parameter("deviceTypeOsx") String deviceTypeOsx,
-        @OutputCustomType.Parameter("deviceTypeWeb") String deviceTypeWeb,
-        @OutputCustomType.Parameter("deviceTypeWindows") String deviceTypeWindows,
-        @OutputCustomType.Parameter("deviceTypeZeroclient") String deviceTypeZeroclient) {
+        @CustomType.Parameter("deviceTypeAndroid") String deviceTypeAndroid,
+        @CustomType.Parameter("deviceTypeChromeos") String deviceTypeChromeos,
+        @CustomType.Parameter("deviceTypeIos") String deviceTypeIos,
+        @CustomType.Parameter("deviceTypeLinux") String deviceTypeLinux,
+        @CustomType.Parameter("deviceTypeOsx") String deviceTypeOsx,
+        @CustomType.Parameter("deviceTypeWeb") String deviceTypeWeb,
+        @CustomType.Parameter("deviceTypeWindows") String deviceTypeWindows,
+        @CustomType.Parameter("deviceTypeZeroclient") String deviceTypeZeroclient) {
         this.deviceTypeAndroid = deviceTypeAndroid;
         this.deviceTypeChromeos = deviceTypeChromeos;
         this.deviceTypeIos = deviceTypeIos;

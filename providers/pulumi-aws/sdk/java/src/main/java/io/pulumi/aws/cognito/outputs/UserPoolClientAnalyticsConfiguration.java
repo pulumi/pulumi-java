@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolClientAnalyticsConfiguration {
     /**
      * Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
@@ -38,13 +38,13 @@ public final class UserPoolClientAnalyticsConfiguration {
      */
     private final @Nullable Boolean userDataShared;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolClientAnalyticsConfiguration(
-        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
-        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
-        @OutputCustomType.Parameter("externalId") @Nullable String externalId,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("userDataShared") @Nullable Boolean userDataShared) {
+        @CustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @CustomType.Parameter("applicationId") @Nullable String applicationId,
+        @CustomType.Parameter("externalId") @Nullable String externalId,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("userDataShared") @Nullable Boolean userDataShared) {
         this.applicationArn = applicationArn;
         this.applicationId = applicationId;
         this.externalId = externalId;

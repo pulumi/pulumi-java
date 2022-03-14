@@ -9,7 +9,7 @@ import io.pulumi.aws.emr.inputs.InstanceFleetState;
 import io.pulumi.aws.emr.outputs.InstanceFleetInstanceTypeConfig;
 import io.pulumi.aws.emr.outputs.InstanceFleetLaunchSpecifications;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
      * 
      */
-    @OutputExport(name="clusterId", type=String.class, parameters={})
+    @Export(name="clusterId", type=String.class, parameters={})
     private Output<String> clusterId;
 
     /**
@@ -55,7 +55,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * Configuration block for instance fleet
      * 
      */
-    @OutputExport(name="instanceTypeConfigs", type=List.class, parameters={InstanceFleetInstanceTypeConfig.class})
+    @Export(name="instanceTypeConfigs", type=List.class, parameters={InstanceFleetInstanceTypeConfig.class})
     private Output</* @Nullable */ List<InstanceFleetInstanceTypeConfig>> instanceTypeConfigs;
 
     /**
@@ -69,7 +69,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * Configuration block for launch specification
      * 
      */
-    @OutputExport(name="launchSpecifications", type=InstanceFleetLaunchSpecifications.class, parameters={})
+    @Export(name="launchSpecifications", type=InstanceFleetLaunchSpecifications.class, parameters={})
     private Output</* @Nullable */ InstanceFleetLaunchSpecifications> launchSpecifications;
 
     /**
@@ -83,7 +83,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * Friendly name given to the instance fleet.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,13 +93,13 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="provisionedOnDemandCapacity", type=Integer.class, parameters={})
+    @Export(name="provisionedOnDemandCapacity", type=Integer.class, parameters={})
     private Output<Integer> provisionedOnDemandCapacity;
 
     public Output<Integer> getProvisionedOnDemandCapacity() {
         return this.provisionedOnDemandCapacity;
     }
-    @OutputExport(name="provisionedSpotCapacity", type=Integer.class, parameters={})
+    @Export(name="provisionedSpotCapacity", type=Integer.class, parameters={})
     private Output<Integer> provisionedSpotCapacity;
 
     public Output<Integer> getProvisionedSpotCapacity() {
@@ -109,7 +109,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
      * 
      */
-    @OutputExport(name="targetOnDemandCapacity", type=Integer.class, parameters={})
+    @Export(name="targetOnDemandCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> targetOnDemandCapacity;
 
     /**
@@ -123,7 +123,7 @@ public class InstanceFleet extends io.pulumi.resources.CustomResource {
      * The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
      * 
      */
-    @OutputExport(name="targetSpotCapacity", type=Integer.class, parameters={})
+    @Export(name="targetSpotCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> targetSpotCapacity;
 
     /**

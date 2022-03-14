@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.aws.elasticloadbalancing.inputs.LoadBalancerPolicyPolicyAttributeGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * The load balancer on which the policy is defined.
      * 
      */
-    @InputImport(name="loadBalancerName")
+    @Import(name="loadBalancerName")
       private final @Nullable Output<String> loadBalancerName;
 
     public Output<String> getLoadBalancerName() {
@@ -31,7 +31,7 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * Policy attribute to apply to the policy.
      * 
      */
-    @InputImport(name="policyAttributes")
+    @Import(name="policyAttributes")
       private final @Nullable Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> policyAttributes;
 
     public Output<List<LoadBalancerPolicyPolicyAttributeGetArgs>> getPolicyAttributes() {
@@ -42,7 +42,7 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * The name of the load balancer policy.
      * 
      */
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
@@ -53,7 +53,7 @@ public final class LoadBalancerPolicyState extends io.pulumi.resources.ResourceA
      * The policy type.
      * 
      */
-    @InputImport(name="policyTypeName")
+    @Import(name="policyTypeName")
       private final @Nullable Output<String> policyTypeName;
 
     public Output<String> getPolicyTypeName() {

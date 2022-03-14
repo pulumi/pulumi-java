@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecServiceDiscoveryDns {
     /**
      * The DNS host name for your virtual node.
@@ -15,8 +15,8 @@ public final class VirtualNodeSpecServiceDiscoveryDns {
      */
     private final String hostname;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecServiceDiscoveryDns(@OutputCustomType.Parameter("hostname") String hostname) {
+    @CustomType.Constructor
+    private VirtualNodeSpecServiceDiscoveryDns(@CustomType.Parameter("hostname") String hostname) {
         this.hostname = hostname;
     }
 

@@ -6,14 +6,14 @@ package io.pulumi.aws.workspaces.outputs;
 import io.pulumi.aws.workspaces.outputs.GetDirectorySelfServicePermission;
 import io.pulumi.aws.workspaces.outputs.GetDirectoryWorkspaceAccessProperty;
 import io.pulumi.aws.workspaces.outputs.GetDirectoryWorkspaceCreationProperty;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDirectoryResult {
     /**
      * The directory alias.
@@ -92,24 +92,24 @@ public final class GetDirectoryResult {
      */
     private final String workspaceSecurityGroupId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDirectoryResult(
-        @OutputCustomType.Parameter("alias") String alias,
-        @OutputCustomType.Parameter("customerUserName") String customerUserName,
-        @OutputCustomType.Parameter("directoryId") String directoryId,
-        @OutputCustomType.Parameter("directoryName") String directoryName,
-        @OutputCustomType.Parameter("directoryType") String directoryType,
-        @OutputCustomType.Parameter("dnsIpAddresses") List<String> dnsIpAddresses,
-        @OutputCustomType.Parameter("iamRoleId") String iamRoleId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipGroupIds") List<String> ipGroupIds,
-        @OutputCustomType.Parameter("registrationCode") String registrationCode,
-        @OutputCustomType.Parameter("selfServicePermissions") List<GetDirectorySelfServicePermission> selfServicePermissions,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("workspaceAccessProperties") List<GetDirectoryWorkspaceAccessProperty> workspaceAccessProperties,
-        @OutputCustomType.Parameter("workspaceCreationProperties") List<GetDirectoryWorkspaceCreationProperty> workspaceCreationProperties,
-        @OutputCustomType.Parameter("workspaceSecurityGroupId") String workspaceSecurityGroupId) {
+        @CustomType.Parameter("alias") String alias,
+        @CustomType.Parameter("customerUserName") String customerUserName,
+        @CustomType.Parameter("directoryId") String directoryId,
+        @CustomType.Parameter("directoryName") String directoryName,
+        @CustomType.Parameter("directoryType") String directoryType,
+        @CustomType.Parameter("dnsIpAddresses") List<String> dnsIpAddresses,
+        @CustomType.Parameter("iamRoleId") String iamRoleId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipGroupIds") List<String> ipGroupIds,
+        @CustomType.Parameter("registrationCode") String registrationCode,
+        @CustomType.Parameter("selfServicePermissions") List<GetDirectorySelfServicePermission> selfServicePermissions,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("workspaceAccessProperties") List<GetDirectoryWorkspaceAccessProperty> workspaceAccessProperties,
+        @CustomType.Parameter("workspaceCreationProperties") List<GetDirectoryWorkspaceCreationProperty> workspaceCreationProperties,
+        @CustomType.Parameter("workspaceSecurityGroupId") String workspaceSecurityGroupId) {
         this.alias = alias;
         this.customerUserName = customerUserName;
         this.directoryId = directoryId;

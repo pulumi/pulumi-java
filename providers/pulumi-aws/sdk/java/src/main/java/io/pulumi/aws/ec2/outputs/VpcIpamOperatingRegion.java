@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VpcIpamOperatingRegion {
     /**
      * The name of the Region you want to add to the IPAM.
@@ -15,8 +15,8 @@ public final class VpcIpamOperatingRegion {
      */
     private final String regionName;
 
-    @OutputCustomType.Constructor
-    private VpcIpamOperatingRegion(@OutputCustomType.Parameter("regionName") String regionName) {
+    @CustomType.Constructor
+    private VpcIpamOperatingRegion(@CustomType.Parameter("regionName") String regionName) {
         this.regionName = regionName;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FileSystemLifecyclePolicy {
     /**
      * Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
@@ -22,10 +22,10 @@ public final class FileSystemLifecyclePolicy {
      */
     private final @Nullable String transitionToPrimaryStorageClass;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileSystemLifecyclePolicy(
-        @OutputCustomType.Parameter("transitionToIa") @Nullable String transitionToIa,
-        @OutputCustomType.Parameter("transitionToPrimaryStorageClass") @Nullable String transitionToPrimaryStorageClass) {
+        @CustomType.Parameter("transitionToIa") @Nullable String transitionToIa,
+        @CustomType.Parameter("transitionToPrimaryStorageClass") @Nullable String transitionToPrimaryStorageClass) {
         this.transitionToIa = transitionToIa;
         this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
     }

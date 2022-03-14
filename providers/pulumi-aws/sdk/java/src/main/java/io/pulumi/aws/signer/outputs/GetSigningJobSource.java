@@ -4,16 +4,16 @@
 package io.pulumi.aws.signer.outputs;
 
 import io.pulumi.aws.signer.outputs.GetSigningJobSourceS3;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSigningJobSource {
     private final List<GetSigningJobSourceS3> s3s;
 
-    @OutputCustomType.Constructor
-    private GetSigningJobSource(@OutputCustomType.Parameter("s3s") List<GetSigningJobSourceS3> s3s) {
+    @CustomType.Constructor
+    private GetSigningJobSource(@CustomType.Parameter("s3s") List<GetSigningJobSourceS3> s3s) {
         this.s3s = s3s;
     }
 

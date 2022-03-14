@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
      * Describes the metadata sent to the HTTP endpoint destination. More details are given below
      * 
      */
-    @InputImport(name="commonAttributes")
+    @Import(name="commonAttributes")
       private final @Nullable Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs>> commonAttributes;
 
     public Output<List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttributeGetArgs>> getCommonAttributes() {
@@ -31,7 +31,7 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
      * Kinesis Data Firehose uses the content encoding to compress the body of a request before sending the request to the destination. Valid values are `NONE` and `GZIP`.  Default value is `NONE`.
      * 
      */
-    @InputImport(name="contentEncoding")
+    @Import(name="contentEncoding")
       private final @Nullable Output<String> contentEncoding;
 
     public Output<String> getContentEncoding() {

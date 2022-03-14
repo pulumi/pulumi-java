@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
      * A boolean value indicating whether the resize operation is using the classic resize process. Default: `false`.
      * 
      */
-    @InputImport(name="classic")
+    @Import(name="classic")
       private final @Nullable Output<Boolean> classic;
 
     public Output<Boolean> getClassic() {
@@ -31,7 +31,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
      * The identifier of the cluster to be resumed.
      * 
      */
-    @InputImport(name="clusterIdentifier", required=true)
+    @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
@@ -42,7 +42,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
      * The new cluster type for the specified cluster.
      * 
      */
-    @InputImport(name="clusterType")
+    @Import(name="clusterType")
       private final @Nullable Output<String> clusterType;
 
     public Output<String> getClusterType() {
@@ -53,7 +53,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
      * The new node type for the nodes you are adding.
      * 
      */
-    @InputImport(name="nodeType")
+    @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
     public Output<String> getNodeType() {
@@ -64,7 +64,7 @@ public final class ScheduledActionTargetActionResizeClusterGetArgs extends io.pu
      * The new number of nodes for the cluster.
      * 
      */
-    @InputImport(name="numberOfNodes")
+    @Import(name="numberOfNodes")
       private final @Nullable Output<Integer> numberOfNodes;
 
     public Output<Integer> getNumberOfNodes() {

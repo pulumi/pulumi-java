@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The application ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @InputImport(name="applicationId", required=true)
+    @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -30,7 +30,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration profile ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @InputImport(name="configurationProfileId", required=true)
+    @Import(name="configurationProfileId", required=true)
       private final Output<String> configurationProfileId;
 
     public Output<String> getConfigurationProfileId() {
@@ -41,7 +41,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration version to deploy. Can be at most 1024 characters.
      * 
      */
-    @InputImport(name="configurationVersion", required=true)
+    @Import(name="configurationVersion", required=true)
       private final Output<String> configurationVersion;
 
     public Output<String> getConfigurationVersion() {
@@ -52,7 +52,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The deployment strategy ID or name of a predefined deployment strategy. See [Predefined Deployment Strategies](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html#appconfig-creating-deployment-strategy-predefined) for more details.
      * 
      */
-    @InputImport(name="deploymentStrategyId", required=true)
+    @Import(name="deploymentStrategyId", required=true)
       private final Output<String> deploymentStrategyId;
 
     public Output<String> getDeploymentStrategyId() {
@@ -63,7 +63,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the deployment. Can be at most 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -74,7 +74,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The environment ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -85,7 +85,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

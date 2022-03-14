@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
      * The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -30,7 +30,7 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
      * The name of the document attachment file
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
      * The value describing the location of an attachment to a document
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final Output<List<String>> values;
 
     public Output<List<String>> getValues() {

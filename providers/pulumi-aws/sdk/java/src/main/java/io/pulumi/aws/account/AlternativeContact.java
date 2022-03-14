@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.account.AlternativeContactArgs;
 import io.pulumi.aws.account.inputs.AlternativeContactState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -38,7 +38,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * The ID of the target account when managing member accounts. Will manage current user's account by default if omitted.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> accountId;
 
     /**
@@ -52,7 +52,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * The type of the alternate contact. Allowed values are: `BILLING`, `OPERATIONS`, `SECURITY`.
      * 
      */
-    @OutputExport(name="alternateContactType", type=String.class, parameters={})
+    @Export(name="alternateContactType", type=String.class, parameters={})
     private Output<String> alternateContactType;
 
     /**
@@ -66,7 +66,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * An email address for the alternate contact.
      * 
      */
-    @OutputExport(name="emailAddress", type=String.class, parameters={})
+    @Export(name="emailAddress", type=String.class, parameters={})
     private Output<String> emailAddress;
 
     /**
@@ -80,7 +80,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * The name of the alternate contact.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * A phone number for the alternate contact.
      * 
      */
-    @OutputExport(name="phoneNumber", type=String.class, parameters={})
+    @Export(name="phoneNumber", type=String.class, parameters={})
     private Output<String> phoneNumber;
 
     /**
@@ -108,7 +108,7 @@ public class AlternativeContact extends io.pulumi.resources.CustomResource {
      * A title for the alternate contact.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**

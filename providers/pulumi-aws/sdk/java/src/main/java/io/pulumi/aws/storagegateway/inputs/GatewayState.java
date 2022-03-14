@@ -6,7 +6,7 @@ package io.pulumi.aws.storagegateway.inputs;
 import io.pulumi.aws.storagegateway.inputs.GatewayGatewayNetworkInterfaceGetArgs;
 import io.pulumi.aws.storagegateway.inputs.GatewaySmbActiveDirectorySettingsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
      * 
      */
-    @InputImport(name="activationKey")
+    @Import(name="activationKey")
       private final @Nullable Output<String> activationKey;
 
     public Output<String> getActivationKey() {
@@ -35,7 +35,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -46,7 +46,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
      * 
      */
-    @InputImport(name="averageDownloadRateLimitInBitsPerSec")
+    @Import(name="averageDownloadRateLimitInBitsPerSec")
       private final @Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec;
 
     public Output<Integer> getAverageDownloadRateLimitInBitsPerSec() {
@@ -57,7 +57,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
      * 
      */
-    @InputImport(name="averageUploadRateLimitInBitsPerSec")
+    @Import(name="averageUploadRateLimitInBitsPerSec")
       private final @Nullable Output<Integer> averageUploadRateLimitInBitsPerSec;
 
     public Output<Integer> getAverageUploadRateLimitInBitsPerSec() {
@@ -68,7 +68,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
      * 
      */
-    @InputImport(name="cloudwatchLogGroupArn")
+    @Import(name="cloudwatchLogGroupArn")
       private final @Nullable Output<String> cloudwatchLogGroupArn;
 
     public Output<String> getCloudwatchLogGroupArn() {
@@ -79,7 +79,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * The ID of the Amazon EC2 instance that was used to launch the gateway.
      * 
      */
-    @InputImport(name="ec2InstanceId")
+    @Import(name="ec2InstanceId")
       private final @Nullable Output<String> ec2InstanceId;
 
     public Output<String> getEc2InstanceId() {
@@ -90,7 +90,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * The type of endpoint for your gateway.
      * 
      */
-    @InputImport(name="endpointType")
+    @Import(name="endpointType")
       private final @Nullable Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -101,7 +101,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Identifier of the gateway.
      * 
      */
-    @InputImport(name="gatewayId")
+    @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
     public Output<String> getGatewayId() {
@@ -112,7 +112,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
      * 
      */
-    @InputImport(name="gatewayIpAddress")
+    @Import(name="gatewayIpAddress")
       private final @Nullable Output<String> gatewayIpAddress;
 
     public Output<String> getGatewayIpAddress() {
@@ -123,7 +123,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Name of the gateway.
      * 
      */
-    @InputImport(name="gatewayName")
+    @Import(name="gatewayName")
       private final @Nullable Output<String> gatewayName;
 
     public Output<String> getGatewayName() {
@@ -134,7 +134,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
      * 
      */
-    @InputImport(name="gatewayNetworkInterfaces")
+    @Import(name="gatewayNetworkInterfaces")
       private final @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
 
     public Output<List<GatewayGatewayNetworkInterfaceGetArgs>> getGatewayNetworkInterfaces() {
@@ -145,7 +145,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
      * 
      */
-    @InputImport(name="gatewayTimezone")
+    @Import(name="gatewayTimezone")
       private final @Nullable Output<String> gatewayTimezone;
 
     public Output<String> getGatewayTimezone() {
@@ -156,7 +156,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
      * 
      */
-    @InputImport(name="gatewayType")
+    @Import(name="gatewayType")
       private final @Nullable Output<String> gatewayType;
 
     public Output<String> getGatewayType() {
@@ -167,7 +167,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
      * 
      */
-    @InputImport(name="gatewayVpcEndpoint")
+    @Import(name="gatewayVpcEndpoint")
       private final @Nullable Output<String> gatewayVpcEndpoint;
 
     public Output<String> getGatewayVpcEndpoint() {
@@ -178,7 +178,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * The type of hypervisor environment used by the host.
      * 
      */
-    @InputImport(name="hostEnvironment")
+    @Import(name="hostEnvironment")
       private final @Nullable Output<String> hostEnvironment;
 
     public Output<String> getHostEnvironment() {
@@ -189,7 +189,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
      * 
      */
-    @InputImport(name="mediumChangerType")
+    @Import(name="mediumChangerType")
       private final @Nullable Output<String> mediumChangerType;
 
     public Output<String> getMediumChangerType() {
@@ -200,7 +200,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
      * 
      */
-    @InputImport(name="smbActiveDirectorySettings")
+    @Import(name="smbActiveDirectorySettings")
       private final @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
 
     public Output<GatewaySmbActiveDirectorySettingsGetArgs> getSmbActiveDirectorySettings() {
@@ -211,7 +211,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the shares on this gateway appear when listing shares.
      * 
      */
-    @InputImport(name="smbFileShareVisibility")
+    @Import(name="smbFileShareVisibility")
       private final @Nullable Output<Boolean> smbFileShareVisibility;
 
     public Output<Boolean> getSmbFileShareVisibility() {
@@ -222,7 +222,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
      * 
      */
-    @InputImport(name="smbGuestPassword")
+    @Import(name="smbGuestPassword")
       private final @Nullable Output<String> smbGuestPassword;
 
     public Output<String> getSmbGuestPassword() {
@@ -233,7 +233,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
      * 
      */
-    @InputImport(name="smbSecurityStrategy")
+    @Import(name="smbSecurityStrategy")
       private final @Nullable Output<String> smbSecurityStrategy;
 
     public Output<String> getSmbSecurityStrategy() {
@@ -244,7 +244,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -255,7 +255,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -266,7 +266,7 @@ public final class GatewayState extends io.pulumi.resources.ResourceArgs {
      * Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
      * 
      */
-    @InputImport(name="tapeDriveType")
+    @Import(name="tapeDriveType")
       private final @Nullable Output<String> tapeDriveType;
 
     public Output<String> getTapeDriveType() {

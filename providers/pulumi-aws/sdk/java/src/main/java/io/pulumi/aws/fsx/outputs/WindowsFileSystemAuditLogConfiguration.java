@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.fsx.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WindowsFileSystemAuditLogConfiguration {
     /**
      * The Amazon Resource Name (ARN) for the destination of the audit logs. The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data Firehose delivery stream ARN. Can be specified when `file_access_audit_log_level` and `file_share_access_audit_log_level` are not set to `DISABLED`. The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The name of the Amazon Kinesis Data Firehouse delivery stream must begin with the `aws-fsx` prefix. If you do not provide a destination in `audit_log_destionation`, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/windows log group.
@@ -27,11 +27,11 @@ public final class WindowsFileSystemAuditLogConfiguration {
      */
     private final @Nullable String fileShareAccessAuditLogLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WindowsFileSystemAuditLogConfiguration(
-        @OutputCustomType.Parameter("auditLogDestination") @Nullable String auditLogDestination,
-        @OutputCustomType.Parameter("fileAccessAuditLogLevel") @Nullable String fileAccessAuditLogLevel,
-        @OutputCustomType.Parameter("fileShareAccessAuditLogLevel") @Nullable String fileShareAccessAuditLogLevel) {
+        @CustomType.Parameter("auditLogDestination") @Nullable String auditLogDestination,
+        @CustomType.Parameter("fileAccessAuditLogLevel") @Nullable String fileAccessAuditLogLevel,
+        @CustomType.Parameter("fileShareAccessAuditLogLevel") @Nullable String fileShareAccessAuditLogLevel) {
         this.auditLogDestination = auditLogDestination;
         this.fileAccessAuditLogLevel = fileAccessAuditLogLevel;
         this.fileShareAccessAuditLogLevel = fileShareAccessAuditLogLevel;

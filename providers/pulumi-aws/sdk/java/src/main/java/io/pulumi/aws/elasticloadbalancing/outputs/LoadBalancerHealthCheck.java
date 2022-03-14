@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.elasticloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerHealthCheck {
     /**
      * The number of checks before the instance is declared healthy.
@@ -39,13 +39,13 @@ public final class LoadBalancerHealthCheck {
      */
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerHealthCheck(
-        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
-        @OutputCustomType.Parameter("interval") Integer interval,
-        @OutputCustomType.Parameter("target") String target,
-        @OutputCustomType.Parameter("timeout") Integer timeout,
-        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
+        @CustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @CustomType.Parameter("interval") Integer interval,
+        @CustomType.Parameter("target") String target,
+        @CustomType.Parameter("timeout") Integer timeout,
+        @CustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.interval = interval;
         this.target = target;

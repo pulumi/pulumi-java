@@ -11,12 +11,12 @@ import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementAndStatementStatementAn
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatement;
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatement;
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleStatementAndStatementStatementAndStatementStatement {
     /**
      * A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
@@ -59,16 +59,16 @@ public final class RuleGroupRuleStatementAndStatementStatementAndStatementStatem
      */
     private final @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatement xssMatchStatement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleStatementAndStatementStatementAndStatementStatement(
-        @OutputCustomType.Parameter("byteMatchStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatement byteMatchStatement,
-        @OutputCustomType.Parameter("geoMatchStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatement geoMatchStatement,
-        @OutputCustomType.Parameter("ipSetReferenceStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatement ipSetReferenceStatement,
-        @OutputCustomType.Parameter("labelMatchStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementLabelMatchStatement labelMatchStatement,
-        @OutputCustomType.Parameter("regexPatternSetReferenceStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
-        @OutputCustomType.Parameter("sizeConstraintStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatement sizeConstraintStatement,
-        @OutputCustomType.Parameter("sqliMatchStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatement sqliMatchStatement,
-        @OutputCustomType.Parameter("xssMatchStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatement xssMatchStatement) {
+        @CustomType.Parameter("byteMatchStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementByteMatchStatement byteMatchStatement,
+        @CustomType.Parameter("geoMatchStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementGeoMatchStatement geoMatchStatement,
+        @CustomType.Parameter("ipSetReferenceStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementIpSetReferenceStatement ipSetReferenceStatement,
+        @CustomType.Parameter("labelMatchStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementLabelMatchStatement labelMatchStatement,
+        @CustomType.Parameter("regexPatternSetReferenceStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
+        @CustomType.Parameter("sizeConstraintStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementSizeConstraintStatement sizeConstraintStatement,
+        @CustomType.Parameter("sqliMatchStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementSqliMatchStatement sqliMatchStatement,
+        @CustomType.Parameter("xssMatchStatement") @Nullable RuleGroupRuleStatementAndStatementStatementAndStatementStatementXssMatchStatement xssMatchStatement) {
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;
         this.ipSetReferenceStatement = ipSetReferenceStatement;

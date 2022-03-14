@@ -6,7 +6,7 @@ package io.pulumi.aws.msk.inputs;
 import io.pulumi.aws.msk.inputs.ClusterClientAuthenticationSaslArgs;
 import io.pulumi.aws.msk.inputs.ClusterClientAuthenticationTlsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class ClusterClientAuthenticationArgs extends io.pulumi.resources.R
      * Configuration block for specifying SASL client authentication. See below.
      * 
      */
-    @InputImport(name="sasl")
+    @Import(name="sasl")
       private final @Nullable Output<ClusterClientAuthenticationSaslArgs> sasl;
 
     public Output<ClusterClientAuthenticationSaslArgs> getSasl() {
@@ -30,7 +30,7 @@ public final class ClusterClientAuthenticationArgs extends io.pulumi.resources.R
      * Configuration block for specifying TLS client authentication. See below.
      * 
      */
-    @InputImport(name="tls")
+    @Import(name="tls")
       private final @Nullable Output<ClusterClientAuthenticationTlsArgs> tls;
 
     public Output<ClusterClientAuthenticationTlsArgs> getTls() {

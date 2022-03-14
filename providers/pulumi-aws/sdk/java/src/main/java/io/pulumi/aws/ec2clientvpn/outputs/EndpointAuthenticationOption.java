@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2clientvpn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointAuthenticationOption {
     /**
      * The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
@@ -37,13 +37,13 @@ public final class EndpointAuthenticationOption {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointAuthenticationOption(
-        @OutputCustomType.Parameter("activeDirectoryId") @Nullable String activeDirectoryId,
-        @OutputCustomType.Parameter("rootCertificateChainArn") @Nullable String rootCertificateChainArn,
-        @OutputCustomType.Parameter("samlProviderArn") @Nullable String samlProviderArn,
-        @OutputCustomType.Parameter("selfServiceSamlProviderArn") @Nullable String selfServiceSamlProviderArn,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("activeDirectoryId") @Nullable String activeDirectoryId,
+        @CustomType.Parameter("rootCertificateChainArn") @Nullable String rootCertificateChainArn,
+        @CustomType.Parameter("samlProviderArn") @Nullable String samlProviderArn,
+        @CustomType.Parameter("selfServiceSamlProviderArn") @Nullable String selfServiceSamlProviderArn,
+        @CustomType.Parameter("type") String type) {
         this.activeDirectoryId = activeDirectoryId;
         this.rootCertificateChainArn = rootCertificateChainArn;
         this.samlProviderArn = samlProviderArn;

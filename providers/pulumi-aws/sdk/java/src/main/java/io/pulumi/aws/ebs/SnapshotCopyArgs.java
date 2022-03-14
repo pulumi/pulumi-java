@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * A description of what the snapshot is.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the snapshot is encrypted.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -43,7 +43,7 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN for the KMS encryption key.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -54,7 +54,7 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether to permanently restore an archived snapshot.
      * 
      */
-    @InputImport(name="permanentRestore")
+    @Import(name="permanentRestore")
       private final @Nullable Output<Boolean> permanentRestore;
 
     public Output<Boolean> getPermanentRestore() {
@@ -65,7 +65,7 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * The region of the source snapshot.
      * 
      */
-    @InputImport(name="sourceRegion", required=true)
+    @Import(name="sourceRegion", required=true)
       private final Output<String> sourceRegion;
 
     public Output<String> getSourceRegion() {
@@ -76,7 +76,7 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN for the snapshot to be copied.
      * 
      */
-    @InputImport(name="sourceSnapshotId", required=true)
+    @Import(name="sourceSnapshotId", required=true)
       private final Output<String> sourceSnapshotId;
 
     public Output<String> getSourceSnapshotId() {
@@ -87,14 +87,14 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
      * 
      */
-    @InputImport(name="storageTier")
+    @Import(name="storageTier")
       private final @Nullable Output<String> storageTier;
 
     public Output<String> getStorageTier() {
         return this.storageTier == null ? Output.empty() : this.storageTier;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -105,7 +105,7 @@ public final class SnapshotCopyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
      * 
      */
-    @InputImport(name="temporaryRestoreDays")
+    @Import(name="temporaryRestoreDays")
       private final @Nullable Output<Integer> temporaryRestoreDays;
 
     public Output<Integer> getTemporaryRestoreDays() {

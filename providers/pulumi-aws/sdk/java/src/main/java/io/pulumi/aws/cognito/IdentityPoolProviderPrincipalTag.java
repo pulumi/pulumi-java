@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cognito.IdentityPoolProviderPrincipalTagArgs;
 import io.pulumi.aws.cognito.inputs.IdentityPoolProviderPrincipalTagState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -32,7 +32,7 @@ public class IdentityPoolProviderPrincipalTag extends io.pulumi.resources.Custom
      * An identity pool ID in the format REGION:GUID.
      * 
      */
-    @OutputExport(name="identityPoolId", type=String.class, parameters={})
+    @Export(name="identityPoolId", type=String.class, parameters={})
     private Output<String> identityPoolId;
 
     /**
@@ -48,7 +48,7 @@ public class IdentityPoolProviderPrincipalTag extends io.pulumi.resources.Custom
      * * `use_defaults`: (Optional: true) use default (username and clientID) attribute mappings.
      * 
      */
-    @OutputExport(name="identityProviderName", type=String.class, parameters={})
+    @Export(name="identityProviderName", type=String.class, parameters={})
     private Output<String> identityProviderName;
 
     /**
@@ -60,13 +60,13 @@ public class IdentityPoolProviderPrincipalTag extends io.pulumi.resources.Custom
     public Output<String> getIdentityProviderName() {
         return this.identityProviderName;
     }
-    @OutputExport(name="principalTags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="principalTags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> principalTags;
 
     public Output</* @Nullable */ Map<String,String>> getPrincipalTags() {
         return this.principalTags;
     }
-    @OutputExport(name="useDefaults", type=Boolean.class, parameters={})
+    @Export(name="useDefaults", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useDefaults;
 
     public Output</* @Nullable */ Boolean> getUseDefaults() {

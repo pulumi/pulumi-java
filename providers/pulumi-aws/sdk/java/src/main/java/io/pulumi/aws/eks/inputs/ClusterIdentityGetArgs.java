@@ -5,7 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.ClusterIdentityOidcGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterIdentityGetArgs extends io.pulumi.resources.ResourceAr
      * Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
      * 
      */
-    @InputImport(name="oidcs")
+    @Import(name="oidcs")
       private final @Nullable Output<List<ClusterIdentityOidcGetArgs>> oidcs;
 
     public Output<List<ClusterIdentityOidcGetArgs>> getOidcs() {

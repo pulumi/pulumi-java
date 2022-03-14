@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs.outputs;
 
 import io.pulumi.aws.efs.outputs.GetFileSystemLifecyclePolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFileSystemResult {
     /**
      * Amazon Resource Name of the file system.
@@ -79,23 +79,23 @@ public final class GetFileSystemResult {
      */
     private final String throughputMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFileSystemResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
-        @OutputCustomType.Parameter("availabilityZoneName") String availabilityZoneName,
-        @OutputCustomType.Parameter("creationToken") String creationToken,
-        @OutputCustomType.Parameter("dnsName") String dnsName,
-        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
-        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("lifecyclePolicy") GetFileSystemLifecyclePolicy lifecyclePolicy,
-        @OutputCustomType.Parameter("performanceMode") String performanceMode,
-        @OutputCustomType.Parameter("provisionedThroughputInMibps") Double provisionedThroughputInMibps,
-        @OutputCustomType.Parameter("sizeInBytes") Integer sizeInBytes,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("throughputMode") String throughputMode) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @CustomType.Parameter("availabilityZoneName") String availabilityZoneName,
+        @CustomType.Parameter("creationToken") String creationToken,
+        @CustomType.Parameter("dnsName") String dnsName,
+        @CustomType.Parameter("encrypted") Boolean encrypted,
+        @CustomType.Parameter("fileSystemId") String fileSystemId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("lifecyclePolicy") GetFileSystemLifecyclePolicy lifecyclePolicy,
+        @CustomType.Parameter("performanceMode") String performanceMode,
+        @CustomType.Parameter("provisionedThroughputInMibps") Double provisionedThroughputInMibps,
+        @CustomType.Parameter("sizeInBytes") Integer sizeInBytes,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("throughputMode") String throughputMode) {
         this.arn = arn;
         this.availabilityZoneId = availabilityZoneId;
         this.availabilityZoneName = availabilityZoneName;

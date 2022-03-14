@@ -4,11 +4,11 @@
 package io.pulumi.aws.networkfirewall.outputs;
 
 import io.pulumi.aws.networkfirewall.outputs.LoggingConfigurationLoggingConfigurationLogDestinationConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoggingConfigurationLoggingConfiguration {
     /**
      * Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for `FLOW` logs and one for `ALERT` logs.
@@ -16,8 +16,8 @@ public final class LoggingConfigurationLoggingConfiguration {
      */
     private final List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs;
 
-    @OutputCustomType.Constructor
-    private LoggingConfigurationLoggingConfiguration(@OutputCustomType.Parameter("logDestinationConfigs") List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
+    @CustomType.Constructor
+    private LoggingConfigurationLoggingConfiguration(@CustomType.Parameter("logDestinationConfigs") List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
         this.logDestinationConfigs = logDestinationConfigs;
     }
 

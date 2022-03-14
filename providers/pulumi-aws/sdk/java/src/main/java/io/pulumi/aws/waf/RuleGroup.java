@@ -8,7 +8,7 @@ import io.pulumi.aws.waf.RuleGroupArgs;
 import io.pulumi.aws.waf.inputs.RuleGroupState;
 import io.pulumi.aws.waf.outputs.RuleGroupActivatedRule;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * A list of activated rules, see below
      * 
      */
-    @OutputExport(name="activatedRules", type=List.class, parameters={RuleGroupActivatedRule.class})
+    @Export(name="activatedRules", type=List.class, parameters={RuleGroupActivatedRule.class})
     private Output</* @Nullable */ List<RuleGroupActivatedRule>> activatedRules;
 
     /**
@@ -49,7 +49,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * The ARN of the WAF rule group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -63,7 +63,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * A friendly name for the metrics from the rule group
      * 
      */
-    @OutputExport(name="metricName", type=String.class, parameters={})
+    @Export(name="metricName", type=String.class, parameters={})
     private Output<String> metricName;
 
     /**
@@ -77,7 +77,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * A friendly name of the rule group
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -105,7 +105,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

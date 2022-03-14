@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InventoryDestinationBucketEncryptionSseKms {
     /**
      * The ARN of the KMS customer master key (CMK) used to encrypt the inventory file.
@@ -15,8 +15,8 @@ public final class InventoryDestinationBucketEncryptionSseKms {
      */
     private final String keyId;
 
-    @OutputCustomType.Constructor
-    private InventoryDestinationBucketEncryptionSseKms(@OutputCustomType.Parameter("keyId") String keyId) {
+    @CustomType.Constructor
+    private InventoryDestinationBucketEncryptionSseKms(@CustomType.Parameter("keyId") String keyId) {
         this.keyId = keyId;
     }
 

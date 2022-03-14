@@ -5,7 +5,7 @@ package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.aws.apprunner.inputs.CustomDomainAssociationCertificateValidationRecordGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * A set of certificate CNAME records used for this domain name. See Certificate Validation Records below for more details.
      * 
      */
-    @InputImport(name="certificateValidationRecords")
+    @Import(name="certificateValidationRecords")
       private final @Nullable Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> certificateValidationRecords;
 
     public Output<List<CustomDomainAssociationCertificateValidationRecordGetArgs>> getCertificateValidationRecords() {
@@ -32,7 +32,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * The App Runner subdomain of the App Runner service. The custom domain name is mapped to this target name. Attribute only available if resource created (not imported) with this provider.
      * 
      */
-    @InputImport(name="dnsTarget")
+    @Import(name="dnsTarget")
       private final @Nullable Output<String> dnsTarget;
 
     public Output<String> getDnsTarget() {
@@ -43,7 +43,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * The custom domain endpoint to association. Specify a base domain e.g., `example.com` or a subdomain e.g., `subdomain.example.com`.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -54,7 +54,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * Whether to associate the subdomain with the App Runner service in addition to the base domain. Defaults to `true`.
      * 
      */
-    @InputImport(name="enableWwwSubdomain")
+    @Import(name="enableWwwSubdomain")
       private final @Nullable Output<Boolean> enableWwwSubdomain;
 
     public Output<Boolean> getEnableWwwSubdomain() {
@@ -65,7 +65,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * The ARN of the App Runner service.
      * 
      */
-    @InputImport(name="serviceArn")
+    @Import(name="serviceArn")
       private final @Nullable Output<String> serviceArn;
 
     public Output<String> getServiceArn() {
@@ -76,7 +76,7 @@ public final class CustomDomainAssociationState extends io.pulumi.resources.Reso
      * The current state of the certificate CNAME record validation. It should change to `SUCCESS` after App Runner completes validation with your DNS.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

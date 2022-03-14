@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudhsmv2.ClusterArgs;
 import io.pulumi.aws.cloudhsmv2.inputs.ClusterState;
 import io.pulumi.aws.cloudhsmv2.outputs.ClusterClusterCertificate;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +47,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
      * 
      */
-    @OutputExport(name="clusterCertificates", type=List.class, parameters={ClusterClusterCertificate.class})
+    @Export(name="clusterCertificates", type=List.class, parameters={ClusterClusterCertificate.class})
     private Output<List<ClusterClusterCertificate>> clusterCertificates;
 
     /**
@@ -66,7 +66,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The id of the CloudHSM cluster.
      * 
      */
-    @OutputExport(name="clusterId", type=String.class, parameters={})
+    @Export(name="clusterId", type=String.class, parameters={})
     private Output<String> clusterId;
 
     /**
@@ -80,7 +80,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The state of the CloudHSM cluster.
      * 
      */
-    @OutputExport(name="clusterState", type=String.class, parameters={})
+    @Export(name="clusterState", type=String.class, parameters={})
     private Output<String> clusterState;
 
     /**
@@ -94,7 +94,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
      * 
      */
-    @OutputExport(name="hsmType", type=String.class, parameters={})
+    @Export(name="hsmType", type=String.class, parameters={})
     private Output<String> hsmType;
 
     /**
@@ -108,7 +108,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The ID of the security group associated with the CloudHSM cluster.
      * 
      */
-    @OutputExport(name="securityGroupId", type=String.class, parameters={})
+    @Export(name="securityGroupId", type=String.class, parameters={})
     private Output<String> securityGroupId;
 
     /**
@@ -122,7 +122,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The id of Cloud HSM v2 cluster backup to be restored.
      * 
      */
-    @OutputExport(name="sourceBackupIdentifier", type=String.class, parameters={})
+    @Export(name="sourceBackupIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceBackupIdentifier;
 
     /**
@@ -136,7 +136,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The IDs of subnets in which cluster will operate.
      * 
      */
-    @OutputExport(name="subnetIds", type=List.class, parameters={String.class})
+    @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> subnetIds;
 
     /**
@@ -150,7 +150,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -164,7 +164,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -178,7 +178,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The id of the VPC that the CloudHSM cluster resides in.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

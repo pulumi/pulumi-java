@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DomainSamlOptionsSamlOptionsIdp {
     /**
      * The unique Entity ID of the application in SAML Identity Provider.
@@ -20,10 +20,10 @@ public final class DomainSamlOptionsSamlOptionsIdp {
      */
     private final String metadataContent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainSamlOptionsSamlOptionsIdp(
-        @OutputCustomType.Parameter("entityId") String entityId,
-        @OutputCustomType.Parameter("metadataContent") String metadataContent) {
+        @CustomType.Parameter("entityId") String entityId,
+        @CustomType.Parameter("metadataContent") String metadataContent) {
         this.entityId = entityId;
         this.metadataContent = metadataContent;
     }

@@ -9,7 +9,7 @@ import io.pulumi.aws.globalaccelerator.inputs.AcceleratorState;
 import io.pulumi.aws.globalaccelerator.outputs.AcceleratorAttributes;
 import io.pulumi.aws.globalaccelerator.outputs.AcceleratorIpSet;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * The attributes of the accelerator. Fields documented below.
      * 
      */
-    @OutputExport(name="attributes", type=AcceleratorAttributes.class, parameters={})
+    @Export(name="attributes", type=AcceleratorAttributes.class, parameters={})
     private Output</* @Nullable */ AcceleratorAttributes> attributes;
 
     /**
@@ -54,7 +54,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      *   is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
      * 
      */
-    @OutputExport(name="dnsName", type=String.class, parameters={})
+    @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
@@ -71,7 +71,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -81,7 +81,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
-    @OutputExport(name="hostedZoneId", type=String.class, parameters={})
+    @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
@@ -91,7 +91,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
      * 
      */
-    @OutputExport(name="ipAddressType", type=String.class, parameters={})
+    @Export(name="ipAddressType", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddressType;
 
     /**
@@ -105,7 +105,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * IP address set associated with the accelerator.
      * 
      */
-    @OutputExport(name="ipSets", type=List.class, parameters={AcceleratorIpSet.class})
+    @Export(name="ipSets", type=List.class, parameters={AcceleratorIpSet.class})
     private Output<List<AcceleratorIpSet>> ipSets;
 
     /**
@@ -119,7 +119,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * The name of the accelerator.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -147,7 +147,7 @@ public class Accelerator extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

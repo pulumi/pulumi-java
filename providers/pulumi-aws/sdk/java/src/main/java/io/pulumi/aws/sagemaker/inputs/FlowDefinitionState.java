@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionHumanLoopRequestSourceGetArgs;
 import io.pulumi.aws.sagemaker.inputs.FlowDefinitionOutputConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * The Amazon Resource Name (ARN) assigned by AWS to this Flow Definition.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * The name of your flow definition.
      * 
      */
-    @InputImport(name="flowDefinitionName")
+    @Import(name="flowDefinitionName")
       private final @Nullable Output<String> flowDefinitionName;
 
     public Output<String> getFlowDefinitionName() {
@@ -45,7 +45,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * An object containing information about the events that trigger a human workflow. See Human Loop Activation Config details below.
      * 
      */
-    @InputImport(name="humanLoopActivationConfig")
+    @Import(name="humanLoopActivationConfig")
       private final @Nullable Output<FlowDefinitionHumanLoopActivationConfigGetArgs> humanLoopActivationConfig;
 
     public Output<FlowDefinitionHumanLoopActivationConfigGetArgs> getHumanLoopActivationConfig() {
@@ -56,7 +56,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * An object containing information about the tasks the human reviewers will perform. See Human Loop Config details below.
      * 
      */
-    @InputImport(name="humanLoopConfig")
+    @Import(name="humanLoopConfig")
       private final @Nullable Output<FlowDefinitionHumanLoopConfigGetArgs> humanLoopConfig;
 
     public Output<FlowDefinitionHumanLoopConfigGetArgs> getHumanLoopConfig() {
@@ -67,7 +67,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * Container for configuring the source of human task requests. Use to specify if Amazon Rekognition or Amazon Textract is used as an integration source. See Human Loop Request Source details below.
      * 
      */
-    @InputImport(name="humanLoopRequestSource")
+    @Import(name="humanLoopRequestSource")
       private final @Nullable Output<FlowDefinitionHumanLoopRequestSourceGetArgs> humanLoopRequestSource;
 
     public Output<FlowDefinitionHumanLoopRequestSourceGetArgs> getHumanLoopRequestSource() {
@@ -78,7 +78,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * An object containing information about where the human review results will be uploaded. See Output Config details below.
      * 
      */
-    @InputImport(name="outputConfig")
+    @Import(name="outputConfig")
       private final @Nullable Output<FlowDefinitionOutputConfigGetArgs> outputConfig;
 
     public Output<FlowDefinitionOutputConfigGetArgs> getOutputConfig() {
@@ -89,7 +89,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * The Amazon Resource Name (ARN) of the role needed to call other services on your behalf.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -100,7 +100,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class FlowDefinitionState extends io.pulumi.resources.ResourceArgs 
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

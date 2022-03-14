@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.emr.StudioSessionMappingArgs;
 import io.pulumi.aws.emr.inputs.StudioSessionMappingState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store.
      * 
      */
-    @OutputExport(name="identityId", type=String.class, parameters={})
+    @Export(name="identityId", type=String.class, parameters={})
     private Output<String> identityId;
 
     /**
@@ -46,7 +46,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * The name of the user or group from the Amazon Web Services SSO Identity Store.
      * 
      */
-    @OutputExport(name="identityName", type=String.class, parameters={})
+    @Export(name="identityName", type=String.class, parameters={})
     private Output<String> identityName;
 
     /**
@@ -60,7 +60,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * Specifies whether the identity to map to the Amazon EMR Studio is a `USER` or a `GROUP`.
      * 
      */
-    @OutputExport(name="identityType", type=String.class, parameters={})
+    @Export(name="identityType", type=String.class, parameters={})
     private Output<String> identityType;
 
     /**
@@ -74,7 +74,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You should specify the ARN for the session policy that you want to apply, not the ARN of your user role.
      * 
      */
-    @OutputExport(name="sessionPolicyArn", type=String.class, parameters={})
+    @Export(name="sessionPolicyArn", type=String.class, parameters={})
     private Output<String> sessionPolicyArn;
 
     /**
@@ -88,7 +88,7 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
      * The ID of the Amazon EMR Studio to which the user or group will be mapped.
      * 
      */
-    @OutputExport(name="studioId", type=String.class, parameters={})
+    @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     /**

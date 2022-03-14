@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.docdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEngineVersionResult {
     private final @Nullable String engine;
     /**
@@ -48,18 +48,18 @@ public final class GetEngineVersionResult {
      */
     private final String versionDescription;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEngineVersionResult(
-        @OutputCustomType.Parameter("engine") @Nullable String engine,
-        @OutputCustomType.Parameter("engineDescription") String engineDescription,
-        @OutputCustomType.Parameter("exportableLogTypes") List<String> exportableLogTypes,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("parameterGroupFamily") String parameterGroupFamily,
-        @OutputCustomType.Parameter("preferredVersions") @Nullable List<String> preferredVersions,
-        @OutputCustomType.Parameter("supportsLogExportsToCloudwatch") Boolean supportsLogExportsToCloudwatch,
-        @OutputCustomType.Parameter("validUpgradeTargets") List<String> validUpgradeTargets,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("versionDescription") String versionDescription) {
+        @CustomType.Parameter("engine") @Nullable String engine,
+        @CustomType.Parameter("engineDescription") String engineDescription,
+        @CustomType.Parameter("exportableLogTypes") List<String> exportableLogTypes,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("parameterGroupFamily") String parameterGroupFamily,
+        @CustomType.Parameter("preferredVersions") @Nullable List<String> preferredVersions,
+        @CustomType.Parameter("supportsLogExportsToCloudwatch") Boolean supportsLogExportsToCloudwatch,
+        @CustomType.Parameter("validUpgradeTargets") List<String> validUpgradeTargets,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("versionDescription") String versionDescription) {
         this.engine = engine;
         this.engineDescription = engineDescription;
         this.exportableLogTypes = exportableLogTypes;

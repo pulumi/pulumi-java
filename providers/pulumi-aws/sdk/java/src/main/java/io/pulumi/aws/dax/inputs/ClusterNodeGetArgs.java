@@ -4,7 +4,7 @@
 package io.pulumi.aws.dax.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class ClusterNodeGetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ClusterNodeGetArgs Empty = new ClusterNodeGetArgs();
 
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
         return this.address == null ? Output.empty() : this.address;
     }
 
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -40,7 +40,7 @@ public final class ClusterNodeGetArgs extends io.pulumi.resources.ResourceArgs {
      * The port used by the configuration endpoint
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name of the job queue.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * in the list will dictate the order.
      * 
      */
-    @InputImport(name="computeEnvironments")
+    @Import(name="computeEnvironments")
       private final @Nullable Output<List<String>> computeEnvironments;
 
     public Output<List<String>> getComputeEnvironments() {
@@ -45,7 +45,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * Specifies the name of the job queue.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * are evaluated first when associated with the same compute environment.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -68,7 +68,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the fair share scheduling policy. If this parameter is specified, the job queue uses a fair share scheduling policy. If this parameter isn't specified, the job queue uses a first in, first out (FIFO) scheduling policy. After a job queue is created, you can replace but can't remove the fair share scheduling policy.
      * 
      */
-    @InputImport(name="schedulingPolicyArn")
+    @Import(name="schedulingPolicyArn")
       private final @Nullable Output<String> schedulingPolicyArn;
 
     public Output<String> getSchedulingPolicyArn() {
@@ -79,7 +79,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -90,7 +90,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -101,7 +101,7 @@ public final class JobQueueState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.kms.AliasArgs;
 import io.pulumi.aws.kms.inputs.AliasState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the key alias.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -78,7 +78,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the target key identifier.
      * 
      */
-    @OutputExport(name="targetKeyArn", type=String.class, parameters={})
+    @Export(name="targetKeyArn", type=String.class, parameters={})
     private Output<String> targetKeyArn;
 
     /**
@@ -92,7 +92,7 @@ public class Alias extends io.pulumi.resources.CustomResource {
      * Identifier for the key for which the alias is for, can be either an ARN or key_id.
      * 
      */
-    @OutputExport(name="targetKeyId", type=String.class, parameters={})
+    @Export(name="targetKeyId", type=String.class, parameters={})
     private Output<String> targetKeyId;
 
     /**

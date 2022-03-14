@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetInstanceFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * [describe-instances in the AWS CLI reference][1].
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetInstanceFilter> filters;
 
     public List<GetInstanceFilter> getFilters() {
@@ -35,7 +35,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
      * 
      */
-    @InputImport(name="getPasswordData")
+    @Import(name="getPasswordData")
       private final @Nullable Boolean getPasswordData;
 
     public Optional<Boolean> getGetPasswordData() {
@@ -46,7 +46,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * Retrieve Base64 encoded User Data contents into the `user_data_base64` attribute. A SHA-1 hash of the User Data contents will always be present in the `user_data` attribute. Defaults to `false`.
      * 
      */
-    @InputImport(name="getUserData")
+    @Import(name="getUserData")
       private final @Nullable Boolean getUserData;
 
     public Optional<Boolean> getGetUserData() {
@@ -57,7 +57,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * Specify the exact Instance ID with which to populate the data source.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable String instanceId;
 
     public Optional<String> getInstanceId() {
@@ -69,7 +69,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * exactly match a pair on the desired Instance.
      * 
      */
-    @InputImport(name="instanceTags")
+    @Import(name="instanceTags")
       private final @Nullable Map<String,String> instanceTags;
 
     public Map<String,String> getInstanceTags() {
@@ -80,7 +80,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * A map of tags assigned to the Instance.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

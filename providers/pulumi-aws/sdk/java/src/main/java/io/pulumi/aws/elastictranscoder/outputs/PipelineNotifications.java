@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elastictranscoder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineNotifications {
     /**
      * The topic ARN for the Amazon SNS topic that you want to notify when Elastic Transcoder has finished processing a job in this pipeline.
@@ -32,12 +32,12 @@ public final class PipelineNotifications {
      */
     private final @Nullable String warning;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineNotifications(
-        @OutputCustomType.Parameter("completed") @Nullable String completed,
-        @OutputCustomType.Parameter("error") @Nullable String error,
-        @OutputCustomType.Parameter("progressing") @Nullable String progressing,
-        @OutputCustomType.Parameter("warning") @Nullable String warning) {
+        @CustomType.Parameter("completed") @Nullable String completed,
+        @CustomType.Parameter("error") @Nullable String error,
+        @CustomType.Parameter("progressing") @Nullable String progressing,
+        @CustomType.Parameter("warning") @Nullable String warning) {
         this.completed = completed;
         this.error = error;
         this.progressing = progressing;

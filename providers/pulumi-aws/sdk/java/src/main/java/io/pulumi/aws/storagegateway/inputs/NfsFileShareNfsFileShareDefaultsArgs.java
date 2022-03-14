@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NfsFileShareNfsFileShareDefaultsArgs extends io.pulumi.resour
      * The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
      * 
      */
-    @InputImport(name="directoryMode")
+    @Import(name="directoryMode")
       private final @Nullable Output<String> directoryMode;
 
     public Output<String> getDirectoryMode() {
@@ -29,7 +29,7 @@ public final class NfsFileShareNfsFileShareDefaultsArgs extends io.pulumi.resour
      * The Unix file mode in the string form "nnnn". Defaults to `"0666"`.
      * 
      */
-    @InputImport(name="fileMode")
+    @Import(name="fileMode")
       private final @Nullable Output<String> fileMode;
 
     public Output<String> getFileMode() {
@@ -40,7 +40,7 @@ public final class NfsFileShareNfsFileShareDefaultsArgs extends io.pulumi.resour
      * The default group ID for the file share (unless the files have another group ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
      * 
      */
-    @InputImport(name="groupId")
+    @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
     public Output<String> getGroupId() {
@@ -51,7 +51,7 @@ public final class NfsFileShareNfsFileShareDefaultsArgs extends io.pulumi.resour
      * The default owner ID for the file share (unless the files have another owner ID specified). Defaults to `65534` (`nfsnobody`). Valid values: `0` through `4294967294`.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {

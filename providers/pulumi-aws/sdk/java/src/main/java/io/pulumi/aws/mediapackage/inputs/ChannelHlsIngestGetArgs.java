@@ -5,7 +5,7 @@ package io.pulumi.aws.mediapackage.inputs;
 
 import io.pulumi.aws.mediapackage.inputs.ChannelHlsIngestIngestEndpointGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ChannelHlsIngestGetArgs extends io.pulumi.resources.ResourceA
      * A list of the ingest endpoints
      * 
      */
-    @InputImport(name="ingestEndpoints")
+    @Import(name="ingestEndpoints")
       private final @Nullable Output<List<ChannelHlsIngestIngestEndpointGetArgs>> ingestEndpoints;
 
     public Output<List<ChannelHlsIngestIngestEndpointGetArgs>> getIngestEndpoints() {

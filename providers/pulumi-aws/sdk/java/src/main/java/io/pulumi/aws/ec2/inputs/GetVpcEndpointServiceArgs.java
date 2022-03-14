@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetVpcEndpointServiceFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetVpcEndpointServiceArgs extends io.pulumi.resources.InvokeA
      * Configuration block(s) for filtering. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetVpcEndpointServiceFilter> filters;
 
     public List<GetVpcEndpointServiceFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetVpcEndpointServiceArgs extends io.pulumi.resources.InvokeA
      * The common name of an AWS service (e.g., `s3`).
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable String service;
 
     public Optional<String> getService() {
@@ -43,7 +43,7 @@ public final class GetVpcEndpointServiceArgs extends io.pulumi.resources.InvokeA
      * The service name that is specified when creating a VPC endpoint. For AWS services the service name is usually in the form `com.amazonaws.<region>.<service>` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.<region>.notebook`).
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable String serviceName;
 
     public Optional<String> getServiceName() {
@@ -54,7 +54,7 @@ public final class GetVpcEndpointServiceArgs extends io.pulumi.resources.InvokeA
      * The service type, `Gateway` or `Interface`.
      * 
      */
-    @InputImport(name="serviceType")
+    @Import(name="serviceType")
       private final @Nullable String serviceType;
 
     public Optional<String> getServiceType() {
@@ -65,7 +65,7 @@ public final class GetVpcEndpointServiceArgs extends io.pulumi.resources.InvokeA
      * A map of tags, each pair of which must exactly match a pair on the desired VPC Endpoint Service.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

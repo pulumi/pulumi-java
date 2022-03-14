@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionRuntimePlatform {
     /**
      * Must be set to either `X86_64` or `ARM64`; see [cpu architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform)
@@ -22,10 +22,10 @@ public final class TaskDefinitionRuntimePlatform {
      */
     private final @Nullable String operatingSystemFamily;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionRuntimePlatform(
-        @OutputCustomType.Parameter("cpuArchitecture") @Nullable String cpuArchitecture,
-        @OutputCustomType.Parameter("operatingSystemFamily") @Nullable String operatingSystemFamily) {
+        @CustomType.Parameter("cpuArchitecture") @Nullable String cpuArchitecture,
+        @CustomType.Parameter("operatingSystemFamily") @Nullable String operatingSystemFamily) {
         this.cpuArchitecture = cpuArchitecture;
         this.operatingSystemFamily = operatingSystemFamily;
     }

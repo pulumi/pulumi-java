@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.GetDomainAutoTuneOptionMaintenanceScheduleDuration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends io.pulumi.
      * A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
      * 
      */
-    @InputImport(name="cronExpressionForRecurrence", required=true)
+    @Import(name="cronExpressionForRecurrence", required=true)
       private final String cronExpressionForRecurrence;
 
     public String getCronExpressionForRecurrence() {
@@ -29,7 +29,7 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends io.pulumi.
      * Configuration block for the duration of the Auto-Tune maintenance window.
      * 
      */
-    @InputImport(name="durations", required=true)
+    @Import(name="durations", required=true)
       private final List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations;
 
     public List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> getDurations() {
@@ -40,7 +40,7 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule extends io.pulumi.
      * Date and time at which the Auto-Tune maintenance schedule starts in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @InputImport(name="startAt", required=true)
+    @Import(name="startAt", required=true)
       private final String startAt;
 
     public String getStartAt() {

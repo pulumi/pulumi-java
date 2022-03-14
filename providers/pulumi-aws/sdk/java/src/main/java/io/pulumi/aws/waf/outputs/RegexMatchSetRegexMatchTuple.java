@@ -4,11 +4,11 @@
 package io.pulumi.aws.waf.outputs;
 
 import io.pulumi.aws.waf.outputs.RegexMatchSetRegexMatchTupleFieldToMatch;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegexMatchSetRegexMatchTuple {
     /**
      * The part of a web request that you want to search, such as a specified header or a query string.
@@ -29,11 +29,11 @@ public final class RegexMatchSetRegexMatchTuple {
      */
     private final String textTransformation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegexMatchSetRegexMatchTuple(
-        @OutputCustomType.Parameter("fieldToMatch") RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("regexPatternSetId") String regexPatternSetId,
-        @OutputCustomType.Parameter("textTransformation") String textTransformation) {
+        @CustomType.Parameter("fieldToMatch") RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch,
+        @CustomType.Parameter("regexPatternSetId") String regexPatternSetId,
+        @CustomType.Parameter("textTransformation") String textTransformation) {
         this.fieldToMatch = fieldToMatch;
         this.regexPatternSetId = regexPatternSetId;
         this.textTransformation = textTransformation;

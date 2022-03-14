@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ImageBuilderAccessEndpointArgs extends io.pulumi.resources.Re
      * Type of interface endpoint.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -29,7 +29,7 @@ public final class ImageBuilderAccessEndpointArgs extends io.pulumi.resources.Re
      * Identifier (ID) of the VPC in which the interface endpoint is used.
      * 
      */
-    @InputImport(name="vpceId")
+    @Import(name="vpceId")
       private final @Nullable Output<String> vpceId;
 
     public Output<String> getVpceId() {

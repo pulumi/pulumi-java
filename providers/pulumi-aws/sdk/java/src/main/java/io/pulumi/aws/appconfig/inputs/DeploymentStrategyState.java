@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * The Amazon Resource Name (ARN) of the AppConfig Deployment Strategy.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * Total amount of time for a deployment to last. Minimum value of 0, maximum value of 1440.
      * 
      */
-    @InputImport(name="deploymentDurationInMinutes")
+    @Import(name="deploymentDurationInMinutes")
       private final @Nullable Output<Integer> deploymentDurationInMinutes;
 
     public Output<Integer> getDeploymentDurationInMinutes() {
@@ -43,7 +43,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * A description of the deployment strategy. Can be at most 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * The amount of time AWS AppConfig monitors for alarms before considering the deployment to be complete and no longer eligible for automatic roll back. Minimum value of 0, maximum value of 1440.
      * 
      */
-    @InputImport(name="finalBakeTimeInMinutes")
+    @Import(name="finalBakeTimeInMinutes")
       private final @Nullable Output<Integer> finalBakeTimeInMinutes;
 
     public Output<Integer> getFinalBakeTimeInMinutes() {
@@ -65,7 +65,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * The percentage of targets to receive a deployed configuration during each interval. Minimum value of 1.0, maximum value of 100.0.
      * 
      */
-    @InputImport(name="growthFactor")
+    @Import(name="growthFactor")
       private final @Nullable Output<Double> growthFactor;
 
     public Output<Double> getGrowthFactor() {
@@ -76,7 +76,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * The algorithm used to define how percentage grows over time. Valid value: `LINEAR` and `EXPONENTIAL`. Defaults to `LINEAR`.
      * 
      */
-    @InputImport(name="growthType")
+    @Import(name="growthType")
       private final @Nullable Output<String> growthType;
 
     public Output<String> getGrowthType() {
@@ -87,7 +87,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * A name for the deployment strategy. Must be between 1 and 64 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -98,7 +98,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * Where to save the deployment strategy. Valid values: `NONE` and `SSM_DOCUMENT`.
      * 
      */
-    @InputImport(name="replicateTo")
+    @Import(name="replicateTo")
       private final @Nullable Output<String> replicateTo;
 
     public Output<String> getReplicateTo() {
@@ -109,7 +109,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -120,7 +120,7 @@ public final class DeploymentStrategyState extends io.pulumi.resources.ResourceA
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

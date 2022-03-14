@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EndpointConnectionLogOptionsArgs extends io.pulumi.resources.
      * The name of the CloudWatch Logs log group.
      * 
      */
-    @InputImport(name="cloudwatchLogGroup")
+    @Import(name="cloudwatchLogGroup")
       private final @Nullable Output<String> cloudwatchLogGroup;
 
     public Output<String> getCloudwatchLogGroup() {
@@ -30,7 +30,7 @@ public final class EndpointConnectionLogOptionsArgs extends io.pulumi.resources.
      * The name of the CloudWatch Logs log stream to which the connection data is published.
      * 
      */
-    @InputImport(name="cloudwatchLogStream")
+    @Import(name="cloudwatchLogStream")
       private final @Nullable Output<String> cloudwatchLogStream;
 
     public Output<String> getCloudwatchLogStream() {
@@ -41,7 +41,7 @@ public final class EndpointConnectionLogOptionsArgs extends io.pulumi.resources.
      * Indicates whether connection logging is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

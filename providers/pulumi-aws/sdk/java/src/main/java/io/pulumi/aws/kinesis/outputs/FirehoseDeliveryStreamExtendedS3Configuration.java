@@ -8,14 +8,14 @@ import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamExtendedS3Configurati
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfiguration;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamExtendedS3Configuration {
     /**
      * The ARN of the S3 bucket
@@ -86,22 +86,22 @@ public final class FirehoseDeliveryStreamExtendedS3Configuration {
      */
     private final @Nullable String s3BackupMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3Configuration(
-        @OutputCustomType.Parameter("bucketArn") String bucketArn,
-        @OutputCustomType.Parameter("bufferInterval") @Nullable Integer bufferInterval,
-        @OutputCustomType.Parameter("bufferSize") @Nullable Integer bufferSize,
-        @OutputCustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
-        @OutputCustomType.Parameter("compressionFormat") @Nullable String compressionFormat,
-        @OutputCustomType.Parameter("dataFormatConversionConfiguration") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration dataFormatConversionConfiguration,
-        @OutputCustomType.Parameter("dynamicPartitioningConfiguration") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfiguration dynamicPartitioningConfiguration,
-        @OutputCustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("processingConfiguration") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration processingConfiguration,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("s3BackupConfiguration") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration s3BackupConfiguration,
-        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode) {
+        @CustomType.Parameter("bucketArn") String bucketArn,
+        @CustomType.Parameter("bufferInterval") @Nullable Integer bufferInterval,
+        @CustomType.Parameter("bufferSize") @Nullable Integer bufferSize,
+        @CustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
+        @CustomType.Parameter("compressionFormat") @Nullable String compressionFormat,
+        @CustomType.Parameter("dataFormatConversionConfiguration") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfiguration dataFormatConversionConfiguration,
+        @CustomType.Parameter("dynamicPartitioningConfiguration") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfiguration dynamicPartitioningConfiguration,
+        @CustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("processingConfiguration") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration processingConfiguration,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("s3BackupConfiguration") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfiguration s3BackupConfiguration,
+        @CustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode) {
         this.bucketArn = bucketArn;
         this.bufferInterval = bufferInterval;
         this.bufferSize = bufferSize;

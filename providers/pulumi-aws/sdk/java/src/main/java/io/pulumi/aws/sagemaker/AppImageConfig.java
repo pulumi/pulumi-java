@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.AppImageConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigState;
 import io.pulumi.aws.sagemaker.outputs.AppImageConfigKernelGatewayImageConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * The name of the App Image Config.
      * 
      */
-    @OutputExport(name="appImageConfigName", type=String.class, parameters={})
+    @Export(name="appImageConfigName", type=String.class, parameters={})
     private Output<String> appImageConfigName;
 
     /**
@@ -48,7 +48,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -62,7 +62,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
      * 
      */
-    @OutputExport(name="kernelGatewayImageConfig", type=AppImageConfigKernelGatewayImageConfig.class, parameters={})
+    @Export(name="kernelGatewayImageConfig", type=AppImageConfigKernelGatewayImageConfig.class, parameters={})
     private Output</* @Nullable */ AppImageConfigKernelGatewayImageConfig> kernelGatewayImageConfig;
 
     /**
@@ -76,7 +76,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -90,7 +90,7 @@ public class AppImageConfig extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

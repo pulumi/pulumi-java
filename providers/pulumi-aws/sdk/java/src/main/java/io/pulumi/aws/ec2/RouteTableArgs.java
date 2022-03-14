@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.RouteTableRouteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * A list of virtual gateways for propagation.
      * 
      */
-    @InputImport(name="propagatingVgws")
+    @Import(name="propagatingVgws")
       private final @Nullable Output<List<String>> propagatingVgws;
 
     public Output<List<String>> getPropagatingVgws() {
@@ -32,7 +32,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * A list of route objects. Their keys are documented below.
      * 
      */
-    @InputImport(name="routes")
+    @Import(name="routes")
       private final @Nullable Output<List<RouteTableRouteArgs>> routes;
 
     public Output<List<RouteTableRouteArgs>> getRoutes() {
@@ -43,7 +43,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -54,7 +54,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * The VPC ID.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RuleSourceSourceDetailGetArgs extends io.pulumi.resources.Res
      * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
      * 
      */
-    @InputImport(name="eventSource")
+    @Import(name="eventSource")
       private final @Nullable Output<String> eventSource;
 
     public Output<String> getEventSource() {
@@ -29,7 +29,7 @@ public final class RuleSourceSourceDetailGetArgs extends io.pulumi.resources.Res
      * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
-    @InputImport(name="maximumExecutionFrequency")
+    @Import(name="maximumExecutionFrequency")
       private final @Nullable Output<String> maximumExecutionFrequency;
 
     public Output<String> getMaximumExecutionFrequency() {
@@ -40,7 +40,7 @@ public final class RuleSourceSourceDetailGetArgs extends io.pulumi.resources.Res
      * The type of notification that triggers AWS Config to run an evaluation for a rule. You can specify the following notification types:
      * 
      */
-    @InputImport(name="messageType")
+    @Import(name="messageType")
       private final @Nullable Output<String> messageType;
 
     public Output<String> getMessageType() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointConfigurationAsyncInferenceConfigClientConfig {
     /**
      * The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.
@@ -17,8 +17,8 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfig {
      */
     private final @Nullable Integer maxConcurrentInvocationsPerInstance;
 
-    @OutputCustomType.Constructor
-    private EndpointConfigurationAsyncInferenceConfigClientConfig(@OutputCustomType.Parameter("maxConcurrentInvocationsPerInstance") @Nullable Integer maxConcurrentInvocationsPerInstance) {
+    @CustomType.Constructor
+    private EndpointConfigurationAsyncInferenceConfigClientConfig(@CustomType.Parameter("maxConcurrentInvocationsPerInstance") @Nullable Integer maxConcurrentInvocationsPerInstance) {
         this.maxConcurrentInvocationsPerInstance = maxConcurrentInvocationsPerInstance;
     }
 

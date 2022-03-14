@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetSecurityGroupsFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetSecurityGroupsArgs extends io.pulumi.resources.InvokeArgs 
      * One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out [describe-security-groups in the AWS CLI reference][1].
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetSecurityGroupsFilter> filters;
 
     public List<GetSecurityGroupsFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetSecurityGroupsArgs extends io.pulumi.resources.InvokeArgs 
      * A map of tags, each pair of which must exactly match for desired security groups.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

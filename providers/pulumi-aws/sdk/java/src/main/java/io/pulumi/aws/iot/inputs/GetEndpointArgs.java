@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * Endpoint type. Valid values: `iot:CredentialProvider`, `iot:Data`, `iot:Data-ATS`, `iot:Jobs`.
      * 
      */
-    @InputImport(name="endpointType")
+    @Import(name="endpointType")
       private final @Nullable String endpointType;
 
     public Optional<String> getEndpointType() {

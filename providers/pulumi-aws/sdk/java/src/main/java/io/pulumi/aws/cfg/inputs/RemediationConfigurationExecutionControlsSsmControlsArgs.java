@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RemediationConfigurationExecutionControlsSsmControlsArgs exte
      * Maximum percentage of remediation actions allowed to run in parallel on the non-compliant resources for that specific rule. The default value is 10%.
      * 
      */
-    @InputImport(name="concurrentExecutionRatePercentage")
+    @Import(name="concurrentExecutionRatePercentage")
       private final @Nullable Output<Integer> concurrentExecutionRatePercentage;
 
     public Output<Integer> getConcurrentExecutionRatePercentage() {
@@ -29,7 +29,7 @@ public final class RemediationConfigurationExecutionControlsSsmControlsArgs exte
      * Percentage of errors that are allowed before SSM stops running automations on non-compliant resources for that specific rule. The default is 50%.
      * 
      */
-    @InputImport(name="errorPercentage")
+    @Import(name="errorPercentage")
       private final @Nullable Output<Integer> errorPercentage;
 
     public Output<Integer> getErrorPercentage() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
      * The repository filter details.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final Output<String> filter;
 
     public Output<String> getFilter() {
@@ -28,7 +28,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
      * The repository filter type. The only supported value is `PREFIX_MATCH`, which is a repository name prefix specified with the filter parameter.
      * 
      */
-    @InputImport(name="filterType", required=true)
+    @Import(name="filterType", required=true)
       private final Output<String> filterType;
 
     public Output<String> getFilterType() {

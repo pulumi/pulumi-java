@@ -4,11 +4,11 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.RouteSpecTcpRouteActionWeightedTarget;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecTcpRouteAction {
     /**
      * The targets that traffic is routed to when a request matches the route.
@@ -17,8 +17,8 @@ public final class RouteSpecTcpRouteAction {
      */
     private final List<RouteSpecTcpRouteActionWeightedTarget> weightedTargets;
 
-    @OutputCustomType.Constructor
-    private RouteSpecTcpRouteAction(@OutputCustomType.Parameter("weightedTargets") List<RouteSpecTcpRouteActionWeightedTarget> weightedTargets) {
+    @CustomType.Constructor
+    private RouteSpecTcpRouteAction(@CustomType.Parameter("weightedTargets") List<RouteSpecTcpRouteActionWeightedTarget> weightedTargets) {
         this.weightedTargets = weightedTargets;
     }
 

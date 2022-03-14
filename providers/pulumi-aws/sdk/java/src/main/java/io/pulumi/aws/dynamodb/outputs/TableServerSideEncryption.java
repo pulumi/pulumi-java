@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableServerSideEncryption {
     /**
      * Indicates whether ttl is enabled (true) or disabled (false).
@@ -24,10 +24,10 @@ public final class TableServerSideEncryption {
      */
     private final @Nullable String kmsKeyArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableServerSideEncryption(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
         this.enabled = enabled;
         this.kmsKeyArn = kmsKeyArn;
     }

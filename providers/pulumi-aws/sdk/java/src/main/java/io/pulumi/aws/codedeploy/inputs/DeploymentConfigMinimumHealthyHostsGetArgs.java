@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DeploymentConfigMinimumHealthyHostsGetArgs extends io.pulumi.
      * The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -33,7 +33,7 @@ public final class DeploymentConfigMinimumHealthyHostsGetArgs extends io.pulumi.
      * When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Integer> value;
 
     public Output<Integer> getValue() {

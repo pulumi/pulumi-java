@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * ARN of the configuration.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
      * 
      */
-    @InputImport(name="authenticationStrategy")
+    @Import(name="authenticationStrategy")
       private final @Nullable Output<String> authenticationStrategy;
 
     public Output<String> getAuthenticationStrategy() {
@@ -42,7 +42,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
@@ -53,7 +53,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Description of the configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
      * 
      */
-    @InputImport(name="engineType")
+    @Import(name="engineType")
       private final @Nullable Output<String> engineType;
 
     public Output<String> getEngineType() {
@@ -75,7 +75,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Version of the broker engine.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -86,7 +86,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Latest revision of the configuration.
      * 
      */
-    @InputImport(name="latestRevision")
+    @Import(name="latestRevision")
       private final @Nullable Output<Integer> latestRevision;
 
     public Output<Integer> getLatestRevision() {
@@ -97,7 +97,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Name of the configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -108,7 +108,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -119,7 +119,7 @@ public final class ConfigurationState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

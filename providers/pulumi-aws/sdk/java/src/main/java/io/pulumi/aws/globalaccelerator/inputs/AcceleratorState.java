@@ -6,7 +6,7 @@ package io.pulumi.aws.globalaccelerator.inputs;
 import io.pulumi.aws.globalaccelerator.inputs.AcceleratorAttributesGetArgs;
 import io.pulumi.aws.globalaccelerator.inputs.AcceleratorIpSetGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * The attributes of the accelerator. Fields documented below.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<AcceleratorAttributesGetArgs> attributes;
 
     public Output<AcceleratorAttributesGetArgs> getAttributes() {
@@ -37,7 +37,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      *   is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -48,14 +48,14 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled == null ? Output.empty() : this.enabled;
     }
 
-    @InputImport(name="hostedZoneId")
+    @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
@@ -66,7 +66,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
      * 
      */
-    @InputImport(name="ipAddressType")
+    @Import(name="ipAddressType")
       private final @Nullable Output<String> ipAddressType;
 
     public Output<String> getIpAddressType() {
@@ -77,7 +77,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * IP address set associated with the accelerator.
      * 
      */
-    @InputImport(name="ipSets")
+    @Import(name="ipSets")
       private final @Nullable Output<List<AcceleratorIpSetGetArgs>> ipSets;
 
     public Output<List<AcceleratorIpSetGetArgs>> getIpSets() {
@@ -88,7 +88,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * The name of the accelerator.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -99,7 +99,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -110,7 +110,7 @@ public final class AcceleratorState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

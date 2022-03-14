@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DistributionLoggingConfigArgs extends io.pulumi.resources.Res
      * example, `myawslogbucket.s3.amazonaws.com`.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -32,7 +32,7 @@ public final class DistributionLoggingConfigArgs extends io.pulumi.resources.Res
      * include cookies in access logs (default: `false`).
      * 
      */
-    @InputImport(name="includeCookies")
+    @Import(name="includeCookies")
       private final @Nullable Output<Boolean> includeCookies;
 
     public Output<Boolean> getIncludeCookies() {
@@ -44,7 +44,7 @@ public final class DistributionLoggingConfigArgs extends io.pulumi.resources.Res
      * to the access log filenames for this distribution, for example, `myprefix/`.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

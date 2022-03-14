@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementLabelMatchStatement {
     /**
      * The string to match against.
@@ -20,10 +20,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
      */
     private final String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementNotStatementStatementLabelMatchStatement(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("scope") String scope) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("scope") String scope) {
         this.key = key;
         this.scope = scope;
     }

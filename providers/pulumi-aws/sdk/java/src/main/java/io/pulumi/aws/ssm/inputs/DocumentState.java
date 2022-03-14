@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm.inputs;
 import io.pulumi.aws.ssm.inputs.DocumentAttachmentsSourceGetArgs;
 import io.pulumi.aws.ssm.inputs.DocumentParameterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
 
     public static final DocumentState Empty = new DocumentState();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * One or more configuration blocks describing attachments sources to a version of a document. Defined below.
      * 
      */
-    @InputImport(name="attachmentsSources")
+    @Import(name="attachmentsSources")
       private final @Nullable Output<List<DocumentAttachmentsSourceGetArgs>> attachmentsSources;
 
     public Output<List<DocumentAttachmentsSourceGetArgs>> getAttachmentsSources() {
@@ -40,7 +40,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The JSON or YAML content of the document.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -51,7 +51,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The date the document was created.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -62,7 +62,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The default version of the document.
      * 
      */
-    @InputImport(name="defaultVersion")
+    @Import(name="defaultVersion")
       private final @Nullable Output<String> defaultVersion;
 
     public Output<String> getDefaultVersion() {
@@ -73,7 +73,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The description of the document.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -84,7 +84,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The format of the document. Valid document types include: `JSON` and `YAML`
      * 
      */
-    @InputImport(name="documentFormat")
+    @Import(name="documentFormat")
       private final @Nullable Output<String> documentFormat;
 
     public Output<String> getDocumentFormat() {
@@ -95,7 +95,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
      * 
      */
-    @InputImport(name="documentType")
+    @Import(name="documentType")
       private final @Nullable Output<String> documentType;
 
     public Output<String> getDocumentType() {
@@ -106,7 +106,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The document version.
      * 
      */
-    @InputImport(name="documentVersion")
+    @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
     public Output<String> getDocumentVersion() {
@@ -117,7 +117,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The sha1 or sha256 of the document content
      * 
      */
-    @InputImport(name="hash")
+    @Import(name="hash")
       private final @Nullable Output<String> hash;
 
     public Output<String> getHash() {
@@ -128,7 +128,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * "Sha1" "Sha256". The hashing algorithm used when hashing the content.
      * 
      */
-    @InputImport(name="hashType")
+    @Import(name="hashType")
       private final @Nullable Output<String> hashType;
 
     public Output<String> getHashType() {
@@ -139,7 +139,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The latest version of the document.
      * 
      */
-    @InputImport(name="latestVersion")
+    @Import(name="latestVersion")
       private final @Nullable Output<String> latestVersion;
 
     public Output<String> getLatestVersion() {
@@ -150,7 +150,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The name of the document.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -161,7 +161,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The AWS user account of the person who created the document.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
@@ -172,7 +172,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The parameters that are available to this document.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<DocumentParameterGetArgs>> parameters;
 
     public Output<List<DocumentParameterGetArgs>> getParameters() {
@@ -183,7 +183,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * Additional Permissions to attach to the document. See Permissions below for details.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<Map<String,String>> permissions;
 
     public Output<Map<String,String>> getPermissions() {
@@ -194,7 +194,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
      * 
      */
-    @InputImport(name="platformTypes")
+    @Import(name="platformTypes")
       private final @Nullable Output<List<String>> platformTypes;
 
     public Output<List<String>> getPlatformTypes() {
@@ -205,7 +205,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The schema version of the document.
      * 
      */
-    @InputImport(name="schemaVersion")
+    @Import(name="schemaVersion")
       private final @Nullable Output<String> schemaVersion;
 
     public Output<String> getSchemaVersion() {
@@ -216,7 +216,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * "Creating", "Active" or "Deleting". The current status of the document.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -227,7 +227,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -238,7 +238,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -249,7 +249,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
      * 
      */
-    @InputImport(name="targetType")
+    @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
     public Output<String> getTargetType() {
@@ -260,7 +260,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * A field specifying the version of the artifact you are creating with the document. For example, "Release 12, Update 6". This value is unique across all versions of a document and cannot be changed for an existing document version.
      * 
      */
-    @InputImport(name="versionName")
+    @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
     public Output<String> getVersionName() {

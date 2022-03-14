@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationOutputSchema {
     /**
      * The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
@@ -15,8 +15,8 @@ public final class AnalyticsApplicationOutputSchema {
      */
     private final String recordFormatType;
 
-    @OutputCustomType.Constructor
-    private AnalyticsApplicationOutputSchema(@OutputCustomType.Parameter("recordFormatType") String recordFormatType) {
+    @CustomType.Constructor
+    private AnalyticsApplicationOutputSchema(@CustomType.Parameter("recordFormatType") String recordFormatType) {
         this.recordFormatType = recordFormatType;
     }
 

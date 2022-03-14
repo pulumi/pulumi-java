@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserPoolAdminCreateUserConfigGetArgs extends io.pulumi.resour
      * Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
      * 
      */
-    @InputImport(name="allowAdminCreateUserOnly")
+    @Import(name="allowAdminCreateUserOnly")
       private final @Nullable Output<Boolean> allowAdminCreateUserOnly;
 
     public Output<Boolean> getAllowAdminCreateUserOnly() {
@@ -30,7 +30,7 @@ public final class UserPoolAdminCreateUserConfigGetArgs extends io.pulumi.resour
      * Invite message template structure. Detailed below.
      * 
      */
-    @InputImport(name="inviteMessageTemplate")
+    @Import(name="inviteMessageTemplate")
       private final @Nullable Output<UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs> inviteMessageTemplate;
 
     public Output<UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs> getInviteMessageTemplate() {

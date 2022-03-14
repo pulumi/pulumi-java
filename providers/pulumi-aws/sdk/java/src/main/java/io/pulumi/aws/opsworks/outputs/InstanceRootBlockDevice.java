@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.opsworks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,19 +11,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceRootBlockDevice {
     private final @Nullable Boolean deleteOnTermination;
     private final @Nullable Integer iops;
     private final @Nullable Integer volumeSize;
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceRootBlockDevice(
-        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
-        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
-        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
-        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
+        @CustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @CustomType.Parameter("iops") @Nullable Integer iops,
+        @CustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @CustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.iops = iops;
         this.volumeSize = volumeSize;

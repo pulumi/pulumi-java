@@ -4,7 +4,7 @@
 package io.pulumi.aws.elb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * The application cookie whose lifetime the ELB's cookie should follow.
      * 
      */
-    @InputImport(name="cookieName")
+    @Import(name="cookieName")
       private final @Nullable Output<String> cookieName;
 
     public Output<String> getCookieName() {
@@ -32,7 +32,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * balancer.
      * 
      */
-    @InputImport(name="lbPort")
+    @Import(name="lbPort")
       private final @Nullable Output<Integer> lbPort;
 
     public Output<Integer> getLbPort() {
@@ -44,7 +44,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * should be attached.
      * 
      */
-    @InputImport(name="loadBalancer")
+    @Import(name="loadBalancer")
       private final @Nullable Output<String> loadBalancer;
 
     public Output<String> getLoadBalancer() {
@@ -55,7 +55,7 @@ public final class AppCookieStickinessPolicyState extends io.pulumi.resources.Re
      * The name of the stickiness policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

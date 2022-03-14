@@ -4,7 +4,7 @@
 package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class WebhookFilterGetArgs extends io.pulumi.resources.ResourceArgs
      * The [JSON path](https://github.com/json-path/JsonPath) to filter on.
      * 
      */
-    @InputImport(name="jsonPath", required=true)
+    @Import(name="jsonPath", required=true)
       private final Output<String> jsonPath;
 
     public Output<String> getJsonPath() {
@@ -28,7 +28,7 @@ public final class WebhookFilterGetArgs extends io.pulumi.resources.ResourceArgs
      * The value to match on (e.g., `refs/heads/{Branch}`). See [AWS docs](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_WebhookFilterRule.html) for details.
      * 
      */
-    @InputImport(name="matchEquals", required=true)
+    @Import(name="matchEquals", required=true)
       private final Output<String> matchEquals;
 
     public Output<String> getMatchEquals() {

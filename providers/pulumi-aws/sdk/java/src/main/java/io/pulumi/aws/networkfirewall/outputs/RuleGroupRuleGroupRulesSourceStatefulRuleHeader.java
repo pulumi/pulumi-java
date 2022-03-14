@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeader {
     /**
      * The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
@@ -40,14 +40,14 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeader {
      */
     private final String sourcePort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatefulRuleHeader(
-        @OutputCustomType.Parameter("destination") String destination,
-        @OutputCustomType.Parameter("destinationPort") String destinationPort,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("sourcePort") String sourcePort) {
+        @CustomType.Parameter("destination") String destination,
+        @CustomType.Parameter("destinationPort") String destinationPort,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("sourcePort") String sourcePort) {
         this.destination = destination;
         this.destinationPort = destinationPort;
         this.direction = direction;

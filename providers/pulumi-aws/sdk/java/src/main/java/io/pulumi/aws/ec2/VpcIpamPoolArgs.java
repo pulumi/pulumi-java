@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The IP protocol assigned to this pool. You must choose either IPv4 or IPv6 protocol for a pool.
      * 
      */
-    @InputImport(name="addressFamily", required=true)
+    @Import(name="addressFamily", required=true)
       private final Output<String> addressFamily;
 
     public Output<String> getAddressFamily() {
@@ -32,7 +32,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * A default netmask length for allocations added to this pool. If, for example, the CIDR assigned to this pool is 10.0.0.0/8 and you enter 16 here, new allocations will default to 10.0.0.0/16 (unless you provide a different netmask value when you create the new allocation).
      * 
      */
-    @InputImport(name="allocationDefaultNetmaskLength")
+    @Import(name="allocationDefaultNetmaskLength")
       private final @Nullable Output<Integer> allocationDefaultNetmaskLength;
 
     public Output<Integer> getAllocationDefaultNetmaskLength() {
@@ -43,7 +43,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum netmask length that will be required for CIDR allocations in this pool.
      * 
      */
-    @InputImport(name="allocationMaxNetmaskLength")
+    @Import(name="allocationMaxNetmaskLength")
       private final @Nullable Output<Integer> allocationMaxNetmaskLength;
 
     public Output<Integer> getAllocationMaxNetmaskLength() {
@@ -54,7 +54,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum netmask length that will be required for CIDR allocations in this pool.
      * 
      */
-    @InputImport(name="allocationMinNetmaskLength")
+    @Import(name="allocationMinNetmaskLength")
       private final @Nullable Output<Integer> allocationMinNetmaskLength;
 
     public Output<Integer> getAllocationMinNetmaskLength() {
@@ -65,7 +65,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Tags that are required for resources that use CIDRs from this IPAM pool. Resources that do not have these tags will not be allowed to allocate space from the pool. If the resources have their tags changed after they have allocated space or if the allocation tagging requirements are changed on the pool, the resource may be marked as noncompliant.
      * 
      */
-    @InputImport(name="allocationResourceTags")
+    @Import(name="allocationResourceTags")
       private final @Nullable Output<Map<String,String>> allocationResourceTags;
 
     public Output<Map<String,String>> getAllocationResourceTags() {
@@ -77,7 +77,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * within the CIDR range in the pool.
      * 
      */
-    @InputImport(name="autoImport")
+    @Import(name="autoImport")
       private final @Nullable Output<Boolean> autoImport;
 
     public Output<Boolean> getAutoImport() {
@@ -88,7 +88,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Limits which AWS service the pool can be used in. Only useable on public scopes. Valid Values: `ec2`.
      * 
      */
-    @InputImport(name="awsService")
+    @Import(name="awsService")
       private final @Nullable Output<String> awsService;
 
     public Output<String> getAwsService() {
@@ -99,7 +99,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the IPAM pool.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -110,7 +110,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the scope in which you would like to create the IPAM pool.
      * 
      */
-    @InputImport(name="ipamScopeId", required=true)
+    @Import(name="ipamScopeId", required=true)
       private final Output<String> ipamScopeId;
 
     public Output<String> getIpamScopeId() {
@@ -121,7 +121,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The locale in which you would like to create the IPAM pool. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region. Possible values: Any AWS region, such as `us-east-1`.
      * 
      */
-    @InputImport(name="locale")
+    @Import(name="locale")
       private final @Nullable Output<String> locale;
 
     public Output<String> getLocale() {
@@ -132,7 +132,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Defines whether or not IPv6 pool space is publicly advertisable over the internet. This option is not available for IPv4 pool space.
      * 
      */
-    @InputImport(name="publiclyAdvertisable")
+    @Import(name="publiclyAdvertisable")
       private final @Nullable Output<Boolean> publiclyAdvertisable;
 
     public Output<Boolean> getPubliclyAdvertisable() {
@@ -143,7 +143,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the source IPAM pool. Use this argument to create a child pool within an existing pool.
      * 
      */
-    @InputImport(name="sourceIpamPoolId")
+    @Import(name="sourceIpamPoolId")
       private final @Nullable Output<String> sourceIpamPoolId;
 
     public Output<String> getSourceIpamPoolId() {
@@ -154,7 +154,7 @@ public final class VpcIpamPoolArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * Amazon Resource Name (ARN) of the Redshift Snapshot Schedule.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
      * 
      */
-    @InputImport(name="definitions")
+    @Import(name="definitions")
       private final @Nullable Output<List<String>> definitions;
 
     public Output<List<String>> getDefinitions() {
@@ -43,7 +43,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * The description of the snapshot schedule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -65,7 +65,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
      * 
      */
-    @InputImport(name="identifier")
+    @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
     public Output<String> getIdentifier() {
@@ -77,7 +77,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * identifier beginning with the specified prefix. Conflicts with `identifier`.
      * 
      */
-    @InputImport(name="identifierPrefix")
+    @Import(name="identifierPrefix")
       private final @Nullable Output<String> identifierPrefix;
 
     public Output<String> getIdentifierPrefix() {
@@ -88,7 +88,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -99,7 +99,7 @@ public final class SnapshotScheduleState extends io.pulumi.resources.ResourceArg
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

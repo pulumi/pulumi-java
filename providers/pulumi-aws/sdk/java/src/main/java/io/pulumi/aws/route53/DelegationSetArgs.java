@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DelegationSetArgs extends io.pulumi.resources.ResourceArgs {
      * (helpful for identifying single delegation set amongst others)
      * 
      */
-    @InputImport(name="referenceName")
+    @Import(name="referenceName")
       private final @Nullable Output<String> referenceName;
 
     public Output<String> getReferenceName() {

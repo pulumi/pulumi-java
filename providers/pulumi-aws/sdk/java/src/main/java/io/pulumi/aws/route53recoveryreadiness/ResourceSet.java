@@ -8,7 +8,7 @@ import io.pulumi.aws.route53recoveryreadiness.ResourceSetArgs;
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetState;
 import io.pulumi.aws.route53recoveryreadiness.outputs.ResourceSetResource;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * NLB resource ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * Unique name describing the resource set.
      * 
      */
-    @OutputExport(name="resourceSetName", type=String.class, parameters={})
+    @Export(name="resourceSetName", type=String.class, parameters={})
     private Output<String> resourceSetName;
 
     /**
@@ -63,7 +63,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * Type of the resources in the resource set.
      * 
      */
-    @OutputExport(name="resourceSetType", type=String.class, parameters={})
+    @Export(name="resourceSetType", type=String.class, parameters={})
     private Output<String> resourceSetType;
 
     /**
@@ -77,7 +77,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * List of resources to add to this resource set. See below.
      * 
      */
-    @OutputExport(name="resources", type=List.class, parameters={ResourceSetResource.class})
+    @Export(name="resources", type=List.class, parameters={ResourceSetResource.class})
     private Output<List<ResourceSetResource>> resources;
 
     /**
@@ -91,7 +91,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -105,7 +105,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

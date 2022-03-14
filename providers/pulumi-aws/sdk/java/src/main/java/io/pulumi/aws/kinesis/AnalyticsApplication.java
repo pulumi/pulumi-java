@@ -11,7 +11,7 @@ import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputs;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationOutput;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationReferenceDataSources;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -45,7 +45,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * The ARN of the Kinesis Analytics Appliation.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -60,7 +60,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * See CloudWatch Logging Options below for more details.
      * 
      */
-    @OutputExport(name="cloudwatchLoggingOptions", type=AnalyticsApplicationCloudwatchLoggingOptions.class, parameters={})
+    @Export(name="cloudwatchLoggingOptions", type=AnalyticsApplicationCloudwatchLoggingOptions.class, parameters={})
     private Output</* @Nullable */ AnalyticsApplicationCloudwatchLoggingOptions> cloudwatchLoggingOptions;
 
     /**
@@ -75,7 +75,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * SQL Code to transform input data, and generate output.
      * 
      */
-    @OutputExport(name="code", type=String.class, parameters={})
+    @Export(name="code", type=String.class, parameters={})
     private Output</* @Nullable */ String> code;
 
     /**
@@ -89,7 +89,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * The Timestamp when the application version was created.
      * 
      */
-    @OutputExport(name="createTimestamp", type=String.class, parameters={})
+    @Export(name="createTimestamp", type=String.class, parameters={})
     private Output<String> createTimestamp;
 
     /**
@@ -103,7 +103,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * Description of the application.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -117,7 +117,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * Input configuration of the application. See Inputs below for more details.
      * 
      */
-    @OutputExport(name="inputs", type=AnalyticsApplicationInputs.class, parameters={})
+    @Export(name="inputs", type=AnalyticsApplicationInputs.class, parameters={})
     private Output</* @Nullable */ AnalyticsApplicationInputs> inputs;
 
     /**
@@ -131,7 +131,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * The Timestamp when the application was last updated.
      * 
      */
-    @OutputExport(name="lastUpdateTimestamp", type=String.class, parameters={})
+    @Export(name="lastUpdateTimestamp", type=String.class, parameters={})
     private Output<String> lastUpdateTimestamp;
 
     /**
@@ -145,7 +145,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * Name of the Kinesis Analytics Application.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -159,7 +159,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * Output destination configuration of the application. See Outputs below for more details.
      * 
      */
-    @OutputExport(name="outputs", type=List.class, parameters={AnalyticsApplicationOutput.class})
+    @Export(name="outputs", type=List.class, parameters={AnalyticsApplicationOutput.class})
     private Output</* @Nullable */ List<AnalyticsApplicationOutput>> outputs;
 
     /**
@@ -174,7 +174,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * See Reference Data Sources below for more details.
      * 
      */
-    @OutputExport(name="referenceDataSources", type=AnalyticsApplicationReferenceDataSources.class, parameters={})
+    @Export(name="referenceDataSources", type=AnalyticsApplicationReferenceDataSources.class, parameters={})
     private Output</* @Nullable */ AnalyticsApplicationReferenceDataSources> referenceDataSources;
 
     /**
@@ -190,7 +190,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
      * 
      */
-    @OutputExport(name="startApplication", type=Boolean.class, parameters={})
+    @Export(name="startApplication", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> startApplication;
 
     /**
@@ -205,7 +205,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * The Status of the application.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -219,7 +219,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * Key-value map of tags for the Kinesis Analytics Application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -233,7 +233,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -247,7 +247,7 @@ public class AnalyticsApplication extends io.pulumi.resources.CustomResource {
      * The Version of the application.
      * 
      */
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The default branch of the repository. The branch specified here needs to exist.
      * 
      */
-    @InputImport(name="defaultBranch")
+    @Import(name="defaultBranch")
       private final @Nullable Output<String> defaultBranch;
 
     public Output<String> getDefaultBranch() {
@@ -30,7 +30,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the repository. This needs to be less than 1000 characters
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the repository. This needs to be less than 100 characters.
      * 
      */
-    @InputImport(name="repositoryName", required=true)
+    @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
@@ -52,7 +52,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

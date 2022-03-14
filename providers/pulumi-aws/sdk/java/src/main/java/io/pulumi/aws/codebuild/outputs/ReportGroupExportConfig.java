@@ -4,13 +4,13 @@
 package io.pulumi.aws.codebuild.outputs;
 
 import io.pulumi.aws.codebuild.outputs.ReportGroupExportConfigS3Destination;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportGroupExportConfig {
     /**
      * contains information about the S3 bucket where the run of a report is exported. see S3 Destination documented below.
@@ -23,10 +23,10 @@ public final class ReportGroupExportConfig {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportGroupExportConfig(
-        @OutputCustomType.Parameter("s3Destination") @Nullable ReportGroupExportConfigS3Destination s3Destination,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("s3Destination") @Nullable ReportGroupExportConfigS3Destination s3Destination,
+        @CustomType.Parameter("type") String type) {
         this.s3Destination = s3Destination;
         this.type = type;
     }

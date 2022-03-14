@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.UserProfileArgs;
 import io.pulumi.aws.sagemaker.inputs.UserProfileState;
 import io.pulumi.aws.sagemaker.outputs.UserProfileUserSettings;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * The user profile Amazon Resource Name (ARN).
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * The ID of the associated Domain.
      * 
      */
-    @OutputExport(name="domainId", type=String.class, parameters={})
+    @Export(name="domainId", type=String.class, parameters={})
     private Output<String> domainId;
 
     /**
@@ -62,7 +62,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
      * 
      */
-    @OutputExport(name="homeEfsFileSystemUid", type=String.class, parameters={})
+    @Export(name="homeEfsFileSystemUid", type=String.class, parameters={})
     private Output<String> homeEfsFileSystemUid;
 
     /**
@@ -76,7 +76,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
      * 
      */
-    @OutputExport(name="singleSignOnUserIdentifier", type=String.class, parameters={})
+    @Export(name="singleSignOnUserIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> singleSignOnUserIdentifier;
 
     /**
@@ -90,7 +90,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
      * 
      */
-    @OutputExport(name="singleSignOnUserValue", type=String.class, parameters={})
+    @Export(name="singleSignOnUserValue", type=String.class, parameters={})
     private Output</* @Nullable */ String> singleSignOnUserValue;
 
     /**
@@ -104,7 +104,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -118,7 +118,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -132,7 +132,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * The name for the User Profile.
      * 
      */
-    @OutputExport(name="userProfileName", type=String.class, parameters={})
+    @Export(name="userProfileName", type=String.class, parameters={})
     private Output<String> userProfileName;
 
     /**
@@ -146,7 +146,7 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
      * The user settings. See User Settings below.
      * 
      */
-    @OutputExport(name="userSettings", type=UserProfileUserSettings.class, parameters={})
+    @Export(name="userSettings", type=UserProfileUserSettings.class, parameters={})
     private Output</* @Nullable */ UserProfileUserSettings> userSettings;
 
     /**

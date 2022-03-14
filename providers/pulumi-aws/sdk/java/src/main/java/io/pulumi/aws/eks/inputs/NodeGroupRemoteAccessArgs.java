@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NodeGroupRemoteAccessArgs extends io.pulumi.resources.Resourc
      * EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify `source_security_group_ids` when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
      * 
      */
-    @InputImport(name="ec2SshKey")
+    @Import(name="ec2SshKey")
       private final @Nullable Output<String> ec2SshKey;
 
     public Output<String> getEc2SshKey() {
@@ -30,7 +30,7 @@ public final class NodeGroupRemoteAccessArgs extends io.pulumi.resources.Resourc
      * Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes. If you specify `ec2_ssh_key`, but do not specify this configuration when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
      * 
      */
-    @InputImport(name="sourceSecurityGroupIds")
+    @Import(name="sourceSecurityGroupIds")
       private final @Nullable Output<List<String>> sourceSecurityGroupIds;
 
     public Output<List<String>> getSourceSecurityGroupIds() {

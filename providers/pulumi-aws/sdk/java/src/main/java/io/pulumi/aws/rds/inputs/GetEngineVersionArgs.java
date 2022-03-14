@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
      * DB engine. Engine values include `aurora`, `aurora-mysql`, `aurora-postgresql`, `docdb`, `mariadb`, `mysql`, `neptune`, `oracle-ee`, `oracle-se`, `oracle-se1`, `oracle-se2`, `postgres`, `sqlserver-ee`, `sqlserver-ex`, `sqlserver-se`, and `sqlserver-web`.
      * 
      */
-    @InputImport(name="engine", required=true)
+    @Import(name="engine", required=true)
       private final String engine;
 
     public String getEngine() {
@@ -30,7 +30,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of a specific DB parameter group family. Examples of parameter group families are `mysql8.0`, `mariadb10.4`, and `postgres12`.
      * 
      */
-    @InputImport(name="parameterGroupFamily")
+    @Import(name="parameterGroupFamily")
       private final @Nullable String parameterGroupFamily;
 
     public Optional<String> getParameterGroupFamily() {
@@ -41,7 +41,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
      * Ordered list of preferred engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
      * 
      */
-    @InputImport(name="preferredVersions")
+    @Import(name="preferredVersions")
       private final @Nullable List<String> preferredVersions;
 
     public List<String> getPreferredVersions() {
@@ -52,7 +52,7 @@ public final class GetEngineVersionArgs extends io.pulumi.resources.InvokeArgs {
      * Version of the DB engine. For example, `5.7.22`, `10.1.34`, and `12.3`. If both the `version` and `preferred_versions` arguments are not configured, the data source will return the default version for the engine.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

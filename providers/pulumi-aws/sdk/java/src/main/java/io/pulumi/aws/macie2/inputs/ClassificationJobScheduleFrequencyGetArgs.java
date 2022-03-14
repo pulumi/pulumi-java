@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ClassificationJobScheduleFrequencyGetArgs extends io.pulumi.r
      * Specifies a daily recurrence pattern for running the job.
      * 
      */
-    @InputImport(name="dailySchedule")
+    @Import(name="dailySchedule")
       private final @Nullable Output<Boolean> dailySchedule;
 
     public Output<Boolean> getDailySchedule() {
@@ -31,7 +31,7 @@ public final class ClassificationJobScheduleFrequencyGetArgs extends io.pulumi.r
      * Specifies a monthly recurrence pattern for running the job.
      * 
      */
-    @InputImport(name="monthlySchedule")
+    @Import(name="monthlySchedule")
       private final @Nullable Output<Integer> monthlySchedule;
 
     public Output<Integer> getMonthlySchedule() {
@@ -42,7 +42,7 @@ public final class ClassificationJobScheduleFrequencyGetArgs extends io.pulumi.r
      * Specifies a weekly recurrence pattern for running the job.
      * 
      */
-    @InputImport(name="weeklySchedule")
+    @Import(name="weeklySchedule")
       private final @Nullable Output<String> weeklySchedule;
 
     public Output<String> getWeeklySchedule() {

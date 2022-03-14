@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker;
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsArgs;
 import io.pulumi.aws.sagemaker.inputs.DomainRetentionPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the VPC used for non-EFS traffic. The default value is `PublicInternetOnly`. Valid values are `PublicInternetOnly` and `VpcOnly`.
      * 
      */
-    @InputImport(name="appNetworkAccessType")
+    @Import(name="appNetworkAccessType")
       private final @Nullable Output<String> appNetworkAccessType;
 
     public Output<String> getAppNetworkAccessType() {
@@ -33,7 +33,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The mode of authentication that members use to access the domain. Valid values are `IAM` and `SSO`.
      * 
      */
-    @InputImport(name="authMode", required=true)
+    @Import(name="authMode", required=true)
       private final Output<String> authMode;
 
     public Output<String> getAuthMode() {
@@ -44,7 +44,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The default user settings. See Default User Settings below.
      * 
      */
-    @InputImport(name="defaultUserSettings", required=true)
+    @Import(name="defaultUserSettings", required=true)
       private final Output<DomainDefaultUserSettingsArgs> defaultUserSettings;
 
     public Output<DomainDefaultUserSettingsArgs> getDefaultUserSettings() {
@@ -55,7 +55,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The domain name.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -66,7 +66,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -77,7 +77,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The retention policy for this domain, which specifies whether resources will be retained after the Domain is deleted. By default, all resources are retained. See Retention Policy below.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Output<DomainRetentionPolicyArgs> retentionPolicy;
 
     public Output<DomainRetentionPolicyArgs> getRetentionPolicy() {
@@ -88,7 +88,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The VPC subnets that Studio uses for communication.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -99,7 +99,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -110,7 +110,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

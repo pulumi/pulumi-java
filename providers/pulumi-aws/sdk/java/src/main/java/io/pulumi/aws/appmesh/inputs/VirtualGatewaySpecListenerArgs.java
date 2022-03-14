@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerHealthCheckArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerPortMappingArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * The connection pool information for the listener.
      * 
      */
-    @InputImport(name="connectionPool")
+    @Import(name="connectionPool")
       private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolArgs> connectionPool;
 
     public Output<VirtualGatewaySpecListenerConnectionPoolArgs> getConnectionPool() {
@@ -32,7 +32,7 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * The health check information for the listener.
      * 
      */
-    @InputImport(name="healthCheck")
+    @Import(name="healthCheck")
       private final @Nullable Output<VirtualGatewaySpecListenerHealthCheckArgs> healthCheck;
 
     public Output<VirtualGatewaySpecListenerHealthCheckArgs> getHealthCheck() {
@@ -43,7 +43,7 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * The port mapping information for the listener.
      * 
      */
-    @InputImport(name="portMapping", required=true)
+    @Import(name="portMapping", required=true)
       private final Output<VirtualGatewaySpecListenerPortMappingArgs> portMapping;
 
     public Output<VirtualGatewaySpecListenerPortMappingArgs> getPortMapping() {
@@ -54,7 +54,7 @@ public final class VirtualGatewaySpecListenerArgs extends io.pulumi.resources.Re
      * The Transport Layer Security (TLS) properties for the listener
      * 
      */
-    @InputImport(name="tls")
+    @Import(name="tls")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsArgs> tls;
 
     public Output<VirtualGatewaySpecListenerTlsArgs> getTls() {

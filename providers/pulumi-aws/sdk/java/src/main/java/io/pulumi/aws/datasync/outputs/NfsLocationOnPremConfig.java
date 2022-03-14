@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NfsLocationOnPremConfig {
     /**
      * List of Amazon Resource Names (ARNs) of the DataSync Agents used to connect to the NFS server.
@@ -16,8 +16,8 @@ public final class NfsLocationOnPremConfig {
      */
     private final List<String> agentArns;
 
-    @OutputCustomType.Constructor
-    private NfsLocationOnPremConfig(@OutputCustomType.Parameter("agentArns") List<String> agentArns) {
+    @CustomType.Constructor
+    private NfsLocationOnPremConfig(@CustomType.Parameter("agentArns") List<String> agentArns) {
         this.agentArns = agentArns;
     }
 

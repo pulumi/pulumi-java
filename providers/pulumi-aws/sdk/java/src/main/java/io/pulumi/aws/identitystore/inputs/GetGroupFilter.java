@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.identitystore.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGroupFilter extends io.pulumi.resources.InvokeArgs {
      * The attribute path that is used to specify which attribute name to search. Currently, `DisplayName` is the only valid attribute path.
      * 
      */
-    @InputImport(name="attributePath", required=true)
+    @Import(name="attributePath", required=true)
       private final String attributePath;
 
     public String getAttributePath() {
@@ -27,7 +27,7 @@ public final class GetGroupFilter extends io.pulumi.resources.InvokeArgs {
      * The value for an attribute.
      * 
      */
-    @InputImport(name="attributeValue", required=true)
+    @Import(name="attributeValue", required=true)
       private final String attributeValue;
 
     public String getAttributeValue() {

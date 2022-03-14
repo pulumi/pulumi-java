@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceElasticsearchConfig {
     /**
      * HTTP URL.
@@ -22,10 +22,10 @@ public final class DataSourceElasticsearchConfig {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceElasticsearchConfig(
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("region") @Nullable String region) {
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("region") @Nullable String region) {
         this.endpoint = endpoint;
         this.region = region;
     }

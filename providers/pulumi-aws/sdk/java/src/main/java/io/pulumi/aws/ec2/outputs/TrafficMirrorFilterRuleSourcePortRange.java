@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrafficMirrorFilterRuleSourcePortRange {
     /**
      * Starting port of the range
@@ -22,10 +22,10 @@ public final class TrafficMirrorFilterRuleSourcePortRange {
      */
     private final @Nullable Integer toPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrafficMirrorFilterRuleSourcePortRange(
-        @OutputCustomType.Parameter("fromPort") @Nullable Integer fromPort,
-        @OutputCustomType.Parameter("toPort") @Nullable Integer toPort) {
+        @CustomType.Parameter("fromPort") @Nullable Integer fromPort,
+        @CustomType.Parameter("toPort") @Nullable Integer toPort) {
         this.fromPort = fromPort;
         this.toPort = toPort;
     }

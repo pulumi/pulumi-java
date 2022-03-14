@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ThingPrincipalAttachmentArgs extends io.pulumi.resources.Reso
      * The AWS IoT Certificate ARN or Amazon Cognito Identity ID.
      * 
      */
-    @InputImport(name="principal", required=true)
+    @Import(name="principal", required=true)
       private final Output<String> principal;
 
     public Output<String> getPrincipal() {
@@ -28,7 +28,7 @@ public final class ThingPrincipalAttachmentArgs extends io.pulumi.resources.Reso
      * The name of the thing.
      * 
      */
-    @InputImport(name="thing", required=true)
+    @Import(name="thing", required=true)
       private final Output<String> thing;
 
     public Output<String> getThing() {

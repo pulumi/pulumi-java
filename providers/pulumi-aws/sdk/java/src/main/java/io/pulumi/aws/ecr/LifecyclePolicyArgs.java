@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The policy document. This is a JSON formatted string. See more details about [Policy Parameters](http://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters) in the official AWS docs.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -28,7 +28,7 @@ public final class LifecyclePolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the repository to apply the policy.
      * 
      */
-    @InputImport(name="repository", required=true)
+    @Import(name="repository", required=true)
       private final Output<String> repository;
 
     public Output<String> getRepository() {

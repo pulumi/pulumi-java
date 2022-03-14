@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpcIpamOrganizationAdminAccountArgs;
 import io.pulumi.aws.ec2.inputs.VpcIpamOrganizationAdminAccountState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class VpcIpamOrganizationAdminAccount extends io.pulumi.resources.CustomR
      * The Organizations ARN for the delegate account.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -42,7 +42,7 @@ public class VpcIpamOrganizationAdminAccount extends io.pulumi.resources.CustomR
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="delegatedAdminAccountId", type=String.class, parameters={})
+    @Export(name="delegatedAdminAccountId", type=String.class, parameters={})
     private Output<String> delegatedAdminAccountId;
 
     public Output<String> getDelegatedAdminAccountId() {
@@ -52,7 +52,7 @@ public class VpcIpamOrganizationAdminAccount extends io.pulumi.resources.CustomR
      * The Organizations email for the delegate account.
      * 
      */
-    @OutputExport(name="email", type=String.class, parameters={})
+    @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
@@ -66,7 +66,7 @@ public class VpcIpamOrganizationAdminAccount extends io.pulumi.resources.CustomR
      * The Organizations name for the delegate account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class VpcIpamOrganizationAdminAccount extends io.pulumi.resources.CustomR
      * The AWS service principal.
      * 
      */
-    @OutputExport(name="servicePrincipal", type=String.class, parameters={})
+    @Export(name="servicePrincipal", type=String.class, parameters={})
     private Output<String> servicePrincipal;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh;
 
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GatewayRouteArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service mesh in which to create the gateway route. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="meshName", required=true)
+    @Import(name="meshName", required=true)
       private final Output<String> meshName;
 
     public Output<String> getMeshName() {
@@ -31,7 +31,7 @@ public final class GatewayRouteArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
      * 
      */
-    @InputImport(name="meshOwner")
+    @Import(name="meshOwner")
       private final @Nullable Output<String> meshOwner;
 
     public Output<String> getMeshOwner() {
@@ -42,7 +42,7 @@ public final class GatewayRouteArgs extends io.pulumi.resources.ResourceArgs {
      * The name to use for the gateway route. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class GatewayRouteArgs extends io.pulumi.resources.ResourceArgs {
      * The gateway route specification to apply.
      * 
      */
-    @InputImport(name="spec", required=true)
+    @Import(name="spec", required=true)
       private final Output<GatewayRouteSpecArgs> spec;
 
     public Output<GatewayRouteSpecArgs> getSpec() {
@@ -64,7 +64,7 @@ public final class GatewayRouteArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -75,7 +75,7 @@ public final class GatewayRouteArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="virtualGatewayName", required=true)
+    @Import(name="virtualGatewayName", required=true)
       private final Output<String> virtualGatewayName;
 
     public Output<String> getVirtualGatewayName() {

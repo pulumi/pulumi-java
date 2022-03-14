@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterLoggingInfoBrokerLogsS3Args extends io.pulumi.resource
      * Name of the S3 bucket to deliver logs to.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -30,7 +30,7 @@ public final class ClusterLoggingInfoBrokerLogsS3Args extends io.pulumi.resource
      * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -41,7 +41,7 @@ public final class ClusterLoggingInfoBrokerLogsS3Args extends io.pulumi.resource
      * Prefix to append to the folder name.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

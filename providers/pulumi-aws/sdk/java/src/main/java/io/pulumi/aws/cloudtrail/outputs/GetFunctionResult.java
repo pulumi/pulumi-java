@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudtrail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFunctionResult {
     /**
      * Amazon Resource Name (ARN) identifying your CloudFront Function.
@@ -52,18 +52,18 @@ public final class GetFunctionResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFunctionResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("runtime") String runtime,
-        @OutputCustomType.Parameter("stage") String stage,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("runtime") String runtime,
+        @CustomType.Parameter("stage") String stage,
+        @CustomType.Parameter("status") String status) {
         this.arn = arn;
         this.code = code;
         this.comment = comment;

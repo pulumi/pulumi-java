@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class RuleGroupRuleActionBlockCustomResponseArgs extends io.pulumi.
      * References the response body that you want AWS WAF to return to the web request client. This must reference a `key` defined in a `custom_response_body` block of this resource.
      * 
      */
-    @InputImport(name="customResponseBodyKey")
+    @Import(name="customResponseBodyKey")
       private final @Nullable Output<String> customResponseBodyKey;
 
     public Output<String> getCustomResponseBodyKey() {
@@ -32,7 +32,7 @@ public final class RuleGroupRuleActionBlockCustomResponseArgs extends io.pulumi.
      * The HTTP status code to return to the client.
      * 
      */
-    @InputImport(name="responseCode", required=true)
+    @Import(name="responseCode", required=true)
       private final Output<Integer> responseCode;
 
     public Output<Integer> getResponseCode() {
@@ -43,7 +43,7 @@ public final class RuleGroupRuleActionBlockCustomResponseArgs extends io.pulumi.
      * The `response_header` blocks used to define the HTTP response headers added to the response. See Custom HTTP Header below for details.
      * 
      */
-    @InputImport(name="responseHeaders")
+    @Import(name="responseHeaders")
       private final @Nullable Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs>> responseHeaders;
 
     public Output<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs>> getResponseHeaders() {

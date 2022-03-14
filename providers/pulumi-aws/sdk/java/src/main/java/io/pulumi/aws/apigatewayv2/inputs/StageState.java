@@ -7,7 +7,7 @@ import io.pulumi.aws.apigatewayv2.inputs.StageAccessLogSettingsGetArgs;
 import io.pulumi.aws.apigatewayv2.inputs.StageDefaultRouteSettingsGetArgs;
 import io.pulumi.aws.apigatewayv2.inputs.StageRouteSettingGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
      * 
      */
-    @InputImport(name="accessLogSettings")
+    @Import(name="accessLogSettings")
       private final @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
 
     public Output<StageAccessLogSettingsGetArgs> getAccessLogSettings() {
@@ -36,7 +36,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The API identifier.
      * 
      */
-    @InputImport(name="apiId")
+    @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -47,7 +47,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the stage.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -58,7 +58,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
      * 
      */
-    @InputImport(name="autoDeploy")
+    @Import(name="autoDeploy")
       private final @Nullable Output<Boolean> autoDeploy;
 
     public Output<Boolean> getAutoDeploy() {
@@ -70,7 +70,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * Supported only for WebSocket APIs.
      * 
      */
-    @InputImport(name="clientCertificateId")
+    @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
     public Output<String> getClientCertificateId() {
@@ -81,7 +81,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The default route settings for the stage.
      * 
      */
-    @InputImport(name="defaultRouteSettings")
+    @Import(name="defaultRouteSettings")
       private final @Nullable Output<StageDefaultRouteSettingsGetArgs> defaultRouteSettings;
 
     public Output<StageDefaultRouteSettingsGetArgs> getDefaultRouteSettings() {
@@ -92,7 +92,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
      * 
      */
-    @InputImport(name="deploymentId")
+    @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
     public Output<String> getDeploymentId() {
@@ -103,7 +103,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The description for the stage. Must be less than or equal to 1024 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -116,7 +116,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
      * 
      */
-    @InputImport(name="executionArn")
+    @Import(name="executionArn")
       private final @Nullable Output<String> executionArn;
 
     public Output<String> getExecutionArn() {
@@ -128,7 +128,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * e.g., `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
      * 
      */
-    @InputImport(name="invokeUrl")
+    @Import(name="invokeUrl")
       private final @Nullable Output<String> invokeUrl;
 
     public Output<String> getInvokeUrl() {
@@ -139,7 +139,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The name of the stage. Must be between 1 and 128 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -150,7 +150,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * Route settings for the stage.
      * 
      */
-    @InputImport(name="routeSettings")
+    @Import(name="routeSettings")
       private final @Nullable Output<List<StageRouteSettingGetArgs>> routeSettings;
 
     public Output<List<StageRouteSettingGetArgs>> getRouteSettings() {
@@ -161,7 +161,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * A map that defines the stage variables for the stage.
      * 
      */
-    @InputImport(name="stageVariables")
+    @Import(name="stageVariables")
       private final @Nullable Output<Map<String,String>> stageVariables;
 
     public Output<Map<String,String>> getStageVariables() {
@@ -172,7 +172,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the stage. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -183,7 +183,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

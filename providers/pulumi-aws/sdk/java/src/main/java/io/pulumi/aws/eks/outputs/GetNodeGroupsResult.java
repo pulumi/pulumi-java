@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNodeGroupsResult {
     private final String clusterName;
     /**
@@ -22,11 +22,11 @@ public final class GetNodeGroupsResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNodeGroupsResult(
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("names") List<String> names) {
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("names") List<String> names) {
         this.clusterName = clusterName;
         this.id = id;
         this.names = names;

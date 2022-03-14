@@ -4,14 +4,14 @@
 package io.pulumi.aws.route53recoveryreadiness.outputs;
 
 import io.pulumi.aws.route53recoveryreadiness.outputs.ResourceSetResourceDnsTargetResource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceSetResource {
     private final @Nullable String componentId;
     /**
@@ -30,12 +30,12 @@ public final class ResourceSetResource {
      */
     private final @Nullable String resourceArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceSetResource(
-        @OutputCustomType.Parameter("componentId") @Nullable String componentId,
-        @OutputCustomType.Parameter("dnsTargetResource") @Nullable ResourceSetResourceDnsTargetResource dnsTargetResource,
-        @OutputCustomType.Parameter("readinessScopes") @Nullable List<String> readinessScopes,
-        @OutputCustomType.Parameter("resourceArn") @Nullable String resourceArn) {
+        @CustomType.Parameter("componentId") @Nullable String componentId,
+        @CustomType.Parameter("dnsTargetResource") @Nullable ResourceSetResourceDnsTargetResource dnsTargetResource,
+        @CustomType.Parameter("readinessScopes") @Nullable List<String> readinessScopes,
+        @CustomType.Parameter("resourceArn") @Nullable String resourceArn) {
         this.componentId = componentId;
         this.dnsTargetResource = dnsTargetResource;
         this.readinessScopes = readinessScopes;

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetContactFlowResult {
     /**
      * The Amazon Resource Name (ARN) of the Contact Flow.
@@ -46,17 +46,17 @@ public final class GetContactFlowResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContactFlowResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("contactFlowId") String contactFlowId,
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("contactFlowId") String contactFlowId,
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.arn = arn;
         this.contactFlowId = contactFlowId;
         this.content = content;

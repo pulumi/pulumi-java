@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StandardsSubscriptionState extends io.pulumi.resources.Resour
      * The ARN of a standard - see below.
      * 
      */
-    @InputImport(name="standardsArn")
+    @Import(name="standardsArn")
       private final @Nullable Output<String> standardsArn;
 
     public Output<String> getStandardsArn() {

@@ -4,13 +4,13 @@
 package io.pulumi.aws.dlm.outputs;
 
 import io.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsSchedule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LifecyclePolicyPolicyDetails {
     /**
      * A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
@@ -28,11 +28,11 @@ public final class LifecyclePolicyPolicyDetails {
      */
     private final Map<String,String> targetTags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LifecyclePolicyPolicyDetails(
-        @OutputCustomType.Parameter("resourceTypes") List<String> resourceTypes,
-        @OutputCustomType.Parameter("schedules") List<LifecyclePolicyPolicyDetailsSchedule> schedules,
-        @OutputCustomType.Parameter("targetTags") Map<String,String> targetTags) {
+        @CustomType.Parameter("resourceTypes") List<String> resourceTypes,
+        @CustomType.Parameter("schedules") List<LifecyclePolicyPolicyDetailsSchedule> schedules,
+        @CustomType.Parameter("targetTags") Map<String,String> targetTags) {
         this.resourceTypes = resourceTypes;
         this.schedules = schedules;
         this.targetTags = targetTags;

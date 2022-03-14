@@ -4,14 +4,14 @@
 package io.pulumi.aws.lex.outputs;
 
 import io.pulumi.aws.lex.outputs.IntentFollowUpPromptRejectionStatementMessage;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntentFollowUpPromptRejectionStatement {
     /**
      * A set of messages, each of which provides a message string and its type.
@@ -28,10 +28,10 @@ public final class IntentFollowUpPromptRejectionStatement {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntentFollowUpPromptRejectionStatement(
-        @OutputCustomType.Parameter("messages") List<IntentFollowUpPromptRejectionStatementMessage> messages,
-        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
+        @CustomType.Parameter("messages") List<IntentFollowUpPromptRejectionStatementMessage> messages,
+        @CustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.messages = messages;
         this.responseCard = responseCard;
     }

@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs exte
      * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
      * 
      */
-    @InputImport(name="defaultResourceSpec")
+    @Import(name="defaultResourceSpec")
       private final @Nullable Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
     public Output<DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
@@ -31,7 +31,7 @@ public final class DomainDefaultUserSettingsJupyterServerAppSettingsGetArgs exte
      * The Amazon Resource Name (ARN) of the Lifecycle Configurations.
      * 
      */
-    @InputImport(name="lifecycleConfigArns")
+    @Import(name="lifecycleConfigArns")
       private final @Nullable Output<List<String>> lifecycleConfigArns;
 
     public Output<List<String>> getLifecycleConfigArns() {

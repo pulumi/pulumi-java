@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.apprunner.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues {
     /**
      * The command App Runner runs to build your application.
@@ -38,13 +38,13 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      */
     private final @Nullable String startCommand;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues(
-        @OutputCustomType.Parameter("buildCommand") @Nullable String buildCommand,
-        @OutputCustomType.Parameter("port") @Nullable String port,
-        @OutputCustomType.Parameter("runtime") String runtime,
-        @OutputCustomType.Parameter("runtimeEnvironmentVariables") @Nullable Map<String,String> runtimeEnvironmentVariables,
-        @OutputCustomType.Parameter("startCommand") @Nullable String startCommand) {
+        @CustomType.Parameter("buildCommand") @Nullable String buildCommand,
+        @CustomType.Parameter("port") @Nullable String port,
+        @CustomType.Parameter("runtime") String runtime,
+        @CustomType.Parameter("runtimeEnvironmentVariables") @Nullable Map<String,String> runtimeEnvironmentVariables,
+        @CustomType.Parameter("startCommand") @Nullable String startCommand) {
         this.buildCommand = buildCommand;
         this.port = port;
         this.runtime = runtime;

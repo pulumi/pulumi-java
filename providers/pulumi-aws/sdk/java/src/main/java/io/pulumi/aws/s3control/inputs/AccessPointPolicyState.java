@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
      * The ARN of the access point that you want to associate with the specified policy.
      * 
      */
-    @InputImport(name="accessPointArn")
+    @Import(name="accessPointArn")
       private final @Nullable Output<String> accessPointArn;
 
     public Output<String> getAccessPointArn() {
@@ -30,7 +30,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
      * Indicates whether this access point currently has a policy that allows public access.
      * 
      */
-    @InputImport(name="hasPublicAccessPolicy")
+    @Import(name="hasPublicAccessPolicy")
       private final @Nullable Output<Boolean> hasPublicAccessPolicy;
 
     public Output<Boolean> getHasPublicAccessPolicy() {
@@ -41,7 +41,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
      * The policy that you want to apply to the specified access point.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {

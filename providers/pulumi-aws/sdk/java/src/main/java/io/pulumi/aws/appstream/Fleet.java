@@ -10,7 +10,7 @@ import io.pulumi.aws.appstream.outputs.FleetComputeCapacity;
 import io.pulumi.aws.appstream.outputs.FleetDomainJoinInfo;
 import io.pulumi.aws.appstream.outputs.FleetVpcConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * ARN of the appstream fleet.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -52,7 +52,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Configuration block for the desired capacity of the fleet. See below.
      * 
      */
-    @OutputExport(name="computeCapacity", type=FleetComputeCapacity.class, parameters={})
+    @Export(name="computeCapacity", type=FleetComputeCapacity.class, parameters={})
     private Output<FleetComputeCapacity> computeCapacity;
 
     /**
@@ -66,7 +66,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Date and time, in UTC and extended RFC 3339 format, when the fleet was created.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -80,7 +80,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Description to display.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -94,7 +94,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Amount of time that a streaming session remains active after users disconnect.
      * 
      */
-    @OutputExport(name="disconnectTimeoutInSeconds", type=Integer.class, parameters={})
+    @Export(name="disconnectTimeoutInSeconds", type=Integer.class, parameters={})
     private Output<Integer> disconnectTimeoutInSeconds;
 
     /**
@@ -108,7 +108,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Human-readable friendly name for the AppStream fleet.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -122,7 +122,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Configuration block for the name of the directory and organizational unit (OU) to use to join the fleet to a Microsoft Active Directory domain. See below.
      * 
      */
-    @OutputExport(name="domainJoinInfo", type=FleetDomainJoinInfo.class, parameters={})
+    @Export(name="domainJoinInfo", type=FleetDomainJoinInfo.class, parameters={})
     private Output<FleetDomainJoinInfo> domainJoinInfo;
 
     /**
@@ -136,7 +136,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Enables or disables default internet access for the fleet.
      * 
      */
-    @OutputExport(name="enableDefaultInternetAccess", type=Boolean.class, parameters={})
+    @Export(name="enableDefaultInternetAccess", type=Boolean.class, parameters={})
     private Output<Boolean> enableDefaultInternetAccess;
 
     /**
@@ -150,7 +150,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Fleet type. Valid values are: `ON_DEMAND`, `ALWAYS_ON`
      * 
      */
-    @OutputExport(name="fleetType", type=String.class, parameters={})
+    @Export(name="fleetType", type=String.class, parameters={})
     private Output<String> fleetType;
 
     /**
@@ -164,7 +164,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * ARN of the IAM role to apply to the fleet.
      * 
      */
-    @OutputExport(name="iamRoleArn", type=String.class, parameters={})
+    @Export(name="iamRoleArn", type=String.class, parameters={})
     private Output<String> iamRoleArn;
 
     /**
@@ -178,7 +178,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the `disconnect_timeout_in_seconds` time interval begins.
      * 
      */
-    @OutputExport(name="idleDisconnectTimeoutInSeconds", type=Integer.class, parameters={})
+    @Export(name="idleDisconnectTimeoutInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idleDisconnectTimeoutInSeconds;
 
     /**
@@ -192,7 +192,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * ARN of the public, private, or shared image to use.
      * 
      */
-    @OutputExport(name="imageArn", type=String.class, parameters={})
+    @Export(name="imageArn", type=String.class, parameters={})
     private Output<String> imageArn;
 
     /**
@@ -206,7 +206,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Name of the image used to create the fleet.
      * 
      */
-    @OutputExport(name="imageName", type=String.class, parameters={})
+    @Export(name="imageName", type=String.class, parameters={})
     private Output<String> imageName;
 
     /**
@@ -220,7 +220,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Instance type to use when launching fleet instances.
      * 
      */
-    @OutputExport(name="instanceType", type=String.class, parameters={})
+    @Export(name="instanceType", type=String.class, parameters={})
     private Output<String> instanceType;
 
     /**
@@ -234,7 +234,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Maximum amount of time that a streaming session can remain active, in seconds.
      * 
      */
-    @OutputExport(name="maxUserDurationInSeconds", type=Integer.class, parameters={})
+    @Export(name="maxUserDurationInSeconds", type=Integer.class, parameters={})
     private Output<Integer> maxUserDurationInSeconds;
 
     /**
@@ -248,7 +248,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Unique name for the fleet.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -262,7 +262,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * State of the fleet. Can be `STARTING`, `RUNNING`, `STOPPING` or `STOPPED`
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -276,7 +276,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * AppStream 2.0 view that is displayed to your users when they stream from the fleet. When `APP` is specified, only the windows of applications opened by users display. When `DESKTOP` is specified, the standard desktop that is provided by the operating system displays. If not specified, defaults to `APP`.
      * 
      */
-    @OutputExport(name="streamView", type=String.class, parameters={})
+    @Export(name="streamView", type=String.class, parameters={})
     private Output<String> streamView;
 
     /**
@@ -290,7 +290,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Map of tags to attach to AppStream instances.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -300,7 +300,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -310,7 +310,7 @@ public class Fleet extends io.pulumi.resources.CustomResource {
      * Configuration block for the VPC configuration for the image builder. See below.
      * 
      */
-    @OutputExport(name="vpcConfig", type=FleetVpcConfig.class, parameters={})
+    @Export(name="vpcConfig", type=FleetVpcConfig.class, parameters={})
     private Output<FleetVpcConfig> vpcConfig;
 
     /**

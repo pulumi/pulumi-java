@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventConnectionAuthParametersInvocationHttpParametersBody {
     /**
      * Specified whether the value is secret.
@@ -28,11 +28,11 @@ public final class EventConnectionAuthParametersInvocationHttpParametersBody {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventConnectionAuthParametersInvocationHttpParametersBody(
-        @OutputCustomType.Parameter("isValueSecret") @Nullable Boolean isValueSecret,
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("isValueSecret") @Nullable Boolean isValueSecret,
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.isValueSecret = isValueSecret;
         this.key = key;
         this.value = value;

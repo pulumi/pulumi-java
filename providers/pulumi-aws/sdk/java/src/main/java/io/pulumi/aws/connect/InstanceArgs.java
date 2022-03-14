@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether auto resolve best voices is enabled. Defaults to `true`.
      * 
      */
-    @InputImport(name="autoResolveBestVoicesEnabled")
+    @Import(name="autoResolveBestVoicesEnabled")
       private final @Nullable Output<Boolean> autoResolveBestVoicesEnabled;
 
     public Output<Boolean> getAutoResolveBestVoicesEnabled() {
@@ -30,7 +30,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether contact flow logs are enabled. Defaults to `false`.
      * 
      */
-    @InputImport(name="contactFlowLogsEnabled")
+    @Import(name="contactFlowLogsEnabled")
       private final @Nullable Output<Boolean> contactFlowLogsEnabled;
 
     public Output<Boolean> getContactFlowLogsEnabled() {
@@ -41,7 +41,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether contact lens is enabled. Defaults to `true`.
      * 
      */
-    @InputImport(name="contactLensEnabled")
+    @Import(name="contactLensEnabled")
       private final @Nullable Output<Boolean> contactLensEnabled;
 
     public Output<Boolean> getContactLensEnabled() {
@@ -52,7 +52,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier for the directory if identity_management_type is `EXISTING_DIRECTORY`.
      * 
      */
-    @InputImport(name="directoryId")
+    @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
     public Output<String> getDirectoryId() {
@@ -63,7 +63,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether early media for outbound calls is enabled . Defaults to `true` if outbound calls is enabled.
      * 
      */
-    @InputImport(name="earlyMediaEnabled")
+    @Import(name="earlyMediaEnabled")
       private final @Nullable Output<Boolean> earlyMediaEnabled;
 
     public Output<Boolean> getEarlyMediaEnabled() {
@@ -74,7 +74,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the identity management type attached to the instance. Allowed Values are: `SAML`, `CONNECT_MANAGED`, `EXISTING_DIRECTORY`.
      * 
      */
-    @InputImport(name="identityManagementType", required=true)
+    @Import(name="identityManagementType", required=true)
       private final Output<String> identityManagementType;
 
     public Output<String> getIdentityManagementType() {
@@ -85,7 +85,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether inbound calls are enabled.
      * 
      */
-    @InputImport(name="inboundCallsEnabled", required=true)
+    @Import(name="inboundCallsEnabled", required=true)
       private final Output<Boolean> inboundCallsEnabled;
 
     public Output<Boolean> getInboundCallsEnabled() {
@@ -96,7 +96,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the name of the instance. Required if `directory_id` not specified.
      * 
      */
-    @InputImport(name="instanceAlias")
+    @Import(name="instanceAlias")
       private final @Nullable Output<String> instanceAlias;
 
     public Output<String> getInstanceAlias() {
@@ -108,7 +108,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * <!-- * `use_custom_tts_voices` - (Optional) Specifies Whether use custom tts voices is enabled. Defaults to `false` -->
      * 
      */
-    @InputImport(name="outboundCallsEnabled", required=true)
+    @Import(name="outboundCallsEnabled", required=true)
       private final Output<Boolean> outboundCallsEnabled;
 
     public Output<Boolean> getOutboundCallsEnabled() {

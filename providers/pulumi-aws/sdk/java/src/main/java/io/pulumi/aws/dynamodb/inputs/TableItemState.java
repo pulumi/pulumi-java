@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * Hash key to use for lookups and identification of the item
      * 
      */
-    @InputImport(name="hashKey")
+    @Import(name="hashKey")
       private final @Nullable Output<String> hashKey;
 
     public Output<String> getHashKey() {
@@ -30,7 +30,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
      * 
      */
-    @InputImport(name="item")
+    @Import(name="item")
       private final @Nullable Output<String> item;
 
     public Output<String> getItem() {
@@ -41,7 +41,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
      * 
      */
-    @InputImport(name="rangeKey")
+    @Import(name="rangeKey")
       private final @Nullable Output<String> rangeKey;
 
     public Output<String> getRangeKey() {
@@ -52,7 +52,7 @@ public final class TableItemState extends io.pulumi.resources.ResourceArgs {
      * The name of the table to contain the item.
      * 
      */
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {

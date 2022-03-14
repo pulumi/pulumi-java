@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPromptArgs extends io.pulumi.resources.InvokeArgs {
      * Reference to the hosting Amazon Connect Instance
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -27,7 +27,7 @@ public final class GetPromptArgs extends io.pulumi.resources.InvokeArgs {
      * Returns information on a specific Prompt by name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

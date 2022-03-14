@@ -10,7 +10,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
 
     public static final ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs Empty = new ApplicationApplicationConfigurationSqlApplicationConfigurationInputGetArgs();
 
-    @InputImport(name="inAppStreamNames")
+    @Import(name="inAppStreamNames")
       private final @Nullable Output<List<String>> inAppStreamNames;
 
     public Output<List<String>> getInAppStreamNames() {
         return this.inAppStreamNames == null ? Output.empty() : this.inAppStreamNames;
     }
 
-    @InputImport(name="inputId")
+    @Import(name="inputId")
       private final @Nullable Output<String> inputId;
 
     public Output<String> getInputId() {
@@ -39,7 +39,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Describes the number of in-application streams to create.
      * 
      */
-    @InputImport(name="inputParallelism")
+    @Import(name="inputParallelism")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs> inputParallelism;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismGetArgs> getInputParallelism() {
@@ -51,7 +51,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * An input processor transforms records as they are received from the stream, before the application's SQL code executes.
      * 
      */
-    @InputImport(name="inputProcessingConfiguration")
+    @Import(name="inputProcessingConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs> inputProcessingConfiguration;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationGetArgs> getInputProcessingConfiguration() {
@@ -62,7 +62,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Describes the format of the data in the streaming source, and how each data element maps to corresponding columns in the in-application stream that is being created.
      * 
      */
-    @InputImport(name="inputSchema", required=true)
+    @Import(name="inputSchema", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs> inputSchema;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaGetArgs> getInputSchema() {
@@ -73,7 +73,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The point at which the application starts processing records from the streaming source.
      * 
      */
-    @InputImport(name="inputStartingPositionConfigurations")
+    @Import(name="inputStartingPositionConfigurations")
       private final @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs>> inputStartingPositionConfigurations;
 
     public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationGetArgs>> getInputStartingPositionConfigurations() {
@@ -84,7 +84,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * If the streaming source is a Kinesis Data Firehose delivery stream, identifies the delivery stream's ARN.
      * 
      */
-    @InputImport(name="kinesisFirehoseInput")
+    @Import(name="kinesisFirehoseInput")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputGetArgs> kinesisFirehoseInput;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputGetArgs> getKinesisFirehoseInput() {
@@ -95,7 +95,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * If the streaming source is a Kinesis data stream, identifies the stream's Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="kinesisStreamsInput")
+    @Import(name="kinesisStreamsInput")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputGetArgs> kinesisStreamsInput;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputGetArgs> getKinesisStreamsInput() {
@@ -106,7 +106,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The name prefix to use when creating an in-application stream.
      * 
      */
-    @InputImport(name="namePrefix", required=true)
+    @Import(name="namePrefix", required=true)
       private final Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {

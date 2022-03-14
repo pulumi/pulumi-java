@@ -7,7 +7,7 @@ import io.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchSpecificationArgs;
 import io.pulumi.aws.ec2.inputs.SpotFleetRequestLaunchTemplateConfigArgs;
 import io.pulumi.aws.ec2.inputs.SpotFleetRequestSpotMaintenanceStrategiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * `lowestPrice`.
      * 
      */
-    @InputImport(name="allocationStrategy")
+    @Import(name="allocationStrategy")
       private final @Nullable Output<String> allocationStrategy;
 
     public Output<String> getAllocationStrategy() {
@@ -40,7 +40,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * request is decreased below the current size of the Spot fleet.
      * 
      */
-    @InputImport(name="excessCapacityTerminationPolicy")
+    @Import(name="excessCapacityTerminationPolicy")
       private final @Nullable Output<String> excessCapacityTerminationPolicy;
 
     public Output<String> getExcessCapacityTerminationPolicy() {
@@ -52,7 +52,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * capacity or also attempts to maintain it. Default is `maintain`.
      * 
      */
-    @InputImport(name="fleetType")
+    @Import(name="fleetType")
       private final @Nullable Output<String> fleetType;
 
     public Output<String> getFleetType() {
@@ -66,7 +66,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * terminateInstancesWithExpiration.
      * 
      */
-    @InputImport(name="iamFleetRole", required=true)
+    @Import(name="iamFleetRole", required=true)
       private final Output<String> iamFleetRole;
 
     public Output<String> getIamFleetRole() {
@@ -79,7 +79,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * `terminate`.
      * 
      */
-    @InputImport(name="instanceInterruptionBehaviour")
+    @Import(name="instanceInterruptionBehaviour")
       private final @Nullable Output<String> instanceInterruptionBehaviour;
 
     public Output<String> getInstanceInterruptionBehaviour() {
@@ -93,7 +93,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * the number of Spot pools that you specify.
      * 
      */
-    @InputImport(name="instancePoolsToUseCount")
+    @Import(name="instancePoolsToUseCount")
       private final @Nullable Output<Integer> instancePoolsToUseCount;
 
     public Output<Integer> getInstancePoolsToUseCount() {
@@ -106,7 +106,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * across different markets and instance types. Conflicts with `launch_template_config`. At least one of `launch_specification` or `launch_template_config` is required.
      * 
      */
-    @InputImport(name="launchSpecifications")
+    @Import(name="launchSpecifications")
       private final @Nullable Output<List<SpotFleetRequestLaunchSpecificationArgs>> launchSpecifications;
 
     public Output<List<SpotFleetRequestLaunchSpecificationArgs>> getLaunchSpecifications() {
@@ -117,7 +117,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * Launch template configuration block. See Launch Template Configs below for more details. Conflicts with `launch_specification`. At least one of `launch_specification` or `launch_template_config` is required.
      * 
      */
-    @InputImport(name="launchTemplateConfigs")
+    @Import(name="launchTemplateConfigs")
       private final @Nullable Output<List<SpotFleetRequestLaunchTemplateConfigArgs>> launchTemplateConfigs;
 
     public Output<List<SpotFleetRequestLaunchTemplateConfigArgs>> getLaunchTemplateConfigs() {
@@ -128,7 +128,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * A list of elastic load balancer names to add to the Spot fleet.
      * 
      */
-    @InputImport(name="loadBalancers")
+    @Import(name="loadBalancers")
       private final @Nullable Output<List<String>> loadBalancers;
 
     public Output<List<String>> getLoadBalancers() {
@@ -139,7 +139,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * The order of the launch template overrides to use in fulfilling On-Demand capacity. the possible values are: `lowestPrice` and `prioritized`. the default is `lowestPrice`.
      * 
      */
-    @InputImport(name="onDemandAllocationStrategy")
+    @Import(name="onDemandAllocationStrategy")
       private final @Nullable Output<String> onDemandAllocationStrategy;
 
     public Output<String> getOnDemandAllocationStrategy() {
@@ -150,7 +150,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * The maximum amount per hour for On-Demand Instances that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
      * 
      */
-    @InputImport(name="onDemandMaxTotalPrice")
+    @Import(name="onDemandMaxTotalPrice")
       private final @Nullable Output<String> onDemandMaxTotalPrice;
 
     public Output<String> getOnDemandMaxTotalPrice() {
@@ -161,7 +161,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * The number of On-Demand units to request. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later.
      * 
      */
-    @InputImport(name="onDemandTargetCapacity")
+    @Import(name="onDemandTargetCapacity")
       private final @Nullable Output<Integer> onDemandTargetCapacity;
 
     public Output<Integer> getOnDemandTargetCapacity() {
@@ -172,7 +172,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
      * 
      */
-    @InputImport(name="replaceUnhealthyInstances")
+    @Import(name="replaceUnhealthyInstances")
       private final @Nullable Output<Boolean> replaceUnhealthyInstances;
 
     public Output<Boolean> getReplaceUnhealthyInstances() {
@@ -183,7 +183,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
      * 
      */
-    @InputImport(name="spotMaintenanceStrategies")
+    @Import(name="spotMaintenanceStrategies")
       private final @Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesArgs> spotMaintenanceStrategies;
 
     public Output<SpotFleetRequestSpotMaintenanceStrategiesArgs> getSpotMaintenanceStrategies() {
@@ -194,7 +194,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * The maximum spot bid for this override request.
      * 
      */
-    @InputImport(name="spotPrice")
+    @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
     public Output<String> getSpotPrice() {
@@ -205,7 +205,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -218,7 +218,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * important to your application workload, such as vCPUs, memory, or I/O.
      * 
      */
-    @InputImport(name="targetCapacity", required=true)
+    @Import(name="targetCapacity", required=true)
       private final Output<Integer> targetCapacity;
 
     public Output<Integer> getTargetCapacity() {
@@ -229,7 +229,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * A list of `aws.alb.TargetGroup` ARNs, for use with Application Load Balancing.
      * 
      */
-    @InputImport(name="targetGroupArns")
+    @Import(name="targetGroupArns")
       private final @Nullable Output<List<String>> targetGroupArns;
 
     public Output<List<String>> getTargetGroupArns() {
@@ -241,7 +241,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * instances should be terminated when the Spot fleet request expires.
      * 
      */
-    @InputImport(name="terminateInstancesWithExpiration")
+    @Import(name="terminateInstancesWithExpiration")
       private final @Nullable Output<Boolean> terminateInstancesWithExpiration;
 
     public Output<Boolean> getTerminateInstancesWithExpiration() {
@@ -252,7 +252,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
      * 
      */
-    @InputImport(name="validFrom")
+    @Import(name="validFrom")
       private final @Nullable Output<String> validFrom;
 
     public Output<String> getValidFrom() {
@@ -263,7 +263,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request.
      * 
      */
-    @InputImport(name="validUntil")
+    @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
 
     public Output<String> getValidUntil() {
@@ -276,7 +276,7 @@ public final class SpotFleetRequestArgs extends io.pulumi.resources.ResourceArgs
      * timeout of 10m is reached.
      * 
      */
-    @InputImport(name="waitForFulfillment")
+    @Import(name="waitForFulfillment")
       private final @Nullable Output<Boolean> waitForFulfillment;
 
     public Output<Boolean> getWaitForFulfillment() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.NetworkInterfaceAttachmentGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * ARN of the network interface.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Configuration block to define the attachment of the ENI. See below.
      * 
      */
-    @InputImport(name="attachments")
+    @Import(name="attachments")
       private final @Nullable Output<List<NetworkInterfaceAttachmentGetArgs>> attachments;
 
     public Output<List<NetworkInterfaceAttachmentGetArgs>> getAttachments() {
@@ -45,7 +45,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Description for the network interface.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -56,7 +56,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Type of network interface to create. Set to `efa` for Elastic Fabric Adapter. Changing `interface_type` will cause the resource to be destroyed and re-created.
      * 
      */
-    @InputImport(name="interfaceType")
+    @Import(name="interfaceType")
       private final @Nullable Output<String> interfaceType;
 
     public Output<String> getInterfaceType() {
@@ -67,7 +67,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Number of IPv4 prefixes that AWS automatically assigns to the network interface.
      * 
      */
-    @InputImport(name="ipv4PrefixCount")
+    @Import(name="ipv4PrefixCount")
       private final @Nullable Output<Integer> ipv4PrefixCount;
 
     public Output<Integer> getIpv4PrefixCount() {
@@ -78,7 +78,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * One or more IPv4 prefixes assigned to the network interface.
      * 
      */
-    @InputImport(name="ipv4Prefixes")
+    @Import(name="ipv4Prefixes")
       private final @Nullable Output<List<String>> ipv4Prefixes;
 
     public Output<List<String>> getIpv4Prefixes() {
@@ -89,14 +89,14 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Number of IPv6 addresses to assign to a network interface. You can't use this option if specifying specific `ipv6_addresses`. If your subnet has the AssignIpv6AddressOnCreation attribute set to `true`, you can specify `0` to override this setting.
      * 
      */
-    @InputImport(name="ipv6AddressCount")
+    @Import(name="ipv6AddressCount")
       private final @Nullable Output<Integer> ipv6AddressCount;
 
     public Output<Integer> getIpv6AddressCount() {
         return this.ipv6AddressCount == null ? Output.empty() : this.ipv6AddressCount;
     }
 
-    @InputImport(name="ipv6AddressListEnabled")
+    @Import(name="ipv6AddressListEnabled")
       private final @Nullable Output<Boolean> ipv6AddressListEnabled;
 
     public Output<Boolean> getIpv6AddressListEnabled() {
@@ -107,7 +107,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * List of private IPs to assign to the ENI in sequential order.
      * 
      */
-    @InputImport(name="ipv6AddressLists")
+    @Import(name="ipv6AddressLists")
       private final @Nullable Output<List<String>> ipv6AddressLists;
 
     public Output<List<String>> getIpv6AddressLists() {
@@ -118,7 +118,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Addresses are assigned without regard to order. You can't use this option if you're specifying `ipv6_address_count`.
      * 
      */
-    @InputImport(name="ipv6Addresses")
+    @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
     public Output<List<String>> getIpv6Addresses() {
@@ -129,7 +129,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Number of IPv6 prefixes that AWS automatically assigns to the network interface.
      * 
      */
-    @InputImport(name="ipv6PrefixCount")
+    @Import(name="ipv6PrefixCount")
       private final @Nullable Output<Integer> ipv6PrefixCount;
 
     public Output<Integer> getIpv6PrefixCount() {
@@ -140,7 +140,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * One or more IPv6 prefixes assigned to the network interface.
      * 
      */
-    @InputImport(name="ipv6Prefixes")
+    @Import(name="ipv6Prefixes")
       private final @Nullable Output<List<String>> ipv6Prefixes;
 
     public Output<List<String>> getIpv6Prefixes() {
@@ -151,14 +151,14 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * MAC address of the network interface.
      * 
      */
-    @InputImport(name="macAddress")
+    @Import(name="macAddress")
       private final @Nullable Output<String> macAddress;
 
     public Output<String> getMacAddress() {
         return this.macAddress == null ? Output.empty() : this.macAddress;
     }
 
-    @InputImport(name="outpostArn")
+    @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
     public Output<String> getOutpostArn() {
@@ -169,7 +169,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * AWS account ID of the owner of the network interface.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -180,21 +180,21 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Private DNS name of the network interface (IPv4).
      * 
      */
-    @InputImport(name="privateDnsName")
+    @Import(name="privateDnsName")
       private final @Nullable Output<String> privateDnsName;
 
     public Output<String> getPrivateDnsName() {
         return this.privateDnsName == null ? Output.empty() : this.privateDnsName;
     }
 
-    @InputImport(name="privateIp")
+    @Import(name="privateIp")
       private final @Nullable Output<String> privateIp;
 
     public Output<String> getPrivateIp() {
         return this.privateIp == null ? Output.empty() : this.privateIp;
     }
 
-    @InputImport(name="privateIpListEnabled")
+    @Import(name="privateIpListEnabled")
       private final @Nullable Output<Boolean> privateIpListEnabled;
 
     public Output<Boolean> getPrivateIpListEnabled() {
@@ -205,7 +205,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * List of private IPs to assign to the ENI in sequential order. Requires setting `private_ip_list_enable` to `true`.
      * 
      */
-    @InputImport(name="privateIpLists")
+    @Import(name="privateIpLists")
       private final @Nullable Output<List<String>> privateIpLists;
 
     public Output<List<String>> getPrivateIpLists() {
@@ -216,7 +216,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * List of private IPs to assign to the ENI without regard to order.
      * 
      */
-    @InputImport(name="privateIps")
+    @Import(name="privateIps")
       private final @Nullable Output<List<String>> privateIps;
 
     public Output<List<String>> getPrivateIps() {
@@ -227,7 +227,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Number of secondary private IPs to assign to the ENI. The total number of private IPs will be 1 + `private_ips_count`, as a primary private IP will be assiged to an ENI by default.
      * 
      */
-    @InputImport(name="privateIpsCount")
+    @Import(name="privateIpsCount")
       private final @Nullable Output<Integer> privateIpsCount;
 
     public Output<Integer> getPrivateIpsCount() {
@@ -238,7 +238,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * List of security group IDs to assign to the ENI.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -249,7 +249,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Whether to enable source destination checking for the ENI. Default true.
      * 
      */
-    @InputImport(name="sourceDestCheck")
+    @Import(name="sourceDestCheck")
       private final @Nullable Output<Boolean> sourceDestCheck;
 
     public Output<Boolean> getSourceDestCheck() {
@@ -260,7 +260,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Subnet ID to create the ENI in.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -271,7 +271,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -282,7 +282,7 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
      * Map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

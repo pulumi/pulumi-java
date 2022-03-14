@@ -3,16 +3,16 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTablePointInTimeRecovery {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private GetTablePointInTimeRecovery(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private GetTablePointInTimeRecovery(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

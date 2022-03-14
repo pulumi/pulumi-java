@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainClusterConfigZoneAwarenessConfig {
     /**
      * Number of Availability Zones for the domain to use with `zone_awareness_enabled`. Defaults to `2`. Valid values: `2` or `3`.
@@ -17,8 +17,8 @@ public final class DomainClusterConfigZoneAwarenessConfig {
      */
     private final @Nullable Integer availabilityZoneCount;
 
-    @OutputCustomType.Constructor
-    private DomainClusterConfigZoneAwarenessConfig(@OutputCustomType.Parameter("availabilityZoneCount") @Nullable Integer availabilityZoneCount) {
+    @CustomType.Constructor
+    private DomainClusterConfigZoneAwarenessConfig(@CustomType.Parameter("availabilityZoneCount") @Nullable Integer availabilityZoneCount) {
         this.availabilityZoneCount = availabilityZoneCount;
     }
 

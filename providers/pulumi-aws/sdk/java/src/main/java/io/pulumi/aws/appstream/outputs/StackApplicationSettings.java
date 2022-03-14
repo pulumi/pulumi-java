@@ -3,22 +3,22 @@
 
 package io.pulumi.aws.appstream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StackApplicationSettings {
     private final @Nullable Boolean enabled;
     private final @Nullable String settingsGroup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StackApplicationSettings(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("settingsGroup") @Nullable String settingsGroup) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("settingsGroup") @Nullable String settingsGroup) {
         this.enabled = enabled;
         this.settingsGroup = settingsGroup;
     }

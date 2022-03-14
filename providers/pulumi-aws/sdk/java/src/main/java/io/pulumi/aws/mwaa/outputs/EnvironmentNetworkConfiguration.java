@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.mwaa.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentNetworkConfiguration {
     /**
      * Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.
@@ -21,10 +21,10 @@ public final class EnvironmentNetworkConfiguration {
      */
     private final List<String> subnetIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentNetworkConfiguration(
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds) {
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
     }

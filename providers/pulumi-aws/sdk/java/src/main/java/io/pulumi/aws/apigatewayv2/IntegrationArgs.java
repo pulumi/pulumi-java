@@ -6,7 +6,7 @@ package io.pulumi.aws.apigatewayv2;
 import io.pulumi.aws.apigatewayv2.inputs.IntegrationResponseParameterArgs;
 import io.pulumi.aws.apigatewayv2.inputs.IntegrationTlsConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The API identifier.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -34,7 +34,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
      * 
      */
-    @InputImport(name="connectionId")
+    @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -45,7 +45,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
      * 
      */
-    @InputImport(name="connectionType")
+    @Import(name="connectionType")
       private final @Nullable Output<String> connectionType;
 
     public Output<String> getConnectionType() {
@@ -56,7 +56,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
      * 
      */
-    @InputImport(name="contentHandlingStrategy")
+    @Import(name="contentHandlingStrategy")
       private final @Nullable Output<String> contentHandlingStrategy;
 
     public Output<String> getContentHandlingStrategy() {
@@ -67,7 +67,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The credentials required for the integration, if any.
      * 
      */
-    @InputImport(name="credentialsArn")
+    @Import(name="credentialsArn")
       private final @Nullable Output<String> credentialsArn;
 
     public Output<String> getCredentialsArn() {
@@ -78,7 +78,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the integration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -89,7 +89,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The integration's HTTP method. Must be specified if `integration_type` is not `MOCK`.
      * 
      */
-    @InputImport(name="integrationMethod")
+    @Import(name="integrationMethod")
       private final @Nullable Output<String> integrationMethod;
 
     public Output<String> getIntegrationMethod() {
@@ -100,7 +100,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integration_type` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
      * 
      */
-    @InputImport(name="integrationSubtype")
+    @Import(name="integrationSubtype")
       private final @Nullable Output<String> integrationSubtype;
 
     public Output<String> getIntegrationSubtype() {
@@ -112,7 +112,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
      * 
      */
-    @InputImport(name="integrationType", required=true)
+    @Import(name="integrationType", required=true)
       private final Output<String> integrationType;
 
     public Output<String> getIntegrationType() {
@@ -124,7 +124,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
      * 
      */
-    @InputImport(name="integrationUri")
+    @Import(name="integrationUri")
       private final @Nullable Output<String> integrationUri;
 
     public Output<String> getIntegrationUri() {
@@ -136,7 +136,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
      * 
      */
-    @InputImport(name="passthroughBehavior")
+    @Import(name="passthroughBehavior")
       private final @Nullable Output<String> passthroughBehavior;
 
     public Output<String> getPassthroughBehavior() {
@@ -147,7 +147,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
      * 
      */
-    @InputImport(name="payloadFormatVersion")
+    @Import(name="payloadFormatVersion")
       private final @Nullable Output<String> payloadFormatVersion;
 
     public Output<String> getPayloadFormatVersion() {
@@ -161,7 +161,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html) for details.
      * 
      */
-    @InputImport(name="requestParameters")
+    @Import(name="requestParameters")
       private final @Nullable Output<Map<String,String>> requestParameters;
 
     public Output<Map<String,String>> getRequestParameters() {
@@ -172,7 +172,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * A map of [Velocity](https://velocity.apache.org/) templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
      * 
      */
-    @InputImport(name="requestTemplates")
+    @Import(name="requestTemplates")
       private final @Nullable Output<Map<String,String>> requestTemplates;
 
     public Output<Map<String,String>> getRequestTemplates() {
@@ -183,7 +183,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * Mappings to transform the HTTP response from a backend integration before returning the response to clients. Supported only for HTTP APIs.
      * 
      */
-    @InputImport(name="responseParameters")
+    @Import(name="responseParameters")
       private final @Nullable Output<List<IntegrationResponseParameterArgs>> responseParameters;
 
     public Output<List<IntegrationResponseParameterArgs>> getResponseParameters() {
@@ -194,7 +194,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
      * 
      */
-    @InputImport(name="templateSelectionExpression")
+    @Import(name="templateSelectionExpression")
       private final @Nullable Output<String> templateSelectionExpression;
 
     public Output<String> getTemplateSelectionExpression() {
@@ -207,7 +207,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * this provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @InputImport(name="timeoutMilliseconds")
+    @Import(name="timeoutMilliseconds")
       private final @Nullable Output<Integer> timeoutMilliseconds;
 
     public Output<Integer> getTimeoutMilliseconds() {
@@ -218,7 +218,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The TLS configuration for a private integration. Supported only for HTTP APIs.
      * 
      */
-    @InputImport(name="tlsConfig")
+    @Import(name="tlsConfig")
       private final @Nullable Output<IntegrationTlsConfigArgs> tlsConfig;
 
     public Output<IntegrationTlsConfigArgs> getTlsConfig() {

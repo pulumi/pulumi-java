@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceCapacityReservationSpecificationCapacityReservationTarget {
     /**
      * The ID of the Capacity Reservation in which to run the instance.
@@ -17,8 +17,8 @@ public final class InstanceCapacityReservationSpecificationCapacityReservationTa
      */
     private final @Nullable String capacityReservationId;
 
-    @OutputCustomType.Constructor
-    private InstanceCapacityReservationSpecificationCapacityReservationTarget(@OutputCustomType.Parameter("capacityReservationId") @Nullable String capacityReservationId) {
+    @CustomType.Constructor
+    private InstanceCapacityReservationSpecificationCapacityReservationTarget(@CustomType.Parameter("capacityReservationId") @Nullable String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
     }
 

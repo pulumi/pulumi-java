@@ -5,13 +5,13 @@ package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatch;
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleStatementOrStatementStatementSqliMatchStatement {
     /**
      * The part of a web request that you want AWS WAF to inspect. See Field to Match below for details.
@@ -24,10 +24,10 @@ public final class RuleGroupRuleStatementOrStatementStatementSqliMatchStatement 
      */
     private final List<RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleStatementOrStatementStatementSqliMatchStatement(
-        @OutputCustomType.Parameter("fieldToMatch") @Nullable RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("textTransformations") List<RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
+        @CustomType.Parameter("fieldToMatch") @Nullable RuleGroupRuleStatementOrStatementStatementSqliMatchStatementFieldToMatch fieldToMatch,
+        @CustomType.Parameter("textTransformations") List<RuleGroupRuleStatementOrStatementStatementSqliMatchStatementTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
     }

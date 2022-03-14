@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
      * 
      */
-    @InputImport(name="recordColumns", required=true)
+    @Import(name="recordColumns", required=true)
       private final Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs>> recordColumns;
 
     public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnGetArgs>> getRecordColumns() {
@@ -32,7 +32,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Specifies the encoding of the records in the streaming source. For example, `UTF-8`.
      * 
      */
-    @InputImport(name="recordEncoding")
+    @Import(name="recordEncoding")
       private final @Nullable Output<String> recordEncoding;
 
     public Output<String> getRecordEncoding() {
@@ -43,7 +43,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Specifies the format of the records on the streaming source.
      * 
      */
-    @InputImport(name="recordFormat", required=true)
+    @Import(name="recordFormat", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatGetArgs> recordFormat;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatGetArgs> getRecordFormat() {

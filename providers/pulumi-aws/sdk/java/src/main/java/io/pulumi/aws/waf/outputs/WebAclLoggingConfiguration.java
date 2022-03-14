@@ -4,13 +4,13 @@
 package io.pulumi.aws.waf.outputs;
 
 import io.pulumi.aws.waf.outputs.WebAclLoggingConfigurationRedactedFields;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclLoggingConfiguration {
     /**
      * Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
@@ -23,10 +23,10 @@ public final class WebAclLoggingConfiguration {
      */
     private final @Nullable WebAclLoggingConfigurationRedactedFields redactedFields;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclLoggingConfiguration(
-        @OutputCustomType.Parameter("logDestination") String logDestination,
-        @OutputCustomType.Parameter("redactedFields") @Nullable WebAclLoggingConfigurationRedactedFields redactedFields) {
+        @CustomType.Parameter("logDestination") String logDestination,
+        @CustomType.Parameter("redactedFields") @Nullable WebAclLoggingConfigurationRedactedFields redactedFields) {
         this.logDestination = logDestination;
         this.redactedFields = redactedFields;
     }

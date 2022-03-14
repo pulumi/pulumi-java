@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the bucket to read the object from. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
@@ -30,14 +30,14 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * The full path to the object inside the bucket
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
         return this.key;
     }
 
-    @InputImport(name="range")
+    @Import(name="range")
       private final @Nullable String range;
 
     public Optional<String> getRange() {
@@ -48,7 +48,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * A map of tags assigned to the object.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -59,7 +59,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * Specific version ID of the object returned (defaults to latest version)
      * 
      */
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable String versionId;
 
     public Optional<String> getVersionId() {

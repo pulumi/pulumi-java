@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -29,7 +29,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
      * 
      */
-    @InputImport(name="creationDate")
+    @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
     public Output<String> getCreationDate() {
@@ -40,7 +40,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
      * 
      */
-    @InputImport(name="css")
+    @Import(name="css")
       private final @Nullable Output<String> css;
 
     public Output<String> getCss() {
@@ -51,7 +51,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * The CSS version number.
      * 
      */
-    @InputImport(name="cssVersion")
+    @Import(name="cssVersion")
       private final @Nullable Output<String> cssVersion;
 
     public Output<String> getCssVersion() {
@@ -62,7 +62,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
      * 
      */
-    @InputImport(name="imageFile")
+    @Import(name="imageFile")
       private final @Nullable Output<String> imageFile;
 
     public Output<String> getImageFile() {
@@ -73,7 +73,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * The logo image URL for the UI customization.
      * 
      */
-    @InputImport(name="imageUrl")
+    @Import(name="imageUrl")
       private final @Nullable Output<String> imageUrl;
 
     public Output<String> getImageUrl() {
@@ -84,7 +84,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * The last-modified date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
      * 
      */
-    @InputImport(name="lastModifiedDate")
+    @Import(name="lastModifiedDate")
       private final @Nullable Output<String> lastModifiedDate;
 
     public Output<String> getLastModifiedDate() {
@@ -95,7 +95,7 @@ public final class UserPoolUICustomizationState extends io.pulumi.resources.Reso
      * The user pool ID for the user pool.
      * 
      */
-    @InputImport(name="userPoolId")
+    @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {

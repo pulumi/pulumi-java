@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * For more information on the permissions required for the bucket, please read the AWS [documentation](http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging)
      * 
      */
-    @InputImport(name="bucketName")
+    @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -31,7 +31,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
      * 
      */
-    @InputImport(name="enable", required=true)
+    @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -42,7 +42,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * The prefix applied to the log file names.
      * 
      */
-    @InputImport(name="s3KeyPrefix")
+    @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
     public Output<String> getS3KeyPrefix() {

@@ -6,12 +6,12 @@ package io.pulumi.aws.appmesh.outputs;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecBackendDefaults;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecListener;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecLogging;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpec {
     /**
      * The defaults for backends.
@@ -29,11 +29,11 @@ public final class VirtualGatewaySpec {
      */
     private final @Nullable VirtualGatewaySpecLogging logging;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualGatewaySpec(
-        @OutputCustomType.Parameter("backendDefaults") @Nullable VirtualGatewaySpecBackendDefaults backendDefaults,
-        @OutputCustomType.Parameter("listener") VirtualGatewaySpecListener listener,
-        @OutputCustomType.Parameter("logging") @Nullable VirtualGatewaySpecLogging logging) {
+        @CustomType.Parameter("backendDefaults") @Nullable VirtualGatewaySpecBackendDefaults backendDefaults,
+        @CustomType.Parameter("listener") VirtualGatewaySpecListener listener,
+        @CustomType.Parameter("logging") @Nullable VirtualGatewaySpecLogging logging) {
         this.backendDefaults = backendDefaults;
         this.listener = listener;
         this.logging = logging;

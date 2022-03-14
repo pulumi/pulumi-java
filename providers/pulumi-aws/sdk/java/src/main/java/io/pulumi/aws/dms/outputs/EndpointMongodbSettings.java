@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.dms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointMongodbSettings {
     /**
      * Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
@@ -42,14 +42,14 @@ public final class EndpointMongodbSettings {
      */
     private final @Nullable String nestingLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointMongodbSettings(
-        @OutputCustomType.Parameter("authMechanism") @Nullable String authMechanism,
-        @OutputCustomType.Parameter("authSource") @Nullable String authSource,
-        @OutputCustomType.Parameter("authType") @Nullable String authType,
-        @OutputCustomType.Parameter("docsToInvestigate") @Nullable String docsToInvestigate,
-        @OutputCustomType.Parameter("extractDocId") @Nullable String extractDocId,
-        @OutputCustomType.Parameter("nestingLevel") @Nullable String nestingLevel) {
+        @CustomType.Parameter("authMechanism") @Nullable String authMechanism,
+        @CustomType.Parameter("authSource") @Nullable String authSource,
+        @CustomType.Parameter("authType") @Nullable String authType,
+        @CustomType.Parameter("docsToInvestigate") @Nullable String docsToInvestigate,
+        @CustomType.Parameter("extractDocId") @Nullable String extractDocId,
+        @CustomType.Parameter("nestingLevel") @Nullable String nestingLevel) {
         this.authMechanism = authMechanism;
         this.authSource = authSource;
         this.authType = authType;

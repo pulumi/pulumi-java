@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificati
      * The ID of the launch template. Conflicts with `name`.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -29,7 +29,7 @@ public final class SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificati
      * The name of the launch template. Conflicts with `id`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class SpotFleetRequestLaunchTemplateConfigLaunchTemplateSpecificati
      * Template version. Unlike the autoscaling equivalent, does not support `$Latest` or `$Default`, so use the launch_template resource's attribute, e.g., `"${aws_launch_template.foo.latest_version}"`. It will use the default version if omitted.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

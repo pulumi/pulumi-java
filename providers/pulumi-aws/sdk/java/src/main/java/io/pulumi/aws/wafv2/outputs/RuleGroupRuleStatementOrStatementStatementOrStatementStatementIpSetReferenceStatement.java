@@ -4,13 +4,13 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatement {
     /**
      * The Amazon Resource Name (ARN) of the IP Set that this statement references.
@@ -23,10 +23,10 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
      */
     private final @Nullable RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatement(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("ipSetForwardedIpConfig") @Nullable RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("ipSetForwardedIpConfig") @Nullable RuleGroupRuleStatementOrStatementStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig ipSetForwardedIpConfig) {
         this.arn = arn;
         this.ipSetForwardedIpConfig = ipSetForwardedIpConfig;
     }

@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * (Required) Amazon Resource Name (ARN) of the distribution configuration.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * Date the distribution configuration was created.
      * 
      */
-    @InputImport(name="dateCreated")
+    @Import(name="dateCreated")
       private final @Nullable Output<String> dateCreated;
 
     public Output<String> getDateCreated() {
@@ -43,7 +43,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * Date the distribution configuration was updated.
      * 
      */
-    @InputImport(name="dateUpdated")
+    @Import(name="dateUpdated")
       private final @Nullable Output<String> dateUpdated;
 
     public Output<String> getDateUpdated() {
@@ -54,7 +54,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * Description of the container distribution configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -65,7 +65,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * One or more configuration blocks with distribution settings. Detailed below.
      * 
      */
-    @InputImport(name="distributions")
+    @Import(name="distributions")
       private final @Nullable Output<List<DistributionConfigurationDistributionGetArgs>> distributions;
 
     public Output<List<DistributionConfigurationDistributionGetArgs>> getDistributions() {
@@ -76,7 +76,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * Name to apply to the distributed AMI.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * Key-value map of resource tags for the distribution configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -98,7 +98,7 @@ public final class DistributionConfigurationState extends io.pulumi.resources.Re
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

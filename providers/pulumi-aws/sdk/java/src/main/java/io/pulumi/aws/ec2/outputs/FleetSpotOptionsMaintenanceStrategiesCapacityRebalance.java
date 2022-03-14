@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetSpotOptionsMaintenanceStrategiesCapacityRebalance {
     /**
      * The replacement strategy to use. Only available for fleets of `type` set to `maintain`. Valid values: `launch`.
@@ -17,8 +17,8 @@ public final class FleetSpotOptionsMaintenanceStrategiesCapacityRebalance {
      */
     private final @Nullable String replacementStrategy;
 
-    @OutputCustomType.Constructor
-    private FleetSpotOptionsMaintenanceStrategiesCapacityRebalance(@OutputCustomType.Parameter("replacementStrategy") @Nullable String replacementStrategy) {
+    @CustomType.Constructor
+    private FleetSpotOptionsMaintenanceStrategiesCapacityRebalance(@CustomType.Parameter("replacementStrategy") @Nullable String replacementStrategy) {
         this.replacementStrategy = replacementStrategy;
     }
 

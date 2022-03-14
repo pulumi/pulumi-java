@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class RecordWeightedRoutingPolicyArgs extends io.pulumi.resources.R
      * A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.
      * 
      */
-    @InputImport(name="weight", required=true)
+    @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
     public Output<Integer> getWeight() {

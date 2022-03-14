@@ -4,7 +4,7 @@
 package io.pulumi.aws.elb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
      * The S3 bucket name to store the logs in.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -31,7 +31,7 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
      * The S3 bucket prefix. Logs are stored in the root if not configured.
      * 
      */
-    @InputImport(name="bucketPrefix")
+    @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
@@ -42,7 +42,7 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
      * Boolean to enable / disable `access_logs`. Default is `true`
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -53,7 +53,7 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
      * The publishing interval in minutes. Default: 60 minutes.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {

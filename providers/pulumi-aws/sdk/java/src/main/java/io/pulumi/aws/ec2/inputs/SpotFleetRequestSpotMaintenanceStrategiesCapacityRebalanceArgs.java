@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArg
      * The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
      * 
      */
-    @InputImport(name="replacementStrategy")
+    @Import(name="replacementStrategy")
       private final @Nullable Output<String> replacementStrategy;
 
     public Output<String> getReplacementStrategy() {

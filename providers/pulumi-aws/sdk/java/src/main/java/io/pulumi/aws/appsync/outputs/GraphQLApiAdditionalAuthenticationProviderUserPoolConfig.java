@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfig {
     /**
      * A regular expression for validating the incoming Amazon Cognito User Pool app client ID.
@@ -27,11 +27,11 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfig {
      */
     private final String userPoolId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GraphQLApiAdditionalAuthenticationProviderUserPoolConfig(
-        @OutputCustomType.Parameter("appIdClientRegex") @Nullable String appIdClientRegex,
-        @OutputCustomType.Parameter("awsRegion") @Nullable String awsRegion,
-        @OutputCustomType.Parameter("userPoolId") String userPoolId) {
+        @CustomType.Parameter("appIdClientRegex") @Nullable String appIdClientRegex,
+        @CustomType.Parameter("awsRegion") @Nullable String awsRegion,
+        @CustomType.Parameter("userPoolId") String userPoolId) {
         this.appIdClientRegex = appIdClientRegex;
         this.awsRegion = awsRegion;
         this.userPoolId = userPoolId;

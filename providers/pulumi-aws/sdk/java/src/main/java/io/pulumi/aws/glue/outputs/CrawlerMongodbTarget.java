@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CrawlerMongodbTarget {
     /**
      * The name of the connection to use to connect to the Delta table target.
@@ -28,11 +28,11 @@ public final class CrawlerMongodbTarget {
      */
     private final @Nullable Boolean scanAll;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CrawlerMongodbTarget(
-        @OutputCustomType.Parameter("connectionName") String connectionName,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("scanAll") @Nullable Boolean scanAll) {
+        @CustomType.Parameter("connectionName") String connectionName,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("scanAll") @Nullable Boolean scanAll) {
         this.connectionName = connectionName;
         this.path = path;
         this.scanAll = scanAll;

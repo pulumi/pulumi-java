@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.lakeformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPermissionsDatabase {
     /**
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
@@ -20,10 +20,10 @@ public final class GetPermissionsDatabase {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPermissionsDatabase(
-        @OutputCustomType.Parameter("catalogId") String catalogId,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("catalogId") String catalogId,
+        @CustomType.Parameter("name") String name) {
         this.catalogId = catalogId;
         this.name = name;
     }

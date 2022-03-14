@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
      * A list of item names (`cookies`, `headers`, or `query_strings`).
      * 
      */
-    @InputImport(name="items", required=true)
+    @Import(name="items", required=true)
       private final List<String> items;
 
     public List<String> getItems() {

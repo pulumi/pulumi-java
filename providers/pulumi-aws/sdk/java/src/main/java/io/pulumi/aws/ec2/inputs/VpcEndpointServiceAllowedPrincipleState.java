@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
      * The ARN of the principal to allow permissions.
      * 
      */
-    @InputImport(name="principalArn")
+    @Import(name="principalArn")
       private final @Nullable Output<String> principalArn;
 
     public Output<String> getPrincipalArn() {
@@ -29,7 +29,7 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
      * The ID of the VPC endpoint service to allow permission.
      * 
      */
-    @InputImport(name="vpcEndpointServiceId")
+    @Import(name="vpcEndpointServiceId")
       private final @Nullable Output<String> vpcEndpointServiceId;
 
     public Output<String> getVpcEndpointServiceId() {

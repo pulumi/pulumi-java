@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerConnectionPoolHttp2 {
     /**
      * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
@@ -15,8 +15,8 @@ public final class VirtualNodeSpecListenerConnectionPoolHttp2 {
      */
     private final Integer maxRequests;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecListenerConnectionPoolHttp2(@OutputCustomType.Parameter("maxRequests") Integer maxRequests) {
+    @CustomType.Constructor
+    private VirtualNodeSpecListenerConnectionPoolHttp2(@CustomType.Parameter("maxRequests") Integer maxRequests) {
         this.maxRequests = maxRequests;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cfg.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecorderRecordingGroup {
     /**
      * Specifies whether AWS Config records configuration changes for every supported type of regional resource (which includes any new type that will become supported in the future). Conflicts with `resource_types`. Defaults to `true`.
@@ -29,11 +29,11 @@ public final class RecorderRecordingGroup {
      */
     private final @Nullable List<String> resourceTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecorderRecordingGroup(
-        @OutputCustomType.Parameter("allSupported") @Nullable Boolean allSupported,
-        @OutputCustomType.Parameter("includeGlobalResourceTypes") @Nullable Boolean includeGlobalResourceTypes,
-        @OutputCustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes) {
+        @CustomType.Parameter("allSupported") @Nullable Boolean allSupported,
+        @CustomType.Parameter("includeGlobalResourceTypes") @Nullable Boolean includeGlobalResourceTypes,
+        @CustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes) {
         this.allSupported = allSupported;
         this.includeGlobalResourceTypes = includeGlobalResourceTypes;
         this.resourceTypes = resourceTypes;

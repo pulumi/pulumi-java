@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.GetScriptDagNodeArg;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
      * Nested configuration an argument or property of a node. Defined below.
      * 
      */
-    @InputImport(name="args", required=true)
+    @Import(name="args", required=true)
       private final List<GetScriptDagNodeArg> args;
 
     public List<GetScriptDagNodeArg> getArgs() {
@@ -32,7 +32,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
      * A node identifier that is unique within the node's graph.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -43,7 +43,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
      * The line number of the node.
      * 
      */
-    @InputImport(name="lineNumber")
+    @Import(name="lineNumber")
       private final @Nullable Integer lineNumber;
 
     public Optional<Integer> getLineNumber() {
@@ -54,7 +54,7 @@ public final class GetScriptDagNode extends io.pulumi.resources.InvokeArgs {
      * The type of node this is.
      * 
      */
-    @InputImport(name="nodeType", required=true)
+    @Import(name="nodeType", required=true)
       private final String nodeType;
 
     public String getNodeType() {

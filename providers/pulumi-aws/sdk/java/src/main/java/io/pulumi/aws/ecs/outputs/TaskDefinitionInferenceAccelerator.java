@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionInferenceAccelerator {
     /**
      * Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.
@@ -20,10 +20,10 @@ public final class TaskDefinitionInferenceAccelerator {
      */
     private final String deviceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionInferenceAccelerator(
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("deviceType") String deviceType) {
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("deviceType") String deviceType) {
         this.deviceName = deviceName;
         this.deviceType = deviceType;
     }

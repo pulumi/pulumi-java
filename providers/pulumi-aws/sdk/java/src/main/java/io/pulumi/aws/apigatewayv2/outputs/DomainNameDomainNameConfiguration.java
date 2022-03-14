@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.apigatewayv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainNameDomainNameConfiguration {
     /**
      * The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
@@ -38,13 +38,13 @@ public final class DomainNameDomainNameConfiguration {
      */
     private final @Nullable String targetDomainName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainNameDomainNameConfiguration(
-        @OutputCustomType.Parameter("certificateArn") String certificateArn,
-        @OutputCustomType.Parameter("endpointType") String endpointType,
-        @OutputCustomType.Parameter("hostedZoneId") @Nullable String hostedZoneId,
-        @OutputCustomType.Parameter("securityPolicy") String securityPolicy,
-        @OutputCustomType.Parameter("targetDomainName") @Nullable String targetDomainName) {
+        @CustomType.Parameter("certificateArn") String certificateArn,
+        @CustomType.Parameter("endpointType") String endpointType,
+        @CustomType.Parameter("hostedZoneId") @Nullable String hostedZoneId,
+        @CustomType.Parameter("securityPolicy") String securityPolicy,
+        @CustomType.Parameter("targetDomainName") @Nullable String targetDomainName) {
         this.certificateArn = certificateArn;
         this.endpointType = endpointType;
         this.hostedZoneId = hostedZoneId;

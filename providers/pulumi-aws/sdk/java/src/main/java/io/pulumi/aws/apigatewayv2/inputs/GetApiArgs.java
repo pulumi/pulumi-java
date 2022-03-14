@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetApiArgs extends io.pulumi.resources.InvokeArgs {
      * The API identifier.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final String apiId;
 
     public String getApiId() {
@@ -30,7 +30,7 @@ public final class GetApiArgs extends io.pulumi.resources.InvokeArgs {
      * A map of resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.fms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PolicySecurityServicePolicyDataArgs extends io.pulumi.resourc
      * Details about the service that are specific to the service type, in JSON format. For service type `SHIELD_ADVANCED`, this is an empty string. Examples depending on `type` can be found in the [AWS Firewall Manager SecurityServicePolicyData API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html).
      * 
      */
-    @InputImport(name="managedServiceData")
+    @Import(name="managedServiceData")
       private final @Nullable Output<String> managedServiceData;
 
     public Output<String> getManagedServiceData() {
@@ -29,7 +29,7 @@ public final class PolicySecurityServicePolicyDataArgs extends io.pulumi.resourc
      * The service that the policy is using to protect the resources. For the current list of supported types, please refer to the [AWS Firewall Manager SecurityServicePolicyData API Type Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html#fms-Type-SecurityServicePolicyData-Type).
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

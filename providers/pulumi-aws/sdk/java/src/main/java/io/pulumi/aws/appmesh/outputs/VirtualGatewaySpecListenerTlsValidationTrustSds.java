@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecListenerTlsValidationTrustSds {
     /**
      * The name of the secret for a virtual gateway's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
@@ -15,8 +15,8 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustSds {
      */
     private final String secretName;
 
-    @OutputCustomType.Constructor
-    private VirtualGatewaySpecListenerTlsValidationTrustSds(@OutputCustomType.Parameter("secretName") String secretName) {
+    @CustomType.Constructor
+    private VirtualGatewaySpecListenerTlsValidationTrustSds(@CustomType.Parameter("secretName") String secretName) {
         this.secretName = secretName;
     }
 

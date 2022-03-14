@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * A list of how you want Kinesis Data Firehose to parse the date and time stamps that may be present in your input data JSON. To specify these format strings, follow the pattern syntax of JodaTime's DateTimeFormat format strings. For more information, see [Class DateTimeFormat](https://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html). You can also use the special value millis to parse time stamps in epoch milliseconds. If you don't specify a format, Kinesis Data Firehose uses java.sql.Timestamp::valueOf by default.
      * 
      */
-    @InputImport(name="timestampFormats")
+    @Import(name="timestampFormats")
       private final @Nullable Output<List<String>> timestampFormats;
 
     public Output<List<String>> getTimestampFormats() {

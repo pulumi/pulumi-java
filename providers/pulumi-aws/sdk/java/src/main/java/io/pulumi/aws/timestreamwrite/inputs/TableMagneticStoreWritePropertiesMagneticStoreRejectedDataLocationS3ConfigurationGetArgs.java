@@ -4,7 +4,7 @@
 package io.pulumi.aws.timestreamwrite.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * Bucket name of the customer S3 bucket.
      * 
      */
-    @InputImport(name="bucketName")
+    @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -29,7 +29,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * Encryption option for the customer s3 location. Options are S3 server side encryption with an S3-managed key or KMS managed key. Valid values are `SSE_KMS` and `SSE_S3`.
      * 
      */
-    @InputImport(name="encryptionOption")
+    @Import(name="encryptionOption")
       private final @Nullable Output<String> encryptionOption;
 
     public Output<String> getEncryptionOption() {
@@ -40,7 +40,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * KMS key arn for the customer s3 location when encrypting with a KMS managed key.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -51,7 +51,7 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      * Object key prefix for the customer S3 location.
      * 
      */
-    @InputImport(name="objectKeyPrefix")
+    @Import(name="objectKeyPrefix")
       private final @Nullable Output<String> objectKeyPrefix;
 
     public Output<String> getObjectKeyPrefix() {

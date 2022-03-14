@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetUserPoolSigningCertificateArgs extends io.pulumi.resources
      * The Cognito user pool ID.
      * 
      */
-    @InputImport(name="userPoolId", required=true)
+    @Import(name="userPoolId", required=true)
       private final String userPoolId;
 
     public String getUserPoolId() {

@@ -4,14 +4,14 @@
 package io.pulumi.aws.iot.outputs;
 
 import io.pulumi.aws.iot.outputs.ThingGroupMetadataRootToParentGroup;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThingGroupMetadata {
     private final @Nullable String creationDate;
     /**
@@ -21,11 +21,11 @@ public final class ThingGroupMetadata {
     private final @Nullable String parentGroupName;
     private final @Nullable List<ThingGroupMetadataRootToParentGroup> rootToParentGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThingGroupMetadata(
-        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
-        @OutputCustomType.Parameter("parentGroupName") @Nullable String parentGroupName,
-        @OutputCustomType.Parameter("rootToParentGroups") @Nullable List<ThingGroupMetadataRootToParentGroup> rootToParentGroups) {
+        @CustomType.Parameter("creationDate") @Nullable String creationDate,
+        @CustomType.Parameter("parentGroupName") @Nullable String parentGroupName,
+        @CustomType.Parameter("rootToParentGroups") @Nullable List<ThingGroupMetadataRootToParentGroup> rootToParentGroups) {
         this.creationDate = creationDate;
         this.parentGroupName = parentGroupName;
         this.rootToParentGroups = rootToParentGroups;

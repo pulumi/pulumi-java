@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.IntentFulfillmentActivityCodeHookGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class IntentFulfillmentActivityGetArgs extends io.pulumi.resources.
      * Required if type is CodeHook. Attributes are documented under code_hook.
      * 
      */
-    @InputImport(name="codeHook")
+    @Import(name="codeHook")
       private final @Nullable Output<IntentFulfillmentActivityCodeHookGetArgs> codeHook;
 
     public Output<IntentFulfillmentActivityCodeHookGetArgs> getCodeHook() {
@@ -32,7 +32,7 @@ public final class IntentFulfillmentActivityGetArgs extends io.pulumi.resources.
      * returning the slot data to the client application.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

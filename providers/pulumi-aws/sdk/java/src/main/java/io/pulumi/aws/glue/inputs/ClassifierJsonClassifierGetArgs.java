@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ClassifierJsonClassifierGetArgs extends io.pulumi.resources.R
      * A `JsonPath` string defining the JSON data for the classifier to classify. AWS Glue supports a subset of `JsonPath`, as described in [Writing JsonPath Custom Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json).
      * 
      */
-    @InputImport(name="jsonPath", required=true)
+    @Import(name="jsonPath", required=true)
       private final Output<String> jsonPath;
 
     public Output<String> getJsonPath() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetInfrastructureConfigurationsFilter extends io.pulumi.resou
      * The name of the filter field. Valid values can be found in the [Image Builder ListInfrastructureConfigurations API Reference](https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_ListInfrastructureConfigurations.html).
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -28,7 +28,7 @@ public final class GetInfrastructureConfigurationsFilter extends io.pulumi.resou
      * Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

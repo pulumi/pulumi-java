@@ -4,14 +4,14 @@
 package io.pulumi.aws.outputs;
 
 import io.pulumi.aws.outputs.GetElasticIpFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetElasticIpResult {
     /**
      * The ID representing the association of the address with an instance in a VPC.
@@ -90,24 +90,24 @@ public final class GetElasticIpResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetElasticIpResult(
-        @OutputCustomType.Parameter("associationId") String associationId,
-        @OutputCustomType.Parameter("carrierIp") String carrierIp,
-        @OutputCustomType.Parameter("customerOwnedIp") String customerOwnedIp,
-        @OutputCustomType.Parameter("customerOwnedIpv4Pool") String customerOwnedIpv4Pool,
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetElasticIpFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
-        @OutputCustomType.Parameter("networkInterfaceOwnerId") String networkInterfaceOwnerId,
-        @OutputCustomType.Parameter("privateDns") String privateDns,
-        @OutputCustomType.Parameter("privateIp") String privateIp,
-        @OutputCustomType.Parameter("publicDns") String publicDns,
-        @OutputCustomType.Parameter("publicIp") String publicIp,
-        @OutputCustomType.Parameter("publicIpv4Pool") String publicIpv4Pool,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("associationId") String associationId,
+        @CustomType.Parameter("carrierIp") String carrierIp,
+        @CustomType.Parameter("customerOwnedIp") String customerOwnedIp,
+        @CustomType.Parameter("customerOwnedIpv4Pool") String customerOwnedIpv4Pool,
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("filters") @Nullable List<GetElasticIpFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @CustomType.Parameter("networkInterfaceOwnerId") String networkInterfaceOwnerId,
+        @CustomType.Parameter("privateDns") String privateDns,
+        @CustomType.Parameter("privateIp") String privateIp,
+        @CustomType.Parameter("publicDns") String publicDns,
+        @CustomType.Parameter("publicIp") String publicIp,
+        @CustomType.Parameter("publicIpv4Pool") String publicIpv4Pool,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.associationId = associationId;
         this.carrierIp = carrierIp;
         this.customerOwnedIp = customerOwnedIp;

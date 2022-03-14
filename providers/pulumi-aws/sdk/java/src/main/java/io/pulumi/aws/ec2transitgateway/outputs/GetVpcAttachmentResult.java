@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2transitgateway.outputs;
 
 import io.pulumi.aws.ec2transitgateway.outputs.GetVpcAttachmentFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpcAttachmentResult {
     /**
      * Whether Appliance Mode support is enabled.
@@ -60,18 +60,18 @@ public final class GetVpcAttachmentResult {
      */
     private final String vpcOwnerId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpcAttachmentResult(
-        @OutputCustomType.Parameter("applianceModeSupport") String applianceModeSupport,
-        @OutputCustomType.Parameter("dnsSupport") String dnsSupport,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcAttachmentFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipv6Support") String ipv6Support,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("transitGatewayId") String transitGatewayId,
-        @OutputCustomType.Parameter("vpcId") String vpcId,
-        @OutputCustomType.Parameter("vpcOwnerId") String vpcOwnerId) {
+        @CustomType.Parameter("applianceModeSupport") String applianceModeSupport,
+        @CustomType.Parameter("dnsSupport") String dnsSupport,
+        @CustomType.Parameter("filters") @Nullable List<GetVpcAttachmentFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipv6Support") String ipv6Support,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("transitGatewayId") String transitGatewayId,
+        @CustomType.Parameter("vpcId") String vpcId,
+        @CustomType.Parameter("vpcOwnerId") String vpcOwnerId) {
         this.applianceModeSupport = applianceModeSupport;
         this.dnsSupport = dnsSupport;
         this.filters = filters;

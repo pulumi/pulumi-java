@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationReferenceDataSourcesS3 {
     /**
      * The S3 Bucket ARN.
@@ -25,11 +25,11 @@ public final class AnalyticsApplicationReferenceDataSourcesS3 {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationReferenceDataSourcesS3(
-        @OutputCustomType.Parameter("bucketArn") String bucketArn,
-        @OutputCustomType.Parameter("fileKey") String fileKey,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("bucketArn") String bucketArn,
+        @CustomType.Parameter("fileKey") String fileKey,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.bucketArn = bucketArn;
         this.fileKey = fileKey;
         this.roleArn = roleArn;

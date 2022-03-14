@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationFilterGetArgs;
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AnalyticsConfigurationState extends io.pulumi.resources.Resou
      * The name of the bucket this analytics configuration is associated with.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -31,7 +31,7 @@ public final class AnalyticsConfigurationState extends io.pulumi.resources.Resou
      * Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<AnalyticsConfigurationFilterGetArgs> filter;
 
     public Output<AnalyticsConfigurationFilterGetArgs> getFilter() {
@@ -42,7 +42,7 @@ public final class AnalyticsConfigurationState extends io.pulumi.resources.Resou
      * Unique identifier of the analytics configuration for the bucket.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class AnalyticsConfigurationState extends io.pulumi.resources.Resou
      * Configuration for the analytics data export (documented below).
      * 
      */
-    @InputImport(name="storageClassAnalysis")
+    @Import(name="storageClassAnalysis")
       private final @Nullable Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> storageClassAnalysis;
 
     public Output<AnalyticsConfigurationStorageClassAnalysisGetArgs> getStorageClassAnalysis() {

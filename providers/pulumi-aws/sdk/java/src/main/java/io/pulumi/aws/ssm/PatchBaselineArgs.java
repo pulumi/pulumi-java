@@ -7,7 +7,7 @@ import io.pulumi.aws.ssm.inputs.PatchBaselineApprovalRuleArgs;
 import io.pulumi.aws.ssm.inputs.PatchBaselineGlobalFilterArgs;
 import io.pulumi.aws.ssm.inputs.PatchBaselineSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
      * 
      */
-    @InputImport(name="approvalRules")
+    @Import(name="approvalRules")
       private final @Nullable Output<List<PatchBaselineApprovalRuleArgs>> approvalRules;
 
     public Output<List<PatchBaselineApprovalRuleArgs>> getApprovalRules() {
@@ -35,7 +35,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * A list of explicitly approved patches for the baseline.
      * 
      */
-    @InputImport(name="approvedPatches")
+    @Import(name="approvedPatches")
       private final @Nullable Output<List<String>> approvedPatches;
 
     public Output<List<String>> getApprovedPatches() {
@@ -46,7 +46,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
      * 
      */
-    @InputImport(name="approvedPatchesComplianceLevel")
+    @Import(name="approvedPatchesComplianceLevel")
       private final @Nullable Output<String> approvedPatchesComplianceLevel;
 
     public Output<String> getApprovedPatchesComplianceLevel() {
@@ -57,7 +57,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
      * 
      */
-    @InputImport(name="approvedPatchesEnableNonSecurity")
+    @Import(name="approvedPatchesEnableNonSecurity")
       private final @Nullable Output<Boolean> approvedPatchesEnableNonSecurity;
 
     public Output<Boolean> getApprovedPatchesEnableNonSecurity() {
@@ -68,7 +68,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the patch baseline.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -79,7 +79,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
      * 
      */
-    @InputImport(name="globalFilters")
+    @Import(name="globalFilters")
       private final @Nullable Output<List<PatchBaselineGlobalFilterArgs>> globalFilters;
 
     public Output<List<PatchBaselineGlobalFilterArgs>> getGlobalFilters() {
@@ -90,7 +90,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * The name specified to identify the patch source.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -101,7 +101,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
      * 
      */
-    @InputImport(name="operatingSystem")
+    @Import(name="operatingSystem")
       private final @Nullable Output<String> operatingSystem;
 
     public Output<String> getOperatingSystem() {
@@ -112,7 +112,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * A list of rejected patches.
      * 
      */
-    @InputImport(name="rejectedPatches")
+    @Import(name="rejectedPatches")
       private final @Nullable Output<List<String>> rejectedPatches;
 
     public Output<List<String>> getRejectedPatches() {
@@ -123,7 +123,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
      * 
      */
-    @InputImport(name="rejectedPatchesAction")
+    @Import(name="rejectedPatchesAction")
       private final @Nullable Output<String> rejectedPatchesAction;
 
     public Output<String> getRejectedPatchesAction() {
@@ -134,7 +134,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
      * 
      */
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable Output<List<PatchBaselineSourceArgs>> sources;
 
     public Output<List<PatchBaselineSourceArgs>> getSources() {
@@ -145,7 +145,7 @@ public final class PatchBaselineArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

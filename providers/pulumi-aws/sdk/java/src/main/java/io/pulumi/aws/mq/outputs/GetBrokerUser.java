@@ -3,23 +3,23 @@
 
 package io.pulumi.aws.mq.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBrokerUser {
     private final Boolean consoleAccess;
     private final List<String> groups;
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBrokerUser(
-        @OutputCustomType.Parameter("consoleAccess") Boolean consoleAccess,
-        @OutputCustomType.Parameter("groups") List<String> groups,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("consoleAccess") Boolean consoleAccess,
+        @CustomType.Parameter("groups") List<String> groups,
+        @CustomType.Parameter("username") String username) {
         this.consoleAccess = consoleAccess;
         this.groups = groups;
         this.username = username;

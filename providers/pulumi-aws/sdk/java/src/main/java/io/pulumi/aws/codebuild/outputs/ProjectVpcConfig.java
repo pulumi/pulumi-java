@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ProjectVpcConfig {
     /**
      * Security group IDs to assign to running builds.
@@ -26,11 +26,11 @@ public final class ProjectVpcConfig {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectVpcConfig(
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnets") List<String> subnets,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("subnets") List<String> subnets,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnets = subnets;
         this.vpcId = vpcId;

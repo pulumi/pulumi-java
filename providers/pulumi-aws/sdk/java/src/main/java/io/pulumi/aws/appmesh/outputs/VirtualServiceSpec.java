@@ -4,12 +4,12 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualServiceSpecProvider;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualServiceSpec {
     /**
      * The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
@@ -17,8 +17,8 @@ public final class VirtualServiceSpec {
      */
     private final @Nullable VirtualServiceSpecProvider provider;
 
-    @OutputCustomType.Constructor
-    private VirtualServiceSpec(@OutputCustomType.Parameter("provider") @Nullable VirtualServiceSpecProvider provider) {
+    @CustomType.Constructor
+    private VirtualServiceSpec(@CustomType.Parameter("provider") @Nullable VirtualServiceSpecProvider provider) {
         this.provider = provider;
     }
 

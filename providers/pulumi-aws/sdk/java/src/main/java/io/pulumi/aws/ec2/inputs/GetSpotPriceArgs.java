@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetSpotPriceFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetSpotPriceArgs extends io.pulumi.resources.InvokeArgs {
      * The availability zone in which to query Spot price information.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
@@ -31,7 +31,7 @@ public final class GetSpotPriceArgs extends io.pulumi.resources.InvokeArgs {
      * One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSpotPriceHistory.html) for supported filters. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetSpotPriceFilter> filters;
 
     public List<GetSpotPriceFilter> getFilters() {
@@ -42,7 +42,7 @@ public final class GetSpotPriceArgs extends io.pulumi.resources.InvokeArgs {
      * The type of instance for which to query Spot Price information.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable String instanceType;
 
     public Optional<String> getInstanceType() {

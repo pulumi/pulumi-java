@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * A boolean value whether to include credits in the cost budget. Defaults to `true`
      * 
      */
-    @InputImport(name="includeCredit")
+    @Import(name="includeCredit")
       private final @Nullable Output<Boolean> includeCredit;
 
     public Output<Boolean> getIncludeCredit() {
@@ -29,7 +29,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * Specifies whether a budget includes discounts. Defaults to `true`
      * 
      */
-    @InputImport(name="includeDiscount")
+    @Import(name="includeDiscount")
       private final @Nullable Output<Boolean> includeDiscount;
 
     public Output<Boolean> getIncludeDiscount() {
@@ -40,7 +40,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * A boolean value whether to include other subscription costs in the cost budget. Defaults to `true`
      * 
      */
-    @InputImport(name="includeOtherSubscription")
+    @Import(name="includeOtherSubscription")
       private final @Nullable Output<Boolean> includeOtherSubscription;
 
     public Output<Boolean> getIncludeOtherSubscription() {
@@ -51,7 +51,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * A boolean value whether to include recurring costs in the cost budget. Defaults to `true`
      * 
      */
-    @InputImport(name="includeRecurring")
+    @Import(name="includeRecurring")
       private final @Nullable Output<Boolean> includeRecurring;
 
     public Output<Boolean> getIncludeRecurring() {
@@ -62,7 +62,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * A boolean value whether to include refunds in the cost budget. Defaults to `true`
      * 
      */
-    @InputImport(name="includeRefund")
+    @Import(name="includeRefund")
       private final @Nullable Output<Boolean> includeRefund;
 
     public Output<Boolean> getIncludeRefund() {
@@ -73,7 +73,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * A boolean value whether to include subscriptions in the cost budget. Defaults to `true`
      * 
      */
-    @InputImport(name="includeSubscription")
+    @Import(name="includeSubscription")
       private final @Nullable Output<Boolean> includeSubscription;
 
     public Output<Boolean> getIncludeSubscription() {
@@ -84,7 +84,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * A boolean value whether to include support costs in the cost budget. Defaults to `true`
      * 
      */
-    @InputImport(name="includeSupport")
+    @Import(name="includeSupport")
       private final @Nullable Output<Boolean> includeSupport;
 
     public Output<Boolean> getIncludeSupport() {
@@ -95,7 +95,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * A boolean value whether to include tax in the cost budget. Defaults to `true`
      * 
      */
-    @InputImport(name="includeTax")
+    @Import(name="includeTax")
       private final @Nullable Output<Boolean> includeTax;
 
     public Output<Boolean> getIncludeTax() {
@@ -106,7 +106,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * A boolean value whether to include upfront costs in the cost budget. Defaults to `true`
      * 
      */
-    @InputImport(name="includeUpfront")
+    @Import(name="includeUpfront")
       private final @Nullable Output<Boolean> includeUpfront;
 
     public Output<Boolean> getIncludeUpfront() {
@@ -117,7 +117,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * Specifies whether a budget uses the amortized rate. Defaults to `false`
      * 
      */
-    @InputImport(name="useAmortized")
+    @Import(name="useAmortized")
       private final @Nullable Output<Boolean> useAmortized;
 
     public Output<Boolean> getUseAmortized() {
@@ -128,7 +128,7 @@ public final class BudgetCostTypesGetArgs extends io.pulumi.resources.ResourceAr
      * A boolean value whether to use blended costs in the cost budget. Defaults to `false`
      * 
      */
-    @InputImport(name="useBlended")
+    @Import(name="useBlended")
       private final @Nullable Output<Boolean> useBlended;
 
     public Output<Boolean> getUseBlended() {

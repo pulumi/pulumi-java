@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskOptions {
     /**
      * A file metadata that shows the last time a file was accessed (that is when the file was read or written to). If set to `BEST_EFFORT`, the DataSync Task attempts to preserve the original (that is, the version before sync `PREPARING` phase) `atime` attribute on all source files. Valid values: `BEST_EFFORT`, `NONE`. Default: `BEST_EFFORT`.
@@ -78,21 +78,21 @@ public final class TaskOptions {
      */
     private final @Nullable String verifyMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskOptions(
-        @OutputCustomType.Parameter("atime") @Nullable String atime,
-        @OutputCustomType.Parameter("bytesPerSecond") @Nullable Integer bytesPerSecond,
-        @OutputCustomType.Parameter("gid") @Nullable String gid,
-        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel,
-        @OutputCustomType.Parameter("mtime") @Nullable String mtime,
-        @OutputCustomType.Parameter("overwriteMode") @Nullable String overwriteMode,
-        @OutputCustomType.Parameter("posixPermissions") @Nullable String posixPermissions,
-        @OutputCustomType.Parameter("preserveDeletedFiles") @Nullable String preserveDeletedFiles,
-        @OutputCustomType.Parameter("preserveDevices") @Nullable String preserveDevices,
-        @OutputCustomType.Parameter("taskQueueing") @Nullable String taskQueueing,
-        @OutputCustomType.Parameter("transferMode") @Nullable String transferMode,
-        @OutputCustomType.Parameter("uid") @Nullable String uid,
-        @OutputCustomType.Parameter("verifyMode") @Nullable String verifyMode) {
+        @CustomType.Parameter("atime") @Nullable String atime,
+        @CustomType.Parameter("bytesPerSecond") @Nullable Integer bytesPerSecond,
+        @CustomType.Parameter("gid") @Nullable String gid,
+        @CustomType.Parameter("logLevel") @Nullable String logLevel,
+        @CustomType.Parameter("mtime") @Nullable String mtime,
+        @CustomType.Parameter("overwriteMode") @Nullable String overwriteMode,
+        @CustomType.Parameter("posixPermissions") @Nullable String posixPermissions,
+        @CustomType.Parameter("preserveDeletedFiles") @Nullable String preserveDeletedFiles,
+        @CustomType.Parameter("preserveDevices") @Nullable String preserveDevices,
+        @CustomType.Parameter("taskQueueing") @Nullable String taskQueueing,
+        @CustomType.Parameter("transferMode") @Nullable String transferMode,
+        @CustomType.Parameter("uid") @Nullable String uid,
+        @CustomType.Parameter("verifyMode") @Nullable String verifyMode) {
         this.atime = atime;
         this.bytesPerSecond = bytesPerSecond;
         this.gid = gid;

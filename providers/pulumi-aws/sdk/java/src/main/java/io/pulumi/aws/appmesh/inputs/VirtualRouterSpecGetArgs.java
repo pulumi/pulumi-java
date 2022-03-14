@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualRouterSpecListenerGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class VirtualRouterSpecGetArgs extends io.pulumi.resources.Resource
      * Currently only one listener is supported per virtual router.
      * 
      */
-    @InputImport(name="listener", required=true)
+    @Import(name="listener", required=true)
       private final Output<VirtualRouterSpecListenerGetArgs> listener;
 
     public Output<VirtualRouterSpecListenerGetArgs> getListener() {

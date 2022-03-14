@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ReceiptRuleSetState extends io.pulumi.resources.ResourceArgs 
      * SES receipt rule set ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class ReceiptRuleSetState extends io.pulumi.resources.ResourceArgs 
      * Name of the rule set.
      * 
      */
-    @InputImport(name="ruleSetName")
+    @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
     public Output<String> getRuleSetName() {

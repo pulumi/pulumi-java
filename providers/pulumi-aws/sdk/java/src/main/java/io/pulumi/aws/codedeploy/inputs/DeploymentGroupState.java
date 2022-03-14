@@ -14,7 +14,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoGetArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupOnPremisesInstanceTagFilterGetArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupTriggerConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * Configuration block of alarms associated with the deployment group (documented below).
      * 
      */
-    @InputImport(name="alarmConfiguration")
+    @Import(name="alarmConfiguration")
       private final @Nullable Output<DeploymentGroupAlarmConfigurationGetArgs> alarmConfiguration;
 
     public Output<DeploymentGroupAlarmConfigurationGetArgs> getAlarmConfiguration() {
@@ -41,7 +41,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * The name of the application.
      * 
      */
-    @InputImport(name="appName")
+    @Import(name="appName")
       private final @Nullable Output<String> appName;
 
     public Output<String> getAppName() {
@@ -52,7 +52,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * The ARN of the CodeDeploy deployment group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -63,7 +63,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
      * 
      */
-    @InputImport(name="autoRollbackConfiguration")
+    @Import(name="autoRollbackConfiguration")
       private final @Nullable Output<DeploymentGroupAutoRollbackConfigurationGetArgs> autoRollbackConfiguration;
 
     public Output<DeploymentGroupAutoRollbackConfigurationGetArgs> getAutoRollbackConfiguration() {
@@ -74,7 +74,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * Autoscaling groups associated with the deployment group.
      * 
      */
-    @InputImport(name="autoscalingGroups")
+    @Import(name="autoscalingGroups")
       private final @Nullable Output<List<String>> autoscalingGroups;
 
     public Output<List<String>> getAutoscalingGroups() {
@@ -85,7 +85,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * Configuration block of the blue/green deployment options for a deployment group (documented below).
      * 
      */
-    @InputImport(name="blueGreenDeploymentConfig")
+    @Import(name="blueGreenDeploymentConfig")
       private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigGetArgs> blueGreenDeploymentConfig;
 
     public Output<DeploymentGroupBlueGreenDeploymentConfigGetArgs> getBlueGreenDeploymentConfig() {
@@ -96,7 +96,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * The destination platform type for the deployment.
      * 
      */
-    @InputImport(name="computePlatform")
+    @Import(name="computePlatform")
       private final @Nullable Output<String> computePlatform;
 
     public Output<String> getComputePlatform() {
@@ -107,7 +107,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
      * 
      */
-    @InputImport(name="deploymentConfigName")
+    @Import(name="deploymentConfigName")
       private final @Nullable Output<String> deploymentConfigName;
 
     public Output<String> getDeploymentConfigName() {
@@ -118,7 +118,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * The ID of the CodeDeploy deployment group.
      * 
      */
-    @InputImport(name="deploymentGroupId")
+    @Import(name="deploymentGroupId")
       private final @Nullable Output<String> deploymentGroupId;
 
     public Output<String> getDeploymentGroupId() {
@@ -129,7 +129,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * The name of the deployment group.
      * 
      */
-    @InputImport(name="deploymentGroupName")
+    @Import(name="deploymentGroupName")
       private final @Nullable Output<String> deploymentGroupName;
 
     public Output<String> getDeploymentGroupName() {
@@ -140,7 +140,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
      * 
      */
-    @InputImport(name="deploymentStyle")
+    @Import(name="deploymentStyle")
       private final @Nullable Output<DeploymentGroupDeploymentStyleGetArgs> deploymentStyle;
 
     public Output<DeploymentGroupDeploymentStyleGetArgs> getDeploymentStyle() {
@@ -151,7 +151,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * Tag filters associated with the deployment group. See the AWS docs for details.
      * 
      */
-    @InputImport(name="ec2TagFilters")
+    @Import(name="ec2TagFilters")
       private final @Nullable Output<List<DeploymentGroupEc2TagFilterGetArgs>> ec2TagFilters;
 
     public Output<List<DeploymentGroupEc2TagFilterGetArgs>> getEc2TagFilters() {
@@ -162,7 +162,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
      * 
      */
-    @InputImport(name="ec2TagSets")
+    @Import(name="ec2TagSets")
       private final @Nullable Output<List<DeploymentGroupEc2TagSetGetArgs>> ec2TagSets;
 
     public Output<List<DeploymentGroupEc2TagSetGetArgs>> getEc2TagSets() {
@@ -173,7 +173,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * Configuration block(s) of the ECS services for a deployment group (documented below).
      * 
      */
-    @InputImport(name="ecsService")
+    @Import(name="ecsService")
       private final @Nullable Output<DeploymentGroupEcsServiceGetArgs> ecsService;
 
     public Output<DeploymentGroupEcsServiceGetArgs> getEcsService() {
@@ -184,7 +184,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * Single configuration block of the load balancer to use in a blue/green deployment (documented below).
      * 
      */
-    @InputImport(name="loadBalancerInfo")
+    @Import(name="loadBalancerInfo")
       private final @Nullable Output<DeploymentGroupLoadBalancerInfoGetArgs> loadBalancerInfo;
 
     public Output<DeploymentGroupLoadBalancerInfoGetArgs> getLoadBalancerInfo() {
@@ -195,7 +195,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * On premise tag filters associated with the group. See the AWS docs for details.
      * 
      */
-    @InputImport(name="onPremisesInstanceTagFilters")
+    @Import(name="onPremisesInstanceTagFilters")
       private final @Nullable Output<List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs>> onPremisesInstanceTagFilters;
 
     public Output<List<DeploymentGroupOnPremisesInstanceTagFilterGetArgs>> getOnPremisesInstanceTagFilters() {
@@ -206,7 +206,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * The service role ARN that allows deployments.
      * 
      */
-    @InputImport(name="serviceRoleArn")
+    @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
     public Output<String> getServiceRoleArn() {
@@ -217,7 +217,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -228,7 +228,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -239,7 +239,7 @@ public final class DeploymentGroupState extends io.pulumi.resources.ResourceArgs
      * Configuration block(s) of the triggers for the deployment group (documented below).
      * 
      */
-    @InputImport(name="triggerConfigurations")
+    @Import(name="triggerConfigurations")
       private final @Nullable Output<List<DeploymentGroupTriggerConfigurationGetArgs>> triggerConfigurations;
 
     public Output<List<DeploymentGroupTriggerConfigurationGetArgs>> getTriggerConfigurations() {

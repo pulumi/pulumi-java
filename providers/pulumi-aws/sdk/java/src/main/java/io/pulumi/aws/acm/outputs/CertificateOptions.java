@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.acm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateOptions {
     /**
      * Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
@@ -17,8 +17,8 @@ public final class CertificateOptions {
      */
     private final @Nullable String certificateTransparencyLoggingPreference;
 
-    @OutputCustomType.Constructor
-    private CertificateOptions(@OutputCustomType.Parameter("certificateTransparencyLoggingPreference") @Nullable String certificateTransparencyLoggingPreference) {
+    @CustomType.Constructor
+    private CertificateOptions(@CustomType.Parameter("certificateTransparencyLoggingPreference") @Nullable String certificateTransparencyLoggingPreference) {
         this.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
     }
 

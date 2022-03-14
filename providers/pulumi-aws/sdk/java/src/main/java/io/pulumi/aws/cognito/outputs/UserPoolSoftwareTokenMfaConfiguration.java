@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolSoftwareTokenMfaConfiguration {
     /**
      * Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA When `sms_configuration` is not present, the `mfa_configuration` argument must be set to `OFF` and the `software_token_mfa_configuration` configuration block must be fully removed.
@@ -15,8 +15,8 @@ public final class UserPoolSoftwareTokenMfaConfiguration {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private UserPoolSoftwareTokenMfaConfiguration(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private UserPoolSoftwareTokenMfaConfiguration(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

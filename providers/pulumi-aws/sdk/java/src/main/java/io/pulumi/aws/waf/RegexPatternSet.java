@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.waf.RegexPatternSetArgs;
 import io.pulumi.aws.waf.inputs.RegexPatternSetState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN)
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * The name or description of the Regex Pattern Set.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -61,7 +61,7 @@ public class RegexPatternSet extends io.pulumi.resources.CustomResource {
      * A list of regular expression (regex) patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`.
      * 
      */
-    @OutputExport(name="regexPatternStrings", type=List.class, parameters={String.class})
+    @Export(name="regexPatternStrings", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> regexPatternStrings;
 
     /**

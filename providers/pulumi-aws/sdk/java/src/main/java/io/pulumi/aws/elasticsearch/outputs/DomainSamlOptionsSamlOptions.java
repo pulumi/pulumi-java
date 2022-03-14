@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.outputs;
 
 import io.pulumi.aws.elasticsearch.outputs.DomainSamlOptionsSamlOptionsIdp;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainSamlOptionsSamlOptions {
     /**
      * Whether SAML authentication is enabled.
@@ -50,15 +50,15 @@ public final class DomainSamlOptionsSamlOptions {
      */
     private final @Nullable String subjectKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainSamlOptionsSamlOptions(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("idp") @Nullable DomainSamlOptionsSamlOptionsIdp idp,
-        @OutputCustomType.Parameter("masterBackendRole") @Nullable String masterBackendRole,
-        @OutputCustomType.Parameter("masterUserName") @Nullable String masterUserName,
-        @OutputCustomType.Parameter("rolesKey") @Nullable String rolesKey,
-        @OutputCustomType.Parameter("sessionTimeoutMinutes") @Nullable Integer sessionTimeoutMinutes,
-        @OutputCustomType.Parameter("subjectKey") @Nullable String subjectKey) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("idp") @Nullable DomainSamlOptionsSamlOptionsIdp idp,
+        @CustomType.Parameter("masterBackendRole") @Nullable String masterBackendRole,
+        @CustomType.Parameter("masterUserName") @Nullable String masterUserName,
+        @CustomType.Parameter("rolesKey") @Nullable String rolesKey,
+        @CustomType.Parameter("sessionTimeoutMinutes") @Nullable Integer sessionTimeoutMinutes,
+        @CustomType.Parameter("subjectKey") @Nullable String subjectKey) {
         this.enabled = enabled;
         this.idp = idp;
         this.masterBackendRole = masterBackendRole;

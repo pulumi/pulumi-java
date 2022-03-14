@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecGrpcRouteRetryPolicyPerRetryTimeout {
     /**
      * Retry unit. Valid values: `ms`, `s`.
@@ -21,10 +21,10 @@ public final class RouteSpecGrpcRouteRetryPolicyPerRetryTimeout {
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpecGrpcRouteRetryPolicyPerRetryTimeout(
-        @OutputCustomType.Parameter("unit") String unit,
-        @OutputCustomType.Parameter("value") Integer value) {
+        @CustomType.Parameter("unit") String unit,
+        @CustomType.Parameter("value") Integer value) {
         this.unit = unit;
         this.value = value;
     }

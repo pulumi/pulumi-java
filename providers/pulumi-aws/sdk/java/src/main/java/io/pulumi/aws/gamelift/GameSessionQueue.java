@@ -8,7 +8,7 @@ import io.pulumi.aws.gamelift.GameSessionQueueArgs;
 import io.pulumi.aws.gamelift.inputs.GameSessionQueueState;
 import io.pulumi.aws.gamelift.outputs.GameSessionQueuePlayerLatencyPolicy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class GameSessionQueue extends io.pulumi.resources.CustomResource {
      * Game Session Queue ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class GameSessionQueue extends io.pulumi.resources.CustomResource {
      * List of fleet/alias ARNs used by session queue for placing game sessions.
      * 
      */
-    @OutputExport(name="destinations", type=List.class, parameters={String.class})
+    @Export(name="destinations", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> destinations;
 
     /**
@@ -64,7 +64,7 @@ public class GameSessionQueue extends io.pulumi.resources.CustomResource {
      * Name of the session queue.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class GameSessionQueue extends io.pulumi.resources.CustomResource {
      * One or more policies used to choose fleet based on player latency. See below.
      * 
      */
-    @OutputExport(name="playerLatencyPolicies", type=List.class, parameters={GameSessionQueuePlayerLatencyPolicy.class})
+    @Export(name="playerLatencyPolicies", type=List.class, parameters={GameSessionQueuePlayerLatencyPolicy.class})
     private Output</* @Nullable */ List<GameSessionQueuePlayerLatencyPolicy>> playerLatencyPolicies;
 
     /**
@@ -92,7 +92,7 @@ public class GameSessionQueue extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -106,7 +106,7 @@ public class GameSessionQueue extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -120,7 +120,7 @@ public class GameSessionQueue extends io.pulumi.resources.CustomResource {
      * Maximum time a game session request can remain in the queue.
      * 
      */
-    @OutputExport(name="timeoutInSeconds", type=Integer.class, parameters={})
+    @Export(name="timeoutInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeoutInSeconds;
 
     /**

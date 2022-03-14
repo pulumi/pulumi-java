@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * Whether Appliance Mode support is enabled. Valid values: `disable`, `enable`.
      * 
      */
-    @InputImport(name="applianceModeSupport")
+    @Import(name="applianceModeSupport")
       private final @Nullable Output<String> applianceModeSupport;
 
     public Output<String> getApplianceModeSupport() {
@@ -32,7 +32,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * Whether DNS support is enabled. Valid values: `disable`, `enable`.
      * 
      */
-    @InputImport(name="dnsSupport")
+    @Import(name="dnsSupport")
       private final @Nullable Output<String> dnsSupport;
 
     public Output<String> getDnsSupport() {
@@ -43,7 +43,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * Whether IPv6 support is enabled. Valid values: `disable`, `enable`.
      * 
      */
-    @InputImport(name="ipv6Support")
+    @Import(name="ipv6Support")
       private final @Nullable Output<String> ipv6Support;
 
     public Output<String> getIpv6Support() {
@@ -54,7 +54,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * Identifiers of EC2 Subnets.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -65,7 +65,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * Key-value tags for the EC2 Transit Gateway VPC Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -87,7 +87,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * The ID of the EC2 Transit Gateway Attachment to manage.
      * 
      */
-    @InputImport(name="transitGatewayAttachmentId")
+    @Import(name="transitGatewayAttachmentId")
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
     public Output<String> getTransitGatewayAttachmentId() {
@@ -98,7 +98,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
      * 
      */
-    @InputImport(name="transitGatewayDefaultRouteTableAssociation")
+    @Import(name="transitGatewayDefaultRouteTableAssociation")
       private final @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
 
     public Output<Boolean> getTransitGatewayDefaultRouteTableAssociation() {
@@ -109,7 +109,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
      * 
      */
-    @InputImport(name="transitGatewayDefaultRouteTablePropagation")
+    @Import(name="transitGatewayDefaultRouteTablePropagation")
       private final @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
 
     public Output<Boolean> getTransitGatewayDefaultRouteTablePropagation() {
@@ -120,7 +120,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * Identifier of EC2 Transit Gateway.
      * 
      */
-    @InputImport(name="transitGatewayId")
+    @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {
@@ -131,7 +131,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * Identifier of EC2 VPC.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
@@ -142,7 +142,7 @@ public final class VpcAttachmentAccepterState extends io.pulumi.resources.Resour
      * Identifier of the AWS account that owns the EC2 VPC.
      * 
      */
-    @InputImport(name="vpcOwnerId")
+    @Import(name="vpcOwnerId")
       private final @Nullable Output<String> vpcOwnerId;
 
     public Output<String> getVpcOwnerId() {

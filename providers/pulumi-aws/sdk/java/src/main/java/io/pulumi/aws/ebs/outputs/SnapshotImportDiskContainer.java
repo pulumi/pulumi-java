@@ -4,13 +4,13 @@
 package io.pulumi.aws.ebs.outputs;
 
 import io.pulumi.aws.ebs.outputs.SnapshotImportDiskContainerUserBucket;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SnapshotImportDiskContainer {
     /**
      * The description of the disk image being imported.
@@ -33,12 +33,12 @@ public final class SnapshotImportDiskContainer {
      */
     private final @Nullable SnapshotImportDiskContainerUserBucket userBucket;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SnapshotImportDiskContainer(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("url") @Nullable String url,
-        @OutputCustomType.Parameter("userBucket") @Nullable SnapshotImportDiskContainerUserBucket userBucket) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("url") @Nullable String url,
+        @CustomType.Parameter("userBucket") @Nullable SnapshotImportDiskContainerUserBucket userBucket) {
         this.description = description;
         this.format = format;
         this.url = url;

@@ -9,7 +9,7 @@ import io.pulumi.aws.rds.inputs.InstanceRestoreToPointInTimeArgs;
 import io.pulumi.aws.rds.inputs.InstanceS3ImportArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The allocated storage in gibibytes. If `max_allocated_storage` is configured, this argument represents the initial storage allocation and differences from the configuration will be ignored automatically when Storage Autoscaling occurs. If `replicate_source_db` is set, the value is ignored during the creation of the instance.
      * 
      */
-    @InputImport(name="allocatedStorage")
+    @Import(name="allocatedStorage")
       private final @Nullable Output<Integer> allocatedStorage;
 
     public Output<Integer> getAllocatedStorage() {
@@ -40,7 +40,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * the change is asynchronously applied as soon as possible.
      * 
      */
-    @InputImport(name="allowMajorVersionUpgrade")
+    @Import(name="allowMajorVersionUpgrade")
       private final @Nullable Output<Boolean> allowMajorVersionUpgrade;
 
     public Output<Boolean> getAllowMajorVersionUpgrade() {
@@ -54,7 +54,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
      * 
      */
-    @InputImport(name="applyImmediately")
+    @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
     public Output<Boolean> getApplyImmediately() {
@@ -67,7 +67,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to true.
      * 
      */
-    @InputImport(name="autoMinorVersionUpgrade")
+    @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
     public Output<Boolean> getAutoMinorVersionUpgrade() {
@@ -78,7 +78,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The AZ for the RDS instance.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -90,7 +90,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * between `0` and `35`. Must be greater than `0` if the database is used as a source for a Read Replica. [See Read Replica][1].
      * 
      */
-    @InputImport(name="backupRetentionPeriod")
+    @Import(name="backupRetentionPeriod")
       private final @Nullable Output<Integer> backupRetentionPeriod;
 
     public Output<Integer> getBackupRetentionPeriod() {
@@ -103,7 +103,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * not overlap with `maintenance_window`.
      * 
      */
-    @InputImport(name="backupWindow")
+    @Import(name="backupWindow")
       private final @Nullable Output<String> backupWindow;
 
     public Output<String> getBackupWindow() {
@@ -114,7 +114,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of the CA certificate for the DB instance.
      * 
      */
-    @InputImport(name="caCertIdentifier")
+    @Import(name="caCertIdentifier")
       private final @Nullable Output<String> caCertIdentifier;
 
     public Output<String> getCaCertIdentifier() {
@@ -128,7 +128,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * or [Server-Level Collation for Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.CommonDBATasks.Collation.html) for more information.
      * 
      */
-    @InputImport(name="characterSetName")
+    @Import(name="characterSetName")
       private final @Nullable Output<String> characterSetName;
 
     public Output<String> getCharacterSetName() {
@@ -139,7 +139,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Copy all Instance `tags` to snapshots. Default is `false`.
      * 
      */
-    @InputImport(name="copyTagsToSnapshot")
+    @Import(name="copyTagsToSnapshot")
       private final @Nullable Output<Boolean> copyTagsToSnapshot;
 
     public Output<Boolean> getCopyTagsToSnapshot() {
@@ -150,7 +150,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether to enable a customer-owned IP address (CoIP) for an RDS on Outposts DB instance. See [CoIP for RDS on Outposts](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html#rds-on-outposts.coip) for more information.
      * 
      */
-    @InputImport(name="customerOwnedIpEnabled")
+    @Import(name="customerOwnedIpEnabled")
       private final @Nullable Output<Boolean> customerOwnedIpEnabled;
 
     public Output<Boolean> getCustomerOwnedIpEnabled() {
@@ -167,7 +167,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * for additional read replica contraints.
      * 
      */
-    @InputImport(name="dbSubnetGroupName")
+    @Import(name="dbSubnetGroupName")
       private final @Nullable Output<String> dbSubnetGroupName;
 
     public Output<String> getDbSubnetGroupName() {
@@ -178,7 +178,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to remove automated backups immediately after the DB instance is deleted. Default is `true`.
      * 
      */
-    @InputImport(name="deleteAutomatedBackups")
+    @Import(name="deleteAutomatedBackups")
       private final @Nullable Output<Boolean> deleteAutomatedBackups;
 
     public Output<Boolean> getDeleteAutomatedBackups() {
@@ -189,7 +189,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -200,7 +200,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the Directory Service Active Directory domain to create the instance in.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -211,7 +211,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the IAM role to be used when making API calls to the Directory Service.
      * 
      */
-    @InputImport(name="domainIamRoleName")
+    @Import(name="domainIamRoleName")
       private final @Nullable Output<String> domainIamRoleName;
 
     public Output<String> getDomainIamRoleName() {
@@ -222,7 +222,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Set of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
      * 
      */
-    @InputImport(name="enabledCloudwatchLogsExports")
+    @Import(name="enabledCloudwatchLogsExports")
       private final @Nullable Output<List<String>> enabledCloudwatchLogsExports;
 
     public Output<List<String>> getEnabledCloudwatchLogsExports() {
@@ -238,7 +238,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * in the Amazon RDS User Guide.
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -253,7 +253,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Note that for Amazon Aurora instances the engine version must match the `DB cluster`'s engine version'.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -266,7 +266,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * set to `false`. The value must begin with a letter, only contain alphanumeric characters and hyphens, and not end with a hyphen or contain two consecutive hyphens. Must not be provided when deleting a read replica.
      * 
      */
-    @InputImport(name="finalSnapshotIdentifier")
+    @Import(name="finalSnapshotIdentifier")
       private final @Nullable Output<String> finalSnapshotIdentifier;
 
     public Output<String> getFinalSnapshotIdentifier() {
@@ -279,7 +279,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * accounts is enabled.
      * 
      */
-    @InputImport(name="iamDatabaseAuthenticationEnabled")
+    @Import(name="iamDatabaseAuthenticationEnabled")
       private final @Nullable Output<Boolean> iamDatabaseAuthenticationEnabled;
 
     public Output<Boolean> getIamDatabaseAuthenticationEnabled() {
@@ -291,7 +291,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * if omitted, this provider will assign a random, unique identifier.
      * 
      */
-    @InputImport(name="identifier")
+    @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
     public Output<String> getIdentifier() {
@@ -303,7 +303,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * identifier beginning with the specified prefix. Conflicts with `identifier`.
      * 
      */
-    @InputImport(name="identifierPrefix")
+    @Import(name="identifierPrefix")
       private final @Nullable Output<String> identifierPrefix;
 
     public Output<String> getIdentifierPrefix() {
@@ -314,7 +314,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The instance type of the RDS instance.
      * 
      */
-    @InputImport(name="instanceClass", required=true)
+    @Import(name="instanceClass", required=true)
       private final Output<Either<String,InstanceType>> instanceClass;
 
     public Output<Either<String,InstanceType>> getInstanceClass() {
@@ -326,7 +326,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * storage_type of "io1".
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
@@ -338,7 +338,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * encrypted replica, set this to the destination KMS ARN.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -350,7 +350,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * SE1) License model information for this DB instance.
      * 
      */
-    @InputImport(name="licenseModel")
+    @Import(name="licenseModel")
       private final @Nullable Output<String> licenseModel;
 
     public Output<String> getLicenseModel() {
@@ -365,7 +365,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * for more information.
      * 
      */
-    @InputImport(name="maintenanceWindow")
+    @Import(name="maintenanceWindow")
       private final @Nullable Output<String> maintenanceWindow;
 
     public Output<String> getMaintenanceWindow() {
@@ -376,7 +376,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * When configured, the upper limit to which Amazon RDS can automatically scale the storage of the DB instance. Configuring this will automatically ignore differences to `allocated_storage`. Must be greater than or equal to `allocated_storage` or `0` to disable Storage Autoscaling.
      * 
      */
-    @InputImport(name="maxAllocatedStorage")
+    @Import(name="maxAllocatedStorage")
       private final @Nullable Output<Integer> maxAllocatedStorage;
 
     public Output<Integer> getMaxAllocatedStorage() {
@@ -390,7 +390,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Values: 0, 1, 5, 10, 15, 30, 60.
      * 
      */
-    @InputImport(name="monitoringInterval")
+    @Import(name="monitoringInterval")
       private final @Nullable Output<Integer> monitoringInterval;
 
     public Output<Integer> getMonitoringInterval() {
@@ -405,7 +405,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.
      * 
      */
-    @InputImport(name="monitoringRoleArn")
+    @Import(name="monitoringRoleArn")
       private final @Nullable Output<String> monitoringRoleArn;
 
     public Output<String> getMonitoringRoleArn() {
@@ -416,7 +416,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies if the RDS instance is multi-AZ
      * 
      */
-    @InputImport(name="multiAz")
+    @Import(name="multiAz")
       private final @Nullable Output<Boolean> multiAz;
 
     public Output<Boolean> getMultiAz() {
@@ -427,7 +427,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the [AWS documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/rds/create-db-instance.html) for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -439,7 +439,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Supported in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html).
      * 
      */
-    @InputImport(name="ncharCharacterSetName")
+    @Import(name="ncharCharacterSetName")
       private final @Nullable Output<String> ncharCharacterSetName;
 
     public Output<String> getNcharCharacterSetName() {
@@ -450,7 +450,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the DB option group to associate.
      * 
      */
-    @InputImport(name="optionGroupName")
+    @Import(name="optionGroupName")
       private final @Nullable Output<String> optionGroupName;
 
     public Output<String> getOptionGroupName() {
@@ -462,7 +462,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * associate.
      * 
      */
-    @InputImport(name="parameterGroupName")
+    @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
 
     public Output<String> getParameterGroupName() {
@@ -475,7 +475,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * logs, and it will be stored in the state file.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -486,7 +486,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether Performance Insights are enabled. Defaults to false.
      * 
      */
-    @InputImport(name="performanceInsightsEnabled")
+    @Import(name="performanceInsightsEnabled")
       private final @Nullable Output<Boolean> performanceInsightsEnabled;
 
     public Output<Boolean> getPerformanceInsightsEnabled() {
@@ -497,7 +497,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN for the KMS key to encrypt Performance Insights data. When specifying `performance_insights_kms_key_id`, `performance_insights_enabled` needs to be set to true. Once KMS key is set, it can never be changed.
      * 
      */
-    @InputImport(name="performanceInsightsKmsKeyId")
+    @Import(name="performanceInsightsKmsKeyId")
       private final @Nullable Output<String> performanceInsightsKmsKeyId;
 
     public Output<String> getPerformanceInsightsKmsKeyId() {
@@ -508,7 +508,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying `performance_insights_retention_period`, `performance_insights_enabled` needs to be set to true. Defaults to '7'.
      * 
      */
-    @InputImport(name="performanceInsightsRetentionPeriod")
+    @Import(name="performanceInsightsRetentionPeriod")
       private final @Nullable Output<Integer> performanceInsightsRetentionPeriod;
 
     public Output<Integer> getPerformanceInsightsRetentionPeriod() {
@@ -519,7 +519,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The port on which the DB accepts connections.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -531,7 +531,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * accessible. Default is `false`.
      * 
      */
-    @InputImport(name="publiclyAccessible")
+    @Import(name="publiclyAccessible")
       private final @Nullable Output<Boolean> publiclyAccessible;
 
     public Output<Boolean> getPubliclyAccessible() {
@@ -543,7 +543,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * is only supported by Oracle instances. Oracle replicas operate in `open-read-only` mode unless otherwise specified. See [Working with Oracle Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-read-replicas.html) for more information.
      * 
      */
-    @InputImport(name="replicaMode")
+    @Import(name="replicaMode")
       private final @Nullable Output<String> replicaMode;
 
     public Output<String> getReplicaMode() {
@@ -562,7 +562,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * for more information on using Replication.
      * 
      */
-    @InputImport(name="replicateSourceDb")
+    @Import(name="replicateSourceDb")
       private final @Nullable Output<String> replicateSourceDb;
 
     public Output<String> getReplicateSourceDb() {
@@ -573,7 +573,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A configuration block for restoring a DB instance to an arbitrary point in time. Requires the `identifier` argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
      * 
      */
-    @InputImport(name="restoreToPointInTime")
+    @Import(name="restoreToPointInTime")
       private final @Nullable Output<InstanceRestoreToPointInTimeArgs> restoreToPointInTime;
 
     public Output<InstanceRestoreToPointInTimeArgs> getRestoreToPointInTime() {
@@ -584,7 +584,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
      * 
      */
-    @InputImport(name="s3Import")
+    @Import(name="s3Import")
       private final @Nullable Output<InstanceS3ImportArgs> s3Import;
 
     public Output<InstanceS3ImportArgs> getS3Import() {
@@ -597,7 +597,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC).
      * 
      */
-    @InputImport(name="securityGroupNames")
+    @Import(name="securityGroupNames")
       private final @Nullable Output<List<String>> securityGroupNames;
 
     public Output<List<String>> getSecurityGroupNames() {
@@ -612,7 +612,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * is `false`.
      * 
      */
-    @InputImport(name="skipFinalSnapshot")
+    @Import(name="skipFinalSnapshot")
       private final @Nullable Output<Boolean> skipFinalSnapshot;
 
     public Output<Boolean> getSkipFinalSnapshot() {
@@ -625,7 +625,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * RDS console, e.g: rds:production-2015-06-26-06-05.
      * 
      */
-    @InputImport(name="snapshotIdentifier")
+    @Import(name="snapshotIdentifier")
       private final @Nullable Output<String> snapshotIdentifier;
 
     public Output<String> getSnapshotIdentifier() {
@@ -639,7 +639,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * default is `false` if not specified.
      * 
      */
-    @InputImport(name="storageEncrypted")
+    @Import(name="storageEncrypted")
       private final @Nullable Output<Boolean> storageEncrypted;
 
     public Output<Boolean> getStorageEncrypted() {
@@ -652,7 +652,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * specified, "gp2" if not.
      * 
      */
-    @InputImport(name="storageType")
+    @Import(name="storageType")
       private final @Nullable Output<Either<String,StorageType>> storageType;
 
     public Output<Either<String,StorageType>> getStorageType() {
@@ -663,7 +663,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -678,7 +678,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * for more information.
      * 
      */
-    @InputImport(name="timezone")
+    @Import(name="timezone")
       private final @Nullable Output<String> timezone;
 
     public Output<String> getTimezone() {
@@ -690,7 +690,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * is provided) Username for the master DB user.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
@@ -702,7 +702,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * associate.
      * 
      */
-    @InputImport(name="vpcSecurityGroupIds")
+    @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {

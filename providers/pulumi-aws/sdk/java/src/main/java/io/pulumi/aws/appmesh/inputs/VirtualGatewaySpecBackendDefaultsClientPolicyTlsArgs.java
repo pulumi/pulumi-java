@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
      * The listener's TLS certificate.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs> certificate;
 
     public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateArgs> getCertificate() {
@@ -33,7 +33,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
      * Whether the policy is enforced. Default is `true`.
      * 
      */
-    @InputImport(name="enforce")
+    @Import(name="enforce")
       private final @Nullable Output<Boolean> enforce;
 
     public Output<Boolean> getEnforce() {
@@ -44,7 +44,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
      * One or more ports that the policy is enforced for.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<Integer>> ports;
 
     public Output<List<Integer>> getPorts() {
@@ -55,7 +55,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsArgs extends 
      * The listener's Transport Layer Security (TLS) validation context.
      * 
      */
-    @InputImport(name="validation", required=true)
+    @Import(name="validation", required=true)
       private final Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs> validation;
 
     public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationArgs> getValidation() {

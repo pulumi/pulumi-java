@@ -3,19 +3,19 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedPrefixListEntry {
     private final String cidr;
     private final String description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedPrefixListEntry(
-        @OutputCustomType.Parameter("cidr") String cidr,
-        @OutputCustomType.Parameter("description") String description) {
+        @CustomType.Parameter("cidr") String cidr,
+        @CustomType.Parameter("description") String description) {
         this.cidr = cidr;
         this.description = description;
     }

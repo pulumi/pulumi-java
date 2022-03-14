@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of VPC
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC. You cannot specify the range of IP addresses, or the size of the CIDR block. Default is `false`. Conflicts with `ipv6_ipam_pool_id`
      * 
      */
-    @InputImport(name="assignGeneratedIpv6CidrBlock")
+    @Import(name="assignGeneratedIpv6CidrBlock")
       private final @Nullable Output<Boolean> assignGeneratedIpv6CidrBlock;
 
     public Output<Boolean> getAssignGeneratedIpv6CidrBlock() {
@@ -43,7 +43,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * The IPv4 CIDR block for the VPC. CIDR can be explicitly set or it can be derived from IPAM using `ipv4_netmask_length`.
      * 
      */
-    @InputImport(name="cidrBlock")
+    @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
@@ -54,7 +54,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * The ID of the network ACL created by default on VPC creation
      * 
      */
-    @InputImport(name="defaultNetworkAclId")
+    @Import(name="defaultNetworkAclId")
       private final @Nullable Output<String> defaultNetworkAclId;
 
     public Output<String> getDefaultNetworkAclId() {
@@ -65,7 +65,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * The ID of the route table created by default on VPC creation
      * 
      */
-    @InputImport(name="defaultRouteTableId")
+    @Import(name="defaultRouteTableId")
       private final @Nullable Output<String> defaultRouteTableId;
 
     public Output<String> getDefaultRouteTableId() {
@@ -76,14 +76,14 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * The ID of the security group created by default on VPC creation
      * 
      */
-    @InputImport(name="defaultSecurityGroupId")
+    @Import(name="defaultSecurityGroupId")
       private final @Nullable Output<String> defaultSecurityGroupId;
 
     public Output<String> getDefaultSecurityGroupId() {
         return this.defaultSecurityGroupId == null ? Output.empty() : this.defaultSecurityGroupId;
     }
 
-    @InputImport(name="dhcpOptionsId")
+    @Import(name="dhcpOptionsId")
       private final @Nullable Output<String> dhcpOptionsId;
 
     public Output<String> getDhcpOptionsId() {
@@ -96,7 +96,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
      * 
      */
-    @InputImport(name="enableClassiclink")
+    @Import(name="enableClassiclink")
       private final @Nullable Output<Boolean> enableClassiclink;
 
     public Output<Boolean> getEnableClassiclink() {
@@ -108,7 +108,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * Only valid in regions and accounts that support EC2 Classic.
      * 
      */
-    @InputImport(name="enableClassiclinkDnsSupport")
+    @Import(name="enableClassiclinkDnsSupport")
       private final @Nullable Output<Boolean> enableClassiclinkDnsSupport;
 
     public Output<Boolean> getEnableClassiclinkDnsSupport() {
@@ -119,7 +119,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
      * 
      */
-    @InputImport(name="enableDnsHostnames")
+    @Import(name="enableDnsHostnames")
       private final @Nullable Output<Boolean> enableDnsHostnames;
 
     public Output<Boolean> getEnableDnsHostnames() {
@@ -130,7 +130,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * A boolean flag to enable/disable DNS support in the VPC. Defaults true.
      * 
      */
-    @InputImport(name="enableDnsSupport")
+    @Import(name="enableDnsSupport")
       private final @Nullable Output<Boolean> enableDnsSupport;
 
     public Output<Boolean> getEnableDnsSupport() {
@@ -141,7 +141,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * A tenancy option for instances launched into the VPC. Default is `default`, which makes your instances shared on the host. Using either of the other options (`dedicated` or `host`) costs at least $2/hr.
      * 
      */
-    @InputImport(name="instanceTenancy")
+    @Import(name="instanceTenancy")
       private final @Nullable Output<String> instanceTenancy;
 
     public Output<String> getInstanceTenancy() {
@@ -152,7 +152,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * The ID of an IPv4 IPAM pool you want to use for allocating this VPC's CIDR. IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts. Using IPAM you can monitor IP address usage throughout your AWS Organization.
      * 
      */
-    @InputImport(name="ipv4IpamPoolId")
+    @Import(name="ipv4IpamPoolId")
       private final @Nullable Output<String> ipv4IpamPoolId;
 
     public Output<String> getIpv4IpamPoolId() {
@@ -163,7 +163,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * The netmask length of the IPv4 CIDR you want to allocate to this VPC. Requires specifying a `ipv4_ipam_pool_id`.
      * 
      */
-    @InputImport(name="ipv4NetmaskLength")
+    @Import(name="ipv4NetmaskLength")
       private final @Nullable Output<Integer> ipv4NetmaskLength;
 
     public Output<Integer> getIpv4NetmaskLength() {
@@ -175,7 +175,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * * ipv6_cidr_block_network_border_group - The Network Border Group Zone name
      * 
      */
-    @InputImport(name="ipv6AssociationId")
+    @Import(name="ipv6AssociationId")
       private final @Nullable Output<String> ipv6AssociationId;
 
     public Output<String> getIpv6AssociationId() {
@@ -186,7 +186,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * IPv6 CIDR block to request from an IPAM Pool. Can be set explicitly or derived from IPAM using `ipv6_netmask_length`.
      * 
      */
-    @InputImport(name="ipv6CidrBlock")
+    @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
     public Output<String> getIpv6CidrBlock() {
@@ -197,7 +197,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * By default when an IPv6 CIDR is assigned to a VPC a default ipv6_cidr_block_network_border_group will be set to the region of the VPC. This can be changed to restrict advertisement of public addresses to specific Network Border Groups such as LocalZones.
      * 
      */
-    @InputImport(name="ipv6CidrBlockNetworkBorderGroup")
+    @Import(name="ipv6CidrBlockNetworkBorderGroup")
       private final @Nullable Output<String> ipv6CidrBlockNetworkBorderGroup;
 
     public Output<String> getIpv6CidrBlockNetworkBorderGroup() {
@@ -208,7 +208,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * IPAM Pool ID for a IPv6 pool. Conflicts with `assign_generated_ipv6_cidr_block`.
      * 
      */
-    @InputImport(name="ipv6IpamPoolId")
+    @Import(name="ipv6IpamPoolId")
       private final @Nullable Output<String> ipv6IpamPoolId;
 
     public Output<String> getIpv6IpamPoolId() {
@@ -219,7 +219,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * Netmask length to request from IPAM Pool. Conflicts with `ipv6_cidr_block`. This can be omitted if IPAM pool as a `allocation_default_netmask_length` set. Valid values: `56`.
      * 
      */
-    @InputImport(name="ipv6NetmaskLength")
+    @Import(name="ipv6NetmaskLength")
       private final @Nullable Output<Integer> ipv6NetmaskLength;
 
     public Output<Integer> getIpv6NetmaskLength() {
@@ -232,7 +232,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * `aws.ec2.MainRouteTableAssociation`.
      * 
      */
-    @InputImport(name="mainRouteTableId")
+    @Import(name="mainRouteTableId")
       private final @Nullable Output<String> mainRouteTableId;
 
     public Output<String> getMainRouteTableId() {
@@ -243,7 +243,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * The ID of the AWS account that owns the VPC.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -254,7 +254,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -265,7 +265,7 @@ public final class VpcState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

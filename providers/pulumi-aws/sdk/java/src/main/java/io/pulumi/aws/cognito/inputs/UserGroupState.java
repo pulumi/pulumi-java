@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * The description of the user group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * The name of the user group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * The precedence of the user group.
      * 
      */
-    @InputImport(name="precedence")
+    @Import(name="precedence")
       private final @Nullable Output<Integer> precedence;
 
     public Output<Integer> getPrecedence() {
@@ -52,7 +52,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the IAM role to be associated with the user group.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -63,7 +63,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * The user pool ID.
      * 
      */
-    @InputImport(name="userPoolId")
+    @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {

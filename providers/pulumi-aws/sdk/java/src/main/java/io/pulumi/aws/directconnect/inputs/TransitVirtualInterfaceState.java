@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
      * 
      */
-    @InputImport(name="addressFamily")
+    @Import(name="addressFamily")
       private final @Nullable Output<String> addressFamily;
 
     public Output<String> getAddressFamily() {
@@ -32,14 +32,14 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
      * 
      */
-    @InputImport(name="amazonAddress")
+    @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
     public Output<String> getAmazonAddress() {
         return this.amazonAddress == null ? Output.empty() : this.amazonAddress;
     }
 
-    @InputImport(name="amazonSideAsn")
+    @Import(name="amazonSideAsn")
       private final @Nullable Output<String> amazonSideAsn;
 
     public Output<String> getAmazonSideAsn() {
@@ -50,7 +50,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The ARN of the virtual interface.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -61,7 +61,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The Direct Connect endpoint on which the virtual interface terminates.
      * 
      */
-    @InputImport(name="awsDevice")
+    @Import(name="awsDevice")
       private final @Nullable Output<String> awsDevice;
 
     public Output<String> getAwsDevice() {
@@ -72,7 +72,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
      * 
      */
-    @InputImport(name="bgpAsn")
+    @Import(name="bgpAsn")
       private final @Nullable Output<Integer> bgpAsn;
 
     public Output<Integer> getBgpAsn() {
@@ -83,7 +83,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The authentication key for BGP configuration.
      * 
      */
-    @InputImport(name="bgpAuthKey")
+    @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
     public Output<String> getBgpAuthKey() {
@@ -94,7 +94,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
      * 
      */
-    @InputImport(name="connectionId")
+    @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -105,7 +105,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
      * 
      */
-    @InputImport(name="customerAddress")
+    @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
     public Output<String> getCustomerAddress() {
@@ -116,7 +116,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The ID of the Direct Connect gateway to which to connect the virtual interface.
      * 
      */
-    @InputImport(name="dxGatewayId")
+    @Import(name="dxGatewayId")
       private final @Nullable Output<String> dxGatewayId;
 
     public Output<String> getDxGatewayId() {
@@ -127,7 +127,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * Indicates whether jumbo frames (8500 MTU) are supported.
      * 
      */
-    @InputImport(name="jumboFrameCapable")
+    @Import(name="jumboFrameCapable")
       private final @Nullable Output<Boolean> jumboFrameCapable;
 
     public Output<Boolean> getJumboFrameCapable() {
@@ -139,7 +139,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
      * 
      */
-    @InputImport(name="mtu")
+    @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
     public Output<Integer> getMtu() {
@@ -150,14 +150,14 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The name for the virtual interface.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="sitelinkEnabled")
+    @Import(name="sitelinkEnabled")
       private final @Nullable Output<Boolean> sitelinkEnabled;
 
     public Output<Boolean> getSitelinkEnabled() {
@@ -168,7 +168,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -179,7 +179,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -190,7 +190,7 @@ public final class TransitVirtualInterfaceState extends io.pulumi.resources.Reso
      * The VLAN ID.
      * 
      */
-    @InputImport(name="vlan")
+    @Import(name="vlan")
       private final @Nullable Output<Integer> vlan;
 
     public Output<Integer> getVlan() {

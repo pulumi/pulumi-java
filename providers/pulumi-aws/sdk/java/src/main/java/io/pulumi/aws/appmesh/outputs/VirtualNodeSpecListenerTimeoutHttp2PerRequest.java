@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerTimeoutHttp2PerRequest {
     /**
      * The unit of time. Valid values: `ms`, `s`.
@@ -21,10 +21,10 @@ public final class VirtualNodeSpecListenerTimeoutHttp2PerRequest {
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecListenerTimeoutHttp2PerRequest(
-        @OutputCustomType.Parameter("unit") String unit,
-        @OutputCustomType.Parameter("value") Integer value) {
+        @CustomType.Parameter("unit") String unit,
+        @CustomType.Parameter("value") Integer value) {
         this.unit = unit;
         this.value = value;
     }

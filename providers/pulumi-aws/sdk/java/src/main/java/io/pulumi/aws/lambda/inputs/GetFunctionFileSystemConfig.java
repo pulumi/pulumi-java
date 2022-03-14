@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,14 +16,14 @@ public final class GetFunctionFileSystemConfig extends io.pulumi.resources.Invok
      * Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
-    @InputImport(name="localMountPath", required=true)
+    @Import(name="localMountPath", required=true)
       private final String localMountPath;
 
     public String getLocalMountPath() {

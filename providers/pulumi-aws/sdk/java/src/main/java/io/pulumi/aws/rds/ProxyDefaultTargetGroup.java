@@ -8,7 +8,7 @@ import io.pulumi.aws.rds.ProxyDefaultTargetGroupArgs;
 import io.pulumi.aws.rds.inputs.ProxyDefaultTargetGroupState;
 import io.pulumi.aws.rds.outputs.ProxyDefaultTargetGroupConnectionPoolConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -35,7 +35,7 @@ public class ProxyDefaultTargetGroup extends io.pulumi.resources.CustomResource 
      * The Amazon Resource Name (ARN) representing the target group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class ProxyDefaultTargetGroup extends io.pulumi.resources.CustomResource 
      * The settings that determine the size and behavior of the connection pool for the target group.
      * 
      */
-    @OutputExport(name="connectionPoolConfig", type=ProxyDefaultTargetGroupConnectionPoolConfig.class, parameters={})
+    @Export(name="connectionPoolConfig", type=ProxyDefaultTargetGroupConnectionPoolConfig.class, parameters={})
     private Output<ProxyDefaultTargetGroupConnectionPoolConfig> connectionPoolConfig;
 
     /**
@@ -63,7 +63,7 @@ public class ProxyDefaultTargetGroup extends io.pulumi.resources.CustomResource 
      * Name of the RDS DB Proxy.
      * 
      */
-    @OutputExport(name="dbProxyName", type=String.class, parameters={})
+    @Export(name="dbProxyName", type=String.class, parameters={})
     private Output<String> dbProxyName;
 
     /**
@@ -77,7 +77,7 @@ public class ProxyDefaultTargetGroup extends io.pulumi.resources.CustomResource 
      * The name of the default target group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

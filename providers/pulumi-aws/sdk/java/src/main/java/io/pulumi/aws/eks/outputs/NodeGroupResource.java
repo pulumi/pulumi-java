@@ -4,14 +4,14 @@
 package io.pulumi.aws.eks.outputs;
 
 import io.pulumi.aws.eks.outputs.NodeGroupResourceAutoscalingGroup;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeGroupResource {
     /**
      * List of objects containing information about AutoScaling Groups.
@@ -24,10 +24,10 @@ public final class NodeGroupResource {
      */
     private final @Nullable String remoteAccessSecurityGroupId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeGroupResource(
-        @OutputCustomType.Parameter("autoscalingGroups") @Nullable List<NodeGroupResourceAutoscalingGroup> autoscalingGroups,
-        @OutputCustomType.Parameter("remoteAccessSecurityGroupId") @Nullable String remoteAccessSecurityGroupId) {
+        @CustomType.Parameter("autoscalingGroups") @Nullable List<NodeGroupResourceAutoscalingGroup> autoscalingGroups,
+        @CustomType.Parameter("remoteAccessSecurityGroupId") @Nullable String remoteAccessSecurityGroupId) {
         this.autoscalingGroups = autoscalingGroups;
         this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
     }

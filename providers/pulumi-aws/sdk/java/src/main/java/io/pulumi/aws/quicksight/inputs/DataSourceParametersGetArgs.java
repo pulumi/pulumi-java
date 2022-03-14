@@ -24,7 +24,7 @@ import io.pulumi.aws.quicksight.inputs.DataSourceParametersSqlServerGetArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceParametersTeradataGetArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceParametersTwitterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -37,7 +37,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Amazon Elasticsearch.
      * 
      */
-    @InputImport(name="amazonElasticsearch")
+    @Import(name="amazonElasticsearch")
       private final @Nullable Output<DataSourceParametersAmazonElasticsearchGetArgs> amazonElasticsearch;
 
     public Output<DataSourceParametersAmazonElasticsearchGetArgs> getAmazonElasticsearch() {
@@ -48,7 +48,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Athena.
      * 
      */
-    @InputImport(name="athena")
+    @Import(name="athena")
       private final @Nullable Output<DataSourceParametersAthenaGetArgs> athena;
 
     public Output<DataSourceParametersAthenaGetArgs> getAthena() {
@@ -59,7 +59,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Aurora MySQL.
      * 
      */
-    @InputImport(name="aurora")
+    @Import(name="aurora")
       private final @Nullable Output<DataSourceParametersAuroraGetArgs> aurora;
 
     public Output<DataSourceParametersAuroraGetArgs> getAurora() {
@@ -70,7 +70,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Aurora Postgresql.
      * 
      */
-    @InputImport(name="auroraPostgresql")
+    @Import(name="auroraPostgresql")
       private final @Nullable Output<DataSourceParametersAuroraPostgresqlGetArgs> auroraPostgresql;
 
     public Output<DataSourceParametersAuroraPostgresqlGetArgs> getAuroraPostgresql() {
@@ -81,7 +81,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to AWS IOT Analytics.
      * 
      */
-    @InputImport(name="awsIotAnalytics")
+    @Import(name="awsIotAnalytics")
       private final @Nullable Output<DataSourceParametersAwsIotAnalyticsGetArgs> awsIotAnalytics;
 
     public Output<DataSourceParametersAwsIotAnalyticsGetArgs> getAwsIotAnalytics() {
@@ -92,7 +92,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Jira.
      * 
      */
-    @InputImport(name="jira")
+    @Import(name="jira")
       private final @Nullable Output<DataSourceParametersJiraGetArgs> jira;
 
     public Output<DataSourceParametersJiraGetArgs> getJira() {
@@ -103,7 +103,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to MariaDB.
      * 
      */
-    @InputImport(name="mariaDb")
+    @Import(name="mariaDb")
       private final @Nullable Output<DataSourceParametersMariaDbGetArgs> mariaDb;
 
     public Output<DataSourceParametersMariaDbGetArgs> getMariaDb() {
@@ -114,7 +114,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to MySQL.
      * 
      */
-    @InputImport(name="mysql")
+    @Import(name="mysql")
       private final @Nullable Output<DataSourceParametersMysqlGetArgs> mysql;
 
     public Output<DataSourceParametersMysqlGetArgs> getMysql() {
@@ -125,7 +125,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Oracle.
      * 
      */
-    @InputImport(name="oracle")
+    @Import(name="oracle")
       private final @Nullable Output<DataSourceParametersOracleGetArgs> oracle;
 
     public Output<DataSourceParametersOracleGetArgs> getOracle() {
@@ -136,7 +136,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Postgresql.
      * 
      */
-    @InputImport(name="postgresql")
+    @Import(name="postgresql")
       private final @Nullable Output<DataSourceParametersPostgresqlGetArgs> postgresql;
 
     public Output<DataSourceParametersPostgresqlGetArgs> getPostgresql() {
@@ -147,7 +147,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Presto.
      * 
      */
-    @InputImport(name="presto")
+    @Import(name="presto")
       private final @Nullable Output<DataSourceParametersPrestoGetArgs> presto;
 
     public Output<DataSourceParametersPrestoGetArgs> getPresto() {
@@ -158,7 +158,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to RDS.
      * 
      */
-    @InputImport(name="rds")
+    @Import(name="rds")
       private final @Nullable Output<DataSourceParametersRdsGetArgs> rds;
 
     public Output<DataSourceParametersRdsGetArgs> getRds() {
@@ -169,7 +169,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Redshift.
      * 
      */
-    @InputImport(name="redshift")
+    @Import(name="redshift")
       private final @Nullable Output<DataSourceParametersRedshiftGetArgs> redshift;
 
     public Output<DataSourceParametersRedshiftGetArgs> getRedshift() {
@@ -180,7 +180,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to S3.
      * 
      */
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable Output<DataSourceParametersS3GetArgs> s3;
 
     public Output<DataSourceParametersS3GetArgs> getS3() {
@@ -191,7 +191,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to ServiceNow.
      * 
      */
-    @InputImport(name="serviceNow")
+    @Import(name="serviceNow")
       private final @Nullable Output<DataSourceParametersServiceNowGetArgs> serviceNow;
 
     public Output<DataSourceParametersServiceNowGetArgs> getServiceNow() {
@@ -202,7 +202,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Snowflake.
      * 
      */
-    @InputImport(name="snowflake")
+    @Import(name="snowflake")
       private final @Nullable Output<DataSourceParametersSnowflakeGetArgs> snowflake;
 
     public Output<DataSourceParametersSnowflakeGetArgs> getSnowflake() {
@@ -213,7 +213,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Spark.
      * 
      */
-    @InputImport(name="spark")
+    @Import(name="spark")
       private final @Nullable Output<DataSourceParametersSparkGetArgs> spark;
 
     public Output<DataSourceParametersSparkGetArgs> getSpark() {
@@ -224,7 +224,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to SQL Server.
      * 
      */
-    @InputImport(name="sqlServer")
+    @Import(name="sqlServer")
       private final @Nullable Output<DataSourceParametersSqlServerGetArgs> sqlServer;
 
     public Output<DataSourceParametersSqlServerGetArgs> getSqlServer() {
@@ -235,7 +235,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Teradata.
      * 
      */
-    @InputImport(name="teradata")
+    @Import(name="teradata")
       private final @Nullable Output<DataSourceParametersTeradataGetArgs> teradata;
 
     public Output<DataSourceParametersTeradataGetArgs> getTeradata() {
@@ -246,7 +246,7 @@ public final class DataSourceParametersGetArgs extends io.pulumi.resources.Resou
      * Parameters for connecting to Twitter.
      * 
      */
-    @InputImport(name="twitter")
+    @Import(name="twitter")
       private final @Nullable Output<DataSourceParametersTwitterGetArgs> twitter;
 
     public Output<DataSourceParametersTwitterGetArgs> getTwitter() {

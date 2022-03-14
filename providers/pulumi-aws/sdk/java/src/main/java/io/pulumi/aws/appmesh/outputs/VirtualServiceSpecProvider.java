@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualServiceSpecProviderVirtualNode;
 import io.pulumi.aws.appmesh.outputs.VirtualServiceSpecProviderVirtualRouter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualServiceSpecProvider {
     /**
      * The virtual node associated with a virtual service.
@@ -23,10 +23,10 @@ public final class VirtualServiceSpecProvider {
      */
     private final @Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualServiceSpecProvider(
-        @OutputCustomType.Parameter("virtualNode") @Nullable VirtualServiceSpecProviderVirtualNode virtualNode,
-        @OutputCustomType.Parameter("virtualRouter") @Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter) {
+        @CustomType.Parameter("virtualNode") @Nullable VirtualServiceSpecProviderVirtualNode virtualNode,
+        @CustomType.Parameter("virtualRouter") @Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter) {
         this.virtualNode = virtualNode;
         this.virtualRouter = virtualRouter;
     }

@@ -5,14 +5,14 @@ package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema {
     /**
      * Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
@@ -30,11 +30,11 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat recordFormat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema(
-        @OutputCustomType.Parameter("recordColumns") List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn> recordColumns,
-        @OutputCustomType.Parameter("recordEncoding") @Nullable String recordEncoding,
-        @OutputCustomType.Parameter("recordFormat") ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat recordFormat) {
+        @CustomType.Parameter("recordColumns") List<ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn> recordColumns,
+        @CustomType.Parameter("recordEncoding") @Nullable String recordEncoding,
+        @CustomType.Parameter("recordFormat") ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat recordFormat) {
         this.recordColumns = recordColumns;
         this.recordEncoding = recordEncoding;
         this.recordFormat = recordFormat;

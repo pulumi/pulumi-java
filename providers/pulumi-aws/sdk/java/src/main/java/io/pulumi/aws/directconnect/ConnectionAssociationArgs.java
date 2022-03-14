@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
      * The ID of the connection.
      * 
      */
-    @InputImport(name="connectionId", required=true)
+    @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -28,7 +28,7 @@ public final class ConnectionAssociationArgs extends io.pulumi.resources.Resourc
      * The ID of the LAG with which to associate the connection.
      * 
      */
-    @InputImport(name="lagId", required=true)
+    @Import(name="lagId", required=true)
       private final Output<String> lagId;
 
     public Output<String> getLagId() {

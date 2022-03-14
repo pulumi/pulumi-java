@@ -5,13 +5,13 @@ package io.pulumi.aws.apprunner.outputs;
 
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfigurationCodeRepositoryCodeConfiguration;
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfigurationCodeRepositorySourceCodeVersion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceSourceConfigurationCodeRepository {
     /**
      * Configuration for building and running the service from a source code repository. See Code Configuration below for more details.
@@ -29,11 +29,11 @@ public final class ServiceSourceConfigurationCodeRepository {
      */
     private final ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceSourceConfigurationCodeRepository(
-        @OutputCustomType.Parameter("codeConfiguration") @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfiguration codeConfiguration,
-        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
-        @OutputCustomType.Parameter("sourceCodeVersion") ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion) {
+        @CustomType.Parameter("codeConfiguration") @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfiguration codeConfiguration,
+        @CustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @CustomType.Parameter("sourceCodeVersion") ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion) {
         this.codeConfiguration = codeConfiguration;
         this.repositoryUrl = repositoryUrl;
         this.sourceCodeVersion = sourceCodeVersion;

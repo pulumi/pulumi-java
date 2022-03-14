@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.MethodArgs;
 import io.pulumi.aws.apigateway.inputs.MethodState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * Specify if the method requires an API key
      * 
      */
-    @OutputExport(name="apiKeyRequired", type=Boolean.class, parameters={})
+    @Export(name="apiKeyRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> apiKeyRequired;
 
     /**
@@ -50,7 +50,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
      * 
      */
-    @OutputExport(name="authorization", type=String.class, parameters={})
+    @Export(name="authorization", type=String.class, parameters={})
     private Output<String> authorization;
 
     /**
@@ -64,7 +64,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
      * 
      */
-    @OutputExport(name="authorizationScopes", type=List.class, parameters={String.class})
+    @Export(name="authorizationScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> authorizationScopes;
 
     /**
@@ -78,7 +78,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
      * 
      */
-    @OutputExport(name="authorizerId", type=String.class, parameters={})
+    @Export(name="authorizerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerId;
 
     /**
@@ -92,7 +92,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
      * 
      */
-    @OutputExport(name="httpMethod", type=String.class, parameters={})
+    @Export(name="httpMethod", type=String.class, parameters={})
     private Output<String> httpMethod;
 
     /**
@@ -106,7 +106,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
      * 
      */
-    @OutputExport(name="operationName", type=String.class, parameters={})
+    @Export(name="operationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> operationName;
 
     /**
@@ -122,7 +122,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
      * 
      */
-    @OutputExport(name="requestModels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="requestModels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> requestModels;
 
     /**
@@ -139,7 +139,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
      * 
      */
-    @OutputExport(name="requestParameters", type=Map.class, parameters={String.class, Boolean.class})
+    @Export(name="requestParameters", type=Map.class, parameters={String.class, Boolean.class})
     private Output</* @Nullable */ Map<String,Boolean>> requestParameters;
 
     /**
@@ -154,7 +154,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The ID of a `aws.apigateway.RequestValidator`
      * 
      */
-    @OutputExport(name="requestValidatorId", type=String.class, parameters={})
+    @Export(name="requestValidatorId", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestValidatorId;
 
     /**
@@ -168,7 +168,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The API resource ID
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -182,7 +182,7 @@ public class Method extends io.pulumi.resources.CustomResource {
      * The ID of the associated REST API
      * 
      */
-    @OutputExport(name="restApi", type=String.class, parameters={})
+    @Export(name="restApi", type=String.class, parameters={})
     private Output<String> restApi;
 
     /**

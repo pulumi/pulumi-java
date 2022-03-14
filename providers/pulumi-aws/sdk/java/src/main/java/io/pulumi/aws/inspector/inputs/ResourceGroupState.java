@@ -4,7 +4,7 @@
 package io.pulumi.aws.inspector.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResourceGroupState extends io.pulumi.resources.ResourceArgs {
      * The resource group ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class ResourceGroupState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of tags that are used to select the EC2 instances to be included in an `Amazon Inspector assessment target` resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

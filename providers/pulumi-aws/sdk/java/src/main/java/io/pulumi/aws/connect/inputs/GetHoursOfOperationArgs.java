@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
      * Returns information on a specific Hours of Operation by hours of operation id
      * 
      */
-    @InputImport(name="hoursOfOperationId")
+    @Import(name="hoursOfOperationId")
       private final @Nullable String hoursOfOperationId;
 
     public Optional<String> getHoursOfOperationId() {
@@ -30,7 +30,7 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
      * Reference to the hosting Amazon Connect Instance
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -41,7 +41,7 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
      * Returns information on a specific Hours of Operation by name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -52,7 +52,7 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
      * A the map of tags to assign to the Hours of Operation.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

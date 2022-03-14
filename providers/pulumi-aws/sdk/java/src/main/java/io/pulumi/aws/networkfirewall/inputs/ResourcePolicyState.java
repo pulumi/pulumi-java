@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
 
     public static final ResourcePolicyState Empty = new ResourcePolicyState();
 
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -25,7 +25,7 @@ public final class ResourcePolicyState extends io.pulumi.resources.ResourceArgs 
      * The Amazon Resource Name (ARN) of the rule group or firewall policy.
      * 
      */
-    @InputImport(name="resourceArn")
+    @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {

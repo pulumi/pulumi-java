@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class VirtualNodeSpecServiceDiscoveryDnsArgs extends io.pulumi.reso
      * The DNS host name for your virtual node.
      * 
      */
-    @InputImport(name="hostname", required=true)
+    @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
     public Output<String> getHostname() {

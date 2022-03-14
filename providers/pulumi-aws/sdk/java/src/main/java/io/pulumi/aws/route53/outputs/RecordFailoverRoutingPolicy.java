@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecordFailoverRoutingPolicy {
     /**
      * `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
@@ -15,8 +15,8 @@ public final class RecordFailoverRoutingPolicy {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private RecordFailoverRoutingPolicy(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private RecordFailoverRoutingPolicy(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

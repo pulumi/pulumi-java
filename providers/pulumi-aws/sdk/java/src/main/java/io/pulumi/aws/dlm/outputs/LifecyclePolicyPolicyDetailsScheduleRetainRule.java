@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.dlm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LifecyclePolicyPolicyDetailsScheduleRetainRule {
     /**
      * How many snapshots to keep. Must be an integer between 1 and 1000.
@@ -15,8 +15,8 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRule {
      */
     private final Integer count;
 
-    @OutputCustomType.Constructor
-    private LifecyclePolicyPolicyDetailsScheduleRetainRule(@OutputCustomType.Parameter("count") Integer count) {
+    @CustomType.Constructor
+    private LifecyclePolicyPolicyDetailsScheduleRetainRule(@CustomType.Parameter("count") Integer count) {
         this.count = count;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.aws.codestarconnections.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
      * he ID of the security group or security groups associated with the Amazon VPC connected to the infrastructure where your provider type is installed.
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -30,7 +30,7 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
      * The ID of the subnet or subnets associated with the Amazon VPC connected to the infrastructure where your provider type is installed.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -41,7 +41,7 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
      * The value of the Transport Layer Security (TLS) certificate associated with the infrastructure where your provider type is installed.
      * 
      */
-    @InputImport(name="tlsCertificate")
+    @Import(name="tlsCertificate")
       private final @Nullable Output<String> tlsCertificate;
 
     public Output<String> getTlsCertificate() {
@@ -52,7 +52,7 @@ public final class HostVpcConfigurationGetArgs extends io.pulumi.resources.Resou
      * The ID of the Amazon VPC connected to the infrastructure where your provider type is installed.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

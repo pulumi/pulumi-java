@@ -4,13 +4,13 @@
 package io.pulumi.aws.appsync.outputs;
 
 import io.pulumi.aws.appsync.outputs.DataSourceRelationalDatabaseConfigHttpEndpointConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceRelationalDatabaseConfig {
     /**
      * The Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.
@@ -23,10 +23,10 @@ public final class DataSourceRelationalDatabaseConfig {
      */
     private final @Nullable String sourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceRelationalDatabaseConfig(
-        @OutputCustomType.Parameter("httpEndpointConfig") @Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfig httpEndpointConfig,
-        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType) {
+        @CustomType.Parameter("httpEndpointConfig") @Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfig httpEndpointConfig,
+        @CustomType.Parameter("sourceType") @Nullable String sourceType) {
         this.httpEndpointConfig = httpEndpointConfig;
         this.sourceType = sourceType;
     }

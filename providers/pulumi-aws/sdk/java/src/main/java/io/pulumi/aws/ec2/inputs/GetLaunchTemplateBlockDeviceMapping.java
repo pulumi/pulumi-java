@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetLaunchTemplateBlockDeviceMappingEb;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,28 +14,28 @@ public final class GetLaunchTemplateBlockDeviceMapping extends io.pulumi.resourc
 
     public static final GetLaunchTemplateBlockDeviceMapping Empty = new GetLaunchTemplateBlockDeviceMapping();
 
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
     }
 
-    @InputImport(name="ebs", required=true)
+    @Import(name="ebs", required=true)
       private final List<GetLaunchTemplateBlockDeviceMappingEb> ebs;
 
     public List<GetLaunchTemplateBlockDeviceMappingEb> getEbs() {
         return this.ebs;
     }
 
-    @InputImport(name="noDevice", required=true)
+    @Import(name="noDevice", required=true)
       private final String noDevice;
 
     public String getNoDevice() {
         return this.noDevice;
     }
 
-    @InputImport(name="virtualName", required=true)
+    @Import(name="virtualName", required=true)
       private final String virtualName;
 
     public String getVirtualName() {

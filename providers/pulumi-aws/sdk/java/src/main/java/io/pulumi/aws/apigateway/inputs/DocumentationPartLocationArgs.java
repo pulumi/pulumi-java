@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
      * The HTTP verb of a method. The default value is `*` for any method.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<String> method;
 
     public Output<String> getMethod() {
@@ -29,7 +29,7 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
      * The name of the targeted API entity.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
      * The URL path of the target. The default value is `/` for the root resource.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -51,7 +51,7 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
      * The HTTP status code of a response. The default value is `*` for any status code.
      * 
      */
-    @InputImport(name="statusCode")
+    @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
     public Output<String> getStatusCode() {
@@ -62,7 +62,7 @@ public final class DocumentationPartLocationArgs extends io.pulumi.resources.Res
      * The type of API entity to which the documentation content appliesE.g., `API`, `METHOD` or `REQUEST_BODY`
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

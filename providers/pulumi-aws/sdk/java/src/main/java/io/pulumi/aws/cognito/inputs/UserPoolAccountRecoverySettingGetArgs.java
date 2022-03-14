@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.aws.cognito.inputs.UserPoolAccountRecoverySettingRecoveryMechanismGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class UserPoolAccountRecoverySettingGetArgs extends io.pulumi.resou
      * List of Account Recovery Options of the following structure:
      * 
      */
-    @InputImport(name="recoveryMechanisms", required=true)
+    @Import(name="recoveryMechanisms", required=true)
       private final Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> recoveryMechanisms;
 
     public Output<List<UserPoolAccountRecoverySettingRecoveryMechanismGetArgs>> getRecoveryMechanisms() {

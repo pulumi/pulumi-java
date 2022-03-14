@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventTargetSqsTarget {
     /**
      * The FIFO message group ID to use as the target.
@@ -17,8 +17,8 @@ public final class EventTargetSqsTarget {
      */
     private final @Nullable String messageGroupId;
 
-    @OutputCustomType.Constructor
-    private EventTargetSqsTarget(@OutputCustomType.Parameter("messageGroupId") @Nullable String messageGroupId) {
+    @CustomType.Constructor
+    private EventTargetSqsTarget(@CustomType.Parameter("messageGroupId") @Nullable String messageGroupId) {
         this.messageGroupId = messageGroupId;
     }
 

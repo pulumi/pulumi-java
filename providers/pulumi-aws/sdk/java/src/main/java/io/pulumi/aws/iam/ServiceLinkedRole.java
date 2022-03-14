@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.ServiceLinkedRoleArgs;
 import io.pulumi.aws.iam.inputs.ServiceLinkedRoleState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) specifying the role.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * The AWS service to which this role is attached. You use a string similar to a URL but without the `http://` in front. For example: `elasticbeanstalk.amazonaws.com`. To find the full list of services that support service-linked roles, check [the docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html).
      * 
      */
-    @OutputExport(name="awsServiceName", type=String.class, parameters={})
+    @Export(name="awsServiceName", type=String.class, parameters={})
     private Output<String> awsServiceName;
 
     /**
@@ -61,7 +61,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * The creation date of the IAM role.
      * 
      */
-    @OutputExport(name="createDate", type=String.class, parameters={})
+    @Export(name="createDate", type=String.class, parameters={})
     private Output<String> createDate;
 
     /**
@@ -75,7 +75,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * Additional string appended to the role name. Not all AWS services support custom suffixes.
      * 
      */
-    @OutputExport(name="customSuffix", type=String.class, parameters={})
+    @Export(name="customSuffix", type=String.class, parameters={})
     private Output</* @Nullable */ String> customSuffix;
 
     /**
@@ -89,7 +89,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * The description of the role.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -103,7 +103,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * The name of the role.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -117,7 +117,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * The path of the role.
      * 
      */
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output<String> path;
 
     /**
@@ -131,7 +131,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * Key-value mapping of tags for the IAM role. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -145,7 +145,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -159,7 +159,7 @@ public class ServiceLinkedRole extends io.pulumi.resources.CustomResource {
      * The stable and unique string identifying the role.
      * 
      */
-    @OutputExport(name="uniqueId", type=String.class, parameters={})
+    @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**

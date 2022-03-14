@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
      * An AWS Account ID to add launch permissions.
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -28,7 +28,7 @@ public final class AmiLaunchPermissionArgs extends io.pulumi.resources.ResourceA
      * A region-unique name for the AMI.
      * 
      */
-    @InputImport(name="imageId", required=true)
+    @Import(name="imageId", required=true)
       private final Output<String> imageId;
 
     public Output<String> getImageId() {

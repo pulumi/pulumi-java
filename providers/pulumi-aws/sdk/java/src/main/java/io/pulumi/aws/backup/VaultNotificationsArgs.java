@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
      * An array of events that indicate the status of jobs to back up resources to the backup vault.
      * 
      */
-    @InputImport(name="backupVaultEvents", required=true)
+    @Import(name="backupVaultEvents", required=true)
       private final Output<List<String>> backupVaultEvents;
 
     public Output<List<String>> getBackupVaultEvents() {
@@ -29,7 +29,7 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
      * Name of the backup vault to add notifications for.
      * 
      */
-    @InputImport(name="backupVaultName", required=true)
+    @Import(name="backupVaultName", required=true)
       private final Output<String> backupVaultName;
 
     public Output<String> getBackupVaultName() {
@@ -40,7 +40,7 @@ public final class VaultNotificationsArgs extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
      * 
      */
-    @InputImport(name="snsTopicArn", required=true)
+    @Import(name="snsTopicArn", required=true)
       private final Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {

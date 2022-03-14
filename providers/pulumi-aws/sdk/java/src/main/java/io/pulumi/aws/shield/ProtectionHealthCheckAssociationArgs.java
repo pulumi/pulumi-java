@@ -4,7 +4,7 @@
 package io.pulumi.aws.shield;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ProtectionHealthCheckAssociationArgs extends io.pulumi.resour
      * The ARN (Amazon Resource Name) of the Route53 Health Check resource which will be associated to the protected resource.
      * 
      */
-    @InputImport(name="healthCheckArn", required=true)
+    @Import(name="healthCheckArn", required=true)
       private final Output<String> healthCheckArn;
 
     public Output<String> getHealthCheckArn() {
@@ -28,7 +28,7 @@ public final class ProtectionHealthCheckAssociationArgs extends io.pulumi.resour
      * The ID of the protected resource.
      * 
      */
-    @InputImport(name="shieldProtectionId", required=true)
+    @Import(name="shieldProtectionId", required=true)
       private final Output<String> shieldProtectionId;
 
     public Output<String> getShieldProtectionId() {

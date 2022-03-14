@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.s3outposts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointNetworkInterface {
     /**
      * Identifier of the Elastic Network Interface (ENI).
@@ -17,8 +17,8 @@ public final class EndpointNetworkInterface {
      */
     private final @Nullable String networkInterfaceId;
 
-    @OutputCustomType.Constructor
-    private EndpointNetworkInterface(@OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId) {
+    @CustomType.Constructor
+    private EndpointNetworkInterface(@CustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
     }
 

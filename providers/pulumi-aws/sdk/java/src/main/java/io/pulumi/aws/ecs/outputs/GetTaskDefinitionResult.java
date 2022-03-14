@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTaskDefinitionResult {
     /**
      * The ARN of the task definition
@@ -47,16 +47,16 @@ public final class GetTaskDefinitionResult {
      */
     private final String taskRoleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTaskDefinitionResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("family") String family,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("networkMode") String networkMode,
-        @OutputCustomType.Parameter("revision") Integer revision,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("taskDefinition") String taskDefinition,
-        @OutputCustomType.Parameter("taskRoleArn") String taskRoleArn) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("family") String family,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("networkMode") String networkMode,
+        @CustomType.Parameter("revision") Integer revision,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("taskDefinition") String taskDefinition,
+        @CustomType.Parameter("taskRoleArn") String taskRoleArn) {
         this.arn = arn;
         this.family = family;
         this.id = id;

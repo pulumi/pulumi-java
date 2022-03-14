@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
      * * `COPY_AUTO_SCALING_GROUP`: Use settings from a specified **Auto Scaling** group to define and create instances in a new Auto Scaling group. _Exactly one Auto Scaling group must be specified_ when selecting `COPY_AUTO_SCALING_GROUP`. Use `autoscaling_groups` to specify the Auto Scaling group.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {

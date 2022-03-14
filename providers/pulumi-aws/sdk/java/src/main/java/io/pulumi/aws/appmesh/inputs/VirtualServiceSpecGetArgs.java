@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class VirtualServiceSpecGetArgs extends io.pulumi.resources.Resourc
      * The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
      * 
      */
-    @InputImport(name="provider")
+    @Import(name="provider")
       private final @Nullable Output<VirtualServiceSpecProviderGetArgs> provider;
 
     public Output<VirtualServiceSpecProviderGetArgs> getProvider() {

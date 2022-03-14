@@ -6,7 +6,7 @@ package io.pulumi.aws.budgets;
 import io.pulumi.aws.budgets.inputs.BudgetCostTypesArgs;
 import io.pulumi.aws.budgets.inputs.BudgetNotificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the target account for budget. Will use current user's account_id by default if omitted.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -33,7 +33,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether this budget tracks monetary cost or usage.
      * 
      */
-    @InputImport(name="budgetType", required=true)
+    @Import(name="budgetType", required=true)
       private final Output<String> budgetType;
 
     public Output<String> getBudgetType() {
@@ -44,7 +44,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Map of CostFilters key/value pairs to apply to the budget.
      * 
      */
-    @InputImport(name="costFilters")
+    @Import(name="costFilters")
       private final @Nullable Output<Map<String,String>> costFilters;
 
     public Output<Map<String,String>> getCostFilters() {
@@ -55,7 +55,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions.
      * 
      */
-    @InputImport(name="costTypes")
+    @Import(name="costTypes")
       private final @Nullable Output<BudgetCostTypesArgs> costTypes;
 
     public Output<BudgetCostTypesArgs> getCostTypes() {
@@ -66,7 +66,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The amount of cost or usage being measured for a budget.
      * 
      */
-    @InputImport(name="limitAmount", required=true)
+    @Import(name="limitAmount", required=true)
       private final Output<String> limitAmount;
 
     public Output<String> getLimitAmount() {
@@ -77,7 +77,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
      * 
      */
-    @InputImport(name="limitUnit", required=true)
+    @Import(name="limitUnit", required=true)
       private final Output<String> limitUnit;
 
     public Output<String> getLimitUnit() {
@@ -88,7 +88,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of a budget. Unique within accounts.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -99,7 +99,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The prefix of the name of a budget. Unique within accounts.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -110,7 +110,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
      * 
      */
-    @InputImport(name="notifications")
+    @Import(name="notifications")
       private final @Nullable Output<List<BudgetNotificationArgs>> notifications;
 
     public Output<List<BudgetNotificationArgs>> getNotifications() {
@@ -121,7 +121,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
      * 
      */
-    @InputImport(name="timePeriodEnd")
+    @Import(name="timePeriodEnd")
       private final @Nullable Output<String> timePeriodEnd;
 
     public Output<String> getTimePeriodEnd() {
@@ -132,7 +132,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The start of the time period covered by the budget. If you don't specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.
      * 
      */
-    @InputImport(name="timePeriodStart")
+    @Import(name="timePeriodStart")
       private final @Nullable Output<String> timePeriodStart;
 
     public Output<String> getTimePeriodStart() {
@@ -143,7 +143,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`, and `DAILY`.
      * 
      */
-    @InputImport(name="timeUnit", required=true)
+    @Import(name="timeUnit", required=true)
       private final Output<String> timeUnit;
 
     public Output<String> getTimeUnit() {

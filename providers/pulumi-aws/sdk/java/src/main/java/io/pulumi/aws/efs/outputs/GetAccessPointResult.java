@@ -5,14 +5,14 @@ package io.pulumi.aws.efs.outputs;
 
 import io.pulumi.aws.efs.outputs.GetAccessPointPosixUser;
 import io.pulumi.aws.efs.outputs.GetAccessPointRootDirectory;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPointResult {
     private final String accessPointId;
     /**
@@ -48,17 +48,17 @@ public final class GetAccessPointResult {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPointResult(
-        @OutputCustomType.Parameter("accessPointId") String accessPointId,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("fileSystemArn") String fileSystemArn,
-        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("posixUsers") List<GetAccessPointPosixUser> posixUsers,
-        @OutputCustomType.Parameter("rootDirectories") List<GetAccessPointRootDirectory> rootDirectories,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("accessPointId") String accessPointId,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("fileSystemArn") String fileSystemArn,
+        @CustomType.Parameter("fileSystemId") String fileSystemId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("posixUsers") List<GetAccessPointPosixUser> posixUsers,
+        @CustomType.Parameter("rootDirectories") List<GetAccessPointRootDirectory> rootDirectories,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.accessPointId = accessPointId;
         this.arn = arn;
         this.fileSystemArn = fileSystemArn;

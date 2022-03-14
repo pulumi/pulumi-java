@@ -9,7 +9,7 @@ import io.pulumi.aws.ec2.inputs.DefaultSecurityGroupState;
 import io.pulumi.aws.ec2.outputs.DefaultSecurityGroupEgress;
 import io.pulumi.aws.ec2.outputs.DefaultSecurityGroupIngress;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -50,7 +50,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * ARN of the security group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -64,7 +64,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * Description of this rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -78,7 +78,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * Configuration block. Detailed below.
      * 
      */
-    @OutputExport(name="egress", type=List.class, parameters={DefaultSecurityGroupEgress.class})
+    @Export(name="egress", type=List.class, parameters={DefaultSecurityGroupEgress.class})
     private Output<List<DefaultSecurityGroupEgress>> egress;
 
     /**
@@ -92,7 +92,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * Configuration block. Detailed below.
      * 
      */
-    @OutputExport(name="ingress", type=List.class, parameters={DefaultSecurityGroupIngress.class})
+    @Export(name="ingress", type=List.class, parameters={DefaultSecurityGroupIngress.class})
     private Output<List<DefaultSecurityGroupIngress>> ingress;
 
     /**
@@ -106,7 +106,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * Name of the security group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * Owner ID.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -130,7 +130,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getOwnerId() {
         return this.ownerId;
     }
-    @OutputExport(name="revokeRulesOnDelete", type=Boolean.class, parameters={})
+    @Export(name="revokeRulesOnDelete", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> revokeRulesOnDelete;
 
     public Output</* @Nullable */ Boolean> getRevokeRulesOnDelete() {
@@ -140,7 +140,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -154,7 +154,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -168,7 +168,7 @@ public class DefaultSecurityGroup extends io.pulumi.resources.CustomResource {
      * VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

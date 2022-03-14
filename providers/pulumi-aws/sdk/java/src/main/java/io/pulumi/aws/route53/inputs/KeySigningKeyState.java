@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * A string used to represent the delegation signer digest algorithm. This value must follow the guidelines provided by [RFC-8624 Section 3.3](https://tools.ietf.org/html/rfc8624#section-3.3).
      * 
      */
-    @InputImport(name="digestAlgorithmMnemonic")
+    @Import(name="digestAlgorithmMnemonic")
       private final @Nullable Output<String> digestAlgorithmMnemonic;
 
     public Output<String> getDigestAlgorithmMnemonic() {
@@ -30,7 +30,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * An integer used to represent the delegation signer digest algorithm. This value must follow the guidelines provided by [RFC-8624 Section 3.3](https://tools.ietf.org/html/rfc8624#section-3.3).
      * 
      */
-    @InputImport(name="digestAlgorithmType")
+    @Import(name="digestAlgorithmType")
       private final @Nullable Output<Integer> digestAlgorithmType;
 
     public Output<Integer> getDigestAlgorithmType() {
@@ -41,7 +41,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * A cryptographic digest of a DNSKEY resource record (RR). DNSKEY records are used to publish the public key that resolvers can use to verify DNSSEC signatures that are used to secure certain kinds of information provided by the DNS system.
      * 
      */
-    @InputImport(name="digestValue")
+    @Import(name="digestValue")
       private final @Nullable Output<String> digestValue;
 
     public Output<String> getDigestValue() {
@@ -52,7 +52,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * A string that represents a DNSKEY record.
      * 
      */
-    @InputImport(name="dnskeyRecord")
+    @Import(name="dnskeyRecord")
       private final @Nullable Output<String> dnskeyRecord;
 
     public Output<String> getDnskeyRecord() {
@@ -63,7 +63,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * A string that represents a delegation signer (DS) record.
      * 
      */
-    @InputImport(name="dsRecord")
+    @Import(name="dsRecord")
       private final @Nullable Output<String> dsRecord;
 
     public Output<String> getDsRecord() {
@@ -74,7 +74,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * An integer that specifies how the key is used. For key-signing key (KSK), this value is always 257.
      * 
      */
-    @InputImport(name="flag")
+    @Import(name="flag")
       private final @Nullable Output<Integer> flag;
 
     public Output<Integer> getFlag() {
@@ -85,7 +85,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * Identifier of the Route 53 Hosted Zone.
      * 
      */
-    @InputImport(name="hostedZoneId")
+    @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
@@ -96,7 +96,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the Key Management Service (KMS) Key. This must be unique for each key-signing key (KSK) in a single hosted zone. This key must be in the `us-east-1` Region and meet certain requirements, which are described in the [Route 53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring-dnssec-cmk-requirements.html) and [Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateKeySigningKey.html).
      * 
      */
-    @InputImport(name="keyManagementServiceArn")
+    @Import(name="keyManagementServiceArn")
       private final @Nullable Output<String> keyManagementServiceArn;
 
     public Output<String> getKeyManagementServiceArn() {
@@ -107,7 +107,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * An integer used to identify the DNSSEC record for the domain name. The process used to calculate the value is described in [RFC-4034 Appendix B](https://tools.ietf.org/rfc/rfc4034.txt).
      * 
      */
-    @InputImport(name="keyTag")
+    @Import(name="keyTag")
       private final @Nullable Output<Integer> keyTag;
 
     public Output<Integer> getKeyTag() {
@@ -118,7 +118,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * Name of the key-signing key (KSK). Must be unique for each key-singing key in the same hosted zone.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -129,7 +129,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * The public key, represented as a Base64 encoding, as required by [RFC-4034 Page 5](https://tools.ietf.org/rfc/rfc4034.txt).
      * 
      */
-    @InputImport(name="publicKey")
+    @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
     public Output<String> getPublicKey() {
@@ -140,7 +140,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * A string used to represent the signing algorithm. This value must follow the guidelines provided by [RFC-8624 Section 3.1](https://tools.ietf.org/html/rfc8624#section-3.1).
      * 
      */
-    @InputImport(name="signingAlgorithmMnemonic")
+    @Import(name="signingAlgorithmMnemonic")
       private final @Nullable Output<String> signingAlgorithmMnemonic;
 
     public Output<String> getSigningAlgorithmMnemonic() {
@@ -151,7 +151,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * An integer used to represent the signing algorithm. This value must follow the guidelines provided by [RFC-8624 Section 3.1](https://tools.ietf.org/html/rfc8624#section-3.1).
      * 
      */
-    @InputImport(name="signingAlgorithmType")
+    @Import(name="signingAlgorithmType")
       private final @Nullable Output<Integer> signingAlgorithmType;
 
     public Output<Integer> getSigningAlgorithmType() {
@@ -162,7 +162,7 @@ public final class KeySigningKeyState extends io.pulumi.resources.ResourceArgs {
      * Status of the key-signing key (KSK). Valid values: `ACTIVE`, `INACTIVE`. Defaults to `ACTIVE`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

@@ -4,14 +4,14 @@
 package io.pulumi.aws.autoscaling.outputs;
 
 import io.pulumi.aws.autoscaling.outputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecification {
     /**
      * The dimensions of the metric.
@@ -39,13 +39,13 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyTargetTrackingConfigurationCustomizedMetricSpecification(
-        @OutputCustomType.Parameter("metricDimensions") @Nullable List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension> metricDimensions,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("statistic") String statistic,
-        @OutputCustomType.Parameter("unit") @Nullable String unit) {
+        @CustomType.Parameter("metricDimensions") @Nullable List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension> metricDimensions,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("statistic") String statistic,
+        @CustomType.Parameter("unit") @Nullable String unit) {
         this.metricDimensions = metricDimensions;
         this.metricName = metricName;
         this.namespace = namespace;

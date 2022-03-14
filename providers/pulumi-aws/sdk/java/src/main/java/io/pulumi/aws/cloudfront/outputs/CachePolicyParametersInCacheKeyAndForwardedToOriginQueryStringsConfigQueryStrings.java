@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings {
     /**
      * A list of item names (cookies, headers, or query strings).
@@ -17,8 +17,8 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
      */
     private final @Nullable List<String> items;
 
-    @OutputCustomType.Constructor
-    private CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings(@OutputCustomType.Parameter("items") @Nullable List<String> items) {
+    @CustomType.Constructor
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings(@CustomType.Parameter("items") @Nullable List<String> items) {
         this.items = items;
     }
 

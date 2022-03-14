@@ -14,7 +14,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventTargetRetryPolicyGetArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventTargetRunCommandTargetGetArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventTargetSqsTargetGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * - ARN of the SQS queue specified as the target for the dead-letter queue.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -40,7 +40,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @InputImport(name="batchTarget")
+    @Import(name="batchTarget")
       private final @Nullable Output<EventTargetBatchTargetGetArgs> batchTarget;
 
     public Output<EventTargetBatchTargetGetArgs> getBatchTarget() {
@@ -51,7 +51,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * Parameters used when you are providing a dead letter config. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @InputImport(name="deadLetterConfig")
+    @Import(name="deadLetterConfig")
       private final @Nullable Output<EventTargetDeadLetterConfigGetArgs> deadLetterConfig;
 
     public Output<EventTargetDeadLetterConfigGetArgs> getDeadLetterConfig() {
@@ -62,7 +62,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * Parameters used when you are using the rule to invoke Amazon ECS Task. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @InputImport(name="ecsTarget")
+    @Import(name="ecsTarget")
       private final @Nullable Output<EventTargetEcsTargetGetArgs> ecsTarget;
 
     public Output<EventTargetEcsTargetGetArgs> getEcsTarget() {
@@ -73,7 +73,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * The event bus to associate with the rule. If you omit this, the `default` event bus is used.
      * 
      */
-    @InputImport(name="eventBusName")
+    @Import(name="eventBusName")
       private final @Nullable Output<String> eventBusName;
 
     public Output<String> getEventBusName() {
@@ -84,7 +84,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * Parameters used when you are using the rule to invoke an API Gateway REST endpoint. Documented below. A maximum of 1 is allowed.
      * 
      */
-    @InputImport(name="httpTarget")
+    @Import(name="httpTarget")
       private final @Nullable Output<EventTargetHttpTargetGetArgs> httpTarget;
 
     public Output<EventTargetHttpTargetGetArgs> getHttpTarget() {
@@ -95,7 +95,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * Valid JSON text passed to the target. Conflicts with `input_path` and `input_transformer`.
      * 
      */
-    @InputImport(name="input")
+    @Import(name="input")
       private final @Nullable Output<String> input;
 
     public Output<String> getInput() {
@@ -106,7 +106,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `input_transformer`.
      * 
      */
-    @InputImport(name="inputPath")
+    @Import(name="inputPath")
       private final @Nullable Output<String> inputPath;
 
     public Output<String> getInputPath() {
@@ -117,7 +117,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `input_path`.
      * 
      */
-    @InputImport(name="inputTransformer")
+    @Import(name="inputTransformer")
       private final @Nullable Output<EventTargetInputTransformerGetArgs> inputTransformer;
 
     public Output<EventTargetInputTransformerGetArgs> getInputTransformer() {
@@ -128,7 +128,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @InputImport(name="kinesisTarget")
+    @Import(name="kinesisTarget")
       private final @Nullable Output<EventTargetKinesisTargetGetArgs> kinesisTarget;
 
     public Output<EventTargetKinesisTargetGetArgs> getKinesisTarget() {
@@ -139,7 +139,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * Parameters used when you are using the rule to invoke an Amazon Redshift Statement. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @InputImport(name="redshiftTarget")
+    @Import(name="redshiftTarget")
       private final @Nullable Output<EventTargetRedshiftTargetGetArgs> redshiftTarget;
 
     public Output<EventTargetRedshiftTargetGetArgs> getRedshiftTarget() {
@@ -150,7 +150,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @InputImport(name="retryPolicy")
+    @Import(name="retryPolicy")
       private final @Nullable Output<EventTargetRetryPolicyGetArgs> retryPolicy;
 
     public Output<EventTargetRetryPolicyGetArgs> getRetryPolicy() {
@@ -161,7 +161,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. Required if `ecs_target` is used or target in `arn` is EC2 instance, Kinesis data stream, Step Functions state machine, or Event Bus in different account or region.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -172,7 +172,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * The name of the rule you want to add targets to.
      * 
      */
-    @InputImport(name="rule")
+    @Import(name="rule")
       private final @Nullable Output<String> rule;
 
     public Output<String> getRule() {
@@ -183,7 +183,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * Parameters used when you are using the rule to invoke Amazon EC2 Run Command. Documented below. A maximum of 5 are allowed.
      * 
      */
-    @InputImport(name="runCommandTargets")
+    @Import(name="runCommandTargets")
       private final @Nullable Output<List<EventTargetRunCommandTargetGetArgs>> runCommandTargets;
 
     public Output<List<EventTargetRunCommandTargetGetArgs>> getRunCommandTargets() {
@@ -194,7 +194,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * Parameters used when you are using the rule to invoke an Amazon SQS Queue. Documented below. A maximum of 1 are allowed.
      * 
      */
-    @InputImport(name="sqsTarget")
+    @Import(name="sqsTarget")
       private final @Nullable Output<EventTargetSqsTargetGetArgs> sqsTarget;
 
     public Output<EventTargetSqsTargetGetArgs> getSqsTarget() {
@@ -205,7 +205,7 @@ public final class EventTargetState extends io.pulumi.resources.ResourceArgs {
      * The unique target assignment ID.  If missing, will generate a random, unique id.
      * 
      */
-    @InputImport(name="targetId")
+    @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
     public Output<String> getTargetId() {

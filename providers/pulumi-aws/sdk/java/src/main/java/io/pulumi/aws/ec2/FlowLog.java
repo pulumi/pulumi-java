@@ -8,7 +8,7 @@ import io.pulumi.aws.ec2.FlowLogArgs;
 import io.pulumi.aws.ec2.inputs.FlowLogState;
 import io.pulumi.aws.ec2.outputs.FlowLogDestinationOptions;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * The ARN of the Flow Log.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Describes the destination options for a flow log. More details below.
      * 
      */
-    @OutputExport(name="destinationOptions", type=FlowLogDestinationOptions.class, parameters={})
+    @Export(name="destinationOptions", type=FlowLogDestinationOptions.class, parameters={})
     private Output</* @Nullable */ FlowLogDestinationOptions> destinationOptions;
 
     /**
@@ -64,7 +64,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Elastic Network Interface ID to attach to
      * 
      */
-    @OutputExport(name="eniId", type=String.class, parameters={})
+    @Export(name="eniId", type=String.class, parameters={})
     private Output</* @Nullable */ String> eniId;
 
     /**
@@ -78,7 +78,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
      * 
      */
-    @OutputExport(name="iamRoleArn", type=String.class, parameters={})
+    @Export(name="iamRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> iamRoleArn;
 
     /**
@@ -92,7 +92,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * The ARN of the logging destination.
      * 
      */
-    @OutputExport(name="logDestination", type=String.class, parameters={})
+    @Export(name="logDestination", type=String.class, parameters={})
     private Output<String> logDestination;
 
     /**
@@ -106,7 +106,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
      * 
      */
-    @OutputExport(name="logDestinationType", type=String.class, parameters={})
+    @Export(name="logDestinationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> logDestinationType;
 
     /**
@@ -120,7 +120,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * The fields to include in the flow log record, in the order in which they should appear.
      * 
      */
-    @OutputExport(name="logFormat", type=String.class, parameters={})
+    @Export(name="logFormat", type=String.class, parameters={})
     private Output<String> logFormat;
 
     /**
@@ -138,7 +138,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* use 'log_destination' argument instead */
-    @OutputExport(name="logGroupName", type=String.class, parameters={})
+    @Export(name="logGroupName", type=String.class, parameters={})
     private Output<String> logGroupName;
 
     /**
@@ -155,7 +155,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * minutes). Default: `600`.
      * 
      */
-    @OutputExport(name="maxAggregationInterval", type=Integer.class, parameters={})
+    @Export(name="maxAggregationInterval", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxAggregationInterval;
 
     /**
@@ -172,7 +172,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Subnet ID to attach to
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetId;
 
     /**
@@ -186,7 +186,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -200,7 +200,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -214,7 +214,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
      * 
      */
-    @OutputExport(name="trafficType", type=String.class, parameters={})
+    @Export(name="trafficType", type=String.class, parameters={})
     private Output<String> trafficType;
 
     /**
@@ -228,7 +228,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * VPC ID to attach to
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcId;
 
     /**

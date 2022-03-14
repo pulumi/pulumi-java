@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterAutoTerminationPolicy {
     /**
      * Specifies the amount of idle time in seconds after which the cluster automatically terminates. You can specify a minimum of `60` seconds and a maximum of `604800` seconds (seven days).
@@ -17,8 +17,8 @@ public final class ClusterAutoTerminationPolicy {
      */
     private final @Nullable Integer idleTimeout;
 
-    @OutputCustomType.Constructor
-    private ClusterAutoTerminationPolicy(@OutputCustomType.Parameter("idleTimeout") @Nullable Integer idleTimeout) {
+    @CustomType.Constructor
+    private ClusterAutoTerminationPolicy(@CustomType.Parameter("idleTimeout") @Nullable Integer idleTimeout) {
         this.idleTimeout = idleTimeout;
     }
 

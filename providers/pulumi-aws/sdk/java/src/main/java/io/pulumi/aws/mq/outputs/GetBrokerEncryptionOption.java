@@ -3,20 +3,20 @@
 
 package io.pulumi.aws.mq.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBrokerEncryptionOption {
     private final String kmsKeyId;
     private final Boolean useAwsOwnedKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBrokerEncryptionOption(
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("useAwsOwnedKey") Boolean useAwsOwnedKey) {
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("useAwsOwnedKey") Boolean useAwsOwnedKey) {
         this.kmsKeyId = kmsKeyId;
         this.useAwsOwnedKey = useAwsOwnedKey;
     }

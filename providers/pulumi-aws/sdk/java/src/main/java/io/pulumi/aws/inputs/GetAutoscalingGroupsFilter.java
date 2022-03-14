@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetAutoscalingGroupsFilter extends io.pulumi.resources.Invoke
      * The name of the DescribeAutoScalingGroup filter. The recommended values are: `tag-key`, `tag-value`, and `tag:<tag name>`
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -28,7 +28,7 @@ public final class GetAutoscalingGroupsFilter extends io.pulumi.resources.Invoke
      * The value of the filter.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

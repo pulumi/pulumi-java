@@ -5,7 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.aws.ses.inputs.ConfgurationSetDeliveryOptionsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * SES configuration set ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="deliveryOptions")
+    @Import(name="deliveryOptions")
       private final @Nullable Output<ConfgurationSetDeliveryOptionsGetArgs> deliveryOptions;
 
     public Output<ConfgurationSetDeliveryOptionsGetArgs> getDeliveryOptions() {
@@ -42,7 +42,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * The date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.
      * 
      */
-    @InputImport(name="lastFreshStart")
+    @Import(name="lastFreshStart")
       private final @Nullable Output<String> lastFreshStart;
 
     public Output<String> getLastFreshStart() {
@@ -53,7 +53,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * Name of the configuration set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is `false`.
      * 
      */
-    @InputImport(name="reputationMetricsEnabled")
+    @Import(name="reputationMetricsEnabled")
       private final @Nullable Output<Boolean> reputationMetricsEnabled;
 
     public Output<Boolean> getReputationMetricsEnabled() {
@@ -75,7 +75,7 @@ public final class ConfgurationSetState extends io.pulumi.resources.ResourceArgs
      * Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
      * 
      */
-    @InputImport(name="sendingEnabled")
+    @Import(name="sendingEnabled")
       private final @Nullable Output<Boolean> sendingEnabled;
 
     public Output<Boolean> getSendingEnabled() {

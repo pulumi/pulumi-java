@@ -8,7 +8,7 @@ import io.pulumi.aws.elb.LoadBalancerCookieStickinessPolicyArgs;
 import io.pulumi.aws.elb.inputs.LoadBalancerCookieStickinessPolicyState;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public class LoadBalancerCookieStickinessPolicy extends io.pulumi.resources.Cust
      * the session cookie should be considered stale, expressed in seconds.
      * 
      */
-    @OutputExport(name="cookieExpirationPeriod", type=Integer.class, parameters={})
+    @Export(name="cookieExpirationPeriod", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> cookieExpirationPeriod;
 
     /**
@@ -45,7 +45,7 @@ public class LoadBalancerCookieStickinessPolicy extends io.pulumi.resources.Cust
      * balancer.
      * 
      */
-    @OutputExport(name="lbPort", type=Integer.class, parameters={})
+    @Export(name="lbPort", type=Integer.class, parameters={})
     private Output<Integer> lbPort;
 
     /**
@@ -62,7 +62,7 @@ public class LoadBalancerCookieStickinessPolicy extends io.pulumi.resources.Cust
      * should be attached.
      * 
      */
-    @OutputExport(name="loadBalancer", type=String.class, parameters={})
+    @Export(name="loadBalancer", type=String.class, parameters={})
     private Output<String> loadBalancer;
 
     /**
@@ -77,7 +77,7 @@ public class LoadBalancerCookieStickinessPolicy extends io.pulumi.resources.Cust
      * The name of the stickiness policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

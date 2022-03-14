@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProxyAuth {
     /**
      * The type of authentication that the proxy uses for connections from the proxy to the underlying database. One of `SECRETS`.
@@ -32,12 +32,12 @@ public final class ProxyAuth {
      */
     private final @Nullable String secretArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProxyAuth(
-        @OutputCustomType.Parameter("authScheme") @Nullable String authScheme,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("iamAuth") @Nullable String iamAuth,
-        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn) {
+        @CustomType.Parameter("authScheme") @Nullable String authScheme,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("iamAuth") @Nullable String iamAuth,
+        @CustomType.Parameter("secretArn") @Nullable String secretArn) {
         this.authScheme = authScheme;
         this.description = description;
         this.iamAuth = iamAuth;

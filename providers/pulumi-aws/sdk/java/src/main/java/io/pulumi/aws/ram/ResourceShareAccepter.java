@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ram.ResourceShareAccepterArgs;
 import io.pulumi.aws.ram.inputs.ResourceShareAccepterState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * The ARN of the resource share invitation.
      * 
      */
-    @OutputExport(name="invitationArn", type=String.class, parameters={})
+    @Export(name="invitationArn", type=String.class, parameters={})
     private Output<String> invitationArn;
 
     /**
@@ -49,7 +49,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * The account ID of the receiver account which accepts the invitation.
      * 
      */
-    @OutputExport(name="receiverAccountId", type=String.class, parameters={})
+    @Export(name="receiverAccountId", type=String.class, parameters={})
     private Output<String> receiverAccountId;
 
     /**
@@ -63,7 +63,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * A list of the resource ARNs shared via the resource share.
      * 
      */
-    @OutputExport(name="resources", type=List.class, parameters={String.class})
+    @Export(name="resources", type=List.class, parameters={String.class})
     private Output<List<String>> resources;
 
     /**
@@ -77,7 +77,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * The account ID of the sender account which submits the invitation.
      * 
      */
-    @OutputExport(name="senderAccountId", type=String.class, parameters={})
+    @Export(name="senderAccountId", type=String.class, parameters={})
     private Output<String> senderAccountId;
 
     /**
@@ -91,7 +91,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * The ARN of the resource share.
      * 
      */
-    @OutputExport(name="shareArn", type=String.class, parameters={})
+    @Export(name="shareArn", type=String.class, parameters={})
     private Output<String> shareArn;
 
     /**
@@ -105,7 +105,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * The ID of the resource share as displayed in the console.
      * 
      */
-    @OutputExport(name="shareId", type=String.class, parameters={})
+    @Export(name="shareId", type=String.class, parameters={})
     private Output<String> shareId;
 
     /**
@@ -119,7 +119,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * The name of the resource share.
      * 
      */
-    @OutputExport(name="shareName", type=String.class, parameters={})
+    @Export(name="shareName", type=String.class, parameters={})
     private Output<String> shareName;
 
     /**
@@ -133,7 +133,7 @@ public class ResourceShareAccepter extends io.pulumi.resources.CustomResource {
      * The status of the resource share (ACTIVE, PENDING, FAILED, DELETING, DELETED).
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

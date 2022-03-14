@@ -6,14 +6,14 @@ package io.pulumi.aws.ec2.outputs;
 import io.pulumi.aws.ec2.outputs.GetNetworkInterfaceAssociation;
 import io.pulumi.aws.ec2.outputs.GetNetworkInterfaceAttachment;
 import io.pulumi.aws.ec2.outputs.GetNetworkInterfaceFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkInterfaceResult {
     /**
      * The ARN of the network interface.
@@ -104,28 +104,28 @@ public final class GetNetworkInterfaceResult {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkInterfaceResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("associations") List<GetNetworkInterfaceAssociation> associations,
-        @OutputCustomType.Parameter("attachments") List<GetNetworkInterfaceAttachment> attachments,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetNetworkInterfaceFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("interfaceType") String interfaceType,
-        @OutputCustomType.Parameter("ipv6Addresses") List<String> ipv6Addresses,
-        @OutputCustomType.Parameter("macAddress") String macAddress,
-        @OutputCustomType.Parameter("outpostArn") String outpostArn,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("privateDnsName") String privateDnsName,
-        @OutputCustomType.Parameter("privateIp") String privateIp,
-        @OutputCustomType.Parameter("privateIps") List<String> privateIps,
-        @OutputCustomType.Parameter("requesterId") String requesterId,
-        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
-        @OutputCustomType.Parameter("subnetId") String subnetId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("associations") List<GetNetworkInterfaceAssociation> associations,
+        @CustomType.Parameter("attachments") List<GetNetworkInterfaceAttachment> attachments,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("filters") @Nullable List<GetNetworkInterfaceFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("interfaceType") String interfaceType,
+        @CustomType.Parameter("ipv6Addresses") List<String> ipv6Addresses,
+        @CustomType.Parameter("macAddress") String macAddress,
+        @CustomType.Parameter("outpostArn") String outpostArn,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("privateDnsName") String privateDnsName,
+        @CustomType.Parameter("privateIp") String privateIp,
+        @CustomType.Parameter("privateIps") List<String> privateIps,
+        @CustomType.Parameter("requesterId") String requesterId,
+        @CustomType.Parameter("securityGroups") List<String> securityGroups,
+        @CustomType.Parameter("subnetId") String subnetId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.associations = associations;
         this.attachments = attachments;

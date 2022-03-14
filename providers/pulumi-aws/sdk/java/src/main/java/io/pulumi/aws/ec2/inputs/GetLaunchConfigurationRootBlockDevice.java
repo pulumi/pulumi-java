@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * Whether the EBS Volume will be deleted on instance termination.
      * 
      */
-    @InputImport(name="deleteOnTermination", required=true)
+    @Import(name="deleteOnTermination", required=true)
       private final Boolean deleteOnTermination;
 
     public Boolean getDeleteOnTermination() {
@@ -29,7 +29,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * Whether the volume is Encrypted.
      * 
      */
-    @InputImport(name="encrypted", required=true)
+    @Import(name="encrypted", required=true)
       private final Boolean encrypted;
 
     public Boolean getEncrypted() {
@@ -40,7 +40,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * The provisioned IOPs of the volume.
      * 
      */
-    @InputImport(name="iops", required=true)
+    @Import(name="iops", required=true)
       private final Integer iops;
 
     public Integer getIops() {
@@ -51,7 +51,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * The Throughput of the volume.
      * 
      */
-    @InputImport(name="throughput", required=true)
+    @Import(name="throughput", required=true)
       private final Boolean throughput;
 
     public Boolean getThroughput() {
@@ -62,7 +62,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * The Size of the volume.
      * 
      */
-    @InputImport(name="volumeSize", required=true)
+    @Import(name="volumeSize", required=true)
       private final Integer volumeSize;
 
     public Integer getVolumeSize() {
@@ -73,7 +73,7 @@ public final class GetLaunchConfigurationRootBlockDevice extends io.pulumi.resou
      * The Type of the volume.
      * 
      */
-    @InputImport(name="volumeType", required=true)
+    @Import(name="volumeType", required=true)
       private final String volumeType;
 
     public String getVolumeType() {

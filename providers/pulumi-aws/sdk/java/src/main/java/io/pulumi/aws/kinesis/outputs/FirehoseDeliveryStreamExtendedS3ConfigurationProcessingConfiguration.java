@@ -4,14 +4,14 @@
 package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration {
     /**
      * Enables or disables data processing.
@@ -24,10 +24,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfig
      */
     private final @Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor> processors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfiguration(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("processors") @Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor> processors) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("processors") @Nullable List<FirehoseDeliveryStreamExtendedS3ConfigurationProcessingConfigurationProcessor> processors) {
         this.enabled = enabled;
         this.processors = processors;
     }

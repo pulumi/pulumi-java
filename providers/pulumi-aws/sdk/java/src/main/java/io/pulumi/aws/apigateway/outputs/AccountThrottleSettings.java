@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccountThrottleSettings {
     /**
      * The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
@@ -23,10 +23,10 @@ public final class AccountThrottleSettings {
      */
     private final @Nullable Double rateLimit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccountThrottleSettings(
-        @OutputCustomType.Parameter("burstLimit") @Nullable Integer burstLimit,
-        @OutputCustomType.Parameter("rateLimit") @Nullable Double rateLimit) {
+        @CustomType.Parameter("burstLimit") @Nullable Integer burstLimit,
+        @CustomType.Parameter("rateLimit") @Nullable Double rateLimit) {
         this.burstLimit = burstLimit;
         this.rateLimit = rateLimit;
     }

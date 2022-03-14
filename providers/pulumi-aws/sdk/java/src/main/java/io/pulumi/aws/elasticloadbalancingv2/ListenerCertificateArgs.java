@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancingv2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
      * The ARN of the certificate to attach to the listener.
      * 
      */
-    @InputImport(name="certificateArn", required=true)
+    @Import(name="certificateArn", required=true)
       private final Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -28,7 +28,7 @@ public final class ListenerCertificateArgs extends io.pulumi.resources.ResourceA
      * The ARN of the listener to which to attach the certificate.
      * 
      */
-    @InputImport(name="listenerArn", required=true)
+    @Import(name="listenerArn", required=true)
       private final Output<String> listenerArn;
 
     public Output<String> getListenerArn() {

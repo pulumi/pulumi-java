@@ -8,7 +8,7 @@ import io.pulumi.aws.applicationloadbalancing.inputs.GetListenerDefaultActionAut
 import io.pulumi.aws.applicationloadbalancing.inputs.GetListenerDefaultActionFixedResponse;
 import io.pulumi.aws.applicationloadbalancing.inputs.GetListenerDefaultActionForward;
 import io.pulumi.aws.applicationloadbalancing.inputs.GetListenerDefaultActionRedirect;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -19,56 +19,56 @@ public final class GetListenerDefaultAction extends io.pulumi.resources.InvokeAr
 
     public static final GetListenerDefaultAction Empty = new GetListenerDefaultAction();
 
-    @InputImport(name="authenticateCognitos", required=true)
+    @Import(name="authenticateCognitos", required=true)
       private final List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos;
 
     public List<GetListenerDefaultActionAuthenticateCognito> getAuthenticateCognitos() {
         return this.authenticateCognitos;
     }
 
-    @InputImport(name="authenticateOidcs", required=true)
+    @Import(name="authenticateOidcs", required=true)
       private final List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs;
 
     public List<GetListenerDefaultActionAuthenticateOidc> getAuthenticateOidcs() {
         return this.authenticateOidcs;
     }
 
-    @InputImport(name="fixedResponses", required=true)
+    @Import(name="fixedResponses", required=true)
       private final List<GetListenerDefaultActionFixedResponse> fixedResponses;
 
     public List<GetListenerDefaultActionFixedResponse> getFixedResponses() {
         return this.fixedResponses;
     }
 
-    @InputImport(name="forwards", required=true)
+    @Import(name="forwards", required=true)
       private final List<GetListenerDefaultActionForward> forwards;
 
     public List<GetListenerDefaultActionForward> getForwards() {
         return this.forwards;
     }
 
-    @InputImport(name="order", required=true)
+    @Import(name="order", required=true)
       private final Integer order;
 
     public Integer getOrder() {
         return this.order;
     }
 
-    @InputImport(name="redirects", required=true)
+    @Import(name="redirects", required=true)
       private final List<GetListenerDefaultActionRedirect> redirects;
 
     public List<GetListenerDefaultActionRedirect> getRedirects() {
         return this.redirects;
     }
 
-    @InputImport(name="targetGroupArn", required=true)
+    @Import(name="targetGroupArn", required=true)
       private final String targetGroupArn;
 
     public String getTargetGroupArn() {
         return this.targetGroupArn;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * Key-value map of tags to apply to the distributed AMI.
      * 
      */
-    @InputImport(name="amiTags")
+    @Import(name="amiTags")
       private final @Nullable Output<Map<String,String>> amiTags;
 
     public Output<Map<String,String>> getAmiTags() {
@@ -32,7 +32,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * Description of the container distribution configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * Amazon Resource Name (ARN) of the Key Management Service (KMS) Key to encrypt the distributed AMI.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -54,7 +54,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * Configuration block of EC2 launch permissions to apply to the distributed AMI. Detailed below.
      * 
      */
-    @InputImport(name="launchPermission")
+    @Import(name="launchPermission")
       private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> launchPermission;
 
     public Output<DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionGetArgs> getLaunchPermission() {
@@ -65,7 +65,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * Name to apply to the distributed AMI.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      * Set of AWS Account identifiers to distribute the AMI.
      * 
      */
-    @InputImport(name="targetAccountIds")
+    @Import(name="targetAccountIds")
       private final @Nullable Output<List<String>> targetAccountIds;
 
     public Output<List<String>> getTargetAccountIds() {

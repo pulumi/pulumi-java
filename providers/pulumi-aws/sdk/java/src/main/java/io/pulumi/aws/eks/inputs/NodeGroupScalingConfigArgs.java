@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class NodeGroupScalingConfigArgs extends io.pulumi.resources.Resour
      * Desired number of worker nodes.
      * 
      */
-    @InputImport(name="desiredSize", required=true)
+    @Import(name="desiredSize", required=true)
       private final Output<Integer> desiredSize;
 
     public Output<Integer> getDesiredSize() {
@@ -28,7 +28,7 @@ public final class NodeGroupScalingConfigArgs extends io.pulumi.resources.Resour
      * Maximum number of worker nodes.
      * 
      */
-    @InputImport(name="maxSize", required=true)
+    @Import(name="maxSize", required=true)
       private final Output<Integer> maxSize;
 
     public Output<Integer> getMaxSize() {
@@ -39,7 +39,7 @@ public final class NodeGroupScalingConfigArgs extends io.pulumi.resources.Resour
      * Minimum number of worker nodes.
      * 
      */
-    @InputImport(name="minSize", required=true)
+    @Import(name="minSize", required=true)
       private final Output<Integer> minSize;
 
     public Output<Integer> getMinSize() {

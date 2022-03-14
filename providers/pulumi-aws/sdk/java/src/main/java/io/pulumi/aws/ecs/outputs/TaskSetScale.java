@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskSetScale {
     /**
      * The unit of measure for the scale value. Default: `PERCENT`.
@@ -23,10 +23,10 @@ public final class TaskSetScale {
      */
     private final @Nullable Double value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskSetScale(
-        @OutputCustomType.Parameter("unit") @Nullable String unit,
-        @OutputCustomType.Parameter("value") @Nullable Double value) {
+        @CustomType.Parameter("unit") @Nullable String unit,
+        @CustomType.Parameter("value") @Nullable Double value) {
         this.unit = unit;
         this.value = value;
     }

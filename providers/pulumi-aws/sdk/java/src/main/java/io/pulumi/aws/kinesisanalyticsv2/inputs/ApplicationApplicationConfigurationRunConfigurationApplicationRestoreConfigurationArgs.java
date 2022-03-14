@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
      * Specifies how the application should be restored. Valid values: `RESTORE_FROM_CUSTOM_SNAPSHOT`, `RESTORE_FROM_LATEST_SNAPSHOT`, `SKIP_RESTORE_FROM_SNAPSHOT`.
      * 
      */
-    @InputImport(name="applicationRestoreType")
+    @Import(name="applicationRestoreType")
       private final @Nullable Output<String> applicationRestoreType;
 
     public Output<String> getApplicationRestoreType() {
@@ -29,7 +29,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
      * The identifier of an existing snapshot of application state to use to restart an application. The application uses this value if `RESTORE_FROM_CUSTOM_SNAPSHOT` is specified for `application_restore_type`.
      * 
      */
-    @InputImport(name="snapshotName")
+    @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
     public Output<String> getSnapshotName() {

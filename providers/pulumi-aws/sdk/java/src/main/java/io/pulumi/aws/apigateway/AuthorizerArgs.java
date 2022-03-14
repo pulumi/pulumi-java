@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * The credentials required for the authorizer. To specify an IAM Role for API Gateway to assume, use the IAM Role ARN.
      * 
      */
-    @InputImport(name="authorizerCredentials")
+    @Import(name="authorizerCredentials")
       private final @Nullable Output<String> authorizerCredentials;
 
     public Output<String> getAuthorizerCredentials() {
@@ -31,7 +31,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * The TTL of cached authorizer results in seconds. Defaults to `300`.
      * 
      */
-    @InputImport(name="authorizerResultTtlInSeconds")
+    @Import(name="authorizerResultTtlInSeconds")
       private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
     public Output<Integer> getAuthorizerResultTtlInSeconds() {
@@ -43,7 +43,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * e.g., `arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:012345678912:function:my-function/invocations`
      * 
      */
-    @InputImport(name="authorizerUri")
+    @Import(name="authorizerUri")
       private final @Nullable Output<String> authorizerUri;
 
     public Output<String> getAuthorizerUri() {
@@ -54,7 +54,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * The source of the identity in an incoming request. Defaults to `method.request.header.Authorization`. For `REQUEST` type, this may be a comma-separated list of values, including headers, query string parameters and stage variables - e.g., `"method.request.header.SomeHeaderName,method.request.querystring.SomeQueryStringName,stageVariables.SomeStageVariableName"`
      * 
      */
-    @InputImport(name="identitySource")
+    @Import(name="identitySource")
       private final @Nullable Output<String> identitySource;
 
     public Output<String> getIdentitySource() {
@@ -65,7 +65,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * A validation expression for the incoming identity. For `TOKEN` type, this value should be a regular expression. The incoming token from the client is matched against this expression, and will proceed if the token matches. If the token doesn't match, the client receives a 401 Unauthorized response.
      * 
      */
-    @InputImport(name="identityValidationExpression")
+    @Import(name="identityValidationExpression")
       private final @Nullable Output<String> identityValidationExpression;
 
     public Output<String> getIdentityValidationExpression() {
@@ -76,7 +76,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the authorizer
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * A list of the Amazon Cognito user pool ARNs. Each element is of this format: `arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}`.
      * 
      */
-    @InputImport(name="providerArns")
+    @Import(name="providerArns")
       private final @Nullable Output<List<String>> providerArns;
 
     public Output<List<String>> getProviderArns() {
@@ -98,7 +98,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated REST API
      * 
      */
-    @InputImport(name="restApi", required=true)
+    @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -109,7 +109,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the authorizer. Possible values are `TOKEN` for a Lambda function using a single authorization token submitted in a custom header, `REQUEST` for a Lambda function using incoming request parameters, or `COGNITO_USER_POOLS` for using an Amazon Cognito user pool. Defaults to `TOKEN`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

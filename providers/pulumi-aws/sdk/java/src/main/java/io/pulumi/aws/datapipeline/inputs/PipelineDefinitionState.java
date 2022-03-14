@@ -7,7 +7,7 @@ import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterObjectGetArg
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionParameterValueGetArgs;
 import io.pulumi.aws.datapipeline.inputs.PipelineDefinitionPipelineObjectGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PipelineDefinitionState extends io.pulumi.resources.ResourceA
      * Configuration block for the parameter objects used in the pipeline definition. See below
      * 
      */
-    @InputImport(name="parameterObjects")
+    @Import(name="parameterObjects")
       private final @Nullable Output<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects;
 
     public Output<List<PipelineDefinitionParameterObjectGetArgs>> getParameterObjects() {
@@ -33,7 +33,7 @@ public final class PipelineDefinitionState extends io.pulumi.resources.ResourceA
      * Configuration block for the parameter values used in the pipeline definition. See below
      * 
      */
-    @InputImport(name="parameterValues")
+    @Import(name="parameterValues")
       private final @Nullable Output<List<PipelineDefinitionParameterValueGetArgs>> parameterValues;
 
     public Output<List<PipelineDefinitionParameterValueGetArgs>> getParameterValues() {
@@ -44,7 +44,7 @@ public final class PipelineDefinitionState extends io.pulumi.resources.ResourceA
      * ID of the pipeline.
      * 
      */
-    @InputImport(name="pipelineId")
+    @Import(name="pipelineId")
       private final @Nullable Output<String> pipelineId;
 
     public Output<String> getPipelineId() {
@@ -55,7 +55,7 @@ public final class PipelineDefinitionState extends io.pulumi.resources.ResourceA
      * Configuration block for the objects that define the pipeline. See below
      * 
      */
-    @InputImport(name="pipelineObjects")
+    @Import(name="pipelineObjects")
       private final @Nullable Output<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects;
 
     public Output<List<PipelineDefinitionPipelineObjectGetArgs>> getPipelineObjects() {

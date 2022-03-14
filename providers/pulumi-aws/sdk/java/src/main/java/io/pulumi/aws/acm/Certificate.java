@@ -9,7 +9,7 @@ import io.pulumi.aws.acm.inputs.CertificateState;
 import io.pulumi.aws.acm.outputs.CertificateDomainValidationOption;
 import io.pulumi.aws.acm.outputs.CertificateOptions;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -49,7 +49,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The ARN of the certificate
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -63,7 +63,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * ARN of an ACM PCA
      * 
      */
-    @OutputExport(name="certificateAuthorityArn", type=String.class, parameters={})
+    @Export(name="certificateAuthorityArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateAuthorityArn;
 
     /**
@@ -77,7 +77,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The certificate's PEM-formatted public key
      * 
      */
-    @OutputExport(name="certificateBody", type=String.class, parameters={})
+    @Export(name="certificateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateBody;
 
     /**
@@ -92,7 +92,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * * Creating a private CA issued certificate
      * 
      */
-    @OutputExport(name="certificateChain", type=String.class, parameters={})
+    @Export(name="certificateChain", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateChain;
 
     /**
@@ -107,7 +107,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * A domain name for which the certificate should be issued
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -121,7 +121,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Set of domain validation objects which can be used to complete certificate validation. Can have more than one element, e.g., if SANs are defined. Only set if `DNS`-validation was used.
      * 
      */
-    @OutputExport(name="domainValidationOptions", type=List.class, parameters={CertificateDomainValidationOption.class})
+    @Export(name="domainValidationOptions", type=List.class, parameters={CertificateDomainValidationOption.class})
     private Output<List<CertificateDomainValidationOption>> domainValidationOptions;
 
     /**
@@ -136,7 +136,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * * Importing an existing certificate
      * 
      */
-    @OutputExport(name="options", type=CertificateOptions.class, parameters={})
+    @Export(name="options", type=CertificateOptions.class, parameters={})
     private Output</* @Nullable */ CertificateOptions> options;
 
     /**
@@ -151,7 +151,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The certificate's PEM-formatted private key
      * 
      */
-    @OutputExport(name="privateKey", type=String.class, parameters={})
+    @Export(name="privateKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateKey;
 
     /**
@@ -165,7 +165,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Status of the certificate.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -179,7 +179,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`).
      * 
      */
-    @OutputExport(name="subjectAlternativeNames", type=List.class, parameters={String.class})
+    @Export(name="subjectAlternativeNames", type=List.class, parameters={String.class})
     private Output<List<String>> subjectAlternativeNames;
 
     /**
@@ -193,7 +193,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource..
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -207,7 +207,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -221,7 +221,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
      * 
      */
-    @OutputExport(name="validationEmails", type=List.class, parameters={String.class})
+    @Export(name="validationEmails", type=List.class, parameters={String.class})
     private Output<List<String>> validationEmails;
 
     /**
@@ -235,7 +235,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into the provider.
      * 
      */
-    @OutputExport(name="validationMethod", type=String.class, parameters={})
+    @Export(name="validationMethod", type=String.class, parameters={})
     private Output<String> validationMethod;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class WebAclVisibilityConfigArgs extends io.pulumi.resources.Resour
      * A boolean indicating whether the associated resource sends metrics to CloudWatch. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics).
      * 
      */
-    @InputImport(name="cloudwatchMetricsEnabled", required=true)
+    @Import(name="cloudwatchMetricsEnabled", required=true)
       private final Output<Boolean> cloudwatchMetricsEnabled;
 
     public Output<Boolean> getCloudwatchMetricsEnabled() {
@@ -29,7 +29,7 @@ public final class WebAclVisibilityConfigArgs extends io.pulumi.resources.Resour
      * A friendly name of the CloudWatch metric. The name can contain only alphanumeric characters (A-Z, a-z, 0-9) hyphen(-) and underscore (\_), with length from one to 128 characters. It can't contain whitespace or metric names reserved for AWS WAF, for example `All` and `Default_Action`.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -40,7 +40,7 @@ public final class WebAclVisibilityConfigArgs extends io.pulumi.resources.Resour
      * A boolean indicating whether AWS WAF should store a sampling of the web requests that match the rules. You can view the sampled requests through the AWS WAF console.
      * 
      */
-    @InputImport(name="sampledRequestsEnabled", required=true)
+    @Import(name="sampledRequestsEnabled", required=true)
       private final Output<Boolean> sampledRequestsEnabled;
 
     public Output<Boolean> getSampledRequestsEnabled() {

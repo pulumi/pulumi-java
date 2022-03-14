@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.LogResourcePolicyArgs;
 import io.pulumi.aws.cloudwatch.inputs.LogResourcePolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class LogResourcePolicy extends io.pulumi.resources.CustomResource {
      * Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.
      * 
      */
-    @OutputExport(name="policyDocument", type=String.class, parameters={})
+    @Export(name="policyDocument", type=String.class, parameters={})
     private Output<String> policyDocument;
 
     /**
@@ -46,7 +46,7 @@ public class LogResourcePolicy extends io.pulumi.resources.CustomResource {
      * Name of the resource policy.
      * 
      */
-    @OutputExport(name="policyName", type=String.class, parameters={})
+    @Export(name="policyName", type=String.class, parameters={})
     private Output<String> policyName;
 
     /**

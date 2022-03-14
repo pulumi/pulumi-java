@@ -3,21 +3,21 @@
 
 package io.pulumi.aws.mwaa.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentLastUpdatedError {
     private final @Nullable String errorCode;
     private final @Nullable String errorMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentLastUpdatedError(
-        @OutputCustomType.Parameter("errorCode") @Nullable String errorCode,
-        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage) {
+        @CustomType.Parameter("errorCode") @Nullable String errorCode,
+        @CustomType.Parameter("errorMessage") @Nullable String errorMessage) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
     }

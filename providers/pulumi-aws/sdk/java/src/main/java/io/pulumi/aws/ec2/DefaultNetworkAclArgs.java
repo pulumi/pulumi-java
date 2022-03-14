@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.DefaultNetworkAclEgressArgs;
 import io.pulumi.aws.ec2.inputs.DefaultNetworkAclIngressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
      * Network ACL ID to manage. This attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
      * 
      */
-    @InputImport(name="defaultNetworkAclId", required=true)
+    @Import(name="defaultNetworkAclId", required=true)
       private final Output<String> defaultNetworkAclId;
 
     public Output<String> getDefaultNetworkAclId() {
@@ -33,7 +33,7 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
      * Configuration block for an egress rule. Detailed below.
      * 
      */
-    @InputImport(name="egress")
+    @Import(name="egress")
       private final @Nullable Output<List<DefaultNetworkAclEgressArgs>> egress;
 
     public Output<List<DefaultNetworkAclEgressArgs>> getEgress() {
@@ -44,7 +44,7 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
      * Configuration block for an ingress rule. Detailed below.
      * 
      */
-    @InputImport(name="ingress")
+    @Import(name="ingress")
       private final @Nullable Output<List<DefaultNetworkAclIngressArgs>> ingress;
 
     public Output<List<DefaultNetworkAclIngressArgs>> getIngress() {
@@ -55,7 +55,7 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
      * List of Subnet IDs to apply the ACL to. See the notes below on managing Subnets in the Default Network ACL
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -66,7 +66,7 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
      * Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

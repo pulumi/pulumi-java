@@ -5,14 +5,14 @@ package io.pulumi.aws.applicationloadbalancing.outputs;
 
 import io.pulumi.aws.applicationloadbalancing.outputs.GetTargetGroupHealthCheck;
 import io.pulumi.aws.applicationloadbalancing.outputs.GetTargetGroupStickiness;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTargetGroupResult {
     private final String arn;
     private final String arnSuffix;
@@ -38,27 +38,27 @@ public final class GetTargetGroupResult {
     private final String targetType;
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTargetGroupResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("arnSuffix") String arnSuffix,
-        @OutputCustomType.Parameter("connectionTermination") Boolean connectionTermination,
-        @OutputCustomType.Parameter("deregistrationDelay") Integer deregistrationDelay,
-        @OutputCustomType.Parameter("healthCheck") GetTargetGroupHealthCheck healthCheck,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lambdaMultiValueHeadersEnabled") Boolean lambdaMultiValueHeadersEnabled,
-        @OutputCustomType.Parameter("loadBalancingAlgorithmType") String loadBalancingAlgorithmType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("preserveClientIp") String preserveClientIp,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("protocolVersion") String protocolVersion,
-        @OutputCustomType.Parameter("proxyProtocolV2") Boolean proxyProtocolV2,
-        @OutputCustomType.Parameter("slowStart") Integer slowStart,
-        @OutputCustomType.Parameter("stickiness") GetTargetGroupStickiness stickiness,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("targetType") String targetType,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("arnSuffix") String arnSuffix,
+        @CustomType.Parameter("connectionTermination") Boolean connectionTermination,
+        @CustomType.Parameter("deregistrationDelay") Integer deregistrationDelay,
+        @CustomType.Parameter("healthCheck") GetTargetGroupHealthCheck healthCheck,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lambdaMultiValueHeadersEnabled") Boolean lambdaMultiValueHeadersEnabled,
+        @CustomType.Parameter("loadBalancingAlgorithmType") String loadBalancingAlgorithmType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("preserveClientIp") String preserveClientIp,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("protocolVersion") String protocolVersion,
+        @CustomType.Parameter("proxyProtocolV2") Boolean proxyProtocolV2,
+        @CustomType.Parameter("slowStart") Integer slowStart,
+        @CustomType.Parameter("stickiness") GetTargetGroupStickiness stickiness,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("targetType") String targetType,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.arnSuffix = arnSuffix;
         this.connectionTermination = connectionTermination;

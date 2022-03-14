@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The application ID.
      * 
      */
-    @InputImport(name="applicationId", required=true)
+    @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -30,7 +30,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -41,7 +41,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * Sender identifier of your messages.
      * 
      */
-    @InputImport(name="senderId")
+    @Import(name="senderId")
       private final @Nullable Output<String> senderId;
 
     public Output<String> getSenderId() {
@@ -52,7 +52,7 @@ public final class SmsChannelArgs extends io.pulumi.resources.ResourceArgs {
      * The Short Code registered with the phone provider.
      * 
      */
-    @InputImport(name="shortCode")
+    @Import(name="shortCode")
       private final @Nullable Output<String> shortCode;
 
     public Output<String> getShortCode() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.outputs;
 
 import io.pulumi.aws.emr.outputs.ClusterCoreInstanceGroupEbsConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterCoreInstanceGroup {
     /**
      * String containing the [EMR Auto Scaling Policy](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-automatic-scaling.html) JSON.
@@ -50,15 +50,15 @@ public final class ClusterCoreInstanceGroup {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterCoreInstanceGroup(
-        @OutputCustomType.Parameter("autoscalingPolicy") @Nullable String autoscalingPolicy,
-        @OutputCustomType.Parameter("bidPrice") @Nullable String bidPrice,
-        @OutputCustomType.Parameter("ebsConfigs") @Nullable List<ClusterCoreInstanceGroupEbsConfig> ebsConfigs,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("autoscalingPolicy") @Nullable String autoscalingPolicy,
+        @CustomType.Parameter("bidPrice") @Nullable String bidPrice,
+        @CustomType.Parameter("ebsConfigs") @Nullable List<ClusterCoreInstanceGroupEbsConfig> ebsConfigs,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.bidPrice = bidPrice;
         this.ebsConfigs = ebsConfigs;

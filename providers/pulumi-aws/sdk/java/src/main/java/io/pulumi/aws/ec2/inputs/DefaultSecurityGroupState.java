@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.DefaultSecurityGroupEgressGetArgs;
 import io.pulumi.aws.ec2.inputs.DefaultSecurityGroupIngressGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * ARN of the security group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * Description of this rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="egress")
+    @Import(name="egress")
       private final @Nullable Output<List<DefaultSecurityGroupEgressGetArgs>> egress;
 
     public Output<List<DefaultSecurityGroupEgressGetArgs>> getEgress() {
@@ -56,7 +56,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="ingress")
+    @Import(name="ingress")
       private final @Nullable Output<List<DefaultSecurityGroupIngressGetArgs>> ingress;
 
     public Output<List<DefaultSecurityGroupIngressGetArgs>> getIngress() {
@@ -67,7 +67,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * Name of the security group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,14 +78,14 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * Owner ID.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
         return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
-    @InputImport(name="revokeRulesOnDelete")
+    @Import(name="revokeRulesOnDelete")
       private final @Nullable Output<Boolean> revokeRulesOnDelete;
 
     public Output<Boolean> getRevokeRulesOnDelete() {
@@ -96,7 +96,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -107,7 +107,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -118,7 +118,7 @@ public final class DefaultSecurityGroupState extends io.pulumi.resources.Resourc
      * VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

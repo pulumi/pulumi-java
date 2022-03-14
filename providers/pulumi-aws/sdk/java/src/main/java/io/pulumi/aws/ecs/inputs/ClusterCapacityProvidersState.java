@@ -5,7 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterCapacityProvidersState extends io.pulumi.resources.Res
      * Set of names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
      * 
      */
-    @InputImport(name="capacityProviders")
+    @Import(name="capacityProviders")
       private final @Nullable Output<List<String>> capacityProviders;
 
     public Output<List<String>> getCapacityProviders() {
@@ -31,7 +31,7 @@ public final class ClusterCapacityProvidersState extends io.pulumi.resources.Res
      * Name of the ECS cluster to manage capacity providers for.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -42,7 +42,7 @@ public final class ClusterCapacityProvidersState extends io.pulumi.resources.Res
      * Set of capacity provider strategies to use by default for the cluster. Detailed below.
      * 
      */
-    @InputImport(name="defaultCapacityProviderStrategies")
+    @Import(name="defaultCapacityProviderStrategies")
       private final @Nullable Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies;
 
     public Output<List<ClusterCapacityProvidersDefaultCapacityProviderStrategyGetArgs>> getDefaultCapacityProviderStrategies() {

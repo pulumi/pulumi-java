@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the patch baseline to register the patch group with.
      * 
      */
-    @InputImport(name="baselineId", required=true)
+    @Import(name="baselineId", required=true)
       private final Output<String> baselineId;
 
     public Output<String> getBaselineId() {
@@ -28,7 +28,7 @@ public final class PatchGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the patch group that should be registered with the patch baseline.
      * 
      */
-    @InputImport(name="patchGroup", required=true)
+    @Import(name="patchGroup", required=true)
       private final Output<String> patchGroup;
 
     public Output<String> getPatchGroup() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.s3.outputs.BucketLifecycleRuleExpiration;
 import io.pulumi.aws.s3.outputs.BucketLifecycleRuleNoncurrentVersionExpiration;
 import io.pulumi.aws.s3.outputs.BucketLifecycleRuleNoncurrentVersionTransition;
 import io.pulumi.aws.s3.outputs.BucketLifecycleRuleTransition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleRule {
     /**
      * Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
@@ -65,17 +65,17 @@ public final class BucketLifecycleRule {
      */
     private final @Nullable List<BucketLifecycleRuleTransition> transitions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLifecycleRule(
-        @OutputCustomType.Parameter("abortIncompleteMultipartUploadDays") @Nullable Integer abortIncompleteMultipartUploadDays,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("expiration") @Nullable BucketLifecycleRuleExpiration expiration,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("noncurrentVersionExpiration") @Nullable BucketLifecycleRuleNoncurrentVersionExpiration noncurrentVersionExpiration,
-        @OutputCustomType.Parameter("noncurrentVersionTransitions") @Nullable List<BucketLifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransitions,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("transitions") @Nullable List<BucketLifecycleRuleTransition> transitions) {
+        @CustomType.Parameter("abortIncompleteMultipartUploadDays") @Nullable Integer abortIncompleteMultipartUploadDays,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("expiration") @Nullable BucketLifecycleRuleExpiration expiration,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("noncurrentVersionExpiration") @Nullable BucketLifecycleRuleNoncurrentVersionExpiration noncurrentVersionExpiration,
+        @CustomType.Parameter("noncurrentVersionTransitions") @Nullable List<BucketLifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransitions,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("transitions") @Nullable List<BucketLifecycleRuleTransition> transitions) {
         this.abortIncompleteMultipartUploadDays = abortIncompleteMultipartUploadDays;
         this.enabled = enabled;
         this.expiration = expiration;

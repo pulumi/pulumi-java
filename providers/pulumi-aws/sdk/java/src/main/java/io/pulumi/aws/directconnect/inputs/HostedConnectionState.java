@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The Direct Connect endpoint on which the physical connection terminates.
      * 
      */
-    @InputImport(name="awsDevice")
+    @Import(name="awsDevice")
       private final @Nullable Output<String> awsDevice;
 
     public Output<String> getAwsDevice() {
@@ -31,7 +31,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The bandwidth of the connection. Valid values for dedicated connections: 1Gbps, 10Gbps. Valid values for hosted connections: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps and 10Gbps. Case sensitive.
      * 
      */
-    @InputImport(name="bandwidth")
+    @Import(name="bandwidth")
       private final @Nullable Output<String> bandwidth;
 
     public Output<String> getBandwidth() {
@@ -42,7 +42,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The ID of the interconnect or LAG.
      * 
      */
-    @InputImport(name="connectionId")
+    @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -53,7 +53,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * Indicates whether the connection supports a secondary BGP peer in the same address family (IPv4/IPv6).
      * 
      */
-    @InputImport(name="hasLogicalRedundancy")
+    @Import(name="hasLogicalRedundancy")
       private final @Nullable Output<String> hasLogicalRedundancy;
 
     public Output<String> getHasLogicalRedundancy() {
@@ -64,7 +64,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * Boolean value representing if jumbo frames have been enabled for this connection.
      * 
      */
-    @InputImport(name="jumboFrameCapable")
+    @Import(name="jumboFrameCapable")
       private final @Nullable Output<Boolean> jumboFrameCapable;
 
     public Output<Boolean> getJumboFrameCapable() {
@@ -75,7 +75,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The ID of the LAG.
      * 
      */
-    @InputImport(name="lagId")
+    @Import(name="lagId")
       private final @Nullable Output<String> lagId;
 
     public Output<String> getLagId() {
@@ -86,7 +86,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The time of the most recent call to [DescribeLoa](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLoa.html) for this connection.
      * 
      */
-    @InputImport(name="loaIssueTime")
+    @Import(name="loaIssueTime")
       private final @Nullable Output<String> loaIssueTime;
 
     public Output<String> getLoaIssueTime() {
@@ -97,7 +97,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The location of the connection.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -108,7 +108,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The name of the connection.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -119,7 +119,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The ID of the AWS account of the customer for the connection.
      * 
      */
-    @InputImport(name="ownerAccountId")
+    @Import(name="ownerAccountId")
       private final @Nullable Output<String> ownerAccountId;
 
     public Output<String> getOwnerAccountId() {
@@ -130,7 +130,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The name of the AWS Direct Connect service provider associated with the connection.
      * 
      */
-    @InputImport(name="partnerName")
+    @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
 
     public Output<String> getPartnerName() {
@@ -141,7 +141,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The name of the service provider associated with the connection.
      * 
      */
-    @InputImport(name="providerName")
+    @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
@@ -152,7 +152,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The AWS Region where the connection is located.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -163,7 +163,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The state of the connection. Possible values include: ordering, requested, pending, available, down, deleting, deleted, rejected, unknown. See [AllocateHostedConnection](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AllocateHostedConnection.html) for a description of each connection state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -174,7 +174,7 @@ public final class HostedConnectionState extends io.pulumi.resources.ResourceArg
      * The dedicated VLAN provisioned to the hosted connection.
      * 
      */
-    @InputImport(name="vlan")
+    @Import(name="vlan")
       private final @Nullable Output<Integer> vlan;
 
     public Output<Integer> getVlan() {

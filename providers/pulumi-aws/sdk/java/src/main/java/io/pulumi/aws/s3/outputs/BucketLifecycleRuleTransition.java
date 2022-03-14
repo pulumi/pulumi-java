@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleRuleTransition {
     /**
      * Specifies the date after which you want the corresponding action to take effect.
@@ -28,11 +28,11 @@ public final class BucketLifecycleRuleTransition {
      */
     private final String storageClass;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLifecycleRuleTransition(
-        @OutputCustomType.Parameter("date") @Nullable String date,
-        @OutputCustomType.Parameter("days") @Nullable Integer days,
-        @OutputCustomType.Parameter("storageClass") String storageClass) {
+        @CustomType.Parameter("date") @Nullable String date,
+        @CustomType.Parameter("days") @Nullable Integer days,
+        @CustomType.Parameter("storageClass") String storageClass) {
         this.date = date;
         this.days = days;
         this.storageClass = storageClass;

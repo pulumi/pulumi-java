@@ -4,11 +4,11 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.GetVirtualServiceSpecProvider;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualServiceSpec {
     /**
      * The App Mesh object that is acting as the provider for a virtual service.
@@ -16,8 +16,8 @@ public final class GetVirtualServiceSpec {
      */
     private final List<GetVirtualServiceSpecProvider> providers;
 
-    @OutputCustomType.Constructor
-    private GetVirtualServiceSpec(@OutputCustomType.Parameter("providers") List<GetVirtualServiceSpecProvider> providers) {
+    @CustomType.Constructor
+    private GetVirtualServiceSpec(@CustomType.Parameter("providers") List<GetVirtualServiceSpecProvider> providers) {
         this.providers = providers;
     }
 

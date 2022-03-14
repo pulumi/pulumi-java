@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceS3Import {
     /**
      * The bucket name where your backup is stored
@@ -37,13 +37,13 @@ public final class InstanceS3Import {
      */
     private final String sourceEngineVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceS3Import(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
-        @OutputCustomType.Parameter("ingestionRole") String ingestionRole,
-        @OutputCustomType.Parameter("sourceEngine") String sourceEngine,
-        @OutputCustomType.Parameter("sourceEngineVersion") String sourceEngineVersion) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @CustomType.Parameter("ingestionRole") String ingestionRole,
+        @CustomType.Parameter("sourceEngine") String sourceEngine,
+        @CustomType.Parameter("sourceEngineVersion") String sourceEngineVersion) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.ingestionRole = ingestionRole;

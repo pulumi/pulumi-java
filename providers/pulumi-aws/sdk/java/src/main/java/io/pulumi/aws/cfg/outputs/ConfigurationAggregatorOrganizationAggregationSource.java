@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cfg.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationAggregatorOrganizationAggregationSource {
     /**
      * If true, aggregate existing AWS Config regions and future regions.
@@ -29,11 +29,11 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationAggregatorOrganizationAggregationSource(
-        @OutputCustomType.Parameter("allRegions") @Nullable Boolean allRegions,
-        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("allRegions") @Nullable Boolean allRegions,
+        @CustomType.Parameter("regions") @Nullable List<String> regions,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.allRegions = allRegions;
         this.regions = regions;
         this.roleArn = roleArn;

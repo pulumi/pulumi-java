@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttpIdleArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutHttpPerRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecListenerTimeoutHttpArgs extends io.pulumi.reso
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
      * 
      */
-    @InputImport(name="idle")
+    @Import(name="idle")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttpIdleArgs> idle;
 
     public Output<VirtualNodeSpecListenerTimeoutHttpIdleArgs> getIdle() {
@@ -30,7 +30,7 @@ public final class VirtualNodeSpecListenerTimeoutHttpArgs extends io.pulumi.reso
      * The per request timeout.
      * 
      */
-    @InputImport(name="perRequest")
+    @Import(name="perRequest")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutHttpPerRequestArgs> perRequest;
 
     public Output<VirtualNodeSpecListenerTimeoutHttpPerRequestArgs> getPerRequest() {

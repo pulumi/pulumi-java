@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.pinpoint.SmsChannelArgs;
 import io.pulumi.aws.pinpoint.inputs.SmsChannelState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -34,7 +34,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * The application ID.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -48,7 +48,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -62,7 +62,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * Promotional messages per second that can be sent.
      * 
      */
-    @OutputExport(name="promotionalMessagesPerSecond", type=Integer.class, parameters={})
+    @Export(name="promotionalMessagesPerSecond", type=Integer.class, parameters={})
     private Output<Integer> promotionalMessagesPerSecond;
 
     /**
@@ -76,7 +76,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * Sender identifier of your messages.
      * 
      */
-    @OutputExport(name="senderId", type=String.class, parameters={})
+    @Export(name="senderId", type=String.class, parameters={})
     private Output</* @Nullable */ String> senderId;
 
     /**
@@ -90,7 +90,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * The Short Code registered with the phone provider.
      * 
      */
-    @OutputExport(name="shortCode", type=String.class, parameters={})
+    @Export(name="shortCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> shortCode;
 
     /**
@@ -104,7 +104,7 @@ public class SmsChannel extends io.pulumi.resources.CustomResource {
      * Transactional messages per second that can be sent.
      * 
      */
-    @OutputExport(name="transactionalMessagesPerSecond", type=Integer.class, parameters={})
+    @Export(name="transactionalMessagesPerSecond", type=Integer.class, parameters={})
     private Output<Integer> transactionalMessagesPerSecond;
 
     /**

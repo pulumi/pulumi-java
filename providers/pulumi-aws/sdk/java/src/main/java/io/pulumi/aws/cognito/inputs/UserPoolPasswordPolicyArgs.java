@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
      * Minimum length of the password policy that you have set.
      * 
      */
-    @InputImport(name="minimumLength")
+    @Import(name="minimumLength")
       private final @Nullable Output<Integer> minimumLength;
 
     public Output<Integer> getMinimumLength() {
@@ -30,7 +30,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
      * Whether you have required users to use at least one lowercase letter in their password.
      * 
      */
-    @InputImport(name="requireLowercase")
+    @Import(name="requireLowercase")
       private final @Nullable Output<Boolean> requireLowercase;
 
     public Output<Boolean> getRequireLowercase() {
@@ -41,7 +41,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
      * Whether you have required users to use at least one number in their password.
      * 
      */
-    @InputImport(name="requireNumbers")
+    @Import(name="requireNumbers")
       private final @Nullable Output<Boolean> requireNumbers;
 
     public Output<Boolean> getRequireNumbers() {
@@ -52,7 +52,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
      * Whether you have required users to use at least one symbol in their password.
      * 
      */
-    @InputImport(name="requireSymbols")
+    @Import(name="requireSymbols")
       private final @Nullable Output<Boolean> requireSymbols;
 
     public Output<Boolean> getRequireSymbols() {
@@ -63,7 +63,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
      * Whether you have required users to use at least one uppercase letter in their password.
      * 
      */
-    @InputImport(name="requireUppercase")
+    @Import(name="requireUppercase")
       private final @Nullable Output<Boolean> requireUppercase;
 
     public Output<Boolean> getRequireUppercase() {
@@ -74,7 +74,7 @@ public final class UserPoolPasswordPolicyArgs extends io.pulumi.resources.Resour
      * In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
      * 
      */
-    @InputImport(name="temporaryPasswordValidityDays")
+    @Import(name="temporaryPasswordValidityDays")
       private final @Nullable Output<Integer> temporaryPasswordValidityDays;
 
     public Output<Integer> getTemporaryPasswordValidityDays() {

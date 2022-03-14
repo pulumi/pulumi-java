@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.outposts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOutpostInstanceTypesResult {
     private final String arn;
     /**
@@ -22,11 +22,11 @@ public final class GetOutpostInstanceTypesResult {
      */
     private final List<String> instanceTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOutpostInstanceTypesResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceTypes") List<String> instanceTypes) {
         this.arn = arn;
         this.id = id;
         this.instanceTypes = instanceTypes;

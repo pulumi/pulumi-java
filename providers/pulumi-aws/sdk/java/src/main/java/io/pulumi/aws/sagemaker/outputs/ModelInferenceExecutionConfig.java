@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelInferenceExecutionConfig {
     /**
      * The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
@@ -15,8 +15,8 @@ public final class ModelInferenceExecutionConfig {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor
-    private ModelInferenceExecutionConfig(@OutputCustomType.Parameter("mode") String mode) {
+    @CustomType.Constructor
+    private ModelInferenceExecutionConfig(@CustomType.Parameter("mode") String mode) {
         this.mode = mode;
     }
 

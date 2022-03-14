@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
      * The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
      * 
      */
-    @InputImport(name="cidrBlock")
+    @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
@@ -31,7 +31,7 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
      * Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
      * 
      */
-    @InputImport(name="egress")
+    @Import(name="egress")
       private final @Nullable Output<Boolean> egress;
 
     public Output<Boolean> getEgress() {
@@ -42,7 +42,7 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
      * The from port to match.
      * 
      */
-    @InputImport(name="fromPort")
+    @Import(name="fromPort")
       private final @Nullable Output<Integer> fromPort;
 
     public Output<Integer> getFromPort() {
@@ -53,7 +53,7 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
      * ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    @InputImport(name="icmpCode")
+    @Import(name="icmpCode")
       private final @Nullable Output<String> icmpCode;
 
     public Output<String> getIcmpCode() {
@@ -64,7 +64,7 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
      * ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    @InputImport(name="icmpType")
+    @Import(name="icmpType")
       private final @Nullable Output<String> icmpType;
 
     public Output<String> getIcmpType() {
@@ -75,7 +75,7 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
      * The IPv6 CIDR block to allow or deny.
      * 
      */
-    @InputImport(name="ipv6CidrBlock")
+    @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
     public Output<String> getIpv6CidrBlock() {
@@ -86,7 +86,7 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
      * The ID of the network ACL.
      * 
      */
-    @InputImport(name="networkAclId")
+    @Import(name="networkAclId")
       private final @Nullable Output<String> networkAclId;
 
     public Output<String> getNetworkAclId() {
@@ -97,7 +97,7 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
      * The protocol. A value of -1 means all protocols.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -108,7 +108,7 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
      * Indicates whether to allow or deny the traffic that matches the rule. Accepted values: `allow` | `deny`
      * 
      */
-    @InputImport(name="ruleAction")
+    @Import(name="ruleAction")
       private final @Nullable Output<String> ruleAction;
 
     public Output<String> getRuleAction() {
@@ -119,7 +119,7 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
      * The rule number for the entry (for example, 100). ACL entries are processed in ascending order by rule number.
      * 
      */
-    @InputImport(name="ruleNumber")
+    @Import(name="ruleNumber")
       private final @Nullable Output<Integer> ruleNumber;
 
     public Output<Integer> getRuleNumber() {
@@ -130,7 +130,7 @@ public final class NetworkAclRuleState extends io.pulumi.resources.ResourceArgs 
      * The to port to match.
      * 
      */
-    @InputImport(name="toPort")
+    @Import(name="toPort")
       private final @Nullable Output<Integer> toPort;
 
     public Output<Integer> getToPort() {

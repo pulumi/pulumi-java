@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.HealthCheckArgs;
 import io.pulumi.aws.route53.inputs.HealthCheckState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -36,7 +36,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Health Check.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The minimum number of child health checks that must be healthy for Route 53 to consider the parent health check to be healthy. Valid values are integers between 0 and 256, inclusive
      * 
      */
-    @OutputExport(name="childHealthThreshold", type=Integer.class, parameters={})
+    @Export(name="childHealthThreshold", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> childHealthThreshold;
 
     /**
@@ -64,7 +64,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * For a specified parent health check, a list of HealthCheckId values for the associated child health checks.
      * 
      */
-    @OutputExport(name="childHealthchecks", type=List.class, parameters={String.class})
+    @Export(name="childHealthchecks", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> childHealthchecks;
 
     /**
@@ -78,7 +78,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The name of the CloudWatch alarm.
      * 
      */
-    @OutputExport(name="cloudwatchAlarmName", type=String.class, parameters={})
+    @Export(name="cloudwatchAlarmName", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudwatchAlarmName;
 
     /**
@@ -92,7 +92,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The CloudWatchRegion that the CloudWatch alarm was created in.
      * 
      */
-    @OutputExport(name="cloudwatchAlarmRegion", type=String.class, parameters={})
+    @Export(name="cloudwatchAlarmRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudwatchAlarmRegion;
 
     /**
@@ -109,7 +109,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
     /**
@@ -126,7 +126,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enable_sni` defaults to `true`, when `type` is anything else `enable_sni` defaults to `false`.
      * 
      */
-    @OutputExport(name="enableSni", type=Boolean.class, parameters={})
+    @Export(name="enableSni", type=Boolean.class, parameters={})
     private Output<Boolean> enableSni;
 
     /**
@@ -140,7 +140,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The number of consecutive health checks that an endpoint must pass or fail.
      * 
      */
-    @OutputExport(name="failureThreshold", type=Integer.class, parameters={})
+    @Export(name="failureThreshold", type=Integer.class, parameters={})
     private Output<Integer> failureThreshold;
 
     /**
@@ -154,7 +154,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The fully qualified domain name of the endpoint to be checked.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output</* @Nullable */ String> fqdn;
 
     /**
@@ -168,7 +168,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The status of the health check when CloudWatch has insufficient data about the state of associated alarm. Valid values are `Healthy` , `Unhealthy` and `LastKnownStatus`.
      * 
      */
-    @OutputExport(name="insufficientDataHealthStatus", type=String.class, parameters={})
+    @Export(name="insufficientDataHealthStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> insufficientDataHealthStatus;
 
     /**
@@ -182,7 +182,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * A boolean value that indicates whether the status of health check should be inverted. For example, if a health check is healthy but Inverted is True , then Route 53 considers the health check to be unhealthy.
      * 
      */
-    @OutputExport(name="invertHealthcheck", type=Boolean.class, parameters={})
+    @Export(name="invertHealthcheck", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> invertHealthcheck;
 
     /**
@@ -196,7 +196,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The IP address of the endpoint to be checked.
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipAddress;
 
     /**
@@ -210,7 +210,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * A Boolean value that indicates whether you want Route 53 to measure the latency between health checkers in multiple AWS regions and your endpoint and to display CloudWatch latency graphs in the Route 53 console.
      * 
      */
-    @OutputExport(name="measureLatency", type=Boolean.class, parameters={})
+    @Export(name="measureLatency", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> measureLatency;
 
     /**
@@ -224,7 +224,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The port of the endpoint to be checked.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -239,7 +239,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * (helpful for identifying single health_check set amongst others)
      * 
      */
-    @OutputExport(name="referenceName", type=String.class, parameters={})
+    @Export(name="referenceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> referenceName;
 
     /**
@@ -254,7 +254,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.
      * 
      */
-    @OutputExport(name="regions", type=List.class, parameters={String.class})
+    @Export(name="regions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> regions;
 
     /**
@@ -268,7 +268,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request.
      * 
      */
-    @OutputExport(name="requestInterval", type=Integer.class, parameters={})
+    @Export(name="requestInterval", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> requestInterval;
 
     /**
@@ -282,7 +282,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The path that you want Amazon Route 53 to request when performing health checks.
      * 
      */
-    @OutputExport(name="resourcePath", type=String.class, parameters={})
+    @Export(name="resourcePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourcePath;
 
     /**
@@ -296,7 +296,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the Route 53 Application Recovery Controller routing control. This is used when health check type is `RECOVERY_CONTROL`
      * 
      */
-    @OutputExport(name="routingControlArn", type=String.class, parameters={})
+    @Export(name="routingControlArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> routingControlArn;
 
     /**
@@ -310,7 +310,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * String searched in the first 5120 bytes of the response body for check to be considered healthy. Only valid with `HTTP_STR_MATCH` and `HTTPS_STR_MATCH`.
      * 
      */
-    @OutputExport(name="searchString", type=String.class, parameters={})
+    @Export(name="searchString", type=String.class, parameters={})
     private Output</* @Nullable */ String> searchString;
 
     /**
@@ -324,7 +324,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the health check. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -338,7 +338,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -352,7 +352,7 @@ public class HealthCheck extends io.pulumi.resources.CustomResource {
      * The protocol to use when performing health checks. Valid values are `HTTP`, `HTTPS`, `HTTP_STR_MATCH`, `HTTPS_STR_MATCH`, `TCP`, `CALCULATED`, `CLOUDWATCH_METRIC` and `RECOVERY_CONTROL`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

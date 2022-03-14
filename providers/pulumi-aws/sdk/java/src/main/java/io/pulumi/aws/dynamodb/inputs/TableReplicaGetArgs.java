@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TableReplicaGetArgs extends io.pulumi.resources.ResourceArgs 
      * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -30,7 +30,7 @@ public final class TableReplicaGetArgs extends io.pulumi.resources.ResourceArgs 
      * Region name of the replica.
      * 
      */
-    @InputImport(name="regionName", required=true)
+    @Import(name="regionName", required=true)
       private final Output<String> regionName;
 
     public Output<String> getRegionName() {

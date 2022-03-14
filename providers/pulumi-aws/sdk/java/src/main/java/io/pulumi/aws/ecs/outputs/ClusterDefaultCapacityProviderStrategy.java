@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterDefaultCapacityProviderStrategy {
     /**
      * The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.
@@ -28,11 +28,11 @@ public final class ClusterDefaultCapacityProviderStrategy {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterDefaultCapacityProviderStrategy(
-        @OutputCustomType.Parameter("base") @Nullable Integer base,
-        @OutputCustomType.Parameter("capacityProvider") String capacityProvider,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("base") @Nullable Integer base,
+        @CustomType.Parameter("capacityProvider") String capacityProvider,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.base = base;
         this.capacityProvider = capacityProvider;
         this.weight = weight;

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.codeartifact.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAuthorizationTokenResult {
     /**
      * Temporary authorization token.
@@ -31,14 +31,14 @@ public final class GetAuthorizationTokenResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAuthorizationTokenResult(
-        @OutputCustomType.Parameter("authorizationToken") String authorizationToken,
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("domainOwner") String domainOwner,
-        @OutputCustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
-        @OutputCustomType.Parameter("expiration") String expiration,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("authorizationToken") String authorizationToken,
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("domainOwner") String domainOwner,
+        @CustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
+        @CustomType.Parameter("expiration") String expiration,
+        @CustomType.Parameter("id") String id) {
         this.authorizationToken = authorizationToken;
         this.domain = domain;
         this.domainOwner = domainOwner;

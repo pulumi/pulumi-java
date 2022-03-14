@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination {
     /**
      * The account ID that owns the destination bucket.
@@ -32,12 +32,12 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination(
-        @OutputCustomType.Parameter("bucketAccountId") @Nullable String bucketAccountId,
-        @OutputCustomType.Parameter("bucketArn") String bucketArn,
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
+        @CustomType.Parameter("bucketAccountId") @Nullable String bucketAccountId,
+        @CustomType.Parameter("bucketArn") String bucketArn,
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucketAccountId = bucketAccountId;
         this.bucketArn = bucketArn;
         this.format = format;

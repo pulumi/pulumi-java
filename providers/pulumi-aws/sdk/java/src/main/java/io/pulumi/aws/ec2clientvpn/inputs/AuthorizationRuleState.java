@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AuthorizationRuleState extends io.pulumi.resources.ResourceAr
      * The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
      * 
      */
-    @InputImport(name="accessGroupId")
+    @Import(name="accessGroupId")
       private final @Nullable Output<String> accessGroupId;
 
     public Output<String> getAccessGroupId() {
@@ -30,7 +30,7 @@ public final class AuthorizationRuleState extends io.pulumi.resources.ResourceAr
      * Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
      * 
      */
-    @InputImport(name="authorizeAllGroups")
+    @Import(name="authorizeAllGroups")
       private final @Nullable Output<Boolean> authorizeAllGroups;
 
     public Output<Boolean> getAuthorizeAllGroups() {
@@ -41,7 +41,7 @@ public final class AuthorizationRuleState extends io.pulumi.resources.ResourceAr
      * The ID of the Client VPN endpoint.
      * 
      */
-    @InputImport(name="clientVpnEndpointId")
+    @Import(name="clientVpnEndpointId")
       private final @Nullable Output<String> clientVpnEndpointId;
 
     public Output<String> getClientVpnEndpointId() {
@@ -52,7 +52,7 @@ public final class AuthorizationRuleState extends io.pulumi.resources.ResourceAr
      * A brief description of the authorization rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -63,7 +63,7 @@ public final class AuthorizationRuleState extends io.pulumi.resources.ResourceAr
      * The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
      * 
      */
-    @InputImport(name="targetNetworkCidr")
+    @Import(name="targetNetworkCidr")
       private final @Nullable Output<String> targetNetworkCidr;
 
     public Output<String> getTargetNetworkCidr() {

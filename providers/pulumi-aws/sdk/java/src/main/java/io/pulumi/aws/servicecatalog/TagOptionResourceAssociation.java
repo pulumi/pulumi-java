@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.TagOptionResourceAssociationArgs;
 import io.pulumi.aws.servicecatalog.inputs.TagOptionResourceAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * ARN of the resource.
      * 
      */
-    @OutputExport(name="resourceArn", type=String.class, parameters={})
+    @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
     /**
@@ -48,7 +48,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * Creation time of the resource.
      * 
      */
-    @OutputExport(name="resourceCreatedTime", type=String.class, parameters={})
+    @Export(name="resourceCreatedTime", type=String.class, parameters={})
     private Output<String> resourceCreatedTime;
 
     /**
@@ -62,7 +62,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * Description of the resource.
      * 
      */
-    @OutputExport(name="resourceDescription", type=String.class, parameters={})
+    @Export(name="resourceDescription", type=String.class, parameters={})
     private Output<String> resourceDescription;
 
     /**
@@ -76,7 +76,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * Resource identifier.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -90,7 +90,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * Description of the resource.
      * 
      */
-    @OutputExport(name="resourceName", type=String.class, parameters={})
+    @Export(name="resourceName", type=String.class, parameters={})
     private Output<String> resourceName;
 
     /**
@@ -104,7 +104,7 @@ public class TagOptionResourceAssociation extends io.pulumi.resources.CustomReso
      * Tag Option identifier.
      * 
      */
-    @OutputExport(name="tagOptionId", type=String.class, parameters={})
+    @Export(name="tagOptionId", type=String.class, parameters={})
     private Output<String> tagOptionId;
 
     /**

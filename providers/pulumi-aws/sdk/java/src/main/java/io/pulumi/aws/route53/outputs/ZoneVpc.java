@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ZoneVpc {
     /**
      * ID of the VPC to associate.
@@ -22,10 +22,10 @@ public final class ZoneVpc {
      */
     private final @Nullable String vpcRegion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ZoneVpc(
-        @OutputCustomType.Parameter("vpcId") String vpcId,
-        @OutputCustomType.Parameter("vpcRegion") @Nullable String vpcRegion) {
+        @CustomType.Parameter("vpcId") String vpcId,
+        @CustomType.Parameter("vpcRegion") @Nullable String vpcRegion) {
         this.vpcId = vpcId;
         this.vpcRegion = vpcRegion;
     }

@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.AmiEbsBlockDeviceGetArgs;
 import io.pulumi.aws.ec2.inputs.AmiEphemeralBlockDeviceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * Machine architecture for created instances. Defaults to "x86_64".
      * 
      */
-    @InputImport(name="architecture")
+    @Import(name="architecture")
       private final @Nullable Output<String> architecture;
 
     public Output<String> getArchitecture() {
@@ -34,7 +34,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the AMI.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -45,7 +45,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * A longer, human-readable description for the AMI.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * attached to created instances. The structure of this block is described below.
      * 
      */
-    @InputImport(name="ebsBlockDevices")
+    @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
     public Output<List<AmiEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
@@ -68,7 +68,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
      * 
      */
-    @InputImport(name="enaSupport")
+    @Import(name="enaSupport")
       private final @Nullable Output<Boolean> enaSupport;
 
     public Output<Boolean> getEnaSupport() {
@@ -80,7 +80,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * should be attached to created instances. The structure of this block is described below.
      * 
      */
-    @InputImport(name="ephemeralBlockDevices")
+    @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
     public Output<List<AmiEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
@@ -91,7 +91,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * The hypervisor type of the image.
      * 
      */
-    @InputImport(name="hypervisor")
+    @Import(name="hypervisor")
       private final @Nullable Output<String> hypervisor;
 
     public Output<String> getHypervisor() {
@@ -103,7 +103,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * by the `ec2-upload-bundle` command in the EC2 command line tools.
      * 
      */
-    @InputImport(name="imageLocation")
+    @Import(name="imageLocation")
       private final @Nullable Output<String> imageLocation;
 
     public Output<String> getImageLocation() {
@@ -114,7 +114,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * The AWS account alias (for example, amazon, self) or the AWS account ID of the AMI owner.
      * 
      */
-    @InputImport(name="imageOwnerAlias")
+    @Import(name="imageOwnerAlias")
       private final @Nullable Output<String> imageOwnerAlias;
 
     public Output<String> getImageOwnerAlias() {
@@ -125,7 +125,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * The type of image.
      * 
      */
-    @InputImport(name="imageType")
+    @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
     public Output<String> getImageType() {
@@ -137,14 +137,14 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * kernel in created instances.
      * 
      */
-    @InputImport(name="kernelId")
+    @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
 
     public Output<String> getKernelId() {
         return this.kernelId == null ? Output.empty() : this.kernelId;
     }
 
-    @InputImport(name="manageEbsSnapshots")
+    @Import(name="manageEbsSnapshots")
       private final @Nullable Output<Boolean> manageEbsSnapshots;
 
     public Output<Boolean> getManageEbsSnapshots() {
@@ -155,7 +155,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * A region-unique name for the AMI.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -166,7 +166,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * The AWS account ID of the image owner.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -177,7 +177,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * This value is set to windows for Windows AMIs; otherwise, it is blank.
      * 
      */
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<String> platform;
 
     public Output<String> getPlatform() {
@@ -188,7 +188,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * The platform details associated with the billing code of the AMI.
      * 
      */
-    @InputImport(name="platformDetails")
+    @Import(name="platformDetails")
       private final @Nullable Output<String> platformDetails;
 
     public Output<String> getPlatformDetails() {
@@ -199,7 +199,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the image has public launch permissions.
      * 
      */
-    @InputImport(name="public")
+    @Import(name="public")
       private final @Nullable Output<Boolean> $public;
 
     public Output<Boolean> get$public() {
@@ -211,7 +211,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * created instances.
      * 
      */
-    @InputImport(name="ramdiskId")
+    @Import(name="ramdiskId")
       private final @Nullable Output<String> ramdiskId;
 
     public Output<String> getRamdiskId() {
@@ -222,7 +222,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
      * 
      */
-    @InputImport(name="rootDeviceName")
+    @Import(name="rootDeviceName")
       private final @Nullable Output<String> rootDeviceName;
 
     public Output<String> getRootDeviceName() {
@@ -233,7 +233,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * The Snapshot ID for the root volume (for EBS-backed AMIs)
      * 
      */
-    @InputImport(name="rootSnapshotId")
+    @Import(name="rootSnapshotId")
       private final @Nullable Output<String> rootSnapshotId;
 
     public Output<String> getRootSnapshotId() {
@@ -245,7 +245,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * for created instances. No other value is supported at this time.
      * 
      */
-    @InputImport(name="sriovNetSupport")
+    @Import(name="sriovNetSupport")
       private final @Nullable Output<String> sriovNetSupport;
 
     public Output<String> getSriovNetSupport() {
@@ -256,7 +256,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -267,7 +267,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -278,7 +278,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
      * 
      */
-    @InputImport(name="usageOperation")
+    @Import(name="usageOperation")
       private final @Nullable Output<String> usageOperation;
 
     public Output<String> getUsageOperation() {
@@ -291,7 +291,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
      * changes the set of further arguments that are required, as described below.
      * 
      */
-    @InputImport(name="virtualizationType")
+    @Import(name="virtualizationType")
       private final @Nullable Output<String> virtualizationType;
 
     public Output<String> getVirtualizationType() {

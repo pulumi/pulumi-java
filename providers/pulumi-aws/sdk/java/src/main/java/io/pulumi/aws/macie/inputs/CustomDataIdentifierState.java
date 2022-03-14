@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * The Amazon Resource Name (ARN) of the custom data identifier.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * The date and time, in UTC and extended RFC 3339 format, when the Amazon Macie account was created.
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
@@ -43,7 +43,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * A custom description of the custom data identifier. The description can contain as many as 512 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * An array that lists specific character sequences (ignore words) to exclude from the results. If the text matched by the regular expression is the same as any string in this array, Amazon Macie ignores it. The array can contain as many as 10 ignore words. Each ignore word can contain 4 - 90 characters. Ignore words are case sensitive.
      * 
      */
-    @InputImport(name="ignoreWords")
+    @Import(name="ignoreWords")
       private final @Nullable Output<List<String>> ignoreWords;
 
     public Output<List<String>> getIgnoreWords() {
@@ -65,7 +65,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * An array that lists specific character sequences (keywords), one of which must be within proximity (`maximum_match_distance`) of the regular expression to match. The array can contain as many as 50 keywords. Each keyword can contain 3 - 90 characters. Keywords aren't case sensitive.
      * 
      */
-    @InputImport(name="keywords")
+    @Import(name="keywords")
       private final @Nullable Output<List<String>> keywords;
 
     public Output<List<String>> getKeywords() {
@@ -76,14 +76,14 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * The maximum number of characters that can exist between text that matches the regex pattern and the character sequences specified by the keywords array. Macie includes or excludes a result based on the proximity of a keyword to text that matches the regex pattern. The distance can be 1 - 300 characters. The default value is 50.
      * 
      */
-    @InputImport(name="maximumMatchDistance")
+    @Import(name="maximumMatchDistance")
       private final @Nullable Output<Integer> maximumMatchDistance;
 
     public Output<Integer> getMaximumMatchDistance() {
         return this.maximumMatchDistance == null ? Output.empty() : this.maximumMatchDistance;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -94,7 +94,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -105,7 +105,7 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * The regular expression (regex) that defines the pattern to match. The expression can contain as many as 512 characters.
      * 
      */
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable Output<String> regex;
 
     public Output<String> getRegex() {
@@ -116,14 +116,14 @@ public final class CustomDataIdentifierState extends io.pulumi.resources.Resourc
      * A map of key-value pairs that specifies the tags to associate with the custom data identifier.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

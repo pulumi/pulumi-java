@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
      * Array of processor parameters. More details are given below
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
 
     public Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> getParameters() {
@@ -31,7 +31,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
      * The type of processor. Valid Values: `Lambda`
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

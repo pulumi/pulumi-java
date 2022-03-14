@@ -8,7 +8,7 @@ import io.pulumi.aws.ec2.enums.InstanceType;
 import io.pulumi.aws.ec2.enums.Tenancy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * The ARN of the Capacity Reservation.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -36,7 +36,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * The Availability Zone in which to create the Capacity Reservation.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -47,7 +47,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * Indicates whether the Capacity Reservation supports EBS-optimized instances.
      * 
      */
-    @InputImport(name="ebsOptimized")
+    @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
@@ -58,7 +58,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
      * 
      */
-    @InputImport(name="endDate")
+    @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
     public Output<String> getEndDate() {
@@ -69,7 +69,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
      * 
      */
-    @InputImport(name="endDateType")
+    @Import(name="endDateType")
       private final @Nullable Output<String> endDateType;
 
     public Output<String> getEndDateType() {
@@ -80,7 +80,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
      * 
      */
-    @InputImport(name="ephemeralStorage")
+    @Import(name="ephemeralStorage")
       private final @Nullable Output<Boolean> ephemeralStorage;
 
     public Output<Boolean> getEphemeralStorage() {
@@ -91,7 +91,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * The number of instances for which to reserve capacity.
      * 
      */
-    @InputImport(name="instanceCount")
+    @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
@@ -102,7 +102,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
      * 
      */
-    @InputImport(name="instanceMatchCriteria")
+    @Import(name="instanceMatchCriteria")
       private final @Nullable Output<String> instanceMatchCriteria;
 
     public Output<String> getInstanceMatchCriteria() {
@@ -113,7 +113,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
      * 
      */
-    @InputImport(name="instancePlatform")
+    @Import(name="instancePlatform")
       private final @Nullable Output<Either<String,InstancePlatform>> instancePlatform;
 
     public Output<Either<String,InstancePlatform>> getInstancePlatform() {
@@ -124,7 +124,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * The instance type for which to reserve capacity.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<Either<String,InstanceType>> instanceType;
 
     public Output<Either<String,InstanceType>> getInstanceType() {
@@ -135,7 +135,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
      * 
      */
-    @InputImport(name="outpostArn")
+    @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
     public Output<String> getOutpostArn() {
@@ -146,7 +146,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * The ID of the AWS account that owns the Capacity Reservation.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -157,14 +157,14 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -175,7 +175,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
      * Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
      * 
      */
-    @InputImport(name="tenancy")
+    @Import(name="tenancy")
       private final @Nullable Output<Either<String,Tenancy>> tenancy;
 
     public Output<Either<String,Tenancy>> getTenancy() {

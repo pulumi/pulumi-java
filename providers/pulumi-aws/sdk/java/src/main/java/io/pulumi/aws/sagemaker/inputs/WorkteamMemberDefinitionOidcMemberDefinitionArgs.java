@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionArgs extends io.p
      * A list of comma separated strings that identifies user groups in your OIDC IdP. Each user group is made up of a group of private workers.
      * 
      */
-    @InputImport(name="groups", required=true)
+    @Import(name="groups", required=true)
       private final Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {

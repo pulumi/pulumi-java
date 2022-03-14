@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sagemaker.ImageVersionArgs;
 import io.pulumi.aws.sagemaker.inputs.ImageVersionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
      * * `image_arn`- The Amazon Resource Name (ARN) of the image the version is based on.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
      * The registry path of the container image on which this image version is based.
      * 
      */
-    @OutputExport(name="baseImage", type=String.class, parameters={})
+    @Export(name="baseImage", type=String.class, parameters={})
     private Output<String> baseImage;
 
     /**
@@ -63,7 +63,7 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
      * The registry path of the container image that contains this image version.
      * 
      */
-    @OutputExport(name="containerImage", type=String.class, parameters={})
+    @Export(name="containerImage", type=String.class, parameters={})
     private Output<String> containerImage;
 
     /**
@@ -73,7 +73,7 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
     public Output<String> getContainerImage() {
         return this.containerImage;
     }
-    @OutputExport(name="imageArn", type=String.class, parameters={})
+    @Export(name="imageArn", type=String.class, parameters={})
     private Output<String> imageArn;
 
     public Output<String> getImageArn() {
@@ -83,7 +83,7 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
      * The name of the image. Must be unique to your account.
      * 
      */
-    @OutputExport(name="imageName", type=String.class, parameters={})
+    @Export(name="imageName", type=String.class, parameters={})
     private Output<String> imageName;
 
     /**
@@ -93,7 +93,7 @@ public class ImageVersion extends io.pulumi.resources.CustomResource {
     public Output<String> getImageName() {
         return this.imageName;
     }
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     public Output<Integer> getVersion() {

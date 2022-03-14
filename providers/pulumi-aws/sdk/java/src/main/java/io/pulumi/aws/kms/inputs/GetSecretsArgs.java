@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.aws.kms.inputs.GetSecretsSecret;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSecretsArgs extends io.pulumi.resources.InvokeArgs {
      * One or more encrypted payload definitions from the KMS service. See the Secret Definitions below.
      * 
      */
-    @InputImport(name="secrets", required=true)
+    @Import(name="secrets", required=true)
       private final List<GetSecretsSecret> secrets;
 
     public List<GetSecretsSecret> getSecrets() {

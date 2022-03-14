@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
      * Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
      * The time that the FSx for Lustre location was created.
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
     public Output<String> getCreationTime() {
@@ -42,7 +42,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) for the FSx for Lustre file system.
      * 
      */
-    @InputImport(name="fsxFilesystemArn")
+    @Import(name="fsxFilesystemArn")
       private final @Nullable Output<String> fsxFilesystemArn;
 
     public Output<String> getFsxFilesystemArn() {
@@ -53,7 +53,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Lustre file system.
      * 
      */
-    @InputImport(name="securityGroupArns")
+    @Import(name="securityGroupArns")
       private final @Nullable Output<List<String>> securityGroupArns;
 
     public Output<List<String>> getSecurityGroupArns() {
@@ -64,7 +64,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
      * Subdirectory to perform actions as source or destination.
      * 
      */
-    @InputImport(name="subdirectory")
+    @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -75,7 +75,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
      * Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -86,7 +86,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -97,7 +97,7 @@ public final class LocationFsxLustreState extends io.pulumi.resources.ResourceAr
      * The URL of the FSx for Lustre location that was described.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

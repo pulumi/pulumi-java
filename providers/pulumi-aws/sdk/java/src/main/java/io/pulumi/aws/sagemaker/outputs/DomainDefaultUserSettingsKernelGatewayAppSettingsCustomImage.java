@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage {
     /**
      * The name of the App Image Config.
@@ -28,11 +28,11 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage 
      */
     private final @Nullable Integer imageVersionNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage(
-        @OutputCustomType.Parameter("appImageConfigName") String appImageConfigName,
-        @OutputCustomType.Parameter("imageName") String imageName,
-        @OutputCustomType.Parameter("imageVersionNumber") @Nullable Integer imageVersionNumber) {
+        @CustomType.Parameter("appImageConfigName") String appImageConfigName,
+        @CustomType.Parameter("imageName") String imageName,
+        @CustomType.Parameter("imageVersionNumber") @Nullable Integer imageVersionNumber) {
         this.appImageConfigName = appImageConfigName;
         this.imageName = imageName;
         this.imageVersionNumber = imageVersionNumber;

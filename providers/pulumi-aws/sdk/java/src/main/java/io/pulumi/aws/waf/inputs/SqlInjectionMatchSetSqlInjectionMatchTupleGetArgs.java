@@ -5,7 +5,7 @@ package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs extends io.
      * Specifies where in a web request to look for snippets of malicious SQL code.
      * 
      */
-    @InputImport(name="fieldToMatch", required=true)
+    @Import(name="fieldToMatch", required=true)
       private final Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
     public Output<SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatchGetArgs> getFieldToMatch() {
@@ -33,7 +33,7 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTupleGetArgs extends io.
      * for all supported values.
      * 
      */
-    @InputImport(name="textTransformation", required=true)
+    @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
     public Output<String> getTextTransformation() {

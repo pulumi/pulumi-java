@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * A boolean flag to enable/disable the subscription. Defaults to true.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -32,7 +32,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * A list of event categories for a SourceType that you want to subscribe to. See https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html or run `aws redshift describe-event-categories`.
      * 
      */
-    @InputImport(name="eventCategories")
+    @Import(name="eventCategories")
       private final @Nullable Output<List<String>> eventCategories;
 
     public Output<List<String>> getEventCategories() {
@@ -43,7 +43,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The name of the Redshift event subscription.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The event severity to be published by the notification subscription. Valid options are `INFO` or `ERROR`.
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable Output<String> severity;
 
     public Output<String> getSeverity() {
@@ -65,7 +65,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The ARN of the SNS topic to send events to.
      * 
      */
-    @InputImport(name="snsTopicArn", required=true)
+    @Import(name="snsTopicArn", required=true)
       private final Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {
@@ -76,7 +76,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.
      * 
      */
-    @InputImport(name="sourceIds")
+    @Import(name="sourceIds")
       private final @Nullable Output<List<String>> sourceIds;
 
     public Output<List<String>> getSourceIds() {
@@ -87,7 +87,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The type of source that will be generating the events. Valid options are `cluster`, `cluster-parameter-group`, `cluster-security-group`, or `cluster-snapshot`. If not set, all sources will be subscribed to.
      * 
      */
-    @InputImport(name="sourceType")
+    @Import(name="sourceType")
       private final @Nullable Output<String> sourceType;
 
     public Output<String> getSourceType() {
@@ -98,7 +98,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

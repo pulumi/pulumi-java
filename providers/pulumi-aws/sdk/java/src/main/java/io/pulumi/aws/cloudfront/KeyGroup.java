@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudfront.KeyGroupArgs;
 import io.pulumi.aws.cloudfront.inputs.KeyGroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public class KeyGroup extends io.pulumi.resources.CustomResource {
      * A comment to describe the key group..
      * 
      */
-    @OutputExport(name="comment", type=String.class, parameters={})
+    @Export(name="comment", type=String.class, parameters={})
     private Output</* @Nullable */ String> comment;
 
     /**
@@ -45,7 +45,7 @@ public class KeyGroup extends io.pulumi.resources.CustomResource {
      * The identifier for this version of the key group.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -59,7 +59,7 @@ public class KeyGroup extends io.pulumi.resources.CustomResource {
      * A list of the identifiers of the public keys in the key group.
      * 
      */
-    @OutputExport(name="items", type=List.class, parameters={String.class})
+    @Export(name="items", type=List.class, parameters={String.class})
     private Output<List<String>> items;
 
     /**
@@ -73,7 +73,7 @@ public class KeyGroup extends io.pulumi.resources.CustomResource {
      * A name to identify the key group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

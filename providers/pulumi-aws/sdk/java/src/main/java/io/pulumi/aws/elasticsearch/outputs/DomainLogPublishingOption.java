@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainLogPublishingOption {
     /**
      * ARN of the Cloudwatch log group to which log needs to be published.
@@ -28,11 +28,11 @@ public final class DomainLogPublishingOption {
      */
     private final String logType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainLogPublishingOption(
-        @OutputCustomType.Parameter("cloudwatchLogGroupArn") String cloudwatchLogGroupArn,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("logType") String logType) {
+        @CustomType.Parameter("cloudwatchLogGroupArn") String cloudwatchLogGroupArn,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("logType") String logType) {
         this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
         this.enabled = enabled;
         this.logType = logType;

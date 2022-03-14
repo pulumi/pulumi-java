@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class VoiceConnectorGroupConnectorGetArgs extends io.pulumi.resourc
      * The priority associated with the Amazon Chime Voice Connector, with 1 being the highest priority. Higher priority Amazon Chime Voice Connectors are attempted first.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -29,7 +29,7 @@ public final class VoiceConnectorGroupConnectorGetArgs extends io.pulumi.resourc
      * The Amazon Chime Voice Connector ID.
      * 
      */
-    @InputImport(name="voiceConnectorId", required=true)
+    @Import(name="voiceConnectorId", required=true)
       private final Output<String> voiceConnectorId;
 
     public Output<String> getVoiceConnectorId() {

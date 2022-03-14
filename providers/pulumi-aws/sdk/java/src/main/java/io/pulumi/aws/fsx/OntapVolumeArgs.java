@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx;
 
 import io.pulumi.aws.fsx.inputs.OntapVolumeTieringPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the location in the storage virtual machine's namespace where the volume is mounted. The junction_path must have a leading forward slash, such as `/vol3`
      * 
      */
-    @InputImport(name="junctionPath", required=true)
+    @Import(name="junctionPath", required=true)
       private final Output<String> junctionPath;
 
     public Output<String> getJunctionPath() {
@@ -33,7 +33,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the tiering policy for the ONTAP volume for moving data to the capacity pool storage. Valid values are `SNAPSHOT_ONLY`, `AUTO`, `ALL`, `NONE`. Default value is `SNAPSHOT_ONLY`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the volume security style, Valid values are `UNIX`, `NTFS`, and `MIXED`. Default value is `UNIX`.
      * 
      */
-    @InputImport(name="securityStyle")
+    @Import(name="securityStyle")
       private final @Nullable Output<String> securityStyle;
 
     public Output<String> getSecurityStyle() {
@@ -55,7 +55,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the size of the volume, in megabytes (MB), that you are creating.
      * 
      */
-    @InputImport(name="sizeInMegabytes", required=true)
+    @Import(name="sizeInMegabytes", required=true)
       private final Output<Integer> sizeInMegabytes;
 
     public Output<Integer> getSizeInMegabytes() {
@@ -66,7 +66,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Set to true to enable deduplication, compression, and compaction storage efficiency features on the volume.
      * 
      */
-    @InputImport(name="storageEfficiencyEnabled", required=true)
+    @Import(name="storageEfficiencyEnabled", required=true)
       private final Output<Boolean> storageEfficiencyEnabled;
 
     public Output<Boolean> getStorageEfficiencyEnabled() {
@@ -77,7 +77,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the storage virtual machine in which to create the volume.
      * 
      */
-    @InputImport(name="storageVirtualMachineId", required=true)
+    @Import(name="storageVirtualMachineId", required=true)
       private final Output<String> storageVirtualMachineId;
 
     public Output<String> getStorageVirtualMachineId() {
@@ -88,14 +88,14 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the volume. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tieringPolicy")
+    @Import(name="tieringPolicy")
       private final @Nullable Output<OntapVolumeTieringPolicyArgs> tieringPolicy;
 
     public Output<OntapVolumeTieringPolicyArgs> getTieringPolicy() {
@@ -106,7 +106,7 @@ public final class OntapVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The type of volume, currently the only valid value is `ONTAP`.
      * 
      */
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

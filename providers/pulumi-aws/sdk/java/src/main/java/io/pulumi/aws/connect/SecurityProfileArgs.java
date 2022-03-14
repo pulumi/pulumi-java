@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the description of the Security Profile.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -42,7 +42,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the name of the Security Profile.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies a list of permissions assigned to the security profile.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
     public Output<List<String>> getPermissions() {
@@ -65,7 +65,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

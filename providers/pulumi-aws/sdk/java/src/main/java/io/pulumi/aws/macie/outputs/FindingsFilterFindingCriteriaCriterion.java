@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.macie.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FindingsFilterFindingCriteriaCriterion {
     /**
      * The value for the property exclusively matches (equals an exact match for) all the specified values. If you specify multiple values, Amazon Macie uses AND logic to join the values.
@@ -53,16 +53,16 @@ public final class FindingsFilterFindingCriteriaCriterion {
      */
     private final @Nullable List<String> neqs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FindingsFilterFindingCriteriaCriterion(
-        @OutputCustomType.Parameter("eqExactMatches") @Nullable List<String> eqExactMatches,
-        @OutputCustomType.Parameter("eqs") @Nullable List<String> eqs,
-        @OutputCustomType.Parameter("field") String field,
-        @OutputCustomType.Parameter("gt") @Nullable String gt,
-        @OutputCustomType.Parameter("gte") @Nullable String gte,
-        @OutputCustomType.Parameter("lt") @Nullable String lt,
-        @OutputCustomType.Parameter("lte") @Nullable String lte,
-        @OutputCustomType.Parameter("neqs") @Nullable List<String> neqs) {
+        @CustomType.Parameter("eqExactMatches") @Nullable List<String> eqExactMatches,
+        @CustomType.Parameter("eqs") @Nullable List<String> eqs,
+        @CustomType.Parameter("field") String field,
+        @CustomType.Parameter("gt") @Nullable String gt,
+        @CustomType.Parameter("gte") @Nullable String gte,
+        @CustomType.Parameter("lt") @Nullable String lt,
+        @CustomType.Parameter("lte") @Nullable String lte,
+        @CustomType.Parameter("neqs") @Nullable List<String> neqs) {
         this.eqExactMatches = eqExactMatches;
         this.eqs = eqs;
         this.field = field;

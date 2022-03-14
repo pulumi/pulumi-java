@@ -6,7 +6,7 @@ package io.pulumi.aws.codepipeline;
 import io.pulumi.aws.codepipeline.inputs.WebhookAuthenticationConfigurationArgs;
 import io.pulumi.aws.codepipeline.inputs.WebhookFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
      * 
      */
-    @InputImport(name="authentication", required=true)
+    @Import(name="authentication", required=true)
       private final Output<String> authentication;
 
     public Output<String> getAuthentication() {
@@ -33,7 +33,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
      * 
      */
-    @InputImport(name="authenticationConfiguration")
+    @Import(name="authenticationConfiguration")
       private final @Nullable Output<WebhookAuthenticationConfigurationArgs> authenticationConfiguration;
 
     public Output<WebhookAuthenticationConfigurationArgs> getAuthenticationConfiguration() {
@@ -44,7 +44,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * One or more `filter` blocks. Filter blocks are documented below.
      * 
      */
-    @InputImport(name="filters", required=true)
+    @Import(name="filters", required=true)
       private final Output<List<WebhookFilterArgs>> filters;
 
     public Output<List<WebhookFilterArgs>> getFilters() {
@@ -55,7 +55,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the webhook.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -77,7 +77,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
      * 
      */
-    @InputImport(name="targetAction", required=true)
+    @Import(name="targetAction", required=true)
       private final Output<String> targetAction;
 
     public Output<String> getTargetAction() {
@@ -88,7 +88,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the pipeline.
      * 
      */
-    @InputImport(name="targetPipeline", required=true)
+    @Import(name="targetPipeline", required=true)
       private final Output<String> targetPipeline;
 
     public Output<String> getTargetPipeline() {

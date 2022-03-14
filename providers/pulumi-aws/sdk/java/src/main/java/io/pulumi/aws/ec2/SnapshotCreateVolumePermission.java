@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.SnapshotCreateVolumePermissionArgs;
 import io.pulumi.aws.ec2.inputs.SnapshotCreateVolumePermissionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public class SnapshotCreateVolumePermission extends io.pulumi.resources.CustomRe
      * An AWS Account ID to add create volume permissions
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -38,7 +38,7 @@ public class SnapshotCreateVolumePermission extends io.pulumi.resources.CustomRe
      * A snapshot ID
      * 
      */
-    @OutputExport(name="snapshotId", type=String.class, parameters={})
+    @Export(name="snapshotId", type=String.class, parameters={})
     private Output<String> snapshotId;
 
     /**

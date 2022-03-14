@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionArgs extends 
      * A fair share identifier or fair share identifier prefix. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
      */
-    @InputImport(name="shareIdentifier", required=true)
+    @Import(name="shareIdentifier", required=true)
       private final Output<String> shareIdentifier;
 
     public Output<String> getShareIdentifier() {
@@ -30,7 +30,7 @@ public final class SchedulingPolicyFairSharePolicyShareDistributionArgs extends 
      * The weight factor for the fair share identifier. For more information, see [ShareAttributes](https://docs.aws.amazon.com/batch/latest/APIReference/API_ShareAttributes.html).
      * 
      */
-    @InputImport(name="weightFactor")
+    @Import(name="weightFactor")
       private final @Nullable Output<Double> weightFactor;
 
     public Output<Double> getWeightFactor() {

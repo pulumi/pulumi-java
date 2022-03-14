@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceParametersAmazonElasticsearch {
     /**
      * The OpenSearch domain.
@@ -15,8 +15,8 @@ public final class DataSourceParametersAmazonElasticsearch {
      */
     private final String domain;
 
-    @OutputCustomType.Constructor
-    private DataSourceParametersAmazonElasticsearch(@OutputCustomType.Parameter("domain") String domain) {
+    @CustomType.Constructor
+    private DataSourceParametersAmazonElasticsearch(@CustomType.Parameter("domain") String domain) {
         this.domain = domain;
     }
 

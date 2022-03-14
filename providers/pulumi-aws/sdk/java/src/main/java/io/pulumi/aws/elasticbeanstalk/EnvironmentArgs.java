@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticbeanstalk;
 
 import io.pulumi.aws.elasticbeanstalk.inputs.EnvironmentSettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * to be deployed
      * 
      */
-    @InputImport(name="application", required=true)
+    @Import(name="application", required=true)
       private final Output<String> application;
 
     public Output<String> getApplication() {
@@ -34,7 +34,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * the Environment.
      * 
      */
-    @InputImport(name="cnamePrefix")
+    @Import(name="cnamePrefix")
       private final @Nullable Output<String> cnamePrefix;
 
     public Output<String> getCnamePrefix() {
@@ -45,7 +45,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Short description of the Environment
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * in the application URL
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * to use in deployment
      * 
      */
-    @InputImport(name="platformArn")
+    @Import(name="platformArn")
       private final @Nullable Output<String> platformArn;
 
     public Output<String> getPlatformArn() {
@@ -83,7 +83,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * use the default behavior, which is an exponential backoff
      * 
      */
-    @InputImport(name="pollInterval")
+    @Import(name="pollInterval")
       private final @Nullable Output<String> pollInterval;
 
     public Output<String> getPollInterval() {
@@ -96,7 +96,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * below in Option Settings
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<List<EnvironmentSettingArgs>> settings;
 
     public Output<List<EnvironmentSettingArgs>> getSettings() {
@@ -108,7 +108,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
      * 
      */
-    @InputImport(name="solutionStackName")
+    @Import(name="solutionStackName")
       private final @Nullable Output<String> solutionStackName;
 
     public Output<String> getSolutionStackName() {
@@ -119,7 +119,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * A set of tags to apply to the Environment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -131,7 +131,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * template to use in deployment
      * 
      */
-    @InputImport(name="templateName")
+    @Import(name="templateName")
       private final @Nullable Output<String> templateName;
 
     public Output<String> getTemplateName() {
@@ -143,7 +143,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * or `WebServer`. If tier is left blank `WebServer` will be used.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
@@ -155,7 +155,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * to use in deployment.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
@@ -169,7 +169,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * out.
      * 
      */
-    @InputImport(name="waitForReadyTimeout")
+    @Import(name="waitForReadyTimeout")
       private final @Nullable Output<String> waitForReadyTimeout;
 
     public Output<String> getWaitForReadyTimeout() {

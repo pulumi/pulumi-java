@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InstanceCapacityReservationSpecificationCapacityReservationTa
      * The ID of the Capacity Reservation in which to run the instance.
      * 
      */
-    @InputImport(name="capacityReservationId")
+    @Import(name="capacityReservationId")
       private final @Nullable Output<String> capacityReservationId;
 
     public Output<String> getCapacityReservationId() {

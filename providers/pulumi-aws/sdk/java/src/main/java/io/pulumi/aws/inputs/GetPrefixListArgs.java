@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.aws.inputs.GetPrefixListFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block(s) for filtering. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetPrefixListFilter> filters;
 
     public List<GetPrefixListFilter> getFilters() {
@@ -31,7 +31,7 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the filter field. Valid values can be found in the [EC2 DescribePrefixLists API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribePrefixLists.html).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -42,7 +42,7 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the prefix list to select.
      * 
      */
-    @InputImport(name="prefixListId")
+    @Import(name="prefixListId")
       private final @Nullable String prefixListId;
 
     public Optional<String> getPrefixListId() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.lambda.inputs;
 import io.pulumi.aws.lambda.inputs.CodeSigningConfigAllowedPublishersGetArgs;
 import io.pulumi.aws.lambda.inputs.CodeSigningConfigPoliciesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
      * 
      */
-    @InputImport(name="allowedPublishers")
+    @Import(name="allowedPublishers")
       private final @Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers;
 
     public Output<CodeSigningConfigAllowedPublishersGetArgs> getAllowedPublishers() {
@@ -31,7 +31,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) of the code signing configuration.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -42,7 +42,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * Unique identifier for the code signing configuration.
      * 
      */
-    @InputImport(name="configId")
+    @Import(name="configId")
       private final @Nullable Output<String> configId;
 
     public Output<String> getConfigId() {
@@ -53,7 +53,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * Descriptive name for this code signing configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * The date and time that the code signing configuration was last modified.
      * 
      */
-    @InputImport(name="lastModified")
+    @Import(name="lastModified")
       private final @Nullable Output<String> lastModified;
 
     public Output<String> getLastModified() {
@@ -75,7 +75,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
      * A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
      * 
      */
-    @InputImport(name="policies")
+    @Import(name="policies")
       private final @Nullable Output<CodeSigningConfigPoliciesGetArgs> policies;
 
     public Output<CodeSigningConfigPoliciesGetArgs> getPolicies() {

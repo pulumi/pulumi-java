@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.DeviceDeviceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The device to register with SageMaker Edge Manager. See Device details below.
      * 
      */
-    @InputImport(name="device", required=true)
+    @Import(name="device", required=true)
       private final Output<DeviceDeviceArgs> device;
 
     public Output<DeviceDeviceArgs> getDevice() {
@@ -29,7 +29,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Device Fleet.
      * 
      */
-    @InputImport(name="deviceFleetName", required=true)
+    @Import(name="deviceFleetName", required=true)
       private final Output<String> deviceFleetName;
 
     public Output<String> getDeviceFleetName() {

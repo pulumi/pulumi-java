@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudformation.CloudFormationTypeArgs;
 import io.pulumi.aws.cloudformation.inputs.CloudFormationTypeState;
 import io.pulumi.aws.cloudformation.outputs.CloudFormationTypeLoggingConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -30,7 +30,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * (Optional) Amazon Resource Name (ARN) of the CloudFormation Type version. See also `type_arn`.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -44,7 +44,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * Identifier of the CloudFormation Type default version.
      * 
      */
-    @OutputExport(name="defaultVersionId", type=String.class, parameters={})
+    @Export(name="defaultVersionId", type=String.class, parameters={})
     private Output<String> defaultVersionId;
 
     /**
@@ -58,7 +58,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * Deprecation status of the version.
      * 
      */
-    @OutputExport(name="deprecatedStatus", type=String.class, parameters={})
+    @Export(name="deprecatedStatus", type=String.class, parameters={})
     private Output<String> deprecatedStatus;
 
     /**
@@ -72,7 +72,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * Description of the version.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -86,7 +86,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * URL of the documentation for the CloudFormation Type.
      * 
      */
-    @OutputExport(name="documentationUrl", type=String.class, parameters={})
+    @Export(name="documentationUrl", type=String.class, parameters={})
     private Output<String> documentationUrl;
 
     /**
@@ -100,7 +100,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the IAM Role for CloudFormation to assume when invoking the extension. If your extension calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. When CloudFormation needs to invoke the extension handler, CloudFormation assumes this execution role to create a temporary session token, which it then passes to the extension handler, thereby supplying your extension with the appropriate credentials.
      * 
      */
-    @OutputExport(name="executionRoleArn", type=String.class, parameters={})
+    @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> executionRoleArn;
 
     /**
@@ -114,7 +114,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * Whether the CloudFormation Type version is the default version.
      * 
      */
-    @OutputExport(name="isDefaultVersion", type=Boolean.class, parameters={})
+    @Export(name="isDefaultVersion", type=Boolean.class, parameters={})
     private Output<Boolean> isDefaultVersion;
 
     /**
@@ -128,7 +128,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * Configuration block containing logging configuration.
      * 
      */
-    @OutputExport(name="loggingConfig", type=CloudFormationTypeLoggingConfig.class, parameters={})
+    @Export(name="loggingConfig", type=CloudFormationTypeLoggingConfig.class, parameters={})
     private Output</* @Nullable */ CloudFormationTypeLoggingConfig> loggingConfig;
 
     /**
@@ -142,7 +142,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * Provisioning behavior of the CloudFormation Type.
      * 
      */
-    @OutputExport(name="provisioningType", type=String.class, parameters={})
+    @Export(name="provisioningType", type=String.class, parameters={})
     private Output<String> provisioningType;
 
     /**
@@ -156,7 +156,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * JSON document of the CloudFormation Type schema.
      * 
      */
-    @OutputExport(name="schema", type=String.class, parameters={})
+    @Export(name="schema", type=String.class, parameters={})
     private Output<String> schema;
 
     /**
@@ -170,7 +170,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * URL to the S3 bucket containing the extension project package that contains the necessary files for the extension you want to register. Must begin with `s3://` or `https://`. For example, `s3://example-bucket/example-object`.
      * 
      */
-    @OutputExport(name="schemaHandlerPackage", type=String.class, parameters={})
+    @Export(name="schemaHandlerPackage", type=String.class, parameters={})
     private Output<String> schemaHandlerPackage;
 
     /**
@@ -184,7 +184,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * URL of the source code for the CloudFormation Type.
      * 
      */
-    @OutputExport(name="sourceUrl", type=String.class, parameters={})
+    @Export(name="sourceUrl", type=String.class, parameters={})
     private Output<String> sourceUrl;
 
     /**
@@ -198,7 +198,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * CloudFormation Registry Type. For example, `RESOURCE` or `MODULE`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -212,7 +212,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * (Optional) Amazon Resource Name (ARN) of the CloudFormation Type. See also `arn`.
      * 
      */
-    @OutputExport(name="typeArn", type=String.class, parameters={})
+    @Export(name="typeArn", type=String.class, parameters={})
     private Output<String> typeArn;
 
     /**
@@ -226,7 +226,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * CloudFormation Type name. For example, `ExampleCompany::ExampleService::ExampleResource`.
      * 
      */
-    @OutputExport(name="typeName", type=String.class, parameters={})
+    @Export(name="typeName", type=String.class, parameters={})
     private Output<String> typeName;
 
     /**
@@ -240,7 +240,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * (Optional) Identifier of the CloudFormation Type version.
      * 
      */
-    @OutputExport(name="versionId", type=String.class, parameters={})
+    @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     /**
@@ -254,7 +254,7 @@ public class CloudFormationType extends io.pulumi.resources.CustomResource {
      * Scope of the CloudFormation Type.
      * 
      */
-    @OutputExport(name="visibility", type=String.class, parameters={})
+    @Export(name="visibility", type=String.class, parameters={})
     private Output<String> visibility;
 
     /**

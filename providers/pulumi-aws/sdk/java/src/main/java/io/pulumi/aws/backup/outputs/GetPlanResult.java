@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPlanResult {
     /**
      * The ARN of the backup plan.
@@ -37,14 +37,14 @@ public final class GetPlanResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPlanResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("planId") String planId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("planId") String planId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("version") String version) {
         this.arn = arn;
         this.id = id;
         this.name = name;

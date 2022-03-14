@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes an application's checkpointing configuration.
      * 
      */
-    @InputImport(name="checkpointConfiguration")
+    @Import(name="checkpointConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs> checkpointConfiguration;
 
     public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs> getCheckpointConfiguration() {
@@ -31,7 +31,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes configuration parameters for CloudWatch logging for an application.
      * 
      */
-    @InputImport(name="monitoringConfiguration")
+    @Import(name="monitoringConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs> monitoringConfiguration;
 
     public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs> getMonitoringConfiguration() {
@@ -42,7 +42,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes parameters for how an application executes multiple tasks simultaneously.
      * 
      */
-    @InputImport(name="parallelismConfiguration")
+    @Import(name="parallelismConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs> parallelismConfiguration;
 
     public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs> getParallelismConfiguration() {

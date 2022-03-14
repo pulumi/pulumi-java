@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetDelegatedAdministratorsArgs extends io.pulumi.resources.In
      * Specifies a service principal name. If specified, then the operation lists the delegated administrators only for the specified service. If you don't specify a service principal, the operation lists all delegated administrators for all services in your organization.
      * 
      */
-    @InputImport(name="servicePrincipal")
+    @Import(name="servicePrincipal")
       private final @Nullable String servicePrincipal;
 
     public Optional<String> getServicePrincipal() {

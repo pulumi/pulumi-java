@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
      * The name of the Lightsail instance to attach the IP to
      * 
      */
-    @InputImport(name="instanceName")
+    @Import(name="instanceName")
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
@@ -29,7 +29,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
      * The allocated static IP address
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -40,7 +40,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
      * The name of the allocated static IP
      * 
      */
-    @InputImport(name="staticIpName")
+    @Import(name="staticIpName")
       private final @Nullable Output<String> staticIpName;
 
     public Output<String> getStaticIpName() {

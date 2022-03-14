@@ -11,7 +11,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementNotStatementStatementSqliMa
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class WebAclRuleStatementNotStatementStatementSqliMatchStatementFie
      * Inspect all query arguments.
      * 
      */
-    @InputImport(name="allQueryArguments")
+    @Import(name="allQueryArguments")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
     public Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
@@ -35,7 +35,7 @@ public final class WebAclRuleStatementNotStatementStatementSqliMatchStatementFie
      * Inspect the request body, which immediately follows the request headers.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body;
 
     public Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchBodyArgs> getBody() {
@@ -46,7 +46,7 @@ public final class WebAclRuleStatementNotStatementStatementSqliMatchStatementFie
      * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method;
 
     public Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchMethodArgs> getMethod() {
@@ -57,7 +57,7 @@ public final class WebAclRuleStatementNotStatementStatementSqliMatchStatementFie
      * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString;
 
     public Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> getQueryString() {
@@ -68,7 +68,7 @@ public final class WebAclRuleStatementNotStatementStatementSqliMatchStatementFie
      * Inspect a single header. See Single Header below for details.
      * 
      */
-    @InputImport(name="singleHeader")
+    @Import(name="singleHeader")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
     public Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
@@ -79,7 +79,7 @@ public final class WebAclRuleStatementNotStatementStatementSqliMatchStatementFie
      * Inspect a single query argument. See Single Query Argument below for details.
      * 
      */
-    @InputImport(name="singleQueryArgument")
+    @Import(name="singleQueryArgument")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
     public Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
@@ -90,7 +90,7 @@ public final class WebAclRuleStatementNotStatementStatementSqliMatchStatementFie
      * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
      */
-    @InputImport(name="uriPath")
+    @Import(name="uriPath")
       private final @Nullable Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath;
 
     public Output<WebAclRuleStatementNotStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> getUriPath() {

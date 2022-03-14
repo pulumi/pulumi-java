@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CrawlerLineageConfiguration {
     /**
      * Specifies whether data lineage is enabled for the crawler. Valid values are: `ENABLE` and `DISABLE`. Default value is `Disable`.
@@ -17,8 +17,8 @@ public final class CrawlerLineageConfiguration {
      */
     private final @Nullable String crawlerLineageSettings;
 
-    @OutputCustomType.Constructor
-    private CrawlerLineageConfiguration(@OutputCustomType.Parameter("crawlerLineageSettings") @Nullable String crawlerLineageSettings) {
+    @CustomType.Constructor
+    private CrawlerLineageConfiguration(@CustomType.Parameter("crawlerLineageSettings") @Nullable String crawlerLineageSettings) {
         this.crawlerLineageSettings = crawlerLineageSettings;
     }
 

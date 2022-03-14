@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DataRepositoryAssociationS3AutoImportPolicyArgs extends io.pu
      * A list of file event types to automatically export to your linked S3 bucket or import from the linked S3 bucket. Valid values are `NEW`, `CHANGED`, `DELETED`. Max of 3.
      * 
      */
-    @InputImport(name="events")
+    @Import(name="events")
       private final @Nullable Output<List<String>> events;
 
     public Output<List<String>> getEvents() {

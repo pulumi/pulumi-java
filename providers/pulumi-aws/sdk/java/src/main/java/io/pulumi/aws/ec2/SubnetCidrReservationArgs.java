@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * The CIDR block for the reservation.
      * 
      */
-    @InputImport(name="cidrBlock", required=true)
+    @Import(name="cidrBlock", required=true)
       private final Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
@@ -29,7 +29,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * A brief description of the reservation.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * The type of reservation to create. Valid values: `explicit`, `prefix`
      * 
      */
-    @InputImport(name="reservationType", required=true)
+    @Import(name="reservationType", required=true)
       private final Output<String> reservationType;
 
     public Output<String> getReservationType() {
@@ -51,7 +51,7 @@ public final class SubnetCidrReservationArgs extends io.pulumi.resources.Resourc
      * The ID of the subnet to create the reservation for.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

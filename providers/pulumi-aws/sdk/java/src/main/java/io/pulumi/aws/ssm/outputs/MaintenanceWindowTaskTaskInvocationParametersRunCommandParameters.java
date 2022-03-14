@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm.outputs;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig;
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters {
     /**
      * Configuration options for sending command output to CloudWatch Logs. Documented below.
@@ -72,19 +72,19 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters(
-        @OutputCustomType.Parameter("cloudwatchConfig") @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig cloudwatchConfig,
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("documentHash") @Nullable String documentHash,
-        @OutputCustomType.Parameter("documentHashType") @Nullable String documentHashType,
-        @OutputCustomType.Parameter("documentVersion") @Nullable String documentVersion,
-        @OutputCustomType.Parameter("notificationConfig") @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig notificationConfig,
-        @OutputCustomType.Parameter("outputS3Bucket") @Nullable String outputS3Bucket,
-        @OutputCustomType.Parameter("outputS3KeyPrefix") @Nullable String outputS3KeyPrefix,
-        @OutputCustomType.Parameter("parameters") @Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter> parameters,
-        @OutputCustomType.Parameter("serviceRoleArn") @Nullable String serviceRoleArn,
-        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
+        @CustomType.Parameter("cloudwatchConfig") @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig cloudwatchConfig,
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("documentHash") @Nullable String documentHash,
+        @CustomType.Parameter("documentHashType") @Nullable String documentHashType,
+        @CustomType.Parameter("documentVersion") @Nullable String documentVersion,
+        @CustomType.Parameter("notificationConfig") @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig notificationConfig,
+        @CustomType.Parameter("outputS3Bucket") @Nullable String outputS3Bucket,
+        @CustomType.Parameter("outputS3KeyPrefix") @Nullable String outputS3KeyPrefix,
+        @CustomType.Parameter("parameters") @Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter> parameters,
+        @CustomType.Parameter("serviceRoleArn") @Nullable String serviceRoleArn,
+        @CustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.cloudwatchConfig = cloudwatchConfig;
         this.comment = comment;
         this.documentHash = documentHash;

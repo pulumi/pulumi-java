@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRuleVariablesIpSetIpSet {
     /**
      * Set of IP addresses and address ranges, in CIDR notation.
@@ -16,8 +16,8 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetIpSet {
      */
     private final List<String> definitions;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleGroupRuleVariablesIpSetIpSet(@OutputCustomType.Parameter("definitions") List<String> definitions) {
+    @CustomType.Constructor
+    private RuleGroupRuleGroupRuleVariablesIpSetIpSet(@CustomType.Parameter("definitions") List<String> definitions) {
         this.definitions = definitions;
     }
 

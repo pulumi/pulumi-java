@@ -6,7 +6,7 @@ package io.pulumi.aws.macie2.inputs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionBucketDefinitionGetArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ClassificationJobS3JobDefinitionGetArgs extends io.pulumi.res
      * An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
      * 
      */
-    @InputImport(name="bucketDefinitions")
+    @Import(name="bucketDefinitions")
       private final @Nullable Output<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> bucketDefinitions;
 
     public Output<List<ClassificationJobS3JobDefinitionBucketDefinitionGetArgs>> getBucketDefinitions() {
@@ -31,7 +31,7 @@ public final class ClassificationJobS3JobDefinitionGetArgs extends io.pulumi.res
      * The property- and tag-based conditions that determine which objects to include or exclude from the analysis. (documented below)
      * 
      */
-    @InputImport(name="scoping")
+    @Import(name="scoping")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingGetArgs> scoping;
 
     public Output<ClassificationJobS3JobDefinitionScopingGetArgs> getScoping() {

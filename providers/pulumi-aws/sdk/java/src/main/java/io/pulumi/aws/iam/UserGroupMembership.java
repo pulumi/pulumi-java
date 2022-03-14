@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.UserGroupMembershipArgs;
 import io.pulumi.aws.iam.inputs.UserGroupMembershipState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class UserGroupMembership extends io.pulumi.resources.CustomResource {
      * A list of IAM Groups to add the user to
      * 
      */
-    @OutputExport(name="groups", type=List.class, parameters={String.class})
+    @Export(name="groups", type=List.class, parameters={String.class})
     private Output<List<String>> groups;
 
     /**
@@ -52,7 +52,7 @@ public class UserGroupMembership extends io.pulumi.resources.CustomResource {
      * The name of the IAM User to add to groups
      * 
      */
-    @OutputExport(name="user", type=String.class, parameters={})
+    @Export(name="user", type=String.class, parameters={})
     private Output<String> user;
 
     /**

@@ -4,11 +4,11 @@
 package io.pulumi.aws.networkfirewall.outputs;
 
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRuleVariablesPortSetPortSet;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRuleVariablesPortSet {
     /**
      * An unique alphanumeric string to identify the `port_set`.
@@ -21,10 +21,10 @@ public final class RuleGroupRuleGroupRuleVariablesPortSet {
      */
     private final RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroupRuleVariablesPortSet(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("portSet") RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("portSet") RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet) {
         this.key = key;
         this.portSet = portSet;
     }

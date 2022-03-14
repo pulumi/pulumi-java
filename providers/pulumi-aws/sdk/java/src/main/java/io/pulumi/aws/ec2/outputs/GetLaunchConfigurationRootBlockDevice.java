@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchConfigurationRootBlockDevice {
     /**
      * Whether the EBS Volume will be deleted on instance termination.
@@ -42,14 +42,14 @@ public final class GetLaunchConfigurationRootBlockDevice {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchConfigurationRootBlockDevice(
-        @OutputCustomType.Parameter("deleteOnTermination") Boolean deleteOnTermination,
-        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
-        @OutputCustomType.Parameter("iops") Integer iops,
-        @OutputCustomType.Parameter("throughput") Boolean throughput,
-        @OutputCustomType.Parameter("volumeSize") Integer volumeSize,
-        @OutputCustomType.Parameter("volumeType") String volumeType) {
+        @CustomType.Parameter("deleteOnTermination") Boolean deleteOnTermination,
+        @CustomType.Parameter("encrypted") Boolean encrypted,
+        @CustomType.Parameter("iops") Integer iops,
+        @CustomType.Parameter("throughput") Boolean throughput,
+        @CustomType.Parameter("volumeSize") Integer volumeSize,
+        @CustomType.Parameter("volumeType") String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

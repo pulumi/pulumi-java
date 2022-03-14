@@ -8,7 +8,7 @@ import io.pulumi.aws.lambda.outputs.GetFunctionEnvironment;
 import io.pulumi.aws.lambda.outputs.GetFunctionFileSystemConfig;
 import io.pulumi.aws.lambda.outputs.GetFunctionTracingConfig;
 import io.pulumi.aws.lambda.outputs.GetFunctionVpcConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFunctionResult {
     /**
      * The instruction set architecture for the Lambda function.
@@ -158,38 +158,38 @@ public final class GetFunctionResult {
      */
     private final GetFunctionVpcConfig vpcConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFunctionResult(
-        @OutputCustomType.Parameter("architectures") List<String> architectures,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("codeSigningConfigArn") String codeSigningConfigArn,
-        @OutputCustomType.Parameter("deadLetterConfig") GetFunctionDeadLetterConfig deadLetterConfig,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("environment") GetFunctionEnvironment environment,
-        @OutputCustomType.Parameter("fileSystemConfigs") List<GetFunctionFileSystemConfig> fileSystemConfigs,
-        @OutputCustomType.Parameter("functionName") String functionName,
-        @OutputCustomType.Parameter("handler") String handler,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageUri") String imageUri,
-        @OutputCustomType.Parameter("invokeArn") String invokeArn,
-        @OutputCustomType.Parameter("kmsKeyArn") String kmsKeyArn,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("layers") List<String> layers,
-        @OutputCustomType.Parameter("memorySize") Integer memorySize,
-        @OutputCustomType.Parameter("qualifiedArn") String qualifiedArn,
-        @OutputCustomType.Parameter("qualifier") @Nullable String qualifier,
-        @OutputCustomType.Parameter("reservedConcurrentExecutions") Integer reservedConcurrentExecutions,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("runtime") String runtime,
-        @OutputCustomType.Parameter("signingJobArn") String signingJobArn,
-        @OutputCustomType.Parameter("signingProfileVersionArn") String signingProfileVersionArn,
-        @OutputCustomType.Parameter("sourceCodeHash") String sourceCodeHash,
-        @OutputCustomType.Parameter("sourceCodeSize") Integer sourceCodeSize,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("timeout") Integer timeout,
-        @OutputCustomType.Parameter("tracingConfig") GetFunctionTracingConfig tracingConfig,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("vpcConfig") GetFunctionVpcConfig vpcConfig) {
+        @CustomType.Parameter("architectures") List<String> architectures,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("codeSigningConfigArn") String codeSigningConfigArn,
+        @CustomType.Parameter("deadLetterConfig") GetFunctionDeadLetterConfig deadLetterConfig,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("environment") GetFunctionEnvironment environment,
+        @CustomType.Parameter("fileSystemConfigs") List<GetFunctionFileSystemConfig> fileSystemConfigs,
+        @CustomType.Parameter("functionName") String functionName,
+        @CustomType.Parameter("handler") String handler,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageUri") String imageUri,
+        @CustomType.Parameter("invokeArn") String invokeArn,
+        @CustomType.Parameter("kmsKeyArn") String kmsKeyArn,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("layers") List<String> layers,
+        @CustomType.Parameter("memorySize") Integer memorySize,
+        @CustomType.Parameter("qualifiedArn") String qualifiedArn,
+        @CustomType.Parameter("qualifier") @Nullable String qualifier,
+        @CustomType.Parameter("reservedConcurrentExecutions") Integer reservedConcurrentExecutions,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("runtime") String runtime,
+        @CustomType.Parameter("signingJobArn") String signingJobArn,
+        @CustomType.Parameter("signingProfileVersionArn") String signingProfileVersionArn,
+        @CustomType.Parameter("sourceCodeHash") String sourceCodeHash,
+        @CustomType.Parameter("sourceCodeSize") Integer sourceCodeSize,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("timeout") Integer timeout,
+        @CustomType.Parameter("tracingConfig") GetFunctionTracingConfig tracingConfig,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("vpcConfig") GetFunctionVpcConfig vpcConfig) {
         this.architectures = architectures;
         this.arn = arn;
         this.codeSigningConfigArn = codeSigningConfigArn;

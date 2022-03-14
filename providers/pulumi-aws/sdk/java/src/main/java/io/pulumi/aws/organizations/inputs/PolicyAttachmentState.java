@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * The unique identifier (ID) of the policy that you want to attach to the target.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -29,7 +29,7 @@ public final class PolicyAttachmentState extends io.pulumi.resources.ResourceArg
      * The unique identifier (ID) of the root, organizational unit, or account number that you want to attach the policy to.
      * 
      */
-    @InputImport(name="targetId")
+    @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
     public Output<String> getTargetId() {

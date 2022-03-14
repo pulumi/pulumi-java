@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterStepHadoopJarStep {
     /**
      * List of command line arguments passed to the JAR file's main function when executed.
@@ -34,12 +34,12 @@ public final class ClusterStepHadoopJarStep {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterStepHadoopJarStep(
-        @OutputCustomType.Parameter("args") @Nullable List<String> args,
-        @OutputCustomType.Parameter("jar") String jar,
-        @OutputCustomType.Parameter("mainClass") @Nullable String mainClass,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
+        @CustomType.Parameter("args") @Nullable List<String> args,
+        @CustomType.Parameter("jar") String jar,
+        @CustomType.Parameter("mainClass") @Nullable String mainClass,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.args = args;
         this.jar = jar;
         this.mainClass = mainClass;

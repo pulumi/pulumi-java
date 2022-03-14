@@ -4,7 +4,7 @@
 package io.pulumi.aws.resourcegroupstaggingapi.inputs;
 
 import io.pulumi.aws.resourcegroupstaggingapi.inputs.GetResourcesTagFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetResourcesArgs extends io.pulumi.resources.InvokeArgs {
      * Specifies whether to exclude resources that are compliant with the tag policy. You can use this parameter only if the `include_compliance_details` argument is also set to `true`.
      * 
      */
-    @InputImport(name="excludeCompliantResources")
+    @Import(name="excludeCompliantResources")
       private final @Nullable Boolean excludeCompliantResources;
 
     public Optional<Boolean> getExcludeCompliantResources() {
@@ -32,7 +32,7 @@ public final class GetResourcesArgs extends io.pulumi.resources.InvokeArgs {
      * Specifies whether to include details regarding the compliance with the effective tag policy.
      * 
      */
-    @InputImport(name="includeComplianceDetails")
+    @Import(name="includeComplianceDetails")
       private final @Nullable Boolean includeComplianceDetails;
 
     public Optional<Boolean> getIncludeComplianceDetails() {
@@ -43,7 +43,7 @@ public final class GetResourcesArgs extends io.pulumi.resources.InvokeArgs {
      * Specifies a list of ARNs of resources for which you want to retrieve tag data. Conflicts with `filter`.
      * 
      */
-    @InputImport(name="resourceArnLists")
+    @Import(name="resourceArnLists")
       private final @Nullable List<String> resourceArnLists;
 
     public List<String> getResourceArnLists() {
@@ -54,7 +54,7 @@ public final class GetResourcesArgs extends io.pulumi.resources.InvokeArgs {
      * The constraints on the resources that you want returned. The format of each resource type is `service:resourceType`. For example, specifying a resource type of `ec2` returns all Amazon EC2 resources (which includes EC2 instances). Specifying a resource type of `ec2:instance` returns only EC2 instances.
      * 
      */
-    @InputImport(name="resourceTypeFilters")
+    @Import(name="resourceTypeFilters")
       private final @Nullable List<String> resourceTypeFilters;
 
     public List<String> getResourceTypeFilters() {
@@ -65,7 +65,7 @@ public final class GetResourcesArgs extends io.pulumi.resources.InvokeArgs {
      * Specifies a list of Tag Filters (keys and values) to restrict the output to only those resources that have the specified tag and, if included, the specified value. See Tag Filter below. Conflicts with `resource_arn_list`.
      * 
      */
-    @InputImport(name="tagFilters")
+    @Import(name="tagFilters")
       private final @Nullable List<GetResourcesTagFilter> tagFilters;
 
     public List<GetResourcesTagFilter> getTagFilters() {

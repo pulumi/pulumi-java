@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
      * 
      */
-    @InputImport(name="deleteOnTermination")
+    @Import(name="deleteOnTermination")
       private final @Nullable Output<String> deleteOnTermination;
 
     public Output<String> getDeleteOnTermination() {
@@ -31,7 +31,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * on the volume (Default: `false`). Cannot be used with `snapshot_id`.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<String> encrypted;
 
     public Output<String> getEncrypted() {
@@ -44,7 +44,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * This must be set with a `volume_type` of `"io1/io2"`.
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
@@ -56,7 +56,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * `encrypted` must be set to `true` when this is set.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -67,7 +67,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * The Snapshot ID to mount.
      * 
      */
-    @InputImport(name="snapshotId")
+    @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
     public Output<String> getSnapshotId() {
@@ -78,7 +78,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * The throughput to provision for a `gp3` volume in MiB/s (specified as an integer, e.g., 500), with a maximum of 1,000 MiB/s.
      * 
      */
-    @InputImport(name="throughput")
+    @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
     public Output<Integer> getThroughput() {
@@ -89,7 +89,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * The size of the volume in gigabytes.
      * 
      */
-    @InputImport(name="volumeSize")
+    @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
@@ -100,7 +100,7 @@ public final class LaunchTemplateBlockDeviceMappingEbsGetArgs extends io.pulumi.
      * The volume type. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
      * 
      */
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

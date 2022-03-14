@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSnapshotResult {
     /**
      * Specifies the allocated storage size in gigabytes (GB).
@@ -106,32 +106,32 @@ public final class GetSnapshotResult {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSnapshotResult(
-        @OutputCustomType.Parameter("allocatedStorage") Integer allocatedStorage,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("dbInstanceIdentifier") @Nullable String dbInstanceIdentifier,
-        @OutputCustomType.Parameter("dbSnapshotArn") String dbSnapshotArn,
-        @OutputCustomType.Parameter("dbSnapshotIdentifier") @Nullable String dbSnapshotIdentifier,
-        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
-        @OutputCustomType.Parameter("engine") String engine,
-        @OutputCustomType.Parameter("engineVersion") String engineVersion,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("includePublic") @Nullable Boolean includePublic,
-        @OutputCustomType.Parameter("includeShared") @Nullable Boolean includeShared,
-        @OutputCustomType.Parameter("iops") Integer iops,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("licenseModel") String licenseModel,
-        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
-        @OutputCustomType.Parameter("optionGroupName") String optionGroupName,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("snapshotCreateTime") String snapshotCreateTime,
-        @OutputCustomType.Parameter("snapshotType") @Nullable String snapshotType,
-        @OutputCustomType.Parameter("sourceDbSnapshotIdentifier") String sourceDbSnapshotIdentifier,
-        @OutputCustomType.Parameter("sourceRegion") String sourceRegion,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("storageType") String storageType,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("allocatedStorage") Integer allocatedStorage,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("dbInstanceIdentifier") @Nullable String dbInstanceIdentifier,
+        @CustomType.Parameter("dbSnapshotArn") String dbSnapshotArn,
+        @CustomType.Parameter("dbSnapshotIdentifier") @Nullable String dbSnapshotIdentifier,
+        @CustomType.Parameter("encrypted") Boolean encrypted,
+        @CustomType.Parameter("engine") String engine,
+        @CustomType.Parameter("engineVersion") String engineVersion,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("includePublic") @Nullable Boolean includePublic,
+        @CustomType.Parameter("includeShared") @Nullable Boolean includeShared,
+        @CustomType.Parameter("iops") Integer iops,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("licenseModel") String licenseModel,
+        @CustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @CustomType.Parameter("optionGroupName") String optionGroupName,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("snapshotCreateTime") String snapshotCreateTime,
+        @CustomType.Parameter("snapshotType") @Nullable String snapshotType,
+        @CustomType.Parameter("sourceDbSnapshotIdentifier") String sourceDbSnapshotIdentifier,
+        @CustomType.Parameter("sourceRegion") String sourceRegion,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("storageType") String storageType,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.allocatedStorage = allocatedStorage;
         this.availabilityZone = availabilityZone;
         this.dbInstanceIdentifier = dbInstanceIdentifier;

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig {
     /**
      * The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary [IAM permissions](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es-vpc)
@@ -29,12 +29,12 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig {
     private final List<String> subnetIds;
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig(
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.roleArn = roleArn;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

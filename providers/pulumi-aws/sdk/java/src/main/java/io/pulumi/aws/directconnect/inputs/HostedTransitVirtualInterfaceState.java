@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
      * 
      */
-    @InputImport(name="addressFamily")
+    @Import(name="addressFamily")
       private final @Nullable Output<String> addressFamily;
 
     public Output<String> getAddressFamily() {
@@ -31,14 +31,14 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
      * 
      */
-    @InputImport(name="amazonAddress")
+    @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
     public Output<String> getAmazonAddress() {
         return this.amazonAddress == null ? Output.empty() : this.amazonAddress;
     }
 
-    @InputImport(name="amazonSideAsn")
+    @Import(name="amazonSideAsn")
       private final @Nullable Output<String> amazonSideAsn;
 
     public Output<String> getAmazonSideAsn() {
@@ -49,7 +49,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The ARN of the virtual interface.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -60,7 +60,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The Direct Connect endpoint on which the virtual interface terminates.
      * 
      */
-    @InputImport(name="awsDevice")
+    @Import(name="awsDevice")
       private final @Nullable Output<String> awsDevice;
 
     public Output<String> getAwsDevice() {
@@ -71,7 +71,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
      * 
      */
-    @InputImport(name="bgpAsn")
+    @Import(name="bgpAsn")
       private final @Nullable Output<Integer> bgpAsn;
 
     public Output<Integer> getBgpAsn() {
@@ -82,7 +82,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The authentication key for BGP configuration.
      * 
      */
-    @InputImport(name="bgpAuthKey")
+    @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
     public Output<String> getBgpAuthKey() {
@@ -93,7 +93,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
      * 
      */
-    @InputImport(name="connectionId")
+    @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -104,7 +104,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
      * 
      */
-    @InputImport(name="customerAddress")
+    @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
     public Output<String> getCustomerAddress() {
@@ -115,7 +115,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * Indicates whether jumbo frames (8500 MTU) are supported.
      * 
      */
-    @InputImport(name="jumboFrameCapable")
+    @Import(name="jumboFrameCapable")
       private final @Nullable Output<Boolean> jumboFrameCapable;
 
     public Output<Boolean> getJumboFrameCapable() {
@@ -126,7 +126,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual transit interface can be either `1500` or `8500` (jumbo frames). Default is `1500`.
      * 
      */
-    @InputImport(name="mtu")
+    @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
     public Output<Integer> getMtu() {
@@ -137,7 +137,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The name for the virtual interface.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -148,7 +148,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The AWS account that will own the new virtual interface.
      * 
      */
-    @InputImport(name="ownerAccountId")
+    @Import(name="ownerAccountId")
       private final @Nullable Output<String> ownerAccountId;
 
     public Output<String> getOwnerAccountId() {
@@ -159,7 +159,7 @@ public final class HostedTransitVirtualInterfaceState extends io.pulumi.resource
      * The VLAN ID.
      * 
      */
-    @InputImport(name="vlan")
+    @Import(name="vlan")
       private final @Nullable Output<Integer> vlan;
 
     public Output<Integer> getVlan() {

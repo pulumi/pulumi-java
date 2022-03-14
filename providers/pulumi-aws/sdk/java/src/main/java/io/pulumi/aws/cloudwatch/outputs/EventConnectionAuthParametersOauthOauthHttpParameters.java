@@ -6,12 +6,12 @@ package io.pulumi.aws.cloudwatch.outputs;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersOauthOauthHttpParametersBody;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersOauthOauthHttpParametersHeader;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersOauthOauthHttpParametersQueryString;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventConnectionAuthParametersOauthOauthHttpParameters {
     /**
      * Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
@@ -29,11 +29,11 @@ public final class EventConnectionAuthParametersOauthOauthHttpParameters {
      */
     private final @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersQueryString> queryStrings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventConnectionAuthParametersOauthOauthHttpParameters(
-        @OutputCustomType.Parameter("bodies") @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersBody> bodies,
-        @OutputCustomType.Parameter("headers") @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersHeader> headers,
-        @OutputCustomType.Parameter("queryStrings") @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersQueryString> queryStrings) {
+        @CustomType.Parameter("bodies") @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersBody> bodies,
+        @CustomType.Parameter("headers") @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersHeader> headers,
+        @CustomType.Parameter("queryStrings") @Nullable List<EventConnectionAuthParametersOauthOauthHttpParametersQueryString> queryStrings) {
         this.bodies = bodies;
         this.headers = headers;
         this.queryStrings = queryStrings;

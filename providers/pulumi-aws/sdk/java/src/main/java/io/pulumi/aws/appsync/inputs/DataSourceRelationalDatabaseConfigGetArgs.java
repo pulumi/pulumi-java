@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
      * The Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.
      * 
      */
-    @InputImport(name="httpEndpointConfig")
+    @Import(name="httpEndpointConfig")
       private final @Nullable Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> httpEndpointConfig;
 
     public Output<DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs> getHttpEndpointConfig() {
@@ -30,7 +30,7 @@ public final class DataSourceRelationalDatabaseConfigGetArgs extends io.pulumi.r
      * Source type for the relational database. Valid values: `RDS_HTTP_ENDPOINT`.
      * 
      */
-    @InputImport(name="sourceType")
+    @Import(name="sourceType")
       private final @Nullable Output<String> sourceType;
 
     public Output<String> getSourceType() {

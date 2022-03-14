@@ -5,7 +5,7 @@ package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
      * The operator to use in the condition.
      * 
      */
-    @InputImport(name="comparator")
+    @Import(name="comparator")
       private final @Nullable Output<String> comparator;
 
     public Output<String> getComparator() {
@@ -31,7 +31,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
      * The tag key to use in the condition.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -42,7 +42,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
      * The tag keys or tag key and value pairs to use in the condition.
      * 
      */
-    @InputImport(name="tagValues")
+    @Import(name="tagValues")
       private final @Nullable Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs>> tagValues;
 
     public Output<List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValueArgs>> getTagValues() {
@@ -53,7 +53,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
      * The type of object to apply the condition to.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {

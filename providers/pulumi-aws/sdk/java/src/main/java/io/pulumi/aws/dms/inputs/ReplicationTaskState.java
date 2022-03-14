@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
      * 
      */
-    @InputImport(name="cdcStartPosition")
+    @Import(name="cdcStartPosition")
       private final @Nullable Output<String> cdcStartPosition;
 
     public Output<String> getCdcStartPosition() {
@@ -30,7 +30,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
      * 
      */
-    @InputImport(name="cdcStartTime")
+    @Import(name="cdcStartTime")
       private final @Nullable Output<String> cdcStartTime;
 
     public Output<String> getCdcStartTime() {
@@ -41,7 +41,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
      * 
      */
-    @InputImport(name="migrationType")
+    @Import(name="migrationType")
       private final @Nullable Output<String> migrationType;
 
     public Output<String> getMigrationType() {
@@ -52,7 +52,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * The Amazon Resource Name (ARN) of the replication instance.
      * 
      */
-    @InputImport(name="replicationInstanceArn")
+    @Import(name="replicationInstanceArn")
       private final @Nullable Output<String> replicationInstanceArn;
 
     public Output<String> getReplicationInstanceArn() {
@@ -63,7 +63,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * The Amazon Resource Name (ARN) for the replication task.
      * 
      */
-    @InputImport(name="replicationTaskArn")
+    @Import(name="replicationTaskArn")
       private final @Nullable Output<String> replicationTaskArn;
 
     public Output<String> getReplicationTaskArn() {
@@ -74,7 +74,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * The replication task identifier.
      * 
      */
-    @InputImport(name="replicationTaskId")
+    @Import(name="replicationTaskId")
       private final @Nullable Output<String> replicationTaskId;
 
     public Output<String> getReplicationTaskId() {
@@ -85,7 +85,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
      * 
      */
-    @InputImport(name="replicationTaskSettings")
+    @Import(name="replicationTaskSettings")
       private final @Nullable Output<String> replicationTaskSettings;
 
     public Output<String> getReplicationTaskSettings() {
@@ -96,7 +96,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
      * 
      */
-    @InputImport(name="sourceEndpointArn")
+    @Import(name="sourceEndpointArn")
       private final @Nullable Output<String> sourceEndpointArn;
 
     public Output<String> getSourceEndpointArn() {
@@ -107,7 +107,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
      * 
      */
-    @InputImport(name="tableMappings")
+    @Import(name="tableMappings")
       private final @Nullable Output<String> tableMappings;
 
     public Output<String> getTableMappings() {
@@ -118,7 +118,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -129,7 +129,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -140,7 +140,7 @@ public final class ReplicationTaskState extends io.pulumi.resources.ResourceArgs
      * The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
      * 
      */
-    @InputImport(name="targetEndpointArn")
+    @Import(name="targetEndpointArn")
       private final @Nullable Output<String> targetEndpointArn;
 
     public Output<String> getTargetEndpointArn() {

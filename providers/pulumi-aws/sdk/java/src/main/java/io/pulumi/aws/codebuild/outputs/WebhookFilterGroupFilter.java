@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebhookFilterGroupFilter {
     /**
      * If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
@@ -28,11 +28,11 @@ public final class WebhookFilterGroupFilter {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebhookFilterGroupFilter(
-        @OutputCustomType.Parameter("excludeMatchedPattern") @Nullable Boolean excludeMatchedPattern,
-        @OutputCustomType.Parameter("pattern") String pattern,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("excludeMatchedPattern") @Nullable Boolean excludeMatchedPattern,
+        @CustomType.Parameter("pattern") String pattern,
+        @CustomType.Parameter("type") String type) {
         this.excludeMatchedPattern = excludeMatchedPattern;
         this.pattern = pattern;
         this.type = type;

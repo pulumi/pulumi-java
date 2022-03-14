@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.PolicyAttachmentArgs;
 import io.pulumi.aws.iam.inputs.PolicyAttachmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * The group(s) the policy should be applied to
      * 
      */
-    @OutputExport(name="groups", type=List.class, parameters={String.class})
+    @Export(name="groups", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> groups;
 
     /**
@@ -45,7 +45,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * The name of the attachment. This cannot be an empty string.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -59,7 +59,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * The ARN of the policy you want to apply
      * 
      */
-    @OutputExport(name="policyArn", type=String.class, parameters={})
+    @Export(name="policyArn", type=String.class, parameters={})
     private Output<String> policyArn;
 
     /**
@@ -73,7 +73,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * The role(s) the policy should be applied to
      * 
      */
-    @OutputExport(name="roles", type=List.class, parameters={String.class})
+    @Export(name="roles", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> roles;
 
     /**
@@ -87,7 +87,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * The user(s) the policy should be applied to
      * 
      */
-    @OutputExport(name="users", type=List.class, parameters={String.class})
+    @Export(name="users", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> users;
 
     /**

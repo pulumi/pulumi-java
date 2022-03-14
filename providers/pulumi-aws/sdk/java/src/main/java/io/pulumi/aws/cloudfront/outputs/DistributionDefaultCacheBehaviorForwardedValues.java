@@ -4,14 +4,14 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.DistributionDefaultCacheBehaviorForwardedValuesCookies;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionDefaultCacheBehaviorForwardedValues {
     /**
      * The forwarded values cookies
@@ -41,12 +41,12 @@ public final class DistributionDefaultCacheBehaviorForwardedValues {
      */
     private final @Nullable List<String> queryStringCacheKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionDefaultCacheBehaviorForwardedValues(
-        @OutputCustomType.Parameter("cookies") DistributionDefaultCacheBehaviorForwardedValuesCookies cookies,
-        @OutputCustomType.Parameter("headers") @Nullable List<String> headers,
-        @OutputCustomType.Parameter("queryString") Boolean queryString,
-        @OutputCustomType.Parameter("queryStringCacheKeys") @Nullable List<String> queryStringCacheKeys) {
+        @CustomType.Parameter("cookies") DistributionDefaultCacheBehaviorForwardedValuesCookies cookies,
+        @CustomType.Parameter("headers") @Nullable List<String> headers,
+        @CustomType.Parameter("queryString") Boolean queryString,
+        @CustomType.Parameter("queryStringCacheKeys") @Nullable List<String> queryStringCacheKeys) {
         this.cookies = cookies;
         this.headers = headers;
         this.queryString = queryString;

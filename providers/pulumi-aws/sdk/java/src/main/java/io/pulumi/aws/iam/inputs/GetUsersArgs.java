@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetUsersArgs extends io.pulumi.resources.InvokeArgs {
      * options to narrow down the list AWS returns.
      * 
      */
-    @InputImport(name="nameRegex")
+    @Import(name="nameRegex")
       private final @Nullable String nameRegex;
 
     public Optional<String> getNameRegex() {
@@ -31,7 +31,7 @@ public final class GetUsersArgs extends io.pulumi.resources.InvokeArgs {
      * The path prefix for filtering the results. For example, the prefix `/division_abc/subdivision_xyz/` gets all users whose path starts with `/division_abc/subdivision_xyz/`. If it is not included, it defaults to a slash (`/`), listing all users. For more details, check out [list-users in the AWS CLI reference][1].
      * 
      */
-    @InputImport(name="pathPrefix")
+    @Import(name="pathPrefix")
       private final @Nullable String pathPrefix;
 
     public Optional<String> getPathPrefix() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.lex.BotAliasArgs;
 import io.pulumi.aws.lex.inputs.BotAliasState;
 import io.pulumi.aws.lex.outputs.BotAliasConversationLogs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * The ARN of the bot alias.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * The name of the bot.
      * 
      */
-    @OutputExport(name="botName", type=String.class, parameters={})
+    @Export(name="botName", type=String.class, parameters={})
     private Output<String> botName;
 
     /**
@@ -62,7 +62,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * The name of the bot.
      * 
      */
-    @OutputExport(name="botVersion", type=String.class, parameters={})
+    @Export(name="botVersion", type=String.class, parameters={})
     private Output<String> botVersion;
 
     /**
@@ -76,7 +76,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * Checksum of the bot alias.
      * 
      */
-    @OutputExport(name="checksum", type=String.class, parameters={})
+    @Export(name="checksum", type=String.class, parameters={})
     private Output<String> checksum;
 
     /**
@@ -90,7 +90,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * The settings that determine how Amazon Lex uses conversation logs for the alias. Attributes are documented under conversation_logs.
      * 
      */
-    @OutputExport(name="conversationLogs", type=BotAliasConversationLogs.class, parameters={})
+    @Export(name="conversationLogs", type=BotAliasConversationLogs.class, parameters={})
     private Output</* @Nullable */ BotAliasConversationLogs> conversationLogs;
 
     /**
@@ -104,7 +104,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * The date that the bot alias was created.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -118,7 +118,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * A description of the alias. Must be less than or equal to 200 characters in length.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -132,7 +132,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.
      * 
      */
-    @OutputExport(name="lastUpdatedDate", type=String.class, parameters={})
+    @Export(name="lastUpdatedDate", type=String.class, parameters={})
     private Output<String> lastUpdatedDate;
 
     /**
@@ -146,7 +146,7 @@ public class BotAlias extends io.pulumi.resources.CustomResource {
      * The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

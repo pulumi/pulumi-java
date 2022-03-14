@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketObjectsResult {
     private final String bucket;
     /**
@@ -42,19 +42,19 @@ public final class GetBucketObjectsResult {
     private final @Nullable String prefix;
     private final @Nullable String startAfter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketObjectsResult(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("commonPrefixes") List<String> commonPrefixes,
-        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
-        @OutputCustomType.Parameter("encodingType") @Nullable String encodingType,
-        @OutputCustomType.Parameter("fetchOwner") @Nullable Boolean fetchOwner,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keys") List<String> keys,
-        @OutputCustomType.Parameter("maxKeys") @Nullable Integer maxKeys,
-        @OutputCustomType.Parameter("owners") List<String> owners,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("startAfter") @Nullable String startAfter) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("commonPrefixes") List<String> commonPrefixes,
+        @CustomType.Parameter("delimiter") @Nullable String delimiter,
+        @CustomType.Parameter("encodingType") @Nullable String encodingType,
+        @CustomType.Parameter("fetchOwner") @Nullable Boolean fetchOwner,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keys") List<String> keys,
+        @CustomType.Parameter("maxKeys") @Nullable Integer maxKeys,
+        @CustomType.Parameter("owners") List<String> owners,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("startAfter") @Nullable String startAfter) {
         this.bucket = bucket;
         this.commonPrefixes = commonPrefixes;
         this.delimiter = delimiter;

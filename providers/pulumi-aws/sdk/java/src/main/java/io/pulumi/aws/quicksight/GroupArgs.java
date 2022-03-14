@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
      * 
      */
-    @InputImport(name="awsAccountId")
+    @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
@@ -29,7 +29,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the group.
      * 
      */
-    @InputImport(name="groupName", required=true)
+    @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
     public Output<String> getGroupName() {
@@ -51,7 +51,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace. Currently, you should set this to `default`.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {

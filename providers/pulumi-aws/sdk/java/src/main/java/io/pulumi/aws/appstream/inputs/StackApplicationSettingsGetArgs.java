@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class StackApplicationSettingsGetArgs extends io.pulumi.resources.R
 
     public static final StackApplicationSettingsGetArgs Empty = new StackApplicationSettingsGetArgs();
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled == null ? Output.empty() : this.enabled;
     }
 
-    @InputImport(name="settingsGroup")
+    @Import(name="settingsGroup")
       private final @Nullable Output<String> settingsGroup;
 
     public Output<String> getSettingsGroup() {

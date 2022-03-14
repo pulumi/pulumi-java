@@ -6,7 +6,7 @@ package io.pulumi.aws.codepipeline;
 import io.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreArgs;
 import io.pulumi.aws.codepipeline.inputs.PipelineStageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * One or more artifact_store blocks. Artifact stores are documented below.
      * 
      */
-    @InputImport(name="artifactStore", required=true)
+    @Import(name="artifactStore", required=true)
       private final Output<PipelineArtifactStoreArgs> artifactStore;
 
     public Output<PipelineArtifactStoreArgs> getArtifactStore() {
@@ -33,7 +33,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the pipeline.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -55,7 +55,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * A stage block. Stages are documented below.
      * 
      */
-    @InputImport(name="stages", required=true)
+    @Import(name="stages", required=true)
       private final Output<List<PipelineStageArgs>> stages;
 
     public Output<List<PipelineStageArgs>> getStages() {
@@ -66,7 +66,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

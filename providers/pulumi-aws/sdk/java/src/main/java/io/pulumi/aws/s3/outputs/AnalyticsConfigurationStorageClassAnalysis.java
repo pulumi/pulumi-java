@@ -4,10 +4,10 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.AnalyticsConfigurationStorageClassAnalysisDataExport;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsConfigurationStorageClassAnalysis {
     /**
      * Data export configuration (documented below).
@@ -15,8 +15,8 @@ public final class AnalyticsConfigurationStorageClassAnalysis {
      */
     private final AnalyticsConfigurationStorageClassAnalysisDataExport dataExport;
 
-    @OutputCustomType.Constructor
-    private AnalyticsConfigurationStorageClassAnalysis(@OutputCustomType.Parameter("dataExport") AnalyticsConfigurationStorageClassAnalysisDataExport dataExport) {
+    @CustomType.Constructor
+    private AnalyticsConfigurationStorageClassAnalysis(@CustomType.Parameter("dataExport") AnalyticsConfigurationStorageClassAnalysisDataExport dataExport) {
         this.dataExport = dataExport;
     }
 

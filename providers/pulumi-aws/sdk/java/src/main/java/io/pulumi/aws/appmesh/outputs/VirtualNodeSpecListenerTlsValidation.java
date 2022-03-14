@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTlsValidationTrust;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerTlsValidation {
     /**
      * The SANs for a TLS validation context.
@@ -23,10 +23,10 @@ public final class VirtualNodeSpecListenerTlsValidation {
      */
     private final VirtualNodeSpecListenerTlsValidationTrust trust;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecListenerTlsValidation(
-        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames subjectAlternativeNames,
-        @OutputCustomType.Parameter("trust") VirtualNodeSpecListenerTlsValidationTrust trust) {
+        @CustomType.Parameter("subjectAlternativeNames") @Nullable VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames subjectAlternativeNames,
+        @CustomType.Parameter("trust") VirtualNodeSpecListenerTlsValidationTrust trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         this.trust = trust;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class JobDefinitionTimeoutGetArgs extends io.pulumi.resources.Resou
      * The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
      * 
      */
-    @InputImport(name="attemptDurationSeconds")
+    @Import(name="attemptDurationSeconds")
       private final @Nullable Output<Integer> attemptDurationSeconds;
 
     public Output<Integer> getAttemptDurationSeconds() {

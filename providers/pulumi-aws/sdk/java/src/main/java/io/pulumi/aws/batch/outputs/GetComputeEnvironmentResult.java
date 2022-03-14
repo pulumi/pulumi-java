@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetComputeEnvironmentResult {
     /**
      * The ARN of the compute environment.
@@ -57,18 +57,18 @@ public final class GetComputeEnvironmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetComputeEnvironmentResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("computeEnvironmentName") String computeEnvironmentName,
-        @OutputCustomType.Parameter("ecsClusterArn") String ecsClusterArn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("serviceRole") String serviceRole,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusReason") String statusReason,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("computeEnvironmentName") String computeEnvironmentName,
+        @CustomType.Parameter("ecsClusterArn") String ecsClusterArn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("serviceRole") String serviceRole,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusReason") String statusReason,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.arn = arn;
         this.computeEnvironmentName = computeEnvironmentName;
         this.ecsClusterArn = ecsClusterArn;

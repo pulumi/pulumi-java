@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
      * Identifier of the AWS account that owns the EC2 TGW peering.
      * 
      */
-    @InputImport(name="peerAccountId")
+    @Import(name="peerAccountId")
       private final @Nullable Output<String> peerAccountId;
 
     public Output<String> getPeerAccountId() {
         return this.peerAccountId == null ? Output.empty() : this.peerAccountId;
     }
 
-    @InputImport(name="peerRegion")
+    @Import(name="peerRegion")
       private final @Nullable Output<String> peerRegion;
 
     public Output<String> getPeerRegion() {
@@ -37,7 +37,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
      * Identifier of EC2 Transit Gateway to peer with.
      * 
      */
-    @InputImport(name="peerTransitGatewayId")
+    @Import(name="peerTransitGatewayId")
       private final @Nullable Output<String> peerTransitGatewayId;
 
     public Output<String> getPeerTransitGatewayId() {
@@ -48,7 +48,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
      * Key-value tags for the EC2 Transit Gateway Peering Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -59,7 +59,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -70,7 +70,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
      * The ID of the EC2 Transit Gateway Peering Attachment to manage.
      * 
      */
-    @InputImport(name="transitGatewayAttachmentId")
+    @Import(name="transitGatewayAttachmentId")
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
     public Output<String> getTransitGatewayAttachmentId() {
@@ -81,7 +81,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
      * Identifier of EC2 Transit Gateway.
      * 
      */
-    @InputImport(name="transitGatewayId")
+    @Import(name="transitGatewayId")
       private final @Nullable Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {

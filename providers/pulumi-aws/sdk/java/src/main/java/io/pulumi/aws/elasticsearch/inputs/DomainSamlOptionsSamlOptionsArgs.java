@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsIdpArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * Whether SAML authentication is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -32,7 +32,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * Information from your identity provider.
      * 
      */
-    @InputImport(name="idp")
+    @Import(name="idp")
       private final @Nullable Output<DomainSamlOptionsSamlOptionsIdpArgs> idp;
 
     public Output<DomainSamlOptionsSamlOptionsIdpArgs> getIdp() {
@@ -43,7 +43,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * This backend role from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
      * 
      */
-    @InputImport(name="masterBackendRole")
+    @Import(name="masterBackendRole")
       private final @Nullable Output<String> masterBackendRole;
 
     public Output<String> getMasterBackendRole() {
@@ -54,7 +54,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * This username from the SAML IdP receives full permissions to the cluster, equivalent to a new master user.
      * 
      */
-    @InputImport(name="masterUserName")
+    @Import(name="masterUserName")
       private final @Nullable Output<String> masterUserName;
 
     public Output<String> getMasterUserName() {
@@ -65,7 +65,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * Element of the SAML assertion to use for backend roles. Default is roles.
      * 
      */
-    @InputImport(name="rolesKey")
+    @Import(name="rolesKey")
       private final @Nullable Output<String> rolesKey;
 
     public Output<String> getRolesKey() {
@@ -76,7 +76,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * Duration of a session in minutes after a user logs in. Default is 60. Maximum value is 1,440.
      * 
      */
-    @InputImport(name="sessionTimeoutMinutes")
+    @Import(name="sessionTimeoutMinutes")
       private final @Nullable Output<Integer> sessionTimeoutMinutes;
 
     public Output<Integer> getSessionTimeoutMinutes() {
@@ -87,7 +87,7 @@ public final class DomainSamlOptionsSamlOptionsArgs extends io.pulumi.resources.
      * Element of the SAML assertion to use for username. Default is NameID.
      * 
      */
-    @InputImport(name="subjectKey")
+    @Import(name="subjectKey")
       private final @Nullable Output<String> subjectKey;
 
     public Output<String> getSubjectKey() {

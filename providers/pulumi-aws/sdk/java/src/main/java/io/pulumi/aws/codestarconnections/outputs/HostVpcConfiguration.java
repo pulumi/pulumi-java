@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.codestarconnections.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HostVpcConfiguration {
     /**
      * he ID of the security group or security groups associated with the Amazon VPC connected to the infrastructure where your provider type is installed.
@@ -33,12 +33,12 @@ public final class HostVpcConfiguration {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HostVpcConfiguration(
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("tlsCertificate") @Nullable String tlsCertificate,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("tlsCertificate") @Nullable String tlsCertificate,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
         this.tlsCertificate = tlsCertificate;

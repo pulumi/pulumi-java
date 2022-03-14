@@ -4,12 +4,12 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecLoggingAccessLog;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecLogging {
     /**
      * The access log configuration for a virtual gateway.
@@ -17,8 +17,8 @@ public final class VirtualGatewaySpecLogging {
      */
     private final @Nullable VirtualGatewaySpecLoggingAccessLog accessLog;
 
-    @OutputCustomType.Constructor
-    private VirtualGatewaySpecLogging(@OutputCustomType.Parameter("accessLog") @Nullable VirtualGatewaySpecLoggingAccessLog accessLog) {
+    @CustomType.Constructor
+    private VirtualGatewaySpecLogging(@CustomType.Parameter("accessLog") @Nullable VirtualGatewaySpecLoggingAccessLog accessLog) {
         this.accessLog = accessLog;
     }
 

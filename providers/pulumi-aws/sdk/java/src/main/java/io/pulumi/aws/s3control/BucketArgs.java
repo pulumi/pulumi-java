@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the bucket.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -30,7 +30,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the Outpost to contain this bucket.
      * 
      */
-    @InputImport(name="outpostId", required=true)
+    @Import(name="outpostId", required=true)
       private final Output<String> outpostId;
 
     public Output<String> getOutpostId() {
@@ -41,7 +41,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicediscovery.InstanceArgs;
 import io.pulumi.aws.servicediscovery.inputs.InstanceState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * A map contains the attributes of the instance. Check the [doc](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html#API_RegisterInstance_RequestSyntax) for the supported attributes and syntax.
      * 
      */
-    @OutputExport(name="attributes", type=Map.class, parameters={String.class, String.class})
+    @Export(name="attributes", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> attributes;
 
     /**
@@ -47,7 +47,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The ID of the service instance.
      * 
      */
-    @OutputExport(name="instanceId", type=String.class, parameters={})
+    @Export(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 
     /**
@@ -61,7 +61,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The ID of the service that you want to use to create the instance.
      * 
      */
-    @OutputExport(name="serviceId", type=String.class, parameters={})
+    @Export(name="serviceId", type=String.class, parameters={})
     private Output<String> serviceId;
 
     /**

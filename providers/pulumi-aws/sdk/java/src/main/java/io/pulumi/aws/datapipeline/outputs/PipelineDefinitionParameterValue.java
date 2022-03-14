@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.datapipeline.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PipelineDefinitionParameterValue {
     /**
      * ID of the parameter value.
@@ -20,10 +20,10 @@ public final class PipelineDefinitionParameterValue {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineDefinitionParameterValue(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("stringValue") String stringValue) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("stringValue") String stringValue) {
         this.id = id;
         this.stringValue = stringValue;
     }

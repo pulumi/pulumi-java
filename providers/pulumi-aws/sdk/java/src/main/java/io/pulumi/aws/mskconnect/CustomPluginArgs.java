@@ -5,7 +5,7 @@ package io.pulumi.aws.mskconnect;
 
 import io.pulumi.aws.mskconnect.inputs.CustomPluginLocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the plugin file. Allowed values are `ZIP` and `JAR`.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -30,7 +30,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
      * A summary description of the custom plugin.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
      * Information about the location of a custom plugin. See below.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<CustomPluginLocationArgs> location;
 
     public Output<CustomPluginLocationArgs> getLocation() {
@@ -52,7 +52,7 @@ public final class CustomPluginArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the custom plugin..
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

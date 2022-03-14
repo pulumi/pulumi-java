@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OptionGroupOptionOptionSetting {
     /**
      * The Name of the setting.
@@ -20,10 +20,10 @@ public final class OptionGroupOptionOptionSetting {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OptionGroupOptionOptionSetting(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") String value) {
         this.name = name;
         this.value = value;
     }

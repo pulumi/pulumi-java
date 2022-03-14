@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.securityhub.ProductSubscriptionArgs;
 import io.pulumi.aws.securityhub.inputs.ProductSubscriptionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class ProductSubscription extends io.pulumi.resources.CustomResource {
      * The ARN of a resource that represents your subscription to the product that generates the findings that you want to import into Security Hub.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -46,7 +46,7 @@ public class ProductSubscription extends io.pulumi.resources.CustomResource {
      * The ARN of the product that generates findings that you want to import into Security Hub - see below.
      * 
      */
-    @OutputExport(name="productArn", type=String.class, parameters={})
+    @Export(name="productArn", type=String.class, parameters={})
     private Output<String> productArn;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     private final String arn;
     /**
@@ -27,13 +27,13 @@ public final class GetCertificateResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("certificate") String certificate,
-        @OutputCustomType.Parameter("certificateAuthorityArn") String certificateAuthorityArn,
-        @OutputCustomType.Parameter("certificateChain") String certificateChain,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("certificate") String certificate,
+        @CustomType.Parameter("certificateAuthorityArn") String certificateAuthorityArn,
+        @CustomType.Parameter("certificateChain") String certificateChain,
+        @CustomType.Parameter("id") String id) {
         this.arn = arn;
         this.certificate = certificate;
         this.certificateAuthorityArn = certificateAuthorityArn;

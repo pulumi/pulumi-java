@@ -17,12 +17,12 @@ import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementRuleGroupReferenceStatemen
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementSizeConstraintStatement;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementSqliMatchStatement;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementXssMatchStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatement {
     /**
      * A logical rule statement used to combine other rule statements with AND logic. See AND Statement below for details.
@@ -95,22 +95,22 @@ public final class WebAclRuleStatement {
      */
     private final @Nullable WebAclRuleStatementXssMatchStatement xssMatchStatement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleStatement(
-        @OutputCustomType.Parameter("andStatement") @Nullable WebAclRuleStatementAndStatement andStatement,
-        @OutputCustomType.Parameter("byteMatchStatement") @Nullable WebAclRuleStatementByteMatchStatement byteMatchStatement,
-        @OutputCustomType.Parameter("geoMatchStatement") @Nullable WebAclRuleStatementGeoMatchStatement geoMatchStatement,
-        @OutputCustomType.Parameter("ipSetReferenceStatement") @Nullable WebAclRuleStatementIpSetReferenceStatement ipSetReferenceStatement,
-        @OutputCustomType.Parameter("labelMatchStatement") @Nullable WebAclRuleStatementLabelMatchStatement labelMatchStatement,
-        @OutputCustomType.Parameter("managedRuleGroupStatement") @Nullable WebAclRuleStatementManagedRuleGroupStatement managedRuleGroupStatement,
-        @OutputCustomType.Parameter("notStatement") @Nullable WebAclRuleStatementNotStatement notStatement,
-        @OutputCustomType.Parameter("orStatement") @Nullable WebAclRuleStatementOrStatement orStatement,
-        @OutputCustomType.Parameter("rateBasedStatement") @Nullable WebAclRuleStatementRateBasedStatement rateBasedStatement,
-        @OutputCustomType.Parameter("regexPatternSetReferenceStatement") @Nullable WebAclRuleStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
-        @OutputCustomType.Parameter("ruleGroupReferenceStatement") @Nullable WebAclRuleStatementRuleGroupReferenceStatement ruleGroupReferenceStatement,
-        @OutputCustomType.Parameter("sizeConstraintStatement") @Nullable WebAclRuleStatementSizeConstraintStatement sizeConstraintStatement,
-        @OutputCustomType.Parameter("sqliMatchStatement") @Nullable WebAclRuleStatementSqliMatchStatement sqliMatchStatement,
-        @OutputCustomType.Parameter("xssMatchStatement") @Nullable WebAclRuleStatementXssMatchStatement xssMatchStatement) {
+        @CustomType.Parameter("andStatement") @Nullable WebAclRuleStatementAndStatement andStatement,
+        @CustomType.Parameter("byteMatchStatement") @Nullable WebAclRuleStatementByteMatchStatement byteMatchStatement,
+        @CustomType.Parameter("geoMatchStatement") @Nullable WebAclRuleStatementGeoMatchStatement geoMatchStatement,
+        @CustomType.Parameter("ipSetReferenceStatement") @Nullable WebAclRuleStatementIpSetReferenceStatement ipSetReferenceStatement,
+        @CustomType.Parameter("labelMatchStatement") @Nullable WebAclRuleStatementLabelMatchStatement labelMatchStatement,
+        @CustomType.Parameter("managedRuleGroupStatement") @Nullable WebAclRuleStatementManagedRuleGroupStatement managedRuleGroupStatement,
+        @CustomType.Parameter("notStatement") @Nullable WebAclRuleStatementNotStatement notStatement,
+        @CustomType.Parameter("orStatement") @Nullable WebAclRuleStatementOrStatement orStatement,
+        @CustomType.Parameter("rateBasedStatement") @Nullable WebAclRuleStatementRateBasedStatement rateBasedStatement,
+        @CustomType.Parameter("regexPatternSetReferenceStatement") @Nullable WebAclRuleStatementRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
+        @CustomType.Parameter("ruleGroupReferenceStatement") @Nullable WebAclRuleStatementRuleGroupReferenceStatement ruleGroupReferenceStatement,
+        @CustomType.Parameter("sizeConstraintStatement") @Nullable WebAclRuleStatementSizeConstraintStatement sizeConstraintStatement,
+        @CustomType.Parameter("sqliMatchStatement") @Nullable WebAclRuleStatementSqliMatchStatement sqliMatchStatement,
+        @CustomType.Parameter("xssMatchStatement") @Nullable WebAclRuleStatementXssMatchStatement xssMatchStatement) {
         this.andStatement = andStatement;
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;

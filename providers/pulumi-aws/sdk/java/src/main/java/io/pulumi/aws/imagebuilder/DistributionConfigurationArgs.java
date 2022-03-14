@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder;
 
 import io.pulumi.aws.imagebuilder.inputs.DistributionConfigurationDistributionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * Description of the container distribution configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * One or more configuration blocks with distribution settings. Detailed below.
      * 
      */
-    @InputImport(name="distributions", required=true)
+    @Import(name="distributions", required=true)
       private final Output<List<DistributionConfigurationDistributionArgs>> distributions;
 
     public Output<List<DistributionConfigurationDistributionArgs>> getDistributions() {
@@ -43,7 +43,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * Name to apply to the distributed AMI.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * Key-value map of resource tags for the distribution configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

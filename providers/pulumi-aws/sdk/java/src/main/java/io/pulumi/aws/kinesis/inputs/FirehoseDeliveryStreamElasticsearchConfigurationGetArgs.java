@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigura
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationGetArgs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
      * 
      */
-    @InputImport(name="bufferingInterval")
+    @Import(name="bufferingInterval")
       private final @Nullable Output<Integer> bufferingInterval;
 
     public Output<Integer> getBufferingInterval() {
@@ -33,7 +33,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
      * 
      */
-    @InputImport(name="bufferingSize")
+    @Import(name="bufferingSize")
       private final @Nullable Output<Integer> bufferingSize;
 
     public Output<Integer> getBufferingSize() {
@@ -44,7 +44,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * The CloudWatch Logging Options for the delivery stream. More details are given below
      * 
      */
-    @InputImport(name="cloudwatchLoggingOptions")
+    @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Output<FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
@@ -55,7 +55,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * The endpoint to use when communicating with the cluster. Conflicts with `domain_arn`.
      * 
      */
-    @InputImport(name="clusterEndpoint")
+    @Import(name="clusterEndpoint")
       private final @Nullable Output<String> clusterEndpoint;
 
     public Output<String> getClusterEndpoint() {
@@ -66,7 +66,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`. Conflicts with `cluster_endpoint`.
      * 
      */
-    @InputImport(name="domainArn")
+    @Import(name="domainArn")
       private final @Nullable Output<String> domainArn;
 
     public Output<String> getDomainArn() {
@@ -77,7 +77,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * The Elasticsearch index name.
      * 
      */
-    @InputImport(name="indexName", required=true)
+    @Import(name="indexName", required=true)
       private final Output<String> indexName;
 
     public Output<String> getIndexName() {
@@ -88,7 +88,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are `NoRotation`, `OneHour`, `OneDay`, `OneWeek`, and `OneMonth`.  The default value is `OneDay`.
      * 
      */
-    @InputImport(name="indexRotationPeriod")
+    @Import(name="indexRotationPeriod")
       private final @Nullable Output<String> indexRotationPeriod;
 
     public Output<String> getIndexRotationPeriod() {
@@ -99,7 +99,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * The data processing configuration.  More details are given below.
      * 
      */
-    @InputImport(name="processingConfiguration")
+    @Import(name="processingConfiguration")
       private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationGetArgs> processingConfiguration;
 
     public Output<FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfigurationGetArgs> getProcessingConfiguration() {
@@ -110,7 +110,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
      * 
      */
-    @InputImport(name="retryDuration")
+    @Import(name="retryDuration")
       private final @Nullable Output<Integer> retryDuration;
 
     public Output<Integer> getRetryDuration() {
@@ -121,7 +121,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * The ARN of the IAM role to be assumed by Firehose for calling the Amazon ES Configuration API and for indexing documents.  The pattern needs to be `arn:.*`.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -132,7 +132,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * Defines how documents should be delivered to Amazon S3.  Valid values are `FailedDocumentsOnly` and `AllDocuments`.  Default value is `FailedDocumentsOnly`.
      * 
      */
-    @InputImport(name="s3BackupMode")
+    @Import(name="s3BackupMode")
       private final @Nullable Output<String> s3BackupMode;
 
     public Output<String> getS3BackupMode() {
@@ -143,7 +143,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * The Elasticsearch type name with maximum length of 100 characters.
      * 
      */
-    @InputImport(name="typeName")
+    @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {
@@ -154,7 +154,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationGetArgs exten
      * The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
      * 
      */
-    @InputImport(name="vpcConfig")
+    @Import(name="vpcConfig")
       private final @Nullable Output<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs> vpcConfig;
 
     public Output<FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigGetArgs> getVpcConfig() {

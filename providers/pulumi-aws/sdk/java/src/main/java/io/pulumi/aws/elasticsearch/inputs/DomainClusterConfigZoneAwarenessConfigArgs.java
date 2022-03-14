@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DomainClusterConfigZoneAwarenessConfigArgs extends io.pulumi.
      * Number of Availability Zones for the domain to use with `zone_awareness_enabled`. Defaults to `2`. Valid values: `2` or `3`.
      * 
      */
-    @InputImport(name="availabilityZoneCount")
+    @Import(name="availabilityZoneCount")
       private final @Nullable Output<Integer> availabilityZoneCount;
 
     public Output<Integer> getAvailabilityZoneCount() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateMetadataOptions {
     /**
      * Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
@@ -38,13 +38,13 @@ public final class LaunchTemplateMetadataOptions {
      */
     private final @Nullable String instanceMetadataTags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchTemplateMetadataOptions(
-        @OutputCustomType.Parameter("httpEndpoint") @Nullable String httpEndpoint,
-        @OutputCustomType.Parameter("httpProtocolIpv6") @Nullable String httpProtocolIpv6,
-        @OutputCustomType.Parameter("httpPutResponseHopLimit") @Nullable Integer httpPutResponseHopLimit,
-        @OutputCustomType.Parameter("httpTokens") @Nullable String httpTokens,
-        @OutputCustomType.Parameter("instanceMetadataTags") @Nullable String instanceMetadataTags) {
+        @CustomType.Parameter("httpEndpoint") @Nullable String httpEndpoint,
+        @CustomType.Parameter("httpProtocolIpv6") @Nullable String httpProtocolIpv6,
+        @CustomType.Parameter("httpPutResponseHopLimit") @Nullable Integer httpPutResponseHopLimit,
+        @CustomType.Parameter("httpTokens") @Nullable String httpTokens,
+        @CustomType.Parameter("instanceMetadataTags") @Nullable String instanceMetadataTags) {
         this.httpEndpoint = httpEndpoint;
         this.httpProtocolIpv6 = httpProtocolIpv6;
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;

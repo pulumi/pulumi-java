@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.pinpoint.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppLimits {
     /**
      * The maximum number of messages that the campaign can send daily.
@@ -32,12 +32,12 @@ public final class AppLimits {
      */
     private final @Nullable Integer total;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppLimits(
-        @OutputCustomType.Parameter("daily") @Nullable Integer daily,
-        @OutputCustomType.Parameter("maximumDuration") @Nullable Integer maximumDuration,
-        @OutputCustomType.Parameter("messagesPerSecond") @Nullable Integer messagesPerSecond,
-        @OutputCustomType.Parameter("total") @Nullable Integer total) {
+        @CustomType.Parameter("daily") @Nullable Integer daily,
+        @CustomType.Parameter("maximumDuration") @Nullable Integer maximumDuration,
+        @CustomType.Parameter("messagesPerSecond") @Nullable Integer messagesPerSecond,
+        @CustomType.Parameter("total") @Nullable Integer total) {
         this.daily = daily;
         this.maximumDuration = maximumDuration;
         this.messagesPerSecond = messagesPerSecond;

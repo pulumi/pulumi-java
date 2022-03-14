@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FunctionTracingConfigGetArgs extends io.pulumi.resources.Reso
      * Whether to to sample and trace a subset of incoming requests with AWS X-Ray. Valid values are `PassThrough` and `Active`. If `PassThrough`, Lambda will only trace the request from an upstream service if it contains a tracing header with "sampled=1". If `Active`, Lambda will respect any tracing header it receives from an upstream service. If no tracing header is received, Lambda will call X-Ray for a tracing decision.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final Output<String> mode;
 
     public Output<String> getMode() {

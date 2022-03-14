@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VaultLockConfigurationState extends io.pulumi.resources.Resou
      * The ARN of the vault.
      * 
      */
-    @InputImport(name="backupVaultArn")
+    @Import(name="backupVaultArn")
       private final @Nullable Output<String> backupVaultArn;
 
     public Output<String> getBackupVaultArn() {
@@ -30,7 +30,7 @@ public final class VaultLockConfigurationState extends io.pulumi.resources.Resou
      * Name of the backup vault to add a lock configuration for.
      * 
      */
-    @InputImport(name="backupVaultName")
+    @Import(name="backupVaultName")
       private final @Nullable Output<String> backupVaultName;
 
     public Output<String> getBackupVaultName() {
@@ -41,7 +41,7 @@ public final class VaultLockConfigurationState extends io.pulumi.resources.Resou
      * The number of days before the lock date.
      * 
      */
-    @InputImport(name="changeableForDays")
+    @Import(name="changeableForDays")
       private final @Nullable Output<Integer> changeableForDays;
 
     public Output<Integer> getChangeableForDays() {
@@ -52,7 +52,7 @@ public final class VaultLockConfigurationState extends io.pulumi.resources.Resou
      * The maximum retention period that the vault retains its recovery points.
      * 
      */
-    @InputImport(name="maxRetentionDays")
+    @Import(name="maxRetentionDays")
       private final @Nullable Output<Integer> maxRetentionDays;
 
     public Output<Integer> getMaxRetentionDays() {
@@ -63,7 +63,7 @@ public final class VaultLockConfigurationState extends io.pulumi.resources.Resou
      * The minimum retention period that the vault retains its recovery points.
      * 
      */
-    @InputImport(name="minRetentionDays")
+    @Import(name="minRetentionDays")
       private final @Nullable Output<Integer> minRetentionDays;
 
     public Output<Integer> getMinRetentionDays() {

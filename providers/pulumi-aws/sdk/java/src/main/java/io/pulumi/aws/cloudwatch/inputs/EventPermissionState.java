@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.EventPermissionConditionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * The action that you are enabling the other account to perform. Defaults to `events:PutEvents`.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -30,7 +30,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * Configuration block to limit the event bus permissions you are granting to only accounts that fulfill the condition. Specified below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<EventPermissionConditionGetArgs> condition;
 
     public Output<EventPermissionConditionGetArgs> getCondition() {
@@ -41,7 +41,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
      * 
      */
-    @InputImport(name="eventBusName")
+    @Import(name="eventBusName")
       private final @Nullable Output<String> eventBusName;
 
     public Output<String> getEventBusName() {
@@ -52,7 +52,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
      * 
      */
-    @InputImport(name="principal")
+    @Import(name="principal")
       private final @Nullable Output<String> principal;
 
     public Output<String> getPrincipal() {
@@ -63,7 +63,7 @@ public final class EventPermissionState extends io.pulumi.resources.ResourceArgs
      * An identifier string for the external account that you are granting permissions to.
      * 
      */
-    @InputImport(name="statementId")
+    @Import(name="statementId")
       private final @Nullable Output<String> statementId;
 
     public Output<String> getStatementId() {

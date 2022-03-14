@@ -4,7 +4,7 @@
 package io.pulumi.aws.directoryservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DirectoryVpcSettingsGetArgs extends io.pulumi.resources.Resou
 
     public static final DirectoryVpcSettingsGetArgs Empty = new DirectoryVpcSettingsGetArgs();
 
-    @InputImport(name="availabilityZones")
+    @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
@@ -26,7 +26,7 @@ public final class DirectoryVpcSettingsGetArgs extends io.pulumi.resources.Resou
      * The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -37,7 +37,7 @@ public final class DirectoryVpcSettingsGetArgs extends io.pulumi.resources.Resou
      * The identifier of the VPC that the directory is in.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

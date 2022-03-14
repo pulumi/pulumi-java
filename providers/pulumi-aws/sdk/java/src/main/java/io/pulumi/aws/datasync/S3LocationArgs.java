@@ -5,7 +5,7 @@ package io.pulumi.aws.datasync;
 
 import io.pulumi.aws.datasync.inputs.S3LocationS3ConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * A list of DataSync Agent ARNs with which this location will be associated.
      * 
      */
-    @InputImport(name="agentArns")
+    @Import(name="agentArns")
       private final @Nullable Output<List<String>> agentArns;
 
     public Output<List<String>> getAgentArns() {
@@ -32,7 +32,7 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the S3 Bucket.
      * 
      */
-    @InputImport(name="s3BucketArn", required=true)
+    @Import(name="s3BucketArn", required=true)
       private final Output<String> s3BucketArn;
 
     public Output<String> getS3BucketArn() {
@@ -43,7 +43,7 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block containing information for connecting to S3.
      * 
      */
-    @InputImport(name="s3Config", required=true)
+    @Import(name="s3Config", required=true)
       private final Output<S3LocationS3ConfigArgs> s3Config;
 
     public Output<S3LocationS3ConfigArgs> getS3Config() {
@@ -54,7 +54,7 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon S3 storage class that you want to store your files in when this location is used as a task destination. [Valid values](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes)
      * 
      */
-    @InputImport(name="s3StorageClass")
+    @Import(name="s3StorageClass")
       private final @Nullable Output<String> s3StorageClass;
 
     public Output<String> getS3StorageClass() {
@@ -65,7 +65,7 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * Prefix to perform actions as source or destination.
      * 
      */
-    @InputImport(name="subdirectory", required=true)
+    @Import(name="subdirectory", required=true)
       private final Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -76,7 +76,7 @@ public final class S3LocationArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

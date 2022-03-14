@@ -6,12 +6,12 @@ package io.pulumi.aws.organizations.outputs;
 import io.pulumi.aws.organizations.outputs.GetOrganizationAccount;
 import io.pulumi.aws.organizations.outputs.GetOrganizationNonMasterAccount;
 import io.pulumi.aws.organizations.outputs.GetOrganizationRoot;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationResult {
     /**
      * List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
@@ -69,19 +69,19 @@ public final class GetOrganizationResult {
      */
     private final List<GetOrganizationRoot> roots;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationResult(
-        @OutputCustomType.Parameter("accounts") List<GetOrganizationAccount> accounts,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("awsServiceAccessPrincipals") List<String> awsServiceAccessPrincipals,
-        @OutputCustomType.Parameter("enabledPolicyTypes") List<String> enabledPolicyTypes,
-        @OutputCustomType.Parameter("featureSet") String featureSet,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("masterAccountArn") String masterAccountArn,
-        @OutputCustomType.Parameter("masterAccountEmail") String masterAccountEmail,
-        @OutputCustomType.Parameter("masterAccountId") String masterAccountId,
-        @OutputCustomType.Parameter("nonMasterAccounts") List<GetOrganizationNonMasterAccount> nonMasterAccounts,
-        @OutputCustomType.Parameter("roots") List<GetOrganizationRoot> roots) {
+        @CustomType.Parameter("accounts") List<GetOrganizationAccount> accounts,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("awsServiceAccessPrincipals") List<String> awsServiceAccessPrincipals,
+        @CustomType.Parameter("enabledPolicyTypes") List<String> enabledPolicyTypes,
+        @CustomType.Parameter("featureSet") String featureSet,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("masterAccountArn") String masterAccountArn,
+        @CustomType.Parameter("masterAccountEmail") String masterAccountEmail,
+        @CustomType.Parameter("masterAccountId") String masterAccountId,
+        @CustomType.Parameter("nonMasterAccounts") List<GetOrganizationNonMasterAccount> nonMasterAccounts,
+        @CustomType.Parameter("roots") List<GetOrganizationRoot> roots) {
         this.accounts = accounts;
         this.arn = arn;
         this.awsServiceAccessPrincipals = awsServiceAccessPrincipals;

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.mq.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BrokerLogs {
     /**
      * Enables audit logging. Auditing is only possible for `engine_type` of `ActiveMQ`. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
@@ -22,10 +22,10 @@ public final class BrokerLogs {
      */
     private final @Nullable Boolean general;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BrokerLogs(
-        @OutputCustomType.Parameter("audit") @Nullable Boolean audit,
-        @OutputCustomType.Parameter("general") @Nullable Boolean general) {
+        @CustomType.Parameter("audit") @Nullable Boolean audit,
+        @CustomType.Parameter("general") @Nullable Boolean general) {
         this.audit = audit;
         this.general = general;
     }

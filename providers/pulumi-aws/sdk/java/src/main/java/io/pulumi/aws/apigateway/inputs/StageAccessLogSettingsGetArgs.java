@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class StageAccessLogSettingsGetArgs extends io.pulumi.resources.Res
      * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with `amazon-apigateway-`. Automatically removes trailing `:*` if present.
      * 
      */
-    @InputImport(name="destinationArn", required=true)
+    @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
     public Output<String> getDestinationArn() {
@@ -29,7 +29,7 @@ public final class StageAccessLogSettingsGetArgs extends io.pulumi.resources.Res
      * For more information on configuring the log format rules visit the AWS [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html)
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<String> format;
 
     public Output<String> getFormat() {

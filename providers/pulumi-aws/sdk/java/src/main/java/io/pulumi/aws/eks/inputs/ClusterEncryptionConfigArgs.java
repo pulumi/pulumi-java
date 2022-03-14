@@ -5,7 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.ClusterEncryptionConfigProviderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
      * Configuration block with provider for encryption. Detailed below.
      * 
      */
-    @InputImport(name="provider", required=true)
+    @Import(name="provider", required=true)
       private final Output<ClusterEncryptionConfigProviderArgs> provider;
 
     public Output<ClusterEncryptionConfigProviderArgs> getProvider() {
@@ -30,7 +30,7 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
      * List of strings with resources to be encrypted. Valid values: `secrets`.
      * 
      */
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final Output<List<String>> resources;
 
     public Output<List<String>> getResources() {

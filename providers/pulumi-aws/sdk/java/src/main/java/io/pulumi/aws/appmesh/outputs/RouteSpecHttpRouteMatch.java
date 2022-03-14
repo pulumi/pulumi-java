@@ -4,14 +4,14 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRouteMatchHeader;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecHttpRouteMatch {
     /**
      * The client request headers to match on.
@@ -35,12 +35,12 @@ public final class RouteSpecHttpRouteMatch {
      */
     private final @Nullable String scheme;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpecHttpRouteMatch(
-        @OutputCustomType.Parameter("headers") @Nullable List<RouteSpecHttpRouteMatchHeader> headers,
-        @OutputCustomType.Parameter("method") @Nullable String method,
-        @OutputCustomType.Parameter("prefix") String prefix,
-        @OutputCustomType.Parameter("scheme") @Nullable String scheme) {
+        @CustomType.Parameter("headers") @Nullable List<RouteSpecHttpRouteMatchHeader> headers,
+        @CustomType.Parameter("method") @Nullable String method,
+        @CustomType.Parameter("prefix") String prefix,
+        @CustomType.Parameter("scheme") @Nullable String scheme) {
         this.headers = headers;
         this.method = method;
         this.prefix = prefix;

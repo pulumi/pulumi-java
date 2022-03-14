@@ -8,7 +8,7 @@ import io.pulumi.aws.waf.IpSetArgs;
 import io.pulumi.aws.waf.inputs.IpSetState;
 import io.pulumi.aws.waf.outputs.IpSetIpSetDescriptor;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * The ARN of the WAF IPSet.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR format) from which web requests originate.
      * 
      */
-    @OutputExport(name="ipSetDescriptors", type=List.class, parameters={IpSetIpSetDescriptor.class})
+    @Export(name="ipSetDescriptors", type=List.class, parameters={IpSetIpSetDescriptor.class})
     private Output</* @Nullable */ List<IpSetIpSetDescriptor>> ipSetDescriptors;
 
     /**
@@ -62,7 +62,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * The name or description of the IPSet.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainNameMutualTlsAuthentication {
     /**
      * An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
@@ -23,10 +23,10 @@ public final class DomainNameMutualTlsAuthentication {
      */
     private final @Nullable String truststoreVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainNameMutualTlsAuthentication(
-        @OutputCustomType.Parameter("truststoreUri") String truststoreUri,
-        @OutputCustomType.Parameter("truststoreVersion") @Nullable String truststoreVersion) {
+        @CustomType.Parameter("truststoreUri") String truststoreUri,
+        @CustomType.Parameter("truststoreVersion") @Nullable String truststoreVersion) {
         this.truststoreUri = truststoreUri;
         this.truststoreVersion = truststoreVersion;
     }

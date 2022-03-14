@@ -4,13 +4,13 @@
 package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.GetDistributionConfigurationsFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDistributionConfigurationsResult {
     /**
      * Set of ARNs of the matched Image Builder Distribution Configurations.
@@ -29,12 +29,12 @@ public final class GetDistributionConfigurationsResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDistributionConfigurationsResult(
-        @OutputCustomType.Parameter("arns") List<String> arns,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetDistributionConfigurationsFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("names") List<String> names) {
+        @CustomType.Parameter("arns") List<String> arns,
+        @CustomType.Parameter("filters") @Nullable List<GetDistributionConfigurationsFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("names") List<String> names) {
         this.arns = arns;
         this.filters = filters;
         this.id = id;

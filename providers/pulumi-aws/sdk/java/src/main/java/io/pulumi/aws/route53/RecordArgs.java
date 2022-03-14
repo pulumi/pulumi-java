@@ -11,7 +11,7 @@ import io.pulumi.aws.route53.inputs.RecordLatencyRoutingPolicyArgs;
 import io.pulumi.aws.route53.inputs.RecordWeightedRoutingPolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * Alias record documented below.
      * 
      */
-    @InputImport(name="aliases")
+    @Import(name="aliases")
       private final @Nullable Output<List<RecordAliasArgs>> aliases;
 
     public Output<List<RecordAliasArgs>> getAliases() {
@@ -40,7 +40,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
      * 
      */
-    @InputImport(name="allowOverwrite")
+    @Import(name="allowOverwrite")
       private final @Nullable Output<Boolean> allowOverwrite;
 
     public Output<Boolean> getAllowOverwrite() {
@@ -51,7 +51,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
      * 
      */
-    @InputImport(name="failoverRoutingPolicies")
+    @Import(name="failoverRoutingPolicies")
       private final @Nullable Output<List<RecordFailoverRoutingPolicyArgs>> failoverRoutingPolicies;
 
     public Output<List<RecordFailoverRoutingPolicyArgs>> getFailoverRoutingPolicies() {
@@ -62,7 +62,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
      * 
      */
-    @InputImport(name="geolocationRoutingPolicies")
+    @Import(name="geolocationRoutingPolicies")
       private final @Nullable Output<List<RecordGeolocationRoutingPolicyArgs>> geolocationRoutingPolicies;
 
     public Output<List<RecordGeolocationRoutingPolicyArgs>> getGeolocationRoutingPolicies() {
@@ -73,7 +73,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * The health check the record should be associated with.
      * 
      */
-    @InputImport(name="healthCheckId")
+    @Import(name="healthCheckId")
       private final @Nullable Output<String> healthCheckId;
 
     public Output<String> getHealthCheckId() {
@@ -84,7 +84,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
      * 
      */
-    @InputImport(name="latencyRoutingPolicies")
+    @Import(name="latencyRoutingPolicies")
       private final @Nullable Output<List<RecordLatencyRoutingPolicyArgs>> latencyRoutingPolicies;
 
     public Output<List<RecordLatencyRoutingPolicyArgs>> getLatencyRoutingPolicies() {
@@ -95,7 +95,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
      * 
      */
-    @InputImport(name="multivalueAnswerRoutingPolicy")
+    @Import(name="multivalueAnswerRoutingPolicy")
       private final @Nullable Output<Boolean> multivalueAnswerRoutingPolicy;
 
     public Output<Boolean> getMultivalueAnswerRoutingPolicy() {
@@ -106,7 +106,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -117,7 +117,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
      * 
      */
-    @InputImport(name="records")
+    @Import(name="records")
       private final @Nullable Output<List<String>> records;
 
     public Output<List<String>> getRecords() {
@@ -128,7 +128,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
      * 
      */
-    @InputImport(name="setIdentifier")
+    @Import(name="setIdentifier")
       private final @Nullable Output<String> setIdentifier;
 
     public Output<String> getSetIdentifier() {
@@ -139,7 +139,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * The TTL of the record.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
     public Output<Integer> getTtl() {
@@ -150,7 +150,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,RecordType>> type;
 
     public Output<Either<String,RecordType>> getType() {
@@ -161,7 +161,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
      * 
      */
-    @InputImport(name="weightedRoutingPolicies")
+    @Import(name="weightedRoutingPolicies")
       private final @Nullable Output<List<RecordWeightedRoutingPolicyArgs>> weightedRoutingPolicies;
 
     public Output<List<RecordWeightedRoutingPolicyArgs>> getWeightedRoutingPolicies() {
@@ -172,7 +172,7 @@ public final class RecordArgs extends io.pulumi.resources.ResourceArgs {
      * Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
      * 
      */
-    @InputImport(name="zoneId", required=true)
+    @Import(name="zoneId", required=true)
       private final Output<String> zoneId;
 
     public Output<String> getZoneId() {

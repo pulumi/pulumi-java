@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.storagegateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetLocalDiskArgs extends io.pulumi.resources.InvokeArgs {
      * The device node of the local disk to retrieve. For example, `/dev/sdb`.
      * 
      */
-    @InputImport(name="diskNode")
+    @Import(name="diskNode")
       private final @Nullable String diskNode;
 
     public Optional<String> getDiskNode() {
@@ -29,7 +29,7 @@ public final class GetLocalDiskArgs extends io.pulumi.resources.InvokeArgs {
      * The device path of the local disk to retrieve. For example, `/dev/xvdb` or `/dev/nvme1n1`.
      * 
      */
-    @InputImport(name="diskPath")
+    @Import(name="diskPath")
       private final @Nullable String diskPath;
 
     public Optional<String> getDiskPath() {
@@ -40,7 +40,7 @@ public final class GetLocalDiskArgs extends io.pulumi.resources.InvokeArgs {
      * The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    @InputImport(name="gatewayArn", required=true)
+    @Import(name="gatewayArn", required=true)
       private final String gatewayArn;
 
     public String getGatewayArn() {

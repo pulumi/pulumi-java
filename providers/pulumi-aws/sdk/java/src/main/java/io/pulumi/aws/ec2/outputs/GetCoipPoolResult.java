@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetCoipPoolFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCoipPoolResult {
     /**
      * ARN of the COIP pool
@@ -33,15 +33,15 @@ public final class GetCoipPoolResult {
     private final String poolId;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCoipPoolResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetCoipPoolFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("localGatewayRouteTableId") String localGatewayRouteTableId,
-        @OutputCustomType.Parameter("poolCidrs") List<String> poolCidrs,
-        @OutputCustomType.Parameter("poolId") String poolId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("filters") @Nullable List<GetCoipPoolFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("localGatewayRouteTableId") String localGatewayRouteTableId,
+        @CustomType.Parameter("poolCidrs") List<String> poolCidrs,
+        @CustomType.Parameter("poolId") String poolId,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.filters = filters;
         this.id = id;

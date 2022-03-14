@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
      * Whether the node is a leader node or a compute node
      * 
      */
-    @InputImport(name="nodeRole")
+    @Import(name="nodeRole")
       private final @Nullable Output<String> nodeRole;
 
     public Output<String> getNodeRole() {
@@ -29,7 +29,7 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
      * The private IP address of a node within a cluster
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
     public Output<String> getPrivateIpAddress() {
@@ -40,7 +40,7 @@ public final class ClusterClusterNodeGetArgs extends io.pulumi.resources.Resourc
      * The public IP address of a node within a cluster
      * 
      */
-    @InputImport(name="publicIpAddress")
+    @Import(name="publicIpAddress")
       private final @Nullable Output<String> publicIpAddress;
 
     public Output<String> getPublicIpAddress() {

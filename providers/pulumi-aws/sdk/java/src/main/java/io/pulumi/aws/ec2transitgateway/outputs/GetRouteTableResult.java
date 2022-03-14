@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.outputs;
 
 import io.pulumi.aws.ec2transitgateway.outputs.GetRouteTableFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRouteTableResult {
     /**
      * EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
@@ -46,15 +46,15 @@ public final class GetRouteTableResult {
      */
     private final String transitGatewayId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouteTableResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("defaultAssociationRouteTable") Boolean defaultAssociationRouteTable,
-        @OutputCustomType.Parameter("defaultPropagationRouteTable") Boolean defaultPropagationRouteTable,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetRouteTableFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("transitGatewayId") String transitGatewayId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("defaultAssociationRouteTable") Boolean defaultAssociationRouteTable,
+        @CustomType.Parameter("defaultPropagationRouteTable") Boolean defaultPropagationRouteTable,
+        @CustomType.Parameter("filters") @Nullable List<GetRouteTableFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("transitGatewayId") String transitGatewayId) {
         this.arn = arn;
         this.defaultAssociationRouteTable = defaultAssociationRouteTable;
         this.defaultPropagationRouteTable = defaultPropagationRouteTable;

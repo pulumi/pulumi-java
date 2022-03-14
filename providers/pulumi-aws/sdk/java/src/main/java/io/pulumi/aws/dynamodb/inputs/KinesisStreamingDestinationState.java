@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
      * The ARN for a Kinesis data stream. This must exist in the same account and region as the DynamoDB table.
      * 
      */
-    @InputImport(name="streamArn")
+    @Import(name="streamArn")
       private final @Nullable Output<String> streamArn;
 
     public Output<String> getStreamArn() {
@@ -30,7 +30,7 @@ public final class KinesisStreamingDestinationState extends io.pulumi.resources.
      * can only be one Kinesis streaming destination for a given DynamoDB table.
      * 
      */
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpcEndpointServiceAllowedPrincipleArgs;
 import io.pulumi.aws.ec2.inputs.VpcEndpointServiceAllowedPrincipleState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public class VpcEndpointServiceAllowedPrinciple extends io.pulumi.resources.Cust
      * The ARN of the principal to allow permissions.
      * 
      */
-    @OutputExport(name="principalArn", type=String.class, parameters={})
+    @Export(name="principalArn", type=String.class, parameters={})
     private Output<String> principalArn;
 
     /**
@@ -44,7 +44,7 @@ public class VpcEndpointServiceAllowedPrinciple extends io.pulumi.resources.Cust
      * The ID of the VPC endpoint service to allow permission.
      * 
      */
-    @OutputExport(name="vpcEndpointServiceId", type=String.class, parameters={})
+    @Export(name="vpcEndpointServiceId", type=String.class, parameters={})
     private Output<String> vpcEndpointServiceId;
 
     /**

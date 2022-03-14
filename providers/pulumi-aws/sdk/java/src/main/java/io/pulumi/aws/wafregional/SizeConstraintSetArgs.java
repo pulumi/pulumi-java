@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional;
 
 import io.pulumi.aws.wafregional.inputs.SizeConstraintSetSizeConstraintArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
      * The name or description of the Size Constraint Set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -31,7 +31,7 @@ public final class SizeConstraintSetArgs extends io.pulumi.resources.ResourceArg
      * Specifies the parts of web requests that you want to inspect the size of.
      * 
      */
-    @InputImport(name="sizeConstraints")
+    @Import(name="sizeConstraints")
       private final @Nullable Output<List<SizeConstraintSetSizeConstraintArgs>> sizeConstraints;
 
     public Output<List<SizeConstraintSetSizeConstraintArgs>> getSizeConstraints() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.eks.FargateProfileArgs;
 import io.pulumi.aws.eks.inputs.FargateProfileState;
 import io.pulumi.aws.eks.outputs.FargateProfileSelector;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the EKS Fargate Profile.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    @OutputExport(name="clusterName", type=String.class, parameters={})
+    @Export(name="clusterName", type=String.class, parameters={})
     private Output<String> clusterName;
 
     /**
@@ -63,7 +63,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * Name of the EKS Fargate Profile.
      * 
      */
-    @OutputExport(name="fargateProfileName", type=String.class, parameters={})
+    @Export(name="fargateProfileName", type=String.class, parameters={})
     private Output<String> fargateProfileName;
 
     /**
@@ -77,7 +77,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.
      * 
      */
-    @OutputExport(name="podExecutionRoleArn", type=String.class, parameters={})
+    @Export(name="podExecutionRoleArn", type=String.class, parameters={})
     private Output<String> podExecutionRoleArn;
 
     /**
@@ -91,7 +91,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
      * 
      */
-    @OutputExport(name="selectors", type=List.class, parameters={FargateProfileSelector.class})
+    @Export(name="selectors", type=List.class, parameters={FargateProfileSelector.class})
     private Output<List<FargateProfileSelector>> selectors;
 
     /**
@@ -105,7 +105,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * Status of the EKS Fargate Profile.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -119,7 +119,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
      * 
      */
-    @OutputExport(name="subnetIds", type=List.class, parameters={String.class})
+    @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subnetIds;
 
     /**
@@ -133,7 +133,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -147,7 +147,7 @@ public class FargateProfile extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
      * The detector ID of the member GuardDuty account.
      * 
      */
-    @InputImport(name="detectorId")
+    @Import(name="detectorId")
       private final @Nullable Output<String> detectorId;
 
     public Output<String> getDetectorId() {
@@ -29,7 +29,7 @@ public final class InviteAccepterState extends io.pulumi.resources.ResourceArgs 
      * AWS account ID for primary account.
      * 
      */
-    @InputImport(name="masterAccountId")
+    @Import(name="masterAccountId")
       private final @Nullable Output<String> masterAccountId;
 
     public Output<String> getMasterAccountId() {

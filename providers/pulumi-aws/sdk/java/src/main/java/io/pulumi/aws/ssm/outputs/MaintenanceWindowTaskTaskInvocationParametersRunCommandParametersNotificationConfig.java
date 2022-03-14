@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig {
     /**
      * An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
@@ -28,11 +28,11 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      */
     private final @Nullable String notificationType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig(
-        @OutputCustomType.Parameter("notificationArn") @Nullable String notificationArn,
-        @OutputCustomType.Parameter("notificationEvents") @Nullable List<String> notificationEvents,
-        @OutputCustomType.Parameter("notificationType") @Nullable String notificationType) {
+        @CustomType.Parameter("notificationArn") @Nullable String notificationArn,
+        @CustomType.Parameter("notificationEvents") @Nullable List<String> notificationEvents,
+        @CustomType.Parameter("notificationType") @Nullable String notificationType) {
         this.notificationArn = notificationArn;
         this.notificationEvents = notificationEvents;
         this.notificationType = notificationType;

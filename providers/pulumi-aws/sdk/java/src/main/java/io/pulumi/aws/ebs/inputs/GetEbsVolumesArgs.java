@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.aws.ebs.inputs.GetEbsVolumesFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetEbsVolumesArgs extends io.pulumi.resources.InvokeArgs {
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetEbsVolumesFilter> filters;
 
     public List<GetEbsVolumesFilter> getFilters() {
@@ -33,7 +33,7 @@ public final class GetEbsVolumesArgs extends io.pulumi.resources.InvokeArgs {
      * a pair on the desired volumes.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

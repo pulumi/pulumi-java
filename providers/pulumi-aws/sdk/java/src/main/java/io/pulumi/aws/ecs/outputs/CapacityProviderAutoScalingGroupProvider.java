@@ -4,13 +4,13 @@
 package io.pulumi.aws.ecs.outputs;
 
 import io.pulumi.aws.ecs.outputs.CapacityProviderAutoScalingGroupProviderManagedScaling;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CapacityProviderAutoScalingGroupProvider {
     /**
      * - ARN of the associated auto scaling group.
@@ -28,11 +28,11 @@ public final class CapacityProviderAutoScalingGroupProvider {
      */
     private final @Nullable String managedTerminationProtection;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CapacityProviderAutoScalingGroupProvider(
-        @OutputCustomType.Parameter("autoScalingGroupArn") String autoScalingGroupArn,
-        @OutputCustomType.Parameter("managedScaling") @Nullable CapacityProviderAutoScalingGroupProviderManagedScaling managedScaling,
-        @OutputCustomType.Parameter("managedTerminationProtection") @Nullable String managedTerminationProtection) {
+        @CustomType.Parameter("autoScalingGroupArn") String autoScalingGroupArn,
+        @CustomType.Parameter("managedScaling") @Nullable CapacityProviderAutoScalingGroupProviderManagedScaling managedScaling,
+        @CustomType.Parameter("managedTerminationProtection") @Nullable String managedTerminationProtection) {
         this.autoScalingGroupArn = autoScalingGroupArn;
         this.managedScaling = managedScaling;
         this.managedTerminationProtection = managedTerminationProtection;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPermissionsDataLocation extends io.pulumi.resources.Invoke
      * Amazon Resource Name (ARN) that uniquely identifies the data location resource.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
@@ -27,7 +27,7 @@ public final class GetPermissionsDataLocation extends io.pulumi.resources.Invoke
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    @InputImport(name="catalogId", required=true)
+    @Import(name="catalogId", required=true)
       private final String catalogId;
 
     public String getCatalogId() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationFilterGetArgs;
 import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationTieringGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * The name of the bucket this intelligent tiering configuration is associated with.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -32,7 +32,7 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * A bucket filter. The configuration only includes objects that meet the filter's criteria (documented below).
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<BucketIntelligentTieringConfigurationFilterGetArgs> filter;
 
     public Output<BucketIntelligentTieringConfigurationFilterGetArgs> getFilter() {
@@ -43,7 +43,7 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * The unique name used to identify the S3 Intelligent-Tiering configuration for the bucket.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * Specifies the status of the configuration. Valid values: `Enabled`, `Disabled`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -65,7 +65,7 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
      * The S3 Intelligent-Tiering storage class tiers of the configuration (documented below).
      * 
      */
-    @InputImport(name="tierings")
+    @Import(name="tierings")
       private final @Nullable Output<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings;
 
     public Output<List<BucketIntelligentTieringConfigurationTieringGetArgs>> getTierings() {

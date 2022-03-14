@@ -8,7 +8,7 @@ import io.pulumi.aws.devicefarm.DevicePoolArgs;
 import io.pulumi.aws.devicefarm.inputs.DevicePoolState;
 import io.pulumi.aws.devicefarm.outputs.DevicePoolRule;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class DevicePool extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name of this Device Pool
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class DevicePool extends io.pulumi.resources.CustomResource {
      * The device pool's description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class DevicePool extends io.pulumi.resources.CustomResource {
      * The number of devices that Device Farm can add to your device pool.
      * 
      */
-    @OutputExport(name="maxDevices", type=Integer.class, parameters={})
+    @Export(name="maxDevices", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxDevices;
 
     /**
@@ -78,7 +78,7 @@ public class DevicePool extends io.pulumi.resources.CustomResource {
      * The name of the Device Pool
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class DevicePool extends io.pulumi.resources.CustomResource {
      * The ARN of the project for the device pool.
      * 
      */
-    @OutputExport(name="projectArn", type=String.class, parameters={})
+    @Export(name="projectArn", type=String.class, parameters={})
     private Output<String> projectArn;
 
     /**
@@ -106,7 +106,7 @@ public class DevicePool extends io.pulumi.resources.CustomResource {
      * The device pool's rules. See Rule.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={DevicePoolRule.class})
+    @Export(name="rules", type=List.class, parameters={DevicePoolRule.class})
     private Output<List<DevicePoolRule>> rules;
 
     /**
@@ -120,7 +120,7 @@ public class DevicePool extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class DevicePool extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -144,7 +144,7 @@ public class DevicePool extends io.pulumi.resources.CustomResource {
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll;
     }
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     public Output<String> getType() {

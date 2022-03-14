@@ -8,7 +8,7 @@ import io.pulumi.aws.s3.BucketMetricArgs;
 import io.pulumi.aws.s3.inputs.BucketMetricState;
 import io.pulumi.aws.s3.outputs.BucketMetricFilter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class BucketMetric extends io.pulumi.resources.CustomResource {
      * The name of the bucket to put metric configuration.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -47,7 +47,7 @@ public class BucketMetric extends io.pulumi.resources.CustomResource {
      * [Object filtering](http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html#metrics-configurations-filter) that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
      * 
      */
-    @OutputExport(name="filter", type=BucketMetricFilter.class, parameters={})
+    @Export(name="filter", type=BucketMetricFilter.class, parameters={})
     private Output</* @Nullable */ BucketMetricFilter> filter;
 
     /**
@@ -61,7 +61,7 @@ public class BucketMetric extends io.pulumi.resources.CustomResource {
      * Unique identifier of the metrics configuration for the bucket.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.OntapFileSystemDiskIopsConfigurationGetArgs;
 import io.pulumi.aws.fsx.inputs.OntapFileSystemEndpointGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * Amazon Resource Name of the file system.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days.
      * 
      */
-    @InputImport(name="automaticBackupRetentionDays")
+    @Import(name="automaticBackupRetentionDays")
       private final @Nullable Output<Integer> automaticBackupRetentionDays;
 
     public Output<Integer> getAutomaticBackupRetentionDays() {
@@ -45,7 +45,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. Requires `automatic_backup_retention_days` to be set.
      * 
      */
-    @InputImport(name="dailyAutomaticBackupStartTime")
+    @Import(name="dailyAutomaticBackupStartTime")
       private final @Nullable Output<String> dailyAutomaticBackupStartTime;
 
     public Output<String> getDailyAutomaticBackupStartTime() {
@@ -56,7 +56,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * - The filesystem deployment type. Only `MULTI_AZ_1` is supported.
      * 
      */
-    @InputImport(name="deploymentType")
+    @Import(name="deploymentType")
       private final @Nullable Output<String> deploymentType;
 
     public Output<String> getDeploymentType() {
@@ -67,7 +67,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system. See Disk Iops Configuration Below.
      * 
      */
-    @InputImport(name="diskIopsConfiguration")
+    @Import(name="diskIopsConfiguration")
       private final @Nullable Output<OntapFileSystemDiskIopsConfigurationGetArgs> diskIopsConfiguration;
 
     public Output<OntapFileSystemDiskIopsConfigurationGetArgs> getDiskIopsConfiguration() {
@@ -78,7 +78,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * The Domain Name Service (DNS) name for the file system. You can mount your file system using its DNS name.
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -89,7 +89,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * Specifies the IP address range in which the endpoints to access your file system will be created. By default, Amazon FSx selects an unused IP address range for you from the 198.19.* range.
      * 
      */
-    @InputImport(name="endpointIpAddressRange")
+    @Import(name="endpointIpAddressRange")
       private final @Nullable Output<String> endpointIpAddressRange;
 
     public Output<String> getEndpointIpAddressRange() {
@@ -100,7 +100,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * The endpoints that are used to access data or to manage the file system using the NetApp ONTAP CLI, REST API, or NetApp SnapMirror. See Endpoints below.
      * 
      */
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable Output<List<OntapFileSystemEndpointGetArgs>> endpoints;
 
     public Output<List<OntapFileSystemEndpointGetArgs>> getEndpoints() {
@@ -111,7 +111,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * The ONTAP administrative password for the fsxadmin user that you can use to administer your file system using the ONTAP CLI and REST API.
      * 
      */
-    @InputImport(name="fsxAdminPassword")
+    @Import(name="fsxAdminPassword")
       private final @Nullable Output<String> fsxAdminPassword;
 
     public Output<String> getFsxAdminPassword() {
@@ -122,7 +122,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * ARN for the KMS Key to encrypt the file system at rest, Defaults to an AWS managed KMS Key.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -133,7 +133,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * Set of Elastic Network Interface identifiers from which the file system is accessible The first network interface returned is the primary network interface.
      * 
      */
-    @InputImport(name="networkInterfaceIds")
+    @Import(name="networkInterfaceIds")
       private final @Nullable Output<List<String>> networkInterfaceIds;
 
     public Output<List<String>> getNetworkInterfaceIds() {
@@ -144,7 +144,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * AWS account identifier that created the file system.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -155,7 +155,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * The ID for a subnet. A subnet is a range of IP addresses in your virtual private cloud (VPC).
      * 
      */
-    @InputImport(name="preferredSubnetId")
+    @Import(name="preferredSubnetId")
       private final @Nullable Output<String> preferredSubnetId;
 
     public Output<String> getPreferredSubnetId() {
@@ -166,7 +166,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * Specifies the VPC route tables in which your file system's endpoints will be created. You should specify all VPC route tables associated with the subnets in which your clients are located. By default, Amazon FSx selects your VPC's default route table.
      * 
      */
-    @InputImport(name="routeTableIds")
+    @Import(name="routeTableIds")
       private final @Nullable Output<List<String>> routeTableIds;
 
     public Output<List<String>> getRouteTableIds() {
@@ -177,7 +177,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -188,7 +188,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * The storage capacity (GiB) of the file system. Valid values between `1024` and `196608`.
      * 
      */
-    @InputImport(name="storageCapacity")
+    @Import(name="storageCapacity")
       private final @Nullable Output<Integer> storageCapacity;
 
     public Output<Integer> getStorageCapacity() {
@@ -199,7 +199,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * - The filesystem storage type. defaults to `SSD`.
      * 
      */
-    @InputImport(name="storageType")
+    @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
@@ -210,7 +210,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * A list of IDs for the subnets that the file system will be accessible from. Exactly 2 subnets need to be provided.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -221,7 +221,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -232,14 +232,14 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
-    @InputImport(name="throughputCapacity")
+    @Import(name="throughputCapacity")
       private final @Nullable Output<Integer> throughputCapacity;
 
     public Output<Integer> getThroughputCapacity() {
@@ -250,7 +250,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * Identifier of the Virtual Private Cloud for the file system.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
@@ -261,7 +261,7 @@ public final class OntapFileSystemState extends io.pulumi.resources.ResourceArgs
      * The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in the UTC time zone.
      * 
      */
-    @InputImport(name="weeklyMaintenanceStartTime")
+    @Import(name="weeklyMaintenanceStartTime")
       private final @Nullable Output<String> weeklyMaintenanceStartTime;
 
     public Output<String> getWeeklyMaintenanceStartTime() {

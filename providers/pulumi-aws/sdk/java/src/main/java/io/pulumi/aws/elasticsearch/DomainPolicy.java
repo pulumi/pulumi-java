@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.elasticsearch.DomainPolicyArgs;
 import io.pulumi.aws.elasticsearch.inputs.DomainPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public class DomainPolicy extends io.pulumi.resources.CustomResource {
      * IAM policy document specifying the access policies for the domain
      * 
      */
-    @OutputExport(name="accessPolicies", type=String.class, parameters={})
+    @Export(name="accessPolicies", type=String.class, parameters={})
     private Output<String> accessPolicies;
 
     /**
@@ -38,7 +38,7 @@ public class DomainPolicy extends io.pulumi.resources.CustomResource {
      * Name of the domain.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**

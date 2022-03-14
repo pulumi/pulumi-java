@@ -4,12 +4,12 @@
 package io.pulumi.aws.synthetics.outputs;
 
 import io.pulumi.aws.synthetics.outputs.CanaryArtifactConfigS3Encryption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanaryArtifactConfig {
     /**
      * Configuration of the encryption-at-rest settings for artifacts that the canary uploads to Amazon S3. See S3 Encryption.
@@ -17,8 +17,8 @@ public final class CanaryArtifactConfig {
      */
     private final @Nullable CanaryArtifactConfigS3Encryption s3Encryption;
 
-    @OutputCustomType.Constructor
-    private CanaryArtifactConfig(@OutputCustomType.Parameter("s3Encryption") @Nullable CanaryArtifactConfigS3Encryption s3Encryption) {
+    @CustomType.Constructor
+    private CanaryArtifactConfig(@CustomType.Parameter("s3Encryption") @Nullable CanaryArtifactConfigS3Encryption s3Encryption) {
         this.s3Encryption = s3Encryption;
     }
 

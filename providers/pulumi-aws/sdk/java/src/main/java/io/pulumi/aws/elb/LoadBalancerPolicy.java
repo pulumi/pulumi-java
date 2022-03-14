@@ -9,7 +9,7 @@ import io.pulumi.aws.elb.inputs.LoadBalancerPolicyState;
 import io.pulumi.aws.elb.outputs.LoadBalancerPolicyPolicyAttribute;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class LoadBalancerPolicy extends io.pulumi.resources.CustomResource {
      * The load balancer on which the policy is defined.
      * 
      */
-    @OutputExport(name="loadBalancerName", type=String.class, parameters={})
+    @Export(name="loadBalancerName", type=String.class, parameters={})
     private Output<String> loadBalancerName;
 
     /**
@@ -41,7 +41,7 @@ public class LoadBalancerPolicy extends io.pulumi.resources.CustomResource {
      * Policy attribute to apply to the policy.
      * 
      */
-    @OutputExport(name="policyAttributes", type=List.class, parameters={LoadBalancerPolicyPolicyAttribute.class})
+    @Export(name="policyAttributes", type=List.class, parameters={LoadBalancerPolicyPolicyAttribute.class})
     private Output<List<LoadBalancerPolicyPolicyAttribute>> policyAttributes;
 
     /**
@@ -55,7 +55,7 @@ public class LoadBalancerPolicy extends io.pulumi.resources.CustomResource {
      * The name of the load balancer policy.
      * 
      */
-    @OutputExport(name="policyName", type=String.class, parameters={})
+    @Export(name="policyName", type=String.class, parameters={})
     private Output<String> policyName;
 
     /**
@@ -69,7 +69,7 @@ public class LoadBalancerPolicy extends io.pulumi.resources.CustomResource {
      * The policy type.
      * 
      */
-    @OutputExport(name="policyTypeName", type=String.class, parameters={})
+    @Export(name="policyTypeName", type=String.class, parameters={})
     private Output<String> policyTypeName;
 
     /**

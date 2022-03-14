@@ -8,7 +8,7 @@ import io.pulumi.aws.docdb.GlobalClusterArgs;
 import io.pulumi.aws.docdb.inputs.GlobalClusterState;
 import io.pulumi.aws.docdb.outputs.GlobalClusterGlobalClusterMember;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -49,7 +49,7 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
      * Global Cluster Amazon Resource Name (ARN)
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -63,7 +63,7 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
      * Name for an automatically created database on cluster creation.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output</* @Nullable */ String> databaseName;
 
     /**
@@ -77,7 +77,7 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
      * If the Global Cluster should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
      * 
      */
-    @OutputExport(name="deletionProtection", type=Boolean.class, parameters={})
+    @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
     /**
@@ -87,7 +87,7 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Boolean> getDeletionProtection() {
         return this.deletionProtection;
     }
-    @OutputExport(name="engine", type=String.class, parameters={})
+    @Export(name="engine", type=String.class, parameters={})
     private Output<String> engine;
 
     public Output<String> getEngine() {
@@ -98,7 +98,7 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
      * * **NOTE:** Upgrading major versions is not supported.
      * 
      */
-    @OutputExport(name="engineVersion", type=String.class, parameters={})
+    @Export(name="engineVersion", type=String.class, parameters={})
     private Output<String> engineVersion;
 
     /**
@@ -113,7 +113,7 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
      * The global cluster identifier.
      * 
      */
-    @OutputExport(name="globalClusterIdentifier", type=String.class, parameters={})
+    @Export(name="globalClusterIdentifier", type=String.class, parameters={})
     private Output<String> globalClusterIdentifier;
 
     /**
@@ -127,7 +127,7 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
      * Set of objects containing Global Cluster members.
      * 
      */
-    @OutputExport(name="globalClusterMembers", type=List.class, parameters={GlobalClusterGlobalClusterMember.class})
+    @Export(name="globalClusterMembers", type=List.class, parameters={GlobalClusterGlobalClusterMember.class})
     private Output<List<GlobalClusterGlobalClusterMember>> globalClusterMembers;
 
     /**
@@ -141,7 +141,7 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
      * AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed.
      * 
      */
-    @OutputExport(name="globalClusterResourceId", type=String.class, parameters={})
+    @Export(name="globalClusterResourceId", type=String.class, parameters={})
     private Output<String> globalClusterResourceId;
 
     /**
@@ -151,19 +151,19 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
     public Output<String> getGlobalClusterResourceId() {
         return this.globalClusterResourceId;
     }
-    @OutputExport(name="sourceDbClusterIdentifier", type=String.class, parameters={})
+    @Export(name="sourceDbClusterIdentifier", type=String.class, parameters={})
     private Output<String> sourceDbClusterIdentifier;
 
     public Output<String> getSourceDbClusterIdentifier() {
         return this.sourceDbClusterIdentifier;
     }
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     public Output<String> getStatus() {
         return this.status;
     }
-    @OutputExport(name="storageEncrypted", type=Boolean.class, parameters={})
+    @Export(name="storageEncrypted", type=Boolean.class, parameters={})
     private Output<Boolean> storageEncrypted;
 
     public Output<Boolean> getStorageEncrypted() {

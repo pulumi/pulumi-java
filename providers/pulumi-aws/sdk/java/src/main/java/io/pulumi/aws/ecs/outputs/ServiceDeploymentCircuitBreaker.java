@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceDeploymentCircuitBreaker {
     /**
      * Whether to enable the deployment circuit breaker logic for the service.
@@ -20,10 +20,10 @@ public final class ServiceDeploymentCircuitBreaker {
      */
     private final Boolean rollback;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceDeploymentCircuitBreaker(
-        @OutputCustomType.Parameter("enable") Boolean enable,
-        @OutputCustomType.Parameter("rollback") Boolean rollback) {
+        @CustomType.Parameter("enable") Boolean enable,
+        @CustomType.Parameter("rollback") Boolean rollback) {
         this.enable = enable;
         this.rollback = rollback;
     }

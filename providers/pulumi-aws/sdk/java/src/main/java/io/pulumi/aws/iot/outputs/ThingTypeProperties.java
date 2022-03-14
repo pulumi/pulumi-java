@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThingTypeProperties {
     /**
      * The description of the thing type.
@@ -23,10 +23,10 @@ public final class ThingTypeProperties {
      */
     private final @Nullable List<String> searchableAttributes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThingTypeProperties(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("searchableAttributes") @Nullable List<String> searchableAttributes) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("searchableAttributes") @Nullable List<String> searchableAttributes) {
         this.description = description;
         this.searchableAttributes = searchableAttributes;
     }

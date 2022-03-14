@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainIdentityResult {
     /**
      * The ARN of the domain identity.
@@ -30,12 +30,12 @@ public final class GetDomainIdentityResult {
      */
     private final String verificationToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainIdentityResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("verificationToken") String verificationToken) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("verificationToken") String verificationToken) {
         this.arn = arn;
         this.domain = domain;
         this.id = id;

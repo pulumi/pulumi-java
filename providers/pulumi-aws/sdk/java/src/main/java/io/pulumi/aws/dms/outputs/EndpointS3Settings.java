@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.dms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointS3Settings {
     /**
      * S3 Bucket Object prefix.
@@ -78,21 +78,21 @@ public final class EndpointS3Settings {
      */
     private final @Nullable String serviceAccessRoleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointS3Settings(
-        @OutputCustomType.Parameter("bucketFolder") @Nullable String bucketFolder,
-        @OutputCustomType.Parameter("bucketName") @Nullable String bucketName,
-        @OutputCustomType.Parameter("compressionType") @Nullable String compressionType,
-        @OutputCustomType.Parameter("csvDelimiter") @Nullable String csvDelimiter,
-        @OutputCustomType.Parameter("csvRowDelimiter") @Nullable String csvRowDelimiter,
-        @OutputCustomType.Parameter("dataFormat") @Nullable String dataFormat,
-        @OutputCustomType.Parameter("datePartitionEnabled") @Nullable Boolean datePartitionEnabled,
-        @OutputCustomType.Parameter("encryptionMode") @Nullable String encryptionMode,
-        @OutputCustomType.Parameter("externalTableDefinition") @Nullable String externalTableDefinition,
-        @OutputCustomType.Parameter("parquetTimestampInMillisecond") @Nullable Boolean parquetTimestampInMillisecond,
-        @OutputCustomType.Parameter("parquetVersion") @Nullable String parquetVersion,
-        @OutputCustomType.Parameter("serverSideEncryptionKmsKeyId") @Nullable String serverSideEncryptionKmsKeyId,
-        @OutputCustomType.Parameter("serviceAccessRoleArn") @Nullable String serviceAccessRoleArn) {
+        @CustomType.Parameter("bucketFolder") @Nullable String bucketFolder,
+        @CustomType.Parameter("bucketName") @Nullable String bucketName,
+        @CustomType.Parameter("compressionType") @Nullable String compressionType,
+        @CustomType.Parameter("csvDelimiter") @Nullable String csvDelimiter,
+        @CustomType.Parameter("csvRowDelimiter") @Nullable String csvRowDelimiter,
+        @CustomType.Parameter("dataFormat") @Nullable String dataFormat,
+        @CustomType.Parameter("datePartitionEnabled") @Nullable Boolean datePartitionEnabled,
+        @CustomType.Parameter("encryptionMode") @Nullable String encryptionMode,
+        @CustomType.Parameter("externalTableDefinition") @Nullable String externalTableDefinition,
+        @CustomType.Parameter("parquetTimestampInMillisecond") @Nullable Boolean parquetTimestampInMillisecond,
+        @CustomType.Parameter("parquetVersion") @Nullable String parquetVersion,
+        @CustomType.Parameter("serverSideEncryptionKmsKeyId") @Nullable String serverSideEncryptionKmsKeyId,
+        @CustomType.Parameter("serviceAccessRoleArn") @Nullable String serviceAccessRoleArn) {
         this.bucketFolder = bucketFolder;
         this.bucketName = bucketName;
         this.compressionType = compressionType;

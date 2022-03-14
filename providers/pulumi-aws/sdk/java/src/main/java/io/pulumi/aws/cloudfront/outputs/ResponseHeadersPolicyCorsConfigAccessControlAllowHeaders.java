@@ -3,18 +3,18 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicyCorsConfigAccessControlAllowHeaders {
     private final @Nullable List<String> items;
 
-    @OutputCustomType.Constructor
-    private ResponseHeadersPolicyCorsConfigAccessControlAllowHeaders(@OutputCustomType.Parameter("items") @Nullable List<String> items) {
+    @CustomType.Constructor
+    private ResponseHeadersPolicyCorsConfigAccessControlAllowHeaders(@CustomType.Parameter("items") @Nullable List<String> items) {
         this.items = items;
     }
 

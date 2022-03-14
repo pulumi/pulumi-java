@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * Map of key-value pairs associated with the user.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -30,7 +30,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * The friendly IAM user name to match.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

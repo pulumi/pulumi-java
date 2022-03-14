@@ -9,7 +9,7 @@ import io.pulumi.aws.iot.inputs.ThingGroupState;
 import io.pulumi.aws.iot.outputs.ThingGroupMetadata;
 import io.pulumi.aws.iot.outputs.ThingGroupProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class ThingGroup extends io.pulumi.resources.CustomResource {
      * The ARN of the Thing Group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class ThingGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="metadatas", type=List.class, parameters={ThingGroupMetadata.class})
+    @Export(name="metadatas", type=List.class, parameters={ThingGroupMetadata.class})
     private Output<List<ThingGroupMetadata>> metadatas;
 
     public Output<List<ThingGroupMetadata>> getMetadatas() {
@@ -57,7 +57,7 @@ public class ThingGroup extends io.pulumi.resources.CustomResource {
      * The name of the Thing Group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -71,7 +71,7 @@ public class ThingGroup extends io.pulumi.resources.CustomResource {
      * The name of the parent Thing Group.
      * 
      */
-    @OutputExport(name="parentGroupName", type=String.class, parameters={})
+    @Export(name="parentGroupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> parentGroupName;
 
     /**
@@ -85,7 +85,7 @@ public class ThingGroup extends io.pulumi.resources.CustomResource {
      * The Thing Group properties. Defined below.
      * 
      */
-    @OutputExport(name="properties", type=ThingGroupProperties.class, parameters={})
+    @Export(name="properties", type=ThingGroupProperties.class, parameters={})
     private Output</* @Nullable */ ThingGroupProperties> properties;
 
     /**
@@ -99,7 +99,7 @@ public class ThingGroup extends io.pulumi.resources.CustomResource {
      * Key-value mapping of resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -109,7 +109,7 @@ public class ThingGroup extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -119,7 +119,7 @@ public class ThingGroup extends io.pulumi.resources.CustomResource {
      * The current version of the Thing Group record in the registry.
      * 
      */
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**

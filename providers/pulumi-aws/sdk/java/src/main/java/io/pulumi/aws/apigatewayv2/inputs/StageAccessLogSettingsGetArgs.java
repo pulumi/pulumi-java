@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class StageAccessLogSettingsGetArgs extends io.pulumi.resources.Res
      * The ARN of the CloudWatch Logs log group to receive access logs. Any trailing `:*` is trimmed from the ARN.
      * 
      */
-    @InputImport(name="destinationArn", required=true)
+    @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
     public Output<String> getDestinationArn() {
@@ -28,7 +28,7 @@ public final class StageAccessLogSettingsGetArgs extends io.pulumi.resources.Res
      * A single line [format](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats) of the access logs of data, as specified by [selected $context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html).
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<String> format;
 
     public Output<String> getFormat() {

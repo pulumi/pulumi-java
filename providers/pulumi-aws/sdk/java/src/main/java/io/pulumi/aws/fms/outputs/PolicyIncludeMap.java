@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.fms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyIncludeMap {
     /**
      * A list of AWS Organization member Accounts that you want to include for this AWS FMS Policy.
@@ -22,10 +22,10 @@ public final class PolicyIncludeMap {
      */
     private final @Nullable List<String> orgunits;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyIncludeMap(
-        @OutputCustomType.Parameter("accounts") @Nullable List<String> accounts,
-        @OutputCustomType.Parameter("orgunits") @Nullable List<String> orgunits) {
+        @CustomType.Parameter("accounts") @Nullable List<String> accounts,
+        @CustomType.Parameter("orgunits") @Nullable List<String> orgunits) {
         this.accounts = accounts;
         this.orgunits = orgunits;
     }

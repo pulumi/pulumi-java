@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
      * 
      */
-    @InputImport(name="defaultRunProperties")
+    @Import(name="defaultRunProperties")
       private final @Nullable Output<Map<String,Object>> defaultRunProperties;
 
     public Output<Map<String,Object>> getDefaultRunProperties() {
@@ -32,7 +32,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the workflow.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
      * 
      */
-    @InputImport(name="maxConcurrentRuns")
+    @Import(name="maxConcurrentRuns")
       private final @Nullable Output<Integer> maxConcurrentRuns;
 
     public Output<Integer> getMaxConcurrentRuns() {
@@ -54,7 +54,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * The name you assign to this workflow.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

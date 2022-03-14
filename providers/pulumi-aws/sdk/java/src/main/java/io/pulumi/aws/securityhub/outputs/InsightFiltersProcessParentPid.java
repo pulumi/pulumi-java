@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.securityhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InsightFiltersProcessParentPid {
     /**
      * The equal-to condition to be applied to a single field when querying for findings, provided as a String.
@@ -27,11 +27,11 @@ public final class InsightFiltersProcessParentPid {
      */
     private final @Nullable String lte;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InsightFiltersProcessParentPid(
-        @OutputCustomType.Parameter("eq") @Nullable String eq,
-        @OutputCustomType.Parameter("gte") @Nullable String gte,
-        @OutputCustomType.Parameter("lte") @Nullable String lte) {
+        @CustomType.Parameter("eq") @Nullable String eq,
+        @CustomType.Parameter("gte") @Nullable String gte,
+        @CustomType.Parameter("lte") @Nullable String lte) {
         this.eq = eq;
         this.gte = gte;
         this.lte = lte;

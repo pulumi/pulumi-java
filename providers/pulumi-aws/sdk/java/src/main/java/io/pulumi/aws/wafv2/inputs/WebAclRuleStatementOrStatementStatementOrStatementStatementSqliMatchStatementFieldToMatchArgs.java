@@ -11,7 +11,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementOrState
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchUriPathArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementSq
      * Inspect all query arguments.
      * 
      */
-    @InputImport(name="allQueryArguments")
+    @Import(name="allQueryArguments")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
     public Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
@@ -35,7 +35,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementSq
      * Inspect the request body, which immediately follows the request headers.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body;
 
     public Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchBodyArgs> getBody() {
@@ -46,7 +46,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementSq
      * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method;
 
     public Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchMethodArgs> getMethod() {
@@ -57,7 +57,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementSq
      * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString;
 
     public Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> getQueryString() {
@@ -68,7 +68,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementSq
      * Inspect a single header. See Single Header below for details.
      * 
      */
-    @InputImport(name="singleHeader")
+    @Import(name="singleHeader")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
     public Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
@@ -79,7 +79,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementSq
      * Inspect a single query argument. See Single Query Argument below for details.
      * 
      */
-    @InputImport(name="singleQueryArgument")
+    @Import(name="singleQueryArgument")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
     public Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
@@ -90,7 +90,7 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementSq
      * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
      */
-    @InputImport(name="uriPath")
+    @Import(name="uriPath")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath;
 
     public Output<WebAclRuleStatementOrStatementStatementOrStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> getUriPath() {

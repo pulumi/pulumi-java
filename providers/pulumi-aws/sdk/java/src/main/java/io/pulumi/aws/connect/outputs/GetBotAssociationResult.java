@@ -4,11 +4,11 @@
 package io.pulumi.aws.connect.outputs;
 
 import io.pulumi.aws.connect.outputs.GetBotAssociationLexBot;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBotAssociationResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -18,11 +18,11 @@ public final class GetBotAssociationResult {
     private final String instanceId;
     private final GetBotAssociationLexBot lexBot;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBotAssociationResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("lexBot") GetBotAssociationLexBot lexBot) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("lexBot") GetBotAssociationLexBot lexBot) {
         this.id = id;
         this.instanceId = instanceId;
         this.lexBot = lexBot;

@@ -4,10 +4,10 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualRouterSpecListenerPortMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualRouterSpecListener {
     /**
      * The port mapping information for the listener.
@@ -15,8 +15,8 @@ public final class VirtualRouterSpecListener {
      */
     private final VirtualRouterSpecListenerPortMapping portMapping;
 
-    @OutputCustomType.Constructor
-    private VirtualRouterSpecListener(@OutputCustomType.Parameter("portMapping") VirtualRouterSpecListenerPortMapping portMapping) {
+    @CustomType.Constructor
+    private VirtualRouterSpecListener(@CustomType.Parameter("portMapping") VirtualRouterSpecListenerPortMapping portMapping) {
         this.portMapping = portMapping;
     }
 

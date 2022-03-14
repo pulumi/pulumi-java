@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.fsx.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OntapVolumeTieringPolicy {
     private final @Nullable Integer coolingPeriod;
     /**
@@ -19,10 +19,10 @@ public final class OntapVolumeTieringPolicy {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OntapVolumeTieringPolicy(
-        @OutputCustomType.Parameter("coolingPeriod") @Nullable Integer coolingPeriod,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("coolingPeriod") @Nullable Integer coolingPeriod,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.coolingPeriod = coolingPeriod;
         this.name = name;
     }

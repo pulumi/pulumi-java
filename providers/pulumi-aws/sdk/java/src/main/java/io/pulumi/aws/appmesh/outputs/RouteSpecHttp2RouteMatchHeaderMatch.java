@@ -4,13 +4,13 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttp2RouteMatchHeaderMatchRange;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecHttp2RouteMatchHeaderMatch {
     /**
      * The value sent by the client must match the specified value exactly. Must be between 1 and 255 characters in length.
@@ -39,13 +39,13 @@ public final class RouteSpecHttp2RouteMatchHeaderMatch {
      */
     private final @Nullable String suffix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpecHttp2RouteMatchHeaderMatch(
-        @OutputCustomType.Parameter("exact") @Nullable String exact,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("range") @Nullable RouteSpecHttp2RouteMatchHeaderMatchRange range,
-        @OutputCustomType.Parameter("regex") @Nullable String regex,
-        @OutputCustomType.Parameter("suffix") @Nullable String suffix) {
+        @CustomType.Parameter("exact") @Nullable String exact,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("range") @Nullable RouteSpecHttp2RouteMatchHeaderMatchRange range,
+        @CustomType.Parameter("regex") @Nullable String regex,
+        @CustomType.Parameter("suffix") @Nullable String suffix) {
         this.exact = exact;
         this.prefix = prefix;
         this.range = range;

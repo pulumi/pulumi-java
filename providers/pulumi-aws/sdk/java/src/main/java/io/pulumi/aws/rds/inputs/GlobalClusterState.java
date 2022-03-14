@@ -5,7 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.aws.rds.inputs.GlobalClusterGlobalClusterMemberGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * RDS Global Cluster Amazon Resource Name (ARN)
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * Name for an automatically created database on cluster creation.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -43,7 +43,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * If the Global Cluster should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -54,7 +54,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * Name of the database engine to be used for this DB cluster. The provider will only perform drift detection if a configuration value is provided. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`. Conflicts with `source_db_cluster_identifier`.
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -66,7 +66,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * * **NOTE:** When the engine is set to `aurora-mysql`, an engine version compatible with global database is required. The earliest available version is `5.7.mysql_aurora.2.06.0`.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -77,7 +77,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * Enable to remove DB Cluster members from Global Cluster on destroy. Required with `source_db_cluster_identifier`.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -88,7 +88,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * The global cluster identifier.
      * 
      */
-    @InputImport(name="globalClusterIdentifier")
+    @Import(name="globalClusterIdentifier")
       private final @Nullable Output<String> globalClusterIdentifier;
 
     public Output<String> getGlobalClusterIdentifier() {
@@ -99,7 +99,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * Set of objects containing Global Cluster members.
      * 
      */
-    @InputImport(name="globalClusterMembers")
+    @Import(name="globalClusterMembers")
       private final @Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
 
     public Output<List<GlobalClusterGlobalClusterMemberGetArgs>> getGlobalClusterMembers() {
@@ -110,7 +110,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
      * 
      */
-    @InputImport(name="globalClusterResourceId")
+    @Import(name="globalClusterResourceId")
       private final @Nullable Output<String> globalClusterResourceId;
 
     public Output<String> getGlobalClusterResourceId() {
@@ -121,7 +121,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation. The provider cannot perform drift detection of this value.
      * 
      */
-    @InputImport(name="sourceDbClusterIdentifier")
+    @Import(name="sourceDbClusterIdentifier")
       private final @Nullable Output<String> sourceDbClusterIdentifier;
 
     public Output<String> getSourceDbClusterIdentifier() {
@@ -132,7 +132,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the DB cluster is encrypted. The default is `false` unless `source_db_cluster_identifier` is specified and encrypted. The provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    @InputImport(name="storageEncrypted")
+    @Import(name="storageEncrypted")
       private final @Nullable Output<Boolean> storageEncrypted;
 
     public Output<Boolean> getStorageEncrypted() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.WorkforceCognitoConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkforceOidcConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkforceSourceIpConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) assigned by AWS to this Workforce.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * Use this parameter to configure an Amazon Cognito private workforce. A single Cognito workforce is created using and corresponds to a single Amazon Cognito user pool. Conflicts with `oidc_config`. see Cognito Config details below.
      * 
      */
-    @InputImport(name="cognitoConfig")
+    @Import(name="cognitoConfig")
       private final @Nullable Output<WorkforceCognitoConfigGetArgs> cognitoConfig;
 
     public Output<WorkforceCognitoConfigGetArgs> getCognitoConfig() {
@@ -43,7 +43,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * Use this parameter to configure a private workforce using your own OIDC Identity Provider. Conflicts with `cognito_config`. see OIDC Config details below.
      * 
      */
-    @InputImport(name="oidcConfig")
+    @Import(name="oidcConfig")
       private final @Nullable Output<WorkforceOidcConfigGetArgs> oidcConfig;
 
     public Output<WorkforceOidcConfigGetArgs> getOidcConfig() {
@@ -54,7 +54,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn't restricted to specific IP addresses. see Source Ip Config details below.
      * 
      */
-    @InputImport(name="sourceIpConfig")
+    @Import(name="sourceIpConfig")
       private final @Nullable Output<WorkforceSourceIpConfigGetArgs> sourceIpConfig;
 
     public Output<WorkforceSourceIpConfigGetArgs> getSourceIpConfig() {
@@ -65,7 +65,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * The subdomain for your OIDC Identity Provider.
      * 
      */
-    @InputImport(name="subdomain")
+    @Import(name="subdomain")
       private final @Nullable Output<String> subdomain;
 
     public Output<String> getSubdomain() {
@@ -76,7 +76,7 @@ public final class WorkforceState extends io.pulumi.resources.ResourceArgs {
      * The name of the Workforce (must be unique).
      * 
      */
-    @InputImport(name="workforceName")
+    @Import(name="workforceName")
       private final @Nullable Output<String> workforceName;
 
     public Output<String> getWorkforceName() {

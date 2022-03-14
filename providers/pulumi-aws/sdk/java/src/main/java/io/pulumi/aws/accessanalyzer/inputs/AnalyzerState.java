@@ -4,7 +4,7 @@
 package io.pulumi.aws.accessanalyzer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AnalyzerState extends io.pulumi.resources.ResourceArgs {
      * Name of the Analyzer.
      * 
      */
-    @InputImport(name="analyzerName")
+    @Import(name="analyzerName")
       private final @Nullable Output<String> analyzerName;
 
     public Output<String> getAnalyzerName() {
@@ -30,7 +30,7 @@ public final class AnalyzerState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the Analyzer.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -41,7 +41,7 @@ public final class AnalyzerState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -52,7 +52,7 @@ public final class AnalyzerState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -63,7 +63,7 @@ public final class AnalyzerState extends io.pulumi.resources.ResourceArgs {
      * Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

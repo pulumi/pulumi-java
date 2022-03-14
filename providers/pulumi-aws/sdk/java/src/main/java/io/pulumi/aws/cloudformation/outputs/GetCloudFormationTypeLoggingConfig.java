@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCloudFormationTypeLoggingConfig {
     /**
      * Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type's handlers.
@@ -20,10 +20,10 @@ public final class GetCloudFormationTypeLoggingConfig {
      */
     private final String logRoleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCloudFormationTypeLoggingConfig(
-        @OutputCustomType.Parameter("logGroupName") String logGroupName,
-        @OutputCustomType.Parameter("logRoleArn") String logRoleArn) {
+        @CustomType.Parameter("logGroupName") String logGroupName,
+        @CustomType.Parameter("logRoleArn") String logRoleArn) {
         this.logGroupName = logGroupName;
         this.logRoleArn = logRoleArn;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
      * The full ARN of the load balancer.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {
@@ -30,7 +30,7 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
      * The unique name of the load balancer.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -41,7 +41,7 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
      * A mapping of tags, each pair of which must exactly match a pair on the desired load balancer.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

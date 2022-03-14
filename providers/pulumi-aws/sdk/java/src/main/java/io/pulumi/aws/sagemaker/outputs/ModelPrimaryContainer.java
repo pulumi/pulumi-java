@@ -4,14 +4,14 @@
 package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.ModelPrimaryContainerImageConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelPrimaryContainer {
     /**
      * The DNS host name for the container.
@@ -45,14 +45,14 @@ public final class ModelPrimaryContainer {
      */
     private final @Nullable String modelDataUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelPrimaryContainer(
-        @OutputCustomType.Parameter("containerHostname") @Nullable String containerHostname,
-        @OutputCustomType.Parameter("environment") @Nullable Map<String,String> environment,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("imageConfig") @Nullable ModelPrimaryContainerImageConfig imageConfig,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("modelDataUrl") @Nullable String modelDataUrl) {
+        @CustomType.Parameter("containerHostname") @Nullable String containerHostname,
+        @CustomType.Parameter("environment") @Nullable Map<String,String> environment,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("imageConfig") @Nullable ModelPrimaryContainerImageConfig imageConfig,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("modelDataUrl") @Nullable String modelDataUrl) {
         this.containerHostname = containerHostname;
         this.environment = environment;
         this.image = image;

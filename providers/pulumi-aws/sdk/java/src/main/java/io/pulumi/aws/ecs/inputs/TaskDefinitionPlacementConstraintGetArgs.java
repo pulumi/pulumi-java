@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TaskDefinitionPlacementConstraintGetArgs extends io.pulumi.re
      * Cluster Query Language expression to apply to the constraint. For more information, see [Cluster Query Language in the Amazon EC2 Container Service Developer Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html).
      * 
      */
-    @InputImport(name="expression")
+    @Import(name="expression")
       private final @Nullable Output<String> expression;
 
     public Output<String> getExpression() {
@@ -29,7 +29,7 @@ public final class TaskDefinitionPlacementConstraintGetArgs extends io.pulumi.re
      * Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

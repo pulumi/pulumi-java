@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository. These repositories are cloned at the same level as the default repository of your notebook instance.
      * 
      */
-    @InputImport(name="additionalCodeRepositories")
+    @Import(name="additionalCodeRepositories")
       private final @Nullable Output<List<String>> additionalCodeRepositories;
 
     public Output<List<String>> getAdditionalCodeRepositories() {
@@ -33,7 +33,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The Git repository associated with the notebook instance as its default code repository. This can be either the name of a Git repository stored as a resource in your account, or the URL of a Git repository in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository.
      * 
      */
-    @InputImport(name="defaultCodeRepository")
+    @Import(name="defaultCodeRepository")
       private final @Nullable Output<String> defaultCodeRepository;
 
     public Output<String> getDefaultCodeRepository() {
@@ -55,7 +55,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * Set to `Disabled` to disable internet access to notebook. Requires `security_groups` and `subnet_id` to be set. Supported values: `Enabled` (Default) or `Disabled`. If set to `Disabled`, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC.
      * 
      */
-    @InputImport(name="directInternetAccess")
+    @Import(name="directInternetAccess")
       private final @Nullable Output<String> directInternetAccess;
 
     public Output<String> getDirectInternetAccess() {
@@ -66,7 +66,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The name of ML compute instance type.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -77,7 +77,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -88,7 +88,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The name of a lifecycle configuration to associate with the notebook instance.
      * 
      */
-    @InputImport(name="lifecycleConfigName")
+    @Import(name="lifecycleConfigName")
       private final @Nullable Output<String> lifecycleConfigName;
 
     public Output<String> getLifecycleConfigName() {
@@ -99,7 +99,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The name of the notebook instance (must be unique).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -110,7 +110,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The network interface ID that Amazon SageMaker created at the time of creating the instance. Only available when setting `subnet_id`.
      * 
      */
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -121,7 +121,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The platform identifier of the notebook instance runtime environment. This value can be either `notebook-al1-v1` or `notebook-al2-v1`, depending on which version of Amazon Linux you require.
      * 
      */
-    @InputImport(name="platformIdentifier")
+    @Import(name="platformIdentifier")
       private final @Nullable Output<String> platformIdentifier;
 
     public Output<String> getPlatformIdentifier() {
@@ -132,7 +132,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -143,7 +143,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * Whether root access is `Enabled` or `Disabled` for users of the notebook instance. The default value is `Enabled`.
      * 
      */
-    @InputImport(name="rootAccess")
+    @Import(name="rootAccess")
       private final @Nullable Output<String> rootAccess;
 
     public Output<String> getRootAccess() {
@@ -154,7 +154,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The associated security groups.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -165,7 +165,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The VPC subnet ID.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -176,7 +176,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -187,7 +187,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -198,7 +198,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The URL that you use to connect to the Jupyter notebook that is running in your notebook instance.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
@@ -209,7 +209,7 @@ public final class NotebookInstanceState extends io.pulumi.resources.ResourceArg
      * The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
      * 
      */
-    @InputImport(name="volumeSize")
+    @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {

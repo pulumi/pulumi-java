@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PartitionStorageDescriptorSortColumn {
     /**
      * The name of the column.
@@ -21,10 +21,10 @@ public final class PartitionStorageDescriptorSortColumn {
      */
     private final Integer sortOrder;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PartitionStorageDescriptorSortColumn(
-        @OutputCustomType.Parameter("column") String column,
-        @OutputCustomType.Parameter("sortOrder") Integer sortOrder) {
+        @CustomType.Parameter("column") String column,
+        @CustomType.Parameter("sortOrder") Integer sortOrder) {
         this.column = column;
         this.sortOrder = sortOrder;
     }

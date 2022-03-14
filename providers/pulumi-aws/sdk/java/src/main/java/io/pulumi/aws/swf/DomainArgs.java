@@ -4,7 +4,7 @@
 package io.pulumi.aws.swf;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The domain description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the domain. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -52,7 +52,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -63,7 +63,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Length of time that SWF will continue to retain information about the workflow execution after the workflow execution is complete, must be between 0 and 90 days.
      * 
      */
-    @InputImport(name="workflowExecutionRetentionPeriodInDays", required=true)
+    @Import(name="workflowExecutionRetentionPeriodInDays", required=true)
       private final Output<String> workflowExecutionRetentionPeriodInDays;
 
     public Output<String> getWorkflowExecutionRetentionPeriodInDays() {

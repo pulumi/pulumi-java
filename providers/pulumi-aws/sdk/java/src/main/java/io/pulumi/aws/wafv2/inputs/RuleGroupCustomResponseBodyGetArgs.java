@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class RuleGroupCustomResponseBodyGetArgs extends io.pulumi.resource
      * The payload of the custom response.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -28,7 +28,7 @@ public final class RuleGroupCustomResponseBodyGetArgs extends io.pulumi.resource
      * The type of content in the payload that you are defining in the `content` argument. Valid values are `TEXT_PLAIN`, `TEXT_HTML`, or `APPLICATION_JSON`.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -39,7 +39,7 @@ public final class RuleGroupCustomResponseBodyGetArgs extends io.pulumi.resource
      * A unique key identifying the custom response body. This is referenced by the `custom_response_body_key` argument in the Custom Response block.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {

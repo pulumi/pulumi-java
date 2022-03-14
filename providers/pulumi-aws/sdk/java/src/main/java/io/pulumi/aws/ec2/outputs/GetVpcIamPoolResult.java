@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetVpcIamPoolFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpcIamPoolResult {
     /**
      * The IP protocol assigned to this pool.
@@ -93,28 +93,28 @@ public final class GetVpcIamPoolResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpcIamPoolResult(
-        @OutputCustomType.Parameter("addressFamily") String addressFamily,
-        @OutputCustomType.Parameter("allocationDefaultNetmaskLength") Integer allocationDefaultNetmaskLength,
-        @OutputCustomType.Parameter("allocationMaxNetmaskLength") Integer allocationMaxNetmaskLength,
-        @OutputCustomType.Parameter("allocationMinNetmaskLength") Integer allocationMinNetmaskLength,
-        @OutputCustomType.Parameter("allocationResourceTags") Map<String,String> allocationResourceTags,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("autoImport") Boolean autoImport,
-        @OutputCustomType.Parameter("awsService") String awsService,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcIamPoolFilter> filters,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipamPoolId") @Nullable String ipamPoolId,
-        @OutputCustomType.Parameter("ipamScopeId") String ipamScopeId,
-        @OutputCustomType.Parameter("ipamScopeType") String ipamScopeType,
-        @OutputCustomType.Parameter("locale") String locale,
-        @OutputCustomType.Parameter("poolDepth") Integer poolDepth,
-        @OutputCustomType.Parameter("publiclyAdvertisable") Boolean publiclyAdvertisable,
-        @OutputCustomType.Parameter("sourceIpamPoolId") String sourceIpamPoolId,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("addressFamily") String addressFamily,
+        @CustomType.Parameter("allocationDefaultNetmaskLength") Integer allocationDefaultNetmaskLength,
+        @CustomType.Parameter("allocationMaxNetmaskLength") Integer allocationMaxNetmaskLength,
+        @CustomType.Parameter("allocationMinNetmaskLength") Integer allocationMinNetmaskLength,
+        @CustomType.Parameter("allocationResourceTags") Map<String,String> allocationResourceTags,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("autoImport") Boolean autoImport,
+        @CustomType.Parameter("awsService") String awsService,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("filters") @Nullable List<GetVpcIamPoolFilter> filters,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipamPoolId") @Nullable String ipamPoolId,
+        @CustomType.Parameter("ipamScopeId") String ipamScopeId,
+        @CustomType.Parameter("ipamScopeType") String ipamScopeType,
+        @CustomType.Parameter("locale") String locale,
+        @CustomType.Parameter("poolDepth") Integer poolDepth,
+        @CustomType.Parameter("publiclyAdvertisable") Boolean publiclyAdvertisable,
+        @CustomType.Parameter("sourceIpamPoolId") String sourceIpamPoolId,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.addressFamily = addressFamily;
         this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
         this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;

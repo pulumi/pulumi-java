@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.dlm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule {
     /**
      * The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
@@ -21,10 +21,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetain
      */
     private final String intervalUnit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule(
-        @OutputCustomType.Parameter("interval") Integer interval,
-        @OutputCustomType.Parameter("intervalUnit") String intervalUnit) {
+        @CustomType.Parameter("interval") Integer interval,
+        @CustomType.Parameter("intervalUnit") String intervalUnit) {
         this.interval = interval;
         this.intervalUnit = intervalUnit;
     }

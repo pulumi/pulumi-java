@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.alb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerDefaultActionForwardTargetGroup {
     /**
      * ARN of the target group.
@@ -23,10 +23,10 @@ public final class ListenerDefaultActionForwardTargetGroup {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerDefaultActionForwardTargetGroup(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.arn = arn;
         this.weight = weight;
     }

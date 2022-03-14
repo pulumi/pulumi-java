@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSubnetGroupResult {
     /**
      * The Amazon Resource Name (ARN) for the DB subnet group.
@@ -42,15 +42,15 @@ public final class GetSubnetGroupResult {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubnetGroupResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.description = description;
         this.id = id;

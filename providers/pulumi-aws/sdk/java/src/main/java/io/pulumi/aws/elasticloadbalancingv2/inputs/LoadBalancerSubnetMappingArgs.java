@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
      * The allocation ID of the Elastic IP address.
      * 
      */
-    @InputImport(name="allocationId")
+    @Import(name="allocationId")
       private final @Nullable Output<String> allocationId;
 
     public Output<String> getAllocationId() {
@@ -29,14 +29,14 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
      * An ipv6 address within the subnet to assign to the internet-facing load balancer.
      * 
      */
-    @InputImport(name="ipv6Address")
+    @Import(name="ipv6Address")
       private final @Nullable Output<String> ipv6Address;
 
     public Output<String> getIpv6Address() {
         return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
     }
 
-    @InputImport(name="outpostId")
+    @Import(name="outpostId")
       private final @Nullable Output<String> outpostId;
 
     public Output<String> getOutpostId() {
@@ -47,7 +47,7 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
      * A private ipv4 address within the subnet to assign to the internal-facing load balancer.
      * 
      */
-    @InputImport(name="privateIpv4Address")
+    @Import(name="privateIpv4Address")
       private final @Nullable Output<String> privateIpv4Address;
 
     public Output<String> getPrivateIpv4Address() {
@@ -58,7 +58,7 @@ public final class LoadBalancerSubnetMappingArgs extends io.pulumi.resources.Res
      * The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

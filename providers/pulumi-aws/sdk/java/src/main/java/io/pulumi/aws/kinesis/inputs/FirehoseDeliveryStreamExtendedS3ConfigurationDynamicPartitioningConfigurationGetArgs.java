@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
      * Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -30,7 +30,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
      * The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
      * 
      */
-    @InputImport(name="retryDuration")
+    @Import(name="retryDuration")
       private final @Nullable Output<Integer> retryDuration;
 
     public Output<Integer> getRetryDuration() {

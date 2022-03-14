@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cfg.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RemediationConfigurationParameter {
     /**
      * Name of the attribute.
@@ -27,11 +27,11 @@ public final class RemediationConfigurationParameter {
      */
     private final @Nullable String staticValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RemediationConfigurationParameter(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceValue") @Nullable String resourceValue,
-        @OutputCustomType.Parameter("staticValue") @Nullable String staticValue) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceValue") @Nullable String resourceValue,
+        @CustomType.Parameter("staticValue") @Nullable String staticValue) {
         this.name = name;
         this.resourceValue = resourceValue;
         this.staticValue = staticValue;

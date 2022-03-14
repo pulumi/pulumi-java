@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.TagArgs;
 import io.pulumi.aws.ec2.inputs.TagState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * The tag name.
      * 
      */
-    @OutputExport(name="key", type=String.class, parameters={})
+    @Export(name="key", type=String.class, parameters={})
     private Output<String> key;
 
     /**
@@ -48,7 +48,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * The ID of the EC2 resource to manage the tag for.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -62,7 +62,7 @@ public class Tag extends io.pulumi.resources.CustomResource {
      * The value of the tag.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**

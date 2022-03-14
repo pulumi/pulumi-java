@@ -5,7 +5,7 @@ package io.pulumi.aws.ssm;
 
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTargetTargetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * The description of the maintenance window target.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * The name of the maintenance window target.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.
      * 
      */
-    @InputImport(name="ownerInformation")
+    @Import(name="ownerInformation")
       private final @Nullable Output<String> ownerInformation;
 
     public Output<String> getOwnerInformation() {
@@ -53,7 +53,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * The type of target being registered with the Maintenance Window. Possible values are `INSTANCE` and `RESOURCE_GROUP`.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -65,7 +65,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * (https://docs.aws.amazon.com/systems-manager/latest/userguide/mw-cli-tutorial-targets-examples.html)
      * 
      */
-    @InputImport(name="targets", required=true)
+    @Import(name="targets", required=true)
       private final Output<List<MaintenanceWindowTargetTargetArgs>> targets;
 
     public Output<List<MaintenanceWindowTargetTargetArgs>> getTargets() {
@@ -76,7 +76,7 @@ public final class MaintenanceWindowTargetArgs extends io.pulumi.resources.Resou
      * The Id of the maintenance window to register the target with.
      * 
      */
-    @InputImport(name="windowId", required=true)
+    @Import(name="windowId", required=true)
       private final Output<String> windowId;
 
     public Output<String> getWindowId() {

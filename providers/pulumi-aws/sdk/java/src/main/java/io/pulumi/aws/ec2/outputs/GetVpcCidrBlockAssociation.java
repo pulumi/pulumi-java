@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetVpcCidrBlockAssociation {
     /**
      * The association ID for the the IPv4 CIDR block.
@@ -26,11 +26,11 @@ public final class GetVpcCidrBlockAssociation {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpcCidrBlockAssociation(
-        @OutputCustomType.Parameter("associationId") String associationId,
-        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("associationId") String associationId,
+        @CustomType.Parameter("cidrBlock") String cidrBlock,
+        @CustomType.Parameter("state") String state) {
         this.associationId = associationId;
         this.cidrBlock = cidrBlock;
         this.state = state;

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.autoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupInitialLifecycleHook {
     private final @Nullable String defaultResult;
     private final @Nullable Integer heartbeatTimeout;
@@ -24,15 +24,15 @@ public final class GroupInitialLifecycleHook {
     private final @Nullable String notificationTargetArn;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupInitialLifecycleHook(
-        @OutputCustomType.Parameter("defaultResult") @Nullable String defaultResult,
-        @OutputCustomType.Parameter("heartbeatTimeout") @Nullable Integer heartbeatTimeout,
-        @OutputCustomType.Parameter("lifecycleTransition") String lifecycleTransition,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationMetadata") @Nullable String notificationMetadata,
-        @OutputCustomType.Parameter("notificationTargetArn") @Nullable String notificationTargetArn,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
+        @CustomType.Parameter("defaultResult") @Nullable String defaultResult,
+        @CustomType.Parameter("heartbeatTimeout") @Nullable Integer heartbeatTimeout,
+        @CustomType.Parameter("lifecycleTransition") String lifecycleTransition,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationMetadata") @Nullable String notificationMetadata,
+        @CustomType.Parameter("notificationTargetArn") @Nullable String notificationTargetArn,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.defaultResult = defaultResult;
         this.heartbeatTimeout = heartbeatTimeout;
         this.lifecycleTransition = lifecycleTransition;

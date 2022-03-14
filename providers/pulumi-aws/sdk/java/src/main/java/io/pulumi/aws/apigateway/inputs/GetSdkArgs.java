@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetSdkArgs extends io.pulumi.resources.InvokeArgs {
      * A key-value map of query string parameters `sdk_type` properties of the SDK. For SDK Type of `objectivec` or `swift`, a parameter named `classPrefix` is required. For SDK Type of `android`, parameters named `groupId`, `artifactId`, `artifactVersion`, and `invokerPackage` are required. For SDK Type of `java`, parameters named `serviceName` and `javaPackageName` are required.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,String> parameters;
 
     public Map<String,String> getParameters() {
@@ -30,7 +30,7 @@ public final class GetSdkArgs extends io.pulumi.resources.InvokeArgs {
      * The identifier of the associated REST API.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final String restApiId;
 
     public String getRestApiId() {
@@ -41,7 +41,7 @@ public final class GetSdkArgs extends io.pulumi.resources.InvokeArgs {
      * The language for the generated SDK. Currently `java`, `javascript`, `android`, `objectivec` (for iOS), `swift` (for iOS), and `ruby` are supported.
      * 
      */
-    @InputImport(name="sdkType", required=true)
+    @Import(name="sdkType", required=true)
       private final String sdkType;
 
     public String getSdkType() {
@@ -52,7 +52,7 @@ public final class GetSdkArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Stage that will be exported.
      * 
      */
-    @InputImport(name="stageName", required=true)
+    @Import(name="stageName", required=true)
       private final String stageName;
 
     public String getStageName() {

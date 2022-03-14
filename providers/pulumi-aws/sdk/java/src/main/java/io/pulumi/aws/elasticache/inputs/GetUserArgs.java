@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,28 +20,28 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
      * 
      */
-    @InputImport(name="accessString")
+    @Import(name="accessString")
       private final @Nullable String accessString;
 
     public Optional<String> getAccessString() {
         return this.accessString == null ? Optional.empty() : Optional.ofNullable(this.accessString);
     }
 
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable String engine;
 
     public Optional<String> getEngine() {
         return this.engine == null ? Optional.empty() : Optional.ofNullable(this.engine);
     }
 
-    @InputImport(name="noPasswordRequired")
+    @Import(name="noPasswordRequired")
       private final @Nullable Boolean noPasswordRequired;
 
     public Optional<Boolean> getNoPasswordRequired() {
         return this.noPasswordRequired == null ? Optional.empty() : Optional.ofNullable(this.noPasswordRequired);
     }
 
-    @InputImport(name="passwords")
+    @Import(name="passwords")
       private final @Nullable List<String> passwords;
 
     public List<String> getPasswords() {
@@ -52,7 +52,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * The identifier for the user.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final String userId;
 
     public String getUserId() {
@@ -63,7 +63,7 @@ public final class GetUserArgs extends io.pulumi.resources.InvokeArgs {
      * The user name of the user.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable String userName;
 
     public Optional<String> getUserName() {

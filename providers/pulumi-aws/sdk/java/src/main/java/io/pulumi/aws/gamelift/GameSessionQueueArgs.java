@@ -5,7 +5,7 @@ package io.pulumi.aws.gamelift;
 
 import io.pulumi.aws.gamelift.inputs.GameSessionQueuePlayerLatencyPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
      * List of fleet/alias ARNs used by session queue for placing game sessions.
      * 
      */
-    @InputImport(name="destinations")
+    @Import(name="destinations")
       private final @Nullable Output<List<String>> destinations;
 
     public Output<List<String>> getDestinations() {
@@ -33,7 +33,7 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
      * Name of the session queue.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
      * One or more policies used to choose fleet based on player latency. See below.
      * 
      */
-    @InputImport(name="playerLatencyPolicies")
+    @Import(name="playerLatencyPolicies")
       private final @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> playerLatencyPolicies;
 
     public Output<List<GameSessionQueuePlayerLatencyPolicyArgs>> getPlayerLatencyPolicies() {
@@ -55,7 +55,7 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -66,7 +66,7 @@ public final class GameSessionQueueArgs extends io.pulumi.resources.ResourceArgs
      * Maximum time a game session request can remain in the queue.
      * 
      */
-    @InputImport(name="timeoutInSeconds")
+    @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
     public Output<Integer> getTimeoutInSeconds() {

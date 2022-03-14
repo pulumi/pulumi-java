@@ -8,7 +8,7 @@ import io.pulumi.aws.apigatewayv2.RouteArgs;
 import io.pulumi.aws.apigatewayv2.inputs.RouteState;
 import io.pulumi.aws.apigatewayv2.outputs.RouteRequestParameter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The API identifier.
      * 
      */
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
     /**
@@ -51,7 +51,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
      * 
      */
-    @OutputExport(name="apiKeyRequired", type=Boolean.class, parameters={})
+    @Export(name="apiKeyRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> apiKeyRequired;
 
     /**
@@ -65,7 +65,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
      * 
      */
-    @OutputExport(name="authorizationScopes", type=List.class, parameters={String.class})
+    @Export(name="authorizationScopes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> authorizationScopes;
 
     /**
@@ -82,7 +82,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Defaults to `NONE`.
      * 
      */
-    @OutputExport(name="authorizationType", type=String.class, parameters={})
+    @Export(name="authorizationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationType;
 
     /**
@@ -99,7 +99,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
      * 
      */
-    @OutputExport(name="authorizerId", type=String.class, parameters={})
+    @Export(name="authorizerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerId;
 
     /**
@@ -113,7 +113,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
      * 
      */
-    @OutputExport(name="modelSelectionExpression", type=String.class, parameters={})
+    @Export(name="modelSelectionExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> modelSelectionExpression;
 
     /**
@@ -127,7 +127,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The operation name for the route. Must be between 1 and 64 characters in length.
      * 
      */
-    @OutputExport(name="operationName", type=String.class, parameters={})
+    @Export(name="operationName", type=String.class, parameters={})
     private Output</* @Nullable */ String> operationName;
 
     /**
@@ -141,7 +141,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The request models for the route. Supported only for WebSocket APIs.
      * 
      */
-    @OutputExport(name="requestModels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="requestModels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> requestModels;
 
     /**
@@ -155,7 +155,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The request parameters for the route. Supported only for WebSocket APIs.
      * 
      */
-    @OutputExport(name="requestParameters", type=List.class, parameters={RouteRequestParameter.class})
+    @Export(name="requestParameters", type=List.class, parameters={RouteRequestParameter.class})
     private Output</* @Nullable */ List<RouteRequestParameter>> requestParameters;
 
     /**
@@ -169,7 +169,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
      * 
      */
-    @OutputExport(name="routeKey", type=String.class, parameters={})
+    @Export(name="routeKey", type=String.class, parameters={})
     private Output<String> routeKey;
 
     /**
@@ -183,7 +183,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
      * 
      */
-    @OutputExport(name="routeResponseSelectionExpression", type=String.class, parameters={})
+    @Export(name="routeResponseSelectionExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> routeResponseSelectionExpression;
 
     /**
@@ -197,7 +197,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
      * 
      */
-    @OutputExport(name="target", type=String.class, parameters={})
+    @Export(name="target", type=String.class, parameters={})
     private Output</* @Nullable */ String> target;
 
     /**

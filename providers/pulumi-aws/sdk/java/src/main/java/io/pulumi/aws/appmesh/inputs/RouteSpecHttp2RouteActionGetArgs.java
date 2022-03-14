@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteActionWeightedTargetGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class RouteSpecHttp2RouteActionGetArgs extends io.pulumi.resources.
      * You can specify one or more targets and their relative weights with which to distribute traffic.
      * 
      */
-    @InputImport(name="weightedTargets", required=true)
+    @Import(name="weightedTargets", required=true)
       private final Output<List<RouteSpecHttp2RouteActionWeightedTargetGetArgs>> weightedTargets;
 
     public Output<List<RouteSpecHttp2RouteActionWeightedTargetGetArgs>> getWeightedTargets() {

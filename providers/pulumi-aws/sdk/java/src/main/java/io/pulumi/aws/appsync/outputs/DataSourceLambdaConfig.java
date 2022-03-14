@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceLambdaConfig {
     /**
      * The ARN for the Lambda function.
@@ -15,8 +15,8 @@ public final class DataSourceLambdaConfig {
      */
     private final String functionArn;
 
-    @OutputCustomType.Constructor
-    private DataSourceLambdaConfig(@OutputCustomType.Parameter("functionArn") String functionArn) {
+    @CustomType.Constructor
+    private DataSourceLambdaConfig(@CustomType.Parameter("functionArn") String functionArn) {
         this.functionArn = functionArn;
     }
 

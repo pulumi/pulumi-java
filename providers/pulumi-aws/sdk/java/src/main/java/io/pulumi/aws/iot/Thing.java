@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iot.ThingArgs;
 import io.pulumi.aws.iot.inputs.ThingState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Thing extends io.pulumi.resources.CustomResource {
      * The ARN of the thing.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Thing extends io.pulumi.resources.CustomResource {
      * Map of attributes of the thing.
      * 
      */
-    @OutputExport(name="attributes", type=Map.class, parameters={String.class, String.class})
+    @Export(name="attributes", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> attributes;
 
     /**
@@ -62,7 +62,7 @@ public class Thing extends io.pulumi.resources.CustomResource {
      * The default client ID.
      * 
      */
-    @OutputExport(name="defaultClientId", type=String.class, parameters={})
+    @Export(name="defaultClientId", type=String.class, parameters={})
     private Output<String> defaultClientId;
 
     /**
@@ -76,7 +76,7 @@ public class Thing extends io.pulumi.resources.CustomResource {
      * The name of the thing.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -90,7 +90,7 @@ public class Thing extends io.pulumi.resources.CustomResource {
      * The thing type name.
      * 
      */
-    @OutputExport(name="thingTypeName", type=String.class, parameters={})
+    @Export(name="thingTypeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> thingTypeName;
 
     /**
@@ -104,7 +104,7 @@ public class Thing extends io.pulumi.resources.CustomResource {
      * The current version of the thing record in the registry.
      * 
      */
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**

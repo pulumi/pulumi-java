@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVpcPeeringConnectionCidrBlockSet extends io.pulumi.resourc
      * The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
      * 
      */
-    @InputImport(name="cidrBlock", required=true)
+    @Import(name="cidrBlock", required=true)
       private final String cidrBlock;
 
     public String getCidrBlock() {

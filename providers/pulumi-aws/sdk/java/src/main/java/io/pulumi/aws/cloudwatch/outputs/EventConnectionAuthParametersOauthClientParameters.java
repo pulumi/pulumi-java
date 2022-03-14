@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EventConnectionAuthParametersOauthClientParameters {
     /**
      * The client ID for the credentials to use for authorization. Created and stored in AWS Secrets Manager.
@@ -20,10 +20,10 @@ public final class EventConnectionAuthParametersOauthClientParameters {
      */
     private final String clientSecret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventConnectionAuthParametersOauthClientParameters(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("clientSecret") String clientSecret) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("clientSecret") String clientSecret) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
     }

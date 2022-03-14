@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.timestreamwrite.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableRetentionProperties {
     /**
      * The duration for which data must be stored in the magnetic store. Minimum value of 1. Maximum value of 73000.
@@ -20,10 +20,10 @@ public final class TableRetentionProperties {
      */
     private final Integer memoryStoreRetentionPeriodInHours;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableRetentionProperties(
-        @OutputCustomType.Parameter("magneticStoreRetentionPeriodInDays") Integer magneticStoreRetentionPeriodInDays,
-        @OutputCustomType.Parameter("memoryStoreRetentionPeriodInHours") Integer memoryStoreRetentionPeriodInHours) {
+        @CustomType.Parameter("magneticStoreRetentionPeriodInDays") Integer magneticStoreRetentionPeriodInDays,
+        @CustomType.Parameter("memoryStoreRetentionPeriodInHours") Integer memoryStoreRetentionPeriodInHours) {
         this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
         this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
     }

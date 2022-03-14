@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetCoipPoolFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class GetCoipPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetCoipPoolArgs Empty = new GetCoipPoolArgs();
 
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetCoipPoolFilter> filters;
 
     public List<GetCoipPoolFilter> getFilters() {
@@ -28,7 +28,7 @@ public final class GetCoipPoolArgs extends io.pulumi.resources.InvokeArgs {
      * Local Gateway Route Table Id assigned to desired COIP Pool
      * 
      */
-    @InputImport(name="localGatewayRouteTableId")
+    @Import(name="localGatewayRouteTableId")
       private final @Nullable String localGatewayRouteTableId;
 
     public Optional<String> getLocalGatewayRouteTableId() {
@@ -39,7 +39,7 @@ public final class GetCoipPoolArgs extends io.pulumi.resources.InvokeArgs {
      * The id of the specific COIP Pool to retrieve.
      * 
      */
-    @InputImport(name="poolId")
+    @Import(name="poolId")
       private final @Nullable String poolId;
 
     public Optional<String> getPoolId() {
@@ -51,7 +51,7 @@ public final class GetCoipPoolArgs extends io.pulumi.resources.InvokeArgs {
      * a pair on the desired COIP Pool.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

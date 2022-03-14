@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApplicationSslConfigurationArgs extends io.pulumi.resources.R
      * The contents of the certificate's domain.crt file.
      * 
      */
-    @InputImport(name="certificate", required=true)
+    @Import(name="certificate", required=true)
       private final Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -29,7 +29,7 @@ public final class ApplicationSslConfigurationArgs extends io.pulumi.resources.R
      * Can be used to specify an intermediate certificate authority key or client authentication.
      * 
      */
-    @InputImport(name="chain")
+    @Import(name="chain")
       private final @Nullable Output<String> chain;
 
     public Output<String> getChain() {
@@ -40,7 +40,7 @@ public final class ApplicationSslConfigurationArgs extends io.pulumi.resources.R
      * The private key; the contents of the certificate's domain.key file.
      * 
      */
-    @InputImport(name="privateKey", required=true)
+    @Import(name="privateKey", required=true)
       private final Output<String> privateKey;
 
     public Output<String> getPrivateKey() {

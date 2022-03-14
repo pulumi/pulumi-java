@@ -6,7 +6,7 @@ package io.pulumi.aws.s3control.inputs;
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsPublicAccessBlockGetArgs;
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsRegionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
      * The name of the Multi-Region Access Point.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -32,7 +32,7 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
      * Configuration block to manage the `PublicAccessBlock` configuration that you want to apply to this Multi-Region Access Point. You can enable the configuration options in any combination. See Public Access Block Configuration below for more details.
      * 
      */
-    @InputImport(name="publicAccessBlock")
+    @Import(name="publicAccessBlock")
       private final @Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock;
 
     public Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> getPublicAccessBlock() {
@@ -43,7 +43,7 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
      * The Region configuration block to specify the bucket associated with the Multi-Region Access Point. See Region Configuration below for more details.
      * 
      */
-    @InputImport(name="regions", required=true)
+    @Import(name="regions", required=true)
       private final Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions;
 
     public Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> getRegions() {

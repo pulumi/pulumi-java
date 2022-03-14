@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.acm.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * The domain of the certificate to look up. If no certificate is found with this name, an error will be returned.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final String domain;
 
     public String getDomain() {
@@ -32,7 +32,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * A list of key algorithms to filter certificates. By default, ACM does not return all certificate types when searching. See the [ACM API Reference](https://docs.aws.amazon.com/acm/latest/APIReference/API_CertificateDetail.html#ACM-Type-CertificateDetail-KeyAlgorithm) for supported key algorithms.
      * 
      */
-    @InputImport(name="keyTypes")
+    @Import(name="keyTypes")
       private final @Nullable List<String> keyTypes;
 
     public List<String> getKeyTypes() {
@@ -43,7 +43,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * If set to true, it sorts the certificates matched by previous criteria by the NotBefore field, returning only the most recent one. If set to false, it returns an error if more than one certificate is found. Defaults to false.
      * 
      */
-    @InputImport(name="mostRecent")
+    @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
@@ -56,7 +56,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * are returned.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable List<String> statuses;
 
     public List<String> getStatuses() {
@@ -67,7 +67,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * A mapping of tags for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -78,7 +78,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * A list of types on which to filter the returned list. Valid values are `AMAZON_ISSUED` and `IMPORTED`.
      * 
      */
-    @InputImport(name="types")
+    @Import(name="types")
       private final @Nullable List<String> types;
 
     public List<String> getTypes() {

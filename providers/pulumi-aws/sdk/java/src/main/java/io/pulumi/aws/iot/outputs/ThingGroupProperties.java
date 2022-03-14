@@ -4,13 +4,13 @@
 package io.pulumi.aws.iot.outputs;
 
 import io.pulumi.aws.iot.outputs.ThingGroupPropertiesAttributePayload;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThingGroupProperties {
     /**
      * The Thing Group attributes. Defined below.
@@ -23,10 +23,10 @@ public final class ThingGroupProperties {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThingGroupProperties(
-        @OutputCustomType.Parameter("attributePayload") @Nullable ThingGroupPropertiesAttributePayload attributePayload,
-        @OutputCustomType.Parameter("description") @Nullable String description) {
+        @CustomType.Parameter("attributePayload") @Nullable ThingGroupPropertiesAttributePayload attributePayload,
+        @CustomType.Parameter("description") @Nullable String description) {
         this.attributePayload = attributePayload;
         this.description = description;
     }

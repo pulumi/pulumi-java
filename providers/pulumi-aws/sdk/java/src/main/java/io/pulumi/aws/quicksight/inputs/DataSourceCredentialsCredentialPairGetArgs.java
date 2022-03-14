@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DataSourceCredentialsCredentialPairGetArgs extends io.pulumi.
      * Password, maximum length of 1024 characters.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -28,7 +28,7 @@ public final class DataSourceCredentialsCredentialPairGetArgs extends io.pulumi.
      * User name, maximum length of 64 characters.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

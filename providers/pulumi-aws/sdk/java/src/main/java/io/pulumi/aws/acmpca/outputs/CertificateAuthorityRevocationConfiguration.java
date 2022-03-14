@@ -4,12 +4,12 @@
 package io.pulumi.aws.acmpca.outputs;
 
 import io.pulumi.aws.acmpca.outputs.CertificateAuthorityRevocationConfigurationCrlConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityRevocationConfiguration {
     /**
      * Nested argument containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority. Defined below.
@@ -17,8 +17,8 @@ public final class CertificateAuthorityRevocationConfiguration {
      */
     private final @Nullable CertificateAuthorityRevocationConfigurationCrlConfiguration crlConfiguration;
 
-    @OutputCustomType.Constructor
-    private CertificateAuthorityRevocationConfiguration(@OutputCustomType.Parameter("crlConfiguration") @Nullable CertificateAuthorityRevocationConfigurationCrlConfiguration crlConfiguration) {
+    @CustomType.Constructor
+    private CertificateAuthorityRevocationConfiguration(@CustomType.Parameter("crlConfiguration") @Nullable CertificateAuthorityRevocationConfigurationCrlConfiguration crlConfiguration) {
         this.crlConfiguration = crlConfiguration;
     }
 

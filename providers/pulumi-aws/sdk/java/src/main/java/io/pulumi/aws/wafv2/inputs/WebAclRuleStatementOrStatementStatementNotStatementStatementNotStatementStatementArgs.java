@@ -12,7 +12,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementNotStat
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementSqliMatchStatementArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementXssMatchStatementArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
      * A rule statement that defines a string match search for AWS WAF to apply to web requests. See Byte Match Statement below for details.
      * 
      */
-    @InputImport(name="byteMatchStatement")
+    @Import(name="byteMatchStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementArgs> byteMatchStatement;
 
     public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementByteMatchStatementArgs> getByteMatchStatement() {
@@ -36,7 +36,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
      * A rule statement used to identify web requests based on country of origin. See GEO Match Statement below for details.
      * 
      */
-    @InputImport(name="geoMatchStatement")
+    @Import(name="geoMatchStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGeoMatchStatementArgs> geoMatchStatement;
 
     public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementGeoMatchStatementArgs> getGeoMatchStatement() {
@@ -47,7 +47,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
      * A rule statement used to detect web requests coming from particular IP addresses or address ranges. See IP Set Reference Statement below for details.
      * 
      */
-    @InputImport(name="ipSetReferenceStatement")
+    @Import(name="ipSetReferenceStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementArgs> ipSetReferenceStatement;
 
     public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementIpSetReferenceStatementArgs> getIpSetReferenceStatement() {
@@ -58,7 +58,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
      * A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL. See Label Match Statement below for details.
      * 
      */
-    @InputImport(name="labelMatchStatement")
+    @Import(name="labelMatchStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementLabelMatchStatementArgs> labelMatchStatement;
 
     public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementLabelMatchStatementArgs> getLabelMatchStatement() {
@@ -69,7 +69,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
      * A rule statement used to search web request components for matches with regular expressions. See Regex Pattern Set Reference Statement below for details.
      * 
      */
-    @InputImport(name="regexPatternSetReferenceStatement")
+    @Import(name="regexPatternSetReferenceStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
 
     public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementRegexPatternSetReferenceStatementArgs> getRegexPatternSetReferenceStatement() {
@@ -80,7 +80,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
      * A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than (>) or less than (<). See Size Constraint Statement below for more details.
      * 
      */
-    @InputImport(name="sizeConstraintStatement")
+    @Import(name="sizeConstraintStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementSizeConstraintStatementArgs> sizeConstraintStatement;
 
     public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementSizeConstraintStatementArgs> getSizeConstraintStatement() {
@@ -91,7 +91,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
      * An SQL injection match condition identifies the part of web requests, such as the URI or the query string, that you want AWS WAF to inspect. See SQL Injection Match Statement below for details.
      * 
      */
-    @InputImport(name="sqliMatchStatement")
+    @Import(name="sqliMatchStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementSqliMatchStatementArgs> sqliMatchStatement;
 
     public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementSqliMatchStatementArgs> getSqliMatchStatement() {
@@ -102,7 +102,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementN
      * A rule statement that defines a cross-site scripting (XSS) match search for AWS WAF to apply to web requests. See XSS Match Statement below for details.
      * 
      */
-    @InputImport(name="xssMatchStatement")
+    @Import(name="xssMatchStatement")
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementXssMatchStatementArgs> xssMatchStatement;
 
     public Output<WebAclRuleStatementOrStatementStatementNotStatementStatementNotStatementStatementXssMatchStatementArgs> getXssMatchStatement() {

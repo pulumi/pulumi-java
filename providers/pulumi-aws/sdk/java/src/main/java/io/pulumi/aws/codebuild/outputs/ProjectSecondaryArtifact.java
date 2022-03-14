@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectSecondaryArtifact {
     /**
      * Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
@@ -63,18 +63,18 @@ public final class ProjectSecondaryArtifact {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectSecondaryArtifact(
-        @OutputCustomType.Parameter("artifactIdentifier") String artifactIdentifier,
-        @OutputCustomType.Parameter("bucketOwnerAccess") @Nullable String bucketOwnerAccess,
-        @OutputCustomType.Parameter("encryptionDisabled") @Nullable Boolean encryptionDisabled,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("namespaceType") @Nullable String namespaceType,
-        @OutputCustomType.Parameter("overrideArtifactName") @Nullable Boolean overrideArtifactName,
-        @OutputCustomType.Parameter("packaging") @Nullable String packaging,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("artifactIdentifier") String artifactIdentifier,
+        @CustomType.Parameter("bucketOwnerAccess") @Nullable String bucketOwnerAccess,
+        @CustomType.Parameter("encryptionDisabled") @Nullable Boolean encryptionDisabled,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("namespaceType") @Nullable String namespaceType,
+        @CustomType.Parameter("overrideArtifactName") @Nullable Boolean overrideArtifactName,
+        @CustomType.Parameter("packaging") @Nullable String packaging,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("type") String type) {
         this.artifactIdentifier = artifactIdentifier;
         this.bucketOwnerAccess = bucketOwnerAccess;
         this.encryptionDisabled = encryptionDisabled;

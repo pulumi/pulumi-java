@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront;
 
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A comment to describe the cache policy.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -31,7 +31,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
      */
-    @InputImport(name="defaultTtl")
+    @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
     public Output<Integer> getDefaultTtl() {
@@ -42,7 +42,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
      */
-    @InputImport(name="maxTtl")
+    @Import(name="maxTtl")
       private final @Nullable Output<Integer> maxTtl;
 
     public Output<Integer> getMaxTtl() {
@@ -53,7 +53,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated.
      * 
      */
-    @InputImport(name="minTtl")
+    @Import(name="minTtl")
       private final @Nullable Output<Integer> minTtl;
 
     public Output<Integer> getMinTtl() {
@@ -64,7 +64,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A unique name to identify the cache policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP headers, cookies, and URL query strings to include in the cache key. See Parameters In Cache Key And Forwarded To Origin for more information.
      * 
      */
-    @InputImport(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
+    @Import(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
 
     public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> getParametersInCacheKeyAndForwardedToOrigin() {

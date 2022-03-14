@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEventConnectionArgs extends io.pulumi.resources.InvokeArgs
      * The name of the connection.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

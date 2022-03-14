@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.MetricAlarmMetricQueryMetricGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
      * The ID of the account where the metrics are located, if this is a cross-account alarm.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -31,7 +31,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
      * The math expression to be performed on the returned data, if this object is performing a math expression. This expression can use the id of the other metrics to refer to those metrics, and can also use the id of other expressions to use the result of those expressions. For more information about metric math expressions, see Metric Math Syntax and Functions in the [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax).
      * 
      */
-    @InputImport(name="expression")
+    @Import(name="expression")
       private final @Nullable Output<String> expression;
 
     public Output<String> getExpression() {
@@ -42,7 +42,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
      * A short name used to tie this object to the results in the response. If you are performing math expressions on this set of data, this name represents that data and can serve as a variable in the mathematical expression. The valid characters are letters, numbers, and underscore. The first character must be a lowercase letter.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -53,7 +53,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
      * A human-readable label for this metric or expression. This is especially useful if this is an expression, so that you know what the value represents.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -64,7 +64,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
      * The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.
      * 
      */
-    @InputImport(name="metric")
+    @Import(name="metric")
       private final @Nullable Output<MetricAlarmMetricQueryMetricGetArgs> metric;
 
     public Output<MetricAlarmMetricQueryMetricGetArgs> getMetric() {
@@ -75,7 +75,7 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
      * Specify exactly one `metric_query` to be `true` to use that `metric_query` result as the alarm.
      * 
      */
-    @InputImport(name="returnData")
+    @Import(name="returnData")
       private final @Nullable Output<Boolean> returnData;
 
     public Output<Boolean> getReturnData() {

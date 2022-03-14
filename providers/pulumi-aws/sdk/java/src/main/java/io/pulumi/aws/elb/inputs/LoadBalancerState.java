@@ -7,7 +7,7 @@ import io.pulumi.aws.elb.inputs.LoadBalancerAccessLogsGetArgs;
 import io.pulumi.aws.elb.inputs.LoadBalancerHealthCheckGetArgs;
 import io.pulumi.aws.elb.inputs.LoadBalancerListenerGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * An Access Logs block. Access Logs documented below.
      * 
      */
-    @InputImport(name="accessLogs")
+    @Import(name="accessLogs")
       private final @Nullable Output<LoadBalancerAccessLogsGetArgs> accessLogs;
 
     public Output<LoadBalancerAccessLogsGetArgs> getAccessLogs() {
@@ -36,7 +36,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the ELB
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -47,7 +47,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The AZ's to serve traffic in.
      * 
      */
-    @InputImport(name="availabilityZones")
+    @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
@@ -58,7 +58,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * Boolean to enable connection draining. Default: `false`
      * 
      */
-    @InputImport(name="connectionDraining")
+    @Import(name="connectionDraining")
       private final @Nullable Output<Boolean> connectionDraining;
 
     public Output<Boolean> getConnectionDraining() {
@@ -69,7 +69,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The time in seconds to allow for connections to drain. Default: `300`
      * 
      */
-    @InputImport(name="connectionDrainingTimeout")
+    @Import(name="connectionDrainingTimeout")
       private final @Nullable Output<Integer> connectionDrainingTimeout;
 
     public Output<Integer> getConnectionDrainingTimeout() {
@@ -80,7 +80,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * Enable cross-zone load balancing. Default: `true`
      * 
      */
-    @InputImport(name="crossZoneLoadBalancing")
+    @Import(name="crossZoneLoadBalancing")
       private final @Nullable Output<Boolean> crossZoneLoadBalancing;
 
     public Output<Boolean> getCrossZoneLoadBalancing() {
@@ -91,7 +91,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
      * 
      */
-    @InputImport(name="desyncMitigationMode")
+    @Import(name="desyncMitigationMode")
       private final @Nullable Output<String> desyncMitigationMode;
 
     public Output<String> getDesyncMitigationMode() {
@@ -102,7 +102,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The DNS name of the ELB
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -113,7 +113,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * A health_check block. Health Check documented below.
      * 
      */
-    @InputImport(name="healthCheck")
+    @Import(name="healthCheck")
       private final @Nullable Output<LoadBalancerHealthCheckGetArgs> healthCheck;
 
     public Output<LoadBalancerHealthCheckGetArgs> getHealthCheck() {
@@ -124,7 +124,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The time in seconds that the connection is allowed to be idle. Default: `60`
      * 
      */
-    @InputImport(name="idleTimeout")
+    @Import(name="idleTimeout")
       private final @Nullable Output<Integer> idleTimeout;
 
     public Output<Integer> getIdleTimeout() {
@@ -135,7 +135,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * A list of instance ids to place in the ELB pool.
      * 
      */
-    @InputImport(name="instances")
+    @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
     public Output<List<String>> getInstances() {
@@ -146,7 +146,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * If true, ELB will be an internal ELB.
      * 
      */
-    @InputImport(name="internal")
+    @Import(name="internal")
       private final @Nullable Output<Boolean> internal;
 
     public Output<Boolean> getInternal() {
@@ -157,7 +157,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * A list of listener blocks. Listeners documented below.
      * 
      */
-    @InputImport(name="listeners")
+    @Import(name="listeners")
       private final @Nullable Output<List<LoadBalancerListenerGetArgs>> listeners;
 
     public Output<List<LoadBalancerListenerGetArgs>> getListeners() {
@@ -168,7 +168,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The name of the ELB. By default generated by this provider.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -180,7 +180,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -192,7 +192,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * Only valid if creating an ELB within a VPC
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -205,7 +205,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * instances. Use this for Classic or Default VPC only.
      * 
      */
-    @InputImport(name="sourceSecurityGroup")
+    @Import(name="sourceSecurityGroup")
       private final @Nullable Output<String> sourceSecurityGroup;
 
     public Output<String> getSourceSecurityGroup() {
@@ -218,7 +218,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * instances. Only available on ELBs launched in a VPC.
      * 
      */
-    @InputImport(name="sourceSecurityGroupId")
+    @Import(name="sourceSecurityGroupId")
       private final @Nullable Output<String> sourceSecurityGroupId;
 
     public Output<String> getSourceSecurityGroupId() {
@@ -229,7 +229,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * A list of subnet IDs to attach to the ELB.
      * 
      */
-    @InputImport(name="subnets")
+    @Import(name="subnets")
       private final @Nullable Output<List<String>> subnets;
 
     public Output<List<String>> getSubnets() {
@@ -240,7 +240,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -251,7 +251,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -262,7 +262,7 @@ public final class LoadBalancerState extends io.pulumi.resources.ResourceArgs {
      * The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
      * 
      */
-    @InputImport(name="zoneId")
+    @Import(name="zoneId")
       private final @Nullable Output<String> zoneId;
 
     public Output<String> getZoneId() {

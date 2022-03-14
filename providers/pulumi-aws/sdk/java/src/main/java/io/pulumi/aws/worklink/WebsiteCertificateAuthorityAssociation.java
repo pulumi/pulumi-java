@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.worklink.WebsiteCertificateAuthorityAssociationArgs;
 import io.pulumi.aws.worklink.inputs.WebsiteCertificateAuthorityAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * The root certificate of the Certificate Authority.
      * 
      */
-    @OutputExport(name="certificate", type=String.class, parameters={})
+    @Export(name="certificate", type=String.class, parameters={})
     private Output<String> certificate;
 
     /**
@@ -44,7 +44,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * The certificate name to display.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -58,7 +58,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * The ARN of the fleet.
      * 
      */
-    @OutputExport(name="fleetArn", type=String.class, parameters={})
+    @Export(name="fleetArn", type=String.class, parameters={})
     private Output<String> fleetArn;
 
     /**
@@ -72,7 +72,7 @@ public class WebsiteCertificateAuthorityAssociation extends io.pulumi.resources.
      * A unique identifier for the Certificate Authority.
      * 
      */
-    @OutputExport(name="websiteCaId", type=String.class, parameters={})
+    @Export(name="websiteCaId", type=String.class, parameters={})
     private Output<String> websiteCaId;
 
     /**

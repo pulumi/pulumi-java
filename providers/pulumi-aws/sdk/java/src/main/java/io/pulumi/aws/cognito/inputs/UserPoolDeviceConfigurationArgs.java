@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserPoolDeviceConfigurationArgs extends io.pulumi.resources.R
      * Whether a challenge is required on a new device. Only applicable to a new device.
      * 
      */
-    @InputImport(name="challengeRequiredOnNewDevice")
+    @Import(name="challengeRequiredOnNewDevice")
       private final @Nullable Output<Boolean> challengeRequiredOnNewDevice;
 
     public Output<Boolean> getChallengeRequiredOnNewDevice() {
@@ -29,7 +29,7 @@ public final class UserPoolDeviceConfigurationArgs extends io.pulumi.resources.R
      * Whether a device is only remembered on user prompt. `false` equates to "Always" remember, `true` is "User Opt In," and not using a `device_configuration` block is "No."
      * 
      */
-    @InputImport(name="deviceOnlyRememberedOnUserPrompt")
+    @Import(name="deviceOnlyRememberedOnUserPrompt")
       private final @Nullable Output<Boolean> deviceOnlyRememberedOnUserPrompt;
 
     public Output<Boolean> getDeviceOnlyRememberedOnUserPrompt() {

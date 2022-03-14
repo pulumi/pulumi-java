@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobExecutionProperty {
     /**
      * The maximum number of concurrent runs allowed for a job. The default is 1.
@@ -17,8 +17,8 @@ public final class JobExecutionProperty {
      */
     private final @Nullable Integer maxConcurrentRuns;
 
-    @OutputCustomType.Constructor
-    private JobExecutionProperty(@OutputCustomType.Parameter("maxConcurrentRuns") @Nullable Integer maxConcurrentRuns) {
+    @CustomType.Constructor
+    private JobExecutionProperty(@CustomType.Parameter("maxConcurrentRuns") @Nullable Integer maxConcurrentRuns) {
         this.maxConcurrentRuns = maxConcurrentRuns;
     }
 

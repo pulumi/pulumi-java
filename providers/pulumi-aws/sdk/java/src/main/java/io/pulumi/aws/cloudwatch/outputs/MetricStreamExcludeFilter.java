@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetricStreamExcludeFilter {
     /**
      * Name of the metric namespace in the filter.
@@ -15,8 +15,8 @@ public final class MetricStreamExcludeFilter {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor
-    private MetricStreamExcludeFilter(@OutputCustomType.Parameter("namespace") String namespace) {
+    @CustomType.Constructor
+    private MetricStreamExcludeFilter(@CustomType.Parameter("namespace") String namespace) {
         this.namespace = namespace;
     }
 

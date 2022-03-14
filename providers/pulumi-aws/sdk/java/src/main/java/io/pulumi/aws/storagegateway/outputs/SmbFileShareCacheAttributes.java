@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.storagegateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SmbFileShareCacheAttributes {
     /**
      * Refreshes a file share's cache by using Time To Live (TTL).
@@ -19,8 +19,8 @@ public final class SmbFileShareCacheAttributes {
      */
     private final @Nullable Integer cacheStaleTimeoutInSeconds;
 
-    @OutputCustomType.Constructor
-    private SmbFileShareCacheAttributes(@OutputCustomType.Parameter("cacheStaleTimeoutInSeconds") @Nullable Integer cacheStaleTimeoutInSeconds) {
+    @CustomType.Constructor
+    private SmbFileShareCacheAttributes(@CustomType.Parameter("cacheStaleTimeoutInSeconds") @Nullable Integer cacheStaleTimeoutInSeconds) {
         this.cacheStaleTimeoutInSeconds = cacheStaleTimeoutInSeconds;
     }
 

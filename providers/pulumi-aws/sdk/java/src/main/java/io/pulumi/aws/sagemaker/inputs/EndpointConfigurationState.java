@@ -7,7 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigG
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigGetArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationProductionVariantGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * Specifies configuration for how an endpoint performs asynchronous inference.
      * 
      */
-    @InputImport(name="asyncInferenceConfig")
+    @Import(name="asyncInferenceConfig")
       private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigGetArgs> asyncInferenceConfig;
 
     public Output<EndpointConfigurationAsyncInferenceConfigGetArgs> getAsyncInferenceConfig() {
@@ -45,7 +45,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
      * 
      */
-    @InputImport(name="dataCaptureConfig")
+    @Import(name="dataCaptureConfig")
       private final @Nullable Output<EndpointConfigurationDataCaptureConfigGetArgs> dataCaptureConfig;
 
     public Output<EndpointConfigurationDataCaptureConfigGetArgs> getDataCaptureConfig() {
@@ -56,7 +56,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -67,7 +67,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * Fields are documented below.
      * 
      */
-    @InputImport(name="productionVariants")
+    @Import(name="productionVariants")
       private final @Nullable Output<List<EndpointConfigurationProductionVariantGetArgs>> productionVariants;
 
     public Output<List<EndpointConfigurationProductionVariantGetArgs>> getProductionVariants() {
@@ -89,7 +89,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * A mapping of tags to assign to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -100,7 +100,7 @@ public final class EndpointConfigurationState extends io.pulumi.resources.Resour
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

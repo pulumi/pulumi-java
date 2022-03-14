@@ -5,7 +5,7 @@ package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.aws.quicksight.inputs.DataSourceParametersS3ManifestFileLocationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class DataSourceParametersS3GetArgs extends io.pulumi.resources.Res
      * An object containing the S3 location of the S3 manifest file.
      * 
      */
-    @InputImport(name="manifestFileLocation", required=true)
+    @Import(name="manifestFileLocation", required=true)
       private final Output<DataSourceParametersS3ManifestFileLocationGetArgs> manifestFileLocation;
 
     public Output<DataSourceParametersS3ManifestFileLocationGetArgs> getManifestFileLocation() {

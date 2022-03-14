@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NfsLocationMountOptions {
     /**
      * The specific NFS version that you want DataSync to use for mounting your NFS share. Valid values: `AUTOMATIC`, `NFS3`, `NFS4_0` and `NFS4_1`. Default: `AUTOMATIC`
@@ -17,8 +17,8 @@ public final class NfsLocationMountOptions {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
-    private NfsLocationMountOptions(@OutputCustomType.Parameter("version") @Nullable String version) {
+    @CustomType.Constructor
+    private NfsLocationMountOptions(@CustomType.Parameter("version") @Nullable String version) {
         this.version = version;
     }
 

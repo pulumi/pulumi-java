@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserSshKeyResult {
     private final String encoding;
     /**
@@ -33,15 +33,15 @@ public final class GetUserSshKeyResult {
     private final String status;
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserSshKeyResult(
-        @OutputCustomType.Parameter("encoding") String encoding,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("publicKey") String publicKey,
-        @OutputCustomType.Parameter("sshPublicKeyId") String sshPublicKeyId,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("encoding") String encoding,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("publicKey") String publicKey,
+        @CustomType.Parameter("sshPublicKeyId") String sshPublicKeyId,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("username") String username) {
         this.encoding = encoding;
         this.fingerprint = fingerprint;
         this.id = id;

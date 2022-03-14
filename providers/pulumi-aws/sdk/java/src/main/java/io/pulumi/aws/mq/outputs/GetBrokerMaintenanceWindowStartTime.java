@@ -3,21 +3,21 @@
 
 package io.pulumi.aws.mq.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBrokerMaintenanceWindowStartTime {
     private final String dayOfWeek;
     private final String timeOfDay;
     private final String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBrokerMaintenanceWindowStartTime(
-        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
-        @OutputCustomType.Parameter("timeOfDay") String timeOfDay,
-        @OutputCustomType.Parameter("timeZone") String timeZone) {
+        @CustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @CustomType.Parameter("timeOfDay") String timeOfDay,
+        @CustomType.Parameter("timeZone") String timeZone) {
         this.dayOfWeek = dayOfWeek;
         this.timeOfDay = timeOfDay;
         this.timeZone = timeZone;

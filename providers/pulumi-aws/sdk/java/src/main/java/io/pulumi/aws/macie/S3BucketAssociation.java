@@ -8,7 +8,7 @@ import io.pulumi.aws.macie.S3BucketAssociationArgs;
 import io.pulumi.aws.macie.inputs.S3BucketAssociationState;
 import io.pulumi.aws.macie.outputs.S3BucketAssociationClassificationType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -29,7 +29,7 @@ public class S3BucketAssociation extends io.pulumi.resources.CustomResource {
      * The name of the S3 bucket that you want to associate with Amazon Macie.
      * 
      */
-    @OutputExport(name="bucketName", type=String.class, parameters={})
+    @Export(name="bucketName", type=String.class, parameters={})
     private Output<String> bucketName;
 
     /**
@@ -43,7 +43,7 @@ public class S3BucketAssociation extends io.pulumi.resources.CustomResource {
      * The configuration of how Amazon Macie classifies the S3 objects.
      * 
      */
-    @OutputExport(name="classificationType", type=S3BucketAssociationClassificationType.class, parameters={})
+    @Export(name="classificationType", type=S3BucketAssociationClassificationType.class, parameters={})
     private Output<S3BucketAssociationClassificationType> classificationType;
 
     /**
@@ -57,7 +57,7 @@ public class S3BucketAssociation extends io.pulumi.resources.CustomResource {
      * The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
      * 
      */
-    @OutputExport(name="memberAccountId", type=String.class, parameters={})
+    @Export(name="memberAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> memberAccountId;
 
     /**
@@ -71,7 +71,7 @@ public class S3BucketAssociation extends io.pulumi.resources.CustomResource {
      * Object key prefix identifying one or more S3 objects to which the association applies.
      * 
      */
-    @OutputExport(name="prefix", type=String.class, parameters={})
+    @Export(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.SizeConstraintSetSizeConstraintFieldToMatchArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SizeConstraintSetSizeConstraintArgs extends io.pulumi.resourc
      * See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_wafRegional_SizeConstraint.html) for all supported values.
      * 
      */
-    @InputImport(name="comparisonOperator", required=true)
+    @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
     public Output<String> getComparisonOperator() {
@@ -32,7 +32,7 @@ public final class SizeConstraintSetSizeConstraintArgs extends io.pulumi.resourc
      * Specifies where in a web request to look for the size constraint.
      * 
      */
-    @InputImport(name="fieldToMatch", required=true)
+    @Import(name="fieldToMatch", required=true)
       private final Output<SizeConstraintSetSizeConstraintFieldToMatchArgs> fieldToMatch;
 
     public Output<SizeConstraintSetSizeConstraintFieldToMatchArgs> getFieldToMatch() {
@@ -44,7 +44,7 @@ public final class SizeConstraintSetSizeConstraintArgs extends io.pulumi.resourc
      * Valid values are between 0 - 21474836480 bytes (0 - 20 GB).
      * 
      */
-    @InputImport(name="size", required=true)
+    @Import(name="size", required=true)
       private final Output<Integer> size;
 
     public Output<Integer> getSize() {
@@ -60,7 +60,7 @@ public final class SizeConstraintSetSizeConstraintArgs extends io.pulumi.resourc
      * **Note:** if you choose `BODY` as `type`, you must choose `NONE` because CloudFront forwards only the first 8192 bytes for inspection.
      * 
      */
-    @InputImport(name="textTransformation", required=true)
+    @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
     public Output<String> getTextTransformation() {

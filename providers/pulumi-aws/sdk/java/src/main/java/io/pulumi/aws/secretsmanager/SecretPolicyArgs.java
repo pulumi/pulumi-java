@@ -4,7 +4,7 @@
 package io.pulumi.aws.secretsmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SecretPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Makes an optional API call to Zelkova to validate the Resource Policy to prevent broad access to your secret.
      * 
      */
-    @InputImport(name="blockPublicPolicy")
+    @Import(name="blockPublicPolicy")
       private final @Nullable Output<Boolean> blockPublicPolicy;
 
     public Output<Boolean> getBlockPublicPolicy() {
@@ -30,7 +30,7 @@ public final class SecretPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html). Unlike `aws.secretsmanager.Secret`, where `policy` can be set to `"{}"` to delete the policy, `"{}"` is not a valid policy since `policy` is required.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -41,7 +41,7 @@ public final class SecretPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Secret ARN.
      * 
      */
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
     public Output<String> getSecretArn() {

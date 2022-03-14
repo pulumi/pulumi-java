@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs
      * The ARN of the IAM role to be assumed by Firehose for calling the Amazon EC2 configuration API and for creating network interfaces. Make sure role has necessary [IAM permissions](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-es-vpc)
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -30,7 +30,7 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs
      * A list of security group IDs to associate with Kinesis Firehose.
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -41,14 +41,14 @@ public final class FirehoseDeliveryStreamElasticsearchConfigurationVpcConfigArgs
      * A list of subnet IDs to associate with Kinesis Firehose.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

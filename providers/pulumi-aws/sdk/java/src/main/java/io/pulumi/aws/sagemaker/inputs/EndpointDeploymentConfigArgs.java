@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigAutoRollbackConfigurationArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class EndpointDeploymentConfigArgs extends io.pulumi.resources.Reso
      * Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.
      * 
      */
-    @InputImport(name="autoRollbackConfiguration")
+    @Import(name="autoRollbackConfiguration")
       private final @Nullable Output<EndpointDeploymentConfigAutoRollbackConfigurationArgs> autoRollbackConfiguration;
 
     public Output<EndpointDeploymentConfigAutoRollbackConfigurationArgs> getAutoRollbackConfiguration() {
@@ -30,7 +30,7 @@ public final class EndpointDeploymentConfigArgs extends io.pulumi.resources.Reso
      * Update policy for a blue/green deployment. If this update policy is specified, SageMaker creates a new fleet during the deployment while maintaining the old fleet. See Blue Green Update Config.
      * 
      */
-    @InputImport(name="blueGreenUpdatePolicy", required=true)
+    @Import(name="blueGreenUpdatePolicy", required=true)
       private final Output<EndpointDeploymentConfigBlueGreenUpdatePolicyArgs> blueGreenUpdatePolicy;
 
     public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyArgs> getBlueGreenUpdatePolicy() {

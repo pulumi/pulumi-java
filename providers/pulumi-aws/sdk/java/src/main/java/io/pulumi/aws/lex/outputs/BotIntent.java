@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotIntent {
     /**
      * The name of the intent. Must be less than or equal to 100 characters in length.
@@ -20,10 +20,10 @@ public final class BotIntent {
      */
     private final String intentVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotIntent(
-        @OutputCustomType.Parameter("intentName") String intentName,
-        @OutputCustomType.Parameter("intentVersion") String intentVersion) {
+        @CustomType.Parameter("intentName") String intentName,
+        @CustomType.Parameter("intentVersion") String intentVersion) {
         this.intentName = intentName;
         this.intentVersion = intentVersion;
     }

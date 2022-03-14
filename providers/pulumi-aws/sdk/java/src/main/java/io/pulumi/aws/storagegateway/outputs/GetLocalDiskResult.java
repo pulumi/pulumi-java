@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.storagegateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLocalDiskResult {
     /**
      * The disk identifierE.g., `pci-0000:03:00.0-scsi-0:0:0:0`
@@ -23,13 +23,13 @@ public final class GetLocalDiskResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocalDiskResult(
-        @OutputCustomType.Parameter("diskId") String diskId,
-        @OutputCustomType.Parameter("diskNode") String diskNode,
-        @OutputCustomType.Parameter("diskPath") String diskPath,
-        @OutputCustomType.Parameter("gatewayArn") String gatewayArn,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("diskId") String diskId,
+        @CustomType.Parameter("diskNode") String diskNode,
+        @CustomType.Parameter("diskPath") String diskPath,
+        @CustomType.Parameter("gatewayArn") String gatewayArn,
+        @CustomType.Parameter("id") String id) {
         this.diskId = diskId;
         this.diskNode = diskNode;
         this.diskPath = diskPath;

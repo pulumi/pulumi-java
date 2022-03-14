@@ -7,7 +7,7 @@ import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCreateRuleAr
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
      * 
      */
-    @InputImport(name="copyTags")
+    @Import(name="copyTags")
       private final @Nullable Output<Boolean> copyTags;
 
     public Output<Boolean> getCopyTags() {
@@ -35,7 +35,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * See the `create_rule` block. Max of 1 per schedule.
      * 
      */
-    @InputImport(name="createRule", required=true)
+    @Import(name="createRule", required=true)
       private final Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs> createRule;
 
     public Output<LifecyclePolicyPolicyDetailsScheduleCreateRuleArgs> getCreateRule() {
@@ -46,7 +46,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * See the `cross_region_copy_rule` block. Max of 3 per schedule.
      * 
      */
-    @InputImport(name="crossRegionCopyRules")
+    @Import(name="crossRegionCopyRules")
       private final @Nullable Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>> crossRegionCopyRules;
 
     public Output<List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs>> getCrossRegionCopyRules() {
@@ -57,7 +57,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * A name for the schedule.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -68,7 +68,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
      * 
      */
-    @InputImport(name="retainRule", required=true)
+    @Import(name="retainRule", required=true)
       private final Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs> retainRule;
 
     public Output<LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs> getRetainRule() {
@@ -79,7 +79,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleArgs extends io.pulumi.re
      * A map of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
      * 
      */
-    @InputImport(name="tagsToAdd")
+    @Import(name="tagsToAdd")
       private final @Nullable Output<Map<String,String>> tagsToAdd;
 
     public Output<Map<String,String>> getTagsToAdd() {

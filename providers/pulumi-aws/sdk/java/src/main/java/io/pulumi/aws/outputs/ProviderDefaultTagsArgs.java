@@ -4,18 +4,18 @@
 package io.pulumi.aws.outputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderDefaultTagsArgs {
     private final @Nullable Output<Map<String,String>> tags;
 
-    @OutputCustomType.Constructor
-    private ProviderDefaultTagsArgs(@OutputCustomType.Parameter("tags") @Nullable Output<Map<String,String>> tags) {
+    @CustomType.Constructor
+    private ProviderDefaultTagsArgs(@CustomType.Parameter("tags") @Nullable Output<Map<String,String>> tags) {
         this.tags = tags;
     }
 

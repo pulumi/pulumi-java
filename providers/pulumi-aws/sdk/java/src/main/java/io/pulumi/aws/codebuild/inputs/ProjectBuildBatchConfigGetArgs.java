@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.ProjectBuildBatchConfigRestrictionsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * Specifies if the build artifacts for the batch build should be combined into a single artifact location.
      * 
      */
-    @InputImport(name="combineArtifacts")
+    @Import(name="combineArtifacts")
       private final @Nullable Output<Boolean> combineArtifacts;
 
     public Output<Boolean> getCombineArtifacts() {
@@ -32,7 +32,7 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * Specifies the restrictions for the batch build.
      * 
      */
-    @InputImport(name="restrictions")
+    @Import(name="restrictions")
       private final @Nullable Output<ProjectBuildBatchConfigRestrictionsGetArgs> restrictions;
 
     public Output<ProjectBuildBatchConfigRestrictionsGetArgs> getRestrictions() {
@@ -43,7 +43,7 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * Specifies the service role ARN for the batch build project.
      * 
      */
-    @InputImport(name="serviceRole", required=true)
+    @Import(name="serviceRole", required=true)
       private final Output<String> serviceRole;
 
     public Output<String> getServiceRole() {
@@ -54,7 +54,7 @@ public final class ProjectBuildBatchConfigGetArgs extends io.pulumi.resources.Re
      * Specifies the maximum amount of time, in minutes, that the batch build must be completed in.
      * 
      */
-    @InputImport(name="timeoutInMins")
+    @Import(name="timeoutInMins")
       private final @Nullable Output<Integer> timeoutInMins;
 
     public Output<Integer> getTimeoutInMins() {

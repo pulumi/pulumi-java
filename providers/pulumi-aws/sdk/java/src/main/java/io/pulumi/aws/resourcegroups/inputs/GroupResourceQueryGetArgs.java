@@ -4,7 +4,7 @@
 package io.pulumi.aws.resourcegroups.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GroupResourceQueryGetArgs extends io.pulumi.resources.Resourc
      * The resource query as a JSON string.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final Output<String> query;
 
     public Output<String> getQuery() {
@@ -29,7 +29,7 @@ public final class GroupResourceQueryGetArgs extends io.pulumi.resources.Resourc
      * The type of the resource query. Defaults to `TAG_FILTERS_1_0`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

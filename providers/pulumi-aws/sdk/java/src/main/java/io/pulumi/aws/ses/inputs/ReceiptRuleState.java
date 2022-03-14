@@ -11,7 +11,7 @@ import io.pulumi.aws.ses.inputs.ReceiptRuleSnsActionGetArgs;
 import io.pulumi.aws.ses.inputs.ReceiptRuleStopActionGetArgs;
 import io.pulumi.aws.ses.inputs.ReceiptRuleWorkmailActionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * A list of Add Header Action blocks. Documented below.
      * 
      */
-    @InputImport(name="addHeaderActions")
+    @Import(name="addHeaderActions")
       private final @Nullable Output<List<ReceiptRuleAddHeaderActionGetArgs>> addHeaderActions;
 
     public Output<List<ReceiptRuleAddHeaderActionGetArgs>> getAddHeaderActions() {
@@ -38,7 +38,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * The name of the rule to place this rule after
      * 
      */
-    @InputImport(name="after")
+    @Import(name="after")
       private final @Nullable Output<String> after;
 
     public Output<String> getAfter() {
@@ -49,7 +49,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * The SES receipt rule ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -60,7 +60,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * A list of Bounce Action blocks. Documented below.
      * 
      */
-    @InputImport(name="bounceActions")
+    @Import(name="bounceActions")
       private final @Nullable Output<List<ReceiptRuleBounceActionGetArgs>> bounceActions;
 
     public Output<List<ReceiptRuleBounceActionGetArgs>> getBounceActions() {
@@ -71,7 +71,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * If true, the rule will be enabled
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -82,7 +82,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * A list of Lambda Action blocks. Documented below.
      * 
      */
-    @InputImport(name="lambdaActions")
+    @Import(name="lambdaActions")
       private final @Nullable Output<List<ReceiptRuleLambdaActionGetArgs>> lambdaActions;
 
     public Output<List<ReceiptRuleLambdaActionGetArgs>> getLambdaActions() {
@@ -93,7 +93,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * The name of the rule
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -104,7 +104,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * A list of email addresses
      * 
      */
-    @InputImport(name="recipients")
+    @Import(name="recipients")
       private final @Nullable Output<List<String>> recipients;
 
     public Output<List<String>> getRecipients() {
@@ -115,7 +115,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * The name of the rule set
      * 
      */
-    @InputImport(name="ruleSetName")
+    @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
     public Output<String> getRuleSetName() {
@@ -126,7 +126,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * A list of S3 Action blocks. Documented below.
      * 
      */
-    @InputImport(name="s3Actions")
+    @Import(name="s3Actions")
       private final @Nullable Output<List<ReceiptRuleS3ActionGetArgs>> s3Actions;
 
     public Output<List<ReceiptRuleS3ActionGetArgs>> getS3Actions() {
@@ -137,7 +137,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * If true, incoming emails will be scanned for spam and viruses
      * 
      */
-    @InputImport(name="scanEnabled")
+    @Import(name="scanEnabled")
       private final @Nullable Output<Boolean> scanEnabled;
 
     public Output<Boolean> getScanEnabled() {
@@ -148,7 +148,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * A list of SNS Action blocks. Documented below.
      * 
      */
-    @InputImport(name="snsActions")
+    @Import(name="snsActions")
       private final @Nullable Output<List<ReceiptRuleSnsActionGetArgs>> snsActions;
 
     public Output<List<ReceiptRuleSnsActionGetArgs>> getSnsActions() {
@@ -159,7 +159,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * A list of Stop Action blocks. Documented below.
      * 
      */
-    @InputImport(name="stopActions")
+    @Import(name="stopActions")
       private final @Nullable Output<List<ReceiptRuleStopActionGetArgs>> stopActions;
 
     public Output<List<ReceiptRuleStopActionGetArgs>> getStopActions() {
@@ -170,7 +170,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * `Require` or `Optional`
      * 
      */
-    @InputImport(name="tlsPolicy")
+    @Import(name="tlsPolicy")
       private final @Nullable Output<String> tlsPolicy;
 
     public Output<String> getTlsPolicy() {
@@ -181,7 +181,7 @@ public final class ReceiptRuleState extends io.pulumi.resources.ResourceArgs {
      * A list of WorkMail Action blocks. Documented below.
      * 
      */
-    @InputImport(name="workmailActions")
+    @Import(name="workmailActions")
       private final @Nullable Output<List<ReceiptRuleWorkmailActionGetArgs>> workmailActions;
 
     public Output<List<ReceiptRuleWorkmailActionGetArgs>> getWorkmailActions() {

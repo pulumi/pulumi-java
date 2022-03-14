@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
      * The description of the API documentation version.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
      * The ID of the associated Rest API
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
     public Output<String> getRestApiId() {
@@ -40,7 +40,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
      * The version identifier of the API documentation snapshot.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<String> version;
 
     public Output<String> getVersion() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TriggerPredicateConditionArgs extends io.pulumi.resources.Res
      * The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
      * 
      */
-    @InputImport(name="crawlState")
+    @Import(name="crawlState")
       private final @Nullable Output<String> crawlState;
 
     public Output<String> getCrawlState() {
@@ -29,7 +29,7 @@ public final class TriggerPredicateConditionArgs extends io.pulumi.resources.Res
      * The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
      * 
      */
-    @InputImport(name="crawlerName")
+    @Import(name="crawlerName")
       private final @Nullable Output<String> crawlerName;
 
     public Output<String> getCrawlerName() {
@@ -40,7 +40,7 @@ public final class TriggerPredicateConditionArgs extends io.pulumi.resources.Res
      * The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
      * 
      */
-    @InputImport(name="jobName")
+    @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
     public Output<String> getJobName() {
@@ -51,7 +51,7 @@ public final class TriggerPredicateConditionArgs extends io.pulumi.resources.Res
      * A logical operator. Defaults to `EQUALS`.
      * 
      */
-    @InputImport(name="logicalOperator")
+    @Import(name="logicalOperator")
       private final @Nullable Output<String> logicalOperator;
 
     public Output<String> getLogicalOperator() {
@@ -62,7 +62,7 @@ public final class TriggerPredicateConditionArgs extends io.pulumi.resources.Res
      * The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {

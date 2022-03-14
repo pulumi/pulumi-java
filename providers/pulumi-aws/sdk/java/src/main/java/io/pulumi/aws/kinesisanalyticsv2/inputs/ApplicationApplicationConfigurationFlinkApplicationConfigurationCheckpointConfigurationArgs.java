@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes the interval in milliseconds between checkpoint operations.
      * 
      */
-    @InputImport(name="checkpointInterval")
+    @Import(name="checkpointInterval")
       private final @Nullable Output<Integer> checkpointInterval;
 
     public Output<Integer> getCheckpointInterval() {
@@ -31,7 +31,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.
      * 
      */
-    @InputImport(name="checkpointingEnabled")
+    @Import(name="checkpointingEnabled")
       private final @Nullable Output<Boolean> checkpointingEnabled;
 
     public Output<Boolean> getCheckpointingEnabled() {
@@ -45,7 +45,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * * `min_pause_between_checkpoints = 5000`
      * 
      */
-    @InputImport(name="configurationType", required=true)
+    @Import(name="configurationType", required=true)
       private final Output<String> configurationType;
 
     public Output<String> getConfigurationType() {
@@ -56,7 +56,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes the minimum time in milliseconds after a checkpoint operation completes that a new checkpoint operation can start.
      * 
      */
-    @InputImport(name="minPauseBetweenCheckpoints")
+    @Import(name="minPauseBetweenCheckpoints")
       private final @Nullable Output<Integer> minPauseBetweenCheckpoints;
 
     public Output<Integer> getMinPauseBetweenCheckpoints() {

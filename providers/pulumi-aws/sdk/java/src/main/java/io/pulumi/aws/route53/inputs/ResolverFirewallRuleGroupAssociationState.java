@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * The ARN (Amazon Resource Name) of the firewall rule group association.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * The unique identifier of the firewall rule group.
      * 
      */
-    @InputImport(name="firewallRuleGroupId")
+    @Import(name="firewallRuleGroupId")
       private final @Nullable Output<String> firewallRuleGroupId;
 
     public Output<String> getFirewallRuleGroupId() {
@@ -42,7 +42,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * If enabled, this setting disallows modification or removal of the association, to help prevent against accidentally altering DNS firewall protections. Valid values: `ENABLED`, `DISABLED`.
      * 
      */
-    @InputImport(name="mutationProtection")
+    @Import(name="mutationProtection")
       private final @Nullable Output<String> mutationProtection;
 
     public Output<String> getMutationProtection() {
@@ -53,7 +53,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * A name that lets you identify the rule group association, to manage and use it.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * The setting that determines the processing order of the rule group among the rule groups that you associate with the specified VPC. DNS Firewall filters VPC traffic starting from the rule group with the lowest numeric priority setting.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -75,7 +75,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -86,7 +86,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -97,7 +97,7 @@ public final class ResolverFirewallRuleGroupAssociationState extends io.pulumi.r
      * The unique identifier of the VPC that you want to associate with the rule group.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TaskExcludesArgs extends io.pulumi.resources.ResourceArgs {
      * The type of filter rule to apply. Valid values: `SIMPLE_PATTERN`.
      * 
      */
-    @InputImport(name="filterType")
+    @Import(name="filterType")
       private final @Nullable Output<String> filterType;
 
     public Output<String> getFilterType() {
@@ -29,7 +29,7 @@ public final class TaskExcludesArgs extends io.pulumi.resources.ResourceArgs {
      * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|" (that is, a pipe), for example: `/folder1|/folder2`
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

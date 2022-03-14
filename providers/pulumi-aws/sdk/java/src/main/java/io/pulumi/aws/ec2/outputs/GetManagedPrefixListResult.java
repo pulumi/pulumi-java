@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetManagedPrefixListEntry;
 import io.pulumi.aws.ec2.outputs.GetManagedPrefixListFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedPrefixListResult {
     /**
      * The address family of the prefix list. Valid values are `IPv4` and `IPv6`.
@@ -58,18 +58,18 @@ public final class GetManagedPrefixListResult {
     private final Map<String,String> tags;
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedPrefixListResult(
-        @OutputCustomType.Parameter("addressFamily") String addressFamily,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("entries") List<GetManagedPrefixListEntry> entries,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetManagedPrefixListFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("maxEntries") Integer maxEntries,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("addressFamily") String addressFamily,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("entries") List<GetManagedPrefixListEntry> entries,
+        @CustomType.Parameter("filters") @Nullable List<GetManagedPrefixListFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("maxEntries") Integer maxEntries,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("version") Integer version) {
         this.addressFamily = addressFamily;
         this.arn = arn;
         this.entries = entries;

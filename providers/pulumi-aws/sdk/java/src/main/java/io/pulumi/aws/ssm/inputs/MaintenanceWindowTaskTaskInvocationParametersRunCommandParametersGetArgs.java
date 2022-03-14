@@ -7,7 +7,7 @@ import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRun
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * Configuration options for sending command output to CloudWatch Logs. Documented below.
      * 
      */
-    @InputImport(name="cloudwatchConfig")
+    @Import(name="cloudwatchConfig")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs> cloudwatchConfig;
 
     public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfigGetArgs> getCloudwatchConfig() {
@@ -34,7 +34,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * Information about the command(s) to execute.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -45,7 +45,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
      * 
      */
-    @InputImport(name="documentHash")
+    @Import(name="documentHash")
       private final @Nullable Output<String> documentHash;
 
     public Output<String> getDocumentHash() {
@@ -56,7 +56,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
      * 
      */
-    @InputImport(name="documentHashType")
+    @Import(name="documentHashType")
       private final @Nullable Output<String> documentHashType;
 
     public Output<String> getDocumentHashType() {
@@ -67,7 +67,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * The version of an Automation document to use during task execution.
      * 
      */
-    @InputImport(name="documentVersion")
+    @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
     public Output<String> getDocumentVersion() {
@@ -78,7 +78,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
      * 
      */
-    @InputImport(name="notificationConfig")
+    @Import(name="notificationConfig")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs> notificationConfig;
 
     public Output<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs> getNotificationConfig() {
@@ -89,7 +89,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * The name of the Amazon S3 bucket.
      * 
      */
-    @InputImport(name="outputS3Bucket")
+    @Import(name="outputS3Bucket")
       private final @Nullable Output<String> outputS3Bucket;
 
     public Output<String> getOutputS3Bucket() {
@@ -100,7 +100,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * The Amazon S3 bucket subfolder.
      * 
      */
-    @InputImport(name="outputS3KeyPrefix")
+    @Import(name="outputS3KeyPrefix")
       private final @Nullable Output<String> outputS3KeyPrefix;
 
     public Output<String> getOutputS3KeyPrefix() {
@@ -111,7 +111,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * The parameters for the RUN_COMMAND task execution. Documented below.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs>> parameters;
 
     public Output<List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameterGetArgs>> getParameters() {
@@ -122,7 +122,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * The IAM service role to assume during task execution.
      * 
      */
-    @InputImport(name="serviceRoleArn")
+    @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
     public Output<String> getServiceRoleArn() {
@@ -133,7 +133,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      * If this time is reached and the command has not already started executing, it doesn't run.
      * 
      */
-    @InputImport(name="timeoutSeconds")
+    @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
     public Output<Integer> getTimeoutSeconds() {

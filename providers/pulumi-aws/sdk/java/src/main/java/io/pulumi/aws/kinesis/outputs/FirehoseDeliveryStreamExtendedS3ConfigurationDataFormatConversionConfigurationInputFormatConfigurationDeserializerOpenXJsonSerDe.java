@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe {
     /**
      * When set to true, which is the default, Kinesis Data Firehose converts JSON keys to lowercase before deserializing them.
@@ -29,11 +29,11 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      */
     private final @Nullable Boolean convertDotsInJsonKeysToUnderscores;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe(
-        @OutputCustomType.Parameter("caseInsensitive") @Nullable Boolean caseInsensitive,
-        @OutputCustomType.Parameter("columnToJsonKeyMappings") @Nullable Map<String,String> columnToJsonKeyMappings,
-        @OutputCustomType.Parameter("convertDotsInJsonKeysToUnderscores") @Nullable Boolean convertDotsInJsonKeysToUnderscores) {
+        @CustomType.Parameter("caseInsensitive") @Nullable Boolean caseInsensitive,
+        @CustomType.Parameter("columnToJsonKeyMappings") @Nullable Map<String,String> columnToJsonKeyMappings,
+        @CustomType.Parameter("convertDotsInJsonKeysToUnderscores") @Nullable Boolean convertDotsInJsonKeysToUnderscores) {
         this.caseInsensitive = caseInsensitive;
         this.columnToJsonKeyMappings = columnToJsonKeyMappings;
         this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class BrokerUserArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user. Applies to `engine_type` of `ActiveMQ` only.
      * 
      */
-    @InputImport(name="consoleAccess")
+    @Import(name="consoleAccess")
       private final @Nullable Output<Boolean> consoleAccess;
 
     public Output<Boolean> getConsoleAccess() {
@@ -31,7 +31,7 @@ public final class BrokerUserArgs extends io.pulumi.resources.ResourceArgs {
      * List of groups (20 maximum) to which the ActiveMQ user belongs. Applies to `engine_type` of `ActiveMQ` only.
      * 
      */
-    @InputImport(name="groups")
+    @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {
@@ -42,7 +42,7 @@ public final class BrokerUserArgs extends io.pulumi.resources.ResourceArgs {
      * Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -53,7 +53,7 @@ public final class BrokerUserArgs extends io.pulumi.resources.ResourceArgs {
      * Username of the user.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

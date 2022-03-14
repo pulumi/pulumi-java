@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RegexPatternSetRegularExpressionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
      * The Amazon Resource Name (ARN) that identifies the cluster.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,14 +32,14 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
      * A friendly description of the regular expression pattern set.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="lockToken")
+    @Import(name="lockToken")
       private final @Nullable Output<String> lockToken;
 
     public Output<String> getLockToken() {
@@ -50,7 +50,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
      * A friendly name of the regular expression pattern set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -61,7 +61,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
      * One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
      * 
      */
-    @InputImport(name="regularExpressions")
+    @Import(name="regularExpressions")
       private final @Nullable Output<List<RegexPatternSetRegularExpressionGetArgs>> regularExpressions;
 
     public Output<List<RegexPatternSetRegularExpressionGetArgs>> getRegularExpressions() {
@@ -72,7 +72,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
      * Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
@@ -83,7 +83,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
      * An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -94,7 +94,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

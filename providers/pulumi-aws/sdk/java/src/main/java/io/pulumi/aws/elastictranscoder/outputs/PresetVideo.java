@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elastictranscoder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PresetVideo {
     /**
      * The display aspect ratio of the video in the output file. Valid values are: `auto`, `1:1`, `4:3`, `3:2`, `16:9`. (Note; to better control resolution and aspect ratio of output videos, we recommend that you use the values `max_width`, `max_height`, `sizing_policy`, `padding_policy`, and `display_aspect_ratio` instead of `resolution` and `aspect_ratio`.)
@@ -77,21 +77,21 @@ public final class PresetVideo {
      */
     private final @Nullable String sizingPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PresetVideo(
-        @OutputCustomType.Parameter("aspectRatio") @Nullable String aspectRatio,
-        @OutputCustomType.Parameter("bitRate") @Nullable String bitRate,
-        @OutputCustomType.Parameter("codec") @Nullable String codec,
-        @OutputCustomType.Parameter("displayAspectRatio") @Nullable String displayAspectRatio,
-        @OutputCustomType.Parameter("fixedGop") @Nullable String fixedGop,
-        @OutputCustomType.Parameter("frameRate") @Nullable String frameRate,
-        @OutputCustomType.Parameter("keyframesMaxDist") @Nullable String keyframesMaxDist,
-        @OutputCustomType.Parameter("maxFrameRate") @Nullable String maxFrameRate,
-        @OutputCustomType.Parameter("maxHeight") @Nullable String maxHeight,
-        @OutputCustomType.Parameter("maxWidth") @Nullable String maxWidth,
-        @OutputCustomType.Parameter("paddingPolicy") @Nullable String paddingPolicy,
-        @OutputCustomType.Parameter("resolution") @Nullable String resolution,
-        @OutputCustomType.Parameter("sizingPolicy") @Nullable String sizingPolicy) {
+        @CustomType.Parameter("aspectRatio") @Nullable String aspectRatio,
+        @CustomType.Parameter("bitRate") @Nullable String bitRate,
+        @CustomType.Parameter("codec") @Nullable String codec,
+        @CustomType.Parameter("displayAspectRatio") @Nullable String displayAspectRatio,
+        @CustomType.Parameter("fixedGop") @Nullable String fixedGop,
+        @CustomType.Parameter("frameRate") @Nullable String frameRate,
+        @CustomType.Parameter("keyframesMaxDist") @Nullable String keyframesMaxDist,
+        @CustomType.Parameter("maxFrameRate") @Nullable String maxFrameRate,
+        @CustomType.Parameter("maxHeight") @Nullable String maxHeight,
+        @CustomType.Parameter("maxWidth") @Nullable String maxWidth,
+        @CustomType.Parameter("paddingPolicy") @Nullable String paddingPolicy,
+        @CustomType.Parameter("resolution") @Nullable String resolution,
+        @CustomType.Parameter("sizingPolicy") @Nullable String sizingPolicy) {
         this.aspectRatio = aspectRatio;
         this.bitRate = bitRate;
         this.codec = codec;

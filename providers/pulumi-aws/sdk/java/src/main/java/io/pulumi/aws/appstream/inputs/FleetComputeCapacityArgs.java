@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
      * Number of currently available instances that can be used to stream sessions.
      * 
      */
-    @InputImport(name="available")
+    @Import(name="available")
       private final @Nullable Output<Integer> available;
 
     public Output<Integer> getAvailable() {
@@ -29,7 +29,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
      * Desired number of streaming instances.
      * 
      */
-    @InputImport(name="desiredInstances", required=true)
+    @Import(name="desiredInstances", required=true)
       private final Output<Integer> desiredInstances;
 
     public Output<Integer> getDesiredInstances() {
@@ -40,7 +40,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
      * Number of instances in use for streaming.
      * 
      */
-    @InputImport(name="inUse")
+    @Import(name="inUse")
       private final @Nullable Output<Integer> inUse;
 
     public Output<Integer> getInUse() {
@@ -51,7 +51,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
      * Total number of simultaneous streaming instances that are running.
      * 
      */
-    @InputImport(name="running")
+    @Import(name="running")
       private final @Nullable Output<Integer> running;
 
     public Output<Integer> getRunning() {

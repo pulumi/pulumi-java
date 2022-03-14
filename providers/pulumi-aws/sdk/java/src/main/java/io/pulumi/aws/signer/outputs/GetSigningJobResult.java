@@ -6,12 +6,12 @@ package io.pulumi.aws.signer.outputs;
 import io.pulumi.aws.signer.outputs.GetSigningJobRevocationRecord;
 import io.pulumi.aws.signer.outputs.GetSigningJobSignedObject;
 import io.pulumi.aws.signer.outputs.GetSigningJobSource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSigningJobResult {
     /**
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
@@ -95,25 +95,25 @@ public final class GetSigningJobResult {
      */
     private final String statusReason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSigningJobResult(
-        @OutputCustomType.Parameter("completedAt") String completedAt,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("jobId") String jobId,
-        @OutputCustomType.Parameter("jobInvoker") String jobInvoker,
-        @OutputCustomType.Parameter("jobOwner") String jobOwner,
-        @OutputCustomType.Parameter("platformDisplayName") String platformDisplayName,
-        @OutputCustomType.Parameter("platformId") String platformId,
-        @OutputCustomType.Parameter("profileName") String profileName,
-        @OutputCustomType.Parameter("profileVersion") String profileVersion,
-        @OutputCustomType.Parameter("requestedBy") String requestedBy,
-        @OutputCustomType.Parameter("revocationRecords") List<GetSigningJobRevocationRecord> revocationRecords,
-        @OutputCustomType.Parameter("signatureExpiresAt") String signatureExpiresAt,
-        @OutputCustomType.Parameter("signedObjects") List<GetSigningJobSignedObject> signedObjects,
-        @OutputCustomType.Parameter("sources") List<GetSigningJobSource> sources,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusReason") String statusReason) {
+        @CustomType.Parameter("completedAt") String completedAt,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("jobId") String jobId,
+        @CustomType.Parameter("jobInvoker") String jobInvoker,
+        @CustomType.Parameter("jobOwner") String jobOwner,
+        @CustomType.Parameter("platformDisplayName") String platformDisplayName,
+        @CustomType.Parameter("platformId") String platformId,
+        @CustomType.Parameter("profileName") String profileName,
+        @CustomType.Parameter("profileVersion") String profileVersion,
+        @CustomType.Parameter("requestedBy") String requestedBy,
+        @CustomType.Parameter("revocationRecords") List<GetSigningJobRevocationRecord> revocationRecords,
+        @CustomType.Parameter("signatureExpiresAt") String signatureExpiresAt,
+        @CustomType.Parameter("signedObjects") List<GetSigningJobSignedObject> signedObjects,
+        @CustomType.Parameter("sources") List<GetSigningJobSource> sources,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusReason") String statusReason) {
         this.completedAt = completedAt;
         this.createdAt = createdAt;
         this.id = id;

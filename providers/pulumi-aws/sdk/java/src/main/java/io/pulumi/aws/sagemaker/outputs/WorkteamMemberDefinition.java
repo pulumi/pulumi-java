@@ -5,12 +5,12 @@ package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.WorkteamMemberDefinitionCognitoMemberDefinition;
 import io.pulumi.aws.sagemaker.outputs.WorkteamMemberDefinitionOidcMemberDefinition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkteamMemberDefinition {
     /**
      * The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.
@@ -23,10 +23,10 @@ public final class WorkteamMemberDefinition {
      */
     private final @Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkteamMemberDefinition(
-        @OutputCustomType.Parameter("cognitoMemberDefinition") @Nullable WorkteamMemberDefinitionCognitoMemberDefinition cognitoMemberDefinition,
-        @OutputCustomType.Parameter("oidcMemberDefinition") @Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition) {
+        @CustomType.Parameter("cognitoMemberDefinition") @Nullable WorkteamMemberDefinitionCognitoMemberDefinition cognitoMemberDefinition,
+        @CustomType.Parameter("oidcMemberDefinition") @Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition) {
         this.cognitoMemberDefinition = cognitoMemberDefinition;
         this.oidcMemberDefinition = oidcMemberDefinition;
     }

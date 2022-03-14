@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
      * You can send query logs to an S3 bucket, a CloudWatch Logs log group, or a Kinesis Data Firehose delivery stream.
      * 
      */
-    @InputImport(name="destinationArn", required=true)
+    @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
     public Output<String> getDestinationArn() {
@@ -31,7 +31,7 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
      * The name of the Route 53 Resolver query logging configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

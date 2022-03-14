@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * The description for the subnet group.
      * 
      */
-    @InputImport(name="replicationSubnetGroupDescription", required=true)
+    @Import(name="replicationSubnetGroupDescription", required=true)
       private final Output<String> replicationSubnetGroupDescription;
 
     public Output<String> getReplicationSubnetGroupDescription() {
@@ -31,7 +31,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * The name for the replication subnet group. This value is stored as a lowercase string.
      * 
      */
-    @InputImport(name="replicationSubnetGroupId", required=true)
+    @Import(name="replicationSubnetGroupId", required=true)
       private final Output<String> replicationSubnetGroupId;
 
     public Output<String> getReplicationSubnetGroupId() {
@@ -42,7 +42,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * A list of the EC2 subnet IDs for the subnet group.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -53,7 +53,7 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

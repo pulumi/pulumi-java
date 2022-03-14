@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
 
     public static final ReplicationSubnetGroupState Empty = new ReplicationSubnetGroupState();
 
-    @InputImport(name="replicationSubnetGroupArn")
+    @Import(name="replicationSubnetGroupArn")
       private final @Nullable Output<String> replicationSubnetGroupArn;
 
     public Output<String> getReplicationSubnetGroupArn() {
@@ -27,7 +27,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * The description for the subnet group.
      * 
      */
-    @InputImport(name="replicationSubnetGroupDescription")
+    @Import(name="replicationSubnetGroupDescription")
       private final @Nullable Output<String> replicationSubnetGroupDescription;
 
     public Output<String> getReplicationSubnetGroupDescription() {
@@ -38,7 +38,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * The name for the replication subnet group. This value is stored as a lowercase string.
      * 
      */
-    @InputImport(name="replicationSubnetGroupId")
+    @Import(name="replicationSubnetGroupId")
       private final @Nullable Output<String> replicationSubnetGroupId;
 
     public Output<String> getReplicationSubnetGroupId() {
@@ -49,7 +49,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * A list of the EC2 subnet IDs for the subnet group.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -60,7 +60,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -71,7 +71,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -82,7 +82,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
      * The ID of the VPC the subnet group is in.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

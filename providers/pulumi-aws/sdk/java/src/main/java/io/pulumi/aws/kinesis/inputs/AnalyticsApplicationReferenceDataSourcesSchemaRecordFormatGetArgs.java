@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGet
      * See Mapping Parameters below for more details.
      * 
      */
-    @InputImport(name="mappingParameters")
+    @Import(name="mappingParameters")
       private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs> mappingParameters;
 
     public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersGetArgs> getMappingParameters() {
@@ -31,7 +31,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatGet
      * The type of Record Format. Can be `CSV` or `JSON`.
      * 
      */
-    @InputImport(name="recordFormatType")
+    @Import(name="recordFormatType")
       private final @Nullable Output<String> recordFormatType;
 
     public Output<String> getRecordFormatType() {

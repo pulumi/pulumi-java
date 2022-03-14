@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,14 +23,14 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
      * See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
      * 
      */
-    @InputImport(name="enableClassiclink")
+    @Import(name="enableClassiclink")
       private final @Nullable Output<Boolean> enableClassiclink;
 
     public Output<Boolean> getEnableClassiclink() {
         return this.enableClassiclink == null ? Output.empty() : this.enableClassiclink;
     }
 
-    @InputImport(name="enableClassiclinkDnsSupport")
+    @Import(name="enableClassiclinkDnsSupport")
       private final @Nullable Output<Boolean> enableClassiclinkDnsSupport;
 
     public Output<Boolean> getEnableClassiclinkDnsSupport() {
@@ -41,7 +41,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
      * 
      */
-    @InputImport(name="enableDnsHostnames")
+    @Import(name="enableDnsHostnames")
       private final @Nullable Output<Boolean> enableDnsHostnames;
 
     public Output<Boolean> getEnableDnsHostnames() {
@@ -52,21 +52,21 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean flag to enable/disable DNS support in the VPC. Defaults true.
      * 
      */
-    @InputImport(name="enableDnsSupport")
+    @Import(name="enableDnsSupport")
       private final @Nullable Output<Boolean> enableDnsSupport;
 
     public Output<Boolean> getEnableDnsSupport() {
         return this.enableDnsSupport == null ? Output.empty() : this.enableDnsSupport;
     }
 
-    @InputImport(name="ipv4IpamPoolId")
+    @Import(name="ipv4IpamPoolId")
       private final @Nullable Output<String> ipv4IpamPoolId;
 
     public Output<String> getIpv4IpamPoolId() {
         return this.ipv4IpamPoolId == null ? Output.empty() : this.ipv4IpamPoolId;
     }
 
-    @InputImport(name="ipv4NetmaskLength")
+    @Import(name="ipv4NetmaskLength")
       private final @Nullable Output<Integer> ipv4NetmaskLength;
 
     public Output<Integer> getIpv4NetmaskLength() {
@@ -77,28 +77,28 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv6 CIDR block of the VPC
      * 
      */
-    @InputImport(name="ipv6CidrBlock")
+    @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
     public Output<String> getIpv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Output.empty() : this.ipv6CidrBlock;
     }
 
-    @InputImport(name="ipv6CidrBlockNetworkBorderGroup")
+    @Import(name="ipv6CidrBlockNetworkBorderGroup")
       private final @Nullable Output<String> ipv6CidrBlockNetworkBorderGroup;
 
     public Output<String> getIpv6CidrBlockNetworkBorderGroup() {
         return this.ipv6CidrBlockNetworkBorderGroup == null ? Output.empty() : this.ipv6CidrBlockNetworkBorderGroup;
     }
 
-    @InputImport(name="ipv6IpamPoolId")
+    @Import(name="ipv6IpamPoolId")
       private final @Nullable Output<String> ipv6IpamPoolId;
 
     public Output<String> getIpv6IpamPoolId() {
         return this.ipv6IpamPoolId == null ? Output.empty() : this.ipv6IpamPoolId;
     }
 
-    @InputImport(name="ipv6NetmaskLength")
+    @Import(name="ipv6NetmaskLength")
       private final @Nullable Output<Integer> ipv6NetmaskLength;
 
     public Output<Integer> getIpv6NetmaskLength() {
@@ -109,7 +109,7 @@ public final class DefaultVpcArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

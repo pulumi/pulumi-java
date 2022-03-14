@@ -8,7 +8,7 @@ import io.pulumi.aws.memorydb.UserArgs;
 import io.pulumi.aws.memorydb.inputs.UserState;
 import io.pulumi.aws.memorydb.outputs.UserAuthenticationMode;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -32,7 +32,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The access permissions string used for this user.
      * 
      */
-    @OutputExport(name="accessString", type=String.class, parameters={})
+    @Export(name="accessString", type=String.class, parameters={})
     private Output<String> accessString;
 
     /**
@@ -46,7 +46,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The ARN of the user.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -60,7 +60,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Denotes the user's authentication properties. Detailed below.
      * 
      */
-    @OutputExport(name="authenticationMode", type=UserAuthenticationMode.class, parameters={})
+    @Export(name="authenticationMode", type=UserAuthenticationMode.class, parameters={})
     private Output<UserAuthenticationMode> authenticationMode;
 
     /**
@@ -75,7 +75,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * * `authentication_mode` configuration block
      * 
      */
-    @OutputExport(name="minimumEngineVersion", type=String.class, parameters={})
+    @Export(name="minimumEngineVersion", type=String.class, parameters={})
     private Output<String> minimumEngineVersion;
 
     /**
@@ -90,7 +90,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -104,7 +104,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -118,7 +118,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Name of the MemoryDB user. Up to 40 characters.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

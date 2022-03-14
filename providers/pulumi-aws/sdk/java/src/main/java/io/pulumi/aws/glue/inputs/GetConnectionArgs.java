@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
      * `123456789123` and the connection name is `conn` then the ID is `123456789123:conn`.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -31,7 +31,7 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
      * The tags assigned to the resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

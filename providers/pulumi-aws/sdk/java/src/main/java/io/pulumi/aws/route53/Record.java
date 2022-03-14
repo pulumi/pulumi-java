@@ -12,7 +12,7 @@ import io.pulumi.aws.route53.outputs.RecordGeolocationRoutingPolicy;
 import io.pulumi.aws.route53.outputs.RecordLatencyRoutingPolicy;
 import io.pulumi.aws.route53.outputs.RecordWeightedRoutingPolicy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -47,7 +47,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * Alias record documented below.
      * 
      */
-    @OutputExport(name="aliases", type=List.class, parameters={RecordAlias.class})
+    @Export(name="aliases", type=List.class, parameters={RecordAlias.class})
     private Output</* @Nullable */ List<RecordAlias>> aliases;
 
     /**
@@ -62,7 +62,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * Allow creation of this record to overwrite an existing record, if any. This does not affect the ability to update the record using this provider and does not prevent other resources within this provider or manual Route 53 changes outside this provider from overwriting this record. `false` by default. This configuration is not recommended for most environments.
      * 
      */
-    @OutputExport(name="allowOverwrite", type=Boolean.class, parameters={})
+    @Export(name="allowOverwrite", type=Boolean.class, parameters={})
     private Output<Boolean> allowOverwrite;
 
     /**
@@ -76,7 +76,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * A block indicating the routing behavior when associated health check fails. Conflicts with any other routing policy. Documented below.
      * 
      */
-    @OutputExport(name="failoverRoutingPolicies", type=List.class, parameters={RecordFailoverRoutingPolicy.class})
+    @Export(name="failoverRoutingPolicies", type=List.class, parameters={RecordFailoverRoutingPolicy.class})
     private Output</* @Nullable */ List<RecordFailoverRoutingPolicy>> failoverRoutingPolicies;
 
     /**
@@ -90,7 +90,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * [FQDN](https://en.wikipedia.org/wiki/Fully_qualified_domain_name) built using the zone domain and `name`.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
     /**
@@ -104,7 +104,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * A block indicating a routing policy based on the geolocation of the requestor. Conflicts with any other routing policy. Documented below.
      * 
      */
-    @OutputExport(name="geolocationRoutingPolicies", type=List.class, parameters={RecordGeolocationRoutingPolicy.class})
+    @Export(name="geolocationRoutingPolicies", type=List.class, parameters={RecordGeolocationRoutingPolicy.class})
     private Output</* @Nullable */ List<RecordGeolocationRoutingPolicy>> geolocationRoutingPolicies;
 
     /**
@@ -118,7 +118,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * The health check the record should be associated with.
      * 
      */
-    @OutputExport(name="healthCheckId", type=String.class, parameters={})
+    @Export(name="healthCheckId", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthCheckId;
 
     /**
@@ -132,7 +132,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * A block indicating a routing policy based on the latency between the requestor and an AWS region. Conflicts with any other routing policy. Documented below.
      * 
      */
-    @OutputExport(name="latencyRoutingPolicies", type=List.class, parameters={RecordLatencyRoutingPolicy.class})
+    @Export(name="latencyRoutingPolicies", type=List.class, parameters={RecordLatencyRoutingPolicy.class})
     private Output</* @Nullable */ List<RecordLatencyRoutingPolicy>> latencyRoutingPolicies;
 
     /**
@@ -146,7 +146,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * Set to `true` to indicate a multivalue answer routing policy. Conflicts with any other routing policy.
      * 
      */
-    @OutputExport(name="multivalueAnswerRoutingPolicy", type=Boolean.class, parameters={})
+    @Export(name="multivalueAnswerRoutingPolicy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> multivalueAnswerRoutingPolicy;
 
     /**
@@ -160,7 +160,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * DNS domain name for a CloudFront distribution, S3 bucket, ELB, or another resource record set in this hosted zone.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -174,7 +174,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * A string list of records. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the configuration string (e.g. `"first255characters\"\"morecharacters"`).
      * 
      */
-    @OutputExport(name="records", type=List.class, parameters={String.class})
+    @Export(name="records", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> records;
 
     /**
@@ -188,7 +188,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * Unique identifier to differentiate records with routing policies from one another. Required if using `failover`, `geolocation`, `latency`, or `weighted` routing policies documented below.
      * 
      */
-    @OutputExport(name="setIdentifier", type=String.class, parameters={})
+    @Export(name="setIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> setIdentifier;
 
     /**
@@ -202,7 +202,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * The TTL of the record.
      * 
      */
-    @OutputExport(name="ttl", type=Integer.class, parameters={})
+    @Export(name="ttl", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ttl;
 
     /**
@@ -216,7 +216,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * `PRIMARY` or `SECONDARY`. A `PRIMARY` record will be served if its healthcheck is passing, otherwise the `SECONDARY` will be served. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-configuring-options.html#dns-failover-failover-rrsets
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -230,7 +230,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * A block indicating a weighted routing policy. Conflicts with any other routing policy. Documented below.
      * 
      */
-    @OutputExport(name="weightedRoutingPolicies", type=List.class, parameters={RecordWeightedRoutingPolicy.class})
+    @Export(name="weightedRoutingPolicies", type=List.class, parameters={RecordWeightedRoutingPolicy.class})
     private Output</* @Nullable */ List<RecordWeightedRoutingPolicy>> weightedRoutingPolicies;
 
     /**
@@ -244,7 +244,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * Hosted zone ID for a CloudFront distribution, S3 bucket, ELB, or Route 53 hosted zone. See `resource_elb.zone_id` for example.
      * 
      */
-    @OutputExport(name="zoneId", type=String.class, parameters={})
+    @Export(name="zoneId", type=String.class, parameters={})
     private Output<String> zoneId;
 
     /**

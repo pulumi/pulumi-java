@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.budgets.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetNotification {
     /**
      * (Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
@@ -43,14 +43,14 @@ public final class BudgetNotification {
      */
     private final String thresholdType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetNotification(
-        @OutputCustomType.Parameter("comparisonOperator") String comparisonOperator,
-        @OutputCustomType.Parameter("notificationType") String notificationType,
-        @OutputCustomType.Parameter("subscriberEmailAddresses") @Nullable List<String> subscriberEmailAddresses,
-        @OutputCustomType.Parameter("subscriberSnsTopicArns") @Nullable List<String> subscriberSnsTopicArns,
-        @OutputCustomType.Parameter("threshold") Double threshold,
-        @OutputCustomType.Parameter("thresholdType") String thresholdType) {
+        @CustomType.Parameter("comparisonOperator") String comparisonOperator,
+        @CustomType.Parameter("notificationType") String notificationType,
+        @CustomType.Parameter("subscriberEmailAddresses") @Nullable List<String> subscriberEmailAddresses,
+        @CustomType.Parameter("subscriberSnsTopicArns") @Nullable List<String> subscriberSnsTopicArns,
+        @CustomType.Parameter("threshold") Double threshold,
+        @CustomType.Parameter("thresholdType") String thresholdType) {
         this.comparisonOperator = comparisonOperator;
         this.notificationType = notificationType;
         this.subscriberEmailAddresses = subscriberEmailAddresses;

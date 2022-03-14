@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FilterFindingCriteriaCriterionArgs extends io.pulumi.resource
      * List of string values to be evaluated.
      * 
      */
-    @InputImport(name="equals")
+    @Import(name="equals")
       private final @Nullable Output<List<String>> equals;
 
     public Output<List<String>> getEquals() {
@@ -30,7 +30,7 @@ public final class FilterFindingCriteriaCriterionArgs extends io.pulumi.resource
      * The name of the field to be evaluated. The full list of field names can be found in [AWS documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_filter-findings.html#filter_criteria).
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final Output<String> field;
 
     public Output<String> getField() {
@@ -41,7 +41,7 @@ public final class FilterFindingCriteriaCriterionArgs extends io.pulumi.resource
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @InputImport(name="greaterThan")
+    @Import(name="greaterThan")
       private final @Nullable Output<String> greaterThan;
 
     public Output<String> getGreaterThan() {
@@ -52,7 +52,7 @@ public final class FilterFindingCriteriaCriterionArgs extends io.pulumi.resource
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @InputImport(name="greaterThanOrEqual")
+    @Import(name="greaterThanOrEqual")
       private final @Nullable Output<String> greaterThanOrEqual;
 
     public Output<String> getGreaterThanOrEqual() {
@@ -63,7 +63,7 @@ public final class FilterFindingCriteriaCriterionArgs extends io.pulumi.resource
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @InputImport(name="lessThan")
+    @Import(name="lessThan")
       private final @Nullable Output<String> lessThan;
 
     public Output<String> getLessThan() {
@@ -74,7 +74,7 @@ public final class FilterFindingCriteriaCriterionArgs extends io.pulumi.resource
      * A value to be evaluated. Accepts either an integer or a date in [RFC 3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @InputImport(name="lessThanOrEqual")
+    @Import(name="lessThanOrEqual")
       private final @Nullable Output<String> lessThanOrEqual;
 
     public Output<String> getLessThanOrEqual() {
@@ -85,7 +85,7 @@ public final class FilterFindingCriteriaCriterionArgs extends io.pulumi.resource
      * List of string values to be evaluated.
      * 
      */
-    @InputImport(name="notEquals")
+    @Import(name="notEquals")
       private final @Nullable Output<List<String>> notEquals;
 
     public Output<List<String>> getNotEquals() {

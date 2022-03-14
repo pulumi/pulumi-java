@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationsFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetDistributionConfigurationsArgs extends io.pulumi.resources
      * Configuration block(s) for filtering. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetDistributionConfigurationsFilter> filters;
 
     public List<GetDistributionConfigurationsFilter> getFilters() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.pinpoint.AdmChannelArgs;
 import io.pulumi.aws.pinpoint.inputs.AdmChannelState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class AdmChannel extends io.pulumi.resources.CustomResource {
      * The application ID.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -47,7 +47,7 @@ public class AdmChannel extends io.pulumi.resources.CustomResource {
      * Client ID (part of OAuth Credentials) obtained via Amazon Developer Account.
      * 
      */
-    @OutputExport(name="clientId", type=String.class, parameters={})
+    @Export(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
     /**
@@ -61,7 +61,7 @@ public class AdmChannel extends io.pulumi.resources.CustomResource {
      * Client Secret (part of OAuth Credentials) obtained via Amazon Developer Account.
      * 
      */
-    @OutputExport(name="clientSecret", type=String.class, parameters={})
+    @Export(name="clientSecret", type=String.class, parameters={})
     private Output<String> clientSecret;
 
     /**
@@ -75,7 +75,7 @@ public class AdmChannel extends io.pulumi.resources.CustomResource {
      * Specifies whether to enable the channel. Defaults to `true`.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**

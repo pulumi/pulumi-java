@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * The message to send
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final Output<String> message;
 
     public Output<String> getMessage() {
@@ -30,7 +30,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * The position of the action in the receipt rule
      * 
      */
-    @InputImport(name="position", required=true)
+    @Import(name="position", required=true)
       private final Output<Integer> position;
 
     public Output<Integer> getPosition() {
@@ -41,7 +41,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * The email address of the sender
      * 
      */
-    @InputImport(name="sender", required=true)
+    @Import(name="sender", required=true)
       private final Output<String> sender;
 
     public Output<String> getSender() {
@@ -52,7 +52,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * The RFC 5321 SMTP reply code
      * 
      */
-    @InputImport(name="smtpReplyCode", required=true)
+    @Import(name="smtpReplyCode", required=true)
       private final Output<String> smtpReplyCode;
 
     public Output<String> getSmtpReplyCode() {
@@ -63,7 +63,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * The RFC 3463 SMTP enhanced status code
      * 
      */
-    @InputImport(name="statusCode")
+    @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
     public Output<String> getStatusCode() {
@@ -74,7 +74,7 @@ public final class ReceiptRuleBounceActionGetArgs extends io.pulumi.resources.Re
      * The ARN of an SNS topic to notify
      * 
      */
-    @InputImport(name="topicArn")
+    @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
     public Output<String> getTopicArn() {

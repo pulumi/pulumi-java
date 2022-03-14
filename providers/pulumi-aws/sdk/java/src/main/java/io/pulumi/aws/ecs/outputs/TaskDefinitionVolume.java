@@ -6,13 +6,13 @@ package io.pulumi.aws.ecs.outputs;
 import io.pulumi.aws.ecs.outputs.TaskDefinitionVolumeDockerVolumeConfiguration;
 import io.pulumi.aws.ecs.outputs.TaskDefinitionVolumeEfsVolumeConfiguration;
 import io.pulumi.aws.ecs.outputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionVolume {
     /**
      * Configuration block to configure a docker volume. Detailed below.
@@ -41,13 +41,13 @@ public final class TaskDefinitionVolume {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionVolume(
-        @OutputCustomType.Parameter("dockerVolumeConfiguration") @Nullable TaskDefinitionVolumeDockerVolumeConfiguration dockerVolumeConfiguration,
-        @OutputCustomType.Parameter("efsVolumeConfiguration") @Nullable TaskDefinitionVolumeEfsVolumeConfiguration efsVolumeConfiguration,
-        @OutputCustomType.Parameter("fsxWindowsFileServerVolumeConfiguration") @Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration,
-        @OutputCustomType.Parameter("hostPath") @Nullable String hostPath,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("dockerVolumeConfiguration") @Nullable TaskDefinitionVolumeDockerVolumeConfiguration dockerVolumeConfiguration,
+        @CustomType.Parameter("efsVolumeConfiguration") @Nullable TaskDefinitionVolumeEfsVolumeConfiguration efsVolumeConfiguration,
+        @CustomType.Parameter("fsxWindowsFileServerVolumeConfiguration") @Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration,
+        @CustomType.Parameter("hostPath") @Nullable String hostPath,
+        @CustomType.Parameter("name") String name) {
         this.dockerVolumeConfiguration = dockerVolumeConfiguration;
         this.efsVolumeConfiguration = efsVolumeConfiguration;
         this.fsxWindowsFileServerVolumeConfiguration = fsxWindowsFileServerVolumeConfiguration;

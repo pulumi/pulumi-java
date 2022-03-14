@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the connection to retrieve.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -30,7 +30,7 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
      * A map of tags for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

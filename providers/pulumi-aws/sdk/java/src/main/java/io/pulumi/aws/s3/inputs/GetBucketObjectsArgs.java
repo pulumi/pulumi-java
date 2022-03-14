@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * Lists object keys in this S3 bucket. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
@@ -31,7 +31,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * A character used to group keys (Default: none)
      * 
      */
-    @InputImport(name="delimiter")
+    @Import(name="delimiter")
       private final @Nullable String delimiter;
 
     public Optional<String> getDelimiter() {
@@ -42,7 +42,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * Encodes keys using this method (Default: none; besides none, only "url" can be used)
      * 
      */
-    @InputImport(name="encodingType")
+    @Import(name="encodingType")
       private final @Nullable String encodingType;
 
     public Optional<String> getEncodingType() {
@@ -53,7 +53,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * Boolean specifying whether to populate the owner list (Default: false)
      * 
      */
-    @InputImport(name="fetchOwner")
+    @Import(name="fetchOwner")
       private final @Nullable Boolean fetchOwner;
 
     public Optional<Boolean> getFetchOwner() {
@@ -64,7 +64,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * Maximum object keys to return (Default: 1000)
      * 
      */
-    @InputImport(name="maxKeys")
+    @Import(name="maxKeys")
       private final @Nullable Integer maxKeys;
 
     public Optional<Integer> getMaxKeys() {
@@ -75,7 +75,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * Limits results to object keys with this prefix (Default: none)
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
@@ -86,7 +86,7 @@ public final class GetBucketObjectsArgs extends io.pulumi.resources.InvokeArgs {
      * Returns key names lexicographically after a specific object key in your bucket (Default: none; S3 lists object keys in UTF-8 character encoding in lexicographical order)
      * 
      */
-    @InputImport(name="startAfter")
+    @Import(name="startAfter")
       private final @Nullable String startAfter;
 
     public Optional<String> getStartAfter() {

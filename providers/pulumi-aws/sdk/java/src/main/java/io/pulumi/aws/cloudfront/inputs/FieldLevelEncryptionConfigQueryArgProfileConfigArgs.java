@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigArgs extends i
      * Flag to set if you want a request to be forwarded to the origin even if the profile specified by the field-level encryption query argument, fle-profile, is unknown.
      * 
      */
-    @InputImport(name="forwardWhenQueryArgProfileIsUnknown", required=true)
+    @Import(name="forwardWhenQueryArgProfileIsUnknown", required=true)
       private final Output<Boolean> forwardWhenQueryArgProfileIsUnknown;
 
     public Output<Boolean> getForwardWhenQueryArgProfileIsUnknown() {
@@ -30,7 +30,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigArgs extends i
      * Object that contains an attribute `items` that contains the list ofrofiles specified for query argument-profile mapping for field-level encryption. see Query Arg Profile.
      * 
      */
-    @InputImport(name="queryArgProfiles")
+    @Import(name="queryArgProfiles")
       private final @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs> queryArgProfiles;
 
     public Output<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs> getQueryArgProfiles() {

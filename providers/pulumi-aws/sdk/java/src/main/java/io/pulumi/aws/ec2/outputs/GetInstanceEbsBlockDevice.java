@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceEbsBlockDevice {
     /**
      * If the root block device will be deleted on termination.
@@ -60,19 +60,19 @@ public final class GetInstanceEbsBlockDevice {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceEbsBlockDevice(
-        @OutputCustomType.Parameter("deleteOnTermination") Boolean deleteOnTermination,
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
-        @OutputCustomType.Parameter("iops") Integer iops,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("snapshotId") String snapshotId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("throughput") Integer throughput,
-        @OutputCustomType.Parameter("volumeId") String volumeId,
-        @OutputCustomType.Parameter("volumeSize") Integer volumeSize,
-        @OutputCustomType.Parameter("volumeType") String volumeType) {
+        @CustomType.Parameter("deleteOnTermination") Boolean deleteOnTermination,
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("encrypted") Boolean encrypted,
+        @CustomType.Parameter("iops") Integer iops,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("snapshotId") String snapshotId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("throughput") Integer throughput,
+        @CustomType.Parameter("volumeId") String volumeId,
+        @CustomType.Parameter("volumeSize") Integer volumeSize,
+        @CustomType.Parameter("volumeType") String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.deviceName = deviceName;
         this.encrypted = encrypted;

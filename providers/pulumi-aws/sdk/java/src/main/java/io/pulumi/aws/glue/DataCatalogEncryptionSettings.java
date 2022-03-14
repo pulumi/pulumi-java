@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.DataCatalogEncryptionSettingsArgs;
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsState;
 import io.pulumi.aws.glue.outputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettings;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class DataCatalogEncryptionSettings extends io.pulumi.resources.CustomRes
      * The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
      * 
      */
-    @OutputExport(name="catalogId", type=String.class, parameters={})
+    @Export(name="catalogId", type=String.class, parameters={})
     private Output<String> catalogId;
 
     /**
@@ -47,7 +47,7 @@ public class DataCatalogEncryptionSettings extends io.pulumi.resources.CustomRes
      * The security configuration to set. see Data Catalog Encryption Settings.
      * 
      */
-    @OutputExport(name="dataCatalogEncryptionSettings", type=DataCatalogEncryptionSettingsDataCatalogEncryptionSettings.class, parameters={})
+    @Export(name="dataCatalogEncryptionSettings", type=DataCatalogEncryptionSettingsDataCatalogEncryptionSettings.class, parameters={})
     private Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettings> dataCatalogEncryptionSettings;
 
     /**

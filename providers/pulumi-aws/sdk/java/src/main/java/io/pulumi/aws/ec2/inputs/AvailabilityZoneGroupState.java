@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
      * Name of the Availability Zone Group.
      * 
      */
-    @InputImport(name="groupName")
+    @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
@@ -29,7 +29,7 @@ public final class AvailabilityZoneGroupState extends io.pulumi.resources.Resour
      * Indicates whether to enable or disable Availability Zone Group. Valid values: `opted-in` or `not-opted-in`.
      * 
      */
-    @InputImport(name="optInStatus")
+    @Import(name="optInStatus")
       private final @Nullable Output<String> optInStatus;
 
     public Output<String> getOptInStatus() {

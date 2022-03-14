@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProductResult {
     private final @Nullable String acceptLanguage;
     /**
@@ -81,23 +81,23 @@ public final class GetProductResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProductResult(
-        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("distributor") String distributor,
-        @OutputCustomType.Parameter("hasDefaultPath") Boolean hasDefaultPath,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("owner") String owner,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("supportDescription") String supportDescription,
-        @OutputCustomType.Parameter("supportEmail") String supportEmail,
-        @OutputCustomType.Parameter("supportUrl") String supportUrl,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("distributor") String distributor,
+        @CustomType.Parameter("hasDefaultPath") Boolean hasDefaultPath,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("owner") String owner,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("supportDescription") String supportDescription,
+        @CustomType.Parameter("supportEmail") String supportEmail,
+        @CustomType.Parameter("supportUrl") String supportUrl,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.acceptLanguage = acceptLanguage;
         this.arn = arn;
         this.createdTime = createdTime;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ServiceDeploymentCircuitBreakerArgs extends io.pulumi.resourc
      * Whether to enable the deployment circuit breaker logic for the service.
      * 
      */
-    @InputImport(name="enable", required=true)
+    @Import(name="enable", required=true)
       private final Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -28,7 +28,7 @@ public final class ServiceDeploymentCircuitBreakerArgs extends io.pulumi.resourc
      * Whether to enable Amazon ECS to roll back the service if a service deployment fails. If rollback is enabled, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.
      * 
      */
-    @InputImport(name="rollback", required=true)
+    @Import(name="rollback", required=true)
       private final Output<Boolean> rollback;
 
     public Output<Boolean> getRollback() {

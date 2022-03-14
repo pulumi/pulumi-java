@@ -5,7 +5,7 @@ package io.pulumi.aws.route53recoverycontrol;
 
 import io.pulumi.aws.route53recoverycontrol.inputs.SafetyRuleRuleConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed.
      * 
      */
-    @InputImport(name="assertedControls")
+    @Import(name="assertedControls")
       private final @Nullable Output<List<String>> assertedControls;
 
     public Output<List<String>> getAssertedControls() {
@@ -32,7 +32,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the control panel in which this safety rule will reside.
      * 
      */
-    @InputImport(name="controlPanelArn", required=true)
+    @Import(name="controlPanelArn", required=true)
       private final Output<String> controlPanelArn;
 
     public Output<String> getControlPanelArn() {
@@ -43,7 +43,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Gating controls for the new gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
      * 
      */
-    @InputImport(name="gatingControls")
+    @Import(name="gatingControls")
       private final @Nullable Output<List<String>> gatingControls;
 
     public Output<List<String>> getGatingControls() {
@@ -54,7 +54,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Name describing the safety rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for safety rule criteria. See below.
      * 
      */
-    @InputImport(name="ruleConfig", required=true)
+    @Import(name="ruleConfig", required=true)
       private final Output<SafetyRuleRuleConfigArgs> ruleConfig;
 
     public Output<SafetyRuleRuleConfigArgs> getRuleConfig() {
@@ -76,7 +76,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Routing controls that can only be set or unset if the specified `rule_config` evaluates to true for the specified `gating_controls`.
      * 
      */
-    @InputImport(name="targetControls")
+    @Import(name="targetControls")
       private final @Nullable Output<List<String>> targetControls;
 
     public Output<List<String>> getTargetControls() {
@@ -87,7 +87,7 @@ public final class SafetyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail.
      * 
      */
-    @InputImport(name="waitPeriodMs", required=true)
+    @Import(name="waitPeriodMs", required=true)
       private final Output<Integer> waitPeriodMs;
 
     public Output<Integer> getWaitPeriodMs() {

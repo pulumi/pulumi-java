@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * Email configuration set name from SES.
      * 
      */
-    @InputImport(name="configurationSet")
+    @Import(name="configurationSet")
       private final @Nullable Output<String> configurationSet;
 
     public Output<String> getConfigurationSet() {
@@ -29,7 +29,7 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * Email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
      * 
      */
-    @InputImport(name="emailSendingAccount")
+    @Import(name="emailSendingAccount")
       private final @Nullable Output<String> emailSendingAccount;
 
     public Output<String> getEmailSendingAccount() {
@@ -40,7 +40,7 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * Sender’s email address or sender’s display name with their email address (e.g., `john@example.com`, `John Smith <john@example.com>` or `\"John Smith Ph.D.\" <john@example.com>`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
      * 
      */
-    @InputImport(name="fromEmailAddress")
+    @Import(name="fromEmailAddress")
       private final @Nullable Output<String> fromEmailAddress;
 
     public Output<String> getFromEmailAddress() {
@@ -51,7 +51,7 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * REPLY-TO email address.
      * 
      */
-    @InputImport(name="replyToEmailAddress")
+    @Import(name="replyToEmailAddress")
       private final @Nullable Output<String> replyToEmailAddress;
 
     public Output<String> getReplyToEmailAddress() {
@@ -62,7 +62,7 @@ public final class UserPoolEmailConfigurationArgs extends io.pulumi.resources.Re
      * ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
      * 
      */
-    @InputImport(name="sourceArn")
+    @Import(name="sourceArn")
       private final @Nullable Output<String> sourceArn;
 
     public Output<String> getSourceArn() {

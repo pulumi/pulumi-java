@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the parent API resource
      * 
      */
-    @InputImport(name="parentId", required=true)
+    @Import(name="parentId", required=true)
       private final Output<String> parentId;
 
     public Output<String> getParentId() {
@@ -28,7 +28,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The last path segment of this API resource.
      * 
      */
-    @InputImport(name="pathPart", required=true)
+    @Import(name="pathPart", required=true)
       private final Output<String> pathPart;
 
     public Output<String> getPathPart() {
@@ -39,7 +39,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated REST API
      * 
      */
-    @InputImport(name="restApi", required=true)
+    @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
     public Output<String> getRestApi() {

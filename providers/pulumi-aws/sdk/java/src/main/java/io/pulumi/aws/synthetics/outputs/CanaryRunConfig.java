@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.synthetics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanaryRunConfig {
     /**
      * Whether this canary is to use active AWS X-Ray tracing when it runs. You can enable active tracing only for canaries that use version syn-nodejs-2.0 or later for their canary runtime.
@@ -28,11 +28,11 @@ public final class CanaryRunConfig {
      */
     private final @Nullable Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CanaryRunConfig(
-        @OutputCustomType.Parameter("activeTracing") @Nullable Boolean activeTracing,
-        @OutputCustomType.Parameter("memoryInMb") @Nullable Integer memoryInMb,
-        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds) {
+        @CustomType.Parameter("activeTracing") @Nullable Boolean activeTracing,
+        @CustomType.Parameter("memoryInMb") @Nullable Integer memoryInMb,
+        @CustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds) {
         this.activeTracing = activeTracing;
         this.memoryInMb = memoryInMb;
         this.timeoutInSeconds = timeoutInSeconds;

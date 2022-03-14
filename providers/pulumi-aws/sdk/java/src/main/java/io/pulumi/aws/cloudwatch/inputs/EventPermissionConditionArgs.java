@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EventPermissionConditionArgs extends io.pulumi.resources.Reso
      * Key for the condition. Valid values: `aws:PrincipalOrgID`.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -28,7 +28,7 @@ public final class EventPermissionConditionArgs extends io.pulumi.resources.Reso
      * Type of condition. Value values: `StringEquals`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -39,7 +39,7 @@ public final class EventPermissionConditionArgs extends io.pulumi.resources.Reso
      * Value for the key.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatementGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatementGetArg
      * The statement to negate. You can use any statement that can be nested. See Statement above for details.
      * 
      */
-    @InputImport(name="statements", required=true)
+    @Import(name="statements", required=true)
       private final Output<List<RuleGroupRuleStatementAndStatementStatementNotStatementStatementGetArgs>> statements;
 
     public Output<List<RuleGroupRuleStatementAndStatementStatementNotStatementStatementGetArgs>> getStatements() {

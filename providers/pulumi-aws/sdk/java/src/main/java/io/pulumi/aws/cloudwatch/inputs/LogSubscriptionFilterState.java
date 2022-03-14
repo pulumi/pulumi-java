@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * The ARN of the destination to deliver matching log events to. Kinesis stream or Lambda function ARN.
      * 
      */
-    @InputImport(name="destinationArn")
+    @Import(name="destinationArn")
       private final @Nullable Output<String> destinationArn;
 
     public Output<String> getDestinationArn() {
@@ -29,7 +29,7 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * The method used to distribute log data to the destination. By default log data is grouped by log stream, but the grouping can be set to random for a more even distribution. This property is only applicable when the destination is an Amazon Kinesis stream. Valid values are "Random" and "ByLogStream".
      * 
      */
-    @InputImport(name="distribution")
+    @Import(name="distribution")
       private final @Nullable Output<String> distribution;
 
     public Output<String> getDistribution() {
@@ -40,7 +40,7 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.
      * 
      */
-    @InputImport(name="filterPattern")
+    @Import(name="filterPattern")
       private final @Nullable Output<String> filterPattern;
 
     public Output<String> getFilterPattern() {
@@ -51,7 +51,7 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * The name of the log group to associate the subscription filter with
      * 
      */
-    @InputImport(name="logGroup")
+    @Import(name="logGroup")
       private final @Nullable Output<String> logGroup;
 
     public Output<String> getLogGroup() {
@@ -62,7 +62,7 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * A name for the subscription filter
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -73,7 +73,7 @@ public final class LogSubscriptionFilterState extends io.pulumi.resources.Resour
      * The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to deliver ingested log events to the destination. If you use Lambda as a destination, you should skip this argument and use `aws.lambda.Permission` resource for granting access from CloudWatch logs to the destination Lambda function.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {

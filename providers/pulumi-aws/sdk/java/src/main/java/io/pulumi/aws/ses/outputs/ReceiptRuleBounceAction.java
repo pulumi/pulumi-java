@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReceiptRuleBounceAction {
     /**
      * The message to send
@@ -43,14 +43,14 @@ public final class ReceiptRuleBounceAction {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReceiptRuleBounceAction(
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("position") Integer position,
-        @OutputCustomType.Parameter("sender") String sender,
-        @OutputCustomType.Parameter("smtpReplyCode") String smtpReplyCode,
-        @OutputCustomType.Parameter("statusCode") @Nullable String statusCode,
-        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("position") Integer position,
+        @CustomType.Parameter("sender") String sender,
+        @CustomType.Parameter("smtpReplyCode") String smtpReplyCode,
+        @CustomType.Parameter("statusCode") @Nullable String statusCode,
+        @CustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.message = message;
         this.position = position;
         this.sender = sender;

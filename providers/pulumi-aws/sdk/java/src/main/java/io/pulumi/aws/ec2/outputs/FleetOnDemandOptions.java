@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetOnDemandOptions {
     /**
      * How to allocate the target capacity across the Spot pools. Valid values: `diversified`, `lowestPrice`. Default: `lowestPrice`.
@@ -17,8 +17,8 @@ public final class FleetOnDemandOptions {
      */
     private final @Nullable String allocationStrategy;
 
-    @OutputCustomType.Constructor
-    private FleetOnDemandOptions(@OutputCustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy) {
+    @CustomType.Constructor
+    private FleetOnDemandOptions(@CustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
     }
 

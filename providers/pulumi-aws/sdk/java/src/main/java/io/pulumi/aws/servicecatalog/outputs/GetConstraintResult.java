@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.servicecatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConstraintResult {
     private final @Nullable String acceptLanguage;
     /**
@@ -49,17 +49,17 @@ public final class GetConstraintResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConstraintResult(
-        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("owner") String owner,
-        @OutputCustomType.Parameter("parameters") String parameters,
-        @OutputCustomType.Parameter("portfolioId") String portfolioId,
-        @OutputCustomType.Parameter("productId") String productId,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("owner") String owner,
+        @CustomType.Parameter("parameters") String parameters,
+        @CustomType.Parameter("portfolioId") String portfolioId,
+        @CustomType.Parameter("productId") String productId,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.acceptLanguage = acceptLanguage;
         this.description = description;
         this.id = id;

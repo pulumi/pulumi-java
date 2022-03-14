@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
      * A user-defined comment about the disk upload.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -30,7 +30,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
      * The time that the disk upload ends.
      * 
      */
-    @InputImport(name="uploadEnd")
+    @Import(name="uploadEnd")
       private final @Nullable Output<String> uploadEnd;
 
     public Output<String> getUploadEnd() {
@@ -41,7 +41,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
      * The size of the uploaded disk image, in GiB.
      * 
      */
-    @InputImport(name="uploadSize")
+    @Import(name="uploadSize")
       private final @Nullable Output<Double> uploadSize;
 
     public Output<Double> getUploadSize() {
@@ -52,7 +52,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
      * The time that the disk upload starts.
      * 
      */
-    @InputImport(name="uploadStart")
+    @Import(name="uploadStart")
       private final @Nullable Output<String> uploadStart;
 
     public Output<String> getUploadStart() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRouteTableAssociation {
     /**
      * ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
@@ -36,13 +36,13 @@ public final class GetRouteTableAssociation {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouteTableAssociation(
-        @OutputCustomType.Parameter("gatewayId") String gatewayId,
-        @OutputCustomType.Parameter("main") Boolean main,
-        @OutputCustomType.Parameter("routeTableAssociationId") String routeTableAssociationId,
-        @OutputCustomType.Parameter("routeTableId") String routeTableId,
-        @OutputCustomType.Parameter("subnetId") String subnetId) {
+        @CustomType.Parameter("gatewayId") String gatewayId,
+        @CustomType.Parameter("main") Boolean main,
+        @CustomType.Parameter("routeTableAssociationId") String routeTableAssociationId,
+        @CustomType.Parameter("routeTableId") String routeTableId,
+        @CustomType.Parameter("subnetId") String subnetId) {
         this.gatewayId = gatewayId;
         this.main = main;
         this.routeTableAssociationId = routeTableAssociationId;

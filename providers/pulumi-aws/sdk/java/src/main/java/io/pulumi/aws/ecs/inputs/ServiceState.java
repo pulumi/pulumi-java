@@ -12,7 +12,7 @@ import io.pulumi.aws.ecs.inputs.ServiceOrderedPlacementStrategyGetArgs;
 import io.pulumi.aws.ecs.inputs.ServicePlacementConstraintGetArgs;
 import io.pulumi.aws.ecs.inputs.ServiceServiceRegistriesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Capacity provider strategies to use for the service. Can be one or more. These can be updated without destroying and recreating the service only if `force_new_deployment = true` and not changing from 0 `capacity_provider_strategy` blocks to greater than 0, or vice versa. See below.
      * 
      */
-    @InputImport(name="capacityProviderStrategies")
+    @Import(name="capacityProviderStrategies")
       private final @Nullable Output<List<ServiceCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
 
     public Output<List<ServiceCapacityProviderStrategyGetArgs>> getCapacityProviderStrategies() {
@@ -41,7 +41,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * ARN of an ECS cluster.
      * 
      */
-    @InputImport(name="cluster")
+    @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
     public Output<String> getCluster() {
@@ -52,7 +52,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for deployment circuit breaker. See below.
      * 
      */
-    @InputImport(name="deploymentCircuitBreaker")
+    @Import(name="deploymentCircuitBreaker")
       private final @Nullable Output<ServiceDeploymentCircuitBreakerGetArgs> deploymentCircuitBreaker;
 
     public Output<ServiceDeploymentCircuitBreakerGetArgs> getDeploymentCircuitBreaker() {
@@ -63,7 +63,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for deployment controller configuration. See below.
      * 
      */
-    @InputImport(name="deploymentController")
+    @Import(name="deploymentController")
       private final @Nullable Output<ServiceDeploymentControllerGetArgs> deploymentController;
 
     public Output<ServiceDeploymentControllerGetArgs> getDeploymentController() {
@@ -74,7 +74,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the `DAEMON` scheduling strategy.
      * 
      */
-    @InputImport(name="deploymentMaximumPercent")
+    @Import(name="deploymentMaximumPercent")
       private final @Nullable Output<Integer> deploymentMaximumPercent;
 
     public Output<Integer> getDeploymentMaximumPercent() {
@@ -85,7 +85,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.
      * 
      */
-    @InputImport(name="deploymentMinimumHealthyPercent")
+    @Import(name="deploymentMinimumHealthyPercent")
       private final @Nullable Output<Integer> deploymentMinimumHealthyPercent;
 
     public Output<Integer> getDeploymentMinimumHealthyPercent() {
@@ -96,7 +96,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the `DAEMON` scheduling strategy.
      * 
      */
-    @InputImport(name="desiredCount")
+    @Import(name="desiredCount")
       private final @Nullable Output<Integer> desiredCount;
 
     public Output<Integer> getDesiredCount() {
@@ -107,7 +107,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to enable Amazon ECS managed tags for the tasks within the service.
      * 
      */
-    @InputImport(name="enableEcsManagedTags")
+    @Import(name="enableEcsManagedTags")
       private final @Nullable Output<Boolean> enableEcsManagedTags;
 
     public Output<Boolean> getEnableEcsManagedTags() {
@@ -118,7 +118,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to enable Amazon ECS Exec for the tasks within the service.
      * 
      */
-    @InputImport(name="enableExecuteCommand")
+    @Import(name="enableExecuteCommand")
       private final @Nullable Output<Boolean> enableExecuteCommand;
 
     public Output<Boolean> getEnableExecuteCommand() {
@@ -129,7 +129,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Enable to force a new task deployment of the service. This can be used to update tasks to use a newer Docker image with same image/tag combination (e.g., `myimage:latest`), roll Fargate tasks onto a newer platform version, or immediately deploy `ordered_placement_strategy` and `placement_constraints` updates.
      * 
      */
-    @InputImport(name="forceNewDeployment")
+    @Import(name="forceNewDeployment")
       private final @Nullable Output<Boolean> forceNewDeployment;
 
     public Output<Boolean> getForceNewDeployment() {
@@ -140,7 +140,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.
      * 
      */
-    @InputImport(name="healthCheckGracePeriodSeconds")
+    @Import(name="healthCheckGracePeriodSeconds")
       private final @Nullable Output<Integer> healthCheckGracePeriodSeconds;
 
     public Output<Integer> getHealthCheckGracePeriodSeconds() {
@@ -151,7 +151,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the `awsvpc` network mode. If using `awsvpc` network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.
      * 
      */
-    @InputImport(name="iamRole")
+    @Import(name="iamRole")
       private final @Nullable Output<String> iamRole;
 
     public Output<String> getIamRole() {
@@ -162,7 +162,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
      * 
      */
-    @InputImport(name="launchType")
+    @Import(name="launchType")
       private final @Nullable Output<String> launchType;
 
     public Output<String> getLaunchType() {
@@ -173,7 +173,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for load balancers. See below.
      * 
      */
-    @InputImport(name="loadBalancers")
+    @Import(name="loadBalancers")
       private final @Nullable Output<List<ServiceLoadBalancerGetArgs>> loadBalancers;
 
     public Output<List<ServiceLoadBalancerGetArgs>> getLoadBalancers() {
@@ -184,7 +184,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Name of the service (up to 255 letters, numbers, hyphens, and underscores)
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -195,7 +195,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. See below.
      * 
      */
-    @InputImport(name="networkConfiguration")
+    @Import(name="networkConfiguration")
       private final @Nullable Output<ServiceNetworkConfigurationGetArgs> networkConfiguration;
 
     public Output<ServiceNetworkConfigurationGetArgs> getNetworkConfiguration() {
@@ -206,7 +206,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. The maximum number of `ordered_placement_strategy` blocks is `5`. See below.
      * 
      */
-    @InputImport(name="orderedPlacementStrategies")
+    @Import(name="orderedPlacementStrategies")
       private final @Nullable Output<List<ServiceOrderedPlacementStrategyGetArgs>> orderedPlacementStrategies;
 
     public Output<List<ServiceOrderedPlacementStrategyGetArgs>> getOrderedPlacementStrategies() {
@@ -217,7 +217,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Rules that are taken into consideration during task placement. Updates to this configuration will take effect next task deployment unless `force_new_deployment` is enabled. Maximum number of `placement_constraints` is `10`. See below.
      * 
      */
-    @InputImport(name="placementConstraints")
+    @Import(name="placementConstraints")
       private final @Nullable Output<List<ServicePlacementConstraintGetArgs>> placementConstraints;
 
     public Output<List<ServicePlacementConstraintGetArgs>> getPlacementConstraints() {
@@ -228,7 +228,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
      * 
      */
-    @InputImport(name="platformVersion")
+    @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
     public Output<String> getPlatformVersion() {
@@ -239,7 +239,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are `SERVICE` and `TASK_DEFINITION`.
      * 
      */
-    @InputImport(name="propagateTags")
+    @Import(name="propagateTags")
       private final @Nullable Output<String> propagateTags;
 
     public Output<String> getPropagateTags() {
@@ -250,7 +250,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Scheduling strategy to use for the service. The valid values are `REPLICA` and `DAEMON`. Defaults to `REPLICA`. Note that [*Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deployment controller types don't support the `DAEMON` scheduling strategy*](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateService.html).
      * 
      */
-    @InputImport(name="schedulingStrategy")
+    @Import(name="schedulingStrategy")
       private final @Nullable Output<String> schedulingStrategy;
 
     public Output<String> getSchedulingStrategy() {
@@ -261,7 +261,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. See below.
      * 
      */
-    @InputImport(name="serviceRegistries")
+    @Import(name="serviceRegistries")
       private final @Nullable Output<ServiceServiceRegistriesGetArgs> serviceRegistries;
 
     public Output<ServiceServiceRegistriesGetArgs> getServiceRegistries() {
@@ -272,7 +272,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -283,7 +283,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -294,7 +294,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service. Required unless using the `EXTERNAL` deployment controller. If a revision is not specified, the latest `ACTIVE` revision is used.
      * 
      */
-    @InputImport(name="taskDefinition")
+    @Import(name="taskDefinition")
       private final @Nullable Output<String> taskDefinition;
 
     public Output<String> getTaskDefinition() {
@@ -305,7 +305,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * If `true`, this provider will wait for the service to reach a steady state (like [`aws ecs wait services-stable`](https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html)) before continuing. Default `false`.
      * 
      */
-    @InputImport(name="waitForSteadyState")
+    @Import(name="waitForSteadyState")
       private final @Nullable Output<Boolean> waitForSteadyState;
 
     public Output<Boolean> getWaitForSteadyState() {

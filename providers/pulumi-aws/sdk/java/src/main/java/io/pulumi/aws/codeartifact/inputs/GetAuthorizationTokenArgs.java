@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codeartifact.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
      * The name of the domain that is in scope for the generated authorization token.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final String domain;
 
     public String getDomain() {
@@ -30,7 +30,7 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
      * The account number of the AWS account that owns the domain.
      * 
      */
-    @InputImport(name="domainOwner")
+    @Import(name="domainOwner")
       private final @Nullable String domainOwner;
 
     public Optional<String> getDomainOwner() {
@@ -41,7 +41,7 @@ public final class GetAuthorizationTokenArgs extends io.pulumi.resources.InvokeA
      * The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
      * 
      */
-    @InputImport(name="durationSeconds")
+    @Import(name="durationSeconds")
       private final @Nullable Integer durationSeconds;
 
     public Optional<Integer> getDurationSeconds() {

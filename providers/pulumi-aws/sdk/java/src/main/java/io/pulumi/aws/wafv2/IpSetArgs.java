@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
      * Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation. AWS WAF supports all address ranges for IP versions IPv4 and IPv6.
      * 
      */
-    @InputImport(name="addresses")
+    @Import(name="addresses")
       private final @Nullable Output<List<String>> addresses;
 
     public Output<List<String>> getAddresses() {
@@ -31,7 +31,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly description of the IP set.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
      * Specify IPV4 or IPV6. Valid values are `IPV4` or `IPV6`.
      * 
      */
-    @InputImport(name="ipAddressVersion", required=true)
+    @Import(name="ipAddressVersion", required=true)
       private final Output<String> ipAddressVersion;
 
     public Output<String> getIpAddressVersion() {
@@ -53,7 +53,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly name of the IP set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the Region US East (N. Virginia).
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -75,7 +75,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

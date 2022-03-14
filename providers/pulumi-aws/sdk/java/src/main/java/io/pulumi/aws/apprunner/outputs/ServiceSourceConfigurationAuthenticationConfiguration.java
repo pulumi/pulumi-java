@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.apprunner.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceSourceConfigurationAuthenticationConfiguration {
     /**
      * ARN of the IAM role that grants the App Runner service access to a source repository. Required for ECR image repositories (but not for ECR Public)
@@ -22,10 +22,10 @@ public final class ServiceSourceConfigurationAuthenticationConfiguration {
      */
     private final @Nullable String connectionArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceSourceConfigurationAuthenticationConfiguration(
-        @OutputCustomType.Parameter("accessRoleArn") @Nullable String accessRoleArn,
-        @OutputCustomType.Parameter("connectionArn") @Nullable String connectionArn) {
+        @CustomType.Parameter("accessRoleArn") @Nullable String accessRoleArn,
+        @CustomType.Parameter("connectionArn") @Nullable String connectionArn) {
         this.accessRoleArn = accessRoleArn;
         this.connectionArn = connectionArn;
     }

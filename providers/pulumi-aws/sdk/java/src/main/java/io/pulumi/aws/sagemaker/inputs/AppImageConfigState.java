@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * The name of the App Image Config.
      * 
      */
-    @InputImport(name="appImageConfigName")
+    @Import(name="appImageConfigName")
       private final @Nullable Output<String> appImageConfigName;
 
     public Output<String> getAppImageConfigName() {
@@ -31,7 +31,7 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * The Amazon Resource Name (ARN) assigned by AWS to this App Image Config.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -42,7 +42,7 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
      * 
      */
-    @InputImport(name="kernelGatewayImageConfig")
+    @Import(name="kernelGatewayImageConfig")
       private final @Nullable Output<AppImageConfigKernelGatewayImageConfigGetArgs> kernelGatewayImageConfig;
 
     public Output<AppImageConfigKernelGatewayImageConfigGetArgs> getKernelGatewayImageConfig() {
@@ -53,7 +53,7 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class AppImageConfigState extends io.pulumi.resources.ResourceArgs 
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Whether the event subscription should be enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -32,7 +32,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * List of event categories to listen for, see `DescribeEventCategories` for a canonical list.
      * 
      */
-    @InputImport(name="eventCategories", required=true)
+    @Import(name="eventCategories", required=true)
       private final Output<List<String>> eventCategories;
 
     public Output<List<String>> getEventCategories() {
@@ -43,7 +43,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Name of event subscription.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * SNS topic arn to send events on.
      * 
      */
-    @InputImport(name="snsTopicArn", required=true)
+    @Import(name="snsTopicArn", required=true)
       private final Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {
@@ -65,7 +65,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Ids of sources to listen to.
      * 
      */
-    @InputImport(name="sourceIds")
+    @Import(name="sourceIds")
       private final @Nullable Output<List<String>> sourceIds;
 
     public Output<List<String>> getSourceIds() {
@@ -76,7 +76,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Type of source for events. Valid values: `replication-instance` or `replication-task`
      * 
      */
-    @InputImport(name="sourceType")
+    @Import(name="sourceType")
       private final @Nullable Output<String> sourceType;
 
     public Output<String> getSourceType() {
@@ -87,7 +87,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Map of resource tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.PeeringConnectionOptionsAccepterGetArgs;
 import io.pulumi.aws.ec2.inputs.PeeringConnectionOptionsRequesterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PeeringConnectionOptionsState extends io.pulumi.resources.Res
      * the peering connection (a maximum of one).
      * 
      */
-    @InputImport(name="accepter")
+    @Import(name="accepter")
       private final @Nullable Output<PeeringConnectionOptionsAccepterGetArgs> accepter;
 
     public Output<PeeringConnectionOptionsAccepterGetArgs> getAccepter() {
@@ -35,7 +35,7 @@ public final class PeeringConnectionOptionsState extends io.pulumi.resources.Res
      * the peering connection (a maximum of one).
      * 
      */
-    @InputImport(name="requester")
+    @Import(name="requester")
       private final @Nullable Output<PeeringConnectionOptionsRequesterGetArgs> requester;
 
     public Output<PeeringConnectionOptionsRequesterGetArgs> getRequester() {
@@ -46,7 +46,7 @@ public final class PeeringConnectionOptionsState extends io.pulumi.resources.Res
      * The ID of the requester VPC peering connection.
      * 
      */
-    @InputImport(name="vpcPeeringConnectionId")
+    @Import(name="vpcPeeringConnectionId")
       private final @Nullable Output<String> vpcPeeringConnectionId;
 
     public Output<String> getVpcPeeringConnectionId() {

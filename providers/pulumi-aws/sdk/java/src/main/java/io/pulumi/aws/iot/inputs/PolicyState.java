@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The ARN assigned by AWS to this policy.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The default version of this policy.
      * 
      */
-    @InputImport(name="defaultVersionId")
+    @Import(name="defaultVersionId")
       private final @Nullable Output<String> defaultVersionId;
 
     public Output<String> getDefaultVersionId() {
@@ -40,7 +40,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The name of the policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The policy document. This is a JSON formatted string. Use the [IoT Developer Guide](http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html) for more information on IoT Policies.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectSourceBuildStatusConfig {
     /**
      * Specifies the context of the build status CodeBuild sends to the source provider. The usage of this parameter depends on the source provider.
@@ -22,10 +22,10 @@ public final class ProjectSourceBuildStatusConfig {
      */
     private final @Nullable String targetUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectSourceBuildStatusConfig(
-        @OutputCustomType.Parameter("context") @Nullable String context,
-        @OutputCustomType.Parameter("targetUrl") @Nullable String targetUrl) {
+        @CustomType.Parameter("context") @Nullable String context,
+        @CustomType.Parameter("targetUrl") @Nullable String targetUrl) {
         this.context = context;
         this.targetUrl = targetUrl;
     }

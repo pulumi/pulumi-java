@@ -5,7 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.aws.cfg.inputs.RecorderRecordingGroupGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
      * The name of the recorder. Defaults to `default`. Changing it recreates the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -30,7 +30,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
      * Recording group - see below.
      * 
      */
-    @InputImport(name="recordingGroup")
+    @Import(name="recordingGroup")
       private final @Nullable Output<RecorderRecordingGroupGetArgs> recordingGroup;
 
     public Output<RecorderRecordingGroupGetArgs> getRecordingGroup() {
@@ -41,7 +41,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the IAM role. Used to make read or write requests to the delivery channel and to describe the AWS resources associated with the account. See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) for more details.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {

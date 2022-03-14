@@ -8,7 +8,7 @@ import io.pulumi.aws.gamelift.BuildArgs;
 import io.pulumi.aws.gamelift.inputs.BuildState;
 import io.pulumi.aws.gamelift.outputs.BuildStorageLocation;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -30,7 +30,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * Gamelift Build ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -44,7 +44,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * Name of the build
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -58,7 +58,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * Operating system that the game server binaries are built to run onE.g., `WINDOWS_2012`, `AMAZON_LINUX` or `AMAZON_LINUX_2`.
      * 
      */
-    @OutputExport(name="operatingSystem", type=String.class, parameters={})
+    @Export(name="operatingSystem", type=String.class, parameters={})
     private Output<String> operatingSystem;
 
     /**
@@ -72,7 +72,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * Information indicating where your game build files are stored. See below.
      * 
      */
-    @OutputExport(name="storageLocation", type=BuildStorageLocation.class, parameters={})
+    @Export(name="storageLocation", type=BuildStorageLocation.class, parameters={})
     private Output<BuildStorageLocation> storageLocation;
 
     /**
@@ -86,7 +86,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -100,7 +100,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -114,7 +114,7 @@ public class Build extends io.pulumi.resources.CustomResource {
      * Version that is associated with this build.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

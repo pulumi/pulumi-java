@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TablePointInTimeRecoveryArgs extends io.pulumi.resources.Reso
      * Indicates whether ttl is enabled (true) or disabled (false).
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

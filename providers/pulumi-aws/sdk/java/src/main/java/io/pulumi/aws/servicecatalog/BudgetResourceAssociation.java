@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.BudgetResourceAssociationArgs;
 import io.pulumi.aws.servicecatalog.inputs.BudgetResourceAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class BudgetResourceAssociation extends io.pulumi.resources.CustomResourc
      * Budget name.
      * 
      */
-    @OutputExport(name="budgetName", type=String.class, parameters={})
+    @Export(name="budgetName", type=String.class, parameters={})
     private Output<String> budgetName;
 
     /**
@@ -48,7 +48,7 @@ public class BudgetResourceAssociation extends io.pulumi.resources.CustomResourc
      * Resource identifier.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**

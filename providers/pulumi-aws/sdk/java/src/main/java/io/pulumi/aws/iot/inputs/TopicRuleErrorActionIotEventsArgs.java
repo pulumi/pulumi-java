@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TopicRuleErrorActionIotEventsArgs extends io.pulumi.resources
      * The name of the AWS IoT Events input.
      * 
      */
-    @InputImport(name="inputName", required=true)
+    @Import(name="inputName", required=true)
       private final Output<String> inputName;
 
     public Output<String> getInputName() {
@@ -29,7 +29,7 @@ public final class TopicRuleErrorActionIotEventsArgs extends io.pulumi.resources
      * Use this to ensure that only one input (message) with a given messageId is processed by an AWS IoT Events detector.
      * 
      */
-    @InputImport(name="messageId")
+    @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
     public Output<String> getMessageId() {
@@ -40,7 +40,7 @@ public final class TopicRuleErrorActionIotEventsArgs extends io.pulumi.resources
      * The ARN of the IAM role that grants access.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class BucketLifecycleConfigurationRuleExpirationGetArgs extends io.
      * Date the object is to be deleted. Should be in `YYYY-MM-DD` date format, e.g., `2020-09-30`.
      * 
      */
-    @InputImport(name="date")
+    @Import(name="date")
       private final @Nullable Output<String> date;
 
     public Output<String> getDate() {
@@ -31,7 +31,7 @@ public final class BucketLifecycleConfigurationRuleExpirationGetArgs extends io.
      * Number of days before the object is to be deleted.
      * 
      */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Output<Integer> days;
 
     public Output<Integer> getDays() {
@@ -42,7 +42,7 @@ public final class BucketLifecycleConfigurationRuleExpirationGetArgs extends io.
      * Enable to remove a delete marker with no noncurrent versions. Cannot be specified with `date` or `days`.
      * 
      */
-    @InputImport(name="expiredObjectDeleteMarker")
+    @Import(name="expiredObjectDeleteMarker")
       private final @Nullable Output<Boolean> expiredObjectDeleteMarker;
 
     public Output<Boolean> getExpiredObjectDeleteMarker() {

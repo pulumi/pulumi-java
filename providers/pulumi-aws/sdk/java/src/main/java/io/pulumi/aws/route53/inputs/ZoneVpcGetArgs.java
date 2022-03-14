@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ZoneVpcGetArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the VPC to associate.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {
@@ -29,7 +29,7 @@ public final class ZoneVpcGetArgs extends io.pulumi.resources.ResourceArgs {
      * Region of the VPC to associate. Defaults to AWS provider region.
      * 
      */
-    @InputImport(name="vpcRegion")
+    @Import(name="vpcRegion")
       private final @Nullable Output<String> vpcRegion;
 
     public Output<String> getVpcRegion() {

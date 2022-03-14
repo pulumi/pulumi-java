@@ -4,13 +4,13 @@
 package io.pulumi.aws.apigateway.outputs;
 
 import io.pulumi.aws.apigateway.outputs.UsagePlanApiStageThrottle;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UsagePlanApiStage {
     /**
      * API Id of the associated API stage in a usage plan.
@@ -28,11 +28,11 @@ public final class UsagePlanApiStage {
      */
     private final @Nullable List<UsagePlanApiStageThrottle> throttles;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UsagePlanApiStage(
-        @OutputCustomType.Parameter("apiId") String apiId,
-        @OutputCustomType.Parameter("stage") String stage,
-        @OutputCustomType.Parameter("throttles") @Nullable List<UsagePlanApiStageThrottle> throttles) {
+        @CustomType.Parameter("apiId") String apiId,
+        @CustomType.Parameter("stage") String stage,
+        @CustomType.Parameter("throttles") @Nullable List<UsagePlanApiStageThrottle> throttles) {
         this.apiId = apiId;
         this.stage = stage;
         this.throttles = throttles;

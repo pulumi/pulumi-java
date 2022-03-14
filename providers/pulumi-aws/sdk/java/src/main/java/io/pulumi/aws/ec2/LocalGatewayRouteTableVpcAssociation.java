@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.LocalGatewayRouteTableVpcAssociationArgs;
 import io.pulumi.aws.ec2.inputs.LocalGatewayRouteTableVpcAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:ec2/localGatewayRouteTableVpcAssociation:LocalGatewayRouteTableVpcAssociation")
 public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="localGatewayId", type=String.class, parameters={})
+    @Export(name="localGatewayId", type=String.class, parameters={})
     private Output<String> localGatewayId;
 
     public Output<String> getLocalGatewayId() {
@@ -39,7 +39,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * Identifier of EC2 Local Gateway Route Table.
      * 
      */
-    @OutputExport(name="localGatewayRouteTableId", type=String.class, parameters={})
+    @Export(name="localGatewayRouteTableId", type=String.class, parameters={})
     private Output<String> localGatewayRouteTableId;
 
     /**
@@ -53,7 +53,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -67,7 +67,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -81,7 +81,7 @@ public class LocalGatewayRouteTableVpcAssociation extends io.pulumi.resources.Cu
      * Identifier of EC2 VPC.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
      * Whether to allow users to change their own password
      * 
      */
-    @InputImport(name="allowUsersToChangePassword")
+    @Import(name="allowUsersToChangePassword")
       private final @Nullable Output<Boolean> allowUsersToChangePassword;
 
     public Output<Boolean> getAllowUsersToChangePassword() {
@@ -30,7 +30,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
      * Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
      * 
      */
-    @InputImport(name="expirePasswords")
+    @Import(name="expirePasswords")
       private final @Nullable Output<Boolean> expirePasswords;
 
     public Output<Boolean> getExpirePasswords() {
@@ -41,7 +41,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
      * Whether users are prevented from setting a new password after their password has expired (i.e., require administrator reset)
      * 
      */
-    @InputImport(name="hardExpiry")
+    @Import(name="hardExpiry")
       private final @Nullable Output<Boolean> hardExpiry;
 
     public Output<Boolean> getHardExpiry() {
@@ -52,7 +52,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
      * The number of days that an user password is valid.
      * 
      */
-    @InputImport(name="maxPasswordAge")
+    @Import(name="maxPasswordAge")
       private final @Nullable Output<Integer> maxPasswordAge;
 
     public Output<Integer> getMaxPasswordAge() {
@@ -63,7 +63,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
      * Minimum length to require for user passwords.
      * 
      */
-    @InputImport(name="minimumPasswordLength")
+    @Import(name="minimumPasswordLength")
       private final @Nullable Output<Integer> minimumPasswordLength;
 
     public Output<Integer> getMinimumPasswordLength() {
@@ -74,7 +74,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
      * The number of previous passwords that users are prevented from reusing.
      * 
      */
-    @InputImport(name="passwordReusePrevention")
+    @Import(name="passwordReusePrevention")
       private final @Nullable Output<Integer> passwordReusePrevention;
 
     public Output<Integer> getPasswordReusePrevention() {
@@ -85,7 +85,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
      * Whether to require lowercase characters for user passwords.
      * 
      */
-    @InputImport(name="requireLowercaseCharacters")
+    @Import(name="requireLowercaseCharacters")
       private final @Nullable Output<Boolean> requireLowercaseCharacters;
 
     public Output<Boolean> getRequireLowercaseCharacters() {
@@ -96,7 +96,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
      * Whether to require numbers for user passwords.
      * 
      */
-    @InputImport(name="requireNumbers")
+    @Import(name="requireNumbers")
       private final @Nullable Output<Boolean> requireNumbers;
 
     public Output<Boolean> getRequireNumbers() {
@@ -107,7 +107,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
      * Whether to require symbols for user passwords.
      * 
      */
-    @InputImport(name="requireSymbols")
+    @Import(name="requireSymbols")
       private final @Nullable Output<Boolean> requireSymbols;
 
     public Output<Boolean> getRequireSymbols() {
@@ -118,7 +118,7 @@ public final class AccountPasswordPolicyState extends io.pulumi.resources.Resour
      * Whether to require uppercase characters for user passwords.
      * 
      */
-    @InputImport(name="requireUppercaseCharacters")
+    @Import(name="requireUppercaseCharacters")
       private final @Nullable Output<Boolean> requireUppercaseCharacters;
 
     public Output<Boolean> getRequireUppercaseCharacters() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudcontrol;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourceArgs Empty = new ResourceArgs();
 
-    @InputImport(name="desiredState", required=true)
+    @Import(name="desiredState", required=true)
       private final Output<String> desiredState;
 
     public Output<String> getDesiredState() {
@@ -25,7 +25,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the IAM Role to assume for operations.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -36,7 +36,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * JSON string of the CloudFormation resource type schema which is used for plan time validation where possible. Automatically fetched if not provided. In large scale environments with multiple resources using the same `type_name`, it is recommended to fetch the schema once via the `aws.cloudformation.CloudFormationType` data source and use this argument to reduce `DescribeType` API operation throttling. This value is marked sensitive only to prevent large plan differences from showing.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
@@ -47,7 +47,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * CloudFormation resource type name. For example, `AWS::EC2::VPC`.
      * 
      */
-    @InputImport(name="typeName", required=true)
+    @Import(name="typeName", required=true)
       private final Output<String> typeName;
 
     public Output<String> getTypeName() {
@@ -58,7 +58,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the CloudFormation resource type version.
      * 
      */
-    @InputImport(name="typeVersionId")
+    @Import(name="typeVersionId")
       private final @Nullable Output<String> typeVersionId;
 
     public Output<String> getTypeVersionId() {

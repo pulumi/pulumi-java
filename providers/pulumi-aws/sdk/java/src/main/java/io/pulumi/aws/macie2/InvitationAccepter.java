@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.macie2.InvitationAccepterArgs;
 import io.pulumi.aws.macie2.inputs.InvitationAccepterState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class InvitationAccepter extends io.pulumi.resources.CustomResource {
      * The AWS account ID for the account that sent the invitation.
      * 
      */
-    @OutputExport(name="administratorAccountId", type=String.class, parameters={})
+    @Export(name="administratorAccountId", type=String.class, parameters={})
     private Output<String> administratorAccountId;
 
     /**
@@ -46,7 +46,7 @@ public class InvitationAccepter extends io.pulumi.resources.CustomResource {
      * The unique identifier for the invitation.
      * 
      */
-    @OutputExport(name="invitationId", type=String.class, parameters={})
+    @Export(name="invitationId", type=String.class, parameters={})
     private Output<String> invitationId;
 
     /**

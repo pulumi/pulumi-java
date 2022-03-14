@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobDefinitionRetryStrategyEvaluateOnExit {
     /**
      * Specifies the action to take if all of the specified conditions are met. The values are not case sensitive. Valid values: `RETRY`, `EXIT`.
@@ -32,12 +32,12 @@ public final class JobDefinitionRetryStrategyEvaluateOnExit {
      */
     private final @Nullable String onStatusReason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobDefinitionRetryStrategyEvaluateOnExit(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("onExitCode") @Nullable String onExitCode,
-        @OutputCustomType.Parameter("onReason") @Nullable String onReason,
-        @OutputCustomType.Parameter("onStatusReason") @Nullable String onStatusReason) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("onExitCode") @Nullable String onExitCode,
+        @CustomType.Parameter("onReason") @Nullable String onReason,
+        @CustomType.Parameter("onStatusReason") @Nullable String onStatusReason) {
         this.action = action;
         this.onExitCode = onExitCode;
         this.onReason = onReason;

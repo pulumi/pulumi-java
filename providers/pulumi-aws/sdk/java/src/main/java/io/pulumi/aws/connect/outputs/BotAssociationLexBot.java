@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotAssociationLexBot {
     /**
      * The Region that the Amazon Lex (V1) bot was created in. Defaults to current region.
@@ -22,10 +22,10 @@ public final class BotAssociationLexBot {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotAssociationLexBot(
-        @OutputCustomType.Parameter("lexRegion") @Nullable String lexRegion,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("lexRegion") @Nullable String lexRegion,
+        @CustomType.Parameter("name") String name) {
         this.lexRegion = lexRegion;
         this.name = name;
     }

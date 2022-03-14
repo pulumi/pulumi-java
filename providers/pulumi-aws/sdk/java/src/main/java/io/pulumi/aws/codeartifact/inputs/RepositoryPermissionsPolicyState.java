@@ -4,7 +4,7 @@
 package io.pulumi.aws.codeartifact.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * The name of the domain on which to set the resource policy.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -29,7 +29,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * The account number of the AWS account that owns the domain.
      * 
      */
-    @InputImport(name="domainOwner")
+    @Import(name="domainOwner")
       private final @Nullable Output<String> domainOwner;
 
     public Output<String> getDomainOwner() {
@@ -40,7 +40,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * A JSON policy string to be set as the access control resource policy on the provided domain.
      * 
      */
-    @InputImport(name="policyDocument")
+    @Import(name="policyDocument")
       private final @Nullable Output<String> policyDocument;
 
     public Output<String> getPolicyDocument() {
@@ -51,7 +51,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.
      * 
      */
-    @InputImport(name="policyRevision")
+    @Import(name="policyRevision")
       private final @Nullable Output<String> policyRevision;
 
     public Output<String> getPolicyRevision() {
@@ -62,7 +62,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * The name of the repository to set the resource policy on.
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable Output<String> repository;
 
     public Output<String> getRepository() {
@@ -73,7 +73,7 @@ public final class RepositoryPermissionsPolicyState extends io.pulumi.resources.
      * The ARN of the resource associated with the resource policy.
      * 
      */
-    @InputImport(name="resourceArn")
+    @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {

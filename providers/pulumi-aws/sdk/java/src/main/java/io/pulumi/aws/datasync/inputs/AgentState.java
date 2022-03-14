@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * DataSync Agent activation key during resource creation. Conflicts with `ip_address`. If an `ip_address` is provided instead, the provider will retrieve the `activation_key` as part of the resource creation.
      * 
      */
-    @InputImport(name="activationKey")
+    @Import(name="activationKey")
       private final @Nullable Output<String> activationKey;
 
     public Output<String> getActivationKey() {
@@ -31,7 +31,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the DataSync Agent.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -42,7 +42,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * DataSync Agent IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. DataSync Agent must be accessible on port 80 from where the provider is running.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -53,7 +53,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * Name of the DataSync Agent.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * The IP address of the VPC endpoint the agent should connect to when retrieving an activation key during resource creation. Conflicts with `activation_key`.
      * 
      */
-    @InputImport(name="privateLinkEndpoint")
+    @Import(name="privateLinkEndpoint")
       private final @Nullable Output<String> privateLinkEndpoint;
 
     public Output<String> getPrivateLinkEndpoint() {
@@ -75,7 +75,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * The ARNs of the security groups used to protect your data transfer task subnets.
      * 
      */
-    @InputImport(name="securityGroupArns")
+    @Import(name="securityGroupArns")
       private final @Nullable Output<List<String>> securityGroupArns;
 
     public Output<List<String>> getSecurityGroupArns() {
@@ -86,7 +86,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
      * 
      */
-    @InputImport(name="subnetArns")
+    @Import(name="subnetArns")
       private final @Nullable Output<List<String>> subnetArns;
 
     public Output<List<String>> getSubnetArns() {
@@ -97,7 +97,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -108,7 +108,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -119,7 +119,7 @@ public final class AgentState extends io.pulumi.resources.ResourceArgs {
      * The ID of the VPC (virtual private cloud) endpoint that the agent has access to.
      * 
      */
-    @InputImport(name="vpcEndpointId")
+    @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {

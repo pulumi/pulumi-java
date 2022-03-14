@@ -4,13 +4,13 @@
 package io.pulumi.aws.fsx.outputs;
 
 import io.pulumi.aws.fsx.outputs.OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OntapStorageVirtualMachineActiveDirectoryConfiguration {
     /**
      * The NetBIOS name of the Active Directory computer object that will be created for your SVM. This is often the same as the SVM name but can be different. It is limited to 15 characters because of standard NetBIOS naming limits.
@@ -19,10 +19,10 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfiguration {
     private final @Nullable String netbiosName;
     private final @Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OntapStorageVirtualMachineActiveDirectoryConfiguration(
-        @OutputCustomType.Parameter("netbiosName") @Nullable String netbiosName,
-        @OutputCustomType.Parameter("selfManagedActiveDirectoryConfiguration") @Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration) {
+        @CustomType.Parameter("netbiosName") @Nullable String netbiosName,
+        @CustomType.Parameter("selfManagedActiveDirectoryConfiguration") @Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration) {
         this.netbiosName = netbiosName;
         this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
     }

@@ -6,7 +6,7 @@ package io.pulumi.aws.acmpca;
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfigurationArgs;
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Nested argument containing algorithms and certificate subject information. Defined below.
      * 
      */
-    @InputImport(name="certificateAuthorityConfiguration", required=true)
+    @Import(name="certificateAuthorityConfiguration", required=true)
       private final Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> certificateAuthorityConfiguration;
 
     public Output<CertificateAuthorityCertificateAuthorityConfigurationArgs> getCertificateAuthorityConfiguration() {
@@ -34,7 +34,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -45,7 +45,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
      * 
      */
-    @InputImport(name="permanentDeletionTimeInDays")
+    @Import(name="permanentDeletionTimeInDays")
       private final @Nullable Output<Integer> permanentDeletionTimeInDays;
 
     public Output<Integer> getPermanentDeletionTimeInDays() {
@@ -56,7 +56,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Nested argument containing revocation configuration. Defined below.
      * 
      */
-    @InputImport(name="revocationConfiguration")
+    @Import(name="revocationConfiguration")
       private final @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
     public Output<CertificateAuthorityRevocationConfigurationArgs> getRevocationConfiguration() {
@@ -67,7 +67,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * Specifies a key-value map of user-defined tags that are attached to the certificate authority. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -78,7 +78,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
      * The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

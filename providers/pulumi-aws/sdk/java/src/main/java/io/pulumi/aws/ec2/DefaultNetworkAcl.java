@@ -9,7 +9,7 @@ import io.pulumi.aws.ec2.inputs.DefaultNetworkAclState;
 import io.pulumi.aws.ec2.outputs.DefaultNetworkAclEgress;
 import io.pulumi.aws.ec2.outputs.DefaultNetworkAclIngress;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +47,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * ARN of the Default Network ACL
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -61,7 +61,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * Network ACL ID to manage. This attribute is exported from `aws.ec2.Vpc`, or manually found via the AWS Console.
      * 
      */
-    @OutputExport(name="defaultNetworkAclId", type=String.class, parameters={})
+    @Export(name="defaultNetworkAclId", type=String.class, parameters={})
     private Output<String> defaultNetworkAclId;
 
     /**
@@ -75,7 +75,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * Configuration block for an egress rule. Detailed below.
      * 
      */
-    @OutputExport(name="egress", type=List.class, parameters={DefaultNetworkAclEgress.class})
+    @Export(name="egress", type=List.class, parameters={DefaultNetworkAclEgress.class})
     private Output</* @Nullable */ List<DefaultNetworkAclEgress>> egress;
 
     /**
@@ -89,7 +89,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * Configuration block for an ingress rule. Detailed below.
      * 
      */
-    @OutputExport(name="ingress", type=List.class, parameters={DefaultNetworkAclIngress.class})
+    @Export(name="ingress", type=List.class, parameters={DefaultNetworkAclIngress.class})
     private Output</* @Nullable */ List<DefaultNetworkAclIngress>> ingress;
 
     /**
@@ -103,7 +103,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * ID of the AWS account that owns the Default Network ACL
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -117,7 +117,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * List of Subnet IDs to apply the ACL to. See the notes below on managing Subnets in the Default Network ACL
      * 
      */
-    @OutputExport(name="subnetIds", type=List.class, parameters={String.class})
+    @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subnetIds;
 
     /**
@@ -131,7 +131,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -145,7 +145,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -159,7 +159,7 @@ public class DefaultNetworkAcl extends io.pulumi.resources.CustomResource {
      * ID of the associated VPC
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

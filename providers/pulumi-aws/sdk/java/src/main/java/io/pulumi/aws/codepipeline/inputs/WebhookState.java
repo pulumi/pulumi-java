@@ -6,7 +6,7 @@ package io.pulumi.aws.codepipeline.inputs;
 import io.pulumi.aws.codepipeline.inputs.WebhookAuthenticationConfigurationGetArgs;
 import io.pulumi.aws.codepipeline.inputs.WebhookFilterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The CodePipeline webhook's ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The type of authentication  to use. One of `IP`, `GITHUB_HMAC`, or `UNAUTHENTICATED`.
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Output<String> authentication;
 
     public Output<String> getAuthentication() {
@@ -44,7 +44,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * An `auth` block. Required for `IP` and `GITHUB_HMAC`. Auth blocks are documented below.
      * 
      */
-    @InputImport(name="authenticationConfiguration")
+    @Import(name="authenticationConfiguration")
       private final @Nullable Output<WebhookAuthenticationConfigurationGetArgs> authenticationConfiguration;
 
     public Output<WebhookAuthenticationConfigurationGetArgs> getAuthenticationConfiguration() {
@@ -55,7 +55,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * One or more `filter` blocks. Filter blocks are documented below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable Output<List<WebhookFilterGetArgs>> filters;
 
     public Output<List<WebhookFilterGetArgs>> getFilters() {
@@ -66,7 +66,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The name of the webhook.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -99,7 +99,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The name of the action in a pipeline you want to connect to the webhook. The action must be from the source (first) stage of the pipeline.
      * 
      */
-    @InputImport(name="targetAction")
+    @Import(name="targetAction")
       private final @Nullable Output<String> targetAction;
 
     public Output<String> getTargetAction() {
@@ -110,7 +110,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The name of the pipeline.
      * 
      */
-    @InputImport(name="targetPipeline")
+    @Import(name="targetPipeline")
       private final @Nullable Output<String> targetPipeline;
 
     public Output<String> getTargetPipeline() {
@@ -121,7 +121,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The CodePipeline webhook's URL. POST events to this endpoint to trigger the target.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

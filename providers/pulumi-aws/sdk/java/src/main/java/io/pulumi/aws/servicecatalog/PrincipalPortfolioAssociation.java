@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.PrincipalPortfolioAssociationArgs;
 import io.pulumi.aws.servicecatalog.inputs.PrincipalPortfolioAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @OutputExport(name="acceptLanguage", type=String.class, parameters={})
+    @Export(name="acceptLanguage", type=String.class, parameters={})
     private Output</* @Nullable */ String> acceptLanguage;
 
     /**
@@ -46,7 +46,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * Portfolio identifier.
      * 
      */
-    @OutputExport(name="portfolioId", type=String.class, parameters={})
+    @Export(name="portfolioId", type=String.class, parameters={})
     private Output<String> portfolioId;
 
     /**
@@ -60,7 +60,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * Principal ARN.
      * 
      */
-    @OutputExport(name="principalArn", type=String.class, parameters={})
+    @Export(name="principalArn", type=String.class, parameters={})
     private Output<String> principalArn;
 
     /**
@@ -74,7 +74,7 @@ public class PrincipalPortfolioAssociation extends io.pulumi.resources.CustomRes
      * Principal type. Setting this argument empty (e.g., `principal_type = ""`) will result in an error. Valid value is `IAM`. Default is `IAM`.
      * 
      */
-    @OutputExport(name="principalType", type=String.class, parameters={})
+    @Export(name="principalType", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalType;
 
     /**

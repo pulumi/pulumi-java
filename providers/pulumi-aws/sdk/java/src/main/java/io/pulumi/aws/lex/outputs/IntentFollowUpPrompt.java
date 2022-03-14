@@ -5,10 +5,10 @@ package io.pulumi.aws.lex.outputs;
 
 import io.pulumi.aws.lex.outputs.IntentFollowUpPromptPrompt;
 import io.pulumi.aws.lex.outputs.IntentFollowUpPromptRejectionStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IntentFollowUpPrompt {
     /**
      * Prompts for information from the user. Attributes are documented under prompt.
@@ -23,10 +23,10 @@ public final class IntentFollowUpPrompt {
      */
     private final IntentFollowUpPromptRejectionStatement rejectionStatement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntentFollowUpPrompt(
-        @OutputCustomType.Parameter("prompt") IntentFollowUpPromptPrompt prompt,
-        @OutputCustomType.Parameter("rejectionStatement") IntentFollowUpPromptRejectionStatement rejectionStatement) {
+        @CustomType.Parameter("prompt") IntentFollowUpPromptPrompt prompt,
+        @CustomType.Parameter("rejectionStatement") IntentFollowUpPromptRejectionStatement rejectionStatement) {
         this.prompt = prompt;
         this.rejectionStatement = rejectionStatement;
     }

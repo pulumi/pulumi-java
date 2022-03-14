@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.servicecatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceActionDefinition {
     /**
      * ARN of the role that performs the self-service actions on your behalf. For example, `arn:aws:iam::12345678910:role/ActionRole`. To reuse the provisioned product launch role, set to `LAUNCH_ROLE`.
@@ -37,13 +37,13 @@ public final class ServiceActionDefinition {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceActionDefinition(
-        @OutputCustomType.Parameter("assumeRole") @Nullable String assumeRole,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable String parameters,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("assumeRole") @Nullable String assumeRole,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable String parameters,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("version") String version) {
         this.assumeRole = assumeRole;
         this.name = name;
         this.parameters = parameters;

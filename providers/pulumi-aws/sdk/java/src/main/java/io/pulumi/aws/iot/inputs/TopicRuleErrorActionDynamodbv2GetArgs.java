@@ -5,7 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.aws.iot.inputs.TopicRuleErrorActionDynamodbv2PutItemGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TopicRuleErrorActionDynamodbv2GetArgs extends io.pulumi.resou
      * Configuration block with DynamoDB Table to which the message will be written. Nested arguments below.
      * 
      */
-    @InputImport(name="putItem")
+    @Import(name="putItem")
       private final @Nullable Output<TopicRuleErrorActionDynamodbv2PutItemGetArgs> putItem;
 
     public Output<TopicRuleErrorActionDynamodbv2PutItemGetArgs> getPutItem() {
@@ -30,7 +30,7 @@ public final class TopicRuleErrorActionDynamodbv2GetArgs extends io.pulumi.resou
      * The IAM role ARN that allows access to the CloudWatch alarm.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

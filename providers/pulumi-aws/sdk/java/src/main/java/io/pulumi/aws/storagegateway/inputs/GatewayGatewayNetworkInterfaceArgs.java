@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GatewayGatewayNetworkInterfaceArgs extends io.pulumi.resource
      * The Internet Protocol version 4 (IPv4) address of the interface.
      * 
      */
-    @InputImport(name="ipv4Address")
+    @Import(name="ipv4Address")
       private final @Nullable Output<String> ipv4Address;
 
     public Output<String> getIpv4Address() {

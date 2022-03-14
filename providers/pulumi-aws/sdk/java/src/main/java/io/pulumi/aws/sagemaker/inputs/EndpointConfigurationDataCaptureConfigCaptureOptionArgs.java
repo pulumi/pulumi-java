@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOptionArgs exten
      * Specifies the data to be captured. Should be one of `Input` or `Output`.
      * 
      */
-    @InputImport(name="captureMode", required=true)
+    @Import(name="captureMode", required=true)
       private final Output<String> captureMode;
 
     public Output<String> getCaptureMode() {

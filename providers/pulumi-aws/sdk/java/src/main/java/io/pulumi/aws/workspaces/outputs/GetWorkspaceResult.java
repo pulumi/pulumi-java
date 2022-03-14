@@ -4,14 +4,14 @@
 package io.pulumi.aws.workspaces.outputs;
 
 import io.pulumi.aws.workspaces.outputs.GetWorkspaceWorkspaceProperty;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkspaceResult {
     private final String bundleId;
     /**
@@ -43,21 +43,21 @@ public final class GetWorkspaceResult {
     private final String workspaceId;
     private final List<GetWorkspaceWorkspaceProperty> workspaceProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkspaceResult(
-        @OutputCustomType.Parameter("bundleId") String bundleId,
-        @OutputCustomType.Parameter("computerName") String computerName,
-        @OutputCustomType.Parameter("directoryId") String directoryId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("rootVolumeEncryptionEnabled") Boolean rootVolumeEncryptionEnabled,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("userName") String userName,
-        @OutputCustomType.Parameter("userVolumeEncryptionEnabled") Boolean userVolumeEncryptionEnabled,
-        @OutputCustomType.Parameter("volumeEncryptionKey") String volumeEncryptionKey,
-        @OutputCustomType.Parameter("workspaceId") String workspaceId,
-        @OutputCustomType.Parameter("workspaceProperties") List<GetWorkspaceWorkspaceProperty> workspaceProperties) {
+        @CustomType.Parameter("bundleId") String bundleId,
+        @CustomType.Parameter("computerName") String computerName,
+        @CustomType.Parameter("directoryId") String directoryId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("rootVolumeEncryptionEnabled") Boolean rootVolumeEncryptionEnabled,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("userName") String userName,
+        @CustomType.Parameter("userVolumeEncryptionEnabled") Boolean userVolumeEncryptionEnabled,
+        @CustomType.Parameter("volumeEncryptionKey") String volumeEncryptionKey,
+        @CustomType.Parameter("workspaceId") String workspaceId,
+        @CustomType.Parameter("workspaceProperties") List<GetWorkspaceWorkspaceProperty> workspaceProperties) {
         this.bundleId = bundleId;
         this.computerName = computerName;
         this.directoryId = directoryId;

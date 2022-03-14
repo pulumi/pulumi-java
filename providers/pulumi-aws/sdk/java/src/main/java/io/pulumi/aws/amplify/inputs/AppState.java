@@ -7,7 +7,7 @@ import io.pulumi.aws.amplify.inputs.AppAutoBranchCreationConfigGetArgs;
 import io.pulumi.aws.amplify.inputs.AppCustomRuleGetArgs;
 import io.pulumi.aws.amplify.inputs.AppProductionBranchGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The personal access token for a third-party source control system for an Amplify app. The personal access token is used to create a webhook and a read-only deploy key. The token is not stored.
      * 
      */
-    @InputImport(name="accessToken")
+    @Import(name="accessToken")
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
@@ -35,7 +35,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the Amplify app.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -46,7 +46,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The automated branch creation configuration for an Amplify app. An `auto_branch_creation_config` block is documented below.
      * 
      */
-    @InputImport(name="autoBranchCreationConfig")
+    @Import(name="autoBranchCreationConfig")
       private final @Nullable Output<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig;
 
     public Output<AppAutoBranchCreationConfigGetArgs> getAutoBranchCreationConfig() {
@@ -57,7 +57,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The automated branch creation glob patterns for an Amplify app.
      * 
      */
-    @InputImport(name="autoBranchCreationPatterns")
+    @Import(name="autoBranchCreationPatterns")
       private final @Nullable Output<List<String>> autoBranchCreationPatterns;
 
     public Output<List<String>> getAutoBranchCreationPatterns() {
@@ -68,7 +68,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The credentials for basic authorization for an Amplify app.
      * 
      */
-    @InputImport(name="basicAuthCredentials")
+    @Import(name="basicAuthCredentials")
       private final @Nullable Output<String> basicAuthCredentials;
 
     public Output<String> getBasicAuthCredentials() {
@@ -79,7 +79,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The [build specification](https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html) (build spec) for an Amplify app.
      * 
      */
-    @InputImport(name="buildSpec")
+    @Import(name="buildSpec")
       private final @Nullable Output<String> buildSpec;
 
     public Output<String> getBuildSpec() {
@@ -90,7 +90,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The custom rewrite and redirect rules for an Amplify app. A `custom_rule` block is documented below.
      * 
      */
-    @InputImport(name="customRules")
+    @Import(name="customRules")
       private final @Nullable Output<List<AppCustomRuleGetArgs>> customRules;
 
     public Output<List<AppCustomRuleGetArgs>> getCustomRules() {
@@ -101,7 +101,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The default domain for the Amplify app.
      * 
      */
-    @InputImport(name="defaultDomain")
+    @Import(name="defaultDomain")
       private final @Nullable Output<String> defaultDomain;
 
     public Output<String> getDefaultDomain() {
@@ -112,7 +112,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The description for an Amplify app.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -123,7 +123,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * Enables automated branch creation for an Amplify app.
      * 
      */
-    @InputImport(name="enableAutoBranchCreation")
+    @Import(name="enableAutoBranchCreation")
       private final @Nullable Output<Boolean> enableAutoBranchCreation;
 
     public Output<Boolean> getEnableAutoBranchCreation() {
@@ -134,7 +134,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * Enables basic authorization for an Amplify app. This will apply to all branches that are part of this app.
      * 
      */
-    @InputImport(name="enableBasicAuth")
+    @Import(name="enableBasicAuth")
       private final @Nullable Output<Boolean> enableBasicAuth;
 
     public Output<Boolean> getEnableBasicAuth() {
@@ -145,7 +145,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * Enables auto-building of branches for the Amplify App.
      * 
      */
-    @InputImport(name="enableBranchAutoBuild")
+    @Import(name="enableBranchAutoBuild")
       private final @Nullable Output<Boolean> enableBranchAutoBuild;
 
     public Output<Boolean> getEnableBranchAutoBuild() {
@@ -156,7 +156,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * Automatically disconnects a branch in the Amplify Console when you delete a branch from your Git repository.
      * 
      */
-    @InputImport(name="enableBranchAutoDeletion")
+    @Import(name="enableBranchAutoDeletion")
       private final @Nullable Output<Boolean> enableBranchAutoDeletion;
 
     public Output<Boolean> getEnableBranchAutoDeletion() {
@@ -167,7 +167,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The environment variables map for an Amplify app.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
@@ -178,7 +178,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The AWS Identity and Access Management (IAM) service role for an Amplify app.
      * 
      */
-    @InputImport(name="iamServiceRoleArn")
+    @Import(name="iamServiceRoleArn")
       private final @Nullable Output<String> iamServiceRoleArn;
 
     public Output<String> getIamServiceRoleArn() {
@@ -189,7 +189,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The name for an Amplify app.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -200,7 +200,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The OAuth token for a third-party source control system for an Amplify app. The OAuth token is used to create a webhook and a read-only deploy key. The OAuth token is not stored.
      * 
      */
-    @InputImport(name="oauthToken")
+    @Import(name="oauthToken")
       private final @Nullable Output<String> oauthToken;
 
     public Output<String> getOauthToken() {
@@ -211,7 +211,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The platform or framework for an Amplify app. Valid values: `WEB`.
      * 
      */
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<String> platform;
 
     public Output<String> getPlatform() {
@@ -222,7 +222,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * Describes the information about a production branch for an Amplify app. A `production_branch` block is documented below.
      * 
      */
-    @InputImport(name="productionBranches")
+    @Import(name="productionBranches")
       private final @Nullable Output<List<AppProductionBranchGetArgs>> productionBranches;
 
     public Output<List<AppProductionBranchGetArgs>> getProductionBranches() {
@@ -233,7 +233,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The repository for an Amplify app.
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable Output<String> repository;
 
     public Output<String> getRepository() {
@@ -244,7 +244,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -255,7 +255,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

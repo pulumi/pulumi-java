@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProvisionedProductStackSetProvisioningPreferences {
     /**
      * One or more AWS accounts that will have access to the provisioned product. The AWS accounts specified should be within the list of accounts in the STACKSET constraint. To get the list of accounts in the STACKSET constraint, use the `aws_servicecatalog_provisioning_parameters` data source. If no values are specified, the default value is all accounts from the STACKSET constraint.
@@ -44,14 +44,14 @@ public final class ProvisionedProductStackSetProvisioningPreferences {
      */
     private final @Nullable List<String> regions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProvisionedProductStackSetProvisioningPreferences(
-        @OutputCustomType.Parameter("accounts") @Nullable List<String> accounts,
-        @OutputCustomType.Parameter("failureToleranceCount") @Nullable Integer failureToleranceCount,
-        @OutputCustomType.Parameter("failureTolerancePercentage") @Nullable Integer failureTolerancePercentage,
-        @OutputCustomType.Parameter("maxConcurrencyCount") @Nullable Integer maxConcurrencyCount,
-        @OutputCustomType.Parameter("maxConcurrencyPercentage") @Nullable Integer maxConcurrencyPercentage,
-        @OutputCustomType.Parameter("regions") @Nullable List<String> regions) {
+        @CustomType.Parameter("accounts") @Nullable List<String> accounts,
+        @CustomType.Parameter("failureToleranceCount") @Nullable Integer failureToleranceCount,
+        @CustomType.Parameter("failureTolerancePercentage") @Nullable Integer failureTolerancePercentage,
+        @CustomType.Parameter("maxConcurrencyCount") @Nullable Integer maxConcurrencyCount,
+        @CustomType.Parameter("maxConcurrencyPercentage") @Nullable Integer maxConcurrencyPercentage,
+        @CustomType.Parameter("regions") @Nullable List<String> regions) {
         this.accounts = accounts;
         this.failureToleranceCount = failureToleranceCount;
         this.failureTolerancePercentage = failureTolerancePercentage;

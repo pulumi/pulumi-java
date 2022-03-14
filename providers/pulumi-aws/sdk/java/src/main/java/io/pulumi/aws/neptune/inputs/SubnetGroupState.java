@@ -4,7 +4,7 @@
 package io.pulumi.aws.neptune.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the neptune subnet group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
      * The description of the neptune subnet group. Defaults to "Managed by Pulumi".
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
      * The name of the neptune subnet group. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -64,7 +64,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
      * A list of VPC subnet IDs.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -75,7 +75,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -86,7 +86,7 @@ public final class SubnetGroupState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs e
      * Classification within a configuration.
      * 
      */
-    @InputImport(name="classification")
+    @Import(name="classification")
       private final @Nullable Output<String> classification;
 
     public Output<String> getClassification() {
@@ -31,7 +31,7 @@ public final class ClusterCoreInstanceFleetInstanceTypeConfigConfigurationArgs e
      * Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,Object>> properties;
 
     public Output<Map<String,Object>> getProperties() {

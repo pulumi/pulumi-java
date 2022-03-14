@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the replica key. The key ARNs of related multi-Region keys differ only in the Region value.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -35,7 +35,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * The default value is `false`.
      * 
      */
-    @InputImport(name="bypassPolicyLockoutSafetyCheck")
+    @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
@@ -47,7 +47,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * If you specify a value, it must be between `7` and `30`, inclusive. If you do not specify a value, it defaults to `30`.
      * 
      */
-    @InputImport(name="deletionWindowInDays")
+    @Import(name="deletionWindowInDays")
       private final @Nullable Output<Integer> deletionWindowInDays;
 
     public Output<Integer> getDeletionWindowInDays() {
@@ -58,7 +58,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * A description of the KMS key.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -69,7 +69,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the replica key is enabled. Disabled KMS keys cannot be used in cryptographic operations. The default value is `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -80,7 +80,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * The key ID of the replica key. Related multi-Region keys have the same key ID.
      * 
      */
-    @InputImport(name="keyId")
+    @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
@@ -91,7 +91,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * A Boolean value that specifies whether key rotation is enabled. This is a shared property of multi-Region keys.
      * 
      */
-    @InputImport(name="keyRotationEnabled")
+    @Import(name="keyRotationEnabled")
       private final @Nullable Output<Boolean> keyRotationEnabled;
 
     public Output<Boolean> getKeyRotationEnabled() {
@@ -102,7 +102,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * The type of key material in the KMS key. This is a shared property of multi-Region keys.
      * 
      */
-    @InputImport(name="keySpec")
+    @Import(name="keySpec")
       private final @Nullable Output<String> keySpec;
 
     public Output<String> getKeySpec() {
@@ -113,14 +113,14 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * The [cryptographic operations](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations) for which you can use the KMS key. This is a shared property of multi-Region keys.
      * 
      */
-    @InputImport(name="keyUsage")
+    @Import(name="keyUsage")
       private final @Nullable Output<String> keyUsage;
 
     public Output<String> getKeyUsage() {
         return this.keyUsage == null ? Output.empty() : this.keyUsage;
     }
 
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -131,7 +131,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the multi-Region primary key to replicate. The primary key must be in a different AWS Region of the same AWS Partition. You can create only one replica of a given primary key in each AWS Region.
      * 
      */
-    @InputImport(name="primaryKeyArn")
+    @Import(name="primaryKeyArn")
       private final @Nullable Output<String> primaryKeyArn;
 
     public Output<String> getPrimaryKeyArn() {
@@ -142,7 +142,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the replica key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -153,7 +153,7 @@ public final class ReplicaKeyState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

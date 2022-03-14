@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption {
     /**
      * The method used to add instances to a replacement environment.
@@ -19,8 +19,8 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
      */
     private final @Nullable String action;
 
-    @OutputCustomType.Constructor
-    private DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption(@OutputCustomType.Parameter("action") @Nullable String action) {
+    @CustomType.Constructor
+    private DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption(@CustomType.Parameter("action") @Nullable String action) {
         this.action = action;
     }
 

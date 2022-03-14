@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class WebAclRuleStatementSqliMatchStatementFieldToMatchSingleQueryA
      * The name of the query header to inspect. This setting must be provided as lower case characters.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

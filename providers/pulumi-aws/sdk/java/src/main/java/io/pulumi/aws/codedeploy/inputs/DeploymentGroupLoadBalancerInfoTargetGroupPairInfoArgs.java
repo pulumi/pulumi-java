@@ -7,7 +7,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGrou
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs extend
      * Configuration block for the production traffic route (documented below).
      * 
      */
-    @InputImport(name="prodTrafficRoute", required=true)
+    @Import(name="prodTrafficRoute", required=true)
       private final Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs> prodTrafficRoute;
 
     public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteArgs> getProdTrafficRoute() {
@@ -32,7 +32,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs extend
      * Configuration blocks for a target group within a target group pair (documented below).
      * 
      */
-    @InputImport(name="targetGroups", required=true)
+    @Import(name="targetGroups", required=true)
       private final Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs>> targetGroups;
 
     public Output<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupArgs>> getTargetGroups() {
@@ -43,7 +43,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs extend
      * Configuration block for the test traffic route (documented below).
      * 
      */
-    @InputImport(name="testTrafficRoute")
+    @Import(name="testTrafficRoute")
       private final @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs> testTrafficRoute;
 
     public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs> getTestTrafficRoute() {

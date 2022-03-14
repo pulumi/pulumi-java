@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.datapipeline.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineDefinitionPipelineObjectField {
     /**
      * Field identifier.
@@ -27,11 +27,11 @@ public final class PipelineDefinitionPipelineObjectField {
      */
     private final @Nullable String stringValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineDefinitionPipelineObjectField(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("refValue") @Nullable String refValue,
-        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("refValue") @Nullable String refValue,
+        @CustomType.Parameter("stringValue") @Nullable String stringValue) {
         this.key = key;
         this.refValue = refValue;
         this.stringValue = stringValue;

@@ -8,7 +8,7 @@ import io.pulumi.aws.ecs.CapacityProviderArgs;
 import io.pulumi.aws.ecs.inputs.CapacityProviderState;
 import io.pulumi.aws.ecs.outputs.CapacityProviderAutoScalingGroupProvider;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -36,7 +36,7 @@ public class CapacityProvider extends io.pulumi.resources.CustomResource {
      * ARN that identifies the capacity provider.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class CapacityProvider extends io.pulumi.resources.CustomResource {
      * Configuration block for the provider for the ECS auto scaling group. Detailed below.
      * 
      */
-    @OutputExport(name="autoScalingGroupProvider", type=CapacityProviderAutoScalingGroupProvider.class, parameters={})
+    @Export(name="autoScalingGroupProvider", type=CapacityProviderAutoScalingGroupProvider.class, parameters={})
     private Output<CapacityProviderAutoScalingGroupProvider> autoScalingGroupProvider;
 
     /**
@@ -64,7 +64,7 @@ public class CapacityProvider extends io.pulumi.resources.CustomResource {
      * Name of the capacity provider.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class CapacityProvider extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -88,7 +88,7 @@ public class CapacityProvider extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class TrafficMirrorFilterState extends io.pulumi.resources.Resource
      * The ARN of the traffic mirror filter.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class TrafficMirrorFilterState extends io.pulumi.resources.Resource
      * A description of the filter.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class TrafficMirrorFilterState extends io.pulumi.resources.Resource
      * List of amazon network services that should be mirrored. Valid values: `amazon-dns`.
      * 
      */
-    @InputImport(name="networkServices")
+    @Import(name="networkServices")
       private final @Nullable Output<List<String>> networkServices;
 
     public Output<List<String>> getNetworkServices() {
@@ -53,7 +53,7 @@ public final class TrafficMirrorFilterState extends io.pulumi.resources.Resource
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class TrafficMirrorFilterState extends io.pulumi.resources.Resource
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

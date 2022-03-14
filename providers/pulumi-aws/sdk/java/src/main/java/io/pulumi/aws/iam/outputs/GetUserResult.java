@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserResult {
     /**
      * The Amazon Resource Name (ARN) assigned by AWS for this user.
@@ -46,15 +46,15 @@ public final class GetUserResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("permissionsBoundary") String permissionsBoundary,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("userId") String userId,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("permissionsBoundary") String permissionsBoundary,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("userId") String userId,
+        @CustomType.Parameter("userName") String userName) {
         this.arn = arn;
         this.id = id;
         this.path = path;

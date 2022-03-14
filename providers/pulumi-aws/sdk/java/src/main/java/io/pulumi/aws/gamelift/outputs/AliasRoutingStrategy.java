@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.gamelift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AliasRoutingStrategy {
     /**
      * ID of the Gamelift Fleet to point the alias to.
@@ -27,11 +27,11 @@ public final class AliasRoutingStrategy {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AliasRoutingStrategy(
-        @OutputCustomType.Parameter("fleetId") @Nullable String fleetId,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("fleetId") @Nullable String fleetId,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("type") String type) {
         this.fleetId = fleetId;
         this.message = message;
         this.type = type;

@@ -11,7 +11,7 @@ import io.pulumi.aws.sagemaker.outputs.ModelInferenceExecutionConfig;
 import io.pulumi.aws.sagemaker.outputs.ModelPrimaryContainer;
 import io.pulumi.aws.sagemaker.outputs.ModelVpcConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this model.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -56,7 +56,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
      * 
      */
-    @OutputExport(name="containers", type=List.class, parameters={ModelContainer.class})
+    @Export(name="containers", type=List.class, parameters={ModelContainer.class})
     private Output</* @Nullable */ List<ModelContainer>> containers;
 
     /**
@@ -70,7 +70,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
      * 
      */
-    @OutputExport(name="enableNetworkIsolation", type=Boolean.class, parameters={})
+    @Export(name="enableNetworkIsolation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableNetworkIsolation;
 
     /**
@@ -84,7 +84,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * A role that SageMaker can assume to access model artifacts and docker images for deployment.
      * 
      */
-    @OutputExport(name="executionRoleArn", type=String.class, parameters={})
+    @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output<String> executionRoleArn;
 
     /**
@@ -98,7 +98,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
      * 
      */
-    @OutputExport(name="inferenceExecutionConfig", type=ModelInferenceExecutionConfig.class, parameters={})
+    @Export(name="inferenceExecutionConfig", type=ModelInferenceExecutionConfig.class, parameters={})
     private Output<ModelInferenceExecutionConfig> inferenceExecutionConfig;
 
     /**
@@ -112,7 +112,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The name of the model (must be unique). If omitted, this provider will assign a random, unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -126,7 +126,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
      * 
      */
-    @OutputExport(name="primaryContainer", type=ModelPrimaryContainer.class, parameters={})
+    @Export(name="primaryContainer", type=ModelPrimaryContainer.class, parameters={})
     private Output</* @Nullable */ ModelPrimaryContainer> primaryContainer;
 
     /**
@@ -140,7 +140,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -154,7 +154,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -168,7 +168,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
      * 
      */
-    @OutputExport(name="vpcConfig", type=ModelVpcConfig.class, parameters={})
+    @Export(name="vpcConfig", type=ModelVpcConfig.class, parameters={})
     private Output</* @Nullable */ ModelVpcConfig> vpcConfig;
 
     /**

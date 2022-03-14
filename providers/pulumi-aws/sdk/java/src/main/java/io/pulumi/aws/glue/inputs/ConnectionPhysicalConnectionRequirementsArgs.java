@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends io.pulum
      * The availability zone of the connection. This field is redundant and implied by `subnet_id`, but is currently an api requirement.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -30,7 +30,7 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends io.pulum
      * The security group ID list used by the connection.
      * 
      */
-    @InputImport(name="securityGroupIdLists")
+    @Import(name="securityGroupIdLists")
       private final @Nullable Output<List<String>> securityGroupIdLists;
 
     public Output<List<String>> getSecurityGroupIdLists() {
@@ -41,7 +41,7 @@ public final class ConnectionPhysicalConnectionRequirementsArgs extends io.pulum
      * The subnet ID used by the connection.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {

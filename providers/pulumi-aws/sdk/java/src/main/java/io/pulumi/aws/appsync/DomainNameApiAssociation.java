@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appsync.DomainNameApiAssociationArgs;
 import io.pulumi.aws.appsync.inputs.DomainNameApiAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class DomainNameApiAssociation extends io.pulumi.resources.CustomResource
      * The API ID.
      * 
      */
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
     /**
@@ -46,7 +46,7 @@ public class DomainNameApiAssociation extends io.pulumi.resources.CustomResource
      * The Appsync domain name.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**

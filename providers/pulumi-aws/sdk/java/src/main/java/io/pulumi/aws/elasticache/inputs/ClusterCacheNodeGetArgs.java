@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
 
     public static final ClusterCacheNodeGetArgs Empty = new ClusterCacheNodeGetArgs();
 
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
@@ -26,14 +26,14 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
      * Availability Zone for the cache cluster. If you want to create cache nodes in multi-az, use `preferred_availability_zones` instead. Default: System chosen Availability Zone. Changing this value will re-create the resource.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -44,7 +44,7 @@ public final class ClusterCacheNodeGetArgs extends io.pulumi.resources.ResourceA
      * The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with `replication_group_id`. Changing this value will re-create the resource.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {

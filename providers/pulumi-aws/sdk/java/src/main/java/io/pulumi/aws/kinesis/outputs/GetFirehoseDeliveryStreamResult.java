@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFirehoseDeliveryStreamResult {
     /**
      * The Amazon Resource Name (ARN) of the Kinesis Stream (same as id).
@@ -21,11 +21,11 @@ public final class GetFirehoseDeliveryStreamResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFirehoseDeliveryStreamResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name) {
         this.arn = arn;
         this.id = id;
         this.name = name;

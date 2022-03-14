@@ -9,7 +9,7 @@ import io.pulumi.aws.elastictranscoder.inputs.PresetThumbnailsGetArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PresetVideoGetArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PresetVideoWatermarkGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the Elastic Transcoder Preset.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -36,7 +36,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * Audio parameters object (documented below).
      * 
      */
-    @InputImport(name="audio")
+    @Import(name="audio")
       private final @Nullable Output<PresetAudioGetArgs> audio;
 
     public Output<PresetAudioGetArgs> getAudio() {
@@ -47,7 +47,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * Codec options for the audio parameters (documented below)
      * 
      */
-    @InputImport(name="audioCodecOptions")
+    @Import(name="audioCodecOptions")
       private final @Nullable Output<PresetAudioCodecOptionsGetArgs> audioCodecOptions;
 
     public Output<PresetAudioCodecOptionsGetArgs> getAudioCodecOptions() {
@@ -58,7 +58,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
      * 
      */
-    @InputImport(name="container")
+    @Import(name="container")
       private final @Nullable Output<String> container;
 
     public Output<String> getContainer() {
@@ -69,7 +69,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * A description of the preset (maximum 255 characters)
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -80,7 +80,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * The name of the preset. (maximum 40 characters)
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -91,14 +91,14 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * Thumbnail parameters object (documented below)
      * 
      */
-    @InputImport(name="thumbnails")
+    @Import(name="thumbnails")
       private final @Nullable Output<PresetThumbnailsGetArgs> thumbnails;
 
     public Output<PresetThumbnailsGetArgs> getThumbnails() {
         return this.thumbnails == null ? Output.empty() : this.thumbnails;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -109,7 +109,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * Video parameters object (documented below)
      * 
      */
-    @InputImport(name="video")
+    @Import(name="video")
       private final @Nullable Output<PresetVideoGetArgs> video;
 
     public Output<PresetVideoGetArgs> getVideo() {
@@ -120,7 +120,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * Codec options for the video parameters
      * 
      */
-    @InputImport(name="videoCodecOptions")
+    @Import(name="videoCodecOptions")
       private final @Nullable Output<Map<String,String>> videoCodecOptions;
 
     public Output<Map<String,String>> getVideoCodecOptions() {
@@ -131,7 +131,7 @@ public final class PresetState extends io.pulumi.resources.ResourceArgs {
      * Watermark parameters for the video parameters (documented below)
      * 
      */
-    @InputImport(name="videoWatermarks")
+    @Import(name="videoWatermarks")
       private final @Nullable Output<List<PresetVideoWatermarkGetArgs>> videoWatermarks;
 
     public Output<List<PresetVideoWatermarkGetArgs>> getVideoWatermarks() {

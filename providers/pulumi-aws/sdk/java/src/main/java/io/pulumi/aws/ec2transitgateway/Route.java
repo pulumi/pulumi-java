@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2transitgateway.RouteArgs;
 import io.pulumi.aws.ec2transitgateway.inputs.RouteState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Indicates whether to drop traffic that matches this route (default to `false`).
      * 
      */
-    @OutputExport(name="blackhole", type=Boolean.class, parameters={})
+    @Export(name="blackhole", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> blackhole;
 
     /**
@@ -47,7 +47,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
      * 
      */
-    @OutputExport(name="destinationCidrBlock", type=String.class, parameters={})
+    @Export(name="destinationCidrBlock", type=String.class, parameters={})
     private Output<String> destinationCidrBlock;
 
     /**
@@ -61,7 +61,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of EC2 Transit Gateway Attachment (required if `blackhole` is set to false).
      * 
      */
-    @OutputExport(name="transitGatewayAttachmentId", type=String.class, parameters={})
+    @Export(name="transitGatewayAttachmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> transitGatewayAttachmentId;
 
     /**
@@ -75,7 +75,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Identifier of EC2 Transit Gateway Route Table.
      * 
      */
-    @OutputExport(name="transitGatewayRouteTableId", type=String.class, parameters={})
+    @Export(name="transitGatewayRouteTableId", type=String.class, parameters={})
     private Output<String> transitGatewayRouteTableId;
 
     /**

@@ -6,7 +6,7 @@ package io.pulumi.aws.efs.inputs;
 import io.pulumi.aws.efs.inputs.FileSystemLifecyclePolicyGetArgs;
 import io.pulumi.aws.efs.inputs.FileSystemSizeInByteGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name of the file system.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -36,7 +36,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * The identifier of the Availability Zone in which the file system's One Zone storage classes exist.
      * 
      */
-    @InputImport(name="availabilityZoneId")
+    @Import(name="availabilityZoneId")
       private final @Nullable Output<String> availabilityZoneId;
 
     public Output<String> getAvailabilityZoneId() {
@@ -47,7 +47,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * the AWS Availability Zone in which to create the file system. Used to create a file system that uses One Zone storage classes. See [user guide](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) for more information.
      * 
      */
-    @InputImport(name="availabilityZoneName")
+    @Import(name="availabilityZoneName")
       private final @Nullable Output<String> availabilityZoneName;
 
     public Output<String> getAvailabilityZoneName() {
@@ -61,7 +61,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * (http://docs.aws.amazon.com/efs/latest/ug/) user guide for more information.
      * 
      */
-    @InputImport(name="creationToken")
+    @Import(name="creationToken")
       private final @Nullable Output<String> creationToken;
 
     public Output<String> getCreationToken() {
@@ -72,7 +72,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -83,7 +83,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * If true, the disk will be encrypted.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -94,7 +94,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -105,7 +105,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
      * 
      */
-    @InputImport(name="lifecyclePolicy")
+    @Import(name="lifecyclePolicy")
       private final @Nullable Output<FileSystemLifecyclePolicyGetArgs> lifecyclePolicy;
 
     public Output<FileSystemLifecyclePolicyGetArgs> getLifecyclePolicy() {
@@ -116,7 +116,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * The current number of mount targets that the file system has.
      * 
      */
-    @InputImport(name="numberOfMountTargets")
+    @Import(name="numberOfMountTargets")
       private final @Nullable Output<Integer> numberOfMountTargets;
 
     public Output<Integer> getNumberOfMountTargets() {
@@ -127,7 +127,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * The AWS account that created the file system. If the file system was createdby an IAM user, the parent account to which the user belongs is the owner.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -138,7 +138,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
      * 
      */
-    @InputImport(name="performanceMode")
+    @Import(name="performanceMode")
       private final @Nullable Output<String> performanceMode;
 
     public Output<String> getPerformanceMode() {
@@ -149,7 +149,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
      * 
      */
-    @InputImport(name="provisionedThroughputInMibps")
+    @Import(name="provisionedThroughputInMibps")
       private final @Nullable Output<Double> provisionedThroughputInMibps;
 
     public Output<Double> getProvisionedThroughputInMibps() {
@@ -160,7 +160,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * The latest known metered size (in bytes) of data stored in the file system, the value is not the exact size that the file system was at any point in time. See Size In Bytes.
      * 
      */
-    @InputImport(name="sizeInBytes")
+    @Import(name="sizeInBytes")
       private final @Nullable Output<List<FileSystemSizeInByteGetArgs>> sizeInBytes;
 
     public Output<List<FileSystemSizeInByteGetArgs>> getSizeInBytes() {
@@ -171,7 +171,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -182,7 +182,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -193,7 +193,7 @@ public final class FileSystemState extends io.pulumi.resources.ResourceArgs {
      * Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
      * 
      */
-    @InputImport(name="throughputMode")
+    @Import(name="throughputMode")
       private final @Nullable Output<String> throughputMode;
 
     public Output<String> getThroughputMode() {

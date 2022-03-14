@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * The AWS account ID for the owner of the buckets for which you want to create a Multi-Region Access Point. Defaults to automatically determined account ID of the AWS provider.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -30,7 +30,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * The alias for the Multi-Region Access Point.
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
@@ -41,7 +41,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * Amazon Resource Name (ARN) of the Multi-Region Access Point.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -52,7 +52,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * A configuration block containing details about the Multi-Region Access Point. See Details Configuration Block below for more details
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable Output<MultiRegionAccessPointDetailsGetArgs> details;
 
     public Output<MultiRegionAccessPointDetailsGetArgs> getDetails() {
@@ -63,7 +63,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * The DNS domain name of the S3 Multi-Region Access Point in the format _`alias`_.accesspoint.s3-global.amazonaws.com. For more information, see the documentation on [Multi-Region Access Point Requests](https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPointRequests.html).
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -74,7 +74,7 @@ public final class MultiRegionAccessPointState extends io.pulumi.resources.Resou
      * The current status of the Multi-Region Access Point. One of: `READY`, `INCONSISTENT_ACROSS_REGIONS`, `CREATING`, `PARTIALLY_CREATED`, `PARTIALLY_DELETED`, `DELETING`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

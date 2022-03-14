@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketObjectLockConfigurationRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
      * Indicates whether this bucket has an Object Lock configuration enabled. Valid value is `Enabled`.
      * 
      */
-    @InputImport(name="objectLockEnabled", required=true)
+    @Import(name="objectLockEnabled", required=true)
       private final Output<String> objectLockEnabled;
 
     public Output<String> getObjectLockEnabled() {
@@ -30,7 +30,7 @@ public final class BucketObjectLockConfigurationArgs extends io.pulumi.resources
      * The Object Lock rule in place for this bucket.
      * 
      */
-    @InputImport(name="rule")
+    @Import(name="rule")
       private final @Nullable Output<BucketObjectLockConfigurationRuleArgs> rule;
 
     public Output<BucketObjectLockConfigurationRuleArgs> getRule() {

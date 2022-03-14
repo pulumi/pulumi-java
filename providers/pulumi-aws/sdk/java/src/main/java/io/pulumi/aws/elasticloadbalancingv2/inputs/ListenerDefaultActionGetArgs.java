@@ -9,7 +9,7 @@ import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerDefaultActionFixedRes
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerDefaultActionForwardGetArgs;
 import io.pulumi.aws.elasticloadbalancingv2.inputs.ListenerDefaultActionRedirectGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * Configuration block for using Amazon Cognito to authenticate users. Specify only when `type` is `authenticate-cognito`. Detailed below.
      * 
      */
-    @InputImport(name="authenticateCognito")
+    @Import(name="authenticateCognito")
       private final @Nullable Output<ListenerDefaultActionAuthenticateCognitoGetArgs> authenticateCognito;
 
     public Output<ListenerDefaultActionAuthenticateCognitoGetArgs> getAuthenticateCognito() {
@@ -35,7 +35,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when `type` is `authenticate-oidc`. Detailed below.
      * 
      */
-    @InputImport(name="authenticateOidc")
+    @Import(name="authenticateOidc")
       private final @Nullable Output<ListenerDefaultActionAuthenticateOidcGetArgs> authenticateOidc;
 
     public Output<ListenerDefaultActionAuthenticateOidcGetArgs> getAuthenticateOidc() {
@@ -46,7 +46,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
      * 
      */
-    @InputImport(name="fixedResponse")
+    @Import(name="fixedResponse")
       private final @Nullable Output<ListenerDefaultActionFixedResponseGetArgs> fixedResponse;
 
     public Output<ListenerDefaultActionFixedResponseGetArgs> getFixedResponse() {
@@ -57,7 +57,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * Configuration block for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`. Detailed below.
      * 
      */
-    @InputImport(name="forward")
+    @Import(name="forward")
       private final @Nullable Output<ListenerDefaultActionForwardGetArgs> forward;
 
     public Output<ListenerDefaultActionForwardGetArgs> getForward() {
@@ -68,7 +68,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * Order for the action. This value is required for rules with multiple actions. The action with the lowest value for order is performed first. Valid values are between `1` and `50000`.
      * 
      */
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable Output<Integer> order;
 
     public Output<Integer> getOrder() {
@@ -79,7 +79,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * Configuration block for creating a redirect action. Required if `type` is `redirect`. Detailed below.
      * 
      */
-    @InputImport(name="redirect")
+    @Import(name="redirect")
       private final @Nullable Output<ListenerDefaultActionRedirectGetArgs> redirect;
 
     public Output<ListenerDefaultActionRedirectGetArgs> getRedirect() {
@@ -90,7 +90,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
      * 
      */
-    @InputImport(name="targetGroupArn")
+    @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
     public Output<String> getTargetGroupArn() {
@@ -101,7 +101,7 @@ public final class ListenerDefaultActionGetArgs extends io.pulumi.resources.Reso
      * Type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

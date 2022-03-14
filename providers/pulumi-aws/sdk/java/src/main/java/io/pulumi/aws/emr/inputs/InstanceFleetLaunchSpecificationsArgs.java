@@ -6,7 +6,7 @@ package io.pulumi.aws.emr.inputs;
 import io.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs;
 import io.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsSpotSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class InstanceFleetLaunchSpecificationsArgs extends io.pulumi.resou
      * Configuration block for on demand instances launch specifications
      * 
      */
-    @InputImport(name="onDemandSpecifications")
+    @Import(name="onDemandSpecifications")
       private final @Nullable Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> onDemandSpecifications;
 
     public Output<List<InstanceFleetLaunchSpecificationsOnDemandSpecificationArgs>> getOnDemandSpecifications() {
@@ -31,7 +31,7 @@ public final class InstanceFleetLaunchSpecificationsArgs extends io.pulumi.resou
      * Configuration block for spot instances launch specifications
      * 
      */
-    @InputImport(name="spotSpecifications")
+    @Import(name="spotSpecifications")
       private final @Nullable Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> spotSpecifications;
 
     public Output<List<InstanceFleetLaunchSpecificationsSpotSpecificationArgs>> getSpotSpecifications() {

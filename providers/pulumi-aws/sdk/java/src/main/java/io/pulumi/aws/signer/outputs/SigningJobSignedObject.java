@@ -4,12 +4,12 @@
 package io.pulumi.aws.signer.outputs;
 
 import io.pulumi.aws.signer.outputs.SigningJobSignedObjectS3;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SigningJobSignedObject {
     /**
      * A configuration block describing the S3 Destination object: See S3 Destination below for details.
@@ -17,8 +17,8 @@ public final class SigningJobSignedObject {
      */
     private final @Nullable List<SigningJobSignedObjectS3> s3s;
 
-    @OutputCustomType.Constructor
-    private SigningJobSignedObject(@OutputCustomType.Parameter("s3s") @Nullable List<SigningJobSignedObjectS3> s3s) {
+    @CustomType.Constructor
+    private SigningJobSignedObject(@CustomType.Parameter("s3s") @Nullable List<SigningJobSignedObjectS3> s3s) {
         this.s3s = s3s;
     }
 

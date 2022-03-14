@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.GetComponentsFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetComponentsArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block(s) for filtering. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetComponentsFilter> filters;
 
     public List<GetComponentsFilter> getFilters() {
@@ -31,7 +31,7 @@ public final class GetComponentsArgs extends io.pulumi.resources.InvokeArgs {
      * The owner of the image recipes. Valid values are `Self`, `Shared` and `Amazon`. Defaults to `Self`.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable String owner;
 
     public Optional<String> getOwner() {

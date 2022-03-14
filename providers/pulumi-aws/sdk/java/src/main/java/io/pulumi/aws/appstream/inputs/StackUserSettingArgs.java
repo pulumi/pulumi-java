@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class StackUserSettingArgs extends io.pulumi.resources.ResourceArgs
      * Action that is enabled or disabled. Valid values are: `CLIPBOARD_COPY_FROM_LOCAL_DEVICE`,  `CLIPBOARD_COPY_TO_LOCAL_DEVICE`, `FILE_UPLOAD`, `FILE_DOWNLOAD`, `PRINTING_TO_LOCAL_DEVICE`, `DOMAIN_PASSWORD_SIGNIN`, `DOMAIN_SMART_CARD_SIGNIN`.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<String> action;
 
     public Output<String> getAction() {
@@ -28,7 +28,7 @@ public final class StackUserSettingArgs extends io.pulumi.resources.ResourceArgs
      * Indicates whether the action is enabled or disabled. Valid values are: `ENABLED`, `DISABLED`.
      * 
      */
-    @InputImport(name="permission", required=true)
+    @Import(name="permission", required=true)
       private final Output<String> permission;
 
     public Output<String> getPermission() {

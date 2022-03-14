@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.storagegateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GatewayGatewayNetworkInterface {
     /**
      * The Internet Protocol version 4 (IPv4) address of the interface.
@@ -17,8 +17,8 @@ public final class GatewayGatewayNetworkInterface {
      */
     private final @Nullable String ipv4Address;
 
-    @OutputCustomType.Constructor
-    private GatewayGatewayNetworkInterface(@OutputCustomType.Parameter("ipv4Address") @Nullable String ipv4Address) {
+    @CustomType.Constructor
+    private GatewayGatewayNetworkInterface(@CustomType.Parameter("ipv4Address") @Nullable String ipv4Address) {
         this.ipv4Address = ipv4Address;
     }
 

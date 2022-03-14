@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * The attached elastic network interface of the broker
      * 
      */
-    @InputImport(name="attachedEniId", required=true)
+    @Import(name="attachedEniId", required=true)
       private final String attachedEniId;
 
     public String getAttachedEniId() {
@@ -29,7 +29,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * The ID of the broker
      * 
      */
-    @InputImport(name="brokerId", required=true)
+    @Import(name="brokerId", required=true)
       private final Double brokerId;
 
     public Double getBrokerId() {
@@ -40,7 +40,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * The client subnet to which this broker node belongs
      * 
      */
-    @InputImport(name="clientSubnet", required=true)
+    @Import(name="clientSubnet", required=true)
       private final String clientSubnet;
 
     public String getClientSubnet() {
@@ -51,7 +51,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * The client virtual private cloud (VPC) IP address
      * 
      */
-    @InputImport(name="clientVpcIpAddress", required=true)
+    @Import(name="clientVpcIpAddress", required=true)
       private final String clientVpcIpAddress;
 
     public String getClientVpcIpAddress() {
@@ -62,7 +62,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * Set of endpoints for accessing the broker. This does not include ports
      * 
      */
-    @InputImport(name="endpoints", required=true)
+    @Import(name="endpoints", required=true)
       private final List<String> endpoints;
 
     public List<String> getEndpoints() {
@@ -73,7 +73,7 @@ public final class GetBrokerNodesNodeInfoList extends io.pulumi.resources.Invoke
      * The Amazon Resource Name (ARN) of the node
      * 
      */
-    @InputImport(name="nodeArn", required=true)
+    @Import(name="nodeArn", required=true)
       private final String nodeArn;
 
     public String getNodeArn() {

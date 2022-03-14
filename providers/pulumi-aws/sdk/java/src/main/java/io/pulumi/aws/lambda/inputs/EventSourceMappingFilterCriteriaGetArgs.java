@@ -5,7 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.aws.lambda.inputs.EventSourceMappingFilterCriteriaFilterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EventSourceMappingFilterCriteriaGetArgs extends io.pulumi.res
      * A set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> filters;
 
     public Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> getFilters() {

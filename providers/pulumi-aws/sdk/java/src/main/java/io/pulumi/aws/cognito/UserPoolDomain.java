@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cognito.UserPoolDomainArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolDomainState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * The AWS account ID for the user pool owner.
      * 
      */
-    @OutputExport(name="awsAccountId", type=String.class, parameters={})
+    @Export(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
     /**
@@ -46,7 +46,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * The ARN of an ISSUED ACM certificate in us-east-1 for a custom domain.
      * 
      */
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateArn;
 
     /**
@@ -60,7 +60,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * The URL of the CloudFront distribution. This is required to generate the ALIAS `aws.route53.Record`
      * 
      */
-    @OutputExport(name="cloudfrontDistributionArn", type=String.class, parameters={})
+    @Export(name="cloudfrontDistributionArn", type=String.class, parameters={})
     private Output<String> cloudfrontDistributionArn;
 
     /**
@@ -74,7 +74,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * The domain string.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
@@ -88,7 +88,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * The S3 bucket where the static files for this domain are stored.
      * 
      */
-    @OutputExport(name="s3Bucket", type=String.class, parameters={})
+    @Export(name="s3Bucket", type=String.class, parameters={})
     private Output<String> s3Bucket;
 
     /**
@@ -102,7 +102,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * The user pool ID.
      * 
      */
-    @OutputExport(name="userPoolId", type=String.class, parameters={})
+    @Export(name="userPoolId", type=String.class, parameters={})
     private Output<String> userPoolId;
 
     /**
@@ -116,7 +116,7 @@ public class UserPoolDomain extends io.pulumi.resources.CustomResource {
      * The app version.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

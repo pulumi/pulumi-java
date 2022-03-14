@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EventConnectionAuthParametersBasicGetArgs extends io.pulumi.r
      * A password for the authorization. Created and stored in AWS Secrets Manager.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -28,7 +28,7 @@ public final class EventConnectionAuthParametersBasicGetArgs extends io.pulumi.r
      * A username for the authorization.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

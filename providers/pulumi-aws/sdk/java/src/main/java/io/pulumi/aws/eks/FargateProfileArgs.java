@@ -5,7 +5,7 @@ package io.pulumi.aws.eks;
 
 import io.pulumi.aws.eks.inputs.FargateProfileSelectorArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -32,7 +32,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the EKS Fargate Profile.
      * 
      */
-    @InputImport(name="fargateProfileName")
+    @Import(name="fargateProfileName")
       private final @Nullable Output<String> fargateProfileName;
 
     public Output<String> getFargateProfileName() {
@@ -43,7 +43,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.
      * 
      */
-    @InputImport(name="podExecutionRoleArn", required=true)
+    @Import(name="podExecutionRoleArn", required=true)
       private final Output<String> podExecutionRoleArn;
 
     public Output<String> getPodExecutionRoleArn() {
@@ -54,7 +54,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
      * 
      */
-    @InputImport(name="selectors", required=true)
+    @Import(name="selectors", required=true)
       private final Output<List<FargateProfileSelectorArgs>> selectors;
 
     public Output<List<FargateProfileSelectorArgs>> getSelectors() {
@@ -65,7 +65,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -76,7 +76,7 @@ public final class FargateProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

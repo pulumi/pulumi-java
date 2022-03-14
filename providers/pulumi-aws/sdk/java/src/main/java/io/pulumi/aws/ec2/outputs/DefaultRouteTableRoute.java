@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefaultRouteTableRoute {
     /**
      * The CIDR block of the route.
@@ -67,19 +67,19 @@ public final class DefaultRouteTableRoute {
      */
     private final @Nullable String vpcPeeringConnectionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefaultRouteTableRoute(
-        @OutputCustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
-        @OutputCustomType.Parameter("destinationPrefixListId") @Nullable String destinationPrefixListId,
-        @OutputCustomType.Parameter("egressOnlyGatewayId") @Nullable String egressOnlyGatewayId,
-        @OutputCustomType.Parameter("gatewayId") @Nullable String gatewayId,
-        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
-        @OutputCustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
-        @OutputCustomType.Parameter("natGatewayId") @Nullable String natGatewayId,
-        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
-        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId,
-        @OutputCustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
-        @OutputCustomType.Parameter("vpcPeeringConnectionId") @Nullable String vpcPeeringConnectionId) {
+        @CustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
+        @CustomType.Parameter("destinationPrefixListId") @Nullable String destinationPrefixListId,
+        @CustomType.Parameter("egressOnlyGatewayId") @Nullable String egressOnlyGatewayId,
+        @CustomType.Parameter("gatewayId") @Nullable String gatewayId,
+        @CustomType.Parameter("instanceId") @Nullable String instanceId,
+        @CustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
+        @CustomType.Parameter("natGatewayId") @Nullable String natGatewayId,
+        @CustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @CustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId,
+        @CustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
+        @CustomType.Parameter("vpcPeeringConnectionId") @Nullable String vpcPeeringConnectionId) {
         this.cidrBlock = cidrBlock;
         this.destinationPrefixListId = destinationPrefixListId;
         this.egressOnlyGatewayId = egressOnlyGatewayId;

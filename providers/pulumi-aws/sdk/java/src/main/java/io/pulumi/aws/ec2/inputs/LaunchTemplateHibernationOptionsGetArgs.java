@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class LaunchTemplateHibernationOptionsGetArgs extends io.pulumi.res
      * If set to `true`, the launched EC2 instance will hibernation enabled.
      * 
      */
-    @InputImport(name="configured", required=true)
+    @Import(name="configured", required=true)
       private final Output<Boolean> configured;
 
     public Output<Boolean> getConfigured() {

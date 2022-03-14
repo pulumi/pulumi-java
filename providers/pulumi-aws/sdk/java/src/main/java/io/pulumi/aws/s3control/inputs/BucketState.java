@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the bucket.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Name of the bucket.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -42,7 +42,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * UTC creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @InputImport(name="creationDate")
+    @Import(name="creationDate")
       private final @Nullable Output<String> creationDate;
 
     public Output<String> getCreationDate() {
@@ -53,7 +53,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Identifier of the Outpost to contain this bucket.
      * 
      */
-    @InputImport(name="outpostId")
+    @Import(name="outpostId")
       private final @Nullable Output<String> outpostId;
 
     public Output<String> getOutpostId() {
@@ -64,7 +64,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Boolean whether Public Access Block is enabled.
      * 
      */
-    @InputImport(name="publicAccessBlockEnabled")
+    @Import(name="publicAccessBlockEnabled")
       private final @Nullable Output<Boolean> publicAccessBlockEnabled;
 
     public Output<Boolean> getPublicAccessBlockEnabled() {
@@ -75,7 +75,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -86,7 +86,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

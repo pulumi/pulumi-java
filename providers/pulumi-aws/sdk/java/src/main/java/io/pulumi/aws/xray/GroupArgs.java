@@ -4,7 +4,7 @@
 package io.pulumi.aws.xray;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The filter expression defining criteria by which to group traces. more info can be found in official [docs](https://docs.aws.amazon.com/xray/latest/devguide/xray-console-filters.html).
      * 
      */
-    @InputImport(name="filterExpression", required=true)
+    @Import(name="filterExpression", required=true)
       private final Output<String> filterExpression;
 
     public Output<String> getFilterExpression() {
@@ -30,7 +30,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the group.
      * 
      */
-    @InputImport(name="groupName", required=true)
+    @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
     public Output<String> getGroupName() {
@@ -41,7 +41,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

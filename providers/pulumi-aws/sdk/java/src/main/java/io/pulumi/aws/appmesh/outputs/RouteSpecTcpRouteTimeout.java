@@ -4,12 +4,12 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.RouteSpecTcpRouteTimeoutIdle;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecTcpRouteTimeout {
     /**
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
@@ -17,8 +17,8 @@ public final class RouteSpecTcpRouteTimeout {
      */
     private final @Nullable RouteSpecTcpRouteTimeoutIdle idle;
 
-    @OutputCustomType.Constructor
-    private RouteSpecTcpRouteTimeout(@OutputCustomType.Parameter("idle") @Nullable RouteSpecTcpRouteTimeoutIdle idle) {
+    @CustomType.Constructor
+    private RouteSpecTcpRouteTimeout(@CustomType.Parameter("idle") @Nullable RouteSpecTcpRouteTimeoutIdle idle) {
         this.idle = idle;
     }
 

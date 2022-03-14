@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class MonitoringSubscriptionMonitoringSubscriptionArgs extends io.p
      * A subscription configuration for additional CloudWatch metrics. See below.
      * 
      */
-    @InputImport(name="realtimeMetricsSubscriptionConfig", required=true)
+    @Import(name="realtimeMetricsSubscriptionConfig", required=true)
       private final Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> realtimeMetricsSubscriptionConfig;
 
     public Output<MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfigArgs> getRealtimeMetricsSubscriptionConfig() {

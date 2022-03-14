@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CatalogTablePartitionIndex {
     /**
      * Name of the partition index.
@@ -24,11 +24,11 @@ public final class CatalogTablePartitionIndex {
      */
     private final List<String> keys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CatalogTablePartitionIndex(
-        @OutputCustomType.Parameter("indexName") String indexName,
-        @OutputCustomType.Parameter("indexStatus") @Nullable String indexStatus,
-        @OutputCustomType.Parameter("keys") List<String> keys) {
+        @CustomType.Parameter("indexName") String indexName,
+        @CustomType.Parameter("indexStatus") @Nullable String indexStatus,
+        @CustomType.Parameter("keys") List<String> keys) {
         this.indexName = indexName;
         this.indexStatus = indexStatus;
         this.keys = keys;

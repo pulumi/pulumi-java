@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ClassifierXmlClassifierArgs extends io.pulumi.resources.Resou
      * An identifier of the data format that the classifier matches.
      * 
      */
-    @InputImport(name="classification", required=true)
+    @Import(name="classification", required=true)
       private final Output<String> classification;
 
     public Output<String> getClassification() {
@@ -28,7 +28,7 @@ public final class ClassifierXmlClassifierArgs extends io.pulumi.resources.Resou
      * The XML tag designating the element that contains each record in an XML document being parsed. Note that this cannot identify a self-closing element (closed by `/>`). An empty row element that contains only attributes can be parsed as long as it ends with a closing tag (for example, `<row item_a="A" item_b="B"></row>` is okay, but `<row item_a="A" item_b="B" />` is not).
      * 
      */
-    @InputImport(name="rowTag", required=true)
+    @Import(name="rowTag", required=true)
       private final Output<String> rowTag;
 
     public Output<String> getRowTag() {

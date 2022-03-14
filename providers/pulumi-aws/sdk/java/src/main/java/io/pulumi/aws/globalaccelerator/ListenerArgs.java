@@ -5,7 +5,7 @@ package io.pulumi.aws.globalaccelerator;
 
 import io.pulumi.aws.globalaccelerator.inputs.ListenerPortRangeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of your accelerator.
      * 
      */
-    @InputImport(name="acceleratorArn", required=true)
+    @Import(name="acceleratorArn", required=true)
       private final Output<String> acceleratorArn;
 
     public Output<String> getAcceleratorArn() {
@@ -31,7 +31,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
      * 
      */
-    @InputImport(name="clientAffinity")
+    @Import(name="clientAffinity")
       private final @Nullable Output<String> clientAffinity;
 
     public Output<String> getClientAffinity() {
@@ -42,7 +42,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * The list of port ranges for the connections from clients to the accelerator. Fields documented below.
      * 
      */
-    @InputImport(name="portRanges", required=true)
+    @Import(name="portRanges", required=true)
       private final Output<List<ListenerPortRangeArgs>> portRanges;
 
     public Output<List<ListenerPortRangeArgs>> getPortRanges() {
@@ -53,7 +53,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
     public Output<String> getProtocol() {

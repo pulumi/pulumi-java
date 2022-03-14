@@ -5,7 +5,7 @@ package io.pulumi.aws.macie;
 
 import io.pulumi.aws.macie.inputs.FindingsFilterFindingCriteriaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The action to perform on findings that meet the filter criteria (`finding_criteria`). Valid values are: `ARCHIVE`, suppress (automatically archive) the findings; and, `NOOP`, don't perform any action on the findings.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<String> action;
 
     public Output<String> getAction() {
@@ -32,7 +32,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * A custom description of the filter. The description can contain as many as 512 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,14 +43,14 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The criteria to use to filter findings.
      * 
      */
-    @InputImport(name="findingCriteria", required=true)
+    @Import(name="findingCriteria", required=true)
       private final Output<FindingsFilterFindingCriteriaArgs> findingCriteria;
 
     public Output<FindingsFilterFindingCriteriaArgs> getFindingCriteria() {
         return this.findingCriteria;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -61,7 +61,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -72,7 +72,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The position of the filter in the list of saved filters on the Amazon Macie console. This value also determines the order in which the filter is applied to findings, relative to other filters that are also applied to the findings.
      * 
      */
-    @InputImport(name="position")
+    @Import(name="position")
       private final @Nullable Output<Integer> position;
 
     public Output<Integer> getPosition() {
@@ -83,7 +83,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * A map of key-value pairs that specifies the tags to associate with the filter.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

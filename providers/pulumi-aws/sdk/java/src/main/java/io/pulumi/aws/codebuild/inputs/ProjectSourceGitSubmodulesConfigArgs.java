@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ProjectSourceGitSubmodulesConfigArgs extends io.pulumi.resour
      * Whether to fetch Git submodules for the AWS CodeBuild build project.
      * 
      */
-    @InputImport(name="fetchSubmodules", required=true)
+    @Import(name="fetchSubmodules", required=true)
       private final Output<Boolean> fetchSubmodules;
 
     public Output<Boolean> getFetchSubmodules() {

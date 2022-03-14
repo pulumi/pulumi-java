@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.gamelift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FleetEc2InboundPermission {
     /**
      * Starting value for a range of allowed port numbers.
@@ -31,12 +31,12 @@ public final class FleetEc2InboundPermission {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetEc2InboundPermission(
-        @OutputCustomType.Parameter("fromPort") Integer fromPort,
-        @OutputCustomType.Parameter("ipRange") String ipRange,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("toPort") Integer toPort) {
+        @CustomType.Parameter("fromPort") Integer fromPort,
+        @CustomType.Parameter("ipRange") String ipRange,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("toPort") Integer toPort) {
         this.fromPort = fromPort;
         this.ipRange = ipRange;
         this.protocol = protocol;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * The tag name.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -29,7 +29,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * The ID of the EC2 resource to manage the tag for.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -40,7 +40,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * The value of the tag.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

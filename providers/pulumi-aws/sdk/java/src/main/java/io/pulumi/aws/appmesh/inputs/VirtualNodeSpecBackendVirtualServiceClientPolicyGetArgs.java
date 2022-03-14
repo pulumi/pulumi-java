@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs exten
      * The Transport Layer Security (TLS) client policy.
      * 
      */
-    @InputImport(name="tls")
+    @Import(name="tls")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> tls;
 
     public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyTlsGetArgs> getTls() {

@@ -4,14 +4,14 @@
 package io.pulumi.aws.elasticsearch.outputs;
 
 import io.pulumi.aws.elasticsearch.outputs.DomainAutoTuneOptionsMaintenanceSchedule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainAutoTuneOptions {
     /**
      * The Auto-Tune desired state for the domain. Valid values: `ENABLED` or `DISABLED`.
@@ -29,11 +29,11 @@ public final class DomainAutoTuneOptions {
      */
     private final @Nullable String rollbackOnDisable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainAutoTuneOptions(
-        @OutputCustomType.Parameter("desiredState") String desiredState,
-        @OutputCustomType.Parameter("maintenanceSchedules") @Nullable List<DomainAutoTuneOptionsMaintenanceSchedule> maintenanceSchedules,
-        @OutputCustomType.Parameter("rollbackOnDisable") @Nullable String rollbackOnDisable) {
+        @CustomType.Parameter("desiredState") String desiredState,
+        @CustomType.Parameter("maintenanceSchedules") @Nullable List<DomainAutoTuneOptionsMaintenanceSchedule> maintenanceSchedules,
+        @CustomType.Parameter("rollbackOnDisable") @Nullable String rollbackOnDisable) {
         this.desiredState = desiredState;
         this.maintenanceSchedules = maintenanceSchedules;
         this.rollbackOnDisable = rollbackOnDisable;

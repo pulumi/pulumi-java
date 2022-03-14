@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest {
     /**
      * The encryption-at-rest mode for encrypting Data Catalog data. Valid values are `DISABLED` and `SSE-KMS`.
@@ -22,10 +22,10 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
      */
     private final @Nullable String sseAwsKmsKeyId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRest(
-        @OutputCustomType.Parameter("catalogEncryptionMode") String catalogEncryptionMode,
-        @OutputCustomType.Parameter("sseAwsKmsKeyId") @Nullable String sseAwsKmsKeyId) {
+        @CustomType.Parameter("catalogEncryptionMode") String catalogEncryptionMode,
+        @CustomType.Parameter("sseAwsKmsKeyId") @Nullable String sseAwsKmsKeyId) {
         this.catalogEncryptionMode = catalogEncryptionMode;
         this.sseAwsKmsKeyId = sseAwsKmsKeyId;
     }

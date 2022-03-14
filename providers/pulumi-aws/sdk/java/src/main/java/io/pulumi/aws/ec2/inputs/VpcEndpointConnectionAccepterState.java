@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
      * AWS VPC Endpoint ID.
      * 
      */
-    @InputImport(name="vpcEndpointId")
+    @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {
@@ -29,7 +29,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
      * AWS VPC Endpoint Service ID.
      * 
      */
-    @InputImport(name="vpcEndpointServiceId")
+    @Import(name="vpcEndpointServiceId")
       private final @Nullable Output<String> vpcEndpointServiceId;
 
     public Output<String> getVpcEndpointServiceId() {
@@ -40,7 +40,7 @@ public final class VpcEndpointConnectionAccepterState extends io.pulumi.resource
      * State of the VPC Endpoint.
      * 
      */
-    @InputImport(name="vpcEndpointState")
+    @Import(name="vpcEndpointState")
       private final @Nullable Output<String> vpcEndpointState;
 
     public Output<String> getVpcEndpointState() {

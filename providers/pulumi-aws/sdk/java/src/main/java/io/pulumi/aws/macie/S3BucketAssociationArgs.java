@@ -5,7 +5,7 @@ package io.pulumi.aws.macie;
 
 import io.pulumi.aws.macie.inputs.S3BucketAssociationClassificationTypeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * The name of the S3 bucket that you want to associate with Amazon Macie.
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -30,7 +30,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * The configuration of how Amazon Macie classifies the S3 objects.
      * 
      */
-    @InputImport(name="classificationType")
+    @Import(name="classificationType")
       private final @Nullable Output<S3BucketAssociationClassificationTypeArgs> classificationType;
 
     public Output<S3BucketAssociationClassificationTypeArgs> getClassificationType() {
@@ -41,7 +41,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * The ID of the Amazon Macie member account whose S3 resources you want to associate with Macie. If `member_account_id` isn't specified, the action associates specified S3 resources with Macie for the current master account.
      * 
      */
-    @InputImport(name="memberAccountId")
+    @Import(name="memberAccountId")
       private final @Nullable Output<String> memberAccountId;
 
     public Output<String> getMemberAccountId() {
@@ -52,7 +52,7 @@ public final class S3BucketAssociationArgs extends io.pulumi.resources.ResourceA
      * Object key prefix identifying one or more S3 objects to which the association applies.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

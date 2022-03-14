@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolAdminCreateUserConfigInviteMessageTemplate {
     /**
      * Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
@@ -27,11 +27,11 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplate {
      */
     private final @Nullable String smsMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolAdminCreateUserConfigInviteMessageTemplate(
-        @OutputCustomType.Parameter("emailMessage") @Nullable String emailMessage,
-        @OutputCustomType.Parameter("emailSubject") @Nullable String emailSubject,
-        @OutputCustomType.Parameter("smsMessage") @Nullable String smsMessage) {
+        @CustomType.Parameter("emailMessage") @Nullable String emailMessage,
+        @CustomType.Parameter("emailSubject") @Nullable String emailSubject,
+        @CustomType.Parameter("smsMessage") @Nullable String smsMessage) {
         this.emailMessage = emailMessage;
         this.emailSubject = emailSubject;
         this.smsMessage = smsMessage;

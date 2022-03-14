@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.memorydb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SnapshotClusterConfiguration {
     /**
      * Description for the cluster.
@@ -78,21 +78,21 @@ public final class SnapshotClusterConfiguration {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SnapshotClusterConfiguration(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("engineVersion") @Nullable String engineVersion,
-        @OutputCustomType.Parameter("maintenanceWindow") @Nullable String maintenanceWindow,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("nodeType") @Nullable String nodeType,
-        @OutputCustomType.Parameter("numShards") @Nullable Integer numShards,
-        @OutputCustomType.Parameter("parameterGroupName") @Nullable String parameterGroupName,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("snapshotRetentionLimit") @Nullable Integer snapshotRetentionLimit,
-        @OutputCustomType.Parameter("snapshotWindow") @Nullable String snapshotWindow,
-        @OutputCustomType.Parameter("subnetGroupName") @Nullable String subnetGroupName,
-        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn,
-        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("engineVersion") @Nullable String engineVersion,
+        @CustomType.Parameter("maintenanceWindow") @Nullable String maintenanceWindow,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("nodeType") @Nullable String nodeType,
+        @CustomType.Parameter("numShards") @Nullable Integer numShards,
+        @CustomType.Parameter("parameterGroupName") @Nullable String parameterGroupName,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("snapshotRetentionLimit") @Nullable Integer snapshotRetentionLimit,
+        @CustomType.Parameter("snapshotWindow") @Nullable String snapshotWindow,
+        @CustomType.Parameter("subnetGroupName") @Nullable String subnetGroupName,
+        @CustomType.Parameter("topicArn") @Nullable String topicArn,
+        @CustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.description = description;
         this.engineVersion = engineVersion;
         this.maintenanceWindow = maintenanceWindow;

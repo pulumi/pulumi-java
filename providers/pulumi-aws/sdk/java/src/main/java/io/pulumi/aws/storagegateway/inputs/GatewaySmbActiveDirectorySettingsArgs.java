@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
 
     public static final GatewaySmbActiveDirectorySettingsArgs Empty = new GatewaySmbActiveDirectorySettingsArgs();
 
-    @InputImport(name="activeDirectoryStatus")
+    @Import(name="activeDirectoryStatus")
       private final @Nullable Output<String> activeDirectoryStatus;
 
     public Output<String> getActiveDirectoryStatus() {
@@ -28,7 +28,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
      * 
      */
-    @InputImport(name="domainControllers")
+    @Import(name="domainControllers")
       private final @Nullable Output<List<String>> domainControllers;
 
     public Output<List<String>> getDomainControllers() {
@@ -39,7 +39,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * The name of the domain that you want the gateway to join.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -51,7 +51,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
      * 
      */
-    @InputImport(name="organizationalUnit")
+    @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
     public Output<String> getOrganizationalUnit() {
@@ -62,7 +62,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * The password of the user who has permission to add the gateway to the Active Directory domain.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -73,7 +73,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
      * 
      */
-    @InputImport(name="timeoutInSeconds")
+    @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
     public Output<Integer> getTimeoutInSeconds() {
@@ -84,7 +84,7 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
      * The user name of user who has permission to add the gateway to the Active Directory domain.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

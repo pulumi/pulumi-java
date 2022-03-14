@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectLogsConfigCloudwatchLogs {
     /**
      * Group name of the logs in CloudWatch Logs.
@@ -27,11 +27,11 @@ public final class ProjectLogsConfigCloudwatchLogs {
      */
     private final @Nullable String streamName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectLogsConfigCloudwatchLogs(
-        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("streamName") @Nullable String streamName) {
+        @CustomType.Parameter("groupName") @Nullable String groupName,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("streamName") @Nullable String streamName) {
         this.groupName = groupName;
         this.status = status;
         this.streamName = streamName;

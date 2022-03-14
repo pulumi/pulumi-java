@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.secretsmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
      * The Amazon Resource Name (ARN) of the secret to retrieve.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {
@@ -29,7 +29,7 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the secret to retrieve.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

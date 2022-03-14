@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamServerSideEncryption {
     /**
      * Whether to enable encryption at rest. Default is `false`.
@@ -28,11 +28,11 @@ public final class FirehoseDeliveryStreamServerSideEncryption {
      */
     private final @Nullable String keyType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamServerSideEncryption(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("keyArn") @Nullable String keyArn,
-        @OutputCustomType.Parameter("keyType") @Nullable String keyType) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("keyArn") @Nullable String keyArn,
+        @CustomType.Parameter("keyType") @Nullable String keyType) {
         this.enabled = enabled;
         this.keyArn = keyArn;
         this.keyType = keyType;

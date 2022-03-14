@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticbeanstalk.inputs;
 
 import io.pulumi.aws.elasticbeanstalk.inputs.ConfigurationTemplateSettingGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * name of the application to associate with this configuration template
      * 
      */
-    @InputImport(name="application")
+    @Import(name="application")
       private final @Nullable Output<String> application;
 
     public Output<String> getApplication() {
@@ -31,7 +31,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * Short description of the Template
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * The ID of the environment used with this configuration template
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -53,7 +53,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * A unique name for this Template.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * below in Option Settings
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<List<ConfigurationTemplateSettingGetArgs>> settings;
 
     public Output<List<ConfigurationTemplateSettingGetArgs>> getSettings() {
@@ -78,7 +78,7 @@ public final class ConfigurationTemplateState extends io.pulumi.resources.Resour
      * off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
      * 
      */
-    @InputImport(name="solutionStackName")
+    @Import(name="solutionStackName")
       private final @Nullable Output<String> solutionStackName;
 
     public Output<String> getSolutionStackName() {

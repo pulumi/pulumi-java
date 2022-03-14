@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
      * ARN of the role that performs the self-service actions on your behalf. For example, `arn:aws:iam::12345678910:role/ActionRole`. To reuse the provisioned product launch role, set to `LAUNCH_ROLE`.
      * 
      */
-    @InputImport(name="assumeRole")
+    @Import(name="assumeRole")
       private final @Nullable Output<String> assumeRole;
 
     public Output<String> getAssumeRole() {
@@ -29,7 +29,7 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
      * Name of the SSM document. For example, `AWS-RestartEC2Instance`. If you are using a shared SSM document, you must provide the ARN instead of the name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
      * List of parameters in JSON format. For example: `[{\"Name\":\"InstanceId\",\"Type\":\"TARGET\"}]` or `[{\"Name\":\"InstanceId\",\"Type\":\"TEXT_VALUE\"}]`.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
     public Output<String> getParameters() {
@@ -51,7 +51,7 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
      * Service action definition type. Valid value is `SSM_AUTOMATION`. Default is `SSM_AUTOMATION`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -62,7 +62,7 @@ public final class ServiceActionDefinitionArgs extends io.pulumi.resources.Resou
      * SSM document version. For example, `1`.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<String> version;
 
     public Output<String> getVersion() {

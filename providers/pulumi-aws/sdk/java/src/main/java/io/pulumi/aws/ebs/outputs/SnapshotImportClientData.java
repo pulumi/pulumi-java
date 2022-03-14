@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ebs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SnapshotImportClientData {
     /**
      * A user-defined comment about the disk upload.
@@ -33,12 +33,12 @@ public final class SnapshotImportClientData {
      */
     private final @Nullable String uploadStart;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SnapshotImportClientData(
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("uploadEnd") @Nullable String uploadEnd,
-        @OutputCustomType.Parameter("uploadSize") @Nullable Double uploadSize,
-        @OutputCustomType.Parameter("uploadStart") @Nullable String uploadStart) {
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("uploadEnd") @Nullable String uploadEnd,
+        @CustomType.Parameter("uploadSize") @Nullable Double uploadSize,
+        @CustomType.Parameter("uploadStart") @Nullable String uploadStart) {
         this.comment = comment;
         this.uploadEnd = uploadEnd;
         this.uploadSize = uploadSize;

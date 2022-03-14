@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionCustomErrorResponse {
     /**
      * The minimum amount of time you want
@@ -38,12 +38,12 @@ public final class DistributionCustomErrorResponse {
      */
     private final @Nullable String responsePagePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionCustomErrorResponse(
-        @OutputCustomType.Parameter("errorCachingMinTtl") @Nullable Integer errorCachingMinTtl,
-        @OutputCustomType.Parameter("errorCode") Integer errorCode,
-        @OutputCustomType.Parameter("responseCode") @Nullable Integer responseCode,
-        @OutputCustomType.Parameter("responsePagePath") @Nullable String responsePagePath) {
+        @CustomType.Parameter("errorCachingMinTtl") @Nullable Integer errorCachingMinTtl,
+        @CustomType.Parameter("errorCode") Integer errorCode,
+        @CustomType.Parameter("responseCode") @Nullable Integer responseCode,
+        @CustomType.Parameter("responsePagePath") @Nullable String responsePagePath) {
         this.errorCachingMinTtl = errorCachingMinTtl;
         this.errorCode = errorCode;
         this.responseCode = responseCode;

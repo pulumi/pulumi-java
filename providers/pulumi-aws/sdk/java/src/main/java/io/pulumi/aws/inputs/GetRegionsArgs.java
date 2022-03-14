@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.aws.inputs.GetRegionsFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
      * If true the source will query all regions regardless of availability.
      * 
      */
-    @InputImport(name="allRegions")
+    @Import(name="allRegions")
       private final @Nullable Boolean allRegions;
 
     public Optional<Boolean> getAllRegions() {
@@ -31,7 +31,7 @@ public final class GetRegionsArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block(s) to use as filters. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetRegionsFilter> filters;
 
     public List<GetRegionsFilter> getFilters() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.UserLoginProfileArgs;
 import io.pulumi.aws.iam.inputs.UserLoginProfileState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -54,7 +54,7 @@ public class UserLoginProfile extends io.pulumi.resources.CustomResource {
      * The encrypted password, base64 encoded. Only available if password was handled on this provider resource creation, not import.
      * 
      */
-    @OutputExport(name="encryptedPassword", type=String.class, parameters={})
+    @Export(name="encryptedPassword", type=String.class, parameters={})
     private Output<String> encryptedPassword;
 
     /**
@@ -68,7 +68,7 @@ public class UserLoginProfile extends io.pulumi.resources.CustomResource {
      * The fingerprint of the PGP key used to encrypt the password. Only available if password was handled on this provider resource creation, not import.
      * 
      */
-    @OutputExport(name="keyFingerprint", type=String.class, parameters={})
+    @Export(name="keyFingerprint", type=String.class, parameters={})
     private Output<String> keyFingerprint;
 
     /**
@@ -82,7 +82,7 @@ public class UserLoginProfile extends io.pulumi.resources.CustomResource {
      * The length of the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
-    @OutputExport(name="passwordLength", type=Integer.class, parameters={})
+    @Export(name="passwordLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> passwordLength;
 
     /**
@@ -96,7 +96,7 @@ public class UserLoginProfile extends io.pulumi.resources.CustomResource {
      * Whether the user should be forced to reset the generated password on resource creation. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
-    @OutputExport(name="passwordResetRequired", type=Boolean.class, parameters={})
+    @Export(name="passwordResetRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> passwordResetRequired;
 
     /**
@@ -110,7 +110,7 @@ public class UserLoginProfile extends io.pulumi.resources.CustomResource {
      * Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:username`. Only applies on resource creation. Drift detection is not possible with this argument.
      * 
      */
-    @OutputExport(name="pgpKey", type=String.class, parameters={})
+    @Export(name="pgpKey", type=String.class, parameters={})
     private Output<String> pgpKey;
 
     /**
@@ -124,7 +124,7 @@ public class UserLoginProfile extends io.pulumi.resources.CustomResource {
      * The IAM user's name.
      * 
      */
-    @OutputExport(name="user", type=String.class, parameters={})
+    @Export(name="user", type=String.class, parameters={})
     private Output<String> user;
 
     /**

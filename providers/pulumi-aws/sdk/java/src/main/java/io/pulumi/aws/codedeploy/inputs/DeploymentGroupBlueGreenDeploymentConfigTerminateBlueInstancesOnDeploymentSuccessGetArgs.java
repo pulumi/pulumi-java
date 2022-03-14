@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
      * * `KEEP_ALIVE`: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -32,7 +32,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
      * The number of minutes to wait after a successful blue/green deployment before terminating instances from the original environment.
      * 
      */
-    @InputImport(name="terminationWaitTimeInMinutes")
+    @Import(name="terminationWaitTimeInMinutes")
       private final @Nullable Output<Integer> terminationWaitTimeInMinutes;
 
     public Output<Integer> getTerminationWaitTimeInMinutes() {

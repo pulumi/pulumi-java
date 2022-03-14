@@ -8,7 +8,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * See CloudWatch Logging Options below for more details.
      * 
      */
-    @InputImport(name="cloudwatchLoggingOptions")
+    @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions;
 
     public Output<AnalyticsApplicationCloudwatchLoggingOptionsArgs> getCloudwatchLoggingOptions() {
@@ -37,7 +37,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * SQL Code to transform input data, and generate output.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
@@ -48,7 +48,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * Description of the application.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * Input configuration of the application. See Inputs below for more details.
      * 
      */
-    @InputImport(name="inputs")
+    @Import(name="inputs")
       private final @Nullable Output<AnalyticsApplicationInputsArgs> inputs;
 
     public Output<AnalyticsApplicationInputsArgs> getInputs() {
@@ -70,7 +70,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * Name of the Kinesis Analytics Application.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -81,7 +81,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * Output destination configuration of the application. See Outputs below for more details.
      * 
      */
-    @InputImport(name="outputs")
+    @Import(name="outputs")
       private final @Nullable Output<List<AnalyticsApplicationOutputArgs>> outputs;
 
     public Output<List<AnalyticsApplicationOutputArgs>> getOutputs() {
@@ -93,7 +93,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * See Reference Data Sources below for more details.
      * 
      */
-    @InputImport(name="referenceDataSources")
+    @Import(name="referenceDataSources")
       private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesArgs> referenceDataSources;
 
     public Output<AnalyticsApplicationReferenceDataSourcesArgs> getReferenceDataSources() {
@@ -105,7 +105,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
      * 
      */
-    @InputImport(name="startApplication")
+    @Import(name="startApplication")
       private final @Nullable Output<Boolean> startApplication;
 
     public Output<Boolean> getStartApplication() {
@@ -116,7 +116,7 @@ public final class AnalyticsApplicationArgs extends io.pulumi.resources.Resource
      * Key-value map of tags for the Kinesis Analytics Application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

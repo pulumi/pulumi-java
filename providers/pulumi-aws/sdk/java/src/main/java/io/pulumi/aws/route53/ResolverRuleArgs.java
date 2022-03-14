@@ -5,7 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.aws.route53.inputs.ResolverRuleTargetIpArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * DNS queries for this domain name are forwarded to the IP addresses that are specified using `target_ip`.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -32,7 +32,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * This argument should only be specified for `FORWARD` type rules.
      * 
      */
-    @InputImport(name="resolverEndpointId")
+    @Import(name="resolverEndpointId")
       private final @Nullable Output<String> resolverEndpointId;
 
     public Output<String> getResolverEndpointId() {
@@ -55,7 +55,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The rule type. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
     public Output<String> getRuleType() {
@@ -66,7 +66,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -78,7 +78,7 @@ public final class ResolverRuleArgs extends io.pulumi.resources.ResourceArgs {
      * This argument should only be specified for `FORWARD` type rules.
      * 
      */
-    @InputImport(name="targetIps")
+    @Import(name="targetIps")
       private final @Nullable Output<List<ResolverRuleTargetIpArgs>> targetIps;
 
     public Output<List<ResolverRuleTargetIpArgs>> getTargetIps() {

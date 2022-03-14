@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscaling.inputs;
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyInstancesDistributionGetArgs;
 import io.pulumi.aws.autoscaling.inputs.GroupMixedInstancesPolicyLaunchTemplateGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class GroupMixedInstancesPolicyGetArgs extends io.pulumi.resources.
      * Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
      * 
      */
-    @InputImport(name="instancesDistribution")
+    @Import(name="instancesDistribution")
       private final @Nullable Output<GroupMixedInstancesPolicyInstancesDistributionGetArgs> instancesDistribution;
 
     public Output<GroupMixedInstancesPolicyInstancesDistributionGetArgs> getInstancesDistribution() {
@@ -30,7 +30,7 @@ public final class GroupMixedInstancesPolicyGetArgs extends io.pulumi.resources.
      * Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
      * 
      */
-    @InputImport(name="launchTemplate", required=true)
+    @Import(name="launchTemplate", required=true)
       private final Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> launchTemplate;
 
     public Output<GroupMixedInstancesPolicyLaunchTemplateGetArgs> getLaunchTemplate() {

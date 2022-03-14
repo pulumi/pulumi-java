@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogMetricFilterMetricTransformation {
     /**
      * The value to emit when a filter pattern does not match a log event. Conflicts with `dimensions`.
@@ -43,14 +43,14 @@ public final class LogMetricFilterMetricTransformation {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogMetricFilterMetricTransformation(
-        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
-        @OutputCustomType.Parameter("dimensions") @Nullable Map<String,String> dimensions,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("unit") @Nullable String unit,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @CustomType.Parameter("dimensions") @Nullable Map<String,String> dimensions,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("unit") @Nullable String unit,
+        @CustomType.Parameter("value") String value) {
         this.defaultValue = defaultValue;
         this.dimensions = dimensions;
         this.name = name;

@@ -8,7 +8,7 @@ import io.pulumi.aws.connect.HoursOfOperationArgs;
 import io.pulumi.aws.connect.inputs.HoursOfOperationState;
 import io.pulumi.aws.connect.outputs.HoursOfOperationConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * One or more config blocks which define the configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below.
      * 
      */
-    @OutputExport(name="configs", type=List.class, parameters={HoursOfOperationConfig.class})
+    @Export(name="configs", type=List.class, parameters={HoursOfOperationConfig.class})
     private Output<List<HoursOfOperationConfig>> configs;
 
     /**
@@ -50,7 +50,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * Specifies the description of the Hours of Operation.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Hours of Operation.
      * 
      */
-    @OutputExport(name="hoursOfOperationArn", type=String.class, parameters={})
+    @Export(name="hoursOfOperationArn", type=String.class, parameters={})
     private Output<String> hoursOfOperationArn;
 
     /**
@@ -78,7 +78,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * The identifier for the hours of operation.
      * 
      */
-    @OutputExport(name="hoursOfOperationId", type=String.class, parameters={})
+    @Export(name="hoursOfOperationId", type=String.class, parameters={})
     private Output<String> hoursOfOperationId;
 
     /**
@@ -92,7 +92,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    @OutputExport(name="instanceId", type=String.class, parameters={})
+    @Export(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 
     /**
@@ -106,7 +106,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * Specifies the name of the Hours of Operation.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * Tags to apply to the Hours of Operation. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -148,7 +148,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * Specifies the time zone of the Hours of Operation.
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**

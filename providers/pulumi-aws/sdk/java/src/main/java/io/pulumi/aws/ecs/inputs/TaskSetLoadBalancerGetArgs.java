@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * The name of the container to associate with the load balancer (as it appears in a container definition).
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -30,7 +30,7 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * The port on the container to associate with the load balancer. Defaults to `0` if not specified.
      * 
      */
-    @InputImport(name="containerPort")
+    @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
@@ -41,7 +41,7 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * The name of the ELB (Classic) to associate with the service.
      * 
      */
-    @InputImport(name="loadBalancerName")
+    @Import(name="loadBalancerName")
       private final @Nullable Output<String> loadBalancerName;
 
     public Output<String> getLoadBalancerName() {
@@ -52,7 +52,7 @@ public final class TaskSetLoadBalancerGetArgs extends io.pulumi.resources.Resour
      * The ARN of the Load Balancer target group to associate with the service.
      * 
      */
-    @InputImport(name="targetGroupArn")
+    @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
     public Output<String> getTargetGroupArn() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchTemplateIamInstanceProfile {
     /**
      * Amazon Resource Name (ARN) of the launch template.
@@ -20,10 +20,10 @@ public final class GetLaunchTemplateIamInstanceProfile {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchTemplateIamInstanceProfile(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("name") String name) {
         this.arn = arn;
         this.name = name;
     }

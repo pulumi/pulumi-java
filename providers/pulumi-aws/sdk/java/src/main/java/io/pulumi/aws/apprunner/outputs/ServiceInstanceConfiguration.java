@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.apprunner.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceInstanceConfiguration {
     /**
      * The number of CPU units reserved for each instance of your App Runner service represented as a String. Defaults to `1024`. Valid values: `1024|2048|(1|2) vCPU`.
@@ -27,11 +27,11 @@ public final class ServiceInstanceConfiguration {
      */
     private final @Nullable String memory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceInstanceConfiguration(
-        @OutputCustomType.Parameter("cpu") @Nullable String cpu,
-        @OutputCustomType.Parameter("instanceRoleArn") @Nullable String instanceRoleArn,
-        @OutputCustomType.Parameter("memory") @Nullable String memory) {
+        @CustomType.Parameter("cpu") @Nullable String cpu,
+        @CustomType.Parameter("instanceRoleArn") @Nullable String instanceRoleArn,
+        @CustomType.Parameter("memory") @Nullable String memory) {
         this.cpu = cpu;
         this.instanceRoleArn = instanceRoleArn;
         this.memory = memory;

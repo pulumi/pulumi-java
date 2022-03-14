@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * The identifier of the security standard control.
      * 
      */
-    @InputImport(name="controlId")
+    @Import(name="controlId")
       private final @Nullable Output<String> controlId;
 
     public Output<String> getControlId() {
@@ -30,7 +30,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * The control status could be `ENABLED` or `DISABLED`. You have to specify `disabled_reason` argument for `DISABLED` control status.
      * 
      */
-    @InputImport(name="controlStatus")
+    @Import(name="controlStatus")
       private final @Nullable Output<String> controlStatus;
 
     public Output<String> getControlStatus() {
@@ -41,7 +41,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * The date and time that the status of the security standard control was most recently updated.
      * 
      */
-    @InputImport(name="controlStatusUpdatedAt")
+    @Import(name="controlStatusUpdatedAt")
       private final @Nullable Output<String> controlStatusUpdatedAt;
 
     public Output<String> getControlStatusUpdatedAt() {
@@ -52,7 +52,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * The standard control longer description. Provides information about what the control is checking for.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -63,7 +63,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * A description of the reason why you are disabling a security standard control. If you specify this attribute, `control_status` will be set to `DISABLED` automatically.
      * 
      */
-    @InputImport(name="disabledReason")
+    @Import(name="disabledReason")
       private final @Nullable Output<String> disabledReason;
 
     public Output<String> getDisabledReason() {
@@ -74,7 +74,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * The list of requirements that are related to this control.
      * 
      */
-    @InputImport(name="relatedRequirements")
+    @Import(name="relatedRequirements")
       private final @Nullable Output<List<String>> relatedRequirements;
 
     public Output<List<String>> getRelatedRequirements() {
@@ -85,7 +85,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * A link to remediation information for the control in the Security Hub user documentation.
      * 
      */
-    @InputImport(name="remediationUrl")
+    @Import(name="remediationUrl")
       private final @Nullable Output<String> remediationUrl;
 
     public Output<String> getRemediationUrl() {
@@ -96,7 +96,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * The severity of findings generated from this security standard control.
      * 
      */
-    @InputImport(name="severityRating")
+    @Import(name="severityRating")
       private final @Nullable Output<String> severityRating;
 
     public Output<String> getSeverityRating() {
@@ -107,7 +107,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * The standards control ARN.
      * 
      */
-    @InputImport(name="standardsControlArn")
+    @Import(name="standardsControlArn")
       private final @Nullable Output<String> standardsControlArn;
 
     public Output<String> getStandardsControlArn() {
@@ -118,7 +118,7 @@ public final class StandardsControlState extends io.pulumi.resources.ResourceArg
      * The standard control title.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

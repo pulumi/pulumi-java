@@ -3,21 +3,21 @@
 
 package io.pulumi.aws.applicationloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerDefaultActionFixedResponse {
     private final String contentType;
     private final String messageBody;
     private final String statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerDefaultActionFixedResponse(
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("messageBody") String messageBody,
-        @OutputCustomType.Parameter("statusCode") String statusCode) {
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("messageBody") String messageBody,
+        @CustomType.Parameter("statusCode") String statusCode) {
         this.contentType = contentType;
         this.messageBody = messageBody;
         this.statusCode = statusCode;

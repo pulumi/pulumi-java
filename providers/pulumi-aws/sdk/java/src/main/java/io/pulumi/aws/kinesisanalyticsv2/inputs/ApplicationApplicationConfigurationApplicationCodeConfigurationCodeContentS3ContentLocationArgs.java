@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * The ARN for the S3 bucket containing the application code.
      * 
      */
-    @InputImport(name="bucketArn", required=true)
+    @Import(name="bucketArn", required=true)
       private final Output<String> bucketArn;
 
     public Output<String> getBucketArn() {
@@ -29,7 +29,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * The file key for the object containing the application code.
      * 
      */
-    @InputImport(name="fileKey", required=true)
+    @Import(name="fileKey", required=true)
       private final Output<String> fileKey;
 
     public Output<String> getFileKey() {
@@ -40,7 +40,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * The version of the object containing the application code.
      * 
      */
-    @InputImport(name="objectVersion")
+    @Import(name="objectVersion")
       private final @Nullable Output<String> objectVersion;
 
     public Output<String> getObjectVersion() {

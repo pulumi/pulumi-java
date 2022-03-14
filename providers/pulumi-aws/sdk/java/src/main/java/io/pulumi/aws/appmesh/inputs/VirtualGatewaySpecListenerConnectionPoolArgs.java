@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerConnectionPoolGrpc
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerConnectionPoolHttp2Args;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerConnectionPoolHttpArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolArgs extends io.pulum
      * Connection pool information for gRPC listeners.
      * 
      */
-    @InputImport(name="grpc")
+    @Import(name="grpc")
       private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolGrpcArgs> grpc;
 
     public Output<VirtualGatewaySpecListenerConnectionPoolGrpcArgs> getGrpc() {
@@ -31,7 +31,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolArgs extends io.pulum
      * Connection pool information for HTTP listeners.
      * 
      */
-    @InputImport(name="http")
+    @Import(name="http")
       private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolHttpArgs> http;
 
     public Output<VirtualGatewaySpecListenerConnectionPoolHttpArgs> getHttp() {
@@ -42,7 +42,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolArgs extends io.pulum
      * Connection pool information for HTTP2 listeners.
      * 
      */
-    @InputImport(name="http2")
+    @Import(name="http2")
       private final @Nullable Output<VirtualGatewaySpecListenerConnectionPoolHttp2Args> http2;
 
     public Output<VirtualGatewaySpecListenerConnectionPoolHttp2Args> getHttp2() {

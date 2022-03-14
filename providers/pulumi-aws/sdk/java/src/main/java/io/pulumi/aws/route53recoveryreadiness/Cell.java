@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53recoveryreadiness.CellArgs;
 import io.pulumi.aws.route53recoveryreadiness.inputs.CellState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * ARN of the cell
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * Unique name describing the cell.
      * 
      */
-    @OutputExport(name="cellName", type=String.class, parameters={})
+    @Export(name="cellName", type=String.class, parameters={})
     private Output<String> cellName;
 
     /**
@@ -62,7 +62,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * List of cell arns to add as nested fault domains within this cell.
      * 
      */
-    @OutputExport(name="cells", type=List.class, parameters={String.class})
+    @Export(name="cells", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> cells;
 
     /**
@@ -76,7 +76,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * List of readiness scopes (recovery groups or cells) that contain this cell.
      * 
      */
-    @OutputExport(name="parentReadinessScopes", type=List.class, parameters={String.class})
+    @Export(name="parentReadinessScopes", type=List.class, parameters={String.class})
     private Output<List<String>> parentReadinessScopes;
 
     /**
@@ -90,7 +90,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -104,7 +104,7 @@ public class Cell extends io.pulumi.resources.CustomResource {
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

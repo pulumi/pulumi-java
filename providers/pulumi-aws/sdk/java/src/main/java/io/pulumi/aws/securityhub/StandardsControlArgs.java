@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
      * The control status could be `ENABLED` or `DISABLED`. You have to specify `disabled_reason` argument for `DISABLED` control status.
      * 
      */
-    @InputImport(name="controlStatus", required=true)
+    @Import(name="controlStatus", required=true)
       private final Output<String> controlStatus;
 
     public Output<String> getControlStatus() {
@@ -29,7 +29,7 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
      * A description of the reason why you are disabling a security standard control. If you specify this attribute, `control_status` will be set to `DISABLED` automatically.
      * 
      */
-    @InputImport(name="disabledReason")
+    @Import(name="disabledReason")
       private final @Nullable Output<String> disabledReason;
 
     public Output<String> getDisabledReason() {
@@ -40,7 +40,7 @@ public final class StandardsControlArgs extends io.pulumi.resources.ResourceArgs
      * The standards control ARN.
      * 
      */
-    @InputImport(name="standardsControlArn", required=true)
+    @Import(name="standardsControlArn", required=true)
       private final Output<String> standardsControlArn;
 
     public Output<String> getStandardsControlArn() {

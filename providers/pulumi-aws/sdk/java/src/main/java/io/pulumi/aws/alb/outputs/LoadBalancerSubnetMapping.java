@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.alb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerSubnetMapping {
     /**
      * The allocation ID of the Elastic IP address.
@@ -33,13 +33,13 @@ public final class LoadBalancerSubnetMapping {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerSubnetMapping(
-        @OutputCustomType.Parameter("allocationId") @Nullable String allocationId,
-        @OutputCustomType.Parameter("ipv6Address") @Nullable String ipv6Address,
-        @OutputCustomType.Parameter("outpostId") @Nullable String outpostId,
-        @OutputCustomType.Parameter("privateIpv4Address") @Nullable String privateIpv4Address,
-        @OutputCustomType.Parameter("subnetId") String subnetId) {
+        @CustomType.Parameter("allocationId") @Nullable String allocationId,
+        @CustomType.Parameter("ipv6Address") @Nullable String ipv6Address,
+        @CustomType.Parameter("outpostId") @Nullable String outpostId,
+        @CustomType.Parameter("privateIpv4Address") @Nullable String privateIpv4Address,
+        @CustomType.Parameter("subnetId") String subnetId) {
         this.allocationId = allocationId;
         this.ipv6Address = ipv6Address;
         this.outpostId = outpostId;

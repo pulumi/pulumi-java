@@ -7,7 +7,7 @@ import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationAuthenticationCo
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationCodeRepositoryGetArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationImageRepositoryGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
      * Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
      * 
      */
-    @InputImport(name="authenticationConfiguration")
+    @Import(name="authenticationConfiguration")
       private final @Nullable Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> authenticationConfiguration;
 
     public Output<ServiceSourceConfigurationAuthenticationConfigurationGetArgs> getAuthenticationConfiguration() {
@@ -32,7 +32,7 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
      * Whether continuous integration from the source repository is enabled for the App Runner service. If set to `true`, each repository change (source code commit or new image version) starts a deployment. Defaults to `true`.
      * 
      */
-    @InputImport(name="autoDeploymentsEnabled")
+    @Import(name="autoDeploymentsEnabled")
       private final @Nullable Output<Boolean> autoDeploymentsEnabled;
 
     public Output<Boolean> getAutoDeploymentsEnabled() {
@@ -43,7 +43,7 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
      * Description of a source code repository. See Code Repository below for more details.
      * 
      */
-    @InputImport(name="codeRepository")
+    @Import(name="codeRepository")
       private final @Nullable Output<ServiceSourceConfigurationCodeRepositoryGetArgs> codeRepository;
 
     public Output<ServiceSourceConfigurationCodeRepositoryGetArgs> getCodeRepository() {
@@ -54,7 +54,7 @@ public final class ServiceSourceConfigurationGetArgs extends io.pulumi.resources
      * Description of a source image repository. See Image Repository below for more details.
      * 
      */
-    @InputImport(name="imageRepository")
+    @Import(name="imageRepository")
       private final @Nullable Output<ServiceSourceConfigurationImageRepositoryGetArgs> imageRepository;
 
     public Output<ServiceSourceConfigurationImageRepositoryGetArgs> getImageRepository() {

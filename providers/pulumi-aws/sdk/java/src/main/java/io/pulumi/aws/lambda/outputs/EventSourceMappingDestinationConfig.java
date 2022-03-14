@@ -4,12 +4,12 @@
 package io.pulumi.aws.lambda.outputs;
 
 import io.pulumi.aws.lambda.outputs.EventSourceMappingDestinationConfigOnFailure;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventSourceMappingDestinationConfig {
     /**
      * The destination configuration for failed invocations. Detailed below.
@@ -17,8 +17,8 @@ public final class EventSourceMappingDestinationConfig {
      */
     private final @Nullable EventSourceMappingDestinationConfigOnFailure onFailure;
 
-    @OutputCustomType.Constructor
-    private EventSourceMappingDestinationConfig(@OutputCustomType.Parameter("onFailure") @Nullable EventSourceMappingDestinationConfigOnFailure onFailure) {
+    @CustomType.Constructor
+    private EventSourceMappingDestinationConfig(@CustomType.Parameter("onFailure") @Nullable EventSourceMappingDestinationConfigOnFailure onFailure) {
         this.onFailure = onFailure;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * Specific log groups to use with the query.
      * 
      */
-    @InputImport(name="logGroupNames")
+    @Import(name="logGroupNames")
       private final @Nullable Output<List<String>> logGroupNames;
 
     public Output<List<String>> getLogGroupNames() {
@@ -30,7 +30,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the query.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class QueryDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * The query to save. You can read more about CloudWatch Logs Query Syntax in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html).
      * 
      */
-    @InputImport(name="queryString", required=true)
+    @Import(name="queryString", required=true)
       private final Output<String> queryString;
 
     public Output<String> getQueryString() {

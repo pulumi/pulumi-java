@@ -6,7 +6,7 @@ package io.pulumi.aws.cfg;
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsArgs;
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * Remediation is triggered automatically if `true`.
      * 
      */
-    @InputImport(name="automatic")
+    @Import(name="automatic")
       private final @Nullable Output<Boolean> automatic;
 
     public Output<Boolean> getAutomatic() {
@@ -34,7 +34,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * Name of the AWS Config rule.
      * 
      */
-    @InputImport(name="configRuleName", required=true)
+    @Import(name="configRuleName", required=true)
       private final Output<String> configRuleName;
 
     public Output<String> getConfigRuleName() {
@@ -45,7 +45,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * Configuration block for execution controls. See below.
      * 
      */
-    @InputImport(name="executionControls")
+    @Import(name="executionControls")
       private final @Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls;
 
     public Output<RemediationConfigurationExecutionControlsArgs> getExecutionControls() {
@@ -56,7 +56,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * Maximum number of failed attempts for auto-remediation. If you do not select a number, the default is 5.
      * 
      */
-    @InputImport(name="maximumAutomaticAttempts")
+    @Import(name="maximumAutomaticAttempts")
       private final @Nullable Output<Integer> maximumAutomaticAttempts;
 
     public Output<Integer> getMaximumAutomaticAttempts() {
@@ -67,7 +67,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * Can be specified multiple times for each parameter. Each parameter block supports arguments below.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<RemediationConfigurationParameterArgs>> parameters;
 
     public Output<List<RemediationConfigurationParameterArgs>> getParameters() {
@@ -78,7 +78,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * Type of resource.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -89,7 +89,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * Maximum time in seconds that AWS Config runs auto-remediation. If you do not select a number, the default is 60 seconds.
      * 
      */
-    @InputImport(name="retryAttemptSeconds")
+    @Import(name="retryAttemptSeconds")
       private final @Nullable Output<Integer> retryAttemptSeconds;
 
     public Output<Integer> getRetryAttemptSeconds() {
@@ -100,7 +100,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * Target ID is the name of the public document.
      * 
      */
-    @InputImport(name="targetId", required=true)
+    @Import(name="targetId", required=true)
       private final Output<String> targetId;
 
     public Output<String> getTargetId() {
@@ -111,7 +111,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * Type of the target. Target executes remediation. For example, SSM document.
      * 
      */
-    @InputImport(name="targetType", required=true)
+    @Import(name="targetType", required=true)
       private final Output<String> targetType;
 
     public Output<String> getTargetType() {
@@ -122,7 +122,7 @@ public final class RemediationConfigurationArgs extends io.pulumi.resources.Reso
      * Version of the target. For example, version of the SSM document
      * 
      */
-    @InputImport(name="targetVersion")
+    @Import(name="targetVersion")
       private final @Nullable Output<String> targetVersion;
 
     public Output<String> getTargetVersion() {

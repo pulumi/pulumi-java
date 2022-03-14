@@ -6,7 +6,7 @@ package io.pulumi.aws.codebuild.outputs;
 import io.pulumi.aws.codebuild.outputs.ProjectSecondarySourceAuth;
 import io.pulumi.aws.codebuild.outputs.ProjectSecondarySourceBuildStatusConfig;
 import io.pulumi.aws.codebuild.outputs.ProjectSecondarySourceGitSubmodulesConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectSecondarySource {
     /**
      * Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
@@ -71,18 +71,18 @@ public final class ProjectSecondarySource {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectSecondarySource(
-        @OutputCustomType.Parameter("auth") @Nullable ProjectSecondarySourceAuth auth,
-        @OutputCustomType.Parameter("buildStatusConfig") @Nullable ProjectSecondarySourceBuildStatusConfig buildStatusConfig,
-        @OutputCustomType.Parameter("buildspec") @Nullable String buildspec,
-        @OutputCustomType.Parameter("gitCloneDepth") @Nullable Integer gitCloneDepth,
-        @OutputCustomType.Parameter("gitSubmodulesConfig") @Nullable ProjectSecondarySourceGitSubmodulesConfig gitSubmodulesConfig,
-        @OutputCustomType.Parameter("insecureSsl") @Nullable Boolean insecureSsl,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("reportBuildStatus") @Nullable Boolean reportBuildStatus,
-        @OutputCustomType.Parameter("sourceIdentifier") String sourceIdentifier,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("auth") @Nullable ProjectSecondarySourceAuth auth,
+        @CustomType.Parameter("buildStatusConfig") @Nullable ProjectSecondarySourceBuildStatusConfig buildStatusConfig,
+        @CustomType.Parameter("buildspec") @Nullable String buildspec,
+        @CustomType.Parameter("gitCloneDepth") @Nullable Integer gitCloneDepth,
+        @CustomType.Parameter("gitSubmodulesConfig") @Nullable ProjectSecondarySourceGitSubmodulesConfig gitSubmodulesConfig,
+        @CustomType.Parameter("insecureSsl") @Nullable Boolean insecureSsl,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("reportBuildStatus") @Nullable Boolean reportBuildStatus,
+        @CustomType.Parameter("sourceIdentifier") String sourceIdentifier,
+        @CustomType.Parameter("type") String type) {
         this.auth = auth;
         this.buildStatusConfig = buildStatusConfig;
         this.buildspec = buildspec;

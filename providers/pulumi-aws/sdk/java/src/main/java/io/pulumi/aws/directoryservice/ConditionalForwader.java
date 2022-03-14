@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directoryservice.ConditionalForwaderArgs;
 import io.pulumi.aws.directoryservice.inputs.ConditionalForwaderState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class ConditionalForwader extends io.pulumi.resources.CustomResource {
      * The id of directory.
      * 
      */
-    @OutputExport(name="directoryId", type=String.class, parameters={})
+    @Export(name="directoryId", type=String.class, parameters={})
     private Output<String> directoryId;
 
     /**
@@ -47,7 +47,7 @@ public class ConditionalForwader extends io.pulumi.resources.CustomResource {
      * A list of forwarder IP addresses.
      * 
      */
-    @OutputExport(name="dnsIps", type=List.class, parameters={String.class})
+    @Export(name="dnsIps", type=List.class, parameters={String.class})
     private Output<List<String>> dnsIps;
 
     /**
@@ -61,7 +61,7 @@ public class ConditionalForwader extends io.pulumi.resources.CustomResource {
      * The fully qualified domain name of the remote domain for which forwarders will be used.
      * 
      */
-    @OutputExport(name="remoteDomainName", type=String.class, parameters={})
+    @Export(name="remoteDomainName", type=String.class, parameters={})
     private Output<String> remoteDomainName;
 
     /**

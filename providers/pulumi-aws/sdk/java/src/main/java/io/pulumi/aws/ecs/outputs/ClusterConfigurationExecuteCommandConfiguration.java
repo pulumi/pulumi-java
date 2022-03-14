@@ -4,13 +4,13 @@
 package io.pulumi.aws.ecs.outputs;
 
 import io.pulumi.aws.ecs.outputs.ClusterConfigurationExecuteCommandConfigurationLogConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterConfigurationExecuteCommandConfiguration {
     /**
      * The AWS Key Management Service key ID to encrypt the data between the local client and the container.
@@ -28,11 +28,11 @@ public final class ClusterConfigurationExecuteCommandConfiguration {
      */
     private final @Nullable String logging;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterConfigurationExecuteCommandConfiguration(
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("logConfiguration") @Nullable ClusterConfigurationExecuteCommandConfigurationLogConfiguration logConfiguration,
-        @OutputCustomType.Parameter("logging") @Nullable String logging) {
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("logConfiguration") @Nullable ClusterConfigurationExecuteCommandConfigurationLogConfiguration logConfiguration,
+        @CustomType.Parameter("logging") @Nullable String logging) {
         this.kmsKeyId = kmsKeyId;
         this.logConfiguration = logConfiguration;
         this.logging = logging;

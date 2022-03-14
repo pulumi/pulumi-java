@@ -4,7 +4,7 @@
 package io.pulumi.aws.worklink.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
      * The SAML metadata document provided by the customer’s identity provider.
      * 
      */
-    @InputImport(name="samlMetadata", required=true)
+    @Import(name="samlMetadata", required=true)
       private final Output<String> samlMetadata;
 
     public Output<String> getSamlMetadata() {
@@ -28,7 +28,7 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
      * The type of identity provider.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

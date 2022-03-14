@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.dynamodb.TableItemArgs;
 import io.pulumi.aws.dynamodb.inputs.TableItemState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -31,7 +31,7 @@ public class TableItem extends io.pulumi.resources.CustomResource {
      * Hash key to use for lookups and identification of the item
      * 
      */
-    @OutputExport(name="hashKey", type=String.class, parameters={})
+    @Export(name="hashKey", type=String.class, parameters={})
     private Output<String> hashKey;
 
     /**
@@ -46,7 +46,7 @@ public class TableItem extends io.pulumi.resources.CustomResource {
      * Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
      * 
      */
-    @OutputExport(name="item", type=String.class, parameters={})
+    @Export(name="item", type=String.class, parameters={})
     private Output<String> item;
 
     /**
@@ -61,7 +61,7 @@ public class TableItem extends io.pulumi.resources.CustomResource {
      * Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
      * 
      */
-    @OutputExport(name="rangeKey", type=String.class, parameters={})
+    @Export(name="rangeKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> rangeKey;
 
     /**
@@ -75,7 +75,7 @@ public class TableItem extends io.pulumi.resources.CustomResource {
      * The name of the table to contain the item.
      * 
      */
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
     /**

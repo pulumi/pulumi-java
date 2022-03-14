@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class AmiEbsBlockDeviceArgs extends io.pulumi.resources.ResourceArg
      * support each created instance will be deleted once that instance is terminated.
      * 
      */
-    @InputImport(name="deleteOnTermination")
+    @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
     public Output<Boolean> getDeleteOnTermination() {
@@ -32,7 +32,7 @@ public final class AmiEbsBlockDeviceArgs extends io.pulumi.resources.ResourceArg
      * The path at which the device is exposed to created instances.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -43,7 +43,7 @@ public final class AmiEbsBlockDeviceArgs extends io.pulumi.resources.ResourceArg
      * Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -55,7 +55,7 @@ public final class AmiEbsBlockDeviceArgs extends io.pulumi.resources.ResourceArg
      * created volumes will support.
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
@@ -68,7 +68,7 @@ public final class AmiEbsBlockDeviceArgs extends io.pulumi.resources.ResourceArg
      * snapshot.
      * 
      */
-    @InputImport(name="snapshotId")
+    @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
     public Output<String> getSnapshotId() {
@@ -79,7 +79,7 @@ public final class AmiEbsBlockDeviceArgs extends io.pulumi.resources.ResourceArg
      * The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
      * 
      */
-    @InputImport(name="throughput")
+    @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
     public Output<Integer> getThroughput() {
@@ -92,7 +92,7 @@ public final class AmiEbsBlockDeviceArgs extends io.pulumi.resources.ResourceArg
      * as the selected snapshot.
      * 
      */
-    @InputImport(name="volumeSize")
+    @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
@@ -103,7 +103,7 @@ public final class AmiEbsBlockDeviceArgs extends io.pulumi.resources.ResourceArg
      * The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
      * 
      */
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FunctionEventInvokeConfigDestinationConfigOnSuccess {
     /**
      * Amazon Resource Name (ARN) of the destination resource. See the [Lambda Developer Guide](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations) for acceptable resource types and associated IAM permissions.
@@ -15,8 +15,8 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccess {
      */
     private final String destination;
 
-    @OutputCustomType.Constructor
-    private FunctionEventInvokeConfigDestinationConfigOnSuccess(@OutputCustomType.Parameter("destination") String destination) {
+    @CustomType.Constructor
+    private FunctionEventInvokeConfigDestinationConfigOnSuccess(@CustomType.Parameter("destination") String destination) {
         this.destination = destination;
     }
 

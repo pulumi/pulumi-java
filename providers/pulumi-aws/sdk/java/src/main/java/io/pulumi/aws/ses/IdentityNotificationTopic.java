@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ses.IdentityNotificationTopicArgs;
 import io.pulumi.aws.ses.inputs.IdentityNotificationTopicState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).
      * 
      */
-    @OutputExport(name="identity", type=String.class, parameters={})
+    @Export(name="identity", type=String.class, parameters={})
     private Output<String> identity;
 
     /**
@@ -47,7 +47,7 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * Whether SES should include original email headers in SNS notifications of this type. *false* by default.
      * 
      */
-    @OutputExport(name="includeOriginalHeaders", type=Boolean.class, parameters={})
+    @Export(name="includeOriginalHeaders", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> includeOriginalHeaders;
 
     /**
@@ -61,7 +61,7 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
      * 
      */
-    @OutputExport(name="notificationType", type=String.class, parameters={})
+    @Export(name="notificationType", type=String.class, parameters={})
     private Output<String> notificationType;
 
     /**
@@ -75,7 +75,7 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an empty string) to disable publishing.
      * 
      */
-    @OutputExport(name="topicArn", type=String.class, parameters={})
+    @Export(name="topicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> topicArn;
 
     /**

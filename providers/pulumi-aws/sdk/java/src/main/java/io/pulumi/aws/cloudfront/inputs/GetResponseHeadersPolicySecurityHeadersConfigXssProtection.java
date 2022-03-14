@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * A Boolean value that determines whether CloudFront includes the mode=block directive in the X-XSS-Protection header.
      * 
      */
-    @InputImport(name="modeBlock", required=true)
+    @Import(name="modeBlock", required=true)
       private final Boolean modeBlock;
 
     public Boolean getModeBlock() {
@@ -28,7 +28,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
      * 
      */
-    @InputImport(name="override", required=true)
+    @Import(name="override", required=true)
       private final Boolean override;
 
     public Boolean getOverride() {
@@ -39,7 +39,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * A Boolean value that determines the value of the X-XSS-Protection HTTP response header. When this setting is true, the value of the X-XSS-Protection header is 1. When this setting is false, the value of the X-XSS-Protection header is 0.
      * 
      */
-    @InputImport(name="protection", required=true)
+    @Import(name="protection", required=true)
       private final Boolean protection;
 
     public Boolean getProtection() {
@@ -50,7 +50,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection ex
      * A Boolean value that determines whether CloudFront sets a reporting URI in the X-XSS-Protection header.
      * 
      */
-    @InputImport(name="reportUri", required=true)
+    @Import(name="reportUri", required=true)
       private final String reportUri;
 
     public String getReportUri() {

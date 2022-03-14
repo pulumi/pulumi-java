@@ -4,13 +4,13 @@
 package io.pulumi.aws.lex.outputs;
 
 import io.pulumi.aws.lex.outputs.IntentFulfillmentActivityCodeHook;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntentFulfillmentActivity {
     /**
      * A description of the Lambda function that is run to fulfill the intent.
@@ -25,10 +25,10 @@ public final class IntentFulfillmentActivity {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntentFulfillmentActivity(
-        @OutputCustomType.Parameter("codeHook") @Nullable IntentFulfillmentActivityCodeHook codeHook,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("codeHook") @Nullable IntentFulfillmentActivityCodeHook codeHook,
+        @CustomType.Parameter("type") String type) {
         this.codeHook = codeHook;
         this.type = type;
     }

@@ -8,7 +8,7 @@ import io.pulumi.aws.cfg.DeliveryChannelArgs;
 import io.pulumi.aws.cfg.inputs.DeliveryChannelState;
 import io.pulumi.aws.cfg.outputs.DeliveryChannelSnapshotDeliveryProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -35,7 +35,7 @@ public class DeliveryChannel extends io.pulumi.resources.CustomResource {
      * The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class DeliveryChannel extends io.pulumi.resources.CustomResource {
      * The name of the S3 bucket used to store the configuration history.
      * 
      */
-    @OutputExport(name="s3BucketName", type=String.class, parameters={})
+    @Export(name="s3BucketName", type=String.class, parameters={})
     private Output<String> s3BucketName;
 
     /**
@@ -63,7 +63,7 @@ public class DeliveryChannel extends io.pulumi.resources.CustomResource {
      * The prefix for the specified S3 bucket.
      * 
      */
-    @OutputExport(name="s3KeyPrefix", type=String.class, parameters={})
+    @Export(name="s3KeyPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3KeyPrefix;
 
     /**
@@ -77,7 +77,7 @@ public class DeliveryChannel extends io.pulumi.resources.CustomResource {
      * The ARN of the AWS KMS key used to encrypt objects delivered by AWS Config. Must belong to the same Region as the destination S3 bucket.
      * 
      */
-    @OutputExport(name="s3KmsKeyArn", type=String.class, parameters={})
+    @Export(name="s3KmsKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3KmsKeyArn;
 
     /**
@@ -91,7 +91,7 @@ public class DeliveryChannel extends io.pulumi.resources.CustomResource {
      * Options for how AWS Config delivers configuration snapshots. See below
      * 
      */
-    @OutputExport(name="snapshotDeliveryProperties", type=DeliveryChannelSnapshotDeliveryProperties.class, parameters={})
+    @Export(name="snapshotDeliveryProperties", type=DeliveryChannelSnapshotDeliveryProperties.class, parameters={})
     private Output</* @Nullable */ DeliveryChannelSnapshotDeliveryProperties> snapshotDeliveryProperties;
 
     /**
@@ -105,7 +105,7 @@ public class DeliveryChannel extends io.pulumi.resources.CustomResource {
      * The ARN of the SNS topic that AWS Config delivers notifications to.
      * 
      */
-    @OutputExport(name="snsTopicArn", type=String.class, parameters={})
+    @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> snsTopicArn;
 
     /**

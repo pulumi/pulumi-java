@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * Information about the Amazon S3 bucket containing the application code.
      * 
      */
-    @InputImport(name="s3ContentLocation")
+    @Import(name="s3ContentLocation")
       private final @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> s3ContentLocation;
 
     public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs> getS3ContentLocation() {
@@ -30,7 +30,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * The text-format code for the application.
      * 
      */
-    @InputImport(name="textContent")
+    @Import(name="textContent")
       private final @Nullable Output<String> textContent;
 
     public Output<String> getTextContent() {

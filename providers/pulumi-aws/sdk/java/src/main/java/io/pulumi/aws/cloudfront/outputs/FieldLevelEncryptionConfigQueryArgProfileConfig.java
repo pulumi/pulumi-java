@@ -4,13 +4,13 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FieldLevelEncryptionConfigQueryArgProfileConfig {
     /**
      * Flag to set if you want a request to be forwarded to the origin even if the profile specified by the field-level encryption query argument, fle-profile, is unknown.
@@ -23,10 +23,10 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfig {
      */
     private final @Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles queryArgProfiles;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FieldLevelEncryptionConfigQueryArgProfileConfig(
-        @OutputCustomType.Parameter("forwardWhenQueryArgProfileIsUnknown") Boolean forwardWhenQueryArgProfileIsUnknown,
-        @OutputCustomType.Parameter("queryArgProfiles") @Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles queryArgProfiles) {
+        @CustomType.Parameter("forwardWhenQueryArgProfileIsUnknown") Boolean forwardWhenQueryArgProfileIsUnknown,
+        @CustomType.Parameter("queryArgProfiles") @Nullable FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles queryArgProfiles) {
         this.forwardWhenQueryArgProfileIsUnknown = forwardWhenQueryArgProfileIsUnknown;
         this.queryArgProfiles = queryArgProfiles;
     }

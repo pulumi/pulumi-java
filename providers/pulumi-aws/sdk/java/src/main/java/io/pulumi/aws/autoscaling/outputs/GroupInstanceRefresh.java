@@ -4,14 +4,14 @@
 package io.pulumi.aws.autoscaling.outputs;
 
 import io.pulumi.aws.autoscaling.outputs.GroupInstanceRefreshPreferences;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupInstanceRefresh {
     /**
      * Override default parameters for Instance Refresh.
@@ -29,11 +29,11 @@ public final class GroupInstanceRefresh {
      */
     private final @Nullable List<String> triggers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupInstanceRefresh(
-        @OutputCustomType.Parameter("preferences") @Nullable GroupInstanceRefreshPreferences preferences,
-        @OutputCustomType.Parameter("strategy") String strategy,
-        @OutputCustomType.Parameter("triggers") @Nullable List<String> triggers) {
+        @CustomType.Parameter("preferences") @Nullable GroupInstanceRefreshPreferences preferences,
+        @CustomType.Parameter("strategy") String strategy,
+        @CustomType.Parameter("triggers") @Nullable List<String> triggers) {
         this.preferences = preferences;
         this.strategy = strategy;
         this.triggers = triggers;

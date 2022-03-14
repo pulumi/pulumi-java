@@ -3,16 +3,16 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFunctionDeadLetterConfig {
     private final String targetArn;
 
-    @OutputCustomType.Constructor
-    private GetFunctionDeadLetterConfig(@OutputCustomType.Parameter("targetArn") String targetArn) {
+    @CustomType.Constructor
+    private GetFunctionDeadLetterConfig(@CustomType.Parameter("targetArn") String targetArn) {
         this.targetArn = targetArn;
     }
 

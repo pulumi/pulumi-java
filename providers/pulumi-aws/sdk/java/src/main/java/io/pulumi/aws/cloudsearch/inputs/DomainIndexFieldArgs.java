@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudsearch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * The analysis scheme you want to use for a `text` field. The analysis scheme specifies the language-specific text processing options that are used during indexing.
      * 
      */
-    @InputImport(name="analysisScheme")
+    @Import(name="analysisScheme")
       private final @Nullable Output<String> analysisScheme;
 
     public Output<String> getAnalysisScheme() {
@@ -30,7 +30,7 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * The default value for the field. This value is used when no value is specified for the field in the document data.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
@@ -41,7 +41,7 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * You can get facet information by enabling this.
      * 
      */
-    @InputImport(name="facet")
+    @Import(name="facet")
       private final @Nullable Output<Boolean> facet;
 
     public Output<Boolean> getFacet() {
@@ -52,7 +52,7 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * You can highlight information.
      * 
      */
-    @InputImport(name="highlight")
+    @Import(name="highlight")
       private final @Nullable Output<Boolean> highlight;
 
     public Output<Boolean> getHighlight() {
@@ -63,7 +63,7 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * You can enable returning the value of all searchable fields.
      * 
      */
-    @InputImport(name="return")
+    @Import(name="return")
       private final @Nullable Output<Boolean> $return;
 
     public Output<Boolean> get$return() {
@@ -85,7 +85,7 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * You can set whether this index should be searchable or not.
      * 
      */
-    @InputImport(name="search")
+    @Import(name="search")
       private final @Nullable Output<Boolean> search;
 
     public Output<Boolean> getSearch() {
@@ -96,7 +96,7 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * You can enable the property to be sortable.
      * 
      */
-    @InputImport(name="sort")
+    @Import(name="sort")
       private final @Nullable Output<Boolean> sort;
 
     public Output<Boolean> getSort() {
@@ -107,7 +107,7 @@ public final class DomainIndexFieldArgs extends io.pulumi.resources.ResourceArgs
      * The field type. Valid values: `date`, `date-array`, `double`, `double-array`, `int`, `int-array`, `literal`, `literal-array`, `text`, `text-array`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.wafregional.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ByteMatchSetByteMatchTupleFieldToMatch {
     /**
      * When the value of Type is HEADER, enter the name of the header that you want AWS WAF to search, for example, User-Agent or Referer. If the value of Type is any other value, omit Data.
@@ -22,10 +22,10 @@ public final class ByteMatchSetByteMatchTupleFieldToMatch {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ByteMatchSetByteMatchTupleFieldToMatch(
-        @OutputCustomType.Parameter("data") @Nullable String data,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("data") @Nullable String data,
+        @CustomType.Parameter("type") String type) {
         this.data = data;
         this.type = type;
     }

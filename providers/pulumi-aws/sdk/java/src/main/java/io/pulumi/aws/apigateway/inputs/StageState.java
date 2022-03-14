@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.StageAccessLogSettingsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * Enables access logs for the API stage. Detailed below.
      * 
      */
-    @InputImport(name="accessLogSettings")
+    @Import(name="accessLogSettings")
       private final @Nullable Output<StageAccessLogSettingsGetArgs> accessLogSettings;
 
     public Output<StageAccessLogSettingsGetArgs> getAccessLogSettings() {
@@ -32,7 +32,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN)
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether a cache cluster is enabled for the stage
      * 
      */
-    @InputImport(name="cacheClusterEnabled")
+    @Import(name="cacheClusterEnabled")
       private final @Nullable Output<Boolean> cacheClusterEnabled;
 
     public Output<Boolean> getCacheClusterEnabled() {
@@ -54,7 +54,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The size of the cache cluster for the stage, if enabled. Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `237`.
      * 
      */
-    @InputImport(name="cacheClusterSize")
+    @Import(name="cacheClusterSize")
       private final @Nullable Output<String> cacheClusterSize;
 
     public Output<String> getCacheClusterSize() {
@@ -65,7 +65,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The identifier of a client certificate for the stage.
      * 
      */
-    @InputImport(name="clientCertificateId")
+    @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
     public Output<String> getClientCertificateId() {
@@ -76,7 +76,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The ID of the deployment that the stage points to
      * 
      */
-    @InputImport(name="deployment")
+    @Import(name="deployment")
       private final @Nullable Output<String> deployment;
 
     public Output<String> getDeployment() {
@@ -87,7 +87,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The description of the stage
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -98,7 +98,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The version of the associated API documentation
      * 
      */
-    @InputImport(name="documentationVersion")
+    @Import(name="documentationVersion")
       private final @Nullable Output<String> documentationVersion;
 
     public Output<String> getDocumentationVersion() {
@@ -111,7 +111,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
      * 
      */
-    @InputImport(name="executionArn")
+    @Import(name="executionArn")
       private final @Nullable Output<String> executionArn;
 
     public Output<String> getExecutionArn() {
@@ -123,7 +123,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * e.g., `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
      * 
      */
-    @InputImport(name="invokeUrl")
+    @Import(name="invokeUrl")
       private final @Nullable Output<String> invokeUrl;
 
     public Output<String> getInvokeUrl() {
@@ -134,7 +134,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated REST API
      * 
      */
-    @InputImport(name="restApi")
+    @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -145,7 +145,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The name of the stage
      * 
      */
-    @InputImport(name="stageName")
+    @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
     public Output<String> getStageName() {
@@ -156,7 +156,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -167,7 +167,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -178,7 +178,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * A map that defines the stage variables
      * 
      */
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
     public Output<Map<String,String>> getVariables() {
@@ -189,7 +189,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the WebAcl associated with the Stage.
      * 
      */
-    @InputImport(name="webAclArn")
+    @Import(name="webAclArn")
       private final @Nullable Output<String> webAclArn;
 
     public Output<String> getWebAclArn() {
@@ -200,7 +200,7 @@ public final class StageState extends io.pulumi.resources.ResourceArgs {
      * Whether active tracing with X-ray is enabled. Defaults to `false`.
      * 
      */
-    @InputImport(name="xrayTracingEnabled")
+    @Import(name="xrayTracingEnabled")
       private final @Nullable Output<Boolean> xrayTracingEnabled;
 
     public Output<Boolean> getXrayTracingEnabled() {

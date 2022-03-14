@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.macie2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTerm {
     /**
      * The operator to use in a condition. Valid values are: `EQ`, `GT`, `GTE`, `LT`, `LTE`, `NE`, `CONTAINS`, `STARTS_WITH`
@@ -28,11 +28,11 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScope
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassificationJobS3JobDefinitionScopingExcludesAndSimpleScopeTerm(
-        @OutputCustomType.Parameter("comparator") @Nullable String comparator,
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("comparator") @Nullable String comparator,
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.comparator = comparator;
         this.key = key;
         this.values = values;

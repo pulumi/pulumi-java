@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleSns {
     /**
      * The message format of the message to publish. Accepted values are "JSON" and "RAW".
@@ -27,11 +27,11 @@ public final class TopicRuleSns {
      */
     private final String targetArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleSns(
-        @OutputCustomType.Parameter("messageFormat") @Nullable String messageFormat,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("targetArn") String targetArn) {
+        @CustomType.Parameter("messageFormat") @Nullable String messageFormat,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("targetArn") String targetArn) {
         this.messageFormat = messageFormat;
         this.roleArn = roleArn;
         this.targetArn = targetArn;

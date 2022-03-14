@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.UsagePlanKeyArgs;
 import io.pulumi.aws.apigateway.inputs.UsagePlanKeyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * The identifier of the API key resource.
      * 
      */
-    @OutputExport(name="keyId", type=String.class, parameters={})
+    @Export(name="keyId", type=String.class, parameters={})
     private Output<String> keyId;
 
     /**
@@ -46,7 +46,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * The type of the API key resource. Currently, the valid key type is API_KEY.
      * 
      */
-    @OutputExport(name="keyType", type=String.class, parameters={})
+    @Export(name="keyType", type=String.class, parameters={})
     private Output<String> keyType;
 
     /**
@@ -60,7 +60,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * The name of a usage plan key.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -74,7 +74,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * The Id of the usage plan resource representing to associate the key to.
      * 
      */
-    @OutputExport(name="usagePlanId", type=String.class, parameters={})
+    @Export(name="usagePlanId", type=String.class, parameters={})
     private Output<String> usagePlanId;
 
     /**
@@ -88,7 +88,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * The value of a usage plan key.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**

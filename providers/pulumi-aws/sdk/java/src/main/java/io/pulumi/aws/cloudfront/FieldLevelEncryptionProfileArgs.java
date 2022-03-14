@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
      * An optional comment about the Field Level Encryption Profile.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -30,7 +30,7 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
      * The encryption entities config block for field-level encryption profiles that contains an attribute `items` which includes the encryption key and field pattern specifications.
      * 
      */
-    @InputImport(name="encryptionEntities", required=true)
+    @Import(name="encryptionEntities", required=true)
       private final Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> encryptionEntities;
 
     public Output<FieldLevelEncryptionProfileEncryptionEntitiesArgs> getEncryptionEntities() {
@@ -41,7 +41,7 @@ public final class FieldLevelEncryptionProfileArgs extends io.pulumi.resources.R
      * The name of the Field Level Encryption Profile.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

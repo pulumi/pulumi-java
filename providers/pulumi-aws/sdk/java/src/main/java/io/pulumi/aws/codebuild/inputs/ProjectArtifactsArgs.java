@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
      * Artifact identifier. Must be the same specified inside the AWS CodeBuild build specification.
      * 
      */
-    @InputImport(name="artifactIdentifier")
+    @Import(name="artifactIdentifier")
       private final @Nullable Output<String> artifactIdentifier;
 
     public Output<String> getArtifactIdentifier() {
@@ -30,7 +30,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the bucket owner's access for objects that another account uploads to their Amazon S3 bucket. By default, only the account that uploads the objects to the bucket has access to these objects. This property allows you to give the bucket owner access to these objects. Valid values are `NONE`, `READ_ONLY`, and `FULL`. your CodeBuild service role must have the `s3:PutBucketAcl` permission. This permission allows CodeBuild to modify the access control list for the bucket.
      * 
      */
-    @InputImport(name="bucketOwnerAccess")
+    @Import(name="bucketOwnerAccess")
       private final @Nullable Output<String> bucketOwnerAccess;
 
     public Output<String> getBucketOwnerAccess() {
@@ -41,7 +41,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
      * Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
      * 
      */
-    @InputImport(name="encryptionDisabled")
+    @Import(name="encryptionDisabled")
       private final @Nullable Output<Boolean> encryptionDisabled;
 
     public Output<Boolean> getEncryptionDisabled() {
@@ -52,7 +52,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
      * Location of the source code from git or s3.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -63,7 +63,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
      * Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
      * Namespace to use in storing build artifacts. If `type` is set to `S3`, then valid values are `BUILD_ID` or `NONE`.
      * 
      */
-    @InputImport(name="namespaceType")
+    @Import(name="namespaceType")
       private final @Nullable Output<String> namespaceType;
 
     public Output<String> getNamespaceType() {
@@ -85,7 +85,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
      * Whether a name specified in the build specification overrides the artifact name.
      * 
      */
-    @InputImport(name="overrideArtifactName")
+    @Import(name="overrideArtifactName")
       private final @Nullable Output<Boolean> overrideArtifactName;
 
     public Output<Boolean> getOverrideArtifactName() {
@@ -96,7 +96,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
      * Type of build output artifact to create. If `type` is set to `S3`, valid values are `NONE`, `ZIP`
      * 
      */
-    @InputImport(name="packaging")
+    @Import(name="packaging")
       private final @Nullable Output<String> packaging;
 
     public Output<String> getPackaging() {
@@ -107,7 +107,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
      * If `type` is set to `S3`, this is the path to the output artifact.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -118,7 +118,7 @@ public final class ProjectArtifactsArgs extends io.pulumi.resources.ResourceArgs
      * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.cfg;
 import io.pulumi.aws.cfg.inputs.ConfigurationAggregatorAccountAggregationSourceArgs;
 import io.pulumi.aws.cfg.inputs.ConfigurationAggregatorOrganizationAggregationSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
      * The account(s) to aggregate config data from as documented below.
      * 
      */
-    @InputImport(name="accountAggregationSource")
+    @Import(name="accountAggregationSource")
       private final @Nullable Output<ConfigurationAggregatorAccountAggregationSourceArgs> accountAggregationSource;
 
     public Output<ConfigurationAggregatorAccountAggregationSourceArgs> getAccountAggregationSource() {
@@ -32,7 +32,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
      * The name of the configuration aggregator.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
      * The organization to aggregate config data from as documented below.
      * 
      */
-    @InputImport(name="organizationAggregationSource")
+    @Import(name="organizationAggregationSource")
       private final @Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource;
 
     public Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> getOrganizationAggregationSource() {
@@ -54,7 +54,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

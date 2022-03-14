@@ -8,7 +8,7 @@ import io.pulumi.aws.s3.inputs.BucketLifecycleRuleNoncurrentVersionExpirationArg
 import io.pulumi.aws.s3.inputs.BucketLifecycleRuleNoncurrentVersionTransitionArgs;
 import io.pulumi.aws.s3.inputs.BucketLifecycleRuleTransitionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.
      * 
      */
-    @InputImport(name="abortIncompleteMultipartUploadDays")
+    @Import(name="abortIncompleteMultipartUploadDays")
       private final @Nullable Output<Integer> abortIncompleteMultipartUploadDays;
 
     public Output<Integer> getAbortIncompleteMultipartUploadDays() {
@@ -37,7 +37,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * Specifies lifecycle rule status.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -48,7 +48,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * Specifies a period in the object's expire (documented below).
      * 
      */
-    @InputImport(name="expiration")
+    @Import(name="expiration")
       private final @Nullable Output<BucketLifecycleRuleExpirationArgs> expiration;
 
     public Output<BucketLifecycleRuleExpirationArgs> getExpiration() {
@@ -59,7 +59,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * Unique identifier for the rule. Must be less than or equal to 255 characters in length.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -70,7 +70,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * Specifies when noncurrent object versions expire (documented below).
      * 
      */
-    @InputImport(name="noncurrentVersionExpiration")
+    @Import(name="noncurrentVersionExpiration")
       private final @Nullable Output<BucketLifecycleRuleNoncurrentVersionExpirationArgs> noncurrentVersionExpiration;
 
     public Output<BucketLifecycleRuleNoncurrentVersionExpirationArgs> getNoncurrentVersionExpiration() {
@@ -81,7 +81,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * Specifies when noncurrent object versions transitions (documented below).
      * 
      */
-    @InputImport(name="noncurrentVersionTransitions")
+    @Import(name="noncurrentVersionTransitions")
       private final @Nullable Output<List<BucketLifecycleRuleNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions;
 
     public Output<List<BucketLifecycleRuleNoncurrentVersionTransitionArgs>> getNoncurrentVersionTransitions() {
@@ -92,7 +92,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * Object key prefix identifying one or more objects to which the rule applies.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -103,7 +103,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * Specifies object tags key and value.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -114,7 +114,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * Specifies a period in the object's transitions (documented below).
      * 
      */
-    @InputImport(name="transitions")
+    @Import(name="transitions")
       private final @Nullable Output<List<BucketLifecycleRuleTransitionArgs>> transitions;
 
     public Output<List<BucketLifecycleRuleTransitionArgs>> getTransitions() {

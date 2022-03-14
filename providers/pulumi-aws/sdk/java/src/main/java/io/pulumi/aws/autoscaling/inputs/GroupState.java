@@ -12,7 +12,7 @@ import io.pulumi.aws.autoscaling.inputs.GroupTagGetArgs;
 import io.pulumi.aws.autoscaling.inputs.GroupWarmPoolGetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The ARN for this Auto Scaling Group
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -41,7 +41,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * A list of one or more availability zones for the group. Used for EC2-Classic, attaching a network interface via id from a launch template and default subnets when not specified with `vpc_zone_identifier` argument. Conflicts with `vpc_zone_identifier`.
      * 
      */
-    @InputImport(name="availabilityZones")
+    @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
@@ -52,7 +52,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether capacity rebalance is enabled. Otherwise, capacity rebalance is disabled.
      * 
      */
-    @InputImport(name="capacityRebalance")
+    @Import(name="capacityRebalance")
       private final @Nullable Output<Boolean> capacityRebalance;
 
     public Output<Boolean> getCapacityRebalance() {
@@ -63,7 +63,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The amount of time, in seconds, after a scaling activity completes before another scaling activity can start.
      * 
      */
-    @InputImport(name="defaultCooldown")
+    @Import(name="defaultCooldown")
       private final @Nullable Output<Integer> defaultCooldown;
 
     public Output<Integer> getDefaultCooldown() {
@@ -76,7 +76,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Capacity below.)
      * 
      */
-    @InputImport(name="desiredCapacity")
+    @Import(name="desiredCapacity")
       private final @Nullable Output<Integer> desiredCapacity;
 
     public Output<Integer> getDesiredCapacity() {
@@ -87,7 +87,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * A list of metrics to collect. The allowed values are defined by the [underlying AWS API](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_EnableMetricsCollection.html).
      * 
      */
-    @InputImport(name="enabledMetrics")
+    @Import(name="enabledMetrics")
       private final @Nullable Output<List<String>> enabledMetrics;
 
     public Output<List<String>> getEnabledMetrics() {
@@ -102,14 +102,14 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * behavior and potentially leaves resources dangling.
      * 
      */
-    @InputImport(name="forceDelete")
+    @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
     public Output<Boolean> getForceDelete() {
         return this.forceDelete == null ? Output.empty() : this.forceDelete;
     }
 
-    @InputImport(name="forceDeleteWarmPool")
+    @Import(name="forceDeleteWarmPool")
       private final @Nullable Output<Boolean> forceDeleteWarmPool;
 
     public Output<Boolean> getForceDeleteWarmPool() {
@@ -120,7 +120,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Time (in seconds) after instance comes into service before checking health.
      * 
      */
-    @InputImport(name="healthCheckGracePeriod")
+    @Import(name="healthCheckGracePeriod")
       private final @Nullable Output<Integer> healthCheckGracePeriod;
 
     public Output<Integer> getHealthCheckGracePeriod() {
@@ -131,7 +131,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * "EC2" or "ELB". Controls how health checking is done.
      * 
      */
-    @InputImport(name="healthCheckType")
+    @Import(name="healthCheckType")
       private final @Nullable Output<String> healthCheckType;
 
     public Output<String> getHealthCheckType() {
@@ -148,7 +148,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
      * 
      */
-    @InputImport(name="initialLifecycleHooks")
+    @Import(name="initialLifecycleHooks")
       private final @Nullable Output<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks;
 
     public Output<List<GroupInitialLifecycleHookGetArgs>> getInitialLifecycleHooks() {
@@ -161,7 +161,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * when this Auto Scaling Group is updated. Defined below.
      * 
      */
-    @InputImport(name="instanceRefresh")
+    @Import(name="instanceRefresh")
       private final @Nullable Output<GroupInstanceRefreshGetArgs> instanceRefresh;
 
     public Output<GroupInstanceRefreshGetArgs> getInstanceRefresh() {
@@ -172,7 +172,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The name of the launch configuration to use.
      * 
      */
-    @InputImport(name="launchConfiguration")
+    @Import(name="launchConfiguration")
       private final @Nullable Output<String> launchConfiguration;
 
     public Output<String> getLaunchConfiguration() {
@@ -183,7 +183,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Nested argument containing launch template settings along with the overrides to specify multiple instance types and weights. Defined below.
      * 
      */
-    @InputImport(name="launchTemplate")
+    @Import(name="launchTemplate")
       private final @Nullable Output<GroupLaunchTemplateGetArgs> launchTemplate;
 
     public Output<GroupLaunchTemplateGetArgs> getLaunchTemplate() {
@@ -195,7 +195,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * group names. Only valid for classic load balancers. For ALBs, use `target_group_arns` instead.
      * 
      */
-    @InputImport(name="loadBalancers")
+    @Import(name="loadBalancers")
       private final @Nullable Output<List<String>> loadBalancers;
 
     public Output<List<String>> getLoadBalancers() {
@@ -206,7 +206,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 86400 and 31536000 seconds.
      * 
      */
-    @InputImport(name="maxInstanceLifetime")
+    @Import(name="maxInstanceLifetime")
       private final @Nullable Output<Integer> maxInstanceLifetime;
 
     public Output<Integer> getMaxInstanceLifetime() {
@@ -217,7 +217,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The maximum size of the Auto Scaling Group.
      * 
      */
-    @InputImport(name="maxSize")
+    @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
 
     public Output<Integer> getMaxSize() {
@@ -228,7 +228,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The granularity to associate with the metrics to collect. The only valid value is `1Minute`. Default is `1Minute`.
      * 
      */
-    @InputImport(name="metricsGranularity")
+    @Import(name="metricsGranularity")
       private final @Nullable Output<Either<String,MetricsGranularity>> metricsGranularity;
 
     public Output<Either<String,MetricsGranularity>> getMetricsGranularity() {
@@ -242,7 +242,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * (See also Waiting for Capacity below.)
      * 
      */
-    @InputImport(name="minElbCapacity")
+    @Import(name="minElbCapacity")
       private final @Nullable Output<Integer> minElbCapacity;
 
     public Output<Integer> getMinElbCapacity() {
@@ -253,7 +253,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Specifies the minimum number of instances to maintain in the warm pool. This helps you to ensure that there is always a certain number of warmed instances available to handle traffic spikes. Defaults to 0 if not specified.
      * 
      */
-    @InputImport(name="minSize")
+    @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
     public Output<Integer> getMinSize() {
@@ -264,7 +264,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Configuration block containing settings to define launch targets for Auto Scaling groups. See Mixed Instances Policy below for more details.
      * 
      */
-    @InputImport(name="mixedInstancesPolicy")
+    @Import(name="mixedInstancesPolicy")
       private final @Nullable Output<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy;
 
     public Output<GroupMixedInstancesPolicyGetArgs> getMixedInstancesPolicy() {
@@ -275,7 +275,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The name of the Auto Scaling Group. By default generated by this provider. Conflicts with `name_prefix`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -287,7 +287,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -298,7 +298,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The name of the placement group into which you'll launch your instances, if any.
      * 
      */
-    @InputImport(name="placementGroup")
+    @Import(name="placementGroup")
       private final @Nullable Output<String> placementGroup;
 
     public Output<String> getPlacementGroup() {
@@ -311,7 +311,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * during scale in events.
      * 
      */
-    @InputImport(name="protectFromScaleIn")
+    @Import(name="protectFromScaleIn")
       private final @Nullable Output<Boolean> protectFromScaleIn;
 
     public Output<Boolean> getProtectFromScaleIn() {
@@ -322,7 +322,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the service-linked role that the ASG will use to call other AWS services
      * 
      */
-    @InputImport(name="serviceLinkedRoleArn")
+    @Import(name="serviceLinkedRoleArn")
       private final @Nullable Output<String> serviceLinkedRoleArn;
 
     public Output<String> getServiceLinkedRoleArn() {
@@ -334,7 +334,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
      * 
      */
-    @InputImport(name="suspendedProcesses")
+    @Import(name="suspendedProcesses")
       private final @Nullable Output<List<String>> suspendedProcesses;
 
     public Output<List<String>> getSuspendedProcesses() {
@@ -345,7 +345,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Configuration block(s) containing resource tags. Conflicts with `tags_collection`. Documented below.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<GroupTagGetArgs>> tags;
 
     public Output<List<GroupTagGetArgs>> getTags() {
@@ -356,7 +356,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Set of maps containing resource tags. Conflicts with `tag`. Documented below.
      * 
      */
-    @InputImport(name="tagsCollection")
+    @Import(name="tagsCollection")
       private final @Nullable Output<List<Map<String,String>>> tagsCollection;
 
     public Output<List<Map<String,String>>> getTagsCollection() {
@@ -367,7 +367,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
      * 
      */
-    @InputImport(name="targetGroupArns")
+    @Import(name="targetGroupArns")
       private final @Nullable Output<List<String>> targetGroupArns;
 
     public Output<List<String>> getTargetGroupArns() {
@@ -378,7 +378,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
      * 
      */
-    @InputImport(name="terminationPolicies")
+    @Import(name="terminationPolicies")
       private final @Nullable Output<List<String>> terminationPolicies;
 
     public Output<List<String>> getTerminationPolicies() {
@@ -389,7 +389,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availability_zones`.
      * 
      */
-    @InputImport(name="vpcZoneIdentifiers")
+    @Import(name="vpcZoneIdentifiers")
       private final @Nullable Output<List<String>> vpcZoneIdentifiers;
 
     public Output<List<String>> getVpcZoneIdentifiers() {
@@ -404,7 +404,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * this provider to skip all Capacity Waiting behavior.
      * 
      */
-    @InputImport(name="waitForCapacityTimeout")
+    @Import(name="waitForCapacityTimeout")
       private final @Nullable Output<String> waitForCapacityTimeout;
 
     public Output<String> getWaitForCapacityTimeout() {
@@ -419,7 +419,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * (See also Waiting for Capacity below.)
      * 
      */
-    @InputImport(name="waitForElbCapacity")
+    @Import(name="waitForElbCapacity")
       private final @Nullable Output<Integer> waitForElbCapacity;
 
     public Output<Integer> getWaitForElbCapacity() {
@@ -431,7 +431,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * to the specified Auto Scaling group. Defined below
      * 
      */
-    @InputImport(name="warmPool")
+    @Import(name="warmPool")
       private final @Nullable Output<GroupWarmPoolGetArgs> warmPool;
 
     public Output<GroupWarmPoolGetArgs> getWarmPool() {

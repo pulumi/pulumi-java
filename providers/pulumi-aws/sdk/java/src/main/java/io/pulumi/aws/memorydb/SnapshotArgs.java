@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the MemoryDB cluster to take a snapshot of.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -30,7 +30,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the KMS key used to encrypt the snapshot at rest.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -41,7 +41,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the cluster.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -63,7 +63,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -74,7 +74,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

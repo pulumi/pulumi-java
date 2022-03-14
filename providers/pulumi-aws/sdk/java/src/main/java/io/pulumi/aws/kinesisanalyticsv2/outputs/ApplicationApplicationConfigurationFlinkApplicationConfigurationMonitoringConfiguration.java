@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration {
     /**
      * Describes whether to use the default CloudWatch logging configuration for an application. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `log_level` or `metrics_level` attribute values to be effective.
@@ -27,11 +27,11 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      */
     private final @Nullable String metricsLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration(
-        @OutputCustomType.Parameter("configurationType") String configurationType,
-        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel,
-        @OutputCustomType.Parameter("metricsLevel") @Nullable String metricsLevel) {
+        @CustomType.Parameter("configurationType") String configurationType,
+        @CustomType.Parameter("logLevel") @Nullable String logLevel,
+        @CustomType.Parameter("metricsLevel") @Nullable String metricsLevel) {
         this.configurationType = configurationType;
         this.logLevel = logLevel;
         this.metricsLevel = metricsLevel;

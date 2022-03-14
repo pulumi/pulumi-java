@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dynamodb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetTableReplica extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTableReplica Empty = new GetTableReplica();
 
-    @InputImport(name="kmsKeyArn", required=true)
+    @Import(name="kmsKeyArn", required=true)
       private final String kmsKeyArn;
 
     public String getKmsKeyArn() {
         return this.kmsKeyArn;
     }
 
-    @InputImport(name="regionName", required=true)
+    @Import(name="regionName", required=true)
       private final String regionName;
 
     public String getRegionName() {

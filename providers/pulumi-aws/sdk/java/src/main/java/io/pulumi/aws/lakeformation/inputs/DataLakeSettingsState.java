@@ -6,7 +6,7 @@ package io.pulumi.aws.lakeformation.inputs;
 import io.pulumi.aws.lakeformation.inputs.DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs;
 import io.pulumi.aws.lakeformation.inputs.DataLakeSettingsCreateTableDefaultPermissionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
      * Set of ARNs of AWS Lake Formation principals (IAM users or roles).
      * 
      */
-    @InputImport(name="admins")
+    @Import(name="admins")
       private final @Nullable Output<List<String>> admins;
 
     public Output<List<String>> getAdmins() {
@@ -32,7 +32,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
      * Identifier for the Data Catalog. By default, the account ID.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -43,7 +43,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
      * Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
      * 
      */
-    @InputImport(name="createDatabaseDefaultPermissions")
+    @Import(name="createDatabaseDefaultPermissions")
       private final @Nullable Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> createDatabaseDefaultPermissions;
 
     public Output<List<DataLakeSettingsCreateDatabaseDefaultPermissionGetArgs>> getCreateDatabaseDefaultPermissions() {
@@ -54,7 +54,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
      * Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
      * 
      */
-    @InputImport(name="createTableDefaultPermissions")
+    @Import(name="createTableDefaultPermissions")
       private final @Nullable Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> createTableDefaultPermissions;
 
     public Output<List<DataLakeSettingsCreateTableDefaultPermissionGetArgs>> getCreateTableDefaultPermissions() {
@@ -65,7 +65,7 @@ public final class DataLakeSettingsState extends io.pulumi.resources.ResourceArg
      * List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
      * 
      */
-    @InputImport(name="trustedResourceOwners")
+    @Import(name="trustedResourceOwners")
       private final @Nullable Output<List<String>> trustedResourceOwners;
 
     public Output<List<String>> getTrustedResourceOwners() {

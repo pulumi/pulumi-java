@@ -5,7 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * The location and type of the application code.
      * 
      */
-    @InputImport(name="codeContent")
+    @Import(name="codeContent")
       private final @Nullable Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> codeContent;
 
     public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs> getCodeContent() {
@@ -30,7 +30,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      * Specifies whether the code content is in text or zip format. Valid values: `PLAINTEXT`, `ZIPFILE`.
      * 
      */
-    @InputImport(name="codeContentType", required=true)
+    @Import(name="codeContentType", required=true)
       private final Output<String> codeContentType;
 
     public Output<String> getCodeContentType() {

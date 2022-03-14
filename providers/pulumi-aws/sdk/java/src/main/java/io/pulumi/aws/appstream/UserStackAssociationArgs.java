@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
      * Authentication type for the user.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
     public Output<String> getAuthenticationType() {
@@ -30,7 +30,7 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
      * Specifies whether a welcome email is sent to a user after the user is created in the user pool.
      * 
      */
-    @InputImport(name="sendEmailNotification")
+    @Import(name="sendEmailNotification")
       private final @Nullable Output<Boolean> sendEmailNotification;
 
     public Output<Boolean> getSendEmailNotification() {
@@ -41,7 +41,7 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
      * Name of the stack that is associated with the user.
      * 
      */
-    @InputImport(name="stackName", required=true)
+    @Import(name="stackName", required=true)
       private final Output<String> stackName;
 
     public Output<String> getStackName() {
@@ -52,7 +52,7 @@ public final class UserStackAssociationArgs extends io.pulumi.resources.Resource
      * Email address of the user who is associated with the stack.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<String> userName;
 
     public Output<String> getUserName() {

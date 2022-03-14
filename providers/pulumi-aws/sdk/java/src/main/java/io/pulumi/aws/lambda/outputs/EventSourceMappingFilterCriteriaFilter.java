@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventSourceMappingFilterCriteriaFilter {
     /**
      * A filter pattern up to 4096 characters. See [Filter Rule Syntax](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax).
@@ -17,8 +17,8 @@ public final class EventSourceMappingFilterCriteriaFilter {
      */
     private final @Nullable String pattern;
 
-    @OutputCustomType.Constructor
-    private EventSourceMappingFilterCriteriaFilter(@OutputCustomType.Parameter("pattern") @Nullable String pattern) {
+    @CustomType.Constructor
+    private EventSourceMappingFilterCriteriaFilter(@CustomType.Parameter("pattern") @Nullable String pattern) {
         this.pattern = pattern;
     }
 

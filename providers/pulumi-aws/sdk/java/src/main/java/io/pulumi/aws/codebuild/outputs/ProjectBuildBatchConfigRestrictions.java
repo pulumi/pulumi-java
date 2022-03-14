@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectBuildBatchConfigRestrictions {
     /**
      * An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
@@ -24,10 +24,10 @@ public final class ProjectBuildBatchConfigRestrictions {
      */
     private final @Nullable Integer maximumBuildsAllowed;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectBuildBatchConfigRestrictions(
-        @OutputCustomType.Parameter("computeTypesAlloweds") @Nullable List<String> computeTypesAlloweds,
-        @OutputCustomType.Parameter("maximumBuildsAllowed") @Nullable Integer maximumBuildsAllowed) {
+        @CustomType.Parameter("computeTypesAlloweds") @Nullable List<String> computeTypesAlloweds,
+        @CustomType.Parameter("maximumBuildsAllowed") @Nullable Integer maximumBuildsAllowed) {
         this.computeTypesAlloweds = computeTypesAlloweds;
         this.maximumBuildsAllowed = maximumBuildsAllowed;
     }

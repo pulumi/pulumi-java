@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class S3BucketAssociationClassificationTypeGetArgs extends io.pulum
      * The only valid value is the default value, `FULL`.
      * 
      */
-    @InputImport(name="continuous")
+    @Import(name="continuous")
       private final @Nullable Output<String> continuous;
 
     public Output<String> getContinuous() {
@@ -31,7 +31,7 @@ public final class S3BucketAssociationClassificationTypeGetArgs extends io.pulum
      * Valid values are `NONE` and `FULL`. Defaults to `NONE` indicating that Macie only classifies objects that are added after the association was created.
      * 
      */
-    @InputImport(name="oneTime")
+    @Import(name="oneTime")
       private final @Nullable Output<String> oneTime;
 
     public Output<String> getOneTime() {

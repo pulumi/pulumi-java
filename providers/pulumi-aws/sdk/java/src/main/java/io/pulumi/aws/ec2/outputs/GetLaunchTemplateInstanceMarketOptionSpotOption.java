@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchTemplateInstanceMarketOptionSpotOption {
     private final Integer blockDurationMinutes;
     private final String instanceInterruptionBehavior;
@@ -16,13 +16,13 @@ public final class GetLaunchTemplateInstanceMarketOptionSpotOption {
     private final String spotInstanceType;
     private final String validUntil;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchTemplateInstanceMarketOptionSpotOption(
-        @OutputCustomType.Parameter("blockDurationMinutes") Integer blockDurationMinutes,
-        @OutputCustomType.Parameter("instanceInterruptionBehavior") String instanceInterruptionBehavior,
-        @OutputCustomType.Parameter("maxPrice") String maxPrice,
-        @OutputCustomType.Parameter("spotInstanceType") String spotInstanceType,
-        @OutputCustomType.Parameter("validUntil") String validUntil) {
+        @CustomType.Parameter("blockDurationMinutes") Integer blockDurationMinutes,
+        @CustomType.Parameter("instanceInterruptionBehavior") String instanceInterruptionBehavior,
+        @CustomType.Parameter("maxPrice") String maxPrice,
+        @CustomType.Parameter("spotInstanceType") String spotInstanceType,
+        @CustomType.Parameter("validUntil") String validUntil) {
         this.blockDurationMinutes = blockDurationMinutes;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.maxPrice = maxPrice;

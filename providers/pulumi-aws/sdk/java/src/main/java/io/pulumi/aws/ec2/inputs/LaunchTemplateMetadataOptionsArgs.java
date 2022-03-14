@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LaunchTemplateMetadataOptionsArgs extends io.pulumi.resources
      * Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
      * 
      */
-    @InputImport(name="httpEndpoint")
+    @Import(name="httpEndpoint")
       private final @Nullable Output<String> httpEndpoint;
 
     public Output<String> getHttpEndpoint() {
@@ -30,7 +30,7 @@ public final class LaunchTemplateMetadataOptionsArgs extends io.pulumi.resources
      * Enables or disables the IPv6 endpoint for the instance metadata service. (Default: `disabled`).
      * 
      */
-    @InputImport(name="httpProtocolIpv6")
+    @Import(name="httpProtocolIpv6")
       private final @Nullable Output<String> httpProtocolIpv6;
 
     public Output<String> getHttpProtocolIpv6() {
@@ -41,7 +41,7 @@ public final class LaunchTemplateMetadataOptionsArgs extends io.pulumi.resources
      * The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
      * 
      */
-    @InputImport(name="httpPutResponseHopLimit")
+    @Import(name="httpPutResponseHopLimit")
       private final @Nullable Output<Integer> httpPutResponseHopLimit;
 
     public Output<Integer> getHttpPutResponseHopLimit() {
@@ -52,7 +52,7 @@ public final class LaunchTemplateMetadataOptionsArgs extends io.pulumi.resources
      * Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
      * 
      */
-    @InputImport(name="httpTokens")
+    @Import(name="httpTokens")
       private final @Nullable Output<String> httpTokens;
 
     public Output<String> getHttpTokens() {
@@ -63,7 +63,7 @@ public final class LaunchTemplateMetadataOptionsArgs extends io.pulumi.resources
      * Enables or disables access to instance tags from the instance metadata service. (Default: `disabled`).
      * 
      */
-    @InputImport(name="instanceMetadataTags")
+    @Import(name="instanceMetadataTags")
       private final @Nullable Output<String> instanceMetadataTags;
 
     public Output<String> getInstanceMetadataTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DefaultNetworkAclIngressArgs extends io.pulumi.resources.Reso
      * The action to take.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<String> action;
 
     public Output<String> getAction() {
@@ -30,7 +30,7 @@ public final class DefaultNetworkAclIngressArgs extends io.pulumi.resources.Reso
      * The CIDR block to match. This must be a valid network mask.
      * 
      */
-    @InputImport(name="cidrBlock")
+    @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
@@ -41,7 +41,7 @@ public final class DefaultNetworkAclIngressArgs extends io.pulumi.resources.Reso
      * The from port to match.
      * 
      */
-    @InputImport(name="fromPort", required=true)
+    @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
     public Output<Integer> getFromPort() {
@@ -52,7 +52,7 @@ public final class DefaultNetworkAclIngressArgs extends io.pulumi.resources.Reso
      * The ICMP type code to be used. Default 0.
      * 
      */
-    @InputImport(name="icmpCode")
+    @Import(name="icmpCode")
       private final @Nullable Output<Integer> icmpCode;
 
     public Output<Integer> getIcmpCode() {
@@ -63,7 +63,7 @@ public final class DefaultNetworkAclIngressArgs extends io.pulumi.resources.Reso
      * The ICMP type to be used. Default 0.
      * 
      */
-    @InputImport(name="icmpType")
+    @Import(name="icmpType")
       private final @Nullable Output<Integer> icmpType;
 
     public Output<Integer> getIcmpType() {
@@ -74,7 +74,7 @@ public final class DefaultNetworkAclIngressArgs extends io.pulumi.resources.Reso
      * The IPv6 CIDR block.
      * 
      */
-    @InputImport(name="ipv6CidrBlock")
+    @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
     public Output<String> getIpv6CidrBlock() {
@@ -85,7 +85,7 @@ public final class DefaultNetworkAclIngressArgs extends io.pulumi.resources.Reso
      * The protocol to match. If using the -1 'all' protocol, you must specify a from and to port of 0.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -96,7 +96,7 @@ public final class DefaultNetworkAclIngressArgs extends io.pulumi.resources.Reso
      * The rule number. Used for ordering.
      * 
      */
-    @InputImport(name="ruleNo", required=true)
+    @Import(name="ruleNo", required=true)
       private final Output<Integer> ruleNo;
 
     public Output<Integer> getRuleNo() {
@@ -107,7 +107,7 @@ public final class DefaultNetworkAclIngressArgs extends io.pulumi.resources.Reso
      * The to port to match.
      * 
      */
-    @InputImport(name="toPort", required=true)
+    @Import(name="toPort", required=true)
       private final Output<Integer> toPort;
 
     public Output<Integer> getToPort() {

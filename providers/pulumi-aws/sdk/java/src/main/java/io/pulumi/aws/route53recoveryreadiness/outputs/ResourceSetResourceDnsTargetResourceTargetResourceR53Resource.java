@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.route53recoveryreadiness.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource {
     /**
      * Domain name that is targeted.
@@ -22,10 +22,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
      */
     private final @Nullable String recordSetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceSetResourceDnsTargetResourceTargetResourceR53Resource(
-        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
-        @OutputCustomType.Parameter("recordSetId") @Nullable String recordSetId) {
+        @CustomType.Parameter("domainName") @Nullable String domainName,
+        @CustomType.Parameter("recordSetId") @Nullable String recordSetId) {
         this.domainName = domainName;
         this.recordSetId = recordSetId;
     }

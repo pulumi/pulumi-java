@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetFileSystemLifecyclePolicy extends io.pulumi.resources.Invo
 
     public static final GetFileSystemLifecyclePolicy Empty = new GetFileSystemLifecyclePolicy();
 
-    @InputImport(name="transitionToIa", required=true)
+    @Import(name="transitionToIa", required=true)
       private final String transitionToIa;
 
     public String getTransitionToIa() {
         return this.transitionToIa;
     }
 
-    @InputImport(name="transitionToPrimaryStorageClass", required=true)
+    @Import(name="transitionToPrimaryStorageClass", required=true)
       private final String transitionToPrimaryStorageClass;
 
     public String getTransitionToPrimaryStorageClass() {

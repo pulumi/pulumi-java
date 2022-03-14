@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
      * The ID of the network interface to attach to.
      * 
      */
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -29,7 +29,7 @@ public final class NetworkInterfaceSecurityGroupAttachmentState extends io.pulum
      * The ID of the security group.
      * 
      */
-    @InputImport(name="securityGroupId")
+    @Import(name="securityGroupId")
       private final @Nullable Output<String> securityGroupId;
 
     public Output<String> getSecurityGroupId() {

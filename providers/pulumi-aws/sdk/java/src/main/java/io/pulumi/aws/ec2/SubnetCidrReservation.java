@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.SubnetCidrReservationArgs;
 import io.pulumi.aws.ec2.inputs.SubnetCidrReservationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {
      * The CIDR block for the reservation.
      * 
      */
-    @OutputExport(name="cidrBlock", type=String.class, parameters={})
+    @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
@@ -46,7 +46,7 @@ public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {
      * A brief description of the reservation.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -60,7 +60,7 @@ public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {
      * ID of the AWS account that owns this CIDR reservation.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -74,7 +74,7 @@ public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {
      * The type of reservation to create. Valid values: `explicit`, `prefix`
      * 
      */
-    @OutputExport(name="reservationType", type=String.class, parameters={})
+    @Export(name="reservationType", type=String.class, parameters={})
     private Output<String> reservationType;
 
     /**
@@ -88,7 +88,7 @@ public class SubnetCidrReservation extends io.pulumi.resources.CustomResource {
      * The ID of the subnet to create the reservation for.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**

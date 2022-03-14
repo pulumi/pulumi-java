@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TopicRuleS3Args extends io.pulumi.resources.ResourceArgs {
      * The Amazon S3 bucket name.
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -28,7 +28,7 @@ public final class TopicRuleS3Args extends io.pulumi.resources.ResourceArgs {
      * The object key.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -39,7 +39,7 @@ public final class TopicRuleS3Args extends io.pulumi.resources.ResourceArgs {
      * The IAM role ARN that allows access to the CloudWatch alarm.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.aws.waf.inputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class WebAclLoggingConfigurationRedactedFieldsArgs extends io.pulum
      * Set of configuration blocks for fields to redact. Detailed below.
      * 
      */
-    @InputImport(name="fieldToMatches", required=true)
+    @Import(name="fieldToMatches", required=true)
       private final Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs>> fieldToMatches;
 
     public Output<List<WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs>> getFieldToMatches() {

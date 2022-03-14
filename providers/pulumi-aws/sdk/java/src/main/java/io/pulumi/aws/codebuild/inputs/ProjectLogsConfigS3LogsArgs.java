@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
      * Specifies the bucket owner's access for objects that another account uploads to their Amazon S3 bucket. By default, only the account that uploads the objects to the bucket has access to these objects. This property allows you to give the bucket owner access to these objects. Valid values are `NONE`, `READ_ONLY`, and `FULL`. your CodeBuild service role must have the `s3:PutBucketAcl` permission. This permission allows CodeBuild to modify the access control list for the bucket.
      * 
      */
-    @InputImport(name="bucketOwnerAccess")
+    @Import(name="bucketOwnerAccess")
       private final @Nullable Output<String> bucketOwnerAccess;
 
     public Output<String> getBucketOwnerAccess() {
@@ -30,7 +30,7 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
      * Whether to disable encrypting output artifacts. If `type` is set to `NO_ARTIFACTS`, this value is ignored. Defaults to `false`.
      * 
      */
-    @InputImport(name="encryptionDisabled")
+    @Import(name="encryptionDisabled")
       private final @Nullable Output<Boolean> encryptionDisabled;
 
     public Output<Boolean> getEncryptionDisabled() {
@@ -41,7 +41,7 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
      * Location of the source code from git or s3.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,7 +52,7 @@ public final class ProjectLogsConfigS3LogsArgs extends io.pulumi.resources.Resou
      * Current status of logs in S3 for a build project. Valid values: `ENABLED`, `DISABLED`. Defaults to `DISABLED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

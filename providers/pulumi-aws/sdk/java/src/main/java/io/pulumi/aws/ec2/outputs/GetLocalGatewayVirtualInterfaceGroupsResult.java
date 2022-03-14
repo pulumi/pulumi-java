@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetLocalGatewayVirtualInterfaceGroupsFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocalGatewayVirtualInterfaceGroupsResult {
     private final @Nullable List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters;
     /**
@@ -31,13 +31,13 @@ public final class GetLocalGatewayVirtualInterfaceGroupsResult {
     private final List<String> localGatewayVirtualInterfaceIds;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocalGatewayVirtualInterfaceGroupsResult(
-        @OutputCustomType.Parameter("filters") @Nullable List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ids") List<String> ids,
-        @OutputCustomType.Parameter("localGatewayVirtualInterfaceIds") List<String> localGatewayVirtualInterfaceIds,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("filters") @Nullable List<GetLocalGatewayVirtualInterfaceGroupsFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ids") List<String> ids,
+        @CustomType.Parameter("localGatewayVirtualInterfaceIds") List<String> localGatewayVirtualInterfaceIds,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

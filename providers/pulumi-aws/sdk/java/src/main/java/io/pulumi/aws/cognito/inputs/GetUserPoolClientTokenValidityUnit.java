@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetUserPoolClientTokenValidityUnit extends io.pulumi.resource
      * (Optional) Time unit in for the value in `access_token_validity`, defaults to `hours`.
      * 
      */
-    @InputImport(name="accessToken", required=true)
+    @Import(name="accessToken", required=true)
       private final String accessToken;
 
     public String getAccessToken() {
@@ -27,7 +27,7 @@ public final class GetUserPoolClientTokenValidityUnit extends io.pulumi.resource
      * (Optional) Time unit in for the value in `id_token_validity`, defaults to `hours`.
      * 
      */
-    @InputImport(name="idToken", required=true)
+    @Import(name="idToken", required=true)
       private final String idToken;
 
     public String getIdToken() {
@@ -38,7 +38,7 @@ public final class GetUserPoolClientTokenValidityUnit extends io.pulumi.resource
      * (Optional) Time unit in for the value in `refresh_token_validity`, defaults to `days`.
      * 
      */
-    @InputImport(name="refreshToken", required=true)
+    @Import(name="refreshToken", required=true)
       private final String refreshToken;
 
     public String getRefreshToken() {

@@ -5,12 +5,12 @@ package io.pulumi.aws.autoscaling.outputs;
 
 import io.pulumi.aws.autoscaling.outputs.GroupMixedInstancesPolicyInstancesDistribution;
 import io.pulumi.aws.autoscaling.outputs.GroupMixedInstancesPolicyLaunchTemplate;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupMixedInstancesPolicy {
     /**
      * Nested argument containing settings on how to mix on-demand and Spot instances in the Auto Scaling group. Defined below.
@@ -23,10 +23,10 @@ public final class GroupMixedInstancesPolicy {
      */
     private final GroupMixedInstancesPolicyLaunchTemplate launchTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupMixedInstancesPolicy(
-        @OutputCustomType.Parameter("instancesDistribution") @Nullable GroupMixedInstancesPolicyInstancesDistribution instancesDistribution,
-        @OutputCustomType.Parameter("launchTemplate") GroupMixedInstancesPolicyLaunchTemplate launchTemplate) {
+        @CustomType.Parameter("instancesDistribution") @Nullable GroupMixedInstancesPolicyInstancesDistribution instancesDistribution,
+        @CustomType.Parameter("launchTemplate") GroupMixedInstancesPolicyLaunchTemplate launchTemplate) {
         this.instancesDistribution = instancesDistribution;
         this.launchTemplate = launchTemplate;
     }

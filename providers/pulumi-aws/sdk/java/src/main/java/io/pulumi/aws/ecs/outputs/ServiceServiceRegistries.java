@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceServiceRegistries {
     /**
      * Container name value, already specified in the task definition, to be used for your service discovery service.
@@ -33,12 +33,12 @@ public final class ServiceServiceRegistries {
      */
     private final String registryArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceServiceRegistries(
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("registryArn") String registryArn) {
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("registryArn") String registryArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.port = port;

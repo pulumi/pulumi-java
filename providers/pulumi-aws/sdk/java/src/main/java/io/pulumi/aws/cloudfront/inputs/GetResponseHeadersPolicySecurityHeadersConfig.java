@@ -9,7 +9,7 @@ import io.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicySecurityHeadersCo
 import io.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy;
 import io.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity;
 import io.pulumi.aws.cloudfront.inputs.GetResponseHeadersPolicySecurityHeadersConfigXssProtection;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * The policy directives and their values that CloudFront includes as values for the Content-Security-Policy HTTP response header.
      * 
      */
-    @InputImport(name="contentSecurityPolicies", required=true)
+    @Import(name="contentSecurityPolicies", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> getContentSecurityPolicies() {
@@ -33,7 +33,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * A setting that determines whether CloudFront includes the X-Content-Type-Options HTTP response header with its value set to nosniff. See Content Type Options for more information.
      * 
      */
-    @InputImport(name="contentTypeOptions", required=true)
+    @Import(name="contentTypeOptions", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> getContentTypeOptions() {
@@ -44,7 +44,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * A setting that determines whether CloudFront includes the X-Frame-Options HTTP response header and the header’s value. See Frame Options for more information.
      * 
      */
-    @InputImport(name="frameOptions", required=true)
+    @Import(name="frameOptions", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> getFrameOptions() {
@@ -55,7 +55,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * The value of the Referrer-Policy HTTP response header. Valid Values: `no-referrer` | `no-referrer-when-downgrade` | `origin` | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` | `unsafe-url`
      * 
      */
-    @InputImport(name="referrerPolicies", required=true)
+    @Import(name="referrerPolicies", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> getReferrerPolicies() {
@@ -66,7 +66,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * Settings that determine whether CloudFront includes the Strict-Transport-Security HTTP response header and the header’s value. See Strict Transport Security for more information.
      * 
      */
-    @InputImport(name="strictTransportSecurities", required=true)
+    @Import(name="strictTransportSecurities", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> getStrictTransportSecurities() {
@@ -77,7 +77,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig extends io.pulu
      * Settings that determine whether CloudFront includes the X-XSS-Protection HTTP response header and the header’s value. See XSS Protection for more information.
      * 
      */
-    @InputImport(name="xssProtections", required=true)
+    @Import(name="xssProtections", required=true)
       private final List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections;
 
     public List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> getXssProtections() {

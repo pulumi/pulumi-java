@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.autoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAmiIdsFilter {
     /**
      * The name of the DescribeAutoScalingGroup filter. The recommended values are: `tag-key`, `tag-value`, and `tag:<tag name>`
@@ -21,10 +21,10 @@ public final class GetAmiIdsFilter {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAmiIdsFilter(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.values = values;
     }

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpcDhcpOptionsAssociationArgs;
 import io.pulumi.aws.ec2.inputs.VpcDhcpOptionsAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -36,7 +36,7 @@ public class VpcDhcpOptionsAssociation extends io.pulumi.resources.CustomResourc
      * The ID of the DHCP Options Set to associate to the VPC.
      * 
      */
-    @OutputExport(name="dhcpOptionsId", type=String.class, parameters={})
+    @Export(name="dhcpOptionsId", type=String.class, parameters={})
     private Output<String> dhcpOptionsId;
 
     /**
@@ -50,7 +50,7 @@ public class VpcDhcpOptionsAssociation extends io.pulumi.resources.CustomResourc
      * The ID of the VPC to which we would like to associate a DHCP Options Set.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

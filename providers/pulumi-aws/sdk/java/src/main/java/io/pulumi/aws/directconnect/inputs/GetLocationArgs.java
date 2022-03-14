@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directconnect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLocationArgs extends io.pulumi.resources.InvokeArgs {
      * The code for the location to retrieve.
      * 
      */
-    @InputImport(name="locationCode", required=true)
+    @Import(name="locationCode", required=true)
       private final String locationCode;
 
     public String getLocationCode() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
      * 
      */
-    @InputImport(name="dashboardBody", required=true)
+    @Import(name="dashboardBody", required=true)
       private final Output<String> dashboardBody;
 
     public Output<String> getDashboardBody() {
@@ -28,7 +28,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the dashboard.
      * 
      */
-    @InputImport(name="dashboardName", required=true)
+    @Import(name="dashboardName", required=true)
       private final Output<String> dashboardName;
 
     public Output<String> getDashboardName() {

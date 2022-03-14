@@ -4,14 +4,14 @@
 package io.pulumi.aws.gamelift.outputs;
 
 import io.pulumi.aws.gamelift.outputs.FleetRuntimeConfigurationServerProcess;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetRuntimeConfiguration {
     /**
      * Maximum amount of time (in seconds) that a game session can remain in status `ACTIVATING`.
@@ -29,11 +29,11 @@ public final class FleetRuntimeConfiguration {
      */
     private final @Nullable List<FleetRuntimeConfigurationServerProcess> serverProcesses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetRuntimeConfiguration(
-        @OutputCustomType.Parameter("gameSessionActivationTimeoutSeconds") @Nullable Integer gameSessionActivationTimeoutSeconds,
-        @OutputCustomType.Parameter("maxConcurrentGameSessionActivations") @Nullable Integer maxConcurrentGameSessionActivations,
-        @OutputCustomType.Parameter("serverProcesses") @Nullable List<FleetRuntimeConfigurationServerProcess> serverProcesses) {
+        @CustomType.Parameter("gameSessionActivationTimeoutSeconds") @Nullable Integer gameSessionActivationTimeoutSeconds,
+        @CustomType.Parameter("maxConcurrentGameSessionActivations") @Nullable Integer maxConcurrentGameSessionActivations,
+        @CustomType.Parameter("serverProcesses") @Nullable List<FleetRuntimeConfigurationServerProcess> serverProcesses) {
         this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
         this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
         this.serverProcesses = serverProcesses;

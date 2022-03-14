@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apprunner.AutoScalingConfigurationVersionArgs;
 import io.pulumi.aws.apprunner.inputs.AutoScalingConfigurationVersionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -35,7 +35,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * ARN of this auto scaling configuration version.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * Name of the auto scaling configuration.
      * 
      */
-    @OutputExport(name="autoScalingConfigurationName", type=String.class, parameters={})
+    @Export(name="autoScalingConfigurationName", type=String.class, parameters={})
     private Output<String> autoScalingConfigurationName;
 
     /**
@@ -63,7 +63,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * The revision of this auto scaling configuration.
      * 
      */
-    @OutputExport(name="autoScalingConfigurationRevision", type=Integer.class, parameters={})
+    @Export(name="autoScalingConfigurationRevision", type=Integer.class, parameters={})
     private Output<Integer> autoScalingConfigurationRevision;
 
     /**
@@ -77,7 +77,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * Whether the auto scaling configuration has the highest `auto_scaling_configuration_revision` among all configurations that share the same `auto_scaling_configuration_name`.
      * 
      */
-    @OutputExport(name="latest", type=Boolean.class, parameters={})
+    @Export(name="latest", type=Boolean.class, parameters={})
     private Output<Boolean> latest;
 
     /**
@@ -91,7 +91,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * The maximal number of concurrent requests that you want an instance to process. When the number of concurrent requests goes over this limit, App Runner scales up your service.
      * 
      */
-    @OutputExport(name="maxConcurrency", type=Integer.class, parameters={})
+    @Export(name="maxConcurrency", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxConcurrency;
 
     /**
@@ -105,7 +105,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * The maximal number of instances that App Runner provisions for your service.
      * 
      */
-    @OutputExport(name="maxSize", type=Integer.class, parameters={})
+    @Export(name="maxSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxSize;
 
     /**
@@ -119,7 +119,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * The minimal number of instances that App Runner provisions for your service.
      * 
      */
-    @OutputExport(name="minSize", type=Integer.class, parameters={})
+    @Export(name="minSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minSize;
 
     /**
@@ -133,7 +133,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * The current state of the auto scaling configuration. An INACTIVE configuration revision has been deleted and can't be used. It is permanently removed some time after deletion.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -147,7 +147,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -161,7 +161,7 @@ public class AutoScalingConfigurationVersion extends io.pulumi.resources.CustomR
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

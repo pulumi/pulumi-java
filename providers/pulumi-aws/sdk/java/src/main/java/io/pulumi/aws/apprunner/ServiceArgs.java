@@ -8,7 +8,7 @@ import io.pulumi.aws.apprunner.inputs.ServiceHealthCheckConfigurationArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceInstanceConfigurationArgs;
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of an App Runner automatic scaling configuration resource that you want to associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling configuration.
      * 
      */
-    @InputImport(name="autoScalingConfigurationArn")
+    @Import(name="autoScalingConfigurationArn")
       private final @Nullable Output<String> autoScalingConfigurationArn;
 
     public Output<String> getAutoScalingConfigurationArn() {
@@ -34,7 +34,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK. See Encryption Configuration below for more details.
      * 
      */
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<ServiceEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<ServiceEncryptionConfigurationArgs> getEncryptionConfiguration() {
@@ -45,7 +45,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
      * 
      */
-    @InputImport(name="healthCheckConfiguration")
+    @Import(name="healthCheckConfiguration")
       private final @Nullable Output<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration;
 
     public Output<ServiceHealthCheckConfigurationArgs> getHealthCheckConfiguration() {
@@ -56,7 +56,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The runtime configuration of instances (scaling units) of the App Runner service. See Instance Configuration below for more details.
      * 
      */
-    @InputImport(name="instanceConfiguration")
+    @Import(name="instanceConfiguration")
       private final @Nullable Output<ServiceInstanceConfigurationArgs> instanceConfiguration;
 
     public Output<ServiceInstanceConfigurationArgs> getInstanceConfiguration() {
@@ -67,7 +67,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -78,7 +78,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The source to deploy to the App Runner service. Can be a code or an image repository. See Source Configuration below for more details.
      * 
      */
-    @InputImport(name="sourceConfiguration", required=true)
+    @Import(name="sourceConfiguration", required=true)
       private final Output<ServiceSourceConfigurationArgs> sourceConfiguration;
 
     public Output<ServiceSourceConfigurationArgs> getSourceConfiguration() {
@@ -89,7 +89,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

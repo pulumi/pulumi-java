@@ -5,7 +5,7 @@ package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.aws.storagegateway.inputs.FileSystemAssociationCacheAttributesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * Amazon Resource Name (ARN) of the newly created file system association.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * The Amazon Resource Name (ARN) of the storage used for the audit logs.
      * 
      */
-    @InputImport(name="auditDestinationArn")
+    @Import(name="auditDestinationArn")
       private final @Nullable Output<String> auditDestinationArn;
 
     public Output<String> getAuditDestinationArn() {
@@ -42,7 +42,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * Refresh cache information. see Cache Attributes for more details.
      * 
      */
-    @InputImport(name="cacheAttributes")
+    @Import(name="cacheAttributes")
       private final @Nullable Output<FileSystemAssociationCacheAttributesGetArgs> cacheAttributes;
 
     public Output<FileSystemAssociationCacheAttributesGetArgs> getCacheAttributes() {
@@ -53,7 +53,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    @InputImport(name="gatewayArn")
+    @Import(name="gatewayArn")
       private final @Nullable Output<String> gatewayArn;
 
     public Output<String> getGatewayArn() {
@@ -64,7 +64,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * The Amazon Resource Name (ARN) of the Amazon FSx file system to associate with the FSx File Gateway.
      * 
      */
-    @InputImport(name="locationArn")
+    @Import(name="locationArn")
       private final @Nullable Output<String> locationArn;
 
     public Output<String> getLocationArn() {
@@ -75,7 +75,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * The password of the user credential.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -86,7 +86,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -97,7 +97,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -108,7 +108,7 @@ public final class FileSystemAssociationState extends io.pulumi.resources.Resour
      * The user name of the user credential that has permission to access the root share of the Amazon FSx file system. The user account must belong to the Amazon FSx delegated admin user group.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

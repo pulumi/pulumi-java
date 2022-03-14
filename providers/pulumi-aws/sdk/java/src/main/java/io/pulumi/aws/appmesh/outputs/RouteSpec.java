@@ -7,13 +7,13 @@ import io.pulumi.aws.appmesh.outputs.RouteSpecGrpcRoute;
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttp2Route;
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRoute;
 import io.pulumi.aws.appmesh.outputs.RouteSpecTcpRoute;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpec {
     /**
      * The gRPC routing information for the route.
@@ -42,13 +42,13 @@ public final class RouteSpec {
      */
     private final @Nullable RouteSpecTcpRoute tcpRoute;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpec(
-        @OutputCustomType.Parameter("grpcRoute") @Nullable RouteSpecGrpcRoute grpcRoute,
-        @OutputCustomType.Parameter("http2Route") @Nullable RouteSpecHttp2Route http2Route,
-        @OutputCustomType.Parameter("httpRoute") @Nullable RouteSpecHttpRoute httpRoute,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("tcpRoute") @Nullable RouteSpecTcpRoute tcpRoute) {
+        @CustomType.Parameter("grpcRoute") @Nullable RouteSpecGrpcRoute grpcRoute,
+        @CustomType.Parameter("http2Route") @Nullable RouteSpecHttp2Route http2Route,
+        @CustomType.Parameter("httpRoute") @Nullable RouteSpecHttpRoute httpRoute,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("tcpRoute") @Nullable RouteSpecTcpRoute tcpRoute) {
         this.grpcRoute = grpcRoute;
         this.http2Route = http2Route;
         this.httpRoute = httpRoute;

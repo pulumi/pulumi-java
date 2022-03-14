@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetLocalGatewayRouteTablesFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetLocalGatewayRouteTablesArgs extends io.pulumi.resources.In
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetLocalGatewayRouteTablesFilter> filters;
 
     public List<GetLocalGatewayRouteTablesFilter> getFilters() {
@@ -33,7 +33,7 @@ public final class GetLocalGatewayRouteTablesArgs extends io.pulumi.resources.In
      * a pair on the desired local gateway route table.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

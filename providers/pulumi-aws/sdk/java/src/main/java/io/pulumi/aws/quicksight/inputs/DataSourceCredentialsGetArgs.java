@@ -5,7 +5,7 @@ package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.aws.quicksight.inputs.DataSourceCredentialsCredentialPairGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DataSourceCredentialsGetArgs extends io.pulumi.resources.Reso
      *   When the value is not null, the `credential_pair` from the data source in the ARN is used.
      * 
      */
-    @InputImport(name="copySourceArn")
+    @Import(name="copySourceArn")
       private final @Nullable Output<String> copySourceArn;
 
     public Output<String> getCopySourceArn() {
@@ -31,7 +31,7 @@ public final class DataSourceCredentialsGetArgs extends io.pulumi.resources.Reso
      * - Credential pair. See Credential Pair below for more details.
      * 
      */
-    @InputImport(name="credentialPair")
+    @Import(name="credentialPair")
       private final @Nullable Output<DataSourceCredentialsCredentialPairGetArgs> credentialPair;
 
     public Output<DataSourceCredentialsCredentialPairGetArgs> getCredentialPair() {

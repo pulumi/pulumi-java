@@ -4,7 +4,7 @@
 package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DirectoryWorkspaceCreationPropertiesGetArgs extends io.pulumi
      * The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
      * 
      */
-    @InputImport(name="customSecurityGroupId")
+    @Import(name="customSecurityGroupId")
       private final @Nullable Output<String> customSecurityGroupId;
 
     public Output<String> getCustomSecurityGroupId() {
@@ -30,7 +30,7 @@ public final class DirectoryWorkspaceCreationPropertiesGetArgs extends io.pulumi
      * The default organizational unit (OU) for your WorkSpace directories. Should conform `"OU=<value>,DC=<value>,...,DC=<value>"` pattern.
      * 
      */
-    @InputImport(name="defaultOu")
+    @Import(name="defaultOu")
       private final @Nullable Output<String> defaultOu;
 
     public Output<String> getDefaultOu() {
@@ -41,7 +41,7 @@ public final class DirectoryWorkspaceCreationPropertiesGetArgs extends io.pulumi
      * Indicates whether internet access is enabled for your WorkSpaces.
      * 
      */
-    @InputImport(name="enableInternetAccess")
+    @Import(name="enableInternetAccess")
       private final @Nullable Output<Boolean> enableInternetAccess;
 
     public Output<Boolean> getEnableInternetAccess() {
@@ -52,7 +52,7 @@ public final class DirectoryWorkspaceCreationPropertiesGetArgs extends io.pulumi
      * Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html)..
      * 
      */
-    @InputImport(name="enableMaintenanceMode")
+    @Import(name="enableMaintenanceMode")
       private final @Nullable Output<Boolean> enableMaintenanceMode;
 
     public Output<Boolean> getEnableMaintenanceMode() {
@@ -63,7 +63,7 @@ public final class DirectoryWorkspaceCreationPropertiesGetArgs extends io.pulumi
      * Indicates whether users are local administrators of their WorkSpaces.
      * 
      */
-    @InputImport(name="userEnabledAsLocalAdministrator")
+    @Import(name="userEnabledAsLocalAdministrator")
       private final @Nullable Output<Boolean> userEnabledAsLocalAdministrator;
 
     public Output<Boolean> getUserEnabledAsLocalAdministrator() {

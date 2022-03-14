@@ -4,13 +4,13 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateCapacityReservationSpecification {
     /**
      * Indicates the instance's Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
@@ -23,10 +23,10 @@ public final class LaunchTemplateCapacityReservationSpecification {
      */
     private final @Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchTemplateCapacityReservationSpecification(
-        @OutputCustomType.Parameter("capacityReservationPreference") @Nullable String capacityReservationPreference,
-        @OutputCustomType.Parameter("capacityReservationTarget") @Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
+        @CustomType.Parameter("capacityReservationPreference") @Nullable String capacityReservationPreference,
+        @CustomType.Parameter("capacityReservationTarget") @Nullable LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget capacityReservationTarget) {
         this.capacityReservationPreference = capacityReservationPreference;
         this.capacityReservationTarget = capacityReservationTarget;
     }

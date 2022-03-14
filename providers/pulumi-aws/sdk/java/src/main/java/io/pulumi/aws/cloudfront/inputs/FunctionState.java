@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) identifying your CloudFront Function.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * Source code of the function
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
@@ -41,7 +41,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * Comment.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -52,7 +52,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * ETag hash of the function. This is the value for the `DEVELOPMENT` stage of the function.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -63,7 +63,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * ETag hash of any `LIVE` stage of the function.
      * 
      */
-    @InputImport(name="liveStageEtag")
+    @Import(name="liveStageEtag")
       private final @Nullable Output<String> liveStageEtag;
 
     public Output<String> getLiveStageEtag() {
@@ -74,7 +74,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * Unique name for your CloudFront Function.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * Whether to publish creation/change as Live CloudFront Function Version. Defaults to `true`.
      * 
      */
-    @InputImport(name="publish")
+    @Import(name="publish")
       private final @Nullable Output<Boolean> publish;
 
     public Output<Boolean> getPublish() {
@@ -96,7 +96,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * Identifier of the function's runtime. Currently only `cloudfront-js-1.0` is valid.
      * 
      */
-    @InputImport(name="runtime")
+    @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
     public Output<String> getRuntime() {
@@ -107,7 +107,7 @@ public final class FunctionState extends io.pulumi.resources.ResourceArgs {
      * Status of the function. Can be `UNPUBLISHED`, `UNASSOCIATED` or `ASSOCIATED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

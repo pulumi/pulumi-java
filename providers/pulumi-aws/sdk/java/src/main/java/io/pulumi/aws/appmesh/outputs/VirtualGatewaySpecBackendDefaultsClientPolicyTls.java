@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecBackendDefaultsClientPolicyTls {
     /**
      * The listener's TLS certificate.
@@ -36,12 +36,12 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTls {
      */
     private final VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation validation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualGatewaySpecBackendDefaultsClientPolicyTls(
-        @OutputCustomType.Parameter("certificate") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate certificate,
-        @OutputCustomType.Parameter("enforce") @Nullable Boolean enforce,
-        @OutputCustomType.Parameter("ports") @Nullable List<Integer> ports,
-        @OutputCustomType.Parameter("validation") VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation validation) {
+        @CustomType.Parameter("certificate") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate certificate,
+        @CustomType.Parameter("enforce") @Nullable Boolean enforce,
+        @CustomType.Parameter("ports") @Nullable List<Integer> ports,
+        @CustomType.Parameter("validation") VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation validation) {
         this.certificate = certificate;
         this.enforce = enforce;
         this.ports = ports;

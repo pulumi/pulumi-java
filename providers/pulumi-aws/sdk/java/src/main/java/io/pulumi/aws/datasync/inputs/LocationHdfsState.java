@@ -6,7 +6,7 @@ package io.pulumi.aws.datasync.inputs;
 import io.pulumi.aws.datasync.inputs.LocationHdfsNameNodeGetArgs;
 import io.pulumi.aws.datasync.inputs.LocationHdfsQopConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * A list of DataSync Agent ARNs with which this location will be associated.
      * 
      */
-    @InputImport(name="agentArns")
+    @Import(name="agentArns")
       private final @Nullable Output<List<String>> agentArns;
 
     public Output<List<String>> getAgentArns() {
@@ -34,7 +34,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -45,7 +45,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * The type of authentication used to determine the identity of the user. Valid values are `SIMPLE` and `KERBEROS`.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<String> authenticationType;
 
     public Output<String> getAuthenticationType() {
@@ -56,7 +56,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * The size of data blocks to write into the HDFS cluster. The block size must be a multiple of 512 bytes. The default block size is 128 mebibytes (MiB).
      * 
      */
-    @InputImport(name="blockSize")
+    @Import(name="blockSize")
       private final @Nullable Output<Integer> blockSize;
 
     public Output<Integer> getBlockSize() {
@@ -67,7 +67,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the encrypted keys. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    @InputImport(name="kerberosKeytab")
+    @Import(name="kerberosKeytab")
       private final @Nullable Output<String> kerberosKeytab;
 
     public Output<String> getKerberosKeytab() {
@@ -78,7 +78,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * The krb5.conf file that contains the Kerberos configuration information. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    @InputImport(name="kerberosKrb5Conf")
+    @Import(name="kerberosKrb5Conf")
       private final @Nullable Output<String> kerberosKrb5Conf;
 
     public Output<String> getKerberosKrb5Conf() {
@@ -89,7 +89,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * The Kerberos principal with access to the files and folders on the HDFS cluster. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    @InputImport(name="kerberosPrincipal")
+    @Import(name="kerberosPrincipal")
       private final @Nullable Output<String> kerberosPrincipal;
 
     public Output<String> getKerberosPrincipal() {
@@ -100,7 +100,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * The URI of the HDFS cluster's Key Management Server (KMS).
      * 
      */
-    @InputImport(name="kmsKeyProviderUri")
+    @Import(name="kmsKeyProviderUri")
       private final @Nullable Output<String> kmsKeyProviderUri;
 
     public Output<String> getKmsKeyProviderUri() {
@@ -111,7 +111,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * The NameNode that manages the HDFS namespace. The NameNode performs operations such as opening, closing, and renaming files and directories. The NameNode contains the information to map blocks of data to the DataNodes. You can use only one NameNode. See configuration below.
      * 
      */
-    @InputImport(name="nameNodes")
+    @Import(name="nameNodes")
       private final @Nullable Output<List<LocationHdfsNameNodeGetArgs>> nameNodes;
 
     public Output<List<LocationHdfsNameNodeGetArgs>> getNameNodes() {
@@ -122,7 +122,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn't specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
      * 
      */
-    @InputImport(name="qopConfiguration")
+    @Import(name="qopConfiguration")
       private final @Nullable Output<LocationHdfsQopConfigurationGetArgs> qopConfiguration;
 
     public Output<LocationHdfsQopConfigurationGetArgs> getQopConfiguration() {
@@ -133,7 +133,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * The number of DataNodes to replicate the data to when writing to the HDFS cluster. By default, data is replicated to three DataNodes.
      * 
      */
-    @InputImport(name="replicationFactor")
+    @Import(name="replicationFactor")
       private final @Nullable Output<Integer> replicationFactor;
 
     public Output<Integer> getReplicationFactor() {
@@ -144,7 +144,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * The user name used to identify the client on the host operating system. If `SIMPLE` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    @InputImport(name="simpleUser")
+    @Import(name="simpleUser")
       private final @Nullable Output<String> simpleUser;
 
     public Output<String> getSimpleUser() {
@@ -155,7 +155,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn't specified, it will default to /.
      * 
      */
-    @InputImport(name="subdirectory")
+    @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -166,7 +166,7 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -177,14 +177,14 @@ public final class LocationHdfsState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

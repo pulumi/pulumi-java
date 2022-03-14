@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class RouteTablePropagationArgs extends io.pulumi.resources.Resourc
      * Identifier of EC2 Transit Gateway Attachment.
      * 
      */
-    @InputImport(name="transitGatewayAttachmentId", required=true)
+    @Import(name="transitGatewayAttachmentId", required=true)
       private final Output<String> transitGatewayAttachmentId;
 
     public Output<String> getTransitGatewayAttachmentId() {
@@ -28,7 +28,7 @@ public final class RouteTablePropagationArgs extends io.pulumi.resources.Resourc
      * Identifier of EC2 Transit Gateway Route Table.
      * 
      */
-    @InputImport(name="transitGatewayRouteTableId", required=true)
+    @Import(name="transitGatewayRouteTableId", required=true)
       private final Output<String> transitGatewayRouteTableId;
 
     public Output<String> getTransitGatewayRouteTableId() {

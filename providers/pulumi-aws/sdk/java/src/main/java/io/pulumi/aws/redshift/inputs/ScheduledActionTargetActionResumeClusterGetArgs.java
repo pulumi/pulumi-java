@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ScheduledActionTargetActionResumeClusterGetArgs extends io.pu
      * The identifier of the cluster to be resumed.
      * 
      */
-    @InputImport(name="clusterIdentifier", required=true)
+    @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {

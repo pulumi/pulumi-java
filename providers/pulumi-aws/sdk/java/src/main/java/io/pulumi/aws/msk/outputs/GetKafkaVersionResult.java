@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.msk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKafkaVersionResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -24,12 +24,12 @@ public final class GetKafkaVersionResult {
     private final String status;
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKafkaVersionResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("preferredVersions") @Nullable List<String> preferredVersions,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("preferredVersions") @Nullable List<String> preferredVersions,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("version") String version) {
         this.id = id;
         this.preferredVersions = preferredVersions;
         this.status = status;

@@ -10,7 +10,7 @@ import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationAsyncInferenceConfig
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationDataCaptureConfig;
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationProductionVariant;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class EndpointConfiguration extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class EndpointConfiguration extends io.pulumi.resources.CustomResource {
      * Specifies configuration for how an endpoint performs asynchronous inference.
      * 
      */
-    @OutputExport(name="asyncInferenceConfig", type=EndpointConfigurationAsyncInferenceConfig.class, parameters={})
+    @Export(name="asyncInferenceConfig", type=EndpointConfigurationAsyncInferenceConfig.class, parameters={})
     private Output</* @Nullable */ EndpointConfigurationAsyncInferenceConfig> asyncInferenceConfig;
 
     /**
@@ -65,7 +65,7 @@ public class EndpointConfiguration extends io.pulumi.resources.CustomResource {
      * Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
      * 
      */
-    @OutputExport(name="dataCaptureConfig", type=EndpointConfigurationDataCaptureConfig.class, parameters={})
+    @Export(name="dataCaptureConfig", type=EndpointConfigurationDataCaptureConfig.class, parameters={})
     private Output</* @Nullable */ EndpointConfigurationDataCaptureConfig> dataCaptureConfig;
 
     /**
@@ -79,7 +79,7 @@ public class EndpointConfiguration extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
      * 
      */
-    @OutputExport(name="kmsKeyArn", type=String.class, parameters={})
+    @Export(name="kmsKeyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyArn;
 
     /**
@@ -93,7 +93,7 @@ public class EndpointConfiguration extends io.pulumi.resources.CustomResource {
      * The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class EndpointConfiguration extends io.pulumi.resources.CustomResource {
      * Fields are documented below.
      * 
      */
-    @OutputExport(name="productionVariants", type=List.class, parameters={EndpointConfigurationProductionVariant.class})
+    @Export(name="productionVariants", type=List.class, parameters={EndpointConfigurationProductionVariant.class})
     private Output<List<EndpointConfigurationProductionVariant>> productionVariants;
 
     /**
@@ -121,7 +121,7 @@ public class EndpointConfiguration extends io.pulumi.resources.CustomResource {
      * A mapping of tags to assign to the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class EndpointConfiguration extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

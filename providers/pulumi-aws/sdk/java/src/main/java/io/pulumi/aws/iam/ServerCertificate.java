@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.ServerCertificateArgs;
 import io.pulumi.aws.iam.inputs.ServerCertificateState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -44,7 +44,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) specifying the server certificate.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -59,7 +59,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * PEM-encoded format.
      * 
      */
-    @OutputExport(name="certificateBody", type=String.class, parameters={})
+    @Export(name="certificateBody", type=String.class, parameters={})
     private Output<String> certificateBody;
 
     /**
@@ -76,7 +76,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * of the chain.
      * 
      */
-    @OutputExport(name="certificateChain", type=String.class, parameters={})
+    @Export(name="certificateChain", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateChain;
 
     /**
@@ -92,7 +92,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) on which the certificate is set to expire.
      * 
      */
-    @OutputExport(name="expiration", type=String.class, parameters={})
+    @Export(name="expiration", type=String.class, parameters={})
     private Output<String> expiration;
 
     /**
@@ -107,7 +107,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * path in this value. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> namePrefix;
 
     /**
@@ -141,7 +141,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
      * 
      */
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output</* @Nullable */ String> path;
 
     /**
@@ -158,7 +158,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * The contents of the private key in PEM-encoded format.
      * 
      */
-    @OutputExport(name="privateKey", type=String.class, parameters={})
+    @Export(name="privateKey", type=String.class, parameters={})
     private Output<String> privateKey;
 
     /**
@@ -172,7 +172,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * Map of resource tags for the server certificate. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -186,7 +186,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -200,7 +200,7 @@ public class ServerCertificate extends io.pulumi.resources.CustomResource {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) when the server certificate was uploaded.
      * 
      */
-    @OutputExport(name="uploadDate", type=String.class, parameters={})
+    @Export(name="uploadDate", type=String.class, parameters={})
     private Output<String> uploadDate;
 
     /**

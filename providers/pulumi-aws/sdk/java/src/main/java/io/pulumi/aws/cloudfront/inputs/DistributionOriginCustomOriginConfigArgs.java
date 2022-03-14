@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * The HTTP port the custom origin listens on.
      * 
      */
-    @InputImport(name="httpPort", required=true)
+    @Import(name="httpPort", required=true)
       private final Output<Integer> httpPort;
 
     public Output<Integer> getHttpPort() {
@@ -31,7 +31,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * The HTTPS port the custom origin listens on.
      * 
      */
-    @InputImport(name="httpsPort", required=true)
+    @Import(name="httpsPort", required=true)
       private final Output<Integer> httpsPort;
 
     public Output<Integer> getHttpsPort() {
@@ -42,7 +42,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
      * 
      */
-    @InputImport(name="originKeepaliveTimeout")
+    @Import(name="originKeepaliveTimeout")
       private final @Nullable Output<Integer> originKeepaliveTimeout;
 
     public Output<Integer> getOriginKeepaliveTimeout() {
@@ -54,7 +54,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * your origin. One of `http-only`, `https-only`, or `match-viewer`.
      * 
      */
-    @InputImport(name="originProtocolPolicy", required=true)
+    @Import(name="originProtocolPolicy", required=true)
       private final Output<String> originProtocolPolicy;
 
     public Output<String> getOriginProtocolPolicy() {
@@ -65,7 +65,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
      * 
      */
-    @InputImport(name="originReadTimeout")
+    @Import(name="originReadTimeout")
       private final @Nullable Output<Integer> originReadTimeout;
 
     public Output<Integer> getOriginReadTimeout() {
@@ -78,7 +78,7 @@ public final class DistributionOriginCustomOriginConfigArgs extends io.pulumi.re
      * one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
      * 
      */
-    @InputImport(name="originSslProtocols", required=true)
+    @Import(name="originSslProtocols", required=true)
       private final Output<List<String>> originSslProtocols;
 
     public Output<List<String>> getOriginSslProtocols() {

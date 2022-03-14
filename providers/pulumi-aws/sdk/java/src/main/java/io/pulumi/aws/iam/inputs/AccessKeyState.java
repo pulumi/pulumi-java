@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +18,21 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
      * 
      */
-    @InputImport(name="createDate")
+    @Import(name="createDate")
       private final @Nullable Output<String> createDate;
 
     public Output<String> getCreateDate() {
         return this.createDate == null ? Output.empty() : this.createDate;
     }
 
-    @InputImport(name="encryptedSecret")
+    @Import(name="encryptedSecret")
       private final @Nullable Output<String> encryptedSecret;
 
     public Output<String> getEncryptedSecret() {
         return this.encryptedSecret == null ? Output.empty() : this.encryptedSecret;
     }
 
-    @InputImport(name="encryptedSesSmtpPasswordV4")
+    @Import(name="encryptedSesSmtpPasswordV4")
       private final @Nullable Output<String> encryptedSesSmtpPasswordV4;
 
     public Output<String> getEncryptedSesSmtpPasswordV4() {
@@ -43,7 +43,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
      * 
      */
-    @InputImport(name="keyFingerprint")
+    @Import(name="keyFingerprint")
       private final @Nullable Output<String> keyFingerprint;
 
     public Output<String> getKeyFingerprint() {
@@ -54,7 +54,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
      * 
      */
-    @InputImport(name="pgpKey")
+    @Import(name="pgpKey")
       private final @Nullable Output<String> pgpKey;
 
     public Output<String> getPgpKey() {
@@ -65,7 +65,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {
@@ -76,7 +76,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * Secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
      * 
      */
-    @InputImport(name="sesSmtpPasswordV4")
+    @Import(name="sesSmtpPasswordV4")
       private final @Nullable Output<String> sesSmtpPasswordV4;
 
     public Output<String> getSesSmtpPasswordV4() {
@@ -87,7 +87,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -98,7 +98,7 @@ public final class AccessKeyState extends io.pulumi.resources.ResourceArgs {
      * IAM user to associate with this access key.
      * 
      */
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {

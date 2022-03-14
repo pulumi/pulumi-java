@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetNodeGroupArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {
@@ -30,7 +30,7 @@ public final class GetNodeGroupArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the node group.
      * 
      */
-    @InputImport(name="nodeGroupName", required=true)
+    @Import(name="nodeGroupName", required=true)
       private final String nodeGroupName;
 
     public String getNodeGroupName() {
@@ -41,7 +41,7 @@ public final class GetNodeGroupArgs extends io.pulumi.resources.InvokeArgs {
      * Key-value map of resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

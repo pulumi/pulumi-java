@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.inputs.ModelInferenceExecutionConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelPrimaryContainerArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelVpcConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies containers in the inference pipeline. If not specified, the `primary_container` argument is required. Fields are documented below.
      * 
      */
-    @InputImport(name="containers")
+    @Import(name="containers")
       private final @Nullable Output<List<ModelContainerArgs>> containers;
 
     public Output<List<ModelContainerArgs>> getContainers() {
@@ -36,7 +36,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * Isolates the model container. No inbound or outbound network calls can be made to or from the model container.
      * 
      */
-    @InputImport(name="enableNetworkIsolation")
+    @Import(name="enableNetworkIsolation")
       private final @Nullable Output<Boolean> enableNetworkIsolation;
 
     public Output<Boolean> getEnableNetworkIsolation() {
@@ -47,7 +47,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * A role that SageMaker can assume to access model artifacts and docker images for deployment.
      * 
      */
-    @InputImport(name="executionRoleArn", required=true)
+    @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
@@ -58,7 +58,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies details of how containers in a multi-container endpoint are called. see Inference Execution Config.
      * 
      */
-    @InputImport(name="inferenceExecutionConfig")
+    @Import(name="inferenceExecutionConfig")
       private final @Nullable Output<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig;
 
     public Output<ModelInferenceExecutionConfigArgs> getInferenceExecutionConfig() {
@@ -69,7 +69,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the model (must be unique). If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -80,7 +80,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the `container` argument is required. Fields are documented below.
      * 
      */
-    @InputImport(name="primaryContainer")
+    @Import(name="primaryContainer")
       private final @Nullable Output<ModelPrimaryContainerArgs> primaryContainer;
 
     public Output<ModelPrimaryContainerArgs> getPrimaryContainer() {
@@ -91,7 +91,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -102,7 +102,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the VPC that you want your model to connect to. VpcConfig is used in hosting services and in batch transform.
      * 
      */
-    @InputImport(name="vpcConfig")
+    @Import(name="vpcConfig")
       private final @Nullable Output<ModelVpcConfigArgs> vpcConfig;
 
     public Output<ModelVpcConfigArgs> getVpcConfig() {

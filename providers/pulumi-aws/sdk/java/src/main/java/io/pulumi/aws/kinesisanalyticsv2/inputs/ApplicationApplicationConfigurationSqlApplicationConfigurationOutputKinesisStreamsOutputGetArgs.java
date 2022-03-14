@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The ARN of the destination Kinesis data stream to write to.
      * 
      */
-    @InputImport(name="resourceArn", required=true)
+    @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
     public Output<String> getResourceArn() {

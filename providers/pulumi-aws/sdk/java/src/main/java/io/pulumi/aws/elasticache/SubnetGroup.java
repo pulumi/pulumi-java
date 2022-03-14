@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.elasticache.SubnetGroupArgs;
 import io.pulumi.aws.elasticache.inputs.SubnetGroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:elasticache/subnetGroup:SubnetGroup")
 public class SubnetGroup extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * Description for the cache subnet group. Defaults to "Managed by Pulumi".
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -58,7 +58,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * Name for the cache subnet group. Elasticache converts this name to lowercase.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -72,7 +72,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * List of VPC Subnet IDs for the cache subnet group
      * 
      */
-    @OutputExport(name="subnetIds", type=List.class, parameters={String.class})
+    @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> subnetIds;
 
     /**
@@ -86,7 +86,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -100,7 +100,7 @@ public class SubnetGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

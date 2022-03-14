@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * The Hosted Zone name of the desired Hosted Zone.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -32,7 +32,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * Used with `name` field to get a private Hosted Zone.
      * 
      */
-    @InputImport(name="privateZone")
+    @Import(name="privateZone")
       private final @Nullable Boolean privateZone;
 
     public Optional<Boolean> getPrivateZone() {
@@ -43,7 +43,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * The number of Record Set in the Hosted Zone.
      * 
      */
-    @InputImport(name="resourceRecordSetCount")
+    @Import(name="resourceRecordSetCount")
       private final @Nullable Integer resourceRecordSetCount;
 
     public Optional<Integer> getResourceRecordSetCount() {
@@ -54,7 +54,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * Used with `name` field. A map of tags, each pair of which must exactly match a pair on the desired Hosted Zone.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -65,7 +65,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * Used with `name` field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {
@@ -76,7 +76,7 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
      * The Hosted Zone id of the desired Hosted Zone.
      * 
      */
-    @InputImport(name="zoneId")
+    @Import(name="zoneId")
       private final @Nullable String zoneId;
 
     public Optional<String> getZoneId() {

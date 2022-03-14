@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends io.pulumi.resour
      * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -30,7 +30,7 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends io.pulumi.resour
      * Whether the internal user database is enabled. If not set, defaults to `false` by the AWS API.
      * 
      */
-    @InputImport(name="internalUserDatabaseEnabled")
+    @Import(name="internalUserDatabaseEnabled")
       private final @Nullable Output<Boolean> internalUserDatabaseEnabled;
 
     public Output<Boolean> getInternalUserDatabaseEnabled() {
@@ -41,7 +41,7 @@ public final class DomainAdvancedSecurityOptionsGetArgs extends io.pulumi.resour
      * Configuration block for the main user. Detailed below.
      * 
      */
-    @InputImport(name="masterUserOptions")
+    @Import(name="masterUserOptions")
       private final @Nullable Output<DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs> masterUserOptions;
 
     public Output<DomainAdvancedSecurityOptionsMasterUserOptionsGetArgs> getMasterUserOptions() {

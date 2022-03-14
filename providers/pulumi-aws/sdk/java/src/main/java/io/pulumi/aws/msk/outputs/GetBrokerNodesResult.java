@@ -4,12 +4,12 @@
 package io.pulumi.aws.msk.outputs;
 
 import io.pulumi.aws.msk.outputs.GetBrokerNodesNodeInfoList;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBrokerNodesResult {
     private final String clusterArn;
     /**
@@ -19,11 +19,11 @@ public final class GetBrokerNodesResult {
     private final String id;
     private final List<GetBrokerNodesNodeInfoList> nodeInfoLists;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBrokerNodesResult(
-        @OutputCustomType.Parameter("clusterArn") String clusterArn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("nodeInfoLists") List<GetBrokerNodesNodeInfoList> nodeInfoLists) {
+        @CustomType.Parameter("clusterArn") String clusterArn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("nodeInfoLists") List<GetBrokerNodesNodeInfoList> nodeInfoLists) {
         this.clusterArn = clusterArn;
         this.id = id;
         this.nodeInfoLists = nodeInfoLists;

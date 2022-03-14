@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * certificate must be in  US-EAST-1.
      * 
      */
-    @InputImport(name="acmCertificateArn")
+    @Import(name="acmCertificateArn")
       private final @Nullable Output<String> acmCertificateArn;
 
     public Output<String> getAcmCertificateArn() {
@@ -35,7 +35,7 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
      * 
      */
-    @InputImport(name="cloudfrontDefaultCertificate")
+    @Import(name="cloudfrontDefaultCertificate")
       private final @Nullable Output<Boolean> cloudfrontDefaultCertificate;
 
     public Output<Boolean> getCloudfrontDefaultCertificate() {
@@ -48,7 +48,7 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
      * 
      */
-    @InputImport(name="iamCertificateId")
+    @Import(name="iamCertificateId")
       private final @Nullable Output<String> iamCertificateId;
 
     public Output<String> getIamCertificateId() {
@@ -70,14 +70,14 @@ public final class DistributionViewerCertificateGetArgs extends io.pulumi.resour
      * must be specified.
      * 
      */
-    @InputImport(name="minimumProtocolVersion")
+    @Import(name="minimumProtocolVersion")
       private final @Nullable Output<String> minimumProtocolVersion;
 
     public Output<String> getMinimumProtocolVersion() {
         return this.minimumProtocolVersion == null ? Output.empty() : this.minimumProtocolVersion;
     }
 
-    @InputImport(name="sslSupportMethod")
+    @Import(name="sslSupportMethod")
       private final @Nullable Output<String> sslSupportMethod;
 
     public Output<String> getSslSupportMethod() {

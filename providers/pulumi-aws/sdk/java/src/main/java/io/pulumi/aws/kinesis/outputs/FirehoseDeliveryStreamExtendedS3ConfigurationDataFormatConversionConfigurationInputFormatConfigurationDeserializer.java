@@ -5,12 +5,12 @@ package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer {
     /**
      * Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
@@ -23,10 +23,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      */
     private final @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe openXJsonSerDe;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializer(
-        @OutputCustomType.Parameter("hiveJsonSerDe") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe hiveJsonSerDe,
-        @OutputCustomType.Parameter("openXJsonSerDe") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe openXJsonSerDe) {
+        @CustomType.Parameter("hiveJsonSerDe") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe hiveJsonSerDe,
+        @CustomType.Parameter("openXJsonSerDe") @Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDe openXJsonSerDe) {
         this.hiveJsonSerDe = hiveJsonSerDe;
         this.openXJsonSerDe = openXJsonSerDe;
     }

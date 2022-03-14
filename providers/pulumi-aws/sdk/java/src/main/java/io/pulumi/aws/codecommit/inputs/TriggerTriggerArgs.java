@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TriggerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The branches that will be included in the trigger configuration. If no branches are specified, the trigger will apply to all branches.
      * 
      */
-    @InputImport(name="branches")
+    @Import(name="branches")
       private final @Nullable Output<List<String>> branches;
 
     public Output<List<String>> getBranches() {
@@ -30,7 +30,7 @@ public final class TriggerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Any custom data associated with the trigger that will be included in the information sent to the target of the trigger.
      * 
      */
-    @InputImport(name="customData")
+    @Import(name="customData")
       private final @Nullable Output<String> customData;
 
     public Output<String> getCustomData() {
@@ -41,7 +41,7 @@ public final class TriggerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the resource that is the target for a trigger. For example, the ARN of a topic in Amazon Simple Notification Service (SNS).
      * 
      */
-    @InputImport(name="destinationArn", required=true)
+    @Import(name="destinationArn", required=true)
       private final Output<String> destinationArn;
 
     public Output<String> getDestinationArn() {
@@ -52,7 +52,7 @@ public final class TriggerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The repository events that will cause the trigger to run actions in another service, such as sending a notification through Amazon Simple Notification Service (SNS). If no events are specified, the trigger will run for all repository events. Event types include: `all`, `updateReference`, `createReference`, `deleteReference`.
      * 
      */
-    @InputImport(name="events", required=true)
+    @Import(name="events", required=true)
       private final Output<List<String>> events;
 
     public Output<List<String>> getEvents() {
@@ -63,7 +63,7 @@ public final class TriggerTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the trigger.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

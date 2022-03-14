@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventTargetRedshiftTarget {
     /**
      * The name of the database.
@@ -43,14 +43,14 @@ public final class EventTargetRedshiftTarget {
      */
     private final @Nullable Boolean withEvent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventTargetRedshiftTarget(
-        @OutputCustomType.Parameter("database") String database,
-        @OutputCustomType.Parameter("dbUser") @Nullable String dbUser,
-        @OutputCustomType.Parameter("secretsManagerArn") @Nullable String secretsManagerArn,
-        @OutputCustomType.Parameter("sql") @Nullable String sql,
-        @OutputCustomType.Parameter("statementName") @Nullable String statementName,
-        @OutputCustomType.Parameter("withEvent") @Nullable Boolean withEvent) {
+        @CustomType.Parameter("database") String database,
+        @CustomType.Parameter("dbUser") @Nullable String dbUser,
+        @CustomType.Parameter("secretsManagerArn") @Nullable String secretsManagerArn,
+        @CustomType.Parameter("sql") @Nullable String sql,
+        @CustomType.Parameter("statementName") @Nullable String statementName,
+        @CustomType.Parameter("withEvent") @Nullable Boolean withEvent) {
         this.database = database;
         this.dbUser = dbUser;
         this.secretsManagerArn = secretsManagerArn;

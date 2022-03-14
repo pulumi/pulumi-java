@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.aws.cloudformation.inputs.CloudFormationTypeLoggingConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * (Optional) Amazon Resource Name (ARN) of the CloudFormation Type version. See also `type_arn`.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * Identifier of the CloudFormation Type default version.
      * 
      */
-    @InputImport(name="defaultVersionId")
+    @Import(name="defaultVersionId")
       private final @Nullable Output<String> defaultVersionId;
 
     public Output<String> getDefaultVersionId() {
@@ -42,7 +42,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * Deprecation status of the version.
      * 
      */
-    @InputImport(name="deprecatedStatus")
+    @Import(name="deprecatedStatus")
       private final @Nullable Output<String> deprecatedStatus;
 
     public Output<String> getDeprecatedStatus() {
@@ -53,7 +53,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * Description of the version.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * URL of the documentation for the CloudFormation Type.
      * 
      */
-    @InputImport(name="documentationUrl")
+    @Import(name="documentationUrl")
       private final @Nullable Output<String> documentationUrl;
 
     public Output<String> getDocumentationUrl() {
@@ -75,7 +75,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * Amazon Resource Name (ARN) of the IAM Role for CloudFormation to assume when invoking the extension. If your extension calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. When CloudFormation needs to invoke the extension handler, CloudFormation assumes this execution role to create a temporary session token, which it then passes to the extension handler, thereby supplying your extension with the appropriate credentials.
      * 
      */
-    @InputImport(name="executionRoleArn")
+    @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
@@ -86,7 +86,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * Whether the CloudFormation Type version is the default version.
      * 
      */
-    @InputImport(name="isDefaultVersion")
+    @Import(name="isDefaultVersion")
       private final @Nullable Output<Boolean> isDefaultVersion;
 
     public Output<Boolean> getIsDefaultVersion() {
@@ -97,7 +97,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * Configuration block containing logging configuration.
      * 
      */
-    @InputImport(name="loggingConfig")
+    @Import(name="loggingConfig")
       private final @Nullable Output<CloudFormationTypeLoggingConfigGetArgs> loggingConfig;
 
     public Output<CloudFormationTypeLoggingConfigGetArgs> getLoggingConfig() {
@@ -108,7 +108,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * Provisioning behavior of the CloudFormation Type.
      * 
      */
-    @InputImport(name="provisioningType")
+    @Import(name="provisioningType")
       private final @Nullable Output<String> provisioningType;
 
     public Output<String> getProvisioningType() {
@@ -119,7 +119,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * JSON document of the CloudFormation Type schema.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
@@ -130,7 +130,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * URL to the S3 bucket containing the extension project package that contains the necessary files for the extension you want to register. Must begin with `s3://` or `https://`. For example, `s3://example-bucket/example-object`.
      * 
      */
-    @InputImport(name="schemaHandlerPackage")
+    @Import(name="schemaHandlerPackage")
       private final @Nullable Output<String> schemaHandlerPackage;
 
     public Output<String> getSchemaHandlerPackage() {
@@ -141,7 +141,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * URL of the source code for the CloudFormation Type.
      * 
      */
-    @InputImport(name="sourceUrl")
+    @Import(name="sourceUrl")
       private final @Nullable Output<String> sourceUrl;
 
     public Output<String> getSourceUrl() {
@@ -152,7 +152,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * CloudFormation Registry Type. For example, `RESOURCE` or `MODULE`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -163,7 +163,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * (Optional) Amazon Resource Name (ARN) of the CloudFormation Type. See also `arn`.
      * 
      */
-    @InputImport(name="typeArn")
+    @Import(name="typeArn")
       private final @Nullable Output<String> typeArn;
 
     public Output<String> getTypeArn() {
@@ -174,7 +174,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * CloudFormation Type name. For example, `ExampleCompany::ExampleService::ExampleResource`.
      * 
      */
-    @InputImport(name="typeName")
+    @Import(name="typeName")
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {
@@ -185,7 +185,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * (Optional) Identifier of the CloudFormation Type version.
      * 
      */
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
     public Output<String> getVersionId() {
@@ -196,7 +196,7 @@ public final class CloudFormationTypeState extends io.pulumi.resources.ResourceA
      * Scope of the CloudFormation Type.
      * 
      */
-    @InputImport(name="visibility")
+    @Import(name="visibility")
       private final @Nullable Output<String> visibility;
 
     public Output<String> getVisibility() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild;
 
 import io.pulumi.aws.codebuild.inputs.WebhookFilterGroupArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
      * 
      */
-    @InputImport(name="branchFilter")
+    @Import(name="branchFilter")
       private final @Nullable Output<String> branchFilter;
 
     public Output<String> getBranchFilter() {
@@ -31,7 +31,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
      * 
      */
-    @InputImport(name="buildType")
+    @Import(name="buildType")
       private final @Nullable Output<String> buildType;
 
     public Output<String> getBuildType() {
@@ -42,7 +42,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Information about the webhook's trigger. Filter group blocks are documented below.
      * 
      */
-    @InputImport(name="filterGroups")
+    @Import(name="filterGroups")
       private final @Nullable Output<List<WebhookFilterGroupArgs>> filterGroups;
 
     public Output<List<WebhookFilterGroupArgs>> getFilterGroups() {
@@ -53,7 +53,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the build project.
      * 
      */
-    @InputImport(name="projectName", required=true)
+    @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
     public Output<String> getProjectName() {

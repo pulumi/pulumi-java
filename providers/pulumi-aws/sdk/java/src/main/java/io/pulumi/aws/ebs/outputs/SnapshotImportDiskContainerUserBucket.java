@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ebs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SnapshotImportDiskContainerUserBucket {
     /**
      * The name of the Amazon S3 bucket where the disk image is located.
@@ -20,10 +20,10 @@ public final class SnapshotImportDiskContainerUserBucket {
      */
     private final String s3Key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SnapshotImportDiskContainerUserBucket(
-        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
-        @OutputCustomType.Parameter("s3Key") String s3Key) {
+        @CustomType.Parameter("s3Bucket") String s3Bucket,
+        @CustomType.Parameter("s3Key") String s3Key) {
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;
     }

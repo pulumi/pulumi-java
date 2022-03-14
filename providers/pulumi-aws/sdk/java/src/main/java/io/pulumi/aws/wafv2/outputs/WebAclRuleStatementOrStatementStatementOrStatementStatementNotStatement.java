@@ -4,11 +4,11 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatement {
     /**
      * The statement to negate. You can use any statement that can be nested. See Statement above for details.
@@ -16,8 +16,8 @@ public final class WebAclRuleStatementOrStatementStatementOrStatementStatementNo
      */
     private final List<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatement> statements;
 
-    @OutputCustomType.Constructor
-    private WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatement(@OutputCustomType.Parameter("statements") List<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatement> statements) {
+    @CustomType.Constructor
+    private WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatement(@CustomType.Parameter("statements") List<WebAclRuleStatementOrStatementStatementOrStatementStatementNotStatementStatement> statements) {
         this.statements = statements;
     }
 

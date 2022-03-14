@@ -6,7 +6,7 @@ package io.pulumi.aws.cognito.inputs;
 import io.pulumi.aws.cognito.inputs.UserPoolLambdaConfigCustomEmailSenderGetArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolLambdaConfigCustomSmsSenderGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * ARN of the lambda creating an authentication challenge.
      * 
      */
-    @InputImport(name="createAuthChallenge")
+    @Import(name="createAuthChallenge")
       private final @Nullable Output<String> createAuthChallenge;
 
     public Output<String> getCreateAuthChallenge() {
@@ -31,7 +31,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * A custom email sender AWS Lambda trigger. See custom_email_sender Below.
      * 
      */
-    @InputImport(name="customEmailSender")
+    @Import(name="customEmailSender")
       private final @Nullable Output<UserPoolLambdaConfigCustomEmailSenderGetArgs> customEmailSender;
 
     public Output<UserPoolLambdaConfigCustomEmailSenderGetArgs> getCustomEmailSender() {
@@ -42,7 +42,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * Custom Message AWS Lambda trigger.
      * 
      */
-    @InputImport(name="customMessage")
+    @Import(name="customMessage")
       private final @Nullable Output<String> customMessage;
 
     public Output<String> getCustomMessage() {
@@ -53,7 +53,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * A custom SMS sender AWS Lambda trigger. See custom_sms_sender Below.
      * 
      */
-    @InputImport(name="customSmsSender")
+    @Import(name="customSmsSender")
       private final @Nullable Output<UserPoolLambdaConfigCustomSmsSenderGetArgs> customSmsSender;
 
     public Output<UserPoolLambdaConfigCustomSmsSenderGetArgs> getCustomSmsSender() {
@@ -64,7 +64,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * Defines the authentication challenge.
      * 
      */
-    @InputImport(name="defineAuthChallenge")
+    @Import(name="defineAuthChallenge")
       private final @Nullable Output<String> defineAuthChallenge;
 
     public Output<String> getDefineAuthChallenge() {
@@ -75,7 +75,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * The Amazon Resource Name of Key Management Service Customer master keys. Amazon Cognito uses the key to encrypt codes and temporary passwords sent to CustomEmailSender and CustomSMSSender.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -86,7 +86,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * Post-authentication AWS Lambda trigger.
      * 
      */
-    @InputImport(name="postAuthentication")
+    @Import(name="postAuthentication")
       private final @Nullable Output<String> postAuthentication;
 
     public Output<String> getPostAuthentication() {
@@ -97,7 +97,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * Post-confirmation AWS Lambda trigger.
      * 
      */
-    @InputImport(name="postConfirmation")
+    @Import(name="postConfirmation")
       private final @Nullable Output<String> postConfirmation;
 
     public Output<String> getPostConfirmation() {
@@ -108,7 +108,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * Pre-authentication AWS Lambda trigger.
      * 
      */
-    @InputImport(name="preAuthentication")
+    @Import(name="preAuthentication")
       private final @Nullable Output<String> preAuthentication;
 
     public Output<String> getPreAuthentication() {
@@ -119,7 +119,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * Pre-registration AWS Lambda trigger.
      * 
      */
-    @InputImport(name="preSignUp")
+    @Import(name="preSignUp")
       private final @Nullable Output<String> preSignUp;
 
     public Output<String> getPreSignUp() {
@@ -130,7 +130,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * Allow to customize identity token claims before token generation.
      * 
      */
-    @InputImport(name="preTokenGeneration")
+    @Import(name="preTokenGeneration")
       private final @Nullable Output<String> preTokenGeneration;
 
     public Output<String> getPreTokenGeneration() {
@@ -141,7 +141,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * User migration Lambda config type.
      * 
      */
-    @InputImport(name="userMigration")
+    @Import(name="userMigration")
       private final @Nullable Output<String> userMigration;
 
     public Output<String> getUserMigration() {
@@ -152,7 +152,7 @@ public final class UserPoolLambdaConfigGetArgs extends io.pulumi.resources.Resou
      * Verifies the authentication challenge response.
      * 
      */
-    @InputImport(name="verifyAuthChallengeResponse")
+    @Import(name="verifyAuthChallengeResponse")
       private final @Nullable Output<String> verifyAuthChallengeResponse;
 
     public Output<String> getVerifyAuthChallengeResponse() {

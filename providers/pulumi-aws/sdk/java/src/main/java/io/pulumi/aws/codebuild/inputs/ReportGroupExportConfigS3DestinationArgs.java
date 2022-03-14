@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * The name of the S3 bucket where the raw data of a report are exported.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -31,7 +31,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * **Note: the API does not currently allow setting encryption as disabled**
      * 
      */
-    @InputImport(name="encryptionDisabled")
+    @Import(name="encryptionDisabled")
       private final @Nullable Output<Boolean> encryptionDisabled;
 
     public Output<Boolean> getEncryptionDisabled() {
@@ -42,7 +42,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * The encryption key for the report's encrypted raw data. The KMS key ARN.
      * 
      */
-    @InputImport(name="encryptionKey", required=true)
+    @Import(name="encryptionKey", required=true)
       private final Output<String> encryptionKey;
 
     public Output<String> getEncryptionKey() {
@@ -53,7 +53,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * The type of build output artifact to create. Valid values are: `NONE` (default) and `ZIP`.
      * 
      */
-    @InputImport(name="packaging")
+    @Import(name="packaging")
       private final @Nullable Output<String> packaging;
 
     public Output<String> getPackaging() {
@@ -64,7 +64,7 @@ public final class ReportGroupExportConfigS3DestinationArgs extends io.pulumi.re
      * The path to the exported report's raw data results.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {

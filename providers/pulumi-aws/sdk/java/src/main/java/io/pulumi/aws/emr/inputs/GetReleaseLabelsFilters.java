@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetReleaseLabelsFilters extends io.pulumi.resources.InvokeArg
      * Optional release label application filter. For example, `Spark@2.1.0` or `Spark`.
      * 
      */
-    @InputImport(name="application")
+    @Import(name="application")
       private final @Nullable String application;
 
     public Optional<String> getApplication() {
@@ -29,7 +29,7 @@ public final class GetReleaseLabelsFilters extends io.pulumi.resources.InvokeArg
      * Optional release label version prefix filter. For example, `emr-5`.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {

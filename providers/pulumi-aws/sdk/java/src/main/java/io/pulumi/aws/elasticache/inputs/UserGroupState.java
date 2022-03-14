@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
 
     public static final UserGroupState Empty = new UserGroupState();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -27,21 +27,21 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * The current supported value is `REDIS`.
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
         return this.engine == null ? Output.empty() : this.engine;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -52,7 +52,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * The ID of the user group.
      * 
      */
-    @InputImport(name="userGroupId")
+    @Import(name="userGroupId")
       private final @Nullable Output<String> userGroupId;
 
     public Output<String> getUserGroupId() {
@@ -63,7 +63,7 @@ public final class UserGroupState extends io.pulumi.resources.ResourceArgs {
      * The list of user IDs that belong to the user group.
      * 
      */
-    @InputImport(name="userIds")
+    @Import(name="userIds")
       private final @Nullable Output<List<String>> userIds;
 
     public Output<List<String>> getUserIds() {

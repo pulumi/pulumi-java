@@ -4,12 +4,12 @@
 package io.pulumi.aws.waf.outputs;
 
 import io.pulumi.aws.waf.outputs.SizeConstraintSetSizeConstraintFieldToMatch;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SizeConstraintSetSizeConstraint {
     /**
      * The type of comparison you want to perform.
@@ -40,12 +40,12 @@ public final class SizeConstraintSetSizeConstraint {
      */
     private final String textTransformation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SizeConstraintSetSizeConstraint(
-        @OutputCustomType.Parameter("comparisonOperator") String comparisonOperator,
-        @OutputCustomType.Parameter("fieldToMatch") SizeConstraintSetSizeConstraintFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("textTransformation") String textTransformation) {
+        @CustomType.Parameter("comparisonOperator") String comparisonOperator,
+        @CustomType.Parameter("fieldToMatch") SizeConstraintSetSizeConstraintFieldToMatch fieldToMatch,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("textTransformation") String textTransformation) {
         this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
         this.size = size;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
      * 
      */
-    @InputImport(name="allowUnassociatedTargets")
+    @Import(name="allowUnassociatedTargets")
       private final @Nullable Output<Boolean> allowUnassociatedTargets;
 
     public Output<Boolean> getAllowUnassociatedTargets() {
@@ -32,7 +32,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
      * 
      */
-    @InputImport(name="cutoff")
+    @Import(name="cutoff")
       private final @Nullable Output<Integer> cutoff;
 
     public Output<Integer> getCutoff() {
@@ -43,7 +43,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * A description for the maintenance window.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * The duration of the Maintenance Window in hours.
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<Integer> duration;
 
     public Output<Integer> getDuration() {
@@ -65,7 +65,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * Whether the maintenance window is enabled. Default: `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -76,7 +76,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
      * 
      */
-    @InputImport(name="endDate")
+    @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
     public Output<String> getEndDate() {
@@ -87,7 +87,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * The name of the maintenance window.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -98,7 +98,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -109,7 +109,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.
      * 
      */
-    @InputImport(name="scheduleOffset")
+    @Import(name="scheduleOffset")
       private final @Nullable Output<Integer> scheduleOffset;
 
     public Output<Integer> getScheduleOffset() {
@@ -120,7 +120,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
      * 
      */
-    @InputImport(name="scheduleTimezone")
+    @Import(name="scheduleTimezone")
       private final @Nullable Output<String> scheduleTimezone;
 
     public Output<String> getScheduleTimezone() {
@@ -131,7 +131,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
      * 
      */
-    @InputImport(name="startDate")
+    @Import(name="startDate")
       private final @Nullable Output<String> startDate;
 
     public Output<String> getStartDate() {
@@ -142,7 +142,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -153,7 +153,7 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

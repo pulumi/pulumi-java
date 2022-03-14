@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
      * (Optional) Indicates whether users can use Android devices to access their WorkSpaces.
      * 
      */
-    @InputImport(name="deviceTypeAndroid", required=true)
+    @Import(name="deviceTypeAndroid", required=true)
       private final String deviceTypeAndroid;
 
     public String getDeviceTypeAndroid() {
@@ -27,7 +27,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
      * (Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
      * 
      */
-    @InputImport(name="deviceTypeChromeos", required=true)
+    @Import(name="deviceTypeChromeos", required=true)
       private final String deviceTypeChromeos;
 
     public String getDeviceTypeChromeos() {
@@ -38,7 +38,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
      * (Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
      * 
      */
-    @InputImport(name="deviceTypeIos", required=true)
+    @Import(name="deviceTypeIos", required=true)
       private final String deviceTypeIos;
 
     public String getDeviceTypeIos() {
@@ -49,7 +49,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
      * (Optional) Indicates whether users can use Linux clients to access their WorkSpaces.
      * 
      */
-    @InputImport(name="deviceTypeLinux", required=true)
+    @Import(name="deviceTypeLinux", required=true)
       private final String deviceTypeLinux;
 
     public String getDeviceTypeLinux() {
@@ -60,7 +60,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
      * (Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
      * 
      */
-    @InputImport(name="deviceTypeOsx", required=true)
+    @Import(name="deviceTypeOsx", required=true)
       private final String deviceTypeOsx;
 
     public String getDeviceTypeOsx() {
@@ -71,7 +71,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
      * (Optional) Indicates whether users can access their WorkSpaces through a web browser.
      * 
      */
-    @InputImport(name="deviceTypeWeb", required=true)
+    @Import(name="deviceTypeWeb", required=true)
       private final String deviceTypeWeb;
 
     public String getDeviceTypeWeb() {
@@ -82,7 +82,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
      * (Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
      * 
      */
-    @InputImport(name="deviceTypeWindows", required=true)
+    @Import(name="deviceTypeWindows", required=true)
       private final String deviceTypeWindows;
 
     public String getDeviceTypeWindows() {
@@ -93,7 +93,7 @@ public final class GetDirectoryWorkspaceAccessProperty extends io.pulumi.resourc
      * (Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
      * 
      */
-    @InputImport(name="deviceTypeZeroclient", required=true)
+    @Import(name="deviceTypeZeroclient", required=true)
       private final String deviceTypeZeroclient;
 
     public String getDeviceTypeZeroclient() {

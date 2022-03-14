@@ -5,12 +5,12 @@ package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition;
 import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclLoggingConfigurationLoggingFilterFilterCondition {
     /**
      * A single action condition. See Action Condition below for more details.
@@ -23,10 +23,10 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterCondition {
      */
     private final @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition labelNameCondition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclLoggingConfigurationLoggingFilterFilterCondition(
-        @OutputCustomType.Parameter("actionCondition") @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition actionCondition,
-        @OutputCustomType.Parameter("labelNameCondition") @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition labelNameCondition) {
+        @CustomType.Parameter("actionCondition") @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition actionCondition,
+        @CustomType.Parameter("labelNameCondition") @Nullable WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameCondition labelNameCondition) {
         this.actionCondition = actionCondition;
         this.labelNameCondition = labelNameCondition;
     }

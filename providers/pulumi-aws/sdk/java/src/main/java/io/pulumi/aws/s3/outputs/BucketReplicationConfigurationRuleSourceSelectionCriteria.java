@@ -4,12 +4,12 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigurationRuleSourceSelectionCriteria {
     /**
      * Match SSE-KMS encrypted objects (documented below). If specified, `replica_kms_key_id`
@@ -18,8 +18,8 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteria {
      */
     private final @Nullable BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects sseKmsEncryptedObjects;
 
-    @OutputCustomType.Constructor
-    private BucketReplicationConfigurationRuleSourceSelectionCriteria(@OutputCustomType.Parameter("sseKmsEncryptedObjects") @Nullable BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects sseKmsEncryptedObjects) {
+    @CustomType.Constructor
+    private BucketReplicationConfigurationRuleSourceSelectionCriteria(@CustomType.Parameter("sseKmsEncryptedObjects") @Nullable BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects sseKmsEncryptedObjects) {
         this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
     }
 

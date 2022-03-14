@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends io
      * Specifies the max number of log events in a batch, up to `10000`. The default value is `1000`.
      * 
      */
-    @InputImport(name="batchCount")
+    @Import(name="batchCount")
       private final @Nullable Output<Integer> batchCount;
 
     public Output<Integer> getBatchCount() {
@@ -30,7 +30,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends io
      * Specifies the maximum size of log events in a batch, in bytes, up to `1048576` bytes. The default value is `32768` bytes.
      * 
      */
-    @InputImport(name="batchSize")
+    @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
     public Output<Integer> getBatchSize() {
@@ -41,7 +41,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends io
      * Specifies the time duration for the batching of log events. The minimum value is `5000` and default value is `5000`.
      * 
      */
-    @InputImport(name="bufferDuration")
+    @Import(name="bufferDuration")
       private final @Nullable Output<Integer> bufferDuration;
 
     public Output<Integer> getBufferDuration() {
@@ -52,7 +52,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends io
      * Specifies how the timestamp is extracted from logs. For more information, see the CloudWatch Logs Agent Reference (https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AgentReference.html).
      * 
      */
-    @InputImport(name="datetimeFormat")
+    @Import(name="datetimeFormat")
       private final @Nullable Output<String> datetimeFormat;
 
     public Output<String> getDatetimeFormat() {
@@ -63,7 +63,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends io
      * Specifies the encoding of the log file so that the file can be read correctly. The default is `utf_8`.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
     public Output<String> getEncoding() {
@@ -74,7 +74,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends io
      * Specifies log files that you want to push to CloudWatch Logs. File can point to a specific file or multiple files (by using wild card characters such as /var/log/system.log*).
      * 
      */
-    @InputImport(name="file", required=true)
+    @Import(name="file", required=true)
       private final Output<String> file;
 
     public Output<String> getFile() {
@@ -85,7 +85,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends io
      * Specifies the range of lines for identifying a file. The valid values are one number, or two dash-delimited numbers, such as `1`, `2-5`. The default value is `1`.
      * 
      */
-    @InputImport(name="fileFingerprintLines")
+    @Import(name="fileFingerprintLines")
       private final @Nullable Output<String> fileFingerprintLines;
 
     public Output<String> getFileFingerprintLines() {
@@ -96,7 +96,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends io
      * Specifies where to start to read data (`start_of_file` or `end_of_file`). The default is `start_of_file`.
      * 
      */
-    @InputImport(name="initialPosition")
+    @Import(name="initialPosition")
       private final @Nullable Output<String> initialPosition;
 
     public Output<String> getInitialPosition() {
@@ -107,7 +107,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends io
      * Specifies the destination log group. A log group is created automatically if it doesn't already exist.
      * 
      */
-    @InputImport(name="logGroupName", required=true)
+    @Import(name="logGroupName", required=true)
       private final Output<String> logGroupName;
 
     public Output<String> getLogGroupName() {
@@ -118,7 +118,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends io
      * Specifies the pattern for identifying the start of a log message.
      * 
      */
-    @InputImport(name="multilineStartPattern")
+    @Import(name="multilineStartPattern")
       private final @Nullable Output<String> multilineStartPattern;
 
     public Output<String> getMultilineStartPattern() {
@@ -129,7 +129,7 @@ public final class CustomLayerCloudwatchConfigurationLogStreamGetArgs extends io
      * Specifies the time zone of log event time stamps.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

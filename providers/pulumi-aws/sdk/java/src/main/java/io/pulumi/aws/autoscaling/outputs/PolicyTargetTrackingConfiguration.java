@@ -5,14 +5,14 @@ package io.pulumi.aws.autoscaling.outputs;
 
 import io.pulumi.aws.autoscaling.outputs.PolicyTargetTrackingConfigurationCustomizedMetricSpecification;
 import io.pulumi.aws.autoscaling.outputs.PolicyTargetTrackingConfigurationPredefinedMetricSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyTargetTrackingConfiguration {
     /**
      * A customized metric. Conflicts with `predefined_metric_specification`.
@@ -35,12 +35,12 @@ public final class PolicyTargetTrackingConfiguration {
      */
     private final Double targetValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyTargetTrackingConfiguration(
-        @OutputCustomType.Parameter("customizedMetricSpecification") @Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecification customizedMetricSpecification,
-        @OutputCustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
-        @OutputCustomType.Parameter("predefinedMetricSpecification") @Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecification predefinedMetricSpecification,
-        @OutputCustomType.Parameter("targetValue") Double targetValue) {
+        @CustomType.Parameter("customizedMetricSpecification") @Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecification customizedMetricSpecification,
+        @CustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
+        @CustomType.Parameter("predefinedMetricSpecification") @Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecification predefinedMetricSpecification,
+        @CustomType.Parameter("targetValue") Double targetValue) {
         this.customizedMetricSpecification = customizedMetricSpecification;
         this.disableScaleIn = disableScaleIn;
         this.predefinedMetricSpecification = predefinedMetricSpecification;

@@ -8,7 +8,7 @@ import io.pulumi.aws.securityhub.InsightArgs;
 import io.pulumi.aws.securityhub.inputs.InsightState;
 import io.pulumi.aws.securityhub.outputs.InsightFilters;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class Insight extends io.pulumi.resources.CustomResource {
      * ARN of the insight.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class Insight extends io.pulumi.resources.CustomResource {
      * A configuration block including one or more (up to 10 distinct) attributes used to filter the findings included in the insight. The insight only includes findings that match criteria defined in the filters. See filters below for more details.
      * 
      */
-    @OutputExport(name="filters", type=InsightFilters.class, parameters={})
+    @Export(name="filters", type=InsightFilters.class, parameters={})
     private Output<InsightFilters> filters;
 
     /**
@@ -61,7 +61,7 @@ public class Insight extends io.pulumi.resources.CustomResource {
      * The attribute used to group the findings for the insight e.g., if an insight is grouped by `ResourceId`, then the insight produces a list of resource identifiers.
      * 
      */
-    @OutputExport(name="groupByAttribute", type=String.class, parameters={})
+    @Export(name="groupByAttribute", type=String.class, parameters={})
     private Output<String> groupByAttribute;
 
     /**
@@ -75,7 +75,7 @@ public class Insight extends io.pulumi.resources.CustomResource {
      * The name of the custom insight.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

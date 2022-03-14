@@ -5,7 +5,7 @@ package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.aws.appconfig.inputs.ConfigurationProfileValidatorGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * The application ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -32,7 +32,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * The Amazon Resource Name (ARN) of the AppConfig Configuration Profile.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * The configuration profile ID.
      * 
      */
-    @InputImport(name="configurationProfileId")
+    @Import(name="configurationProfileId")
       private final @Nullable Output<String> configurationProfileId;
 
     public Output<String> getConfigurationProfileId() {
@@ -54,7 +54,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * The description of the configuration profile. Can be at most 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -65,7 +65,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * A URI to locate the configuration. You can specify the AWS AppConfig hosted configuration store, Systems Manager (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted configuration store, specify `hosted`. For an SSM document, specify either the document name in the format `ssm-document://<Document_name>` or the Amazon Resource Name (ARN). For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter_name>` or the ARN. For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey>`.
      * 
      */
-    @InputImport(name="locationUri")
+    @Import(name="locationUri")
       private final @Nullable Output<String> locationUri;
 
     public Output<String> getLocationUri() {
@@ -76,7 +76,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * The name for the configuration profile. Must be between 1 and 64 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * The ARN of an IAM role with permission to access the configuration at the specified `location_uri`. A retrieval role ARN is not required for configurations stored in the AWS AppConfig `hosted` configuration store. It is required for all other sources that store your configuration.
      * 
      */
-    @InputImport(name="retrievalRoleArn")
+    @Import(name="retrievalRoleArn")
       private final @Nullable Output<String> retrievalRoleArn;
 
     public Output<String> getRetrievalRoleArn() {
@@ -98,7 +98,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -109,7 +109,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -120,7 +120,7 @@ public final class ConfigurationProfileState extends io.pulumi.resources.Resourc
      * A set of methods for validating the configuration. Maximum of 2. See Validator below for more details.
      * 
      */
-    @InputImport(name="validators")
+    @Import(name="validators")
       private final @Nullable Output<List<ConfigurationProfileValidatorGetArgs>> validators;
 
     public Output<List<ConfigurationProfileValidatorGetArgs>> getValidators() {

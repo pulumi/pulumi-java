@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLambdaFunctionAssociationResult {
     private final String functionArn;
     /**
@@ -17,11 +17,11 @@ public final class GetLambdaFunctionAssociationResult {
     private final String id;
     private final String instanceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLambdaFunctionAssociationResult(
-        @OutputCustomType.Parameter("functionArn") String functionArn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceId") String instanceId) {
+        @CustomType.Parameter("functionArn") String functionArn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceId") String instanceId) {
         this.functionArn = functionArn;
         this.id = id;
         this.instanceId = instanceId;

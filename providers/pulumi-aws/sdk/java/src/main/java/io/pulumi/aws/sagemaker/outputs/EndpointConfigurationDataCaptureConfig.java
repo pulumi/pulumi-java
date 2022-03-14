@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader;
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationDataCaptureConfigCaptureOption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointConfigurationDataCaptureConfig {
     /**
      * The content type headers to capture. Fields are documented below.
@@ -47,14 +47,14 @@ public final class EndpointConfigurationDataCaptureConfig {
      */
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointConfigurationDataCaptureConfig(
-        @OutputCustomType.Parameter("captureContentTypeHeader") @Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader captureContentTypeHeader,
-        @OutputCustomType.Parameter("captureOptions") List<EndpointConfigurationDataCaptureConfigCaptureOption> captureOptions,
-        @OutputCustomType.Parameter("destinationS3Uri") String destinationS3Uri,
-        @OutputCustomType.Parameter("enableCapture") @Nullable Boolean enableCapture,
-        @OutputCustomType.Parameter("initialSamplingPercentage") Integer initialSamplingPercentage,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
+        @CustomType.Parameter("captureContentTypeHeader") @Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeader captureContentTypeHeader,
+        @CustomType.Parameter("captureOptions") List<EndpointConfigurationDataCaptureConfigCaptureOption> captureOptions,
+        @CustomType.Parameter("destinationS3Uri") String destinationS3Uri,
+        @CustomType.Parameter("enableCapture") @Nullable Boolean enableCapture,
+        @CustomType.Parameter("initialSamplingPercentage") Integer initialSamplingPercentage,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.captureContentTypeHeader = captureContentTypeHeader;
         this.captureOptions = captureOptions;
         this.destinationS3Uri = destinationS3Uri;

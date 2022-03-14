@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.workspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDirectoryWorkspaceCreationProperty {
     /**
      * The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
@@ -36,13 +36,13 @@ public final class GetDirectoryWorkspaceCreationProperty {
      */
     private final Boolean userEnabledAsLocalAdministrator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDirectoryWorkspaceCreationProperty(
-        @OutputCustomType.Parameter("customSecurityGroupId") String customSecurityGroupId,
-        @OutputCustomType.Parameter("defaultOu") String defaultOu,
-        @OutputCustomType.Parameter("enableInternetAccess") Boolean enableInternetAccess,
-        @OutputCustomType.Parameter("enableMaintenanceMode") Boolean enableMaintenanceMode,
-        @OutputCustomType.Parameter("userEnabledAsLocalAdministrator") Boolean userEnabledAsLocalAdministrator) {
+        @CustomType.Parameter("customSecurityGroupId") String customSecurityGroupId,
+        @CustomType.Parameter("defaultOu") String defaultOu,
+        @CustomType.Parameter("enableInternetAccess") Boolean enableInternetAccess,
+        @CustomType.Parameter("enableMaintenanceMode") Boolean enableMaintenanceMode,
+        @CustomType.Parameter("userEnabledAsLocalAdministrator") Boolean userEnabledAsLocalAdministrator) {
         this.customSecurityGroupId = customSecurityGroupId;
         this.defaultOu = defaultOu;
         this.enableInternetAccess = enableInternetAccess;

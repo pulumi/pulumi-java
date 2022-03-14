@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ResolverFirewallDomainListState extends io.pulumi.resources.R
      * The ARN (Amazon Resource Name) of the domain list.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ResolverFirewallDomainListState extends io.pulumi.resources.R
      * A array of domains for the firewall domain list.
      * 
      */
-    @InputImport(name="domains")
+    @Import(name="domains")
       private final @Nullable Output<List<String>> domains;
 
     public Output<List<String>> getDomains() {
@@ -42,7 +42,7 @@ public final class ResolverFirewallDomainListState extends io.pulumi.resources.R
      * A name that lets you identify the domain list, to manage and use it.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class ResolverFirewallDomainListState extends io.pulumi.resources.R
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class ResolverFirewallDomainListState extends io.pulumi.resources.R
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -4,12 +4,12 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig {
     /**
      * Determines whether any URL query strings in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
@@ -22,10 +22,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
      */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig(
-        @OutputCustomType.Parameter("queryStringBehavior") String queryStringBehavior,
-        @OutputCustomType.Parameter("queryStrings") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
+        @CustomType.Parameter("queryStringBehavior") String queryStringBehavior,
+        @CustomType.Parameter("queryStrings") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
         this.queryStringBehavior = queryStringBehavior;
         this.queryStrings = queryStrings;
     }

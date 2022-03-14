@@ -4,14 +4,14 @@
 package io.pulumi.aws.autoscaling.outputs;
 
 import io.pulumi.aws.autoscaling.outputs.GetGroupLaunchTemplate;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the Auto Scaling group.
@@ -102,28 +102,28 @@ public final class GetGroupResult {
      */
     private final String vpcZoneIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
-        @OutputCustomType.Parameter("defaultCooldown") Integer defaultCooldown,
-        @OutputCustomType.Parameter("desiredCapacity") Integer desiredCapacity,
-        @OutputCustomType.Parameter("healthCheckGracePeriod") Integer healthCheckGracePeriod,
-        @OutputCustomType.Parameter("healthCheckType") String healthCheckType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("launchConfiguration") String launchConfiguration,
-        @OutputCustomType.Parameter("launchTemplates") List<GetGroupLaunchTemplate> launchTemplates,
-        @OutputCustomType.Parameter("loadBalancers") List<String> loadBalancers,
-        @OutputCustomType.Parameter("maxSize") Integer maxSize,
-        @OutputCustomType.Parameter("minSize") Integer minSize,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("newInstancesProtectedFromScaleIn") Boolean newInstancesProtectedFromScaleIn,
-        @OutputCustomType.Parameter("placementGroup") String placementGroup,
-        @OutputCustomType.Parameter("serviceLinkedRoleArn") String serviceLinkedRoleArn,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("targetGroupArns") List<String> targetGroupArns,
-        @OutputCustomType.Parameter("terminationPolicies") List<String> terminationPolicies,
-        @OutputCustomType.Parameter("vpcZoneIdentifier") String vpcZoneIdentifier) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @CustomType.Parameter("defaultCooldown") Integer defaultCooldown,
+        @CustomType.Parameter("desiredCapacity") Integer desiredCapacity,
+        @CustomType.Parameter("healthCheckGracePeriod") Integer healthCheckGracePeriod,
+        @CustomType.Parameter("healthCheckType") String healthCheckType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("launchConfiguration") String launchConfiguration,
+        @CustomType.Parameter("launchTemplates") List<GetGroupLaunchTemplate> launchTemplates,
+        @CustomType.Parameter("loadBalancers") List<String> loadBalancers,
+        @CustomType.Parameter("maxSize") Integer maxSize,
+        @CustomType.Parameter("minSize") Integer minSize,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("newInstancesProtectedFromScaleIn") Boolean newInstancesProtectedFromScaleIn,
+        @CustomType.Parameter("placementGroup") String placementGroup,
+        @CustomType.Parameter("serviceLinkedRoleArn") String serviceLinkedRoleArn,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("targetGroupArns") List<String> targetGroupArns,
+        @CustomType.Parameter("terminationPolicies") List<String> terminationPolicies,
+        @CustomType.Parameter("vpcZoneIdentifier") String vpcZoneIdentifier) {
         this.arn = arn;
         this.availabilityZones = availabilityZones;
         this.defaultCooldown = defaultCooldown;

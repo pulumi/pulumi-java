@@ -5,7 +5,7 @@ package io.pulumi.aws.appautoscaling.inputs;
 
 import io.pulumi.aws.appautoscaling.inputs.PolicyStepScalingPolicyConfigurationStepAdjustmentArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PolicyStepScalingPolicyConfigurationArgs extends io.pulumi.re
      * Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
      * 
      */
-    @InputImport(name="adjustmentType")
+    @Import(name="adjustmentType")
       private final @Nullable Output<String> adjustmentType;
 
     public Output<String> getAdjustmentType() {
@@ -32,7 +32,7 @@ public final class PolicyStepScalingPolicyConfigurationArgs extends io.pulumi.re
      * The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
      * 
      */
-    @InputImport(name="cooldown")
+    @Import(name="cooldown")
       private final @Nullable Output<Integer> cooldown;
 
     public Output<Integer> getCooldown() {
@@ -43,7 +43,7 @@ public final class PolicyStepScalingPolicyConfigurationArgs extends io.pulumi.re
      * The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
      * 
      */
-    @InputImport(name="metricAggregationType")
+    @Import(name="metricAggregationType")
       private final @Nullable Output<String> metricAggregationType;
 
     public Output<String> getMetricAggregationType() {
@@ -54,7 +54,7 @@ public final class PolicyStepScalingPolicyConfigurationArgs extends io.pulumi.re
      * The minimum number to adjust your scalable dimension as a result of a scaling activity. If the adjustment type is PercentChangeInCapacity, the scaling policy changes the scalable dimension of the scalable target by this amount.
      * 
      */
-    @InputImport(name="minAdjustmentMagnitude")
+    @Import(name="minAdjustmentMagnitude")
       private final @Nullable Output<Integer> minAdjustmentMagnitude;
 
     public Output<Integer> getMinAdjustmentMagnitude() {
@@ -65,7 +65,7 @@ public final class PolicyStepScalingPolicyConfigurationArgs extends io.pulumi.re
      * A set of adjustments that manage scaling. These have the following structure:
      * 
      */
-    @InputImport(name="stepAdjustments")
+    @Import(name="stepAdjustments")
       private final @Nullable Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentArgs>> stepAdjustments;
 
     public Output<List<PolicyStepScalingPolicyConfigurationStepAdjustmentArgs>> getStepAdjustments() {

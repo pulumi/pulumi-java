@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOriginGroupFailoverCriteriaGetArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOriginGroupMemberGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DistributionOriginGroupGetArgs extends io.pulumi.resources.Re
      * The failover criteria for when to failover to the secondary origin
      * 
      */
-    @InputImport(name="failoverCriteria", required=true)
+    @Import(name="failoverCriteria", required=true)
       private final Output<DistributionOriginGroupFailoverCriteriaGetArgs> failoverCriteria;
 
     public Output<DistributionOriginGroupFailoverCriteriaGetArgs> getFailoverCriteria() {
@@ -31,7 +31,7 @@ public final class DistributionOriginGroupGetArgs extends io.pulumi.resources.Re
      * Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
      * 
      */
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<DistributionOriginGroupMemberGetArgs>> members;
 
     public Output<List<DistributionOriginGroupMemberGetArgs>> getMembers() {
@@ -42,7 +42,7 @@ public final class DistributionOriginGroupGetArgs extends io.pulumi.resources.Re
      * The unique identifier of the member origin
      * 
      */
-    @InputImport(name="originId", required=true)
+    @Import(name="originId", required=true)
       private final Output<String> originId;
 
     public Output<String> getOriginId() {

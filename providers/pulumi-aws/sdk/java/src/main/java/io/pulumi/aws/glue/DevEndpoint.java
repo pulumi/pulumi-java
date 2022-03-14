@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.glue.DevEndpointArgs;
 import io.pulumi.aws.glue.inputs.DevEndpointState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
@@ -36,7 +36,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * A map of arguments used to configure the endpoint.
      * 
      */
-    @OutputExport(name="arguments", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="arguments", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> arguments;
 
     /**
@@ -50,7 +50,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The ARN of the endpoint.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -64,7 +64,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The AWS availability zone where this endpoint is located.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output<String> availabilityZone;
 
     /**
@@ -78,7 +78,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
      * 
      */
-    @OutputExport(name="extraJarsS3Path", type=String.class, parameters={})
+    @Export(name="extraJarsS3Path", type=String.class, parameters={})
     private Output</* @Nullable */ String> extraJarsS3Path;
 
     /**
@@ -92,7 +92,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
      * 
      */
-    @OutputExport(name="extraPythonLibsS3Path", type=String.class, parameters={})
+    @Export(name="extraPythonLibsS3Path", type=String.class, parameters={})
     private Output</* @Nullable */ String> extraPythonLibsS3Path;
 
     /**
@@ -106,7 +106,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The reason for a current failure in this endpoint.
      * 
      */
-    @OutputExport(name="failureReason", type=String.class, parameters={})
+    @Export(name="failureReason", type=String.class, parameters={})
     private Output<String> failureReason;
 
     /**
@@ -120,7 +120,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * -  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
      * 
      */
-    @OutputExport(name="glueVersion", type=String.class, parameters={})
+    @Export(name="glueVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> glueVersion;
 
     /**
@@ -134,7 +134,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The name of this endpoint. It must be unique in your account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -148,7 +148,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
      * 
      */
-    @OutputExport(name="numberOfNodes", type=Integer.class, parameters={})
+    @Export(name="numberOfNodes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> numberOfNodes;
 
     /**
@@ -162,7 +162,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
      * 
      */
-    @OutputExport(name="numberOfWorkers", type=Integer.class, parameters={})
+    @Export(name="numberOfWorkers", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> numberOfWorkers;
 
     /**
@@ -176,7 +176,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
      * 
      */
-    @OutputExport(name="privateAddress", type=String.class, parameters={})
+    @Export(name="privateAddress", type=String.class, parameters={})
     private Output<String> privateAddress;
 
     /**
@@ -190,7 +190,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The public IP address used by this endpoint. The PublicAddress field is present only when you create a non-VPC endpoint.
      * 
      */
-    @OutputExport(name="publicAddress", type=String.class, parameters={})
+    @Export(name="publicAddress", type=String.class, parameters={})
     private Output<String> publicAddress;
 
     /**
@@ -204,7 +204,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The public key to be used by this endpoint for authentication.
      * 
      */
-    @OutputExport(name="publicKey", type=String.class, parameters={})
+    @Export(name="publicKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicKey;
 
     /**
@@ -218,7 +218,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * A list of public keys to be used by this endpoint for authentication.
      * 
      */
-    @OutputExport(name="publicKeys", type=List.class, parameters={String.class})
+    @Export(name="publicKeys", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> publicKeys;
 
     /**
@@ -232,7 +232,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The IAM role for this endpoint.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -246,7 +246,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The name of the Security Configuration structure to be used with this endpoint.
      * 
      */
-    @OutputExport(name="securityConfiguration", type=String.class, parameters={})
+    @Export(name="securityConfiguration", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityConfiguration;
 
     /**
@@ -260,7 +260,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * Security group IDs for the security groups to be used by this endpoint.
      * 
      */
-    @OutputExport(name="securityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="securityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> securityGroupIds;
 
     /**
@@ -274,7 +274,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The current status of this endpoint.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -288,7 +288,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The subnet ID for the new endpoint to use.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetId;
 
     /**
@@ -302,7 +302,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -316,7 +316,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -330,7 +330,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * he ID of the VPC used by this endpoint.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
@@ -344,7 +344,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
      * 
      */
-    @OutputExport(name="workerType", type=String.class, parameters={})
+    @Export(name="workerType", type=String.class, parameters={})
     private Output</* @Nullable */ String> workerType;
 
     /**
@@ -358,7 +358,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The YARN endpoint address used by this endpoint.
      * 
      */
-    @OutputExport(name="yarnEndpointAddress", type=String.class, parameters={})
+    @Export(name="yarnEndpointAddress", type=String.class, parameters={})
     private Output<String> yarnEndpointAddress;
 
     /**
@@ -372,7 +372,7 @@ public class DevEndpoint extends io.pulumi.resources.CustomResource {
      * The Apache Zeppelin port for the remote Apache Spark interpreter.
      * 
      */
-    @OutputExport(name="zeppelinRemoteSparkInterpreterPort", type=Integer.class, parameters={})
+    @Export(name="zeppelinRemoteSparkInterpreterPort", type=Integer.class, parameters={})
     private Output<Integer> zeppelinRemoteSparkInterpreterPort;
 
     /**

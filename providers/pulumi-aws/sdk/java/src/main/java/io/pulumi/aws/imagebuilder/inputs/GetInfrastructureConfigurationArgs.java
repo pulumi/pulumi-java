@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetInfrastructureConfigurationArgs extends io.pulumi.resource
      * Amazon Resource Name (ARN) of the infrastructure configuration.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
@@ -30,7 +30,7 @@ public final class GetInfrastructureConfigurationArgs extends io.pulumi.resource
      * Key-value map of resource tags for the infrastructure created by the infrastructure configuration.
      * 
      */
-    @InputImport(name="resourceTags")
+    @Import(name="resourceTags")
       private final @Nullable Map<String,String> resourceTags;
 
     public Map<String,String> getResourceTags() {
@@ -41,7 +41,7 @@ public final class GetInfrastructureConfigurationArgs extends io.pulumi.resource
      * Key-value map of resource tags for the infrastructure configuration.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

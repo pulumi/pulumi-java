@@ -10,7 +10,7 @@ import io.pulumi.aws.appsync.outputs.ResolverCachingConfig;
 import io.pulumi.aws.appsync.outputs.ResolverPipelineConfig;
 import io.pulumi.aws.appsync.outputs.ResolverSyncConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * The API ID for the GraphQL API.
      * 
      */
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
     /**
@@ -50,7 +50,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * The ARN
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -64,7 +64,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * The CachingConfig.
      * 
      */
-    @OutputExport(name="cachingConfig", type=ResolverCachingConfig.class, parameters={})
+    @Export(name="cachingConfig", type=ResolverCachingConfig.class, parameters={})
     private Output</* @Nullable */ ResolverCachingConfig> cachingConfig;
 
     /**
@@ -78,7 +78,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * The DataSource name.
      * 
      */
-    @OutputExport(name="dataSource", type=String.class, parameters={})
+    @Export(name="dataSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataSource;
 
     /**
@@ -92,7 +92,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * The field name from the schema defined in the GraphQL API.
      * 
      */
-    @OutputExport(name="field", type=String.class, parameters={})
+    @Export(name="field", type=String.class, parameters={})
     private Output<String> field;
 
     /**
@@ -106,7 +106,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * The resolver type. Valid values are `UNIT` and `PIPELINE`.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -120,7 +120,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * The maximum batching size for a resolver. Valid values are between `0` and `2000`.
      * 
      */
-    @OutputExport(name="maxBatchSize", type=Integer.class, parameters={})
+    @Export(name="maxBatchSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxBatchSize;
 
     /**
@@ -134,7 +134,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * The PipelineConfig.
      * 
      */
-    @OutputExport(name="pipelineConfig", type=ResolverPipelineConfig.class, parameters={})
+    @Export(name="pipelineConfig", type=ResolverPipelineConfig.class, parameters={})
     private Output</* @Nullable */ ResolverPipelineConfig> pipelineConfig;
 
     /**
@@ -148,7 +148,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
-    @OutputExport(name="requestTemplate", type=String.class, parameters={})
+    @Export(name="requestTemplate", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestTemplate;
 
     /**
@@ -162,7 +162,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
-    @OutputExport(name="responseTemplate", type=String.class, parameters={})
+    @Export(name="responseTemplate", type=String.class, parameters={})
     private Output</* @Nullable */ String> responseTemplate;
 
     /**
@@ -176,7 +176,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * Describes a Sync configuration for a resolver. See Sync Config.
      * 
      */
-    @OutputExport(name="syncConfig", type=ResolverSyncConfig.class, parameters={})
+    @Export(name="syncConfig", type=ResolverSyncConfig.class, parameters={})
     private Output</* @Nullable */ ResolverSyncConfig> syncConfig;
 
     /**
@@ -190,7 +190,7 @@ public class Resolver extends io.pulumi.resources.CustomResource {
      * The type name from the schema defined in the GraphQL API.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * Amazon Resource Name (ARN) of the rule
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * Description of the rule
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * List of AWS account identifiers to exclude from the rule
      * 
      */
-    @InputImport(name="excludedAccounts")
+    @Import(name="excludedAccounts")
       private final @Nullable Output<List<String>> excludedAccounts;
 
     public Output<List<String>> getExcludedAccounts() {
@@ -52,7 +52,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * A string in JSON format that is passed to the AWS Config Rule Lambda Function
      * 
      */
-    @InputImport(name="inputParameters")
+    @Import(name="inputParameters")
       private final @Nullable Output<String> inputParameters;
 
     public Output<String> getInputParameters() {
@@ -63,7 +63,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * Amazon Resource Name (ARN) of the rule Lambda Function
      * 
      */
-    @InputImport(name="lambdaFunctionArn")
+    @Import(name="lambdaFunctionArn")
       private final @Nullable Output<String> lambdaFunctionArn;
 
     public Output<String> getLambdaFunctionArn() {
@@ -74,7 +74,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * The maximum frequency with which AWS Config runs evaluations for a rule, if the rule is triggered at a periodic frequency. Defaults to `TwentyFour_Hours` for periodic frequency triggered rules. Valid values: `One_Hour`, `Three_Hours`, `Six_Hours`, `Twelve_Hours`, or `TwentyFour_Hours`.
      * 
      */
-    @InputImport(name="maximumExecutionFrequency")
+    @Import(name="maximumExecutionFrequency")
       private final @Nullable Output<String> maximumExecutionFrequency;
 
     public Output<String> getMaximumExecutionFrequency() {
@@ -85,7 +85,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * The name of the rule
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -96,7 +96,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * Identifier of the AWS resource to evaluate
      * 
      */
-    @InputImport(name="resourceIdScope")
+    @Import(name="resourceIdScope")
       private final @Nullable Output<String> resourceIdScope;
 
     public Output<String> getResourceIdScope() {
@@ -107,7 +107,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * List of types of AWS resources to evaluate
      * 
      */
-    @InputImport(name="resourceTypesScopes")
+    @Import(name="resourceTypesScopes")
       private final @Nullable Output<List<String>> resourceTypesScopes;
 
     public Output<List<String>> getResourceTypesScopes() {
@@ -118,7 +118,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * Tag key of AWS resources to evaluate
      * 
      */
-    @InputImport(name="tagKeyScope")
+    @Import(name="tagKeyScope")
       private final @Nullable Output<String> tagKeyScope;
 
     public Output<String> getTagKeyScope() {
@@ -129,7 +129,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * Tag value of AWS resources to evaluate
      * 
      */
-    @InputImport(name="tagValueScope")
+    @Import(name="tagValueScope")
       private final @Nullable Output<String> tagValueScope;
 
     public Output<String> getTagValueScope() {
@@ -140,7 +140,7 @@ public final class OrganizationCustomRuleState extends io.pulumi.resources.Resou
      * List of notification types that trigger AWS Config to run an evaluation for the rule. Valid values: `ConfigurationItemChangeNotification`, `OversizedConfigurationItemChangeNotification`, and `ScheduledNotification`
      * 
      */
-    @InputImport(name="triggerTypes")
+    @Import(name="triggerTypes")
       private final @Nullable Output<List<String>> triggerTypes;
 
     public Output<List<String>> getTriggerTypes() {

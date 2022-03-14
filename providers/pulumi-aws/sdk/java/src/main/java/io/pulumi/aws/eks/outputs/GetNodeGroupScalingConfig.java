@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNodeGroupScalingConfig {
     /**
      * Desired number of worker nodes.
@@ -25,11 +25,11 @@ public final class GetNodeGroupScalingConfig {
      */
     private final Integer minSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNodeGroupScalingConfig(
-        @OutputCustomType.Parameter("desiredSize") Integer desiredSize,
-        @OutputCustomType.Parameter("maxSize") Integer maxSize,
-        @OutputCustomType.Parameter("minSize") Integer minSize) {
+        @CustomType.Parameter("desiredSize") Integer desiredSize,
+        @CustomType.Parameter("maxSize") Integer maxSize,
+        @CustomType.Parameter("minSize") Integer minSize) {
         this.desiredSize = desiredSize;
         this.maxSize = maxSize;
         this.minSize = minSize;

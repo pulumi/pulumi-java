@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
      * A name for the association that you're creating between a resolver rule and a VPC.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
      * The ID of the resolver rule that you want to associate with the VPC.
      * 
      */
-    @InputImport(name="resolverRuleId")
+    @Import(name="resolverRuleId")
       private final @Nullable Output<String> resolverRuleId;
 
     public Output<String> getResolverRuleId() {
@@ -40,7 +40,7 @@ public final class ResolverRuleAssociationState extends io.pulumi.resources.Reso
      * The ID of the VPC that you want to associate the resolver rule with.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateBlockDeviceMappingEbs {
     /**
      * Whether the volume should be destroyed on instance termination. Defaults to `false` if not set. See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
@@ -57,16 +57,16 @@ public final class LaunchTemplateBlockDeviceMappingEbs {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchTemplateBlockDeviceMappingEbs(
-        @OutputCustomType.Parameter("deleteOnTermination") @Nullable String deleteOnTermination,
-        @OutputCustomType.Parameter("encrypted") @Nullable String encrypted,
-        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("snapshotId") @Nullable String snapshotId,
-        @OutputCustomType.Parameter("throughput") @Nullable Integer throughput,
-        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
-        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
+        @CustomType.Parameter("deleteOnTermination") @Nullable String deleteOnTermination,
+        @CustomType.Parameter("encrypted") @Nullable String encrypted,
+        @CustomType.Parameter("iops") @Nullable Integer iops,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("snapshotId") @Nullable String snapshotId,
+        @CustomType.Parameter("throughput") @Nullable Integer throughput,
+        @CustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @CustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

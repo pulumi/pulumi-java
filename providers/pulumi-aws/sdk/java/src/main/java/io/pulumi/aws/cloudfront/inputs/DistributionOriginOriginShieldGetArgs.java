@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class DistributionOriginOriginShieldGetArgs extends io.pulumi.resou
      * A flag that specifies whether Origin Shield is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -29,7 +29,7 @@ public final class DistributionOriginOriginShieldGetArgs extends io.pulumi.resou
      * The AWS Region for Origin Shield. To specify a region, use the region code, not the region name. For example, specify the US East (Ohio) region as us-east-2.
      * 
      */
-    @InputImport(name="originShieldRegion", required=true)
+    @Import(name="originShieldRegion", required=true)
       private final Output<String> originShieldRegion;
 
     public Output<String> getOriginShieldRegion() {

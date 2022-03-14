@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigurationRuleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketReplicationConfigurationGetArgs extends io.pulumi.resou
      * The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -30,7 +30,7 @@ public final class BucketReplicationConfigurationGetArgs extends io.pulumi.resou
      * Specifies the rules managing the replication (documented below).
      * 
      */
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final Output<List<BucketReplicationConfigurationRuleGetArgs>> rules;
 
     public Output<List<BucketReplicationConfigurationRuleGetArgs>> getRules() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.docdb;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Name for an automatically created database on cluster creation.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -30,14 +30,14 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * If the Global Cluster should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
         return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
     }
 
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -49,7 +49,7 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * * **NOTE:** Upgrading major versions is not supported.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -60,21 +60,21 @@ public final class GlobalClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The global cluster identifier.
      * 
      */
-    @InputImport(name="globalClusterIdentifier", required=true)
+    @Import(name="globalClusterIdentifier", required=true)
       private final Output<String> globalClusterIdentifier;
 
     public Output<String> getGlobalClusterIdentifier() {
         return this.globalClusterIdentifier;
     }
 
-    @InputImport(name="sourceDbClusterIdentifier")
+    @Import(name="sourceDbClusterIdentifier")
       private final @Nullable Output<String> sourceDbClusterIdentifier;
 
     public Output<String> getSourceDbClusterIdentifier() {
         return this.sourceDbClusterIdentifier == null ? Output.empty() : this.sourceDbClusterIdentifier;
     }
 
-    @InputImport(name="storageEncrypted")
+    @Import(name="storageEncrypted")
       private final @Nullable Output<Boolean> storageEncrypted;
 
     public Output<Boolean> getStorageEncrypted() {

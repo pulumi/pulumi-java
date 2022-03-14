@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkInterfaceAssociation {
     /**
      * The allocation ID.
@@ -45,15 +45,15 @@ public final class GetNetworkInterfaceAssociation {
      */
     private final String publicIp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkInterfaceAssociation(
-        @OutputCustomType.Parameter("allocationId") String allocationId,
-        @OutputCustomType.Parameter("associationId") String associationId,
-        @OutputCustomType.Parameter("carrierIp") String carrierIp,
-        @OutputCustomType.Parameter("customerOwnedIp") String customerOwnedIp,
-        @OutputCustomType.Parameter("ipOwnerId") String ipOwnerId,
-        @OutputCustomType.Parameter("publicDnsName") String publicDnsName,
-        @OutputCustomType.Parameter("publicIp") String publicIp) {
+        @CustomType.Parameter("allocationId") String allocationId,
+        @CustomType.Parameter("associationId") String associationId,
+        @CustomType.Parameter("carrierIp") String carrierIp,
+        @CustomType.Parameter("customerOwnedIp") String customerOwnedIp,
+        @CustomType.Parameter("ipOwnerId") String ipOwnerId,
+        @CustomType.Parameter("publicDnsName") String publicDnsName,
+        @CustomType.Parameter("publicIp") String publicIp) {
         this.allocationId = allocationId;
         this.associationId = associationId;
         this.carrierIp = carrierIp;

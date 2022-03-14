@@ -9,7 +9,7 @@ import io.pulumi.aws.efs.inputs.AccessPointState;
 import io.pulumi.aws.efs.outputs.AccessPointPosixUser;
 import io.pulumi.aws.efs.outputs.AccessPointRootDirectory;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * ARN of the access point.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * ARN of the file system.
      * 
      */
-    @OutputExport(name="fileSystemArn", type=String.class, parameters={})
+    @Export(name="fileSystemArn", type=String.class, parameters={})
     private Output<String> fileSystemArn;
 
     /**
@@ -63,7 +63,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * ID of the file system for which the access point is intended.
      * 
      */
-    @OutputExport(name="fileSystemId", type=String.class, parameters={})
+    @Export(name="fileSystemId", type=String.class, parameters={})
     private Output<String> fileSystemId;
 
     /**
@@ -73,7 +73,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
     public Output<String> getFileSystemId() {
         return this.fileSystemId;
     }
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -83,7 +83,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * Operating system user and group applied to all file system requests made using the access point. Detailed below.
      * 
      */
-    @OutputExport(name="posixUser", type=AccessPointPosixUser.class, parameters={})
+    @Export(name="posixUser", type=AccessPointPosixUser.class, parameters={})
     private Output</* @Nullable */ AccessPointPosixUser> posixUser;
 
     /**
@@ -97,7 +97,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
      * 
      */
-    @OutputExport(name="rootDirectory", type=AccessPointRootDirectory.class, parameters={})
+    @Export(name="rootDirectory", type=AccessPointRootDirectory.class, parameters={})
     private Output<AccessPointRootDirectory> rootDirectory;
 
     /**
@@ -111,7 +111,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

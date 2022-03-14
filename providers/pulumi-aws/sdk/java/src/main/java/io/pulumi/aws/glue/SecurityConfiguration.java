@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.SecurityConfigurationArgs;
 import io.pulumi.aws.glue.inputs.SecurityConfigurationState;
 import io.pulumi.aws.glue.outputs.SecurityConfigurationEncryptionConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class SecurityConfiguration extends io.pulumi.resources.CustomResource {
      * Configuration block containing encryption configuration. Detailed below.
      * 
      */
-    @OutputExport(name="encryptionConfiguration", type=SecurityConfigurationEncryptionConfiguration.class, parameters={})
+    @Export(name="encryptionConfiguration", type=SecurityConfigurationEncryptionConfiguration.class, parameters={})
     private Output<SecurityConfigurationEncryptionConfiguration> encryptionConfiguration;
 
     /**
@@ -47,7 +47,7 @@ public class SecurityConfiguration extends io.pulumi.resources.CustomResource {
      * Name of the security configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

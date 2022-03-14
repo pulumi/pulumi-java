@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBillingServiceAccountResult {
     /**
      * The ARN of the AWS billing service account.
@@ -20,10 +20,10 @@ public final class GetBillingServiceAccountResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBillingServiceAccountResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id) {
         this.arn = arn;
         this.id = id;
     }

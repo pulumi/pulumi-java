@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDelegatedAdministratorsDelegatedAdministrator {
     /**
      * The Amazon Resource Name (ARN) of the delegated administrator's account.
@@ -50,16 +50,16 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDelegatedAdministratorsDelegatedAdministrator(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("delegationEnabledDate") String delegationEnabledDate,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("joinedMethod") String joinedMethod,
-        @OutputCustomType.Parameter("joinedTimestamp") String joinedTimestamp,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("delegationEnabledDate") String delegationEnabledDate,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("joinedMethod") String joinedMethod,
+        @CustomType.Parameter("joinedTimestamp") String joinedTimestamp,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status) {
         this.arn = arn;
         this.delegationEnabledDate = delegationEnabledDate;
         this.email = email;

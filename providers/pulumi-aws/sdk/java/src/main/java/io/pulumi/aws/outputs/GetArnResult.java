@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetArnResult {
     /**
      * The [ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) of the AWS account that owns the resource, without the hyphens.
@@ -43,15 +43,15 @@ public final class GetArnResult {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetArnResult(
-        @OutputCustomType.Parameter("account") String account,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("partition") String partition,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("resource") String resource,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("account") String account,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("partition") String partition,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("resource") String resource,
+        @CustomType.Parameter("service") String service) {
         this.account = account;
         this.arn = arn;
         this.id = id;

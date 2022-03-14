@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssm.ActivationArgs;
 import io.pulumi.aws.ssm.inputs.ActivationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -35,7 +35,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * The code the system generates when it processes the activation.
      * 
      */
-    @OutputExport(name="activationCode", type=String.class, parameters={})
+    @Export(name="activationCode", type=String.class, parameters={})
     private Output<String> activationCode;
 
     /**
@@ -49,7 +49,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * The description of the resource that you want to register.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @OutputExport(name="expirationDate", type=String.class, parameters={})
+    @Export(name="expirationDate", type=String.class, parameters={})
     private Output<String> expirationDate;
 
     /**
@@ -77,7 +77,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * If the current activation has expired.
      * 
      */
-    @OutputExport(name="expired", type=Boolean.class, parameters={})
+    @Export(name="expired", type=Boolean.class, parameters={})
     private Output<Boolean> expired;
 
     /**
@@ -91,7 +91,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * The IAM Role to attach to the managed instance.
      * 
      */
-    @OutputExport(name="iamRole", type=String.class, parameters={})
+    @Export(name="iamRole", type=String.class, parameters={})
     private Output<String> iamRole;
 
     /**
@@ -105,7 +105,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * The default name of the registered managed instance.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -119,7 +119,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * The number of managed instances that are currently registered using this activation.
      * 
      */
-    @OutputExport(name="registrationCount", type=Integer.class, parameters={})
+    @Export(name="registrationCount", type=Integer.class, parameters={})
     private Output<Integer> registrationCount;
 
     /**
@@ -133,7 +133,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * The maximum number of managed instances you want to register. The default value is 1 instance.
      * 
      */
-    @OutputExport(name="registrationLimit", type=Integer.class, parameters={})
+    @Export(name="registrationLimit", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> registrationLimit;
 
     /**
@@ -147,7 +147,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -161,7 +161,7 @@ public class Activation extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

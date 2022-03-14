@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.PartitionStorageDescriptorGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -32,7 +32,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * The time at which the partition was created.
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
     public Output<String> getCreationTime() {
@@ -43,7 +43,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -54,7 +54,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * The last time at which the partition was accessed.
      * 
      */
-    @InputImport(name="lastAccessedTime")
+    @Import(name="lastAccessedTime")
       private final @Nullable Output<String> lastAccessedTime;
 
     public Output<String> getLastAccessedTime() {
@@ -65,7 +65,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * The last time at which column statistics were computed for this partition.
      * 
      */
-    @InputImport(name="lastAnalyzedTime")
+    @Import(name="lastAnalyzedTime")
       private final @Nullable Output<String> lastAnalyzedTime;
 
     public Output<String> getLastAnalyzedTime() {
@@ -76,7 +76,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * A map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -87,7 +87,7 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * The values that define the partition.
      * 
      */
-    @InputImport(name="partitionValues")
+    @Import(name="partitionValues")
       private final @Nullable Output<List<String>> partitionValues;
 
     public Output<List<String>> getPartitionValues() {
@@ -98,14 +98,14 @@ public final class PartitionState extends io.pulumi.resources.ResourceArgs {
      * A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
      * 
      */
-    @InputImport(name="storageDescriptor")
+    @Import(name="storageDescriptor")
       private final @Nullable Output<PartitionStorageDescriptorGetArgs> storageDescriptor;
 
     public Output<PartitionStorageDescriptorGetArgs> getStorageDescriptor() {
         return this.storageDescriptor == null ? Output.empty() : this.storageDescriptor;
     }
 
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters {
     /**
      * Pass client-specific information to the Lambda function that you are invoking.
@@ -27,11 +27,11 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      */
     private final @Nullable String qualifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersLambdaParameters(
-        @OutputCustomType.Parameter("clientContext") @Nullable String clientContext,
-        @OutputCustomType.Parameter("payload") @Nullable String payload,
-        @OutputCustomType.Parameter("qualifier") @Nullable String qualifier) {
+        @CustomType.Parameter("clientContext") @Nullable String clientContext,
+        @CustomType.Parameter("payload") @Nullable String payload,
+        @CustomType.Parameter("qualifier") @Nullable String qualifier) {
         this.clientContext = clientContext;
         this.payload = payload;
         this.qualifier = qualifier;

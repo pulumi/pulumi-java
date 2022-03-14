@@ -8,7 +8,7 @@ import io.pulumi.aws.s3.BucketOwnershipControlsArgs;
 import io.pulumi.aws.s3.inputs.BucketOwnershipControlsState;
 import io.pulumi.aws.s3.outputs.BucketOwnershipControlsRule;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class BucketOwnershipControls extends io.pulumi.resources.CustomResource 
      * The name of the bucket that you want to associate this access point with.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -47,7 +47,7 @@ public class BucketOwnershipControls extends io.pulumi.resources.CustomResource 
      * Configuration block(s) with Ownership Controls rules. Detailed below.
      * 
      */
-    @OutputExport(name="rule", type=BucketOwnershipControlsRule.class, parameters={})
+    @Export(name="rule", type=BucketOwnershipControlsRule.class, parameters={})
     private Output<BucketOwnershipControlsRule> rule;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TableTtlArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the table attribute to store the TTL timestamp in.
      * 
      */
-    @InputImport(name="attributeName", required=true)
+    @Import(name="attributeName", required=true)
       private final Output<String> attributeName;
 
     public Output<String> getAttributeName() {
@@ -30,7 +30,7 @@ public final class TableTtlArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether ttl is enabled (true) or disabled (false).
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

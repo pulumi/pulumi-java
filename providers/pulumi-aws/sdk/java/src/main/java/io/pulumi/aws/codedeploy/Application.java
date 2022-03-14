@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.codedeploy.ApplicationArgs;
 import io.pulumi.aws.codedeploy.inputs.ApplicationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The application ID.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -48,7 +48,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The ARN of the CodeDeploy application.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -62,7 +62,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The compute platform can either be `ECS`, `Lambda`, or `Server`. Default is `Server`.
      * 
      */
-    @OutputExport(name="computePlatform", type=String.class, parameters={})
+    @Export(name="computePlatform", type=String.class, parameters={})
     private Output</* @Nullable */ String> computePlatform;
 
     /**
@@ -76,7 +76,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The name for a connection to a GitHub account.
      * 
      */
-    @OutputExport(name="githubAccountName", type=String.class, parameters={})
+    @Export(name="githubAccountName", type=String.class, parameters={})
     private Output<String> githubAccountName;
 
     /**
@@ -90,7 +90,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Whether the user has authenticated with GitHub for the specified application.
      * 
      */
-    @OutputExport(name="linkedToGithub", type=Boolean.class, parameters={})
+    @Export(name="linkedToGithub", type=Boolean.class, parameters={})
     private Output<Boolean> linkedToGithub;
 
     /**
@@ -104,7 +104,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The name of the application.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -118,7 +118,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -132,7 +132,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

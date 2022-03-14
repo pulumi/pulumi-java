@@ -5,7 +5,7 @@ package io.pulumi.aws.securityhub;
 
 import io.pulumi.aws.securityhub.inputs.InsightFiltersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
      * A configuration block including one or more (up to 10 distinct) attributes used to filter the findings included in the insight. The insight only includes findings that match criteria defined in the filters. See filters below for more details.
      * 
      */
-    @InputImport(name="filters", required=true)
+    @Import(name="filters", required=true)
       private final Output<InsightFiltersArgs> filters;
 
     public Output<InsightFiltersArgs> getFilters() {
@@ -30,7 +30,7 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
      * The attribute used to group the findings for the insight e.g., if an insight is grouped by `ResourceId`, then the insight produces a list of resource identifiers.
      * 
      */
-    @InputImport(name="groupByAttribute", required=true)
+    @Import(name="groupByAttribute", required=true)
       private final Output<String> groupByAttribute;
 
     public Output<String> getGroupByAttribute() {
@@ -41,7 +41,7 @@ public final class InsightArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the custom insight.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

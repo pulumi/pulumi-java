@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EventDestinationKinesisDestination {
     /**
      * The ARN of the role that has permissions to access the Kinesis Stream
@@ -20,10 +20,10 @@ public final class EventDestinationKinesisDestination {
      */
     private final String streamArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventDestinationKinesisDestination(
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("streamArn") String streamArn) {
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("streamArn") String streamArn) {
         this.roleArn = roleArn;
         this.streamArn = streamArn;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AmiEphemeralBlockDevice {
     /**
      * The path at which the device is exposed to created instances.
@@ -21,10 +21,10 @@ public final class AmiEphemeralBlockDevice {
      */
     private final String virtualName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AmiEphemeralBlockDevice(
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("virtualName") String virtualName) {
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("virtualName") String virtualName) {
         this.deviceName = deviceName;
         this.virtualName = virtualName;
     }

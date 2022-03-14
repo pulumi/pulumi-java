@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DataSourceParametersAwsIotAnalyticsGetArgs extends io.pulumi.
      * The name of the data set to which to connect.
      * 
      */
-    @InputImport(name="dataSetName", required=true)
+    @Import(name="dataSetName", required=true)
       private final Output<String> dataSetName;
 
     public Output<String> getDataSetName() {

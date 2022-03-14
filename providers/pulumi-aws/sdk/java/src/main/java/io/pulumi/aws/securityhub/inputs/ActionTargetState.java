@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the Security Hub custom action target.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
      * The name of the custom action target.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
      * The ID for the custom action target.
      * 
      */
-    @InputImport(name="identifier")
+    @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
     public Output<String> getIdentifier() {
@@ -51,7 +51,7 @@ public final class ActionTargetState extends io.pulumi.resources.ResourceArgs {
      * The description for the custom action target.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

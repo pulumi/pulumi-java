@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
      * 
      */
-    @InputImport(name="httpMethod", required=true)
+    @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
     public Output<String> getHttpMethod() {
@@ -31,7 +31,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * The API resource ID
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -42,7 +42,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * A map of the API models used for the response's content type
      * 
      */
-    @InputImport(name="responseModels")
+    @Import(name="responseModels")
       private final @Nullable Output<Map<String,String>> responseModels;
 
     public Output<Map<String,String>> getResponseModels() {
@@ -55,7 +55,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * would define that the header `X-Some-Header` can be provided on the response.
      * 
      */
-    @InputImport(name="responseParameters")
+    @Import(name="responseParameters")
       private final @Nullable Output<Map<String,Boolean>> responseParameters;
 
     public Output<Map<String,Boolean>> getResponseParameters() {
@@ -66,7 +66,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated REST API
      * 
      */
-    @InputImport(name="restApi", required=true)
+    @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -77,7 +77,7 @@ public final class MethodResponseArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP status code
      * 
      */
-    @InputImport(name="statusCode", required=true)
+    @Import(name="statusCode", required=true)
       private final Output<String> statusCode;
 
     public Output<String> getStatusCode() {

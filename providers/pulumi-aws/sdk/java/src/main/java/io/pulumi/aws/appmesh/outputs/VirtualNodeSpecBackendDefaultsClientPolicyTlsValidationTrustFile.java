@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile {
     /**
      * The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
@@ -15,8 +15,8 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustF
      */
     private final String certificateChain;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile(@OutputCustomType.Parameter("certificateChain") String certificateChain) {
+    @CustomType.Constructor
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile(@CustomType.Parameter("certificateChain") String certificateChain) {
         this.certificateChain = certificateChain;
     }
 

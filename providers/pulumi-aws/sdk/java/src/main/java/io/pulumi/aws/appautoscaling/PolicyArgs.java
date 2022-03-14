@@ -6,7 +6,7 @@ package io.pulumi.aws.appautoscaling;
 import io.pulumi.aws.appautoscaling.inputs.PolicyStepScalingPolicyConfigurationArgs;
 import io.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the policy. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -31,7 +31,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The policy type. Valid values are `StepScaling` and `TargetTrackingScaling`. Defaults to `StepScaling`. Certain services only support only one policy type. For more information see the [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) documentation.
      * 
      */
-    @InputImport(name="policyType")
+    @Import(name="policyType")
       private final @Nullable Output<String> policyType;
 
     public Output<String> getPolicyType() {
@@ -42,7 +42,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -53,7 +53,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
      * 
      */
-    @InputImport(name="scalableDimension", required=true)
+    @Import(name="scalableDimension", required=true)
       private final Output<String> scalableDimension;
 
     public Output<String> getScalableDimension() {
@@ -64,7 +64,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
      * 
      */
-    @InputImport(name="serviceNamespace", required=true)
+    @Import(name="serviceNamespace", required=true)
       private final Output<String> serviceNamespace;
 
     public Output<String> getServiceNamespace() {
@@ -75,7 +75,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
      * 
      */
-    @InputImport(name="stepScalingPolicyConfiguration")
+    @Import(name="stepScalingPolicyConfiguration")
       private final @Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
 
     public Output<PolicyStepScalingPolicyConfigurationArgs> getStepScalingPolicyConfiguration() {
@@ -86,7 +86,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
      * 
      */
-    @InputImport(name="targetTrackingScalingPolicyConfiguration")
+    @Import(name="targetTrackingScalingPolicyConfiguration")
       private final @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
 
     public Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> getTargetTrackingScalingPolicyConfiguration() {

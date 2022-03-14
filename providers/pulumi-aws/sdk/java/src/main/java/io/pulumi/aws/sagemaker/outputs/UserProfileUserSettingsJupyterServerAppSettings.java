@@ -4,13 +4,13 @@
 package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpec;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserProfileUserSettingsJupyterServerAppSettings {
     /**
      * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
@@ -23,10 +23,10 @@ public final class UserProfileUserSettingsJupyterServerAppSettings {
      */
     private final @Nullable List<String> lifecycleConfigArns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserProfileUserSettingsJupyterServerAppSettings(
-        @OutputCustomType.Parameter("defaultResourceSpec") UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpec defaultResourceSpec,
-        @OutputCustomType.Parameter("lifecycleConfigArns") @Nullable List<String> lifecycleConfigArns) {
+        @CustomType.Parameter("defaultResourceSpec") UserProfileUserSettingsJupyterServerAppSettingsDefaultResourceSpec defaultResourceSpec,
+        @CustomType.Parameter("lifecycleConfigArns") @Nullable List<String> lifecycleConfigArns) {
         this.defaultResourceSpec = defaultResourceSpec;
         this.lifecycleConfigArns = lifecycleConfigArns;
     }

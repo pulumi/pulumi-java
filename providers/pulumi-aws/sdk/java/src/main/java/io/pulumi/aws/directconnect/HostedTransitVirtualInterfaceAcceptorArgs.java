@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends io.pulumi.r
      * The ID of the Direct Connect gateway to which to connect the virtual interface.
      * 
      */
-    @InputImport(name="dxGatewayId", required=true)
+    @Import(name="dxGatewayId", required=true)
       private final Output<String> dxGatewayId;
 
     public Output<String> getDxGatewayId() {
@@ -30,7 +30,7 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends io.pulumi.r
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -41,7 +41,7 @@ public final class HostedTransitVirtualInterfaceAcceptorArgs extends io.pulumi.r
      * The ID of the Direct Connect virtual interface to accept.
      * 
      */
-    @InputImport(name="virtualInterfaceId", required=true)
+    @Import(name="virtualInterfaceId", required=true)
       private final Output<String> virtualInterfaceId;
 
     public Output<String> getVirtualInterfaceId() {

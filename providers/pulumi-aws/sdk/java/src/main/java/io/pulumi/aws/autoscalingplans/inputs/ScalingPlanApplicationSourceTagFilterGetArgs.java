@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscalingplans.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends io.pulum
      * The tag key.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -30,7 +30,7 @@ public final class ScalingPlanApplicationSourceTagFilterGetArgs extends io.pulum
      * The tag values.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

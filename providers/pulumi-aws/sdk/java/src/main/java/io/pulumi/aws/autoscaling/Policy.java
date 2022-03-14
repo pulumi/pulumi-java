@@ -10,7 +10,7 @@ import io.pulumi.aws.autoscaling.outputs.PolicyPredictiveScalingConfiguration;
 import io.pulumi.aws.autoscaling.outputs.PolicyStepAdjustment;
 import io.pulumi.aws.autoscaling.outputs.PolicyTargetTrackingConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
      * 
      */
-    @OutputExport(name="adjustmentType", type=String.class, parameters={})
+    @Export(name="adjustmentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> adjustmentType;
 
     /**
@@ -57,7 +57,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The ARN assigned by AWS to the scaling policy.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -71,7 +71,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The name of the autoscaling group.
      * 
      */
-    @OutputExport(name="autoscalingGroupName", type=String.class, parameters={})
+    @Export(name="autoscalingGroupName", type=String.class, parameters={})
     private Output<String> autoscalingGroupName;
 
     /**
@@ -85,7 +85,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
      * 
      */
-    @OutputExport(name="cooldown", type=Integer.class, parameters={})
+    @Export(name="cooldown", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> cooldown;
 
     /**
@@ -99,7 +99,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
      * 
      */
-    @OutputExport(name="estimatedInstanceWarmup", type=Integer.class, parameters={})
+    @Export(name="estimatedInstanceWarmup", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> estimatedInstanceWarmup;
 
     /**
@@ -113,7 +113,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
      * 
      */
-    @OutputExport(name="metricAggregationType", type=String.class, parameters={})
+    @Export(name="metricAggregationType", type=String.class, parameters={})
     private Output<String> metricAggregationType;
 
     /**
@@ -127,7 +127,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Minimum value to scale by when `adjustment_type` is set to `PercentChangeInCapacity`.
      * 
      */
-    @OutputExport(name="minAdjustmentMagnitude", type=Integer.class, parameters={})
+    @Export(name="minAdjustmentMagnitude", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minAdjustmentMagnitude;
 
     /**
@@ -141,7 +141,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The name of the dimension.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -155,7 +155,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
      * 
      */
-    @OutputExport(name="policyType", type=String.class, parameters={})
+    @Export(name="policyType", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyType;
 
     /**
@@ -169,7 +169,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
      * 
      */
-    @OutputExport(name="predictiveScalingConfiguration", type=PolicyPredictiveScalingConfiguration.class, parameters={})
+    @Export(name="predictiveScalingConfiguration", type=PolicyPredictiveScalingConfiguration.class, parameters={})
     private Output</* @Nullable */ PolicyPredictiveScalingConfiguration> predictiveScalingConfiguration;
 
     /**
@@ -185,7 +185,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * up. A negative value scales down.
      * 
      */
-    @OutputExport(name="scalingAdjustment", type=Integer.class, parameters={})
+    @Export(name="scalingAdjustment", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> scalingAdjustment;
 
     /**
@@ -202,7 +202,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * group scaling. These have the following structure:
      * 
      */
-    @OutputExport(name="stepAdjustments", type=List.class, parameters={PolicyStepAdjustment.class})
+    @Export(name="stepAdjustments", type=List.class, parameters={PolicyStepAdjustment.class})
     private Output</* @Nullable */ List<PolicyStepAdjustment>> stepAdjustments;
 
     /**
@@ -217,7 +217,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * A target tracking policy. These have the following structure:
      * 
      */
-    @OutputExport(name="targetTrackingConfiguration", type=PolicyTargetTrackingConfiguration.class, parameters={})
+    @Export(name="targetTrackingConfiguration", type=PolicyTargetTrackingConfiguration.class, parameters={})
     private Output</* @Nullable */ PolicyTargetTrackingConfiguration> targetTrackingConfiguration;
 
     /**

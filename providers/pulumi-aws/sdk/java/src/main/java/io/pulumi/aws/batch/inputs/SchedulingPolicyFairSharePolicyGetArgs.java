@@ -5,7 +5,7 @@ package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.aws.batch.inputs.SchedulingPolicyFairSharePolicyShareDistributionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends io.pulumi.reso
      * A value used to reserve some of the available maximum vCPU for fair share identifiers that have not yet been used. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html).
      * 
      */
-    @InputImport(name="computeReservation")
+    @Import(name="computeReservation")
       private final @Nullable Output<Integer> computeReservation;
 
     public Output<Integer> getComputeReservation() {
         return this.computeReservation == null ? Output.empty() : this.computeReservation;
     }
 
-    @InputImport(name="shareDecaySeconds")
+    @Import(name="shareDecaySeconds")
       private final @Nullable Output<Integer> shareDecaySeconds;
 
     public Output<Integer> getShareDecaySeconds() {
@@ -38,7 +38,7 @@ public final class SchedulingPolicyFairSharePolicyGetArgs extends io.pulumi.reso
      * One or more share distribution blocks which define the weights for the fair share identifiers for the fair share policy. For more information, see [FairsharePolicy](https://docs.aws.amazon.com/batch/latest/APIReference/API_FairsharePolicy.html). The `share_distribution` block is documented below.
      * 
      */
-    @InputImport(name="shareDistributions")
+    @Import(name="shareDistributions")
       private final @Nullable Output<List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs>> shareDistributions;
 
     public Output<List<SchedulingPolicyFairSharePolicyShareDistributionGetArgs>> getShareDistributions() {

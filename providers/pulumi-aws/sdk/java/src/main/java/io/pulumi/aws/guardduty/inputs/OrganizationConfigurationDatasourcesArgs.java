@@ -5,7 +5,7 @@ package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesS3LogsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class OrganizationConfigurationDatasourcesArgs extends io.pulumi.re
      * Configuration for the builds to store logs to S3.
      * 
      */
-    @InputImport(name="s3Logs")
+    @Import(name="s3Logs")
       private final @Nullable Output<OrganizationConfigurationDatasourcesS3LogsArgs> s3Logs;
 
     public Output<OrganizationConfigurationDatasourcesS3LogsArgs> getS3Logs() {

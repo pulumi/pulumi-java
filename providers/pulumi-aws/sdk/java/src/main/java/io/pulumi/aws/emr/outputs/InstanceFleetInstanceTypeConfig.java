@@ -5,7 +5,7 @@ package io.pulumi.aws.emr.outputs;
 
 import io.pulumi.aws.emr.outputs.InstanceFleetInstanceTypeConfigConfiguration;
 import io.pulumi.aws.emr.outputs.InstanceFleetInstanceTypeConfigEbsConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFleetInstanceTypeConfig {
     /**
      * The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
@@ -47,14 +47,14 @@ public final class InstanceFleetInstanceTypeConfig {
      */
     private final @Nullable Integer weightedCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceFleetInstanceTypeConfig(
-        @OutputCustomType.Parameter("bidPrice") @Nullable String bidPrice,
-        @OutputCustomType.Parameter("bidPriceAsPercentageOfOnDemandPrice") @Nullable Double bidPriceAsPercentageOfOnDemandPrice,
-        @OutputCustomType.Parameter("configurations") @Nullable List<InstanceFleetInstanceTypeConfigConfiguration> configurations,
-        @OutputCustomType.Parameter("ebsConfigs") @Nullable List<InstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("weightedCapacity") @Nullable Integer weightedCapacity) {
+        @CustomType.Parameter("bidPrice") @Nullable String bidPrice,
+        @CustomType.Parameter("bidPriceAsPercentageOfOnDemandPrice") @Nullable Double bidPriceAsPercentageOfOnDemandPrice,
+        @CustomType.Parameter("configurations") @Nullable List<InstanceFleetInstanceTypeConfigConfiguration> configurations,
+        @CustomType.Parameter("ebsConfigs") @Nullable List<InstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("weightedCapacity") @Nullable Integer weightedCapacity) {
         this.bidPrice = bidPrice;
         this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
         this.configurations = configurations;

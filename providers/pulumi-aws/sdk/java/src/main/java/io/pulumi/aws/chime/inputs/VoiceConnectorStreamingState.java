@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class VoiceConnectorStreamingState extends io.pulumi.resources.Reso
      * The retention period, in hours, for the Amazon Kinesis data.
      * 
      */
-    @InputImport(name="dataRetention")
+    @Import(name="dataRetention")
       private final @Nullable Output<Integer> dataRetention;
 
     public Output<Integer> getDataRetention() {
@@ -32,7 +32,7 @@ public final class VoiceConnectorStreamingState extends io.pulumi.resources.Reso
      * When true, media streaming to Amazon Kinesis is turned off. Default: `false`
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -43,7 +43,7 @@ public final class VoiceConnectorStreamingState extends io.pulumi.resources.Reso
      * The streaming notification targets. Valid Values: `EventBridge | SNS | SQS`
      * 
      */
-    @InputImport(name="streamingNotificationTargets")
+    @Import(name="streamingNotificationTargets")
       private final @Nullable Output<List<String>> streamingNotificationTargets;
 
     public Output<List<String>> getStreamingNotificationTargets() {
@@ -54,7 +54,7 @@ public final class VoiceConnectorStreamingState extends io.pulumi.resources.Reso
      * The Amazon Chime Voice Connector ID.
      * 
      */
-    @InputImport(name="voiceConnectorId")
+    @Import(name="voiceConnectorId")
       private final @Nullable Output<String> voiceConnectorId;
 
     public Output<String> getVoiceConnectorId() {

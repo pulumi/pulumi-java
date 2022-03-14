@@ -6,7 +6,7 @@ package io.pulumi.aws.elasticloadbalancing.outputs;
 import io.pulumi.aws.elasticloadbalancing.outputs.GetLoadBalancerAccessLogs;
 import io.pulumi.aws.elasticloadbalancing.outputs.GetLoadBalancerHealthCheck;
 import io.pulumi.aws.elasticloadbalancing.outputs.GetLoadBalancerListener;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLoadBalancerResult {
     private final GetLoadBalancerAccessLogs accessLogs;
     private final String arn;
@@ -42,29 +42,29 @@ public final class GetLoadBalancerResult {
     private final Map<String,String> tags;
     private final String zoneId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLoadBalancerResult(
-        @OutputCustomType.Parameter("accessLogs") GetLoadBalancerAccessLogs accessLogs,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
-        @OutputCustomType.Parameter("connectionDraining") Boolean connectionDraining,
-        @OutputCustomType.Parameter("connectionDrainingTimeout") Integer connectionDrainingTimeout,
-        @OutputCustomType.Parameter("crossZoneLoadBalancing") Boolean crossZoneLoadBalancing,
-        @OutputCustomType.Parameter("desyncMitigationMode") String desyncMitigationMode,
-        @OutputCustomType.Parameter("dnsName") String dnsName,
-        @OutputCustomType.Parameter("healthCheck") GetLoadBalancerHealthCheck healthCheck,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("idleTimeout") Integer idleTimeout,
-        @OutputCustomType.Parameter("instances") List<String> instances,
-        @OutputCustomType.Parameter("internal") Boolean internal,
-        @OutputCustomType.Parameter("listeners") List<GetLoadBalancerListener> listeners,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
-        @OutputCustomType.Parameter("sourceSecurityGroup") String sourceSecurityGroup,
-        @OutputCustomType.Parameter("sourceSecurityGroupId") String sourceSecurityGroupId,
-        @OutputCustomType.Parameter("subnets") List<String> subnets,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("zoneId") String zoneId) {
+        @CustomType.Parameter("accessLogs") GetLoadBalancerAccessLogs accessLogs,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @CustomType.Parameter("connectionDraining") Boolean connectionDraining,
+        @CustomType.Parameter("connectionDrainingTimeout") Integer connectionDrainingTimeout,
+        @CustomType.Parameter("crossZoneLoadBalancing") Boolean crossZoneLoadBalancing,
+        @CustomType.Parameter("desyncMitigationMode") String desyncMitigationMode,
+        @CustomType.Parameter("dnsName") String dnsName,
+        @CustomType.Parameter("healthCheck") GetLoadBalancerHealthCheck healthCheck,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("idleTimeout") Integer idleTimeout,
+        @CustomType.Parameter("instances") List<String> instances,
+        @CustomType.Parameter("internal") Boolean internal,
+        @CustomType.Parameter("listeners") List<GetLoadBalancerListener> listeners,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("securityGroups") List<String> securityGroups,
+        @CustomType.Parameter("sourceSecurityGroup") String sourceSecurityGroup,
+        @CustomType.Parameter("sourceSecurityGroupId") String sourceSecurityGroupId,
+        @CustomType.Parameter("subnets") List<String> subnets,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("zoneId") String zoneId) {
         this.accessLogs = accessLogs;
         this.arn = arn;
         this.availabilityZones = availabilityZones;

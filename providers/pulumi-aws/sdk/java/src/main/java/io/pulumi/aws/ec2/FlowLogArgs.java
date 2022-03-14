@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.FlowLogDestinationOptionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the destination options for a flow log. More details below.
      * 
      */
-    @InputImport(name="destinationOptions")
+    @Import(name="destinationOptions")
       private final @Nullable Output<FlowLogDestinationOptionsArgs> destinationOptions;
 
     public Output<FlowLogDestinationOptionsArgs> getDestinationOptions() {
@@ -32,7 +32,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * Elastic Network Interface ID to attach to
      * 
      */
-    @InputImport(name="eniId")
+    @Import(name="eniId")
       private final @Nullable Output<String> eniId;
 
     public Output<String> getEniId() {
@@ -43,7 +43,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
      * 
      */
-    @InputImport(name="iamRoleArn")
+    @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
@@ -54,7 +54,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the logging destination.
      * 
      */
-    @InputImport(name="logDestination")
+    @Import(name="logDestination")
       private final @Nullable Output<String> logDestination;
 
     public Output<String> getLogDestination() {
@@ -65,7 +65,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
      * 
      */
-    @InputImport(name="logDestinationType")
+    @Import(name="logDestinationType")
       private final @Nullable Output<String> logDestinationType;
 
     public Output<String> getLogDestinationType() {
@@ -76,7 +76,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * The fields to include in the flow log record, in the order in which they should appear.
      * 
      */
-    @InputImport(name="logFormat")
+    @Import(name="logFormat")
       private final @Nullable Output<String> logFormat;
 
     public Output<String> getLogFormat() {
@@ -91,7 +91,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* use 'log_destination' argument instead */
-    @InputImport(name="logGroupName")
+    @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
     @Deprecated /* use 'log_destination' argument instead */
@@ -106,7 +106,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * minutes). Default: `600`.
      * 
      */
-    @InputImport(name="maxAggregationInterval")
+    @Import(name="maxAggregationInterval")
       private final @Nullable Output<Integer> maxAggregationInterval;
 
     public Output<Integer> getMaxAggregationInterval() {
@@ -117,7 +117,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * Subnet ID to attach to
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -128,7 +128,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -139,7 +139,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
      * 
      */
-    @InputImport(name="trafficType", required=true)
+    @Import(name="trafficType", required=true)
       private final Output<String> trafficType;
 
     public Output<String> getTrafficType() {
@@ -150,7 +150,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * VPC ID to attach to
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

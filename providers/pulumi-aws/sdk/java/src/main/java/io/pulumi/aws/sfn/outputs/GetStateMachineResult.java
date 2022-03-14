@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.sfn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetStateMachineResult {
     /**
      * Set to the arn of the state function.
@@ -41,15 +41,15 @@ public final class GetStateMachineResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStateMachineResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("definition") String definition,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("definition") String definition,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("status") String status) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.definition = definition;

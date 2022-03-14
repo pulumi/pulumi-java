@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetAmiBlockDeviceMapping extends io.pulumi.resources.InvokeAr
      * The physical name of the device.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -28,7 +28,7 @@ public final class GetAmiBlockDeviceMapping extends io.pulumi.resources.InvokeAr
      * Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g., `ebs.volume_size` or `ebs["volume_size"]`) rather than accessed through the first element of a list (e.g., `ebs[0].volume_size`).
      * 
      */
-    @InputImport(name="ebs", required=true)
+    @Import(name="ebs", required=true)
       private final Map<String,String> ebs;
 
     public Map<String,String> getEbs() {
@@ -39,7 +39,7 @@ public final class GetAmiBlockDeviceMapping extends io.pulumi.resources.InvokeAr
      * Suppresses the specified device included in the block device mapping of the AMI.
      * 
      */
-    @InputImport(name="noDevice", required=true)
+    @Import(name="noDevice", required=true)
       private final String noDevice;
 
     public String getNoDevice() {
@@ -50,7 +50,7 @@ public final class GetAmiBlockDeviceMapping extends io.pulumi.resources.InvokeAr
      * The virtual device name (for instance stores).
      * 
      */
-    @InputImport(name="virtualName", required=true)
+    @Import(name="virtualName", required=true)
       private final String virtualName;
 
     public String getVirtualName() {

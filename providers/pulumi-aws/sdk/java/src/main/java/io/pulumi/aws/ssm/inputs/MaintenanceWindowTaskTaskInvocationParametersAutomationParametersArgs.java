@@ -5,7 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
      * The version of an Automation document to use during task execution.
      * 
      */
-    @InputImport(name="documentVersion")
+    @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
     public Output<String> getDocumentVersion() {
@@ -31,7 +31,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
      * The parameters for the RUN_COMMAND task execution. Documented below.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> parameters;
 
     public Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterArgs>> getParameters() {

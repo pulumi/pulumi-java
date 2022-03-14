@@ -4,22 +4,22 @@
 package io.pulumi.aws.opsworks.outputs;
 
 import io.pulumi.aws.opsworks.outputs.PhpAppLayerCloudwatchConfigurationLogStream;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PhpAppLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<PhpAppLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PhpAppLayerCloudwatchConfiguration(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("logStreams") @Nullable List<PhpAppLayerCloudwatchConfigurationLogStream> logStreams) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("logStreams") @Nullable List<PhpAppLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
      * 
      */
-    @InputImport(name="pgpKey")
+    @Import(name="pgpKey")
       private final @Nullable Output<String> pgpKey;
 
     public Output<String> getPgpKey() {
@@ -29,7 +29,7 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -40,7 +40,7 @@ public final class AccessKeyArgs extends io.pulumi.resources.ResourceArgs {
      * IAM user to associate with this access key.
      * 
      */
-    @InputImport(name="user", required=true)
+    @Import(name="user", required=true)
       private final Output<String> user;
 
     public Output<String> getUser() {

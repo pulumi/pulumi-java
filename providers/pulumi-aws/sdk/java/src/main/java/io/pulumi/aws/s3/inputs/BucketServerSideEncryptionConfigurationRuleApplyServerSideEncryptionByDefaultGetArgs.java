@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
      * The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of `sse_algorithm` as `aws:kms`. The default `aws/s3` AWS KMS master key is used if this element is absent while the `sse_algorithm` is `aws:kms`.
      * 
      */
-    @InputImport(name="kmsMasterKeyId")
+    @Import(name="kmsMasterKeyId")
       private final @Nullable Output<String> kmsMasterKeyId;
 
     public Output<String> getKmsMasterKeyId() {
@@ -29,7 +29,7 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
      * The server-side encryption algorithm to use. Valid values are `AES256` and `aws:kms`
      * 
      */
-    @InputImport(name="sseAlgorithm", required=true)
+    @Import(name="sseAlgorithm", required=true)
       private final Output<String> sseAlgorithm;
 
     public Output<String> getSseAlgorithm() {

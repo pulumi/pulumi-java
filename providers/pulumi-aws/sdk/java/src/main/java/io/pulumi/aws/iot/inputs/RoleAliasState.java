@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * The name of the role alias.
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
@@ -30,7 +30,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * The ARN assigned by AWS to this role alias.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -41,7 +41,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * The duration of the credential, in seconds. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 900 seconds (15 minutes) to 43200 seconds (12 hours).
      * 
      */
-    @InputImport(name="credentialDuration")
+    @Import(name="credentialDuration")
       private final @Nullable Output<Integer> credentialDuration;
 
     public Output<Integer> getCredentialDuration() {
@@ -52,7 +52,7 @@ public final class RoleAliasState extends io.pulumi.resources.ResourceArgs {
      * The identity of the role to which the alias refers.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {

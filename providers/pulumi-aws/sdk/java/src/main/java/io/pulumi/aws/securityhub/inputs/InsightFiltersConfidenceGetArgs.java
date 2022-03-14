@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InsightFiltersConfidenceGetArgs extends io.pulumi.resources.R
      * The equal-to condition to be applied to a single field when querying for findings, provided as a String.
      * 
      */
-    @InputImport(name="eq")
+    @Import(name="eq")
       private final @Nullable Output<String> eq;
 
     public Output<String> getEq() {
@@ -29,7 +29,7 @@ public final class InsightFiltersConfidenceGetArgs extends io.pulumi.resources.R
      * The greater-than-equal condition to be applied to a single field when querying for findings, provided as a String.
      * 
      */
-    @InputImport(name="gte")
+    @Import(name="gte")
       private final @Nullable Output<String> gte;
 
     public Output<String> getGte() {
@@ -40,7 +40,7 @@ public final class InsightFiltersConfidenceGetArgs extends io.pulumi.resources.R
      * The less-than-equal condition to be applied to a single field when querying for findings, provided as a String.
      * 
      */
-    @InputImport(name="lte")
+    @Import(name="lte")
       private final @Nullable Output<String> lte;
 
     public Output<String> getLte() {

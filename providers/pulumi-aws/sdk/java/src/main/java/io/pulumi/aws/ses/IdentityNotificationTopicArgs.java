@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
      * The identity for which the Amazon SNS topic will be set. You can specify an identity by using its name or by using its Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="identity", required=true)
+    @Import(name="identity", required=true)
       private final Output<String> identity;
 
     public Output<String> getIdentity() {
@@ -30,7 +30,7 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
      * Whether SES should include original email headers in SNS notifications of this type. *false* by default.
      * 
      */
-    @InputImport(name="includeOriginalHeaders")
+    @Import(name="includeOriginalHeaders")
       private final @Nullable Output<Boolean> includeOriginalHeaders;
 
     public Output<Boolean> getIncludeOriginalHeaders() {
@@ -41,7 +41,7 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
      * The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: *Bounce*, *Complaint* or *Delivery*.
      * 
      */
-    @InputImport(name="notificationType", required=true)
+    @Import(name="notificationType", required=true)
       private final Output<String> notificationType;
 
     public Output<String> getNotificationType() {
@@ -52,7 +52,7 @@ public final class IdentityNotificationTopicArgs extends io.pulumi.resources.Res
      * The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an empty string) to disable publishing.
      * 
      */
-    @InputImport(name="topicArn")
+    @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
     public Output<String> getTopicArn() {

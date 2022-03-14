@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DomainNameEndpointConfiguration {
     /**
      * A list of endpoint types. This resource currently only supports managing a single value. Valid values: `EDGE` or `REGIONAL`. If unspecified, defaults to `EDGE`. Must be declared as `REGIONAL` in non-Commercial partitions. Refer to the [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html) for more information on the difference between edge-optimized and regional APIs.
@@ -15,8 +15,8 @@ public final class DomainNameEndpointConfiguration {
      */
     private final String types;
 
-    @OutputCustomType.Constructor
-    private DomainNameEndpointConfiguration(@OutputCustomType.Parameter("types") String types) {
+    @CustomType.Constructor
+    private DomainNameEndpointConfiguration(@CustomType.Parameter("types") String types) {
         this.types = types;
     }
 

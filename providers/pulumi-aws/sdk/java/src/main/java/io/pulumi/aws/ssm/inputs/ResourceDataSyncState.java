@@ -5,7 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.aws.ssm.inputs.ResourceDataSyncS3DestinationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResourceDataSyncState extends io.pulumi.resources.ResourceArg
      * Name for the configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -30,7 +30,7 @@ public final class ResourceDataSyncState extends io.pulumi.resources.ResourceArg
      * Amazon S3 configuration details for the sync.
      * 
      */
-    @InputImport(name="s3Destination")
+    @Import(name="s3Destination")
       private final @Nullable Output<ResourceDataSyncS3DestinationGetArgs> s3Destination;
 
     public Output<ResourceDataSyncS3DestinationGetArgs> getS3Destination() {

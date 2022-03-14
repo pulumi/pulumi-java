@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
 
     public static final FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs Empty = new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesGetArgs();
 
-    @InputImport(name="items", required=true)
+    @Import(name="items", required=true)
       private final Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> items;
 
     public Output<List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs>> getItems() {

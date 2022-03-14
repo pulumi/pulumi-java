@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration {
     /**
      * Describes whether the Kinesis Data Analytics service can increase the parallelism of the application in response to increased throughput.
@@ -34,12 +34,12 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      */
     private final @Nullable Integer parallelismPerKpu;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration(
-        @OutputCustomType.Parameter("autoScalingEnabled") @Nullable Boolean autoScalingEnabled,
-        @OutputCustomType.Parameter("configurationType") String configurationType,
-        @OutputCustomType.Parameter("parallelism") @Nullable Integer parallelism,
-        @OutputCustomType.Parameter("parallelismPerKpu") @Nullable Integer parallelismPerKpu) {
+        @CustomType.Parameter("autoScalingEnabled") @Nullable Boolean autoScalingEnabled,
+        @CustomType.Parameter("configurationType") String configurationType,
+        @CustomType.Parameter("parallelism") @Nullable Integer parallelism,
+        @CustomType.Parameter("parallelismPerKpu") @Nullable Integer parallelismPerKpu) {
         this.autoScalingEnabled = autoScalingEnabled;
         this.configurationType = configurationType;
         this.parallelism = parallelism;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.aws.ebs.inputs.GetSnapshotFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * [describe-snapshots in the AWS CLI reference][1].
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetSnapshotFilter> filters;
 
     public List<GetSnapshotFilter> getFilters() {
@@ -35,7 +35,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * If more than one result is returned, use the most recent snapshot.
      * 
      */
-    @InputImport(name="mostRecent")
+    @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
@@ -46,7 +46,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * Returns the snapshots owned by the specified owner id. Multiple owners can be specified.
      * 
      */
-    @InputImport(name="owners")
+    @Import(name="owners")
       private final @Nullable List<String> owners;
 
     public List<String> getOwners() {
@@ -57,7 +57,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * One or more AWS accounts IDs that can create volumes from the snapshot.
      * 
      */
-    @InputImport(name="restorableByUserIds")
+    @Import(name="restorableByUserIds")
       private final @Nullable List<String> restorableByUserIds;
 
     public List<String> getRestorableByUserIds() {
@@ -68,7 +68,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * Returns information on a specific snapshot_id.
      * 
      */
-    @InputImport(name="snapshotIds")
+    @Import(name="snapshotIds")
       private final @Nullable List<String> snapshotIds;
 
     public List<String> getSnapshotIds() {
@@ -79,7 +79,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * A map of tags for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

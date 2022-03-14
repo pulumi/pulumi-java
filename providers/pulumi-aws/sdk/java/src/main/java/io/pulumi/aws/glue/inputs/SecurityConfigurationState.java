@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * Configuration block containing encryption configuration. Detailed below.
      * 
      */
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<SecurityConfigurationEncryptionConfigurationGetArgs> encryptionConfiguration;
 
     public Output<SecurityConfigurationEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
@@ -30,7 +30,7 @@ public final class SecurityConfigurationState extends io.pulumi.resources.Resour
      * Name of the security configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

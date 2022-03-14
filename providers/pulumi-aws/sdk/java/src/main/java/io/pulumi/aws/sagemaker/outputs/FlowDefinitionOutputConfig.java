@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowDefinitionOutputConfig {
     /**
      * The Amazon Key Management Service (KMS) key ARN for server-side encryption.
@@ -22,10 +22,10 @@ public final class FlowDefinitionOutputConfig {
      */
     private final String s3OutputPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowDefinitionOutputConfig(
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("s3OutputPath") String s3OutputPath) {
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("s3OutputPath") String s3OutputPath) {
         this.kmsKeyId = kmsKeyId;
         this.s3OutputPath = s3OutputPath;
     }

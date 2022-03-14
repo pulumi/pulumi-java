@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.GatewayArgs;
 import io.pulumi.aws.directconnect.inputs.GatewayState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The ASN to be configured on the Amazon side of the connection. The ASN must be in the private range of 64,512 to 65,534 or 4,200,000,000 to 4,294,967,294.
      * 
      */
-    @OutputExport(name="amazonSideAsn", type=String.class, parameters={})
+    @Export(name="amazonSideAsn", type=String.class, parameters={})
     private Output<String> amazonSideAsn;
 
     /**
@@ -46,7 +46,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The name of the connection.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -60,7 +60,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * AWS Account ID of the gateway.
      * 
      */
-    @OutputExport(name="ownerAccountId", type=String.class, parameters={})
+    @Export(name="ownerAccountId", type=String.class, parameters={})
     private Output<String> ownerAccountId;
 
     /**

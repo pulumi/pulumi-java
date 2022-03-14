@@ -4,13 +4,13 @@
 package io.pulumi.aws.timestreamwrite.outputs;
 
 import io.pulumi.aws.timestreamwrite.outputs.TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableMagneticStoreWriteProperties {
     /**
      * A flag to enable magnetic store writes.
@@ -23,10 +23,10 @@ public final class TableMagneticStoreWriteProperties {
      */
     private final @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableMagneticStoreWriteProperties(
-        @OutputCustomType.Parameter("enableMagneticStoreWrites") @Nullable Boolean enableMagneticStoreWrites,
-        @OutputCustomType.Parameter("magneticStoreRejectedDataLocation") @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation) {
+        @CustomType.Parameter("enableMagneticStoreWrites") @Nullable Boolean enableMagneticStoreWrites,
+        @CustomType.Parameter("magneticStoreRejectedDataLocation") @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation) {
         this.enableMagneticStoreWrites = enableMagneticStoreWrites;
         this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolDeviceConfiguration {
     /**
      * Whether a challenge is required on a new device. Only applicable to a new device.
@@ -22,10 +22,10 @@ public final class UserPoolDeviceConfiguration {
      */
     private final @Nullable Boolean deviceOnlyRememberedOnUserPrompt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolDeviceConfiguration(
-        @OutputCustomType.Parameter("challengeRequiredOnNewDevice") @Nullable Boolean challengeRequiredOnNewDevice,
-        @OutputCustomType.Parameter("deviceOnlyRememberedOnUserPrompt") @Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
+        @CustomType.Parameter("challengeRequiredOnNewDevice") @Nullable Boolean challengeRequiredOnNewDevice,
+        @CustomType.Parameter("deviceOnlyRememberedOnUserPrompt") @Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
         this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
         this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
     }

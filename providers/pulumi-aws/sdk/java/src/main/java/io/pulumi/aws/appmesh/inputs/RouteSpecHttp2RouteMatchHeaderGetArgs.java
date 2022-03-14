@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteMatchHeaderMatchGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RouteSpecHttp2RouteMatchHeaderGetArgs extends io.pulumi.resou
      * If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
      * 
      */
-    @InputImport(name="invert")
+    @Import(name="invert")
       private final @Nullable Output<Boolean> invert;
 
     public Output<Boolean> getInvert() {
@@ -31,7 +31,7 @@ public final class RouteSpecHttp2RouteMatchHeaderGetArgs extends io.pulumi.resou
      * The method and value to match the header value sent with a request. Specify one match method.
      * 
      */
-    @InputImport(name="match")
+    @Import(name="match")
       private final @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchGetArgs> match;
 
     public Output<RouteSpecHttp2RouteMatchHeaderMatchGetArgs> getMatch() {
@@ -42,7 +42,7 @@ public final class RouteSpecHttp2RouteMatchHeaderGetArgs extends io.pulumi.resou
      * A name for the HTTP header in the client request that will be matched on.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

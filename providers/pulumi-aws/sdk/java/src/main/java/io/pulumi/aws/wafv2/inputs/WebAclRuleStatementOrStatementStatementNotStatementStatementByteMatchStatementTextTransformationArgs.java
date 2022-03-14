@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementB
      * The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -29,7 +29,7 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementB
      * The transformation to apply, please refer to the Text Transformation [documentation](https://docs.aws.amazon.com/waf/latest/APIReference/API_TextTransformation.html) for more details.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

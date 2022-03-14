@@ -6,7 +6,7 @@ package io.pulumi.aws.applicationloadbalancing;
 import io.pulumi.aws.applicationloadbalancing.inputs.ListenerRuleActionArgs;
 import io.pulumi.aws.applicationloadbalancing.inputs.ListenerRuleConditionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
      * An Action block. Action blocks are documented below.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<ListenerRuleActionArgs>> actions;
 
     public Output<List<ListenerRuleActionArgs>> getActions() {
@@ -34,7 +34,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final Output<List<ListenerRuleConditionArgs>> conditions;
 
     public Output<List<ListenerRuleConditionArgs>> getConditions() {
@@ -45,7 +45,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the listener to which to attach the rule.
      * 
      */
-    @InputImport(name="listenerArn", required=true)
+    @Import(name="listenerArn", required=true)
       private final Output<String> listenerArn;
 
     public Output<String> getListenerArn() {
@@ -56,7 +56,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -67,7 +67,7 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

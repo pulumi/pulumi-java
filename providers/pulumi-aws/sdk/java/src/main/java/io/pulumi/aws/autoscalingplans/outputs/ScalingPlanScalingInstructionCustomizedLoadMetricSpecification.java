@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.autoscalingplans.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScalingPlanScalingInstructionCustomizedLoadMetricSpecification {
     /**
      * The dimensions of the metric.
@@ -38,13 +38,13 @@ public final class ScalingPlanScalingInstructionCustomizedLoadMetricSpecificatio
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScalingPlanScalingInstructionCustomizedLoadMetricSpecification(
-        @OutputCustomType.Parameter("dimensions") @Nullable Map<String,String> dimensions,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("statistic") String statistic,
-        @OutputCustomType.Parameter("unit") @Nullable String unit) {
+        @CustomType.Parameter("dimensions") @Nullable Map<String,String> dimensions,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("statistic") String statistic,
+        @CustomType.Parameter("unit") @Nullable String unit) {
         this.dimensions = dimensions;
         this.metricName = metricName;
         this.namespace = namespace;

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission {
     /**
      * Set of EC2 launch permission user groups.
@@ -21,10 +21,10 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      */
     private final List<String> userIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(
-        @OutputCustomType.Parameter("userGroups") List<String> userGroups,
-        @OutputCustomType.Parameter("userIds") List<String> userIds) {
+        @CustomType.Parameter("userGroups") List<String> userGroups,
+        @CustomType.Parameter("userIds") List<String> userIds) {
         this.userGroups = userGroups;
         this.userIds = userIds;
     }

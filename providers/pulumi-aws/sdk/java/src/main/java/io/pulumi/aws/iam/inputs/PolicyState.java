@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The ARN assigned by AWS to this policy.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * Description of the IAM policy.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The name of the policy. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -64,7 +64,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -75,7 +75,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The policy document. This is a JSON formatted string.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -86,7 +86,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The policy's ID.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -97,7 +97,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * Map of resource tags for the IAM Policy
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -108,7 +108,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

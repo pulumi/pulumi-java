@@ -4,7 +4,7 @@
 package io.pulumi.aws.codestarconnections.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The codestar connection ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The codestar connection status. Possible values are `PENDING`, `AVAILABLE` and `ERROR`.
      * 
      */
-    @InputImport(name="connectionStatus")
+    @Import(name="connectionStatus")
       private final @Nullable Output<String> connectionStatus;
 
     public Output<String> getConnectionStatus() {
@@ -41,7 +41,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the host associated with the connection. Conflicts with `provider_type`
      * 
      */
-    @InputImport(name="hostArn")
+    @Import(name="hostArn")
       private final @Nullable Output<String> hostArn;
 
     public Output<String> getHostArn() {
@@ -52,7 +52,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The name of the connection to be created. The name must be unique in the calling AWS account. Changing `name` will create a new resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -63,7 +63,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * The name of the external provider where your third-party code repository is configured. Valid values are `Bitbucket`, `GitHub` or `GitHubEnterpriseServer`. Changing `provider_type` will create a new resource. Conflicts with `host_arn`
      * 
      */
-    @InputImport(name="providerType")
+    @Import(name="providerType")
       private final @Nullable Output<String> providerType;
 
     public Output<String> getProviderType() {
@@ -74,7 +74,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * Map of key-value resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -85,7 +85,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

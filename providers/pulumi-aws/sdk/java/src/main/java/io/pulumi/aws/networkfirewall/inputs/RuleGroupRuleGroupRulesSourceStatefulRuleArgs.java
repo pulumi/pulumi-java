@@ -6,7 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
      * Action to take with packets in a traffic flow when the flow matches the stateful rule criteria. For all actions, AWS Network Firewall performs the specified action and discontinues stateful inspection of the traffic flow. Valid values: `ALERT`, `DROP` or `PASS`.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<String> action;
 
     public Output<String> getAction() {
@@ -31,7 +31,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
      * A configuration block containing the stateful 5-tuple inspection criteria for the rule, used to inspect traffic flows. See Header below for details.
      * 
      */
-    @InputImport(name="header", required=true)
+    @Import(name="header", required=true)
       private final Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> header;
 
     public Output<RuleGroupRuleGroupRulesSourceStatefulRuleHeaderArgs> getHeader() {
@@ -42,7 +42,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
      * Set of configuration blocks containing additional settings for a stateful rule. See Rule Option below for details.
      * 
      */
-    @InputImport(name="ruleOptions", required=true)
+    @Import(name="ruleOptions", required=true)
       private final Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> ruleOptions;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs>> getRuleOptions() {

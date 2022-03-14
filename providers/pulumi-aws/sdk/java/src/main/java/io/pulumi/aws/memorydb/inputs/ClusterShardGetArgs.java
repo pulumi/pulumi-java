@@ -5,7 +5,7 @@ package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.aws.memorydb.inputs.ClusterShardNodeGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
      * * `endpoint`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
      * Set of nodes in this shard.
      * 
      */
-    @InputImport(name="nodes")
+    @Import(name="nodes")
       private final @Nullable Output<List<ClusterShardNodeGetArgs>> nodes;
 
     public Output<List<ClusterShardNodeGetArgs>> getNodes() {
@@ -44,7 +44,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
      * Number of individual nodes in this shard.
      * 
      */
-    @InputImport(name="numNodes")
+    @Import(name="numNodes")
       private final @Nullable Output<Integer> numNodes;
 
     public Output<Integer> getNumNodes() {
@@ -55,7 +55,7 @@ public final class ClusterShardGetArgs extends io.pulumi.resources.ResourceArgs 
      * Keyspace for this shard. Example: `0-16383`.
      * 
      */
-    @InputImport(name="slots")
+    @Import(name="slots")
       private final @Nullable Output<String> slots;
 
     public Output<String> getSlots() {

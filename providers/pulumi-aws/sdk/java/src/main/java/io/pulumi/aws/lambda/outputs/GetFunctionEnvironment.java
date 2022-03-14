@@ -3,17 +3,17 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFunctionEnvironment {
     private final Map<String,String> variables;
 
-    @OutputCustomType.Constructor
-    private GetFunctionEnvironment(@OutputCustomType.Parameter("variables") Map<String,String> variables) {
+    @CustomType.Constructor
+    private GetFunctionEnvironment(@CustomType.Parameter("variables") Map<String,String> variables) {
         this.variables = variables;
     }
 

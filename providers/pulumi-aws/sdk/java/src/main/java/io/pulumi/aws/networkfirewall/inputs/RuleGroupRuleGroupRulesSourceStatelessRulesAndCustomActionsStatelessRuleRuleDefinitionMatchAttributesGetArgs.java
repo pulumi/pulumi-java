@@ -9,7 +9,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatele
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * Set of configuration blocks describing the destination ports to inspect for. If not specified, this matches with any destination port. See Destination Port below for details.
      * 
      */
-    @InputImport(name="destinationPorts")
+    @Import(name="destinationPorts")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> destinationPorts;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPortGetArgs>> getDestinationPorts() {
@@ -35,7 +35,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * Set of configuration blocks describing the destination IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any destination address. See Destination below for details.
      * 
      */
-    @InputImport(name="destinations")
+    @Import(name="destinations")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> destinations;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationGetArgs>> getDestinations() {
@@ -46,7 +46,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
      * 
      */
-    @InputImport(name="protocols")
+    @Import(name="protocols")
       private final @Nullable Output<List<Integer>> protocols;
 
     public Output<List<Integer>> getProtocols() {
@@ -57,7 +57,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * Set of configuration blocks describing the source ports to inspect for. If not specified, this matches with any source port. See Source Port below for details.
      * 
      */
-    @InputImport(name="sourcePorts")
+    @Import(name="sourcePorts")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> sourcePorts;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs>> getSourcePorts() {
@@ -68,7 +68,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * Set of configuration blocks describing the source IP address and address ranges to inspect for, in CIDR notation. If not specified, this matches with any source address. See Source below for details.
      * 
      */
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> sources;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourceGetArgs>> getSources() {
@@ -79,7 +79,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * Set of configuration blocks containing the TCP flags and masks to inspect for. If not specified, this matches with any settings.
      * 
      */
-    @InputImport(name="tcpFlags")
+    @Import(name="tcpFlags")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> tcpFlags;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlagGetArgs>> getTcpFlags() {

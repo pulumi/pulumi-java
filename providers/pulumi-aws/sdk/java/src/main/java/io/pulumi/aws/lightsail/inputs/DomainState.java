@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Lightsail domain
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The name of the Lightsail domain to manage
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {

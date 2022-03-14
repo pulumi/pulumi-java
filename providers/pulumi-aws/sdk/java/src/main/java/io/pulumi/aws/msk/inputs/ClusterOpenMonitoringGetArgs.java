@@ -5,7 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringPrometheusGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class ClusterOpenMonitoringGetArgs extends io.pulumi.resources.Reso
      * Configuration block for Prometheus settings for open monitoring. See below.
      * 
      */
-    @InputImport(name="prometheus", required=true)
+    @Import(name="prometheus", required=true)
       private final Output<ClusterOpenMonitoringPrometheusGetArgs> prometheus;
 
     public Output<ClusterOpenMonitoringPrometheusGetArgs> getPrometheus() {

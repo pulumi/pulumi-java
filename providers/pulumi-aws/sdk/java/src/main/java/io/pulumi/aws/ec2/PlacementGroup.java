@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.PlacementGroupArgs;
 import io.pulumi.aws.ec2.inputs.PlacementGroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the placement group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * The name of the placement group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * `"partition"`.  Valid values are 1 - 7 (default is `2`).
      * 
      */
-    @OutputExport(name="partitionCount", type=Integer.class, parameters={})
+    @Export(name="partitionCount", type=Integer.class, parameters={})
     private Output<Integer> partitionCount;
 
     /**
@@ -81,7 +81,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * The ID of the placement group.
      * 
      */
-    @OutputExport(name="placementGroupId", type=String.class, parameters={})
+    @Export(name="placementGroupId", type=String.class, parameters={})
     private Output<String> placementGroupId;
 
     /**
@@ -95,7 +95,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * The placement strategy. Can be `"cluster"`, `"partition"` or `"spread"`.
      * 
      */
-    @OutputExport(name="strategy", type=String.class, parameters={})
+    @Export(name="strategy", type=String.class, parameters={})
     private Output<String> strategy;
 
     /**
@@ -109,7 +109,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -123,7 +123,7 @@ public class PlacementGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

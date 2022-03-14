@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.resourcegroupstaggingapi.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,21 +20,21 @@ public final class GetResourcesResourceTagMappingListComplianceDetail extends io
      * * ` non_compliant_keys  ` - Set of non-compliant tag keys.
      * 
      */
-    @InputImport(name="complianceStatus", required=true)
+    @Import(name="complianceStatus", required=true)
       private final Boolean complianceStatus;
 
     public Boolean getComplianceStatus() {
         return this.complianceStatus;
     }
 
-    @InputImport(name="keysWithNoncompliantValues", required=true)
+    @Import(name="keysWithNoncompliantValues", required=true)
       private final List<String> keysWithNoncompliantValues;
 
     public List<String> getKeysWithNoncompliantValues() {
         return this.keysWithNoncompliantValues;
     }
 
-    @InputImport(name="nonCompliantKeys", required=true)
+    @Import(name="nonCompliantKeys", required=true)
       private final List<String> nonCompliantKeys;
 
     public List<String> getNonCompliantKeys() {

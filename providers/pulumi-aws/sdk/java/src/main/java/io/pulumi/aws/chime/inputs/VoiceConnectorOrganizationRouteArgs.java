@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends io.pulumi.resourc
      * The FQDN or IP address to contact for origination traffic.
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final Output<String> host;
 
     public Output<String> getHost() {
@@ -30,7 +30,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends io.pulumi.resourc
      * The designated origination route port. Defaults to `5060`.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -41,7 +41,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends io.pulumi.resourc
      * The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted first.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -52,7 +52,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends io.pulumi.resourc
      * The protocol to use for the origination route. Encryption-enabled Amazon Chime Voice Connectors use TCP protocol by default.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -63,7 +63,7 @@ public final class VoiceConnectorOrganizationRouteArgs extends io.pulumi.resourc
      * The weight associated with the host. If hosts are equal in priority, calls are redistributed among them based on their relative weight.
      * 
      */
-    @InputImport(name="weight", required=true)
+    @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
     public Output<Integer> getWeight() {

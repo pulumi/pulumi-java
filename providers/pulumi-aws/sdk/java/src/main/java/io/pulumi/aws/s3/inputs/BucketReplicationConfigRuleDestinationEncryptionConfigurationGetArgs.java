@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration
      * The ID (Key ARN or Alias ARN) of the customer managed AWS KMS key stored in AWS Key Management Service (KMS) for the destination bucket.
      * 
      */
-    @InputImport(name="replicaKmsKeyId", required=true)
+    @Import(name="replicaKmsKeyId", required=true)
       private final Output<String> replicaKmsKeyId;
 
     public Output<String> getReplicaKmsKeyId() {

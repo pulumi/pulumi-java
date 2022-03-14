@@ -10,14 +10,14 @@ import io.pulumi.aws.mq.outputs.GetBrokerLdapServerMetadata;
 import io.pulumi.aws.mq.outputs.GetBrokerLogs;
 import io.pulumi.aws.mq.outputs.GetBrokerMaintenanceWindowStartTime;
 import io.pulumi.aws.mq.outputs.GetBrokerUser;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBrokerResult {
     private final String arn;
     private final String authenticationStrategy;
@@ -46,30 +46,30 @@ public final class GetBrokerResult {
     private final Map<String,String> tags;
     private final List<GetBrokerUser> users;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBrokerResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("authenticationStrategy") String authenticationStrategy,
-        @OutputCustomType.Parameter("autoMinorVersionUpgrade") Boolean autoMinorVersionUpgrade,
-        @OutputCustomType.Parameter("brokerId") String brokerId,
-        @OutputCustomType.Parameter("brokerName") String brokerName,
-        @OutputCustomType.Parameter("configuration") GetBrokerConfiguration configuration,
-        @OutputCustomType.Parameter("deploymentMode") String deploymentMode,
-        @OutputCustomType.Parameter("encryptionOptions") List<GetBrokerEncryptionOption> encryptionOptions,
-        @OutputCustomType.Parameter("engineType") String engineType,
-        @OutputCustomType.Parameter("engineVersion") String engineVersion,
-        @OutputCustomType.Parameter("hostInstanceType") String hostInstanceType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instances") List<GetBrokerInstance> instances,
-        @OutputCustomType.Parameter("ldapServerMetadatas") List<GetBrokerLdapServerMetadata> ldapServerMetadatas,
-        @OutputCustomType.Parameter("logs") GetBrokerLogs logs,
-        @OutputCustomType.Parameter("maintenanceWindowStartTime") GetBrokerMaintenanceWindowStartTime maintenanceWindowStartTime,
-        @OutputCustomType.Parameter("publiclyAccessible") Boolean publiclyAccessible,
-        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
-        @OutputCustomType.Parameter("storageType") String storageType,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("users") List<GetBrokerUser> users) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("authenticationStrategy") String authenticationStrategy,
+        @CustomType.Parameter("autoMinorVersionUpgrade") Boolean autoMinorVersionUpgrade,
+        @CustomType.Parameter("brokerId") String brokerId,
+        @CustomType.Parameter("brokerName") String brokerName,
+        @CustomType.Parameter("configuration") GetBrokerConfiguration configuration,
+        @CustomType.Parameter("deploymentMode") String deploymentMode,
+        @CustomType.Parameter("encryptionOptions") List<GetBrokerEncryptionOption> encryptionOptions,
+        @CustomType.Parameter("engineType") String engineType,
+        @CustomType.Parameter("engineVersion") String engineVersion,
+        @CustomType.Parameter("hostInstanceType") String hostInstanceType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instances") List<GetBrokerInstance> instances,
+        @CustomType.Parameter("ldapServerMetadatas") List<GetBrokerLdapServerMetadata> ldapServerMetadatas,
+        @CustomType.Parameter("logs") GetBrokerLogs logs,
+        @CustomType.Parameter("maintenanceWindowStartTime") GetBrokerMaintenanceWindowStartTime maintenanceWindowStartTime,
+        @CustomType.Parameter("publiclyAccessible") Boolean publiclyAccessible,
+        @CustomType.Parameter("securityGroups") List<String> securityGroups,
+        @CustomType.Parameter("storageType") String storageType,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("users") List<GetBrokerUser> users) {
         this.arn = arn;
         this.authenticationStrategy = authenticationStrategy;
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;

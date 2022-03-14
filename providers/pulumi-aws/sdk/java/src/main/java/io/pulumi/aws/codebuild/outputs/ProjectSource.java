@@ -6,7 +6,7 @@ package io.pulumi.aws.codebuild.outputs;
 import io.pulumi.aws.codebuild.outputs.ProjectSourceAuth;
 import io.pulumi.aws.codebuild.outputs.ProjectSourceBuildStatusConfig;
 import io.pulumi.aws.codebuild.outputs.ProjectSourceGitSubmodulesConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectSource {
     /**
      * Configuration block with the authorization settings for AWS CodeBuild to access the source code to be built. This information is for the AWS CodeBuild console's use only. Use the `aws.codebuild.SourceCredential` resource instead. Auth blocks are documented below.
@@ -66,17 +66,17 @@ public final class ProjectSource {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectSource(
-        @OutputCustomType.Parameter("auth") @Nullable ProjectSourceAuth auth,
-        @OutputCustomType.Parameter("buildStatusConfig") @Nullable ProjectSourceBuildStatusConfig buildStatusConfig,
-        @OutputCustomType.Parameter("buildspec") @Nullable String buildspec,
-        @OutputCustomType.Parameter("gitCloneDepth") @Nullable Integer gitCloneDepth,
-        @OutputCustomType.Parameter("gitSubmodulesConfig") @Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig,
-        @OutputCustomType.Parameter("insecureSsl") @Nullable Boolean insecureSsl,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("reportBuildStatus") @Nullable Boolean reportBuildStatus,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("auth") @Nullable ProjectSourceAuth auth,
+        @CustomType.Parameter("buildStatusConfig") @Nullable ProjectSourceBuildStatusConfig buildStatusConfig,
+        @CustomType.Parameter("buildspec") @Nullable String buildspec,
+        @CustomType.Parameter("gitCloneDepth") @Nullable Integer gitCloneDepth,
+        @CustomType.Parameter("gitSubmodulesConfig") @Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig,
+        @CustomType.Parameter("insecureSsl") @Nullable Boolean insecureSsl,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("reportBuildStatus") @Nullable Boolean reportBuildStatus,
+        @CustomType.Parameter("type") String type) {
         this.auth = auth;
         this.buildStatusConfig = buildStatusConfig;
         this.buildspec = buildspec;

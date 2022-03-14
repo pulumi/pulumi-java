@@ -11,7 +11,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementAndS
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
      * Inspect all query arguments.
      * 
      */
-    @InputImport(name="allQueryArguments")
+    @Import(name="allQueryArguments")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
     public Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
@@ -35,7 +35,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
      * Inspect the request body, which immediately follows the request headers.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> body;
 
     public Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchBodyArgs> getBody() {
@@ -46,7 +46,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
      * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> method;
 
     public Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchMethodArgs> getMethod() {
@@ -57,7 +57,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
      * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> queryString;
 
     public Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchQueryStringArgs> getQueryString() {
@@ -68,7 +68,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
      * Inspect a single header. See Single Header below for details.
      * 
      */
-    @InputImport(name="singleHeader")
+    @Import(name="singleHeader")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
     public Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
@@ -79,7 +79,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
      * Inspect a single query argument. See Single Query Argument below for details.
      * 
      */
-    @InputImport(name="singleQueryArgument")
+    @Import(name="singleQueryArgument")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
     public Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
@@ -90,7 +90,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
      * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
      */
-    @InputImport(name="uriPath")
+    @Import(name="uriPath")
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> uriPath;
 
     public Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementSqliMatchStatementFieldToMatchUriPathArgs> getUriPath() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Specifies the allocated storage size in gigabytes (GB).
      * 
      */
-    @InputImport(name="allocatedStorage")
+    @Import(name="allocatedStorage")
       private final @Nullable Output<Integer> allocatedStorage;
 
     public Output<Integer> getAllocatedStorage() {
@@ -32,7 +32,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Specifies the name of the Availability Zone the DB instance was located in at the time of the DB snapshot.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -43,7 +43,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * The DB Instance Identifier from which to take the snapshot.
      * 
      */
-    @InputImport(name="dbInstanceIdentifier")
+    @Import(name="dbInstanceIdentifier")
       private final @Nullable Output<String> dbInstanceIdentifier;
 
     public Output<String> getDbInstanceIdentifier() {
@@ -54,7 +54,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) for the DB snapshot.
      * 
      */
-    @InputImport(name="dbSnapshotArn")
+    @Import(name="dbSnapshotArn")
       private final @Nullable Output<String> dbSnapshotArn;
 
     public Output<String> getDbSnapshotArn() {
@@ -65,7 +65,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * The Identifier for the snapshot.
      * 
      */
-    @InputImport(name="dbSnapshotIdentifier")
+    @Import(name="dbSnapshotIdentifier")
       private final @Nullable Output<String> dbSnapshotIdentifier;
 
     public Output<String> getDbSnapshotIdentifier() {
@@ -76,7 +76,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the DB snapshot is encrypted.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -87,7 +87,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Specifies the name of the database engine.
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -98,7 +98,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Specifies the version of the database engine.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -109,7 +109,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Specifies the Provisioned IOPS (I/O operations per second) value of the DB instance at the time of the snapshot.
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
@@ -120,7 +120,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * The ARN for the KMS encryption key.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -131,7 +131,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * License model information for the restored DB instance.
      * 
      */
-    @InputImport(name="licenseModel")
+    @Import(name="licenseModel")
       private final @Nullable Output<String> licenseModel;
 
     public Output<String> getLicenseModel() {
@@ -142,21 +142,21 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Provides the option group name for the DB snapshot.
      * 
      */
-    @InputImport(name="optionGroupName")
+    @Import(name="optionGroupName")
       private final @Nullable Output<String> optionGroupName;
 
     public Output<String> getOptionGroupName() {
         return this.optionGroupName == null ? Output.empty() : this.optionGroupName;
     }
 
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
         return this.port == null ? Output.empty() : this.port;
     }
 
-    @InputImport(name="snapshotType")
+    @Import(name="snapshotType")
       private final @Nullable Output<String> snapshotType;
 
     public Output<String> getSnapshotType() {
@@ -167,7 +167,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * The DB snapshot Arn that the DB snapshot was copied from. It only has value in case of cross customer or cross region copy.
      * 
      */
-    @InputImport(name="sourceDbSnapshotIdentifier")
+    @Import(name="sourceDbSnapshotIdentifier")
       private final @Nullable Output<String> sourceDbSnapshotIdentifier;
 
     public Output<String> getSourceDbSnapshotIdentifier() {
@@ -178,7 +178,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * The region that the DB snapshot was created in or copied from.
      * 
      */
-    @InputImport(name="sourceRegion")
+    @Import(name="sourceRegion")
       private final @Nullable Output<String> sourceRegion;
 
     public Output<String> getSourceRegion() {
@@ -189,7 +189,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Specifies the status of this DB snapshot.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -200,7 +200,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Specifies the storage type associated with DB snapshot.
      * 
      */
-    @InputImport(name="storageType")
+    @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
@@ -211,7 +211,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -222,7 +222,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -233,7 +233,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Provides the VPC ID associated with the DB snapshot.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

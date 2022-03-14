@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes whether the Kinesis Data Analytics service can increase the parallelism of the application in response to increased throughput.
      * 
      */
-    @InputImport(name="autoScalingEnabled")
+    @Import(name="autoScalingEnabled")
       private final @Nullable Output<Boolean> autoScalingEnabled;
 
     public Output<Boolean> getAutoScalingEnabled() {
@@ -31,7 +31,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes whether the application uses the default parallelism for the Kinesis Data Analytics service. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `auto_scaling_enabled`, `parallelism`, or `parallelism_per_kpu` attribute values to be effective.
      * 
      */
-    @InputImport(name="configurationType", required=true)
+    @Import(name="configurationType", required=true)
       private final Output<String> configurationType;
 
     public Output<String> getConfigurationType() {
@@ -42,7 +42,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes the initial number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform.
      * 
      */
-    @InputImport(name="parallelism")
+    @Import(name="parallelism")
       private final @Nullable Output<Integer> parallelism;
 
     public Output<Integer> getParallelism() {
@@ -53,7 +53,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes the number of parallel tasks that a Flink-based Kinesis Data Analytics application can perform per Kinesis Processing Unit (KPU) used by the application.
      * 
      */
-    @InputImport(name="parallelismPerKpu")
+    @Import(name="parallelismPerKpu")
       private final @Nullable Output<Integer> parallelismPerKpu;
 
     public Output<Integer> getParallelismPerKpu() {

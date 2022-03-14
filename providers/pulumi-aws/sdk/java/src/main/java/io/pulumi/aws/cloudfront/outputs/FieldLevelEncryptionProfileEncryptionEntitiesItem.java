@@ -4,11 +4,11 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FieldLevelEncryptionProfileEncryptionEntitiesItem {
     /**
      * Object that contains an attribute `items` that contains the list of field patterns in a field-level encryption content type profile specify the fields that you want to be encrypted.
@@ -26,11 +26,11 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItem {
      */
     private final String publicKeyId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FieldLevelEncryptionProfileEncryptionEntitiesItem(
-        @OutputCustomType.Parameter("fieldPatterns") FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns fieldPatterns,
-        @OutputCustomType.Parameter("providerId") String providerId,
-        @OutputCustomType.Parameter("publicKeyId") String publicKeyId) {
+        @CustomType.Parameter("fieldPatterns") FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatterns fieldPatterns,
+        @CustomType.Parameter("providerId") String providerId,
+        @CustomType.Parameter("publicKeyId") String publicKeyId) {
         this.fieldPatterns = fieldPatterns;
         this.providerId = providerId;
         this.publicKeyId = publicKeyId;

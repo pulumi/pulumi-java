@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentMonitor {
     /**
      * ARN of the Amazon CloudWatch alarm.
@@ -22,10 +22,10 @@ public final class EnvironmentMonitor {
      */
     private final @Nullable String alarmRoleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentMonitor(
-        @OutputCustomType.Parameter("alarmArn") String alarmArn,
-        @OutputCustomType.Parameter("alarmRoleArn") @Nullable String alarmRoleArn) {
+        @CustomType.Parameter("alarmArn") String alarmArn,
+        @CustomType.Parameter("alarmRoleArn") @Nullable String alarmRoleArn) {
         this.alarmArn = alarmArn;
         this.alarmRoleArn = alarmRoleArn;
     }

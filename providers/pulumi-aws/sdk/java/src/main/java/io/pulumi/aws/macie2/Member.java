@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.macie2.MemberArgs;
 import io.pulumi.aws.macie2.inputs.MemberState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The AWS account ID for the account.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -48,7 +48,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The AWS account ID for the administrator account.
      * 
      */
-    @OutputExport(name="administratorAccountId", type=String.class, parameters={})
+    @Export(name="administratorAccountId", type=String.class, parameters={})
     private Output<String> administratorAccountId;
 
     /**
@@ -62,7 +62,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the account.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -76,7 +76,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The email address for the account.
      * 
      */
-    @OutputExport(name="email", type=String.class, parameters={})
+    @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
@@ -90,7 +90,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Specifies whether to send an email notification to the root user of each account that the invitation will be sent to. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. To send an email notification to the root user of each account, set this value to `true`.
      * 
      */
-    @OutputExport(name="invitationDisableEmailNotification", type=String.class, parameters={})
+    @Export(name="invitationDisableEmailNotification", type=String.class, parameters={})
     private Output</* @Nullable */ String> invitationDisableEmailNotification;
 
     /**
@@ -104,7 +104,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it sends for an invitation.
      * 
      */
-    @OutputExport(name="invitationMessage", type=String.class, parameters={})
+    @Export(name="invitationMessage", type=String.class, parameters={})
     private Output</* @Nullable */ String> invitationMessage;
 
     /**
@@ -118,7 +118,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Send an invitation to a member
      * 
      */
-    @OutputExport(name="invite", type=Boolean.class, parameters={})
+    @Export(name="invite", type=Boolean.class, parameters={})
     private Output<Boolean> invite;
 
     /**
@@ -132,7 +132,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn't been sent to the account.
      * 
      */
-    @OutputExport(name="invitedAt", type=String.class, parameters={})
+    @Export(name="invitedAt", type=String.class, parameters={})
     private Output<String> invitedAt;
 
     /**
@@ -142,7 +142,7 @@ public class Member extends io.pulumi.resources.CustomResource {
     public Output<String> getInvitedAt() {
         return this.invitedAt;
     }
-    @OutputExport(name="masterAccountId", type=String.class, parameters={})
+    @Export(name="masterAccountId", type=String.class, parameters={})
     private Output<String> masterAccountId;
 
     public Output<String> getMasterAccountId() {
@@ -152,7 +152,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The current status of the relationship between the account and the administrator account.
      * 
      */
-    @OutputExport(name="relationshipStatus", type=String.class, parameters={})
+    @Export(name="relationshipStatus", type=String.class, parameters={})
     private Output<String> relationshipStatus;
 
     /**
@@ -166,7 +166,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to `ENABLED`. Valid values are `ENABLED` or `PAUSED`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -180,7 +180,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * A map of key-value pairs that specifies the tags to associate with the account in Amazon Macie.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -190,7 +190,7 @@ public class Member extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -200,7 +200,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The date and time, in UTC and extended RFC 3339 format, of the most recent change to the status of the relationship between the account and the administrator account.
      * 
      */
-    @OutputExport(name="updatedAt", type=String.class, parameters={})
+    @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**

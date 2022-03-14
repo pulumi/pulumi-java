@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -21,7 +21,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * Specifies whether the cached responses are encrypted.
      * 
      */
-    @InputImport(name="cacheDataEncrypted")
+    @Import(name="cacheDataEncrypted")
       private final @Nullable Output<Boolean> cacheDataEncrypted;
 
     public Output<Boolean> getCacheDataEncrypted() {
@@ -32,7 +32,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * Specifies the time to live (TTL), in seconds, for cached responses. The higher the TTL, the longer the response will be cached.
      * 
      */
-    @InputImport(name="cacheTtlInSeconds")
+    @Import(name="cacheTtlInSeconds")
       private final @Nullable Output<Integer> cacheTtlInSeconds;
 
     public Output<Integer> getCacheTtlInSeconds() {
@@ -43,7 +43,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * Specifies whether responses should be cached and returned for requests. A cache cluster must be enabled on the stage for responses to be cached.
      * 
      */
-    @InputImport(name="cachingEnabled")
+    @Import(name="cachingEnabled")
       private final @Nullable Output<Boolean> cachingEnabled;
 
     public Output<Boolean> getCachingEnabled() {
@@ -54,7 +54,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * Specifies whether data trace logging is enabled for this method, which effects the log entries pushed to Amazon CloudWatch Logs.
      * 
      */
-    @InputImport(name="dataTraceEnabled")
+    @Import(name="dataTraceEnabled")
       private final @Nullable Output<Boolean> dataTraceEnabled;
 
     public Output<Boolean> getDataTraceEnabled() {
@@ -65,7 +65,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * Specifies the logging level for this method, which effects the log entries pushed to Amazon CloudWatch Logs. The available levels are `OFF`, `ERROR`, and `INFO`.
      * 
      */
-    @InputImport(name="loggingLevel")
+    @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
 
     public Output<String> getLoggingLevel() {
@@ -76,7 +76,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * Specifies whether Amazon CloudWatch metrics are enabled for this method.
      * 
      */
-    @InputImport(name="metricsEnabled")
+    @Import(name="metricsEnabled")
       private final @Nullable Output<Boolean> metricsEnabled;
 
     public Output<Boolean> getMetricsEnabled() {
@@ -87,7 +87,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * Specifies whether authorization is required for a cache invalidation request.
      * 
      */
-    @InputImport(name="requireAuthorizationForCacheControl")
+    @Import(name="requireAuthorizationForCacheControl")
       private final @Nullable Output<Boolean> requireAuthorizationForCacheControl;
 
     public Output<Boolean> getRequireAuthorizationForCacheControl() {
@@ -98,7 +98,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * Specifies the throttling burst limit. Default: `-1` (throttling disabled).
      * 
      */
-    @InputImport(name="throttlingBurstLimit")
+    @Import(name="throttlingBurstLimit")
       private final @Nullable Output<Integer> throttlingBurstLimit;
 
     public Output<Integer> getThrottlingBurstLimit() {
@@ -109,7 +109,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * Specifies the throttling rate limit. Default: `-1` (throttling disabled).
      * 
      */
-    @InputImport(name="throttlingRateLimit")
+    @Import(name="throttlingRateLimit")
       private final @Nullable Output<Double> throttlingRateLimit;
 
     public Output<Double> getThrottlingRateLimit() {
@@ -120,7 +120,7 @@ public final class MethodSettingsSettingsArgs extends io.pulumi.resources.Resour
      * Specifies how to handle unauthorized requests for cache invalidation. The available values are `FAIL_WITH_403`, `SUCCEED_WITH_RESPONSE_HEADER`, `SUCCEED_WITHOUT_RESPONSE_HEADER`.
      * 
      */
-    @InputImport(name="unauthorizedCacheControlHeaderStrategy")
+    @Import(name="unauthorizedCacheControlHeaderStrategy")
       private final @Nullable Output<String> unauthorizedCacheControlHeaderStrategy;
 
     public Output<String> getUnauthorizedCacheControlHeaderStrategy() {

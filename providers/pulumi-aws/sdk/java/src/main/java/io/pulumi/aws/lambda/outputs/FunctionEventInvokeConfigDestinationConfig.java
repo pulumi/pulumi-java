@@ -5,12 +5,12 @@ package io.pulumi.aws.lambda.outputs;
 
 import io.pulumi.aws.lambda.outputs.FunctionEventInvokeConfigDestinationConfigOnFailure;
 import io.pulumi.aws.lambda.outputs.FunctionEventInvokeConfigDestinationConfigOnSuccess;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionEventInvokeConfigDestinationConfig {
     /**
      * Configuration block with destination configuration for failed asynchronous invocations. See below for details.
@@ -23,10 +23,10 @@ public final class FunctionEventInvokeConfigDestinationConfig {
      */
     private final @Nullable FunctionEventInvokeConfigDestinationConfigOnSuccess onSuccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionEventInvokeConfigDestinationConfig(
-        @OutputCustomType.Parameter("onFailure") @Nullable FunctionEventInvokeConfigDestinationConfigOnFailure onFailure,
-        @OutputCustomType.Parameter("onSuccess") @Nullable FunctionEventInvokeConfigDestinationConfigOnSuccess onSuccess) {
+        @CustomType.Parameter("onFailure") @Nullable FunctionEventInvokeConfigDestinationConfigOnFailure onFailure,
+        @CustomType.Parameter("onSuccess") @Nullable FunctionEventInvokeConfigDestinationConfigOnSuccess onSuccess) {
         this.onFailure = onFailure;
         this.onSuccess = onSuccess;
     }

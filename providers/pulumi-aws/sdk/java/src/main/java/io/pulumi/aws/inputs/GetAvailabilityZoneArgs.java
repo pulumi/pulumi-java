@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.aws.inputs.GetAvailabilityZoneFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetAvailabilityZoneArgs extends io.pulumi.resources.InvokeArg
      * Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
      * 
      */
-    @InputImport(name="allAvailabilityZones")
+    @Import(name="allAvailabilityZones")
       private final @Nullable Boolean allAvailabilityZones;
 
     public Optional<Boolean> getAllAvailabilityZones() {
@@ -32,7 +32,7 @@ public final class GetAvailabilityZoneArgs extends io.pulumi.resources.InvokeArg
      * Configuration block(s) for filtering. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetAvailabilityZoneFilter> filters;
 
     public List<GetAvailabilityZoneFilter> getFilters() {
@@ -43,7 +43,7 @@ public final class GetAvailabilityZoneArgs extends io.pulumi.resources.InvokeArg
      * The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -54,7 +54,7 @@ public final class GetAvailabilityZoneArgs extends io.pulumi.resources.InvokeArg
      * A specific availability zone state to require. May be any of `"available"`, `"information"` or `"impaired"`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -65,7 +65,7 @@ public final class GetAvailabilityZoneArgs extends io.pulumi.resources.InvokeArg
      * The zone ID of the availability zone to select.
      * 
      */
-    @InputImport(name="zoneId")
+    @Import(name="zoneId")
       private final @Nullable String zoneId;
 
     public Optional<String> getZoneId() {

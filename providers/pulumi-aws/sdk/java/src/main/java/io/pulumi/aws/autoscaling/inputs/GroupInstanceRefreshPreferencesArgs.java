@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
      * The number of seconds to wait after a checkpoint. Defaults to `3600`.
      * 
      */
-    @InputImport(name="checkpointDelay")
+    @Import(name="checkpointDelay")
       private final @Nullable Output<String> checkpointDelay;
 
     public Output<String> getCheckpointDelay() {
@@ -31,7 +31,7 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
      * List of percentages for each checkpoint. Values must be unique and in ascending order. To replace all instances, the final number must be `100`.
      * 
      */
-    @InputImport(name="checkpointPercentages")
+    @Import(name="checkpointPercentages")
       private final @Nullable Output<List<Integer>> checkpointPercentages;
 
     public Output<List<Integer>> getCheckpointPercentages() {
@@ -42,7 +42,7 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
      * The number of seconds until a newly launched instance is configured and ready to use. Default behavior is to use the Auto Scaling Group's health check grace period.
      * 
      */
-    @InputImport(name="instanceWarmup")
+    @Import(name="instanceWarmup")
       private final @Nullable Output<String> instanceWarmup;
 
     public Output<String> getInstanceWarmup() {
@@ -53,7 +53,7 @@ public final class GroupInstanceRefreshPreferencesArgs extends io.pulumi.resourc
      * The amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to `90`.
      * 
      */
-    @InputImport(name="minHealthyPercentage")
+    @Import(name="minHealthyPercentage")
       private final @Nullable Output<Integer> minHealthyPercentage;
 
     public Output<Integer> getMinHealthyPercentage() {

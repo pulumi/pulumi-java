@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QuickConnectQuickConnectConfigQueueConfig {
     /**
      * Specifies the identifier of the contact flow.
@@ -20,10 +20,10 @@ public final class QuickConnectQuickConnectConfigQueueConfig {
      */
     private final String queueId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QuickConnectQuickConnectConfigQueueConfig(
-        @OutputCustomType.Parameter("contactFlowId") String contactFlowId,
-        @OutputCustomType.Parameter("queueId") String queueId) {
+        @CustomType.Parameter("contactFlowId") String contactFlowId,
+        @CustomType.Parameter("queueId") String queueId) {
         this.contactFlowId = contactFlowId;
         this.queueId = queueId;
     }

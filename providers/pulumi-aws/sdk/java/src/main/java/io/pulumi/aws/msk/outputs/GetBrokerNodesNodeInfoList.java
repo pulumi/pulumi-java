@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.msk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBrokerNodesNodeInfoList {
     /**
      * The attached elastic network interface of the broker
@@ -42,14 +42,14 @@ public final class GetBrokerNodesNodeInfoList {
      */
     private final String nodeArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBrokerNodesNodeInfoList(
-        @OutputCustomType.Parameter("attachedEniId") String attachedEniId,
-        @OutputCustomType.Parameter("brokerId") Double brokerId,
-        @OutputCustomType.Parameter("clientSubnet") String clientSubnet,
-        @OutputCustomType.Parameter("clientVpcIpAddress") String clientVpcIpAddress,
-        @OutputCustomType.Parameter("endpoints") List<String> endpoints,
-        @OutputCustomType.Parameter("nodeArn") String nodeArn) {
+        @CustomType.Parameter("attachedEniId") String attachedEniId,
+        @CustomType.Parameter("brokerId") Double brokerId,
+        @CustomType.Parameter("clientSubnet") String clientSubnet,
+        @CustomType.Parameter("clientVpcIpAddress") String clientVpcIpAddress,
+        @CustomType.Parameter("endpoints") List<String> endpoints,
+        @CustomType.Parameter("nodeArn") String nodeArn) {
         this.attachedEniId = attachedEniId;
         this.brokerId = brokerId;
         this.clientSubnet = clientSubnet;

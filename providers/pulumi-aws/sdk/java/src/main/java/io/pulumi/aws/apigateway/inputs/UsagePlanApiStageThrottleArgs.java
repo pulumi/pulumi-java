@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
      * The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
      * 
      */
-    @InputImport(name="burstLimit")
+    @Import(name="burstLimit")
       private final @Nullable Output<Integer> burstLimit;
 
     public Output<Integer> getBurstLimit() {
@@ -31,7 +31,7 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
      * The method to apply the throttle settings for. Specfiy the path and method, for example `/test/GET`.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -42,7 +42,7 @@ public final class UsagePlanApiStageThrottleArgs extends io.pulumi.resources.Res
      * The API request steady-state rate limit.
      * 
      */
-    @InputImport(name="rateLimit")
+    @Import(name="rateLimit")
       private final @Nullable Output<Double> rateLimit;
 
     public Output<Double> getRateLimit() {

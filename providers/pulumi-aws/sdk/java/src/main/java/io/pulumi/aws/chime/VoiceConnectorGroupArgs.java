@@ -5,7 +5,7 @@ package io.pulumi.aws.chime;
 
 import io.pulumi.aws.chime.inputs.VoiceConnectorGroupConnectorArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
      * The Amazon Chime Voice Connectors to route inbound calls to.
      * 
      */
-    @InputImport(name="connectors")
+    @Import(name="connectors")
       private final @Nullable Output<List<VoiceConnectorGroupConnectorArgs>> connectors;
 
     public Output<List<VoiceConnectorGroupConnectorArgs>> getConnectors() {
@@ -31,7 +31,7 @@ public final class VoiceConnectorGroupArgs extends io.pulumi.resources.ResourceA
      * The name of the Amazon Chime Voice Connector group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

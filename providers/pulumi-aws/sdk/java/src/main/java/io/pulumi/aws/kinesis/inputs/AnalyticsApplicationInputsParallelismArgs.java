@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AnalyticsApplicationInputsParallelismArgs extends io.pulumi.r
      * The Count of streams.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {

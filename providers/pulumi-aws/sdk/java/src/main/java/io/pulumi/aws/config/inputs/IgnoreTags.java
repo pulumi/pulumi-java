@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.config.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class IgnoreTags extends io.pulumi.resources.InvokeArgs {
 
     public static final IgnoreTags Empty = new IgnoreTags();
 
-    @InputImport(name="keyPrefixes")
+    @Import(name="keyPrefixes")
       private final @Nullable List<String> keyPrefixes;
 
     public List<String> getKeyPrefixes() {
         return this.keyPrefixes == null ? List.of() : this.keyPrefixes;
     }
 
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable List<String> keys;
 
     public List<String> getKeys() {

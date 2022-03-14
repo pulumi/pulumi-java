@@ -6,7 +6,7 @@ package io.pulumi.aws.macie2.inputs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermGetArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndGetArgs ext
      * A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
      * 
      */
-    @InputImport(name="simpleScopeTerm")
+    @Import(name="simpleScopeTerm")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermGetArgs> simpleScopeTerm;
 
     public Output<ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTermGetArgs> getSimpleScopeTerm() {
@@ -30,7 +30,7 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndGetArgs ext
      * A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.  (documented below)
      * 
      */
-    @InputImport(name="tagScopeTerm")
+    @Import(name="tagScopeTerm")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermGetArgs> tagScopeTerm;
 
     public Output<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermGetArgs> getTagScopeTerm() {

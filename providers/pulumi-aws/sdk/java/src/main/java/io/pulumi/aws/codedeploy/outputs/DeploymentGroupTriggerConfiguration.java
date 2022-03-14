@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupTriggerConfiguration {
     /**
      * The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
@@ -26,11 +26,11 @@ public final class DeploymentGroupTriggerConfiguration {
      */
     private final String triggerTargetArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentGroupTriggerConfiguration(
-        @OutputCustomType.Parameter("triggerEvents") List<String> triggerEvents,
-        @OutputCustomType.Parameter("triggerName") String triggerName,
-        @OutputCustomType.Parameter("triggerTargetArn") String triggerTargetArn) {
+        @CustomType.Parameter("triggerEvents") List<String> triggerEvents,
+        @CustomType.Parameter("triggerName") String triggerName,
+        @CustomType.Parameter("triggerTargetArn") String triggerTargetArn) {
         this.triggerEvents = triggerEvents;
         this.triggerName = triggerName;
         this.triggerTargetArn = triggerTargetArn;

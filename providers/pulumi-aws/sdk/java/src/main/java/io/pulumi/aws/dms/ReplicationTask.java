@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.dms.ReplicationTaskArgs;
 import io.pulumi.aws.dms.inputs.ReplicationTaskState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * Indicates when you want a change data capture (CDC) operation to start. The value can be in date, checkpoint, or LSN/SCN format depending on the source engine. For more information, see [Determining a CDC native start point](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html#CHAP_Task.CDC.StartPoint.Native).
      * 
      */
-    @OutputExport(name="cdcStartPosition", type=String.class, parameters={})
+    @Export(name="cdcStartPosition", type=String.class, parameters={})
     private Output</* @Nullable */ String> cdcStartPosition;
 
     /**
@@ -47,7 +47,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
      * 
      */
-    @OutputExport(name="cdcStartTime", type=String.class, parameters={})
+    @Export(name="cdcStartTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> cdcStartTime;
 
     /**
@@ -61,7 +61,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
      * 
      */
-    @OutputExport(name="migrationType", type=String.class, parameters={})
+    @Export(name="migrationType", type=String.class, parameters={})
     private Output<String> migrationType;
 
     /**
@@ -75,7 +75,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the replication instance.
      * 
      */
-    @OutputExport(name="replicationInstanceArn", type=String.class, parameters={})
+    @Export(name="replicationInstanceArn", type=String.class, parameters={})
     private Output<String> replicationInstanceArn;
 
     /**
@@ -89,7 +89,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the replication task.
      * 
      */
-    @OutputExport(name="replicationTaskArn", type=String.class, parameters={})
+    @Export(name="replicationTaskArn", type=String.class, parameters={})
     private Output<String> replicationTaskArn;
 
     /**
@@ -103,7 +103,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * The replication task identifier.
      * 
      */
-    @OutputExport(name="replicationTaskId", type=String.class, parameters={})
+    @Export(name="replicationTaskId", type=String.class, parameters={})
     private Output<String> replicationTaskId;
 
     /**
@@ -117,7 +117,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
      * 
      */
-    @OutputExport(name="replicationTaskSettings", type=String.class, parameters={})
+    @Export(name="replicationTaskSettings", type=String.class, parameters={})
     private Output</* @Nullable */ String> replicationTaskSettings;
 
     /**
@@ -131,7 +131,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
      * 
      */
-    @OutputExport(name="sourceEndpointArn", type=String.class, parameters={})
+    @Export(name="sourceEndpointArn", type=String.class, parameters={})
     private Output<String> sourceEndpointArn;
 
     /**
@@ -145,7 +145,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
      * 
      */
-    @OutputExport(name="tableMappings", type=String.class, parameters={})
+    @Export(name="tableMappings", type=String.class, parameters={})
     private Output<String> tableMappings;
 
     /**
@@ -159,7 +159,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -173,7 +173,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -187,7 +187,7 @@ public class ReplicationTask extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
      * 
      */
-    @OutputExport(name="targetEndpointArn", type=String.class, parameters={})
+    @Export(name="targetEndpointArn", type=String.class, parameters={})
     private Output<String> targetEndpointArn;
 
     /**

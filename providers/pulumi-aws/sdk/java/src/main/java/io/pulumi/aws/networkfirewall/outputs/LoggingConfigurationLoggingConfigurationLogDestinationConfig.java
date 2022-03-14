@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoggingConfigurationLoggingConfigurationLogDestinationConfig {
     /**
      * A map describing the logging destination for the chosen `log_destination_type`.
@@ -29,11 +29,11 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfig 
      */
     private final String logType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoggingConfigurationLoggingConfigurationLogDestinationConfig(
-        @OutputCustomType.Parameter("logDestination") Map<String,String> logDestination,
-        @OutputCustomType.Parameter("logDestinationType") String logDestinationType,
-        @OutputCustomType.Parameter("logType") String logType) {
+        @CustomType.Parameter("logDestination") Map<String,String> logDestination,
+        @CustomType.Parameter("logDestinationType") String logDestinationType,
+        @CustomType.Parameter("logType") String logType) {
         this.logDestination = logDestination;
         this.logDestinationType = logDestinationType;
         this.logType = logType;

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainRetentionPolicy {
     /**
      * The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Default value is `Retain`.
@@ -17,8 +17,8 @@ public final class DomainRetentionPolicy {
      */
     private final @Nullable String homeEfsFileSystem;
 
-    @OutputCustomType.Constructor
-    private DomainRetentionPolicy(@OutputCustomType.Parameter("homeEfsFileSystem") @Nullable String homeEfsFileSystem) {
+    @CustomType.Constructor
+    private DomainRetentionPolicy(@CustomType.Parameter("homeEfsFileSystem") @Nullable String homeEfsFileSystem) {
         this.homeEfsFileSystem = homeEfsFileSystem;
     }
 

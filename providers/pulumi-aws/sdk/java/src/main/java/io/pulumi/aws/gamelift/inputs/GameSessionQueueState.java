@@ -5,7 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.aws.gamelift.inputs.GameSessionQueuePlayerLatencyPolicyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * Game Session Queue ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * List of fleet/alias ARNs used by session queue for placing game sessions.
      * 
      */
-    @InputImport(name="destinations")
+    @Import(name="destinations")
       private final @Nullable Output<List<String>> destinations;
 
     public Output<List<String>> getDestinations() {
@@ -44,7 +44,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * Name of the session queue.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * One or more policies used to choose fleet based on player latency. See below.
      * 
      */
-    @InputImport(name="playerLatencyPolicies")
+    @Import(name="playerLatencyPolicies")
       private final @Nullable Output<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> playerLatencyPolicies;
 
     public Output<List<GameSessionQueuePlayerLatencyPolicyGetArgs>> getPlayerLatencyPolicies() {
@@ -66,7 +66,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -77,7 +77,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -88,7 +88,7 @@ public final class GameSessionQueueState extends io.pulumi.resources.ResourceArg
      * Maximum time a game session request can remain in the queue.
      * 
      */
-    @InputImport(name="timeoutInSeconds")
+    @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
     public Output<Integer> getTimeoutInSeconds() {

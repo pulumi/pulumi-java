@@ -9,7 +9,7 @@ import io.pulumi.aws.sagemaker.inputs.WorkteamState;
 import io.pulumi.aws.sagemaker.outputs.WorkteamMemberDefinition;
 import io.pulumi.aws.sagemaker.outputs.WorkteamNotificationConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Workteam extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this Workteam.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class Workteam extends io.pulumi.resources.CustomResource {
      * A description of the work team.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -64,7 +64,7 @@ public class Workteam extends io.pulumi.resources.CustomResource {
      * A list of Member Definitions that contains objects that identify the workers that make up the work team. Workforces can be created using Amazon Cognito or your own OIDC Identity Provider (IdP). For private workforces created using Amazon Cognito use `cognito_member_definition`. For workforces created using your own OIDC identity provider (IdP) use `oidc_member_definition`. Do not provide input for both of these parameters in a single request. see Member Definition details below.
      * 
      */
-    @OutputExport(name="memberDefinitions", type=List.class, parameters={WorkteamMemberDefinition.class})
+    @Export(name="memberDefinitions", type=List.class, parameters={WorkteamMemberDefinition.class})
     private Output<List<WorkteamMemberDefinition>> memberDefinitions;
 
     /**
@@ -78,7 +78,7 @@ public class Workteam extends io.pulumi.resources.CustomResource {
      * Configures notification of workers regarding available or expiring work items. see Notification Configuration details below.
      * 
      */
-    @OutputExport(name="notificationConfiguration", type=WorkteamNotificationConfiguration.class, parameters={})
+    @Export(name="notificationConfiguration", type=WorkteamNotificationConfiguration.class, parameters={})
     private Output</* @Nullable */ WorkteamNotificationConfiguration> notificationConfiguration;
 
     /**
@@ -92,7 +92,7 @@ public class Workteam extends io.pulumi.resources.CustomResource {
      * The subdomain for your OIDC Identity Provider.
      * 
      */
-    @OutputExport(name="subdomain", type=String.class, parameters={})
+    @Export(name="subdomain", type=String.class, parameters={})
     private Output<String> subdomain;
 
     /**
@@ -106,7 +106,7 @@ public class Workteam extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -120,7 +120,7 @@ public class Workteam extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -134,7 +134,7 @@ public class Workteam extends io.pulumi.resources.CustomResource {
      * The name of the Workteam (must be unique).
      * 
      */
-    @OutputExport(name="workforceName", type=String.class, parameters={})
+    @Export(name="workforceName", type=String.class, parameters={})
     private Output<String> workforceName;
 
     /**
@@ -148,7 +148,7 @@ public class Workteam extends io.pulumi.resources.CustomResource {
      * The name of the workforce.
      * 
      */
-    @OutputExport(name="workteamName", type=String.class, parameters={})
+    @Export(name="workteamName", type=String.class, parameters={})
     private Output<String> workteamName;
 
     /**

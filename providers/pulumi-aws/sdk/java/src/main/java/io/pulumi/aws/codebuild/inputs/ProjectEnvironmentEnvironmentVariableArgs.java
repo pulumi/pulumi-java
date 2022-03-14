@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ProjectEnvironmentEnvironmentVariableArgs extends io.pulumi.r
      * Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class ProjectEnvironmentEnvironmentVariableArgs extends io.pulumi.r
      * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -40,7 +40,7 @@ public final class ProjectEnvironmentEnvironmentVariableArgs extends io.pulumi.r
      * Environment variable's value.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

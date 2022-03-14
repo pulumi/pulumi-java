@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainVpcOption {
     /**
      * The availability zones used by the domain.
@@ -31,12 +31,12 @@ public final class GetDomainVpcOption {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainVpcOption(
-        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.availabilityZones = availabilityZones;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

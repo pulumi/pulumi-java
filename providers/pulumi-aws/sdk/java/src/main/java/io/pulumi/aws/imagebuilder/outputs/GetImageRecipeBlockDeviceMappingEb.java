@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetImageRecipeBlockDeviceMappingEb {
     /**
      * Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.
@@ -47,15 +47,15 @@ public final class GetImageRecipeBlockDeviceMappingEb {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageRecipeBlockDeviceMappingEb(
-        @OutputCustomType.Parameter("deleteOnTermination") Boolean deleteOnTermination,
-        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
-        @OutputCustomType.Parameter("iops") Integer iops,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("snapshotId") String snapshotId,
-        @OutputCustomType.Parameter("volumeSize") Integer volumeSize,
-        @OutputCustomType.Parameter("volumeType") String volumeType) {
+        @CustomType.Parameter("deleteOnTermination") Boolean deleteOnTermination,
+        @CustomType.Parameter("encrypted") Boolean encrypted,
+        @CustomType.Parameter("iops") Integer iops,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("snapshotId") String snapshotId,
+        @CustomType.Parameter("volumeSize") Integer volumeSize,
+        @CustomType.Parameter("volumeType") String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

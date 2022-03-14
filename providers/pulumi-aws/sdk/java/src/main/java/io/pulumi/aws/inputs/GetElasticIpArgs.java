@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.aws.inputs.GetElasticIpFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetElasticIpArgs extends io.pulumi.resources.InvokeArgs {
      * One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAddresses.html).
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetElasticIpFilter> filters;
 
     public List<GetElasticIpFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetElasticIpArgs extends io.pulumi.resources.InvokeArgs {
      * The allocation id of the specific VPC EIP to retrieve. If a classic EIP is required, do NOT set `id`, only set `public_ip`
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -43,7 +43,7 @@ public final class GetElasticIpArgs extends io.pulumi.resources.InvokeArgs {
      * The public IP of the specific EIP to retrieve.
      * 
      */
-    @InputImport(name="publicIp")
+    @Import(name="publicIp")
       private final @Nullable String publicIp;
 
     public Optional<String> getPublicIp() {
@@ -54,7 +54,7 @@ public final class GetElasticIpArgs extends io.pulumi.resources.InvokeArgs {
      * A map of tags, each pair of which must exactly match a pair on the desired Elastic IP
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

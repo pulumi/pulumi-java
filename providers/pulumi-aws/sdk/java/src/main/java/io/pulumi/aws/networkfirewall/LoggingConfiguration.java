@@ -8,7 +8,7 @@ import io.pulumi.aws.networkfirewall.LoggingConfigurationArgs;
 import io.pulumi.aws.networkfirewall.inputs.LoggingConfigurationState;
 import io.pulumi.aws.networkfirewall.outputs.LoggingConfigurationLoggingConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Network Firewall firewall.
      * 
      */
-    @OutputExport(name="firewallArn", type=String.class, parameters={})
+    @Export(name="firewallArn", type=String.class, parameters={})
     private Output<String> firewallArn;
 
     /**
@@ -47,7 +47,7 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
      * A configuration block describing how AWS Network Firewall performs logging for a firewall. See Logging Configuration below for details.
      * 
      */
-    @OutputExport(name="loggingConfiguration", type=LoggingConfigurationLoggingConfiguration.class, parameters={})
+    @Export(name="loggingConfiguration", type=LoggingConfigurationLoggingConfiguration.class, parameters={})
     private Output<LoggingConfigurationLoggingConfiguration> loggingConfiguration;
 
     /**

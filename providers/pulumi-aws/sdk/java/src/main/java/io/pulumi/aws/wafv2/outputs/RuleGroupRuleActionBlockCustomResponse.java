@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleActionBlockCustomResponseResponseHeader;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleActionBlockCustomResponse {
     /**
      * References the response body that you want AWS WAF to return to the web request client. This must reference a `key` defined in a `custom_response_body` block of this resource.
@@ -30,11 +30,11 @@ public final class RuleGroupRuleActionBlockCustomResponse {
      */
     private final @Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeader> responseHeaders;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleActionBlockCustomResponse(
-        @OutputCustomType.Parameter("customResponseBodyKey") @Nullable String customResponseBodyKey,
-        @OutputCustomType.Parameter("responseCode") Integer responseCode,
-        @OutputCustomType.Parameter("responseHeaders") @Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeader> responseHeaders) {
+        @CustomType.Parameter("customResponseBodyKey") @Nullable String customResponseBodyKey,
+        @CustomType.Parameter("responseCode") Integer responseCode,
+        @CustomType.Parameter("responseHeaders") @Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeader> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
         this.responseCode = responseCode;
         this.responseHeaders = responseHeaders;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCloudFormationTypeLoggingConfig extends io.pulumi.resource
      * Name of the CloudWatch Log Group where CloudFormation sends error logging information when invoking the type's handlers.
      * 
      */
-    @InputImport(name="logGroupName", required=true)
+    @Import(name="logGroupName", required=true)
       private final String logGroupName;
 
     public String getLogGroupName() {
@@ -27,7 +27,7 @@ public final class GetCloudFormationTypeLoggingConfig extends io.pulumi.resource
      * Amazon Resource Name (ARN) of the IAM Role CloudFormation assumes when sending error logging information to CloudWatch Logs.
      * 
      */
-    @InputImport(name="logRoleArn", required=true)
+    @Import(name="logRoleArn", required=true)
       private final String logRoleArn;
 
     public String getLogRoleArn() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.applicationloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerDefaultActionRedirect {
     /**
      * Hostname. This component is not percent-encoded. The hostname can contain `#{host}`. Defaults to `#{host}`.
@@ -42,14 +42,14 @@ public final class ListenerDefaultActionRedirect {
      */
     private final String statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerDefaultActionRedirect(
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("port") @Nullable String port,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("query") @Nullable String query,
-        @OutputCustomType.Parameter("statusCode") String statusCode) {
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("port") @Nullable String port,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("query") @Nullable String query,
+        @CustomType.Parameter("statusCode") String statusCode) {
         this.host = host;
         this.path = path;
         this.port = port;

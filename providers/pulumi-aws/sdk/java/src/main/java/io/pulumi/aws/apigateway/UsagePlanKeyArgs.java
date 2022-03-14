@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of the API key resource.
      * 
      */
-    @InputImport(name="keyId", required=true)
+    @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
     public Output<String> getKeyId() {
@@ -28,7 +28,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the API key resource. Currently, the valid key type is API_KEY.
      * 
      */
-    @InputImport(name="keyType", required=true)
+    @Import(name="keyType", required=true)
       private final Output<String> keyType;
 
     public Output<String> getKeyType() {
@@ -39,7 +39,7 @@ public final class UsagePlanKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The Id of the usage plan resource representing to associate the key to.
      * 
      */
-    @InputImport(name="usagePlanId", required=true)
+    @Import(name="usagePlanId", required=true)
       private final Output<String> usagePlanId;
 
     public Output<String> getUsagePlanId() {

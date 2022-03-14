@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.aws.ec2transitgateway.inputs.GetVpnAttachmentFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetVpnAttachmentArgs extends io.pulumi.resources.InvokeArgs {
      * Configuration block(s) for filtering. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetVpnAttachmentFilter> filters;
 
     public List<GetVpnAttachmentFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetVpnAttachmentArgs extends io.pulumi.resources.InvokeArgs {
      * A map of tags, each pair of which must exactly match a pair on the desired Transit Gateway VPN Attachment.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -43,7 +43,7 @@ public final class GetVpnAttachmentArgs extends io.pulumi.resources.InvokeArgs {
      * Identifier of the EC2 Transit Gateway.
      * 
      */
-    @InputImport(name="transitGatewayId")
+    @Import(name="transitGatewayId")
       private final @Nullable String transitGatewayId;
 
     public Optional<String> getTransitGatewayId() {
@@ -54,7 +54,7 @@ public final class GetVpnAttachmentArgs extends io.pulumi.resources.InvokeArgs {
      * Identifier of the EC2 VPN Connection.
      * 
      */
-    @InputImport(name="vpnConnectionId")
+    @Import(name="vpnConnectionId")
       private final @Nullable String vpnConnectionId;
 
     public Optional<String> getVpnConnectionId() {

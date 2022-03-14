@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetSecurityGroupFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetSecurityGroupArgs extends io.pulumi.resources.InvokeArgs {
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetSecurityGroupFilter> filters;
 
     public List<GetSecurityGroupFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetSecurityGroupArgs extends io.pulumi.resources.InvokeArgs {
      * The id of the specific security group to retrieve.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -44,7 +44,7 @@ public final class GetSecurityGroupArgs extends io.pulumi.resources.InvokeArgs {
      * [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeSecurityGroups.html).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class GetSecurityGroupArgs extends io.pulumi.resources.InvokeArgs {
      * a pair on the desired security group.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -67,7 +67,7 @@ public final class GetSecurityGroupArgs extends io.pulumi.resources.InvokeArgs {
      * The id of the VPC that the desired security group belongs to.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable String vpcId;
 
     public Optional<String> getVpcId() {

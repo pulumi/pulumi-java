@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.codebuild.ResourcePolicyArgs;
 import io.pulumi.aws.codebuild.inputs.ResourcePolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * A JSON-formatted resource policy. For more information, see [Sharing a Projec](https://docs.aws.amazon.com/codebuild/latest/userguide/project-sharing.html#project-sharing-share) and [Sharing a Report Group](https://docs.aws.amazon.com/codebuild/latest/userguide/report-groups-sharing.html#report-groups-sharing-share).
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**
@@ -46,7 +46,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * The ARN of the Project or ReportGroup resource you want to associate with a resource policy.
      * 
      */
-    @OutputExport(name="resourceArn", type=String.class, parameters={})
+    @Export(name="resourceArn", type=String.class, parameters={})
     private Output<String> resourceArn;
 
     /**

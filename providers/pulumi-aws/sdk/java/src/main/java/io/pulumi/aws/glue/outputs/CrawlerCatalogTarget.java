@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CrawlerCatalogTarget {
     /**
      * The name of the Glue database to be synchronized.
@@ -21,10 +21,10 @@ public final class CrawlerCatalogTarget {
      */
     private final List<String> tables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CrawlerCatalogTarget(
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("tables") List<String> tables) {
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("tables") List<String> tables) {
         this.databaseName = databaseName;
         this.tables = tables;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfig {
     /**
      * The signing Amazon Web Services Region for IAM authorization.
@@ -22,10 +22,10 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfig {
      */
     private final @Nullable String signingServiceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceHttpConfigAuthorizationConfigAwsIamConfig(
-        @OutputCustomType.Parameter("signingRegion") @Nullable String signingRegion,
-        @OutputCustomType.Parameter("signingServiceName") @Nullable String signingServiceName) {
+        @CustomType.Parameter("signingRegion") @Nullable String signingRegion,
+        @CustomType.Parameter("signingServiceName") @Nullable String signingServiceName) {
         this.signingRegion = signingRegion;
         this.signingServiceName = signingServiceName;
     }

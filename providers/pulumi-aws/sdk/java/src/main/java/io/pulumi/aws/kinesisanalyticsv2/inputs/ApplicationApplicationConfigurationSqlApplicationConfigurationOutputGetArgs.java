@@ -8,7 +8,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Describes the data format when records are written to the destination.
      * 
      */
-    @InputImport(name="destinationSchema", required=true)
+    @Import(name="destinationSchema", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs> destinationSchema;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaGetArgs> getDestinationSchema() {
@@ -33,7 +33,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Identifies a Kinesis Data Firehose delivery stream as the destination.
      * 
      */
-    @InputImport(name="kinesisFirehoseOutput")
+    @Import(name="kinesisFirehoseOutput")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs> kinesisFirehoseOutput;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputGetArgs> getKinesisFirehoseOutput() {
@@ -44,7 +44,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Identifies a Kinesis data stream as the destination.
      * 
      */
-    @InputImport(name="kinesisStreamsOutput")
+    @Import(name="kinesisStreamsOutput")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs> kinesisStreamsOutput;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputGetArgs> getKinesisStreamsOutput() {
@@ -55,7 +55,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Identifies a Lambda function as the destination.
      * 
      */
-    @InputImport(name="lambdaOutput")
+    @Import(name="lambdaOutput")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs> lambdaOutput;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputGetArgs> getLambdaOutput() {
@@ -66,14 +66,14 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The name of the in-application stream.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="outputId")
+    @Import(name="outputId")
       private final @Nullable Output<String> outputId;
 
     public Output<String> getOutputId() {

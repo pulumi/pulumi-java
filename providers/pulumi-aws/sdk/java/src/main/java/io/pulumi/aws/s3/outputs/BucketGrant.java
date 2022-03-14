@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketGrant {
     /**
      * Canonical user id to grant for. Used only when `type` is `CanonicalUser`.
@@ -33,12 +33,12 @@ public final class BucketGrant {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketGrant(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("permissions") List<String> permissions,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("permissions") List<String> permissions,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.id = id;
         this.permissions = permissions;
         this.type = type;

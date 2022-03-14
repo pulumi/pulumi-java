@@ -6,7 +6,7 @@ package io.pulumi.aws.secretsmanager;
 import io.pulumi.aws.secretsmanager.inputs.SecretReplicaArgs;
 import io.pulumi.aws.secretsmanager.inputs.SecretRotationRulesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the secret.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Accepts boolean value to specify whether to overwrite a secret with the same name in the destination Region.
      * 
      */
-    @InputImport(name="forceOverwriteReplicaSecret")
+    @Import(name="forceOverwriteReplicaSecret")
       private final @Nullable Output<Boolean> forceOverwriteReplicaSecret;
 
     public Output<Boolean> getForceOverwriteReplicaSecret() {
@@ -46,7 +46,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * ARN, Key ID, or Alias of the AWS KMS key within the region secret is replicated to. If one is not specified, then Secrets Manager defaults to using the AWS account's default KMS key (`aws/secretsmanager`) in the region or creates one for use if non-existent.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -57,7 +57,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -68,7 +68,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -79,7 +79,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html). Removing `policy` from your configuration or setting `policy` to null or an empty string (i.e., `policy = ""`) _will not_ delete the policy since it could have been set by `aws.secretsmanager.SecretPolicy`. To delete the `policy`, set it to `"{}"` (an empty JSON document).
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -90,7 +90,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
      * 
      */
-    @InputImport(name="recoveryWindowInDays")
+    @Import(name="recoveryWindowInDays")
       private final @Nullable Output<Integer> recoveryWindowInDays;
 
     public Output<Integer> getRecoveryWindowInDays() {
@@ -101,7 +101,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block to support secret replication. See details below.
      * 
      */
-    @InputImport(name="replicas")
+    @Import(name="replicas")
       private final @Nullable Output<List<SecretReplicaArgs>> replicas;
 
     public Output<List<SecretReplicaArgs>> getReplicas() {
@@ -116,7 +116,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
-    @InputImport(name="rotationLambdaArn")
+    @Import(name="rotationLambdaArn")
       private final @Nullable Output<String> rotationLambdaArn;
 
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
@@ -132,7 +132,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
-    @InputImport(name="rotationRules")
+    @Import(name="rotationRules")
       private final @Nullable Output<SecretRotationRulesArgs> rotationRules;
 
     @Deprecated /* Use the aws_secretsmanager_secret_rotation resource instead */
@@ -144,7 +144,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of user-defined tags that are attached to the secret. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

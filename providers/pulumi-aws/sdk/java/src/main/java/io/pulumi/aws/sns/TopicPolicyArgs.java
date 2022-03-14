@@ -4,7 +4,7 @@
 package io.pulumi.aws.sns;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TopicPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the SNS topic
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final Output<String> arn;
 
     public Output<String> getArn() {
@@ -28,7 +28,7 @@ public final class TopicPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The fully-formed AWS policy as JSON.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ecr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationConfigurationReplicationConfigurationRuleDestination {
     /**
      * A Region to replicate to.
@@ -20,10 +20,10 @@ public final class ReplicationConfigurationReplicationConfigurationRuleDestinati
      */
     private final String registryId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationConfigurationReplicationConfigurationRuleDestination(
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("registryId") String registryId) {
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("registryId") String registryId) {
         this.region = region;
         this.registryId = registryId;
     }

@@ -3,25 +3,25 @@
 
 package io.pulumi.aws.elasticloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLoadBalancerAccessLogs {
     private final String bucket;
     private final String bucketPrefix;
     private final Boolean enabled;
     private final Integer interval;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLoadBalancerAccessLogs(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("bucketPrefix") String bucketPrefix,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("interval") Integer interval) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("bucketPrefix") String bucketPrefix,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("interval") Integer interval) {
         this.bucket = bucket;
         this.bucketPrefix = bucketPrefix;
         this.enabled = enabled;

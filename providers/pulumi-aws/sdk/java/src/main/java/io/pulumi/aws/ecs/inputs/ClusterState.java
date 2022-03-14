@@ -7,7 +7,7 @@ import io.pulumi.aws.ecs.inputs.ClusterConfigurationGetArgs;
 import io.pulumi.aws.ecs.inputs.ClusterDefaultCapacityProviderStrategyGetArgs;
 import io.pulumi.aws.ecs.inputs.ClusterSettingGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * ARN that identifies the cluster.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
      * 
      */
-    @InputImport(name="capacityProviders")
+    @Import(name="capacityProviders")
       private final @Nullable Output<List<String>> capacityProviders;
 
     public Output<List<String>> getCapacityProviders() {
@@ -45,7 +45,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The execute command configuration for the cluster. Detailed below.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<ClusterConfigurationGetArgs> configuration;
 
     public Output<ClusterConfigurationGetArgs> getConfiguration() {
@@ -56,7 +56,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
      * 
      */
-    @InputImport(name="defaultCapacityProviderStrategies")
+    @Import(name="defaultCapacityProviderStrategies")
       private final @Nullable Output<List<ClusterDefaultCapacityProviderStrategyGetArgs>> defaultCapacityProviderStrategies;
 
     public Output<List<ClusterDefaultCapacityProviderStrategyGetArgs>> getDefaultCapacityProviderStrategies() {
@@ -67,7 +67,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Name of the setting to manage. Valid values: `containerInsights`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<List<ClusterSettingGetArgs>> settings;
 
     public Output<List<ClusterSettingGetArgs>> getSettings() {
@@ -89,14 +89,14 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

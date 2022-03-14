@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TableServerSideEncryptionGetArgs extends io.pulumi.resources.
      * Indicates whether ttl is enabled (true) or disabled (false).
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -31,7 +31,7 @@ public final class TableServerSideEncryptionGetArgs extends io.pulumi.resources.
      * This attribute should only be specified if the key is different from the default DynamoDB CMK, `alias/aws/dynamodb`.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {

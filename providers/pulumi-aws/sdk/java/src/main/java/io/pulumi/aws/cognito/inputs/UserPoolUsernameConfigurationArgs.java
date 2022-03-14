@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class UserPoolUsernameConfigurationArgs extends io.pulumi.resources
      * Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
      * 
      */
-    @InputImport(name="caseSensitive", required=true)
+    @Import(name="caseSensitive", required=true)
       private final Output<Boolean> caseSensitive;
 
     public Output<Boolean> getCaseSensitive() {

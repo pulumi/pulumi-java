@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFirehoseDeliveryStreamArgs extends io.pulumi.resources.Inv
      * The name of the Kinesis Stream.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

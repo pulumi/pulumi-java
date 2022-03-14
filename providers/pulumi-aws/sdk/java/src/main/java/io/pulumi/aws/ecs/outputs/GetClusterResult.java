@@ -4,13 +4,13 @@
 package io.pulumi.aws.ecs.outputs;
 
 import io.pulumi.aws.ecs.outputs.GetClusterSetting;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The ARN of the ECS Cluster
@@ -49,16 +49,16 @@ public final class GetClusterResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("pendingTasksCount") Integer pendingTasksCount,
-        @OutputCustomType.Parameter("registeredContainerInstancesCount") Integer registeredContainerInstancesCount,
-        @OutputCustomType.Parameter("runningTasksCount") Integer runningTasksCount,
-        @OutputCustomType.Parameter("settings") List<GetClusterSetting> settings,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("pendingTasksCount") Integer pendingTasksCount,
+        @CustomType.Parameter("registeredContainerInstancesCount") Integer registeredContainerInstancesCount,
+        @CustomType.Parameter("runningTasksCount") Integer runningTasksCount,
+        @CustomType.Parameter("settings") List<GetClusterSetting> settings,
+        @CustomType.Parameter("status") String status) {
         this.arn = arn;
         this.clusterName = clusterName;
         this.id = id;

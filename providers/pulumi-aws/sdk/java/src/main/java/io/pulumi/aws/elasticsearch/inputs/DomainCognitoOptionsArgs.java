@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
      * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -30,7 +30,7 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
      * ID of the Cognito Identity Pool to use.
      * 
      */
-    @InputImport(name="identityPoolId", required=true)
+    @Import(name="identityPoolId", required=true)
       private final Output<String> identityPoolId;
 
     public Output<String> getIdentityPoolId() {
@@ -41,7 +41,7 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
      * ARN of the IAM role that has the AmazonESCognitoAccess policy attached.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -52,7 +52,7 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
      * ID of the Cognito User Pool to use.
      * 
      */
-    @InputImport(name="userPoolId", required=true)
+    @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {

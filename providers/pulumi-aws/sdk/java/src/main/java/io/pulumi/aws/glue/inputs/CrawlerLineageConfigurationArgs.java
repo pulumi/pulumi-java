@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CrawlerLineageConfigurationArgs extends io.pulumi.resources.R
      * Specifies whether data lineage is enabled for the crawler. Valid values are: `ENABLE` and `DISABLE`. Default value is `Disable`.
      * 
      */
-    @InputImport(name="crawlerLineageSettings")
+    @Import(name="crawlerLineageSettings")
       private final @Nullable Output<String> crawlerLineageSettings;
 
     public Output<String> getCrawlerLineageSettings() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ServiceInstanceConfigurationGetArgs extends io.pulumi.resourc
      * The number of CPU units reserved for each instance of your App Runner service represented as a String. Defaults to `1024`. Valid values: `1024|2048|(1|2) vCPU`.
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<String> cpu;
 
     public Output<String> getCpu() {
@@ -29,7 +29,7 @@ public final class ServiceInstanceConfigurationGetArgs extends io.pulumi.resourc
      * The Amazon Resource Name (ARN) of an IAM role that provides permissions to your App Runner service. These are permissions that your code needs when it calls any AWS APIs.
      * 
      */
-    @InputImport(name="instanceRoleArn")
+    @Import(name="instanceRoleArn")
       private final @Nullable Output<String> instanceRoleArn;
 
     public Output<String> getInstanceRoleArn() {
@@ -40,7 +40,7 @@ public final class ServiceInstanceConfigurationGetArgs extends io.pulumi.resourc
      * The amount of memory, in MB or GB, reserved for each instance of your App Runner service. Defaults to `2048`. Valid values: `2048|3072|4096|(2|3|4) GB`.
      * 
      */
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable Output<String> memory;
 
     public Output<String> getMemory() {

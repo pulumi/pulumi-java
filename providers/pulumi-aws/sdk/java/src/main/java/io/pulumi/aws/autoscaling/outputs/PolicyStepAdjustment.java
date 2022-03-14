@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.autoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyStepAdjustment {
     /**
      * The lower bound for the
@@ -35,11 +35,11 @@ public final class PolicyStepAdjustment {
      */
     private final Integer scalingAdjustment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyStepAdjustment(
-        @OutputCustomType.Parameter("metricIntervalLowerBound") @Nullable String metricIntervalLowerBound,
-        @OutputCustomType.Parameter("metricIntervalUpperBound") @Nullable String metricIntervalUpperBound,
-        @OutputCustomType.Parameter("scalingAdjustment") Integer scalingAdjustment) {
+        @CustomType.Parameter("metricIntervalLowerBound") @Nullable String metricIntervalLowerBound,
+        @CustomType.Parameter("metricIntervalUpperBound") @Nullable String metricIntervalUpperBound,
+        @CustomType.Parameter("scalingAdjustment") Integer scalingAdjustment) {
         this.metricIntervalLowerBound = metricIntervalLowerBound;
         this.metricIntervalUpperBound = metricIntervalUpperBound;
         this.scalingAdjustment = scalingAdjustment;

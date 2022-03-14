@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscalingplans.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
      * The dimensions of the metric.
      * 
      */
-    @InputImport(name="dimensions")
+    @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
     public Output<Map<String,String>> getDimensions() {
@@ -30,7 +30,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
      * The name of the metric.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -41,7 +41,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
      * The namespace of the metric.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -52,7 +52,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
      * The statistic of the metric. Valid values: `Average`, `Maximum`, `Minimum`, `SampleCount`, `Sum`.
      * 
      */
-    @InputImport(name="statistic", required=true)
+    @Import(name="statistic", required=true)
       private final Output<String> statistic;
 
     public Output<String> getStatistic() {
@@ -63,7 +63,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
      * The unit of the metric.
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {

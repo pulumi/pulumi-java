@@ -6,7 +6,7 @@ package io.pulumi.aws.outputs;
 import io.pulumi.aws.outputs.GetAmiBlockDeviceMapping;
 import io.pulumi.aws.outputs.GetAmiFilter;
 import io.pulumi.aws.outputs.GetAmiProductCode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAmiResult {
     /**
      * The OS architecture of the AMI (ie: `i386` or `x86_64`).
@@ -181,42 +181,42 @@ public final class GetAmiResult {
      */
     private final String virtualizationType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAmiResult(
-        @OutputCustomType.Parameter("architecture") String architecture,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("blockDeviceMappings") List<GetAmiBlockDeviceMapping> blockDeviceMappings,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enaSupport") Boolean enaSupport,
-        @OutputCustomType.Parameter("executableUsers") @Nullable List<String> executableUsers,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetAmiFilter> filters,
-        @OutputCustomType.Parameter("hypervisor") String hypervisor,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageId") String imageId,
-        @OutputCustomType.Parameter("imageLocation") String imageLocation,
-        @OutputCustomType.Parameter("imageOwnerAlias") String imageOwnerAlias,
-        @OutputCustomType.Parameter("imageType") String imageType,
-        @OutputCustomType.Parameter("kernelId") String kernelId,
-        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nameRegex") @Nullable String nameRegex,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("owners") List<String> owners,
-        @OutputCustomType.Parameter("platform") String platform,
-        @OutputCustomType.Parameter("platformDetails") String platformDetails,
-        @OutputCustomType.Parameter("productCodes") List<GetAmiProductCode> productCodes,
-        @OutputCustomType.Parameter("public") Boolean $public,
-        @OutputCustomType.Parameter("ramdiskId") String ramdiskId,
-        @OutputCustomType.Parameter("rootDeviceName") String rootDeviceName,
-        @OutputCustomType.Parameter("rootDeviceType") String rootDeviceType,
-        @OutputCustomType.Parameter("rootSnapshotId") String rootSnapshotId,
-        @OutputCustomType.Parameter("sriovNetSupport") String sriovNetSupport,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateReason") Map<String,String> stateReason,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("usageOperation") String usageOperation,
-        @OutputCustomType.Parameter("virtualizationType") String virtualizationType) {
+        @CustomType.Parameter("architecture") String architecture,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("blockDeviceMappings") List<GetAmiBlockDeviceMapping> blockDeviceMappings,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enaSupport") Boolean enaSupport,
+        @CustomType.Parameter("executableUsers") @Nullable List<String> executableUsers,
+        @CustomType.Parameter("filters") @Nullable List<GetAmiFilter> filters,
+        @CustomType.Parameter("hypervisor") String hypervisor,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageId") String imageId,
+        @CustomType.Parameter("imageLocation") String imageLocation,
+        @CustomType.Parameter("imageOwnerAlias") String imageOwnerAlias,
+        @CustomType.Parameter("imageType") String imageType,
+        @CustomType.Parameter("kernelId") String kernelId,
+        @CustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nameRegex") @Nullable String nameRegex,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("owners") List<String> owners,
+        @CustomType.Parameter("platform") String platform,
+        @CustomType.Parameter("platformDetails") String platformDetails,
+        @CustomType.Parameter("productCodes") List<GetAmiProductCode> productCodes,
+        @CustomType.Parameter("public") Boolean $public,
+        @CustomType.Parameter("ramdiskId") String ramdiskId,
+        @CustomType.Parameter("rootDeviceName") String rootDeviceName,
+        @CustomType.Parameter("rootDeviceType") String rootDeviceType,
+        @CustomType.Parameter("rootSnapshotId") String rootSnapshotId,
+        @CustomType.Parameter("sriovNetSupport") String sriovNetSupport,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateReason") Map<String,String> stateReason,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("usageOperation") String usageOperation,
+        @CustomType.Parameter("virtualizationType") String virtualizationType) {
         this.architecture = architecture;
         this.arn = arn;
         this.blockDeviceMappings = blockDeviceMappings;

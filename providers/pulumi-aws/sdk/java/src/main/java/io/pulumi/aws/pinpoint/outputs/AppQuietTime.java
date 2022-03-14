@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.pinpoint.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppQuietTime {
     /**
      * The default end time for quiet time in ISO 8601 format. Required if `start` is set
@@ -22,10 +22,10 @@ public final class AppQuietTime {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppQuietTime(
-        @OutputCustomType.Parameter("end") @Nullable String end,
-        @OutputCustomType.Parameter("start") @Nullable String start) {
+        @CustomType.Parameter("end") @Nullable String end,
+        @CustomType.Parameter("start") @Nullable String start) {
         this.end = end;
         this.start = start;
     }

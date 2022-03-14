@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementXssMatchStatementTextTransformation {
     /**
      * The relative processing order for multiple transformations that are defined for a rule statement. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content.
@@ -21,10 +21,10 @@ public final class WebAclRuleStatementManagedRuleGroupStatementScopeDownStatemen
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementOrStatementStatementXssMatchStatementTextTransformation(
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("type") String type) {
         this.priority = priority;
         this.type = type;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ram.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ResourceShareState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether principals outside your organization can be associated with a resource share.
      * 
      */
-    @InputImport(name="allowExternalPrincipals")
+    @Import(name="allowExternalPrincipals")
       private final @Nullable Output<Boolean> allowExternalPrincipals;
 
     public Output<Boolean> getAllowExternalPrincipals() {
@@ -31,7 +31,7 @@ public final class ResourceShareState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the resource share.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -42,7 +42,7 @@ public final class ResourceShareState extends io.pulumi.resources.ResourceArgs {
      * The name of the resource share.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class ResourceShareState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource share. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class ResourceShareState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

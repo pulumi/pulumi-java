@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersInvocationHt
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersInvocationHttpParametersHeaderArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
      * Contains additional body string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
      * 
      */
-    @InputImport(name="bodies")
+    @Import(name="bodies")
       private final @Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersBodyArgs>> bodies;
 
     public Output<List<EventConnectionAuthParametersInvocationHttpParametersBodyArgs>> getBodies() {
@@ -32,7 +32,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
      * Contains additional header parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersHeaderArgs>> headers;
 
     public Output<List<EventConnectionAuthParametersInvocationHttpParametersHeaderArgs>> getHeaders() {
@@ -43,7 +43,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersArgs ext
      * Contains additional query string parameters for the connection. You can include up to 100 additional body string parameters per request. Each additional parameter counts towards the event payload size, which cannot exceed 64 KB. Each parameter can contain the following:
      * 
      */
-    @InputImport(name="queryStrings")
+    @Import(name="queryStrings")
       private final @Nullable Output<List<EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs>> queryStrings;
 
     public Output<List<EventConnectionAuthParametersInvocationHttpParametersQueryStringArgs>> getQueryStrings() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class TopicRuleSqsGetArgs extends io.pulumi.resources.ResourceArgs 
      * The URL of the Amazon SQS queue.
      * 
      */
-    @InputImport(name="queueUrl", required=true)
+    @Import(name="queueUrl", required=true)
       private final Output<String> queueUrl;
 
     public Output<String> getQueueUrl() {
@@ -29,7 +29,7 @@ public final class TopicRuleSqsGetArgs extends io.pulumi.resources.ResourceArgs 
      * The ARN of the IAM role that grants access.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -40,7 +40,7 @@ public final class TopicRuleSqsGetArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies whether to use Base64 encoding.
      * 
      */
-    @InputImport(name="useBase64", required=true)
+    @Import(name="useBase64", required=true)
       private final Output<Boolean> useBase64;
 
     public Output<Boolean> getUseBase64() {

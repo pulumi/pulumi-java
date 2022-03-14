@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends io.pulumi.res
      * Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
      * 
      */
-    @InputImport(name="deleteOnTermination")
+    @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
     public Output<Boolean> getDeleteOnTermination() {
@@ -31,7 +31,7 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends io.pulumi.res
      * Integer index of the network interface attachment. Limited by instance type.
      * 
      */
-    @InputImport(name="deviceIndex", required=true)
+    @Import(name="deviceIndex", required=true)
       private final Output<Integer> deviceIndex;
 
     public Output<Integer> getDeviceIndex() {
@@ -42,7 +42,7 @@ public final class SpotInstanceRequestNetworkInterfaceArgs extends io.pulumi.res
      * ID of the network interface to attach.
      * 
      */
-    @InputImport(name="networkInterfaceId", required=true)
+    @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AnalyticsApplicationOutputLambdaArgs extends io.pulumi.resour
      * The ARN of the Lambda function.
      * 
      */
-    @InputImport(name="resourceArn", required=true)
+    @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
@@ -28,7 +28,7 @@ public final class AnalyticsApplicationOutputLambdaArgs extends io.pulumi.resour
      * The ARN of the IAM Role used to access the Lambda function.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

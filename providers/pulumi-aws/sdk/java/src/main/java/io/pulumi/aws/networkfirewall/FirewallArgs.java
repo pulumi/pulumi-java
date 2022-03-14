@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall;
 
 import io.pulumi.aws.networkfirewall.inputs.FirewallSubnetMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
      * 
      */
-    @InputImport(name="deleteProtection")
+    @Import(name="deleteProtection")
       private final @Nullable Output<Boolean> deleteProtection;
 
     public Output<Boolean> getDeleteProtection() {
@@ -33,7 +33,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly description of the firewall.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the VPC Firewall policy.
      * 
      */
-    @InputImport(name="firewallPolicyArn", required=true)
+    @Import(name="firewallPolicyArn", required=true)
       private final Output<String> firewallPolicyArn;
 
     public Output<String> getFirewallPolicyArn() {
@@ -55,7 +55,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
      * 
      */
-    @InputImport(name="firewallPolicyChangeProtection")
+    @Import(name="firewallPolicyChangeProtection")
       private final @Nullable Output<Boolean> firewallPolicyChangeProtection;
 
     public Output<Boolean> getFirewallPolicyChangeProtection() {
@@ -66,7 +66,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly name of the firewall.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
      * 
      */
-    @InputImport(name="subnetChangeProtection")
+    @Import(name="subnetChangeProtection")
       private final @Nullable Output<Boolean> subnetChangeProtection;
 
     public Output<Boolean> getSubnetChangeProtection() {
@@ -88,7 +88,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
      * 
      */
-    @InputImport(name="subnetMappings", required=true)
+    @Import(name="subnetMappings", required=true)
       private final Output<List<FirewallSubnetMappingArgs>> subnetMappings;
 
     public Output<List<FirewallSubnetMappingArgs>> getSubnetMappings() {
@@ -99,7 +99,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * Map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -110,7 +110,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of the VPC where AWS Network Firewall should create the firewall.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

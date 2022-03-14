@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetVpcPeeringConnectionCidrBlockSet {
     /**
      * The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
@@ -15,8 +15,8 @@ public final class GetVpcPeeringConnectionCidrBlockSet {
      */
     private final String cidrBlock;
 
-    @OutputCustomType.Constructor
-    private GetVpcPeeringConnectionCidrBlockSet(@OutputCustomType.Parameter("cidrBlock") String cidrBlock) {
+    @CustomType.Constructor
+    private GetVpcPeeringConnectionCidrBlockSet(@CustomType.Parameter("cidrBlock") String cidrBlock) {
         this.cidrBlock = cidrBlock;
     }
 

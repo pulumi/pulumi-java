@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of messages that the campaign can send daily.
      * 
      */
-    @InputImport(name="daily")
+    @Import(name="daily")
       private final @Nullable Output<Integer> daily;
 
     public Output<Integer> getDaily() {
@@ -29,7 +29,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * The length of time (in seconds) that the campaign can run before it ends and message deliveries stop. This duration begins at the scheduled start time for the campaign. The minimum value is 60.
      * 
      */
-    @InputImport(name="maximumDuration")
+    @Import(name="maximumDuration")
       private final @Nullable Output<Integer> maximumDuration;
 
     public Output<Integer> getMaximumDuration() {
@@ -40,7 +40,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * The number of messages that the campaign can send per second. The minimum value is 50, and the maximum is 20000.
      * 
      */
-    @InputImport(name="messagesPerSecond")
+    @Import(name="messagesPerSecond")
       private final @Nullable Output<Integer> messagesPerSecond;
 
     public Output<Integer> getMessagesPerSecond() {
@@ -51,7 +51,7 @@ public final class AppLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum total number of messages that the campaign can send.
      * 
      */
-    @InputImport(name="total")
+    @Import(name="total")
       private final @Nullable Output<Integer> total;
 
     public Output<Integer> getTotal() {

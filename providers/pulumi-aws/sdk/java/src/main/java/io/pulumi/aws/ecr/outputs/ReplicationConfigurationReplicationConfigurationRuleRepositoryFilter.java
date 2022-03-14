@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ecr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter {
     /**
      * The repository filter details.
@@ -20,10 +20,10 @@ public final class ReplicationConfigurationReplicationConfigurationRuleRepositor
      */
     private final String filterType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationConfigurationReplicationConfigurationRuleRepositoryFilter(
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("filterType") String filterType) {
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("filterType") String filterType) {
         this.filter = filter;
         this.filterType = filterType;
     }

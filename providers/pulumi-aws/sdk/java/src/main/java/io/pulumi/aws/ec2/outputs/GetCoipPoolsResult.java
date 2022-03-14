@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetCoipPoolsFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCoipPoolsResult {
     private final @Nullable List<GetCoipPoolsFilter> filters;
     /**
@@ -26,12 +26,12 @@ public final class GetCoipPoolsResult {
     private final List<String> poolIds;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCoipPoolsResult(
-        @OutputCustomType.Parameter("filters") @Nullable List<GetCoipPoolsFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("poolIds") List<String> poolIds,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("filters") @Nullable List<GetCoipPoolsFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("poolIds") List<String> poolIds,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.poolIds = poolIds;

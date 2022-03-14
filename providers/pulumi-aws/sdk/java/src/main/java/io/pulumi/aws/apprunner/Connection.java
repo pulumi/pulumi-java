@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apprunner.ConnectionArgs;
 import io.pulumi.aws.apprunner.inputs.ConnectionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * ARN of the connection.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Name of the connection.
      * 
      */
-    @OutputExport(name="connectionName", type=String.class, parameters={})
+    @Export(name="connectionName", type=String.class, parameters={})
     private Output<String> connectionName;
 
     /**
@@ -63,7 +63,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The source repository provider. Valid values: `GITHUB`.
      * 
      */
-    @OutputExport(name="providerType", type=String.class, parameters={})
+    @Export(name="providerType", type=String.class, parameters={})
     private Output<String> providerType;
 
     /**
@@ -77,7 +77,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The current state of the App Runner connection. When the state is `AVAILABLE`, you can use the connection to create an `aws.apprunner.Service` resource.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -91,7 +91,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -105,7 +105,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

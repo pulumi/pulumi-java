@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.wafv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetIpSetArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the WAFv2 IP Set.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class GetIpSetArgs extends io.pulumi.resources.InvokeArgs {
      * Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {

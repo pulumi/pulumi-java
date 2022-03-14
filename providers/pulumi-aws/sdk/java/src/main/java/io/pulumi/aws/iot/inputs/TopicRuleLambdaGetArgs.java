@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TopicRuleLambdaGetArgs extends io.pulumi.resources.ResourceAr
      * The ARN of the Lambda function.
      * 
      */
-    @InputImport(name="functionArn", required=true)
+    @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
     public Output<String> getFunctionArn() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTypeGpus {
     private final Integer count;
     private final String manufacturer;
@@ -19,12 +19,12 @@ public final class GetInstanceTypeGpus {
     private final Integer memorySize;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTypeGpus(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("manufacturer") String manufacturer,
-        @OutputCustomType.Parameter("memorySize") Integer memorySize,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("manufacturer") String manufacturer,
+        @CustomType.Parameter("memorySize") Integer memorySize,
+        @CustomType.Parameter("name") String name) {
         this.count = count;
         this.manufacturer = manufacturer;
         this.memorySize = memorySize;

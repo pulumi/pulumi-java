@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2transitgateway.PrefixListReferenceArgs;
 import io.pulumi.aws.ec2transitgateway.inputs.PrefixListReferenceState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class PrefixListReference extends io.pulumi.resources.CustomResource {
      * Indicates whether to drop traffic that matches the Prefix List. Defaults to `false`.
      * 
      */
-    @OutputExport(name="blackhole", type=Boolean.class, parameters={})
+    @Export(name="blackhole", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> blackhole;
 
     /**
@@ -47,7 +47,7 @@ public class PrefixListReference extends io.pulumi.resources.CustomResource {
      * Identifier of EC2 Prefix List.
      * 
      */
-    @OutputExport(name="prefixListId", type=String.class, parameters={})
+    @Export(name="prefixListId", type=String.class, parameters={})
     private Output<String> prefixListId;
 
     /**
@@ -57,7 +57,7 @@ public class PrefixListReference extends io.pulumi.resources.CustomResource {
     public Output<String> getPrefixListId() {
         return this.prefixListId;
     }
-    @OutputExport(name="prefixListOwnerId", type=String.class, parameters={})
+    @Export(name="prefixListOwnerId", type=String.class, parameters={})
     private Output<String> prefixListOwnerId;
 
     public Output<String> getPrefixListOwnerId() {
@@ -67,7 +67,7 @@ public class PrefixListReference extends io.pulumi.resources.CustomResource {
      * Identifier of EC2 Transit Gateway Attachment.
      * 
      */
-    @OutputExport(name="transitGatewayAttachmentId", type=String.class, parameters={})
+    @Export(name="transitGatewayAttachmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> transitGatewayAttachmentId;
 
     /**
@@ -81,7 +81,7 @@ public class PrefixListReference extends io.pulumi.resources.CustomResource {
      * Identifier of EC2 Transit Gateway Route Table.
      * 
      */
-    @OutputExport(name="transitGatewayRouteTableId", type=String.class, parameters={})
+    @Export(name="transitGatewayRouteTableId", type=String.class, parameters={})
     private Output<String> transitGatewayRouteTableId;
 
     /**

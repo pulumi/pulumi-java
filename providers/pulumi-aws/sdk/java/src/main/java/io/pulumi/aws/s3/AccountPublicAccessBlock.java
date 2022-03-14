@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.s3.AccountPublicAccessBlockArgs;
 import io.pulumi.aws.s3.inputs.AccountPublicAccessBlockState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class AccountPublicAccessBlock extends io.pulumi.resources.CustomResource
      * AWS account ID to configure. Defaults to automatically determined account ID of the this provider AWS provider.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -53,7 +53,7 @@ public class AccountPublicAccessBlock extends io.pulumi.resources.CustomResource
      * * PUT Object calls fail if the request includes a public ACL.
      * 
      */
-    @OutputExport(name="blockPublicAcls", type=Boolean.class, parameters={})
+    @Export(name="blockPublicAcls", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> blockPublicAcls;
 
     /**
@@ -70,7 +70,7 @@ public class AccountPublicAccessBlock extends io.pulumi.resources.CustomResource
      * * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
      * 
      */
-    @OutputExport(name="blockPublicPolicy", type=Boolean.class, parameters={})
+    @Export(name="blockPublicPolicy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> blockPublicPolicy;
 
     /**
@@ -86,7 +86,7 @@ public class AccountPublicAccessBlock extends io.pulumi.resources.CustomResource
      * * Ignore all public ACLs on buckets in this account and any objects that they contain.
      * 
      */
-    @OutputExport(name="ignorePublicAcls", type=Boolean.class, parameters={})
+    @Export(name="ignorePublicAcls", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ignorePublicAcls;
 
     /**
@@ -102,7 +102,7 @@ public class AccountPublicAccessBlock extends io.pulumi.resources.CustomResource
      * * Only the bucket owner and AWS Services can access buckets with public policies.
      * 
      */
-    @OutputExport(name="restrictPublicBuckets", type=Boolean.class, parameters={})
+    @Export(name="restrictPublicBuckets", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> restrictPublicBuckets;
 
     /**

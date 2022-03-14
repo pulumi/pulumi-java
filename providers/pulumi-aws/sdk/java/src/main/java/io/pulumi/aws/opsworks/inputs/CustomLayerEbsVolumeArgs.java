@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * Encrypt the volume.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -31,7 +31,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * For PIOPS volumes, the IOPS per disk.
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
@@ -42,7 +42,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * The path to mount the EBS volume on the layer's instances.
      * 
      */
-    @InputImport(name="mountPoint", required=true)
+    @Import(name="mountPoint", required=true)
       private final Output<String> mountPoint;
 
     public Output<String> getMountPoint() {
@@ -53,7 +53,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * The number of disks to use for the EBS volume.
      * 
      */
-    @InputImport(name="numberOfDisks", required=true)
+    @Import(name="numberOfDisks", required=true)
       private final Output<Integer> numberOfDisks;
 
     public Output<Integer> getNumberOfDisks() {
@@ -64,7 +64,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * The RAID level to use for the volume.
      * 
      */
-    @InputImport(name="raidLevel")
+    @Import(name="raidLevel")
       private final @Nullable Output<String> raidLevel;
 
     public Output<String> getRaidLevel() {
@@ -75,7 +75,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * The size of the volume in gigabytes.
      * 
      */
-    @InputImport(name="size", required=true)
+    @Import(name="size", required=true)
       private final Output<Integer> size;
 
     public Output<Integer> getSize() {
@@ -86,7 +86,7 @@ public final class CustomLayerEbsVolumeArgs extends io.pulumi.resources.Resource
      * The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

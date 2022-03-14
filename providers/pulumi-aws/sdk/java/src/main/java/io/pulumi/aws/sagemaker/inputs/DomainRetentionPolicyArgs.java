@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DomainRetentionPolicyArgs extends io.pulumi.resources.Resourc
      * The retention policy for data stored on an Amazon Elastic File System (EFS) volume. Default value is `Retain`.
      * 
      */
-    @InputImport(name="homeEfsFileSystem")
+    @Import(name="homeEfsFileSystem")
       private final @Nullable Output<String> homeEfsFileSystem;
 
     public Output<String> getHomeEfsFileSystem() {

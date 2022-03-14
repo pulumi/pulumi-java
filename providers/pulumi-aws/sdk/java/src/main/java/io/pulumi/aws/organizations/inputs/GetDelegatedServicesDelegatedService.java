@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDelegatedServicesDelegatedService extends io.pulumi.resour
      * The date that the account became a delegated administrator for this service.
      * 
      */
-    @InputImport(name="delegationEnabledDate", required=true)
+    @Import(name="delegationEnabledDate", required=true)
       private final String delegationEnabledDate;
 
     public String getDelegationEnabledDate() {
@@ -27,7 +27,7 @@ public final class GetDelegatedServicesDelegatedService extends io.pulumi.resour
      * The name of an AWS service that can request an operation for the specified service.
      * 
      */
-    @InputImport(name="servicePrincipal", required=true)
+    @Import(name="servicePrincipal", required=true)
       private final String servicePrincipal;
 
     public String getServicePrincipal() {

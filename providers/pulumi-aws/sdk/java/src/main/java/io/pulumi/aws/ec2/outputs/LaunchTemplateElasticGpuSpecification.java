@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateElasticGpuSpecification {
     /**
      * The [Elastic GPU Type](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-gpus.html#elastic-gpus-basics)
@@ -15,8 +15,8 @@ public final class LaunchTemplateElasticGpuSpecification {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private LaunchTemplateElasticGpuSpecification(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private LaunchTemplateElasticGpuSpecification(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

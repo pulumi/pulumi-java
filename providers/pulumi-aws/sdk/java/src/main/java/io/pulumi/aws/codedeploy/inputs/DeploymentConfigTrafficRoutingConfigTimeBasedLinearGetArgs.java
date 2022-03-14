@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs ex
      * The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
@@ -29,7 +29,7 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearGetArgs ex
      * The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
      * 
      */
-    @InputImport(name="percentage")
+    @Import(name="percentage")
       private final @Nullable Output<Integer> percentage;
 
     public Output<Integer> getPercentage() {

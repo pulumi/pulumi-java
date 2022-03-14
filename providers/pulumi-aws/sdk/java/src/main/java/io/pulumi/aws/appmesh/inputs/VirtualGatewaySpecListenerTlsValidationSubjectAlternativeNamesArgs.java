@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
      * The criteria for determining a SAN's match.
      * 
      */
-    @InputImport(name="match", required=true)
+    @Import(name="match", required=true)
       private final Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> match;
 
     public Output<VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatchArgs> getMatch() {

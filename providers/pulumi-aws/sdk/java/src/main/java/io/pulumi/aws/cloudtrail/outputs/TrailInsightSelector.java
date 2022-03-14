@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudtrail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TrailInsightSelector {
     /**
      * Type of insights to log on a trail. The valid value is `ApiCallRateInsight`.
@@ -15,8 +15,8 @@ public final class TrailInsightSelector {
      */
     private final String insightType;
 
-    @OutputCustomType.Constructor
-    private TrailInsightSelector(@OutputCustomType.Parameter("insightType") String insightType) {
+    @CustomType.Constructor
+    private TrailInsightSelector(@CustomType.Parameter("insightType") String insightType) {
         this.insightType = insightType;
     }
 

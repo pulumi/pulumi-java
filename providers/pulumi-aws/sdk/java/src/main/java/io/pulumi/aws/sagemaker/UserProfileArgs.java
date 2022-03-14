@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated Domain.
      * 
      */
-    @InputImport(name="domainId", required=true)
+    @Import(name="domainId", required=true)
       private final Output<String> domainId;
 
     public Output<String> getDomainId() {
@@ -31,7 +31,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
      * 
      */
-    @InputImport(name="singleSignOnUserIdentifier")
+    @Import(name="singleSignOnUserIdentifier")
       private final @Nullable Output<String> singleSignOnUserIdentifier;
 
     public Output<String> getSingleSignOnUserIdentifier() {
@@ -42,7 +42,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
      * 
      */
-    @InputImport(name="singleSignOnUserValue")
+    @Import(name="singleSignOnUserValue")
       private final @Nullable Output<String> singleSignOnUserValue;
 
     public Output<String> getSingleSignOnUserValue() {
@@ -53,7 +53,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -64,7 +64,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the User Profile.
      * 
      */
-    @InputImport(name="userProfileName", required=true)
+    @Import(name="userProfileName", required=true)
       private final Output<String> userProfileName;
 
     public Output<String> getUserProfileName() {
@@ -75,7 +75,7 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The user settings. See User Settings below.
      * 
      */
-    @InputImport(name="userSettings")
+    @Import(name="userSettings")
       private final @Nullable Output<UserProfileUserSettingsArgs> userSettings;
 
     public Output<UserProfileUserSettingsArgs> getUserSettings() {

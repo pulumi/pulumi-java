@@ -23,12 +23,12 @@ import io.pulumi.aws.quicksight.outputs.DataSourceParametersSpark;
 import io.pulumi.aws.quicksight.outputs.DataSourceParametersSqlServer;
 import io.pulumi.aws.quicksight.outputs.DataSourceParametersTeradata;
 import io.pulumi.aws.quicksight.outputs.DataSourceParametersTwitter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceParameters {
     /**
      * Parameters for connecting to Amazon Elasticsearch.
@@ -131,28 +131,28 @@ public final class DataSourceParameters {
      */
     private final @Nullable DataSourceParametersTwitter twitter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceParameters(
-        @OutputCustomType.Parameter("amazonElasticsearch") @Nullable DataSourceParametersAmazonElasticsearch amazonElasticsearch,
-        @OutputCustomType.Parameter("athena") @Nullable DataSourceParametersAthena athena,
-        @OutputCustomType.Parameter("aurora") @Nullable DataSourceParametersAurora aurora,
-        @OutputCustomType.Parameter("auroraPostgresql") @Nullable DataSourceParametersAuroraPostgresql auroraPostgresql,
-        @OutputCustomType.Parameter("awsIotAnalytics") @Nullable DataSourceParametersAwsIotAnalytics awsIotAnalytics,
-        @OutputCustomType.Parameter("jira") @Nullable DataSourceParametersJira jira,
-        @OutputCustomType.Parameter("mariaDb") @Nullable DataSourceParametersMariaDb mariaDb,
-        @OutputCustomType.Parameter("mysql") @Nullable DataSourceParametersMysql mysql,
-        @OutputCustomType.Parameter("oracle") @Nullable DataSourceParametersOracle oracle,
-        @OutputCustomType.Parameter("postgresql") @Nullable DataSourceParametersPostgresql postgresql,
-        @OutputCustomType.Parameter("presto") @Nullable DataSourceParametersPresto presto,
-        @OutputCustomType.Parameter("rds") @Nullable DataSourceParametersRds rds,
-        @OutputCustomType.Parameter("redshift") @Nullable DataSourceParametersRedshift redshift,
-        @OutputCustomType.Parameter("s3") @Nullable DataSourceParametersS3 s3,
-        @OutputCustomType.Parameter("serviceNow") @Nullable DataSourceParametersServiceNow serviceNow,
-        @OutputCustomType.Parameter("snowflake") @Nullable DataSourceParametersSnowflake snowflake,
-        @OutputCustomType.Parameter("spark") @Nullable DataSourceParametersSpark spark,
-        @OutputCustomType.Parameter("sqlServer") @Nullable DataSourceParametersSqlServer sqlServer,
-        @OutputCustomType.Parameter("teradata") @Nullable DataSourceParametersTeradata teradata,
-        @OutputCustomType.Parameter("twitter") @Nullable DataSourceParametersTwitter twitter) {
+        @CustomType.Parameter("amazonElasticsearch") @Nullable DataSourceParametersAmazonElasticsearch amazonElasticsearch,
+        @CustomType.Parameter("athena") @Nullable DataSourceParametersAthena athena,
+        @CustomType.Parameter("aurora") @Nullable DataSourceParametersAurora aurora,
+        @CustomType.Parameter("auroraPostgresql") @Nullable DataSourceParametersAuroraPostgresql auroraPostgresql,
+        @CustomType.Parameter("awsIotAnalytics") @Nullable DataSourceParametersAwsIotAnalytics awsIotAnalytics,
+        @CustomType.Parameter("jira") @Nullable DataSourceParametersJira jira,
+        @CustomType.Parameter("mariaDb") @Nullable DataSourceParametersMariaDb mariaDb,
+        @CustomType.Parameter("mysql") @Nullable DataSourceParametersMysql mysql,
+        @CustomType.Parameter("oracle") @Nullable DataSourceParametersOracle oracle,
+        @CustomType.Parameter("postgresql") @Nullable DataSourceParametersPostgresql postgresql,
+        @CustomType.Parameter("presto") @Nullable DataSourceParametersPresto presto,
+        @CustomType.Parameter("rds") @Nullable DataSourceParametersRds rds,
+        @CustomType.Parameter("redshift") @Nullable DataSourceParametersRedshift redshift,
+        @CustomType.Parameter("s3") @Nullable DataSourceParametersS3 s3,
+        @CustomType.Parameter("serviceNow") @Nullable DataSourceParametersServiceNow serviceNow,
+        @CustomType.Parameter("snowflake") @Nullable DataSourceParametersSnowflake snowflake,
+        @CustomType.Parameter("spark") @Nullable DataSourceParametersSpark spark,
+        @CustomType.Parameter("sqlServer") @Nullable DataSourceParametersSqlServer sqlServer,
+        @CustomType.Parameter("teradata") @Nullable DataSourceParametersTeradata teradata,
+        @CustomType.Parameter("twitter") @Nullable DataSourceParametersTwitter twitter) {
         this.amazonElasticsearch = amazonElasticsearch;
         this.athena = athena;
         this.aurora = aurora;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class ProviderDefaultTagsArgs extends io.pulumi.resources.ResourceA
 
     public static final ProviderDefaultTagsArgs Empty = new ProviderDefaultTagsArgs();
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.AccountPasswordPolicyArgs;
 import io.pulumi.aws.iam.inputs.AccountPasswordPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * Whether to allow users to change their own password
      * 
      */
-    @OutputExport(name="allowUsersToChangePassword", type=Boolean.class, parameters={})
+    @Export(name="allowUsersToChangePassword", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowUsersToChangePassword;
 
     /**
@@ -51,7 +51,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
      * 
      */
-    @OutputExport(name="expirePasswords", type=Boolean.class, parameters={})
+    @Export(name="expirePasswords", type=Boolean.class, parameters={})
     private Output<Boolean> expirePasswords;
 
     /**
@@ -65,7 +65,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * Whether users are prevented from setting a new password after their password has expired (i.e., require administrator reset)
      * 
      */
-    @OutputExport(name="hardExpiry", type=Boolean.class, parameters={})
+    @Export(name="hardExpiry", type=Boolean.class, parameters={})
     private Output<Boolean> hardExpiry;
 
     /**
@@ -79,7 +79,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * The number of days that an user password is valid.
      * 
      */
-    @OutputExport(name="maxPasswordAge", type=Integer.class, parameters={})
+    @Export(name="maxPasswordAge", type=Integer.class, parameters={})
     private Output<Integer> maxPasswordAge;
 
     /**
@@ -93,7 +93,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * Minimum length to require for user passwords.
      * 
      */
-    @OutputExport(name="minimumPasswordLength", type=Integer.class, parameters={})
+    @Export(name="minimumPasswordLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minimumPasswordLength;
 
     /**
@@ -107,7 +107,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * The number of previous passwords that users are prevented from reusing.
      * 
      */
-    @OutputExport(name="passwordReusePrevention", type=Integer.class, parameters={})
+    @Export(name="passwordReusePrevention", type=Integer.class, parameters={})
     private Output<Integer> passwordReusePrevention;
 
     /**
@@ -121,7 +121,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * Whether to require lowercase characters for user passwords.
      * 
      */
-    @OutputExport(name="requireLowercaseCharacters", type=Boolean.class, parameters={})
+    @Export(name="requireLowercaseCharacters", type=Boolean.class, parameters={})
     private Output<Boolean> requireLowercaseCharacters;
 
     /**
@@ -135,7 +135,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * Whether to require numbers for user passwords.
      * 
      */
-    @OutputExport(name="requireNumbers", type=Boolean.class, parameters={})
+    @Export(name="requireNumbers", type=Boolean.class, parameters={})
     private Output<Boolean> requireNumbers;
 
     /**
@@ -149,7 +149,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * Whether to require symbols for user passwords.
      * 
      */
-    @OutputExport(name="requireSymbols", type=Boolean.class, parameters={})
+    @Export(name="requireSymbols", type=Boolean.class, parameters={})
     private Output<Boolean> requireSymbols;
 
     /**
@@ -163,7 +163,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * Whether to require uppercase characters for user passwords.
      * 
      */
-    @OutputExport(name="requireUppercaseCharacters", type=Boolean.class, parameters={})
+    @Export(name="requireUppercaseCharacters", type=Boolean.class, parameters={})
     private Output<Boolean> requireUppercaseCharacters;
 
     /**

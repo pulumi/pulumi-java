@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
      * The compute type. For more information, see [Amazon WorkSpaces Bundles](http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles). Valid values are `VALUE`, `STANDARD`, `PERFORMANCE`, `POWER`, `GRAPHICS`, `POWERPRO` and `GRAPHICSPRO`.
      * 
      */
-    @InputImport(name="computeTypeName", required=true)
+    @Import(name="computeTypeName", required=true)
       private final String computeTypeName;
 
     public String getComputeTypeName() {
@@ -28,7 +28,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
      * The size of the root volume.
      * 
      */
-    @InputImport(name="rootVolumeSizeGib", required=true)
+    @Import(name="rootVolumeSizeGib", required=true)
       private final Integer rootVolumeSizeGib;
 
     public Integer getRootVolumeSizeGib() {
@@ -39,7 +39,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
      * The running mode. For more information, see [Manage the WorkSpace Running Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html). Valid values are `AUTO_STOP` and `ALWAYS_ON`.
      * 
      */
-    @InputImport(name="runningMode", required=true)
+    @Import(name="runningMode", required=true)
       private final String runningMode;
 
     public String getRunningMode() {
@@ -50,7 +50,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
      * The time after a user logs off when WorkSpaces are automatically stopped. Configured in 60-minute intervals.
      * 
      */
-    @InputImport(name="runningModeAutoStopTimeoutInMinutes", required=true)
+    @Import(name="runningModeAutoStopTimeoutInMinutes", required=true)
       private final Integer runningModeAutoStopTimeoutInMinutes;
 
     public Integer getRunningModeAutoStopTimeoutInMinutes() {
@@ -61,7 +61,7 @@ public final class GetWorkspaceWorkspaceProperty extends io.pulumi.resources.Inv
      * The size of the user storage.
      * 
      */
-    @InputImport(name="userVolumeSizeGib", required=true)
+    @Import(name="userVolumeSizeGib", required=true)
       private final Integer userVolumeSizeGib;
 
     public Integer getUserVolumeSizeGib() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.applicationloadbalancing.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -14,77 +14,77 @@ public final class GetListenerDefaultActionAuthenticateOidc extends io.pulumi.re
 
     public static final GetListenerDefaultActionAuthenticateOidc Empty = new GetListenerDefaultActionAuthenticateOidc();
 
-    @InputImport(name="authenticationRequestExtraParams", required=true)
+    @Import(name="authenticationRequestExtraParams", required=true)
       private final Map<String,String> authenticationRequestExtraParams;
 
     public Map<String,String> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams;
     }
 
-    @InputImport(name="authorizationEndpoint", required=true)
+    @Import(name="authorizationEndpoint", required=true)
       private final String authorizationEndpoint;
 
     public String getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final String clientId;
 
     public String getClientId() {
         return this.clientId;
     }
 
-    @InputImport(name="clientSecret", required=true)
+    @Import(name="clientSecret", required=true)
       private final String clientSecret;
 
     public String getClientSecret() {
         return this.clientSecret;
     }
 
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final String issuer;
 
     public String getIssuer() {
         return this.issuer;
     }
 
-    @InputImport(name="onUnauthenticatedRequest", required=true)
+    @Import(name="onUnauthenticatedRequest", required=true)
       private final String onUnauthenticatedRequest;
 
     public String getOnUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest;
     }
 
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {
         return this.scope;
     }
 
-    @InputImport(name="sessionCookieName", required=true)
+    @Import(name="sessionCookieName", required=true)
       private final String sessionCookieName;
 
     public String getSessionCookieName() {
         return this.sessionCookieName;
     }
 
-    @InputImport(name="sessionTimeout", required=true)
+    @Import(name="sessionTimeout", required=true)
       private final Integer sessionTimeout;
 
     public Integer getSessionTimeout() {
         return this.sessionTimeout;
     }
 
-    @InputImport(name="tokenEndpoint", required=true)
+    @Import(name="tokenEndpoint", required=true)
       private final String tokenEndpoint;
 
     public String getTokenEndpoint() {
         return this.tokenEndpoint;
     }
 
-    @InputImport(name="userInfoEndpoint", required=true)
+    @Import(name="userInfoEndpoint", required=true)
       private final String userInfoEndpoint;
 
     public String getUserInfoEndpoint() {

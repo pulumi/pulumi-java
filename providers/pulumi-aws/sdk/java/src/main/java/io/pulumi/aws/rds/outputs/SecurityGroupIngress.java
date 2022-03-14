@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityGroupIngress {
     /**
      * The CIDR block to accept
@@ -33,12 +33,12 @@ public final class SecurityGroupIngress {
      */
     private final @Nullable String securityGroupOwnerId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityGroupIngress(
-        @OutputCustomType.Parameter("cidr") @Nullable String cidr,
-        @OutputCustomType.Parameter("securityGroupId") @Nullable String securityGroupId,
-        @OutputCustomType.Parameter("securityGroupName") @Nullable String securityGroupName,
-        @OutputCustomType.Parameter("securityGroupOwnerId") @Nullable String securityGroupOwnerId) {
+        @CustomType.Parameter("cidr") @Nullable String cidr,
+        @CustomType.Parameter("securityGroupId") @Nullable String securityGroupId,
+        @CustomType.Parameter("securityGroupName") @Nullable String securityGroupName,
+        @CustomType.Parameter("securityGroupOwnerId") @Nullable String securityGroupOwnerId) {
         this.cidr = cidr;
         this.securityGroupId = securityGroupId;
         this.securityGroupName = securityGroupName;

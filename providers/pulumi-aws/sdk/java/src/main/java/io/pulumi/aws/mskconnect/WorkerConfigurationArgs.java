@@ -4,7 +4,7 @@
 package io.pulumi.aws.mskconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
      * A summary description of the worker configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
      * The name of the worker configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class WorkerConfigurationArgs extends io.pulumi.resources.ResourceA
      * Contents of connect-distributed.properties file. The value can be either base64 encoded or in raw format.
      * 
      */
-    @InputImport(name="propertiesFileContent", required=true)
+    @Import(name="propertiesFileContent", required=true)
       private final Output<String> propertiesFileContent;
 
     public Output<String> getPropertiesFileContent() {

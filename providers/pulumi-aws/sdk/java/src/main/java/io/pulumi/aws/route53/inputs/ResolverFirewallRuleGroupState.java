@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
      * The ARN (Amazon Resource Name) of the rule group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
      * A name that lets you identify the rule group, to manage and use it.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
      * The AWS account ID for the account that created the rule group. When a rule group is shared with your account, this is the account that has shared the rule group with you.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -52,7 +52,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
      * Whether the rule group is shared with other AWS accounts, or was shared with the current account by another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM). Valid values: `NOT_SHARED`, `SHARED_BY_ME`, `SHARED_WITH_ME`
      * 
      */
-    @InputImport(name="shareStatus")
+    @Import(name="shareStatus")
       private final @Nullable Output<String> shareStatus;
 
     public Output<String> getShareStatus() {
@@ -63,7 +63,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -74,7 +74,7 @@ public final class ResolverFirewallRuleGroupState extends io.pulumi.resources.Re
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

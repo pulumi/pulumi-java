@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * The lower limit of the port range. This must be less than or equal to the `to_port`.
      * 
      */
-    @InputImport(name="fromPort", required=true)
+    @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
     public Output<Integer> getFromPort() {
@@ -29,7 +29,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      * The upper limit of the port range. This must be greater than or equal to the `from_port`.
      * 
      */
-    @InputImport(name="toPort")
+    @Import(name="toPort")
       private final @Nullable Output<Integer> toPort;
 
     public Output<Integer> getToPort() {

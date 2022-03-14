@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ClusterIdentityOidcArgs extends io.pulumi.resources.ResourceA
      * Issuer URL for the OpenID Connect identity provider.
      * 
      */
-    @InputImport(name="issuer")
+    @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
     public Output<String> getIssuer() {

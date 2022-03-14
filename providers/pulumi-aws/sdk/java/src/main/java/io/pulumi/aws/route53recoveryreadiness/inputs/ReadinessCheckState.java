@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
      * ARN of the readiness_check
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
      * Unique name describing the readiness check.
      * 
      */
-    @InputImport(name="readinessCheckName")
+    @Import(name="readinessCheckName")
       private final @Nullable Output<String> readinessCheckName;
 
     public Output<String> getReadinessCheckName() {
@@ -41,7 +41,7 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
      * Name describing the resource set that will be monitored for readiness.
      * 
      */
-    @InputImport(name="resourceSetName")
+    @Import(name="resourceSetName")
       private final @Nullable Output<String> resourceSetName;
 
     public Output<String> getResourceSetName() {
@@ -52,7 +52,7 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -63,7 +63,7 @@ public final class ReadinessCheckState extends io.pulumi.resources.ResourceArgs 
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

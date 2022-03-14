@@ -6,7 +6,7 @@ package io.pulumi.aws.timestreamwrite;
 import io.pulumi.aws.timestreamwrite.inputs.TableMagneticStoreWritePropertiesArgs;
 import io.pulumi.aws.timestreamwrite.inputs.TableRetentionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Timestream database.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -32,7 +32,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Contains properties to set on the table when enabling magnetic store writes. See Magnetic Store Write Properties below for more details.
      * 
      */
-    @InputImport(name="magneticStoreWriteProperties")
+    @Import(name="magneticStoreWriteProperties")
       private final @Nullable Output<TableMagneticStoreWritePropertiesArgs> magneticStoreWriteProperties;
 
     public Output<TableMagneticStoreWritePropertiesArgs> getMagneticStoreWriteProperties() {
@@ -43,7 +43,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, `magnetic_store_retention_period_in_days` default to 73000 and `memory_store_retention_period_in_hours` defaults to 6.
      * 
      */
-    @InputImport(name="retentionProperties")
+    @Import(name="retentionProperties")
       private final @Nullable Output<TableRetentionPropertiesArgs> retentionProperties;
 
     public Output<TableRetentionPropertiesArgs> getRetentionProperties() {
@@ -54,7 +54,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Timestream table.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {
@@ -65,7 +65,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

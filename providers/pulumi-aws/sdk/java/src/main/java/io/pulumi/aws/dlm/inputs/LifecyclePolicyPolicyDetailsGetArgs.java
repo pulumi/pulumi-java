@@ -5,7 +5,7 @@ package io.pulumi.aws.dlm.inputs;
 
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
      * A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
      * 
      */
-    @InputImport(name="resourceTypes", required=true)
+    @Import(name="resourceTypes", required=true)
       private final Output<List<String>> resourceTypes;
 
     public Output<List<String>> getResourceTypes() {
@@ -31,7 +31,7 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
      * See the `schedule` configuration block.
      * 
      */
-    @InputImport(name="schedules", required=true)
+    @Import(name="schedules", required=true)
       private final Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules;
 
     public Output<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> getSchedules() {
@@ -42,7 +42,7 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
      * A map of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
      * 
      */
-    @InputImport(name="targetTags", required=true)
+    @Import(name="targetTags", required=true)
       private final Output<Map<String,String>> targetTags;
 
     public Output<Map<String,String>> getTargetTags() {

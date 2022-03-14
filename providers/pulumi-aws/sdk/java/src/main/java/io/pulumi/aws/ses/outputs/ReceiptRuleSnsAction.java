@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReceiptRuleSnsAction {
     /**
      * The encoding to use for the email within the Amazon SNS notification. Default value is `UTF-8`.
@@ -28,11 +28,11 @@ public final class ReceiptRuleSnsAction {
      */
     private final String topicArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReceiptRuleSnsAction(
-        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
-        @OutputCustomType.Parameter("position") Integer position,
-        @OutputCustomType.Parameter("topicArn") String topicArn) {
+        @CustomType.Parameter("encoding") @Nullable String encoding,
+        @CustomType.Parameter("position") Integer position,
+        @CustomType.Parameter("topicArn") String topicArn) {
         this.encoding = encoding;
         this.position = position;
         this.topicArn = topicArn;

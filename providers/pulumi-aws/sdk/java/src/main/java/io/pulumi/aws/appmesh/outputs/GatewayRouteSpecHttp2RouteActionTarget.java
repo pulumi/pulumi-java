@@ -4,10 +4,10 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.GatewayRouteSpecHttp2RouteActionTargetVirtualService;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GatewayRouteSpecHttp2RouteActionTarget {
     /**
      * The virtual service gateway route target.
@@ -15,8 +15,8 @@ public final class GatewayRouteSpecHttp2RouteActionTarget {
      */
     private final GatewayRouteSpecHttp2RouteActionTargetVirtualService virtualService;
 
-    @OutputCustomType.Constructor
-    private GatewayRouteSpecHttp2RouteActionTarget(@OutputCustomType.Parameter("virtualService") GatewayRouteSpecHttp2RouteActionTargetVirtualService virtualService) {
+    @CustomType.Constructor
+    private GatewayRouteSpecHttp2RouteActionTarget(@CustomType.Parameter("virtualService") GatewayRouteSpecHttp2RouteActionTargetVirtualService virtualService) {
         this.virtualService = virtualService;
     }
 

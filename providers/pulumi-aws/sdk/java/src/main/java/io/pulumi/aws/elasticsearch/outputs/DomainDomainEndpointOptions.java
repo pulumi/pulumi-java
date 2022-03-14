@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainDomainEndpointOptions {
     /**
      * Fully qualified domain for your custom endpoint.
@@ -34,13 +34,13 @@ public final class DomainDomainEndpointOptions {
     private final @Nullable Boolean enforceHttps;
     private final @Nullable String tlsSecurityPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainDomainEndpointOptions(
-        @OutputCustomType.Parameter("customEndpoint") @Nullable String customEndpoint,
-        @OutputCustomType.Parameter("customEndpointCertificateArn") @Nullable String customEndpointCertificateArn,
-        @OutputCustomType.Parameter("customEndpointEnabled") @Nullable Boolean customEndpointEnabled,
-        @OutputCustomType.Parameter("enforceHttps") @Nullable Boolean enforceHttps,
-        @OutputCustomType.Parameter("tlsSecurityPolicy") @Nullable String tlsSecurityPolicy) {
+        @CustomType.Parameter("customEndpoint") @Nullable String customEndpoint,
+        @CustomType.Parameter("customEndpointCertificateArn") @Nullable String customEndpointCertificateArn,
+        @CustomType.Parameter("customEndpointEnabled") @Nullable Boolean customEndpointEnabled,
+        @CustomType.Parameter("enforceHttps") @Nullable Boolean enforceHttps,
+        @CustomType.Parameter("tlsSecurityPolicy") @Nullable String tlsSecurityPolicy) {
         this.customEndpoint = customEndpoint;
         this.customEndpointCertificateArn = customEndpointCertificateArn;
         this.customEndpointEnabled = customEndpointEnabled;

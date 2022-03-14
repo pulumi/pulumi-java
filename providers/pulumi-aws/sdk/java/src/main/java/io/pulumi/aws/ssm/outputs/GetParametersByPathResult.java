@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetParametersByPathResult {
     private final List<String> arns;
     /**
@@ -26,16 +26,16 @@ public final class GetParametersByPathResult {
     private final List<String> values;
     private final @Nullable Boolean withDecryption;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetParametersByPathResult(
-        @OutputCustomType.Parameter("arns") List<String> arns,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("names") List<String> names,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("recursive") @Nullable Boolean recursive,
-        @OutputCustomType.Parameter("types") List<String> types,
-        @OutputCustomType.Parameter("values") List<String> values,
-        @OutputCustomType.Parameter("withDecryption") @Nullable Boolean withDecryption) {
+        @CustomType.Parameter("arns") List<String> arns,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("names") List<String> names,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("recursive") @Nullable Boolean recursive,
+        @CustomType.Parameter("types") List<String> types,
+        @CustomType.Parameter("values") List<String> values,
+        @CustomType.Parameter("withDecryption") @Nullable Boolean withDecryption) {
         this.arns = arns;
         this.id = id;
         this.names = names;

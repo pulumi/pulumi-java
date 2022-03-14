@@ -7,7 +7,7 @@ import io.pulumi.aws.fsx.inputs.OpenZfsVolumeNfsExportsArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsVolumeOriginSnapshotArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsVolumeUserAndGroupQuotaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
      * 
      */
-    @InputImport(name="copyTagsToSnapshots")
+    @Import(name="copyTagsToSnapshots")
       private final @Nullable Output<Boolean> copyTagsToSnapshots;
 
     public Output<Boolean> getCopyTagsToSnapshots() {
@@ -36,7 +36,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Method used to compress the data on the volume. Valid values are `NONE` or `ZSTD`. Child volumes that don't specify compression option will inherit from parent volume. This option on file system applies to the root volume.
      * 
      */
-    @InputImport(name="dataCompressionType")
+    @Import(name="dataCompressionType")
       private final @Nullable Output<String> dataCompressionType;
 
     public Output<String> getDataCompressionType() {
@@ -47,7 +47,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Volume. You can use a maximum of 203 alphanumeric characters, plus the underscore (_) special character.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -58,7 +58,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * NFS export configuration for the root volume. Exactly 1 item. See NFS Exports Below.
      * 
      */
-    @InputImport(name="nfsExports")
+    @Import(name="nfsExports")
       private final @Nullable Output<OpenZfsVolumeNfsExportsArgs> nfsExports;
 
     public Output<OpenZfsVolumeNfsExportsArgs> getNfsExports() {
@@ -69,7 +69,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the source snapshot to create the volume from.
      * 
      */
-    @InputImport(name="originSnapshot")
+    @Import(name="originSnapshot")
       private final @Nullable Output<OpenZfsVolumeOriginSnapshotArgs> originSnapshot;
 
     public Output<OpenZfsVolumeOriginSnapshotArgs> getOriginSnapshot() {
@@ -80,7 +80,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The volume id of volume that will be the parent volume for the volume being created, this could be the root volume created from the `aws.fsx.OpenZfsFileSystem` resource with the `root_volume_id` or the `id` property of another `aws.fsx.OpenZfsVolume`.
      * 
      */
-    @InputImport(name="parentVolumeId", required=true)
+    @Import(name="parentVolumeId", required=true)
       private final Output<String> parentVolumeId;
 
     public Output<String> getParentVolumeId() {
@@ -91,7 +91,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * specifies whether the volume is read-only. Default is false.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -102,7 +102,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
      * 
      */
-    @InputImport(name="storageCapacityQuotaGib")
+    @Import(name="storageCapacityQuotaGib")
       private final @Nullable Output<Integer> storageCapacityQuotaGib;
 
     public Output<Integer> getStorageCapacityQuotaGib() {
@@ -113,7 +113,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The amount of storage in gibibytes (GiB) to reserve from the parent volume.
      * 
      */
-    @InputImport(name="storageCapacityReservationGib")
+    @Import(name="storageCapacityReservationGib")
       private final @Nullable Output<Integer> storageCapacityReservationGib;
 
     public Output<Integer> getStorageCapacityReservationGib() {
@@ -124,7 +124,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the file system. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -135,7 +135,7 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -146,14 +146,14 @@ public final class OpenZfsVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * - Specify how much storage users or groups can use on the volume. Maximum of 100 items. See User and Group Quotas Below.
      * 
      */
-    @InputImport(name="userAndGroupQuotas")
+    @Import(name="userAndGroupQuotas")
       private final @Nullable Output<List<OpenZfsVolumeUserAndGroupQuotaArgs>> userAndGroupQuotas;
 
     public Output<List<OpenZfsVolumeUserAndGroupQuotaArgs>> getUserAndGroupQuotas() {
         return this.userAndGroupQuotas == null ? Output.empty() : this.userAndGroupQuotas;
     }
 
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

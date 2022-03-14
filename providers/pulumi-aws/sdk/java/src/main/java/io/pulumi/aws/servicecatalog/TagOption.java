@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.TagOptionArgs;
 import io.pulumi.aws.servicecatalog.inputs.TagOptionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class TagOption extends io.pulumi.resources.CustomResource {
      * Whether tag option is active. Default is `true`.
      * 
      */
-    @OutputExport(name="active", type=Boolean.class, parameters={})
+    @Export(name="active", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> active;
 
     /**
@@ -47,7 +47,7 @@ public class TagOption extends io.pulumi.resources.CustomResource {
      * Tag option key.
      * 
      */
-    @OutputExport(name="key", type=String.class, parameters={})
+    @Export(name="key", type=String.class, parameters={})
     private Output<String> key;
 
     /**
@@ -57,7 +57,7 @@ public class TagOption extends io.pulumi.resources.CustomResource {
     public Output<String> getKey() {
         return this.key;
     }
-    @OutputExport(name="owner", type=String.class, parameters={})
+    @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
     public Output<String> getOwner() {
@@ -67,7 +67,7 @@ public class TagOption extends io.pulumi.resources.CustomResource {
      * Tag option value.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**

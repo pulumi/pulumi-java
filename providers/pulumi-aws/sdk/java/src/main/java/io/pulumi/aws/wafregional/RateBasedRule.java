@@ -8,7 +8,7 @@ import io.pulumi.aws.wafregional.RateBasedRuleArgs;
 import io.pulumi.aws.wafregional.inputs.RateBasedRuleState;
 import io.pulumi.aws.wafregional.outputs.RateBasedRulePredicate;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * The ARN of the WAF Regional Rate Based Rule.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * The name or description for the Amazon CloudWatch metric of this rule.
      * 
      */
-    @OutputExport(name="metricName", type=String.class, parameters={})
+    @Export(name="metricName", type=String.class, parameters={})
     private Output<String> metricName;
 
     /**
@@ -64,7 +64,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * The name or description of the rule.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * The objects to include in a rule (documented below).
      * 
      */
-    @OutputExport(name="predicates", type=List.class, parameters={RateBasedRulePredicate.class})
+    @Export(name="predicates", type=List.class, parameters={RateBasedRulePredicate.class})
     private Output</* @Nullable */ List<RateBasedRulePredicate>> predicates;
 
     /**
@@ -92,7 +92,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * Valid value is IP.
      * 
      */
-    @OutputExport(name="rateKey", type=String.class, parameters={})
+    @Export(name="rateKey", type=String.class, parameters={})
     private Output<String> rateKey;
 
     /**
@@ -106,7 +106,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 100.
      * 
      */
-    @OutputExport(name="rateLimit", type=Integer.class, parameters={})
+    @Export(name="rateLimit", type=Integer.class, parameters={})
     private Output<Integer> rateLimit;
 
     /**
@@ -120,7 +120,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class RateBasedRule extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceSslProperties {
     /**
      * A Boolean option to control whether SSL should be disabled.
@@ -15,8 +15,8 @@ public final class DataSourceSslProperties {
      */
     private final Boolean disableSsl;
 
-    @OutputCustomType.Constructor
-    private DataSourceSslProperties(@OutputCustomType.Parameter("disableSsl") Boolean disableSsl) {
+    @CustomType.Constructor
+    private DataSourceSslProperties(@CustomType.Parameter("disableSsl") Boolean disableSsl) {
         this.disableSsl = disableSsl;
     }
 

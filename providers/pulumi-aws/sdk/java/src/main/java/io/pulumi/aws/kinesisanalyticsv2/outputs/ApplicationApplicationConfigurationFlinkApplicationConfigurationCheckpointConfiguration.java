@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration {
     /**
      * Describes the interval in milliseconds between checkpoint operations.
@@ -37,12 +37,12 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      */
     private final @Nullable Integer minPauseBetweenCheckpoints;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration(
-        @OutputCustomType.Parameter("checkpointInterval") @Nullable Integer checkpointInterval,
-        @OutputCustomType.Parameter("checkpointingEnabled") @Nullable Boolean checkpointingEnabled,
-        @OutputCustomType.Parameter("configurationType") String configurationType,
-        @OutputCustomType.Parameter("minPauseBetweenCheckpoints") @Nullable Integer minPauseBetweenCheckpoints) {
+        @CustomType.Parameter("checkpointInterval") @Nullable Integer checkpointInterval,
+        @CustomType.Parameter("checkpointingEnabled") @Nullable Boolean checkpointingEnabled,
+        @CustomType.Parameter("configurationType") String configurationType,
+        @CustomType.Parameter("minPauseBetweenCheckpoints") @Nullable Integer minPauseBetweenCheckpoints) {
         this.checkpointInterval = checkpointInterval;
         this.checkpointingEnabled = checkpointingEnabled;
         this.configurationType = configurationType;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AccessPointPosixUserGetArgs extends io.pulumi.resources.Resou
      * POSIX group ID used for all file system operations using this access point.
      * 
      */
-    @InputImport(name="gid", required=true)
+    @Import(name="gid", required=true)
       private final Output<Integer> gid;
 
     public Output<Integer> getGid() {
@@ -30,7 +30,7 @@ public final class AccessPointPosixUserGetArgs extends io.pulumi.resources.Resou
      * Secondary POSIX group IDs used for all file system operations using this access point.
      * 
      */
-    @InputImport(name="secondaryGids")
+    @Import(name="secondaryGids")
       private final @Nullable Output<List<Integer>> secondaryGids;
 
     public Output<List<Integer>> getSecondaryGids() {
@@ -41,7 +41,7 @@ public final class AccessPointPosixUserGetArgs extends io.pulumi.resources.Resou
      * POSIX user ID used for all file system operations using this access point.
      * 
      */
-    @InputImport(name="uid", required=true)
+    @Import(name="uid", required=true)
       private final Output<Integer> uid;
 
     public Output<Integer> getUid() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.secretsmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetSecretRotationRule extends io.pulumi.resources.InvokeArgs 
 
     public static final GetSecretRotationRule Empty = new GetSecretRotationRule();
 
-    @InputImport(name="automaticallyAfterDays", required=true)
+    @Import(name="automaticallyAfterDays", required=true)
       private final Integer automaticallyAfterDays;
 
     public Integer getAutomaticallyAfterDays() {

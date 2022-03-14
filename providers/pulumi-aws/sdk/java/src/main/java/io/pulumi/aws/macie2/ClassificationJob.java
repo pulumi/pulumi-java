@@ -10,7 +10,7 @@ import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinition;
 import io.pulumi.aws.macie2.outputs.ClassificationJobScheduleFrequency;
 import io.pulumi.aws.macie2.outputs.ClassificationJobUserPausedDetail;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -39,7 +39,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * The date and time, in UTC and extended RFC 3339 format, when the job was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -53,7 +53,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * The custom data identifiers to use for data analysis and classification.
      * 
      */
-    @OutputExport(name="customDataIdentifierIds", type=List.class, parameters={String.class})
+    @Export(name="customDataIdentifierIds", type=List.class, parameters={String.class})
     private Output<List<String>> customDataIdentifierIds;
 
     /**
@@ -67,7 +67,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * A custom description of the job. The description can contain as many as 200 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -81,7 +81,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * Specifies whether to analyze all existing, eligible objects immediately after the job is created.
      * 
      */
-    @OutputExport(name="initialRun", type=Boolean.class, parameters={})
+    @Export(name="initialRun", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> initialRun;
 
     /**
@@ -91,13 +91,13 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Boolean> getInitialRun() {
         return this.initialRun;
     }
-    @OutputExport(name="jobArn", type=String.class, parameters={})
+    @Export(name="jobArn", type=String.class, parameters={})
     private Output<String> jobArn;
 
     public Output<String> getJobArn() {
         return this.jobArn;
     }
-    @OutputExport(name="jobId", type=String.class, parameters={})
+    @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
     public Output<String> getJobId() {
@@ -107,7 +107,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * The status for the job. Valid values are: `CANCELLED`, `RUNNING` and `USER_PAUSED`
      * 
      */
-    @OutputExport(name="jobStatus", type=String.class, parameters={})
+    @Export(name="jobStatus", type=String.class, parameters={})
     private Output<String> jobStatus;
 
     /**
@@ -121,7 +121,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * The schedule for running the job. Valid values are: `ONE_TIME` - Run the job only once. If you specify this value, don't specify a value for the `schedule_frequency` property. `SCHEDULED` - Run the job on a daily, weekly, or monthly basis. If you specify this value, use the `schedule_frequency` property to define the recurrence pattern for the job.
      * 
      */
-    @OutputExport(name="jobType", type=String.class, parameters={})
+    @Export(name="jobType", type=String.class, parameters={})
     private Output<String> jobType;
 
     /**
@@ -131,7 +131,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
     public Output<String> getJobType() {
         return this.jobType;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
@@ -141,7 +141,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -155,7 +155,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
      * 
      */
-    @OutputExport(name="s3JobDefinition", type=ClassificationJobS3JobDefinition.class, parameters={})
+    @Export(name="s3JobDefinition", type=ClassificationJobS3JobDefinition.class, parameters={})
     private Output<ClassificationJobS3JobDefinition> s3JobDefinition;
 
     /**
@@ -169,7 +169,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * The sampling depth, as a percentage, to apply when processing objects. This value determines the percentage of eligible objects that the job analyzes. If this value is less than 100, Amazon Macie selects the objects to analyze at random, up to the specified percentage, and analyzes all the data in those objects.
      * 
      */
-    @OutputExport(name="samplingPercentage", type=Integer.class, parameters={})
+    @Export(name="samplingPercentage", type=Integer.class, parameters={})
     private Output<Integer> samplingPercentage;
 
     /**
@@ -183,7 +183,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * The recurrence pattern for running the job. To run the job only once, don't specify a value for this property and set the value for the `job_type` property to `ONE_TIME`. (documented below)
      * 
      */
-    @OutputExport(name="scheduleFrequency", type=ClassificationJobScheduleFrequency.class, parameters={})
+    @Export(name="scheduleFrequency", type=ClassificationJobScheduleFrequency.class, parameters={})
     private Output<ClassificationJobScheduleFrequency> scheduleFrequency;
 
     /**
@@ -197,7 +197,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * A map of key-value pairs that specifies the tags to associate with the job. A job can have a maximum of 50 tags. Each tag consists of a tag key and an associated tag value. The maximum length of a tag key is 128 characters. The maximum length of a tag value is 256 characters.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -207,7 +207,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -217,7 +217,7 @@ public class ClassificationJob extends io.pulumi.resources.CustomResource {
      * If the current status of the job is `USER_PAUSED`, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn't resumed. This value is present only if the value for `job-status` is `USER_PAUSED`.
      * 
      */
-    @OutputExport(name="userPausedDetails", type=List.class, parameters={ClassificationJobUserPausedDetail.class})
+    @Export(name="userPausedDetails", type=List.class, parameters={ClassificationJobUserPausedDetail.class})
     private Output<List<ClassificationJobUserPausedDetail>> userPausedDetails;
 
     /**

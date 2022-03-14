@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Access permissions string used for this user. See [Specifying Permissions Using an Access String](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html#Access-string) for more details.
      * 
      */
-    @InputImport(name="accessString", required=true)
+    @Import(name="accessString", required=true)
       private final Output<String> accessString;
 
     public Output<String> getAccessString() {
@@ -32,7 +32,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the created ElastiCache User.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The current supported value is `REDIS`.
      * 
      */
-    @InputImport(name="engine", required=true)
+    @Import(name="engine", required=true)
       private final Output<String> engine;
 
     public Output<String> getEngine() {
@@ -54,7 +54,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates a password is not required for this user.
      * 
      */
-    @InputImport(name="noPasswordRequired")
+    @Import(name="noPasswordRequired")
       private final @Nullable Output<Boolean> noPasswordRequired;
 
     public Output<Boolean> getNoPasswordRequired() {
@@ -65,7 +65,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Passwords used for this user. You can create up to two passwords for each user.
      * 
      */
-    @InputImport(name="passwords")
+    @Import(name="passwords")
       private final @Nullable Output<List<String>> passwords;
 
     public Output<List<String>> getPasswords() {
@@ -76,7 +76,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * A list of tags to be added to this resource. A tag is a key-value pair.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the user.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {
@@ -98,7 +98,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The username of the user.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<String> userName;
 
     public Output<String> getUserName() {

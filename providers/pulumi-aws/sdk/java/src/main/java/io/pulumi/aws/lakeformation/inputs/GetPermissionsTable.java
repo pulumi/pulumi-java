@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lakeformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetPermissionsTable extends io.pulumi.resources.InvokeArgs {
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    @InputImport(name="catalogId", required=true)
+    @Import(name="catalogId", required=true)
       private final String catalogId;
 
     public String getCatalogId() {
@@ -30,7 +30,7 @@ public final class GetPermissionsTable extends io.pulumi.resources.InvokeArgs {
      * Name of the database for the table with columns resource. Unique to the Data Catalog.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -41,7 +41,7 @@ public final class GetPermissionsTable extends io.pulumi.resources.InvokeArgs {
      * Name of the table resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -52,7 +52,7 @@ public final class GetPermissionsTable extends io.pulumi.resources.InvokeArgs {
      * Whether to use a wildcard representing every table under a database. At least one of `name` or `wildcard` is required. Defaults to `false`.
      * 
      */
-    @InputImport(name="wildcard")
+    @Import(name="wildcard")
       private final @Nullable Boolean wildcard;
 
     public Optional<Boolean> getWildcard() {

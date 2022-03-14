@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iot.ThingPrincipalAttachmentArgs;
 import io.pulumi.aws.iot.inputs.ThingPrincipalAttachmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public class ThingPrincipalAttachment extends io.pulumi.resources.CustomResource
      * The AWS IoT Certificate ARN or Amazon Cognito Identity ID.
      * 
      */
-    @OutputExport(name="principal", type=String.class, parameters={})
+    @Export(name="principal", type=String.class, parameters={})
     private Output<String> principal;
 
     /**
@@ -38,7 +38,7 @@ public class ThingPrincipalAttachment extends io.pulumi.resources.CustomResource
      * The name of the thing.
      * 
      */
-    @OutputExport(name="thing", type=String.class, parameters={})
+    @Export(name="thing", type=String.class, parameters={})
     private Output<String> thing;
 
     /**

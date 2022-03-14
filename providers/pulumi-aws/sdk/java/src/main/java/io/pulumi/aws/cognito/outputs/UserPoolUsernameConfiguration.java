@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolUsernameConfiguration {
     /**
      * Whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
@@ -15,8 +15,8 @@ public final class UserPoolUsernameConfiguration {
      */
     private final Boolean caseSensitive;
 
-    @OutputCustomType.Constructor
-    private UserPoolUsernameConfiguration(@OutputCustomType.Parameter("caseSensitive") Boolean caseSensitive) {
+    @CustomType.Constructor
+    private UserPoolUsernameConfiguration(@CustomType.Parameter("caseSensitive") Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
     }
 

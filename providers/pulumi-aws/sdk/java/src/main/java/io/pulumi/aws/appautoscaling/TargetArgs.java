@@ -4,7 +4,7 @@
 package io.pulumi.aws.appautoscaling;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * The max capacity of the scalable target.
      * 
      */
-    @InputImport(name="maxCapacity", required=true)
+    @Import(name="maxCapacity", required=true)
       private final Output<Integer> maxCapacity;
 
     public Output<Integer> getMaxCapacity() {
@@ -30,7 +30,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * The min capacity of the scalable target.
      * 
      */
-    @InputImport(name="minCapacity", required=true)
+    @Import(name="minCapacity", required=true)
       private final Output<Integer> minCapacity;
 
     public Output<Integer> getMinCapacity() {
@@ -41,7 +41,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -52,7 +52,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the IAM role that allows Application AutoScaling to modify your scalable target on your behalf. This defaults to an IAM Service-Linked Role for most services and custom IAM Roles are ignored by the API for those namespaces. See the [AWS Application Auto Scaling documentation](https://docs.aws.amazon.com/autoscaling/application/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-roles) for more information about how this service interacts with IAM.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -63,7 +63,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
      * 
      */
-    @InputImport(name="scalableDimension", required=true)
+    @Import(name="scalableDimension", required=true)
       private final Output<String> scalableDimension;
 
     public Output<String> getScalableDimension() {
@@ -74,7 +74,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
      * 
      */
-    @InputImport(name="serviceNamespace", required=true)
+    @Import(name="serviceNamespace", required=true)
       private final Output<String> serviceNamespace;
 
     public Output<String> getServiceNamespace() {

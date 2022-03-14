@@ -7,14 +7,14 @@ import io.pulumi.aws.sagemaker.outputs.DomainDefaultUserSettingsJupyterServerApp
 import io.pulumi.aws.sagemaker.outputs.DomainDefaultUserSettingsKernelGatewayAppSettings;
 import io.pulumi.aws.sagemaker.outputs.DomainDefaultUserSettingsSharingSettings;
 import io.pulumi.aws.sagemaker.outputs.DomainDefaultUserSettingsTensorBoardAppSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainDefaultUserSettings {
     /**
      * The execution role ARN for the user.
@@ -47,14 +47,14 @@ public final class DomainDefaultUserSettings {
      */
     private final @Nullable DomainDefaultUserSettingsTensorBoardAppSettings tensorBoardAppSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainDefaultUserSettings(
-        @OutputCustomType.Parameter("executionRole") String executionRole,
-        @OutputCustomType.Parameter("jupyterServerAppSettings") @Nullable DomainDefaultUserSettingsJupyterServerAppSettings jupyterServerAppSettings,
-        @OutputCustomType.Parameter("kernelGatewayAppSettings") @Nullable DomainDefaultUserSettingsKernelGatewayAppSettings kernelGatewayAppSettings,
-        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
-        @OutputCustomType.Parameter("sharingSettings") @Nullable DomainDefaultUserSettingsSharingSettings sharingSettings,
-        @OutputCustomType.Parameter("tensorBoardAppSettings") @Nullable DomainDefaultUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
+        @CustomType.Parameter("executionRole") String executionRole,
+        @CustomType.Parameter("jupyterServerAppSettings") @Nullable DomainDefaultUserSettingsJupyterServerAppSettings jupyterServerAppSettings,
+        @CustomType.Parameter("kernelGatewayAppSettings") @Nullable DomainDefaultUserSettingsKernelGatewayAppSettings kernelGatewayAppSettings,
+        @CustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @CustomType.Parameter("sharingSettings") @Nullable DomainDefaultUserSettingsSharingSettings sharingSettings,
+        @CustomType.Parameter("tensorBoardAppSettings") @Nullable DomainDefaultUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
         this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;

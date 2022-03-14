@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceRestoreToPointInTime {
     /**
      * The date and time to restore from. Value must be a time in Universal Coordinated Time (UTC) format and must be before the latest restorable time for the DB instance. Cannot be specified with `use_latest_restorable_time`.
@@ -33,12 +33,12 @@ public final class InstanceRestoreToPointInTime {
      */
     private final @Nullable Boolean useLatestRestorableTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceRestoreToPointInTime(
-        @OutputCustomType.Parameter("restoreTime") @Nullable String restoreTime,
-        @OutputCustomType.Parameter("sourceDbInstanceIdentifier") @Nullable String sourceDbInstanceIdentifier,
-        @OutputCustomType.Parameter("sourceDbiResourceId") @Nullable String sourceDbiResourceId,
-        @OutputCustomType.Parameter("useLatestRestorableTime") @Nullable Boolean useLatestRestorableTime) {
+        @CustomType.Parameter("restoreTime") @Nullable String restoreTime,
+        @CustomType.Parameter("sourceDbInstanceIdentifier") @Nullable String sourceDbInstanceIdentifier,
+        @CustomType.Parameter("sourceDbiResourceId") @Nullable String sourceDbiResourceId,
+        @CustomType.Parameter("useLatestRestorableTime") @Nullable Boolean useLatestRestorableTime) {
         this.restoreTime = restoreTime;
         this.sourceDbInstanceIdentifier = sourceDbInstanceIdentifier;
         this.sourceDbiResourceId = sourceDbiResourceId;

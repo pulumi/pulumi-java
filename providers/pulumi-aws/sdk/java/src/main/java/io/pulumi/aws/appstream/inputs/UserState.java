@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * ARN of the appstream user.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Authentication type for the user. You must specify USERPOOL. Valid values: `API`, `SAML`, `USERPOOL`
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<String> authenticationType;
 
     public Output<String> getAuthenticationType() {
@@ -41,7 +41,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Date and time, in UTC and extended RFC 3339 format, when the user was created.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -52,7 +52,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the user in the user pool is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -63,7 +63,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * First name, or given name, of the user.
      * 
      */
-    @InputImport(name="firstName")
+    @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
     public Output<String> getFirstName() {
@@ -74,7 +74,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Last name, or surname, of the user.
      * 
      */
-    @InputImport(name="lastName")
+    @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
     public Output<String> getLastName() {
@@ -85,7 +85,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Send an email notification.
      * 
      */
-    @InputImport(name="sendEmailNotification")
+    @Import(name="sendEmailNotification")
       private final @Nullable Output<Boolean> sendEmailNotification;
 
     public Output<Boolean> getSendEmailNotification() {
@@ -96,7 +96,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Email address of the user.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

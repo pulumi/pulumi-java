@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.aws.appsync.inputs.DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DataSourceHttpConfigAuthorizationConfigGetArgs extends io.pul
      * The authorization type that the HTTP endpoint requires. Default values is `AWS_IAM`.
      * 
      */
-    @InputImport(name="authorizationType")
+    @Import(name="authorizationType")
       private final @Nullable Output<String> authorizationType;
 
     public Output<String> getAuthorizationType() {
@@ -30,7 +30,7 @@ public final class DataSourceHttpConfigAuthorizationConfigGetArgs extends io.pul
      * The Identity and Access Management (IAM) settings. See AWS IAM Config.
      * 
      */
-    @InputImport(name="awsIamConfig")
+    @Import(name="awsIamConfig")
       private final @Nullable Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs> awsIamConfig;
 
     public Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs> getAwsIamConfig() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NodeGroupUpdateConfigGetArgs extends io.pulumi.resources.Reso
      * Desired max number of unavailable worker nodes during node group update.
      * 
      */
-    @InputImport(name="maxUnavailable")
+    @Import(name="maxUnavailable")
       private final @Nullable Output<Integer> maxUnavailable;
 
     public Output<Integer> getMaxUnavailable() {
@@ -29,7 +29,7 @@ public final class NodeGroupUpdateConfigGetArgs extends io.pulumi.resources.Reso
      * Desired max percentage of unavailable worker nodes during node group update.
      * 
      */
-    @InputImport(name="maxUnavailablePercentage")
+    @Import(name="maxUnavailablePercentage")
       private final @Nullable Output<Integer> maxUnavailablePercentage;
 
     public Output<Integer> getMaxUnavailablePercentage() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationGetA
 import io.pulumi.aws.autoscaling.inputs.PolicyStepAdjustmentGetArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the adjustment is an absolute number or a percentage of the current capacity. Valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`.
      * 
      */
-    @InputImport(name="adjustmentType")
+    @Import(name="adjustmentType")
       private final @Nullable Output<String> adjustmentType;
 
     public Output<String> getAdjustmentType() {
@@ -34,7 +34,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The ARN assigned by AWS to the scaling policy.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -45,7 +45,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The name of the autoscaling group.
      * 
      */
-    @InputImport(name="autoscalingGroupName")
+    @Import(name="autoscalingGroupName")
       private final @Nullable Output<String> autoscalingGroupName;
 
     public Output<String> getAutoscalingGroupName() {
@@ -56,7 +56,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
      * 
      */
-    @InputImport(name="cooldown")
+    @Import(name="cooldown")
       private final @Nullable Output<Integer> cooldown;
 
     public Output<Integer> getCooldown() {
@@ -67,7 +67,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The estimated time, in seconds, until a newly launched instance will contribute CloudWatch metrics. Without a value, AWS will default to the group's specified cooldown period.
      * 
      */
-    @InputImport(name="estimatedInstanceWarmup")
+    @Import(name="estimatedInstanceWarmup")
       private final @Nullable Output<Integer> estimatedInstanceWarmup;
 
     public Output<Integer> getEstimatedInstanceWarmup() {
@@ -78,7 +78,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The aggregation type for the policy's metrics. Valid values are "Minimum", "Maximum", and "Average". Without a value, AWS will treat the aggregation type as "Average".
      * 
      */
-    @InputImport(name="metricAggregationType")
+    @Import(name="metricAggregationType")
       private final @Nullable Output<String> metricAggregationType;
 
     public Output<String> getMetricAggregationType() {
@@ -89,7 +89,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * Minimum value to scale by when `adjustment_type` is set to `PercentChangeInCapacity`.
      * 
      */
-    @InputImport(name="minAdjustmentMagnitude")
+    @Import(name="minAdjustmentMagnitude")
       private final @Nullable Output<Integer> minAdjustmentMagnitude;
 
     public Output<Integer> getMinAdjustmentMagnitude() {
@@ -100,7 +100,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The name of the dimension.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -111,7 +111,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The policy type, either "SimpleScaling", "StepScaling", "TargetTrackingScaling", or "PredictiveScaling". If this value isn't provided, AWS will default to "SimpleScaling."
      * 
      */
-    @InputImport(name="policyType")
+    @Import(name="policyType")
       private final @Nullable Output<String> policyType;
 
     public Output<String> getPolicyType() {
@@ -122,7 +122,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.
      * 
      */
-    @InputImport(name="predictiveScalingConfiguration")
+    @Import(name="predictiveScalingConfiguration")
       private final @Nullable Output<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration;
 
     public Output<PolicyPredictiveScalingConfigurationGetArgs> getPredictiveScalingConfiguration() {
@@ -135,7 +135,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * up. A negative value scales down.
      * 
      */
-    @InputImport(name="scalingAdjustment")
+    @Import(name="scalingAdjustment")
       private final @Nullable Output<Integer> scalingAdjustment;
 
     public Output<Integer> getScalingAdjustment() {
@@ -147,7 +147,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * group scaling. These have the following structure:
      * 
      */
-    @InputImport(name="stepAdjustments")
+    @Import(name="stepAdjustments")
       private final @Nullable Output<List<PolicyStepAdjustmentGetArgs>> stepAdjustments;
 
     public Output<List<PolicyStepAdjustmentGetArgs>> getStepAdjustments() {
@@ -158,7 +158,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A target tracking policy. These have the following structure:
      * 
      */
-    @InputImport(name="targetTrackingConfiguration")
+    @Import(name="targetTrackingConfiguration")
       private final @Nullable Output<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration;
 
     public Output<PolicyTargetTrackingConfigurationGetArgs> getTargetTrackingConfiguration() {

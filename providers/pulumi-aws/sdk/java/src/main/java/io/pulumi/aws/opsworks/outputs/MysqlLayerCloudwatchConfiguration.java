@@ -4,22 +4,22 @@
 package io.pulumi.aws.opsworks.outputs;
 
 import io.pulumi.aws.opsworks.outputs.MysqlLayerCloudwatchConfigurationLogStream;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MysqlLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<MysqlLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MysqlLayerCloudwatchConfiguration(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("logStreams") @Nullable List<MysqlLayerCloudwatchConfigurationLogStream> logStreams) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("logStreams") @Nullable List<MysqlLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }

@@ -4,11 +4,11 @@
 package io.pulumi.aws.ecs.outputs;
 
 import io.pulumi.aws.ecs.outputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration {
     /**
      * Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
@@ -26,11 +26,11 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration {
      */
     private final String rootDirectory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration(
-        @OutputCustomType.Parameter("authorizationConfig") TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig authorizationConfig,
-        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
-        @OutputCustomType.Parameter("rootDirectory") String rootDirectory) {
+        @CustomType.Parameter("authorizationConfig") TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig authorizationConfig,
+        @CustomType.Parameter("fileSystemId") String fileSystemId,
+        @CustomType.Parameter("rootDirectory") String rootDirectory) {
         this.authorizationConfig = authorizationConfig;
         this.fileSystemId = fileSystemId;
         this.rootDirectory = rootDirectory;

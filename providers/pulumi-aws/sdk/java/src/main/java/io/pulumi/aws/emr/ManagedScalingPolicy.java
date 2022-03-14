@@ -8,7 +8,7 @@ import io.pulumi.aws.emr.ManagedScalingPolicyArgs;
 import io.pulumi.aws.emr.inputs.ManagedScalingPolicyState;
 import io.pulumi.aws.emr.outputs.ManagedScalingPolicyComputeLimit;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ManagedScalingPolicy extends io.pulumi.resources.CustomResource {
      * The id of the EMR cluster
      * 
      */
-    @OutputExport(name="clusterId", type=String.class, parameters={})
+    @Export(name="clusterId", type=String.class, parameters={})
     private Output<String> clusterId;
 
     /**
@@ -48,7 +48,7 @@ public class ManagedScalingPolicy extends io.pulumi.resources.CustomResource {
      * Configuration block with compute limit settings. Described below.
      * 
      */
-    @OutputExport(name="computeLimits", type=List.class, parameters={ManagedScalingPolicyComputeLimit.class})
+    @Export(name="computeLimits", type=List.class, parameters={ManagedScalingPolicyComputeLimit.class})
     private Output<List<ManagedScalingPolicyComputeLimit>> computeLimits;
 
     /**

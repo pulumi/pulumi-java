@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs extends i
      * String value to specify whether domains in the target list are allowed or denied access. Valid values: `ALLOWLIST`, `DENYLIST`.
      * 
      */
-    @InputImport(name="generatedRulesType", required=true)
+    @Import(name="generatedRulesType", required=true)
       private final Output<String> generatedRulesType;
 
     public Output<String> getGeneratedRulesType() {
@@ -29,7 +29,7 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs extends i
      * Set of types of domain specifications that are provided in the `targets` argument. Valid values: `HTTP_HOST`, `TLS_SNI`.
      * 
      */
-    @InputImport(name="targetTypes", required=true)
+    @Import(name="targetTypes", required=true)
       private final Output<List<String>> targetTypes;
 
     public Output<List<String>> getTargetTypes() {
@@ -40,7 +40,7 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceListGetArgs extends i
      * Set of domains that you want to inspect for in your traffic flows.
      * 
      */
-    @InputImport(name="targets", required=true)
+    @Import(name="targets", required=true)
       private final Output<List<String>> targets;
 
     public Output<List<String>> getTargets() {

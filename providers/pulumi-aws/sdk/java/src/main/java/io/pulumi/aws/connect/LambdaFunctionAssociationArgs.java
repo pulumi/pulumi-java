@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class LambdaFunctionAssociationArgs extends io.pulumi.resources.Res
      * Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
      * 
      */
-    @InputImport(name="functionArn", required=true)
+    @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
     public Output<String> getFunctionArn() {
@@ -28,7 +28,7 @@ public final class LambdaFunctionAssociationArgs extends io.pulumi.resources.Res
      * The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {

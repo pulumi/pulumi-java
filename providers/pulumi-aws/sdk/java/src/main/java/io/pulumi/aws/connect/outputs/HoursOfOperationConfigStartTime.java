@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HoursOfOperationConfigStartTime {
     /**
      * Specifies the hour of opening.
@@ -20,10 +20,10 @@ public final class HoursOfOperationConfigStartTime {
      */
     private final Integer minutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HoursOfOperationConfigStartTime(
-        @OutputCustomType.Parameter("hours") Integer hours,
-        @OutputCustomType.Parameter("minutes") Integer minutes) {
+        @CustomType.Parameter("hours") Integer hours,
+        @CustomType.Parameter("minutes") Integer minutes) {
         this.hours = hours;
         this.minutes = minutes;
     }

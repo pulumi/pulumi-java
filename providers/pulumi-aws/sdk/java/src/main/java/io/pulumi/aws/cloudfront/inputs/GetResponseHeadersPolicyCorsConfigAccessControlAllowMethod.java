@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod ex
 
     public static final GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod Empty = new GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod();
 
-    @InputImport(name="items", required=true)
+    @Import(name="items", required=true)
       private final List<String> items;
 
     public List<String> getItems() {

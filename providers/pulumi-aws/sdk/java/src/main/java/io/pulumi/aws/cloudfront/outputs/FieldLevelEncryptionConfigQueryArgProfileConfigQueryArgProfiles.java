@@ -4,17 +4,17 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles {
     private final @Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem> items;
 
-    @OutputCustomType.Constructor
-    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles(@OutputCustomType.Parameter("items") @Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem> items) {
+    @CustomType.Constructor
+    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfiles(@CustomType.Parameter("items") @Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem> items) {
         this.items = items;
     }
 

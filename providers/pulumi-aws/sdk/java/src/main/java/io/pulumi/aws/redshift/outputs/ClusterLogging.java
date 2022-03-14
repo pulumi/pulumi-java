@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterLogging {
     /**
      * The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
@@ -29,11 +29,11 @@ public final class ClusterLogging {
      */
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterLogging(
-        @OutputCustomType.Parameter("bucketName") @Nullable String bucketName,
-        @OutputCustomType.Parameter("enable") Boolean enable,
-        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
+        @CustomType.Parameter("bucketName") @Nullable String bucketName,
+        @CustomType.Parameter("enable") Boolean enable,
+        @CustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.bucketName = bucketName;
         this.enable = enable;
         this.s3KeyPrefix = s3KeyPrefix;

@@ -5,7 +5,7 @@ package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.aws.servicediscovery.inputs.ServiceDnsConfigDnsRecordGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
      * An array that contains one DnsRecord object for each resource record set.
      * 
      */
-    @InputImport(name="dnsRecords", required=true)
+    @Import(name="dnsRecords", required=true)
       private final Output<List<ServiceDnsConfigDnsRecordGetArgs>> dnsRecords;
 
     public Output<List<ServiceDnsConfigDnsRecordGetArgs>> getDnsRecords() {
@@ -31,7 +31,7 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
      * The ID of the namespace to use for DNS configuration.
      * 
      */
-    @InputImport(name="namespaceId", required=true)
+    @Import(name="namespaceId", required=true)
       private final Output<String> namespaceId;
 
     public Output<String> getNamespaceId() {
@@ -42,7 +42,7 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
      * The routing policy that you want to apply to all records that Route 53 creates when you register an instance and specify the service. Valid Values: MULTIVALUE, WEIGHTED
      * 
      */
-    @InputImport(name="routingPolicy")
+    @Import(name="routingPolicy")
       private final @Nullable Output<String> routingPolicy;
 
     public Output<String> getRoutingPolicy() {

@@ -6,13 +6,13 @@ package io.pulumi.aws.codedeploy.outputs;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupLoadBalancerInfoElbInfo;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupLoadBalancerInfoTargetGroupInfo;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfo;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupLoadBalancerInfo {
     /**
      * The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
@@ -30,11 +30,11 @@ public final class DeploymentGroupLoadBalancerInfo {
      */
     private final @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentGroupLoadBalancerInfo(
-        @OutputCustomType.Parameter("elbInfos") @Nullable List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos,
-        @OutputCustomType.Parameter("targetGroupInfos") @Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos,
-        @OutputCustomType.Parameter("targetGroupPairInfo") @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo) {
+        @CustomType.Parameter("elbInfos") @Nullable List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos,
+        @CustomType.Parameter("targetGroupInfos") @Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos,
+        @CustomType.Parameter("targetGroupPairInfo") @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo) {
         this.elbInfos = elbInfos;
         this.targetGroupInfos = targetGroupInfos;
         this.targetGroupPairInfo = targetGroupPairInfo;

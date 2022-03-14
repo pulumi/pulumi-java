@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * The hostname of the RDS instance. See also `endpoint` and `port`.
@@ -206,48 +206,48 @@ public final class GetInstanceResult {
      */
     private final List<String> vpcSecurityGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("address") String address,
-        @OutputCustomType.Parameter("allocatedStorage") Integer allocatedStorage,
-        @OutputCustomType.Parameter("autoMinorVersionUpgrade") Boolean autoMinorVersionUpgrade,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("backupRetentionPeriod") Integer backupRetentionPeriod,
-        @OutputCustomType.Parameter("caCertIdentifier") String caCertIdentifier,
-        @OutputCustomType.Parameter("dbClusterIdentifier") String dbClusterIdentifier,
-        @OutputCustomType.Parameter("dbInstanceArn") String dbInstanceArn,
-        @OutputCustomType.Parameter("dbInstanceClass") String dbInstanceClass,
-        @OutputCustomType.Parameter("dbInstanceIdentifier") String dbInstanceIdentifier,
-        @OutputCustomType.Parameter("dbInstancePort") Integer dbInstancePort,
-        @OutputCustomType.Parameter("dbName") String dbName,
-        @OutputCustomType.Parameter("dbParameterGroups") List<String> dbParameterGroups,
-        @OutputCustomType.Parameter("dbSecurityGroups") List<String> dbSecurityGroups,
-        @OutputCustomType.Parameter("dbSubnetGroup") String dbSubnetGroup,
-        @OutputCustomType.Parameter("enabledCloudwatchLogsExports") List<String> enabledCloudwatchLogsExports,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("engine") String engine,
-        @OutputCustomType.Parameter("engineVersion") String engineVersion,
-        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("iops") Integer iops,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("licenseModel") String licenseModel,
-        @OutputCustomType.Parameter("masterUsername") String masterUsername,
-        @OutputCustomType.Parameter("monitoringInterval") Integer monitoringInterval,
-        @OutputCustomType.Parameter("monitoringRoleArn") String monitoringRoleArn,
-        @OutputCustomType.Parameter("multiAz") Boolean multiAz,
-        @OutputCustomType.Parameter("optionGroupMemberships") List<String> optionGroupMemberships,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("preferredBackupWindow") String preferredBackupWindow,
-        @OutputCustomType.Parameter("preferredMaintenanceWindow") String preferredMaintenanceWindow,
-        @OutputCustomType.Parameter("publiclyAccessible") Boolean publiclyAccessible,
-        @OutputCustomType.Parameter("replicateSourceDb") String replicateSourceDb,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("storageEncrypted") Boolean storageEncrypted,
-        @OutputCustomType.Parameter("storageType") String storageType,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("timezone") String timezone,
-        @OutputCustomType.Parameter("vpcSecurityGroups") List<String> vpcSecurityGroups) {
+        @CustomType.Parameter("address") String address,
+        @CustomType.Parameter("allocatedStorage") Integer allocatedStorage,
+        @CustomType.Parameter("autoMinorVersionUpgrade") Boolean autoMinorVersionUpgrade,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("backupRetentionPeriod") Integer backupRetentionPeriod,
+        @CustomType.Parameter("caCertIdentifier") String caCertIdentifier,
+        @CustomType.Parameter("dbClusterIdentifier") String dbClusterIdentifier,
+        @CustomType.Parameter("dbInstanceArn") String dbInstanceArn,
+        @CustomType.Parameter("dbInstanceClass") String dbInstanceClass,
+        @CustomType.Parameter("dbInstanceIdentifier") String dbInstanceIdentifier,
+        @CustomType.Parameter("dbInstancePort") Integer dbInstancePort,
+        @CustomType.Parameter("dbName") String dbName,
+        @CustomType.Parameter("dbParameterGroups") List<String> dbParameterGroups,
+        @CustomType.Parameter("dbSecurityGroups") List<String> dbSecurityGroups,
+        @CustomType.Parameter("dbSubnetGroup") String dbSubnetGroup,
+        @CustomType.Parameter("enabledCloudwatchLogsExports") List<String> enabledCloudwatchLogsExports,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("engine") String engine,
+        @CustomType.Parameter("engineVersion") String engineVersion,
+        @CustomType.Parameter("hostedZoneId") String hostedZoneId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("iops") Integer iops,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("licenseModel") String licenseModel,
+        @CustomType.Parameter("masterUsername") String masterUsername,
+        @CustomType.Parameter("monitoringInterval") Integer monitoringInterval,
+        @CustomType.Parameter("monitoringRoleArn") String monitoringRoleArn,
+        @CustomType.Parameter("multiAz") Boolean multiAz,
+        @CustomType.Parameter("optionGroupMemberships") List<String> optionGroupMemberships,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("preferredBackupWindow") String preferredBackupWindow,
+        @CustomType.Parameter("preferredMaintenanceWindow") String preferredMaintenanceWindow,
+        @CustomType.Parameter("publiclyAccessible") Boolean publiclyAccessible,
+        @CustomType.Parameter("replicateSourceDb") String replicateSourceDb,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("storageEncrypted") Boolean storageEncrypted,
+        @CustomType.Parameter("storageType") String storageType,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("timezone") String timezone,
+        @CustomType.Parameter("vpcSecurityGroups") List<String> vpcSecurityGroups) {
         this.address = address;
         this.allocatedStorage = allocatedStorage;
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;

@@ -7,7 +7,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoElbInfoGet
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupInfoGetArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DeploymentGroupLoadBalancerInfoGetArgs extends io.pulumi.reso
      * The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
      * 
      */
-    @InputImport(name="elbInfos")
+    @Import(name="elbInfos")
       private final @Nullable Output<List<DeploymentGroupLoadBalancerInfoElbInfoGetArgs>> elbInfos;
 
     public Output<List<DeploymentGroupLoadBalancerInfoElbInfoGetArgs>> getElbInfos() {
@@ -32,7 +32,7 @@ public final class DeploymentGroupLoadBalancerInfoGetArgs extends io.pulumi.reso
      * The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
      * 
      */
-    @InputImport(name="targetGroupInfos")
+    @Import(name="targetGroupInfos")
       private final @Nullable Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoGetArgs>> targetGroupInfos;
 
     public Output<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoGetArgs>> getTargetGroupInfos() {
@@ -43,7 +43,7 @@ public final class DeploymentGroupLoadBalancerInfoGetArgs extends io.pulumi.reso
      * The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
      * 
      */
-    @InputImport(name="targetGroupPairInfo")
+    @Import(name="targetGroupPairInfo")
       private final @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs> targetGroupPairInfo;
 
     public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs> getTargetGroupPairInfo() {

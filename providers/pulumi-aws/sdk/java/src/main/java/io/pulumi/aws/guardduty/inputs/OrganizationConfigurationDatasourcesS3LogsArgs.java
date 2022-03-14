@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class OrganizationConfigurationDatasourcesS3LogsArgs extends io.pul
      * When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
      * 
      */
-    @InputImport(name="autoEnable", required=true)
+    @Import(name="autoEnable", required=true)
       private final Output<Boolean> autoEnable;
 
     public Output<Boolean> getAutoEnable() {

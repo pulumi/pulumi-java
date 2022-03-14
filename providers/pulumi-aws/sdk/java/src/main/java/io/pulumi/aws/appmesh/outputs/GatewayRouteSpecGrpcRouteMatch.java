@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GatewayRouteSpecGrpcRouteMatch {
     /**
      * The fully qualified domain name for the service to match from the request.
@@ -15,8 +15,8 @@ public final class GatewayRouteSpecGrpcRouteMatch {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor
-    private GatewayRouteSpecGrpcRouteMatch(@OutputCustomType.Parameter("serviceName") String serviceName) {
+    @CustomType.Constructor
+    private GatewayRouteSpecGrpcRouteMatch(@CustomType.Parameter("serviceName") String serviceName) {
         this.serviceName = serviceName;
     }
 

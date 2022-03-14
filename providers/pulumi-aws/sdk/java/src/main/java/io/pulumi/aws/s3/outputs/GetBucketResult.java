@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketResult {
     /**
      * The ARN of the bucket. Will be of format `arn:aws:s3:::bucketname`.
@@ -51,17 +51,17 @@ public final class GetBucketResult {
      */
     private final String websiteEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("bucketDomainName") String bucketDomainName,
-        @OutputCustomType.Parameter("bucketRegionalDomainName") String bucketRegionalDomainName,
-        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("websiteDomain") String websiteDomain,
-        @OutputCustomType.Parameter("websiteEndpoint") String websiteEndpoint) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("bucketDomainName") String bucketDomainName,
+        @CustomType.Parameter("bucketRegionalDomainName") String bucketRegionalDomainName,
+        @CustomType.Parameter("hostedZoneId") String hostedZoneId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("websiteDomain") String websiteDomain,
+        @CustomType.Parameter("websiteEndpoint") String websiteEndpoint) {
         this.arn = arn;
         this.bucket = bucket;
         this.bucketDomainName = bucketDomainName;

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterConfigurationExecuteCommandConfigurationLogConfiguration {
     /**
      * Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
@@ -38,13 +38,13 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      */
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterConfigurationExecuteCommandConfigurationLogConfiguration(
-        @OutputCustomType.Parameter("cloudWatchEncryptionEnabled") @Nullable Boolean cloudWatchEncryptionEnabled,
-        @OutputCustomType.Parameter("cloudWatchLogGroupName") @Nullable String cloudWatchLogGroupName,
-        @OutputCustomType.Parameter("s3BucketEncryptionEnabled") @Nullable Boolean s3BucketEncryptionEnabled,
-        @OutputCustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
-        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
+        @CustomType.Parameter("cloudWatchEncryptionEnabled") @Nullable Boolean cloudWatchEncryptionEnabled,
+        @CustomType.Parameter("cloudWatchLogGroupName") @Nullable String cloudWatchLogGroupName,
+        @CustomType.Parameter("s3BucketEncryptionEnabled") @Nullable Boolean s3BucketEncryptionEnabled,
+        @CustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
+        @CustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
         this.cloudWatchLogGroupName = cloudWatchLogGroupName;
         this.s3BucketEncryptionEnabled = s3BucketEncryptionEnabled;

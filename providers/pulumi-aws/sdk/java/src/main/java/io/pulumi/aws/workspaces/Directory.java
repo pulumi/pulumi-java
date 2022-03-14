@@ -10,7 +10,7 @@ import io.pulumi.aws.workspaces.outputs.DirectorySelfServicePermissions;
 import io.pulumi.aws.workspaces.outputs.DirectoryWorkspaceAccessProperties;
 import io.pulumi.aws.workspaces.outputs.DirectoryWorkspaceCreationProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * The directory alias.
      * 
      */
-    @OutputExport(name="alias", type=String.class, parameters={})
+    @Export(name="alias", type=String.class, parameters={})
     private Output<String> alias;
 
     /**
@@ -53,7 +53,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * The user name for the service account.
      * 
      */
-    @OutputExport(name="customerUserName", type=String.class, parameters={})
+    @Export(name="customerUserName", type=String.class, parameters={})
     private Output<String> customerUserName;
 
     /**
@@ -67,7 +67,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * The directory identifier for registration in WorkSpaces service.
      * 
      */
-    @OutputExport(name="directoryId", type=String.class, parameters={})
+    @Export(name="directoryId", type=String.class, parameters={})
     private Output<String> directoryId;
 
     /**
@@ -81,7 +81,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * The name of the directory.
      * 
      */
-    @OutputExport(name="directoryName", type=String.class, parameters={})
+    @Export(name="directoryName", type=String.class, parameters={})
     private Output<String> directoryName;
 
     /**
@@ -95,7 +95,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * The directory type.
      * 
      */
-    @OutputExport(name="directoryType", type=String.class, parameters={})
+    @Export(name="directoryType", type=String.class, parameters={})
     private Output<String> directoryType;
 
     /**
@@ -109,7 +109,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * The IP addresses of the DNS servers for the directory.
      * 
      */
-    @OutputExport(name="dnsIpAddresses", type=List.class, parameters={String.class})
+    @Export(name="dnsIpAddresses", type=List.class, parameters={String.class})
     private Output<List<String>> dnsIpAddresses;
 
     /**
@@ -123,7 +123,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
      * 
      */
-    @OutputExport(name="iamRoleId", type=String.class, parameters={})
+    @Export(name="iamRoleId", type=String.class, parameters={})
     private Output<String> iamRoleId;
 
     /**
@@ -137,7 +137,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * The identifiers of the IP access control groups associated with the directory.
      * 
      */
-    @OutputExport(name="ipGroupIds", type=List.class, parameters={String.class})
+    @Export(name="ipGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> ipGroupIds;
 
     /**
@@ -151,7 +151,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
      * 
      */
-    @OutputExport(name="registrationCode", type=String.class, parameters={})
+    @Export(name="registrationCode", type=String.class, parameters={})
     private Output<String> registrationCode;
 
     /**
@@ -165,7 +165,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * Permissions to enable or disable self-service capabilities. Defined below.
      * 
      */
-    @OutputExport(name="selfServicePermissions", type=DirectorySelfServicePermissions.class, parameters={})
+    @Export(name="selfServicePermissions", type=DirectorySelfServicePermissions.class, parameters={})
     private Output<DirectorySelfServicePermissions> selfServicePermissions;
 
     /**
@@ -179,7 +179,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * The identifiers of the subnets where the directory resides.
      * 
      */
-    @OutputExport(name="subnetIds", type=List.class, parameters={String.class})
+    @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> subnetIds;
 
     /**
@@ -193,7 +193,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the WorkSpaces directory. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -207,7 +207,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -221,7 +221,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
      * 
      */
-    @OutputExport(name="workspaceAccessProperties", type=DirectoryWorkspaceAccessProperties.class, parameters={})
+    @Export(name="workspaceAccessProperties", type=DirectoryWorkspaceAccessProperties.class, parameters={})
     private Output<DirectoryWorkspaceAccessProperties> workspaceAccessProperties;
 
     /**
@@ -235,7 +235,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * Default properties that are used for creating WorkSpaces. Defined below.
      * 
      */
-    @OutputExport(name="workspaceCreationProperties", type=DirectoryWorkspaceCreationProperties.class, parameters={})
+    @Export(name="workspaceCreationProperties", type=DirectoryWorkspaceCreationProperties.class, parameters={})
     private Output<DirectoryWorkspaceCreationProperties> workspaceCreationProperties;
 
     /**
@@ -249,7 +249,7 @@ public class Directory extends io.pulumi.resources.CustomResource {
      * The identifier of the security group that is assigned to new WorkSpaces.
      * 
      */
-    @OutputExport(name="workspaceSecurityGroupId", type=String.class, parameters={})
+    @Export(name="workspaceSecurityGroupId", type=String.class, parameters={})
     private Output<String> workspaceSecurityGroupId;
 
     /**

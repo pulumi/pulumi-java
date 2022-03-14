@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInfrastructureConfigurationLoggingS3Log {
     /**
      * Name of the S3 Bucket for logging.
@@ -20,10 +20,10 @@ public final class GetInfrastructureConfigurationLoggingS3Log {
      */
     private final String s3KeyPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInfrastructureConfigurationLoggingS3Log(
-        @OutputCustomType.Parameter("s3BucketName") String s3BucketName,
-        @OutputCustomType.Parameter("s3KeyPrefix") String s3KeyPrefix) {
+        @CustomType.Parameter("s3BucketName") String s3BucketName,
+        @CustomType.Parameter("s3KeyPrefix") String s3KeyPrefix) {
         this.s3BucketName = s3BucketName;
         this.s3KeyPrefix = s3KeyPrefix;
     }

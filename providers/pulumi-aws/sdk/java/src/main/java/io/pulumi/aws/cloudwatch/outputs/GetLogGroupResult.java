@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLogGroupResult {
     /**
      * The ARN of the Cloudwatch log group
@@ -43,15 +43,15 @@ public final class GetLogGroupResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLogGroupResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("creationTime") Integer creationTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("retentionInDays") Integer retentionInDays,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("creationTime") Integer creationTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("retentionInDays") Integer retentionInDays,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.creationTime = creationTime;
         this.id = id;

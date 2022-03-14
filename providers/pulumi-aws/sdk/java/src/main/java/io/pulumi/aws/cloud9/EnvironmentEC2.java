@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloud9.EnvironmentEC2Args;
 import io.pulumi.aws.cloud9.inputs.EnvironmentEC2State;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * The ARN of the environment.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -40,7 +40,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * The number of minutes until the running instance is shut down after the environment has last been used.
      * 
      */
-    @OutputExport(name="automaticStopTimeMinutes", type=Integer.class, parameters={})
+    @Export(name="automaticStopTimeMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> automaticStopTimeMinutes;
 
     /**
@@ -54,7 +54,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * The description of the environment.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -68,7 +68,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * The type of instance to connect to the environment, e.g., `t2.micro`.
      * 
      */
-    @OutputExport(name="instanceType", type=String.class, parameters={})
+    @Export(name="instanceType", type=String.class, parameters={})
     private Output<String> instanceType;
 
     /**
@@ -82,7 +82,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * The name of the environment.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.
      * 
      */
-    @OutputExport(name="ownerArn", type=String.class, parameters={})
+    @Export(name="ownerArn", type=String.class, parameters={})
     private Output<String> ownerArn;
 
     /**
@@ -110,7 +110,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetId;
 
     /**
@@ -124,7 +124,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -138,7 +138,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -152,7 +152,7 @@ public class EnvironmentEC2 extends io.pulumi.resources.CustomResource {
      * The type of the environment (e.g., `ssh` or `ec2`)
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

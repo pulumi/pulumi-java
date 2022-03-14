@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * VPC prefixes (CIDRs) to advertise to the Direct Connect gateway. Defaults to the CIDR block of the VPC associated with the Virtual Gateway. To enable drift detection, must be configured.
      * 
      */
-    @InputImport(name="allowedPrefixes")
+    @Import(name="allowedPrefixes")
       private final @Nullable Output<List<String>> allowedPrefixes;
 
     public Output<List<String>> getAllowedPrefixes() {
@@ -30,7 +30,7 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
      * 
      */
-    @InputImport(name="associatedGatewayId", required=true)
+    @Import(name="associatedGatewayId", required=true)
       private final Output<String> associatedGatewayId;
 
     public Output<String> getAssociatedGatewayId() {
@@ -41,7 +41,7 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * Direct Connect Gateway identifier.
      * 
      */
-    @InputImport(name="dxGatewayId", required=true)
+    @Import(name="dxGatewayId", required=true)
       private final Output<String> dxGatewayId;
 
     public Output<String> getDxGatewayId() {
@@ -52,7 +52,7 @@ public final class GatewayAssociationProposalArgs extends io.pulumi.resources.Re
      * AWS Account identifier of the Direct Connect Gateway's owner.
      * 
      */
-    @InputImport(name="dxGatewayOwnerAccountId", required=true)
+    @Import(name="dxGatewayOwnerAccountId", required=true)
       private final Output<String> dxGatewayOwnerAccountId;
 
     public Output<String> getDxGatewayOwnerAccountId() {

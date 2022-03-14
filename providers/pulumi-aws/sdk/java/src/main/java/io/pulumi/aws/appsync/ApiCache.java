@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appsync.ApiCacheArgs;
 import io.pulumi.aws.appsync.inputs.ApiCacheState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -34,7 +34,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * Caching behavior. Valid values are `FULL_REQUEST_CACHING` and `PER_RESOLVER_CACHING`.
      * 
      */
-    @OutputExport(name="apiCachingBehavior", type=String.class, parameters={})
+    @Export(name="apiCachingBehavior", type=String.class, parameters={})
     private Output<String> apiCachingBehavior;
 
     /**
@@ -48,7 +48,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * The GraphQL API ID.
      * 
      */
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
     /**
@@ -62,7 +62,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * At-rest encryption flag for cache. You cannot update this setting after creation.
      * 
      */
-    @OutputExport(name="atRestEncryptionEnabled", type=Boolean.class, parameters={})
+    @Export(name="atRestEncryptionEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> atRestEncryptionEnabled;
 
     /**
@@ -76,7 +76,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      * 
      */
-    @OutputExport(name="transitEncryptionEnabled", type=Boolean.class, parameters={})
+    @Export(name="transitEncryptionEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> transitEncryptionEnabled;
 
     /**
@@ -90,7 +90,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * TTL in seconds for cache entries.
      * 
      */
-    @OutputExport(name="ttl", type=Integer.class, parameters={})
+    @Export(name="ttl", type=Integer.class, parameters={})
     private Output<Integer> ttl;
 
     /**
@@ -104,7 +104,7 @@ public class ApiCache extends io.pulumi.resources.CustomResource {
      * The cache instance type. Valid values are `SMALL`, `MEDIUM`, `LARGE`, `XLARGE`, `LARGE_2X`, `LARGE_4X`, `LARGE_8X`, `LARGE_12X`, `T2_SMALL`, `T2_MEDIUM`, `R4_LARGE`, `R4_XLARGE`, `R4_2XLARGE`, `R4_4XLARGE`, `R4_8XLARGE`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

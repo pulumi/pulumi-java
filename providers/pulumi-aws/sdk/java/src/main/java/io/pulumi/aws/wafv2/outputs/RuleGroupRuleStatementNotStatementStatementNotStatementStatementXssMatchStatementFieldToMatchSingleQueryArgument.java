@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument {
     /**
      * The name of the query header to inspect. This setting must be provided as lower case characters.
@@ -15,8 +15,8 @@ public final class RuleGroupRuleStatementNotStatementStatementNotStatementStatem
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private RuleGroupRuleStatementNotStatementStatementNotStatementStatementXssMatchStatementFieldToMatchSingleQueryArgument(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

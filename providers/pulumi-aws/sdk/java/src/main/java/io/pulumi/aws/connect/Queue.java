@@ -8,7 +8,7 @@ import io.pulumi.aws.connect.QueueArgs;
 import io.pulumi.aws.connect.inputs.QueueState;
 import io.pulumi.aws.connect.outputs.QueueOutboundCallerConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Queue.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -53,7 +53,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Specifies the description of the Queue.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -67,7 +67,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Specifies the identifier of the Hours of Operation.
      * 
      */
-    @OutputExport(name="hoursOfOperationId", type=String.class, parameters={})
+    @Export(name="hoursOfOperationId", type=String.class, parameters={})
     private Output<String> hoursOfOperationId;
 
     /**
@@ -81,7 +81,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    @OutputExport(name="instanceId", type=String.class, parameters={})
+    @Export(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 
     /**
@@ -95,7 +95,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Specifies the maximum number of contacts that can be in the queue before it is considered full. Minimum value of 0.
      * 
      */
-    @OutputExport(name="maxContacts", type=Integer.class, parameters={})
+    @Export(name="maxContacts", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxContacts;
 
     /**
@@ -109,7 +109,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Specifies the name of the Queue.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A block that defines the outbound caller ID name, number, and outbound whisper flow. The Outbound Caller Config block is documented below.
      * 
      */
-    @OutputExport(name="outboundCallerConfig", type=QueueOutboundCallerConfig.class, parameters={})
+    @Export(name="outboundCallerConfig", type=QueueOutboundCallerConfig.class, parameters={})
     private Output</* @Nullable */ QueueOutboundCallerConfig> outboundCallerConfig;
 
     /**
@@ -137,7 +137,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The identifier for the Queue.
      * 
      */
-    @OutputExport(name="queueId", type=String.class, parameters={})
+    @Export(name="queueId", type=String.class, parameters={})
     private Output<String> queueId;
 
     /**
@@ -151,7 +151,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Specifies a list of quick connects ids that determine the quick connects available to agents who are working the queue.
      * 
      */
-    @OutputExport(name="quickConnectIds", type=List.class, parameters={String.class})
+    @Export(name="quickConnectIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> quickConnectIds;
 
     /**
@@ -165,7 +165,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Specifies the description of the Queue. Valid values are `ENABLED`, `DISABLED`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -179,7 +179,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Tags to apply to the Queue. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -193,7 +193,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

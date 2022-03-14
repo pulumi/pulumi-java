@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elasticbeanstalk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationAppversionLifecycle {
     /**
      * Specifies whether delete a version's source bundle from S3 when the application version is deleted.
@@ -32,12 +32,12 @@ public final class GetApplicationAppversionLifecycle {
      */
     private final String serviceRole;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationAppversionLifecycle(
-        @OutputCustomType.Parameter("deleteSourceFromS3") Boolean deleteSourceFromS3,
-        @OutputCustomType.Parameter("maxAgeInDays") Integer maxAgeInDays,
-        @OutputCustomType.Parameter("maxCount") Integer maxCount,
-        @OutputCustomType.Parameter("serviceRole") String serviceRole) {
+        @CustomType.Parameter("deleteSourceFromS3") Boolean deleteSourceFromS3,
+        @CustomType.Parameter("maxAgeInDays") Integer maxAgeInDays,
+        @CustomType.Parameter("maxCount") Integer maxCount,
+        @CustomType.Parameter("serviceRole") String serviceRole) {
         this.deleteSourceFromS3 = deleteSourceFromS3;
         this.maxAgeInDays = maxAgeInDays;
         this.maxCount = maxCount;

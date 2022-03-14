@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Availability zone group.
      * 
      */
-    @InputImport(name="availabilityZoneGroup")
+    @Import(name="availabilityZoneGroup")
       private final @Nullable String availabilityZoneGroup;
 
     public Optional<String> getAvailabilityZoneGroup() {
@@ -31,7 +31,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * DB engine. Engine values include `aurora`, `aurora-mysql`, `aurora-postgresql`, `docdb`, `mariadb`, `mysql`, `neptune`, `oracle-ee`, `oracle-se`, `oracle-se1`, `oracle-se2`, `postgres`, `sqlserver-ee`, `sqlserver-ex`, `sqlserver-se`, and `sqlserver-web`.
      * 
      */
-    @InputImport(name="engine", required=true)
+    @Import(name="engine", required=true)
       private final String engine;
 
     public String getEngine() {
@@ -42,7 +42,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Version of the DB engine. If none is provided, the AWS-defined default version will be used.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable String engineVersion;
 
     public Optional<String> getEngineVersion() {
@@ -53,7 +53,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * DB instance class. Examples of classes are `db.m3.2xlarge`, `db.t2.small`, and `db.m3.medium`.
      * 
      */
-    @InputImport(name="instanceClass")
+    @Import(name="instanceClass")
       private final @Nullable String instanceClass;
 
     public Optional<String> getInstanceClass() {
@@ -64,7 +64,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * License model. Examples of license models are `general-public-license`, `bring-your-own-license`, and `amazon-license`.
      * 
      */
-    @InputImport(name="licenseModel")
+    @Import(name="licenseModel")
       private final @Nullable String licenseModel;
 
     public Optional<String> getLicenseModel() {
@@ -75,7 +75,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Ordered list of preferred RDS DB instance engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
      * 
      */
-    @InputImport(name="preferredEngineVersions")
+    @Import(name="preferredEngineVersions")
       private final @Nullable List<String> preferredEngineVersions;
 
     public List<String> getPreferredEngineVersions() {
@@ -86,7 +86,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Ordered list of preferred RDS DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
      * 
      */
-    @InputImport(name="preferredInstanceClasses")
+    @Import(name="preferredInstanceClasses")
       private final @Nullable List<String> preferredInstanceClasses;
 
     public List<String> getPreferredInstanceClasses() {
@@ -97,7 +97,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Storage types. Examples of storage types are `standard`, `io1`, `gp2`, and `aurora`.
      * 
      */
-    @InputImport(name="storageType")
+    @Import(name="storageType")
       private final @Nullable String storageType;
 
     public Optional<String> getStorageType() {
@@ -108,7 +108,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Enable this to ensure a DB instance supports Enhanced Monitoring at intervals from 1 to 60 seconds.
      * 
      */
-    @InputImport(name="supportsEnhancedMonitoring")
+    @Import(name="supportsEnhancedMonitoring")
       private final @Nullable Boolean supportsEnhancedMonitoring;
 
     public Optional<Boolean> getSupportsEnhancedMonitoring() {
@@ -119,7 +119,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Enable this to ensure a DB instance supports Aurora global databases with a specific combination of other DB engine attributes.
      * 
      */
-    @InputImport(name="supportsGlobalDatabases")
+    @Import(name="supportsGlobalDatabases")
       private final @Nullable Boolean supportsGlobalDatabases;
 
     public Optional<Boolean> getSupportsGlobalDatabases() {
@@ -130,7 +130,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Enable this to ensure a DB instance supports IAM database authentication.
      * 
      */
-    @InputImport(name="supportsIamDatabaseAuthentication")
+    @Import(name="supportsIamDatabaseAuthentication")
       private final @Nullable Boolean supportsIamDatabaseAuthentication;
 
     public Optional<Boolean> getSupportsIamDatabaseAuthentication() {
@@ -141,7 +141,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Enable this to ensure a DB instance supports provisioned IOPS.
      * 
      */
-    @InputImport(name="supportsIops")
+    @Import(name="supportsIops")
       private final @Nullable Boolean supportsIops;
 
     public Optional<Boolean> getSupportsIops() {
@@ -152,7 +152,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Enable this to ensure a DB instance supports Kerberos Authentication.
      * 
      */
-    @InputImport(name="supportsKerberosAuthentication")
+    @Import(name="supportsKerberosAuthentication")
       private final @Nullable Boolean supportsKerberosAuthentication;
 
     public Optional<Boolean> getSupportsKerberosAuthentication() {
@@ -163,7 +163,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Enable this to ensure a DB instance supports Performance Insights.
      * 
      */
-    @InputImport(name="supportsPerformanceInsights")
+    @Import(name="supportsPerformanceInsights")
       private final @Nullable Boolean supportsPerformanceInsights;
 
     public Optional<Boolean> getSupportsPerformanceInsights() {
@@ -174,7 +174,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Enable this to ensure Amazon RDS can automatically scale storage for DB instances that use the specified DB instance class.
      * 
      */
-    @InputImport(name="supportsStorageAutoscaling")
+    @Import(name="supportsStorageAutoscaling")
       private final @Nullable Boolean supportsStorageAutoscaling;
 
     public Optional<Boolean> getSupportsStorageAutoscaling() {
@@ -185,7 +185,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Enable this to ensure a DB instance supports encrypted storage.
      * 
      */
-    @InputImport(name="supportsStorageEncryption")
+    @Import(name="supportsStorageEncryption")
       private final @Nullable Boolean supportsStorageEncryption;
 
     public Optional<Boolean> getSupportsStorageEncryption() {
@@ -196,7 +196,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Boolean that indicates whether to show only VPC or non-VPC offerings.
      * 
      */
-    @InputImport(name="vpc")
+    @Import(name="vpc")
       private final @Nullable Boolean vpc;
 
     public Optional<Boolean> getVpc() {

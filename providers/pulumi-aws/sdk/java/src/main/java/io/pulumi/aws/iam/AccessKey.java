@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.AccessKeyArgs;
 import io.pulumi.aws.iam.inputs.AccessKeyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class AccessKey extends io.pulumi.resources.CustomResource {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the access key was created.
      * 
      */
-    @OutputExport(name="createDate", type=String.class, parameters={})
+    @Export(name="createDate", type=String.class, parameters={})
     private Output<String> createDate;
 
     /**
@@ -44,13 +44,13 @@ public class AccessKey extends io.pulumi.resources.CustomResource {
     public Output<String> getCreateDate() {
         return this.createDate;
     }
-    @OutputExport(name="encryptedSecret", type=String.class, parameters={})
+    @Export(name="encryptedSecret", type=String.class, parameters={})
     private Output<String> encryptedSecret;
 
     public Output<String> getEncryptedSecret() {
         return this.encryptedSecret;
     }
-    @OutputExport(name="encryptedSesSmtpPasswordV4", type=String.class, parameters={})
+    @Export(name="encryptedSesSmtpPasswordV4", type=String.class, parameters={})
     private Output<String> encryptedSesSmtpPasswordV4;
 
     public Output<String> getEncryptedSesSmtpPasswordV4() {
@@ -60,7 +60,7 @@ public class AccessKey extends io.pulumi.resources.CustomResource {
      * Fingerprint of the PGP key used to encrypt the secret. This attribute is not available for imported resources.
      * 
      */
-    @OutputExport(name="keyFingerprint", type=String.class, parameters={})
+    @Export(name="keyFingerprint", type=String.class, parameters={})
     private Output<String> keyFingerprint;
 
     /**
@@ -74,7 +74,7 @@ public class AccessKey extends io.pulumi.resources.CustomResource {
      * Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`, for use in the `encrypted_secret` output attribute.
      * 
      */
-    @OutputExport(name="pgpKey", type=String.class, parameters={})
+    @Export(name="pgpKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> pgpKey;
 
     /**
@@ -88,7 +88,7 @@ public class AccessKey extends io.pulumi.resources.CustomResource {
      * Secret access key. This attribute is not available for imported resources. Note that this will be written to the state file. If you use this, please protect your backend state file judiciously. Alternatively, you may supply a `pgp_key` instead, which will prevent the secret from being stored in plaintext, at the cost of preventing the use of the secret key in automation.
      * 
      */
-    @OutputExport(name="secret", type=String.class, parameters={})
+    @Export(name="secret", type=String.class, parameters={})
     private Output<String> secret;
 
     /**
@@ -102,7 +102,7 @@ public class AccessKey extends io.pulumi.resources.CustomResource {
      * Secret access key converted into an SES SMTP password by applying [AWS's documented Sigv4 conversion algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert). This attribute is not available for imported resources. As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region).
      * 
      */
-    @OutputExport(name="sesSmtpPasswordV4", type=String.class, parameters={})
+    @Export(name="sesSmtpPasswordV4", type=String.class, parameters={})
     private Output<String> sesSmtpPasswordV4;
 
     /**
@@ -116,7 +116,7 @@ public class AccessKey extends io.pulumi.resources.CustomResource {
      * Access key status to apply. Defaults to `Active`. Valid values are `Active` and `Inactive`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -130,7 +130,7 @@ public class AccessKey extends io.pulumi.resources.CustomResource {
      * IAM user to associate with this access key.
      * 
      */
-    @OutputExport(name="user", type=String.class, parameters={})
+    @Export(name="user", type=String.class, parameters={})
     private Output<String> user;
 
     /**

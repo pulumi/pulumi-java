@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PipelineThumbnailConfigGetArgs extends io.pulumi.resources.Re
      * The Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -29,7 +29,7 @@ public final class PipelineThumbnailConfigGetArgs extends io.pulumi.resources.Re
      * The Amazon S3 storage class, Standard or ReducedRedundancy, that you want Elastic Transcoder to assign to the thumbnails that it stores in your Amazon S3 bucket.
      * 
      */
-    @InputImport(name="storageClass")
+    @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketMetricFilterGetArgs extends io.pulumi.resources.Resourc
      * Object prefix for filtering (singular).
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -30,7 +30,7 @@ public final class BucketMetricFilterGetArgs extends io.pulumi.resources.Resourc
      * Object tags for filtering (up to 10).
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

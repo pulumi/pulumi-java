@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class VirtualNodeSpecBackendArgs extends io.pulumi.resources.Resour
      * Specifies a virtual service to use as a backend for a virtual node.
      * 
      */
-    @InputImport(name="virtualService", required=true)
+    @Import(name="virtualService", required=true)
       private final Output<VirtualNodeSpecBackendVirtualServiceArgs> virtualService;
 
     public Output<VirtualNodeSpecBackendVirtualServiceArgs> getVirtualService() {

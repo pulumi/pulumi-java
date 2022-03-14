@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
      * The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
      * 
      */
-    @InputImport(name="featureName")
+    @Import(name="featureName")
       private final @Nullable Output<String> featureName;
 
     public Output<String> getFeatureName() {
@@ -29,7 +29,7 @@ public final class FeatureGroupFeatureDefinitionArgs extends io.pulumi.resources
      * The value type of a feature. Valid values are `Integral`, `Fractional`, or `String`.
      * 
      */
-    @InputImport(name="featureType")
+    @Import(name="featureType")
       private final @Nullable Output<String> featureType;
 
     public Output<String> getFeatureType() {

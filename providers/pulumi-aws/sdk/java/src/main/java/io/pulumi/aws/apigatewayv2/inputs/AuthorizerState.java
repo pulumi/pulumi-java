@@ -5,7 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.aws.apigatewayv2.inputs.AuthorizerJwtConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * The API identifier.
      * 
      */
-    @InputImport(name="apiId")
+    @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -34,7 +34,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * Supported only for `REQUEST` authorizers.
      * 
      */
-    @InputImport(name="authorizerCredentialsArn")
+    @Import(name="authorizerCredentialsArn")
       private final @Nullable Output<String> authorizerCredentialsArn;
 
     public Output<String> getAuthorizerCredentialsArn() {
@@ -46,7 +46,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * Valid values: `1.0`, `2.0`.
      * 
      */
-    @InputImport(name="authorizerPayloadFormatVersion")
+    @Import(name="authorizerPayloadFormatVersion")
       private final @Nullable Output<String> authorizerPayloadFormatVersion;
 
     public Output<String> getAuthorizerPayloadFormatVersion() {
@@ -59,7 +59,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * Supported only for HTTP API Lambda authorizers.
      * 
      */
-    @InputImport(name="authorizerResultTtlInSeconds")
+    @Import(name="authorizerResultTtlInSeconds")
       private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
     public Output<Integer> getAuthorizerResultTtlInSeconds() {
@@ -72,7 +72,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * For HTTP APIs, specify `JWT` to use JSON Web Tokens.
      * 
      */
-    @InputImport(name="authorizerType")
+    @Import(name="authorizerType")
       private final @Nullable Output<String> authorizerType;
 
     public Output<String> getAuthorizerType() {
@@ -85,7 +85,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
      * 
      */
-    @InputImport(name="authorizerUri")
+    @Import(name="authorizerUri")
       private final @Nullable Output<String> authorizerUri;
 
     public Output<String> getAuthorizerUri() {
@@ -97,7 +97,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * Supported only for HTTP APIs.
      * 
      */
-    @InputImport(name="enableSimpleResponses")
+    @Import(name="enableSimpleResponses")
       private final @Nullable Output<Boolean> enableSimpleResponses;
 
     public Output<Boolean> getEnableSimpleResponses() {
@@ -110,7 +110,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
      * 
      */
-    @InputImport(name="identitySources")
+    @Import(name="identitySources")
       private final @Nullable Output<List<String>> identitySources;
 
     public Output<List<String>> getIdentitySources() {
@@ -122,7 +122,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * Supported only for HTTP APIs.
      * 
      */
-    @InputImport(name="jwtConfiguration")
+    @Import(name="jwtConfiguration")
       private final @Nullable Output<AuthorizerJwtConfigurationGetArgs> jwtConfiguration;
 
     public Output<AuthorizerJwtConfigurationGetArgs> getJwtConfiguration() {
@@ -133,7 +133,7 @@ public final class AuthorizerState extends io.pulumi.resources.ResourceArgs {
      * The name of the authorizer. Must be between 1 and 128 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

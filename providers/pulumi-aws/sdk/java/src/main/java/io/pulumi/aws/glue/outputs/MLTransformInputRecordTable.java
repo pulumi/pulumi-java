@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MLTransformInputRecordTable {
     /**
      * A unique identifier for the AWS Glue Data Catalog.
@@ -32,12 +32,12 @@ public final class MLTransformInputRecordTable {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MLTransformInputRecordTable(
-        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
-        @OutputCustomType.Parameter("connectionName") @Nullable String connectionName,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("tableName") String tableName) {
+        @CustomType.Parameter("catalogId") @Nullable String catalogId,
+        @CustomType.Parameter("connectionName") @Nullable String connectionName,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("tableName") String tableName) {
         this.catalogId = catalogId;
         this.connectionName = connectionName;
         this.databaseName = databaseName;

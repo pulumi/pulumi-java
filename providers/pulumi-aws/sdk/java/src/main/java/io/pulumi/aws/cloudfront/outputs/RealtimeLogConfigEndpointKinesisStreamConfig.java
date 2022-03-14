@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RealtimeLogConfigEndpointKinesisStreamConfig {
     /**
      * The ARN of an IAM role that CloudFront can use to send real-time log data to the Kinesis data stream.
@@ -21,10 +21,10 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfig {
      */
     private final String streamArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RealtimeLogConfigEndpointKinesisStreamConfig(
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("streamArn") String streamArn) {
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("streamArn") String streamArn) {
         this.roleArn = roleArn;
         this.streamArn = streamArn;
     }

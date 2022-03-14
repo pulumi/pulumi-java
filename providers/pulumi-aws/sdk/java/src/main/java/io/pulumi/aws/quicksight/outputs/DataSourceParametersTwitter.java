@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceParametersTwitter {
     /**
      * The maximum number of rows to query.
@@ -21,10 +21,10 @@ public final class DataSourceParametersTwitter {
      */
     private final String query;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceParametersTwitter(
-        @OutputCustomType.Parameter("maxRows") Integer maxRows,
-        @OutputCustomType.Parameter("query") String query) {
+        @CustomType.Parameter("maxRows") Integer maxRows,
+        @CustomType.Parameter("query") String query) {
         this.maxRows = maxRows;
         this.query = query;
     }

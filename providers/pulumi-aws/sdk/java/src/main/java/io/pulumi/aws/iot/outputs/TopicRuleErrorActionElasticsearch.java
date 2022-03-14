@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleErrorActionElasticsearch {
     /**
      * The endpoint of your Elasticsearch domain.
@@ -35,13 +35,13 @@ public final class TopicRuleErrorActionElasticsearch {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleErrorActionElasticsearch(
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("index") String index,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("index") String index,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("type") String type) {
         this.endpoint = endpoint;
         this.id = id;
         this.index = index;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * The fractional portion, in cents, of the amount. Valid value range between `0` and `99`.
      * 
      */
-    @InputImport(name="cents")
+    @Import(name="cents")
       private final @Nullable Output<Integer> cents;
 
     public Output<Integer> getCents() {
@@ -29,7 +29,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * The whole number of dollars in the amount. Valid value range between `0` and `2`.
      * 
      */
-    @InputImport(name="dollars")
+    @Import(name="dollars")
       private final @Nullable Output<Integer> dollars;
 
     public Output<Integer> getDollars() {
@@ -40,7 +40,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
      * Fractions of a cent, in tenths. Valid value range between `0` and `9`.
      * 
      */
-    @InputImport(name="tenthFractionsOfACent")
+    @Import(name="tenthFractionsOfACent")
       private final @Nullable Output<Integer> tenthFractionsOfACent;
 
     public Output<Integer> getTenthFractionsOfACent() {

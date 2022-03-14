@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.datapipeline.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPipelineResult {
     /**
      * Description of Pipeline.
@@ -32,13 +32,13 @@ public final class GetPipelineResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPipelineResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pipelineId") String pipelineId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pipelineId") String pipelineId,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.description = description;
         this.id = id;
         this.name = name;

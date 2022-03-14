@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscalingplans.inputs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationGetArgs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationGetAr
      * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedScalingMetricSpecification.html).
      * 
      */
-    @InputImport(name="customizedScalingMetricSpecification")
+    @Import(name="customizedScalingMetricSpecification")
       private final @Nullable Output<ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationGetArgs> customizedScalingMetricSpecification;
 
     public Output<ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecificationGetArgs> getCustomizedScalingMetricSpecification() {
@@ -34,7 +34,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationGetAr
      * Boolean indicating whether scale in by the target tracking scaling policy is disabled. Defaults to `false`.
      * 
      */
-    @InputImport(name="disableScaleIn")
+    @Import(name="disableScaleIn")
       private final @Nullable Output<Boolean> disableScaleIn;
 
     public Output<Boolean> getDisableScaleIn() {
@@ -46,7 +46,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationGetAr
      * This value is used only if the resource is an Auto Scaling group.
      * 
      */
-    @InputImport(name="estimatedInstanceWarmup")
+    @Import(name="estimatedInstanceWarmup")
       private final @Nullable Output<Integer> estimatedInstanceWarmup;
 
     public Output<Integer> getEstimatedInstanceWarmup() {
@@ -58,7 +58,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationGetAr
      * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedScalingMetricSpecification.html).
      * 
      */
-    @InputImport(name="predefinedScalingMetricSpecification")
+    @Import(name="predefinedScalingMetricSpecification")
       private final @Nullable Output<ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs> predefinedScalingMetricSpecification;
 
     public Output<ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecificationGetArgs> getPredefinedScalingMetricSpecification() {
@@ -70,7 +70,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationGetAr
      * This value is not used if the scalable resource is an Auto Scaling group.
      * 
      */
-    @InputImport(name="scaleInCooldown")
+    @Import(name="scaleInCooldown")
       private final @Nullable Output<Integer> scaleInCooldown;
 
     public Output<Integer> getScaleInCooldown() {
@@ -82,7 +82,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationGetAr
      * This value is not used if the scalable resource is an Auto Scaling group.
      * 
      */
-    @InputImport(name="scaleOutCooldown")
+    @Import(name="scaleOutCooldown")
       private final @Nullable Output<Integer> scaleOutCooldown;
 
     public Output<Integer> getScaleOutCooldown() {
@@ -93,7 +93,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationGetAr
      * The target value for the metric.
      * 
      */
-    @InputImport(name="targetValue", required=true)
+    @Import(name="targetValue", required=true)
       private final Output<Double> targetValue;
 
     public Output<Double> getTargetValue() {

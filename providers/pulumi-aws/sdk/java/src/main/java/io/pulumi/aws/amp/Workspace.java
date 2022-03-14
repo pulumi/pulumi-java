@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.amp.WorkspaceArgs;
 import io.pulumi.aws.amp.inputs.WorkspaceState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The alias of the prometheus workspace. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-onboard-create-workspace.html).
      * 
      */
-    @OutputExport(name="alias", type=String.class, parameters={})
+    @Export(name="alias", type=String.class, parameters={})
     private Output</* @Nullable */ String> alias;
 
     /**
@@ -48,7 +48,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the workspace.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -62,7 +62,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Prometheus endpoint available for this workspace.
      * 
      */
-    @OutputExport(name="prometheusEndpoint", type=String.class, parameters={})
+    @Export(name="prometheusEndpoint", type=String.class, parameters={})
     private Output<String> prometheusEndpoint;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
      * The application ID.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -29,7 +29,7 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the Amazon Kinesis stream or Firehose delivery stream to which you want to publish events.
      * 
      */
-    @InputImport(name="destinationStreamArn")
+    @Import(name="destinationStreamArn")
       private final @Nullable Output<String> destinationStreamArn;
 
     public Output<String> getDestinationStreamArn() {
@@ -40,7 +40,7 @@ public final class EventStreamState extends io.pulumi.resources.ResourceArgs {
      * The IAM role that authorizes Amazon Pinpoint to publish events to the stream in your account.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {

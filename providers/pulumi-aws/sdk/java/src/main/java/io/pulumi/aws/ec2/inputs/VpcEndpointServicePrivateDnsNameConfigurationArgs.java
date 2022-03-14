@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
      * Name of the record subdomain the service provider needs to create.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
      * Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -40,7 +40,7 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
      * Endpoint service verification type, for example `TXT`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -51,7 +51,7 @@ public final class VpcEndpointServicePrivateDnsNameConfigurationArgs extends io.
      * Value the service provider adds to the private DNS name domain record before verification.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

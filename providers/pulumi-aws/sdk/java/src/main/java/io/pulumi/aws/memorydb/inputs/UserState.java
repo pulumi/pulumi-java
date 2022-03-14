@@ -5,7 +5,7 @@ package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.aws.memorydb.inputs.UserAuthenticationModeGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The access permissions string used for this user.
      * 
      */
-    @InputImport(name="accessString")
+    @Import(name="accessString")
       private final @Nullable Output<String> accessString;
 
     public Output<String> getAccessString() {
@@ -31,7 +31,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the user.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -42,7 +42,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Denotes the user's authentication properties. Detailed below.
      * 
      */
-    @InputImport(name="authenticationMode")
+    @Import(name="authenticationMode")
       private final @Nullable Output<UserAuthenticationModeGetArgs> authenticationMode;
 
     public Output<UserAuthenticationModeGetArgs> getAuthenticationMode() {
@@ -54,7 +54,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * * `authentication_mode` configuration block
      * 
      */
-    @InputImport(name="minimumEngineVersion")
+    @Import(name="minimumEngineVersion")
       private final @Nullable Output<String> minimumEngineVersion;
 
     public Output<String> getMinimumEngineVersion() {
@@ -65,7 +65,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -87,7 +87,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Name of the MemoryDB user. Up to 40 characters.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

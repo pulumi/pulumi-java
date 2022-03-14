@@ -8,7 +8,7 @@ import io.pulumi.aws.athena.WorkgroupArgs;
 import io.pulumi.aws.athena.inputs.WorkgroupState;
 import io.pulumi.aws.athena.outputs.WorkgroupConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Workgroup extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the workgroup
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class Workgroup extends io.pulumi.resources.CustomResource {
      * Configuration block with various settings for the workgroup. Documented below.
      * 
      */
-    @OutputExport(name="configuration", type=WorkgroupConfiguration.class, parameters={})
+    @Export(name="configuration", type=WorkgroupConfiguration.class, parameters={})
     private Output</* @Nullable */ WorkgroupConfiguration> configuration;
 
     /**
@@ -63,7 +63,7 @@ public class Workgroup extends io.pulumi.resources.CustomResource {
      * Description of the workgroup.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -77,7 +77,7 @@ public class Workgroup extends io.pulumi.resources.CustomResource {
      * The option to delete the workgroup and its contents even if the workgroup contains any named queries.
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -91,7 +91,7 @@ public class Workgroup extends io.pulumi.resources.CustomResource {
      * Name of the workgroup.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class Workgroup extends io.pulumi.resources.CustomResource {
      * State of the workgroup. Valid values are `DISABLED` or `ENABLED`. Defaults to `ENABLED`.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
@@ -119,7 +119,7 @@ public class Workgroup extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags for the workgroup. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -133,7 +133,7 @@ public class Workgroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

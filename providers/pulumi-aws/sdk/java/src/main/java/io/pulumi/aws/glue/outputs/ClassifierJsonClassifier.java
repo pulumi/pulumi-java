@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClassifierJsonClassifier {
     /**
      * A `JsonPath` string defining the JSON data for the classifier to classify. AWS Glue supports a subset of `JsonPath`, as described in [Writing JsonPath Custom Classifiers](https://docs.aws.amazon.com/glue/latest/dg/custom-classifier.html#custom-classifier-json).
@@ -15,8 +15,8 @@ public final class ClassifierJsonClassifier {
      */
     private final String jsonPath;
 
-    @OutputCustomType.Constructor
-    private ClassifierJsonClassifier(@OutputCustomType.Parameter("jsonPath") String jsonPath) {
+    @CustomType.Constructor
+    private ClassifierJsonClassifier(@CustomType.Parameter("jsonPath") String jsonPath) {
         this.jsonPath = jsonPath;
     }
 

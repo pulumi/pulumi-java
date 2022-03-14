@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) for the proxy endpoint.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * The identifier for the proxy endpoint. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it can't end with a hyphen or contain two consecutive hyphens.
      * 
      */
-    @InputImport(name="dbProxyEndpointName")
+    @Import(name="dbProxyEndpointName")
       private final @Nullable Output<String> dbProxyEndpointName;
 
     public Output<String> getDbProxyEndpointName() {
@@ -43,7 +43,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * The name of the DB proxy associated with the DB proxy endpoint that you create.
      * 
      */
-    @InputImport(name="dbProxyName")
+    @Import(name="dbProxyName")
       private final @Nullable Output<String> dbProxyName;
 
     public Output<String> getDbProxyName() {
@@ -54,7 +54,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -65,7 +65,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether this endpoint is the default endpoint for the associated DB proxy.
      * 
      */
-    @InputImport(name="isDefault")
+    @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
     public Output<Boolean> getIsDefault() {
@@ -76,14 +76,14 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * A mapping of tags to assign to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -94,7 +94,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the DB proxy endpoint can be used for read/write or read-only operations. The default is `READ_WRITE`. Valid values are `READ_WRITE` and `READ_ONLY`.
      * 
      */
-    @InputImport(name="targetRole")
+    @Import(name="targetRole")
       private final @Nullable Output<String> targetRole;
 
     public Output<String> getTargetRole() {
@@ -105,7 +105,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * The VPC ID of the DB proxy endpoint.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
@@ -116,7 +116,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * One or more VPC security group IDs to associate with the new proxy.
      * 
      */
-    @InputImport(name="vpcSecurityGroupIds")
+    @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {
@@ -127,7 +127,7 @@ public final class ProxyEndpointState extends io.pulumi.resources.ResourceArgs {
      * One or more VPC subnet IDs to associate with the new proxy.
      * 
      */
-    @InputImport(name="vpcSubnetIds")
+    @Import(name="vpcSubnetIds")
       private final @Nullable Output<List<String>> vpcSubnetIds;
 
     public Output<List<String>> getVpcSubnetIds() {

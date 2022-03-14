@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.efs.MountTargetArgs;
 import io.pulumi.aws.efs.inputs.MountTargetState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
      * 
      */
-    @OutputExport(name="availabilityZoneId", type=String.class, parameters={})
+    @Export(name="availabilityZoneId", type=String.class, parameters={})
     private Output<String> availabilityZoneId;
 
     /**
@@ -47,7 +47,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * The name of the Availability Zone (AZ) that the mount target resides in.
      * 
      */
-    @OutputExport(name="availabilityZoneName", type=String.class, parameters={})
+    @Export(name="availabilityZoneName", type=String.class, parameters={})
     private Output<String> availabilityZoneName;
 
     /**
@@ -61,7 +61,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * The DNS name for the EFS file system.
      * 
      */
-    @OutputExport(name="dnsName", type=String.class, parameters={})
+    @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
@@ -75,7 +75,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name of the file system.
      * 
      */
-    @OutputExport(name="fileSystemArn", type=String.class, parameters={})
+    @Export(name="fileSystemArn", type=String.class, parameters={})
     private Output<String> fileSystemArn;
 
     /**
@@ -89,7 +89,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * The ID of the file system for which the mount target is intended.
      * 
      */
-    @OutputExport(name="fileSystemId", type=String.class, parameters={})
+    @Export(name="fileSystemId", type=String.class, parameters={})
     private Output<String> fileSystemId;
 
     /**
@@ -104,7 +104,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * which the file system may be mounted via the mount target.
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
@@ -119,7 +119,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
      * 
      */
-    @OutputExport(name="mountTargetDnsName", type=String.class, parameters={})
+    @Export(name="mountTargetDnsName", type=String.class, parameters={})
     private Output<String> mountTargetDnsName;
 
     /**
@@ -133,7 +133,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * The ID of the network interface that Amazon EFS created when it created the mount target.
      * 
      */
-    @OutputExport(name="networkInterfaceId", type=String.class, parameters={})
+    @Export(name="networkInterfaceId", type=String.class, parameters={})
     private Output<String> networkInterfaceId;
 
     /**
@@ -147,7 +147,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * AWS account ID that owns the resource.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -162,7 +162,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * be for the same VPC as subnet specified) in effect for the mount target.
      * 
      */
-    @OutputExport(name="securityGroups", type=List.class, parameters={String.class})
+    @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroups;
 
     /**
@@ -177,7 +177,7 @@ public class MountTarget extends io.pulumi.resources.CustomResource {
      * The ID of the subnet to add the mount target in.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.s3control.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda {
     /**
      * The Amazon Resource Name (ARN) of the AWS Lambda function.
@@ -22,10 +22,10 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      */
     private final @Nullable String functionPayload;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambda(
-        @OutputCustomType.Parameter("functionArn") String functionArn,
-        @OutputCustomType.Parameter("functionPayload") @Nullable String functionPayload) {
+        @CustomType.Parameter("functionArn") String functionArn,
+        @CustomType.Parameter("functionPayload") @Nullable String functionPayload) {
         this.functionArn = functionArn;
         this.functionPayload = functionPayload;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
      * * For a Kinesis Data Firehose delivery stream, specify the key `deliveryStream` with the name of the delivery stream.
      * 
      */
-    @InputImport(name="logDestination", required=true)
+    @Import(name="logDestination", required=true)
       private final Output<Map<String,String>> logDestination;
 
     public Output<Map<String,String>> getLogDestination() {
@@ -32,7 +32,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
      * The location to send logs to. Valid values: `S3`, `CloudWatchLogs`, `KinesisDataFirehose`.
      * 
      */
-    @InputImport(name="logDestinationType", required=true)
+    @Import(name="logDestinationType", required=true)
       private final Output<String> logDestinationType;
 
     public Output<String> getLogDestinationType() {
@@ -43,7 +43,7 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfigA
      * The type of log to send. Valid values: `ALERT` or `FLOW`. Alert logs report traffic that matches a `StatefulRule` with an action setting that sends a log message. Flow logs are standard network traffic flow logs.
      * 
      */
-    @InputImport(name="logType", required=true)
+    @Import(name="logType", required=true)
       private final Output<String> logType;
 
     public Output<String> getLogType() {

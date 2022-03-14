@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.storagegateway.UploadBufferArgs;
 import io.pulumi.aws.storagegateway.inputs.UploadBufferState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class UploadBuffer extends io.pulumi.resources.CustomResource {
      * Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
      * 
      */
-    @OutputExport(name="diskId", type=String.class, parameters={})
+    @Export(name="diskId", type=String.class, parameters={})
     private Output<String> diskId;
 
     /**
@@ -48,7 +48,7 @@ public class UploadBuffer extends io.pulumi.resources.CustomResource {
      * Local disk path. For example, `/dev/nvme1n1`.
      * 
      */
-    @OutputExport(name="diskPath", type=String.class, parameters={})
+    @Export(name="diskPath", type=String.class, parameters={})
     private Output<String> diskPath;
 
     /**
@@ -62,7 +62,7 @@ public class UploadBuffer extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    @OutputExport(name="gatewayArn", type=String.class, parameters={})
+    @Export(name="gatewayArn", type=String.class, parameters={})
     private Output<String> gatewayArn;
 
     /**

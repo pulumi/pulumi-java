@@ -6,13 +6,13 @@ package io.pulumi.aws.autoscaling.outputs;
 import io.pulumi.aws.autoscaling.outputs.PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification;
 import io.pulumi.aws.autoscaling.outputs.PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification;
 import io.pulumi.aws.autoscaling.outputs.PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyPredictiveScalingConfigurationMetricSpecification {
     /**
      * The load metric specification.
@@ -35,12 +35,12 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecification {
      */
     private final Integer targetValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyPredictiveScalingConfigurationMetricSpecification(
-        @OutputCustomType.Parameter("predefinedLoadMetricSpecification") @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification predefinedLoadMetricSpecification,
-        @OutputCustomType.Parameter("predefinedMetricPairSpecification") @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification predefinedMetricPairSpecification,
-        @OutputCustomType.Parameter("predefinedScalingMetricSpecification") @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification,
-        @OutputCustomType.Parameter("targetValue") Integer targetValue) {
+        @CustomType.Parameter("predefinedLoadMetricSpecification") @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification predefinedLoadMetricSpecification,
+        @CustomType.Parameter("predefinedMetricPairSpecification") @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification predefinedMetricPairSpecification,
+        @CustomType.Parameter("predefinedScalingMetricSpecification") @Nullable PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification,
+        @CustomType.Parameter("targetValue") Integer targetValue) {
         this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
         this.predefinedMetricPairSpecification = predefinedMetricPairSpecification;
         this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;

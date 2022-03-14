@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * The CIDR block associated with the local subnet of the customer network.
      * 
      */
-    @InputImport(name="destinationCidrBlock", required=true)
+    @Import(name="destinationCidrBlock", required=true)
       private final Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
@@ -28,7 +28,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * The ID of the VPN connection.
      * 
      */
-    @InputImport(name="vpnConnectionId", required=true)
+    @Import(name="vpnConnectionId", required=true)
       private final Output<String> vpnConnectionId;
 
     public Output<String> getVpnConnectionId() {

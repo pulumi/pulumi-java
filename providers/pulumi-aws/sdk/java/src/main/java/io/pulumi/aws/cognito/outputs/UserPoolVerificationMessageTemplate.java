@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolVerificationMessageTemplate {
     /**
      * Default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
@@ -42,14 +42,14 @@ public final class UserPoolVerificationMessageTemplate {
      */
     private final @Nullable String smsMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolVerificationMessageTemplate(
-        @OutputCustomType.Parameter("defaultEmailOption") @Nullable String defaultEmailOption,
-        @OutputCustomType.Parameter("emailMessage") @Nullable String emailMessage,
-        @OutputCustomType.Parameter("emailMessageByLink") @Nullable String emailMessageByLink,
-        @OutputCustomType.Parameter("emailSubject") @Nullable String emailSubject,
-        @OutputCustomType.Parameter("emailSubjectByLink") @Nullable String emailSubjectByLink,
-        @OutputCustomType.Parameter("smsMessage") @Nullable String smsMessage) {
+        @CustomType.Parameter("defaultEmailOption") @Nullable String defaultEmailOption,
+        @CustomType.Parameter("emailMessage") @Nullable String emailMessage,
+        @CustomType.Parameter("emailMessageByLink") @Nullable String emailMessageByLink,
+        @CustomType.Parameter("emailSubject") @Nullable String emailSubject,
+        @CustomType.Parameter("emailSubjectByLink") @Nullable String emailSubjectByLink,
+        @CustomType.Parameter("smsMessage") @Nullable String smsMessage) {
         this.defaultEmailOption = defaultEmailOption;
         this.emailMessage = emailMessage;
         this.emailMessageByLink = emailMessageByLink;

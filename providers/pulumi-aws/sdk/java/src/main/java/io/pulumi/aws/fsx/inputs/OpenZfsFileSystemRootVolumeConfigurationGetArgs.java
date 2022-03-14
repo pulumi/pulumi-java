@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationNfsExportsGetArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
      * - A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
      * 
      */
-    @InputImport(name="copyTagsToSnapshots")
+    @Import(name="copyTagsToSnapshots")
       private final @Nullable Output<Boolean> copyTagsToSnapshots;
 
     public Output<Boolean> getCopyTagsToSnapshots() {
@@ -33,7 +33,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
      * - Method used to compress the data on the volume. Valid values are `NONE` or `ZSTD`. Child volumes that don't specify compression option will inherit from parent volume. This option on file system applies to the root volume.
      * 
      */
-    @InputImport(name="dataCompressionType")
+    @Import(name="dataCompressionType")
       private final @Nullable Output<String> dataCompressionType;
 
     public Output<String> getDataCompressionType() {
@@ -44,7 +44,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
      * - NFS export configuration for the root volume. Exactly 1 item. See NFS Exports Below.
      * 
      */
-    @InputImport(name="nfsExports")
+    @Import(name="nfsExports")
       private final @Nullable Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsGetArgs> nfsExports;
 
     public Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsGetArgs> getNfsExports() {
@@ -55,7 +55,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
      * - specifies whether the volume is read-only. Default is false.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -66,7 +66,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
      * - Specify how much storage users or groups can use on the volume. Maximum of 100 items. See User and Group Quotas Below.
      * 
      */
-    @InputImport(name="userAndGroupQuotas")
+    @Import(name="userAndGroupQuotas")
       private final @Nullable Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaGetArgs>> userAndGroupQuotas;
 
     public Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaGetArgs>> getUserAndGroupQuotas() {

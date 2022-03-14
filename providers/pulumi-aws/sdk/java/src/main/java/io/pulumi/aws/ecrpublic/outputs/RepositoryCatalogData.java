@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ecrpublic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RepositoryCatalogData {
     /**
      * A detailed description of the contents of the repository. It is publicly visible in the Amazon ECR Public Gallery. The text must be in markdown format.
@@ -43,14 +43,14 @@ public final class RepositoryCatalogData {
      */
     private final @Nullable String usageText;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepositoryCatalogData(
-        @OutputCustomType.Parameter("aboutText") @Nullable String aboutText,
-        @OutputCustomType.Parameter("architectures") @Nullable List<String> architectures,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("logoImageBlob") @Nullable String logoImageBlob,
-        @OutputCustomType.Parameter("operatingSystems") @Nullable List<String> operatingSystems,
-        @OutputCustomType.Parameter("usageText") @Nullable String usageText) {
+        @CustomType.Parameter("aboutText") @Nullable String aboutText,
+        @CustomType.Parameter("architectures") @Nullable List<String> architectures,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("logoImageBlob") @Nullable String logoImageBlob,
+        @CustomType.Parameter("operatingSystems") @Nullable List<String> operatingSystems,
+        @CustomType.Parameter("usageText") @Nullable String usageText) {
         this.aboutText = aboutText;
         this.architectures = architectures;
         this.description = description;

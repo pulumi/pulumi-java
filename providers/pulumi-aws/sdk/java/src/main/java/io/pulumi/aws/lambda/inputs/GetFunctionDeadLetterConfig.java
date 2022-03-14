@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetFunctionDeadLetterConfig extends io.pulumi.resources.Invok
 
     public static final GetFunctionDeadLetterConfig Empty = new GetFunctionDeadLetterConfig();
 
-    @InputImport(name="targetArn", required=true)
+    @Import(name="targetArn", required=true)
       private final String targetArn;
 
     public String getTargetArn() {

@@ -11,7 +11,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementByteMa
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementFie
      * Inspect all query arguments.
      * 
      */
-    @InputImport(name="allQueryArguments")
+    @Import(name="allQueryArguments")
       private final @Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
     public Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
@@ -35,7 +35,7 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementFie
      * Inspect the request body, which immediately follows the request headers.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchBodyArgs> body;
 
     public Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchBodyArgs> getBody() {
@@ -46,7 +46,7 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementFie
      * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchMethodArgs> method;
 
     public Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchMethodArgs> getMethod() {
@@ -57,7 +57,7 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementFie
      * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringArgs> queryString;
 
     public Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchQueryStringArgs> getQueryString() {
@@ -68,7 +68,7 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementFie
      * Inspect a single header. See Single Header below for details.
      * 
      */
-    @InputImport(name="singleHeader")
+    @Import(name="singleHeader")
       private final @Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
     public Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
@@ -79,7 +79,7 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementFie
      * Inspect a single query argument. See Single Query Argument below for details.
      * 
      */
-    @InputImport(name="singleQueryArgument")
+    @Import(name="singleQueryArgument")
       private final @Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
     public Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
@@ -90,7 +90,7 @@ public final class WebAclRuleStatementAndStatementStatementByteMatchStatementFie
      * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
      */
-    @InputImport(name="uriPath")
+    @Import(name="uriPath")
       private final @Nullable Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathArgs> uriPath;
 
     public Output<WebAclRuleStatementAndStatementStatementByteMatchStatementFieldToMatchUriPathArgs> getUriPath() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * The full path of the resource.  If no path is found, an error will be returned.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -27,7 +27,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * The REST API id that owns the resource. If no REST API is found, an error will be returned.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final String restApiId;
 
     public String getRestApiId() {

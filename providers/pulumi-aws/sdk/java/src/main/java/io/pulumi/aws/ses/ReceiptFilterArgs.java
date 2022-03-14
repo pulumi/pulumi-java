@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ReceiptFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The IP address or address range to filter, in CIDR notation
      * 
      */
-    @InputImport(name="cidr", required=true)
+    @Import(name="cidr", required=true)
       private final Output<String> cidr;
 
     public Output<String> getCidr() {
@@ -29,7 +29,7 @@ public final class ReceiptFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the filter
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class ReceiptFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Block or Allow
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ZoneAssociationArgs;
 import io.pulumi.aws.route53.inputs.ZoneAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -42,7 +42,7 @@ public class ZoneAssociation extends io.pulumi.resources.CustomResource {
      * The account ID of the account that created the hosted zone.
      * 
      */
-    @OutputExport(name="owningAccount", type=String.class, parameters={})
+    @Export(name="owningAccount", type=String.class, parameters={})
     private Output<String> owningAccount;
 
     /**
@@ -56,7 +56,7 @@ public class ZoneAssociation extends io.pulumi.resources.CustomResource {
      * The VPC to associate with the private hosted zone.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
@@ -70,7 +70,7 @@ public class ZoneAssociation extends io.pulumi.resources.CustomResource {
      * The VPC's region. Defaults to the region of the AWS provider.
      * 
      */
-    @OutputExport(name="vpcRegion", type=String.class, parameters={})
+    @Export(name="vpcRegion", type=String.class, parameters={})
     private Output<String> vpcRegion;
 
     /**
@@ -84,7 +84,7 @@ public class ZoneAssociation extends io.pulumi.resources.CustomResource {
      * The private hosted zone to associate.
      * 
      */
-    @OutputExport(name="zoneId", type=String.class, parameters={})
+    @Export(name="zoneId", type=String.class, parameters={})
     private Output<String> zoneId;
 
     /**

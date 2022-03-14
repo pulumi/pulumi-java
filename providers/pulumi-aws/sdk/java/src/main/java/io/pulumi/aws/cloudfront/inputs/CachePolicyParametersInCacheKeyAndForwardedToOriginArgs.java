@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForward
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
      * Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
      * 
      */
-    @InputImport(name="cookiesConfig", required=true)
+    @Import(name="cookiesConfig", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigArgs> cookiesConfig;
 
     public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigArgs> getCookiesConfig() {
@@ -32,7 +32,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
      * A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
      * 
      */
-    @InputImport(name="enableAcceptEncodingBrotli")
+    @Import(name="enableAcceptEncodingBrotli")
       private final @Nullable Output<Boolean> enableAcceptEncodingBrotli;
 
     public Output<Boolean> getEnableAcceptEncodingBrotli() {
@@ -43,7 +43,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
      * A flag that can affect whether the Accept-Encoding HTTP header is included in the cache key and included in requests that CloudFront sends to the origin.
      * 
      */
-    @InputImport(name="enableAcceptEncodingGzip")
+    @Import(name="enableAcceptEncodingGzip")
       private final @Nullable Output<Boolean> enableAcceptEncodingGzip;
 
     public Output<Boolean> getEnableAcceptEncodingGzip() {
@@ -54,7 +54,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
      * Object that determines whether any HTTP headers (and if so, which headers) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
      * 
      */
-    @InputImport(name="headersConfig", required=true)
+    @Import(name="headersConfig", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigArgs> headersConfig;
 
     public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigArgs> getHeadersConfig() {
@@ -65,7 +65,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginArgs exten
      * Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
      * 
      */
-    @InputImport(name="queryStringsConfig", required=true)
+    @Import(name="queryStringsConfig", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs> queryStringsConfig;
 
     public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigArgs> getQueryStringsConfig() {

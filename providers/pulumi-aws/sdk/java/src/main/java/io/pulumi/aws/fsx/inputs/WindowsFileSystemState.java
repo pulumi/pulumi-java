@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.WindowsFileSystemAuditLogConfigurationGetArgs;
 import io.pulumi.aws.fsx.inputs.WindowsFileSystemSelfManagedActiveDirectoryGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `self_managed_active_directory`.
      * 
      */
-    @InputImport(name="activeDirectoryId")
+    @Import(name="activeDirectoryId")
       private final @Nullable Output<String> activeDirectoryId;
 
     public Output<String> getActiveDirectoryId() {
@@ -35,7 +35,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * An array DNS alias names that you want to associate with the Amazon FSx file system.  For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html)
      * 
      */
-    @InputImport(name="aliases")
+    @Import(name="aliases")
       private final @Nullable Output<List<String>> aliases;
 
     public Output<List<String>> getAliases() {
@@ -46,7 +46,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * Amazon Resource Name of the file system.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -57,7 +57,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See below.
      * 
      */
-    @InputImport(name="auditLogConfiguration")
+    @Import(name="auditLogConfiguration")
       private final @Nullable Output<WindowsFileSystemAuditLogConfigurationGetArgs> auditLogConfiguration;
 
     public Output<WindowsFileSystemAuditLogConfigurationGetArgs> getAuditLogConfiguration() {
@@ -68,7 +68,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * The number of days to retain automatic backups. Minimum of `0` and maximum of `90`. Defaults to `7`. Set to `0` to disable.
      * 
      */
-    @InputImport(name="automaticBackupRetentionDays")
+    @Import(name="automaticBackupRetentionDays")
       private final @Nullable Output<Integer> automaticBackupRetentionDays;
 
     public Output<Integer> getAutomaticBackupRetentionDays() {
@@ -79,7 +79,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * The ID of the source backup to create the filesystem from.
      * 
      */
-    @InputImport(name="backupId")
+    @Import(name="backupId")
       private final @Nullable Output<String> backupId;
 
     public Output<String> getBackupId() {
@@ -90,7 +90,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * A boolean flag indicating whether tags on the file system should be copied to backups. Defaults to `false`.
      * 
      */
-    @InputImport(name="copyTagsToBackups")
+    @Import(name="copyTagsToBackups")
       private final @Nullable Output<Boolean> copyTagsToBackups;
 
     public Output<Boolean> getCopyTagsToBackups() {
@@ -101,7 +101,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * The preferred time (in `HH:MM` format) to take daily automatic backups, in the UTC time zone.
      * 
      */
-    @InputImport(name="dailyAutomaticBackupStartTime")
+    @Import(name="dailyAutomaticBackupStartTime")
       private final @Nullable Output<String> dailyAutomaticBackupStartTime;
 
     public Output<String> getDailyAutomaticBackupStartTime() {
@@ -112,7 +112,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * Specifies the file system deployment type, valid values are `MULTI_AZ_1`, `SINGLE_AZ_1` and `SINGLE_AZ_2`. Default value is `SINGLE_AZ_1`.
      * 
      */
-    @InputImport(name="deploymentType")
+    @Import(name="deploymentType")
       private final @Nullable Output<String> deploymentType;
 
     public Output<String> getDeploymentType() {
@@ -123,7 +123,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * DNS name for the file system, e.g., `fs-12345678.corp.example.com` (domain name matching the Active Directory domain name)
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -134,7 +134,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS managed KMS Key.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -145,7 +145,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * Set of Elastic Network Interface identifiers from which the file system is accessible.
      * 
      */
-    @InputImport(name="networkInterfaceIds")
+    @Import(name="networkInterfaceIds")
       private final @Nullable Output<List<String>> networkInterfaceIds;
 
     public Output<List<String>> getNetworkInterfaceIds() {
@@ -156,7 +156,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * AWS account identifier that created the file system.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -167,7 +167,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * The IP address of the primary, or preferred, file server.
      * 
      */
-    @InputImport(name="preferredFileServerIp")
+    @Import(name="preferredFileServerIp")
       private final @Nullable Output<String> preferredFileServerIp;
 
     public Output<String> getPreferredFileServerIp() {
@@ -178,7 +178,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * Specifies the subnet in which you want the preferred file server to be located. Required for when deployment type is `MULTI_AZ_1`.
      * 
      */
-    @InputImport(name="preferredSubnetId")
+    @Import(name="preferredSubnetId")
       private final @Nullable Output<String> preferredSubnetId;
 
     public Output<String> getPreferredSubnetId() {
@@ -189,7 +189,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * For `MULTI_AZ_1` deployment types, use this endpoint when performing administrative tasks on the file system using Amazon FSx Remote PowerShell. For `SINGLE_AZ_1` deployment types, this is the DNS name of the file system.
      * 
      */
-    @InputImport(name="remoteAdministrationEndpoint")
+    @Import(name="remoteAdministrationEndpoint")
       private final @Nullable Output<String> remoteAdministrationEndpoint;
 
     public Output<String> getRemoteAdministrationEndpoint() {
@@ -200,7 +200,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -211,7 +211,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `active_directory_id`. Detailed below.
      * 
      */
-    @InputImport(name="selfManagedActiveDirectory")
+    @Import(name="selfManagedActiveDirectory")
       private final @Nullable Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> selfManagedActiveDirectory;
 
     public Output<WindowsFileSystemSelfManagedActiveDirectoryGetArgs> getSelfManagedActiveDirectory() {
@@ -222,7 +222,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * When enabled, will skip the default final backup taken when the file system is deleted. This configuration must be applied separately before attempting to delete the resource to have the desired behavior. Defaults to `false`.
      * 
      */
-    @InputImport(name="skipFinalBackup")
+    @Import(name="skipFinalBackup")
       private final @Nullable Output<Boolean> skipFinalBackup;
 
     public Output<Boolean> getSkipFinalBackup() {
@@ -233,7 +233,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000. Required when not creating filesystem for a backup.
      * 
      */
-    @InputImport(name="storageCapacity")
+    @Import(name="storageCapacity")
       private final @Nullable Output<Integer> storageCapacity;
 
     public Output<Integer> getStorageCapacity() {
@@ -244,7 +244,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * Specifies the storage type, Valid values are `SSD` and `HDD`. `HDD` is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types. Default value is `SSD`.
      * 
      */
-    @InputImport(name="storageType")
+    @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
@@ -255,7 +255,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * A list of IDs for the subnets that the file system will be accessible from. To specify more than a single subnet set `deployment_type` to `MULTI_AZ_1`.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -266,7 +266,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * A map of tags to assign to the file system. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -277,7 +277,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -288,7 +288,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * Throughput (megabytes per second) of the file system in power of 2 increments. Minimum of `8` and maximum of `2048`.
      * 
      */
-    @InputImport(name="throughputCapacity")
+    @Import(name="throughputCapacity")
       private final @Nullable Output<Integer> throughputCapacity;
 
     public Output<Integer> getThroughputCapacity() {
@@ -299,7 +299,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * Identifier of the Virtual Private Cloud for the file system.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
@@ -310,7 +310,7 @@ public final class WindowsFileSystemState extends io.pulumi.resources.ResourceAr
      * The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in the UTC time zone.
      * 
      */
-    @InputImport(name="weeklyMaintenanceStartTime")
+    @Import(name="weeklyMaintenanceStartTime")
       private final @Nullable Output<String> weeklyMaintenanceStartTime;
 
     public Output<String> getWeeklyMaintenanceStartTime() {

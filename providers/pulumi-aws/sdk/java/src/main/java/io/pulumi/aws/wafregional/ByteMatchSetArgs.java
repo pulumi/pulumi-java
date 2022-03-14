@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional;
 
 import io.pulumi.aws.wafregional.inputs.ByteMatchSetByteMatchTupleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for the ByteMatchSet, such as the bytes (typically a string that corresponds with ASCII characters) that you want AWS WAF to search for in web requests. ByteMatchTuple documented below.
      * 
      */
-    @InputImport(name="byteMatchTuples")
+    @Import(name="byteMatchTuples")
       private final @Nullable Output<List<ByteMatchSetByteMatchTupleArgs>> byteMatchTuples;
 
     public Output<List<ByteMatchSetByteMatchTupleArgs>> getByteMatchTuples() {
@@ -31,7 +31,7 @@ public final class ByteMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * The name or description of the ByteMatchSet.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

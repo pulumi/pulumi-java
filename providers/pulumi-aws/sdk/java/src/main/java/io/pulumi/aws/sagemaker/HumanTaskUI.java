@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.HumanTaskUIArgs;
 import io.pulumi.aws.sagemaker.inputs.HumanTaskUIState;
 import io.pulumi.aws.sagemaker.outputs.HumanTaskUIUiTemplate;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class HumanTaskUI extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this Human Task UI.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class HumanTaskUI extends io.pulumi.resources.CustomResource {
      * The name of the Human Task UI.
      * 
      */
-    @OutputExport(name="humanTaskUiName", type=String.class, parameters={})
+    @Export(name="humanTaskUiName", type=String.class, parameters={})
     private Output<String> humanTaskUiName;
 
     /**
@@ -62,7 +62,7 @@ public class HumanTaskUI extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -76,7 +76,7 @@ public class HumanTaskUI extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -90,7 +90,7 @@ public class HumanTaskUI extends io.pulumi.resources.CustomResource {
      * The Liquid template for the worker user interface. See UI Template below.
      * 
      */
-    @OutputExport(name="uiTemplate", type=HumanTaskUIUiTemplate.class, parameters={})
+    @Export(name="uiTemplate", type=HumanTaskUIUiTemplate.class, parameters={})
     private Output<HumanTaskUIUiTemplate> uiTemplate;
 
     /**

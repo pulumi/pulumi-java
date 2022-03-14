@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * Returns information on a specific connect instance by alias
      * 
      */
-    @InputImport(name="instanceAlias")
+    @Import(name="instanceAlias")
       private final @Nullable String instanceAlias;
 
     public Optional<String> getInstanceAlias() {
@@ -29,7 +29,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * Returns information on a specific connect instance by id
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable String instanceId;
 
     public Optional<String> getInstanceId() {

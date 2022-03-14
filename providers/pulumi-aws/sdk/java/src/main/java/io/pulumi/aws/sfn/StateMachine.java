@@ -9,7 +9,7 @@ import io.pulumi.aws.sfn.inputs.StateMachineState;
 import io.pulumi.aws.sfn.outputs.StateMachineLoggingConfiguration;
 import io.pulumi.aws.sfn.outputs.StateMachineTracingConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * The ARN of the state machine.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * The date the state machine was created.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -63,7 +63,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * The [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html) definition of the state machine.
      * 
      */
-    @OutputExport(name="definition", type=String.class, parameters={})
+    @Export(name="definition", type=String.class, parameters={})
     private Output<String> definition;
 
     /**
@@ -77,7 +77,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * Defines what execution history events are logged and where they are logged. The `logging_configuration` parameter is only valid when `type` is set to `EXPRESS`. Defaults to `OFF`. For more information see [Logging Express Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html) and [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide.
      * 
      */
-    @OutputExport(name="loggingConfiguration", type=StateMachineLoggingConfiguration.class, parameters={})
+    @Export(name="loggingConfiguration", type=StateMachineLoggingConfiguration.class, parameters={})
     private Output<StateMachineLoggingConfiguration> loggingConfiguration;
 
     /**
@@ -91,7 +91,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * The name of the state machine. To enable logging with CloudWatch Logs, the name should only contain `0`-`9`, `A`-`Z`, `a`-`z`, `-` and `_`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -119,7 +119,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * The current status of the state machine. Either `ACTIVE` or `DELETING`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -133,7 +133,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -147,7 +147,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -161,7 +161,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * Selects whether AWS X-Ray tracing is enabled.
      * 
      */
-    @OutputExport(name="tracingConfiguration", type=StateMachineTracingConfiguration.class, parameters={})
+    @Export(name="tracingConfiguration", type=StateMachineTracingConfiguration.class, parameters={})
     private Output<StateMachineTracingConfiguration> tracingConfiguration;
 
     /**
@@ -175,7 +175,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * Determines whether a Standard or Express state machine is created. The default is `STANDARD`. You cannot update the type of a state machine once it has been created. Valid values: `STANDARD`, `EXPRESS`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

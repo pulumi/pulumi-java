@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.opsworks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationSslConfiguration {
     /**
      * The contents of the certificate's domain.crt file.
@@ -27,11 +27,11 @@ public final class ApplicationSslConfiguration {
      */
     private final String privateKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationSslConfiguration(
-        @OutputCustomType.Parameter("certificate") String certificate,
-        @OutputCustomType.Parameter("chain") @Nullable String chain,
-        @OutputCustomType.Parameter("privateKey") String privateKey) {
+        @CustomType.Parameter("certificate") String certificate,
+        @CustomType.Parameter("chain") @Nullable String chain,
+        @CustomType.Parameter("privateKey") String privateKey) {
         this.certificate = certificate;
         this.chain = chain;
         this.privateKey = privateKey;

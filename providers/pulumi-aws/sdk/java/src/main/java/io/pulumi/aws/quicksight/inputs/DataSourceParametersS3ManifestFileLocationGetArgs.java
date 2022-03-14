@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DataSourceParametersS3ManifestFileLocationGetArgs extends io.
      * The name of the bucket that contains the manifest file.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -28,7 +28,7 @@ public final class DataSourceParametersS3ManifestFileLocationGetArgs extends io.
      * The key of the manifest file within the bucket.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetPolicyDocumentStatementPrincipal extends io.pulumi.resourc
      * List of identifiers for principals. When `type` is `AWS`, these are IAM principal ARNs, e.g., `arn:aws:iam::12345678901:role/yak-role`.  When `type` is `Service`, these are AWS Service roles, e.g., `lambda.amazonaws.com`. When `type` is `Federated`, these are web identity users or SAML provider ARNs, e.g., `accounts.google.com` or `arn:aws:iam::12345678901:saml-provider/yak-saml-provider`. When `type` is `CanonicalUser`, these are [canonical user IDs](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html#FindingCanonicalId), e.g., `79a59df900b949e55d96a1e698fbacedfd6e09d98eacf8f8d5218e7cd47ef2be`.
      * 
      */
-    @InputImport(name="identifiers", required=true)
+    @Import(name="identifiers", required=true)
       private final List<String> identifiers;
 
     public List<String> getIdentifiers() {
@@ -28,7 +28,7 @@ public final class GetPolicyDocumentStatementPrincipal extends io.pulumi.resourc
      * Type of principal. Valid values include `AWS`, `Service`, `Federated`, `CanonicalUser` and `*`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

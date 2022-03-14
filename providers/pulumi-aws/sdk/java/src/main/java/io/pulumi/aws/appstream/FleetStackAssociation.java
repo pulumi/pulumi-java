@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appstream.FleetStackAssociationArgs;
 import io.pulumi.aws.appstream.inputs.FleetStackAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class FleetStackAssociation extends io.pulumi.resources.CustomResource {
      * Name of the fleet.
      * 
      */
-    @OutputExport(name="fleetName", type=String.class, parameters={})
+    @Export(name="fleetName", type=String.class, parameters={})
     private Output<String> fleetName;
 
     /**
@@ -46,7 +46,7 @@ public class FleetStackAssociation extends io.pulumi.resources.CustomResource {
      * Name of the stack.
      * 
      */
-    @OutputExport(name="stackName", type=String.class, parameters={})
+    @Export(name="stackName", type=String.class, parameters={})
     private Output<String> stackName;
 
     /**

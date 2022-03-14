@@ -8,7 +8,7 @@ import io.pulumi.aws.datasync.EfsLocationArgs;
 import io.pulumi.aws.datasync.inputs.EfsLocationState;
 import io.pulumi.aws.datasync.outputs.EfsLocationEc2Config;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -36,7 +36,7 @@ public class EfsLocation extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class EfsLocation extends io.pulumi.resources.CustomResource {
      * Configuration block containing EC2 configurations for connecting to the EFS File System.
      * 
      */
-    @OutputExport(name="ec2Config", type=EfsLocationEc2Config.class, parameters={})
+    @Export(name="ec2Config", type=EfsLocationEc2Config.class, parameters={})
     private Output<EfsLocationEc2Config> ec2Config;
 
     /**
@@ -64,7 +64,7 @@ public class EfsLocation extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of EFS File System.
      * 
      */
-    @OutputExport(name="efsFileSystemArn", type=String.class, parameters={})
+    @Export(name="efsFileSystemArn", type=String.class, parameters={})
     private Output<String> efsFileSystemArn;
 
     /**
@@ -78,7 +78,7 @@ public class EfsLocation extends io.pulumi.resources.CustomResource {
      * Subdirectory to perform actions as source or destination. Default `/`.
      * 
      */
-    @OutputExport(name="subdirectory", type=String.class, parameters={})
+    @Export(name="subdirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> subdirectory;
 
     /**
@@ -92,7 +92,7 @@ public class EfsLocation extends io.pulumi.resources.CustomResource {
      * Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -106,7 +106,7 @@ public class EfsLocation extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -116,7 +116,7 @@ public class EfsLocation extends io.pulumi.resources.CustomResource {
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll;
     }
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
     public Output<String> getUri() {

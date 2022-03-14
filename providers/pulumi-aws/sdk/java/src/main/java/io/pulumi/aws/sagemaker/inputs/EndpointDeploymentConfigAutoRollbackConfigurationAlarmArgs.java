@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs ex
      * The name of a CloudWatch alarm in your account.
      * 
      */
-    @InputImport(name="alarmName", required=true)
+    @Import(name="alarmName", required=true)
       private final Output<String> alarmName;
 
     public Output<String> getAlarmName() {

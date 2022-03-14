@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
      * The name of the Lightsail instance to attach the IP to
      * 
      */
-    @InputImport(name="instanceName", required=true)
+    @Import(name="instanceName", required=true)
       private final Output<String> instanceName;
 
     public Output<String> getInstanceName() {
@@ -28,7 +28,7 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
      * The name of the allocated static IP
      * 
      */
-    @InputImport(name="staticIpName", required=true)
+    @Import(name="staticIpName", required=true)
       private final Output<String> staticIpName;
 
     public Output<String> getStaticIpName() {

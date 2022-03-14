@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the schema.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * The compatibility mode of the schema. Values values are: `NONE`, `DISABLED`, `BACKWARD`, `BACKWARD_ALL`, `FORWARD`, `FORWARD_ALL`, `FULL`, and `FULL_ALL`.
      * 
      */
-    @InputImport(name="compatibility")
+    @Import(name="compatibility")
       private final @Nullable Output<String> compatibility;
 
     public Output<String> getCompatibility() {
@@ -42,7 +42,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * The data format of the schema definition. Valid values are `AVRO` and `JSON`.
      * 
      */
-    @InputImport(name="dataFormat")
+    @Import(name="dataFormat")
       private final @Nullable Output<String> dataFormat;
 
     public Output<String> getDataFormat() {
@@ -53,7 +53,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * A description of the schema.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * The latest version of the schema associated with the returned schema definition.
      * 
      */
-    @InputImport(name="latestSchemaVersion")
+    @Import(name="latestSchemaVersion")
       private final @Nullable Output<Integer> latestSchemaVersion;
 
     public Output<Integer> getLatestSchemaVersion() {
@@ -75,7 +75,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * The next version of the schema associated with the returned schema definition.
      * 
      */
-    @InputImport(name="nextSchemaVersion")
+    @Import(name="nextSchemaVersion")
       private final @Nullable Output<Integer> nextSchemaVersion;
 
     public Output<Integer> getNextSchemaVersion() {
@@ -86,7 +86,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Glue Registry to create the schema in.
      * 
      */
-    @InputImport(name="registryArn")
+    @Import(name="registryArn")
       private final @Nullable Output<String> registryArn;
 
     public Output<String> getRegistryArn() {
@@ -97,7 +97,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * The name of the Glue Registry.
      * 
      */
-    @InputImport(name="registryName")
+    @Import(name="registryName")
       private final @Nullable Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -108,7 +108,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * The version number of the checkpoint (the last time the compatibility mode was changed).
      * 
      */
-    @InputImport(name="schemaCheckpoint")
+    @Import(name="schemaCheckpoint")
       private final @Nullable Output<Integer> schemaCheckpoint;
 
     public Output<Integer> getSchemaCheckpoint() {
@@ -119,7 +119,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * The schema definition using the `data_format` setting for `schema_name`.
      * 
      */
-    @InputImport(name="schemaDefinition")
+    @Import(name="schemaDefinition")
       private final @Nullable Output<String> schemaDefinition;
 
     public Output<String> getSchemaDefinition() {
@@ -130,7 +130,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * The Name of the schema.
      * 
      */
-    @InputImport(name="schemaName")
+    @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
     public Output<String> getSchemaName() {
@@ -141,7 +141,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -152,7 +152,7 @@ public final class SchemaState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

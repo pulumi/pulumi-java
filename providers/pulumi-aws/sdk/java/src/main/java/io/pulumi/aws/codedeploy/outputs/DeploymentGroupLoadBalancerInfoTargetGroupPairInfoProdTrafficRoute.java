@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute {
     /**
      * List of Amazon Resource Names (ARNs) of the load balancer listeners.
@@ -16,8 +16,8 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTraffic
      */
     private final List<String> listenerArns;
 
-    @OutputCustomType.Constructor
-    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute(@OutputCustomType.Parameter("listenerArns") List<String> listenerArns) {
+    @CustomType.Constructor
+    private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute(@CustomType.Parameter("listenerArns") List<String> listenerArns) {
         this.listenerArns = listenerArns;
     }
 

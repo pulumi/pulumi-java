@@ -4,7 +4,7 @@
 package io.pulumi.aws.lb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * Only used when the type is `lb_cookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
      * 
      */
-    @InputImport(name="cookieDuration")
+    @Import(name="cookieDuration")
       private final @Nullable Output<Integer> cookieDuration;
 
     public Output<Integer> getCookieDuration() {
@@ -31,7 +31,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * Name of the application based cookie. AWSALB, AWSALBAPP, and AWSALBTG prefixes are reserved and cannot be used. Only needed when type is `app_cookie`.
      * 
      */
-    @InputImport(name="cookieName")
+    @Import(name="cookieName")
       private final @Nullable Output<String> cookieName;
 
     public Output<String> getCookieName() {
@@ -42,7 +42,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * Boolean to enable / disable `stickiness`. Default is `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -53,7 +53,7 @@ public final class TargetGroupStickinessGetArgs extends io.pulumi.resources.Reso
      * The type of sticky sessions. The only current possible values are `lb_cookie`, `app_cookie` for ALBs, and `source_ip` for NLBs.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

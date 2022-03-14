@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpcEndpointDnsEntry {
     /**
      * The DNS name.
@@ -22,10 +22,10 @@ public final class VpcEndpointDnsEntry {
      */
     private final @Nullable String hostedZoneId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpcEndpointDnsEntry(
-        @OutputCustomType.Parameter("dnsName") @Nullable String dnsName,
-        @OutputCustomType.Parameter("hostedZoneId") @Nullable String hostedZoneId) {
+        @CustomType.Parameter("dnsName") @Nullable String dnsName,
+        @CustomType.Parameter("hostedZoneId") @Nullable String hostedZoneId) {
         this.dnsName = dnsName;
         this.hostedZoneId = hostedZoneId;
     }

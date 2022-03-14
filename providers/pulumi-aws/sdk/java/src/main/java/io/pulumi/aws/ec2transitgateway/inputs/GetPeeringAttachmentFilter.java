@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2transitgateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetPeeringAttachmentFilter extends io.pulumi.resources.Invoke
      * [the underlying AWS API](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeTransitGatewayPeeringAttachments.html).
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -30,7 +30,7 @@ public final class GetPeeringAttachmentFilter extends io.pulumi.resources.Invoke
      * An EC2 Transit Gateway Peering Attachment be selected if any one of the given values matches.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

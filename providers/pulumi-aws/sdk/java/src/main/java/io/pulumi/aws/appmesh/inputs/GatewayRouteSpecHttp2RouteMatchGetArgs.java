@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GatewayRouteSpecHttp2RouteMatchGetArgs extends io.pulumi.reso
      * Specifies the path to match requests with. This parameter must always start with `/`, which by itself matches all requests to the virtual service name.
      * 
      */
-    @InputImport(name="prefix", required=true)
+    @Import(name="prefix", required=true)
       private final Output<String> prefix;
 
     public Output<String> getPrefix() {

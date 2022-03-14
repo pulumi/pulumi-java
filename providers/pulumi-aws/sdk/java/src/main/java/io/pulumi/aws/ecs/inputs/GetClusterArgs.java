@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the ECS Cluster
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {

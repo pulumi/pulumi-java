@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementOrStatementStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig {
     /**
      * - The match status to assign to the web request if the request doesn't have a valid IP address in the specified position. Valid values include: `MATCH` or `NO_MATCH`.
@@ -25,11 +25,11 @@ public final class WebAclRuleStatementOrStatementStatementNotStatementStatementA
      */
     private final String position;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleStatementOrStatementStatementNotStatementStatementAndStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig(
-        @OutputCustomType.Parameter("fallbackBehavior") String fallbackBehavior,
-        @OutputCustomType.Parameter("headerName") String headerName,
-        @OutputCustomType.Parameter("position") String position) {
+        @CustomType.Parameter("fallbackBehavior") String fallbackBehavior,
+        @CustomType.Parameter("headerName") String headerName,
+        @CustomType.Parameter("position") String position) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
         this.position = position;

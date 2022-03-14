@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageA
      * The name of the App Image Config.
      * 
      */
-    @InputImport(name="appImageConfigName", required=true)
+    @Import(name="appImageConfigName", required=true)
       private final Output<String> appImageConfigName;
 
     public Output<String> getAppImageConfigName() {
@@ -30,7 +30,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageA
      * The name of the Custom Image.
      * 
      */
-    @InputImport(name="imageName", required=true)
+    @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
     public Output<String> getImageName() {
@@ -41,7 +41,7 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageA
      * The version number of the Custom Image.
      * 
      */
-    @InputImport(name="imageVersionNumber")
+    @Import(name="imageVersionNumber")
       private final @Nullable Output<Integer> imageVersionNumber;
 
     public Output<Integer> getImageVersionNumber() {

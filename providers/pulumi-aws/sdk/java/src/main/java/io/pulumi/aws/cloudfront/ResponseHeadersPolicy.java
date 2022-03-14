@@ -10,7 +10,7 @@ import io.pulumi.aws.cloudfront.outputs.ResponseHeadersPolicyCorsConfig;
 import io.pulumi.aws.cloudfront.outputs.ResponseHeadersPolicyCustomHeadersConfig;
 import io.pulumi.aws.cloudfront.outputs.ResponseHeadersPolicySecurityHeadersConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -38,7 +38,7 @@ public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {
      * A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
      * 
      */
-    @OutputExport(name="comment", type=String.class, parameters={})
+    @Export(name="comment", type=String.class, parameters={})
     private Output</* @Nullable */ String> comment;
 
     /**
@@ -52,7 +52,7 @@ public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {
      * A configuration for a set of HTTP response headers that are used for Cross-Origin Resource Sharing (CORS). See Cors Config for more information.
      * 
      */
-    @OutputExport(name="corsConfig", type=ResponseHeadersPolicyCorsConfig.class, parameters={})
+    @Export(name="corsConfig", type=ResponseHeadersPolicyCorsConfig.class, parameters={})
     private Output</* @Nullable */ ResponseHeadersPolicyCorsConfig> corsConfig;
 
     /**
@@ -66,7 +66,7 @@ public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {
      * Object that contains an attribute `items` that contains a list of custom headers. See Custom Header for more information.
      * 
      */
-    @OutputExport(name="customHeadersConfig", type=ResponseHeadersPolicyCustomHeadersConfig.class, parameters={})
+    @Export(name="customHeadersConfig", type=ResponseHeadersPolicyCustomHeadersConfig.class, parameters={})
     private Output</* @Nullable */ ResponseHeadersPolicyCustomHeadersConfig> customHeadersConfig;
 
     /**
@@ -80,7 +80,7 @@ public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {
      * The current version of the response headers policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -94,7 +94,7 @@ public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {
      * A unique name to identify the response headers policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class ResponseHeadersPolicy extends io.pulumi.resources.CustomResource {
      * A configuration for a set of security-related HTTP response headers. See Security Headers Config for more information.
      * 
      */
-    @OutputExport(name="securityHeadersConfig", type=ResponseHeadersPolicySecurityHeadersConfig.class, parameters={})
+    @Export(name="securityHeadersConfig", type=ResponseHeadersPolicySecurityHeadersConfig.class, parameters={})
     private Output</* @Nullable */ ResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfig;
 
     /**

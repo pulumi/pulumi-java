@@ -5,13 +5,13 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTlsCertificate;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTlsValidation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerTls {
     /**
      * The listener's TLS certificate.
@@ -29,11 +29,11 @@ public final class VirtualNodeSpecListenerTls {
      */
     private final @Nullable VirtualNodeSpecListenerTlsValidation validation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecListenerTls(
-        @OutputCustomType.Parameter("certificate") VirtualNodeSpecListenerTlsCertificate certificate,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("validation") @Nullable VirtualNodeSpecListenerTlsValidation validation) {
+        @CustomType.Parameter("certificate") VirtualNodeSpecListenerTlsCertificate certificate,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("validation") @Nullable VirtualNodeSpecListenerTlsValidation validation) {
         this.certificate = certificate;
         this.mode = mode;
         this.validation = validation;

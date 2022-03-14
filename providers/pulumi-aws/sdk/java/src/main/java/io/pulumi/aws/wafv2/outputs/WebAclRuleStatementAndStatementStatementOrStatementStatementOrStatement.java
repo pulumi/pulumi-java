@@ -4,11 +4,11 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementAndStatementStatementOrStatementStatementOrStatementStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementAndStatementStatementOrStatementStatementOrStatement {
     /**
      * The statements to combine with `OR` logic. You can use any statements that can be nested. See Statement above for details.
@@ -16,8 +16,8 @@ public final class WebAclRuleStatementAndStatementStatementOrStatementStatementO
      */
     private final List<WebAclRuleStatementAndStatementStatementOrStatementStatementOrStatementStatement> statements;
 
-    @OutputCustomType.Constructor
-    private WebAclRuleStatementAndStatementStatementOrStatementStatementOrStatement(@OutputCustomType.Parameter("statements") List<WebAclRuleStatementAndStatementStatementOrStatementStatementOrStatementStatement> statements) {
+    @CustomType.Constructor
+    private WebAclRuleStatementAndStatementStatementOrStatementStatementOrStatement(@CustomType.Parameter("statements") List<WebAclRuleStatementAndStatementStatementOrStatementStatementOrStatementStatement> statements) {
         this.statements = statements;
     }
 

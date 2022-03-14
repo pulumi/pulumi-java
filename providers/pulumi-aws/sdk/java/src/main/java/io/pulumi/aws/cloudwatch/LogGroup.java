@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.LogGroupArgs;
 import io.pulumi.aws.cloudwatch.inputs.LogGroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) specifying the log group. Any `:*` suffix added by the API, denoting all CloudWatch Log Streams under the CloudWatch Log Group, is removed for greater compatibility with other AWS services that do not accept the suffix.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * permissions for the CMK whenever the encrypted data is requested.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -66,7 +66,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * The name of the log group. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> namePrefix;
 
     /**
@@ -96,7 +96,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * If you select 0, the events in the log group are always retained and never expire.
      * 
      */
-    @OutputExport(name="retentionInDays", type=Integer.class, parameters={})
+    @Export(name="retentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionInDays;
 
     /**
@@ -112,7 +112,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -126,7 +126,7 @@ public class LogGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

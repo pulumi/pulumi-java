@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudformation.StackSetInstanceArgs;
 import io.pulumi.aws.cloudformation.inputs.StackSetInstanceState;
 import io.pulumi.aws.cloudformation.outputs.StackSetInstanceDeploymentTargets;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * Target AWS Account ID to create a Stack based on the StackSet. Defaults to current account.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -53,7 +53,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.
      * 
      */
-    @OutputExport(name="deploymentTargets", type=StackSetInstanceDeploymentTargets.class, parameters={})
+    @Export(name="deploymentTargets", type=StackSetInstanceDeploymentTargets.class, parameters={})
     private Output</* @Nullable */ StackSetInstanceDeploymentTargets> deploymentTargets;
 
     /**
@@ -67,7 +67,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * The organization root ID or organizational unit (OU) IDs specified for `deployment_targets`.
      * 
      */
-    @OutputExport(name="organizationalUnitId", type=String.class, parameters={})
+    @Export(name="organizationalUnitId", type=String.class, parameters={})
     private Output<String> organizationalUnitId;
 
     /**
@@ -81,7 +81,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * Key-value map of input parameters to override from the StackSet for this Instance.
      * 
      */
-    @OutputExport(name="parameterOverrides", type=Map.class, parameters={String.class, String.class})
+    @Export(name="parameterOverrides", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameterOverrides;
 
     /**
@@ -95,7 +95,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * Target AWS Region to create a Stack based on the StackSet. Defaults to current region.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -109,7 +109,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * During resource destroy, remove Instance from StackSet while keeping the Stack and its associated resources. Must be enabled in the state _before_ destroy operation to take effect. You cannot reassociate a retained Stack or add an existing, saved Stack to a new StackSet. Defaults to `false`.
      * 
      */
-    @OutputExport(name="retainStack", type=Boolean.class, parameters={})
+    @Export(name="retainStack", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> retainStack;
 
     /**
@@ -123,7 +123,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * Stack identifier
      * 
      */
-    @OutputExport(name="stackId", type=String.class, parameters={})
+    @Export(name="stackId", type=String.class, parameters={})
     private Output<String> stackId;
 
     /**
@@ -137,7 +137,7 @@ public class StackSetInstance extends io.pulumi.resources.CustomResource {
      * Name of the StackSet.
      * 
      */
-    @OutputExport(name="stackSetName", type=String.class, parameters={})
+    @Export(name="stackSetName", type=String.class, parameters={})
     private Output<String> stackSetName;
 
     /**

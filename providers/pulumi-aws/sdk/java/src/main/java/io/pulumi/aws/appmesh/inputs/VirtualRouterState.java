@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualRouterSpecGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VirtualRouterState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the virtual router.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class VirtualRouterState extends io.pulumi.resources.ResourceArgs {
      * The creation date of the virtual router.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -42,7 +42,7 @@ public final class VirtualRouterState extends io.pulumi.resources.ResourceArgs {
      * The last update date of the virtual router.
      * 
      */
-    @InputImport(name="lastUpdatedDate")
+    @Import(name="lastUpdatedDate")
       private final @Nullable Output<String> lastUpdatedDate;
 
     public Output<String> getLastUpdatedDate() {
@@ -53,7 +53,7 @@ public final class VirtualRouterState extends io.pulumi.resources.ResourceArgs {
      * The name of the service mesh in which to create the virtual router. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="meshName")
+    @Import(name="meshName")
       private final @Nullable Output<String> meshName;
 
     public Output<String> getMeshName() {
@@ -64,7 +64,7 @@ public final class VirtualRouterState extends io.pulumi.resources.ResourceArgs {
      * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
      * 
      */
-    @InputImport(name="meshOwner")
+    @Import(name="meshOwner")
       private final @Nullable Output<String> meshOwner;
 
     public Output<String> getMeshOwner() {
@@ -75,7 +75,7 @@ public final class VirtualRouterState extends io.pulumi.resources.ResourceArgs {
      * The name to use for the virtual router. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class VirtualRouterState extends io.pulumi.resources.ResourceArgs {
      * The resource owner's AWS account ID.
      * 
      */
-    @InputImport(name="resourceOwner")
+    @Import(name="resourceOwner")
       private final @Nullable Output<String> resourceOwner;
 
     public Output<String> getResourceOwner() {
@@ -97,7 +97,7 @@ public final class VirtualRouterState extends io.pulumi.resources.ResourceArgs {
      * The virtual router specification to apply.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<VirtualRouterSpecGetArgs> spec;
 
     public Output<VirtualRouterSpecGetArgs> getSpec() {
@@ -108,7 +108,7 @@ public final class VirtualRouterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -119,7 +119,7 @@ public final class VirtualRouterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

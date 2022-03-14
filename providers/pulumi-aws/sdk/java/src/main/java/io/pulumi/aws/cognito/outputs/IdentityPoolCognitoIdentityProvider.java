@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IdentityPoolCognitoIdentityProvider {
     /**
      * The client ID for the Amazon Cognito Identity User Pool.
@@ -28,11 +28,11 @@ public final class IdentityPoolCognitoIdentityProvider {
      */
     private final @Nullable Boolean serverSideTokenCheck;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentityPoolCognitoIdentityProvider(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("providerName") @Nullable String providerName,
-        @OutputCustomType.Parameter("serverSideTokenCheck") @Nullable Boolean serverSideTokenCheck) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("providerName") @Nullable String providerName,
+        @CustomType.Parameter("serverSideTokenCheck") @Nullable Boolean serverSideTokenCheck) {
         this.clientId = clientId;
         this.providerName = providerName;
         this.serverSideTokenCheck = serverSideTokenCheck;

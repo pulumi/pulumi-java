@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ThingTypePropertiesArgs extends io.pulumi.resources.ResourceA
      * The description of the thing type.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class ThingTypePropertiesArgs extends io.pulumi.resources.ResourceA
      * A list of searchable thing attribute names.
      * 
      */
-    @InputImport(name="searchableAttributes")
+    @Import(name="searchableAttributes")
       private final @Nullable Output<List<String>> searchableAttributes;
 
     public Output<List<String>> getSearchableAttributes() {

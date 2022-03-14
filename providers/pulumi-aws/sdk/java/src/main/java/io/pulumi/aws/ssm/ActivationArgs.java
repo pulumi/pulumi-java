@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the resource that you want to register.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
@@ -42,7 +42,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * The IAM Role to attach to the managed instance.
      * 
      */
-    @InputImport(name="iamRole", required=true)
+    @Import(name="iamRole", required=true)
       private final Output<String> iamRole;
 
     public Output<String> getIamRole() {
@@ -53,7 +53,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * The default name of the registered managed instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of managed instances you want to register. The default value is 1 instance.
      * 
      */
-    @InputImport(name="registrationLimit")
+    @Import(name="registrationLimit")
       private final @Nullable Output<Integer> registrationLimit;
 
     public Output<Integer> getRegistrationLimit() {
@@ -75,7 +75,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

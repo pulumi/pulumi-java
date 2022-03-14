@@ -9,7 +9,7 @@ import io.pulumi.aws.inputs.ProviderDefaultTagsArgs;
 import io.pulumi.aws.inputs.ProviderEndpointArgs;
 import io.pulumi.aws.inputs.ProviderIgnoreTagsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,21 +26,21 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
      * 
      */
-    @InputImport(name="accessKey")
+    @Import(name="accessKey")
       private final @Nullable Output<String> accessKey;
 
     public Output<String> getAccessKey() {
         return this.accessKey == null ? Output.empty() : this.accessKey;
     }
 
-    @InputImport(name="allowedAccountIds", json=true)
+    @Import(name="allowedAccountIds", json=true)
       private final @Nullable Output<List<String>> allowedAccountIds;
 
     public Output<List<String>> getAllowedAccountIds() {
         return this.allowedAccountIds == null ? Output.empty() : this.allowedAccountIds;
     }
 
-    @InputImport(name="assumeRole", json=true)
+    @Import(name="assumeRole", json=true)
       private final @Nullable Output<ProviderAssumeRoleArgs> assumeRole;
 
     public Output<ProviderAssumeRoleArgs> getAssumeRole() {
@@ -51,21 +51,21 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block with settings to default resource tags across all resources.
      * 
      */
-    @InputImport(name="defaultTags", json=true)
+    @Import(name="defaultTags", json=true)
       private final @Nullable Output<ProviderDefaultTagsArgs> defaultTags;
 
     public Output<ProviderDefaultTagsArgs> getDefaultTags() {
         return this.defaultTags == null ? Output.empty() : this.defaultTags;
     }
 
-    @InputImport(name="endpoints", json=true)
+    @Import(name="endpoints", json=true)
       private final @Nullable Output<List<ProviderEndpointArgs>> endpoints;
 
     public Output<List<ProviderEndpointArgs>> getEndpoints() {
         return this.endpoints == null ? Output.empty() : this.endpoints;
     }
 
-    @InputImport(name="forbiddenAccountIds", json=true)
+    @Import(name="forbiddenAccountIds", json=true)
       private final @Nullable Output<List<String>> forbiddenAccountIds;
 
     public Output<List<String>> getForbiddenAccountIds() {
@@ -77,7 +77,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * `HTTPS_PROXY` environment variables.
      * 
      */
-    @InputImport(name="httpProxy")
+    @Import(name="httpProxy")
       private final @Nullable Output<String> httpProxy;
 
     public Output<String> getHttpProxy() {
@@ -88,7 +88,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block with settings to ignore resource tags across all resources.
      * 
      */
-    @InputImport(name="ignoreTags", json=true)
+    @Import(name="ignoreTags", json=true)
       private final @Nullable Output<ProviderIgnoreTagsArgs> ignoreTags;
 
     public Output<ProviderIgnoreTagsArgs> getIgnoreTags() {
@@ -99,7 +99,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Explicitly allow the provider to perform "insecure" SSL requests. If omitted, default value is `false`
      * 
      */
-    @InputImport(name="insecure", json=true)
+    @Import(name="insecure", json=true)
       private final @Nullable Output<Boolean> insecure;
 
     public Output<Boolean> getInsecure() {
@@ -110,7 +110,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of times an AWS API request is being executed. If the API request still fails, an error is thrown.
      * 
      */
-    @InputImport(name="maxRetries", json=true)
+    @Import(name="maxRetries", json=true)
       private final @Nullable Output<Integer> maxRetries;
 
     public Output<Integer> getMaxRetries() {
@@ -121,7 +121,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The profile for API operations. If not set, the default profile created with `aws configure` will be used.
      * 
      */
-    @InputImport(name="profile")
+    @Import(name="profile")
       private final @Nullable Output<String> profile;
 
     public Output<String> getProfile() {
@@ -132,7 +132,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -145,7 +145,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Specific to the Amazon S3 service.
      * 
      */
-    @InputImport(name="s3ForcePathStyle", json=true)
+    @Import(name="s3ForcePathStyle", json=true)
       private final @Nullable Output<Boolean> s3ForcePathStyle;
 
     public Output<Boolean> getS3ForcePathStyle() {
@@ -156,7 +156,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
      * 
      */
-    @InputImport(name="secretKey")
+    @Import(name="secretKey")
       private final @Nullable Output<String> secretKey;
 
     public Output<String> getSecretKey() {
@@ -167,7 +167,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
      * 
      */
-    @InputImport(name="sharedCredentialsFile")
+    @Import(name="sharedCredentialsFile")
       private final @Nullable Output<String> sharedCredentialsFile;
 
     public Output<String> getSharedCredentialsFile() {
@@ -179,7 +179,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * available/implemented.
      * 
      */
-    @InputImport(name="skipCredentialsValidation", json=true)
+    @Import(name="skipCredentialsValidation", json=true)
       private final @Nullable Output<Boolean> skipCredentialsValidation;
 
     public Output<Boolean> getSkipCredentialsValidation() {
@@ -190,14 +190,14 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes permissions.
      * 
      */
-    @InputImport(name="skipGetEc2Platforms", json=true)
+    @Import(name="skipGetEc2Platforms", json=true)
       private final @Nullable Output<Boolean> skipGetEc2Platforms;
 
     public Output<Boolean> getSkipGetEc2Platforms() {
         return this.skipGetEc2Platforms == null ? Output.empty() : this.skipGetEc2Platforms;
     }
 
-    @InputImport(name="skipMetadataApiCheck", json=true)
+    @Import(name="skipMetadataApiCheck", json=true)
       private final @Nullable Output<Boolean> skipMetadataApiCheck;
 
     public Output<Boolean> getSkipMetadataApiCheck() {
@@ -209,7 +209,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * not public (yet).
      * 
      */
-    @InputImport(name="skipRegionValidation", json=true)
+    @Import(name="skipRegionValidation", json=true)
       private final @Nullable Output<Boolean> skipRegionValidation;
 
     public Output<Boolean> getSkipRegionValidation() {
@@ -220,7 +220,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.
      * 
      */
-    @InputImport(name="skipRequestingAccountId", json=true)
+    @Import(name="skipRequestingAccountId", json=true)
       private final @Nullable Output<Boolean> skipRequestingAccountId;
 
     public Output<Boolean> getSkipRequestingAccountId() {
@@ -231,7 +231,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * session token. A session token is only required if you are using temporary security credentials.
      * 
      */
-    @InputImport(name="token")
+    @Import(name="token")
       private final @Nullable Output<String> token;
 
     public Output<String> getToken() {

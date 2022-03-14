@@ -5,7 +5,7 @@ package io.pulumi.aws.amplify;
 
 import io.pulumi.aws.amplify.inputs.DomainAssociationSubDomainArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * The unique ID for an Amplify app.
      * 
      */
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final Output<String> appId;
 
     public Output<String> getAppId() {
@@ -32,7 +32,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * The domain name for the domain association.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -43,7 +43,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * The setting for the subdomain. Documented below.
      * 
      */
-    @InputImport(name="subDomains", required=true)
+    @Import(name="subDomains", required=true)
       private final Output<List<DomainAssociationSubDomainArgs>> subDomains;
 
     public Output<List<DomainAssociationSubDomainArgs>> getSubDomains() {
@@ -54,7 +54,7 @@ public final class DomainAssociationArgs extends io.pulumi.resources.ResourceArg
      * If enabled, the resource will wait for the domain association status to change to `PENDING_DEPLOYMENT` or `AVAILABLE`. Setting this to `false` will skip the process. Default: `true`.
      * 
      */
-    @InputImport(name="waitForVerification")
+    @Import(name="waitForVerification")
       private final @Nullable Output<Boolean> waitForVerification;
 
     public Output<Boolean> getWaitForVerification() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.workspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDirectorySelfServicePermission {
     /**
      * Whether WorkSpaces directory users can change the compute type (bundle) for their workspace.
@@ -35,13 +35,13 @@ public final class GetDirectorySelfServicePermission {
      */
     private final Boolean switchRunningMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDirectorySelfServicePermission(
-        @OutputCustomType.Parameter("changeComputeType") Boolean changeComputeType,
-        @OutputCustomType.Parameter("increaseVolumeSize") Boolean increaseVolumeSize,
-        @OutputCustomType.Parameter("rebuildWorkspace") Boolean rebuildWorkspace,
-        @OutputCustomType.Parameter("restartWorkspace") Boolean restartWorkspace,
-        @OutputCustomType.Parameter("switchRunningMode") Boolean switchRunningMode) {
+        @CustomType.Parameter("changeComputeType") Boolean changeComputeType,
+        @CustomType.Parameter("increaseVolumeSize") Boolean increaseVolumeSize,
+        @CustomType.Parameter("rebuildWorkspace") Boolean rebuildWorkspace,
+        @CustomType.Parameter("restartWorkspace") Boolean restartWorkspace,
+        @CustomType.Parameter("switchRunningMode") Boolean switchRunningMode) {
         this.changeComputeType = changeComputeType;
         this.increaseVolumeSize = increaseVolumeSize;
         this.rebuildWorkspace = rebuildWorkspace;

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ebs.SnapshotArgs;
 import io.pulumi.aws.ebs.inputs.SnapshotState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -35,7 +35,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the EBS Snapshot.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The data encryption key identifier for the snapshot.
      * 
      */
-    @OutputExport(name="dataEncryptionKeyId", type=String.class, parameters={})
+    @Export(name="dataEncryptionKeyId", type=String.class, parameters={})
     private Output<String> dataEncryptionKeyId;
 
     /**
@@ -63,7 +63,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * A description of what the snapshot is.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -77,7 +77,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Whether the snapshot is encrypted.
      * 
      */
-    @OutputExport(name="encrypted", type=Boolean.class, parameters={})
+    @Export(name="encrypted", type=Boolean.class, parameters={})
     private Output<Boolean> encrypted;
 
     /**
@@ -91,7 +91,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The ARN for the KMS encryption key.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
     /**
@@ -105,7 +105,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Outpost on which to create a local snapshot.
      * 
      */
-    @OutputExport(name="outpostArn", type=String.class, parameters={})
+    @Export(name="outpostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> outpostArn;
 
     /**
@@ -119,7 +119,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Value from an Amazon-maintained list (`amazon`, `aws-marketplace`, `microsoft`) of snapshot owners.
      * 
      */
-    @OutputExport(name="ownerAlias", type=String.class, parameters={})
+    @Export(name="ownerAlias", type=String.class, parameters={})
     private Output<String> ownerAlias;
 
     /**
@@ -133,7 +133,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the EBS snapshot owner.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -147,7 +147,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Indicates whether to permanently restore an archived snapshot.
      * 
      */
-    @OutputExport(name="permanentRestore", type=Boolean.class, parameters={})
+    @Export(name="permanentRestore", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> permanentRestore;
 
     /**
@@ -161,7 +161,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The name of the storage tier. Valid values are `archive` and `standard`. Default value is `standard`.
      * 
      */
-    @OutputExport(name="storageTier", type=String.class, parameters={})
+    @Export(name="storageTier", type=String.class, parameters={})
     private Output<String> storageTier;
 
     /**
@@ -175,7 +175,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the snapshot. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -189,7 +189,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -203,7 +203,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
      * 
      */
-    @OutputExport(name="temporaryRestoreDays", type=Integer.class, parameters={})
+    @Export(name="temporaryRestoreDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> temporaryRestoreDays;
 
     /**
@@ -217,7 +217,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The Volume ID of which to make a snapshot.
      * 
      */
-    @OutputExport(name="volumeId", type=String.class, parameters={})
+    @Export(name="volumeId", type=String.class, parameters={})
     private Output<String> volumeId;
 
     /**
@@ -231,7 +231,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The size of the drive in GiBs.
      * 
      */
-    @OutputExport(name="volumeSize", type=Integer.class, parameters={})
+    @Export(name="volumeSize", type=Integer.class, parameters={})
     private Output<Integer> volumeSize;
 
     /**

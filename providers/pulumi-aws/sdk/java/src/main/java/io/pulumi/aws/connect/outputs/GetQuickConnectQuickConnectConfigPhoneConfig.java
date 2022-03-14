@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetQuickConnectQuickConnectConfigPhoneConfig {
     /**
      * Specifies the phone number in in E.164 format.
@@ -15,8 +15,8 @@ public final class GetQuickConnectQuickConnectConfigPhoneConfig {
      */
     private final String phoneNumber;
 
-    @OutputCustomType.Constructor
-    private GetQuickConnectQuickConnectConfigPhoneConfig(@OutputCustomType.Parameter("phoneNumber") String phoneNumber) {
+    @CustomType.Constructor
+    private GetQuickConnectQuickConnectConfigPhoneConfig(@CustomType.Parameter("phoneNumber") String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

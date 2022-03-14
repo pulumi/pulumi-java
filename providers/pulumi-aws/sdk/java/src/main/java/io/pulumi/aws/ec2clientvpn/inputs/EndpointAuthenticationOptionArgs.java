@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * The ID of the Active Directory to be used for authentication if type is `directory-service-authentication`.
      * 
      */
-    @InputImport(name="activeDirectoryId")
+    @Import(name="activeDirectoryId")
       private final @Nullable Output<String> activeDirectoryId;
 
     public Output<String> getActiveDirectoryId() {
@@ -29,7 +29,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * The ARN of the client certificate. The certificate must be signed by a certificate authority (CA) and it must be provisioned in AWS Certificate Manager (ACM). Only necessary when type is set to `certificate-authentication`.
      * 
      */
-    @InputImport(name="rootCertificateChainArn")
+    @Import(name="rootCertificateChainArn")
       private final @Nullable Output<String> rootCertificateChainArn;
 
     public Output<String> getRootCertificateChainArn() {
@@ -40,7 +40,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * The ARN of the IAM SAML identity provider if type is `federated-authentication`.
      * 
      */
-    @InputImport(name="samlProviderArn")
+    @Import(name="samlProviderArn")
       private final @Nullable Output<String> samlProviderArn;
 
     public Output<String> getSamlProviderArn() {
@@ -51,7 +51,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * The ARN of the IAM SAML identity provider for the self service portal if type is `federated-authentication`.
      * 
      */
-    @InputImport(name="selfServiceSamlProviderArn")
+    @Import(name="selfServiceSamlProviderArn")
       private final @Nullable Output<String> selfServiceSamlProviderArn;
 
     public Output<String> getSelfServiceSamlProviderArn() {
@@ -62,7 +62,7 @@ public final class EndpointAuthenticationOptionArgs extends io.pulumi.resources.
      * The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

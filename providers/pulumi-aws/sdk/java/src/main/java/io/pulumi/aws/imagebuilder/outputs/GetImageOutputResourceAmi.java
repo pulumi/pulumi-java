@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetImageOutputResourceAmi {
     /**
      * Account identifier of the AMI.
@@ -35,13 +35,13 @@ public final class GetImageOutputResourceAmi {
      */
     private final String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageOutputResourceAmi(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("region") String region) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("region") String region) {
         this.accountId = accountId;
         this.description = description;
         this.image = image;

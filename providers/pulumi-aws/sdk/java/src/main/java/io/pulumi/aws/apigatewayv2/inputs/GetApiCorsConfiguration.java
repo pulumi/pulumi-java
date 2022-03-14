@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * Whether credentials are included in the CORS request.
      * 
      */
-    @InputImport(name="allowCredentials", required=true)
+    @Import(name="allowCredentials", required=true)
       private final Boolean allowCredentials;
 
     public Boolean getAllowCredentials() {
@@ -30,7 +30,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * The set of allowed HTTP headers.
      * 
      */
-    @InputImport(name="allowHeaders", required=true)
+    @Import(name="allowHeaders", required=true)
       private final List<String> allowHeaders;
 
     public List<String> getAllowHeaders() {
@@ -41,7 +41,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * The set of allowed HTTP methods.
      * 
      */
-    @InputImport(name="allowMethods", required=true)
+    @Import(name="allowMethods", required=true)
       private final List<String> allowMethods;
 
     public List<String> getAllowMethods() {
@@ -52,7 +52,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * The set of allowed origins.
      * 
      */
-    @InputImport(name="allowOrigins", required=true)
+    @Import(name="allowOrigins", required=true)
       private final List<String> allowOrigins;
 
     public List<String> getAllowOrigins() {
@@ -63,7 +63,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * The set of exposed HTTP headers.
      * 
      */
-    @InputImport(name="exposeHeaders", required=true)
+    @Import(name="exposeHeaders", required=true)
       private final List<String> exposeHeaders;
 
     public List<String> getExposeHeaders() {
@@ -74,7 +74,7 @@ public final class GetApiCorsConfiguration extends io.pulumi.resources.InvokeArg
      * The number of seconds that the browser should cache preflight request results.
      * 
      */
-    @InputImport(name="maxAge", required=true)
+    @Import(name="maxAge", required=true)
       private final Integer maxAge;
 
     public Integer getMaxAge() {

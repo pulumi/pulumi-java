@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.IntegrationTlsConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * A list of cache key parameters for the integration.
      * 
      */
-    @InputImport(name="cacheKeyParameters")
+    @Import(name="cacheKeyParameters")
       private final @Nullable Output<List<String>> cacheKeyParameters;
 
     public Output<List<String>> getCacheKeyParameters() {
@@ -33,7 +33,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The integration's cache namespace.
      * 
      */
-    @InputImport(name="cacheNamespace")
+    @Import(name="cacheNamespace")
       private final @Nullable Output<String> cacheNamespace;
 
     public Output<String> getCacheNamespace() {
@@ -44,7 +44,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The id of the VpcLink used for the integration. **Required** if `connection_type` is `VPC_LINK`
      * 
      */
-    @InputImport(name="connectionId")
+    @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -55,7 +55,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The integration input's [connectionType](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/#connectionType). Valid values are `INTERNET` (default for connections through the public routable internet), and `VPC_LINK` (for private connections between API Gateway and a network load balancer in a VPC).
      * 
      */
-    @InputImport(name="connectionType")
+    @Import(name="connectionType")
       private final @Nullable Output<String> connectionType;
 
     public Output<String> getConnectionType() {
@@ -66,7 +66,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the request payload will be passed through from the method request to integration request without modification, provided that the passthroughBehaviors is configured to support payload pass-through.
      * 
      */
-    @InputImport(name="contentHandling")
+    @Import(name="contentHandling")
       private final @Nullable Output<String> contentHandling;
 
     public Output<String> getContentHandling() {
@@ -77,7 +77,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The credentials required for the integration. For `AWS` integrations, 2 options are available. To specify an IAM Role for Amazon API Gateway to assume, use the role's ARN. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::\*:user/\*`.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<String> credentials;
 
     public Output<String> getCredentials() {
@@ -89,7 +89,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * when calling the associated resource.
      * 
      */
-    @InputImport(name="httpMethod", required=true)
+    @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
     public Output<String> getHttpMethod() {
@@ -104,7 +104,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * e.g., Lambda function [can only be invoked](https://github.com/awslabs/aws-apigateway-importer/issues/9#issuecomment-129651005) via `POST`.
      * 
      */
-    @InputImport(name="integrationHttpMethod")
+    @Import(name="integrationHttpMethod")
       private final @Nullable Output<String> integrationHttpMethod;
 
     public Output<String> getIntegrationHttpMethod() {
@@ -115,7 +115,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The integration passthrough behavior (`WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`).  **Required** if `request_templates` is used.
      * 
      */
-    @InputImport(name="passthroughBehavior")
+    @Import(name="passthroughBehavior")
       private final @Nullable Output<String> passthroughBehavior;
 
     public Output<String> getPassthroughBehavior() {
@@ -127,7 +127,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * For example: `request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }`
      * 
      */
-    @InputImport(name="requestParameters")
+    @Import(name="requestParameters")
       private final @Nullable Output<Map<String,String>> requestParameters;
 
     public Output<Map<String,String>> getRequestParameters() {
@@ -138,7 +138,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * A map of the integration's request templates.
      * 
      */
-    @InputImport(name="requestTemplates")
+    @Import(name="requestTemplates")
       private final @Nullable Output<Map<String,String>> requestTemplates;
 
     public Output<Map<String,String>> getRequestTemplates() {
@@ -149,7 +149,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The API resource ID.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -160,7 +160,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated REST API.
      * 
      */
-    @InputImport(name="restApi", required=true)
+    @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -171,7 +171,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.
      * 
      */
-    @InputImport(name="timeoutMilliseconds")
+    @Import(name="timeoutMilliseconds")
       private final @Nullable Output<Integer> timeoutMilliseconds;
 
     public Output<Integer> getTimeoutMilliseconds() {
@@ -182,7 +182,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block specifying the TLS configuration for an integration. Defined below.
      * 
      */
-    @InputImport(name="tlsConfig")
+    @Import(name="tlsConfig")
       private final @Nullable Output<IntegrationTlsConfigArgs> tlsConfig;
 
     public Output<IntegrationTlsConfigArgs> getTlsConfig() {
@@ -193,7 +193,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * The integration input's [type](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/). Valid values are `HTTP` (for HTTP backends), `MOCK` (not calling any real backend), `AWS` (for AWS services), `AWS_PROXY` (for Lambda proxy integration) and `HTTP_PROXY` (for HTTP proxy integration). An `HTTP` or `HTTP_PROXY` integration with a `connection_type` of `VPC_LINK` is referred to as a private integration and uses a VpcLink to connect API Gateway to a network load balancer of a VPC.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -206,7 +206,7 @@ public final class IntegrationArgs extends io.pulumi.resources.ResourceArgs {
      * e.g., `arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations`. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

@@ -4,11 +4,11 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementNotStatementStatementAndStatementStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementNotStatementStatementAndStatement {
     /**
      * The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
@@ -16,8 +16,8 @@ public final class WebAclRuleStatementNotStatementStatementAndStatement {
      */
     private final List<WebAclRuleStatementNotStatementStatementAndStatementStatement> statements;
 
-    @OutputCustomType.Constructor
-    private WebAclRuleStatementNotStatementStatementAndStatement(@OutputCustomType.Parameter("statements") List<WebAclRuleStatementNotStatementStatementAndStatementStatement> statements) {
+    @CustomType.Constructor
+    private WebAclRuleStatementNotStatementStatementAndStatement(@CustomType.Parameter("statements") List<WebAclRuleStatementNotStatementStatementAndStatementStatement> statements) {
         this.statements = statements;
     }
 

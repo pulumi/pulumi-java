@@ -4,13 +4,13 @@
 package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointDeploymentConfigBlueGreenUpdatePolicy {
     /**
      * Maximum execution timeout for the deployment. Note that the timeout value should be larger than the total waiting time specified in `termination_wait_in_seconds` and `wait_interval_in_seconds`. Valid values are between `600` and `14400`.
@@ -28,11 +28,11 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicy {
      */
     private final EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointDeploymentConfigBlueGreenUpdatePolicy(
-        @OutputCustomType.Parameter("maximumExecutionTimeoutInSeconds") @Nullable Integer maximumExecutionTimeoutInSeconds,
-        @OutputCustomType.Parameter("terminationWaitInSeconds") @Nullable Integer terminationWaitInSeconds,
-        @OutputCustomType.Parameter("trafficRoutingConfiguration") EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration) {
+        @CustomType.Parameter("maximumExecutionTimeoutInSeconds") @Nullable Integer maximumExecutionTimeoutInSeconds,
+        @CustomType.Parameter("terminationWaitInSeconds") @Nullable Integer terminationWaitInSeconds,
+        @CustomType.Parameter("trafficRoutingConfiguration") EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration) {
         this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
         this.terminationWaitInSeconds = terminationWaitInSeconds;
         this.trafficRoutingConfiguration = trafficRoutingConfiguration;

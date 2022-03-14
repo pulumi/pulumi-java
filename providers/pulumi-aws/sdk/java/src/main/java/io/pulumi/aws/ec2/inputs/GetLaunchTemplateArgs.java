@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetLaunchTemplateFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetLaunchTemplateArgs extends io.pulumi.resources.InvokeArgs 
      * Configuration block(s) for filtering. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetLaunchTemplateFilter> filters;
 
     public List<GetLaunchTemplateFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetLaunchTemplateArgs extends io.pulumi.resources.InvokeArgs 
      * The ID of the specific launch template to retrieve.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -43,7 +43,7 @@ public final class GetLaunchTemplateArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the filter field. Valid values can be found in the [EC2 DescribeLaunchTemplates API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLaunchTemplates.html).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -54,7 +54,7 @@ public final class GetLaunchTemplateArgs extends io.pulumi.resources.InvokeArgs 
      * A map of tags, each pair of which must exactly match a pair on the desired Launch Template.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

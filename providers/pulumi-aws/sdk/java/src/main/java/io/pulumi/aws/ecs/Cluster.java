@@ -10,7 +10,7 @@ import io.pulumi.aws.ecs.outputs.ClusterConfiguration;
 import io.pulumi.aws.ecs.outputs.ClusterDefaultCapacityProviderStrategy;
 import io.pulumi.aws.ecs.outputs.ClusterSetting;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * ARN that identifies the cluster.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
      * 
      */
-    @OutputExport(name="capacityProviders", type=List.class, parameters={String.class})
+    @Export(name="capacityProviders", type=List.class, parameters={String.class})
     private Output<List<String>> capacityProviders;
 
     /**
@@ -61,7 +61,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The execute command configuration for the cluster. Detailed below.
      * 
      */
-    @OutputExport(name="configuration", type=ClusterConfiguration.class, parameters={})
+    @Export(name="configuration", type=ClusterConfiguration.class, parameters={})
     private Output</* @Nullable */ ClusterConfiguration> configuration;
 
     /**
@@ -75,7 +75,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Configuration block for capacity provider strategy to use by default for the cluster. Can be one or more. Detailed below.
      * 
      */
-    @OutputExport(name="defaultCapacityProviderStrategies", type=List.class, parameters={ClusterDefaultCapacityProviderStrategy.class})
+    @Export(name="defaultCapacityProviderStrategies", type=List.class, parameters={ClusterDefaultCapacityProviderStrategy.class})
     private Output<List<ClusterDefaultCapacityProviderStrategy>> defaultCapacityProviderStrategies;
 
     /**
@@ -89,7 +89,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Name of the setting to manage. Valid values: `containerInsights`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -103,7 +103,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.
      * 
      */
-    @OutputExport(name="settings", type=List.class, parameters={ClusterSetting.class})
+    @Export(name="settings", type=List.class, parameters={ClusterSetting.class})
     private Output<List<ClusterSetting>> settings;
 
     /**
@@ -117,7 +117,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -127,7 +127,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

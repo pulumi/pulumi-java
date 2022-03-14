@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingAccessLogGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class VirtualNodeSpecLoggingGetArgs extends io.pulumi.resources.Res
      * The access log configuration for a virtual node.
      * 
      */
-    @InputImport(name="accessLog")
+    @Import(name="accessLog")
       private final @Nullable Output<VirtualNodeSpecLoggingAccessLogGetArgs> accessLog;
 
     public Output<VirtualNodeSpecLoggingAccessLogGetArgs> getAccessLog() {

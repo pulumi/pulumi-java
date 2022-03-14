@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.outputs;
 
 import io.pulumi.aws.fsx.outputs.OpenZfsFileSystemRootVolumeConfigurationNfsExports;
 import io.pulumi.aws.fsx.outputs.OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OpenZfsFileSystemRootVolumeConfiguration {
     /**
      * - A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
@@ -41,13 +41,13 @@ public final class OpenZfsFileSystemRootVolumeConfiguration {
      */
     private final @Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota> userAndGroupQuotas;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenZfsFileSystemRootVolumeConfiguration(
-        @OutputCustomType.Parameter("copyTagsToSnapshots") @Nullable Boolean copyTagsToSnapshots,
-        @OutputCustomType.Parameter("dataCompressionType") @Nullable String dataCompressionType,
-        @OutputCustomType.Parameter("nfsExports") @Nullable OpenZfsFileSystemRootVolumeConfigurationNfsExports nfsExports,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("userAndGroupQuotas") @Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota> userAndGroupQuotas) {
+        @CustomType.Parameter("copyTagsToSnapshots") @Nullable Boolean copyTagsToSnapshots,
+        @CustomType.Parameter("dataCompressionType") @Nullable String dataCompressionType,
+        @CustomType.Parameter("nfsExports") @Nullable OpenZfsFileSystemRootVolumeConfigurationNfsExports nfsExports,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("userAndGroupQuotas") @Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota> userAndGroupQuotas) {
         this.copyTagsToSnapshots = copyTagsToSnapshots;
         this.dataCompressionType = dataCompressionType;
         this.nfsExports = nfsExports;

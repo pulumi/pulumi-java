@@ -3,21 +3,21 @@
 
 package io.pulumi.aws.signer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSigningProfileRevocationRecord {
     private final String revocationEffectiveFrom;
     private final String revokedAt;
     private final String revokedBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSigningProfileRevocationRecord(
-        @OutputCustomType.Parameter("revocationEffectiveFrom") String revocationEffectiveFrom,
-        @OutputCustomType.Parameter("revokedAt") String revokedAt,
-        @OutputCustomType.Parameter("revokedBy") String revokedBy) {
+        @CustomType.Parameter("revocationEffectiveFrom") String revocationEffectiveFrom,
+        @CustomType.Parameter("revokedAt") String revokedAt,
+        @CustomType.Parameter("revokedBy") String revokedBy) {
         this.revocationEffectiveFrom = revocationEffectiveFrom;
         this.revokedAt = revokedAt;
         this.revokedBy = revokedBy;

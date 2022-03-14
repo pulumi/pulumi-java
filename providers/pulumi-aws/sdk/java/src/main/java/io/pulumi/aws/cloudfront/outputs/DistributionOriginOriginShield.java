@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOriginOriginShield {
     /**
      * A flag that specifies whether Origin Shield is enabled.
@@ -21,10 +21,10 @@ public final class DistributionOriginOriginShield {
      */
     private final String originShieldRegion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionOriginOriginShield(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("originShieldRegion") String originShieldRegion) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("originShieldRegion") String originShieldRegion) {
         this.enabled = enabled;
         this.originShieldRegion = originShieldRegion;
     }

@@ -9,7 +9,7 @@ import io.pulumi.aws.lb.inputs.ListenerRuleActionFixedResponseArgs;
 import io.pulumi.aws.lb.inputs.ListenerRuleActionForwardArgs;
 import io.pulumi.aws.lb.inputs.ListenerRuleActionRedirectArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * Information for creating an authenticate action using Cognito. Required if `type` is `authenticate-cognito`.
      * 
      */
-    @InputImport(name="authenticateCognito")
+    @Import(name="authenticateCognito")
       private final @Nullable Output<ListenerRuleActionAuthenticateCognitoArgs> authenticateCognito;
 
     public Output<ListenerRuleActionAuthenticateCognitoArgs> getAuthenticateCognito() {
@@ -35,7 +35,7 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * Information for creating an authenticate action using OIDC. Required if `type` is `authenticate-oidc`.
      * 
      */
-    @InputImport(name="authenticateOidc")
+    @Import(name="authenticateOidc")
       private final @Nullable Output<ListenerRuleActionAuthenticateOidcArgs> authenticateOidc;
 
     public Output<ListenerRuleActionAuthenticateOidcArgs> getAuthenticateOidc() {
@@ -46,7 +46,7 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
      * 
      */
-    @InputImport(name="fixedResponse")
+    @Import(name="fixedResponse")
       private final @Nullable Output<ListenerRuleActionFixedResponseArgs> fixedResponse;
 
     public Output<ListenerRuleActionFixedResponseArgs> getFixedResponse() {
@@ -57,14 +57,14 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * Information for creating an action that distributes requests among one or more target groups. Specify only if `type` is `forward`. If you specify both `forward` block and `target_group_arn` attribute, you can specify only one target group using `forward` and it must be the same target group specified in `target_group_arn`.
      * 
      */
-    @InputImport(name="forward")
+    @Import(name="forward")
       private final @Nullable Output<ListenerRuleActionForwardArgs> forward;
 
     public Output<ListenerRuleActionForwardArgs> getForward() {
         return this.forward == null ? Output.empty() : this.forward;
     }
 
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable Output<Integer> order;
 
     public Output<Integer> getOrder() {
@@ -75,7 +75,7 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * Information for creating a redirect action. Required if `type` is `redirect`.
      * 
      */
-    @InputImport(name="redirect")
+    @Import(name="redirect")
       private final @Nullable Output<ListenerRuleActionRedirectArgs> redirect;
 
     public Output<ListenerRuleActionRedirectArgs> getRedirect() {
@@ -86,7 +86,7 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * The ARN of the Target Group to which to route traffic. Specify only if `type` is `forward` and you want to route to a single target group. To route to one or more target groups, use a `forward` block instead.
      * 
      */
-    @InputImport(name="targetGroupArn")
+    @Import(name="targetGroupArn")
       private final @Nullable Output<String> targetGroupArn;
 
     public Output<String> getTargetGroupArn() {
@@ -97,7 +97,7 @@ public final class ListenerRuleActionArgs extends io.pulumi.resources.ResourceAr
      * The type of routing action. Valid values are `forward`, `redirect`, `fixed-response`, `authenticate-cognito` and `authenticate-oidc`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

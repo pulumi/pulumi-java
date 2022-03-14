@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.servicecatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchPathsSummaryConstraintSummary {
     /**
      * Description of the constraint.
@@ -20,10 +20,10 @@ public final class GetLaunchPathsSummaryConstraintSummary {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchPathsSummaryConstraintSummary(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.type = type;
     }

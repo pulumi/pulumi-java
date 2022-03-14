@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.gamelift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetRuntimeConfigurationServerProcess {
     /**
      * Number of server processes using this configuration to run concurrently on an instance.
@@ -28,11 +28,11 @@ public final class FleetRuntimeConfigurationServerProcess {
      */
     private final @Nullable String parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetRuntimeConfigurationServerProcess(
-        @OutputCustomType.Parameter("concurrentExecutions") Integer concurrentExecutions,
-        @OutputCustomType.Parameter("launchPath") String launchPath,
-        @OutputCustomType.Parameter("parameters") @Nullable String parameters) {
+        @CustomType.Parameter("concurrentExecutions") Integer concurrentExecutions,
+        @CustomType.Parameter("launchPath") String launchPath,
+        @CustomType.Parameter("parameters") @Nullable String parameters) {
         this.concurrentExecutions = concurrentExecutions;
         this.launchPath = launchPath;
         this.parameters = parameters;

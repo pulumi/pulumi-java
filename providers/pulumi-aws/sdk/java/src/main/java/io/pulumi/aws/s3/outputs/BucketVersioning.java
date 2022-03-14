@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketVersioning {
     /**
      * Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.
@@ -22,10 +22,10 @@ public final class BucketVersioning {
      */
     private final @Nullable Boolean mfaDelete;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketVersioning(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("mfaDelete") @Nullable Boolean mfaDelete) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("mfaDelete") @Nullable Boolean mfaDelete) {
         this.enabled = enabled;
         this.mfaDelete = mfaDelete;
     }

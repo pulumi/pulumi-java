@@ -4,11 +4,11 @@
 package io.pulumi.aws.glue.outputs;
 
 import io.pulumi.aws.glue.outputs.MLTransformParametersFindMatchesParameters;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MLTransformParameters {
     /**
      * The parameters for the find matches algorithm. see Find Matches Parameters.
@@ -21,10 +21,10 @@ public final class MLTransformParameters {
      */
     private final String transformType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MLTransformParameters(
-        @OutputCustomType.Parameter("findMatchesParameters") MLTransformParametersFindMatchesParameters findMatchesParameters,
-        @OutputCustomType.Parameter("transformType") String transformType) {
+        @CustomType.Parameter("findMatchesParameters") MLTransformParametersFindMatchesParameters findMatchesParameters,
+        @CustomType.Parameter("transformType") String transformType) {
         this.findMatchesParameters = findMatchesParameters;
         this.transformType = transformType;
     }

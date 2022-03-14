@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig {
     /**
      * The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.
@@ -20,10 +20,10 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
      */
     private final String domain;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig(
-        @OutputCustomType.Parameter("credentialsParameter") String credentialsParameter,
-        @OutputCustomType.Parameter("domain") String domain) {
+        @CustomType.Parameter("credentialsParameter") String credentialsParameter,
+        @CustomType.Parameter("domain") String domain) {
         this.credentialsParameter = credentialsParameter;
         this.domain = domain;
     }

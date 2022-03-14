@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.outputs;
 
 import io.pulumi.aws.ec2transitgateway.outputs.GetDirectConnectGatewayAttachmentFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDirectConnectGatewayAttachmentResult {
     private final @Nullable String dxGatewayId;
     private final @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters;
@@ -28,13 +28,13 @@ public final class GetDirectConnectGatewayAttachmentResult {
     private final Map<String,String> tags;
     private final @Nullable String transitGatewayId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDirectConnectGatewayAttachmentResult(
-        @OutputCustomType.Parameter("dxGatewayId") @Nullable String dxGatewayId,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId) {
+        @CustomType.Parameter("dxGatewayId") @Nullable String dxGatewayId,
+        @CustomType.Parameter("filters") @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId) {
         this.dxGatewayId = dxGatewayId;
         this.filters = filters;
         this.id = id;

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolEmailConfiguration {
     /**
      * Email configuration set name from SES.
@@ -37,13 +37,13 @@ public final class UserPoolEmailConfiguration {
      */
     private final @Nullable String sourceArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolEmailConfiguration(
-        @OutputCustomType.Parameter("configurationSet") @Nullable String configurationSet,
-        @OutputCustomType.Parameter("emailSendingAccount") @Nullable String emailSendingAccount,
-        @OutputCustomType.Parameter("fromEmailAddress") @Nullable String fromEmailAddress,
-        @OutputCustomType.Parameter("replyToEmailAddress") @Nullable String replyToEmailAddress,
-        @OutputCustomType.Parameter("sourceArn") @Nullable String sourceArn) {
+        @CustomType.Parameter("configurationSet") @Nullable String configurationSet,
+        @CustomType.Parameter("emailSendingAccount") @Nullable String emailSendingAccount,
+        @CustomType.Parameter("fromEmailAddress") @Nullable String fromEmailAddress,
+        @CustomType.Parameter("replyToEmailAddress") @Nullable String replyToEmailAddress,
+        @CustomType.Parameter("sourceArn") @Nullable String sourceArn) {
         this.configurationSet = configurationSet;
         this.emailSendingAccount = emailSendingAccount;
         this.fromEmailAddress = fromEmailAddress;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * (Required) Comparison operator to use to evaluate the condition. Can be `LESS_THAN`, `EQUAL_TO` or `GREATER_THAN`.
      * 
      */
-    @InputImport(name="comparisonOperator", required=true)
+    @Import(name="comparisonOperator", required=true)
       private final Output<String> comparisonOperator;
 
     public Output<String> getComparisonOperator() {
@@ -31,7 +31,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * (Required) What kind of budget value to notify on. Can be `ACTUAL` or `FORECASTED`
      * 
      */
-    @InputImport(name="notificationType", required=true)
+    @Import(name="notificationType", required=true)
       private final Output<String> notificationType;
 
     public Output<String> getNotificationType() {
@@ -42,7 +42,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * (Optional) E-Mail addresses to notify. Either this or `subscriber_sns_topic_arns` is required.
      * 
      */
-    @InputImport(name="subscriberEmailAddresses")
+    @Import(name="subscriberEmailAddresses")
       private final @Nullable Output<List<String>> subscriberEmailAddresses;
 
     public Output<List<String>> getSubscriberEmailAddresses() {
@@ -53,7 +53,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * (Optional) SNS topics to notify. Either this or `subscriber_email_addresses` is required.
      * 
      */
-    @InputImport(name="subscriberSnsTopicArns")
+    @Import(name="subscriberSnsTopicArns")
       private final @Nullable Output<List<String>> subscriberSnsTopicArns;
 
     public Output<List<String>> getSubscriberSnsTopicArns() {
@@ -64,7 +64,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * (Required) Threshold when the notification should be sent.
      * 
      */
-    @InputImport(name="threshold", required=true)
+    @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
     public Output<Double> getThreshold() {
@@ -75,7 +75,7 @@ public final class BudgetNotificationArgs extends io.pulumi.resources.ResourceAr
      * (Required) What kind of threshold is defined. Can be `PERCENTAGE` OR `ABSOLUTE_VALUE`.
      * 
      */
-    @InputImport(name="thresholdType", required=true)
+    @Import(name="thresholdType", required=true)
       private final Output<String> thresholdType;
 
     public Output<String> getThresholdType() {

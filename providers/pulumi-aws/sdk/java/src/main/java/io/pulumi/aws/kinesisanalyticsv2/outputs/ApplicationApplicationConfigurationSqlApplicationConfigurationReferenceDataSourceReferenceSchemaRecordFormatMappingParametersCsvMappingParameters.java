@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters {
     /**
      * The column delimiter. For example, in a CSV format, a comma (`,`) is the typical column delimiter.
@@ -20,10 +20,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String recordRowDelimiter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters(
-        @OutputCustomType.Parameter("recordColumnDelimiter") String recordColumnDelimiter,
-        @OutputCustomType.Parameter("recordRowDelimiter") String recordRowDelimiter) {
+        @CustomType.Parameter("recordColumnDelimiter") String recordColumnDelimiter,
+        @CustomType.Parameter("recordRowDelimiter") String recordRowDelimiter) {
         this.recordColumnDelimiter = recordColumnDelimiter;
         this.recordRowDelimiter = recordRowDelimiter;
     }

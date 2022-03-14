@@ -5,7 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.aws.lex.inputs.BotAliasConversationLogsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the bot alias.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * The name of the bot.
      * 
      */
-    @InputImport(name="botName")
+    @Import(name="botName")
       private final @Nullable Output<String> botName;
 
     public Output<String> getBotName() {
@@ -41,7 +41,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * The name of the bot.
      * 
      */
-    @InputImport(name="botVersion")
+    @Import(name="botVersion")
       private final @Nullable Output<String> botVersion;
 
     public Output<String> getBotVersion() {
@@ -52,7 +52,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * Checksum of the bot alias.
      * 
      */
-    @InputImport(name="checksum")
+    @Import(name="checksum")
       private final @Nullable Output<String> checksum;
 
     public Output<String> getChecksum() {
@@ -63,7 +63,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * The settings that determine how Amazon Lex uses conversation logs for the alias. Attributes are documented under conversation_logs.
      * 
      */
-    @InputImport(name="conversationLogs")
+    @Import(name="conversationLogs")
       private final @Nullable Output<BotAliasConversationLogsGetArgs> conversationLogs;
 
     public Output<BotAliasConversationLogsGetArgs> getConversationLogs() {
@@ -74,7 +74,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * The date that the bot alias was created.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -85,7 +85,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * A description of the alias. Must be less than or equal to 200 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -96,7 +96,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.
      * 
      */
-    @InputImport(name="lastUpdatedDate")
+    @Import(name="lastUpdatedDate")
       private final @Nullable Output<String> lastUpdatedDate;
 
     public Output<String> getLastUpdatedDate() {
@@ -107,7 +107,7 @@ public final class BotAliasState extends io.pulumi.resources.ResourceArgs {
      * The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

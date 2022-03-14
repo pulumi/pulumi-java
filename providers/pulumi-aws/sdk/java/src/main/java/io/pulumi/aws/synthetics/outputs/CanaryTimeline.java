@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.synthetics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanaryTimeline {
     /**
      * Date and time the canary was created.
@@ -32,12 +32,12 @@ public final class CanaryTimeline {
      */
     private final @Nullable String lastStopped;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CanaryTimeline(
-        @OutputCustomType.Parameter("created") @Nullable String created,
-        @OutputCustomType.Parameter("lastModified") @Nullable String lastModified,
-        @OutputCustomType.Parameter("lastStarted") @Nullable String lastStarted,
-        @OutputCustomType.Parameter("lastStopped") @Nullable String lastStopped) {
+        @CustomType.Parameter("created") @Nullable String created,
+        @CustomType.Parameter("lastModified") @Nullable String lastModified,
+        @CustomType.Parameter("lastStarted") @Nullable String lastStarted,
+        @CustomType.Parameter("lastStopped") @Nullable String lastStopped) {
         this.created = created;
         this.lastModified = lastModified;
         this.lastStarted = lastStarted;

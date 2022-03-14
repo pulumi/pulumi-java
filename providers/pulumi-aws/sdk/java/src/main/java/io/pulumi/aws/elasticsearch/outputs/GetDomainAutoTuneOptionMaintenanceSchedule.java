@@ -4,12 +4,12 @@
 package io.pulumi.aws.elasticsearch.outputs;
 
 import io.pulumi.aws.elasticsearch.outputs.GetDomainAutoTuneOptionMaintenanceScheduleDuration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainAutoTuneOptionMaintenanceSchedule {
     /**
      * A cron expression specifying the recurrence pattern for an Auto-Tune maintenance schedule.
@@ -27,11 +27,11 @@ public final class GetDomainAutoTuneOptionMaintenanceSchedule {
      */
     private final String startAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainAutoTuneOptionMaintenanceSchedule(
-        @OutputCustomType.Parameter("cronExpressionForRecurrence") String cronExpressionForRecurrence,
-        @OutputCustomType.Parameter("durations") List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations,
-        @OutputCustomType.Parameter("startAt") String startAt) {
+        @CustomType.Parameter("cronExpressionForRecurrence") String cronExpressionForRecurrence,
+        @CustomType.Parameter("durations") List<GetDomainAutoTuneOptionMaintenanceScheduleDuration> durations,
+        @CustomType.Parameter("startAt") String startAt) {
         this.cronExpressionForRecurrence = cronExpressionForRecurrence;
         this.durations = durations;
         this.startAt = startAt;

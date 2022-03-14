@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.storagegateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NfsFileShareNfsFileShareDefaults {
     /**
      * The Unix directory mode in the string form "nnnn". Defaults to `"0777"`.
@@ -32,12 +32,12 @@ public final class NfsFileShareNfsFileShareDefaults {
      */
     private final @Nullable String ownerId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NfsFileShareNfsFileShareDefaults(
-        @OutputCustomType.Parameter("directoryMode") @Nullable String directoryMode,
-        @OutputCustomType.Parameter("fileMode") @Nullable String fileMode,
-        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
-        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId) {
+        @CustomType.Parameter("directoryMode") @Nullable String directoryMode,
+        @CustomType.Parameter("fileMode") @Nullable String fileMode,
+        @CustomType.Parameter("groupId") @Nullable String groupId,
+        @CustomType.Parameter("ownerId") @Nullable String ownerId) {
         this.directoryMode = directoryMode;
         this.fileMode = fileMode;
         this.groupId = groupId;

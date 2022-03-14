@@ -9,7 +9,7 @@ import io.pulumi.aws.ecs.inputs.TaskSetNetworkConfigurationGetArgs;
 import io.pulumi.aws.ecs.inputs.TaskSetScaleGetArgs;
 import io.pulumi.aws.ecs.inputs.TaskSetServiceRegistriesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) that identifies the task set.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -37,7 +37,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The capacity provider strategy to use for the service. Can be one or more.  Defined below.
      * 
      */
-    @InputImport(name="capacityProviderStrategies")
+    @Import(name="capacityProviderStrategies")
       private final @Nullable Output<List<TaskSetCapacityProviderStrategyGetArgs>> capacityProviderStrategies;
 
     public Output<List<TaskSetCapacityProviderStrategyGetArgs>> getCapacityProviderStrategies() {
@@ -48,7 +48,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The short name or ARN of the cluster that hosts the service to create the task set in.
      * 
      */
-    @InputImport(name="cluster")
+    @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
     public Output<String> getCluster() {
@@ -59,14 +59,14 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The external ID associated with the task set.
      * 
      */
-    @InputImport(name="externalId")
+    @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
     public Output<String> getExternalId() {
         return this.externalId == null ? Output.empty() : this.externalId;
     }
 
-    @InputImport(name="forceDelete")
+    @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
     public Output<Boolean> getForceDelete() {
@@ -77,7 +77,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
      * 
      */
-    @InputImport(name="launchType")
+    @Import(name="launchType")
       private final @Nullable Output<String> launchType;
 
     public Output<String> getLaunchType() {
@@ -88,7 +88,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * Details on load balancers that are used with a task set. Detailed below.
      * 
      */
-    @InputImport(name="loadBalancers")
+    @Import(name="loadBalancers")
       private final @Nullable Output<List<TaskSetLoadBalancerGetArgs>> loadBalancers;
 
     public Output<List<TaskSetLoadBalancerGetArgs>> getLoadBalancers() {
@@ -99,7 +99,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
      * 
      */
-    @InputImport(name="networkConfiguration")
+    @Import(name="networkConfiguration")
       private final @Nullable Output<TaskSetNetworkConfigurationGetArgs> networkConfiguration;
 
     public Output<TaskSetNetworkConfigurationGetArgs> getNetworkConfiguration() {
@@ -110,7 +110,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
      * 
      */
-    @InputImport(name="platformVersion")
+    @Import(name="platformVersion")
       private final @Nullable Output<String> platformVersion;
 
     public Output<String> getPlatformVersion() {
@@ -121,7 +121,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * A floating-point percentage of the desired number of tasks to place and keep running in the task set. Detailed below.
      * 
      */
-    @InputImport(name="scale")
+    @Import(name="scale")
       private final @Nullable Output<TaskSetScaleGetArgs> scale;
 
     public Output<TaskSetScaleGetArgs> getScale() {
@@ -132,7 +132,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The short name or ARN of the ECS service.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
@@ -143,7 +143,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
      * 
      */
-    @InputImport(name="serviceRegistries")
+    @Import(name="serviceRegistries")
       private final @Nullable Output<TaskSetServiceRegistriesGetArgs> serviceRegistries;
 
     public Output<TaskSetServiceRegistriesGetArgs> getServiceRegistries() {
@@ -154,7 +154,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The stability status. This indicates whether the task set has reached a steady state.
      * 
      */
-    @InputImport(name="stabilityStatus")
+    @Import(name="stabilityStatus")
       private final @Nullable Output<String> stabilityStatus;
 
     public Output<String> getStabilityStatus() {
@@ -165,7 +165,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The status of the task set.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -176,7 +176,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level. If you have set `copy_tags_to_backups` to true, and you specify one or more tags, no existing file system tags are copied from the file system to the backup.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -187,7 +187,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -198,7 +198,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The family and revision (`family:revision`) or full ARN of the task definition that you want to run in your service.
      * 
      */
-    @InputImport(name="taskDefinition")
+    @Import(name="taskDefinition")
       private final @Nullable Output<String> taskDefinition;
 
     public Output<String> getTaskDefinition() {
@@ -209,14 +209,14 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * The ID of the task set.
      * 
      */
-    @InputImport(name="taskSetId")
+    @Import(name="taskSetId")
       private final @Nullable Output<String> taskSetId;
 
     public Output<String> getTaskSetId() {
         return this.taskSetId == null ? Output.empty() : this.taskSetId;
     }
 
-    @InputImport(name="waitUntilStable")
+    @Import(name="waitUntilStable")
       private final @Nullable Output<Boolean> waitUntilStable;
 
     public Output<Boolean> getWaitUntilStable() {
@@ -227,7 +227,7 @@ public final class TaskSetState extends io.pulumi.resources.ResourceArgs {
      * Wait timeout for task set to reach `STEADY_STATE`. Valid time units include `ns`, `us` (or `µs`), `ms`, `s`, `m`, and `h`. Default `10m`.
      * 
      */
-    @InputImport(name="waitUntilStableTimeout")
+    @Import(name="waitUntilStableTimeout")
       private final @Nullable Output<String> waitUntilStableTimeout;
 
     public Output<String> getWaitUntilStableTimeout() {

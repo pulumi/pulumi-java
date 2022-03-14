@@ -5,7 +5,7 @@ package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.aws.synthetics.inputs.CanaryArtifactConfigS3EncryptionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class CanaryArtifactConfigGetArgs extends io.pulumi.resources.Resou
      * Configuration of the encryption-at-rest settings for artifacts that the canary uploads to Amazon S3. See S3 Encryption.
      * 
      */
-    @InputImport(name="s3Encryption")
+    @Import(name="s3Encryption")
       private final @Nullable Output<CanaryArtifactConfigS3EncryptionGetArgs> s3Encryption;
 
     public Output<CanaryArtifactConfigS3EncryptionGetArgs> getS3Encryption() {

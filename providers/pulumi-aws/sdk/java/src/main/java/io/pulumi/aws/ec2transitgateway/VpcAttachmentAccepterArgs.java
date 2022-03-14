@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * Key-value tags for the EC2 Transit Gateway VPC Attachment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -31,7 +31,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * The ID of the EC2 Transit Gateway Attachment to manage.
      * 
      */
-    @InputImport(name="transitGatewayAttachmentId", required=true)
+    @Import(name="transitGatewayAttachmentId", required=true)
       private final Output<String> transitGatewayAttachmentId;
 
     public Output<String> getTransitGatewayAttachmentId() {
@@ -42,7 +42,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * Boolean whether the VPC Attachment should be associated with the EC2 Transit Gateway association default route table. Default value: `true`.
      * 
      */
-    @InputImport(name="transitGatewayDefaultRouteTableAssociation")
+    @Import(name="transitGatewayDefaultRouteTableAssociation")
       private final @Nullable Output<Boolean> transitGatewayDefaultRouteTableAssociation;
 
     public Output<Boolean> getTransitGatewayDefaultRouteTableAssociation() {
@@ -53,7 +53,7 @@ public final class VpcAttachmentAccepterArgs extends io.pulumi.resources.Resourc
      * Boolean whether the VPC Attachment should propagate routes with the EC2 Transit Gateway propagation default route table. Default value: `true`.
      * 
      */
-    @InputImport(name="transitGatewayDefaultRouteTablePropagation")
+    @Import(name="transitGatewayDefaultRouteTablePropagation")
       private final @Nullable Output<Boolean> transitGatewayDefaultRouteTablePropagation;
 
     public Output<Boolean> getTransitGatewayDefaultRouteTablePropagation() {

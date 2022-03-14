@@ -10,7 +10,7 @@ import io.pulumi.aws.dynamodb.outputs.GetTablePointInTimeRecovery;
 import io.pulumi.aws.dynamodb.outputs.GetTableReplica;
 import io.pulumi.aws.dynamodb.outputs.GetTableServerSideEncryption;
 import io.pulumi.aws.dynamodb.outputs.GetTableTtl;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTableResult {
     private final String arn;
     private final List<GetTableAttribute> attributes;
@@ -46,29 +46,29 @@ public final class GetTableResult {
     private final GetTableTtl ttl;
     private final Integer writeCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTableResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("attributes") List<GetTableAttribute> attributes,
-        @OutputCustomType.Parameter("billingMode") String billingMode,
-        @OutputCustomType.Parameter("globalSecondaryIndexes") List<GetTableGlobalSecondaryIndex> globalSecondaryIndexes,
-        @OutputCustomType.Parameter("hashKey") String hashKey,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("localSecondaryIndexes") List<GetTableLocalSecondaryIndex> localSecondaryIndexes,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pointInTimeRecovery") GetTablePointInTimeRecovery pointInTimeRecovery,
-        @OutputCustomType.Parameter("rangeKey") String rangeKey,
-        @OutputCustomType.Parameter("readCapacity") Integer readCapacity,
-        @OutputCustomType.Parameter("replicas") List<GetTableReplica> replicas,
-        @OutputCustomType.Parameter("serverSideEncryption") GetTableServerSideEncryption serverSideEncryption,
-        @OutputCustomType.Parameter("streamArn") String streamArn,
-        @OutputCustomType.Parameter("streamEnabled") Boolean streamEnabled,
-        @OutputCustomType.Parameter("streamLabel") String streamLabel,
-        @OutputCustomType.Parameter("streamViewType") String streamViewType,
-        @OutputCustomType.Parameter("tableClass") String tableClass,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("ttl") GetTableTtl ttl,
-        @OutputCustomType.Parameter("writeCapacity") Integer writeCapacity) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("attributes") List<GetTableAttribute> attributes,
+        @CustomType.Parameter("billingMode") String billingMode,
+        @CustomType.Parameter("globalSecondaryIndexes") List<GetTableGlobalSecondaryIndex> globalSecondaryIndexes,
+        @CustomType.Parameter("hashKey") String hashKey,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("localSecondaryIndexes") List<GetTableLocalSecondaryIndex> localSecondaryIndexes,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pointInTimeRecovery") GetTablePointInTimeRecovery pointInTimeRecovery,
+        @CustomType.Parameter("rangeKey") String rangeKey,
+        @CustomType.Parameter("readCapacity") Integer readCapacity,
+        @CustomType.Parameter("replicas") List<GetTableReplica> replicas,
+        @CustomType.Parameter("serverSideEncryption") GetTableServerSideEncryption serverSideEncryption,
+        @CustomType.Parameter("streamArn") String streamArn,
+        @CustomType.Parameter("streamEnabled") Boolean streamEnabled,
+        @CustomType.Parameter("streamLabel") String streamLabel,
+        @CustomType.Parameter("streamViewType") String streamViewType,
+        @CustomType.Parameter("tableClass") String tableClass,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("ttl") GetTableTtl ttl,
+        @CustomType.Parameter("writeCapacity") Integer writeCapacity) {
         this.arn = arn;
         this.attributes = attributes;
         this.billingMode = billingMode;

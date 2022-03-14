@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScriptDagNodeArg {
     /**
      * The name of the argument or property.
@@ -28,11 +28,11 @@ public final class GetScriptDagNodeArg {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScriptDagNodeArg(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("param") @Nullable Boolean param,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("param") @Nullable Boolean param,
+        @CustomType.Parameter("value") String value) {
         this.name = name;
         this.param = param;
         this.value = value;

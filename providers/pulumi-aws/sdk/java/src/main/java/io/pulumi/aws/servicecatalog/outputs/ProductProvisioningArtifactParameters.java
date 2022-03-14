@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.servicecatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProductProvisioningArtifactParameters {
     /**
      * Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
@@ -43,14 +43,14 @@ public final class ProductProvisioningArtifactParameters {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProductProvisioningArtifactParameters(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("disableTemplateValidation") @Nullable Boolean disableTemplateValidation,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("templatePhysicalId") @Nullable String templatePhysicalId,
-        @OutputCustomType.Parameter("templateUrl") @Nullable String templateUrl,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("disableTemplateValidation") @Nullable Boolean disableTemplateValidation,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("templatePhysicalId") @Nullable String templatePhysicalId,
+        @CustomType.Parameter("templateUrl") @Nullable String templateUrl,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.description = description;
         this.disableTemplateValidation = disableTemplateValidation;
         this.name = name;

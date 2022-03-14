@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDelegatedServicesArgs extends io.pulumi.resources.InvokeAr
      * The account ID number of a delegated administrator account in the organization.
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final String accountId;
 
     public String getAccountId() {

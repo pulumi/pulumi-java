@@ -4,14 +4,14 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttp2RouteRetryPolicyPerRetryTimeout;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecHttp2RouteRetryPolicy {
     /**
      * List of HTTP retry events.
@@ -36,12 +36,12 @@ public final class RouteSpecHttp2RouteRetryPolicy {
      */
     private final @Nullable List<String> tcpRetryEvents;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpecHttp2RouteRetryPolicy(
-        @OutputCustomType.Parameter("httpRetryEvents") @Nullable List<String> httpRetryEvents,
-        @OutputCustomType.Parameter("maxRetries") Integer maxRetries,
-        @OutputCustomType.Parameter("perRetryTimeout") RouteSpecHttp2RouteRetryPolicyPerRetryTimeout perRetryTimeout,
-        @OutputCustomType.Parameter("tcpRetryEvents") @Nullable List<String> tcpRetryEvents) {
+        @CustomType.Parameter("httpRetryEvents") @Nullable List<String> httpRetryEvents,
+        @CustomType.Parameter("maxRetries") Integer maxRetries,
+        @CustomType.Parameter("perRetryTimeout") RouteSpecHttp2RouteRetryPolicyPerRetryTimeout perRetryTimeout,
+        @CustomType.Parameter("tcpRetryEvents") @Nullable List<String> tcpRetryEvents) {
         this.httpRetryEvents = httpRetryEvents;
         this.maxRetries = maxRetries;
         this.perRetryTimeout = perRetryTimeout;

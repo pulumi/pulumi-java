@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.outputs;
 
 import io.pulumi.aws.codebuild.outputs.ProjectBuildBatchConfigRestrictions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectBuildBatchConfig {
     /**
      * Specifies if the build artifacts for the batch build should be combined into a single artifact location.
@@ -35,12 +35,12 @@ public final class ProjectBuildBatchConfig {
      */
     private final @Nullable Integer timeoutInMins;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectBuildBatchConfig(
-        @OutputCustomType.Parameter("combineArtifacts") @Nullable Boolean combineArtifacts,
-        @OutputCustomType.Parameter("restrictions") @Nullable ProjectBuildBatchConfigRestrictions restrictions,
-        @OutputCustomType.Parameter("serviceRole") String serviceRole,
-        @OutputCustomType.Parameter("timeoutInMins") @Nullable Integer timeoutInMins) {
+        @CustomType.Parameter("combineArtifacts") @Nullable Boolean combineArtifacts,
+        @CustomType.Parameter("restrictions") @Nullable ProjectBuildBatchConfigRestrictions restrictions,
+        @CustomType.Parameter("serviceRole") String serviceRole,
+        @CustomType.Parameter("timeoutInMins") @Nullable Integer timeoutInMins) {
         this.combineArtifacts = combineArtifacts;
         this.restrictions = restrictions;
         this.serviceRole = serviceRole;

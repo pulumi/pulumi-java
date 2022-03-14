@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
      * IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
      * 
      */
-    @InputImport(name="destinationCidrBlock", required=true)
+    @Import(name="destinationCidrBlock", required=true)
       private final Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
@@ -28,7 +28,7 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
      * Identifier of EC2 Local Gateway Route Table.
      * 
      */
-    @InputImport(name="localGatewayRouteTableId", required=true)
+    @Import(name="localGatewayRouteTableId", required=true)
       private final Output<String> localGatewayRouteTableId;
 
     public Output<String> getLocalGatewayRouteTableId() {
@@ -39,7 +39,7 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
      * Identifier of EC2 Local Gateway Virtual Interface Group.
      * 
      */
-    @InputImport(name="localGatewayVirtualInterfaceGroupId", required=true)
+    @Import(name="localGatewayVirtualInterfaceGroupId", required=true)
       private final Output<String> localGatewayVirtualInterfaceGroupId;
 
     public Output<String> getLocalGatewayVirtualInterfaceGroupId() {

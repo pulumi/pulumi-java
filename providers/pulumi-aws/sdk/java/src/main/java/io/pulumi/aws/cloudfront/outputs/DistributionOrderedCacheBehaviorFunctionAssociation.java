@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOrderedCacheBehaviorFunctionAssociation {
     /**
      * The specific event to trigger this function.
@@ -21,10 +21,10 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociation {
      */
     private final String functionArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionOrderedCacheBehaviorFunctionAssociation(
-        @OutputCustomType.Parameter("eventType") String eventType,
-        @OutputCustomType.Parameter("functionArn") String functionArn) {
+        @CustomType.Parameter("eventType") String eventType,
+        @CustomType.Parameter("functionArn") String functionArn) {
         this.eventType = eventType;
         this.functionArn = functionArn;
     }

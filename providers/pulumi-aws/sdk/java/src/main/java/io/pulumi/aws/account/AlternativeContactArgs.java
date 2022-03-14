@@ -4,7 +4,7 @@
 package io.pulumi.aws.account;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * The ID of the target account when managing member accounts. Will manage current user's account by default if omitted.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -29,7 +29,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * The type of the alternate contact. Allowed values are: `BILLING`, `OPERATIONS`, `SECURITY`.
      * 
      */
-    @InputImport(name="alternateContactType", required=true)
+    @Import(name="alternateContactType", required=true)
       private final Output<String> alternateContactType;
 
     public Output<String> getAlternateContactType() {
@@ -40,7 +40,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * An email address for the alternate contact.
      * 
      */
-    @InputImport(name="emailAddress", required=true)
+    @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
 
     public Output<String> getEmailAddress() {
@@ -51,7 +51,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * The name of the alternate contact.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -62,7 +62,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * A phone number for the alternate contact.
      * 
      */
-    @InputImport(name="phoneNumber", required=true)
+    @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;
 
     public Output<String> getPhoneNumber() {
@@ -73,7 +73,7 @@ public final class AlternativeContactArgs extends io.pulumi.resources.ResourceAr
      * A title for the alternate contact.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

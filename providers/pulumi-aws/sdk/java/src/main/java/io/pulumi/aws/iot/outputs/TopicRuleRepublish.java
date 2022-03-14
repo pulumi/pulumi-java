@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleRepublish {
     /**
      * The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
@@ -28,11 +28,11 @@ public final class TopicRuleRepublish {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleRepublish(
-        @OutputCustomType.Parameter("qos") @Nullable Integer qos,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("qos") @Nullable Integer qos,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("topic") String topic) {
         this.qos = qos;
         this.roleArn = roleArn;
         this.topic = topic;

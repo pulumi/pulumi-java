@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetSubnetIdsFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetSubnetIdsArgs extends io.pulumi.resources.InvokeArgs {
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetSubnetIdsFilter> filters;
 
     public List<GetSubnetIdsFilter> getFilters() {
@@ -33,7 +33,7 @@ public final class GetSubnetIdsArgs extends io.pulumi.resources.InvokeArgs {
      * a pair on the desired subnets.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -44,7 +44,7 @@ public final class GetSubnetIdsArgs extends io.pulumi.resources.InvokeArgs {
      * The VPC ID that you want to filter from.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final String vpcId;
 
     public String getVpcId() {

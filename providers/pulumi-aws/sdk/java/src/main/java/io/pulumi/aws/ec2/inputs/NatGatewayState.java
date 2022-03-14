@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
      * 
      */
-    @InputImport(name="allocationId")
+    @Import(name="allocationId")
       private final @Nullable Output<String> allocationId;
 
     public Output<String> getAllocationId() {
@@ -30,7 +30,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
      * 
      */
-    @InputImport(name="connectivityType")
+    @Import(name="connectivityType")
       private final @Nullable Output<String> connectivityType;
 
     public Output<String> getConnectivityType() {
@@ -41,7 +41,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * The ENI ID of the network interface created by the NAT gateway.
      * 
      */
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -52,7 +52,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * The private IP address of the NAT Gateway.
      * 
      */
-    @InputImport(name="privateIp")
+    @Import(name="privateIp")
       private final @Nullable Output<String> privateIp;
 
     public Output<String> getPrivateIp() {
@@ -63,7 +63,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * The public IP address of the NAT Gateway.
      * 
      */
-    @InputImport(name="publicIp")
+    @Import(name="publicIp")
       private final @Nullable Output<String> publicIp;
 
     public Output<String> getPublicIp() {
@@ -74,7 +74,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * The Subnet ID of the subnet in which to place the gateway.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -85,7 +85,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -96,7 +96,7 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNodeGroupRemoteAccess {
     /**
      * EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group.
@@ -21,10 +21,10 @@ public final class GetNodeGroupRemoteAccess {
      */
     private final List<String> sourceSecurityGroupIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNodeGroupRemoteAccess(
-        @OutputCustomType.Parameter("ec2SshKey") String ec2SshKey,
-        @OutputCustomType.Parameter("sourceSecurityGroupIds") List<String> sourceSecurityGroupIds) {
+        @CustomType.Parameter("ec2SshKey") String ec2SshKey,
+        @CustomType.Parameter("sourceSecurityGroupIds") List<String> sourceSecurityGroupIds) {
         this.ec2SshKey = ec2SshKey;
         this.sourceSecurityGroupIds = sourceSecurityGroupIds;
     }

@@ -4,14 +4,14 @@
 package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration {
     /**
      * The ARN of the S3 bucket
@@ -61,17 +61,17 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurat
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration(
-        @OutputCustomType.Parameter("bucketArn") String bucketArn,
-        @OutputCustomType.Parameter("bufferInterval") @Nullable Integer bufferInterval,
-        @OutputCustomType.Parameter("bufferSize") @Nullable Integer bufferSize,
-        @OutputCustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
-        @OutputCustomType.Parameter("compressionFormat") @Nullable String compressionFormat,
-        @OutputCustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("bucketArn") String bucketArn,
+        @CustomType.Parameter("bufferInterval") @Nullable Integer bufferInterval,
+        @CustomType.Parameter("bufferSize") @Nullable Integer bufferSize,
+        @CustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
+        @CustomType.Parameter("compressionFormat") @Nullable String compressionFormat,
+        @CustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.bucketArn = bucketArn;
         this.bufferInterval = bufferInterval;
         this.bufferSize = bufferSize;

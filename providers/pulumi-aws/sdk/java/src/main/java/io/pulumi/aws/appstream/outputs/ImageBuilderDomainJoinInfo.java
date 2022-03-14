@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appstream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageBuilderDomainJoinInfo {
     /**
      * Fully qualified name of the directory (for example, corp.example.com).
@@ -22,10 +22,10 @@ public final class ImageBuilderDomainJoinInfo {
      */
     private final @Nullable String organizationalUnitDistinguishedName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageBuilderDomainJoinInfo(
-        @OutputCustomType.Parameter("directoryName") @Nullable String directoryName,
-        @OutputCustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName) {
+        @CustomType.Parameter("directoryName") @Nullable String directoryName,
+        @CustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName) {
         this.directoryName = directoryName;
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
     }

@@ -14,7 +14,7 @@ import io.pulumi.aws.dynamodb.outputs.TableReplica;
 import io.pulumi.aws.dynamodb.outputs.TableServerSideEncryption;
 import io.pulumi.aws.dynamodb.outputs.TableTtl;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -45,7 +45,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The arn of the table
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -59,7 +59,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
      * 
      */
-    @OutputExport(name="attributes", type=List.class, parameters={TableAttribute.class})
+    @Export(name="attributes", type=List.class, parameters={TableAttribute.class})
     private Output<List<TableAttribute>> attributes;
 
     /**
@@ -73,7 +73,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
      * 
      */
-    @OutputExport(name="billingMode", type=String.class, parameters={})
+    @Export(name="billingMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingMode;
 
     /**
@@ -89,7 +89,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * attributes, etc.
      * 
      */
-    @OutputExport(name="globalSecondaryIndexes", type=List.class, parameters={TableGlobalSecondaryIndex.class})
+    @Export(name="globalSecondaryIndexes", type=List.class, parameters={TableGlobalSecondaryIndex.class})
     private Output</* @Nullable */ List<TableGlobalSecondaryIndex>> globalSecondaryIndexes;
 
     /**
@@ -106,7 +106,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * defined as an attribute in the resource.
      * 
      */
-    @OutputExport(name="hashKey", type=String.class, parameters={})
+    @Export(name="hashKey", type=String.class, parameters={})
     private Output<String> hashKey;
 
     /**
@@ -123,7 +123,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * definition after you have created the resource.
      * 
      */
-    @OutputExport(name="localSecondaryIndexes", type=List.class, parameters={TableLocalSecondaryIndex.class})
+    @Export(name="localSecondaryIndexes", type=List.class, parameters={TableLocalSecondaryIndex.class})
     private Output</* @Nullable */ List<TableLocalSecondaryIndex>> localSecondaryIndexes;
 
     /**
@@ -139,7 +139,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The name of the index
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -153,7 +153,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Enable point-in-time recovery options.
      * 
      */
-    @OutputExport(name="pointInTimeRecovery", type=TablePointInTimeRecovery.class, parameters={})
+    @Export(name="pointInTimeRecovery", type=TablePointInTimeRecovery.class, parameters={})
     private Output<TablePointInTimeRecovery> pointInTimeRecovery;
 
     /**
@@ -167,7 +167,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The name of the range key; must be defined
      * 
      */
-    @OutputExport(name="rangeKey", type=String.class, parameters={})
+    @Export(name="rangeKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> rangeKey;
 
     /**
@@ -181,7 +181,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
      */
-    @OutputExport(name="readCapacity", type=Integer.class, parameters={})
+    @Export(name="readCapacity", type=Integer.class, parameters={})
     private Output<Integer> readCapacity;
 
     /**
@@ -195,7 +195,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
      * 
      */
-    @OutputExport(name="replicas", type=List.class, parameters={TableReplica.class})
+    @Export(name="replicas", type=List.class, parameters={TableReplica.class})
     private Output</* @Nullable */ List<TableReplica>> replicas;
 
     /**
@@ -209,7 +209,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The time of the point-in-time recovery point to restore.
      * 
      */
-    @OutputExport(name="restoreDateTime", type=String.class, parameters={})
+    @Export(name="restoreDateTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> restoreDateTime;
 
     /**
@@ -223,7 +223,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The name of the table to restore. Must match the name of an existing table.
      * 
      */
-    @OutputExport(name="restoreSourceName", type=String.class, parameters={})
+    @Export(name="restoreSourceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> restoreSourceName;
 
     /**
@@ -237,7 +237,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * If set, restores table to the most recent point-in-time recovery point.
      * 
      */
-    @OutputExport(name="restoreToLatestTime", type=Boolean.class, parameters={})
+    @Export(name="restoreToLatestTime", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> restoreToLatestTime;
 
     /**
@@ -251,7 +251,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
      * 
      */
-    @OutputExport(name="serverSideEncryption", type=TableServerSideEncryption.class, parameters={})
+    @Export(name="serverSideEncryption", type=TableServerSideEncryption.class, parameters={})
     private Output<TableServerSideEncryption> serverSideEncryption;
 
     /**
@@ -265,7 +265,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The ARN of the Table Stream. Only available when `stream_enabled = true`
      * 
      */
-    @OutputExport(name="streamArn", type=String.class, parameters={})
+    @Export(name="streamArn", type=String.class, parameters={})
     private Output<String> streamArn;
 
     /**
@@ -279,7 +279,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Indicates whether Streams are to be enabled (true) or disabled (false).
      * 
      */
-    @OutputExport(name="streamEnabled", type=Boolean.class, parameters={})
+    @Export(name="streamEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> streamEnabled;
 
     /**
@@ -296,7 +296,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * It can be used for creating CloudWatch Alarms. Only available when `stream_enabled = true`
      * 
      */
-    @OutputExport(name="streamLabel", type=String.class, parameters={})
+    @Export(name="streamLabel", type=String.class, parameters={})
     private Output<String> streamLabel;
 
     /**
@@ -313,7 +313,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
      * 
      */
-    @OutputExport(name="streamViewType", type=String.class, parameters={})
+    @Export(name="streamViewType", type=String.class, parameters={})
     private Output<String> streamViewType;
 
     /**
@@ -327,7 +327,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The storage class of the table. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`.
      * 
      */
-    @OutputExport(name="tableClass", type=String.class, parameters={})
+    @Export(name="tableClass", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableClass;
 
     /**
@@ -341,7 +341,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * A map of tags to populate on the created table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -355,7 +355,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -369,7 +369,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Defines ttl, has two properties, and can only be specified once:
      * 
      */
-    @OutputExport(name="ttl", type=TableTtl.class, parameters={})
+    @Export(name="ttl", type=TableTtl.class, parameters={})
     private Output<TableTtl> ttl;
 
     /**
@@ -383,7 +383,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
      */
-    @OutputExport(name="writeCapacity", type=Integer.class, parameters={})
+    @Export(name="writeCapacity", type=Integer.class, parameters={})
     private Output<Integer> writeCapacity;
 
     /**

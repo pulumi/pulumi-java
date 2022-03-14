@@ -9,7 +9,7 @@ import io.pulumi.aws.lakeformation.inputs.DataLakeSettingsState;
 import io.pulumi.aws.lakeformation.outputs.DataLakeSettingsCreateDatabaseDefaultPermission;
 import io.pulumi.aws.lakeformation.outputs.DataLakeSettingsCreateTableDefaultPermission;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
      * Set of ARNs of AWS Lake Formation principals (IAM users or roles).
      * 
      */
-    @OutputExport(name="admins", type=List.class, parameters={String.class})
+    @Export(name="admins", type=List.class, parameters={String.class})
     private Output<List<String>> admins;
 
     /**
@@ -43,7 +43,7 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
      * Identifier for the Data Catalog. By default, the account ID.
      * 
      */
-    @OutputExport(name="catalogId", type=String.class, parameters={})
+    @Export(name="catalogId", type=String.class, parameters={})
     private Output</* @Nullable */ String> catalogId;
 
     /**
@@ -57,7 +57,7 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
      * Up to three configuration blocks of principal permissions for default create database permissions. Detailed below.
      * 
      */
-    @OutputExport(name="createDatabaseDefaultPermissions", type=List.class, parameters={DataLakeSettingsCreateDatabaseDefaultPermission.class})
+    @Export(name="createDatabaseDefaultPermissions", type=List.class, parameters={DataLakeSettingsCreateDatabaseDefaultPermission.class})
     private Output<List<DataLakeSettingsCreateDatabaseDefaultPermission>> createDatabaseDefaultPermissions;
 
     /**
@@ -71,7 +71,7 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
      * Up to three configuration blocks of principal permissions for default create table permissions. Detailed below.
      * 
      */
-    @OutputExport(name="createTableDefaultPermissions", type=List.class, parameters={DataLakeSettingsCreateTableDefaultPermission.class})
+    @Export(name="createTableDefaultPermissions", type=List.class, parameters={DataLakeSettingsCreateTableDefaultPermission.class})
     private Output<List<DataLakeSettingsCreateTableDefaultPermission>> createTableDefaultPermissions;
 
     /**
@@ -85,7 +85,7 @@ public class DataLakeSettings extends io.pulumi.resources.CustomResource {
      * List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).
      * 
      */
-    @OutputExport(name="trustedResourceOwners", type=List.class, parameters={String.class})
+    @Export(name="trustedResourceOwners", type=List.class, parameters={String.class})
     private Output<List<String>> trustedResourceOwners;
 
     /**

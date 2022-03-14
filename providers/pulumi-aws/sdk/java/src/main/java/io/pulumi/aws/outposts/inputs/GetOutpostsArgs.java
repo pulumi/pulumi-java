@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.outposts.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
      * Availability Zone name.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
@@ -29,7 +29,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
      * Availability Zone identifier.
      * 
      */
-    @InputImport(name="availabilityZoneId")
+    @Import(name="availabilityZoneId")
       private final @Nullable String availabilityZoneId;
 
     public Optional<String> getAvailabilityZoneId() {
@@ -40,7 +40,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
      * AWS Account identifier of the Outpost owner.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable String ownerId;
 
     public Optional<String> getOwnerId() {
@@ -51,7 +51,7 @@ public final class GetOutpostsArgs extends io.pulumi.resources.InvokeArgs {
      * Site identifier.
      * 
      */
-    @InputImport(name="siteId")
+    @Import(name="siteId")
       private final @Nullable String siteId;
 
     public Optional<String> getSiteId() {

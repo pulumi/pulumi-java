@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class GetDomainEbsOption extends io.pulumi.resources.InvokeArgs {
      * Whether EBS volumes are attached to data nodes in the domain.
      * 
      */
-    @InputImport(name="ebsEnabled", required=true)
+    @Import(name="ebsEnabled", required=true)
       private final Boolean ebsEnabled;
 
     public Boolean getEbsEnabled() {
@@ -29,7 +29,7 @@ public final class GetDomainEbsOption extends io.pulumi.resources.InvokeArgs {
      * The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
      * 
      */
-    @InputImport(name="iops", required=true)
+    @Import(name="iops", required=true)
       private final Integer iops;
 
     public Integer getIops() {
@@ -40,7 +40,7 @@ public final class GetDomainEbsOption extends io.pulumi.resources.InvokeArgs {
      * The size of EBS volumes attached to data nodes (in GB).
      * 
      */
-    @InputImport(name="volumeSize", required=true)
+    @Import(name="volumeSize", required=true)
       private final Integer volumeSize;
 
     public Integer getVolumeSize() {
@@ -51,7 +51,7 @@ public final class GetDomainEbsOption extends io.pulumi.resources.InvokeArgs {
      * The type of EBS volumes attached to data nodes.
      * 
      */
-    @InputImport(name="volumeType", required=true)
+    @Import(name="volumeType", required=true)
       private final String volumeType;
 
     public String getVolumeType() {

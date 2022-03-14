@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lambda.ProvisionedConcurrencyConfigArgs;
 import io.pulumi.aws.lambda.inputs.ProvisionedConcurrencyConfigState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomReso
      * Name or Amazon Resource Name (ARN) of the Lambda Function.
      * 
      */
-    @OutputExport(name="functionName", type=String.class, parameters={})
+    @Export(name="functionName", type=String.class, parameters={})
     private Output<String> functionName;
 
     /**
@@ -47,7 +47,7 @@ public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomReso
      * Amount of capacity to allocate. Must be greater than or equal to `1`.
      * 
      */
-    @OutputExport(name="provisionedConcurrentExecutions", type=Integer.class, parameters={})
+    @Export(name="provisionedConcurrentExecutions", type=Integer.class, parameters={})
     private Output<Integer> provisionedConcurrentExecutions;
 
     /**
@@ -61,7 +61,7 @@ public class ProvisionedConcurrencyConfig extends io.pulumi.resources.CustomReso
      * Lambda Function version or Lambda Alias name.
      * 
      */
-    @OutputExport(name="qualifier", type=String.class, parameters={})
+    @Export(name="qualifier", type=String.class, parameters={})
     private Output<String> qualifier;
 
     /**

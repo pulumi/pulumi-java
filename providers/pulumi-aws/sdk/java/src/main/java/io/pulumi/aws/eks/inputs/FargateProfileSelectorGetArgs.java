@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FargateProfileSelectorGetArgs extends io.pulumi.resources.Res
      * Key-value map of Kubernetes labels for selection.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -30,7 +30,7 @@ public final class FargateProfileSelectorGetArgs extends io.pulumi.resources.Res
      * Kubernetes namespace for selection.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {

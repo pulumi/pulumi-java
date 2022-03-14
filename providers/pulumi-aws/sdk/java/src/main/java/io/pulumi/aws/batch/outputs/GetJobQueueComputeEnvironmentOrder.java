@@ -3,20 +3,20 @@
 
 package io.pulumi.aws.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobQueueComputeEnvironmentOrder {
     private final String computeEnvironment;
     private final Integer order;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobQueueComputeEnvironmentOrder(
-        @OutputCustomType.Parameter("computeEnvironment") String computeEnvironment,
-        @OutputCustomType.Parameter("order") Integer order) {
+        @CustomType.Parameter("computeEnvironment") String computeEnvironment,
+        @CustomType.Parameter("order") Integer order) {
         this.computeEnvironment = computeEnvironment;
         this.order = order;
     }

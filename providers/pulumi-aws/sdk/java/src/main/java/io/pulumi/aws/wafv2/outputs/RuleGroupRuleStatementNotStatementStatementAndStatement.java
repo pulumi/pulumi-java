@@ -4,11 +4,11 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementNotStatementStatementAndStatementStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleStatementNotStatementStatementAndStatement {
     /**
      * The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
@@ -16,8 +16,8 @@ public final class RuleGroupRuleStatementNotStatementStatementAndStatement {
      */
     private final List<RuleGroupRuleStatementNotStatementStatementAndStatementStatement> statements;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleStatementNotStatementStatementAndStatement(@OutputCustomType.Parameter("statements") List<RuleGroupRuleStatementNotStatementStatementAndStatementStatement> statements) {
+    @CustomType.Constructor
+    private RuleGroupRuleStatementNotStatementStatementAndStatement(@CustomType.Parameter("statements") List<RuleGroupRuleStatementNotStatementStatementAndStatementStatement> statements) {
         this.statements = statements;
     }
 

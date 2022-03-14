@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.memorydb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserAuthenticationMode {
     /**
      * The number of passwords belonging to the user.
@@ -29,11 +29,11 @@ public final class UserAuthenticationMode {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserAuthenticationMode(
-        @OutputCustomType.Parameter("passwordCount") @Nullable Integer passwordCount,
-        @OutputCustomType.Parameter("passwords") List<String> passwords,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("passwordCount") @Nullable Integer passwordCount,
+        @CustomType.Parameter("passwords") List<String> passwords,
+        @CustomType.Parameter("type") String type) {
         this.passwordCount = passwordCount;
         this.passwords = passwords;
         this.type = type;

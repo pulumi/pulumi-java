@@ -4,13 +4,13 @@
 package io.pulumi.aws.msk.outputs;
 
 import io.pulumi.aws.msk.outputs.ClusterEncryptionInfoEncryptionInTransit;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterEncryptionInfo {
     /**
      * You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS ('aws/msk' managed service) key will be used for encrypting the data at rest.
@@ -23,10 +23,10 @@ public final class ClusterEncryptionInfo {
      */
     private final @Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterEncryptionInfo(
-        @OutputCustomType.Parameter("encryptionAtRestKmsKeyArn") @Nullable String encryptionAtRestKmsKeyArn,
-        @OutputCustomType.Parameter("encryptionInTransit") @Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit) {
+        @CustomType.Parameter("encryptionAtRestKmsKeyArn") @Nullable String encryptionAtRestKmsKeyArn,
+        @CustomType.Parameter("encryptionInTransit") @Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit) {
         this.encryptionAtRestKmsKeyArn = encryptionAtRestKmsKeyArn;
         this.encryptionInTransit = encryptionInTransit;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.transfer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
      */
-    @InputImport(name="addressAllocationIds")
+    @Import(name="addressAllocationIds")
       private final @Nullable Output<List<String>> addressAllocationIds;
 
     public Output<List<String>> getAddressAllocationIds() {
@@ -30,7 +30,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * A list of security groups IDs that are available to attach to your server's endpoint. If no security groups are specified, the VPC's default security groups are automatically assigned to your endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -41,7 +41,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * A list of subnet IDs that are required to host your SFTP server endpoint in your VPC. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -52,7 +52,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * The ID of the VPC endpoint. This property can only be used when `endpoint_type` is set to `VPC_ENDPOINT`
      * 
      */
-    @InputImport(name="vpcEndpointId")
+    @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {
@@ -63,7 +63,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
      * The VPC ID of the virtual private cloud in which the SFTP server's endpoint will be hosted. This property can only be used when `endpoint_type` is set to `VPC`.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

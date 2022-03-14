@@ -4,7 +4,7 @@
 package io.pulumi.aws.inspector;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
      * The duration of the inspector run.
      * 
      */
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final Output<Integer> duration;
 
     public Output<Integer> getDuration() {
@@ -32,7 +32,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
      * The name of the assessment template.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
      * The rules to be used during the run.
      * 
      */
-    @InputImport(name="rulesPackageArns", required=true)
+    @Import(name="rulesPackageArns", required=true)
       private final Output<List<String>> rulesPackageArns;
 
     public Output<List<String>> getRulesPackageArns() {
@@ -54,7 +54,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
      * Key-value map of tags for the Inspector assessment template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -65,7 +65,7 @@ public final class AssessmentTemplateArgs extends io.pulumi.resources.ResourceAr
      * The assessment target ARN to attach the template to.
      * 
      */
-    @InputImport(name="targetArn", required=true)
+    @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
     public Output<String> getTargetArn() {

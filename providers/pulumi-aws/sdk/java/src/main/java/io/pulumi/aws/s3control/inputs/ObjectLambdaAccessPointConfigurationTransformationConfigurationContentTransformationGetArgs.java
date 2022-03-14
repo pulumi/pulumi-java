@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      * Configuration for an AWS Lambda function. See AWS Lambda below for more details.
      * 
      */
-    @InputImport(name="awsLambda", required=true)
+    @Import(name="awsLambda", required=true)
       private final Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs> awsLambda;
 
     public Output<ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs> getAwsLambda() {

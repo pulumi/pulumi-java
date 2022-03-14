@@ -8,7 +8,7 @@ import io.pulumi.aws.route53recoverycontrol.SafetyRuleArgs;
 import io.pulumi.aws.route53recoverycontrol.inputs.SafetyRuleState;
 import io.pulumi.aws.route53recoverycontrol.outputs.SafetyRuleRuleConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * ARN of the safety rule.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * Routing controls that are part of transactions that are evaluated to determine if a request to change a routing control state is allowed.
      * 
      */
-    @OutputExport(name="assertedControls", type=List.class, parameters={String.class})
+    @Export(name="assertedControls", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assertedControls;
 
     /**
@@ -63,7 +63,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * ARN of the control panel in which this safety rule will reside.
      * 
      */
-    @OutputExport(name="controlPanelArn", type=String.class, parameters={})
+    @Export(name="controlPanelArn", type=String.class, parameters={})
     private Output<String> controlPanelArn;
 
     /**
@@ -77,7 +77,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * Gating controls for the new gating rule. That is, routing controls that are evaluated by the rule configuration that you specify.
      * 
      */
-    @OutputExport(name="gatingControls", type=List.class, parameters={String.class})
+    @Export(name="gatingControls", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> gatingControls;
 
     /**
@@ -91,7 +91,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * Name describing the safety rule.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * Configuration block for safety rule criteria. See below.
      * 
      */
-    @OutputExport(name="ruleConfig", type=SafetyRuleRuleConfig.class, parameters={})
+    @Export(name="ruleConfig", type=SafetyRuleRuleConfig.class, parameters={})
     private Output<SafetyRuleRuleConfig> ruleConfig;
 
     /**
@@ -119,7 +119,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * Status of the safety rule. `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -133,7 +133,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * Routing controls that can only be set or unset if the specified `rule_config` evaluates to true for the specified `gating_controls`.
      * 
      */
-    @OutputExport(name="targetControls", type=List.class, parameters={String.class})
+    @Export(name="targetControls", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> targetControls;
 
     /**
@@ -147,7 +147,7 @@ public class SafetyRule extends io.pulumi.resources.CustomResource {
      * Evaluation period, in milliseconds (ms), during which any request against the target routing controls will fail.
      * 
      */
-    @OutputExport(name="waitPeriodMs", type=Integer.class, parameters={})
+    @Export(name="waitPeriodMs", type=Integer.class, parameters={})
     private Output<Integer> waitPeriodMs;
 
     /**

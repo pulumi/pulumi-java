@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification {
     /**
      * Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
@@ -15,8 +15,8 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecifi
      */
     private final String allocationStrategy;
 
-    @OutputCustomType.Constructor
-    private ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification(@OutputCustomType.Parameter("allocationStrategy") String allocationStrategy) {
+    @CustomType.Constructor
+    private ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification(@CustomType.Parameter("allocationStrategy") String allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
     }
 

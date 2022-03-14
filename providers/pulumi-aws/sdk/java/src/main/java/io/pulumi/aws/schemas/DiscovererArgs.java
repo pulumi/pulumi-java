@@ -4,7 +4,7 @@
 package io.pulumi.aws.schemas;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DiscovererArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the discoverer. Maximum of 256 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class DiscovererArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the event bus to discover event schemas on.
      * 
      */
-    @InputImport(name="sourceArn", required=true)
+    @Import(name="sourceArn", required=true)
       private final Output<String> sourceArn;
 
     public Output<String> getSourceArn() {
@@ -41,7 +41,7 @@ public final class DiscovererArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

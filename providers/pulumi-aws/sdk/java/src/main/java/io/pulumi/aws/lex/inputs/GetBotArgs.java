@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lex.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the bot. The name is case sensitive.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -29,7 +29,7 @@ public final class GetBotArgs extends io.pulumi.resources.InvokeArgs {
      * The version or alias of the bot.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

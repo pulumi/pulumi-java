@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScriptDagEdge {
     /**
      * The ID of the node at which the edge starts.
@@ -27,11 +27,11 @@ public final class GetScriptDagEdge {
      */
     private final @Nullable String targetParameter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScriptDagEdge(
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("target") String target,
-        @OutputCustomType.Parameter("targetParameter") @Nullable String targetParameter) {
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("target") String target,
+        @CustomType.Parameter("targetParameter") @Nullable String targetParameter) {
         this.source = source;
         this.target = target;
         this.targetParameter = targetParameter;

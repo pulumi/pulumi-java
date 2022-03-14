@@ -6,12 +6,12 @@ package io.pulumi.aws.wafv2.outputs;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleActionAllow;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleActionBlock;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleActionCount;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleAction {
     /**
      * Instructs AWS WAF to allow the web request. See Allow below for details.
@@ -29,11 +29,11 @@ public final class WebAclRuleAction {
      */
     private final @Nullable WebAclRuleActionCount count;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleAction(
-        @OutputCustomType.Parameter("allow") @Nullable WebAclRuleActionAllow allow,
-        @OutputCustomType.Parameter("block") @Nullable WebAclRuleActionBlock block,
-        @OutputCustomType.Parameter("count") @Nullable WebAclRuleActionCount count) {
+        @CustomType.Parameter("allow") @Nullable WebAclRuleActionAllow allow,
+        @CustomType.Parameter("block") @Nullable WebAclRuleActionBlock block,
+        @CustomType.Parameter("count") @Nullable WebAclRuleActionCount count) {
         this.allow = allow;
         this.block = block;
         this.count = count;

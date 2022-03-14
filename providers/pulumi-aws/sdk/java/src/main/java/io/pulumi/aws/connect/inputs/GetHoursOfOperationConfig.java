@@ -5,7 +5,7 @@ package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.aws.connect.inputs.GetHoursOfOperationConfigEndTime;
 import io.pulumi.aws.connect.inputs.GetHoursOfOperationConfigStartTime;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetHoursOfOperationConfig extends io.pulumi.resources.InvokeA
      * Specifies the day that the hours of operation applies to.
      * 
      */
-    @InputImport(name="day", required=true)
+    @Import(name="day", required=true)
       private final String day;
 
     public String getDay() {
@@ -30,7 +30,7 @@ public final class GetHoursOfOperationConfig extends io.pulumi.resources.InvokeA
      * A end time block specifies the time that your contact center closes. The `end_time` is documented below.
      * 
      */
-    @InputImport(name="endTimes", required=true)
+    @Import(name="endTimes", required=true)
       private final List<GetHoursOfOperationConfigEndTime> endTimes;
 
     public List<GetHoursOfOperationConfigEndTime> getEndTimes() {
@@ -41,7 +41,7 @@ public final class GetHoursOfOperationConfig extends io.pulumi.resources.InvokeA
      * A start time block specifies the time that your contact center opens. The `start_time` is documented below.
      * 
      */
-    @InputImport(name="startTimes", required=true)
+    @Import(name="startTimes", required=true)
       private final List<GetHoursOfOperationConfigStartTime> startTimes;
 
     public List<GetHoursOfOperationConfigStartTime> getStartTimes() {

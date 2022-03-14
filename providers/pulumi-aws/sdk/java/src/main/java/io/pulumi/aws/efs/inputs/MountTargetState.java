@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * The unique and consistent identifier of the Availability Zone (AZ) that the mount target resides in.
      * 
      */
-    @InputImport(name="availabilityZoneId")
+    @Import(name="availabilityZoneId")
       private final @Nullable Output<String> availabilityZoneId;
 
     public Output<String> getAvailabilityZoneId() {
@@ -30,7 +30,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * The name of the Availability Zone (AZ) that the mount target resides in.
      * 
      */
-    @InputImport(name="availabilityZoneName")
+    @Import(name="availabilityZoneName")
       private final @Nullable Output<String> availabilityZoneName;
 
     public Output<String> getAvailabilityZoneName() {
@@ -41,7 +41,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * The DNS name for the EFS file system.
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -52,7 +52,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name of the file system.
      * 
      */
-    @InputImport(name="fileSystemArn")
+    @Import(name="fileSystemArn")
       private final @Nullable Output<String> fileSystemArn;
 
     public Output<String> getFileSystemArn() {
@@ -63,7 +63,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * The ID of the file system for which the mount target is intended.
      * 
      */
-    @InputImport(name="fileSystemId")
+    @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
@@ -75,7 +75,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * which the file system may be mounted via the mount target.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -86,7 +86,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
      * 
      */
-    @InputImport(name="mountTargetDnsName")
+    @Import(name="mountTargetDnsName")
       private final @Nullable Output<String> mountTargetDnsName;
 
     public Output<String> getMountTargetDnsName() {
@@ -97,7 +97,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * The ID of the network interface that Amazon EFS created when it created the mount target.
      * 
      */
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -108,7 +108,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * AWS account ID that owns the resource.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -120,7 +120,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * be for the same VPC as subnet specified) in effect for the mount target.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -131,7 +131,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
      * The ID of the subnet to add the mount target in.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {

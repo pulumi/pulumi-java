@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDe {
     /**
      * The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
@@ -66,18 +66,18 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      */
     private final @Nullable Integer stripeSizeBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDe(
-        @OutputCustomType.Parameter("blockSizeBytes") @Nullable Integer blockSizeBytes,
-        @OutputCustomType.Parameter("bloomFilterColumns") @Nullable List<String> bloomFilterColumns,
-        @OutputCustomType.Parameter("bloomFilterFalsePositiveProbability") @Nullable Double bloomFilterFalsePositiveProbability,
-        @OutputCustomType.Parameter("compression") @Nullable String compression,
-        @OutputCustomType.Parameter("dictionaryKeyThreshold") @Nullable Double dictionaryKeyThreshold,
-        @OutputCustomType.Parameter("enablePadding") @Nullable Boolean enablePadding,
-        @OutputCustomType.Parameter("formatVersion") @Nullable String formatVersion,
-        @OutputCustomType.Parameter("paddingTolerance") @Nullable Double paddingTolerance,
-        @OutputCustomType.Parameter("rowIndexStride") @Nullable Integer rowIndexStride,
-        @OutputCustomType.Parameter("stripeSizeBytes") @Nullable Integer stripeSizeBytes) {
+        @CustomType.Parameter("blockSizeBytes") @Nullable Integer blockSizeBytes,
+        @CustomType.Parameter("bloomFilterColumns") @Nullable List<String> bloomFilterColumns,
+        @CustomType.Parameter("bloomFilterFalsePositiveProbability") @Nullable Double bloomFilterFalsePositiveProbability,
+        @CustomType.Parameter("compression") @Nullable String compression,
+        @CustomType.Parameter("dictionaryKeyThreshold") @Nullable Double dictionaryKeyThreshold,
+        @CustomType.Parameter("enablePadding") @Nullable Boolean enablePadding,
+        @CustomType.Parameter("formatVersion") @Nullable String formatVersion,
+        @CustomType.Parameter("paddingTolerance") @Nullable Double paddingTolerance,
+        @CustomType.Parameter("rowIndexStride") @Nullable Integer rowIndexStride,
+        @CustomType.Parameter("stripeSizeBytes") @Nullable Integer stripeSizeBytes) {
         this.blockSizeBytes = blockSizeBytes;
         this.bloomFilterColumns = bloomFilterColumns;
         this.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;

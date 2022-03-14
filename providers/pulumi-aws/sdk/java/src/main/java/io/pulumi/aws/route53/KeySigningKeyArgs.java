@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the Route 53 Hosted Zone.
      * 
      */
-    @InputImport(name="hostedZoneId", required=true)
+    @Import(name="hostedZoneId", required=true)
       private final Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
@@ -29,7 +29,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the Key Management Service (KMS) Key. This must be unique for each key-signing key (KSK) in a single hosted zone. This key must be in the `us-east-1` Region and meet certain requirements, which are described in the [Route 53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-configuring-dnssec-cmk-requirements.html) and [Route 53 API Reference](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateKeySigningKey.html).
      * 
      */
-    @InputImport(name="keyManagementServiceArn", required=true)
+    @Import(name="keyManagementServiceArn", required=true)
       private final Output<String> keyManagementServiceArn;
 
     public Output<String> getKeyManagementServiceArn() {
@@ -40,7 +40,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the key-signing key (KSK). Must be unique for each key-singing key in the same hosted zone.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Status of the key-signing key (KSK). Valid values: `ACTIVE`, `INACTIVE`. Defaults to `ACTIVE`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

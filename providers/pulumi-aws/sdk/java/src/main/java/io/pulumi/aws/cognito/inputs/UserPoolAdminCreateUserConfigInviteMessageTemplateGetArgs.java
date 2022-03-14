@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs ext
      * Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
      * 
      */
-    @InputImport(name="emailMessage")
+    @Import(name="emailMessage")
       private final @Nullable Output<String> emailMessage;
 
     public Output<String> getEmailMessage() {
@@ -29,7 +29,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs ext
      * Subject line for the email message template. Conflicts with `email_verification_subject` argument.
      * 
      */
-    @InputImport(name="emailSubject")
+    @Import(name="emailSubject")
       private final @Nullable Output<String> emailSubject;
 
     public Output<String> getEmailSubject() {
@@ -40,7 +40,7 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateGetArgs ext
      * SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
      * 
      */
-    @InputImport(name="smsMessage")
+    @Import(name="smsMessage")
       private final @Nullable Output<String> smsMessage;
 
     public Output<String> getSmsMessage() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TopicRuleErrorActionRepublishArgs extends io.pulumi.resources
      * The Quality of Service (QoS) level to use when republishing messages. Valid values are 0 or 1. The default value is 0.
      * 
      */
-    @InputImport(name="qos")
+    @Import(name="qos")
       private final @Nullable Output<Integer> qos;
 
     public Output<Integer> getQos() {
@@ -30,7 +30,7 @@ public final class TopicRuleErrorActionRepublishArgs extends io.pulumi.resources
      * The ARN of the IAM role that grants access.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -41,7 +41,7 @@ public final class TopicRuleErrorActionRepublishArgs extends io.pulumi.resources
      * The name of the MQTT topic the message should be republished to.
      * 
      */
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final Output<String> topic;
 
     public Output<String> getTopic() {

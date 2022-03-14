@@ -5,7 +5,7 @@ package io.pulumi.aws.globalaccelerator;
 
 import io.pulumi.aws.globalaccelerator.inputs.AcceleratorAttributesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * The attributes of the accelerator. Fields documented below.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<AcceleratorAttributesArgs> attributes;
 
     public Output<AcceleratorAttributesArgs> getAttributes() {
@@ -32,7 +32,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the accelerator is enabled. Defaults to `true`. Valid values: `true`, `false`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -43,7 +43,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * The value for the address type. Defaults to `IPV4`. Valid values: `IPV4`.
      * 
      */
-    @InputImport(name="ipAddressType")
+    @Import(name="ipAddressType")
       private final @Nullable Output<String> ipAddressType;
 
     public Output<String> getIpAddressType() {
@@ -54,7 +54,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the accelerator.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

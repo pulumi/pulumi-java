@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.autoscaling.AttachmentArgs;
 import io.pulumi.aws.autoscaling.inputs.AttachmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * The ARN of an ALB Target Group.
      * 
      */
-    @OutputExport(name="albTargetGroupArn", type=String.class, parameters={})
+    @Export(name="albTargetGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> albTargetGroupArn;
 
     /**
@@ -47,7 +47,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * Name of ASG to associate with the ELB.
      * 
      */
-    @OutputExport(name="autoscalingGroupName", type=String.class, parameters={})
+    @Export(name="autoscalingGroupName", type=String.class, parameters={})
     private Output<String> autoscalingGroupName;
 
     /**
@@ -61,7 +61,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * The name of the ELB.
      * 
      */
-    @OutputExport(name="elb", type=String.class, parameters={})
+    @Export(name="elb", type=String.class, parameters={})
     private Output</* @Nullable */ String> elb;
 
     /**

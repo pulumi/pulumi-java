@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ecr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RepositoryImageScanningConfiguration {
     /**
      * Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false).
@@ -15,8 +15,8 @@ public final class RepositoryImageScanningConfiguration {
      */
     private final Boolean scanOnPush;
 
-    @OutputCustomType.Constructor
-    private RepositoryImageScanningConfiguration(@OutputCustomType.Parameter("scanOnPush") Boolean scanOnPush) {
+    @CustomType.Constructor
+    private RepositoryImageScanningConfiguration(@CustomType.Parameter("scanOnPush") Boolean scanOnPush) {
         this.scanOnPush = scanOnPush;
     }
 

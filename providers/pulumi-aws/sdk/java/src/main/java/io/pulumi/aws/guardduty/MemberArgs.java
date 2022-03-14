@@ -4,7 +4,7 @@
 package io.pulumi.aws.guardduty;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * AWS account ID for member account.
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -30,7 +30,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * The detector ID of the GuardDuty account where you want to create member accounts.
      * 
      */
-    @InputImport(name="detectorId", required=true)
+    @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
     public Output<String> getDetectorId() {
@@ -41,7 +41,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean whether an email notification is sent to the accounts. Defaults to `false`.
      * 
      */
-    @InputImport(name="disableEmailNotification")
+    @Import(name="disableEmailNotification")
       private final @Nullable Output<Boolean> disableEmailNotification;
 
     public Output<Boolean> getDisableEmailNotification() {
@@ -52,7 +52,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * Email address for member account.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final Output<String> email;
 
     public Output<String> getEmail() {
@@ -63,7 +63,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * Message for invitation.
      * 
      */
-    @InputImport(name="invitationMessage")
+    @Import(name="invitationMessage")
       private final @Nullable Output<String> invitationMessage;
 
     public Output<String> getInvitationMessage() {
@@ -74,7 +74,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
      * 
      */
-    @InputImport(name="invite")
+    @Import(name="invite")
       private final @Nullable Output<Boolean> invite;
 
     public Output<Boolean> getInvite() {

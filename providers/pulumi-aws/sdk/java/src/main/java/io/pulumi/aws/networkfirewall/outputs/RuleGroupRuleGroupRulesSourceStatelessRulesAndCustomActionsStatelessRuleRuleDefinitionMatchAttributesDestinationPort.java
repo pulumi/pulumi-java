@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPort {
     /**
      * The lower limit of the port range. This must be less than or equal to the `to_port`.
@@ -22,10 +22,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      */
     private final @Nullable Integer toPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPort(
-        @OutputCustomType.Parameter("fromPort") Integer fromPort,
-        @OutputCustomType.Parameter("toPort") @Nullable Integer toPort) {
+        @CustomType.Parameter("fromPort") Integer fromPort,
+        @CustomType.Parameter("toPort") @Nullable Integer toPort) {
         this.fromPort = fromPort;
         this.toPort = toPort;
     }

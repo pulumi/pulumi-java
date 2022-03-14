@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.applicationloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerDefaultActionRedirect {
     private final String host;
     private final String path;
@@ -20,14 +20,14 @@ public final class GetListenerDefaultActionRedirect {
     private final String query;
     private final String statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerDefaultActionRedirect(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("port") String port,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("statusCode") String statusCode) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("port") String port,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("statusCode") String statusCode) {
         this.host = host;
         this.path = path;
         this.port = port;

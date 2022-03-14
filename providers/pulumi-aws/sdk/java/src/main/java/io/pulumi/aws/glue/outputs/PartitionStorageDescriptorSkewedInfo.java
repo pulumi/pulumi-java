@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PartitionStorageDescriptorSkewedInfo {
     /**
      * A list of names of columns that contain skewed values.
@@ -28,11 +28,11 @@ public final class PartitionStorageDescriptorSkewedInfo {
      */
     private final @Nullable List<String> skewedColumnValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PartitionStorageDescriptorSkewedInfo(
-        @OutputCustomType.Parameter("skewedColumnNames") @Nullable List<String> skewedColumnNames,
-        @OutputCustomType.Parameter("skewedColumnValueLocationMaps") @Nullable Map<String,String> skewedColumnValueLocationMaps,
-        @OutputCustomType.Parameter("skewedColumnValues") @Nullable List<String> skewedColumnValues) {
+        @CustomType.Parameter("skewedColumnNames") @Nullable List<String> skewedColumnNames,
+        @CustomType.Parameter("skewedColumnValueLocationMaps") @Nullable Map<String,String> skewedColumnValueLocationMaps,
+        @CustomType.Parameter("skewedColumnValues") @Nullable List<String> skewedColumnValues) {
         this.skewedColumnNames = skewedColumnNames;
         this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
         this.skewedColumnValues = skewedColumnValues;

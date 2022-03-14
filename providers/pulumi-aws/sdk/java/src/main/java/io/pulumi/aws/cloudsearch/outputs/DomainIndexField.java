@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainIndexField {
     /**
      * The analysis scheme you want to use for a `text` field. The analysis scheme specifies the language-specific text processing options that are used during indexing.
@@ -58,17 +58,17 @@ public final class DomainIndexField {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainIndexField(
-        @OutputCustomType.Parameter("analysisScheme") @Nullable String analysisScheme,
-        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
-        @OutputCustomType.Parameter("facet") @Nullable Boolean facet,
-        @OutputCustomType.Parameter("highlight") @Nullable Boolean highlight,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("return") @Nullable Boolean $return,
-        @OutputCustomType.Parameter("search") @Nullable Boolean search,
-        @OutputCustomType.Parameter("sort") @Nullable Boolean sort,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("analysisScheme") @Nullable String analysisScheme,
+        @CustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @CustomType.Parameter("facet") @Nullable Boolean facet,
+        @CustomType.Parameter("highlight") @Nullable Boolean highlight,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("return") @Nullable Boolean $return,
+        @CustomType.Parameter("search") @Nullable Boolean search,
+        @CustomType.Parameter("sort") @Nullable Boolean sort,
+        @CustomType.Parameter("type") String type) {
         this.analysisScheme = analysisScheme;
         this.defaultValue = defaultValue;
         this.facet = facet;

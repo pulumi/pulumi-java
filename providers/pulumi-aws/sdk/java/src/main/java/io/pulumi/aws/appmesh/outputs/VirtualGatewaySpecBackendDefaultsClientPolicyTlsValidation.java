@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames;
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation {
     /**
      * The SANs for a virtual gateway's listener's Transport Layer Security (TLS) validation context.
@@ -23,10 +23,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation {
      */
     private final VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust trust;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidation(
-        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames subjectAlternativeNames,
-        @OutputCustomType.Parameter("trust") VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust trust) {
+        @CustomType.Parameter("subjectAlternativeNames") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames subjectAlternativeNames,
+        @CustomType.Parameter("trust") VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrust trust) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         this.trust = trust;
     }

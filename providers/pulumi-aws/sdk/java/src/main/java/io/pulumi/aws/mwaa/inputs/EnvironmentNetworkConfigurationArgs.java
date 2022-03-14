@@ -4,7 +4,7 @@
 package io.pulumi.aws.mwaa.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resourc
      * Security groups IDs for the environment. At least one of the security group needs to allow MWAA resources to talk to each other, otherwise MWAA cannot be provisioned.
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -29,7 +29,7 @@ public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resourc
      * The private subnet IDs in which the environment should be created. MWAA requires two subnets.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn {
     /**
      * The Mapping reference to the data element.
@@ -27,11 +27,11 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn {
      */
     private final String sqlType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn(
-        @OutputCustomType.Parameter("mapping") @Nullable String mapping,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sqlType") String sqlType) {
+        @CustomType.Parameter("mapping") @Nullable String mapping,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sqlType") String sqlType) {
         this.mapping = mapping;
         this.name = name;
         this.sqlType = sqlType;

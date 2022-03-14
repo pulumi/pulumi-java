@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
      * Domain name that is targeted.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -29,7 +29,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceR53Resource
      * Resource record set ID that is targeted.
      * 
      */
-    @InputImport(name="recordSetId")
+    @Import(name="recordSetId")
       private final @Nullable Output<String> recordSetId;
 
     public Output<String> getRecordSetId() {

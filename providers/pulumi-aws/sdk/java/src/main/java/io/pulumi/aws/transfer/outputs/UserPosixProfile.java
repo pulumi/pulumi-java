@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.transfer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPosixProfile {
     /**
      * The POSIX group ID used for all EFS operations by this user.
@@ -27,11 +27,11 @@ public final class UserPosixProfile {
      */
     private final Integer uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPosixProfile(
-        @OutputCustomType.Parameter("gid") Integer gid,
-        @OutputCustomType.Parameter("secondaryGids") @Nullable List<Integer> secondaryGids,
-        @OutputCustomType.Parameter("uid") Integer uid) {
+        @CustomType.Parameter("gid") Integer gid,
+        @CustomType.Parameter("secondaryGids") @Nullable List<Integer> secondaryGids,
+        @CustomType.Parameter("uid") Integer uid) {
         this.gid = gid;
         this.secondaryGids = secondaryGids;
         this.uid = uid;

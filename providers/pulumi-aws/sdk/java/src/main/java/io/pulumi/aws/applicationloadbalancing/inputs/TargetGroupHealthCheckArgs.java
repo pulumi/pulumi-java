@@ -4,7 +4,7 @@
 package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * Boolean to enable / disable `stickiness`. Default is `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -31,7 +31,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * Number of consecutive health checks successes required before considering an unhealthy target healthy. Defaults to 3.
      * 
      */
-    @InputImport(name="healthyThreshold")
+    @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
     public Output<Integer> getHealthyThreshold() {
@@ -42,7 +42,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * Approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. For `lambda` target groups, it needs to be greater as the `timeout` of the underlying `lambda`. Default 30 seconds.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
@@ -53,7 +53,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * Response codes to use when checking for a healthy responses from a target. You can specify multiple values (for example, "200,202" for HTTP(s) or "0,12" for GRPC) or a range of values (for example, "200-299" or "0-99"). Required for HTTP/HTTPS/GRPC ALB. Only applies to Application Load Balancers (i.e., HTTP/HTTPS/GRPC) not Network Load Balancers (i.e., TCP).
      * 
      */
-    @InputImport(name="matcher")
+    @Import(name="matcher")
       private final @Nullable Output<String> matcher;
 
     public Output<String> getMatcher() {
@@ -64,7 +64,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * Destination for the health check request. Required for HTTP/HTTPS ALB and HTTP NLB. Only applies to HTTP/HTTPS.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -75,7 +75,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<String> port;
 
     public Output<String> getPort() {
@@ -86,7 +86,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -97,7 +97,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * Amount of time, in seconds, during which no response means a failed health check. For Application Load Balancers, the range is 2 to 120 seconds, and the default is 5 seconds for the `instance` target type and 30 seconds for the `lambda` target type. For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -108,7 +108,7 @@ public final class TargetGroupHealthCheckArgs extends io.pulumi.resources.Resour
      * Number of consecutive health check failures required before considering the target unhealthy. For Network Load Balancers, this value must be the same as the `healthy_threshold`. Defaults to 3.
      * 
      */
-    @InputImport(name="unhealthyThreshold")
+    @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
     public Output<Integer> getUnhealthyThreshold() {

@@ -11,7 +11,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementSizeConstraintStatementFiel
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementSizeConstraintStatementFieldToMatchUriPathArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class WebAclRuleStatementSizeConstraintStatementFieldToMatchArgs ex
      * Inspect all query arguments.
      * 
      */
-    @InputImport(name="allQueryArguments")
+    @Import(name="allQueryArguments")
       private final @Nullable Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsArgs> allQueryArguments;
 
     public Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsArgs> getAllQueryArguments() {
@@ -35,7 +35,7 @@ public final class WebAclRuleStatementSizeConstraintStatementFieldToMatchArgs ex
      * Inspect the request body, which immediately follows the request headers.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchBodyArgs> body;
 
     public Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchBodyArgs> getBody() {
@@ -46,7 +46,7 @@ public final class WebAclRuleStatementSizeConstraintStatementFieldToMatchArgs ex
      * Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchMethodArgs> method;
 
     public Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchMethodArgs> getMethod() {
@@ -57,7 +57,7 @@ public final class WebAclRuleStatementSizeConstraintStatementFieldToMatchArgs ex
      * Inspect the query string. This is the part of a URL that appears after a `?` character, if any.
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchQueryStringArgs> queryString;
 
     public Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchQueryStringArgs> getQueryString() {
@@ -68,7 +68,7 @@ public final class WebAclRuleStatementSizeConstraintStatementFieldToMatchArgs ex
      * Inspect a single header. See Single Header below for details.
      * 
      */
-    @InputImport(name="singleHeader")
+    @Import(name="singleHeader")
       private final @Nullable Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs> singleHeader;
 
     public Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleHeaderArgs> getSingleHeader() {
@@ -79,7 +79,7 @@ public final class WebAclRuleStatementSizeConstraintStatementFieldToMatchArgs ex
      * Inspect a single query argument. See Single Query Argument below for details.
      * 
      */
-    @InputImport(name="singleQueryArgument")
+    @Import(name="singleQueryArgument")
       private final @Nullable Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs> singleQueryArgument;
 
     public Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentArgs> getSingleQueryArgument() {
@@ -90,7 +90,7 @@ public final class WebAclRuleStatementSizeConstraintStatementFieldToMatchArgs ex
      * Inspect the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
      * 
      */
-    @InputImport(name="uriPath")
+    @Import(name="uriPath")
       private final @Nullable Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchUriPathArgs> uriPath;
 
     public Output<WebAclRuleStatementSizeConstraintStatementFieldToMatchUriPathArgs> getUriPath() {

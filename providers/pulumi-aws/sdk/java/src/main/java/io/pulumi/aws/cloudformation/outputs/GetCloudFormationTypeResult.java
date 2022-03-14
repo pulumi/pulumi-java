@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudformation.outputs;
 
 import io.pulumi.aws.cloudformation.outputs.GetCloudFormationTypeLoggingConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCloudFormationTypeResult {
     private final String arn;
     /**
@@ -80,25 +80,25 @@ public final class GetCloudFormationTypeResult {
      */
     private final String visibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCloudFormationTypeResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("defaultVersionId") String defaultVersionId,
-        @OutputCustomType.Parameter("deprecatedStatus") String deprecatedStatus,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("documentationUrl") String documentationUrl,
-        @OutputCustomType.Parameter("executionRoleArn") String executionRoleArn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isDefaultVersion") Boolean isDefaultVersion,
-        @OutputCustomType.Parameter("loggingConfigs") List<GetCloudFormationTypeLoggingConfig> loggingConfigs,
-        @OutputCustomType.Parameter("provisioningType") String provisioningType,
-        @OutputCustomType.Parameter("schema") String schema,
-        @OutputCustomType.Parameter("sourceUrl") String sourceUrl,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("typeArn") String typeArn,
-        @OutputCustomType.Parameter("typeName") String typeName,
-        @OutputCustomType.Parameter("versionId") @Nullable String versionId,
-        @OutputCustomType.Parameter("visibility") String visibility) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("defaultVersionId") String defaultVersionId,
+        @CustomType.Parameter("deprecatedStatus") String deprecatedStatus,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("documentationUrl") String documentationUrl,
+        @CustomType.Parameter("executionRoleArn") String executionRoleArn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isDefaultVersion") Boolean isDefaultVersion,
+        @CustomType.Parameter("loggingConfigs") List<GetCloudFormationTypeLoggingConfig> loggingConfigs,
+        @CustomType.Parameter("provisioningType") String provisioningType,
+        @CustomType.Parameter("schema") String schema,
+        @CustomType.Parameter("sourceUrl") String sourceUrl,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("typeArn") String typeArn,
+        @CustomType.Parameter("typeName") String typeName,
+        @CustomType.Parameter("versionId") @Nullable String versionId,
+        @CustomType.Parameter("visibility") String visibility) {
         this.arn = arn;
         this.defaultVersionId = defaultVersionId;
         this.deprecatedStatus = deprecatedStatus;

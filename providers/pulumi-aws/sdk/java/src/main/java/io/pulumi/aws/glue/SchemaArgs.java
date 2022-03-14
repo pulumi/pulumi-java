@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The compatibility mode of the schema. Values values are: `NONE`, `DISABLED`, `BACKWARD`, `BACKWARD_ALL`, `FORWARD`, `FORWARD_ALL`, `FULL`, and `FULL_ALL`.
      * 
      */
-    @InputImport(name="compatibility", required=true)
+    @Import(name="compatibility", required=true)
       private final Output<String> compatibility;
 
     public Output<String> getCompatibility() {
@@ -30,7 +30,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The data format of the schema definition. Valid values are `AVRO` and `JSON`.
      * 
      */
-    @InputImport(name="dataFormat", required=true)
+    @Import(name="dataFormat", required=true)
       private final Output<String> dataFormat;
 
     public Output<String> getDataFormat() {
@@ -41,7 +41,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the schema.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -52,7 +52,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Glue Registry to create the schema in.
      * 
      */
-    @InputImport(name="registryArn")
+    @Import(name="registryArn")
       private final @Nullable Output<String> registryArn;
 
     public Output<String> getRegistryArn() {
@@ -63,7 +63,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The schema definition using the `data_format` setting for `schema_name`.
      * 
      */
-    @InputImport(name="schemaDefinition", required=true)
+    @Import(name="schemaDefinition", required=true)
       private final Output<String> schemaDefinition;
 
     public Output<String> getSchemaDefinition() {
@@ -74,7 +74,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * The Name of the schema.
      * 
      */
-    @InputImport(name="schemaName", required=true)
+    @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
     public Output<String> getSchemaName() {
@@ -85,7 +85,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

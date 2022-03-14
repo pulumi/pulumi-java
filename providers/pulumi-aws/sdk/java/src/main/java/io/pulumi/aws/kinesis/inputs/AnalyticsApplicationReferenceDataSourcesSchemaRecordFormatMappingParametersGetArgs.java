@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      * See CSV Mapping Parameters below for more details.
      * 
      */
-    @InputImport(name="csv")
+    @Import(name="csv")
       private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> csv;
 
     public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvGetArgs> getCsv() {
@@ -32,7 +32,7 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      * See JSON Mapping Parameters below for more details.
      * 
      */
-    @InputImport(name="json")
+    @Import(name="json")
       private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> json;
 
     public Output<AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonGetArgs> getJson() {

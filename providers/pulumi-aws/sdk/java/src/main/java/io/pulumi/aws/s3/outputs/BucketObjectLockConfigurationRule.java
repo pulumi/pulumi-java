@@ -4,10 +4,10 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.BucketObjectLockConfigurationRuleDefaultRetention;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketObjectLockConfigurationRule {
     /**
      * The default retention period that you want to apply to new objects placed in this bucket.
@@ -15,8 +15,8 @@ public final class BucketObjectLockConfigurationRule {
      */
     private final BucketObjectLockConfigurationRuleDefaultRetention defaultRetention;
 
-    @OutputCustomType.Constructor
-    private BucketObjectLockConfigurationRule(@OutputCustomType.Parameter("defaultRetention") BucketObjectLockConfigurationRuleDefaultRetention defaultRetention) {
+    @CustomType.Constructor
+    private BucketObjectLockConfigurationRule(@CustomType.Parameter("defaultRetention") BucketObjectLockConfigurationRuleDefaultRetention defaultRetention) {
         this.defaultRetention = defaultRetention;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskExcludes {
     /**
      * The type of filter rule to apply. Valid values: `SIMPLE_PATTERN`.
@@ -22,10 +22,10 @@ public final class TaskExcludes {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskExcludes(
-        @OutputCustomType.Parameter("filterType") @Nullable String filterType,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("filterType") @Nullable String filterType,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.filterType = filterType;
         this.value = value;
     }

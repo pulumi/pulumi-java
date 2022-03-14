@@ -4,7 +4,7 @@
 package io.pulumi.aws.detective.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * AWS account ID for the account.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -30,7 +30,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * AWS account ID for the administrator account.
      * 
      */
-    @InputImport(name="administratorId")
+    @Import(name="administratorId")
       private final @Nullable Output<String> administratorId;
 
     public Output<String> getAdministratorId() {
@@ -41,14 +41,14 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * If set to true, then the root user of the invited account will _not_ receive an email notification. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. By default, this is set to `false`.
      * 
      */
-    @InputImport(name="disableEmailNotification")
+    @Import(name="disableEmailNotification")
       private final @Nullable Output<Boolean> disableEmailNotification;
 
     public Output<Boolean> getDisableEmailNotification() {
         return this.disableEmailNotification == null ? Output.empty() : this.disableEmailNotification;
     }
 
-    @InputImport(name="disabledReason")
+    @Import(name="disabledReason")
       private final @Nullable Output<String> disabledReason;
 
     public Output<String> getDisabledReason() {
@@ -59,7 +59,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * Email address for the account.
      * 
      */
-    @InputImport(name="emailAddress")
+    @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
 
     public Output<String> getEmailAddress() {
@@ -70,7 +70,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * ARN of the behavior graph to invite the member accounts to contribute their data to.
      * 
      */
-    @InputImport(name="graphArn")
+    @Import(name="graphArn")
       private final @Nullable Output<String> graphArn;
 
     public Output<String> getGraphArn() {
@@ -81,7 +81,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * Date and time, in UTC and extended RFC 3339 format, when an Amazon Detective membership invitation was last sent to the account.
      * 
      */
-    @InputImport(name="invitedTime")
+    @Import(name="invitedTime")
       private final @Nullable Output<String> invitedTime;
 
     public Output<String> getInvitedTime() {
@@ -92,7 +92,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * A custom message to include in the invitation. Amazon Detective adds this message to the standard content that it sends for an invitation.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -103,7 +103,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * Current membership status of the member account.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -114,7 +114,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * Date and time, in UTC and extended RFC 3339 format, of the most recent change to the member account's status.
      * 
      */
-    @InputImport(name="updatedTime")
+    @Import(name="updatedTime")
       private final @Nullable Output<String> updatedTime;
 
     public Output<String> getUpdatedTime() {
@@ -125,7 +125,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * Data volume in bytes per day for the member account.
      * 
      */
-    @InputImport(name="volumeUsageInBytes")
+    @Import(name="volumeUsageInBytes")
       private final @Nullable Output<String> volumeUsageInBytes;
 
     public Output<String> getVolumeUsageInBytes() {

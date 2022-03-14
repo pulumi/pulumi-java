@@ -4,11 +4,11 @@
 package io.pulumi.aws.networkfirewall.outputs;
 
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule {
     /**
      * A setting that indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule group. AWS Network Firewall evaluates the rules in a rule group starting with the lowest priority setting.
@@ -21,10 +21,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      */
     private final RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition ruleDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule(
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("ruleDefinition") RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition ruleDefinition) {
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleDefinition") RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition ruleDefinition) {
         this.priority = priority;
         this.ruleDefinition = ruleDefinition;
     }

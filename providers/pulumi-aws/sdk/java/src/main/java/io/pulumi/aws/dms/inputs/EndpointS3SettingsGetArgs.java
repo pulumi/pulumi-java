@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * S3 Bucket Object prefix.
      * 
      */
-    @InputImport(name="bucketFolder")
+    @Import(name="bucketFolder")
       private final @Nullable Output<String> bucketFolder;
 
     public Output<String> getBucketFolder() {
@@ -30,7 +30,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * S3 Bucket name.
      * 
      */
-    @InputImport(name="bucketName")
+    @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -41,7 +41,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * Set to compress target files. Defaults to `NONE`. Valid values are `GZIP` and `NONE`.
      * 
      */
-    @InputImport(name="compressionType")
+    @Import(name="compressionType")
       private final @Nullable Output<String> compressionType;
 
     public Output<String> getCompressionType() {
@@ -52,7 +52,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * Delimiter used to separate columns in the source files. Defaults to `,`.
      * 
      */
-    @InputImport(name="csvDelimiter")
+    @Import(name="csvDelimiter")
       private final @Nullable Output<String> csvDelimiter;
 
     public Output<String> getCsvDelimiter() {
@@ -63,7 +63,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * Delimiter used to separate rows in the source files. Defaults to `\n`.
      * 
      */
-    @InputImport(name="csvRowDelimiter")
+    @Import(name="csvRowDelimiter")
       private final @Nullable Output<String> csvRowDelimiter;
 
     public Output<String> getCsvRowDelimiter() {
@@ -74,7 +74,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * The output format for the files that AWS DMS uses to create S3 objects. Defaults to `csv`. Valid values are `csv` and `parquet`.
      * 
      */
-    @InputImport(name="dataFormat")
+    @Import(name="dataFormat")
       private final @Nullable Output<String> dataFormat;
 
     public Output<String> getDataFormat() {
@@ -85,7 +85,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
      * 
      */
-    @InputImport(name="datePartitionEnabled")
+    @Import(name="datePartitionEnabled")
       private final @Nullable Output<Boolean> datePartitionEnabled;
 
     public Output<Boolean> getDatePartitionEnabled() {
@@ -96,7 +96,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * The server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Defaults to `SSE_S3`. Valid values are `SSE_S3` and `SSE_KMS`.
      * 
      */
-    @InputImport(name="encryptionMode")
+    @Import(name="encryptionMode")
       private final @Nullable Output<String> encryptionMode;
 
     public Output<String> getEncryptionMode() {
@@ -107,7 +107,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * JSON document that describes how AWS DMS should interpret the data.
      * 
      */
-    @InputImport(name="externalTableDefinition")
+    @Import(name="externalTableDefinition")
       private final @Nullable Output<String> externalTableDefinition;
 
     public Output<String> getExternalTableDefinition() {
@@ -118,7 +118,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * - Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Defaults to `false`.
      * 
      */
-    @InputImport(name="parquetTimestampInMillisecond")
+    @Import(name="parquetTimestampInMillisecond")
       private final @Nullable Output<Boolean> parquetTimestampInMillisecond;
 
     public Output<Boolean> getParquetTimestampInMillisecond() {
@@ -129,7 +129,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * The version of the .parquet file format. Defaults to `parquet-1-0`. Valid values are `parquet-1-0` and `parquet-2-0`.
      * 
      */
-    @InputImport(name="parquetVersion")
+    @Import(name="parquetVersion")
       private final @Nullable Output<String> parquetVersion;
 
     public Output<String> getParquetVersion() {
@@ -140,7 +140,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * If you set encryptionMode to `SSE_KMS`, set this parameter to the Amazon Resource Name (ARN) for the AWS KMS key.
      * 
      */
-    @InputImport(name="serverSideEncryptionKmsKeyId")
+    @Import(name="serverSideEncryptionKmsKeyId")
       private final @Nullable Output<String> serverSideEncryptionKmsKeyId;
 
     public Output<String> getServerSideEncryptionKmsKeyId() {
@@ -151,7 +151,7 @@ public final class EndpointS3SettingsGetArgs extends io.pulumi.resources.Resourc
      * Amazon Resource Name (ARN) of the IAM Role with permissions to read from or write to the S3 Bucket.
      * 
      */
-    @InputImport(name="serviceAccessRoleArn")
+    @Import(name="serviceAccessRoleArn")
       private final @Nullable Output<String> serviceAccessRoleArn;
 
     public Output<String> getServiceAccessRoleArn() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.globalaccelerator.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointGroupPortOverride {
     /**
      * The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
@@ -20,10 +20,10 @@ public final class EndpointGroupPortOverride {
      */
     private final Integer listenerPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointGroupPortOverride(
-        @OutputCustomType.Parameter("endpointPort") Integer endpointPort,
-        @OutputCustomType.Parameter("listenerPort") Integer listenerPort) {
+        @CustomType.Parameter("endpointPort") Integer endpointPort,
+        @CustomType.Parameter("listenerPort") Integer listenerPort) {
         this.endpointPort = endpointPort;
         this.listenerPort = listenerPort;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.codeartifact.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Domain.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The total size of all assets in the domain.
      * 
      */
-    @InputImport(name="assetSizeBytes")
+    @Import(name="assetSizeBytes")
       private final @Nullable Output<Integer> assetSizeBytes;
 
     public Output<Integer> getAssetSizeBytes() {
@@ -42,7 +42,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * A timestamp that represents the date and time the domain was created in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -53,7 +53,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The name of the domain to create. All domain names in an AWS Region that are in the same AWS account must be unique. The domain name is used as the prefix in DNS hostnames. Do not use sensitive information in a domain name because it is publicly discoverable.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -64,7 +64,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The encryption key for the domain. This is used to encrypt content stored in a domain. The KMS Key Amazon Resource Name (ARN). The default aws/codeartifact AWS KMS master key is used if this element is absent.
      * 
      */
-    @InputImport(name="encryptionKey")
+    @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
     public Output<String> getEncryptionKey() {
@@ -75,7 +75,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The AWS account ID that owns the domain.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
@@ -86,7 +86,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * The number of repositories in the domain.
      * 
      */
-    @InputImport(name="repositoryCount")
+    @Import(name="repositoryCount")
       private final @Nullable Output<Integer> repositoryCount;
 
     public Output<Integer> getRepositoryCount() {
@@ -97,7 +97,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -108,7 +108,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

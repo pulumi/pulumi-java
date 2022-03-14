@@ -4,11 +4,11 @@
 package io.pulumi.aws.wafregional.outputs;
 
 import io.pulumi.aws.wafregional.outputs.SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SqlInjectionMatchSetSqlInjectionMatchTuple {
     /**
      * Specifies where in a web request to look for snippets of malicious SQL code.
@@ -25,10 +25,10 @@ public final class SqlInjectionMatchSetSqlInjectionMatchTuple {
      */
     private final String textTransformation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlInjectionMatchSetSqlInjectionMatchTuple(
-        @OutputCustomType.Parameter("fieldToMatch") SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("textTransformation") String textTransformation) {
+        @CustomType.Parameter("fieldToMatch") SqlInjectionMatchSetSqlInjectionMatchTupleFieldToMatch fieldToMatch,
+        @CustomType.Parameter("textTransformation") String textTransformation) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformation = textTransformation;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
      * needed. For more information, see [Placement Strategy](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html).
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable Output<String> field;
 
     public Output<String> getField() {
@@ -32,7 +32,7 @@ public final class ServiceOrderedPlacementStrategyGetArgs extends io.pulumi.reso
      * Type of placement strategy. Must be one of: `binpack`, `random`, or `spread`
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

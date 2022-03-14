@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.securityhub.StandardsSubscriptionArgs;
 import io.pulumi.aws.securityhub.inputs.StandardsSubscriptionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -36,7 +36,7 @@ public class StandardsSubscription extends io.pulumi.resources.CustomResource {
      * The ARN of a standard - see below.
      * 
      */
-    @OutputExport(name="standardsArn", type=String.class, parameters={})
+    @Export(name="standardsArn", type=String.class, parameters={})
     private Output<String> standardsArn;
 
     /**

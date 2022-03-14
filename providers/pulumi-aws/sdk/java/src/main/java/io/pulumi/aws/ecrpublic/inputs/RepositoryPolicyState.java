@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecrpublic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
 
     public static final RepositoryPolicyState Empty = new RepositoryPolicyState();
 
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -25,7 +25,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
      * The registry ID where the repository was created.
      * 
      */
-    @InputImport(name="registryId")
+    @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
     public Output<String> getRegistryId() {
@@ -36,7 +36,7 @@ public final class RepositoryPolicyState extends io.pulumi.resources.ResourceArg
      * Name of the repository to apply the policy.
      * 
      */
-    @InputImport(name="repositoryName")
+    @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.msk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClientAuthenticationSasl {
     /**
      * Enables IAM client authentication. Defaults to `false`.
@@ -22,10 +22,10 @@ public final class ClusterClientAuthenticationSasl {
      */
     private final @Nullable Boolean scram;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClientAuthenticationSasl(
-        @OutputCustomType.Parameter("iam") @Nullable Boolean iam,
-        @OutputCustomType.Parameter("scram") @Nullable Boolean scram) {
+        @CustomType.Parameter("iam") @Nullable Boolean iam,
+        @CustomType.Parameter("scram") @Nullable Boolean scram) {
         this.iam = iam;
         this.scram = scram;
     }

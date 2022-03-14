@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetZoneResult {
     /**
      * The Amazon Resource Name (ARN) of the Hosted Zone.
@@ -61,21 +61,21 @@ public final class GetZoneResult {
     private final String vpcId;
     private final String zoneId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetZoneResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("callerReference") String callerReference,
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("linkedServiceDescription") String linkedServiceDescription,
-        @OutputCustomType.Parameter("linkedServicePrincipal") String linkedServicePrincipal,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
-        @OutputCustomType.Parameter("privateZone") @Nullable Boolean privateZone,
-        @OutputCustomType.Parameter("resourceRecordSetCount") Integer resourceRecordSetCount,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcId") String vpcId,
-        @OutputCustomType.Parameter("zoneId") String zoneId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("callerReference") String callerReference,
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("linkedServiceDescription") String linkedServiceDescription,
+        @CustomType.Parameter("linkedServicePrincipal") String linkedServicePrincipal,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nameServers") List<String> nameServers,
+        @CustomType.Parameter("privateZone") @Nullable Boolean privateZone,
+        @CustomType.Parameter("resourceRecordSetCount") Integer resourceRecordSetCount,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcId") String vpcId,
+        @CustomType.Parameter("zoneId") String zoneId) {
         this.arn = arn;
         this.callerReference = callerReference;
         this.comment = comment;

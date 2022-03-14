@@ -7,7 +7,7 @@ import io.pulumi.aws.glue.outputs.PartitionStorageDescriptorColumn;
 import io.pulumi.aws.glue.outputs.PartitionStorageDescriptorSerDeInfo;
 import io.pulumi.aws.glue.outputs.PartitionStorageDescriptorSkewedInfo;
 import io.pulumi.aws.glue.outputs.PartitionStorageDescriptorSortColumn;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PartitionStorageDescriptor {
     /**
      * A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
@@ -80,20 +80,20 @@ public final class PartitionStorageDescriptor {
      */
     private final @Nullable Boolean storedAsSubDirectories;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PartitionStorageDescriptor(
-        @OutputCustomType.Parameter("bucketColumns") @Nullable List<String> bucketColumns,
-        @OutputCustomType.Parameter("columns") @Nullable List<PartitionStorageDescriptorColumn> columns,
-        @OutputCustomType.Parameter("compressed") @Nullable Boolean compressed,
-        @OutputCustomType.Parameter("inputFormat") @Nullable String inputFormat,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("numberOfBuckets") @Nullable Integer numberOfBuckets,
-        @OutputCustomType.Parameter("outputFormat") @Nullable String outputFormat,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
-        @OutputCustomType.Parameter("serDeInfo") @Nullable PartitionStorageDescriptorSerDeInfo serDeInfo,
-        @OutputCustomType.Parameter("skewedInfo") @Nullable PartitionStorageDescriptorSkewedInfo skewedInfo,
-        @OutputCustomType.Parameter("sortColumns") @Nullable List<PartitionStorageDescriptorSortColumn> sortColumns,
-        @OutputCustomType.Parameter("storedAsSubDirectories") @Nullable Boolean storedAsSubDirectories) {
+        @CustomType.Parameter("bucketColumns") @Nullable List<String> bucketColumns,
+        @CustomType.Parameter("columns") @Nullable List<PartitionStorageDescriptorColumn> columns,
+        @CustomType.Parameter("compressed") @Nullable Boolean compressed,
+        @CustomType.Parameter("inputFormat") @Nullable String inputFormat,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("numberOfBuckets") @Nullable Integer numberOfBuckets,
+        @CustomType.Parameter("outputFormat") @Nullable String outputFormat,
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @CustomType.Parameter("serDeInfo") @Nullable PartitionStorageDescriptorSerDeInfo serDeInfo,
+        @CustomType.Parameter("skewedInfo") @Nullable PartitionStorageDescriptorSkewedInfo skewedInfo,
+        @CustomType.Parameter("sortColumns") @Nullable List<PartitionStorageDescriptorSortColumn> sortColumns,
+        @CustomType.Parameter("storedAsSubDirectories") @Nullable Boolean storedAsSubDirectories) {
         this.bucketColumns = bucketColumns;
         this.columns = columns;
         this.compressed = compressed;

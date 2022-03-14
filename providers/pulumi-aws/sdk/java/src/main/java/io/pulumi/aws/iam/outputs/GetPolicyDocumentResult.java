@@ -4,14 +4,14 @@
 package io.pulumi.aws.iam.outputs;
 
 import io.pulumi.aws.iam.outputs.GetPolicyDocumentStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyDocumentResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -31,17 +31,17 @@ public final class GetPolicyDocumentResult {
     private final @Nullable List<GetPolicyDocumentStatement> statements;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyDocumentResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("json") String json,
-        @OutputCustomType.Parameter("overrideJson") @Nullable String overrideJson,
-        @OutputCustomType.Parameter("overridePolicyDocuments") @Nullable List<String> overridePolicyDocuments,
-        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
-        @OutputCustomType.Parameter("sourceJson") @Nullable String sourceJson,
-        @OutputCustomType.Parameter("sourcePolicyDocuments") @Nullable List<String> sourcePolicyDocuments,
-        @OutputCustomType.Parameter("statements") @Nullable List<GetPolicyDocumentStatement> statements,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("json") String json,
+        @CustomType.Parameter("overrideJson") @Nullable String overrideJson,
+        @CustomType.Parameter("overridePolicyDocuments") @Nullable List<String> overridePolicyDocuments,
+        @CustomType.Parameter("policyId") @Nullable String policyId,
+        @CustomType.Parameter("sourceJson") @Nullable String sourceJson,
+        @CustomType.Parameter("sourcePolicyDocuments") @Nullable List<String> sourcePolicyDocuments,
+        @CustomType.Parameter("statements") @Nullable List<GetPolicyDocumentStatement> statements,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.json = json;
         this.overrideJson = overrideJson;

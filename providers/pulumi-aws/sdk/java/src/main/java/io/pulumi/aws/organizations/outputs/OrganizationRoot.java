@@ -4,14 +4,14 @@
 package io.pulumi.aws.organizations.outputs;
 
 import io.pulumi.aws.organizations.outputs.OrganizationRootPolicyType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationRoot {
     /**
      * ARN of the root
@@ -34,12 +34,12 @@ public final class OrganizationRoot {
      */
     private final @Nullable List<OrganizationRootPolicyType> policyTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrganizationRoot(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("policyTypes") @Nullable List<OrganizationRootPolicyType> policyTypes) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("policyTypes") @Nullable List<OrganizationRootPolicyType> policyTypes) {
         this.arn = arn;
         this.id = id;
         this.name = name;

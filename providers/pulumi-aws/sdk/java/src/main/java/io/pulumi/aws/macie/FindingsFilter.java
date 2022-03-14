@@ -8,7 +8,7 @@ import io.pulumi.aws.macie.FindingsFilterArgs;
 import io.pulumi.aws.macie.inputs.FindingsFilterState;
 import io.pulumi.aws.macie.outputs.FindingsFilterFindingCriteria;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * The action to perform on findings that meet the filter criteria (`finding_criteria`). Valid values are: `ARCHIVE`, suppress (automatically archive) the findings; and, `NOOP`, don't perform any action on the findings.
      * 
      */
-    @OutputExport(name="action", type=String.class, parameters={})
+    @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     /**
@@ -49,7 +49,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Findings Filter.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -63,7 +63,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * A custom description of the filter. The description can contain as many as 512 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -77,7 +77,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * The criteria to use to filter findings.
      * 
      */
-    @OutputExport(name="findingCriteria", type=FindingsFilterFindingCriteria.class, parameters={})
+    @Export(name="findingCriteria", type=FindingsFilterFindingCriteria.class, parameters={})
     private Output<FindingsFilterFindingCriteria> findingCriteria;
 
     /**
@@ -87,7 +87,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
     public Output<FindingsFilterFindingCriteria> getFindingCriteria() {
         return this.findingCriteria;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
@@ -97,7 +97,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -111,7 +111,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * The position of the filter in the list of saved filters on the Amazon Macie console. This value also determines the order in which the filter is applied to findings, relative to other filters that are also applied to the findings.
      * 
      */
-    @OutputExport(name="position", type=Integer.class, parameters={})
+    @Export(name="position", type=Integer.class, parameters={})
     private Output<Integer> position;
 
     /**
@@ -125,7 +125,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
      * A map of key-value pairs that specifies the tags to associate with the filter.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class FindingsFilter extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

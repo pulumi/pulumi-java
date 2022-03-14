@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.fms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicySecurityServicePolicyData {
     /**
      * Details about the service that are specific to the service type, in JSON format. For service type `SHIELD_ADVANCED`, this is an empty string. Examples depending on `type` can be found in the [AWS Firewall Manager SecurityServicePolicyData API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html).
@@ -22,10 +22,10 @@ public final class PolicySecurityServicePolicyData {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicySecurityServicePolicyData(
-        @OutputCustomType.Parameter("managedServiceData") @Nullable String managedServiceData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("managedServiceData") @Nullable String managedServiceData,
+        @CustomType.Parameter("type") String type) {
         this.managedServiceData = managedServiceData;
         this.type = type;
     }

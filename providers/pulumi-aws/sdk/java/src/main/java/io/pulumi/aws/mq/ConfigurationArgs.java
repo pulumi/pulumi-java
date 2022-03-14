@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Authentication strategy associated with the configuration. Valid values are `simple` and `ldap`. `ldap` is not supported for `engine_type` `RabbitMQ`.
      * 
      */
-    @InputImport(name="authenticationStrategy")
+    @Import(name="authenticationStrategy")
       private final @Nullable Output<String> authenticationStrategy;
 
     public Output<String> getAuthenticationStrategy() {
@@ -30,7 +30,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Broker configuration in XML format. See [official docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) for supported parameters and format of the XML.
      * 
      */
-    @InputImport(name="data", required=true)
+    @Import(name="data", required=true)
       private final Output<String> data;
 
     public Output<String> getData() {
@@ -41,7 +41,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -52,7 +52,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Type of broker engine. Valid values are `ActiveMQ` and `RabbitMQ`.
      * 
      */
-    @InputImport(name="engineType", required=true)
+    @Import(name="engineType", required=true)
       private final Output<String> engineType;
 
     public Output<String> getEngineType() {
@@ -63,7 +63,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Version of the broker engine.
      * 
      */
-    @InputImport(name="engineVersion", required=true)
+    @Import(name="engineVersion", required=true)
       private final Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -74,7 +74,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

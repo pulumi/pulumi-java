@@ -5,13 +5,13 @@ package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationReferenceDataSourcesS3;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationReferenceDataSourcesSchema;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationReferenceDataSources {
     /**
      * The ARN of the Kinesis Analytics Application.
@@ -34,12 +34,12 @@ public final class AnalyticsApplicationReferenceDataSources {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationReferenceDataSources(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("s3") AnalyticsApplicationReferenceDataSourcesS3 s3,
-        @OutputCustomType.Parameter("schema") AnalyticsApplicationReferenceDataSourcesSchema schema,
-        @OutputCustomType.Parameter("tableName") String tableName) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("s3") AnalyticsApplicationReferenceDataSourcesS3 s3,
+        @CustomType.Parameter("schema") AnalyticsApplicationReferenceDataSourcesSchema schema,
+        @CustomType.Parameter("tableName") String tableName) {
         this.id = id;
         this.s3 = s3;
         this.schema = schema;

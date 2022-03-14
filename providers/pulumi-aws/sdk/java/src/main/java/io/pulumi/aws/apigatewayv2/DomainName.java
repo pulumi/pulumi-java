@@ -9,7 +9,7 @@ import io.pulumi.aws.apigatewayv2.inputs.DomainNameState;
 import io.pulumi.aws.apigatewayv2.outputs.DomainNameDomainNameConfiguration;
 import io.pulumi.aws.apigatewayv2.outputs.DomainNameMutualTlsAuthentication;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -39,7 +39,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
      * 
      */
-    @OutputExport(name="apiMappingSelectionExpression", type=String.class, parameters={})
+    @Export(name="apiMappingSelectionExpression", type=String.class, parameters={})
     private Output<String> apiMappingSelectionExpression;
 
     /**
@@ -53,7 +53,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The ARN of the domain name.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -67,7 +67,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The domain name. Must be between 1 and 512 characters in length.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -81,7 +81,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The domain name configuration.
      * 
      */
-    @OutputExport(name="domainNameConfiguration", type=DomainNameDomainNameConfiguration.class, parameters={})
+    @Export(name="domainNameConfiguration", type=DomainNameDomainNameConfiguration.class, parameters={})
     private Output<DomainNameDomainNameConfiguration> domainNameConfiguration;
 
     /**
@@ -95,7 +95,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The mutual TLS authentication configuration for the domain name.
      * 
      */
-    @OutputExport(name="mutualTlsAuthentication", type=DomainNameMutualTlsAuthentication.class, parameters={})
+    @Export(name="mutualTlsAuthentication", type=DomainNameMutualTlsAuthentication.class, parameters={})
     private Output</* @Nullable */ DomainNameMutualTlsAuthentication> mutualTlsAuthentication;
 
     /**
@@ -109,7 +109,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -123,7 +123,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

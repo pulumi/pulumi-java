@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * The server-side encryption key that is used to protect your backups.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -30,7 +30,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the backup vault to create.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that you can assign to help organize the resources that you create. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

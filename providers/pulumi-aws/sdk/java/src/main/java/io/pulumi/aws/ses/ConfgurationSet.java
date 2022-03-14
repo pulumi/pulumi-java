@@ -8,7 +8,7 @@ import io.pulumi.aws.ses.ConfgurationSetArgs;
 import io.pulumi.aws.ses.inputs.ConfgurationSetState;
 import io.pulumi.aws.ses.outputs.ConfgurationSetDeliveryOptions;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class ConfgurationSet extends io.pulumi.resources.CustomResource {
      * SES configuration set ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -52,7 +52,7 @@ public class ConfgurationSet extends io.pulumi.resources.CustomResource {
      * Configuration block. Detailed below.
      * 
      */
-    @OutputExport(name="deliveryOptions", type=ConfgurationSetDeliveryOptions.class, parameters={})
+    @Export(name="deliveryOptions", type=ConfgurationSetDeliveryOptions.class, parameters={})
     private Output</* @Nullable */ ConfgurationSetDeliveryOptions> deliveryOptions;
 
     /**
@@ -66,7 +66,7 @@ public class ConfgurationSet extends io.pulumi.resources.CustomResource {
      * The date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.
      * 
      */
-    @OutputExport(name="lastFreshStart", type=String.class, parameters={})
+    @Export(name="lastFreshStart", type=String.class, parameters={})
     private Output<String> lastFreshStart;
 
     /**
@@ -80,7 +80,7 @@ public class ConfgurationSet extends io.pulumi.resources.CustomResource {
      * Name of the configuration set.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class ConfgurationSet extends io.pulumi.resources.CustomResource {
      * Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is `false`.
      * 
      */
-    @OutputExport(name="reputationMetricsEnabled", type=Boolean.class, parameters={})
+    @Export(name="reputationMetricsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reputationMetricsEnabled;
 
     /**
@@ -108,7 +108,7 @@ public class ConfgurationSet extends io.pulumi.resources.CustomResource {
      * Whether email sending is enabled or disabled for the configuration set. The default value is `true`.
      * 
      */
-    @OutputExport(name="sendingEnabled", type=Boolean.class, parameters={})
+    @Export(name="sendingEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sendingEnabled;
 
     /**

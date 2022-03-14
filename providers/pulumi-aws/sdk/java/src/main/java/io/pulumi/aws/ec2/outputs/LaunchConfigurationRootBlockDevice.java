@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchConfigurationRootBlockDevice {
     private final @Nullable Boolean deleteOnTermination;
     private final @Nullable Boolean encrypted;
@@ -20,14 +20,14 @@ public final class LaunchConfigurationRootBlockDevice {
     private final @Nullable Integer volumeSize;
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchConfigurationRootBlockDevice(
-        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
-        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
-        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
-        @OutputCustomType.Parameter("throughput") @Nullable Integer throughput,
-        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
-        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
+        @CustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @CustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @CustomType.Parameter("iops") @Nullable Integer iops,
+        @CustomType.Parameter("throughput") @Nullable Integer throughput,
+        @CustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @CustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

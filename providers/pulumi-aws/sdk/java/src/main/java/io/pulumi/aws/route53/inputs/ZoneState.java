@@ -5,7 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.aws.route53.inputs.ZoneVpcGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the Hosted Zone.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -44,7 +44,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
      * 
      */
-    @InputImport(name="delegationSetId")
+    @Import(name="delegationSetId")
       private final @Nullable Output<String> delegationSetId;
 
     public Output<String> getDelegationSetId() {
@@ -55,7 +55,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -66,7 +66,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * This is the name of the hosted zone.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
      * 
      */
-    @InputImport(name="nameServers")
+    @Import(name="nameServers")
       private final @Nullable Output<List<String>> nameServers;
 
     public Output<List<String>> getNameServers() {
@@ -89,7 +89,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * A mapping of tags to assign to the zone.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -100,7 +100,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -111,7 +111,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
      * 
      */
-    @InputImport(name="vpcs")
+    @Import(name="vpcs")
       private final @Nullable Output<List<ZoneVpcGetArgs>> vpcs;
 
     public Output<List<ZoneVpcGetArgs>> getVpcs() {
@@ -122,7 +122,7 @@ public final class ZoneState extends io.pulumi.resources.ResourceArgs {
      * The Hosted Zone ID. This can be referenced by zone records.
      * 
      */
-    @InputImport(name="zoneId")
+    @Import(name="zoneId")
       private final @Nullable Output<String> zoneId;
 
     public Output<String> getZoneId() {

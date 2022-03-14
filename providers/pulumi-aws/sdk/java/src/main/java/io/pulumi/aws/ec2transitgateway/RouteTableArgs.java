@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value tags for the EC2 Transit Gateway Route Table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -30,7 +30,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of EC2 Transit Gateway.
      * 
      */
-    @InputImport(name="transitGatewayId", required=true)
+    @Import(name="transitGatewayId", required=true)
       private final Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.alb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerDefaultActionAuthenticateOidc {
     private final Map<String,String> authenticationRequestExtraParams;
     private final String authorizationEndpoint;
@@ -23,19 +23,19 @@ public final class GetListenerDefaultActionAuthenticateOidc {
     private final String tokenEndpoint;
     private final String userInfoEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerDefaultActionAuthenticateOidc(
-        @OutputCustomType.Parameter("authenticationRequestExtraParams") Map<String,String> authenticationRequestExtraParams,
-        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("clientSecret") String clientSecret,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("onUnauthenticatedRequest") String onUnauthenticatedRequest,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("sessionCookieName") String sessionCookieName,
-        @OutputCustomType.Parameter("sessionTimeout") Integer sessionTimeout,
-        @OutputCustomType.Parameter("tokenEndpoint") String tokenEndpoint,
-        @OutputCustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
+        @CustomType.Parameter("authenticationRequestExtraParams") Map<String,String> authenticationRequestExtraParams,
+        @CustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("clientSecret") String clientSecret,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("onUnauthenticatedRequest") String onUnauthenticatedRequest,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("sessionCookieName") String sessionCookieName,
+        @CustomType.Parameter("sessionTimeout") Integer sessionTimeout,
+        @CustomType.Parameter("tokenEndpoint") String tokenEndpoint,
+        @CustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientId = clientId;

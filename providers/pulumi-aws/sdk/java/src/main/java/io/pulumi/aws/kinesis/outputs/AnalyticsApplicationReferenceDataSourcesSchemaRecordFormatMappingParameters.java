@@ -5,12 +5,12 @@ package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters {
     /**
      * Mapping information when the record format uses delimiters.
@@ -25,10 +25,10 @@ public final class AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMap
      */
     private final @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson json;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters(
-        @OutputCustomType.Parameter("csv") @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv csv,
-        @OutputCustomType.Parameter("json") @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson json) {
+        @CustomType.Parameter("csv") @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv csv,
+        @CustomType.Parameter("json") @Nullable AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson json) {
         this.csv = csv;
         this.json = json;
     }

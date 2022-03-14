@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs exte
      * Object that contains an attribute `items` that contains the list of field patterns in a field-level encryption content type profile specify the fields that you want to be encrypted.
      * 
      */
-    @InputImport(name="fieldPatterns", required=true)
+    @Import(name="fieldPatterns", required=true)
       private final Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsGetArgs> fieldPatterns;
 
     public Output<FieldLevelEncryptionProfileEncryptionEntitiesItemFieldPatternsGetArgs> getFieldPatterns() {
@@ -29,7 +29,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs exte
      * The provider associated with the public key being used for encryption.
      * 
      */
-    @InputImport(name="providerId", required=true)
+    @Import(name="providerId", required=true)
       private final Output<String> providerId;
 
     public Output<String> getProviderId() {
@@ -40,7 +40,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs exte
      * The public key associated with a set of field-level encryption patterns, to be used when encrypting the fields that match the patterns.
      * 
      */
-    @InputImport(name="publicKeyId", required=true)
+    @Import(name="publicKeyId", required=true)
       private final Output<String> publicKeyId;
 
     public Output<String> getPublicKeyId() {

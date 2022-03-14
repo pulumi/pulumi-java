@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.serverlessrepository.CloudFormationStackArgs;
 import io.pulumi.aws.serverlessrepository.inputs.CloudFormationStackState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * The ARN of the application from the Serverless Application Repository.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -48,7 +48,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * A list of capabilities. Valid values are `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_RESOURCE_POLICY`, or `CAPABILITY_AUTO_EXPAND`
      * 
      */
-    @OutputExport(name="capabilities", type=List.class, parameters={String.class})
+    @Export(name="capabilities", type=List.class, parameters={String.class})
     private Output<List<String>> capabilities;
 
     /**
@@ -62,7 +62,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * The name of the stack to create. The resource deployed in AWS will be prefixed with `serverlessrepo-`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * A map of outputs from the stack.
      * 
      */
-    @OutputExport(name="outputs", type=Map.class, parameters={String.class, String.class})
+    @Export(name="outputs", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> outputs;
 
     /**
@@ -90,7 +90,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * A map of Parameter structures that specify input parameters for the stack.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> parameters;
 
     /**
@@ -104,7 +104,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * The version of the application to deploy. If not supplied, deploys the latest version.
      * 
      */
-    @OutputExport(name="semanticVersion", type=String.class, parameters={})
+    @Export(name="semanticVersion", type=String.class, parameters={})
     private Output<String> semanticVersion;
 
     /**
@@ -118,7 +118,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * A list of tags to associate with this stack. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -132,7 +132,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

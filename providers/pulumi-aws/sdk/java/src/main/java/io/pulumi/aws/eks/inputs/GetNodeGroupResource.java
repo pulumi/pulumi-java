@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.GetNodeGroupResourceAutoscalingGroup;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetNodeGroupResource extends io.pulumi.resources.InvokeArgs {
      * List of objects containing information about AutoScaling Groups.
      * 
      */
-    @InputImport(name="autoscalingGroups", required=true)
+    @Import(name="autoscalingGroups", required=true)
       private final List<GetNodeGroupResourceAutoscalingGroup> autoscalingGroups;
 
     public List<GetNodeGroupResourceAutoscalingGroup> getAutoscalingGroups() {
@@ -29,7 +29,7 @@ public final class GetNodeGroupResource extends io.pulumi.resources.InvokeArgs {
      * Identifier of the remote access EC2 Security Group.
      * 
      */
-    @InputImport(name="remoteAccessSecurityGroupId", required=true)
+    @Import(name="remoteAccessSecurityGroupId", required=true)
       private final String remoteAccessSecurityGroupId;
 
     public String getRemoteAccessSecurityGroupId() {

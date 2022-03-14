@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.fsx.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OpenZfsVolumeUserAndGroupQuota {
     /**
      * - The ID of the user or group. Valid values between `0` and `2147483647`
@@ -22,11 +22,11 @@ public final class OpenZfsVolumeUserAndGroupQuota {
     private final Integer storageCapacityQuotaGib;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenZfsVolumeUserAndGroupQuota(
-        @OutputCustomType.Parameter("id") Integer id,
-        @OutputCustomType.Parameter("storageCapacityQuotaGib") Integer storageCapacityQuotaGib,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") Integer id,
+        @CustomType.Parameter("storageCapacityQuotaGib") Integer storageCapacityQuotaGib,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.storageCapacityQuotaGib = storageCapacityQuotaGib;
         this.type = type;

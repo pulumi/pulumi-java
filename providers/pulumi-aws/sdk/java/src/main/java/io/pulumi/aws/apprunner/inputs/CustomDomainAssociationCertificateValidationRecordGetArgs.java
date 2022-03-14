@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CustomDomainAssociationCertificateValidationRecordGetArgs ext
      * The certificate CNAME record name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class CustomDomainAssociationCertificateValidationRecordGetArgs ext
      * The current state of the certificate CNAME record validation. It should change to `SUCCESS` after App Runner completes validation with your DNS.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -40,7 +40,7 @@ public final class CustomDomainAssociationCertificateValidationRecordGetArgs ext
      * The record type, always `CNAME`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -51,7 +51,7 @@ public final class CustomDomainAssociationCertificateValidationRecordGetArgs ext
      * The certificate CNAME record value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

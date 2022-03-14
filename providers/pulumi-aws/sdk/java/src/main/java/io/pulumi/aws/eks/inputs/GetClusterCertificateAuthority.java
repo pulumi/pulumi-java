@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.eks.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetClusterCertificateAuthority extends io.pulumi.resources.In
      * The base64 encoded certificate data required to communicate with your cluster. Add this to the `certificate-authority-data` section of the `kubeconfig` file for your cluster.
      * 
      */
-    @InputImport(name="data", required=true)
+    @Import(name="data", required=true)
       private final String data;
 
     public String getData() {

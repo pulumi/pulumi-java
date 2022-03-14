@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigatewayv2.ModelArgs;
 import io.pulumi.aws.apigatewayv2.inputs.ModelState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The API identifier.
      * 
      */
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
     /**
@@ -46,7 +46,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
     /**
@@ -60,7 +60,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The description of the model. Must be between 1 and 128 characters in length.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -74,7 +74,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -88,7 +88,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
      * 
      */
-    @OutputExport(name="schema", type=String.class, parameters={})
+    @Export(name="schema", type=String.class, parameters={})
     private Output<String> schema;
 
     /**

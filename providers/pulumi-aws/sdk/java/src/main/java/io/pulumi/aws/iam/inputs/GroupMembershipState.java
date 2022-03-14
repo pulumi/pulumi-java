@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * The IAM Group name to attach the list of `users` to
      * 
      */
-    @InputImport(name="group")
+    @Import(name="group")
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
@@ -30,7 +30,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * The name to identify the Group Membership
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * A list of IAM User names to associate with the Group
      * 
      */
-    @InputImport(name="users")
+    @Import(name="users")
       private final @Nullable Output<List<String>> users;
 
     public Output<List<String>> getUsers() {

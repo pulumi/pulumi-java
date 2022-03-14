@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
      * Set of configuration blocks containing the dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for details.
      * 
      */
-    @InputImport(name="dimensions", required=true)
+    @Import(name="dimensions", required=true)
       private final Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs>> dimensions;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActionDimensionArgs>> getDimensions() {

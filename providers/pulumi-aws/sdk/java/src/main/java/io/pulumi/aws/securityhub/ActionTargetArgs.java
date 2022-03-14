@@ -4,7 +4,7 @@
 package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ActionTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the custom action target.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class ActionTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The ID for the custom action target.
      * 
      */
-    @InputImport(name="identifier", required=true)
+    @Import(name="identifier", required=true)
       private final Output<String> identifier;
 
     public Output<String> getIdentifier() {
@@ -40,7 +40,7 @@ public final class ActionTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The description for the custom action target.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

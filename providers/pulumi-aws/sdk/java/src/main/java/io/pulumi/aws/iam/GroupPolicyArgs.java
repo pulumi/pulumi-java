@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GroupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The IAM group to attach to the policy.
      * 
      */
-    @InputImport(name="group", required=true)
+    @Import(name="group", required=true)
       private final Output<String> group;
 
     public Output<String> getGroup() {
@@ -30,7 +30,7 @@ public final class GroupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class GroupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -53,7 +53,7 @@ public final class GroupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The policy document. This is a JSON formatted string.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {

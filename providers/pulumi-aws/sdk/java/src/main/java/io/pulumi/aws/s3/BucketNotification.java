@@ -10,7 +10,7 @@ import io.pulumi.aws.s3.outputs.BucketNotificationLambdaFunction;
 import io.pulumi.aws.s3.outputs.BucketNotificationQueue;
 import io.pulumi.aws.s3.outputs.BucketNotificationTopic;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class BucketNotification extends io.pulumi.resources.CustomResource {
      * Name of the bucket for notification configuration.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -53,7 +53,7 @@ public class BucketNotification extends io.pulumi.resources.CustomResource {
      * Whether to enable Amazon EventBridge notifications.
      * 
      */
-    @OutputExport(name="eventbridge", type=Boolean.class, parameters={})
+    @Export(name="eventbridge", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> eventbridge;
 
     /**
@@ -67,7 +67,7 @@ public class BucketNotification extends io.pulumi.resources.CustomResource {
      * Used to configure notifications to a Lambda Function. See below.
      * 
      */
-    @OutputExport(name="lambdaFunctions", type=List.class, parameters={BucketNotificationLambdaFunction.class})
+    @Export(name="lambdaFunctions", type=List.class, parameters={BucketNotificationLambdaFunction.class})
     private Output</* @Nullable */ List<BucketNotificationLambdaFunction>> lambdaFunctions;
 
     /**
@@ -81,7 +81,7 @@ public class BucketNotification extends io.pulumi.resources.CustomResource {
      * Notification configuration to SQS Queue. See below.
      * 
      */
-    @OutputExport(name="queues", type=List.class, parameters={BucketNotificationQueue.class})
+    @Export(name="queues", type=List.class, parameters={BucketNotificationQueue.class})
     private Output</* @Nullable */ List<BucketNotificationQueue>> queues;
 
     /**
@@ -95,7 +95,7 @@ public class BucketNotification extends io.pulumi.resources.CustomResource {
      * Notification configuration to SNS Topic. See below.
      * 
      */
-    @OutputExport(name="topics", type=List.class, parameters={BucketNotificationTopic.class})
+    @Export(name="topics", type=List.class, parameters={BucketNotificationTopic.class})
     private Output</* @Nullable */ List<BucketNotificationTopic>> topics;
 
     /**

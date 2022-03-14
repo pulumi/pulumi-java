@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.budgets.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BudgetActionActionThreshold {
     /**
      * The type of threshold for a notification. Valid values are `PERCENTAGE` or `ABSOLUTE_VALUE`.
@@ -21,10 +21,10 @@ public final class BudgetActionActionThreshold {
      */
     private final Double actionThresholdValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetActionActionThreshold(
-        @OutputCustomType.Parameter("actionThresholdType") String actionThresholdType,
-        @OutputCustomType.Parameter("actionThresholdValue") Double actionThresholdValue) {
+        @CustomType.Parameter("actionThresholdType") String actionThresholdType,
+        @CustomType.Parameter("actionThresholdValue") Double actionThresholdValue) {
         this.actionThresholdType = actionThresholdType;
         this.actionThresholdValue = actionThresholdValue;
     }

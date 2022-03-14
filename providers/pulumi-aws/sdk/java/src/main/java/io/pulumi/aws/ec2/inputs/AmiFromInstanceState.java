@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.AmiFromInstanceEbsBlockDeviceGetArgs;
 import io.pulumi.aws.ec2.inputs.AmiFromInstanceEphemeralBlockDeviceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * Machine architecture for created instances. Defaults to "x86_64".
      * 
      */
-    @InputImport(name="architecture")
+    @Import(name="architecture")
       private final @Nullable Output<String> architecture;
 
     public Output<String> getArchitecture() {
@@ -34,7 +34,7 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * The ARN of the AMI.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -45,7 +45,7 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * A longer, human-readable description for the AMI.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * attached to created instances. The structure of this block is described below.
      * 
      */
-    @InputImport(name="ebsBlockDevices")
+    @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<AmiFromInstanceEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
     public Output<List<AmiFromInstanceEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
@@ -68,7 +68,7 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
      * 
      */
-    @InputImport(name="enaSupport")
+    @Import(name="enaSupport")
       private final @Nullable Output<Boolean> enaSupport;
 
     public Output<Boolean> getEnaSupport() {
@@ -80,14 +80,14 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * should be attached to created instances. The structure of this block is described below.
      * 
      */
-    @InputImport(name="ephemeralBlockDevices")
+    @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<AmiFromInstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
     public Output<List<AmiFromInstanceEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
         return this.ephemeralBlockDevices == null ? Output.empty() : this.ephemeralBlockDevices;
     }
 
-    @InputImport(name="hypervisor")
+    @Import(name="hypervisor")
       private final @Nullable Output<String> hypervisor;
 
     public Output<String> getHypervisor() {
@@ -99,21 +99,21 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * by the `ec2-upload-bundle` command in the EC2 command line tools.
      * 
      */
-    @InputImport(name="imageLocation")
+    @Import(name="imageLocation")
       private final @Nullable Output<String> imageLocation;
 
     public Output<String> getImageLocation() {
         return this.imageLocation == null ? Output.empty() : this.imageLocation;
     }
 
-    @InputImport(name="imageOwnerAlias")
+    @Import(name="imageOwnerAlias")
       private final @Nullable Output<String> imageOwnerAlias;
 
     public Output<String> getImageOwnerAlias() {
         return this.imageOwnerAlias == null ? Output.empty() : this.imageOwnerAlias;
     }
 
-    @InputImport(name="imageType")
+    @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
     public Output<String> getImageType() {
@@ -125,14 +125,14 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * kernel in created instances.
      * 
      */
-    @InputImport(name="kernelId")
+    @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
 
     public Output<String> getKernelId() {
         return this.kernelId == null ? Output.empty() : this.kernelId;
     }
 
-    @InputImport(name="manageEbsSnapshots")
+    @Import(name="manageEbsSnapshots")
       private final @Nullable Output<Boolean> manageEbsSnapshots;
 
     public Output<Boolean> getManageEbsSnapshots() {
@@ -143,35 +143,35 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * A region-unique name for the AMI.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
         return this.ownerId == null ? Output.empty() : this.ownerId;
     }
 
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<String> platform;
 
     public Output<String> getPlatform() {
         return this.platform == null ? Output.empty() : this.platform;
     }
 
-    @InputImport(name="platformDetails")
+    @Import(name="platformDetails")
       private final @Nullable Output<String> platformDetails;
 
     public Output<String> getPlatformDetails() {
         return this.platformDetails == null ? Output.empty() : this.platformDetails;
     }
 
-    @InputImport(name="public")
+    @Import(name="public")
       private final @Nullable Output<Boolean> $public;
 
     public Output<Boolean> get$public() {
@@ -183,7 +183,7 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * created instances.
      * 
      */
-    @InputImport(name="ramdiskId")
+    @Import(name="ramdiskId")
       private final @Nullable Output<String> ramdiskId;
 
     public Output<String> getRamdiskId() {
@@ -194,14 +194,14 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
      * 
      */
-    @InputImport(name="rootDeviceName")
+    @Import(name="rootDeviceName")
       private final @Nullable Output<String> rootDeviceName;
 
     public Output<String> getRootDeviceName() {
         return this.rootDeviceName == null ? Output.empty() : this.rootDeviceName;
     }
 
-    @InputImport(name="rootSnapshotId")
+    @Import(name="rootSnapshotId")
       private final @Nullable Output<String> rootSnapshotId;
 
     public Output<String> getRootSnapshotId() {
@@ -215,7 +215,7 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * guarantees that no filesystem writes will be underway at the time of snapshot.
      * 
      */
-    @InputImport(name="snapshotWithoutReboot")
+    @Import(name="snapshotWithoutReboot")
       private final @Nullable Output<Boolean> snapshotWithoutReboot;
 
     public Output<Boolean> getSnapshotWithoutReboot() {
@@ -226,7 +226,7 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * The id of the instance to use as the basis of the AMI.
      * 
      */
-    @InputImport(name="sourceInstanceId")
+    @Import(name="sourceInstanceId")
       private final @Nullable Output<String> sourceInstanceId;
 
     public Output<String> getSourceInstanceId() {
@@ -238,7 +238,7 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * for created instances. No other value is supported at this time.
      * 
      */
-    @InputImport(name="sriovNetSupport")
+    @Import(name="sriovNetSupport")
       private final @Nullable Output<String> sriovNetSupport;
 
     public Output<String> getSriovNetSupport() {
@@ -249,21 +249,21 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
-    @InputImport(name="usageOperation")
+    @Import(name="usageOperation")
       private final @Nullable Output<String> usageOperation;
 
     public Output<String> getUsageOperation() {
@@ -276,7 +276,7 @@ public final class AmiFromInstanceState extends io.pulumi.resources.ResourceArgs
      * changes the set of further arguments that are required, as described below.
      * 
      */
-    @InputImport(name="virtualizationType")
+    @Import(name="virtualizationType")
       private final @Nullable Output<String> virtualizationType;
 
     public Output<String> getVirtualizationType() {

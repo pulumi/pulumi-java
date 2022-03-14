@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.ProxyProtocolPolicyArgs;
 import io.pulumi.aws.ec2.inputs.ProxyProtocolPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class ProxyProtocolPolicy extends io.pulumi.resources.CustomResource {
      * should be applied. This can be specified if the protocol is SSL or TCP.
      * 
      */
-    @OutputExport(name="instancePorts", type=List.class, parameters={String.class})
+    @Export(name="instancePorts", type=List.class, parameters={String.class})
     private Output<List<String>> instancePorts;
 
     /**
@@ -42,7 +42,7 @@ public class ProxyProtocolPolicy extends io.pulumi.resources.CustomResource {
      * should be attached.
      * 
      */
-    @OutputExport(name="loadBalancer", type=String.class, parameters={})
+    @Export(name="loadBalancer", type=String.class, parameters={})
     private Output<String> loadBalancer;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The certificate identifier.
      * 
      */
-    @InputImport(name="certificateId", required=true)
+    @Import(name="certificateId", required=true)
       private final Output<String> certificateId;
 
     public Output<String> getCertificateId() {
@@ -30,7 +30,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The contents of the .pem X.509 certificate file for the certificate. Either `certificate_pem` or `certificate_wallet` must be set.
      * 
      */
-    @InputImport(name="certificatePem")
+    @Import(name="certificatePem")
       private final @Nullable Output<String> certificatePem;
 
     public Output<String> getCertificatePem() {
@@ -41,7 +41,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The contents of the Oracle Wallet certificate for use with SSL, provided as a base64-encoded String. Either `certificate_pem` or `certificate_wallet` must be set.
      * 
      */
-    @InputImport(name="certificateWallet")
+    @Import(name="certificateWallet")
       private final @Nullable Output<String> certificateWallet;
 
     public Output<String> getCertificateWallet() {
@@ -52,7 +52,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

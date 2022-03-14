@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSessionContextResult {
     private final String arn;
     /**
@@ -36,14 +36,14 @@ public final class GetSessionContextResult {
      */
     private final String sessionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSessionContextResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("issuerArn") String issuerArn,
-        @OutputCustomType.Parameter("issuerId") String issuerId,
-        @OutputCustomType.Parameter("issuerName") String issuerName,
-        @OutputCustomType.Parameter("sessionName") String sessionName) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("issuerArn") String issuerArn,
+        @CustomType.Parameter("issuerId") String issuerId,
+        @CustomType.Parameter("issuerName") String issuerName,
+        @CustomType.Parameter("sessionName") String sessionName) {
         this.arn = arn;
         this.id = id;
         this.issuerArn = issuerArn;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCodeSigningConfigPolicy extends io.pulumi.resources.Invoke
      * Code signing configuration policy for deployment validation failure.
      * 
      */
-    @InputImport(name="untrustedArtifactOnDeployment", required=true)
+    @Import(name="untrustedArtifactOnDeployment", required=true)
       private final String untrustedArtifactOnDeployment;
 
     public String getUntrustedArtifactOnDeployment() {

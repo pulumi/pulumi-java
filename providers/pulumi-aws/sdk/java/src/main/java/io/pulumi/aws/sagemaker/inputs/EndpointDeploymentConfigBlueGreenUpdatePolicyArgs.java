@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
      * Maximum execution timeout for the deployment. Note that the timeout value should be larger than the total waiting time specified in `termination_wait_in_seconds` and `wait_interval_in_seconds`. Valid values are between `600` and `14400`.
      * 
      */
-    @InputImport(name="maximumExecutionTimeoutInSeconds")
+    @Import(name="maximumExecutionTimeoutInSeconds")
       private final @Nullable Output<Integer> maximumExecutionTimeoutInSeconds;
 
     public Output<Integer> getMaximumExecutionTimeoutInSeconds() {
@@ -30,7 +30,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
      * Additional waiting time in seconds after the completion of an endpoint deployment before terminating the old endpoint fleet. Default is `0`. Valid values are between `0` and `3600`.
      * 
      */
-    @InputImport(name="terminationWaitInSeconds")
+    @Import(name="terminationWaitInSeconds")
       private final @Nullable Output<Integer> terminationWaitInSeconds;
 
     public Output<Integer> getTerminationWaitInSeconds() {
@@ -41,7 +41,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyArgs extends io.
      * Defines the traffic routing strategy to shift traffic from the old fleet to the new fleet during an endpoint deployment. See Traffic Routing Configuration.
      * 
      */
-    @InputImport(name="trafficRoutingConfiguration", required=true)
+    @Import(name="trafficRoutingConfiguration", required=true)
       private final Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> trafficRoutingConfiguration;
 
     public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs> getTrafficRoutingConfiguration() {

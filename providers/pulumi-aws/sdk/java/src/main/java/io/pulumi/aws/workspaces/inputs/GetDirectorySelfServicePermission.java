@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDirectorySelfServicePermission extends io.pulumi.resources
      * Whether WorkSpaces directory users can change the compute type (bundle) for their workspace.
      * 
      */
-    @InputImport(name="changeComputeType", required=true)
+    @Import(name="changeComputeType", required=true)
       private final Boolean changeComputeType;
 
     public Boolean getChangeComputeType() {
@@ -27,7 +27,7 @@ public final class GetDirectorySelfServicePermission extends io.pulumi.resources
      * Whether WorkSpaces directory users can increase the volume size of the drives on their workspace.
      * 
      */
-    @InputImport(name="increaseVolumeSize", required=true)
+    @Import(name="increaseVolumeSize", required=true)
       private final Boolean increaseVolumeSize;
 
     public Boolean getIncreaseVolumeSize() {
@@ -38,7 +38,7 @@ public final class GetDirectorySelfServicePermission extends io.pulumi.resources
      * Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state.
      * 
      */
-    @InputImport(name="rebuildWorkspace", required=true)
+    @Import(name="rebuildWorkspace", required=true)
       private final Boolean rebuildWorkspace;
 
     public Boolean getRebuildWorkspace() {
@@ -49,7 +49,7 @@ public final class GetDirectorySelfServicePermission extends io.pulumi.resources
      * Whether WorkSpaces directory users can restart their workspace.
      * 
      */
-    @InputImport(name="restartWorkspace", required=true)
+    @Import(name="restartWorkspace", required=true)
       private final Boolean restartWorkspace;
 
     public Boolean getRestartWorkspace() {
@@ -60,7 +60,7 @@ public final class GetDirectorySelfServicePermission extends io.pulumi.resources
      * Whether WorkSpaces directory users can switch the running mode of their workspace.
      * 
      */
-    @InputImport(name="switchRunningMode", required=true)
+    @Import(name="switchRunningMode", required=true)
       private final Boolean switchRunningMode;
 
     public Boolean getSwitchRunningMode() {

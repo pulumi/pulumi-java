@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleErrorActionIotEvents {
     /**
      * The name of the AWS IoT Events input.
@@ -27,11 +27,11 @@ public final class TopicRuleErrorActionIotEvents {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleErrorActionIotEvents(
-        @OutputCustomType.Parameter("inputName") String inputName,
-        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("inputName") String inputName,
+        @CustomType.Parameter("messageId") @Nullable String messageId,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.inputName = inputName;
         this.messageId = messageId;
         this.roleArn = roleArn;

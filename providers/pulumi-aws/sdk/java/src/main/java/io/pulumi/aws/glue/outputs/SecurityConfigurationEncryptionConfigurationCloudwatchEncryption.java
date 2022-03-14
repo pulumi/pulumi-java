@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncryption {
     /**
      * Encryption mode to use for CloudWatch data. Valid values: `DISABLED`, `SSE-KMS`. Default value: `DISABLED`.
@@ -22,10 +22,10 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
      */
     private final @Nullable String kmsKeyArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityConfigurationEncryptionConfigurationCloudwatchEncryption(
-        @OutputCustomType.Parameter("cloudwatchEncryptionMode") @Nullable String cloudwatchEncryptionMode,
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
+        @CustomType.Parameter("cloudwatchEncryptionMode") @Nullable String cloudwatchEncryptionMode,
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
         this.cloudwatchEncryptionMode = cloudwatchEncryptionMode;
         this.kmsKeyArn = kmsKeyArn;
     }

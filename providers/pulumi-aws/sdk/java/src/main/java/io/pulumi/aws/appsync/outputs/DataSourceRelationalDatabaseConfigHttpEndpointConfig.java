@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceRelationalDatabaseConfigHttpEndpointConfig {
     /**
      * AWS secret store ARN for database credentials.
@@ -37,13 +37,13 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfig {
      */
     private final @Nullable String schema;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceRelationalDatabaseConfigHttpEndpointConfig(
-        @OutputCustomType.Parameter("awsSecretStoreArn") String awsSecretStoreArn,
-        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
-        @OutputCustomType.Parameter("dbClusterIdentifier") String dbClusterIdentifier,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("schema") @Nullable String schema) {
+        @CustomType.Parameter("awsSecretStoreArn") String awsSecretStoreArn,
+        @CustomType.Parameter("databaseName") @Nullable String databaseName,
+        @CustomType.Parameter("dbClusterIdentifier") String dbClusterIdentifier,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("schema") @Nullable String schema) {
         this.awsSecretStoreArn = awsSecretStoreArn;
         this.databaseName = databaseName;
         this.dbClusterIdentifier = dbClusterIdentifier;

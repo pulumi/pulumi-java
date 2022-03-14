@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class ResolverCachingConfigArgs extends io.pulumi.resources.Resourc
      * The list of caching key.
      * 
      */
-    @InputImport(name="cachingKeys")
+    @Import(name="cachingKeys")
       private final @Nullable Output<List<String>> cachingKeys;
 
     public Output<List<String>> getCachingKeys() {
@@ -31,7 +31,7 @@ public final class ResolverCachingConfigArgs extends io.pulumi.resources.Resourc
      * The TTL in seconds.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
     public Output<Integer> getTtl() {

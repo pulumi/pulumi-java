@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2clientvpn.AuthorizationRuleArgs;
 import io.pulumi.aws.ec2clientvpn.inputs.AuthorizationRuleState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * The ID of the group to which the authorization rule grants access. One of `access_group_id` or `authorize_all_groups` must be set.
      * 
      */
-    @OutputExport(name="accessGroupId", type=String.class, parameters={})
+    @Export(name="accessGroupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessGroupId;
 
     /**
@@ -52,7 +52,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * Indicates whether the authorization rule grants access to all clients. One of `access_group_id` or `authorize_all_groups` must be set.
      * 
      */
-    @OutputExport(name="authorizeAllGroups", type=Boolean.class, parameters={})
+    @Export(name="authorizeAllGroups", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> authorizeAllGroups;
 
     /**
@@ -66,7 +66,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * The ID of the Client VPN endpoint.
      * 
      */
-    @OutputExport(name="clientVpnEndpointId", type=String.class, parameters={})
+    @Export(name="clientVpnEndpointId", type=String.class, parameters={})
     private Output<String> clientVpnEndpointId;
 
     /**
@@ -80,7 +80,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * A brief description of the authorization rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -94,7 +94,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * The IPv4 address range, in CIDR notation, of the network to which the authorization rule applies.
      * 
      */
-    @OutputExport(name="targetNetworkCidr", type=String.class, parameters={})
+    @Export(name="targetNetworkCidr", type=String.class, parameters={})
     private Output<String> targetNetworkCidr;
 
     /**

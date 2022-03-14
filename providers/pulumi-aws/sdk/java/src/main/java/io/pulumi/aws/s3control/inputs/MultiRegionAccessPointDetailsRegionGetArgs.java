@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class MultiRegionAccessPointDetailsRegionGetArgs extends io.pulumi.
      * The name of the associated bucket for the Region.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {

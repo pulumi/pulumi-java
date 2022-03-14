@@ -6,7 +6,7 @@ package io.pulumi.aws.emr.inputs;
 import io.pulumi.aws.emr.inputs.InstanceFleetInstanceTypeConfigConfigurationGetArgs;
 import io.pulumi.aws.emr.inputs.InstanceFleetInstanceTypeConfigEbsConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
      * The bid price for each EC2 Spot instance type as defined by `instance_type`. Expressed in USD. If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
      * 
      */
-    @InputImport(name="bidPrice")
+    @Import(name="bidPrice")
       private final @Nullable Output<String> bidPrice;
 
     public Output<String> getBidPrice() {
@@ -34,7 +34,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
      * The bid price, as a percentage of On-Demand price, for each EC2 Spot instance as defined by `instance_type`. Expressed as a number (for example, 20 specifies 20%). If neither `bid_price` nor `bid_price_as_percentage_of_on_demand_price` is provided, `bid_price_as_percentage_of_on_demand_price` defaults to 100%.
      * 
      */
-    @InputImport(name="bidPriceAsPercentageOfOnDemandPrice")
+    @Import(name="bidPriceAsPercentageOfOnDemandPrice")
       private final @Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice;
 
     public Output<Double> getBidPriceAsPercentageOfOnDemandPrice() {
@@ -45,7 +45,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
      * A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
      * 
      */
-    @InputImport(name="configurations")
+    @Import(name="configurations")
       private final @Nullable Output<List<InstanceFleetInstanceTypeConfigConfigurationGetArgs>> configurations;
 
     public Output<List<InstanceFleetInstanceTypeConfigConfigurationGetArgs>> getConfigurations() {
@@ -56,7 +56,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
      * Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
      * 
      */
-    @InputImport(name="ebsConfigs")
+    @Import(name="ebsConfigs")
       private final @Nullable Output<List<InstanceFleetInstanceTypeConfigEbsConfigGetArgs>> ebsConfigs;
 
     public Output<List<InstanceFleetInstanceTypeConfigEbsConfigGetArgs>> getEbsConfigs() {
@@ -67,7 +67,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
      * An EC2 instance type, such as m4.xlarge.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -78,7 +78,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
      * The number of units that a provisioned instance of this type provides toward fulfilling the target capacities defined in `aws.emr.InstanceFleet`.
      * 
      */
-    @InputImport(name="weightedCapacity")
+    @Import(name="weightedCapacity")
       private final @Nullable Output<Integer> weightedCapacity;
 
     public Output<Integer> getWeightedCapacity() {

@@ -4,11 +4,11 @@
 package io.pulumi.aws.networkfirewall.outputs;
 
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRuleVariablesIpSetIpSet;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRuleVariablesIpSet {
     /**
      * A configuration block that defines a set of IP addresses. See IP Set below for details.
@@ -21,10 +21,10 @@ public final class RuleGroupRuleGroupRuleVariablesIpSet {
      */
     private final String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroupRuleVariablesIpSet(
-        @OutputCustomType.Parameter("ipSet") RuleGroupRuleGroupRuleVariablesIpSetIpSet ipSet,
-        @OutputCustomType.Parameter("key") String key) {
+        @CustomType.Parameter("ipSet") RuleGroupRuleGroupRuleVariablesIpSetIpSet ipSet,
+        @CustomType.Parameter("key") String key) {
         this.ipSet = ipSet;
         this.key = key;
     }

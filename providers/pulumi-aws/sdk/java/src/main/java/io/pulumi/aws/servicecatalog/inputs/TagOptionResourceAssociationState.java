@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * ARN of the resource.
      * 
      */
-    @InputImport(name="resourceArn")
+    @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
@@ -29,7 +29,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * Creation time of the resource.
      * 
      */
-    @InputImport(name="resourceCreatedTime")
+    @Import(name="resourceCreatedTime")
       private final @Nullable Output<String> resourceCreatedTime;
 
     public Output<String> getResourceCreatedTime() {
@@ -40,7 +40,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * Description of the resource.
      * 
      */
-    @InputImport(name="resourceDescription")
+    @Import(name="resourceDescription")
       private final @Nullable Output<String> resourceDescription;
 
     public Output<String> getResourceDescription() {
@@ -51,7 +51,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * Resource identifier.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -62,7 +62,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * Description of the resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -73,7 +73,7 @@ public final class TagOptionResourceAssociationState extends io.pulumi.resources
      * Tag Option identifier.
      * 
      */
-    @InputImport(name="tagOptionId")
+    @Import(name="tagOptionId")
       private final @Nullable Output<String> tagOptionId;
 
     public Output<String> getTagOptionId() {

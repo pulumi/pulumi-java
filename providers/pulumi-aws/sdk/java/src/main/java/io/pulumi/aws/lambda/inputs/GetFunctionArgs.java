@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the lambda function.
      * 
      */
-    @InputImport(name="functionName", required=true)
+    @Import(name="functionName", required=true)
       private final String functionName;
 
     public String getFunctionName() {
@@ -30,14 +30,14 @@ public final class GetFunctionArgs extends io.pulumi.resources.InvokeArgs {
      * Alias name or version number of the lambda functionE.g., `$LATEST`, `my-alias`, or `1`
      * 
      */
-    @InputImport(name="qualifier")
+    @Import(name="qualifier")
       private final @Nullable String qualifier;
 
     public Optional<String> getQualifier() {
         return this.qualifier == null ? Optional.empty() : Optional.ofNullable(this.qualifier);
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

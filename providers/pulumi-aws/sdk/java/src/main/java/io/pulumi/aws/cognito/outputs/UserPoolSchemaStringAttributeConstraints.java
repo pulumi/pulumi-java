@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolSchemaStringAttributeConstraints {
     /**
      * Maximum length of an attribute value of the string type.
@@ -22,10 +22,10 @@ public final class UserPoolSchemaStringAttributeConstraints {
      */
     private final @Nullable String minLength;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolSchemaStringAttributeConstraints(
-        @OutputCustomType.Parameter("maxLength") @Nullable String maxLength,
-        @OutputCustomType.Parameter("minLength") @Nullable String minLength) {
+        @CustomType.Parameter("maxLength") @Nullable String maxLength,
+        @CustomType.Parameter("minLength") @Nullable String minLength) {
         this.maxLength = maxLength;
         this.minLength = minLength;
     }

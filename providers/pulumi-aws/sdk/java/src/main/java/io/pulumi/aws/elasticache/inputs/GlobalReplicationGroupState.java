@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * 
      */
     @Deprecated /* Use engine_version_actual instead */
-    @InputImport(name="actualEngineVersion")
+    @Import(name="actualEngineVersion")
       private final @Nullable Output<String> actualEngineVersion;
 
     @Deprecated /* Use engine_version_actual instead */
@@ -35,7 +35,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * The ARN of the ElastiCache Global Replication Group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -46,7 +46,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * A flag that indicate whether the encryption at rest is enabled.
      * 
      */
-    @InputImport(name="atRestEncryptionEnabled")
+    @Import(name="atRestEncryptionEnabled")
       private final @Nullable Output<Boolean> atRestEncryptionEnabled;
 
     public Output<Boolean> getAtRestEncryptionEnabled() {
@@ -57,7 +57,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * A flag that indicate whether AuthToken (password) is enabled.
      * 
      */
-    @InputImport(name="authTokenEnabled")
+    @Import(name="authTokenEnabled")
       private final @Nullable Output<Boolean> authTokenEnabled;
 
     public Output<Boolean> getAuthTokenEnabled() {
@@ -68,7 +68,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * The instance class used. See AWS documentation for information on [supported node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) and [guidance on selecting node types](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/nodes-select-size.html).
      * 
      */
-    @InputImport(name="cacheNodeType")
+    @Import(name="cacheNodeType")
       private final @Nullable Output<String> cacheNodeType;
 
     public Output<String> getCacheNodeType() {
@@ -79,7 +79,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * Indicates whether the Global Datastore is cluster enabled.
      * 
      */
-    @InputImport(name="clusterEnabled")
+    @Import(name="clusterEnabled")
       private final @Nullable Output<Boolean> clusterEnabled;
 
     public Output<Boolean> getClusterEnabled() {
@@ -90,7 +90,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * The name of the cache engine to be used for the clusters in this global replication group.
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -101,7 +101,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * The full version number of the cache engine running on the members of this global replication group.
      * 
      */
-    @InputImport(name="engineVersionActual")
+    @Import(name="engineVersionActual")
       private final @Nullable Output<String> engineVersionActual;
 
     public Output<String> getEngineVersionActual() {
@@ -112,7 +112,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * A user-created description for the global replication group.
      * 
      */
-    @InputImport(name="globalReplicationGroupDescription")
+    @Import(name="globalReplicationGroupDescription")
       private final @Nullable Output<String> globalReplicationGroupDescription;
 
     public Output<String> getGlobalReplicationGroupDescription() {
@@ -123,7 +123,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * The full ID of the global replication group.
      * 
      */
-    @InputImport(name="globalReplicationGroupId")
+    @Import(name="globalReplicationGroupId")
       private final @Nullable Output<String> globalReplicationGroupId;
 
     public Output<String> getGlobalReplicationGroupId() {
@@ -134,7 +134,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
      * 
      */
-    @InputImport(name="globalReplicationGroupIdSuffix")
+    @Import(name="globalReplicationGroupIdSuffix")
       private final @Nullable Output<String> globalReplicationGroupIdSuffix;
 
     public Output<String> getGlobalReplicationGroupIdSuffix() {
@@ -145,7 +145,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
      * 
      */
-    @InputImport(name="primaryReplicationGroupId")
+    @Import(name="primaryReplicationGroupId")
       private final @Nullable Output<String> primaryReplicationGroupId;
 
     public Output<String> getPrimaryReplicationGroupId() {
@@ -156,7 +156,7 @@ public final class GlobalReplicationGroupState extends io.pulumi.resources.Resou
      * A flag that indicates whether the encryption in transit is enabled.
      * 
      */
-    @InputImport(name="transitEncryptionEnabled")
+    @Import(name="transitEncryptionEnabled")
       private final @Nullable Output<Boolean> transitEncryptionEnabled;
 
     public Output<Boolean> getTransitEncryptionEnabled() {

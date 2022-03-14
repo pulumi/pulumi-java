@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
      * Must be set to either `X86_64` or `ARM64`; see [cpu architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform)
      * 
      */
-    @InputImport(name="cpuArchitecture")
+    @Import(name="cpuArchitecture")
       private final @Nullable Output<String> cpuArchitecture;
 
     public Output<String> getCpuArchitecture() {
@@ -29,7 +29,7 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
      * If the `requires_compatibilities` is `FARGATE` this field is required; must be set to a valid option from the [operating system family in the runtime platform](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform) setting
      * 
      */
-    @InputImport(name="operatingSystemFamily")
+    @Import(name="operatingSystemFamily")
       private final @Nullable Output<String> operatingSystemFamily;
 
     public Output<String> getOperatingSystemFamily() {

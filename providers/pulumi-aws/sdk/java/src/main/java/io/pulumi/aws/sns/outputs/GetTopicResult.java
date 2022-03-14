@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.sns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTopicResult {
     /**
      * Amazon Resource Name (ARN) of the found topic, suitable for referencing in other resources that support SNS topics.
@@ -21,11 +21,11 @@ public final class GetTopicResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTopicResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name) {
         this.arn = arn;
         this.id = id;
         this.name = name;

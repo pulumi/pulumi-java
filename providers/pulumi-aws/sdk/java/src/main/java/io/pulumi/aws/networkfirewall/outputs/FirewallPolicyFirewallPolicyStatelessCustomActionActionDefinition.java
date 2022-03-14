@@ -4,10 +4,10 @@
 package io.pulumi.aws.networkfirewall.outputs;
 
 import io.pulumi.aws.networkfirewall.outputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition {
     /**
      * A configuration block describing the stateless inspection criteria that publishes the specified metrics to Amazon CloudWatch for the matching packet. You can pair this custom action with any of the standard stateless rule actions. See Publish Metric Action below for details.
@@ -15,8 +15,8 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      */
     private final FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction publishMetricAction;
 
-    @OutputCustomType.Constructor
-    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition(@OutputCustomType.Parameter("publishMetricAction") FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction publishMetricAction) {
+    @CustomType.Constructor
+    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinition(@CustomType.Parameter("publishMetricAction") FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction publishMetricAction) {
         this.publishMetricAction = publishMetricAction;
     }
 

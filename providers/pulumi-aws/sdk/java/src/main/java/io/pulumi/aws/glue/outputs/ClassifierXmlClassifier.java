@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClassifierXmlClassifier {
     /**
      * An identifier of the data format that the classifier matches.
@@ -20,10 +20,10 @@ public final class ClassifierXmlClassifier {
      */
     private final String rowTag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassifierXmlClassifier(
-        @OutputCustomType.Parameter("classification") String classification,
-        @OutputCustomType.Parameter("rowTag") String rowTag) {
+        @CustomType.Parameter("classification") String classification,
+        @CustomType.Parameter("rowTag") String rowTag) {
         this.classification = classification;
         this.rowTag = rowTag;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class LoadBalancerHealthCheckArgs extends io.pulumi.resources.Resou
      * The number of checks before the instance is declared healthy.
      * 
      */
-    @InputImport(name="healthyThreshold", required=true)
+    @Import(name="healthyThreshold", required=true)
       private final Output<Integer> healthyThreshold;
 
     public Output<Integer> getHealthyThreshold() {
@@ -29,7 +29,7 @@ public final class LoadBalancerHealthCheckArgs extends io.pulumi.resources.Resou
      * The interval between checks.
      * 
      */
-    @InputImport(name="interval", required=true)
+    @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
     public Output<Integer> getInterval() {
@@ -43,7 +43,7 @@ public final class LoadBalancerHealthCheckArgs extends io.pulumi.resources.Resou
      * * `TCP`, `SSL` - PORT is required, PATH is not supported
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<String> target;
 
     public Output<String> getTarget() {
@@ -54,7 +54,7 @@ public final class LoadBalancerHealthCheckArgs extends io.pulumi.resources.Resou
      * The length of time before the check times out.
      * 
      */
-    @InputImport(name="timeout", required=true)
+    @Import(name="timeout", required=true)
       private final Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -65,7 +65,7 @@ public final class LoadBalancerHealthCheckArgs extends io.pulumi.resources.Resou
      * The number of checks before the instance is declared unhealthy.
      * 
      */
-    @InputImport(name="unhealthyThreshold", required=true)
+    @Import(name="unhealthyThreshold", required=true)
       private final Output<Integer> unhealthyThreshold;
 
     public Output<Integer> getUnhealthyThreshold() {

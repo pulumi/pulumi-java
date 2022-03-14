@@ -6,14 +6,14 @@ package io.pulumi.aws.kinesis.outputs;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamRedshiftConfiguration {
     /**
      * The CloudWatch Logging Options for the delivery stream. More details are given below
@@ -76,20 +76,20 @@ public final class FirehoseDeliveryStreamRedshiftConfiguration {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamRedshiftConfiguration(
-        @OutputCustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
-        @OutputCustomType.Parameter("clusterJdbcurl") String clusterJdbcurl,
-        @OutputCustomType.Parameter("copyOptions") @Nullable String copyOptions,
-        @OutputCustomType.Parameter("dataTableColumns") @Nullable String dataTableColumns,
-        @OutputCustomType.Parameter("dataTableName") String dataTableName,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("processingConfiguration") @Nullable FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration processingConfiguration,
-        @OutputCustomType.Parameter("retryDuration") @Nullable Integer retryDuration,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("s3BackupConfiguration") @Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration s3BackupConfiguration,
-        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
+        @CustomType.Parameter("clusterJdbcurl") String clusterJdbcurl,
+        @CustomType.Parameter("copyOptions") @Nullable String copyOptions,
+        @CustomType.Parameter("dataTableColumns") @Nullable String dataTableColumns,
+        @CustomType.Parameter("dataTableName") String dataTableName,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("processingConfiguration") @Nullable FirehoseDeliveryStreamRedshiftConfigurationProcessingConfiguration processingConfiguration,
+        @CustomType.Parameter("retryDuration") @Nullable Integer retryDuration,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("s3BackupConfiguration") @Nullable FirehoseDeliveryStreamRedshiftConfigurationS3BackupConfiguration s3BackupConfiguration,
+        @CustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
+        @CustomType.Parameter("username") String username) {
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
         this.clusterJdbcurl = clusterJdbcurl;
         this.copyOptions = copyOptions;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Change description of the component.
      * 
      */
-    @InputImport(name="changeDescription")
+    @Import(name="changeDescription")
       private final @Nullable Output<String> changeDescription;
 
     public Output<String> getChangeDescription() {
@@ -31,7 +31,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Inline YAML string with data of the component. Exactly one of `data` and `uri` can be specified. the provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
@@ -42,7 +42,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the component.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -64,7 +64,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the component.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Platform of the component.
      * 
      */
-    @InputImport(name="platform", required=true)
+    @Import(name="platform", required=true)
       private final Output<String> platform;
 
     public Output<String> getPlatform() {
@@ -86,7 +86,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Set of Operating Systems (OS) supported by the component.
      * 
      */
-    @InputImport(name="supportedOsVersions")
+    @Import(name="supportedOsVersions")
       private final @Nullable Output<List<String>> supportedOsVersions;
 
     public Output<List<String>> getSupportedOsVersions() {
@@ -97,7 +97,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags for the component. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -108,7 +108,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * S3 URI with data of the component. Exactly one of `data` and `uri` can be specified.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
@@ -119,7 +119,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Version of the component.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<String> version;
 
     public Output<String> getVersion() {

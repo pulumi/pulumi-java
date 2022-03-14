@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterMasterInstanceFleetInstanceTypeConfigConfiguration {
     /**
      * Classification within a configuration.
@@ -24,10 +24,10 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfigConfiguration {
      */
     private final @Nullable Map<String,Object> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterMasterInstanceFleetInstanceTypeConfigConfiguration(
-        @OutputCustomType.Parameter("classification") @Nullable String classification,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,Object> properties) {
+        @CustomType.Parameter("classification") @Nullable String classification,
+        @CustomType.Parameter("properties") @Nullable Map<String,Object> properties) {
         this.classification = classification;
         this.properties = properties;
     }

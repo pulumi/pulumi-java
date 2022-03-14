@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
      * The default value for the event
      * 
      */
-    @InputImport(name="defaultValue", required=true)
+    @Import(name="defaultValue", required=true)
       private final Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
@@ -28,7 +28,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
      * The name for the dimension
      * 
      */
-    @InputImport(name="dimensionName", required=true)
+    @Import(name="dimensionName", required=true)
       private final Output<String> dimensionName;
 
     public Output<String> getDimensionName() {
@@ -39,7 +39,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends io.pulum
      * The source for the value. May be any of `"messageTag"`, `"emailHeader"` or `"linkTag"`.
      * 
      */
-    @InputImport(name="valueSource", required=true)
+    @Import(name="valueSource", required=true)
       private final Output<String> valueSource;
 
     public Output<String> getValueSource() {

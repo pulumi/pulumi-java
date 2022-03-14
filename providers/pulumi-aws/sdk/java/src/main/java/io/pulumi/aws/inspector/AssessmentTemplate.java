@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.inspector.AssessmentTemplateArgs;
 import io.pulumi.aws.inspector.inputs.AssessmentTemplateState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * The template assessment ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * The duration of the inspector run.
      * 
      */
-    @OutputExport(name="duration", type=Integer.class, parameters={})
+    @Export(name="duration", type=Integer.class, parameters={})
     private Output<Integer> duration;
 
     /**
@@ -63,7 +63,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * The name of the assessment template.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * The rules to be used during the run.
      * 
      */
-    @OutputExport(name="rulesPackageArns", type=List.class, parameters={String.class})
+    @Export(name="rulesPackageArns", type=List.class, parameters={String.class})
     private Output<List<String>> rulesPackageArns;
 
     /**
@@ -91,7 +91,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * Key-value map of tags for the Inspector assessment template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -105,7 +105,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -119,7 +119,7 @@ public class AssessmentTemplate extends io.pulumi.resources.CustomResource {
      * The assessment target ARN to attach the template to.
      * 
      */
-    @OutputExport(name="targetArn", type=String.class, parameters={})
+    @Export(name="targetArn", type=String.class, parameters={})
     private Output<String> targetArn;
 
     /**

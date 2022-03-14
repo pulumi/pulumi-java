@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.AppArgs;
 import io.pulumi.aws.sagemaker.inputs.AppState;
 import io.pulumi.aws.sagemaker.outputs.AppResourceSpec;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The name of the app.
      * 
      */
-    @OutputExport(name="appName", type=String.class, parameters={})
+    @Export(name="appName", type=String.class, parameters={})
     private Output<String> appName;
 
     /**
@@ -48,7 +48,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The type of app. Valid values are `JupyterServer`, `KernelGateway` and `TensorBoard`.
      * 
      */
-    @OutputExport(name="appType", type=String.class, parameters={})
+    @Export(name="appType", type=String.class, parameters={})
     private Output<String> appType;
 
     /**
@@ -62,7 +62,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the app.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -76,7 +76,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The domain ID.
      * 
      */
-    @OutputExport(name="domainId", type=String.class, parameters={})
+    @Export(name="domainId", type=String.class, parameters={})
     private Output<String> domainId;
 
     /**
@@ -90,7 +90,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
      * 
      */
-    @OutputExport(name="resourceSpec", type=AppResourceSpec.class, parameters={})
+    @Export(name="resourceSpec", type=AppResourceSpec.class, parameters={})
     private Output<AppResourceSpec> resourceSpec;
 
     /**
@@ -104,7 +104,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -118,7 +118,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -132,7 +132,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * The user profile name.
      * 
      */
-    @OutputExport(name="userProfileName", type=String.class, parameters={})
+    @Export(name="userProfileName", type=String.class, parameters={})
     private Output<String> userProfileName;
 
     /**

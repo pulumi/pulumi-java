@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
      * The AWS service to which this role is attached. You use a string similar to a URL but without the `http://` in front. For example: `elasticbeanstalk.amazonaws.com`. To find the full list of services that support service-linked roles, check [the docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html).
      * 
      */
-    @InputImport(name="awsServiceName", required=true)
+    @Import(name="awsServiceName", required=true)
       private final Output<String> awsServiceName;
 
     public Output<String> getAwsServiceName() {
@@ -30,7 +30,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
      * Additional string appended to the role name. Not all AWS services support custom suffixes.
      * 
      */
-    @InputImport(name="customSuffix")
+    @Import(name="customSuffix")
       private final @Nullable Output<String> customSuffix;
 
     public Output<String> getCustomSuffix() {
@@ -41,7 +41,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
      * The description of the role.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -52,7 +52,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
      * Key-value mapping of tags for the IAM role. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -63,7 +63,7 @@ public final class ServiceLinkedRoleArgs extends io.pulumi.resources.ResourceArg
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

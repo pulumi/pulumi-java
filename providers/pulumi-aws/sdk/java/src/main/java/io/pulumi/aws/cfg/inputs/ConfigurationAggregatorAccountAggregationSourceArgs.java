@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
      * List of 12-digit account IDs of the account(s) being aggregated.
      * 
      */
-    @InputImport(name="accountIds", required=true)
+    @Import(name="accountIds", required=true)
       private final Output<List<String>> accountIds;
 
     public Output<List<String>> getAccountIds() {
@@ -31,7 +31,7 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
      * If true, aggregate existing AWS Config regions and future regions.
      * 
      */
-    @InputImport(name="allRegions")
+    @Import(name="allRegions")
       private final @Nullable Output<Boolean> allRegions;
 
     public Output<Boolean> getAllRegions() {
@@ -42,7 +42,7 @@ public final class ConfigurationAggregatorAccountAggregationSourceArgs extends i
      * List of source regions being aggregated.
      * 
      */
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
     public Output<List<String>> getRegions() {

@@ -4,13 +4,13 @@
 package io.pulumi.aws.glue.outputs;
 
 import io.pulumi.aws.glue.outputs.GetConnectionPhysicalConnectionRequirement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionResult {
     /**
      * The ARN of the Glue Connection.
@@ -55,18 +55,18 @@ public final class GetConnectionResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("catalogId") String catalogId,
-        @OutputCustomType.Parameter("connectionProperties") Map<String,String> connectionProperties,
-        @OutputCustomType.Parameter("connectionType") String connectionType,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("matchCriterias") List<String> matchCriterias,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("physicalConnectionRequirements") List<GetConnectionPhysicalConnectionRequirement> physicalConnectionRequirements,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("catalogId") String catalogId,
+        @CustomType.Parameter("connectionProperties") Map<String,String> connectionProperties,
+        @CustomType.Parameter("connectionType") String connectionType,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("matchCriterias") List<String> matchCriterias,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("physicalConnectionRequirements") List<GetConnectionPhysicalConnectionRequirement> physicalConnectionRequirements,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.catalogId = catalogId;
         this.connectionProperties = connectionProperties;

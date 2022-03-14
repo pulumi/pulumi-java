@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
      * The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<String> destination;
 
     public Output<String> getDestination() {
@@ -28,7 +28,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
      * The destination port to inspect for. To match with any address, specify `ANY`.
      * 
      */
-    @InputImport(name="destinationPort", required=true)
+    @Import(name="destinationPort", required=true)
       private final Output<String> destinationPort;
 
     public Output<String> getDestinationPort() {
@@ -39,7 +39,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
      * The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final Output<String> direction;
 
     public Output<String> getDirection() {
@@ -50,7 +50,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
      * The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -61,7 +61,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
      * The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {
@@ -72,7 +72,7 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
      * The source port to inspect for. To match with any address, specify `ANY`.
      * 
      */
-    @InputImport(name="sourcePort", required=true)
+    @Import(name="sourcePort", required=true)
       private final Output<String> sourcePort;
 
     public Output<String> getSourcePort() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceParametersAwsIotAnalytics {
     /**
      * The name of the data set to which to connect.
@@ -15,8 +15,8 @@ public final class DataSourceParametersAwsIotAnalytics {
      */
     private final String dataSetName;
 
-    @OutputCustomType.Constructor
-    private DataSourceParametersAwsIotAnalytics(@OutputCustomType.Parameter("dataSetName") String dataSetName) {
+    @CustomType.Constructor
+    private DataSourceParametersAwsIotAnalytics(@CustomType.Parameter("dataSetName") String dataSetName) {
         this.dataSetName = dataSetName;
     }
 

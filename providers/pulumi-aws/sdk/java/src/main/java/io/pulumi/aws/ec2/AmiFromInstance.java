@@ -9,7 +9,7 @@ import io.pulumi.aws.ec2.inputs.AmiFromInstanceState;
 import io.pulumi.aws.ec2.outputs.AmiFromInstanceEbsBlockDevice;
 import io.pulumi.aws.ec2.outputs.AmiFromInstanceEphemeralBlockDevice;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -45,7 +45,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * Machine architecture for created instances. Defaults to "x86_64".
      * 
      */
-    @OutputExport(name="architecture", type=String.class, parameters={})
+    @Export(name="architecture", type=String.class, parameters={})
     private Output<String> architecture;
 
     /**
@@ -59,7 +59,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * The ARN of the AMI.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -73,7 +73,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * A longer, human-readable description for the AMI.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -88,7 +88,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * attached to created instances. The structure of this block is described below.
      * 
      */
-    @OutputExport(name="ebsBlockDevices", type=List.class, parameters={AmiFromInstanceEbsBlockDevice.class})
+    @Export(name="ebsBlockDevices", type=List.class, parameters={AmiFromInstanceEbsBlockDevice.class})
     private Output<List<AmiFromInstanceEbsBlockDevice>> ebsBlockDevices;
 
     /**
@@ -103,7 +103,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
      * 
      */
-    @OutputExport(name="enaSupport", type=Boolean.class, parameters={})
+    @Export(name="enaSupport", type=Boolean.class, parameters={})
     private Output<Boolean> enaSupport;
 
     /**
@@ -118,7 +118,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * should be attached to created instances. The structure of this block is described below.
      * 
      */
-    @OutputExport(name="ephemeralBlockDevices", type=List.class, parameters={AmiFromInstanceEphemeralBlockDevice.class})
+    @Export(name="ephemeralBlockDevices", type=List.class, parameters={AmiFromInstanceEphemeralBlockDevice.class})
     private Output<List<AmiFromInstanceEphemeralBlockDevice>> ephemeralBlockDevices;
 
     /**
@@ -129,7 +129,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
     public Output<List<AmiFromInstanceEphemeralBlockDevice>> getEphemeralBlockDevices() {
         return this.ephemeralBlockDevices;
     }
-    @OutputExport(name="hypervisor", type=String.class, parameters={})
+    @Export(name="hypervisor", type=String.class, parameters={})
     private Output<String> hypervisor;
 
     public Output<String> getHypervisor() {
@@ -140,7 +140,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * by the `ec2-upload-bundle` command in the EC2 command line tools.
      * 
      */
-    @OutputExport(name="imageLocation", type=String.class, parameters={})
+    @Export(name="imageLocation", type=String.class, parameters={})
     private Output<String> imageLocation;
 
     /**
@@ -151,13 +151,13 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
     public Output<String> getImageLocation() {
         return this.imageLocation;
     }
-    @OutputExport(name="imageOwnerAlias", type=String.class, parameters={})
+    @Export(name="imageOwnerAlias", type=String.class, parameters={})
     private Output<String> imageOwnerAlias;
 
     public Output<String> getImageOwnerAlias() {
         return this.imageOwnerAlias;
     }
-    @OutputExport(name="imageType", type=String.class, parameters={})
+    @Export(name="imageType", type=String.class, parameters={})
     private Output<String> imageType;
 
     public Output<String> getImageType() {
@@ -168,7 +168,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * kernel in created instances.
      * 
      */
-    @OutputExport(name="kernelId", type=String.class, parameters={})
+    @Export(name="kernelId", type=String.class, parameters={})
     private Output<String> kernelId;
 
     /**
@@ -179,7 +179,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
     public Output<String> getKernelId() {
         return this.kernelId;
     }
-    @OutputExport(name="manageEbsSnapshots", type=Boolean.class, parameters={})
+    @Export(name="manageEbsSnapshots", type=Boolean.class, parameters={})
     private Output<Boolean> manageEbsSnapshots;
 
     public Output<Boolean> getManageEbsSnapshots() {
@@ -189,7 +189,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * A region-unique name for the AMI.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -199,25 +199,25 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     public Output<String> getOwnerId() {
         return this.ownerId;
     }
-    @OutputExport(name="platform", type=String.class, parameters={})
+    @Export(name="platform", type=String.class, parameters={})
     private Output<String> platform;
 
     public Output<String> getPlatform() {
         return this.platform;
     }
-    @OutputExport(name="platformDetails", type=String.class, parameters={})
+    @Export(name="platformDetails", type=String.class, parameters={})
     private Output<String> platformDetails;
 
     public Output<String> getPlatformDetails() {
         return this.platformDetails;
     }
-    @OutputExport(name="public", type=Boolean.class, parameters={})
+    @Export(name="public", type=Boolean.class, parameters={})
     private Output<Boolean> $public;
 
     public Output<Boolean> get$public() {
@@ -228,7 +228,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * created instances.
      * 
      */
-    @OutputExport(name="ramdiskId", type=String.class, parameters={})
+    @Export(name="ramdiskId", type=String.class, parameters={})
     private Output<String> ramdiskId;
 
     /**
@@ -243,7 +243,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
      * 
      */
-    @OutputExport(name="rootDeviceName", type=String.class, parameters={})
+    @Export(name="rootDeviceName", type=String.class, parameters={})
     private Output<String> rootDeviceName;
 
     /**
@@ -253,7 +253,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
     public Output<String> getRootDeviceName() {
         return this.rootDeviceName;
     }
-    @OutputExport(name="rootSnapshotId", type=String.class, parameters={})
+    @Export(name="rootSnapshotId", type=String.class, parameters={})
     private Output<String> rootSnapshotId;
 
     public Output<String> getRootSnapshotId() {
@@ -266,7 +266,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * guarantees that no filesystem writes will be underway at the time of snapshot.
      * 
      */
-    @OutputExport(name="snapshotWithoutReboot", type=Boolean.class, parameters={})
+    @Export(name="snapshotWithoutReboot", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> snapshotWithoutReboot;
 
     /**
@@ -283,7 +283,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * The id of the instance to use as the basis of the AMI.
      * 
      */
-    @OutputExport(name="sourceInstanceId", type=String.class, parameters={})
+    @Export(name="sourceInstanceId", type=String.class, parameters={})
     private Output<String> sourceInstanceId;
 
     /**
@@ -298,7 +298,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * for created instances. No other value is supported at this time.
      * 
      */
-    @OutputExport(name="sriovNetSupport", type=String.class, parameters={})
+    @Export(name="sriovNetSupport", type=String.class, parameters={})
     private Output<String> sriovNetSupport;
 
     /**
@@ -313,7 +313,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -323,13 +323,13 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll;
     }
-    @OutputExport(name="usageOperation", type=String.class, parameters={})
+    @Export(name="usageOperation", type=String.class, parameters={})
     private Output<String> usageOperation;
 
     public Output<String> getUsageOperation() {
@@ -341,7 +341,7 @@ public class AmiFromInstance extends io.pulumi.resources.CustomResource {
      * changes the set of further arguments that are required, as described below.
      * 
      */
-    @OutputExport(name="virtualizationType", type=String.class, parameters={})
+    @Export(name="virtualizationType", type=String.class, parameters={})
     private Output<String> virtualizationType;
 
     /**

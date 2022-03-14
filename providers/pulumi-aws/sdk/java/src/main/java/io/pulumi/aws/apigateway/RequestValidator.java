@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.RequestValidatorArgs;
 import io.pulumi.aws.apigateway.inputs.RequestValidatorState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * The name of the request validator
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -47,7 +47,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * The ID of the associated Rest API
      * 
      */
-    @OutputExport(name="restApi", type=String.class, parameters={})
+    @Export(name="restApi", type=String.class, parameters={})
     private Output<String> restApi;
 
     /**
@@ -61,7 +61,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * Boolean whether to validate request body. Defaults to `false`.
      * 
      */
-    @OutputExport(name="validateRequestBody", type=Boolean.class, parameters={})
+    @Export(name="validateRequestBody", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validateRequestBody;
 
     /**
@@ -75,7 +75,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * Boolean whether to validate request parameters. Defaults to `false`.
      * 
      */
-    @OutputExport(name="validateRequestParameters", type=Boolean.class, parameters={})
+    @Export(name="validateRequestParameters", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validateRequestParameters;
 
     /**

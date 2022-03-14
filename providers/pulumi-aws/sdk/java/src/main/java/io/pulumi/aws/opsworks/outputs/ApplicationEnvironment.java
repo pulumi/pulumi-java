@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.opsworks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationEnvironment {
     /**
      * Variable name.
@@ -28,11 +28,11 @@ public final class ApplicationEnvironment {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationEnvironment(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("secure") @Nullable Boolean secure,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("secure") @Nullable Boolean secure,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.secure = secure;
         this.value = value;

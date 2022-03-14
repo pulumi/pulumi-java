@@ -14,7 +14,7 @@ import io.pulumi.aws.cloudfront.inputs.DistributionTrustedKeyGroupGetArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionTrustedSignerGetArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionViewerCertificateGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * this distribution.
      * 
      */
-    @InputImport(name="aliases")
+    @Import(name="aliases")
       private final @Nullable Output<List<String>> aliases;
 
     public Output<List<String>> getAliases() {
@@ -44,7 +44,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -56,7 +56,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * updates to the distribution configuration.
      * 
      */
-    @InputImport(name="callerReference")
+    @Import(name="callerReference")
       private final @Nullable Output<String> callerReference;
 
     public Output<String> getCallerReference() {
@@ -68,7 +68,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * distribution.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -79,7 +79,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * One or more custom error response elements (multiples allowed).
      * 
      */
-    @InputImport(name="customErrorResponses")
+    @Import(name="customErrorResponses")
       private final @Nullable Output<List<DistributionCustomErrorResponseGetArgs>> customErrorResponses;
 
     public Output<List<DistributionCustomErrorResponseGetArgs>> getCustomErrorResponses() {
@@ -91,7 +91,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * one).
      * 
      */
-    @InputImport(name="defaultCacheBehavior")
+    @Import(name="defaultCacheBehavior")
       private final @Nullable Output<DistributionDefaultCacheBehaviorGetArgs> defaultCacheBehavior;
 
     public Output<DistributionDefaultCacheBehaviorGetArgs> getDefaultCacheBehavior() {
@@ -103,7 +103,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * return (for example, index.html) when an end user requests the root URL.
      * 
      */
-    @InputImport(name="defaultRootObject")
+    @Import(name="defaultRootObject")
       private final @Nullable Output<String> defaultRootObject;
 
     public Output<String> getDefaultRootObject() {
@@ -115,7 +115,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * web site of your custom origin.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -126,7 +126,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * A flag that specifies whether Origin Shield is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -138,7 +138,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * `E2QWRUHAPOMQZL`.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -151,7 +151,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * alias for the zone ID `Z2FDTNDATAQYW2`.
      * 
      */
-    @InputImport(name="hostedZoneId")
+    @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {
@@ -164,7 +164,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * `http2`.
      * 
      */
-    @InputImport(name="httpVersion")
+    @Import(name="httpVersion")
       private final @Nullable Output<String> httpVersion;
 
     public Output<String> getHttpVersion() {
@@ -176,7 +176,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * currently in progress.
      * 
      */
-    @InputImport(name="inProgressValidationBatches")
+    @Import(name="inProgressValidationBatches")
       private final @Nullable Output<Integer> inProgressValidationBatches;
 
     public Output<Integer> getInProgressValidationBatches() {
@@ -187,7 +187,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * Whether the IPv6 is enabled for the distribution.
      * 
      */
-    @InputImport(name="isIpv6Enabled")
+    @Import(name="isIpv6Enabled")
       private final @Nullable Output<Boolean> isIpv6Enabled;
 
     public Output<Boolean> getIsIpv6Enabled() {
@@ -198,7 +198,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * The date and time the distribution was last modified.
      * 
      */
-    @InputImport(name="lastModifiedTime")
+    @Import(name="lastModifiedTime")
       private final @Nullable Output<String> lastModifiedTime;
 
     public Output<String> getLastModifiedTime() {
@@ -211,7 +211,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * to your distribution (maximum one).
      * 
      */
-    @InputImport(name="loggingConfig")
+    @Import(name="loggingConfig")
       private final @Nullable Output<DistributionLoggingConfigGetArgs> loggingConfig;
 
     public Output<DistributionLoggingConfigGetArgs> getLoggingConfig() {
@@ -224,7 +224,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * in order of precedence. The topmost cache behavior will have precedence 0.
      * 
      */
-    @InputImport(name="orderedCacheBehaviors")
+    @Import(name="orderedCacheBehaviors")
       private final @Nullable Output<List<DistributionOrderedCacheBehaviorGetArgs>> orderedCacheBehaviors;
 
     public Output<List<DistributionOrderedCacheBehaviorGetArgs>> getOrderedCacheBehaviors() {
@@ -236,7 +236,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * distribution (multiples allowed).
      * 
      */
-    @InputImport(name="originGroups")
+    @Import(name="originGroups")
       private final @Nullable Output<List<DistributionOriginGroupGetArgs>> originGroups;
 
     public Output<List<DistributionOriginGroupGetArgs>> getOriginGroups() {
@@ -248,7 +248,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * distribution (multiples allowed).
      * 
      */
-    @InputImport(name="origins")
+    @Import(name="origins")
       private final @Nullable Output<List<DistributionOriginGetArgs>> origins;
 
     public Output<List<DistributionOriginGetArgs>> getOrigins() {
@@ -260,7 +260,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
      * 
      */
-    @InputImport(name="priceClass")
+    @Import(name="priceClass")
       private final @Nullable Output<String> priceClass;
 
     public Output<String> getPriceClass() {
@@ -272,7 +272,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * configuration for this distribution (maximum one).
      * 
      */
-    @InputImport(name="restrictions")
+    @Import(name="restrictions")
       private final @Nullable Output<DistributionRestrictionsGetArgs> restrictions;
 
     public Output<DistributionRestrictionsGetArgs> getRestrictions() {
@@ -285,7 +285,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * the distribution needs to be deleted manually afterwards. Default: `false`.
      * 
      */
-    @InputImport(name="retainOnDelete")
+    @Import(name="retainOnDelete")
       private final @Nullable Output<Boolean> retainOnDelete;
 
     public Output<Boolean> getRetainOnDelete() {
@@ -298,7 +298,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * CloudFront system.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -309,7 +309,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -320,7 +320,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -332,7 +332,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
      */
-    @InputImport(name="trustedKeyGroups")
+    @Import(name="trustedKeyGroups")
       private final @Nullable Output<List<DistributionTrustedKeyGroupGetArgs>> trustedKeyGroups;
 
     public Output<List<DistributionTrustedKeyGroupGetArgs>> getTrustedKeyGroups() {
@@ -344,7 +344,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
      */
-    @InputImport(name="trustedSigners")
+    @Import(name="trustedSigners")
       private final @Nullable Output<List<DistributionTrustedSignerGetArgs>> trustedSigners;
 
     public Output<List<DistributionTrustedSignerGetArgs>> getTrustedSigners() {
@@ -357,7 +357,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * one).
      * 
      */
-    @InputImport(name="viewerCertificate")
+    @Import(name="viewerCertificate")
       private final @Nullable Output<DistributionViewerCertificateGetArgs> viewerCertificate;
 
     public Output<DistributionViewerCertificateGetArgs> getViewerCertificate() {
@@ -370,7 +370,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * this to`false` will skip the process. Default: `true`.
      * 
      */
-    @InputImport(name="waitForDeployment")
+    @Import(name="waitForDeployment")
       private final @Nullable Output<Boolean> waitForDeployment;
 
     public Output<Boolean> getWaitForDeployment() {
@@ -387,7 +387,7 @@ public final class DistributionState extends io.pulumi.resources.ResourceArgs {
      * credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
      * 
      */
-    @InputImport(name="webAclId")
+    @Import(name="webAclId")
       private final @Nullable Output<String> webAclId;
 
     public Output<String> getWebAclId() {

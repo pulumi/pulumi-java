@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WebhookFilterGroupFilterArgs extends io.pulumi.resources.Reso
      * If set to `true`, the specified filter does *not* trigger a build. Defaults to `false`.
      * 
      */
-    @InputImport(name="excludeMatchedPattern")
+    @Import(name="excludeMatchedPattern")
       private final @Nullable Output<Boolean> excludeMatchedPattern;
 
     public Output<Boolean> getExcludeMatchedPattern() {
@@ -30,7 +30,7 @@ public final class WebhookFilterGroupFilterArgs extends io.pulumi.resources.Reso
      * For a filter that uses `EVENT` type, a comma-separated string that specifies one event: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, `PULL_REQUEST_REOPENED`. `PULL_REQUEST_MERGED` works with GitHub & GitHub Enterprise only. For a filter that uses any of the other filter types, a regular expression.
      * 
      */
-    @InputImport(name="pattern", required=true)
+    @Import(name="pattern", required=true)
       private final Output<String> pattern;
 
     public Output<String> getPattern() {
@@ -41,7 +41,7 @@ public final class WebhookFilterGroupFilterArgs extends io.pulumi.resources.Reso
      * The webhook filter group's type. Valid values for this parameter are: `EVENT`, `BASE_REF`, `HEAD_REF`, `ACTOR_ACCOUNT_ID`, `FILE_PATH`, `COMMIT_MESSAGE`. At least one filter group must specify `EVENT` as its type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

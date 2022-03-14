@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
      * Fully qualified domain for your custom endpoint.
      * 
      */
-    @InputImport(name="customEndpoint")
+    @Import(name="customEndpoint")
       private final @Nullable Output<String> customEndpoint;
 
     public Output<String> getCustomEndpoint() {
@@ -30,7 +30,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
      * ACM certificate ARN for your custom endpoint.
      * 
      */
-    @InputImport(name="customEndpointCertificateArn")
+    @Import(name="customEndpointCertificateArn")
       private final @Nullable Output<String> customEndpointCertificateArn;
 
     public Output<String> getCustomEndpointCertificateArn() {
@@ -41,7 +41,7 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
      * Whether to enable custom endpoint for the Elasticsearch domain.
      * 
      */
-    @InputImport(name="customEndpointEnabled")
+    @Import(name="customEndpointEnabled")
       private final @Nullable Output<Boolean> customEndpointEnabled;
 
     public Output<Boolean> getCustomEndpointEnabled() {
@@ -52,14 +52,14 @@ public final class DomainDomainEndpointOptionsArgs extends io.pulumi.resources.R
      * Whether or not to require HTTPS. Defaults to `true`.
      * 
      */
-    @InputImport(name="enforceHttps")
+    @Import(name="enforceHttps")
       private final @Nullable Output<Boolean> enforceHttps;
 
     public Output<Boolean> getEnforceHttps() {
         return this.enforceHttps == null ? Output.empty() : this.enforceHttps;
     }
 
-    @InputImport(name="tlsSecurityPolicy")
+    @Import(name="tlsSecurityPolicy")
       private final @Nullable Output<String> tlsSecurityPolicy;
 
     public Output<String> getTlsSecurityPolicy() {

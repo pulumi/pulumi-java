@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.aws.apigateway.inputs.DocumentationPartLocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
      * The location of the targeted API entity of the to-be-created documentation part. See below.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<DocumentationPartLocationArgs> location;
 
     public Output<DocumentationPartLocationArgs> getLocation() {
@@ -29,7 +29,7 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
      * A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., "{ \"description\": \"The API does ...\" }". Only Swagger-compliant key-value pairs can be exported and, hence, published.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<String> properties;
 
     public Output<String> getProperties() {
@@ -40,7 +40,7 @@ public final class DocumentationPartArgs extends io.pulumi.resources.ResourceArg
      * The ID of the associated Rest API
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
     public Output<String> getRestApiId() {

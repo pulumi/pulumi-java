@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class JobNotificationPropertyGetArgs extends io.pulumi.resources.Re
      * After a job run starts, the number of minutes to wait before sending a job run delay notification.
      * 
      */
-    @InputImport(name="notifyDelayAfter")
+    @Import(name="notifyDelayAfter")
       private final @Nullable Output<Integer> notifyDelayAfter;
 
     public Output<Integer> getNotifyDelayAfter() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetAr
      * A regular expression for validating the incoming Amazon Cognito User Pool app client ID.
      * 
      */
-    @InputImport(name="appIdClientRegex")
+    @Import(name="appIdClientRegex")
       private final @Nullable Output<String> appIdClientRegex;
 
     public Output<String> getAppIdClientRegex() {
@@ -29,7 +29,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetAr
      * The AWS region in which the user pool was created.
      * 
      */
-    @InputImport(name="awsRegion")
+    @Import(name="awsRegion")
       private final @Nullable Output<String> awsRegion;
 
     public Output<String> getAwsRegion() {
@@ -40,7 +40,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfigGetAr
      * The user pool ID.
      * 
      */
-    @InputImport(name="userPoolId", required=true)
+    @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {

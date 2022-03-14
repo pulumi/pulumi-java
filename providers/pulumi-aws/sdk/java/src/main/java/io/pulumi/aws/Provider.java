@@ -6,7 +6,7 @@ package io.pulumi.aws;
 import io.pulumi.aws.ProviderArgs;
 import io.pulumi.aws.Utilities;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
      * 
      */
-    @OutputExport(name="accessKey", type=String.class, parameters={})
+    @Export(name="accessKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessKey;
 
     /**
@@ -39,7 +39,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * `HTTPS_PROXY` environment variables.
      * 
      */
-    @OutputExport(name="httpProxy", type=String.class, parameters={})
+    @Export(name="httpProxy", type=String.class, parameters={})
     private Output</* @Nullable */ String> httpProxy;
 
     /**
@@ -54,7 +54,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * The profile for API operations. If not set, the default profile created with `aws configure` will be used.
      * 
      */
-    @OutputExport(name="profile", type=String.class, parameters={})
+    @Export(name="profile", type=String.class, parameters={})
     private Output</* @Nullable */ String> profile;
 
     /**
@@ -68,7 +68,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**
@@ -82,7 +82,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
      * 
      */
-    @OutputExport(name="secretKey", type=String.class, parameters={})
+    @Export(name="secretKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> secretKey;
 
     /**
@@ -96,7 +96,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
      * 
      */
-    @OutputExport(name="sharedCredentialsFile", type=String.class, parameters={})
+    @Export(name="sharedCredentialsFile", type=String.class, parameters={})
     private Output</* @Nullable */ String> sharedCredentialsFile;
 
     /**
@@ -110,7 +110,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * session token. A session token is only required if you are using temporary security credentials.
      * 
      */
-    @OutputExport(name="token", type=String.class, parameters={})
+    @Export(name="token", type=String.class, parameters={})
     private Output</* @Nullable */ String> token;
 
     /**

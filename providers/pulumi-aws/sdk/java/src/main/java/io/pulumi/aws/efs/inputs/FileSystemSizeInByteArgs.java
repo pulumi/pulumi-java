@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FileSystemSizeInByteArgs extends io.pulumi.resources.Resource
      * The latest known metered size (in bytes) of data stored in the file system.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Integer> value;
 
     public Output<Integer> getValue() {
@@ -29,7 +29,7 @@ public final class FileSystemSizeInByteArgs extends io.pulumi.resources.Resource
      * The latest known metered size (in bytes) of data stored in the Infrequent Access storage class.
      * 
      */
-    @InputImport(name="valueInIa")
+    @Import(name="valueInIa")
       private final @Nullable Output<Integer> valueInIa;
 
     public Output<Integer> getValueInIa() {
@@ -40,7 +40,7 @@ public final class FileSystemSizeInByteArgs extends io.pulumi.resources.Resource
      * The latest known metered size (in bytes) of data stored in the Standard storage class.
      * 
      */
-    @InputImport(name="valueInStandard")
+    @Import(name="valueInStandard")
       private final @Nullable Output<Integer> valueInStandard;
 
     public Output<Integer> getValueInStandard() {

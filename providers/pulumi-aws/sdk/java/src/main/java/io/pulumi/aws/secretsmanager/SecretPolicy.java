@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.secretsmanager.SecretPolicyArgs;
 import io.pulumi.aws.secretsmanager.inputs.SecretPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class SecretPolicy extends io.pulumi.resources.CustomResource {
      * Makes an optional API call to Zelkova to validate the Resource Policy to prevent broad access to your secret.
      * 
      */
-    @OutputExport(name="blockPublicPolicy", type=Boolean.class, parameters={})
+    @Export(name="blockPublicPolicy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> blockPublicPolicy;
 
     /**
@@ -47,7 +47,7 @@ public class SecretPolicy extends io.pulumi.resources.CustomResource {
      * Valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html). Unlike `aws.secretsmanager.Secret`, where `policy` can be set to `"{}"` to delete the policy, `"{}"` is not a valid policy since `policy` is required.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**
@@ -61,7 +61,7 @@ public class SecretPolicy extends io.pulumi.resources.CustomResource {
      * Secret ARN.
      * 
      */
-    @OutputExport(name="secretArn", type=String.class, parameters={})
+    @Export(name="secretArn", type=String.class, parameters={})
     private Output<String> secretArn;
 
     /**

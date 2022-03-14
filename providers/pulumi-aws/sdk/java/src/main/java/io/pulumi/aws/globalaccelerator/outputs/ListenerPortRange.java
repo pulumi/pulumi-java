@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.globalaccelerator.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerPortRange {
     /**
      * The first port in the range of ports, inclusive.
@@ -22,10 +22,10 @@ public final class ListenerPortRange {
      */
     private final @Nullable Integer toPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerPortRange(
-        @OutputCustomType.Parameter("fromPort") @Nullable Integer fromPort,
-        @OutputCustomType.Parameter("toPort") @Nullable Integer toPort) {
+        @CustomType.Parameter("fromPort") @Nullable Integer fromPort,
+        @CustomType.Parameter("toPort") @Nullable Integer toPort) {
         this.fromPort = fromPort;
         this.toPort = toPort;
     }

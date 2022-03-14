@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directoryservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class GetDirectoryVpcSetting extends io.pulumi.resources.InvokeArgs
 
     public static final GetDirectoryVpcSetting Empty = new GetDirectoryVpcSetting();
 
-    @InputImport(name="availabilityZones", required=true)
+    @Import(name="availabilityZones", required=true)
       private final List<String> availabilityZones;
 
     public List<String> getAvailabilityZones() {
@@ -24,7 +24,7 @@ public final class GetDirectoryVpcSetting extends io.pulumi.resources.InvokeArgs
      * The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final List<String> subnetIds;
 
     public List<String> getSubnetIds() {
@@ -35,7 +35,7 @@ public final class GetDirectoryVpcSetting extends io.pulumi.resources.InvokeArgs
      * The ID of the VPC that the connector is in.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final String vpcId;
 
     public String getVpcId() {

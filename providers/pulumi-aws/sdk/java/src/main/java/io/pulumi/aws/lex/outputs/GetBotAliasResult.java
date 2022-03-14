@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBotAliasResult {
     /**
      * The ARN of the bot alias.
@@ -55,17 +55,17 @@ public final class GetBotAliasResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBotAliasResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("botName") String botName,
-        @OutputCustomType.Parameter("botVersion") String botVersion,
-        @OutputCustomType.Parameter("checksum") String checksum,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("botName") String botName,
+        @CustomType.Parameter("botVersion") String botVersion,
+        @CustomType.Parameter("checksum") String checksum,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @CustomType.Parameter("name") String name) {
         this.arn = arn;
         this.botName = botName;
         this.botVersion = botVersion;

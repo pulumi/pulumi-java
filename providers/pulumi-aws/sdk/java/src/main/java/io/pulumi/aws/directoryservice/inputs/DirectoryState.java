@@ -6,7 +6,7 @@ package io.pulumi.aws.directoryservice.inputs;
 import io.pulumi.aws.directoryservice.inputs.DirectoryConnectSettingsGetArgs;
 import io.pulumi.aws.directoryservice.inputs.DirectoryVpcSettingsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The access URL for the directory, such as `http://alias.awsapps.com`.
      * 
      */
-    @InputImport(name="accessUrl")
+    @Import(name="accessUrl")
       private final @Nullable Output<String> accessUrl;
 
     public Output<String> getAccessUrl() {
@@ -34,7 +34,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
@@ -45,7 +45,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * Connector related information about the directory. Fields documented below.
      * 
      */
-    @InputImport(name="connectSettings")
+    @Import(name="connectSettings")
       private final @Nullable Output<DirectoryConnectSettingsGetArgs> connectSettings;
 
     public Output<DirectoryConnectSettingsGetArgs> getConnectSettings() {
@@ -56,7 +56,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * A textual description for the directory.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * A list of IP addresses of the DNS servers for the directory or connector.
      * 
      */
-    @InputImport(name="dnsIpAddresses")
+    @Import(name="dnsIpAddresses")
       private final @Nullable Output<List<String>> dnsIpAddresses;
 
     public Output<List<String>> getDnsIpAddresses() {
@@ -78,7 +78,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
      * 
      */
-    @InputImport(name="edition")
+    @Import(name="edition")
       private final @Nullable Output<String> edition;
 
     public Output<String> getEdition() {
@@ -89,7 +89,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
      * 
      */
-    @InputImport(name="enableSso")
+    @Import(name="enableSso")
       private final @Nullable Output<Boolean> enableSso;
 
     public Output<Boolean> getEnableSso() {
@@ -100,7 +100,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The fully qualified name for the directory, such as `corp.example.com`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -111,7 +111,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The password for the directory administrator or connector user.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -122,7 +122,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The ID of the security group created by the directory.
      * 
      */
-    @InputImport(name="securityGroupId")
+    @Import(name="securityGroupId")
       private final @Nullable Output<String> securityGroupId;
 
     public Output<String> getSecurityGroupId() {
@@ -133,7 +133,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The short name of the directory, such as `CORP`.
      * 
      */
-    @InputImport(name="shortName")
+    @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
     public Output<String> getShortName() {
@@ -144,7 +144,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The size of the directory (`Small` or `Large` are accepted values).
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
@@ -155,7 +155,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -166,7 +166,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -177,7 +177,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -188,7 +188,7 @@ public final class DirectoryState extends io.pulumi.resources.ResourceArgs {
      * VPC related information about the directory. Fields documented below.
      * 
      */
-    @InputImport(name="vpcSettings")
+    @Import(name="vpcSettings")
       private final @Nullable Output<DirectoryVpcSettingsGetArgs> vpcSettings;
 
     public Output<DirectoryVpcSettingsGetArgs> getVpcSettings() {

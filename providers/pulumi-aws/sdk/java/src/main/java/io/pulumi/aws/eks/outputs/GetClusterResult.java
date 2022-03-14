@@ -7,13 +7,13 @@ import io.pulumi.aws.eks.outputs.GetClusterCertificateAuthority;
 import io.pulumi.aws.eks.outputs.GetClusterIdentity;
 import io.pulumi.aws.eks.outputs.GetClusterKubernetesNetworkConfig;
 import io.pulumi.aws.eks.outputs.GetClusterVpcConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The Amazon Resource Name (ARN) of the cluster.
@@ -87,23 +87,23 @@ public final class GetClusterResult {
      */
     private final GetClusterVpcConfig vpcConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("certificateAuthority") GetClusterCertificateAuthority certificateAuthority,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("enabledClusterLogTypes") List<String> enabledClusterLogTypes,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identities") List<GetClusterIdentity> identities,
-        @OutputCustomType.Parameter("kubernetesNetworkConfigs") List<GetClusterKubernetesNetworkConfig> kubernetesNetworkConfigs,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("platformVersion") String platformVersion,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("vpcConfig") GetClusterVpcConfig vpcConfig) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("certificateAuthority") GetClusterCertificateAuthority certificateAuthority,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("enabledClusterLogTypes") List<String> enabledClusterLogTypes,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identities") List<GetClusterIdentity> identities,
+        @CustomType.Parameter("kubernetesNetworkConfigs") List<GetClusterKubernetesNetworkConfig> kubernetesNetworkConfigs,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("platformVersion") String platformVersion,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("vpcConfig") GetClusterVpcConfig vpcConfig) {
         this.arn = arn;
         this.certificateAuthority = certificateAuthority;
         this.createdAt = createdAt;

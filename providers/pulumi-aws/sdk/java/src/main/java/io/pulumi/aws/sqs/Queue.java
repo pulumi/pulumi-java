@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sqs.QueueArgs;
 import io.pulumi.aws.sqs.inputs.QueueState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -42,7 +42,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The ARN of the SQS queue
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -56,7 +56,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Enables content-based deduplication for FIFO queues. For more information, see the [related documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing)
      * 
      */
-    @OutputExport(name="contentBasedDeduplication", type=Boolean.class, parameters={})
+    @Export(name="contentBasedDeduplication", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> contentBasedDeduplication;
 
     /**
@@ -70,7 +70,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Specifies whether message deduplication occurs at the message group or queue level. Valid values are `messageGroup` and `queue` (default).
      * 
      */
-    @OutputExport(name="deduplicationScope", type=String.class, parameters={})
+    @Export(name="deduplicationScope", type=String.class, parameters={})
     private Output<String> deduplicationScope;
 
     /**
@@ -84,7 +84,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes). The default for this attribute is 0 seconds.
      * 
      */
-    @OutputExport(name="delaySeconds", type=Integer.class, parameters={})
+    @Export(name="delaySeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> delaySeconds;
 
     /**
@@ -98,7 +98,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Boolean designating a FIFO queue. If not set, it defaults to `false` making it standard.
      * 
      */
-    @OutputExport(name="fifoQueue", type=Boolean.class, parameters={})
+    @Export(name="fifoQueue", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> fifoQueue;
 
     /**
@@ -112,7 +112,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Specifies whether the FIFO queue throughput quota applies to the entire queue or per message group. Valid values are `perQueue` (default) and `perMessageGroupId`.
      * 
      */
-    @OutputExport(name="fifoThroughputLimit", type=String.class, parameters={})
+    @Export(name="fifoThroughputLimit", type=String.class, parameters={})
     private Output<String> fifoThroughputLimit;
 
     /**
@@ -126,7 +126,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. An integer representing seconds, between 60 seconds (1 minute) and 86,400 seconds (24 hours). The default is 300 (5 minutes).
      * 
      */
-    @OutputExport(name="kmsDataKeyReusePeriodSeconds", type=Integer.class, parameters={})
+    @Export(name="kmsDataKeyReusePeriodSeconds", type=Integer.class, parameters={})
     private Output<Integer> kmsDataKeyReusePeriodSeconds;
 
     /**
@@ -140,7 +140,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see [Key Terms](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html#sqs-sse-key-terms).
      * 
      */
-    @OutputExport(name="kmsMasterKeyId", type=String.class, parameters={})
+    @Export(name="kmsMasterKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsMasterKeyId;
 
     /**
@@ -154,7 +154,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB). The default for this attribute is 262144 (256 KiB).
      * 
      */
-    @OutputExport(name="maxMessageSize", type=Integer.class, parameters={})
+    @Export(name="maxMessageSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxMessageSize;
 
     /**
@@ -168,7 +168,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days). The default for this attribute is 345600 (4 days).
      * 
      */
-    @OutputExport(name="messageRetentionSeconds", type=Integer.class, parameters={})
+    @Export(name="messageRetentionSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> messageRetentionSeconds;
 
     /**
@@ -182,7 +182,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The name of the queue. Queue names must be made up of only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 80 characters long. For a FIFO (first-in-first-out) queue, the name must end with the `.fifo` suffix. If omitted, this provider will assign a random, unique name. Conflicts with `name_prefix`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -196,7 +196,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -210,7 +210,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The JSON policy for the SQS queue.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**
@@ -224,7 +224,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.
      * 
      */
-    @OutputExport(name="receiveWaitTimeSeconds", type=Integer.class, parameters={})
+    @Export(name="receiveWaitTimeSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> receiveWaitTimeSeconds;
 
     /**
@@ -238,7 +238,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The JSON policy to set up the Dead Letter Queue redrive permission, see [AWS docs](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSDeadLetterQueue.html).
      * 
      */
-    @OutputExport(name="redriveAllowPolicy", type=String.class, parameters={})
+    @Export(name="redriveAllowPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> redriveAllowPolicy;
 
     /**
@@ -252,7 +252,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The JSON policy to set up the Dead Letter Queue, see [AWS docs](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSDeadLetterQueue.html). **Note:** when specifying `maxReceiveCount`, you must specify it as an integer (`5`), and not a string (`"5"`).
      * 
      */
-    @OutputExport(name="redrivePolicy", type=String.class, parameters={})
+    @Export(name="redrivePolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> redrivePolicy;
 
     /**
@@ -266,7 +266,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Boolean to enable server-side encryption (SSE) of message content with SQS-owned encryption keys. Defaults to `false`. See [Encryption at rest](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html).
      * 
      */
-    @OutputExport(name="sqsManagedSseEnabled", type=Boolean.class, parameters={})
+    @Export(name="sqsManagedSseEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sqsManagedSseEnabled;
 
     /**
@@ -280,7 +280,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the queue. If configured with a provider `default_tags` configuration block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -294,7 +294,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -308,7 +308,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Same as `id`: The URL for the created Amazon SQS queue.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
@@ -322,7 +322,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see [AWS docs](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/AboutVT.html).
      * 
      */
-    @OutputExport(name="visibilityTimeoutSeconds", type=Integer.class, parameters={})
+    @Export(name="visibilityTimeoutSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> visibilityTimeoutSeconds;
 
     /**

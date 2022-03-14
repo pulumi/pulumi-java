@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * The account ID number of the member account in the organization to register as a delegated administrator.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -29,7 +29,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * The Amazon Resource Name (ARN) of the delegated administrator's account.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -40,7 +40,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * The date when the account was made a delegated administrator.
      * 
      */
-    @InputImport(name="delegationEnabledDate")
+    @Import(name="delegationEnabledDate")
       private final @Nullable Output<String> delegationEnabledDate;
 
     public Output<String> getDelegationEnabledDate() {
@@ -51,7 +51,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * The email address that is associated with the delegated administrator's AWS account.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -62,7 +62,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * The method by which the delegated administrator's account joined the organization.
      * 
      */
-    @InputImport(name="joinedMethod")
+    @Import(name="joinedMethod")
       private final @Nullable Output<String> joinedMethod;
 
     public Output<String> getJoinedMethod() {
@@ -73,7 +73,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * The date when the delegated administrator's account became a part of the organization.
      * 
      */
-    @InputImport(name="joinedTimestamp")
+    @Import(name="joinedTimestamp")
       private final @Nullable Output<String> joinedTimestamp;
 
     public Output<String> getJoinedTimestamp() {
@@ -84,7 +84,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * The friendly name of the delegated administrator's account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -95,7 +95,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * The service principal of the AWS service for which you want to make the member account a delegated administrator.
      * 
      */
-    @InputImport(name="servicePrincipal")
+    @Import(name="servicePrincipal")
       private final @Nullable Output<String> servicePrincipal;
 
     public Output<String> getServicePrincipal() {
@@ -106,7 +106,7 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
      * The status of the delegated administrator's account in the organization.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

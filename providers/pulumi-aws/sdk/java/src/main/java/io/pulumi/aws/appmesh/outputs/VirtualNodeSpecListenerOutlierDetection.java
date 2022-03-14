@@ -5,11 +5,11 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerOutlierDetectionInterval;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerOutlierDetection {
     /**
      * The base amount of time for which a host is ejected.
@@ -33,12 +33,12 @@ public final class VirtualNodeSpecListenerOutlierDetection {
      */
     private final Integer maxServerErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecListenerOutlierDetection(
-        @OutputCustomType.Parameter("baseEjectionDuration") VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration baseEjectionDuration,
-        @OutputCustomType.Parameter("interval") VirtualNodeSpecListenerOutlierDetectionInterval interval,
-        @OutputCustomType.Parameter("maxEjectionPercent") Integer maxEjectionPercent,
-        @OutputCustomType.Parameter("maxServerErrors") Integer maxServerErrors) {
+        @CustomType.Parameter("baseEjectionDuration") VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration baseEjectionDuration,
+        @CustomType.Parameter("interval") VirtualNodeSpecListenerOutlierDetectionInterval interval,
+        @CustomType.Parameter("maxEjectionPercent") Integer maxEjectionPercent,
+        @CustomType.Parameter("maxServerErrors") Integer maxServerErrors) {
         this.baseEjectionDuration = baseEjectionDuration;
         this.interval = interval;
         this.maxEjectionPercent = maxEjectionPercent;

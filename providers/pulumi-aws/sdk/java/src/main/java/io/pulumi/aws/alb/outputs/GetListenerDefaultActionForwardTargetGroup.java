@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.alb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerDefaultActionForwardTargetGroup {
     /**
      * ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
@@ -17,10 +17,10 @@ public final class GetListenerDefaultActionForwardTargetGroup {
     private final String arn;
     private final Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerDefaultActionForwardTargetGroup(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("weight") Integer weight) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("weight") Integer weight) {
         this.arn = arn;
         this.weight = weight;
     }

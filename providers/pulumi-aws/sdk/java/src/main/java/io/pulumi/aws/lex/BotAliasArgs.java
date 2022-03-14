@@ -5,7 +5,7 @@ package io.pulumi.aws.lex;
 
 import io.pulumi.aws.lex.inputs.BotAliasConversationLogsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the bot.
      * 
      */
-    @InputImport(name="botName", required=true)
+    @Import(name="botName", required=true)
       private final Output<String> botName;
 
     public Output<String> getBotName() {
@@ -30,7 +30,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the bot.
      * 
      */
-    @InputImport(name="botVersion", required=true)
+    @Import(name="botVersion", required=true)
       private final Output<String> botVersion;
 
     public Output<String> getBotVersion() {
@@ -41,7 +41,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * The settings that determine how Amazon Lex uses conversation logs for the alias. Attributes are documented under conversation_logs.
      * 
      */
-    @InputImport(name="conversationLogs")
+    @Import(name="conversationLogs")
       private final @Nullable Output<BotAliasConversationLogsArgs> conversationLogs;
 
     public Output<BotAliasConversationLogsArgs> getConversationLogs() {
@@ -52,7 +52,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the alias. Must be less than or equal to 200 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -63,7 +63,7 @@ public final class BotAliasArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the alias. The name is not case sensitive. Must be less than or equal to 100 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

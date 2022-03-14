@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationRedactedFieldArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * The Amazon Kinesis Data Firehose, Cloudwatch Log log group, or S3 bucket Amazon Resource Names (ARNs) that you want to associate with the web ACL.
      * 
      */
-    @InputImport(name="logDestinationConfigs", required=true)
+    @Import(name="logDestinationConfigs", required=true)
       private final Output<List<String>> logDestinationConfigs;
 
     public Output<List<String>> getLogDestinationConfigs() {
@@ -32,7 +32,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * A configuration block that specifies which web requests are kept in the logs and which are dropped. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation. See Logging Filter below for more details.
      * 
      */
-    @InputImport(name="loggingFilter")
+    @Import(name="loggingFilter")
       private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterArgs> loggingFilter;
 
     public Output<WebAclLoggingConfigurationLoggingFilterArgs> getLoggingFilter() {
@@ -43,7 +43,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported. See Redacted Fields below for more details.
      * 
      */
-    @InputImport(name="redactedFields")
+    @Import(name="redactedFields")
       private final @Nullable Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> redactedFields;
 
     public Output<List<WebAclLoggingConfigurationRedactedFieldArgs>> getRedactedFields() {
@@ -54,7 +54,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
      * 
      */
-    @InputImport(name="resourceArn", required=true)
+    @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
     public Output<String> getResourceArn() {

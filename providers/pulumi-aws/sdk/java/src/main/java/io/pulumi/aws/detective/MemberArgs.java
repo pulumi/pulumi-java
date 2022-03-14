@@ -4,7 +4,7 @@
 package io.pulumi.aws.detective;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * AWS account ID for the account.
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -30,7 +30,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * If set to true, then the root user of the invited account will _not_ receive an email notification. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. By default, this is set to `false`.
      * 
      */
-    @InputImport(name="disableEmailNotification")
+    @Import(name="disableEmailNotification")
       private final @Nullable Output<Boolean> disableEmailNotification;
 
     public Output<Boolean> getDisableEmailNotification() {
@@ -41,7 +41,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * Email address for the account.
      * 
      */
-    @InputImport(name="emailAddress", required=true)
+    @Import(name="emailAddress", required=true)
       private final Output<String> emailAddress;
 
     public Output<String> getEmailAddress() {
@@ -52,7 +52,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the behavior graph to invite the member accounts to contribute their data to.
      * 
      */
-    @InputImport(name="graphArn", required=true)
+    @Import(name="graphArn", required=true)
       private final Output<String> graphArn;
 
     public Output<String> getGraphArn() {
@@ -63,7 +63,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * A custom message to include in the invitation. Amazon Detective adds this message to the standard content that it sends for an invitation.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.CodeRepositoryGitConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Code Repository (must be unique).
      * 
      */
-    @InputImport(name="codeRepositoryName", required=true)
+    @Import(name="codeRepositoryName", required=true)
       private final Output<String> codeRepositoryName;
 
     public Output<String> getCodeRepositoryName() {
@@ -31,7 +31,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies details about the repository. see Git Config details below.
      * 
      */
-    @InputImport(name="gitConfig", required=true)
+    @Import(name="gitConfig", required=true)
       private final Output<CodeRepositoryGitConfigArgs> gitConfig;
 
     public Output<CodeRepositoryGitConfigArgs> getGitConfig() {
@@ -42,7 +42,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

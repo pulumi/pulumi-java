@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetPolicyDocumentStatementCondition extends io.pulumi.resourc
      * Name of the [IAM condition operator](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html) to evaluate.
      * 
      */
-    @InputImport(name="test", required=true)
+    @Import(name="test", required=true)
       private final String test;
 
     public String getTest() {
@@ -28,7 +28,7 @@ public final class GetPolicyDocumentStatementCondition extends io.pulumi.resourc
      * Values to evaluate the condition against. If multiple values are provided, the condition matches if at least one of them applies. That is, AWS evaluates multiple values as though using an "OR" boolean operation.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {
@@ -39,7 +39,7 @@ public final class GetPolicyDocumentStatementCondition extends io.pulumi.resourc
      * Name of a [Context Variable](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys) to apply the condition to. Context variables may either be standard AWS variables starting with `aws:` or service-specific variables prefixed with the service name.
      * 
      */
-    @InputImport(name="variable", required=true)
+    @Import(name="variable", required=true)
       private final String variable;
 
     public String getVariable() {

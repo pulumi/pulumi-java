@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations. See Deployment Config.
      * 
      */
-    @InputImport(name="deploymentConfig")
+    @Import(name="deploymentConfig")
       private final @Nullable Output<EndpointDeploymentConfigArgs> deploymentConfig;
 
     public Output<EndpointDeploymentConfigArgs> getDeploymentConfig() {
@@ -31,7 +31,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the endpoint configuration to use.
      * 
      */
-    @InputImport(name="endpointConfigName", required=true)
+    @Import(name="endpointConfigName", required=true)
       private final Output<String> endpointConfigName;
 
     public Output<String> getEndpointConfigName() {
@@ -42,7 +42,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the endpoint.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

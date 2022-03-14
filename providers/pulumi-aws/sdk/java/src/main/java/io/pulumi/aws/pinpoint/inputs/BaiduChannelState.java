@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
      * Platform credential API key from Baidu.
      * 
      */
-    @InputImport(name="apiKey")
+    @Import(name="apiKey")
       private final @Nullable Output<String> apiKey;
 
     public Output<String> getApiKey() {
@@ -30,7 +30,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
      * The application ID.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -41,7 +41,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to enable the channel. Defaults to `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -52,7 +52,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
      * Platform credential Secret key from Baidu.
      * 
      */
-    @InputImport(name="secretKey")
+    @Import(name="secretKey")
       private final @Nullable Output<String> secretKey;
 
     public Output<String> getSecretKey() {

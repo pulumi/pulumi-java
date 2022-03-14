@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class RouteRequestParameterGetArgs extends io.pulumi.resources.Reso
      * Request parameter key. This is a [request data mapping parameter](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-data-mapping.html#websocket-mapping-request-parameters).
      * 
      */
-    @InputImport(name="requestParameterKey", required=true)
+    @Import(name="requestParameterKey", required=true)
       private final Output<String> requestParameterKey;
 
     public Output<String> getRequestParameterKey() {
@@ -29,7 +29,7 @@ public final class RouteRequestParameterGetArgs extends io.pulumi.resources.Reso
      * Boolean whether or not the parameter is required.
      * 
      */
-    @InputImport(name="required", required=true)
+    @Import(name="required", required=true)
       private final Output<Boolean> required;
 
     public Output<Boolean> getRequired() {

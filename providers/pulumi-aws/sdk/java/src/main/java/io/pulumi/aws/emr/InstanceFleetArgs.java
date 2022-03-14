@@ -6,7 +6,7 @@ package io.pulumi.aws.emr;
 import io.pulumi.aws.emr.inputs.InstanceFleetInstanceTypeConfigArgs;
 import io.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the EMR Cluster to attach to. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
     public Output<String> getClusterId() {
@@ -33,7 +33,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for instance fleet
      * 
      */
-    @InputImport(name="instanceTypeConfigs")
+    @Import(name="instanceTypeConfigs")
       private final @Nullable Output<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs;
 
     public Output<List<InstanceFleetInstanceTypeConfigArgs>> getInstanceTypeConfigs() {
@@ -44,7 +44,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for launch specification
      * 
      */
-    @InputImport(name="launchSpecifications")
+    @Import(name="launchSpecifications")
       private final @Nullable Output<InstanceFleetLaunchSpecificationsArgs> launchSpecifications;
 
     public Output<InstanceFleetLaunchSpecificationsArgs> getLaunchSpecifications() {
@@ -55,7 +55,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * Friendly name given to the instance fleet.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * The target capacity of On-Demand units for the instance fleet, which determines how many On-Demand instances to provision.
      * 
      */
-    @InputImport(name="targetOnDemandCapacity")
+    @Import(name="targetOnDemandCapacity")
       private final @Nullable Output<Integer> targetOnDemandCapacity;
 
     public Output<Integer> getTargetOnDemandCapacity() {
@@ -77,7 +77,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * The target capacity of Spot units for the instance fleet, which determines how many Spot instances to provision.
      * 
      */
-    @InputImport(name="targetSpotCapacity")
+    @Import(name="targetSpotCapacity")
       private final @Nullable Output<Integer> targetSpotCapacity;
 
     public Output<Integer> getTargetSpotCapacity() {

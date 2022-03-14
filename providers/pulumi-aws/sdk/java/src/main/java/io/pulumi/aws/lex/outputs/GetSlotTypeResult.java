@@ -4,14 +4,14 @@
 package io.pulumi.aws.lex.outputs;
 
 import io.pulumi.aws.lex.outputs.GetSlotTypeEnumerationValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSlotTypeResult {
     /**
      * Checksum identifying the version of the slot type that was created. The checksum is
@@ -65,17 +65,17 @@ public final class GetSlotTypeResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSlotTypeResult(
-        @OutputCustomType.Parameter("checksum") String checksum,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enumerationValues") List<GetSlotTypeEnumerationValue> enumerationValues,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("valueSelectionStrategy") String valueSelectionStrategy,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("checksum") String checksum,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enumerationValues") List<GetSlotTypeEnumerationValue> enumerationValues,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("valueSelectionStrategy") String valueSelectionStrategy,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.checksum = checksum;
         this.createdDate = createdDate;
         this.description = description;

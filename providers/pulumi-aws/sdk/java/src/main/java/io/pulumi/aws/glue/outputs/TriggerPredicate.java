@@ -4,14 +4,14 @@
 package io.pulumi.aws.glue.outputs;
 
 import io.pulumi.aws.glue.outputs.TriggerPredicateCondition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerPredicate {
     /**
      * A list of the conditions that determine when the trigger will fire. See Conditions.
@@ -24,10 +24,10 @@ public final class TriggerPredicate {
      */
     private final @Nullable String logical;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerPredicate(
-        @OutputCustomType.Parameter("conditions") List<TriggerPredicateCondition> conditions,
-        @OutputCustomType.Parameter("logical") @Nullable String logical) {
+        @CustomType.Parameter("conditions") List<TriggerPredicateCondition> conditions,
+        @CustomType.Parameter("logical") @Nullable String logical) {
         this.conditions = conditions;
         this.logical = logical;
     }

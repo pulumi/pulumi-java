@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
      * An array of strings that specify the compute types that are allowed for the batch build. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the AWS CodeBuild User Guide for these values.
      * 
      */
-    @InputImport(name="computeTypesAlloweds")
+    @Import(name="computeTypesAlloweds")
       private final @Nullable Output<List<String>> computeTypesAlloweds;
 
     public Output<List<String>> getComputeTypesAlloweds() {
@@ -31,7 +31,7 @@ public final class ProjectBuildBatchConfigRestrictionsGetArgs extends io.pulumi.
      * Specifies the maximum number of builds allowed.
      * 
      */
-    @InputImport(name="maximumBuildsAllowed")
+    @Import(name="maximumBuildsAllowed")
       private final @Nullable Output<Integer> maximumBuildsAllowed;
 
     public Output<Integer> getMaximumBuildsAllowed() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * AWS secret store ARN for database credentials.
      * 
      */
-    @InputImport(name="awsSecretStoreArn", required=true)
+    @Import(name="awsSecretStoreArn", required=true)
       private final Output<String> awsSecretStoreArn;
 
     public Output<String> getAwsSecretStoreArn() {
@@ -29,7 +29,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * Logical database name.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -40,7 +40,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * Amazon RDS cluster identifier.
      * 
      */
-    @InputImport(name="dbClusterIdentifier", required=true)
+    @Import(name="dbClusterIdentifier", required=true)
       private final Output<String> dbClusterIdentifier;
 
     public Output<String> getDbClusterIdentifier() {
@@ -51,7 +51,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * AWS Region for RDS HTTP endpoint. Defaults to current region.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -62,7 +62,7 @@ public final class DataSourceRelationalDatabaseConfigHttpEndpointConfigGetArgs e
      * Logical schema name.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {

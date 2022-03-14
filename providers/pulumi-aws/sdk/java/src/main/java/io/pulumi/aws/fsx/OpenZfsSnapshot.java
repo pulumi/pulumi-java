@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.fsx.OpenZfsSnapshotArgs;
 import io.pulumi.aws.fsx.inputs.OpenZfsSnapshotState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class OpenZfsSnapshot extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name of the snapshot.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -44,7 +44,7 @@ public class OpenZfsSnapshot extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     public Output<String> getCreationTime() {
@@ -54,7 +54,7 @@ public class OpenZfsSnapshot extends io.pulumi.resources.CustomResource {
      * The name of the Snapshot. You can use a maximum of 203 alphanumeric characters plus either _ or -  or : or . for the name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -68,7 +68,7 @@ public class OpenZfsSnapshot extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the file system. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level. If you have set `copy_tags_to_backups` to true, and you specify one or more tags, no existing file system tags are copied from the file system to the backup.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
@@ -82,7 +82,7 @@ public class OpenZfsSnapshot extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -96,7 +96,7 @@ public class OpenZfsSnapshot extends io.pulumi.resources.CustomResource {
      * The ID of the volume to snapshot. This can be the root volume or a child volume.
      * 
      */
-    @OutputExport(name="volumeId", type=String.class, parameters={})
+    @Export(name="volumeId", type=String.class, parameters={})
     private Output<String> volumeId;
 
     /**

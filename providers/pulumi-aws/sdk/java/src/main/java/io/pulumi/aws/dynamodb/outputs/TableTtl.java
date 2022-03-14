@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableTtl {
     /**
      * The name of the table attribute to store the TTL timestamp in.
@@ -23,10 +23,10 @@ public final class TableTtl {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableTtl(
-        @OutputCustomType.Parameter("attributeName") String attributeName,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+        @CustomType.Parameter("attributeName") String attributeName,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.attributeName = attributeName;
         this.enabled = enabled;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetSchedulingPolicyArgs extends io.pulumi.resources.InvokeArg
      * The Amazon Resource Name (ARN) of the scheduling policy.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
@@ -30,7 +30,7 @@ public final class GetSchedulingPolicyArgs extends io.pulumi.resources.InvokeArg
      * Key-value map of resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

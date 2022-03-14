@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.xray.GroupArgs;
 import io.pulumi.aws.xray.inputs.GroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The ARN of the Group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The filter expression defining criteria by which to group traces. more info can be found in official [docs](https://docs.aws.amazon.com/xray/latest/devguide/xray-console-filters.html).
      * 
      */
-    @OutputExport(name="filterExpression", type=String.class, parameters={})
+    @Export(name="filterExpression", type=String.class, parameters={})
     private Output<String> filterExpression;
 
     /**
@@ -61,7 +61,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The name of the group.
      * 
      */
-    @OutputExport(name="groupName", type=String.class, parameters={})
+    @Export(name="groupName", type=String.class, parameters={})
     private Output<String> groupName;
 
     /**
@@ -75,7 +75,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -89,7 +89,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PublicVirtualInterfaceArgs extends io.pulumi.resources.Resour
      * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
      * 
      */
-    @InputImport(name="addressFamily", required=true)
+    @Import(name="addressFamily", required=true)
       private final Output<String> addressFamily;
 
     public Output<String> getAddressFamily() {
@@ -32,7 +32,7 @@ public final class PublicVirtualInterfaceArgs extends io.pulumi.resources.Resour
      * The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
      * 
      */
-    @InputImport(name="amazonAddress")
+    @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
     public Output<String> getAmazonAddress() {
@@ -43,7 +43,7 @@ public final class PublicVirtualInterfaceArgs extends io.pulumi.resources.Resour
      * The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
      * 
      */
-    @InputImport(name="bgpAsn", required=true)
+    @Import(name="bgpAsn", required=true)
       private final Output<Integer> bgpAsn;
 
     public Output<Integer> getBgpAsn() {
@@ -54,7 +54,7 @@ public final class PublicVirtualInterfaceArgs extends io.pulumi.resources.Resour
      * The authentication key for BGP configuration.
      * 
      */
-    @InputImport(name="bgpAuthKey")
+    @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
     public Output<String> getBgpAuthKey() {
@@ -65,7 +65,7 @@ public final class PublicVirtualInterfaceArgs extends io.pulumi.resources.Resour
      * The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
      * 
      */
-    @InputImport(name="connectionId", required=true)
+    @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -76,7 +76,7 @@ public final class PublicVirtualInterfaceArgs extends io.pulumi.resources.Resour
      * The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
      * 
      */
-    @InputImport(name="customerAddress")
+    @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
     public Output<String> getCustomerAddress() {
@@ -87,7 +87,7 @@ public final class PublicVirtualInterfaceArgs extends io.pulumi.resources.Resour
      * The name for the virtual interface.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -98,7 +98,7 @@ public final class PublicVirtualInterfaceArgs extends io.pulumi.resources.Resour
      * A list of routes to be advertised to the AWS network in this region.
      * 
      */
-    @InputImport(name="routeFilterPrefixes", required=true)
+    @Import(name="routeFilterPrefixes", required=true)
       private final Output<List<String>> routeFilterPrefixes;
 
     public Output<List<String>> getRouteFilterPrefixes() {
@@ -109,7 +109,7 @@ public final class PublicVirtualInterfaceArgs extends io.pulumi.resources.Resour
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -120,7 +120,7 @@ public final class PublicVirtualInterfaceArgs extends io.pulumi.resources.Resour
      * The VLAN ID.
      * 
      */
-    @InputImport(name="vlan", required=true)
+    @Import(name="vlan", required=true)
       private final Output<Integer> vlan;
 
     public Output<Integer> getVlan() {

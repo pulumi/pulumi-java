@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetLaunchTemplateConfigLaunchTemplateSpecification {
     /**
      * ID of the launch template.
@@ -27,11 +27,11 @@ public final class FleetLaunchTemplateConfigLaunchTemplateSpecification {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetLaunchTemplateConfigLaunchTemplateSpecification(
-        @OutputCustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
-        @OutputCustomType.Parameter("launchTemplateName") @Nullable String launchTemplateName,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
+        @CustomType.Parameter("launchTemplateName") @Nullable String launchTemplateName,
+        @CustomType.Parameter("version") String version) {
         this.launchTemplateId = launchTemplateId;
         this.launchTemplateName = launchTemplateName;
         this.version = version;

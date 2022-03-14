@@ -11,7 +11,7 @@ import io.pulumi.aws.glue.outputs.CatalogTablePartitionKey;
 import io.pulumi.aws.glue.outputs.CatalogTableStorageDescriptor;
 import io.pulumi.aws.glue.outputs.CatalogTableTargetTable;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * The ARN of the Glue Table.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -53,7 +53,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * ID of the Data Catalog in which the table resides.
      * 
      */
-    @OutputExport(name="catalogId", type=String.class, parameters={})
+    @Export(name="catalogId", type=String.class, parameters={})
     private Output<String> catalogId;
 
     /**
@@ -67,7 +67,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * Name of the catalog database that contains the target table.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
     /**
@@ -81,7 +81,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * Description of the table.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -95,7 +95,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * Name of the target table.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * Owner of the table.
      * 
      */
-    @OutputExport(name="owner", type=String.class, parameters={})
+    @Export(name="owner", type=String.class, parameters={})
     private Output</* @Nullable */ String> owner;
 
     /**
@@ -123,7 +123,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * Map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
     /**
@@ -137,7 +137,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * Configuration block for a maximum of 3 partition indexes. See `partition_index` below.
      * 
      */
-    @OutputExport(name="partitionIndices", type=List.class, parameters={CatalogTablePartitionIndex.class})
+    @Export(name="partitionIndices", type=List.class, parameters={CatalogTablePartitionIndex.class})
     private Output<List<CatalogTablePartitionIndex>> partitionIndices;
 
     /**
@@ -151,7 +151,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See `partition_keys` below.
      * 
      */
-    @OutputExport(name="partitionKeys", type=List.class, parameters={CatalogTablePartitionKey.class})
+    @Export(name="partitionKeys", type=List.class, parameters={CatalogTablePartitionKey.class})
     private Output</* @Nullable */ List<CatalogTablePartitionKey>> partitionKeys;
 
     /**
@@ -165,7 +165,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * Retention time for this table.
      * 
      */
-    @OutputExport(name="retention", type=Integer.class, parameters={})
+    @Export(name="retention", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retention;
 
     /**
@@ -179,7 +179,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * Configuration block for information about the physical storage of this table. For more information, refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor). See `storage_descriptor` below.
      * 
      */
-    @OutputExport(name="storageDescriptor", type=CatalogTableStorageDescriptor.class, parameters={})
+    @Export(name="storageDescriptor", type=CatalogTableStorageDescriptor.class, parameters={})
     private Output</* @Nullable */ CatalogTableStorageDescriptor> storageDescriptor;
 
     /**
@@ -193,7 +193,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * Type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
      * 
      */
-    @OutputExport(name="tableType", type=String.class, parameters={})
+    @Export(name="tableType", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableType;
 
     /**
@@ -207,7 +207,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * Configuration block of a target table for resource linking. See `target_table` below.
      * 
      */
-    @OutputExport(name="targetTable", type=CatalogTableTargetTable.class, parameters={})
+    @Export(name="targetTable", type=CatalogTableTargetTable.class, parameters={})
     private Output</* @Nullable */ CatalogTableTargetTable> targetTable;
 
     /**
@@ -221,7 +221,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * If the table is a view, the expanded text of the view; otherwise null.
      * 
      */
-    @OutputExport(name="viewExpandedText", type=String.class, parameters={})
+    @Export(name="viewExpandedText", type=String.class, parameters={})
     private Output</* @Nullable */ String> viewExpandedText;
 
     /**
@@ -235,7 +235,7 @@ public class CatalogTable extends io.pulumi.resources.CustomResource {
      * If the table is a view, the original text of the view; otherwise null.
      * 
      */
-    @OutputExport(name="viewOriginalText", type=String.class, parameters={})
+    @Export(name="viewOriginalText", type=String.class, parameters={})
     private Output</* @Nullable */ String> viewOriginalText;
 
     /**

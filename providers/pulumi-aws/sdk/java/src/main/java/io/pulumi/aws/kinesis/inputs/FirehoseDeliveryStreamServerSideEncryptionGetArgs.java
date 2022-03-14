@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
      * Whether to enable encryption at rest. Default is `false`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -30,7 +30,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
      * Amazon Resource Name (ARN) of the encryption key. Required when `key_type` is `CUSTOMER_MANAGED_CMK`.
      * 
      */
-    @InputImport(name="keyArn")
+    @Import(name="keyArn")
       private final @Nullable Output<String> keyArn;
 
     public Output<String> getKeyArn() {
@@ -41,7 +41,7 @@ public final class FirehoseDeliveryStreamServerSideEncryptionGetArgs extends io.
      * Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
      * 
      */
-    @InputImport(name="keyType")
+    @Import(name="keyType")
       private final @Nullable Output<String> keyType;
 
     public Output<String> getKeyType() {

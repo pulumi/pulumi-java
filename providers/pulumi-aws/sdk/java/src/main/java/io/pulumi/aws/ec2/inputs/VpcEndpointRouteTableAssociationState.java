@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
      * Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
      * 
      */
-    @InputImport(name="routeTableId")
+    @Import(name="routeTableId")
       private final @Nullable Output<String> routeTableId;
 
     public Output<String> getRouteTableId() {
@@ -29,7 +29,7 @@ public final class VpcEndpointRouteTableAssociationState extends io.pulumi.resou
      * Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.
      * 
      */
-    @InputImport(name="vpcEndpointId")
+    @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {

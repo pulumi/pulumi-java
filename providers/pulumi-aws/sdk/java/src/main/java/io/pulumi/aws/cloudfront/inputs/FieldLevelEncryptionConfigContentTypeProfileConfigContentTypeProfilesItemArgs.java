@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * he content type for a field-level encryption content type-profile mapping. Valid value is `application/x-www-form-urlencoded`.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -29,7 +29,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * The format for a field-level encryption content type-profile mapping. Valid value is `URLEncoded`.
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<String> format;
 
     public Output<String> getFormat() {
@@ -40,7 +40,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
      * ID of profile to use for field-level encryption query argument-profile mapping
      * 
      */
-    @InputImport(name="profileId")
+    @Import(name="profileId")
       private final @Nullable Output<String> profileId;
 
     public Output<String> getProfileId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetAccessPointPosixUser extends io.pulumi.resources.InvokeArg
      * Group ID
      * 
      */
-    @InputImport(name="gid", required=true)
+    @Import(name="gid", required=true)
       private final Integer gid;
 
     public Integer getGid() {
@@ -28,7 +28,7 @@ public final class GetAccessPointPosixUser extends io.pulumi.resources.InvokeArg
      * Secondary group IDs
      * 
      */
-    @InputImport(name="secondaryGids", required=true)
+    @Import(name="secondaryGids", required=true)
       private final List<Integer> secondaryGids;
 
     public List<Integer> getSecondaryGids() {
@@ -40,7 +40,7 @@ public final class GetAccessPointPosixUser extends io.pulumi.resources.InvokeArg
      * * `root_directory`- Single element list containing information on the directory on the Amazon EFS file system that the access point provides access to.
      * 
      */
-    @InputImport(name="uid", required=true)
+    @Import(name="uid", required=true)
       private final Integer uid;
 
     public Integer getUid() {

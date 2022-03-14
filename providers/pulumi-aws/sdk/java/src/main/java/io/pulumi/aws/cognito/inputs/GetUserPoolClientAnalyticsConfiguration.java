@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cognito.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends io.pulumi.res
      * (Optional) Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
      * 
      */
-    @InputImport(name="applicationArn", required=true)
+    @Import(name="applicationArn", required=true)
       private final String applicationArn;
 
     public String getApplicationArn() {
@@ -28,7 +28,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends io.pulumi.res
      * (Optional) Application ID for an Amazon Pinpoint application.
      * 
      */
-    @InputImport(name="applicationId", required=true)
+    @Import(name="applicationId", required=true)
       private final String applicationId;
 
     public String getApplicationId() {
@@ -39,7 +39,7 @@ public final class GetUserPoolClientAnalyticsConfiguration extends io.pulumi.res
      * (Optional) ID for the Analytics Configuration. Conflicts with `application_arn`.
      * 
      */
-    @InputImport(name="externalId", required=true)
+    @Import(name="externalId", required=true)
       private final String externalId;
 
     public String getExternalId() {
@@ -51,14 +51,14 @@ public final class GetUserPoolClientAnalyticsConfiguration extends io.pulumi.res
      * * `user_data_shared` (Optional) If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="userDataShared", required=true)
+    @Import(name="userDataShared", required=true)
       private final Boolean userDataShared;
 
     public Boolean getUserDataShared() {

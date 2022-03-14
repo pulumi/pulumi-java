@@ -4,12 +4,12 @@
 package io.pulumi.aws.ecs.outputs;
 
 import io.pulumi.aws.ecs.outputs.ClusterConfigurationExecuteCommandConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterConfiguration {
     /**
      * The details of the execute command configuration. Detailed below.
@@ -17,8 +17,8 @@ public final class ClusterConfiguration {
      */
     private final @Nullable ClusterConfigurationExecuteCommandConfiguration executeCommandConfiguration;
 
-    @OutputCustomType.Constructor
-    private ClusterConfiguration(@OutputCustomType.Parameter("executeCommandConfiguration") @Nullable ClusterConfigurationExecuteCommandConfiguration executeCommandConfiguration) {
+    @CustomType.Constructor
+    private ClusterConfiguration(@CustomType.Parameter("executeCommandConfiguration") @Nullable ClusterConfigurationExecuteCommandConfiguration executeCommandConfiguration) {
         this.executeCommandConfiguration = executeCommandConfiguration;
     }
 

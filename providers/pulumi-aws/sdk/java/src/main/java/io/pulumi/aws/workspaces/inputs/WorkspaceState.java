@@ -5,7 +5,7 @@ package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.aws.workspaces.inputs.WorkspaceWorkspacePropertiesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * The ID of the bundle for the WorkSpace.
      * 
      */
-    @InputImport(name="bundleId")
+    @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
     public Output<String> getBundleId() {
@@ -32,7 +32,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * The name of the WorkSpace, as seen by the operating system.
      * 
      */
-    @InputImport(name="computerName")
+    @Import(name="computerName")
       private final @Nullable Output<String> computerName;
 
     public Output<String> getComputerName() {
@@ -43,7 +43,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * The ID of the directory for the WorkSpace.
      * 
      */
-    @InputImport(name="directoryId")
+    @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
     public Output<String> getDirectoryId() {
@@ -54,7 +54,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * The IP address of the WorkSpace.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -65,7 +65,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the data stored on the root volume is encrypted.
      * 
      */
-    @InputImport(name="rootVolumeEncryptionEnabled")
+    @Import(name="rootVolumeEncryptionEnabled")
       private final @Nullable Output<Boolean> rootVolumeEncryptionEnabled;
 
     public Output<Boolean> getRootVolumeEncryptionEnabled() {
@@ -76,7 +76,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * The operational state of the WorkSpace.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -87,7 +87,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * The tags for the WorkSpace. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -98,7 +98,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -109,7 +109,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {
@@ -120,7 +120,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the data stored on the user volume is encrypted.
      * 
      */
-    @InputImport(name="userVolumeEncryptionEnabled")
+    @Import(name="userVolumeEncryptionEnabled")
       private final @Nullable Output<Boolean> userVolumeEncryptionEnabled;
 
     public Output<Boolean> getUserVolumeEncryptionEnabled() {
@@ -131,7 +131,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.
      * 
      */
-    @InputImport(name="volumeEncryptionKey")
+    @Import(name="volumeEncryptionKey")
       private final @Nullable Output<String> volumeEncryptionKey;
 
     public Output<String> getVolumeEncryptionKey() {
@@ -142,7 +142,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
      * The WorkSpace properties.
      * 
      */
-    @InputImport(name="workspaceProperties")
+    @Import(name="workspaceProperties")
       private final @Nullable Output<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties;
 
     public Output<WorkspaceWorkspacePropertiesGetArgs> getWorkspaceProperties() {

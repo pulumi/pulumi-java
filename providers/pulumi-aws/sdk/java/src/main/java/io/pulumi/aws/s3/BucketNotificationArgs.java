@@ -7,7 +7,7 @@ import io.pulumi.aws.s3.inputs.BucketNotificationLambdaFunctionArgs;
 import io.pulumi.aws.s3.inputs.BucketNotificationQueueArgs;
 import io.pulumi.aws.s3.inputs.BucketNotificationTopicArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
      * Name of the bucket for notification configuration.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -34,7 +34,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
      * Whether to enable Amazon EventBridge notifications.
      * 
      */
-    @InputImport(name="eventbridge")
+    @Import(name="eventbridge")
       private final @Nullable Output<Boolean> eventbridge;
 
     public Output<Boolean> getEventbridge() {
@@ -45,7 +45,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
      * Used to configure notifications to a Lambda Function. See below.
      * 
      */
-    @InputImport(name="lambdaFunctions")
+    @Import(name="lambdaFunctions")
       private final @Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions;
 
     public Output<List<BucketNotificationLambdaFunctionArgs>> getLambdaFunctions() {
@@ -56,7 +56,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
      * Notification configuration to SQS Queue. See below.
      * 
      */
-    @InputImport(name="queues")
+    @Import(name="queues")
       private final @Nullable Output<List<BucketNotificationQueueArgs>> queues;
 
     public Output<List<BucketNotificationQueueArgs>> getQueues() {
@@ -67,7 +67,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
      * Notification configuration to SNS Topic. See below.
      * 
      */
-    @InputImport(name="topics")
+    @Import(name="topics")
       private final @Nullable Output<List<BucketNotificationTopicArgs>> topics;
 
     public Output<List<BucketNotificationTopicArgs>> getTopics() {

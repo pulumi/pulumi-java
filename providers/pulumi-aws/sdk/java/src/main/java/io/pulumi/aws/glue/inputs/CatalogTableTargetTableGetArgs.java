@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class CatalogTableTargetTableGetArgs extends io.pulumi.resources.Re
      * ID of the Data Catalog in which the table resides.
      * 
      */
-    @InputImport(name="catalogId", required=true)
+    @Import(name="catalogId", required=true)
       private final Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -28,7 +28,7 @@ public final class CatalogTableTargetTableGetArgs extends io.pulumi.resources.Re
      * Name of the catalog database that contains the target table.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -39,7 +39,7 @@ public final class CatalogTableTargetTableGetArgs extends io.pulumi.resources.Re
      * Name of the target table.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

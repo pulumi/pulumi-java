@@ -5,7 +5,7 @@ package io.pulumi.aws.connect;
 
 import io.pulumi.aws.connect.inputs.HoursOfOperationConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * One or more config blocks which define the configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below.
      * 
      */
-    @InputImport(name="configs", required=true)
+    @Import(name="configs", required=true)
       private final Output<List<HoursOfOperationConfigArgs>> configs;
 
     public Output<List<HoursOfOperationConfigArgs>> getConfigs() {
@@ -32,7 +32,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the description of the Hours of Operation.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -54,7 +54,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the name of the Hours of Operation.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * Tags to apply to the Hours of Operation. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -87,7 +87,7 @@ public final class HoursOfOperationArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the time zone of the Hours of Operation.
      * 
      */
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
     public Output<String> getTimeZone() {

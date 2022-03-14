@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends io
      * ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
      * 
      */
-    @InputImport(name="masterUserArn")
+    @Import(name="masterUserArn")
       private final @Nullable Output<String> masterUserArn;
 
     public Output<String> getMasterUserArn() {
@@ -29,7 +29,7 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends io
      * Main user's username, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
      */
-    @InputImport(name="masterUserName")
+    @Import(name="masterUserName")
       private final @Nullable Output<String> masterUserName;
 
     public Output<String> getMasterUserName() {
@@ -40,7 +40,7 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptionsArgs extends io
      * Main user's password, which is stored in the Amazon Elasticsearch Service domain's internal database. Only specify if `internal_user_database_enabled` is set to `true`.
      * 
      */
-    @InputImport(name="masterUserPassword")
+    @Import(name="masterUserPassword")
       private final @Nullable Output<String> masterUserPassword;
 
     public Output<String> getMasterUserPassword() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FleetDomainJoinInfoArgs extends io.pulumi.resources.ResourceA
      * Fully qualified name of the directory (for example, corp.example.com).
      * 
      */
-    @InputImport(name="directoryName")
+    @Import(name="directoryName")
       private final @Nullable Output<String> directoryName;
 
     public Output<String> getDirectoryName() {
@@ -29,7 +29,7 @@ public final class FleetDomainJoinInfoArgs extends io.pulumi.resources.ResourceA
      * Distinguished name of the organizational unit for computer accounts.
      * 
      */
-    @InputImport(name="organizationalUnitDistinguishedName")
+    @Import(name="organizationalUnitDistinguishedName")
       private final @Nullable Output<String> organizationalUnitDistinguishedName;
 
     public Output<String> getOrganizationalUnitDistinguishedName() {

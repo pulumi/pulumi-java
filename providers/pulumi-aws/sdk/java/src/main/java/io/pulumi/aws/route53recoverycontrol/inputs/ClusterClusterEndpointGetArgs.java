@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ClusterClusterEndpointGetArgs extends io.pulumi.resources.Res
      * Cluster endpoint.
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -29,7 +29,7 @@ public final class ClusterClusterEndpointGetArgs extends io.pulumi.resources.Res
      * Region of the endpoint.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

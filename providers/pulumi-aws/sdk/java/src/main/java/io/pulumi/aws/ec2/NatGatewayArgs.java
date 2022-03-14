@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
      * 
      */
-    @InputImport(name="allocationId")
+    @Import(name="allocationId")
       private final @Nullable Output<String> allocationId;
 
     public Output<String> getAllocationId() {
@@ -30,7 +30,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
      * 
      */
-    @InputImport(name="connectivityType")
+    @Import(name="connectivityType")
       private final @Nullable Output<String> connectivityType;
 
     public Output<String> getConnectivityType() {
@@ -41,7 +41,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The Subnet ID of the subnet in which to place the gateway.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -52,7 +52,7 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

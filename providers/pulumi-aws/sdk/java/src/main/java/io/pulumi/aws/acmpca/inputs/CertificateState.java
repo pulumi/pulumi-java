@@ -5,7 +5,7 @@ package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.aws.acmpca.inputs.CertificateValidityGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the certificate.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * The PEM-encoded certificate value.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -41,7 +41,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the certificate authority.
      * 
      */
-    @InputImport(name="certificateAuthorityArn")
+    @Import(name="certificateAuthorityArn")
       private final @Nullable Output<String> certificateAuthorityArn;
 
     public Output<String> getCertificateAuthorityArn() {
@@ -52,7 +52,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA.
      * 
      */
-    @InputImport(name="certificateChain")
+    @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {
@@ -63,7 +63,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Certificate Signing Request in PEM format.
      * 
      */
-    @InputImport(name="certificateSigningRequest")
+    @Import(name="certificateSigningRequest")
       private final @Nullable Output<String> certificateSigningRequest;
 
     public Output<String> getCertificateSigningRequest() {
@@ -74,7 +74,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Algorithm to use to sign certificate requests. Valid values: `SHA256WITHRSA`, `SHA256WITHECDSA`, `SHA384WITHRSA`, `SHA384WITHECDSA`, `SHA512WITHRSA`, `SHA512WITHECDSA`
      * 
      */
-    @InputImport(name="signingAlgorithm")
+    @Import(name="signingAlgorithm")
       private final @Nullable Output<String> signingAlgorithm;
 
     public Output<String> getSigningAlgorithm() {
@@ -85,7 +85,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * The template to use when issuing a certificate. See [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/userguide/UsingTemplates.html) for more information.
      * 
      */
-    @InputImport(name="templateArn")
+    @Import(name="templateArn")
       private final @Nullable Output<String> templateArn;
 
     public Output<String> getTemplateArn() {
@@ -96,7 +96,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Configures end of the validity period for the certificate. See validity block below.
      * 
      */
-    @InputImport(name="validity")
+    @Import(name="validity")
       private final @Nullable Output<CertificateValidityGetArgs> validity;
 
     public Output<CertificateValidityGetArgs> getValidity() {

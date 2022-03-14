@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class OntapVolumeTieringPolicyGetArgs extends io.pulumi.resources.R
 
     public static final OntapVolumeTieringPolicyGetArgs Empty = new OntapVolumeTieringPolicyGetArgs();
 
-    @InputImport(name="coolingPeriod")
+    @Import(name="coolingPeriod")
       private final @Nullable Output<Integer> coolingPeriod;
 
     public Output<Integer> getCoolingPeriod() {
@@ -26,7 +26,7 @@ public final class OntapVolumeTieringPolicyGetArgs extends io.pulumi.resources.R
      * Specifies the tiering policy for the ONTAP volume for moving data to the capacity pool storage. Valid values are `SNAPSHOT_ONLY`, `AUTO`, `ALL`, `NONE`. Default value is `SNAPSHOT_ONLY`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

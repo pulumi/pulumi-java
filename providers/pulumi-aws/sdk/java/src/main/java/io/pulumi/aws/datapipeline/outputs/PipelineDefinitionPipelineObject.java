@@ -4,13 +4,13 @@
 package io.pulumi.aws.datapipeline.outputs;
 
 import io.pulumi.aws.datapipeline.outputs.PipelineDefinitionPipelineObjectField;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineDefinitionPipelineObject {
     /**
      * Configuration block for Key-value pairs that define the properties of the object. See below
@@ -28,11 +28,11 @@ public final class PipelineDefinitionPipelineObject {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineDefinitionPipelineObject(
-        @OutputCustomType.Parameter("fields") @Nullable List<PipelineDefinitionPipelineObjectField> fields,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("fields") @Nullable List<PipelineDefinitionPipelineObjectField> fields,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name) {
         this.fields = fields;
         this.id = id;
         this.name = name;

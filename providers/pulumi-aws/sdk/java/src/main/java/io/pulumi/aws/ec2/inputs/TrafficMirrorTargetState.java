@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * The ARN of the traffic mirror target.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * A description of the traffic mirror session.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * The network interface ID that is associated with the target.
      * 
      */
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -52,7 +52,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.
      * 
      */
-    @InputImport(name="networkLoadBalancerArn")
+    @Import(name="networkLoadBalancerArn")
       private final @Nullable Output<String> networkLoadBalancerArn;
 
     public Output<String> getNetworkLoadBalancerArn() {
@@ -63,7 +63,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * The ID of the AWS account that owns the traffic mirror target.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -74,7 +74,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -85,7 +85,7 @@ public final class TrafficMirrorTargetState extends io.pulumi.resources.Resource
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

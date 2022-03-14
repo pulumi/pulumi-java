@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationDistributionAmiDistributionConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetDistributionConfigurationDistribution extends io.pulumi.re
      * Nested list of AMI distribution configuration.
      * 
      */
-    @InputImport(name="amiDistributionConfigurations", required=true)
+    @Import(name="amiDistributionConfigurations", required=true)
       private final List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations;
 
     public List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> getAmiDistributionConfigurations() {
@@ -29,7 +29,7 @@ public final class GetDistributionConfigurationDistribution extends io.pulumi.re
      * Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
      * 
      */
-    @InputImport(name="licenseConfigurationArns", required=true)
+    @Import(name="licenseConfigurationArns", required=true)
       private final List<String> licenseConfigurationArns;
 
     public List<String> getLicenseConfigurationArns() {
@@ -40,7 +40,7 @@ public final class GetDistributionConfigurationDistribution extends io.pulumi.re
      * AWS Region of distribution.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.pricing.inputs;
 
 import io.pulumi.aws.pricing.inputs.GetProductFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * A list of filters. Passed directly to the API (see GetProducts API reference). These filters must describe a single product, this resource will fail if more than one product is returned by the API.
      * 
      */
-    @InputImport(name="filters", required=true)
+    @Import(name="filters", required=true)
       private final List<GetProductFilter> filters;
 
     public List<GetProductFilter> getFilters() {
@@ -29,7 +29,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * The code of the service. Available service codes can be fetched using the DescribeServices pricing API call.
      * 
      */
-    @InputImport(name="serviceCode", required=true)
+    @Import(name="serviceCode", required=true)
       private final String serviceCode;
 
     public String getServiceCode() {

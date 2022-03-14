@@ -5,7 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.aws.emr.inputs.ClusterMasterInstanceGroupEbsConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
      * Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
      * 
      */
-    @InputImport(name="bidPrice")
+    @Import(name="bidPrice")
       private final @Nullable Output<String> bidPrice;
 
     public Output<String> getBidPrice() {
@@ -32,7 +32,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
      * Configuration block(s) for EBS volumes attached to each instance in the instance group. Detailed below.
      * 
      */
-    @InputImport(name="ebsConfigs")
+    @Import(name="ebsConfigs")
       private final @Nullable Output<List<ClusterMasterInstanceGroupEbsConfigArgs>> ebsConfigs;
 
     public Output<List<ClusterMasterInstanceGroupEbsConfigArgs>> getEbsConfigs() {
@@ -43,7 +43,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
      * ID of the cluster.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -54,7 +54,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
      * Target number of instances for the instance group. Must be 1 or 3. Defaults to 1. Launching with multiple master nodes is only supported in EMR version 5.23.0+, and requires this resource's `core_instance_group` to be configured. Public (Internet accessible) instances must be created in VPC subnets that have map public IP on launch enabled. Termination protection is automatically enabled when launched with multiple master nodes and this provider must have the `termination_protection = false` configuration applied before destroying this resource.
      * 
      */
-    @InputImport(name="instanceCount")
+    @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
@@ -65,7 +65,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
      * EC2 instance type for all instances in the instance group.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -76,7 +76,7 @@ public final class ClusterMasterInstanceGroupArgs extends io.pulumi.resources.Re
      * Name of the step.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

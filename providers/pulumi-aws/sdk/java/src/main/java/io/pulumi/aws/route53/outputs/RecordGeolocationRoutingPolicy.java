@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecordGeolocationRoutingPolicy {
     /**
      * A two-letter continent code. See http://docs.aws.amazon.com/Route53/latest/APIReference/API_GetGeoLocation.html for code details. Either `continent` or `country` must be specified.
@@ -27,11 +27,11 @@ public final class RecordGeolocationRoutingPolicy {
      */
     private final @Nullable String subdivision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecordGeolocationRoutingPolicy(
-        @OutputCustomType.Parameter("continent") @Nullable String continent,
-        @OutputCustomType.Parameter("country") @Nullable String country,
-        @OutputCustomType.Parameter("subdivision") @Nullable String subdivision) {
+        @CustomType.Parameter("continent") @Nullable String continent,
+        @CustomType.Parameter("country") @Nullable String country,
+        @CustomType.Parameter("subdivision") @Nullable String subdivision) {
         this.continent = continent;
         this.country = country;
         this.subdivision = subdivision;

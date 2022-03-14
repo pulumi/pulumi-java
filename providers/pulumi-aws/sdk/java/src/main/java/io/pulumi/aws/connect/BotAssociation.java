@@ -8,7 +8,7 @@ import io.pulumi.aws.connect.BotAssociationArgs;
 import io.pulumi.aws.connect.inputs.BotAssociationState;
 import io.pulumi.aws.connect.outputs.BotAssociationLexBot;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -36,7 +36,7 @@ public class BotAssociation extends io.pulumi.resources.CustomResource {
      * The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.
      * 
      */
-    @OutputExport(name="instanceId", type=String.class, parameters={})
+    @Export(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 
     /**
@@ -50,7 +50,7 @@ public class BotAssociation extends io.pulumi.resources.CustomResource {
      * Configuration information of an Amazon Lex (V1) bot. Detailed below.
      * 
      */
-    @OutputExport(name="lexBot", type=BotAssociationLexBot.class, parameters={})
+    @Export(name="lexBot", type=BotAssociationLexBot.class, parameters={})
     private Output<BotAssociationLexBot> lexBot;
 
     /**

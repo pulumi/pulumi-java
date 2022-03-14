@@ -4,11 +4,11 @@
 package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.GetInfrastructureConfigurationLoggingS3Log;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInfrastructureConfigurationLogging {
     /**
      * Nested list of S3 logs settings.
@@ -16,8 +16,8 @@ public final class GetInfrastructureConfigurationLogging {
      */
     private final List<GetInfrastructureConfigurationLoggingS3Log> s3Logs;
 
-    @OutputCustomType.Constructor
-    private GetInfrastructureConfigurationLogging(@OutputCustomType.Parameter("s3Logs") List<GetInfrastructureConfigurationLoggingS3Log> s3Logs) {
+    @CustomType.Constructor
+    private GetInfrastructureConfigurationLogging(@CustomType.Parameter("s3Logs") List<GetInfrastructureConfigurationLoggingS3Log> s3Logs) {
         this.s3Logs = s3Logs;
     }
 

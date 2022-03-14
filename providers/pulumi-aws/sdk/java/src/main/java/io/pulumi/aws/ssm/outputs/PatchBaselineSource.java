@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PatchBaselineSource {
     /**
      * The value of the yum repo configuration. For information about other options available for your yum repository configuration, see the [`dnf.conf` documentation](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)
@@ -26,11 +26,11 @@ public final class PatchBaselineSource {
      */
     private final List<String> products;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchBaselineSource(
-        @OutputCustomType.Parameter("configuration") String configuration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("products") List<String> products) {
+        @CustomType.Parameter("configuration") String configuration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("products") List<String> products) {
         this.configuration = configuration;
         this.name = name;
         this.products = products;

@@ -8,7 +8,7 @@ import io.pulumi.aws.datasync.S3LocationArgs;
 import io.pulumi.aws.datasync.inputs.S3LocationState;
 import io.pulumi.aws.datasync.outputs.S3LocationS3Config;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class S3Location extends io.pulumi.resources.CustomResource {
      * A list of DataSync Agent ARNs with which this location will be associated.
      * 
      */
-    @OutputExport(name="agentArns", type=List.class, parameters={String.class})
+    @Export(name="agentArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> agentArns;
 
     /**
@@ -49,7 +49,7 @@ public class S3Location extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -63,7 +63,7 @@ public class S3Location extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the S3 Bucket.
      * 
      */
-    @OutputExport(name="s3BucketArn", type=String.class, parameters={})
+    @Export(name="s3BucketArn", type=String.class, parameters={})
     private Output<String> s3BucketArn;
 
     /**
@@ -77,7 +77,7 @@ public class S3Location extends io.pulumi.resources.CustomResource {
      * Configuration block containing information for connecting to S3.
      * 
      */
-    @OutputExport(name="s3Config", type=S3LocationS3Config.class, parameters={})
+    @Export(name="s3Config", type=S3LocationS3Config.class, parameters={})
     private Output<S3LocationS3Config> s3Config;
 
     /**
@@ -91,7 +91,7 @@ public class S3Location extends io.pulumi.resources.CustomResource {
      * The Amazon S3 storage class that you want to store your files in when this location is used as a task destination. [Valid values](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes)
      * 
      */
-    @OutputExport(name="s3StorageClass", type=String.class, parameters={})
+    @Export(name="s3StorageClass", type=String.class, parameters={})
     private Output<String> s3StorageClass;
 
     /**
@@ -105,7 +105,7 @@ public class S3Location extends io.pulumi.resources.CustomResource {
      * Prefix to perform actions as source or destination.
      * 
      */
-    @OutputExport(name="subdirectory", type=String.class, parameters={})
+    @Export(name="subdirectory", type=String.class, parameters={})
     private Output<String> subdirectory;
 
     /**
@@ -119,7 +119,7 @@ public class S3Location extends io.pulumi.resources.CustomResource {
      * Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -133,7 +133,7 @@ public class S3Location extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -143,7 +143,7 @@ public class S3Location extends io.pulumi.resources.CustomResource {
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll;
     }
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
     public Output<String> getUri() {

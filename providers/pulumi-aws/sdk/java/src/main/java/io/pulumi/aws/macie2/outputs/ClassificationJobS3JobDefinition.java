@@ -5,13 +5,13 @@ package io.pulumi.aws.macie2.outputs;
 
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionBucketDefinition;
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionScoping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClassificationJobS3JobDefinition {
     /**
      * An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account. (documented below)
@@ -24,10 +24,10 @@ public final class ClassificationJobS3JobDefinition {
      */
     private final @Nullable ClassificationJobS3JobDefinitionScoping scoping;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassificationJobS3JobDefinition(
-        @OutputCustomType.Parameter("bucketDefinitions") @Nullable List<ClassificationJobS3JobDefinitionBucketDefinition> bucketDefinitions,
-        @OutputCustomType.Parameter("scoping") @Nullable ClassificationJobS3JobDefinitionScoping scoping) {
+        @CustomType.Parameter("bucketDefinitions") @Nullable List<ClassificationJobS3JobDefinitionBucketDefinition> bucketDefinitions,
+        @CustomType.Parameter("scoping") @Nullable ClassificationJobS3JobDefinitionScoping scoping) {
         this.bucketDefinitions = bucketDefinitions;
         this.scoping = scoping;
     }

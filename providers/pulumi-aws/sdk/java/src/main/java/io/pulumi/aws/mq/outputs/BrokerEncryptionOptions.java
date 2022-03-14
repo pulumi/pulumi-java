@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.mq.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BrokerEncryptionOptions {
     /**
      * Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting `use_aws_owned_key` to `false`. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.
@@ -23,10 +23,10 @@ public final class BrokerEncryptionOptions {
      */
     private final @Nullable Boolean useAwsOwnedKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BrokerEncryptionOptions(
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("useAwsOwnedKey") @Nullable Boolean useAwsOwnedKey) {
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("useAwsOwnedKey") @Nullable Boolean useAwsOwnedKey) {
         this.kmsKeyId = kmsKeyId;
         this.useAwsOwnedKey = useAwsOwnedKey;
     }

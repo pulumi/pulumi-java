@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FirewallSubnetMappingArgs extends io.pulumi.resources.Resourc
      * The unique identifier for the subnet.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

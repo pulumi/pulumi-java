@@ -4,14 +4,14 @@
 package io.pulumi.aws.rds.outputs;
 
 import io.pulumi.aws.rds.outputs.GetProxyAuth;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProxyResult {
     /**
      * The ARN of the DB Proxy.
@@ -75,21 +75,21 @@ public final class GetProxyResult {
      */
     private final List<String> vpcSubnetIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProxyResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("auths") List<GetProxyAuth> auths,
-        @OutputCustomType.Parameter("debugLogging") Boolean debugLogging,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("engineFamily") String engineFamily,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("idleClientTimeout") Integer idleClientTimeout,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("requireTls") Boolean requireTls,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("vpcId") String vpcId,
-        @OutputCustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds,
-        @OutputCustomType.Parameter("vpcSubnetIds") List<String> vpcSubnetIds) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("auths") List<GetProxyAuth> auths,
+        @CustomType.Parameter("debugLogging") Boolean debugLogging,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("engineFamily") String engineFamily,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("idleClientTimeout") Integer idleClientTimeout,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("requireTls") Boolean requireTls,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("vpcId") String vpcId,
+        @CustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds,
+        @CustomType.Parameter("vpcSubnetIds") List<String> vpcSubnetIds) {
         this.arn = arn;
         this.auths = auths;
         this.debugLogging = debugLogging;

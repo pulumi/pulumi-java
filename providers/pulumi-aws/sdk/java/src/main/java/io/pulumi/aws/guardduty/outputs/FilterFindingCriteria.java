@@ -4,16 +4,16 @@
 package io.pulumi.aws.guardduty.outputs;
 
 import io.pulumi.aws.guardduty.outputs.FilterFindingCriteriaCriterion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FilterFindingCriteria {
     private final List<FilterFindingCriteriaCriterion> criterions;
 
-    @OutputCustomType.Constructor
-    private FilterFindingCriteria(@OutputCustomType.Parameter("criterions") List<FilterFindingCriteriaCriterion> criterions) {
+    @CustomType.Constructor
+    private FilterFindingCriteria(@CustomType.Parameter("criterions") List<FilterFindingCriteriaCriterion> criterions) {
         this.criterions = criterions;
     }
 

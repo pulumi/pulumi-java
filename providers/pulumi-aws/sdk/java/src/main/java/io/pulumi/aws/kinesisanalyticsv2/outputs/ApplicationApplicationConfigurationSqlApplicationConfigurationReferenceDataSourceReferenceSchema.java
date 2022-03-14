@@ -5,14 +5,14 @@ package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema {
     /**
      * Describes the mapping of each data element in the streaming source to the corresponding column in the in-application stream.
@@ -30,11 +30,11 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat recordFormat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema(
-        @OutputCustomType.Parameter("recordColumns") List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn> recordColumns,
-        @OutputCustomType.Parameter("recordEncoding") @Nullable String recordEncoding,
-        @OutputCustomType.Parameter("recordFormat") ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat recordFormat) {
+        @CustomType.Parameter("recordColumns") List<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn> recordColumns,
+        @CustomType.Parameter("recordEncoding") @Nullable String recordEncoding,
+        @CustomType.Parameter("recordFormat") ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat recordFormat) {
         this.recordColumns = recordColumns;
         this.recordEncoding = recordEncoding;
         this.recordFormat = recordFormat;

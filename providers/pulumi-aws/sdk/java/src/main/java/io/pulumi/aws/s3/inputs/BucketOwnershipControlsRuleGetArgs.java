@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BucketOwnershipControlsRuleGetArgs extends io.pulumi.resource
      * Object ownership. Valid values: `BucketOwnerPreferred`, `ObjectWriter` or `BucketOwnerEnforced`
      * 
      */
-    @InputImport(name="objectOwnership", required=true)
+    @Import(name="objectOwnership", required=true)
       private final Output<String> objectOwnership;
 
     public Output<String> getObjectOwnership() {

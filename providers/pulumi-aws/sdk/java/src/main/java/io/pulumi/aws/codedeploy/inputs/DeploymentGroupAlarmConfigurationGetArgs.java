@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class DeploymentGroupAlarmConfigurationGetArgs extends io.pulumi.re
      * A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
      * 
      */
-    @InputImport(name="alarms")
+    @Import(name="alarms")
       private final @Nullable Output<List<String>> alarms;
 
     public Output<List<String>> getAlarms() {
@@ -31,7 +31,7 @@ public final class DeploymentGroupAlarmConfigurationGetArgs extends io.pulumi.re
      * Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -44,7 +44,7 @@ public final class DeploymentGroupAlarmConfigurationGetArgs extends io.pulumi.re
      * * `false`: The deployment will stop if alarm status information can't be retrieved.
      * 
      */
-    @InputImport(name="ignorePollAlarmFailure")
+    @Import(name="ignorePollAlarmFailure")
       private final @Nullable Output<Boolean> ignorePollAlarmFailure;
 
     public Output<Boolean> getIgnorePollAlarmFailure() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.swf.DomainArgs;
 import io.pulumi.aws.swf.inputs.DomainState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN)
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The domain description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -61,7 +61,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The name of the domain. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -75,7 +75,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> namePrefix;
 
     /**
@@ -89,7 +89,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -103,7 +103,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -117,7 +117,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Length of time that SWF will continue to retain information about the workflow execution after the workflow execution is complete, must be between 0 and 90 days.
      * 
      */
-    @OutputExport(name="workflowExecutionRetentionPeriodInDays", type=String.class, parameters={})
+    @Export(name="workflowExecutionRetentionPeriodInDays", type=String.class, parameters={})
     private Output<String> workflowExecutionRetentionPeriodInDays;
 
     /**

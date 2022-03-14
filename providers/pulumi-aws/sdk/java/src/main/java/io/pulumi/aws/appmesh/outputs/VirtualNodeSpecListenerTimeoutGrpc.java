@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutGrpcIdle;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutGrpcPerRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerTimeoutGrpc {
     /**
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
@@ -23,10 +23,10 @@ public final class VirtualNodeSpecListenerTimeoutGrpc {
      */
     private final @Nullable VirtualNodeSpecListenerTimeoutGrpcPerRequest perRequest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecListenerTimeoutGrpc(
-        @OutputCustomType.Parameter("idle") @Nullable VirtualNodeSpecListenerTimeoutGrpcIdle idle,
-        @OutputCustomType.Parameter("perRequest") @Nullable VirtualNodeSpecListenerTimeoutGrpcPerRequest perRequest) {
+        @CustomType.Parameter("idle") @Nullable VirtualNodeSpecListenerTimeoutGrpcIdle idle,
+        @CustomType.Parameter("perRequest") @Nullable VirtualNodeSpecListenerTimeoutGrpcPerRequest perRequest) {
         this.idle = idle;
         this.perRequest = perRequest;
     }

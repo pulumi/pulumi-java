@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.glue.WorkflowArgs;
 import io.pulumi.aws.glue.inputs.WorkflowState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
@@ -37,7 +37,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of Glue Workflow
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
      * 
      */
-    @OutputExport(name="defaultRunProperties", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="defaultRunProperties", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> defaultRunProperties;
 
     /**
@@ -65,7 +65,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Description of the workflow.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -79,7 +79,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
      * 
      */
-    @OutputExport(name="maxConcurrentRuns", type=Integer.class, parameters={})
+    @Export(name="maxConcurrentRuns", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxConcurrentRuns;
 
     /**
@@ -93,7 +93,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The name you assign to this workflow.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

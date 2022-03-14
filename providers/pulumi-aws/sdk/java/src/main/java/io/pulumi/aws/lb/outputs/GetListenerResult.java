@@ -4,14 +4,14 @@
 package io.pulumi.aws.lb.outputs;
 
 import io.pulumi.aws.lb.outputs.GetListenerDefaultAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerResult {
     private final String alpnPolicy;
     private final String arn;
@@ -28,18 +28,18 @@ public final class GetListenerResult {
     private final String sslPolicy;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerResult(
-        @OutputCustomType.Parameter("alpnPolicy") String alpnPolicy,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("certificateArn") String certificateArn,
-        @OutputCustomType.Parameter("defaultActions") List<GetListenerDefaultAction> defaultActions,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("loadBalancerArn") String loadBalancerArn,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("sslPolicy") String sslPolicy,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("alpnPolicy") String alpnPolicy,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("certificateArn") String certificateArn,
+        @CustomType.Parameter("defaultActions") List<GetListenerDefaultAction> defaultActions,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("loadBalancerArn") String loadBalancerArn,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("sslPolicy") String sslPolicy,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.alpnPolicy = alpnPolicy;
         this.arn = arn;
         this.certificateArn = certificateArn;

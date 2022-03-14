@@ -5,7 +5,7 @@ package io.pulumi.aws.macie.inputs;
 
 import io.pulumi.aws.macie.inputs.FindingsFilterFindingCriteriaCriterionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FindingsFilterFindingCriteriaGetArgs extends io.pulumi.resour
      * A condition that specifies the property, operator, and one or more values to use to filter the results.  (documented below)
      * 
      */
-    @InputImport(name="criterions")
+    @Import(name="criterions")
       private final @Nullable Output<List<FindingsFilterFindingCriteriaCriterionGetArgs>> criterions;
 
     public Output<List<FindingsFilterFindingCriteriaCriterionGetArgs>> getCriterions() {

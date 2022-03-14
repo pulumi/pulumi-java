@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolLambdaConfigCustomEmailSender {
     /**
      * The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
@@ -20,10 +20,10 @@ public final class UserPoolLambdaConfigCustomEmailSender {
      */
     private final String lambdaVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolLambdaConfigCustomEmailSender(
-        @OutputCustomType.Parameter("lambdaArn") String lambdaArn,
-        @OutputCustomType.Parameter("lambdaVersion") String lambdaVersion) {
+        @CustomType.Parameter("lambdaArn") String lambdaArn,
+        @CustomType.Parameter("lambdaVersion") String lambdaVersion) {
         this.lambdaArn = lambdaArn;
         this.lambdaVersion = lambdaVersion;
     }

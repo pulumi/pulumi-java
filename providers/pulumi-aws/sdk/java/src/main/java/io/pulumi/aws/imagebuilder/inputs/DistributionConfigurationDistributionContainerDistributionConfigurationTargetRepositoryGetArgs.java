@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
      * 
      */
-    @InputImport(name="repositoryName", required=true)
+    @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
@@ -28,7 +28,7 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      * The service in which this image is registered. Valid values: `ECR`.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {

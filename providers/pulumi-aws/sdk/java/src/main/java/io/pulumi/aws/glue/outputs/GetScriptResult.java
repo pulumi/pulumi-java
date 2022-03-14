@@ -5,14 +5,14 @@ package io.pulumi.aws.glue.outputs;
 
 import io.pulumi.aws.glue.outputs.GetScriptDagEdge;
 import io.pulumi.aws.glue.outputs.GetScriptDagNode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScriptResult {
     private final List<GetScriptDagEdge> dagEdges;
     private final List<GetScriptDagNode> dagNodes;
@@ -33,14 +33,14 @@ public final class GetScriptResult {
      */
     private final String scalaCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScriptResult(
-        @OutputCustomType.Parameter("dagEdges") List<GetScriptDagEdge> dagEdges,
-        @OutputCustomType.Parameter("dagNodes") List<GetScriptDagNode> dagNodes,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("language") @Nullable String language,
-        @OutputCustomType.Parameter("pythonScript") String pythonScript,
-        @OutputCustomType.Parameter("scalaCode") String scalaCode) {
+        @CustomType.Parameter("dagEdges") List<GetScriptDagEdge> dagEdges,
+        @CustomType.Parameter("dagNodes") List<GetScriptDagNode> dagNodes,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("language") @Nullable String language,
+        @CustomType.Parameter("pythonScript") String pythonScript,
+        @CustomType.Parameter("scalaCode") String scalaCode) {
         this.dagEdges = dagEdges;
         this.dagNodes = dagNodes;
         this.id = id;

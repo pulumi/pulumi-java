@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * The horizontal position of the watermark unless you specify a nonzero value for `horzontal_offset`.
      * 
      */
-    @InputImport(name="horizontalAlign")
+    @Import(name="horizontalAlign")
       private final @Nullable Output<String> horizontalAlign;
 
     public Output<String> getHorizontalAlign() {
@@ -29,7 +29,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * The amount by which you want the horizontal position of the watermark to be offset from the position specified by `horizontal_align`.
      * 
      */
-    @InputImport(name="horizontalOffset")
+    @Import(name="horizontalOffset")
       private final @Nullable Output<String> horizontalOffset;
 
     public Output<String> getHorizontalOffset() {
@@ -40,7 +40,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * A unique identifier for the settings for one watermark. The value of Id can be up to 40 characters long. You can specify settings for up to four watermarks.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -51,7 +51,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * The maximum height of the watermark.
      * 
      */
-    @InputImport(name="maxHeight")
+    @Import(name="maxHeight")
       private final @Nullable Output<String> maxHeight;
 
     public Output<String> getMaxHeight() {
@@ -62,7 +62,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * The maximum width of the watermark.
      * 
      */
-    @InputImport(name="maxWidth")
+    @Import(name="maxWidth")
       private final @Nullable Output<String> maxWidth;
 
     public Output<String> getMaxWidth() {
@@ -73,7 +73,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * A percentage that indicates how much you want a watermark to obscure the video in the location where it appears.
      * 
      */
-    @InputImport(name="opacity")
+    @Import(name="opacity")
       private final @Nullable Output<String> opacity;
 
     public Output<String> getOpacity() {
@@ -84,7 +84,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * A value that controls scaling of the watermark. Valid values are: `Fit`, `Stretch`, `ShrinkToFit`
      * 
      */
-    @InputImport(name="sizingPolicy")
+    @Import(name="sizingPolicy")
       private final @Nullable Output<String> sizingPolicy;
 
     public Output<String> getSizingPolicy() {
@@ -95,7 +95,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * A value that determines how Elastic Transcoder interprets values that you specified for `video_watermarks.horizontal_offset`, `video_watermarks.vertical_offset`, `video_watermarks.max_width`, and `video_watermarks.max_height`. Valid values are `Content` and `Frame`.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
@@ -106,7 +106,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * The vertical position of the watermark unless you specify a nonzero value for `vertical_align`. Valid values are `Top`, `Bottom`, `Center`.
      * 
      */
-    @InputImport(name="verticalAlign")
+    @Import(name="verticalAlign")
       private final @Nullable Output<String> verticalAlign;
 
     public Output<String> getVerticalAlign() {
@@ -117,7 +117,7 @@ public final class PresetVideoWatermarkArgs extends io.pulumi.resources.Resource
      * The amount by which you want the vertical position of the watermark to be offset from the position specified by `vertical_align`
      * 
      */
-    @InputImport(name="verticalOffset")
+    @Import(name="verticalOffset")
       private final @Nullable Output<String> verticalOffset;
 
     public Output<String> getVerticalOffset() {

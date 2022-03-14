@@ -4,7 +4,7 @@
 package io.pulumi.aws.mediapackage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ChannelHlsIngestIngestEndpointGetArgs extends io.pulumi.resou
      * The password
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -29,7 +29,7 @@ public final class ChannelHlsIngestIngestEndpointGetArgs extends io.pulumi.resou
      * The URL
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
@@ -40,7 +40,7 @@ public final class ChannelHlsIngestIngestEndpointGetArgs extends io.pulumi.resou
      * The username
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

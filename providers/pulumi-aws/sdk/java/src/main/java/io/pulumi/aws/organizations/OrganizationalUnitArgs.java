@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
      * The name for the organizational unit
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -30,7 +30,7 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
      * ID of the parent organizational unit, which may be the root
      * 
      */
-    @InputImport(name="parentId", required=true)
+    @Import(name="parentId", required=true)
       private final Output<String> parentId;
 
     public Output<String> getParentId() {
@@ -41,7 +41,7 @@ public final class OrganizationalUnitArgs extends io.pulumi.resources.ResourceAr
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

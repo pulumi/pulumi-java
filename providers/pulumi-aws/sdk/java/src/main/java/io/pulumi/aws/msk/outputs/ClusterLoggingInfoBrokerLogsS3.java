@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.msk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterLoggingInfoBrokerLogsS3 {
     /**
      * Name of the S3 bucket to deliver logs to.
@@ -28,11 +28,11 @@ public final class ClusterLoggingInfoBrokerLogsS3 {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterLoggingInfoBrokerLogsS3(
-        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
+        @CustomType.Parameter("bucket") @Nullable String bucket,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucket = bucket;
         this.enabled = enabled;
         this.prefix = prefix;

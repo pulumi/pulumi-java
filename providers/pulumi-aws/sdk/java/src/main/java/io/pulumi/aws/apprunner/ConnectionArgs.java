@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the connection.
      * 
      */
-    @InputImport(name="connectionName", required=true)
+    @Import(name="connectionName", required=true)
       private final Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -30,7 +30,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The source repository provider. Valid values: `GITHUB`.
      * 
      */
-    @InputImport(name="providerType", required=true)
+    @Import(name="providerType", required=true)
       private final Output<String> providerType;
 
     public Output<String> getProviderType() {
@@ -41,7 +41,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ProvisionedProductProvisioningParameterArgs extends io.pulumi
      * Parameter key.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -30,7 +30,7 @@ public final class ProvisionedProductProvisioningParameterArgs extends io.pulumi
      * Whether to ignore `value` and keep the previous parameter value. Ignored when initially provisioning a product.
      * 
      */
-    @InputImport(name="usePreviousValue")
+    @Import(name="usePreviousValue")
       private final @Nullable Output<Boolean> usePreviousValue;
 
     public Output<Boolean> getUsePreviousValue() {
@@ -41,7 +41,7 @@ public final class ProvisionedProductProvisioningParameterArgs extends io.pulumi
      * Parameter value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

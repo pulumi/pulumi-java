@@ -9,7 +9,7 @@ import io.pulumi.aws.appsync.inputs.DataSourceHttpConfigGetArgs;
 import io.pulumi.aws.appsync.inputs.DataSourceLambdaConfigGetArgs;
 import io.pulumi.aws.appsync.inputs.DataSourceRelationalDatabaseConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * The API ID for the GraphQL API for the DataSource.
      * 
      */
-    @InputImport(name="apiId")
+    @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -34,7 +34,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * The ARN
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -45,7 +45,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * A description of the DataSource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -56,7 +56,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * DynamoDB settings. See below
      * 
      */
-    @InputImport(name="dynamodbConfig")
+    @Import(name="dynamodbConfig")
       private final @Nullable Output<DataSourceDynamodbConfigGetArgs> dynamodbConfig;
 
     public Output<DataSourceDynamodbConfigGetArgs> getDynamodbConfig() {
@@ -67,7 +67,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * Amazon Elasticsearch settings. See below
      * 
      */
-    @InputImport(name="elasticsearchConfig")
+    @Import(name="elasticsearchConfig")
       private final @Nullable Output<DataSourceElasticsearchConfigGetArgs> elasticsearchConfig;
 
     public Output<DataSourceElasticsearchConfigGetArgs> getElasticsearchConfig() {
@@ -78,7 +78,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * HTTP settings. See below
      * 
      */
-    @InputImport(name="httpConfig")
+    @Import(name="httpConfig")
       private final @Nullable Output<DataSourceHttpConfigGetArgs> httpConfig;
 
     public Output<DataSourceHttpConfigGetArgs> getHttpConfig() {
@@ -89,7 +89,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * AWS Lambda settings. See below
      * 
      */
-    @InputImport(name="lambdaConfig")
+    @Import(name="lambdaConfig")
       private final @Nullable Output<DataSourceLambdaConfigGetArgs> lambdaConfig;
 
     public Output<DataSourceLambdaConfigGetArgs> getLambdaConfig() {
@@ -100,7 +100,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * A user-supplied name for the DataSource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -111,7 +111,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * AWS RDS settings. See Relational Database Config
      * 
      */
-    @InputImport(name="relationalDatabaseConfig")
+    @Import(name="relationalDatabaseConfig")
       private final @Nullable Output<DataSourceRelationalDatabaseConfigGetArgs> relationalDatabaseConfig;
 
     public Output<DataSourceRelationalDatabaseConfigGetArgs> getRelationalDatabaseConfig() {
@@ -122,7 +122,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * The IAM service role ARN for the data source.
      * 
      */
-    @InputImport(name="serviceRoleArn")
+    @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
     public Output<String> getServiceRoleArn() {
@@ -133,7 +133,7 @@ public final class DataSourceState extends io.pulumi.resources.ResourceArgs {
      * The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`, `RELATIONAL_DATABASE`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
