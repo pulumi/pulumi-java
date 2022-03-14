@@ -1,5 +1,15 @@
 # API Design
 
+## Review examples
+
+https://github.com/pulumi/pulumi-jvm/blob/main/tests/examples/minimal/app/src/main/java/minimal/MyStack.java
+https://github.com/pulumi/pulumi-jvm/blob/main/tests/examples/random/app/src/main/java/random/MyStack.java
+https://github.com/pulumi/pulumi-jvm/blob/main/tests/examples/aws-java-webserver/app/src/main/java/webserver/MyStack.java
+https://github.com/pulumi/pulumi-jvm/blob/main/tests/examples/aws-native-java-s3-folder/app/src/main/java/s3site/MyStack.java
+https://github.com/pulumi/pulumi-jvm/blob/main/tests/examples/azure-java-appservice-sql/app/src/main/java/appservice/MyStack.java
+https://github.com/pulumi/pulumi-jvm/blob/main/tests/examples/azure-java-static-website/app/src/main/java/staticwebsite/MyStack.java
+https://github.com/pulumi/pulumi-jvm/blob/main/tests/examples/gcp-java-gke-hello-world/app/src/main/java/gcpgke/MyStack.java
+
 ## Required Args
 
 Should we fail at compile time when the user fails to provide required
